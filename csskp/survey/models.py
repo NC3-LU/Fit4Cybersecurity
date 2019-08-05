@@ -27,13 +27,15 @@ class SurveyQuestionServiceCategory(models.Model):
 
     title = models.CharField(max_length=128)
 
+
+
 class SurveySection(models.Model):
     # Section ID
     # Section title
 
     sectionTitle = models.CharField(max_length=128)
 
-    pass
+
 
 class SurveyQuestion(models.Model):
     # Question id --> translation in other table
@@ -68,6 +70,7 @@ class SurveyUser(models.Model):
     survey_done = models.BooleanField(default=False)
 
 
+
 class SurveyUserAnswers(models.Model):
     # UUID user
     # QuestionID
@@ -75,6 +78,7 @@ class SurveyUserAnswers(models.Model):
 
     user = models.ForeignKey(SurveyUser,on_delete=models.CASCADE)
     question = models.ForeignKey(SurveyQuestion,on_delete=models.CASCADE)
+
 
 
 class SurveyUserAnswer(models.Model):
