@@ -64,8 +64,7 @@ class SurveyUser(models.Model):
     user_id = models.UUIDField()
     sector = models.CharField(max_length=4, choices=SECTOR_CHOICES, default="it")
 
-    
-
+    current_question = models.IntegerField(default=0)
     survey_done = models.BooleanField(default=False)
 
 

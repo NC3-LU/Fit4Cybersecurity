@@ -20,6 +20,7 @@ def gotoQuestion(request,id=0):
 
     return HttpResponse("some JSON here")
 
+
 def startSurvey(request):
 
     return HttpResponse("Some template here and then start the rest")
@@ -49,3 +50,7 @@ def getCompanies(request):
 def continueSelfEval(request):
 
     return HttpResponse("If you were here, enter the code")
+
+def loadSelfEval(request,key):
+
+    return HttpResponse("Thank you for the key! Loading the survey and its template again")
