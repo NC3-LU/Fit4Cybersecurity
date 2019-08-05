@@ -14,14 +14,25 @@ def index(request):
     return render(request,'survey/index.html',context=james)
 
 
-def gotoQuestion(request):
+def gotoQuestion(request,id=0):
 
     # save what the answers were
 
     return HttpResponse("some JSON here")
 
+def startSurvey(request):
+
+    return HttpResponse("Some template here and then start the rest")
+
 
 def finishSurvey(request):
+
+    # make survey readonly and show results.
+
+    return HttpResponse("Closing stuff and give template to see report")
+
+
+def showReport(request):
 
     # make survey readonly and show results.
 
@@ -33,3 +44,8 @@ def getCompanies(request):
     # get Companies contained in certain category
 
     return HttpResponse("Here is the JSON list of companies that are related to that category")
+
+
+def continueSelfEval(request):
+
+    return HttpResponse("If you were here, enter the code")
