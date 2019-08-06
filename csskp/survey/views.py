@@ -27,7 +27,7 @@ def gotoQuestion(request,id=0):
 
             # remember to save the data to the DB
 
-            #CHANGE THIS TO THE DATABASE THING
+            # CHANGE THIS to info from DB
             answer_list = [
                 'james',
                 'marc',
@@ -41,10 +41,11 @@ def gotoQuestion(request,id=0):
             for a in answer_list:
                 tupelanswers.append( (i,a) )
                 i+=1
+            # END CHANGE THIS
+            
             form = AnswerMChoice()
             form.setUID(user)
             form.setAnswers(tupelanswers)
-
 
             return HttpResponse(form)
     else:
