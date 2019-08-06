@@ -2,6 +2,7 @@ from django.db import models
 
 # import global constants
 from survey.globals import SECTOR_CHOICES
+import uuid
 
 # Create your models here.
 
@@ -63,7 +64,7 @@ class SurveyUser(models.Model):
     # OtherSector Description
     # number of employees
 
-    user_id = models.UUIDField()
+    user_id = models.UUIDField(default=uuid.uuid4)
     sector = models.CharField(max_length=4, choices=SECTOR_CHOICES, default="it")
 
     current_question = models.IntegerField(default=0)

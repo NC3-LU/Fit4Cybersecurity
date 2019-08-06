@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head></head>
+
+</body>
+
+<h1>{{ title }}</h1>
+
+<div>{{ description }}</div>
+
+<div>
+<form action="/survey/gotoquestion/0" method="post">
+    {% csrf_token %}
+    <table>
+    {{ form.as_table }}
+    </table>
+    <input type="submit" value="Next" style="float:right;">
+<form>
+</div>
+</body>
+</html>
