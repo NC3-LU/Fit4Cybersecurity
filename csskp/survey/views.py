@@ -3,6 +3,7 @@ from django.http import HttpResponse
 
 from survey.models import SurveyUser
 from survey.forms import InitialStartForm, AnswerMChoice
+from survey.viewLogic import saveAndGetQuestion
 
 
 # Create your views here.
@@ -11,45 +12,18 @@ def index(request):
     
     # show main page
 
-    #return HttpResponse("Survey Test")
+    # return HttpResponse("Survey Test")
     james = {'the_title':"Was geht!"}
 
     return render(request,'survey/index.html',context=james)
 
 
 def gotoQuestion(request,id=0):
-
-    # save what the answers were
-    if request.method == 'POST':
-        form = InitialStartForm(request.POST) # A form bound to the POST data
-        if form.is_valid():
-            user=form.cleaned_data['userid']
-
-            # remember to save the data to the DB
-
-            # CHANGE THIS to info from DB
-            answer_list = [
-                'james',
-                'marc',
-                'michael',
-                'peter',
-                'tim',
-            ]
-
-            tupelanswers = []
-            i=0
-            for a in answer_list:
-                tupelanswers.append( (i,a) )
-                i+=1
-            # END CHANGE THIS
-            
-            form = AnswerMChoice()
-            form.setUID(user)
-            form.setAnswers(tupelanswers)
-
-            return HttpResponse(form)
-    else:
-        return startSurvey()
+    question = saveAndGetQuestion(request,id)
+    if question == None:
+        return startSurvey(request)
+    return render(request, 'survey/questions.html',context=question)
+    
 
 
 def startSurvey(request):

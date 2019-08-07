@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>
+            {{ title }}
+        </title>
+    </head>
+    <body>
+        <div><h1>{{ question }}</h1></div>
+        <form action="/survey/gotoquestion/{{ next }}" method="post">
+            {% csrf_token %}
+
+            <div>
+                <ul>
+                {{ form.as_p }}
+                </ul>
+            </div>
+            <div>
+                {% if next > -1 %}
+                <input type="submit" value="NEXT" style="float:right;">
+                {% endif %}
+                <a href="/survey/resumelater">RESUME LATER</a>
+            </div>
+                
+        <form>
+
+    </body>
+</html>
