@@ -66,10 +66,13 @@ class SurveyQuestionAnswer(models.Model):
 
     question = models.ForeignKey(SurveyQuestion,on_delete=models.CASCADE)
     answer = models.CharField(max_length=256)
-    aindex = models.IntegerField(unique=True)
+    aindex = models.IntegerField()
 
     def __str__(self):
         return self.answer
+
+    class Meta:
+        unique_together = ('aindex','question')
 
 
 

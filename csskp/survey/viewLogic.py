@@ -5,15 +5,13 @@ from survey.forms import InitialStartForm, AnswerMChoice
 def saveAndGetQuestion(request,id):
 
     tupelanswers = []
-    i=0
 
     if id <= 0:
-        firstQuestion = SurveyQuestion.objects.all()[0]
-        answerChoices = SurveyQuestionAnswer.objects.filter(question=firstQuestion)
+        firstQuestion = SurveyQuestion.objects.order_by('qindex')[0]
+        answerChoices = SurveyQuestionAnswer.objects.order_by('aindex').filter(question=firstQuestion)
 
         for answer in answerChoices:
-            tupelanswers.append( (i,answer.answer) )
-            i+=1
+            tupelanswers.append( (answer.id,answer.answer) )
 
     # save what the answers were
     if request.method == 'POST':
@@ -38,33 +36,29 @@ def saveAndGetQuestion(request,id):
             return question
         
         if id > 0:
-            lastQuestion = SurveyQuestion.objects.all()[id-1]
-            answerChoices = SurveyQuestionAnswer.objects.filter(question=lastQuestion)
+            lastQuestion = SurveyQuestion.objects.order_by('qindex')[id-1]
+            answerChoices = SurveyQuestionAnswer.objects.order_by('aindex').filter(question=lastQuestion)
 
             tupelanswers.clear()
-            i=0
 
             for answer in answerChoices:
-                tupelanswers.append( (i,answer.answer) )
-                i+=1
+                tupelanswers.append( (answer.id,answer.answer) )
 
         form = AnswerMChoice(tupelanswers,request.POST)        
         if form.is_valid():
             user=form.cleaned_data['userid']
             questionTitle = "You are done!"
 
-            if id < len(SurveyQuestion.objects.all()):
-                nextQuestion = SurveyQuestion.objects.all()[id]
-                answerChoices = SurveyQuestionAnswer.objects.filter(question=nextQuestion)
+            if id < len(SurveyQuestion.objects.order_by('qindex')):
+                nextQuestion = SurveyQuestion.objects.order_by('qindex')[id]
+                answerChoices = SurveyQuestionAnswer.objects.order_by('aindex').filter(question=nextQuestion).order_by('aindex')
                 
                 questionTitle = nextQuestion.title
 
                 tupelanswers.clear()
-                i=0
 
                 for answer in answerChoices:
-                    tupelanswers.append( (i,answer.answer) )
-                    i+=1
+                    tupelanswers.append( (answer.id,answer.answer) )
 
                 newform = AnswerMChoice(tupelanswers)
                 newform.setUID(user)

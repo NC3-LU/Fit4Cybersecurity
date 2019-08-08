@@ -48,6 +48,8 @@ def startSurvey(request):
 def finishSurvey(request):
 
     # make survey readonly and show results.
+    # also needs saving here!
+    # show a "Thank you" and a "get your report" button
 
     return HttpResponse("Closing stuff and give template to see report")
 
