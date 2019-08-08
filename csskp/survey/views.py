@@ -57,22 +57,25 @@ def finishSurvey(request):
 def showReport(request):
 
     # make survey readonly and show results.
-
+    # make checkboxes to recommendation and a single button of get companies
+    # then call getcompanies when button is hit
     return HttpResponse("Here the report mate! in JSON of course")
 
 
 def getCompanies(request):
 
     # get Companies contained in certain category
-
+    # just a company list related to the selected recommendations
     return HttpResponse("Here is the JSON list of companies that are related to that category")
 
 
 def continueSelfEval(request):
 
+    # show page to enter secret key - uuid from user
     return HttpResponse("If you were here, enter the code")
 
 
 def loadSelfEval(request,key):
 
+    # you have uuid, so get the user current question and load the next question after that.
     return HttpResponse("Thank you for the key! Loading the survey and its template again")
