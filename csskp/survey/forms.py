@@ -18,7 +18,7 @@ class InitialStartForm(forms.Form):
 
 class AnswerMChoice(forms.Form):
     userid = forms.CharField(widget=forms.HiddenInput())
-    answers = forms.MultipleChoiceField(choices=[], widget=forms.CheckboxSelectMultiple())
+    answers = forms.MultipleChoiceField(choices=[], widget=forms.CheckboxSelectMultiple(), label='')
     
     def __init__(self, answers=None, *args, **kwargs):
         super().__init__(*args, **kwargs)

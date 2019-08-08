@@ -28,6 +28,9 @@ class SurveyQuestionServiceCategory(models.Model):
 
     title = models.CharField(max_length=128)
 
+    def __str__(self):
+        return self.title
+
 
 
 class SurveySection(models.Model):
@@ -35,6 +38,9 @@ class SurveySection(models.Model):
     # Section title
 
     sectionTitle = models.CharField(max_length=128)
+    
+    def __str__(self):
+        return self.sectionTitle
 
 
 
@@ -47,6 +53,9 @@ class SurveyQuestion(models.Model):
     section = models.ForeignKey(SurveySection,on_delete=models.CASCADE)
     title = models.CharField(max_length=256)
 
+    def __str__(self):
+        return self.title
+
 
 
 class SurveyQuestionAnswer(models.Model):
@@ -55,6 +64,9 @@ class SurveyQuestionAnswer(models.Model):
 
     question = models.ForeignKey(SurveyQuestion,on_delete=models.CASCADE)
     answer = models.CharField(max_length=256)
+
+    def __str__(self):
+        return self.answer
 
 
 
@@ -70,6 +82,9 @@ class SurveyUser(models.Model):
     current_question = models.IntegerField(default=0)
     survey_done = models.BooleanField(default=False)
 
+    def __str__(self):
+        return self.user_id
+
 
 
 class SurveyUserAnswers(models.Model):
@@ -80,6 +95,9 @@ class SurveyUserAnswers(models.Model):
     user = models.ForeignKey(SurveyUser,on_delete=models.CASCADE)
     question = models.ForeignKey(SurveyQuestion,on_delete=models.CASCADE)
 
+    def __str__(self):
+        return self.user
+
 
 
 class SurveyUserAnswer(models.Model):
@@ -89,5 +107,8 @@ class SurveyUserAnswer(models.Model):
     answer = models.ForeignKey(SurveyQuestionAnswer,on_delete=models.CASCADE)
     # 0, 1 for true, false selections, or -inf to +inf for value slider questions
     value = models.IntegerField(default=0)
+
+    def __str__(self):
+        return self.answer
 
 

@@ -20,6 +20,8 @@ def index(request):
 
 def gotoQuestion(request,id=0):
     question = saveAndGetQuestion(request,id)
+    if question == -1:
+        return finishSurvey(request)
     if question == None:
         return startSurvey(request)
     return render(request, 'survey/questions.html',context=question)
