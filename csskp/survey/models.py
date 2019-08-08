@@ -1,7 +1,7 @@
 from django.db import models
 
 # import global constants
-from survey.globals import SECTOR_CHOICES
+from survey.globals import SECTOR_CHOICES,QUESTION_TYPES
 import uuid
 
 # Create your models here.
@@ -52,6 +52,8 @@ class SurveyQuestion(models.Model):
     service_category = models.ForeignKey(SurveyQuestionServiceCategory, on_delete=models.CASCADE)
     section = models.ForeignKey(SurveySection,on_delete=models.CASCADE)
     title = models.CharField(max_length=256)
+    qtype = models.CharField(max_length=1,choices=QUESTION_TYPES,default=QUESTION_TYPES[0][0])
+    qindex = models.IntegerField(unique=True)
 
     def __str__(self):
         return self.title
@@ -64,6 +66,7 @@ class SurveyQuestionAnswer(models.Model):
 
     question = models.ForeignKey(SurveyQuestion,on_delete=models.CASCADE)
     answer = models.CharField(max_length=256)
+    aindex = models.IntegerField(unique=True)
 
     def __str__(self):
         return self.answer
@@ -77,7 +80,7 @@ class SurveyUser(models.Model):
     # number of employees
 
     user_id = models.UUIDField(default=uuid.uuid4)
-    sector = models.CharField(max_length=4, choices=SECTOR_CHOICES, default="it")
+    sector = models.CharField(max_length=4, choices=SECTOR_CHOICES, default=SECTOR_CHOICES[0][0])
 
     current_question = models.IntegerField(default=0)
     survey_done = models.BooleanField(default=False)

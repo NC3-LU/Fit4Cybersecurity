@@ -33,3 +33,9 @@ COMPANY_SIZE = [
     (7,"1000-5000"),
     (7,"5000+"),
 ]
+
+QUESTION_TYPES = [
+    ("M", "Multiple Choice"),
+    ("S", "Single Choice"),
+    ("I", "Integer Slider"),
+]
