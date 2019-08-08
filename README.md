@@ -1,6 +1,31 @@
 # CybersecurityStarterKit
 New PHP implementation with many more features and simplified questions compared to the Startup security kit
 
+## Python/Django Installation
+
+Just install `Python 3` and `Django 2.2`,
+
+Then clone this repository and that is it for the installation. 
+
+#### Running the test server
+
+For the next step, if you want to test the project and your modification, use the terminal and go into the folder `csskp`. And then simply run the test server:
+
+```bash
+python3 manage.py runserver
+```
+
+#### updated the models?
+If you made any changes to the database structure (models) then you need to do the following:
+
+```bash
+python3 manage.py makemigrations
+python3 manage.py migrate
+```
+
+
+## PHP version install - not maintained at the moment
+
 #### Installing LAMP and Zend 3 from scratch:
 
 ```bash
