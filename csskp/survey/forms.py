@@ -8,10 +8,11 @@ class InitialStartForm(forms.Form):
     sector = forms.ChoiceField(widget=forms.Select, choices=SECTOR_CHOICES)
     compSize = forms.ChoiceField(widget=forms.Select, choices=COMPANY_SIZE)
 
-
-    def setQuestions(self, q1, q2):
-        self.fields['sector'].label = q1
-        self.fields['compSize'].label = q2
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+    
+        self.fields['sector'].label = "What is your sector?"
+        self.fields['compSize'].label = "How many employees?"
 
     def setUID(self,uid):
         self.fields['userid'].initial = uid

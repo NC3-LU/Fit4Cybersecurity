@@ -17,14 +17,14 @@ def saveAndGetQuestion(request,id):
     if request.method == 'POST':
         form = InitialStartForm(request.POST) # A form bound to the POST data
         if form.is_valid():
-            user=form.cleaned_data['userid']
+            user=SurveyUser.objects.filter(user_id=form.cleaned_data['userid'])[0]
 
             # remember to save the data to the DB
 
-            
+            initialQuestion = InitialStartForm(form)
             
             form = AnswerMChoice(tupelanswers)
-            form.setUID(user)
+            form.setUID(user.user_id)
 
             question = {
                 'title': "Question "+str(id+1),
@@ -46,7 +46,7 @@ def saveAndGetQuestion(request,id):
 
         form = AnswerMChoice(tupelanswers,request.POST)        
         if form.is_valid():
-            user=form.cleaned_data['userid']
+            user=SurveyUser.objects.filter(user_id=form.cleaned_data['userid'])[0]
             questionTitle = "You are done!"
 
             if id < len(SurveyQuestion.objects.order_by('qindex')):
@@ -61,7 +61,7 @@ def saveAndGetQuestion(request,id):
                     tupelanswers.append( (answer.id,answer.answer) )
 
                 newform = AnswerMChoice(tupelanswers)
-                newform.setUID(user)
+                newform.setUID(user.user_id)
             else:
                 #FINAL QUESTION return the new interface
                 return -1

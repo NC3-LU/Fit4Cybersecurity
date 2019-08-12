@@ -19,6 +19,7 @@ def index(request):
 
 
 def gotoQuestion(request,id=0):
+
     question = saveAndGetQuestion(request,id)
     if question == -1:
         return finishSurvey(request)
@@ -31,9 +32,9 @@ def gotoQuestion(request,id=0):
 def startSurvey(request):
 
     user = SurveyUser()
+    user.save()
     
     form = InitialStartForm()
-    form.setQuestions("What is your sector?", "How many employees?")
     form.setUID(user.user_id)
 
     allText = {
