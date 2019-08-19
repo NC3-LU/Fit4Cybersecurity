@@ -109,12 +109,11 @@ class SurveyUserAnswers(models.Model):
 class SurveyUserAnswer(models.Model):
     # AnswerID
     # AnswerListID
-
+    user = models.ForeignKey(SurveyUser,on_delete=models.CASCADE)
     answer = models.ForeignKey(SurveyQuestionAnswer,on_delete=models.CASCADE)
     # 0, 1 for true, false selections, or -inf to +inf for value slider questions
     value = models.IntegerField(default=0)
 
     def __str__(self):
         return self.answer
-
 

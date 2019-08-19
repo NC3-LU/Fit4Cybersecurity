@@ -1,4 +1,4 @@
-from survey.models import SurveyUser, SurveyQuestion, SurveyQuestionAnswer
+from survey.models import SurveyUser, SurveyQuestion, SurveyQuestionAnswer, SurveyUserAnswers, SurveyUserAnswer
 from survey.forms import InitialStartForm, AnswerMChoice
 
 
@@ -31,28 +31,39 @@ def saveAndGetQuestion(request,id):
                 'question': firstQuestion.title,
                 'form': form,
                 'next': id+1,
+                'user': user.user_id,
             }
 
             return question
         
         if id > 0:
             lastQuestion = SurveyQuestion.objects.order_by('qindex')[id-1]
-            answerChoices = SurveyQuestionAnswer.objects.order_by('aindex').filter(question=lastQuestion)
+            lastAnswerChoices = SurveyQuestionAnswer.objects.order_by('aindex').filter(question=lastQuestion)
 
             tupelanswers.clear()
 
-            for answer in answerChoices:
+            for answer in lastAnswerChoices:
                 tupelanswers.append( (answer.id,answer.answer) )
 
-        form = AnswerMChoice(tupelanswers,request.POST)        
+        form = AnswerMChoice(tupelanswers,request.POST) 
+
+        #for answer in form.fields['answers']:
+         #   print (answer + "\n")
+
         if form.is_valid():
             user=SurveyUser.objects.filter(user_id=form.cleaned_data['userid'])[0]
+            answers = form.cleaned_data['answers']
             questionTitle = "You are done!"
+            
+            saveAnswers(lastAnswerChoices,answers,user)
 
+            
             if id < len(SurveyQuestion.objects.order_by('qindex')):
                 nextQuestion = SurveyQuestion.objects.order_by('qindex')[id]
                 answerChoices = SurveyQuestionAnswer.objects.order_by('aindex').filter(question=nextQuestion).order_by('aindex')
                 
+                
+
                 questionTitle = nextQuestion.title
 
                 tupelanswers.clear()
@@ -72,6 +83,7 @@ def saveAndGetQuestion(request,id):
                 'question': questionTitle,
                 'form': newform,
                 'next': id+1,
+                'user': user.user_id,
             }
 
             return question
@@ -80,3 +92,14 @@ def saveAndGetQuestion(request,id):
 
 
     return None
+
+
+
+def saveAnswers (answer_choices,answers,user):
+    for i in answer_choices:
+        if i.id in answers:
+            answer = SurveyUserAnswer()
+            answer.user = user
+            answer.answer = SurveyQuestionAnswer.objects.filter(id=i)
+            answer.value = 1
+            answer.save()

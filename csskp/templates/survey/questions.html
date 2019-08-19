@@ -13,15 +13,13 @@
             {% csrf_token %}
 
             <div>
-                <ul>
                 {{ form.as_p }}
-                </ul>
             </div>
             <div>
                 {% if next > -1 %}
                 <input type="submit" value="NEXT" style="float:right;">
                 {% endif %}
-                <a href="/survey/resumelater">RESUME LATER</a>
+                <a href="/survey/resumelater/{{ user }}">RESUME LATER</a>
             </div>
                 
         <form>

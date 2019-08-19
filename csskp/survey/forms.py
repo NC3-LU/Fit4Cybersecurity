@@ -17,6 +17,7 @@ class InitialStartForm(forms.Form):
     def setUID(self,uid):
         self.fields['userid'].initial = uid
 
+        
 class AnswerMChoice(forms.Form):
     userid = forms.CharField(widget=forms.HiddenInput())
     answers = forms.MultipleChoiceField(choices=[], widget=forms.CheckboxSelectMultiple(), label='')
