@@ -29,7 +29,7 @@ class SurveyQuestionServiceCategory(models.Model):
     title = models.CharField(max_length=128)
 
     def __str__(self):
-        return self.title
+        return str(self.title)
 
 
 
@@ -40,7 +40,7 @@ class SurveySection(models.Model):
     sectionTitle = models.CharField(max_length=128)
     
     def __str__(self):
-        return self.sectionTitle
+        return str(self.sectionTitle)
 
 
 
@@ -56,7 +56,7 @@ class SurveyQuestion(models.Model):
     qindex = models.IntegerField(unique=True)
 
     def __str__(self):
-        return self.title
+        return str(self.title)
 
 
 
@@ -69,7 +69,7 @@ class SurveyQuestionAnswer(models.Model):
     aindex = models.IntegerField()
 
     def __str__(self):
-        return self.answer
+        return str(self.answer)
 
     class Meta:
         unique_together = ('aindex','question')
@@ -89,7 +89,7 @@ class SurveyUser(models.Model):
     survey_done = models.BooleanField(default=False)
 
     def __str__(self):
-        return self.user_id
+        return str(self.user_id)
 
 
 
@@ -102,7 +102,7 @@ class SurveyUserAnswers(models.Model):
     question = models.ForeignKey(SurveyQuestion,on_delete=models.CASCADE)
 
     def __str__(self):
-        return self.user
+        return str(self.user)
 
 
 
@@ -115,5 +115,5 @@ class SurveyUserAnswer(models.Model):
     value = models.IntegerField(default=0)
 
     def __str__(self):
-        return self.answer
+        return str(self.answer)
 
