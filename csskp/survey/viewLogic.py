@@ -36,6 +36,9 @@ def saveAndGetQuestion(request,id):
 
             return question
         
+        lastQuestion = ""
+        lastAnswerChoices = ""
+
         if id > 0:
             lastQuestion = SurveyQuestion.objects.order_by('qindex')[id-1]
             lastAnswerChoices = SurveyQuestionAnswer.objects.order_by('aindex').filter(question=lastQuestion)
@@ -52,6 +55,7 @@ def saveAndGetQuestion(request,id):
 
         if form.is_valid():
             user=SurveyUser.objects.filter(user_id=form.cleaned_data['userid'])[0]
+
             answers = form.cleaned_data['answers']
             questionTitle = "You are done!"
             
@@ -90,16 +94,19 @@ def saveAndGetQuestion(request,id):
         
         return {'question':form.errors}
 
-
     return None
 
 
 
 def saveAnswers (answer_choices,answers,user):
     for i in answer_choices:
-        if i.id in answers:
+        for a in answers:
             answer = SurveyUserAnswer()
             answer.user = user
-            answer.answer = SurveyQuestionAnswer.objects.filter(id=i)
-            answer.value = 1
+            answer.answer = SurveyQuestionAnswer.objects.filter(answer=i)[0]
+            
+            answer.value = 0
+            if int(a) == i.id:
+                answer.value += 1
+            
             answer.save()
