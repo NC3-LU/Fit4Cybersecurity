@@ -23,13 +23,17 @@ def saveAndGetQuestion(request,id):
 
             initialQuestion = InitialStartForm(form)
             
-            form = AnswerMChoice(tupelanswers)
-            form.setUID(user.user_id)
+            user.sector = form.cleaned_data['sector']
+            user.e_count = form.cleaned_data['compSize']
+            user.save()
+
+            qform = AnswerMChoice(tupelanswers)
+            qform.setUID(user.user_id)
 
             question = {
                 'title': "Question "+str(id+1),
                 'question': firstQuestion.title,
-                'form': form,
+                'form': qform,
                 'next': id+1,
                 'user': user.user_id,
             }
