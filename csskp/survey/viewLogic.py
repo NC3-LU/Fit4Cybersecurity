@@ -25,6 +25,7 @@ def saveAndGetQuestion(request,id):
             
             user.sector = form.cleaned_data['sector']
             user.e_count = form.cleaned_data['compSize']
+            user.current_question = id
             user.save()
 
             qform = AnswerMChoice(tupelanswers)
@@ -67,6 +68,9 @@ def saveAndGetQuestion(request,id):
 
             
             if id < len(SurveyQuestion.objects.order_by('qindex')):
+                user.current_question = id
+                user.save()
+
                 nextQuestion = SurveyQuestion.objects.order_by('qindex')[id]
                 answerChoices = SurveyQuestionAnswer.objects.order_by('aindex').filter(question=nextQuestion).order_by('aindex')
                 
@@ -83,6 +87,9 @@ def saveAndGetQuestion(request,id):
                 newform.setUID(user.user_id)
             else:
                 #FINAL QUESTION return the new interface
+                user.current_question = id
+                user.survey_done = True
+                user.save()
                 return -1
 
             # GET THE QUESTIONS FROM DB
