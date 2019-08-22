@@ -73,8 +73,6 @@ def saveAndGetQuestion(request,id):
 
                 nextQuestion = SurveyQuestion.objects.order_by('qindex')[id]
                 answerChoices = SurveyQuestionAnswer.objects.order_by('aindex').filter(question=nextQuestion).order_by('aindex')
-                
-                
 
                 questionTitle = nextQuestion.title
 
