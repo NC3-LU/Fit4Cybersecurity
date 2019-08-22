@@ -89,7 +89,7 @@ def saveAndGetQuestion(request,id):
                 'next': id+1,
                 'user': user.user_id,
             }
-
+ 
             return question
         
         return {'question':form.errors}
