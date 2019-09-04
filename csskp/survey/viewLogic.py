@@ -108,14 +108,15 @@ def saveAndGetQuestion(request,id):
 
 
 def saveAnswers (answer_choices,answers,user):
-    for i in answer_choices:
-        for a in answers:
-            answer = SurveyUserAnswer()
-            answer.user = user
-            answer.answer = SurveyQuestionAnswer.objects.filter(answer=i)[0]
-            
-            answer.value = 0
-            if int(a) == i.id:
-                answer.value += 1
-            
-            answer.save()
+    existinganswerids = [ i.id for i in answer_choices]
+    for a in answers:
+        answer = SurveyUserAnswer()
+        answer.user = user
+        qanswer = SurveyQuestionAnswer.objects.filter(id=int(a))[0]
+        answer.answer = SurveyQuestionAnswer.objects.filter(answer=qanswer)[0]
+        
+        answer.value = 0
+        if int(a) in existinganswerids:
+            answer.value += 1
+        
+        answer.save()
