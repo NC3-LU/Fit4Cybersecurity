@@ -39,3 +39,9 @@ QUESTION_TYPES = [
     ("S", "Single Choice"),
     ("I", "Integer Slider"),
 ]
+
+LANG_SELECT = [
+    ("EN", "English"),
+    ("FR", "Français"),
+    ("DE", "Deutsch"),
+]

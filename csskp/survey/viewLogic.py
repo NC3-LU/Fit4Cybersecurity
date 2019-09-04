@@ -1,4 +1,4 @@
-from survey.models import SurveyUser, SurveyQuestion, SurveyQuestionAnswer, SurveyUserAnswers, SurveyUserAnswer
+from survey.models import SurveyUser, SurveyQuestion, SurveyQuestionAnswer, SurveyUserAnswers, SurveyUserAnswer, TranslationKey
 from survey.forms import InitialStartForm, AnswerMChoice
 
 
@@ -11,7 +11,7 @@ def saveAndGetQuestion(request,id):
         answerChoices = SurveyQuestionAnswer.objects.order_by('aindex').filter(question=firstQuestion)
 
         for answer in answerChoices:
-            tupelanswers.append( (answer.id,answer.answer) )
+            tupelanswers.append( (answer.id,TranslationKey.objects.filter(key=answer.answerKey)[0].text) )
 
     # save what the answers were
     if request.method == 'POST':
@@ -33,7 +33,7 @@ def saveAndGetQuestion(request,id):
 
             question = {
                 'title': "Question "+str(id+1),
-                'question': firstQuestion.title,
+                'question': TranslationKey.objects.filter(lang=user.chosenLang).filter(key=firstQuestion.titleKey)[0].text,
                 'form': qform,
                 'next': id+1,
                 'user': user.user_id,
@@ -51,7 +51,7 @@ def saveAndGetQuestion(request,id):
             tupelanswers.clear()
 
             for answer in lastAnswerChoices:
-                tupelanswers.append( (answer.id,answer.answer) )
+                tupelanswers.append( (answer.id,TranslationKey.objects.filter(lang=user.chosenLang).filter(key=answer.answerKey)[0].text) )
 
         form = AnswerMChoice(tupelanswers,request.POST) 
 
@@ -74,12 +74,12 @@ def saveAndGetQuestion(request,id):
                 nextQuestion = SurveyQuestion.objects.order_by('qindex')[id]
                 answerChoices = SurveyQuestionAnswer.objects.order_by('aindex').filter(question=nextQuestion).order_by('aindex')
 
-                questionTitle = nextQuestion.title
+                questionTitle = TranslationKey.objects.filter(lang=user.chosenLang).filter(key=nextQuestion.titleKey)[0].text
 
                 tupelanswers.clear()
 
                 for answer in answerChoices:
-                    tupelanswers.append( (answer.id,answer.answer) )
+                    tupelanswers.append( (answer.id,TranslationKey.objects.filter(lang=user.chosenLang).filter(key=answer.answerKey)[0].text) )
 
                 newform = AnswerMChoice(tupelanswers)
                 newform.setUID(user.user_id)
@@ -108,7 +108,7 @@ def saveAndGetQuestion(request,id):
 
 
 def saveAnswers (answer_choices,answers,user):
-    existinganswerids = [ i.id for i in answer_choices]
+    existinganswerids = [ i.id for i in answer_choices ]
     for a in answers:
         answer = SurveyUserAnswer()
         answer.user = user

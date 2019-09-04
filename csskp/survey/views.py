@@ -4,7 +4,7 @@ from django.http import HttpResponse
 from survey.models import SurveyUser
 from survey.forms import InitialStartForm, AnswerMChoice
 from survey.viewLogic import saveAndGetQuestion
-
+from survey.globals import LANG_SELECT
 
 # Create your views here.
 
@@ -13,7 +13,7 @@ def index(request):
     # show main page
 
     # return HttpResponse("Survey Test")
-    james = {'the_title':"Was geht!"}
+    james = {'the_title':"Was geht! and choose Language"}
 
     return render(request,'survey/index.html',context=james)
 
@@ -29,9 +29,14 @@ def gotoQuestion(request,id=0):
     
 
 
-def startSurvey(request):
-
+def startSurvey(request,lang="EN"):
     user = SurveyUser()
+    
+    langs = [ x[0] for x in LANG_SELECT ]
+    if lang in langs:
+        user.chosenLang = lang
+    else:
+        user.chosenLang = LANG_SELECT[0][0]
     user.save()
     
     form = InitialStartForm()

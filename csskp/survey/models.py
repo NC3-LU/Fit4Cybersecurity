@@ -1,7 +1,7 @@
 from django.db import models
 
 # import global constants
-from survey.globals import SECTOR_CHOICES,QUESTION_TYPES,COMPANY_SIZE
+from survey.globals import SECTOR_CHOICES,QUESTION_TYPES,COMPANY_SIZE, LANG_SELECT
 import uuid
 
 # Create your models here.
@@ -22,14 +22,15 @@ Each question has a type (see above)
 Each question has only a question ID - multilanguage
 '''
 
+LOCAL_DEFAULT_LANG = LANG_SELECT[0][0]
 
 class SurveyQuestionServiceCategory(models.Model):
     # QuestionCatID
 
-    title = models.CharField(max_length=128)
+    titleKey = models.CharField(max_length=32)
 
     def __str__(self):
-        return str(self.title)
+        return str(TranslationKey.objects.filter(lang=LOCAL_DEFAULT_LANG).filter(key=self.titleKey)[0].text)
 
 
 
@@ -37,10 +38,10 @@ class SurveySection(models.Model):
     # Section ID
     # Section title
 
-    sectionTitle = models.CharField(max_length=128)
+    sectionTitleKey = models.CharField(max_length=32)
     
     def __str__(self):
-        return str(self.sectionTitle)
+        return str(TranslationKey.objects.filter(lang=LOCAL_DEFAULT_LANG).filter(key=self.sectionTitleKey)[0].text)
 
 
 
@@ -51,12 +52,12 @@ class SurveyQuestion(models.Model):
 
     service_category = models.ForeignKey(SurveyQuestionServiceCategory, on_delete=models.CASCADE)
     section = models.ForeignKey(SurveySection,on_delete=models.CASCADE)
-    title = models.CharField(max_length=256)
+    titleKey = models.CharField(max_length=32)
     qtype = models.CharField(max_length=1,choices=QUESTION_TYPES,default=QUESTION_TYPES[0][0])
     qindex = models.IntegerField(unique=True)
 
     def __str__(self):
-        return str(self.title)
+        return str(TranslationKey.objects.filter(lang=LOCAL_DEFAULT_LANG).filter(key=self.titleKey)[0].text)
 
 
 
@@ -65,11 +66,11 @@ class SurveyQuestionAnswer(models.Model):
     # Question id --> can be 1-question to multi-answers
 
     question = models.ForeignKey(SurveyQuestion,on_delete=models.CASCADE)
-    answer = models.CharField(max_length=256)
+    answerKey = models.CharField(max_length=32)
     aindex = models.IntegerField()
 
     def __str__(self):
-        return str(self.answer)
+        return str(TranslationKey.objects.filter(lang=LOCAL_DEFAULT_LANG).filter(key=self.answerKey)[0].text)
 
     class Meta:
         unique_together = ('aindex','question')
@@ -85,6 +86,8 @@ class SurveyUser(models.Model):
     user_id = models.UUIDField(default=uuid.uuid4)
     sector = models.CharField(max_length=4, choices=SECTOR_CHOICES, default=SECTOR_CHOICES[0][0])
     e_count = models.CharField(max_length=2, choices=COMPANY_SIZE, default=COMPANY_SIZE[0][0])
+
+    chosenLang = models.CharField(max_length=2, choices=LANG_SELECT, default=LANG_SELECT[0][0])
 
     current_question = models.IntegerField(default=0)
     survey_done = models.BooleanField(default=False)
@@ -118,3 +121,14 @@ class SurveyUserAnswer(models.Model):
     def __str__(self):
         return str(self.answer)
 
+
+class TranslationKey(models.Model):
+    key = models.CharField(max_length=32)
+    text = models.CharField(max_length=256)
+    lang = models.CharField(max_length=2,choices=LANG_SELECT,default=LANG_SELECT[0][0])
+
+    class Meta:
+        unique_together = ('lang','key')
+    
+    def __str__(self):
+        return str(self.text)

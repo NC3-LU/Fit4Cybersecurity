@@ -8,11 +8,14 @@ class InitialStartForm(forms.Form):
     sector = forms.ChoiceField(widget=forms.Select, choices=SECTOR_CHOICES)
     compSize = forms.ChoiceField(widget=forms.Select, choices=COMPANY_SIZE)
 
-    def __init__(self, *args, **kwargs):
+    def __init__(self, translations=None, *args, **kwargs):
         super().__init__(*args, **kwargs)
-    
-        self.fields['sector'].label = "What is your sector?"
-        self.fields['compSize'].label = "How many employees?"
+        if translations != None:
+            self.fields['sector'].label = translations['sector']
+            self.fields['compSize'].label = translations['compSize']
+        else:
+            self.fields['sector'].label = "What is your sector?"
+            self.fields['compSize'].label = "How many employees?"
 
     def setUID(self,uid):
         self.fields['userid'].initial = uid
@@ -22,10 +25,10 @@ class AnswerMChoice(forms.Form):
     userid = forms.CharField(widget=forms.HiddenInput())
     answers = forms.MultipleChoiceField(choices=[], widget=forms.CheckboxSelectMultiple(), label='')
     
-    def __init__(self, answers=None, *args, **kwargs):
+    def __init__(self, tanswers=None, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        if answers != None:
-            self.fields['answers'].choices = answers
+        if tanswers != None:
+            self.fields['answers'].choices = tanswers
 
     def setUID(self,uid):
         self.fields['userid'].initial = uid
