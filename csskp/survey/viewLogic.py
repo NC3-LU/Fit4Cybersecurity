@@ -1,4 +1,4 @@
-from survey.models import SurveyUser, SurveyQuestion, SurveyQuestionAnswer, SurveyUserAnswers, SurveyUserAnswer, TranslationKey
+from survey.models import SurveyUser, SurveyQuestion, SurveyQuestionAnswer, SurveyUserAnswer, TranslationKey
 from survey.forms import InitialStartForm, AnswerMChoice
 
 

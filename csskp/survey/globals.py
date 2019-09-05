@@ -30,8 +30,8 @@ COMPANY_SIZE = [
     (5,"100-200"),
     (6,"200-500"),
     (7,"500-1000"),
-    (7,"1000-5000"),
-    (7,"5000+"),
+    (8,"1000-5000"),
+    (9,"5000+"),
 ]
 
 QUESTION_TYPES = [
@@ -44,4 +44,10 @@ LANG_SELECT = [
     ("EN", "English"),
     ("FR", "Français"),
     ("DE", "Deutsch"),
+]
+
+TRANSLATION_TYPES = [
+    ("Q"," Question"),
+    ("A", "Answer"),
+    ("R", "Recommendation")
 ]
