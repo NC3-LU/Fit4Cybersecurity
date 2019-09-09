@@ -32,6 +32,7 @@ def gotoQuestion(request,id=0):
 def startSurvey(request,lang="EN"):
     user = SurveyUser()
     
+    # prevent the use of custom languages
     langs = [ x[0] for x in LANG_SELECT ]
     if lang in langs:
         user.chosenLang = lang
@@ -39,6 +40,9 @@ def startSurvey(request,lang="EN"):
         user.chosenLang = LANG_SELECT[0][0]
     user.save()
     
+    request.session['lang'] = user.chosenLang
+    request.session['user_id'] = str(user.user_id)
+
     form = InitialStartForm()
     form.setUID(user.user_id)
 

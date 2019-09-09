@@ -22,11 +22,11 @@ Each question has a type (see above)
 Each question has only a question ID - multilanguage
 '''
 
-LOCAL_DEFAULT_LANG = LANG_SELECT[0][0]
-
+LOCAL_DEFAULT_LANG = LANG_SELECT[1][0]
 
 
 class TranslationKey(models.Model):
+    key = models.CharField(max_length=32)
     text = models.TextField()
     lang = models.CharField(max_length=2,choices=LANG_SELECT,default=LANG_SELECT[0][0])
     ttype = models.CharField(max_length=1,choices=TRANSLATION_TYPES,default=TRANSLATION_TYPES[0][0])
@@ -42,10 +42,10 @@ class TranslationKey(models.Model):
 class SurveyQuestionServiceCategory(models.Model):
     # QuestionCatID
 
-    titleKey = models.ForeignKey(TranslationKey, on_delete=models.CASCADE)
+    titleKey = models.CharField(max_length=32)
 
     def __str__(self):
-        return str(TranslationKey.objects.filter(lang=LOCAL_DEFAULT_LANG).filter(key=self.titleKey)[0].text)
+        return str(TranslationKey.objects.filter(lang=LOCAL_DEFAULT_LANG).filter(key=self.titleKey)[0])
 
 
 
@@ -53,10 +53,10 @@ class SurveySection(models.Model):
     # Section ID
     # Section title
 
-    sectionTitleKey = models.ForeignKey(TranslationKey, on_delete=models.CASCADE)
+    sectionTitleKey = models.CharField(max_length=32)
     
     def __str__(self):
-        return str(TranslationKey.objects.filter(lang=LOCAL_DEFAULT_LANG).filter(key=self.sectionTitleKey)[0].text)
+        return str(TranslationKey.objects.filter(lang=LOCAL_DEFAULT_LANG).filter(key=self.sectionTitleKey)[0])
 
 
 
@@ -67,12 +67,12 @@ class SurveyQuestion(models.Model):
 
     service_category = models.ForeignKey(SurveyQuestionServiceCategory, on_delete=models.CASCADE)
     section = models.ForeignKey(SurveySection,on_delete=models.CASCADE)
-    titleKey = models.ForeignKey(TranslationKey, on_delete=models.CASCADE)
+    titleKey = models.CharField(max_length=32)
     qtype = models.CharField(max_length=1,choices=QUESTION_TYPES,default=QUESTION_TYPES[0][0])
     qindex = models.IntegerField(unique=True)
 
     def __str__(self):
-        return str(TranslationKey.objects.filter(lang=LOCAL_DEFAULT_LANG).filter(key=self.titleKey)[0].text)
+        return str(TranslationKey.objects.filter(lang=LOCAL_DEFAULT_LANG).filter(key=self.titleKey)[0])
 
 
 
@@ -81,11 +81,11 @@ class SurveyQuestionAnswer(models.Model):
     # Question id --> can be 1-question to multi-answers
 
     question = models.ForeignKey(SurveyQuestion,on_delete=models.CASCADE)
-    answerKey = models.ForeignKey(TranslationKey, on_delete=models.CASCADE)
+    answerKey = models.CharField(max_length=32)
     aindex = models.IntegerField()
 
     def __str__(self):
-        return str(TranslationKey.objects.filter(lang=LOCAL_DEFAULT_LANG).filter(key=self.answerKey)[0].text)
+        return str(TranslationKey.objects.filter(lang=LOCAL_DEFAULT_LANG).filter(key=self.answerKey)[0])
 
     class Meta:
         unique_together = ('aindex','question')
@@ -139,7 +139,7 @@ class SurveyUserAnswer(models.Model):
 
 
 class Recommendations(models.Model):
-    textKey = models.ForeignKey(TranslationKey, on_delete=models.CASCADE)
+    textKey = models.CharField(max_length=32)
     min_e_count = models.CharField(max_length=2, choices=COMPANY_SIZE, default=COMPANY_SIZE[0][0])
     max_e_count = models.CharField(max_length=2, choices=COMPANY_SIZE, default=COMPANY_SIZE[-1][0])
     sector = models.CharField(max_length=4, choices=SECTOR_CHOICES, null=True, blank=True, default=None)
@@ -147,4 +147,4 @@ class Recommendations(models.Model):
     answerChosen = models.BooleanField(default=False)
 
     def __str__(self):
-        return str(TranslationKey.objects.filter(lang=LOCAL_DEFAULT_LANG).filter(key=self.textKey)[0].text)
+        return str(TranslationKey.objects.filter(lang=LOCAL_DEFAULT_LANG).filter(key=self.textKey)[0])

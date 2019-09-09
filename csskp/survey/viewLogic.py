@@ -1,23 +1,37 @@
 from survey.models import SurveyUser, SurveyQuestion, SurveyQuestionAnswer, SurveyUserAnswer, TranslationKey
 from survey.forms import InitialStartForm, AnswerMChoice
+from survey.globals import LANG_SELECT
 
 
 def saveAndGetQuestion(request,id):
+    try:
+        userLang=request.session['lang']
+        if userLang not in [x[0] for x in LANG_SELECT]:
+            return None
+    except:
+        return None
 
     tupelanswers = []
 
+    user=SurveyUser.objects.filter(user_id=request.session['user_id'])[0]
+    if user.chosenlang != userLang:
+        user.chosenlang = userLang
+        user.save()
+
     if id <= 0:
+        id = 0
         firstQuestion = SurveyQuestion.objects.order_by('qindex')[0]
         answerChoices = SurveyQuestionAnswer.objects.order_by('aindex').filter(question=firstQuestion)
 
         for answer in answerChoices:
-            tupelanswers.append( (answer.id,TranslationKey.objects.filter(key=answer.answerKey)[0].text) )
+            tupelanswers.append( (answer.id,TranslationKey.objects.filter(lang=userLang).filter(key=answer.answerKey)[0].text) )
+
+    
 
     # save what the answers were
     if request.method == 'POST':
         form = InitialStartForm(request.POST) # A form bound to the POST data
         if form.is_valid():
-            user=SurveyUser.objects.filter(user_id=form.cleaned_data['userid'])[0]
 
             # remember to save the data to the DB
 
@@ -40,9 +54,11 @@ def saveAndGetQuestion(request,id):
             }
 
             return question
-        
+
         lastQuestion = ""
         lastAnswerChoices = ""
+
+        
 
         if id > 0:
             lastQuestion = SurveyQuestion.objects.order_by('qindex')[id-1]
@@ -59,7 +75,6 @@ def saveAndGetQuestion(request,id):
          #   print (answer + "\n")
 
         if form.is_valid():
-            user=SurveyUser.objects.filter(user_id=form.cleaned_data['userid'])[0]
 
             answers = form.cleaned_data['answers']
             questionTitle = "You are done!"
