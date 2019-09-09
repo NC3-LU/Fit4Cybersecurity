@@ -5,8 +5,10 @@ from survey.globals import SECTOR_CHOICES, COMPANY_SIZE
 
 class InitialStartForm(forms.Form):
     userid = forms.CharField(widget=forms.HiddenInput())
-    sector = forms.ChoiceField(widget=forms.Select, choices=SECTOR_CHOICES)
-    compSize = forms.ChoiceField(widget=forms.Select, choices=COMPANY_SIZE)
+    sector = forms.ChoiceField(required=True, widget=forms.Select, choices=SECTOR_CHOICES)
+    compSize = forms.ChoiceField(required=True, widget=forms.Select, choices=COMPANY_SIZE)
+
+    required_css_class = "bootstrap4-req"
 
     def __init__(self, translations=None, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -23,8 +25,10 @@ class InitialStartForm(forms.Form):
         
 class AnswerMChoice(forms.Form):
     userid = forms.CharField(widget=forms.HiddenInput())
-    answers = forms.MultipleChoiceField(choices=[], widget=forms.CheckboxSelectMultiple(), label='')
-    
+    answers = forms.MultipleChoiceField(required=True, choices=[], widget=forms.CheckboxSelectMultiple(), label='')
+
+    required_css_class = "bootstrap4-req"
+
     def __init__(self, tanswers=None, *args, **kwargs):
         super().__init__(*args, **kwargs)
         if tanswers != None:

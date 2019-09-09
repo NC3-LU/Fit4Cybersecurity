@@ -1,24 +1,21 @@
-<!DOCTYPE html>
-{% load staticfiles %}
-<html>
-    <head>
-        <meta charset="utf-8">
-        <title>
-            Welcome to the Fit4Cybersecurity self-assessment tool!
-        </title>
-    </head>
-    <body>
-        <div><div style="float:right;">DE | FR | <span style="text-decoration: underline;">EN</span></div><h1>Welcome</h1></div>
-        <div>
-            This is how it works, and you know it will be great! Have fun!
-        </div>
-        <div>
-            <a href="/survey/startsurvey/EN" style="float:right;">GO!</a>
-            <a href="/survey/startsurvey/FR" style="float:right;">GO!(FR)</a>
-            <a href="/survey/startsurvey/DE" style="float:right;">GO!(DE)</a>
-            <a href="/survey/continueselfeval">Resume</a>
-        </div>
-        
+{% extends 'survey/base.html' %}
 
-    </body>
-</html>
+{% load bootstrap4 %}
+
+{% load staticfiles %}
+
+{% block content %}
+    <div>
+        <div style="float:right;">DE | FR | <span style="text-decoration: underline;">EN</span></div>
+        <h1>Welcome</h1>
+    </div>
+    <div>
+        This is how it works, and you know it will be great! Have fun!
+    </div>
+    <div>
+        <a href="/survey/startsurvey/EN" style="float:right;">GO!</a>
+        <a href="/survey/startsurvey/FR" style="float:right;">GO!(FR)</a>
+        <a href="/survey/startsurvey/DE" style="float:right;">GO!(DE)</a>
+        <a href="/survey/continueselfeval">Resume</a>
+    </div>
+{% endblock %}

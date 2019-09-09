@@ -1,21 +1,23 @@
-<!DOCTYPE html>
-<html>
-<head></head>
+{% extends 'survey/base.html' %}
 
-</body>
+{% load bootstrap4 %}
 
-<h1>{{ title }}</h1>
+{% load staticfiles %}
 
-<div>{{ description }}</div>
+{% block title %}{{ title }}{% endblock %}
 
-<div>
-<form action="/survey/gotoquestion/0" method="post">
-    {% csrf_token %}
-    <table>
-    {{ form.as_table }}
-    </table>
-    <input type="submit" value="Next" style="float:right;">
-<form>
-</div>
-</body>
-</html>
+{% block content %}
+    <div>{{ description }}</div>
+    <div>
+        <form action="/survey/gotoquestion/0" method="post" class="form">
+
+            {% csrf_token %}
+
+            {% bootstrap_form form %}
+
+            {% buttons %}
+                <input type="submit" value="Next" class="btn btn-primary">
+            {% endbuttons %}
+        </form>
+    </div>
+{% endblock %}
