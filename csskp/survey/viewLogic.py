@@ -14,8 +14,8 @@ def saveAndGetQuestion(request,id):
     tupelanswers = []
 
     user=SurveyUser.objects.filter(user_id=request.session['user_id'])[0]
-    if user.chosenlang != userLang:
-        user.chosenlang = userLang
+    if user.chosenLang != userLang:
+        user.chosenLang = userLang
         user.save()
 
     if id <= 0:
@@ -25,12 +25,12 @@ def saveAndGetQuestion(request,id):
 
         for answer in answerChoices:
             tupelanswers.append( (answer.id,TranslationKey.objects.filter(lang=userLang).filter(key=answer.answerKey)[0].text) )
-
     
 
     # save what the answers were
     if request.method == 'POST':
         form = InitialStartForm(request.POST) # A form bound to the POST data
+        print (form.errors)
         if form.is_valid():
 
             # remember to save the data to the DB
@@ -54,7 +54,8 @@ def saveAndGetQuestion(request,id):
             }
 
             return question
-
+        else: 
+            print (form)
         lastQuestion = ""
         lastAnswerChoices = ""
 
