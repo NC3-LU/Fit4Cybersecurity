@@ -1,0 +1,18 @@
+{% extends 'survey/bootstrap.html' %}
+
+{% load bootstrap4 %}
+
+{% load staticfiles %}
+
+{% block title %}
+    Welcome to the Fit4Cybersecurity self-assessment tool!
+{% endblock %}
+
+{% block bootstrap4_content %}
+    <div class="container">
+
+        {% autoescape off %}{% bootstrap_messages %}{% endautoescape %}
+
+        {% block content %}{% endblock %}
+    </div>
+{% endblock %}
