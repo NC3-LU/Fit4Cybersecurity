@@ -4,6 +4,11 @@
 
 {% load staticfiles %}
 
+{% block bootstrap4_extra_head %}
+    <link rel="stylesheet" type="text/css" href="{% static "survey/css/survey.css" %}" />
+    <script type="text/javascript" src="{% static "survey/js/survey.js" %}"></script>
+{% endblock %}
+
 {% block title %}{{ title }}{% endblock %}
 
 {% block content %}
@@ -21,11 +26,12 @@
                         <input class="btn btn-primary" type="submit" value="Next">
                     </div>
                     <div class="col text-left">
-                        <button class="btn btn-link">Continue later</button>
+                        <button class="btn btn-link" type="button" name="continue-later" data-toggle="modal" data-target="#modal" data-tooltip>Continue later</button>
                     </div>
                 {% endbuttons %}
             {% endif %}
         </div>
-        
     </form>
+
+    {% include 'survey/continueSelfEval.html' %}
 {% endblock %}

@@ -50,12 +50,11 @@ def saveAndGetQuestion(request,id):
                 'question': TranslationKey.objects.filter(lang=user.chosenLang).filter(key=firstQuestion.titleKey)[0].text,
                 'form': qform,
                 'next': id+1,
-                'user': user.user_id,
+                'userId': user.user_id,
             }
 
             return question
-        
-        lastQuestion = ""
+
         lastAnswerChoices = ""
 
         
@@ -111,12 +110,12 @@ def saveAndGetQuestion(request,id):
                 'question': questionTitle,
                 'form': newform,
                 'next': id+1,
-                'user': user.user_id,
+                'userId': user.user_id,
             }
  
             return question
         
-        return {'question':form.errors}
+        return {'question': form.errors}
 
     return None
 
@@ -139,4 +138,5 @@ def saveAnswers (answer_choices,answers,user):
 
 
 def findUserById( userId ):
-    return SurveyUser.object.filter(user_id=userId)[0]
+    user = SurveyUser.objects.filter(user_id=userId)[0]
+    return user

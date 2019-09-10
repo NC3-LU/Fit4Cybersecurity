@@ -82,11 +82,11 @@ def getCompanies(request):
 
 def loadSelfEval(request, userId):
     try:
-        user = findUserById(userId)
+        user = findUserById(str(userId))
     except:
         return HttpResponseNotFound('User not found')
 
     request.session['lang'] = user.chosenLang
     request.session['user_id'] = str(userId)
 
-    return HttpResponseRedirect('survey/gotoquestion/' + user.current_question)
+    return HttpResponseRedirect('/survey/gotoquestion/' + str(user.current_question))
