@@ -11,6 +11,7 @@
 
     <form action="/survey/gotoquestion/{{ next }}" method="post" class="form">
         {% csrf_token %}
+
         {% bootstrap_form form %}
 
         <div>
@@ -21,5 +22,6 @@
             {% endif %}
             <a href="/survey/resumelater/{{ user }}">RESUME LATER</a>
         </div>
+        
     </form>
 {% endblock %}

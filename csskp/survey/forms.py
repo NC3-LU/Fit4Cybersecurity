@@ -8,7 +8,7 @@ class InitialStartForm(forms.Form):
     sector = forms.ChoiceField(required=True, widget=forms.Select, choices=SECTOR_CHOICES)
     compSize = forms.ChoiceField(required=True, widget=forms.Select, choices=COMPANY_SIZE)
 
-    required_css_class = "bootstrap4-req"
+    #required_css_class = "bootstrap4-req"
 
     def __init__(self, translations=None, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -27,7 +27,7 @@ class AnswerMChoice(forms.Form):
     userid = forms.CharField(widget=forms.HiddenInput())
     answers = forms.MultipleChoiceField(required=True, choices=[], widget=forms.CheckboxSelectMultiple(), label='')
 
-    required_css_class = "bootstrap4-req"
+    #required_css_class = "bootstrap4-req"
 
     def __init__(self, tanswers=None, *args, **kwargs):
         super().__init__(*args, **kwargs)

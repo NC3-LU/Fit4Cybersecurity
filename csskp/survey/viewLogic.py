@@ -17,26 +17,26 @@ def saveAndGetQuestion(request,id):
     if user.chosenLang != userLang:
         user.chosenLang = userLang
         user.save()
+        
+    firstQuestion = SurveyQuestion.objects.order_by('qindex')[0]
+    answerChoices = SurveyQuestionAnswer.objects.order_by('aindex').filter(question=firstQuestion)
 
-    if id <= 0:
-        id = 0
-        firstQuestion = SurveyQuestion.objects.order_by('qindex')[0]
-        answerChoices = SurveyQuestionAnswer.objects.order_by('aindex').filter(question=firstQuestion)
-
-        for answer in answerChoices:
-            tupelanswers.append( (answer.id,TranslationKey.objects.filter(lang=userLang).filter(key=answer.answerKey)[0].text) )
+    for answer in answerChoices:
+        tupelanswers.append( (answer.id,TranslationKey.objects.filter(lang=userLang).filter(key=answer.answerKey)[0].text) )
     
 
     # save what the answers were
     if request.method == 'POST':
-        form = InitialStartForm(request.POST) # A form bound to the POST data
-        print (form.errors)
+        form = InitialStartForm(data=request.POST) # A form bound to the POST data
         if form.is_valid():
 
             # remember to save the data to the DB
 
             initialQuestion = InitialStartForm(form)
             
+            if id <= 0:
+                id = 0
+
             user.sector = form.cleaned_data['sector']
             user.e_count = form.cleaned_data['compSize']
             user.current_question = id
@@ -54,8 +54,7 @@ def saveAndGetQuestion(request,id):
             }
 
             return question
-        else: 
-            print (form)
+        
         lastQuestion = ""
         lastAnswerChoices = ""
 
@@ -70,7 +69,7 @@ def saveAndGetQuestion(request,id):
             for answer in lastAnswerChoices:
                 tupelanswers.append( (answer.id,TranslationKey.objects.filter(lang=user.chosenLang).filter(key=answer.answerKey)[0].text) )
 
-        form = AnswerMChoice(tupelanswers,request.POST) 
+        form = AnswerMChoice(tupelanswers,data=request.POST) 
 
         #for answer in form.fields['answers']:
          #   print (answer + "\n")
@@ -124,15 +123,16 @@ def saveAndGetQuestion(request,id):
 
 
 def saveAnswers (answer_choices,answers,user):
-    existinganswerids = [ i.id for i in answer_choices ]
-    for a in answers:
+    existinganswerids = [ int(i.id) for i in answer_choices ]
+    useranswers = [int(i) for i in answers]
+    for a in existinganswerids:
         answer = SurveyUserAnswer()
         answer.user = user
-        qanswer = SurveyQuestionAnswer.objects.filter(id=int(a))[0]
-        answer.answer = SurveyQuestionAnswer.objects.filter(answer=qanswer)[0]
+        qanswer = SurveyQuestionAnswer.objects.filter(id=a)[0]
+        answer.answer = qanswer
         
         answer.value = 0
-        if int(a) in existinganswerids:
+        if a in useranswers:
             answer.value += 1
         
         answer.save()
