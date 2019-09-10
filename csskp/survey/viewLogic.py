@@ -136,3 +136,7 @@ def saveAnswers (answer_choices,answers,user):
             answer.value += 1
         
         answer.save()
+
+
+def findUserById( userId ):
+    return SurveyUser.object.filter(user_id=userId)[0]

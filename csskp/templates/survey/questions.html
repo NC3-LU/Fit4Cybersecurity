@@ -17,10 +17,14 @@
         <div>
             {% if next > -1 %}
                 {% buttons %}
-                    <input class="btn btn-primary" type="submit" value="Next">
+                    <div class="col text-right">
+                        <input class="btn btn-primary" type="submit" value="Next">
+                    </div>
+                    <div class="col text-left">
+                        <button class="btn btn-link">Continue later</button>
+                    </div>
                 {% endbuttons %}
             {% endif %}
-            <a href="/survey/resumelater/{{ user }}">RESUME LATER</a>
         </div>
         
     </form>
