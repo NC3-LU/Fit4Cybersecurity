@@ -4,6 +4,11 @@
 
 {% load staticfiles %}
 
+{% block bootstrap4_extra_head %}
+    <link rel="stylesheet" type="text/css" href="{% static "survey/css/survey-index.css" %}" />
+    <script type="text/javascript" src="{% static "survey/js/survey-index.js" %}"></script>
+{% endblock %}
+
 {% block content %}
     <div>
         <div style="float:right;">DE | FR | <span style="text-decoration: underline;">EN</span></div>
@@ -16,6 +21,8 @@
         <a href="/survey/startsurvey/EN" style="float:right;">GO!</a>
         <a href="/survey/startsurvey/FR" style="float:right;">GO!(FR)</a>
         <a href="/survey/startsurvey/DE" style="float:right;">GO!(DE)</a>
-        <a href="/survey/continueselfeval">Resume</a>
+        <button class="btn btn-link" type="button" name="resume-show-popup" data-toggle="modal" data-target="#modal" data-tooltip>Resume</button>
     </div>
+
+    {% include 'survey/resume.html' %}
 {% endblock %}

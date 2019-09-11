@@ -1,0 +1,11 @@
+<div class="modal fade" tabindex="-1" role="dialog" id="modal" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-header">
+            <h4>Please insert your code to continue the survey</h4>
+        </div>
+        <div class="modal-content">
+            <input type="text" id="resume-code-input" name="resume-code" value="" data-link="https://{{ request.get_host }}/survey/continueselfeval/" />
+            <button disabled id="resume-code-submit" class="btn btn-link" type="button">Confirm</button>
+        </div>
+    </div>
+</div>

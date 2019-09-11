@@ -4,7 +4,11 @@
             <h4>Continue the evaluation later</h4>
         </div>
         <div class="modal-content">
-            <p>To continue the evaluation process later you can copy the provided link or create a bookmark.</p>
+            <p class="text-info">
+                <span>To continue the evaluation process later you can copy the provided link, create a bookmark</span>
+                <span>or use the code to resume later on the main page: <input type="text" class="input-no-border" id="resume-later-code" value="{{ userId }}" readonly="readonly" />
+                </span>
+            </p>
             <div class="col text-left">
                 <textarea
                         class="text-primary disabled"
