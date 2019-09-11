@@ -29,10 +29,6 @@ def saveAndGetQuestion(request,id):
     if request.method == 'POST':
         form = InitialStartForm(data=request.POST) # A form bound to the POST data
         if form.is_valid():
-
-            # remember to save the data to the DB
-
-            initialQuestion = InitialStartForm(form)
             
             if id <= 0:
                 id = 0
