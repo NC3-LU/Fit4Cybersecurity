@@ -1,9 +1,9 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from django.http import HttpResponse, HttpResponseNotFound, HttpResponseRedirect
 
 from survey.models import SurveyUser
 from survey.forms import InitialStartForm, AnswerMChoice
-from survey.viewLogic import saveAndGetQuestion
+from survey.viewLogic import saveAndGetQuestion, findUserById
 from survey.globals import LANG_SELECT
 
 # Create your views here.
@@ -50,6 +50,7 @@ def startSurvey(request,lang="EN"):
         'title':"Welcome and let's go!",
         'description':"We will start by knowing your sector and your number of employees to be able to give you a relevant recommendation in the report",
         'form':form,
+        'userId': user.user_id,
     }
 
     return render(request, 'survey/startSurvey.html',context=allText)
@@ -79,13 +80,13 @@ def getCompanies(request):
     return HttpResponse("Here is the JSON list of companies that are related to that category")
 
 
-def continueSelfEval(request):
+def loadSelfEval(request, userId):
+    try:
+        user = findUserById(str(userId))
+    except:
+        return HttpResponseNotFound('User not found')
 
-    # show page to enter secret key - uuid from user
-    return HttpResponse("If you were here, enter the code")
+    request.session['lang'] = user.chosenLang
+    request.session['user_id'] = str(userId)
 
-
-def loadSelfEval(request,key):
-
-    # you have uuid, so get the user current question and load the next question after that.
-    return HttpResponse("Thank you for the key! Loading the survey and its template again")
+    return HttpResponseRedirect('/survey/gotoquestion/' + str(user.current_question))

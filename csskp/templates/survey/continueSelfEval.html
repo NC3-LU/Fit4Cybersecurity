@@ -1,0 +1,23 @@
+<div class="modal fade" tabindex="-1" role="dialog" id="modal" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-header">
+            <h4>Continue the evaluation later</h4>
+        </div>
+        <div class="modal-content">
+            <p>To continue the evaluation process later you can copy the provided link or create a bookmark.</p>
+            <div class="col text-left">
+                <textarea
+                        class="text-primary disabled"
+                        id="direct-link"
+                        data-link="https://{{ request.get_host }}/survey/continueselfeval/{{ userId }}"
+                >https://{{ request.get_host }}/survey/continueselfeval/{{ userId }}</textarea>
+            </div>
+            <div class="col text-left">
+                <button class="btn btn-primary" id="download-direct-link">Download direct link</button>
+            </div>
+            <div class="col text-right">
+                <button class="close-popup btn btn-link" type="button" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
