@@ -3,7 +3,7 @@ from django.http import HttpResponse, HttpResponseNotFound, HttpResponseRedirect
 
 from survey.models import SurveyUser
 from survey.forms import InitialStartForm, AnswerMChoice
-from survey.viewLogic import saveAndGetQuestion, findUserById
+from survey.viewLogic import saveAndGetQuestion, findUserById, showCompleteReport
 from survey.globals import LANG_SELECT
 
 # Create your views here.
@@ -27,7 +27,6 @@ def gotoQuestion(request,id=0):
         return startSurvey(request)
     return render(request, 'survey/questions.html',context=question)
     
-
 
 def startSurvey(request,lang="EN"):
     user = SurveyUser()
@@ -58,18 +57,23 @@ def startSurvey(request,lang="EN"):
 
 def finishSurvey(request):
 
+    userid = request.session['user_id']
+
     # make survey readonly and show results.
     # also needs saving here!
     # show a "Thank you" and a "get your report" button
 
-    return HttpResponse("Closing stuff and give template to see report")
+    return HttpResponse(showCompleteReport(request,userid))
 
 
 def showReport(request):
+    userid = request.session['user_id']
 
+    
     # make survey readonly and show results.
     # make checkboxes to recommendation and a single button of get companies
     # then call getcompanies when button is hit
+
     return HttpResponse("Here the report mate! in JSON of course")
 
 

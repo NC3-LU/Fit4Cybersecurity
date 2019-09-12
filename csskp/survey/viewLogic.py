@@ -1,4 +1,4 @@
-from survey.models import SurveyUser, SurveyQuestion, SurveyQuestionAnswer, SurveyUserAnswer, TranslationKey
+from survey.models import SurveyUser, SurveyQuestion, SurveyQuestionAnswer, SurveyUserAnswer, TranslationKey, Recommendations
 from survey.forms import InitialStartForm, AnswerMChoice
 from survey.globals import LANG_SELECT
 
@@ -136,3 +136,44 @@ def saveAnswers (answer_choices,answers,user):
 def findUserById( userId ):
     user = SurveyUser.objects.filter(user_id=userId)[0]
     return user
+
+
+def showCompleteReport(request,userID):
+    cuser = SurveyUser.objects.filter(user_id=userID)[0]
+
+    #allQuestions = SurveyQuestion.objects.all().order_by('qindex')
+    allAnswers = SurveyQuestionAnswer.objects.all().order_by('question__qindex','aindex')
+
+    #userAnswers = SurveyUserAnswer.objects.all().filter(user=cuser)
+
+    #recommendations = Recommendations
+
+    finalReportRecs = []
+
+    for a in allAnswers:
+        userAnswer = SurveyUserAnswer.objects.all().filter(user=cuser).filter(answer=a)[0]
+        recommendation = Recommendations.objects.all().filter(forAnswer=a)
+
+        if not recommendation.exists():
+            continue
+
+        for rec in recommendation:
+            if rec.min_e_count.lower() > cuser.e_count.lower() or rec.max_e_count.lower() < cuser.e_count.lower():
+                print("oh no!")
+                continue
+            if userAnswer.value > 0 and rec.answerChosen:
+                finalReportRecs.append(rec)
+            elif userAnswer.value <= 0 and not rec.answerChosen:
+                finalReportRecs.append(rec)
+
+    allText = []
+    
+    for x in finalReportRecs:
+
+        txt = TranslationKey.objects.filter(lang=cuser.chosenLang).filter(key=x.textKey)[0]
+        txt = txt.text.replace("\n","<br>")
+        allText.append(txt)
+    
+    return ("<br><br>".join(allText))
+    
+    # get all answers
