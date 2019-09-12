@@ -24,4 +24,8 @@ $(document).ready(function() {
     $('#direct-link').on('mouseup', function() {
         $(this).select();
     });
+
+    $('#resume-later-code').on('mouseup', function() {
+        $(this).select();
+    });
 });
