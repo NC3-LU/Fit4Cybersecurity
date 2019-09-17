@@ -3,9 +3,9 @@ New PHP implementation with many more features and simplified questions compared
 
 ## Python/Django Installation
 
-Just install `Python 3` and `Django 2.2`,
+Just install `Python 3` (incl. `python-lxml`) and `Django 2.2`,
 
-Then clone this repository and that is it for the installation. 
+Then clone this repository and install all the packages in the Pipfile. 
 
 #### Running the test server
 
