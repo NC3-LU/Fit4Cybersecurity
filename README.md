@@ -24,6 +24,13 @@ python3 manage.py migrate
 ```
 
 
+#### Sources
+[1] https://pbpython.com/python-word-template.html
+[2] https://stackoverflow.com/questions/19400089/downloadable-docx-file-in-django
+[3] https://stackoverflow.com/questions/54260657/python-script-insert-image-using-mailmerge-into-docx-file
+
+
+
 ## PHP version install - not maintained at the moment
 
 #### Installing LAMP and Zend 3 from scratch:
