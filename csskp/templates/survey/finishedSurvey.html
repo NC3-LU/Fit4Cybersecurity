@@ -1,0 +1,27 @@
+{% extends 'survey/base.html' %}
+
+{% load bootstrap4 %}
+
+{% load staticfiles %}
+{% block bootstrap4_extra_head %}
+    <link rel="stylesheet" type="text/css" href="{% static "survey/css/survey-questions.css" %}" />
+    <script type="text/javascript" src="{% static "survey/js/survey-questions.js" %}"></script>
+{% endblock %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+    <div styles="float: right, width: 250px">
+    Download:<br>
+    <a href="{{ reportlink }}/EN">FLAG_UK</a>
+    <a href="{{ reportlink }}/FR">FLAG_FR</a>
+    <a href="{{ reportlink }}/DE">FLAG_DE</a>
+    </div>
+    <div>{{ description }}</div>
+    <div>
+        {% for x in recommendations %}
+            <p>{{ x | safe }}</p>
+        {% endfor %}
+    </div>
+
+{% endblock %}

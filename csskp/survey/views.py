@@ -1,12 +1,10 @@
-from __future__ import print_function
-
 from django.shortcuts import render
 from django.http import HttpResponse, HttpResponseNotFound, HttpResponseRedirect
 
 from survey.models import SurveyUser
 from survey.forms import InitialStartForm, AnswerMChoice
-from survey.viewLogic import saveAndGetQuestion, findUserById, showCompleteReport
-from survey.globals import LANG_SELECT, COMPANY_SIZE
+from survey.viewLogic import saveAndGetQuestion, findUserById, showCompleteReport, createAndSendReport
+from survey.globals import LANG_SELECT
 
 
 
@@ -67,40 +65,24 @@ def finishSurvey(request):
     # also needs saving here!
     # show a "Thank you" and a "get your report" button
 
-    #return HttpResponse(showCompleteReport(request,userid))
+    textLayout = {
+        'title': "There is the report",
+        'description': "show what the report is about",
+        'recommendations': showCompleteReport(request,userid),
+        'userId': userid,
+        'reportlink': "/survey/report"
+    }
 
-    return showReport(request)
+    return render(request, 'survey/finishedSurvey.html',context=textLayout)
+
+    #return showReport(request)
 
 
-def showReport(request):
+def showReport(request, lang):
     userid = request.session['user_id']
-    
-    from mailmerge import MailMerge
-    from datetime import date
+    userlang = request.session['lang']
 
-    template = "/home/fabien/Documents/CybersecurityStarterKit/csskp/templateForTest.docx"
-    
-    document = MailMerge(template)
-    print(document.get_merge_fields())
-
-    document.merge(
-        result="80/100",
-        companysize=COMPANY_SIZE[5][1],
-        resultGraph="SOME IMAGE HERE",
-        surveyAnswers="THE COMPLETE LIST",
-        sector=str(userid),
-        generationDate=str(date.today()),
-        recommendationsList=showCompleteReport(request,userid) 
-        )
-
-    response = HttpResponse(content_type='application/vnd.openxmlformats-officedocument.wordprocessingml.document')
-    response['Content-Disposition'] = 'attachment; filename=download.docx'
-    document.write(response)
-    # make survey readonly and show results.
-    # make checkboxes to recommendation and a single button of get companies
-    # then call getcompanies when button is hit
-
-    return response
+    return createAndSendReport(request, userid, lang)
     #return finishSurvey(request)
 
 

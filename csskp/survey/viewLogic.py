@@ -1,6 +1,8 @@
+from django.http import HttpResponse
+
 from survey.models import SurveyUser, SurveyQuestion, SurveyQuestionAnswer, SurveyUserAnswer, TranslationKey, Recommendations
 from survey.forms import InitialStartForm, AnswerMChoice
-from survey.globals import LANG_SELECT
+from survey.globals import LANG_SELECT, COMPANY_SIZE, SECTOR_CHOICES
 
 
 def saveAndGetQuestion(request,id):
@@ -148,6 +150,28 @@ def showCompleteReport(request,userID):
 
     #recommendations = Recommendations
 
+    finalReportRecs = getRecommendations(cuser)
+
+    allText = []
+    
+    for x in finalReportRecs:
+
+        txt = x #TranslationKey.objects.filter(lang=cuser.chosenLang).filter(key=x.textKey)[0]
+        #txt = txt.text.replace("\n","<br>")
+        txt = txt.replace("\n","<br>")
+        allText.append(str(txt))
+    
+    return allText
+    
+    # get all answers
+
+def getRecommendations(cuser):
+    allAnswers = SurveyQuestionAnswer.objects.all().order_by('question__qindex','aindex')
+
+    #userAnswers = SurveyUserAnswer.objects.all().filter(user=cuser)
+
+    #recommendations = Recommendations
+
     finalReportRecs = []
 
     for a in allAnswers:
@@ -159,21 +183,57 @@ def showCompleteReport(request,userID):
 
         for rec in recommendation:
             if rec.min_e_count.lower() > cuser.e_count.lower() or rec.max_e_count.lower() < cuser.e_count.lower():
-                print("oh no!")
                 continue
             if userAnswer.value > 0 and rec.answerChosen:
-                finalReportRecs.append(rec)
+                finalReportRecs.append(str(rec))
             elif userAnswer.value <= 0 and not rec.answerChosen:
-                finalReportRecs.append(rec)
+                finalReportRecs.append(str(rec))
 
-    allText = []
-    
-    for x in finalReportRecs:
+    return finalReportRecs
 
-        txt = TranslationKey.objects.filter(lang=cuser.chosenLang).filter(key=x.textKey)[0]
-        txt = txt.text.replace("\n","<br>")
-        allText.append(txt)
+def createAndSendReport(request, userID, lang):
+    from mailmerge import MailMerge
+    from datetime import date
+
+    cuser = SurveyUser.objects.filter(user_id=userID)[0]
+
+    template = "/home/fabien/Documents/CybersecurityStarterKit/csskp/wtemps/"+lang.lower()+".docx"
     
-    return ("<br><br>".join(allText))
+    document = MailMerge(template)
+
+    theResult = 80
+
+    everyQuestionAndAnswer = "THE COMPLETE LIST"
+
+    theImage = "IMAGE"
+
+    sectorName = str(cuser.sector)
+    for a,b in SECTOR_CHOICES:
+        if cuser.sector == a:
+            sectorName = str(b)
     
-    # get all answers
+    compSize = str(cuser.e_count)
+    for a,b in COMPANY_SIZE:
+        if cuser.e_count == a:
+            compSize = b
+
+    recommendationList = "\n\n".join(getRecommendations(cuser))
+
+    document.merge(
+        result=str(theResult)+"/100",
+        companysize=compSize,
+        resultGraph=theImage,
+        surveyAnswers=everyQuestionAndAnswer,
+        sector=sectorName,
+        generationDate=str(date.today()),
+        recommendationsList=recommendationList,
+        )
+
+    response = HttpResponse(content_type='application/vnd.openxmlformats-officedocument.wordprocessingml.document')
+    response['Content-Disposition'] = 'attachment; filename=result'+lang.lower()+'.docx'
+    document.write(response)
+    # make survey readonly and show results.
+    # make checkboxes to recommendation and a single button of get companies
+    # then call getcompanies when button is hit
+
+    return response
