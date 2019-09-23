@@ -28,6 +28,8 @@ python3 manage.py migrate
 [1] https://pbpython.com/python-word-template.html
 [2] https://stackoverflow.com/questions/19400089/downloadable-docx-file-in-django
 [3] https://stackoverflow.com/questions/54260657/python-script-insert-image-using-mailmerge-into-docx-file
+[4] https://pypi.org/project/docx-mailmerge/
+[5] https://python-docx.readthedocs.io/en/latest/
 
 
 

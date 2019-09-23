@@ -227,7 +227,6 @@ def createAndSendReport(request, userID, lang):
     recommendationList = getRecommendations(cuser)
     recommendationList = "\n\n".join(recommendationList)
 
-    
 
     table = []
     ind = 0
