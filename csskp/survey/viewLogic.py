@@ -84,7 +84,7 @@ def saveAndGetQuestion(request,id):
                 user.save()
 
                 nextQuestion = SurveyQuestion.objects.order_by('qindex')[id]
-                answerChoices = SurveyQuestionAnswer.objects.order_by('aindex').filter(question=nextQuestion).order_by('aindex')
+                answerChoices = SurveyQuestionAnswer.objects.filter(question=nextQuestion).order_by('aindex')
 
                 questionTitle = TranslationKey.objects.filter(lang=user.chosenLang).filter(key=nextQuestion.titleKey)[0].text
 
@@ -118,7 +118,6 @@ def saveAndGetQuestion(request,id):
     return None
 
 
-
 def saveAnswers (answer_choices,answers,user):
     existinganswerids = [ int(i.id) for i in answer_choices ]
     useranswers = [int(i) for i in answers]
@@ -139,31 +138,6 @@ def findUserById( userId ):
     user = SurveyUser.objects.filter(user_id=userId)[0]
     return user
 
-
-def showCompleteReport(request,userID):
-    cuser = SurveyUser.objects.filter(user_id=userID)[0]
-
-    #allQuestions = SurveyQuestion.objects.all().order_by('qindex')
-    allAnswers = SurveyQuestionAnswer.objects.all().order_by('question__qindex','aindex')
-
-    #userAnswers = SurveyUserAnswer.objects.all().filter(user=cuser)
-
-    #recommendations = Recommendations
-
-    finalReportRecs = getRecommendations(cuser)
-
-    allText = []
-    
-    for x in finalReportRecs:
-
-        txt = x #TranslationKey.objects.filter(lang=cuser.chosenLang).filter(key=x.textKey)[0]
-        #txt = txt.text.replace("\n","<br>")
-        txt = txt.replace("\n","<br>")
-        allText.append(str(txt))
-    
-    return allText
-    
-    # get all answers
 
 def getRecommendations(cuser):
     allAnswers = SurveyQuestionAnswer.objects.all().order_by('question__qindex','aindex')
@@ -191,21 +165,54 @@ def getRecommendations(cuser):
 
     return finalReportRecs
 
+
+def showCompleteReport(request,userID):
+    cuser = SurveyUser.objects.filter(user_id=userID)[0]
+
+    #allQuestions = SurveyQuestion.objects.all().order_by('qindex')
+    allAnswers = SurveyQuestionAnswer.objects.all().order_by('question__qindex','aindex')
+
+    #userAnswers = SurveyUserAnswer.objects.all().filter(user=cuser)
+
+    #recommendations = Recommendations
+
+    finalReportRecs = getRecommendations(cuser)
+
+    allText = []
+    
+    for x in finalReportRecs:
+
+        txt = x #TranslationKey.objects.filter(lang=cuser.chosenLang).filter(key=x.textKey)[0]
+        #txt = txt.text.replace("\n","<br>")
+        txt = txt.replace("\n","<br>")
+        allText.append(str(txt))
+    
+    return allText
+    
+    # get all answers
+
+
 def createAndSendReport(request, userID, lang):
     from mailmerge import MailMerge
     from datetime import date
+    from docx import Document
+    from docx.shared import Cm, Inches
 
     cuser = SurveyUser.objects.filter(user_id=userID)[0]
 
-    template = "/home/fabien/Documents/CybersecurityStarterKit/csskp/wtemps/"+lang.lower()+".docx"
-    
+    filepath = "/home/fabien/Documents/CybersecurityStarterKit/csskp/wtemps/"
+
+    theImage = filepath+"monarc.jpg"
+    template = filepath+lang.lower()+"1.docx"
+    doc = Document(template)
     document = MailMerge(template)
+    #doc = Document()
+
+    print (doc)
 
     theResult = 80
 
-    everyQuestionAndAnswer = "THE COMPLETE LIST"
-
-    theImage = "IMAGE"
+    everyQuestion = SurveyQuestion.objects.all().order_by('qindex')
 
     sectorName = str(cuser.sector)
     for a,b in SECTOR_CHOICES:
@@ -216,14 +223,43 @@ def createAndSendReport(request, userID, lang):
     for a,b in COMPANY_SIZE:
         if cuser.e_count == a:
             compSize = b
+    
+    recommendationList = getRecommendations(cuser)
+    recommendationList = "\n\n".join(recommendationList)
 
-    recommendationList = "\n\n".join(getRecommendations(cuser))
+    
 
+    table = []
+    ind = 0
+    for i in everyQuestion:
+        ind += 1
+        if ind > 1:
+            table.append({'ca':"", 'surveyAnswers':""})
+
+        answerlist = SurveyQuestionAnswer.objects.filter(question=i).order_by('aindex')
+        headingLine = {'ca':str(ind), 'surveyAnswers':str(i)}
+        table.append(headingLine)
+        
+        for a in answerlist:
+            line = {'ca':"", 'surveyAnswers':""}
+            u = SurveyUserAnswer.objects.filter(answer=a)[0]
+            
+            if u.value > 0:
+                line['ca'] = "X"
+            else:
+                line['ca'] = " "
+            
+            line['surveyAnswers'] = str(a)
+            table.append(line)
+
+    everyQuestionAndAnswer = table
+    
     document.merge(
         result=str(theResult)+"/100",
         companysize=compSize,
         resultGraph=theImage,
-        surveyAnswers=everyQuestionAndAnswer,
+        #surveyAnswers=everyQuestionAndAnswer,
+        ca=everyQuestionAndAnswer,
         sector=sectorName,
         generationDate=str(date.today()),
         recommendationsList=recommendationList,
@@ -232,6 +268,7 @@ def createAndSendReport(request, userID, lang):
     response = HttpResponse(content_type='application/vnd.openxmlformats-officedocument.wordprocessingml.document')
     response['Content-Disposition'] = 'attachment; filename=result'+lang.lower()+'.docx'
     document.write(response)
+    #doc.save(response)
     # make survey readonly and show results.
     # make checkboxes to recommendation and a single button of get companies
     # then call getcompanies when button is hit
