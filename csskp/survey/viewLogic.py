@@ -1,4 +1,5 @@
 from django.http import HttpResponse
+from django.utils.html import format_html, mark_safe
 
 from survey.models import SurveyUser, SurveyQuestion, SurveyQuestionAnswer, SurveyUserAnswer, TranslationKey, Recommendations
 from survey.forms import InitialStartForm, AnswerMChoice
@@ -24,7 +25,7 @@ def saveAndGetQuestion(request,id):
     answerChoices = SurveyQuestionAnswer.objects.order_by('aindex').filter(question=firstQuestion)
 
     for answer in answerChoices:
-        tupelanswers.append( (answer.id,TranslationKey.objects.filter(lang=userLang).filter(key=answer.answerKey)[0].text) )
+        tupelanswers.append( (answer.id,format_html('{}{}',mark_safe('<span class="checkmark"></span>'),TranslationKey.objects.filter(lang=userLang).filter(key=answer.answerKey)[0].text) ))
     
 
     # save what the answers were
@@ -64,7 +65,7 @@ def saveAndGetQuestion(request,id):
             tupelanswers.clear()
 
             for answer in lastAnswerChoices:
-                tupelanswers.append( (answer.id,TranslationKey.objects.filter(lang=user.chosenLang).filter(key=answer.answerKey)[0].text) )
+                tupelanswers.append( (answer.id,format_html('{}{}',mark_safe('<span class="checkmark"></span>'),TranslationKey.objects.filter(lang=userLang).filter(key=answer.answerKey)[0].text)) )
 
         form = AnswerMChoice(tupelanswers,data=request.POST) 
 
@@ -91,7 +92,7 @@ def saveAndGetQuestion(request,id):
                 tupelanswers.clear()
 
                 for answer in answerChoices:
-                    tupelanswers.append( (answer.id,TranslationKey.objects.filter(lang=user.chosenLang).filter(key=answer.answerKey)[0].text) )
+                    tupelanswers.append( (answer.id,format_html('{}{}',mark_safe('<span class="checkmark"></span>'),TranslationKey.objects.filter(lang=userLang).filter(key=answer.answerKey)[0].text)) )
 
                 newform = AnswerMChoice(tupelanswers)
                 newform.setUID(user.user_id)

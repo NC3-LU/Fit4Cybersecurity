@@ -11,11 +11,16 @@
 {% block title %}{{ title }}{% endblock %}
 
 {% block content %}
-    <div styles="float: right, width: 250px">
-    Download:<br>
-    <a href="{{ reportlink }}/EN">FLAG_UK</a>
-    <a href="{{ reportlink }}/FR">FLAG_FR</a>
-    <a href="{{ reportlink }}/DE">FLAG_DE</a>
+    <div class="float-right" styles="width: 250px">
+        <div>Download:</div>
+        <div>
+            <img src="{% static "images/reportLogo.png" %}" alt="DOC ICON">
+        </div>
+        <div>
+        <a href="{{ reportlink }}/EN">FLAG_UK</a>
+        <a href="{{ reportlink }}/FR">FLAG_FR</a>
+        <a href="{{ reportlink }}/DE">FLAG_DE</a>
+        </div>
     </div>
     <div>{{ description }}</div>
     <div>

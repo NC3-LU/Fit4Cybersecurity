@@ -11,6 +11,7 @@
 {% block title %}{{ title }}{% endblock %}
 
 {% block content %}
+<div class="border rounded  p-3 bg-light">
     <div>{{ description }}</div>
     <div>
         <form action="/survey/gotoquestion/0" method="post" class="form">
@@ -19,15 +20,14 @@
             {% bootstrap_form form %}
 
             {% buttons %}
-                <div class="col text-right">
-                    <input class="btn btn-primary" type="submit" value="Next">
-                </div>
-                <div class="col text-left">
-                    <button class="btn btn-link" type="button" name="continue-later" data-toggle="modal" data-target="#modal" data-tooltip>Continue later</button>
+                <div class="d-flex flex-row justify-content-between">
+                        <button class="btn btn-link" type="button" name="continue-later" data-toggle="modal" data-target="#modal" data-tooltip>Continue later</button>
+                        <input class="btn btn-primary" type="submit" value="Next">
                 </div>
             {% endbuttons %}
         </form>
     </div>
-
+</div>
     {% include 'survey/continueSelfEval.html' %}
+
 {% endblock %}

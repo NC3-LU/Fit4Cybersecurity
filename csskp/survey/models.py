@@ -83,6 +83,7 @@ class SurveyQuestionAnswer(models.Model):
     question = models.ForeignKey(SurveyQuestion,on_delete=models.CASCADE)
     answerKey = models.CharField(max_length=32)
     aindex = models.IntegerField()
+    uniqueAnswer = models.BooleanField(default=False)
 
     def __str__(self):
         return str(TranslationKey.objects.filter(lang=LOCAL_DEFAULT_LANG).filter(key=self.answerKey)[0])
