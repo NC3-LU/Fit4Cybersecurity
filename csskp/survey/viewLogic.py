@@ -3,7 +3,7 @@ from django.utils.html import format_html, mark_safe
 
 from survey.models import SurveyUser, SurveyQuestion, SurveyQuestionAnswer, SurveyUserAnswer, TranslationKey, Recommendations
 from survey.forms import InitialStartForm, AnswerMChoice
-from survey.globals import LANG_SELECT, COMPANY_SIZE, SECTOR_CHOICES
+from survey.globals import LANG_SELECT, COMPANY_SIZE, SECTOR_CHOICES, TRANSLATION_UI
 
 
 def saveAndGetQuestion(request,id):
@@ -45,7 +45,7 @@ def saveAndGetQuestion(request,id):
             qform.setUID(user.user_id)
 
             question = {
-                'title': "Question "+str(id+1),
+                'title': "Fit4Cybersecurity - "+TRANSLATION_UI['question']['question'][user.chosenlang.lower()]+" "+str(id+1),
                 'question': TranslationKey.objects.filter(lang=user.chosenLang).filter(key=firstQuestion.titleKey)[0].text,
                 'form': qform,
                 'next': id+1,
@@ -105,7 +105,7 @@ def saveAndGetQuestion(request,id):
 
             # GET THE QUESTIONS FROM DB
             question = {
-                'title': "Question "+str(id+1),
+                'title': "Fit4Cybersecurity - "+TRANSLATION_UI['question']['question'][user.chosenlang.lower()]+" "+str(id+1),
                 'question': questionTitle,
                 'form': newform,
                 'next': id+1,

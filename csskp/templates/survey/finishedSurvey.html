@@ -11,22 +11,27 @@
 {% block title %}{{ title }}{% endblock %}
 
 {% block content %}
-    <div class="float-right" styles="width: 250px">
-        <div>Download:</div>
-        <div>
+    <div class="float-right m-2 p-2 border rounded bg-light" styles="width: 200px">
+        <div><h4>{{ txtdownload }}:</h4></div>
+        <div class="text-center py-2">
             <img src="{% static "images/reportLogo.png" %}" alt="DOC ICON">
         </div>
-        <div>
-        <a href="{{ reportlink }}/EN">FLAG_UK</a>
-        <a href="{{ reportlink }}/FR">FLAG_FR</a>
-        <a href="{{ reportlink }}/DE">FLAG_DE</a>
+        <div class="text-center py-2">
+        <a href="{{ reportlink }}/EN" class="p-1"><img src="{% static "images/flags/uk.png" %}" alt="EN"></a>
+        <a href="{{ reportlink }}/FR" class="p-2"><img src="{% static "images/flags/fr.png" %}" alt="FR"></a>
+        <a href="{{ reportlink }}/DE" class="p-2"><img src="{% static "images/flags/de.png" %}" alt="DE"></a>
         </div>
     </div>
-    <div>{{ description }}</div>
     <div>
+    <h2>{{ txtreport }}:</h2>
+    {{ description }}
+    </div>
+    <div>
+        <ol>
         {% for x in recommendations %}
-            <p>{{ x | safe }}</p>
+            <li>{{ x | safe }}</li>
         {% endfor %}
+        </ol>
     </div>
 
 {% endblock %}

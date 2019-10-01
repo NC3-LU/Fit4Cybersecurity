@@ -1,7 +1,7 @@
 from django.db import models
 
 # import global constants
-from survey.globals import SECTOR_CHOICES,QUESTION_TYPES,COMPANY_SIZE, LANG_SELECT, TRANSLATION_TYPES
+from survey.globals import SECTOR_CHOICES,QUESTION_TYPES,COMPANY_SIZE, LANG_SELECT, TRANSLATION_TYPES,COUNTRIES,SERVICE_TARGETS
 import uuid
 
 # Create your models here.
@@ -149,3 +149,31 @@ class Recommendations(models.Model):
 
     def __str__(self):
         return str(TranslationKey.objects.filter(lang=LOCAL_DEFAULT_LANG).filter(key=self.textKey)[0])
+
+
+class Company(models.Model):
+    # company name
+    # company contact email
+    # company contact phone
+    # company contact address
+    # company special notes # what is important to know: "We only fix MACs ;)"
+    name = models.CharField(max_length=128)
+    contact_email = models.EmailField()
+    contact_tel = models.TextField(max_length=32)
+    contact_address_street = models.CharField(max_length=128)
+    contact_address_city = models.CharField(max_length=64)
+    contact_address_country = models.CharField(max_length=2,choices=COUNTRIES)
+    contact_address_number = models.IntegerField()
+    contact_address_postcode = models.CharField(max_length=10)
+    notes = models.TextField()
+
+class CompanyService(models.Model):
+    # SurveyQuestionServiceCategory connection
+    # Company
+    # for who are there services
+        # SME
+        # Corporate
+        # private
+    category = models.ForeignKey(SurveyQuestionServiceCategory,on_delete=models.CASCADE)
+    company = models.ForeignKey(Company,on_delete=models.CASCADE)
+    target = models.CharField(max_length=3,choices=SERVICE_TARGETS)

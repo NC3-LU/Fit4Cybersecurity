@@ -4,7 +4,7 @@ from django.http import HttpResponse, HttpResponseNotFound, HttpResponseRedirect
 from survey.models import SurveyUser
 from survey.forms import InitialStartForm, AnswerMChoice
 from survey.viewLogic import saveAndGetQuestion, findUserById, showCompleteReport, createAndSendReport
-from survey.globals import LANG_SELECT
+from survey.globals import LANG_SELECT,TRANSLATION_UI
 
 
 
@@ -15,18 +15,19 @@ def index(request):
     # show main page
 
     # return HttpResponse("Survey Test")
-    james = {'the_title':"Was geht! and choose Language"}
+    james = {'the_title':"Fit4Cybersecurity - Welcome!"}
 
     return render(request,'survey/index.html',context=james)
 
 
 def gotoQuestion(request,id=0):
-
+    userlang = request.session['lang'].lower()
     question = saveAndGetQuestion(request,id)
     if question == -1:
         return finishSurvey(request)
     if question == None:
         return startSurvey(request)
+    question['txtcontinuelater'] = TRANSLATION_UI['question']['continuelater'][userlang]
     return render(request, 'survey/questions.html',context=question)
     
 
@@ -47,11 +48,16 @@ def startSurvey(request,lang="EN"):
     form = InitialStartForm()
     form.setUID(user.user_id)
 
+    txtdescription = TRANSLATION_UI['question']['description'][user.chosenLang.lower()]
+    txtcontinuelater = TRANSLATION_UI['question']['continuelater'][user.chosenLang.lower()]
+    txttitle = TRANSLATION_UI['question']['title'][user.chosenLang.lower()]
+
     allText = {
-        'title':"Welcome and let's go!",
-        'description':"We will start by knowing your sector and your number of employees to be able to give you a relevant recommendation in the report",
+        'title':"Fit4Cybersecurity - "+txttitle,
+        'description':txtdescription,
         'form':form,
         'userId': user.user_id,
+        'txtcontinuelater':txtcontinuelater,
     }
 
     return render(request, 'survey/startSurvey.html',context=allText)
@@ -60,17 +66,25 @@ def startSurvey(request,lang="EN"):
 def finishSurvey(request):
 
     userid = request.session['user_id']
+    userlang = request.session['lang'].lower()
 
     # make survey readonly and show results.
     # also needs saving here!
     # show a "Thank you" and a "get your report" button
 
+    txtdownload = TRANSLATION_UI['report']['download'][userlang]
+    txtreport = TRANSLATION_UI['report']['report'][userlang]
+    txtdescription = TRANSLATION_UI['report']['description'][userlang]
+    txttitle = TRANSLATION_UI['report']['title'][userlang]
+
     textLayout = {
-        'title': "There is the report",
-        'description': "show what the report is about",
+        'title': "Fit4Cybersecurity - "+txttitle,
+        'description': txtdescription,
         'recommendations': showCompleteReport(request,userid),
         'userId': userid,
-        'reportlink': "/survey/report"
+        'reportlink': "/survey/report",
+        'txtdownload': txtdownload,
+        'txtreport': txtreport,
     }
 
     return render(request, 'survey/finishedSurvey.html',context=textLayout)
