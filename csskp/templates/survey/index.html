@@ -10,44 +10,44 @@
 {% endblock %}
 
 {% block content %}
-    <div class="p-2">
-        <h1><img src="{% static "images/logoFull.png" %}" width="500px" alt="Fit4Cybersecurity"></h1>
-    </div>
-        <div class="d-flex flex-row align-items-center border-bottom">
-            <div class="p-2 flex-grow-1">
-                Welcome to the all new CASES self-assessment tool: Fit4Cybersecurity. This survey will ask some questions and present some recommendations, based on your sector, company size and your answers. Keep in mind, thought, that it is a self-assessment tool and that it only touches the surface of information security by giving a very basic marturity level estimate and some basic recommendations. And that due to the aforementioned reasons, we are not liable for the result or recommendation implementations.
-            </div>
-            <div class="px-2 py-4 text-center align-content-center min-width border rounded bg-light">
-                <a href="/survey/startsurvey/EN">
+    <div class="d-flex flex-row align-items-center border-bottom px-3">
+        <div class="p-2 flex-grow-1">
+            <h5>Welcome to the all new CASES self-assessment tool: Fit4Cybersecurity.</h5>
+            This survey will ask some questions and present some recommendations, based on your sector, company size and your answers. Keep in mind, thought, that it is a self-assessment tool and that it only touches the surface of information security by giving a very basic marturity level estimate and some basic recommendations. And that due to the aforementioned reasons, we are not liable for the result or recommendation implementations.
+        </div>
+        <a href="/survey/startsurvey/EN" class="text-primary">
+            <div class="px-2 py-4 text-center align-content-center min-width border rounded border-primary bg-bright-blue">
                 <img src="{% static "images/flags/uk.png" %}" alt="EN"><br>
                 Start
-                </a>
             </div>
+        </a>
+    </div>
+    <div class="d-flex flex-row align-items-center border-bottom px-3">
+        <div class="p-2 flex-grow-1">
+            <h5>Bienvenue dans le tout nouvel outil d’auto-évaluation CASES: Fit4Cybersecurity. </h5>
+            Ce sondage posera des questions et présentera des recommandations, en fonction de votre secteur, de la taille de votre entreprise et de vos réponses. Rappelez-vous qu’il s’agit d’un outil d’auto-évaluation et qu’il ne fait que toucher à la surface de la sécurité de l’information en fournissant une estimation de base de la maturité ainsi que des recommandations de base. Et pour les raisons susmentionnées, nous ne sommes pas responsables du résultat ou de la mise en œuvre des recommandations.
         </div>
-        <div class="d-flex flex-row align-items-center border-bottom">
-            <div class="p-2 flex-grow-1">
-                Bienvenue dans le tout nouvel outil d’auto-évaluation CASES: Fit4Cybersecurity. Ce sondage posera des questions et présentera des recommandations, en fonction de votre secteur, de la taille de votre entreprise et de vos réponses. Rappelez-vous qu’il s’agit d’un outil d’auto-évaluation et qu’il ne fait que toucher à la surface de la sécurité de l’information en fournissant une estimation de base de la maturité ainsi que des recommandations de base. Et pour les raisons susmentionnées, nous ne sommes pas responsables du résultat ou de la mise en œuvre des recommandations.
+        <a href="/survey/startsurvey/FR" class="text-primary">
+            <div class="px-2 py-4 text-center align-content-center min-width border rounded border-primary bg-bright-blue">
+                <img src="{% static "images/flags/fr.png" %}" alt="FR"><br>
+                Démarer
             </div>
-            <div class="px-2 py-4 text-center align-content-center min-width border rounded bg-light">
-                <a href="/survey/startsurvey/EN">
-                    <img src="{% static "images/flags/fr.png" %}" alt="FR"><br>
-                    Démarer
-                </a>
-            </div>
+        </a>
+    </div>
+    <div class="d-flex flex-row align-items-center px-3">
+        <div class="p-2 flex-grow-1">
+            <h5>Willkommen beim brandneuen CASES-Tool zur Selbstbewertung: Fit4Cybersecurity. </h5>
+            Diese Umfrage wird einige Fragen stellen und einige Empfehlungen basierend auf Ihrer Branche, Unternehmensgröße und Ihren Antworten präsentieren. Denken Sie daran, dass es sich um ein Selbstbewertungstool handelt und dass es nur die Oberfläche der Informationssicherheit berührt, indem es eine sehr einfache Schätzung des Sicherheitsniveaus und einige einfache Empfehlungen enthält. Und das aus den oben genannten Gründen, sind wir nicht haftbar für das Ergebnis oder die Umsetzung von Empfehlungen.
         </div>
-        <div class="d-flex flex-row align-items-center">
-            <div class="p-2 flex-grow-1">
-                Willkommen beim brandneuen CASES-Tool zur Selbstbewertung: Fit4Cybersecurity. Diese Umfrage wird einige Fragen stellen und einige Empfehlungen basierend auf Ihrer Branche, Unternehmensgröße und Ihren Antworten präsentieren. Denken Sie daran, dass es sich um ein Selbstbewertungstool handelt und dass es nur die Oberfläche der Informationssicherheit berührt, indem es eine sehr einfache Schätzung des Sicherheitsniveaus und einige einfache Empfehlungen enthält. Und das aus den oben genannten Gründen, sind wir nicht haftbar für das Ergebnis oder die Umsetzung von Empfehlungen.
+        <a href="/survey/startsurvey/DE" class="text-primary">
+            <div class="px-2 py-4 text-center align-content-center min-width border rounded border-primary bg-bright-blue">
+                <img src="{% static "images/flags/de.png" %}" alt="DE"><br>
+                Starten    
             </div>
-            <div class="px-2 py-4 text-center align-content-center min-width border rounded bg-light">
-                <a href="/survey/startsurvey/EN">
-                    <img src="{% static "images/flags/de.png" %}" alt="DE"><br>
-                    Starten
-                </a>
-            </div>
+        </a>
         
     </div>
-    <div>
+    <div class=" px-3">
         <button class="btn btn-link" type="button" name="resume-show-popup" data-toggle="modal" data-target="#modal" data-tooltip>Continue a previous survey</button>
     </div>
 

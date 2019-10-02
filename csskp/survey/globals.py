@@ -83,7 +83,7 @@ TRANSLATION_UI = {
             'fr':"continuer plus tard",
             'de':"später weitermachen",
         },
-        'descripition': {
+        'description': {
             'en':"Before we start, we need a little information to be able to give you useful recommendations, once the self-assessment is done.",
             'fr':"Avant de commencer, nous avons besoin de quelques informations pour pouvoir vous faire des recommandations utiles, une fois l’auto-évaluation terminée.",
             'de':"Bevor wir beginnen, benötigen wir einige Informationen, um Ihnen nützliche Empfehlungen geben zu können, sobald die Selbsteinschätzung abgeschlossen ist.",

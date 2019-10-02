@@ -9,7 +9,15 @@
 {% endblock %}
 
 {% block bootstrap4_content %}
-    <div class="container p-2">
+    <div class="container-fluid p-0">
+    <div class="d-flex px-3 py-2 border-bottom border-primary">
+        <div class="flex-grow-1">
+            <h1><img src="{% static "images/logoFull.png" %}" width="500px" alt="Fit4Cybersecurity"></h1>
+        </div>
+        <div>
+        {% block langselect %}{% endblock %}
+        </div>
+    </div>
 
         {% autoescape off %}{% bootstrap_messages %}{% endautoescape %}
 
