@@ -127,8 +127,16 @@ def calculateResult(request,user):
     for q in SurveyQuestion.objects.all():
         if q.section.id not in evaluation:
             evaluation[q.section.id] = 0
+        if q.section.id not in maxeval:
+            maxeval[q.section.id] = 0
+        
+        maxeval[q.section.id] += q.maxPoints
+
         uanswers = SurveyUserAnswer.objects.filter(answer__question__id=q.id).filter(value>0)
         scores = [x.answer.score for x in uanswers]
         evaluation[q.section.id] += sum(scores)
+
+    # get the score in percent! with then 100 being maxscore
+    totalscore = round((totalscore*100)/maxscore)
     
-    return maxscore, totalscore, maxeval, evaluation
+    return totalscore, maxeval, evaluation

@@ -12,6 +12,15 @@
 
 {% block content %}
     <div class="float-right mx-4 my-2 p-2 border rounded border-primary bg-bright-blue" styles="width: 200px">
+        <div><h3>
+        {% if txtscore < 50 %}
+            <span class="font-weight-bold text-danger">{{ txtscore }}</span>
+        {% elsif txtscore < 80 %} 
+            <span class="font-weight-bold text-warning">{{ txtscore }}</span>
+        {% else %}
+            <span class="font-weight-bold text-success">{{ txtscore }}</span>
+        {% endif %}   
+        /{{ maxscore }}</h3></div>
         <div><h4>{{ txtdownload }}:</h4></div>
         <div class="text-center py-2">
             <img src="{% static "images/reportLogo.png" %}" alt="DOC ICON">
