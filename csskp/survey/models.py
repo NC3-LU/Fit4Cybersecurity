@@ -70,6 +70,7 @@ class SurveyQuestion(models.Model):
     titleKey = models.CharField(max_length=32)
     qtype = models.CharField(max_length=1,choices=QUESTION_TYPES,default=QUESTION_TYPES[0][0])
     qindex = models.IntegerField(unique=True)
+    maxPoints = models.IntegerField(default=10)
 
     def __str__(self):
         return str(TranslationKey.objects.filter(lang=LOCAL_DEFAULT_LANG).filter(key=self.titleKey)[0])
@@ -84,6 +85,7 @@ class SurveyQuestionAnswer(models.Model):
     answerKey = models.CharField(max_length=32)
     aindex = models.IntegerField()
     uniqueAnswer = models.BooleanField(default=False)
+    score = models.IntegerField(default=0)
 
     def __str__(self):
         return str(TranslationKey.objects.filter(lang=LOCAL_DEFAULT_LANG).filter(key=self.answerKey)[0])
