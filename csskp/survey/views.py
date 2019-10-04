@@ -1,7 +1,6 @@
 from django.shortcuts import render
-from django.http import HttpResponse, HttpResponseNotFound, HttpResponseRedirect
+from django.http import HttpResponse, HttpResponseRedirect
 
-from survey.forms import InitialStartForm, AnswerMChoice
 from survey.viewLogic import createUser, handleStartSurvey, saveAndGetQuestion, findUserById, showCompleteReport, createAndSendReport
 from survey.globals import TRANSLATION_UI
 from django.contrib import messages
