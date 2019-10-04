@@ -4,7 +4,12 @@
             <h4>Please insert your code to continue the survey</h4>
         </div>
         <div class="modal-content">
-            <input type="text" id="resume-code-input" name="resume-code" value="" data-link="https://{{ request.get_host }}/survey/continueselfeval/" />
+            <input type="text"
+                   id="resume-code-input"
+                   name="resume-code"
+                   value=""
+                   data-link="{% if request.is_secure %}https{% else %}http{% endif %}://{{ request.get_host }}/survey/resume/"
+            />
             <button disabled id="resume-code-submit" class="btn btn-link" type="button">Confirm</button>
         </div>
     </div>

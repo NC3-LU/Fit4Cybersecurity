@@ -6,121 +6,111 @@ from survey.forms import InitialStartForm, AnswerMChoice
 from survey.globals import LANG_SELECT, COMPANY_SIZE, SECTOR_CHOICES, TRANSLATION_UI
 
 
-def saveAndGetQuestion(request,id):
-    try:
-        userLang=request.session['lang']
-        if userLang not in [x[0] for x in LANG_SELECT]:
-            return None
-    except:
-        return None
+def createUser(lang):
 
-    tupelanswers = []
+    user = SurveyUser()
 
-    user=SurveyUser.objects.filter(user_id=request.session['user_id'])[0]
-    if user.chosenLang != userLang:
-        user.chosenLang = userLang
-        user.save()
-        
-    firstQuestion = SurveyQuestion.objects.order_by('qindex')[0]
-    answerChoices = SurveyQuestionAnswer.objects.order_by('aindex').filter(question=firstQuestion)
+    # prevent the use of custom languages
+    langs = [x[0] for x in LANG_SELECT]
+    if lang in langs:
+        user.chosenLang = lang
+    else:
+        user.chosenLang = LANG_SELECT[0][0]
 
-    for answer in answerChoices:
-        tupelanswers.append( (answer.id,format_html('{}{}',mark_safe('<span class="checkmark"></span>'),TranslationKey.objects.filter(lang=userLang).filter(key=answer.answerKey)[0].text) ))
-    
+    user.save()
 
-    # save what the answers were
+    return user
+
+
+def handleStartSurvey(user: SurveyUser, request):
+
+    action = '/survey/start/' + user.chosenLang
+    question = TRANSLATION_UI['question']['description'][user.chosenLang.lower()]
+    title = "Fit4Cybersecurity - " + TRANSLATION_UI['question']['title'][user.chosenLang.lower()]
+
     if request.method == 'POST':
-        form = InitialStartForm(data=request.POST) # A form bound to the POST data
-        if form.is_valid():
-            
-            if id <= 0:
-                id = 0
 
+        form = InitialStartForm(data=request.POST)
+
+        if form.is_valid():
             user.sector = form.cleaned_data['sector']
             user.e_count = form.cleaned_data['compSize']
-            user.current_question = id
+            user.current_question = 1
             user.save()
 
-            qform = AnswerMChoice(tupelanswers)
-            qform.setUID(user.user_id)
+            survey_question = SurveyQuestion.objects.order_by('qindex').first()
+            answer_choices = get_answer_choices(survey_question, user.chosenLang)
 
-            question = {
-                'title': "Fit4Cybersecurity - "+TRANSLATION_UI['question']['question'][user.chosenLang.lower()]+" "+str(id+1),
-                'question': TranslationKey.objects.filter(lang=user.chosenLang).filter(key=firstQuestion.titleKey)[0].text,
-                'form': qform,
-                'next': id+1,
-                'userId': user.user_id,
-            }
+            form = AnswerMChoice(answer_choices)
+            form.setUID(user.user_id)
+            form.set_question_id(survey_question.id)
 
-            return question
+            action = '/survey/question'
+            title += " " + str(user.current_question)
+            question = TranslationKey.objects.filter(lang=user.chosenLang).filter(key=survey_question.titleKey)[0].text
 
-        lastAnswerChoices = ""
+    else:
+        form = InitialStartForm()
+        form.setUID(user.user_id)
 
-        
+    return {
+        'title': title,
+        'question': question,
+        'form': form,
+        'action': action,
+        'userId': user.user_id,
+        'txtcontinuelater': TRANSLATION_UI['question']['continuelater'][user.chosenLang.lower()],
+    }
 
-        if id > 0:
-            lastQuestion = SurveyQuestion.objects.order_by('qindex')[id-1]
-            lastAnswerChoices = SurveyQuestionAnswer.objects.order_by('aindex').filter(question=lastQuestion)
+def saveAndGetQuestion(user: SurveyUser, request):
 
-            tupelanswers.clear()
+    if user.survey_done:
+        return -1
 
-            for answer in lastAnswerChoices:
-                tupelanswers.append( (answer.id,format_html('{}{}',mark_safe('<span class="checkmark"></span>'),TranslationKey.objects.filter(lang=userLang).filter(key=answer.answerKey)[0].text)) )
+    survey_questions = SurveyQuestion.objects.order_by('qindex')
+    survey_question = survey_questions[user.current_question - 1]
+    tuple_answers = get_answer_choices(survey_question, user.chosenLang)
 
-        form = AnswerMChoice(tupelanswers,data=request.POST) 
+    # save what the answers were
 
-        #for answer in form.fields['answers']:
-         #   print (answer + "\n")
+    if request.method == 'POST' and user.current_question == int(request.POST['questionid']):
+
+        form = AnswerMChoice(tuple_answers, data=request.POST)
 
         if form.is_valid():
 
             answers = form.cleaned_data['answers']
-            questionTitle = "You are done!"
-            
-            saveAnswers(lastAnswerChoices,answers,user)
+            saveAnswers(tuple_answers, answers, user)
 
-            
-            if id < len(SurveyQuestion.objects.order_by('qindex')):
-                user.current_question = id
+            if user.current_question < len(survey_questions):
+                user.current_question += 1
                 user.save()
 
-                nextQuestion = SurveyQuestion.objects.order_by('qindex')[id]
-                answerChoices = SurveyQuestionAnswer.objects.filter(question=nextQuestion).order_by('aindex')
-
-                questionTitle = TranslationKey.objects.filter(lang=user.chosenLang).filter(key=nextQuestion.titleKey)[0].text
-
-                tupelanswers.clear()
-
-                for answer in answerChoices:
-                    tupelanswers.append( (answer.id,format_html('{}{}',mark_safe('<span class="checkmark"></span>'),TranslationKey.objects.filter(lang=userLang).filter(key=answer.answerKey)[0].text)) )
-
-                newform = AnswerMChoice(tupelanswers)
-                newform.setUID(user.user_id)
+                survey_question = survey_questions[user.current_question - 1]
+                tuple_answers = get_answer_choices(survey_question, user.chosenLang)
             else:
                 #FINAL QUESTION return the new interface
-                user.current_question = id
                 user.survey_done = True
                 user.save()
+
                 return -1
 
-            # GET THE QUESTIONS FROM DB
-            question = {
-                'title': "Fit4Cybersecurity - "+TRANSLATION_UI['question']['question'][user.chosenLang.lower()]+" "+str(id+1),
-                'question': questionTitle,
-                'form': newform,
-                'next': id+1,
-                'userId': user.user_id,
-            }
- 
-            return question
+    form = AnswerMChoice(tuple_answers)
+    form.setUID(user.user_id)
+    form.set_question_id(survey_question.id)
+
+    return {
+        'title': "Fit4Cybersecurity - " + TRANSLATION_UI['question']['question'][user.chosenLang.lower()] + " " + str(user.current_question),
+        'question': TranslationKey.objects.filter(lang=user.chosenLang).filter(key=survey_question.titleKey)[0].text,
+        'form': form,
+        'action': '/survey/question',
+        'userId': user.user_id,
+        'txtcontinuelater': TRANSLATION_UI['question']['continuelater'][user.chosenLang.lower()],
+    }
         
-        return {'question': form.errors}
 
-    return None
-
-
-def saveAnswers (answer_choices,answers,user):
-    existinganswerids = [ int(i.id) for i in answer_choices ]
+def saveAnswers (answer_choices, answers, user):
+    existinganswerids = [ int(i[0]) for i in answer_choices ]
     useranswers = [int(i) for i in answers]
     for a in existinganswerids:
         answer = SurveyUserAnswer()
@@ -135,9 +125,8 @@ def saveAnswers (answer_choices,answers,user):
         answer.save()
 
 
-def findUserById( userId ):
-    user = SurveyUser.objects.filter(user_id=userId)[0]
-    return user
+def findUserById(user_id):
+    return SurveyUser.objects.filter(user_id=user_id)[0]
 
 
 def getRecommendations(cuser):
@@ -274,3 +263,28 @@ def createAndSendReport(request, userID, lang):
     # then call getcompanies when button is hit
 
     return response
+
+
+def get_answer_choices(survey_question: SurveyQuestion, user_lang: str):
+
+    tuple_answers = []
+
+    answer_choices = SurveyQuestionAnswer.objects.order_by('aindex').filter(question=survey_question)
+
+    for answer_choice in answer_choices:
+        translation_keys = TranslationKey.objects.filter(lang=user_lang).filter(key=answer_choice.answerKey)
+        if translation_keys.count() == 0:
+            raise RuntimeError('The translation has to be do for the answers choices.')
+
+        tuple_answers.append(
+            (
+                answer_choice.id,
+                format_html(
+                    '{}{}',
+                    mark_safe('<span class="checkmark"></span>'),
+                    translation_keys[0].text
+                )
+            )
+        )
+
+    return tuple_answers

@@ -25,6 +25,7 @@ class InitialStartForm(forms.Form):
         
 class AnswerMChoice(forms.Form):
     userid = forms.CharField(widget=forms.HiddenInput())
+    questionid = forms.IntegerField(widget=forms.HiddenInput())
     answers = forms.MultipleChoiceField(required=True, choices=[], widget=forms.CheckboxSelectMultiple(), label='')
 
     required_css_class = "bootstrap4-req"
@@ -34,5 +35,8 @@ class AnswerMChoice(forms.Form):
         if tanswers != None:
             self.fields['answers'].choices = tanswers
 
-    def setUID(self,uid):
+    def setUID(self, uid):
         self.fields['userid'].initial = uid
+
+    def set_question_id(self, question_id):
+        self.fields['questionid'].initial = question_id

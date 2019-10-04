@@ -11,28 +11,25 @@
 
 {% block title %}{{ title }}{% endblock %}
 
-
-
 {% block content %}
-<div class="border rounded border-primary m-2 p-3 bg-bright-blue">
-    <div><h1>{{ question }}</h1></div>
+    <div class="border rounded border-primary m-2 p-3 bg-bright-blue">
+        <div class="card-title">{{ question }}</div>
 
-    <form action="/survey/gotoquestion/{{ next }}" method="post" class="form">
-        {% csrf_token %}
+        <form action="{{ action }}" method="post" class="form">
+            {% csrf_token %}
 
-        {% bootstrap_form form %}
+            {% bootstrap_form form %}
 
-        <div>
-            {% if next > -1 %}
+            <div>
                 {% buttons %}
                     <div class="d-flex flex-row justify-content-between">
                         <button class="btn btn-link" type="button" name="continue-later" data-toggle="modal" data-target="#modal" data-tooltip>{{ txtcontinuelater }}</button>
                         <input class="btn btn-primary" type="submit" value="Next">
                     </div>
                 {% endbuttons %}
-            {% endif %}
-        </div>
-    </form>
-</div>
-    {% include 'survey/continueSelfEval.html' %}
+            </div>
+        </form>
+    </div>
+
+    {% include 'survey/continue.html' %}
 {% endblock %}

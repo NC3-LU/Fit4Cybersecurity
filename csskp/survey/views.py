@@ -1,69 +1,54 @@
 from django.shortcuts import render
 from django.http import HttpResponse, HttpResponseNotFound, HttpResponseRedirect
 
-from survey.models import SurveyUser
 from survey.forms import InitialStartForm, AnswerMChoice
-from survey.viewLogic import saveAndGetQuestion, findUserById, showCompleteReport, createAndSendReport
-from survey.globals import LANG_SELECT,TRANSLATION_UI
+from survey.viewLogic import createUser, handleStartSurvey, saveAndGetQuestion, findUserById, showCompleteReport, createAndSendReport
+from survey.globals import TRANSLATION_UI
+from django.contrib import messages
 
-
-
-# Create your views here.
 
 def index(request):
     
     # show main page
 
-    # return HttpResponse("Survey Test")
-    james = {'the_title':"Fit4Cybersecurity - Welcome!"}
+    james = {'the_title': "Fit4Cybersecurity - Welcome!"}
 
-    return render(request,'survey/index.html',context=james)
+    return render(request, 'survey/index.html', context=james)
 
 
-def gotoQuestion(request,id=0):
-    userlang = request.session['lang'].lower()
-    question = saveAndGetQuestion(request,id)
-    if question == -1:
-        return finishSurvey(request)
-    if question == None:
-        return startSurvey(request)
-    question['txtcontinuelater'] = TRANSLATION_UI['question']['continuelater'][userlang]
-    return render(request, 'survey/questions.html',context=question)
-    
+def start(request, lang="EN"):
 
-def startSurvey(request,lang="EN"):
-    user = SurveyUser()
-    
-    # prevent the use of custom languages
-    langs = [ x[0] for x in LANG_SELECT ]
-    if lang in langs:
-        user.chosenLang = lang
+    if request.method == 'GET':
+        user = createUser(lang)
+
+        request.session['lang'] = user.chosenLang
+        request.session['user_id'] = str(user.user_id)
     else:
-        user.chosenLang = LANG_SELECT[0][0]
-    user.save()
-    
-    request.session['lang'] = user.chosenLang
-    request.session['user_id'] = str(user.user_id)
+        if request.session.get('user_id', None) is None:
+            return HttpResponseRedirect('/')
 
-    form = InitialStartForm()
-    form.setUID(user.user_id)
+        user = findUserById(request.session['user_id'])
 
-    txtdescription = TRANSLATION_UI['question']['description'][user.chosenLang.lower()]
-    txtcontinuelater = TRANSLATION_UI['question']['continuelater'][user.chosenLang.lower()]
-    txttitle = TRANSLATION_UI['question']['title'][user.chosenLang.lower()]
+    form_data = handleStartSurvey(user, request)
 
-    allText = {
-        'title':"Fit4Cybersecurity - "+txttitle,
-        'description':txtdescription,
-        'form':form,
-        'userId': user.user_id,
-        'txtcontinuelater':txtcontinuelater,
-    }
-
-    return render(request, 'survey/startSurvey.html',context=allText)
+    return render(request, 'survey/questions.html', context=form_data)
 
 
-def finishSurvey(request):
+def getQuestion(request):
+
+    if request.session.get('user_id', None) is None:
+        return HttpResponseRedirect('/')
+
+    user = findUserById(request.session['user_id'])
+    question = saveAndGetQuestion(user, request)
+
+    if question == -1:
+        return finish(request)
+
+    return render(request, 'survey/questions.html', context=question)
+
+
+def finish(request):
 
     userid = request.session['user_id']
     userlang = request.session['lang'].lower()
@@ -78,26 +63,22 @@ def finishSurvey(request):
     txttitle = TRANSLATION_UI['report']['title'][userlang]
 
     textLayout = {
-        'title': "Fit4Cybersecurity - "+txttitle,
+        'title': "Fit4Cybersecurity - " + txttitle,
         'description': txtdescription,
-        'recommendations': showCompleteReport(request,userid),
+        'recommendations': showCompleteReport(request, userid),
         'userId': userid,
         'reportlink': "/survey/report",
         'txtdownload': txtdownload,
         'txtreport': txtreport,
     }
 
-    return render(request, 'survey/finishedSurvey.html',context=textLayout)
-
-    #return showReport(request)
+    return render(request, 'survey/finishedSurvey.html', context=textLayout)
 
 
 def showReport(request, lang):
     userid = request.session['user_id']
-    userlang = request.session['lang']
 
     return createAndSendReport(request, userid, lang)
-    #return finishSurvey(request)
 
 
 def getCompanies(request):
@@ -107,13 +88,14 @@ def getCompanies(request):
     return HttpResponse("Here is the JSON list of companies that are related to that category")
 
 
-def loadSelfEval(request, userId):
+def resume(request, userId):
     try:
-        user = findUserById(str(userId))
+        findUserById(str(userId))
     except:
-        return HttpResponseNotFound('User not found')
+        messages.warning(request, 'We could not find a survey with te requested key, please start a new one.')
 
-    request.session['lang'] = user.chosenLang
+        return HttpResponseRedirect('/')
+
     request.session['user_id'] = str(userId)
 
-    return HttpResponseRedirect('/survey/gotoquestion/' + str(user.current_question))
+    return HttpResponseRedirect('/survey/question')
