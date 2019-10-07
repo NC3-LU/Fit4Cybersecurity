@@ -60,7 +60,7 @@ def finish(request):
     txtreport = TRANSLATION_UI['report']['report'][userlang]
     txtdescription = TRANSLATION_UI['report']['description'][userlang]
     txttitle = TRANSLATION_UI['report']['title'][userlang]
-    txtscore, radarMax, radarCurrent = calculateResult(request, user)
+    txtscore, radarMax, radarCurrent, sectionslist = calculateResult(request, user)
 
     textLayout = {
         'title': "Fit4Cybersecurity - " + txttitle,

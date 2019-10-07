@@ -24,9 +24,9 @@ def getRecommendations(cuser):
         for rec in recommendation:
             if rec.min_e_count.lower() > cuser.e_count.lower() or rec.max_e_count.lower() < cuser.e_count.lower():
                 continue
-            if userAnswer.value > 0 and rec.answerChosen:
+            if userAnswer.uvalue > 0 and rec.answerChosen:
                 finalReportRecs.append(str(rec))
-            elif userAnswer.value <= 0 and not rec.answerChosen:
+            elif userAnswer.uvalue <= 0 and not rec.answerChosen:
                 finalReportRecs.append(str(rec))
 
     return finalReportRecs
@@ -36,7 +36,7 @@ def createAndSendReport(request, userID, lang):
     from mailmerge import MailMerge
     from datetime import date
     from docx import Document
-    from docx.shared import Cm, Inches
+    from docx.shared import Cm, Inches, Pt
 
     cuser = SurveyUser.objects.filter(user_id=userID)[0]
 
@@ -101,7 +101,7 @@ def createAndSendReport(request, userID, lang):
     tfile.close()
 
     results = results.replace("\n\r","\n")
-    results = results.replace("$$result$$",score)
+    results = results.replace("$$result$$",str(score))
     results = results.split("\n\n")
 
     x = 0
@@ -113,14 +113,22 @@ def createAndSendReport(request, userID, lang):
         doc.add_paragraph(i)
 
 
-    doc.add_heading(TRANSLATION_UI['document']['questions'][lang],level=1)
+    doc.add_heading(TRANSLATION_UI['document']['questions'][lang.lower()],level=1)
 
-    x = 0
+    x = 1
     for i in everyQuestion:
         table = doc.add_table(rows=1,cols=2)
+        table.autofit = False
         hdr_cells = table.rows[0].cells
         hdr_cells[0].text = str(x)
-        hdr_cells[1].text = i
+        hdr_cells[1].text = str(i)
+
+        bX = hdr_cells[0].paragraphs[0].runs[0]
+        bX.font.bold = True
+        bX.font.size = Pt(13)
+        bX = hdr_cells[1].paragraphs[0].runs[0]
+        bX.font.bold = True
+        bX.font.size = Pt(13)
 
         answerlist = SurveyQuestionAnswer.objects.filter(question=i).order_by('aindex')
         
@@ -128,15 +136,21 @@ def createAndSendReport(request, userID, lang):
             row_cells = table.add_row().cells
             u = SurveyUserAnswer.objects.filter(answer=a)[0]
             
-            if u.value > 0:
-                row_cells[0] = "X"
+            if u.uvalue > 0:
+                row_cells[0].text = "X"
                 bX = row_cells[0].paragraphs[0].runs[0]
                 bX.font.bold = True
             else:
-                row_cells[0] = " "
+                row_cells[0].text = " "
             
-            row_cells[1] = str(a)
+            row_cells[1].text = str(a)
         
+        col = table.columns[0]
+        col.width = Cm(1.5)
+        col = table.columns[1]
+        col.width = Cm(14.0)
+        for cell in table.columns[0].cells:
+            cell.width=Cm(1.5)
 
         doc.add_paragraph()
         x += 1
@@ -159,7 +173,7 @@ def createAndSendReport(request, userID, lang):
             line = {'ca':"", 'surveyAnswers':""}
             u = SurveyUserAnswer.objects.filter(answer=a)[0]
             
-            if u.value > 0:
+            if u.uvalue > 0:
                 line['ca'] = "X"
             else:
                 line['ca'] = " "
@@ -205,12 +219,15 @@ def calculateResult(request, cuser):
 
     maxeval = {}
     evaluation = {}
+    sectionlist = {}
 
     for q in SurveyQuestion.objects.all():
         if q.section.id not in evaluation:
             evaluation[q.section.id] = 0
         if q.section.id not in maxeval:
             maxeval[q.section.id] = 0
+        if q.section.id not in sectionlist:
+            sectionlist[q.section.id] = str(q.section)
         
         maxeval[q.section.id] += q.maxPoints
 
@@ -221,4 +238,4 @@ def calculateResult(request, cuser):
     # get the score in percent! with then 100 being maxscore
     totalscore = round((totalscore*100)/maxscore)
     
-    return totalscore, maxeval, evaluation
+    return totalscore, maxeval, evaluation, sectionlist
