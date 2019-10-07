@@ -1,10 +1,10 @@
 from django.shortcuts import render
 from django.http import HttpResponse, HttpResponseRedirect
 
-from survey.viewLogic import createUser, handleStartSurvey, saveAndGetQuestion, findUserById, showCompleteReport, createAndSendReport
+from survey.viewLogic import createUser, handleStartSurvey, saveAndGetQuestion, findUserById, showCompleteReport, \
+    createAndSendReport, generate_chart_png
 from survey.globals import TRANSLATION_UI
 from django.contrib import messages
-
 
 
 def index(request):
@@ -12,32 +12,8 @@ def index(request):
     # show main page
 
     james = {'the_title': "Fit4Cybersecurity - Welcome!"}
-    print('Generationg shart...')
-    show_chart()
+
     return render(request, 'survey/index.html', context=james)
-
-### Example:
-
-from matplotlib import pylab
-
-def show_chart():
-    N = 5
-    menMeans = (20, 35, 30, 35, 27)
-    womenMeans = (25, 32, 34, 20, 25)
-    menStd = (2, 3, 4, 1, 2)
-    womenStd = (3, 5, 2, 3, 3)
-    ind = np.arange(N)    # the x locations for the groups
-    width = 0.35       # the width of the bars: can also be len(x) sequence
-
-    p1 = plt.bar(ind, menMeans, width, yerr=menStd)
-    p2 = plt.bar(ind, womenMeans, width,
-                 bottom=menMeans, yerr=womenStd)
-
-    plt.ylabel('Scores')
-    plt.title('Scores by group and gender')
-    plt.xticks(ind, ('G1', 'G2', 'G3', 'G4', 'G5'))
-    plt.legend((p1[0], p2[0]), ('Men', 'Women'))
-    plt.show()
 
 
 def start(request, lang="EN"):
@@ -123,3 +99,11 @@ def resume(request, userId):
     request.session['user_id'] = str(userId)
 
     return HttpResponseRedirect('/survey/question')
+
+
+def show_chart(request):
+    data = {
+        'chart_url': generate_chart_png(request.session['user_id'])
+    }
+
+    return render(request, 'survey/chart.html', context=data)

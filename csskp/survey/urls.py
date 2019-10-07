@@ -1,4 +1,4 @@
-from django.urls import path, re_path
+from django.urls import path
 
 from survey import views
 
@@ -11,5 +11,6 @@ urlpatterns = [
     path('finish', views.finish),
     path('report', views.finish),
     path('report/<slug:lang>', views.showReport),
+    path('chart', views.show_chart),
     path('companies', views.getCompanies),
 ]
