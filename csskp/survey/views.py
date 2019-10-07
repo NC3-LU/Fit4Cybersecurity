@@ -19,6 +19,7 @@ def index(request):
 ### Example:
 
 from matplotlib import pylab
+from pylab import *
 
 def show_chart():
     N = 5
@@ -39,7 +40,7 @@ def show_chart():
     plt.yticks(np.arange(0, 81, 10))
     plt.legend((p1[0], p2[0]), ('Men', 'Women'))
     plt.show()
-###
+
 
 def start(request, lang="EN"):
 
