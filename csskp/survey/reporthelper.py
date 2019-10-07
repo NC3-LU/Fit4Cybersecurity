@@ -1,8 +1,8 @@
 from django.http import HttpResponse
-from django.conf import BASE_DIR
+from django.conf import settings
 
 from survey.models import SurveyQuestion, SurveyQuestionAnswer, SurveyUser, SurveyUserAnswer, Recommendations
-from survey.globals import SECTOR_CHOICES, COMPANY_SIZE
+from survey.globals import SECTOR_CHOICES, COMPANY_SIZE, TRANSLATION_UI
 
 
 def getRecommendations(cuser):
@@ -40,7 +40,7 @@ def createAndSendReport(request, userID, lang):
 
     cuser = SurveyUser.objects.filter(user_id=userID)[0]
 
-    filepath = BASE_DIR+"/wtemps/"
+    filepath = settings.BASE_DIR+"/wtemps/"
 
     theImage = filepath+"monarc.jpg"
     template = filepath+lang.lower()+"1.docx"
@@ -66,20 +66,37 @@ def createAndSendReport(request, userID, lang):
     recommendationList = getRecommendations(cuser)
     recommendationList = "\n\n".join(recommendationList)
 
-    tfile = open(BASE_DIR+"/"+lang.lower()+"_intro.txt",'r')
+    tfile = open(filepath+"/"+lang.lower()+"_intro.txt",'r')
     introduction = tfile.read()
     tfile.close()
+
     introduction = introduction.replace("\n\r","\n")
     introduction = introduction.split("\n\n")
     x = 0
     for i in introduction:
         if x == 0:
-            doc.add_heading(i)
+            doc.add_heading(i,level=1)
             x += 1
             continue
         doc.add_paragraph(i)
 
-    tfile = open(BASE_DIR+"/"+lang.lower()+"_resultdisclaimer.txt",'r')
+
+    tfile = open(filepath+"/"+lang.lower()+"_description.txt",'r')
+    methodDescr = tfile.read()
+    tfile.close()
+    
+    methodDescr = methodDescr.replace("\n\r","\n")
+    methodDescr = methodDescr.split("\n\n")
+    x = 0
+    for i in methodDescr:
+        if x == 0:
+            doc.add_heading(i,level=1)
+            x += 1
+            continue
+        doc.add_paragraph(i)
+    
+
+    tfile = open(filepath+"/"+lang.lower()+"_resultdisclaimer.txt",'r')
     results = tfile.read()
     tfile.close()
 
@@ -90,10 +107,41 @@ def createAndSendReport(request, userID, lang):
     x = 0
     for i in results:
         if x == 0:
-            doc.add_heading(i)
+            doc.add_heading(i,level=1)
             x += 1
             continue
         doc.add_paragraph(i)
+
+
+    doc.add_heading(TRANSLATION_UI['document']['questions'][lang],level=1)
+
+    x = 0
+    for i in everyQuestion:
+        table = doc.add_table(rows=1,cols=2)
+        hdr_cells = table.rows[0].cells
+        hdr_cells[0].text = str(x)
+        hdr_cells[1].text = i
+
+        answerlist = SurveyQuestionAnswer.objects.filter(question=i).order_by('aindex')
+        
+        for a in answerlist:
+            row_cells = table.add_row().cells
+            u = SurveyUserAnswer.objects.filter(answer=a)[0]
+            
+            if u.value > 0:
+                row_cells[0] = "X"
+                bX = row_cells[0].paragraphs[0].runs[0]
+                bX.font.bold = True
+            else:
+                row_cells[0] = " "
+            
+            row_cells[1] = str(a)
+        
+
+        doc.add_paragraph()
+        x += 1
+
+
 
     '''
     table = []
@@ -152,7 +200,7 @@ def createAndSendReport(request, userID, lang):
 def calculateResult(request,user):
     allQuestions = SurveyQuestion.objects.values_list('maxPoints', flat=True).order_by('qindex')
     maxscore = sum(allQuestions)
-    allUserAnswers = SurveyUserAnswer.objects.filter(user=user).filter(value>0).order_by('answer__question__qindex','answer__aindex')
+    allUserAnswers = SurveyUserAnswer.objects.filter(uvalue>0,user=user).order_by('answer__question__qindex','answer__aindex')
     totalscore = sum([x.answer.score for x in allUserAnswers])
 
     maxeval = {}
@@ -166,7 +214,7 @@ def calculateResult(request,user):
         
         maxeval[q.section.id] += q.maxPoints
 
-        uanswers = SurveyUserAnswer.objects.filter(answer__question__id=q.id).filter(value>0)
+        uanswers = SurveyUserAnswer.objects.filter(uvalue>0,answer__question__id=q.id)
         scores = [x.answer.score for x in uanswers]
         evaluation[q.section.id] += sum(scores)
 

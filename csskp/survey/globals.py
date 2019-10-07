@@ -98,5 +98,12 @@ TRANSLATION_UI = {
             'fr':"Commençons",
             'de':"Lasst uns beginnen",
         },
-    }
+    },
+    'document':{
+        'questions': {
+            'en':"Questions",
+            'fr':"Questions",
+            'de':"Fragen",
+        },
+    },
 }
