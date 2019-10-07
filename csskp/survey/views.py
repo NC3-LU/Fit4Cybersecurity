@@ -19,7 +19,6 @@ def index(request):
 ### Example:
 
 from matplotlib import pylab
-from pylab import *
 
 def show_chart():
     N = 5
@@ -37,7 +36,6 @@ def show_chart():
     plt.ylabel('Scores')
     plt.title('Scores by group and gender')
     plt.xticks(ind, ('G1', 'G2', 'G3', 'G4', 'G5'))
-    plt.yticks(np.arange(0, 81, 10))
     plt.legend((p1[0], p2[0]), ('Men', 'Women'))
     plt.show()
 
