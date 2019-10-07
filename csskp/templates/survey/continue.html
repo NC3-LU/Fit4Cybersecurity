@@ -13,8 +13,8 @@
                 <textarea
                         class="text-primary disabled"
                         id="direct-link"
-                        data-link="https://{{ request.get_host }}/survey/continueselfeval/{{ userId }}"
-                >https://{{ request.get_host }}/survey/continueselfeval/{{ userId }}</textarea>
+                        data-link="{% if request.is_secure %}https{% else %}http{% endif %}://{{ request.get_host }}/survey/resume/{{ userId }}"
+                >{% if request.is_secure %}https{% else %}http{% endif %}://{{ request.get_host }}/survey/resume/{{ userId }}</textarea>
             </div>
             <div class="col text-left">
                 <button class="btn btn-primary" id="download-direct-link">Download direct link</button>

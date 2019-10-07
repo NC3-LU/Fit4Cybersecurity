@@ -1,5 +1,5 @@
 from django.http import HttpResponse
-from django.conf import BASE_DIR
+from django.conf import settings
 
 from survey.models import SurveyQuestion, SurveyQuestionAnswer, SurveyUser, SurveyUserAnswer, Recommendations
 from survey.globals import SECTOR_CHOICES, COMPANY_SIZE
@@ -40,7 +40,7 @@ def createAndSendReport(request, userID, lang):
 
     cuser = SurveyUser.objects.filter(user_id=userID)[0]
 
-    filepath = BASE_DIR+"/wtemps/"
+    filepath = settings.BASE_DIR + "/wtemps/"
 
     theImage = filepath+"monarc.jpg"
     template = filepath+lang.lower()+"1.docx"
@@ -66,7 +66,7 @@ def createAndSendReport(request, userID, lang):
     recommendationList = getRecommendations(cuser)
     recommendationList = "\n\n".join(recommendationList)
 
-    tfile = open(BASE_DIR+"/"+lang.lower()+"_intro.txt",'r')
+    tfile = open(settings.BASE_DIR+"/"+lang.lower()+"_intro.txt",'r')
     introduction = tfile.read()
     tfile.close()
     introduction = introduction.replace("\n\r","\n")
@@ -79,7 +79,7 @@ def createAndSendReport(request, userID, lang):
             continue
         doc.add_paragraph(i)
 
-    tfile = open(BASE_DIR+"/"+lang.lower()+"_resultdisclaimer.txt",'r')
+    tfile = open(settings.BASE_DIR+"/"+lang.lower()+"_resultdisclaimer.txt",'r')
     results = tfile.read()
     tfile.close()
 
@@ -149,10 +149,10 @@ def createAndSendReport(request, userID, lang):
     return response
 
 
-def calculateResult(request,user):
+def calculateResult(request, user):
     allQuestions = SurveyQuestion.objects.values_list('maxPoints', flat=True).order_by('qindex')
     maxscore = sum(allQuestions)
-    allUserAnswers = SurveyUserAnswer.objects.filter(user=user).filter(value>0).order_by('answer__question__qindex','answer__aindex')
+    allUserAnswers = SurveyUserAnswer.objects.filter(user=user, value=1).order_by('answer__question__qindex','answer__aindex')
     totalscore = sum([x.answer.score for x in allUserAnswers])
 
     maxeval = {}
@@ -166,7 +166,7 @@ def calculateResult(request,user):
         
         maxeval[q.section.id] += q.maxPoints
 
-        uanswers = SurveyUserAnswer.objects.filter(answer__question__id=q.id).filter(value>0)
+        uanswers = SurveyUserAnswer.objects.filter(answer__question__id=q.id, value=1)
         scores = [x.answer.score for x in uanswers]
         evaluation[q.section.id] += sum(scores)
 
