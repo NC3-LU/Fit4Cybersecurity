@@ -1,0 +1,14 @@
+{% extends 'survey/base.html' %}
+
+{% load bootstrap4 %}
+
+{% load staticfiles %}
+
+{% block bootstrap4_extra_head %}
+    <link rel="stylesheet" type="text/css" href="{% static "survey/css/survey-index.css" %}" />
+    <script type="text/javascript" src="{% static "survey/js/survey-index.js" %}"></script>
+{% endblock %}
+
+{% block content %}
+    <img src="{{ chart_url }}">
+{% endblock %}

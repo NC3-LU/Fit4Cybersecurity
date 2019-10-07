@@ -197,10 +197,10 @@ def createAndSendReport(request, userID, lang):
     return response
 
 
-def calculateResult(request,user):
+def calculateResult(request, cuser):
     allQuestions = SurveyQuestion.objects.values_list('maxPoints', flat=True).order_by('qindex')
     maxscore = sum(allQuestions)
-    allUserAnswers = SurveyUserAnswer.objects.filter(uvalue>0,user=user).order_by('answer__question__qindex','answer__aindex')
+    allUserAnswers = SurveyUserAnswer.objects.filter(uvalue__gt=0,user=cuser).order_by('answer__question__qindex','answer__aindex')
     totalscore = sum([x.answer.score for x in allUserAnswers])
 
     maxeval = {}
@@ -214,7 +214,7 @@ def calculateResult(request,user):
         
         maxeval[q.section.id] += q.maxPoints
 
-        uanswers = SurveyUserAnswer.objects.filter(uvalue>0,answer__question__id=q.id)
+        uanswers = SurveyUserAnswer.objects.filter(uvalue__gt=0,answer__question__id=q.id)
         scores = [x.answer.score for x in uanswers]
         evaluation[q.section.id] += sum(scores)
 
