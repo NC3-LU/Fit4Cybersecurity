@@ -109,7 +109,7 @@ def saveAndGetQuestion(user: SurveyUser, request):
         'userId': user.user_id,
         'txtcontinuelater': TRANSLATION_UI['question']['continuelater'][user.chosenLang.lower()],
     }
-        
+
 
 def saveAnswers (answer_choices, answers, user):
     existinganswerids = [ int(i[0]) for i in answer_choices ]
@@ -119,11 +119,11 @@ def saveAnswers (answer_choices, answers, user):
         answer.user = user
         qanswer = SurveyQuestionAnswer.objects.filter(id=a)[0]
         answer.answer = qanswer
-        
+
         answer.value = 0
         if a in useranswers:
             answer.value += 1
-        
+
         answer.save()
 
 
@@ -171,16 +171,16 @@ def showCompleteReport(request,userID):
     finalReportRecs = getRecommendations(cuser)
 
     allText = []
-    
+
     for x in finalReportRecs:
 
         txt = x #TranslationKey.objects.filter(lang=cuser.chosenLang).filter(key=x.textKey)[0]
         #txt = txt.text.replace("\n","<br>")
         txt = txt.replace("\n","<br>")
         allText.append(str(txt))
-    
+
     return allText
-    
+
     # get all answers
 
 
@@ -192,7 +192,7 @@ def createAndSendReport(request, userID, lang):
 
     cuser = SurveyUser.objects.filter(user_id=userID)[0]
 
-    filepath = "/home/fabien/Documents/CybersecurityStarterKit/csskp/wtemps/"
+    filepath = 'wtemps/'
 
     theImage = filepath+"monarc.jpg"
     template = filepath+lang.lower()+"1.docx"
@@ -210,12 +210,12 @@ def createAndSendReport(request, userID, lang):
     for a,b in SECTOR_CHOICES:
         if cuser.sector == a:
             sectorName = str(b)
-    
+
     compSize = str(cuser.e_count)
     for a,b in COMPANY_SIZE:
         if cuser.e_count == a:
             compSize = b
-    
+
     recommendationList = getRecommendations(cuser)
     recommendationList = "\n\n".join(recommendationList)
 
@@ -230,21 +230,21 @@ def createAndSendReport(request, userID, lang):
         answerlist = SurveyQuestionAnswer.objects.filter(question=i).order_by('aindex')
         headingLine = {'ca':str(ind), 'surveyAnswers':str(i)}
         table.append(headingLine)
-        
+
         for a in answerlist:
             line = {'ca':"", 'surveyAnswers':""}
             u = SurveyUserAnswer.objects.filter(answer=a)[0]
-            
+
             if u.value > 0:
                 line['ca'] = "X"
             else:
                 line['ca'] = " "
-            
+
             line['surveyAnswers'] = str(a)
             table.append(line)
 
     everyQuestionAndAnswer = table
-    
+
     document.merge(
         result=str(theResult)+"/100",
         companysize=compSize,
