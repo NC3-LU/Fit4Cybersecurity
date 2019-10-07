@@ -4,6 +4,7 @@ from django.http import HttpResponse, HttpResponseNotFound, HttpResponseRedirect
 from survey.models import SurveyUser
 from survey.forms import InitialStartForm, AnswerMChoice
 from survey.viewLogic import saveAndGetQuestion, findUserById, showCompleteReport, createAndSendReport
+from survey.reporthelper import calculateResult
 from survey.globals import LANG_SELECT,TRANSLATION_UI
 
 
@@ -67,6 +68,7 @@ def finishSurvey(request):
 
     userid = request.session['user_id']
     userlang = request.session['lang'].lower()
+    user=SurveyUser.objects.filter(user_id=userid)[0]
 
     # make survey readonly and show results.
     # also needs saving here!
@@ -76,6 +78,7 @@ def finishSurvey(request):
     txtreport = TRANSLATION_UI['report']['report'][userlang]
     txtdescription = TRANSLATION_UI['report']['description'][userlang]
     txttitle = TRANSLATION_UI['report']['title'][userlang]
+    txtscore, radarMax, radarCurrent = calculateResult(request, user)
 
     textLayout = {
         'title': "Fit4Cybersecurity - "+txttitle,
@@ -85,6 +88,7 @@ def finishSurvey(request):
         'reportlink': "/survey/report",
         'txtdownload': txtdownload,
         'txtreport': txtreport,
+        'txtscore': txtscore,
     }
 
     return render(request, 'survey/finishedSurvey.html',context=textLayout)

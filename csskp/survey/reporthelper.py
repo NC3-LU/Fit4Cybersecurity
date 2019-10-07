@@ -1,4 +1,5 @@
 from django.http import HttpResponse
+from django.conf import BASE_DIR
 
 from survey.models import SurveyQuestion, SurveyQuestionAnswer, SurveyUser, SurveyUserAnswer, Recommendations
 from survey.globals import SECTOR_CHOICES, COMPANY_SIZE
@@ -39,7 +40,7 @@ def createAndSendReport(request, userID, lang):
 
     cuser = SurveyUser.objects.filter(user_id=userID)[0]
 
-    filepath = "/home/fabien/Documents/CybersecurityStarterKit/csskp/wtemps/"
+    filepath = BASE_DIR+"/wtemps/"
 
     theImage = filepath+"monarc.jpg"
     template = filepath+lang.lower()+"1.docx"
@@ -47,9 +48,8 @@ def createAndSendReport(request, userID, lang):
     #document = MailMerge(template)
     #doc = Document()
 
-    print (doc)
-
-    theResult = 80
+    score = 80
+    score, detailMax, details = calculateResult(request,cuser)
 
     everyQuestion = SurveyQuestion.objects.all().order_by('qindex')
 
@@ -66,7 +66,36 @@ def createAndSendReport(request, userID, lang):
     recommendationList = getRecommendations(cuser)
     recommendationList = "\n\n".join(recommendationList)
 
+    tfile = open(BASE_DIR+"/"+lang.lower()+"_intro.txt",'r')
+    introduction = tfile.read()
+    tfile.close()
+    introduction = introduction.replace("\n\r","\n")
+    introduction = introduction.split("\n\n")
+    x = 0
+    for i in introduction:
+        if x == 0:
+            doc.add_heading(i)
+            x += 1
+            continue
+        doc.add_paragraph(i)
 
+    tfile = open(BASE_DIR+"/"+lang.lower()+"_resultdisclaimer.txt",'r')
+    results = tfile.read()
+    tfile.close()
+
+    results = results.replace("\n\r","\n")
+    results = results.replace("$$result$$",score)
+    results = results.split("\n\n")
+
+    x = 0
+    for i in results:
+        if x == 0:
+            doc.add_heading(i)
+            x += 1
+            continue
+        doc.add_paragraph(i)
+
+    '''
     table = []
     ind = 0
     for i in everyQuestion:
@@ -91,7 +120,7 @@ def createAndSendReport(request, userID, lang):
             table.append(line)
 
     everyQuestionAndAnswer = table
-    
+    '''
     '''
     document.merge(
         result=str(theResult)+"/100",
@@ -105,8 +134,12 @@ def createAndSendReport(request, userID, lang):
         )
     '''
 
+    # use matplotlib for png of radar graph
+    # can use matplotlib import pyplot as plt
+    # then the graph save: plt.savefig('/tmp/'+str(userID)+'.png')
+
     response = HttpResponse(content_type='application/vnd.openxmlformats-officedocument.wordprocessingml.document')
-    response['Content-Disposition'] = 'attachment; filename=result'+lang.lower()+'.docx'
+    response['Content-Disposition'] = 'attachment; filename=result-'+lang.lower()+'.docx'
     #document.write(response)
     doc.save(response)
     # make survey readonly and show results.
@@ -114,6 +147,7 @@ def createAndSendReport(request, userID, lang):
     # then call getcompanies when button is hit
 
     return response
+
 
 def calculateResult(request,user):
     allQuestions = SurveyQuestion.objects.values_list('maxPoints', flat=True).order_by('qindex')
