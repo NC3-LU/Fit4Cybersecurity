@@ -65,7 +65,7 @@
                             pointBorderColor: '#fff',
                             pointHoverBackgroundColor: '#fff',
                             pointHoverBorderColor: 'rgb(54, 162, 235)',
-                            data: {{ chartdataMax | safe }},
+                            data: parseFloat({{ chartdataMax | safe }}),
                         }
                     ]
                 },
@@ -74,13 +74,13 @@
                         ticks: {
                             beginAtZero: true,
                             min: 0,
-                            max: {{ chartMax }},
+                            max: parseFloat({{ chartdataMax | safe }}),
                         }
                     },
                     elements:{
                         line:{
-                            tension:0,
-                            borderWidth:3
+                            tension: 0,
+                            borderWidth: 3
                         }
                     },
                     title: {

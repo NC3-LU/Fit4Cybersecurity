@@ -11,6 +11,5 @@ urlpatterns = [
     path('finish', views.finish),
     path('report', views.finish),
     path('report/<slug:lang>', views.showReport),
-    path('chart', views.show_chart),
     path('companies', views.getCompanies),
 ]

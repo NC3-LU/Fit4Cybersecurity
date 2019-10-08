@@ -1,8 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse, HttpResponseRedirect
 
-from survey.viewLogic import createUser, handleStartSurvey, saveAndGetQuestion, findUserById, showCompleteReport, \
-    generate_chart_png
+from survey.viewLogic import createUser, handleStartSurvey, saveAndGetQuestion, findUserById, getRecommendationsReport
 from survey.reporthelper import calculateResult, createAndSendReport
 from survey.globals import TRANSLATION_UI
 from django.contrib import messages
@@ -48,44 +47,37 @@ def getQuestion(request):
 
 def finish(request):
 
-    userid = request.session['user_id']
-    userlang = request.session['lang'].lower()
-    user = findUserById(userid)
+    user_id = request.session['user_id']
+    user = findUserById(user_id)
+    user_lang = user.chosenLang.lower()
 
     # make survey readonly and show results.
     # also needs saving here!
     # show a "Thank you" and a "get your report" button
 
-    txtdownload = TRANSLATION_UI['report']['download'][userlang]
-    txtreport = TRANSLATION_UI['report']['report'][userlang]
-    txtdescription = TRANSLATION_UI['report']['description'][userlang]
-    txttitle = TRANSLATION_UI['report']['title'][userlang]
-    txtscore, radarMax, radarCurrent, sectionslist = calculateResult(request, user)
-    txtresult = TRANSLATION_UI['report']['result'][userlang]
-    txtresultMax = TRANSLATION_UI['report']['resultMax'][userlang]
+    txt_score, radar_max, radar_current, sections_list = calculateResult(user)
 
     textLayout = {
-        'title': "Fit4Cybersecurity - " + txttitle,
-        'description': txtdescription,
-        'recommendations': showCompleteReport(request, userid),
-        'userId': userid,
+        'title': "Fit4Cybersecurity - " + TRANSLATION_UI['report']['title'][user_lang],
+        'description': TRANSLATION_UI['report']['description'][user_lang],
+        'recommendations': getRecommendationsReport(user),
+        'userId': user_id,
         'reportlink': "/survey/report",
-        'txtdownload': txtdownload,
-        'txtreport': txtreport,
-        'txtscore': txtscore,
-        'chartTitles': str(sectionslist),
-        'chartlabelYou': txtresult,
-        'chartlabelMax': txtresultMax,
-        'chartdataYou': str(radarCurrent),
-        'chartdataMax': str(radarMax),
-        'chartMax': max(radarMax),
+        'txtdownload': TRANSLATION_UI['report']['download'][user_lang],
+        'txtreport': TRANSLATION_UI['report']['report'][user_lang],
+        'txtscore': txt_score,
+        'chartTitles': str(sections_list),
+        'chartlabelYou': TRANSLATION_UI['report']['result'][user_lang],
+        'chartlabelMax': TRANSLATION_UI['report']['resultMax'][user_lang],
+        'chartdataYou': str(radar_current),
+        'chartdataMax': str(radar_max),
     }
 
     return render(request, 'survey/finishedSurvey.html', context=textLayout)
 
 
 def showReport(request, lang):
-    return createAndSendReport(request, request.session['user_id'], lang)
+    return createAndSendReport(request.session['user_id'], lang)
 
 
 def getCompanies(request):
@@ -106,11 +98,3 @@ def resume(request, userId):
     request.session['user_id'] = str(userId)
 
     return HttpResponseRedirect('/survey/question')
-
-
-def show_chart(request):
-    data = {
-        'chart_url': generate_chart_png(request.session['user_id'])
-    }
-
-    return render(request, 'survey/chart.html', context=data)

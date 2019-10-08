@@ -1,8 +1,11 @@
 from django.http import HttpResponse
 from django.conf import settings
 
-from survey.models import SurveyQuestion, SurveyQuestionAnswer, SurveyUser, SurveyUserAnswer, Recommendations
+from survey.models import SurveyQuestion, SurveyQuestionAnswer, SurveyUser, SurveyUserAnswer, Recommendations, \
+    TranslationKey
 from survey.globals import SECTOR_CHOICES, COMPANY_SIZE, TRANSLATION_UI
+from utils.radarFactory import radar_factory
+import matplotlib.pyplot as plt
 
 
 def getRecommendations(cuser):
@@ -32,8 +35,7 @@ def getRecommendations(cuser):
     return finalReportRecs
 
 
-def createAndSendReport(request, userID, lang):
-    from mailmerge import MailMerge
+def createAndSendReport(userID, lang):
     from datetime import date
     from docx import Document
     from docx.shared import Cm, Inches, Pt
@@ -49,7 +51,7 @@ def createAndSendReport(request, userID, lang):
     #doc = Document()
 
     score = 80
-    score, detailMax, details = calculateResult(request,cuser)
+    score, detailMax, details, section_list = calculateResult(cuser)
 
     everyQuestion = SurveyQuestion.objects.all().order_by('qindex')
 
@@ -155,6 +157,7 @@ def createAndSendReport(request, userID, lang):
         doc.add_paragraph()
         x += 1
 
+    # todo: add chart_png_file = generate_chart_png(user, detailMax, details, section_list) to the file.
 
 
     '''
@@ -211,37 +214,91 @@ def createAndSendReport(request, userID, lang):
     return response
 
 
-def calculateResult(request, cuser):
-    allQuestions = SurveyQuestion.objects.values_list('maxPoints', flat=True).order_by('qindex')
-    maxscore = sum(allQuestions)
-    allUserAnswers = SurveyUserAnswer.objects.filter(uvalue__gt=0,user=cuser).order_by('answer__question__qindex','answer__aindex')
+def calculateResult(user: SurveyUser):
+    allUserAnswers = SurveyUserAnswer.objects.filter(uvalue__gt=0, user=user).order_by('answer__question__qindex',
+                                                                                       'answer__aindex')
     totalscore = sum([x.answer.score for x in allUserAnswers])
 
     maxeval = {}
     evaluation = {}
     sectionlist = {}
+    maxscore = 0
+
+    translations = TranslationKey.objects.filter(lang=user.chosenLang, ttype='S')
+    translation_key_values = {}
+    for translation in translations:
+        translation_key_values[translation.key] = translation.text
 
     for q in SurveyQuestion.objects.all():
+        maxscore += q.maxPoints
         if q.section.id not in evaluation:
             evaluation[q.section.id] = 0
         if q.section.id not in maxeval:
             maxeval[q.section.id] = 0
-        if q.section.id not in sectionlist:
-            sectionlist[q.section.id] = str(q.section)
-        
+        sectionlist[q.section.id] = translation_key_values[q.section.sectionTitleKey]
+
         maxeval[q.section.id] += q.maxPoints
 
-        uanswers = SurveyUserAnswer.objects.filter(uvalue__gt=0,answer__question__id=q.id)
+        uanswers = SurveyUserAnswer.objects.filter(user=user, uvalue__gt=0, answer__question__id=q.id)
         scores = [x.answer.score for x in uanswers]
         evaluation[q.section.id] += sum(scores)
 
     # get the score in percent! with then 100 being maxscore
-    totalscore = round((totalscore*100)/maxscore)
-
+    totalscore = round((totalscore * 100) / maxscore)
 
     sectionlist = [sectionlist[x] for x in sectionlist]
     evaluation = [evaluation[x] for x in evaluation]
     maxeval = [maxeval[x] for x in maxeval]
-    
-    
+
     return totalscore, maxeval, evaluation, sectionlist
+
+
+def generate_chart_png(user: SurveyUser, max_eval, evaluation, sections_list):
+    n = len(sections_list)
+    theta = radar_factory(n, frame='polygon')
+
+    spoke_labels = []
+    for section in sections_list:
+        spoke_labels.append(section)
+
+    fig, ax = plt.subplots(figsize=(n, n), nrows=1, ncols=1,
+                             subplot_kw=dict(projection='radar'))
+    fig.subplots_adjust(wspace=0.25, hspace=0.20, top=0.85, bottom=0.05)
+
+    colors = ['b', 'r', 'g', 'm', 'y', 'c', 'k', 'w']
+
+    # data = [
+    #     ('Basecase', [
+    #         [0.88, 0.01],
+    #         [0.07, 0.95],
+    #     ]),
+    # ]
+    # for ax, (title, case_data) in zip(axes.flat, data):
+    #     ax.set_rgrids([0.2, 0.4, 0.6, 0.8])
+    #     ax.set_title(title, weight='bold', size='medium', position=(0.5, 1.1),
+    #                  horizontalalignment='center', verticalalignment='center')
+    #     for d, color in zip(case_data, colors):
+    #         ax.plot(theta, d, color=color)
+    #         ax.fill(theta, d, facecolor=color, alpha=0.25)
+    #     ax.set_varlabels(spoke_labels)
+
+
+    grid_step = max_eval[1] / 5
+    ax.set_rgrids([grid_step, grid_step * 2, grid_step * 3, grid_step * 4])
+
+    ax.plot(theta, evaluation, color=colors[1])
+    ax.fill(theta, evaluation, facecolor=colors[1], alpha=0.25)
+    ax.set_varlabels(spoke_labels)
+
+    # add legend relative to top-left plot
+    ax.legend(sections_list, loc=(0.9, .95),
+                       labelspacing=0.1, fontsize='small')
+
+    fig.text(0.5, 0.965, TRANSLATION_UI['report']['chart'][user.chosenLang.lower()],
+             horizontalalignment='center', color='black', weight='bold',
+             size='large')
+
+    file_name = './static/users/survey-' + str(user.id) + '.png'
+    plt.savefig(file_name)
+
+    return file_name
