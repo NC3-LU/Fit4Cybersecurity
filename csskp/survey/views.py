@@ -71,13 +71,14 @@ def finish(request):
         'chartlabelMax': TRANSLATION_UI['report']['resultMax'][user_lang],
         'chartdataYou': str(radar_current),
         'chartdataMax': str(radar_max),
+        'chartMax': max(radar_max),
     }
 
     return render(request, 'survey/finishedSurvey.html', context=textLayout)
 
 
 def showReport(request, lang):
-    return createAndSendReport(request.session['user_id'], lang)
+    return createAndSendReport(findUserById(request.session['user_id']), lang)
 
 
 def getCompanies(request):

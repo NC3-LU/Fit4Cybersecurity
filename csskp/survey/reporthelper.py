@@ -35,91 +35,94 @@ def getRecommendations(cuser):
     return finalReportRecs
 
 
-def createAndSendReport(userID, lang):
-    from datetime import date
-    from docx import Document
-    from docx.shared import Cm, Inches, Pt
+def createAndSendReport(user: SurveyUser, lang):
 
-    cuser = SurveyUser.objects.filter(user_id=userID)[0]
+    score, detail_max, details, section_list = calculateResult(user)
+
+    chart_png_file = generate_chart_png(user, detail_max, details, section_list)
+
+    from docx import Document
+    from docx.shared import Cm, Pt
 
     filepath = settings.BASE_DIR+"/wtemps/"
 
-    theImage = filepath+"monarc.jpg"
-    template = filepath+lang.lower()+"1.docx"
+    template = filepath + lang.lower() + "1.docx"
     doc = Document(template)
-    #document = MailMerge(template)
-    #doc = Document()
-
-    score = 80
-    score, detailMax, details, section_list = calculateResult(cuser)
 
     everyQuestion = SurveyQuestion.objects.all().order_by('qindex')
 
-    sectorName = str(cuser.sector)
-    for a,b in SECTOR_CHOICES:
-        if cuser.sector == a:
-            sectorName = str(b)
-    
-    compSize = str(cuser.e_count)
-    for a,b in COMPANY_SIZE:
-        if cuser.e_count == a:
-            compSize = b
-    
-    recommendationList = getRecommendations(cuser)
-    recommendationList = "\n\n".join(recommendationList)
+    # sectorName = str(user.sector)
+    # for a,b in SECTOR_CHOICES:
+    #     if user.sector == a:
+    #         sectorName = str(b)
+    #
+    # compSize = str(user.e_count)
+    # for a,b in COMPANY_SIZE:
+    #     if user.e_count == a:
+    #         compSize = b
+    #
+    # recommendationList = getRecommendations(user)
+    # recommendationList = "\n\n".join(recommendationList)
 
-    tfile = open(filepath+"/"+lang.lower()+"_intro.txt",'r')
+    tfile = open(filepath + "/" + lang.lower() + "_intro.txt", 'r')
     introduction = tfile.read()
     tfile.close()
 
-    introduction = introduction.replace("\n\r","\n")
+    introduction = introduction.replace("\n\r", "\n")
     introduction = introduction.split("\n\n")
     x = 0
     for i in introduction:
         if x == 0:
-            doc.add_heading(i,level=1)
+            doc.add_heading(i, level=1)
             x += 1
             continue
         doc.add_paragraph(i)
 
-
-    tfile = open(filepath+"/"+lang.lower()+"_description.txt",'r')
+    tfile = open(filepath + "/" + lang.lower() + "_description.txt", 'r')
     methodDescr = tfile.read()
     tfile.close()
-    
-    methodDescr = methodDescr.replace("\n\r","\n")
+
+    methodDescr = methodDescr.replace("\n\r", "\n")
     methodDescr = methodDescr.split("\n\n")
     x = 0
     for i in methodDescr:
         if x == 0:
-            doc.add_heading(i,level=1)
+            doc.add_heading(i, level=1)
             x += 1
             continue
         doc.add_paragraph(i)
-    
 
-    tfile = open(filepath+"/"+lang.lower()+"_resultdisclaimer.txt",'r')
+    tfile = open(filepath + "/" + lang.lower() + "_resultdisclaimer.txt", 'r')
     results = tfile.read()
     tfile.close()
 
-    results = results.replace("\n\r","\n")
-    results = results.replace("$$result$$",str(score))
+    results = results.replace("\n\r", "\n")
+    results = results.replace("$$result$$", str(score))
     results = results.split("\n\n")
+
+
 
     x = 0
     for i in results:
         if x == 0:
-            doc.add_heading(i,level=1)
+            doc.add_heading(i, level=1)
             x += 1
+
             continue
         doc.add_paragraph(i)
 
+    chart_png_file = generate_chart_png(user, detail_max, details, section_list)
+    doc.add_paragraph()
+    #doc.add_heading(TRANSLATION_UI['report']['chart'][user.chosenLang.lower()], level=2)
+    paragraph = doc.add_paragraph()
+    run = paragraph.add_run()
+    run.add_picture(chart_png_file)
 
-    doc.add_heading(TRANSLATION_UI['document']['questions'][lang.lower()],level=1)
+    doc.add_heading(TRANSLATION_UI['document']['questions'][lang.lower()], level=1)
 
     x = 1
     for i in everyQuestion:
-        table = doc.add_table(rows=1,cols=2)
+        table = doc.add_table(rows=1, cols=2)
         table.autofit = False
         hdr_cells = table.rows[0].cells
         hdr_cells[0].text = str(x)
@@ -133,32 +136,29 @@ def createAndSendReport(userID, lang):
         bX.font.size = Pt(13)
 
         answerlist = SurveyQuestionAnswer.objects.filter(question=i).order_by('aindex')
-        
+
         for a in answerlist:
             row_cells = table.add_row().cells
             u = SurveyUserAnswer.objects.filter(answer=a)[0]
-            
+
             if u.uvalue > 0:
                 row_cells[0].text = "X"
                 bX = row_cells[0].paragraphs[0].runs[0]
                 bX.font.bold = True
             else:
                 row_cells[0].text = " "
-            
+
             row_cells[1].text = str(a)
-        
+
         col = table.columns[0]
         col.width = Cm(1.5)
         col = table.columns[1]
         col.width = Cm(14.0)
         for cell in table.columns[0].cells:
-            cell.width=Cm(1.5)
+            cell.width = Cm(1.5)
 
         doc.add_paragraph()
         x += 1
-
-    # todo: add chart_png_file = generate_chart_png(user, detailMax, details, section_list) to the file.
-
 
     '''
     table = []
@@ -199,14 +199,10 @@ def createAndSendReport(userID, lang):
         )
     '''
 
-    # use matplotlib for png of radar graph
-    # can use matplotlib import pyplot as plt
-    # then the graph save: plt.savefig('/tmp/'+str(userID)+'.png')
-
     response = HttpResponse(content_type='application/vnd.openxmlformats-officedocument.wordprocessingml.document')
     response['Content-Disposition'] = 'attachment; filename=result-'+lang.lower()+'.docx'
-    #document.write(response)
     doc.save(response)
+
     # make survey readonly and show results.
     # make checkboxes to recommendation and a single button of get companies
     # then call getcompanies when button is hit
@@ -261,44 +257,31 @@ def generate_chart_png(user: SurveyUser, max_eval, evaluation, sections_list):
     for section in sections_list:
         spoke_labels.append(section)
 
-    fig, ax = plt.subplots(figsize=(n, n), nrows=1, ncols=1,
+    fig, ax = plt.subplots(figsize=(7, 5), dpi=150, nrows=1, ncols=1,
                              subplot_kw=dict(projection='radar'))
     fig.subplots_adjust(wspace=0.25, hspace=0.20, top=0.85, bottom=0.05)
 
-    colors = ['b', 'r', 'g', 'm', 'y', 'c', 'k', 'w']
+    grid_step = max(max_eval) / 5
+    ax.set_rgrids([0, grid_step, grid_step * 2, grid_step * 3, grid_step * 4])
+    ax.set_ylim(0, max(max_eval))
 
-    # data = [
-    #     ('Basecase', [
-    #         [0.88, 0.01],
-    #         [0.07, 0.95],
-    #     ]),
-    # ]
-    # for ax, (title, case_data) in zip(axes.flat, data):
-    #     ax.set_rgrids([0.2, 0.4, 0.6, 0.8])
-    #     ax.set_title(title, weight='bold', size='medium', position=(0.5, 1.1),
-    #                  horizontalalignment='center', verticalalignment='center')
-    #     for d, color in zip(case_data, colors):
-    #         ax.plot(theta, d, color=color)
-    #         ax.fill(theta, d, facecolor=color, alpha=0.25)
-    #     ax.set_varlabels(spoke_labels)
+    ax.plot(theta, evaluation, color='r')
+    ax.fill(theta, evaluation, facecolor='r', alpha=0.25)
 
+    ax.plot(theta, max_eval, color='b')
+    ax.fill(theta, max_eval, facecolor='b', alpha=0.25)
 
-    grid_step = max_eval[1] / 5
-    ax.set_rgrids([grid_step, grid_step * 2, grid_step * 3, grid_step * 4])
-
-    ax.plot(theta, evaluation, color=colors[1])
-    ax.fill(theta, evaluation, facecolor=colors[1], alpha=0.25)
     ax.set_varlabels(spoke_labels)
 
-    # add legend relative to top-left plot
-    ax.legend(sections_list, loc=(0.9, .95),
-                       labelspacing=0.1, fontsize='small')
+    ax.legend([TRANSLATION_UI['report']['result'][user.chosenLang.lower()],
+               TRANSLATION_UI['report']['resultMax'][user.chosenLang.lower()]], loc=(0.9, .95),
+              labelspacing=0.1, fontsize='small')
 
-    fig.text(0.5, 0.965, TRANSLATION_UI['report']['chart'][user.chosenLang.lower()],
+    fig.text(1.0, 1.0, TRANSLATION_UI['report']['chart'][user.chosenLang.lower()],
              horizontalalignment='center', color='black', weight='bold',
              size='large')
 
-    file_name = './static/users/survey-' + str(user.id) + '.png'
+    file_name = './static/users/survey-' + str(user.user_id) + '.png'
     plt.savefig(file_name)
 
     return file_name
