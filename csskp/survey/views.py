@@ -61,6 +61,8 @@ def finish(request):
     txtdescription = TRANSLATION_UI['report']['description'][userlang]
     txttitle = TRANSLATION_UI['report']['title'][userlang]
     txtscore, radarMax, radarCurrent, sectionslist = calculateResult(request, user)
+    txtresult = TRANSLATION_UI['report']['result'][userlang]
+    txtresultMax = TRANSLATION_UI['report']['resultMax'][userlang]
 
     textLayout = {
         'title': "Fit4Cybersecurity - " + txttitle,
@@ -71,6 +73,12 @@ def finish(request):
         'txtdownload': txtdownload,
         'txtreport': txtreport,
         'txtscore': txtscore,
+        'chartTitles': str(sectionslist),
+        'chartlabelYou': txtresult,
+        'chartlabelMax': txtresultMax,
+        'chartdataYou': str(radarCurrent),
+        'chartdataMax': str(radarMax),
+        'chartMax': max(radarMax),
     }
 
     return render(request, 'survey/finishedSurvey.html', context=textLayout)

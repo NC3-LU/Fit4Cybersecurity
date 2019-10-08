@@ -237,5 +237,11 @@ def calculateResult(request, cuser):
 
     # get the score in percent! with then 100 being maxscore
     totalscore = round((totalscore*100)/maxscore)
+
+
+    sectionlist = [sectionlist[x] for x in sectionlist]
+    evaluation = [evaluation[x] for x in evaluation]
+    maxeval = [maxeval[x] for x in maxeval]
+    
     
     return totalscore, maxeval, evaluation, sectionlist
