@@ -66,6 +66,7 @@ def handleStartSurvey(user: SurveyUser, request):
     }
 
 def saveAndGetQuestion(user: SurveyUser, request):
+
     if user.survey_done:
         return -1
 
@@ -119,11 +120,11 @@ def saveAnswers (answer_choices, answers, user):
         answer.user = user
         qanswer = SurveyQuestionAnswer.objects.filter(id=a)[0]
         answer.answer = qanswer
-        
+
         answer.value = 0
         if a in useranswers:
             answer.value += 1
-        
+
         answer.save()
 
 
@@ -150,7 +151,7 @@ def showCompleteReport(request, userID):
         # txt = txt.text.replace("\n","<br>")
         txt = txt.replace("\n", "<br>")
         allText.append(str(txt))
-
+    
     return allText
 
 
