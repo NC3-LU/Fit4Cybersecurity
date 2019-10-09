@@ -3,7 +3,7 @@ from django.conf import settings
 
 from survey.models import SurveyQuestion, SurveyQuestionAnswer, SurveyUser, SurveyUserAnswer, Recommendations, \
     TranslationKey
-from survey.globals import SECTOR_CHOICES, COMPANY_SIZE, TRANSLATION_UI
+from survey.globals import TRANSLATION_UI
 from utils.radarFactory import radar_factory
 import matplotlib.pyplot as plt
 
@@ -139,6 +139,7 @@ def createAndSendReport(user: SurveyUser, lang):
 
     '''
     sectorName = str(user.sector)
+    # SECTOR_CHOICES is removed!
     for a,b in SECTOR_CHOICES:
         if user.sector == a:
             sectorName = str(b)
@@ -150,7 +151,7 @@ def createAndSendReport(user: SurveyUser, lang):
 
     recommendationList = getRecommendations(user)
     recommendationList = "\n\n".join(recommendationList)
-    
+
     table = []
     ind = 0
     for i in everyQuestion:
@@ -161,16 +162,16 @@ def createAndSendReport(user: SurveyUser, lang):
         answerlist = SurveyQuestionAnswer.objects.filter(question=i).order_by('aindex')
         headingLine = {'ca':str(ind), 'surveyAnswers':str(i)}
         table.append(headingLine)
-        
+
         for a in answerlist:
             line = {'ca':"", 'surveyAnswers':""}
             u = SurveyUserAnswer.objects.filter(answer=a)[0]
-            
+
             if u.uvalue > 0:
                 line['ca'] = "X"
             else:
                 line['ca'] = " "
-            
+
             line['surveyAnswers'] = str(a)
             table.append(line)
 

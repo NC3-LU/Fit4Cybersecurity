@@ -1,7 +1,7 @@
 SECTOR_CHOICES = [
     ("gov", "Government"),
     ("adm", "Public Administrations"),
-    ("fin", "Sinancial Sector"),
+    ("fin", "Financial Sector"),
     ("it", "Information Technology (IT)"),
 ]
 
@@ -186,8 +186,42 @@ TRANSLATION_UI = {
                     'en': "You can't choose multiple answers if the answer '%(value)s' is choosen",
                     'fr': "Vous ne pouvez pas choisir plusieurs réponses si la réponse '%(value)s' est choisie",
                     'de': "Sie können nicht mehrere Antworten auswählen, wenn die Antwort '%(value)s' ausgewählt ist",
-                }
-            }
-        }
-    }
+                },
+            },
+        },
+        'start_form': {
+            'sector_question': {
+                'en': "What is your sector?",
+                'fr': "Quel est votre secteur?",
+                'de': "Was ist Ihre Branche?",
+            },
+            'sector_list': {
+                'gov': {
+                    'en': "Government",
+                    'fr': "Gouvernement",
+                    'de': "Regierung",
+                },
+                'adm': {
+                    'en': "Public Administrations",
+                    'fr': "Administrations publiques",
+                    'de': "Öffentliche Verwaltungen",
+                },
+                'fin': {
+                    'en': "Financial Sector",
+                    'fr': "Secteur financier",
+                    'de': "Finanzsektor",
+                },
+                'it': {
+                    'en': "Information Technology (IT)",
+                    'fr': "Information Technologique (IT)",
+                    'de': "Informationstechnologie (IT)",
+                },
+            },
+            'size_question': {
+                'en': "How many employees?",
+                'fr': "Combien d'employés?",
+                'de': "Wie viele mitarbeiter?",
+            },
+        },
+    },
 }
