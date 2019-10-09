@@ -9,11 +9,7 @@ import matplotlib.pyplot as plt
 
 
 def getRecommendations(cuser):
-    allAnswers = SurveyQuestionAnswer.objects.all().order_by('question__qindex','aindex')
-
-    #userAnswers = SurveyUserAnswer.objects.all().filter(user=cuser)
-
-    #recommendations = Recommendations
+    allAnswers = SurveyQuestionAnswer.objects.all().order_by('question__qindex', 'aindex')
 
     finalReportRecs = []
 
@@ -36,33 +32,15 @@ def getRecommendations(cuser):
 
 
 def createAndSendReport(user: SurveyUser, lang):
-
-    score, detail_max, details, section_list = calculateResult(user)
-
-    chart_png_file = generate_chart_png(user, detail_max, details, section_list)
-
     from docx import Document
     from docx.shared import Cm, Pt
 
     filepath = settings.BASE_DIR+"/wtemps/"
 
-    template = filepath + lang.lower() + "1.docx"
+    template = filepath + lang.lower() + ".docx"
     doc = Document(template)
 
     everyQuestion = SurveyQuestion.objects.all().order_by('qindex')
-
-    # sectorName = str(user.sector)
-    # for a,b in SECTOR_CHOICES:
-    #     if user.sector == a:
-    #         sectorName = str(b)
-    #
-    # compSize = str(user.e_count)
-    # for a,b in COMPANY_SIZE:
-    #     if user.e_count == a:
-    #         compSize = b
-    #
-    # recommendationList = getRecommendations(user)
-    # recommendationList = "\n\n".join(recommendationList)
 
     tfile = open(filepath + "/" + lang.lower() + "_intro.txt", 'r')
     introduction = tfile.read()
@@ -96,11 +74,11 @@ def createAndSendReport(user: SurveyUser, lang):
     results = tfile.read()
     tfile.close()
 
+    score, detail_max, details, section_list = calculateResult(user)
+
     results = results.replace("\n\r", "\n")
     results = results.replace("$$result$$", str(score))
     results = results.split("\n\n")
-
-
 
     x = 0
     for i in results:
@@ -111,9 +89,8 @@ def createAndSendReport(user: SurveyUser, lang):
             continue
         doc.add_paragraph(i)
 
-    chart_png_file = generate_chart_png(user, detail_max, details, section_list)
+    chart_png_file = generate_chart_png(user, detail_max, details, section_list, lang)
     doc.add_paragraph()
-    #doc.add_heading(TRANSLATION_UI['report']['chart'][user.chosenLang.lower()], level=2)
     paragraph = doc.add_paragraph()
     run = paragraph.add_run()
     run.add_picture(chart_png_file)
@@ -161,6 +138,19 @@ def createAndSendReport(user: SurveyUser, lang):
         x += 1
 
     '''
+    sectorName = str(user.sector)
+    for a,b in SECTOR_CHOICES:
+        if user.sector == a:
+            sectorName = str(b)
+
+    compSize = str(user.e_count)
+    for a,b in COMPANY_SIZE:
+        if user.e_count == a:
+            compSize = b
+
+    recommendationList = getRecommendations(user)
+    recommendationList = "\n\n".join(recommendationList)
+    
     table = []
     ind = 0
     for i in everyQuestion:
@@ -185,8 +175,7 @@ def createAndSendReport(user: SurveyUser, lang):
             table.append(line)
 
     everyQuestionAndAnswer = table
-    '''
-    '''
+
     document.merge(
         result=str(theResult)+"/100",
         companysize=compSize,
@@ -203,7 +192,6 @@ def createAndSendReport(user: SurveyUser, lang):
     response['Content-Disposition'] = 'attachment; filename=result-'+lang.lower()+'.docx'
     doc.save(response)
 
-    # make survey readonly and show results.
     # make checkboxes to recommendation and a single button of get companies
     # then call getcompanies when button is hit
 
@@ -249,7 +237,7 @@ def calculateResult(user: SurveyUser):
     return totalscore, maxeval, evaluation, sectionlist
 
 
-def generate_chart_png(user: SurveyUser, max_eval, evaluation, sections_list):
+def generate_chart_png(user: SurveyUser, max_eval, evaluation, sections_list, lang):
     n = len(sections_list)
     theta = radar_factory(n, frame='polygon')
 
@@ -273,11 +261,11 @@ def generate_chart_png(user: SurveyUser, max_eval, evaluation, sections_list):
 
     ax.set_varlabels(spoke_labels)
 
-    ax.legend([TRANSLATION_UI['report']['result'][user.chosenLang.lower()],
-               TRANSLATION_UI['report']['resultMax'][user.chosenLang.lower()]], loc=(0.9, .95),
+    ax.legend([TRANSLATION_UI['report']['result'][lang.lower()],
+               TRANSLATION_UI['report']['resultMax'][lang.lower()]], loc=(0.9, .95),
               labelspacing=0.1, fontsize='small')
 
-    fig.text(1.0, 1.0, TRANSLATION_UI['report']['chart'][user.chosenLang.lower()],
+    fig.text(1.0, 1.0, TRANSLATION_UI['report']['chart'][lang.lower()],
              horizontalalignment='center', color='black', weight='bold',
              size='large')
 
