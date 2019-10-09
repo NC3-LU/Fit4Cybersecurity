@@ -76,6 +76,21 @@ TRANSLATION_UI = {
             'fr':"résumé final",
             'de':"Zusammenfassung",
         },
+        'result': {
+            'en': "Current",
+            'fr': "Maintenant",
+            'de': "Jetzt",
+        },
+        'resultMax': {
+            'en': "Target",
+            'fr': "But",
+            'de': "Ziel",
+        },
+        'chart': {
+            'en': "Your results chart",
+            'fr': "Votre tableau de résultats",
+            'de': "Ihr Ergebnisdiagramm",
+        },
     },
     'question':{
         'continuelater': {

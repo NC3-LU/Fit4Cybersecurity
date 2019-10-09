@@ -1,8 +1,11 @@
 from django.http import HttpResponse
 from django.conf import settings
 
-from survey.models import SurveyQuestion, SurveyQuestionAnswer, SurveyUser, SurveyUserAnswer, Recommendations
+from survey.models import SurveyQuestion, SurveyQuestionAnswer, SurveyUser, SurveyUserAnswer, Recommendations, \
+    TranslationKey
 from survey.globals import SECTOR_CHOICES, COMPANY_SIZE, TRANSLATION_UI
+from utils.radarFactory import radar_factory
+import matplotlib.pyplot as plt
 
 
 def getRecommendations(cuser):
@@ -24,124 +27,138 @@ def getRecommendations(cuser):
         for rec in recommendation:
             if rec.min_e_count.lower() > cuser.e_count.lower() or rec.max_e_count.lower() < cuser.e_count.lower():
                 continue
-            if userAnswer.value > 0 and rec.answerChosen:
+            if userAnswer.uvalue > 0 and rec.answerChosen:
                 finalReportRecs.append(str(rec))
-            elif userAnswer.value <= 0 and not rec.answerChosen:
+            elif userAnswer.uvalue <= 0 and not rec.answerChosen:
                 finalReportRecs.append(str(rec))
 
     return finalReportRecs
 
 
-def createAndSendReport(request, userID, lang):
-    from mailmerge import MailMerge
-    from datetime import date
-    from docx import Document
-    from docx.shared import Cm, Inches
+def createAndSendReport(user: SurveyUser, lang):
 
-    cuser = SurveyUser.objects.filter(user_id=userID)[0]
+    score, detail_max, details, section_list = calculateResult(user)
+
+    chart_png_file = generate_chart_png(user, detail_max, details, section_list)
+
+    from docx import Document
+    from docx.shared import Cm, Pt
 
     filepath = settings.BASE_DIR+"/wtemps/"
 
-    theImage = filepath+"monarc.jpg"
-    template = filepath+lang.lower()+"1.docx"
+    template = filepath + lang.lower() + "1.docx"
     doc = Document(template)
-    #document = MailMerge(template)
-    #doc = Document()
-
-    score = 80
-    score, detailMax, details = calculateResult(request,cuser)
 
     everyQuestion = SurveyQuestion.objects.all().order_by('qindex')
 
-    sectorName = str(cuser.sector)
-    for a,b in SECTOR_CHOICES:
-        if cuser.sector == a:
-            sectorName = str(b)
-    
-    compSize = str(cuser.e_count)
-    for a,b in COMPANY_SIZE:
-        if cuser.e_count == a:
-            compSize = b
-    
-    recommendationList = getRecommendations(cuser)
-    recommendationList = "\n\n".join(recommendationList)
+    # sectorName = str(user.sector)
+    # for a,b in SECTOR_CHOICES:
+    #     if user.sector == a:
+    #         sectorName = str(b)
+    #
+    # compSize = str(user.e_count)
+    # for a,b in COMPANY_SIZE:
+    #     if user.e_count == a:
+    #         compSize = b
+    #
+    # recommendationList = getRecommendations(user)
+    # recommendationList = "\n\n".join(recommendationList)
 
-    tfile = open(filepath+"/"+lang.lower()+"_intro.txt",'r')
+    tfile = open(filepath + "/" + lang.lower() + "_intro.txt", 'r')
     introduction = tfile.read()
     tfile.close()
 
-    introduction = introduction.replace("\n\r","\n")
+    introduction = introduction.replace("\n\r", "\n")
     introduction = introduction.split("\n\n")
     x = 0
     for i in introduction:
         if x == 0:
-            doc.add_heading(i,level=1)
+            doc.add_heading(i, level=1)
             x += 1
             continue
         doc.add_paragraph(i)
 
-
-    tfile = open(filepath+"/"+lang.lower()+"_description.txt",'r')
+    tfile = open(filepath + "/" + lang.lower() + "_description.txt", 'r')
     methodDescr = tfile.read()
     tfile.close()
-    
-    methodDescr = methodDescr.replace("\n\r","\n")
+
+    methodDescr = methodDescr.replace("\n\r", "\n")
     methodDescr = methodDescr.split("\n\n")
     x = 0
     for i in methodDescr:
         if x == 0:
-            doc.add_heading(i,level=1)
+            doc.add_heading(i, level=1)
             x += 1
             continue
         doc.add_paragraph(i)
-    
 
-    tfile = open(filepath+"/"+lang.lower()+"_resultdisclaimer.txt",'r')
+    tfile = open(filepath + "/" + lang.lower() + "_resultdisclaimer.txt", 'r')
     results = tfile.read()
     tfile.close()
 
-    results = results.replace("\n\r","\n")
-    results = results.replace("$$result$$",score)
+    results = results.replace("\n\r", "\n")
+    results = results.replace("$$result$$", str(score))
     results = results.split("\n\n")
+
+
 
     x = 0
     for i in results:
         if x == 0:
-            doc.add_heading(i,level=1)
+            doc.add_heading(i, level=1)
             x += 1
+
             continue
         doc.add_paragraph(i)
 
+    chart_png_file = generate_chart_png(user, detail_max, details, section_list)
+    doc.add_paragraph()
+    #doc.add_heading(TRANSLATION_UI['report']['chart'][user.chosenLang.lower()], level=2)
+    paragraph = doc.add_paragraph()
+    run = paragraph.add_run()
+    run.add_picture(chart_png_file)
 
-    doc.add_heading(TRANSLATION_UI['document']['questions'][lang],level=1)
+    doc.add_heading(TRANSLATION_UI['document']['questions'][lang.lower()], level=1)
 
-    x = 0
+    x = 1
     for i in everyQuestion:
-        table = doc.add_table(rows=1,cols=2)
+        table = doc.add_table(rows=1, cols=2)
+        table.autofit = False
         hdr_cells = table.rows[0].cells
         hdr_cells[0].text = str(x)
-        hdr_cells[1].text = i
+        hdr_cells[1].text = str(i)
+
+        bX = hdr_cells[0].paragraphs[0].runs[0]
+        bX.font.bold = True
+        bX.font.size = Pt(13)
+        bX = hdr_cells[1].paragraphs[0].runs[0]
+        bX.font.bold = True
+        bX.font.size = Pt(13)
 
         answerlist = SurveyQuestionAnswer.objects.filter(question=i).order_by('aindex')
-        
+
         for a in answerlist:
             row_cells = table.add_row().cells
             u = SurveyUserAnswer.objects.filter(answer=a)[0]
-            
-            if u.value > 0:
-                row_cells[0] = "X"
+
+            if u.uvalue > 0:
+                row_cells[0].text = "X"
                 bX = row_cells[0].paragraphs[0].runs[0]
                 bX.font.bold = True
             else:
-                row_cells[0] = " "
-            
-            row_cells[1] = str(a)
-        
+                row_cells[0].text = " "
+
+            row_cells[1].text = str(a)
+
+        col = table.columns[0]
+        col.width = Cm(1.5)
+        col = table.columns[1]
+        col.width = Cm(14.0)
+        for cell in table.columns[0].cells:
+            cell.width = Cm(1.5)
 
         doc.add_paragraph()
         x += 1
-
-
 
     '''
     table = []
@@ -159,7 +176,7 @@ def createAndSendReport(request, userID, lang):
             line = {'ca':"", 'surveyAnswers':""}
             u = SurveyUserAnswer.objects.filter(answer=a)[0]
             
-            if u.value > 0:
+            if u.uvalue > 0:
                 line['ca'] = "X"
             else:
                 line['ca'] = " "
@@ -182,14 +199,10 @@ def createAndSendReport(request, userID, lang):
         )
     '''
 
-    # use matplotlib for png of radar graph
-    # can use matplotlib import pyplot as plt
-    # then the graph save: plt.savefig('/tmp/'+str(userID)+'.png')
-
     response = HttpResponse(content_type='application/vnd.openxmlformats-officedocument.wordprocessingml.document')
     response['Content-Disposition'] = 'attachment; filename=result-'+lang.lower()+'.docx'
-    #document.write(response)
     doc.save(response)
+
     # make survey readonly and show results.
     # make checkboxes to recommendation and a single button of get companies
     # then call getcompanies when button is hit
@@ -197,28 +210,78 @@ def createAndSendReport(request, userID, lang):
     return response
 
 
-def calculateResult(request, cuser):
-    allQuestions = SurveyQuestion.objects.values_list('maxPoints', flat=True).order_by('qindex')
-    maxscore = sum(allQuestions)
-    allUserAnswers = SurveyUserAnswer.objects.filter(uvalue__gt=0,user=cuser).order_by('answer__question__qindex','answer__aindex')
+def calculateResult(user: SurveyUser):
+    allUserAnswers = SurveyUserAnswer.objects.filter(uvalue__gt=0, user=user).order_by('answer__question__qindex',
+                                                                                       'answer__aindex')
     totalscore = sum([x.answer.score for x in allUserAnswers])
 
     maxeval = {}
     evaluation = {}
+    sectionlist = {}
+    maxscore = 0
+
+    translations = TranslationKey.objects.filter(lang=user.chosenLang, ttype='S')
+    translation_key_values = {}
+    for translation in translations:
+        translation_key_values[translation.key] = translation.text
 
     for q in SurveyQuestion.objects.all():
+        maxscore += q.maxPoints
         if q.section.id not in evaluation:
             evaluation[q.section.id] = 0
         if q.section.id not in maxeval:
             maxeval[q.section.id] = 0
-        
+        sectionlist[q.section.id] = translation_key_values[q.section.sectionTitleKey]
+
         maxeval[q.section.id] += q.maxPoints
 
-        uanswers = SurveyUserAnswer.objects.filter(uvalue__gt=0,answer__question__id=q.id)
+        uanswers = SurveyUserAnswer.objects.filter(user=user, uvalue__gt=0, answer__question__id=q.id)
         scores = [x.answer.score for x in uanswers]
         evaluation[q.section.id] += sum(scores)
 
     # get the score in percent! with then 100 being maxscore
-    totalscore = round((totalscore*100)/maxscore)
-    
-    return totalscore, maxeval, evaluation
+    totalscore = round((totalscore * 100) / maxscore)
+
+    sectionlist = [sectionlist[x] for x in sectionlist]
+    evaluation = [evaluation[x] for x in evaluation]
+    maxeval = [maxeval[x] for x in maxeval]
+
+    return totalscore, maxeval, evaluation, sectionlist
+
+
+def generate_chart_png(user: SurveyUser, max_eval, evaluation, sections_list):
+    n = len(sections_list)
+    theta = radar_factory(n, frame='polygon')
+
+    spoke_labels = []
+    for section in sections_list:
+        spoke_labels.append(section)
+
+    fig, ax = plt.subplots(figsize=(7, 5), dpi=150, nrows=1, ncols=1,
+                             subplot_kw=dict(projection='radar'))
+    fig.subplots_adjust(wspace=0.25, hspace=0.20, top=0.85, bottom=0.05)
+
+    grid_step = max(max_eval) / 5
+    ax.set_rgrids([0, grid_step, grid_step * 2, grid_step * 3, grid_step * 4])
+    ax.set_ylim(0, max(max_eval))
+
+    ax.plot(theta, evaluation, color='r')
+    ax.fill(theta, evaluation, facecolor='r', alpha=0.25)
+
+    ax.plot(theta, max_eval, color='b')
+    ax.fill(theta, max_eval, facecolor='b', alpha=0.25)
+
+    ax.set_varlabels(spoke_labels)
+
+    ax.legend([TRANSLATION_UI['report']['result'][user.chosenLang.lower()],
+               TRANSLATION_UI['report']['resultMax'][user.chosenLang.lower()]], loc=(0.9, .95),
+              labelspacing=0.1, fontsize='small')
+
+    fig.text(1.0, 1.0, TRANSLATION_UI['report']['chart'][user.chosenLang.lower()],
+             horizontalalignment='center', color='black', weight='bold',
+             size='large')
+
+    file_name = './static/users/survey-' + str(user.user_id) + '.png'
+    plt.savefig(file_name)
+
+    return file_name
