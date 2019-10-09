@@ -3,7 +3,7 @@ from django.utils.html import format_html, mark_safe
 from survey.models import SurveyUser, SurveyQuestion, SurveyQuestionAnswer, SurveyUserAnswer, TranslationKey
 from survey.forms import InitialStartForm, AnswerMChoice
 from survey.globals import LANG_SELECT, TRANSLATION_UI
-from survey.reporthelper import getRecommendations, generate_chart_png
+from survey.reporthelper import getRecommendations
 
 
 def createUser(lang):
@@ -41,7 +41,7 @@ def handleStartSurvey(user: SurveyUser, request):
             survey_question = SurveyQuestion.objects.order_by('qindex').first()
             answer_choices = get_answer_choices(survey_question, user.chosenLang)
 
-            form = AnswerMChoice(answer_choices)
+            form = AnswerMChoice(answer_choices, lang=user.chosenLang)
             form.setUID(user.user_id)
             form.set_question_id(survey_question.id)
 
@@ -59,7 +59,6 @@ def handleStartSurvey(user: SurveyUser, request):
         'form': form,
         'action': action,
         'userId': user.user_id,
-        'txtcontinuelater': TRANSLATION_UI['question']['continuelater'][user.chosenLang.lower()],
     }
 
 def saveAndGetQuestion(user: SurveyUser, request):
@@ -73,7 +72,7 @@ def saveAndGetQuestion(user: SurveyUser, request):
 
     if request.method == 'POST' and user.current_question == int(request.POST['questionid']):
 
-        form = AnswerMChoice(tuple_answers, data=request.POST)
+        form = AnswerMChoice(tuple_answers, data=request.POST, lang=user.chosenLang)
 
         if form.is_valid():
 
@@ -86,7 +85,7 @@ def saveAndGetQuestion(user: SurveyUser, request):
 
                 survey_question = survey_questions[user.current_question - 1]
                 tuple_answers = get_answer_choices(survey_question, user.chosenLang)
-                form = AnswerMChoice(tuple_answers)
+                form = AnswerMChoice(tuple_answers, lang=user.chosenLang)
             else:
                 #FINAL QUESTION return the new interface
                 user.survey_done = True
@@ -94,7 +93,7 @@ def saveAndGetQuestion(user: SurveyUser, request):
 
                 return -1
     else:
-        form = AnswerMChoice(tuple_answers)
+        form = AnswerMChoice(tuple_answers, lang=user.chosenLang)
 
     form.setUID(user.user_id)
     form.set_question_id(survey_question.id)
@@ -105,7 +104,6 @@ def saveAndGetQuestion(user: SurveyUser, request):
         'form': form,
         'action': '/survey/question',
         'userId': user.user_id,
-        'txtcontinuelater': TRANSLATION_UI['question']['continuelater'][user.chosenLang.lower()],
     }
 
 
@@ -130,7 +128,7 @@ def findUserById(user_id):
 
 
 def getRecommendationsReport(user: SurveyUser):
-    
+
     report = []
     for reportRec in getRecommendations(user):
         txt = reportRec
@@ -147,8 +145,8 @@ def get_answer_choices(survey_question: SurveyQuestion, user_lang: str):
     answer_choices = SurveyQuestionAnswer.objects.order_by('aindex').filter(question=survey_question)
 
     for answer_choice in answer_choices:
-        translation_keys = TranslationKey.objects.filter(lang=user_lang).filter(key=answer_choice.answerKey)
-        if translation_keys.count() == 0:
+        translation_key = TranslationKey.objects.filter(lang=user_lang, key=answer_choice.answerKey)
+        if translation_key.count() == 0:
             raise RuntimeError('The translation has to be do for the answers choices.')
 
         tuple_answers.append(
@@ -157,7 +155,7 @@ def get_answer_choices(survey_question: SurveyQuestion, user_lang: str):
                 format_html(
                     '{}{}',
                     mark_safe('<span class="checkmark"></span>'),
-                    translation_keys[0].text
+                    translation_key[0].text
                 )
             )
         )

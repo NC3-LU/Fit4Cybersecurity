@@ -1,21 +1,26 @@
 .modal-content {
-    width: 540px;
-    height: 100px;
+    height: 100%;
     padding: 15px;
+    border-radius: 0;
+    color: white;
+    overflow: auto;
 }
 
 .modal-header {
     background-color: #337AB7;
     padding: 16px;
     color: #FFF;
-    width: 540px;
     border-bottom: 1px dashed #337AB7;
- }
+}
 
- .min-width {
-     min-width: 140px;
- }
+#resume-code-input {
+    border: 1px solid gainsboro;
+}
 
- .bg-bright-blue {
-    background-color:rgb(182, 218, 240);
- }
+.min-width {
+    min-width: 140px;
+}
+
+.bg-bright-blue {
+    background-color: rgb(182, 218, 240);
+}

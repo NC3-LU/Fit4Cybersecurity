@@ -28,6 +28,8 @@ def start(request, lang="EN"):
 
     form_data = handleStartSurvey(user, request)
 
+    add_form_translations(form_data, user, 'question')
+
     return render(request, 'survey/questions.html', context=form_data)
 
 
@@ -37,12 +39,18 @@ def getQuestion(request):
         return HttpResponseRedirect('/')
 
     user = findUserById(request.session['user_id'])
-    question = saveAndGetQuestion(user, request)
+    form_data = saveAndGetQuestion(user, request)
 
-    if question == -1:
+    if form_data == -1:
         return finish(request)
 
-    return render(request, 'survey/questions.html', context=question)
+    add_form_translations(form_data, user, 'question')
+
+    return render(request, 'survey/questions.html', context=form_data)
+
+
+def showReport(request, lang):
+    return createAndSendReport(findUserById(request.session['user_id']), lang)
 
 
 def finish(request):
@@ -74,11 +82,9 @@ def finish(request):
         'chartMax': max(radar_max),
     }
 
+    add_form_translations(textLayout, user, 'report')
+
     return render(request, 'survey/finishedSurvey.html', context=textLayout)
-
-
-def showReport(request, lang):
-    return createAndSendReport(findUserById(request.session['user_id']), lang)
 
 
 def getCompanies(request):
@@ -99,3 +105,20 @@ def resume(request, userId):
     request.session['user_id'] = str(userId)
 
     return HttpResponseRedirect('/survey/question')
+
+
+def add_form_translations(data, user, topic='question'):
+    next_button_text = ''
+    if 'next_button' in TRANSLATION_UI[topic]:
+        next_button_text = TRANSLATION_UI[topic]['next_button'][user.chosenLang.lower()]
+
+    data['translations'] = {
+        'continue_later': {
+            'button': TRANSLATION_UI[topic]['continue_later']['button'][user.chosenLang.lower()],
+            'title': TRANSLATION_UI[topic]['continue_later']['title'][user.chosenLang.lower()],
+            'text': TRANSLATION_UI[topic]['continue_later']['text'][user.chosenLang.lower()],
+            'button_download': TRANSLATION_UI[topic]['continue_later']['button_download'][user.chosenLang.lower()],
+            'button_close': TRANSLATION_UI[topic]['continue_later']['button_close'][user.chosenLang.lower()],
+        },
+        'next_button': next_button_text,
+    }
