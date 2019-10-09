@@ -146,8 +146,6 @@ def showCompleteReport(request, userID):
     allText = []
 
     for x in finalReportRecs:
-
-    for x in finalReportRecs:
         txt = x  # TranslationKey.objects.filter(lang=cuser.chosenLang).filter(key=x.textKey)[0]
         # txt = txt.text.replace("\n","<br>")
         txt = txt.replace("\n", "<br>")
