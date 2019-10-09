@@ -30,7 +30,7 @@ def handleStartSurvey(user: SurveyUser, request):
 
     if request.method == 'POST':
 
-        form = InitialStartForm(data=request.POST)
+        form = InitialStartForm(data=request.POST, lang=user.chosenLang)
 
         if form.is_valid():
             user.sector = form.cleaned_data['sector']
@@ -50,7 +50,7 @@ def handleStartSurvey(user: SurveyUser, request):
             question = TranslationKey.objects.filter(lang=user.chosenLang, key=survey_question.titleKey)[0].text
 
     else:
-        form = InitialStartForm()
+        form = InitialStartForm(lang=user.chosenLang)
         form.setUID(user.user_id)
 
     return {
