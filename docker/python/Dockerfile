@@ -16,6 +16,6 @@ RUN pip install -r requirements.txt
 COPY . /csskp/
 
 RUN npm set unsafe-perm true \
-    && npm install \
+    && npm --prefix ./static install ./static \
     && python manage.py compilemessages \
     && python manage.py makemessages

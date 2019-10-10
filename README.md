@@ -42,7 +42,7 @@ example WSGI.
 ```bash
 $ git clone https://github.com/CASES-LU/CybersecurityStarterKit.git
 $ cd CybersecurityStarterKit/csskp
-$ npm install
+$ npm --prefix ./static install ./static
 $ pipenv install
 ```
 

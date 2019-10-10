@@ -88,12 +88,9 @@ WSGI_APPLICATION = 'csskp.wsgi.application'
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'postgres',
-        'USER': 'postgres',
-        'HOST': 'db',
-        'PORT': 5432,
+     'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
 
@@ -177,13 +174,13 @@ BOOTSTRAP4 = {
     # e.g. "https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css",
     # or a dict like the default value below.
     "css_url": {
-        "href": "/static/npm_components/bootstrap/dist/css/bootstrap.min.css",
+        "href": "/static/node_modules/bootstrap/dist/css/bootstrap.min.css",
         "crossorigin": "anonymous",
     },
 
     # The complete URL to the Bootstrap JavaScript file
     "javascript_url": {
-        "url": "/static/npm_components/bootstrap/dist/js/bootstrap.min.js",
+        "url": "/static/node_modules/bootstrap/dist/js/bootstrap.min.js",
         "crossorigin": "anonymous",
     },
 
@@ -192,19 +189,19 @@ BOOTSTRAP4 = {
 
     # The URL to the jQuery JavaScript file (full)
     "jquery_url": {
-        "url": "/static/npm_components/jquery/dist/jquery.min.js",
+        "url": "/static/node_modules/jquery/dist/jquery.min.js",
         "crossorigin": "anonymous",
     },
 
     # The URL to the jQuery JavaScript file (slim)
     "jquery_slim_url": {
-        "url": "/static/npm_components/jquery/dist/jquery.slim.min.js",
+        "url": "/static/node_modules/jquery/dist/jquery.slim.min.js",
         "crossorigin": "anonymous",
     },
 
     # The URL to the Popper.js JavaScript file (slim)
     "popper_url": {
-        "url": "/static/npm_components/popper.js/dist/umd/popper.min.js",
+        "url": "/static/node_modules/popper.js/dist/umd/popper.min.js",
         "crossorigin": "anonymous",
     },
 
