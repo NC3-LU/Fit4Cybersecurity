@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-10-10 12:39+0000\n"
+"POT-Creation-Date: 2019-10-10 12:46+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -38,6 +38,17 @@ msgid ""
 "and only scratches the surface of the information security maturity level "
 "and thus, we are not liable for the results of this survey."
 msgstr ""
+"Voici la liste des recommandations visant à améliorer la maturité de la "
+"sécurité des informations dans votre entreprise, à condition que vos réponses "
+"reflètent correctement l'état de votre entreprise. N'oubliez pas non plus "
+"qu'il s'agit d'une auto-évaluation et qu'elle ne fait qu'effleurer le niveau "
+"de maturité de la sécurité de l'information. Par conséquent, nous ne sommes "
+"pas responsables des résultats de cette enquête."
+
+
+#: templates/survey/base.html:8
+msgid "Fit4Cybersecurity a CASES self-assessment tool!"
+msgstr "Fit4Cybersecurity est un outil d’auto-évaluation CASES!"
 
 #: templates/survey/base.html:15
 msgid "images/logoFull-en.png"
@@ -69,3 +80,11 @@ msgstr ""
 #: templates/survey/index.html:49
 msgid "Continue a previous survey"
 msgstr "Continuer une enquête précédente"
+
+#: templates/survey/resume.html:4
+msgid "Please insert your code to continue the survey or go to your results"
+msgstr "Veuillez insérer votre code pour continuer l’enquête ou consulter vos résultats."
+
+#: templates/survey/resume.html:13
+msgid "Confirm"
+msgstr "Confirmer"

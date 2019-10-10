@@ -53,6 +53,7 @@ Still in the folder `csskp`:
 
 ```bash
 $ pipenv shell
+$ python manage.py compilemessages # compile the translations
 $ # I suppose we need to initialize the DB with manager.py...
 $ python manager.py createsuperuser --username <username>
 $ python manager.py runserver # not for production
@@ -79,8 +80,9 @@ $ python manage.py migrate
 
 
 #### Sources
-[1] https://pbpython.com/python-word-template.html
-[2] https://stackoverflow.com/questions/19400089/downloadable-docx-file-in-django
-[3] https://stackoverflow.com/questions/54260657/python-script-insert-image-using-mailmerge-into-docx-file
-[4] https://pypi.org/project/docx-mailmerge/
-[5] https://python-docx.readthedocs.io/en/latest/
+
+- https://pbpython.com/python-word-template.html
+- https://stackoverflow.com/questions/19400089/downloadable-docx-file-in-django
+- https://stackoverflow.com/questions/54260657/python-script-insert-image-using-mailmerge-into-docx-file
+- https://pypi.org/project/docx-mailmerge/
+- https://python-docx.readthedocs.io/en/latest/
