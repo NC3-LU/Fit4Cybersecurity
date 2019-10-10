@@ -16,8 +16,9 @@ $ sudo apt install npm # later: postgresql or mariadb
 ### Set your Python environment
 
 Before to begin you will need to install
-[pipenv](https://github.com/pyenv/pyenv).  
-A convenient way to do so is to first install pyenv. With pyenv you will be able
+[pipenv](https://github.com/pypa/pipenv).  
+A convenient way to do so is to first install
+[pyenv](https://github.com/pyenv/pyenv). With pyenv you will be able
 to easily manage Python versions on your system and to install the latest
 version of Python:
 
@@ -29,7 +30,7 @@ $ pyenv versions # check
 
 Then install
 [pipx](https://github.com/pipxproject/pipx).  
-And finally install [pipenv](https://github.com/pypa/pipenv) with pipx.
+And finally install pipenv with pipx.
 
 Later on, this Python environment can be used on production with for
 example WSGI.
