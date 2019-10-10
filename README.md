@@ -60,7 +60,22 @@ $ python manager.py runserver # not for production
 ```
 
 
-#### Internationalization
+
+## Upgrading
+
+### Updating the models
+
+```bash
+$ cd CybersecurityStarterKit/
+$ git pull origin master
+$ cd csskp/
+$ pipenv shell
+$ python manage.py makemigrations
+$ python manage.py migrate
+```
+
+
+### Internationalization
 
 ```bash
 $ sudo apt install gettext
@@ -69,17 +84,8 @@ $ python manage.py compilemessages # compile the translations
 ```
 
 
-#### Updating the models
 
-If you made any changes to the database structure (models) then you need to do the following:
-
-```bash
-$ python manage.py makemigrations
-$ python manage.py migrate
-```
-
-
-#### Sources
+## Sources
 
 - https://pbpython.com/python-word-template.html
 - https://stackoverflow.com/questions/19400089/downloadable-docx-file-in-django
