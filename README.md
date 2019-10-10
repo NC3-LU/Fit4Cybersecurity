@@ -84,8 +84,18 @@ $ python manage.py compilemessages # compile the translations
 ```
 
 
+## Use dockerized environment (for development purposes)
+
+### Unstall Docker
+```bash
+https://docs.docker.com/get-started/
+```
 
 ## Sources
+```bash
+$ docker-compose up -d
+```
+
 
 - https://pbpython.com/python-word-template.html
 - https://stackoverflow.com/questions/19400089/downloadable-docx-file-in-django
