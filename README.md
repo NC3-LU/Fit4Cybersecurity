@@ -80,7 +80,7 @@ $ python manage.py migrate
 Simply compile the new translations:
 
 ```bash
-$ python manage.py compilemessages # compile the translations
+$ python manage.py compilemessages
 ```
 
 If you want to update the translations, you must first run:
