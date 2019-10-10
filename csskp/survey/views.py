@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse, HttpResponseRedirect
+from django.utils.translation import gettext as _
 
 from survey.viewLogic import createUser, handleStartSurvey, saveAndGetQuestion, findUserById, getRecommendationsReport
 from survey.reporthelper import calculateResult, createAndSendReport
@@ -74,7 +75,7 @@ def finish(request):
 
     textLayout = {
         'title': "Fit4Cybersecurity - " + TRANSLATION_UI['report']['title'][user_lang],
-        'description': TRANSLATION_UI['report']['description'][user_lang],
+        'description': _('This is the list of recommendations to improve the information security maturity in your company, provided that your answers did correctly reflect the state in your company. Also keep in mind that it is a self-assessment and only scratches the surface of the information security maturity level and thus, we are not liable for the results of this survey.'),
         'recommendations': getRecommendationsReport(user),
         'userId': user_id,
         'reportlink': "/survey/report",

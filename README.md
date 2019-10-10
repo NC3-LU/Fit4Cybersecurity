@@ -59,13 +59,22 @@ $ python manager.py runserver # not for production
 ```
 
 
+#### Internationalization
+
+```bash
+$ sudo apt install gettext
+$ python manage.py makemessages # extract the translations
+$ python manage.py compilemessages # compile the translations
+```
+
+
 #### Updating the models
 
 If you made any changes to the database structure (models) then you need to do the following:
 
 ```bash
-python3 manage.py makemigrations
-python3 manage.py migrate
+$ python manage.py makemigrations
+$ python manage.py migrate
 ```
 
 
