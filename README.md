@@ -9,11 +9,11 @@ the Startup security kit
 ### Requirements
 
 ```bash
-$ sudo apt install npm # later: postgresql or mariadb
+$ sudo apt install npm gettext # later: postgresql or mariadb
 ```
 
 
-### Set your Python environment
+### Set up your Python environment
 
 Before to begin you will need to install
 [pipenv](https://github.com/pypa/pipenv).  
@@ -60,26 +60,51 @@ $ python manager.py runserver # not for production
 ```
 
 
-#### Internationalization
+
+## Upgrading
+
+### Updating the models
 
 ```bash
-$ sudo apt install gettext
-$ python manage.py makemessages # extract the translations
-$ python manage.py compilemessages # compile the translations
-```
-
-
-#### Updating the models
-
-If you made any changes to the database structure (models) then you need to do the following:
-
-```bash
+$ cd CybersecurityStarterKit/
+$ git pull origin master
+$ cd csskp/
+$ pipenv shell
 $ python manage.py makemigrations
 $ python manage.py migrate
 ```
 
 
-#### Sources
+### Internationalization
+
+Simply compile the new translations:
+
+```bash
+$ python manage.py compilemessages
+```
+
+If you want to update the translations, you must first run:
+
+```bash
+$ python manage.py makemessages # extract the translations
+```
+
+Then you can use a tool like
+[poedit](https://poedit.net) to translate the strings and you can compile with
+the previously mentioned command.
+
+## Use dockerized environment (for development purposes)
+
+### Unstall Docker
+```bash
+https://docs.docker.com/get-started/
+```
+
+## Sources
+```bash
+$ docker-compose up -d
+```
+
 
 - https://pbpython.com/python-word-template.html
 - https://stackoverflow.com/questions/19400089/downloadable-docx-file-in-django

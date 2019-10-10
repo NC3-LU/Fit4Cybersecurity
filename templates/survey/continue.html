@@ -1,0 +1,25 @@
+<div class="modal fade" tabindex="-1" role="dialog" id="modal" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-header">
+            <h4>{{ translations.continue_later.title }}</h4>
+        </div>
+        <div class="modal-content">
+            <div class="content text-left">
+                <p class="text-info">
+                    <span>{{ translations.continue_later.text }} <input type="text" class="input-no-border" id="resume-later-code" value="{{ userId }}" readonly="readonly" />
+                    </span>
+                </p>
+            <div class="content text-left">
+                <textarea
+                        class="text-primary disabled"
+                        id="direct-link"
+                        data-link="{% if request.is_secure %}https{% else %}http{% endif %}://{{ request.get_host }}/survey/resume/{{ userId }}"
+                >{% if request.is_secure %}https{% else %}http{% endif %}://{{ request.get_host }}/survey/resume/{{userId }}</textarea>
+            </div>
+            <div class="content">
+                <button class="btn btn-primary" id="download-direct-link">{{ translations.continue_later.button_download }}</button>
+                <button class="close-popup btn btn-link" type="button" data-dismiss="modal">{{ translations.continue_later.button_close }}</button>
+            </div>
+        </div>
+    </div>
+</div>
