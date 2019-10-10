@@ -44,9 +44,6 @@ $ git clone https://github.com/CASES-LU/CybersecurityStarterKit.git
 $ cd CybersecurityStarterKit/csskp
 $ npm install
 $ pipenv install
-$ pipenv shell
-$ python manager.py --username <username>
-$ python manager.py runserver
 ```
 
 
@@ -55,7 +52,7 @@ $ python manager.py runserver
 Still in the folder `csskp`:
 
 ```bash
-$ pipenv shell # if not yet in the virtual environment
+$ pipenv shell
 $ # I suppose we need to initialize the DB with manager.py...
 $ python manager.py createsuperuser --username <username>
 $ python manager.py runserver # not for production
