@@ -35,10 +35,12 @@ def getRecommendations(cuser):
 def createAndSendReport(user: SurveyUser, lang):
     from docx import Document
     from docx.shared import Cm, Pt
+    from docx.enum.style import WD_STYLE_TYPE
+    from datetime import date
 
     filepath = settings.BASE_DIR+"/wtemps/"
 
-    template = filepath + lang.lower() + ".docx"
+    template = filepath + "template.docx"
     doc = Document(template)
 
     everyQuestion = SurveyQuestion.objects.all().order_by('qindex')
@@ -108,6 +110,15 @@ def createAndSendReport(user: SurveyUser, lang):
     paragraph = doc.add_paragraph()
     run = paragraph.add_run()
     run.add_picture(chart_png_file)
+
+
+    recommendationList = getRecommendations(user)
+    #recommendationList = "\n\n".join(recommendationList)
+
+    for rec in recommendationList:
+        doc.add_paragraph(rec, style='List Paragraph')
+
+
 
     doc.add_heading(TRANSLATION_UI['document']['questions'][lang.lower()], level=1)
 
@@ -202,6 +213,13 @@ def createAndSendReport(user: SurveyUser, lang):
         recommendationsList=recommendationList,
         )
     '''
+
+    section = doc.sections[0]
+    header = section.header
+    paragraph = header.paragraphs[0]
+    paragraph.text = str(date.today())+"\t\tFit4Cybersecurity"
+    paragraph.style = doc.styles["Header"]
+
 
     response = HttpResponse(content_type='application/vnd.openxmlformats-officedocument.wordprocessingml.document')
     response['Content-Disposition'] = 'attachment; filename=result-'+lang.lower()+'.docx'
