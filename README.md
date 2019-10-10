@@ -9,7 +9,7 @@ the Startup security kit
 ### Requirements
 
 ```bash
-$ sudo apt install npm poedit # later: postgresql or mariadb
+$ sudo apt install npm gettext # later: postgresql or mariadb
 ```
 
 
@@ -89,7 +89,7 @@ If you want to update the translations, you must first run:
 $ python manage.py makemessages # extract the translations
 ```
 
-Then you use a tool like
+Then you can use a tool like
 [poedit](https://poedit.net) to translate the strings and you can compile with
 the previously mentioned command.
 
