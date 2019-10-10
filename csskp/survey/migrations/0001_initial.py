@@ -29,6 +29,8 @@ class Migration(migrations.Migration):
                 ('answerKey', models.CharField(max_length=32)),
                 ('aindex', models.IntegerField()),
                 ('question', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='survey.SurveyQuestion')),
+                ('uniqueAnswer', models.BooleanField(default=False)),
+                ('score', models.IntegerField(default=0)),
             ],
             options={
                 'unique_together': {('aindex', 'question')},
@@ -77,7 +79,7 @@ class Migration(migrations.Migration):
             name='SurveyUserAnswer',
             fields=[
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('value', models.IntegerField(default=0)),
+                ('uvalue', models.IntegerField(default=0)),
                 ('answer', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='survey.SurveyQuestionAnswer')),
                 ('user', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='survey.SurveyUser')),
             ],
@@ -92,16 +94,45 @@ class Migration(migrations.Migration):
             name='service_category',
             field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='survey.SurveyQuestionServiceCategory'),
         ),
+        migrations.AddField(
+            model_name='surveyquestion',
+            name='maxPoints',
+            field=models.IntegerField(default=10),
+        ),
         migrations.CreateModel(
             name='Recommendations',
             fields=[
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('textKey', models.CharField(max_length=32)),
-                ('min_e_count', models.CharField(choices=[(0, '1-5'), (1, '6-10'), (2, '10-20'), (3, '20-50'), (4, '50-100'), (5, '100-200'), (6, '200-500'), (7, '500-1000'), (8, '1000-5000'), (9, '5000+')], default=0, max_length=2)),
-                ('max_e_count', models.CharField(choices=[(0, '1-5'), (1, '6-10'), (2, '10-20'), (3, '20-50'), (4, '50-100'), (5, '100-200'), (6, '200-500'), (7, '500-1000'), (8, '1000-5000'), (9, '5000+')], default=9, max_length=2)),
+                ('min_e_count', models.CharField(choices=[('a', '1-5'), ('b', '6-10'), ('c', '10-20'), ('d', '20-50'), ('e', '50-100'), ('f', '100-200'), ('g', '200-500'), ('h', '500-1000'), ('i', '1000-5000'), ('j', '5000+')], default='a', max_length=2)),
+                ('max_e_count', models.CharField(choices=[('a', '1-5'), ('b', '6-10'), ('c', '10-20'), ('d', '20-50'), ('e', '50-100'), ('f', '100-200'), ('g', '200-500'), ('h', '500-1000'), ('i', '1000-5000'), ('j', '5000+')], default='j', max_length=2)),
                 ('sector', models.CharField(blank=True, choices=[('gov', 'Government'), ('adm', 'Public Administrations'), ('fin', 'Sinancial Sector'), ('it', 'Information Technology (IT)')], default=None, max_length=4, null=True)),
                 ('answerChosen', models.BooleanField(default=False)),
                 ('forAnswer', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='survey.SurveyQuestionAnswer')),
+            ],
+        ),
+        migrations.CreateModel(
+            name='Company',
+            fields=[
+                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
+                ('name', models.CharField(max_length=128)),
+                ('contact_email', models.EmailField(max_length=254)),
+                ('contact_tel', models.TextField(max_length=32)),
+                ('contact_address_street', models.CharField(max_length=128)),
+                ('contact_address_city', models.CharField(max_length=64)),
+                ('contact_address_country', models.CharField(choices=[('LU', 'Luxembourg'), ('DE', 'Deutschland'), ('BE', 'Belgique'), ('FR', 'France')], max_length=2)),
+                ('contact_address_number', models.IntegerField()),
+                ('contact_address_postcode', models.CharField(max_length=10)),
+                ('notes', models.TextField()),
+            ],
+        ),
+        migrations.CreateModel(
+            name='CompanyService',
+            fields=[
+                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
+                ('target', models.CharField(choices=[('SME', 'Small to Medium Size Entreprises'), ('BC', 'Big Company'), ('MN', 'Multinationals Coorporations'), ('IND', 'Independent'), ('PRI', 'Private Person')], max_length=3)),
+                ('category', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='survey.SurveyQuestionServiceCategory')),
+                ('company', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='survey.Company')),
             ],
         ),
     ]
