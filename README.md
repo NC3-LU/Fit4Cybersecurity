@@ -13,7 +13,7 @@ $ sudo apt install npm # later: postgresql or mariadb
 ```
 
 
-### Set your Python environment
+### Set up your Python environment
 
 Before to begin you will need to install
 [pipenv](https://github.com/pypa/pipenv).  
