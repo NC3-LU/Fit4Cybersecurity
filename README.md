@@ -9,7 +9,7 @@ the Startup security kit
 ### Requirements
 
 ```bash
-$ sudo apt install npm # later: postgresql or mariadb
+$ sudo apt install npm gettext # later: postgresql or mariadb
 ```
 
 
@@ -77,12 +77,21 @@ $ python manage.py migrate
 
 ### Internationalization
 
+Simply compile the new translations:
+
 ```bash
-$ sudo apt install gettext
-$ python manage.py makemessages # extract the translations
-$ python manage.py compilemessages # compile the translations
+$ python manage.py compilemessages
 ```
 
+If you want to update the translations, you must first run:
+
+```bash
+$ python manage.py makemessages # extract the translations
+```
+
+Then you can use a tool like
+[poedit](https://poedit.net) to translate the strings and you can compile with
+the previously mentioned command.
 
 ## Use dockerized environment (for development purposes)
 
