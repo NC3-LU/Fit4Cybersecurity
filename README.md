@@ -56,7 +56,8 @@ Still in the folder `csskp`:
 
 ```bash
 $ pipenv shell # if not yet in the virtual environment
-$ python manager.py --username <username>
+$ # I suppose we need to initialize the DB with manager.py...
+$ python manager.py createsuperuser --username <username>
 $ python manager.py runserver # not for production
 ```
 
