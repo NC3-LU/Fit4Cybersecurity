@@ -2,6 +2,7 @@
     "name": "CybersecurityStarterKit",
     "version": "0.0.1",
     "description": "CybersecurityStarterKit",
+    "private": true,
     "scripts": {
         "postinstall": "cd static/ ; ln -sf ../node_modules npm_components"
     },
