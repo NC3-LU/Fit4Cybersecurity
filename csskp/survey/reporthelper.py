@@ -1,3 +1,4 @@
+import os
 from django.http import HttpResponse
 from django.conf import settings
 
@@ -42,9 +43,14 @@ def createAndSendReport(user: SurveyUser, lang):
 
     everyQuestion = SurveyQuestion.objects.all().order_by('qindex')
 
-    tfile = open(filepath + "/" + lang.lower() + "_intro.txt", 'r')
-    introduction = tfile.read()
-    tfile.close()
+    introduction = ""
+    file_path = os.path.join(filepath, lang.lower() + '_intro.txt')
+    try:
+        with open(file_path, 'r') as f:
+            introduction = f.read()
+    except Exception as e:
+        #raise e
+        raise Exception('Missing file: {}'.format(file_path))
 
     introduction = introduction.replace("\n\r", "\n")
     introduction = introduction.split("\n\n")
@@ -56,9 +62,13 @@ def createAndSendReport(user: SurveyUser, lang):
             continue
         doc.add_paragraph(i)
 
-    tfile = open(filepath + "/" + lang.lower() + "_description.txt", 'r')
-    methodDescr = tfile.read()
-    tfile.close()
+    methodDescr = ""
+    file_path = os.path.join(filepath, lang.lower() + '_description.txt')
+    try:
+        with open(file_path, 'r') as f:
+            methodDescr = f.read()
+    except:
+        raise Exception('Missing file: {}'.format(file_path))
 
     methodDescr = methodDescr.replace("\n\r", "\n")
     methodDescr = methodDescr.split("\n\n")
@@ -70,9 +80,13 @@ def createAndSendReport(user: SurveyUser, lang):
             continue
         doc.add_paragraph(i)
 
-    tfile = open(filepath + "/" + lang.lower() + "_resultdisclaimer.txt", 'r')
-    results = tfile.read()
-    tfile.close()
+    results = ""
+    file_path = os.path.join(filepath, lang.lower() + '_resultdisclaimer.txt')
+    try:
+        with open(file_path, 'r') as f:
+            results = f.read()
+    except:
+        raise Exception('Missing file: {}'.format(file_path))
 
     score, detail_max, details, section_list = calculateResult(user)
 

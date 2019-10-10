@@ -39,7 +39,10 @@ def handleStartSurvey(user: SurveyUser, request):
             user.save()
 
             survey_question = SurveyQuestion.objects.order_by('qindex').first()
-            answer_choices = get_answer_choices(survey_question, user.chosenLang)
+            try:
+                answer_choices = get_answer_choices(survey_question, user.chosenLang)
+            except Exception as e:
+                raise e
 
             form = AnswerMChoice(answer_choices, lang=user.chosenLang)
             form.setUID(user.user_id)
@@ -68,7 +71,10 @@ def saveAndGetQuestion(user: SurveyUser, request):
 
     survey_questions = SurveyQuestion.objects.order_by('qindex')
     survey_question = survey_questions[user.current_question - 1]
-    tuple_answers = get_answer_choices(survey_question, user.chosenLang)
+    try:
+        tuple_answers = get_answer_choices(survey_question, user.chosenLang)
+    except Exception as e:
+        raise e
 
     if request.method == 'POST' and user.current_question == int(request.POST['questionid']):
 
@@ -84,7 +90,10 @@ def saveAndGetQuestion(user: SurveyUser, request):
                 user.save()
 
                 survey_question = survey_questions[user.current_question - 1]
-                tuple_answers = get_answer_choices(survey_question, user.chosenLang)
+                try:
+                    tuple_answers = get_answer_choices(survey_question, user.chosenLang)
+                except Exception as e:
+                    raise e
                 form = AnswerMChoice(tuple_answers, lang=user.chosenLang)
             else:
                 #FINAL QUESTION return the new interface
@@ -147,7 +156,9 @@ def get_answer_choices(survey_question: SurveyQuestion, user_lang: str):
     for answer_choice in answer_choices:
         translation_key = TranslationKey.objects.filter(lang=user_lang, key=answer_choice.answerKey)
         if translation_key.count() == 0:
-            raise RuntimeError('The translation has to be do for the answers choices.')
+            raise Exception('The translation has to be do for the answers ' +
+                'choices. It is not possible to continue with this ' +
+                'language. We are Sorry.')
 
         tuple_answers.append(
             (

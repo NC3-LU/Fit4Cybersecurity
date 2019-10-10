@@ -26,7 +26,11 @@ def start(request, lang="EN"):
 
         user = findUserById(request.session['user_id'])
 
-    form_data = handleStartSurvey(user, request)
+    try:
+        form_data = handleStartSurvey(user, request)
+    except Exception as e:
+        messages.error(request, e)
+        return HttpResponseRedirect('/')
 
     add_form_translations(form_data, user, 'question')
 
@@ -50,8 +54,11 @@ def getQuestion(request):
 
 
 def showReport(request, lang):
-    return createAndSendReport(findUserById(request.session['user_id']), lang)
-
+    try:
+        return createAndSendReport(findUserById(request.session['user_id']), lang)
+    except Exception as e:
+        messages.warning(request, e)
+        return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
 
 def finish(request):
 
@@ -99,7 +106,6 @@ def resume(request, userId):
         findUserById(str(userId))
     except:
         messages.warning(request, 'We could not find a survey with te requested key, please start a new one.')
-
         return HttpResponseRedirect('/')
 
     request.session['user_id'] = str(userId)
