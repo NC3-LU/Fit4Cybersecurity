@@ -174,13 +174,13 @@ BOOTSTRAP4 = {
     # e.g. "https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css",
     # or a dict like the default value below.
     "css_url": {
-        "href": "/static/node_modules/bootstrap/dist/css/bootstrap.min.css",
+        "href": "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css",
         "crossorigin": "anonymous",
     },
 
     # The complete URL to the Bootstrap JavaScript file
     "javascript_url": {
-        "url": "/static/node_modules/bootstrap/dist/js/bootstrap.min.js",
+        "url": "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js",
         "crossorigin": "anonymous",
     },
 
@@ -189,19 +189,19 @@ BOOTSTRAP4 = {
 
     # The URL to the jQuery JavaScript file (full)
     "jquery_url": {
-        "url": "/static/node_modules/jquery/dist/jquery.min.js",
+        "url": "https://code.jquery.com/jquery-3.4.1.min.js",
         "crossorigin": "anonymous",
     },
 
     # The URL to the jQuery JavaScript file (slim)
     "jquery_slim_url": {
-        "url": "/static/node_modules/jquery/dist/jquery.slim.min.js",
+        "url": "https://code.jquery.com/jquery-3.4.1.slim.min.js",
         "crossorigin": "anonymous",
     },
 
     # The URL to the Popper.js JavaScript file (slim)
     "popper_url": {
-        "url": "/static/node_modules/popper.js/dist/umd/popper.min.js",
+        "url": "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js",
         "crossorigin": "anonymous",
     },
 
