@@ -1,0 +1,646 @@
+/* survey_surveyquestionservicecategory */
+INSERT INTO "survey_surveyquestionservicecategory" ("id", "titleKey") VALUES (1, 'SERVCAT001PWDS');
+INSERT INTO "survey_surveyquestionservicecategory" ("id", "titleKey") VALUES (2, 'SERVCAT002SNDA');
+INSERT INTO "survey_surveyquestionservicecategory" ("id", "titleKey") VALUES (3, 'SERVCAT003WIFI');
+INSERT INTO "survey_surveyquestionservicecategory" ("id", "titleKey") VALUES (4, 'SERVCAT004RCHA');
+INSERT INTO "survey_surveyquestionservicecategory" ("id", "titleKey") VALUES (5, 'SERVCAT005TRAI');
+INSERT INTO "survey_surveyquestionservicecategory" ("id", "titleKey") VALUES (6, 'SERVCAT006BACK');
+INSERT INTO "survey_surveyquestionservicecategory" ("id", "titleKey") VALUES (7, 'SERVCAT007GDPR');
+INSERT INTO "survey_surveyquestionservicecategory" ("id", "titleKey") VALUES (8, 'SERVCAT008BYOD');
+INSERT INTO "survey_surveyquestionservicecategory" ("id", "titleKey") VALUES (9, 'SERVCAT009TELE');
+INSERT INTO "survey_surveyquestionservicecategory" ("id", "titleKey") VALUES (10, 'SERVCAT010UPDT');
+INSERT INTO "survey_surveyquestionservicecategory" ("id", "titleKey") VALUES (11, 'SERVCAT011AVIR');
+INSERT INTO "survey_surveyquestionservicecategory" ("id", "titleKey") VALUES (12, 'SERVCAT012REIT');
+INSERT INTO "survey_surveyquestionservicecategory" ("id", "titleKey") VALUES (13, 'SERVCAT013CLEA');
+
+/* survey_surveysection */
+INSERT INTO "survey_surveysection" ("id", "sectionTitleKey") VALUES (1, 'SECTION001OC');
+INSERT INTO "survey_surveysection" ("id", "sectionTitleKey") VALUES (2, 'SECTION002GE');
+INSERT INTO "survey_surveysection" ("id", "sectionTitleKey") VALUES (3, 'SECTION003GT');
+INSERT INTO "survey_surveysection" ("id", "sectionTitleKey") VALUES (4, 'SECTION004AL');
+INSERT INTO "survey_surveysection" ("id", "sectionTitleKey") VALUES (5, 'SECTION005RI');
+INSERT INTO "survey_surveysection" ("id", "sectionTitleKey") VALUES (6, 'SECTION006IT');
+
+/* survey_surveyquestion */
+INSERT INTO "survey_surveyquestion" ("id", "titleKey", "qtype", "qindex", "section_id", "service_category_id", "maxPoints") VALUES (1, 'Q001RCHA', 'M', 10, 4, 1, 0);
+INSERT INTO "survey_surveyquestion" ("id", "titleKey", "qtype", "qindex", "section_id", "service_category_id", "maxPoints") VALUES (2, 'Q002GDPR', 'M', 20, 7, 1, 0);
+INSERT INTO "survey_surveyquestion" ("id", "titleKey", "qtype", "qindex", "section_id", "service_category_id", "maxPoints") VALUES (3, 'Q003TRAI', 'M', 10, 5, 2, 0);
+INSERT INTO "survey_surveyquestion" ("id", "titleKey", "qtype", "qindex", "section_id", "service_category_id", "maxPoints") VALUES (4, 'Q004REIT', 'M', 20, 12, 2, 0);
+INSERT INTO "survey_surveyquestion" ("id", "titleKey", "qtype", "qindex", "section_id", "service_category_id", "maxPoints") VALUES (5, 'Q005TELE', 'M', 30, 9, 2, 0);
+INSERT INTO "survey_surveyquestion" ("id", "titleKey", "qtype", "qindex", "section_id", "service_category_id", "maxPoints") VALUES (6, 'Q006SNDA', 'M', 10, 2, 3, 0);
+INSERT INTO "survey_surveyquestion" ("id", "titleKey", "qtype", "qindex", "section_id", "service_category_id", "maxPoints") VALUES (7, 'Q007CLEA', 'M', 20, 13, 3, 0);
+INSERT INTO "survey_surveyquestion" ("id", "titleKey", "qtype", "qindex", "section_id", "service_category_id", "maxPoints") VALUES (8, 'Q008PWDS', 'M', 10, 1, 4, 0);
+INSERT INTO "survey_surveyquestion" ("id", "titleKey", "qtype", "qindex", "section_id", "service_category_id", "maxPoints") VALUES (9, 'Q009WIFI', 'M', 10, 3, 5, 0);
+INSERT INTO "survey_surveyquestion" ("id", "titleKey", "qtype", "qindex", "section_id", "service_category_id", "maxPoints") VALUES (10, 'Q010AVIR', 'M', 20, 11, 5, 0);
+INSERT INTO "survey_surveyquestion" ("id", "titleKey", "qtype", "qindex", "section_id", "service_category_id", "maxPoints") VALUES (11, 'Q011UPDT', 'M', 10, 10, 6, 0);
+INSERT INTO "survey_surveyquestion" ("id", "titleKey", "qtype", "qindex", "section_id", "service_category_id", "maxPoints") VALUES (12, 'Q012BACK', 'M', 20, 6, 6, 0);
+INSERT INTO "survey_surveyquestion" ("id", "titleKey", "qtype", "qindex", "section_id", "service_category_id", "maxPoints") VALUES (13, 'Q013BYOD', 'M', 30, 8, 6, 0);
+
+/* survey_surveyquestionanswer */
+INSERT INTO "survey_surveyquestionanswer" ("id", "answerKey", "aindex", "question_id", "uniqueAnswer", "score") VALUES (1, 'Q001A001', 10, 1, TRUE, 0);
+INSERT INTO "survey_surveyquestionanswer" ("id", "answerKey", "aindex", "question_id", "uniqueAnswer", "score") VALUES (2, 'Q001A002', 20, 1, FALSE, 0);
+INSERT INTO "survey_surveyquestionanswer" ("id", "answerKey", "aindex", "question_id", "uniqueAnswer", "score") VALUES (3, 'Q001A003', 30, 1, FALSE, 0);
+INSERT INTO "survey_surveyquestionanswer" ("id", "answerKey", "aindex", "question_id", "uniqueAnswer", "score") VALUES (4, 'Q001A004', 40, 1, FALSE, 0);
+INSERT INTO "survey_surveyquestionanswer" ("id", "answerKey", "aindex", "question_id", "uniqueAnswer", "score") VALUES (5, 'Q001A005', 50, 1, FALSE, 0);
+INSERT INTO "survey_surveyquestionanswer" ("id", "answerKey", "aindex", "question_id", "uniqueAnswer", "score") VALUES (6, 'Q001A006', 60, 1, FALSE, 0);
+INSERT INTO "survey_surveyquestionanswer" ("id", "answerKey", "aindex", "question_id", "uniqueAnswer", "score") VALUES (7, 'Q001A007', 70, 1, FALSE, 0);
+INSERT INTO "survey_surveyquestionanswer" ("id", "answerKey", "aindex", "question_id", "uniqueAnswer", "score") VALUES (8, 'Q001A008', 80, 1, FALSE, 0);
+
+INSERT INTO "survey_surveyquestionanswer" ("id", "answerKey", "aindex", "question_id", "uniqueAnswer", "score") VALUES (9, 'Q002A001', 10, 2, TRUE, 0);
+INSERT INTO "survey_surveyquestionanswer" ("id", "answerKey", "aindex", "question_id", "uniqueAnswer", "score") VALUES (10, 'Q002A002', 20, 2, FALSE, 0);
+INSERT INTO "survey_surveyquestionanswer" ("id", "answerKey", "aindex", "question_id", "uniqueAnswer", "score") VALUES (11, 'Q002A003', 30, 2, FALSE, 0);
+INSERT INTO "survey_surveyquestionanswer" ("id", "answerKey", "aindex", "question_id", "uniqueAnswer", "score") VALUES (12, 'Q002A004', 40, 2, FALSE, 0);
+INSERT INTO "survey_surveyquestionanswer" ("id", "answerKey", "aindex", "question_id", "uniqueAnswer", "score") VALUES (13, 'Q002A005', 50, 2, FALSE, 0);
+
+INSERT INTO "survey_surveyquestionanswer" ("id", "answerKey", "aindex", "question_id", "uniqueAnswer", "score") VALUES (14, 'Q003A001', 10, 3, FALSE, 0);
+INSERT INTO "survey_surveyquestionanswer" ("id", "answerKey", "aindex", "question_id", "uniqueAnswer", "score") VALUES (15, 'Q003A002', 20, 3, FALSE, 0);
+INSERT INTO "survey_surveyquestionanswer" ("id", "answerKey", "aindex", "question_id", "uniqueAnswer", "score") VALUES (16, 'Q003A003', 30, 3, FALSE, 0);
+INSERT INTO "survey_surveyquestionanswer" ("id", "answerKey", "aindex", "question_id", "uniqueAnswer", "score") VALUES (17, 'Q003A004', 40, 3, FALSE, 0);
+INSERT INTO "survey_surveyquestionanswer" ("id", "answerKey", "aindex", "question_id", "uniqueAnswer", "score") VALUES (18, 'Q003A005', 50, 3, FALSE, 0);
+-- consider to add a flag to survey_surveyquestion.are_answers_unique(bool) and create radiobutton in the form instead of checkboxes.
+INSERT INTO "survey_surveyquestionanswer" ("id", "answerKey", "aindex", "question_id", "uniqueAnswer", "score") VALUES (19, 'Q004A001', 10, 4, TRUE, 0);
+INSERT INTO "survey_surveyquestionanswer" ("id", "answerKey", "aindex", "question_id", "uniqueAnswer", "score") VALUES (20, 'Q004A002', 20, 4, TRUE, 0);
+INSERT INTO "survey_surveyquestionanswer" ("id", "answerKey", "aindex", "question_id", "uniqueAnswer", "score") VALUES (21, 'Q004A003', 30, 4, TRUE, 0);
+INSERT INTO "survey_surveyquestionanswer" ("id", "answerKey", "aindex", "question_id", "uniqueAnswer", "score") VALUES (22, 'Q004A004', 40, 4, TRUE, 0);
+INSERT INTO "survey_surveyquestionanswer" ("id", "answerKey", "aindex", "question_id", "uniqueAnswer", "score") VALUES (23, 'Q004A005', 50, 4, TRUE, 0);
+
+INSERT INTO "survey_surveyquestionanswer" ("id", "answerKey", "aindex", "question_id", "uniqueAnswer", "score") VALUES (24, 'Q005A001', 10, 5, TRUE, 0);
+INSERT INTO "survey_surveyquestionanswer" ("id", "answerKey", "aindex", "question_id", "uniqueAnswer", "score") VALUES (25, 'Q005A002', 20, 5, FALSE, 0);
+INSERT INTO "survey_surveyquestionanswer" ("id", "answerKey", "aindex", "question_id", "uniqueAnswer", "score") VALUES (26, 'Q005A003', 30, 5, FALSE, 0);
+INSERT INTO "survey_surveyquestionanswer" ("id", "answerKey", "aindex", "question_id", "uniqueAnswer", "score") VALUES (27, 'Q005A004', 40, 5, FALSE, 0);
+INSERT INTO "survey_surveyquestionanswer" ("id", "answerKey", "aindex", "question_id", "uniqueAnswer", "score") VALUES (28, 'Q005A005', 50, 5, FALSE, 0);
+INSERT INTO "survey_surveyquestionanswer" ("id", "answerKey", "aindex", "question_id", "uniqueAnswer", "score") VALUES (29, 'Q005A006', 60, 5, FALSE, 0);
+
+INSERT INTO "survey_surveyquestionanswer" ("id", "answerKey", "aindex", "question_id", "uniqueAnswer", "score") VALUES (30, 'Q006A001', 10, 6, TRUE, 0);
+INSERT INTO "survey_surveyquestionanswer" ("id", "answerKey", "aindex", "question_id", "uniqueAnswer", "score") VALUES (31, 'Q006A002', 20, 6, FALSE, 0);
+INSERT INTO "survey_surveyquestionanswer" ("id", "answerKey", "aindex", "question_id", "uniqueAnswer", "score") VALUES (32, 'Q006A003', 30, 6, FALSE, 0);
+INSERT INTO "survey_surveyquestionanswer" ("id", "answerKey", "aindex", "question_id", "uniqueAnswer", "score") VALUES (33, 'Q006A004', 40, 6, FALSE, 0);
+
+INSERT INTO "survey_surveyquestionanswer" ("id", "answerKey", "aindex", "question_id", "uniqueAnswer", "score") VALUES (34, 'Q007A001', 10, 7, TRUE, 0);
+INSERT INTO "survey_surveyquestionanswer" ("id", "answerKey", "aindex", "question_id", "uniqueAnswer", "score") VALUES (35, 'Q007A002', 20, 7, FALSE, 0);
+INSERT INTO "survey_surveyquestionanswer" ("id", "answerKey", "aindex", "question_id", "uniqueAnswer", "score") VALUES (36, 'Q007A003', 30, 7, FALSE, 0);
+INSERT INTO "survey_surveyquestionanswer" ("id", "answerKey", "aindex", "question_id", "uniqueAnswer", "score") VALUES (37, 'Q007A004', 40, 7, FALSE, 0);
+INSERT INTO "survey_surveyquestionanswer" ("id", "answerKey", "aindex", "question_id", "uniqueAnswer", "score") VALUES (38, 'Q007A005', 50, 7, FALSE, 0);
+INSERT INTO "survey_surveyquestionanswer" ("id", "answerKey", "aindex", "question_id", "uniqueAnswer", "score") VALUES (39, 'Q007A006', 60, 7, FALSE, 0);
+
+INSERT INTO "survey_surveyquestionanswer" ("id", "answerKey", "aindex", "question_id", "uniqueAnswer", "score") VALUES (40, 'Q008A001', 10, 8, TRUE, 0);
+INSERT INTO "survey_surveyquestionanswer" ("id", "answerKey", "aindex", "question_id", "uniqueAnswer", "score") VALUES (41, 'Q008A002', 20, 8, FALSE, 0);
+INSERT INTO "survey_surveyquestionanswer" ("id", "answerKey", "aindex", "question_id", "uniqueAnswer", "score") VALUES (42, 'Q008A003', 30, 8, FALSE, 0);
+INSERT INTO "survey_surveyquestionanswer" ("id", "answerKey", "aindex", "question_id", "uniqueAnswer", "score") VALUES (43, 'Q008A004', 40, 8, FALSE, 0);
+INSERT INTO "survey_surveyquestionanswer" ("id", "answerKey", "aindex", "question_id", "uniqueAnswer", "score") VALUES (44, 'Q008A005', 50, 8, FALSE, 0);
+INSERT INTO "survey_surveyquestionanswer" ("id", "answerKey", "aindex", "question_id", "uniqueAnswer", "score") VALUES (45, 'Q008A006', 60, 8, FALSE, 0);
+INSERT INTO "survey_surveyquestionanswer" ("id", "answerKey", "aindex", "question_id", "uniqueAnswer", "score") VALUES (46, 'Q008A007', 70, 8, FALSE, 0);
+INSERT INTO "survey_surveyquestionanswer" ("id", "answerKey", "aindex", "question_id", "uniqueAnswer", "score") VALUES (47, 'Q008A008', 80, 8, FALSE, 0);
+INSERT INTO "survey_surveyquestionanswer" ("id", "answerKey", "aindex", "question_id", "uniqueAnswer", "score") VALUES (48, 'Q008A009', 90, 8, FALSE, 0);
+INSERT INTO "survey_surveyquestionanswer" ("id", "answerKey", "aindex", "question_id", "uniqueAnswer", "score") VALUES (49, 'Q008A010', 100, 8, FALSE, 0);
+
+INSERT INTO "survey_surveyquestionanswer" ("id", "answerKey", "aindex", "question_id", "uniqueAnswer", "score") VALUES (50, 'Q009A001', 10, 9, TRUE, 0);
+INSERT INTO "survey_surveyquestionanswer" ("id", "answerKey", "aindex", "question_id", "uniqueAnswer", "score") VALUES (51, 'Q009A002', 20, 9, FALSE, 0);
+INSERT INTO "survey_surveyquestionanswer" ("id", "answerKey", "aindex", "question_id", "uniqueAnswer", "score") VALUES (52, 'Q009A003', 30, 9, FALSE, 0);
+INSERT INTO "survey_surveyquestionanswer" ("id", "answerKey", "aindex", "question_id", "uniqueAnswer", "score") VALUES (53, 'Q009A004', 40, 9, FALSE, 0);
+INSERT INTO "survey_surveyquestionanswer" ("id", "answerKey", "aindex", "question_id", "uniqueAnswer", "score") VALUES (54, 'Q009A005', 50, 9, FALSE, 0);
+
+INSERT INTO "survey_surveyquestionanswer" ("id", "answerKey", "aindex", "question_id", "uniqueAnswer", "score") VALUES (55, 'Q010A001', 10, 10, TRUE, 0);
+INSERT INTO "survey_surveyquestionanswer" ("id", "answerKey", "aindex", "question_id", "uniqueAnswer", "score") VALUES (56, 'Q010A002', 20, 10, FALSE, 0);
+INSERT INTO "survey_surveyquestionanswer" ("id", "answerKey", "aindex", "question_id", "uniqueAnswer", "score") VALUES (57, 'Q010A003', 30, 10, FALSE, 0);
+INSERT INTO "survey_surveyquestionanswer" ("id", "answerKey", "aindex", "question_id", "uniqueAnswer", "score") VALUES (58, 'Q010A004', 40, 10, FALSE, 0);
+INSERT INTO "survey_surveyquestionanswer" ("id", "answerKey", "aindex", "question_id", "uniqueAnswer", "score") VALUES (59, 'Q010A005', 50, 10, FALSE, 0);
+INSERT INTO "survey_surveyquestionanswer" ("id", "answerKey", "aindex", "question_id", "uniqueAnswer", "score") VALUES (60, 'Q010A006', 60, 10, FALSE, 0);
+INSERT INTO "survey_surveyquestionanswer" ("id", "answerKey", "aindex", "question_id", "uniqueAnswer", "score") VALUES (61, 'Q010A007', 70, 10, FALSE, 0);
+
+INSERT INTO "survey_surveyquestionanswer" ("id", "answerKey", "aindex", "question_id", "uniqueAnswer", "score") VALUES (62, 'Q011A001', 10, 11, TRUE, 0);
+INSERT INTO "survey_surveyquestionanswer" ("id", "answerKey", "aindex", "question_id", "uniqueAnswer", "score") VALUES (63, 'Q011A002', 20, 11, FALSE, 0);
+INSERT INTO "survey_surveyquestionanswer" ("id", "answerKey", "aindex", "question_id", "uniqueAnswer", "score") VALUES (64, 'Q011A003', 30, 11, FALSE, 0);
+INSERT INTO "survey_surveyquestionanswer" ("id", "answerKey", "aindex", "question_id", "uniqueAnswer", "score") VALUES (65, 'Q011A004', 40, 11, FALSE, 0);
+INSERT INTO "survey_surveyquestionanswer" ("id", "answerKey", "aindex", "question_id", "uniqueAnswer", "score") VALUES (66, 'Q011A005', 50, 11, FALSE, 0);
+
+INSERT INTO "survey_surveyquestionanswer" ("id", "answerKey", "aindex", "question_id", "uniqueAnswer", "score") VALUES (67, 'Q012A001', 10, 12, TRUE, 0);
+INSERT INTO "survey_surveyquestionanswer" ("id", "answerKey", "aindex", "question_id", "uniqueAnswer", "score") VALUES (68, 'Q012A002', 20, 12, FALSE, 0);
+INSERT INTO "survey_surveyquestionanswer" ("id", "answerKey", "aindex", "question_id", "uniqueAnswer", "score") VALUES (69, 'Q012A003', 30, 12, FALSE, 0);
+INSERT INTO "survey_surveyquestionanswer" ("id", "answerKey", "aindex", "question_id", "uniqueAnswer", "score") VALUES (70, 'Q012A004', 40, 12, FALSE, 0);
+INSERT INTO "survey_surveyquestionanswer" ("id", "answerKey", "aindex", "question_id", "uniqueAnswer", "score") VALUES (71, 'Q012A005', 50, 12, FALSE, 0);
+INSERT INTO "survey_surveyquestionanswer" ("id", "answerKey", "aindex", "question_id", "uniqueAnswer", "score") VALUES (72, 'Q012A006', 60, 12, FALSE, 0);
+INSERT INTO "survey_surveyquestionanswer" ("id", "answerKey", "aindex", "question_id", "uniqueAnswer", "score") VALUES (73, 'Q012A007', 70, 12, FALSE, 0);
+INSERT INTO "survey_surveyquestionanswer" ("id", "answerKey", "aindex", "question_id", "uniqueAnswer", "score") VALUES (74, 'Q012A008', 80, 12, FALSE, 0);
+INSERT INTO "survey_surveyquestionanswer" ("id", "answerKey", "aindex", "question_id", "uniqueAnswer", "score") VALUES (75, 'Q012A009', 90, 12, FALSE, 0);
+
+INSERT INTO "survey_surveyquestionanswer" ("id", "answerKey", "aindex", "question_id", "uniqueAnswer", "score") VALUES (76, 'Q013A001', 10, 13, TRUE, 0);
+INSERT INTO "survey_surveyquestionanswer" ("id", "answerKey", "aindex", "question_id", "uniqueAnswer", "score") VALUES (77, 'Q013A002', 20, 13, FALSE, 0);
+INSERT INTO "survey_surveyquestionanswer" ("id", "answerKey", "aindex", "question_id", "uniqueAnswer", "score") VALUES (78, 'Q013A003', 30, 13, FALSE, 0);
+INSERT INTO "survey_surveyquestionanswer" ("id", "answerKey", "aindex", "question_id", "uniqueAnswer", "score") VALUES (79, 'Q013A004', 40, 13, FALSE, 0);
+
+
+/* survey_recommendations */
+INSERT INTO "survey_recommendations" ("textKey", "min_e_count", "max_e_count", "sector", "answerChosen", "forAnswer_id") VALUES ('Q001REC001', 'a', 'j', NULL, TRUE, 1);
+INSERT INTO "survey_recommendations" ("textKey", "min_e_count", "max_e_count", "sector", "answerChosen", "forAnswer_id") VALUES ('Q001REC002', 'a', 'j', NULL, FALSE, 2);
+INSERT INTO "survey_recommendations" ("textKey", "min_e_count", "max_e_count", "sector", "answerChosen", "forAnswer_id") VALUES ('Q001REC003', 'a', 'b', NULL, FALSE, 3);
+INSERT INTO "survey_recommendations" ("textKey", "min_e_count", "max_e_count", "sector", "answerChosen", "forAnswer_id") VALUES ('Q001REC004', 'c', 'j', NULL, FALSE, 3);
+INSERT INTO "survey_recommendations" ("textKey", "min_e_count", "max_e_count", "sector", "answerChosen", "forAnswer_id") VALUES ('Q001REC005', 'a', 'j', NULL, FALSE, 4);
+INSERT INTO "survey_recommendations" ("textKey", "min_e_count", "max_e_count", "sector", "answerChosen", "forAnswer_id") VALUES ('Q001REC006', 'a', 'j', NULL, FALSE, 5);
+INSERT INTO "survey_recommendations" ("textKey", "min_e_count", "max_e_count", "sector", "answerChosen", "forAnswer_id") VALUES ('Q001REC007', 'a', 'j', NULL, TRUE, 6);
+INSERT INTO "survey_recommendations" ("textKey", "min_e_count", "max_e_count", "sector", "answerChosen", "forAnswer_id") VALUES ('Q001REC008', 'a', 'j', NULL, FALSE, 7);
+INSERT INTO "survey_recommendations" ("textKey", "min_e_count", "max_e_count", "sector", "answerChosen", "forAnswer_id") VALUES ('Q001REC009', 'a', 'j', NULL, FALSE, 8);
+
+INSERT INTO "survey_recommendations" ("textKey", "min_e_count", "max_e_count", "sector", "answerChosen", "forAnswer_id") VALUES ('Q002REC001', 'a', 'j', NULL, TRUE, 9);
+INSERT INTO "survey_recommendations" ("textKey", "min_e_count", "max_e_count", "sector", "answerChosen", "forAnswer_id") VALUES ('Q002REC002', 'a', 'j', NULL, FALSE, 10);
+INSERT INTO "survey_recommendations" ("textKey", "min_e_count", "max_e_count", "sector", "answerChosen", "forAnswer_id") VALUES ('Q002REC003', 'a', 'j', NULL, FALSE, 11);
+INSERT INTO "survey_recommendations" ("textKey", "min_e_count", "max_e_count", "sector", "answerChosen", "forAnswer_id") VALUES ('Q002REC004', 'a', 'j', NULL, FALSE, 12);
+INSERT INTO "survey_recommendations" ("textKey", "min_e_count", "max_e_count", "sector", "answerChosen", "forAnswer_id") VALUES ('Q002REC005', 'a', 'j', NULL, FALSE, 13);
+
+INSERT INTO "survey_recommendations" ("textKey", "min_e_count", "max_e_count", "sector", "answerChosen", "forAnswer_id") VALUES ('Q003REC001', 'a', 'j', NULL, FALSE, 14);
+INSERT INTO "survey_recommendations" ("textKey", "min_e_count", "max_e_count", "sector", "answerChosen", "forAnswer_id") VALUES ('Q003REC002', 'a', 'j', NULL, FALSE, 15);
+INSERT INTO "survey_recommendations" ("textKey", "min_e_count", "max_e_count", "sector", "answerChosen", "forAnswer_id") VALUES ('Q003REC003', 'a', 'j', NULL, FALSE, 16);
+INSERT INTO "survey_recommendations" ("textKey", "min_e_count", "max_e_count", "sector", "answerChosen", "forAnswer_id") VALUES ('Q003REC004', 'a', 'j', NULL, FALSE, 17);
+INSERT INTO "survey_recommendations" ("textKey", "min_e_count", "max_e_count", "sector", "answerChosen", "forAnswer_id") VALUES ('Q003REC005', 'a', 'j', NULL, FALSE, 18);
+
+INSERT INTO "survey_recommendations" ("textKey", "min_e_count", "max_e_count", "sector", "answerChosen", "forAnswer_id") VALUES ('Q004REC001', 'a', 'j', NULL, TRUE, 23);
+
+INSERT INTO "survey_recommendations" ("textKey", "min_e_count", "max_e_count", "sector", "answerChosen", "forAnswer_id") VALUES ('Q005REC001', 'a', 'j', NULL, TRUE, 24);
+INSERT INTO "survey_recommendations" ("textKey", "min_e_count", "max_e_count", "sector", "answerChosen", "forAnswer_id") VALUES ('Q005REC002', 'a', 'j', NULL, FALSE, 25);
+INSERT INTO "survey_recommendations" ("textKey", "min_e_count", "max_e_count", "sector", "answerChosen", "forAnswer_id") VALUES ('Q005REC003', 'a', 'j', NULL, TRUE, 27);
+INSERT INTO "survey_recommendations" ("textKey", "min_e_count", "max_e_count", "sector", "answerChosen", "forAnswer_id") VALUES ('Q005REC004', 'a', 'j', NULL, FALSE, 28);
+INSERT INTO "survey_recommendations" ("textKey", "min_e_count", "max_e_count", "sector", "answerChosen", "forAnswer_id") VALUES ('Q005REC005', 'a', 'j', NULL, FALSE, 29);
+
+INSERT INTO "survey_recommendations" ("textKey", "min_e_count", "max_e_count", "sector", "answerChosen", "forAnswer_id") VALUES ('Q006REC001', 'a', 'j', NULL, TRUE, 30);
+INSERT INTO "survey_recommendations" ("textKey", "min_e_count", "max_e_count", "sector", "answerChosen", "forAnswer_id") VALUES ('Q006REC002', 'a', 'j', NULL, FALSE, 31);
+INSERT INTO "survey_recommendations" ("textKey", "min_e_count", "max_e_count", "sector", "answerChosen", "forAnswer_id") VALUES ('Q006REC003', 'a', 'j', NULL, FALSE, 32);
+INSERT INTO "survey_recommendations" ("textKey", "min_e_count", "max_e_count", "sector", "answerChosen", "forAnswer_id") VALUES ('Q006REC004', 'a', 'j', NULL, FALSE, 33);
+
+INSERT INTO "survey_recommendations" ("textKey", "min_e_count", "max_e_count", "sector", "answerChosen", "forAnswer_id") VALUES ('Q007REC001', 'a', 'j', NULL, TRUE, 34);
+INSERT INTO "survey_recommendations" ("textKey", "min_e_count", "max_e_count", "sector", "answerChosen", "forAnswer_id") VALUES ('Q007REC002', 'a', 'j', NULL, FALSE, 35);
+INSERT INTO "survey_recommendations" ("textKey", "min_e_count", "max_e_count", "sector", "answerChosen", "forAnswer_id") VALUES ('Q007REC003', 'a', 'j', NULL, FALSE, 36);
+INSERT INTO "survey_recommendations" ("textKey", "min_e_count", "max_e_count", "sector", "answerChosen", "forAnswer_id") VALUES ('Q007REC004', 'a', 'j', NULL, FALSE, 37);
+INSERT INTO "survey_recommendations" ("textKey", "min_e_count", "max_e_count", "sector", "answerChosen", "forAnswer_id") VALUES ('Q007REC005', 'a', 'j', NULL, FALSE, 38);
+INSERT INTO "survey_recommendations" ("textKey", "min_e_count", "max_e_count", "sector", "answerChosen", "forAnswer_id") VALUES ('Q007REC006', 'a', 'j', NULL, FALSE, 39);
+
+INSERT INTO "survey_recommendations" ("textKey", "min_e_count", "max_e_count", "sector", "answerChosen", "forAnswer_id") VALUES ('Q008REC001', 'a', 'j', NULL, TRUE, 40);
+INSERT INTO "survey_recommendations" ("textKey", "min_e_count", "max_e_count", "sector", "answerChosen", "forAnswer_id") VALUES ('Q008REC002', 'a', 'j', NULL, TRUE, 41);
+INSERT INTO "survey_recommendations" ("textKey", "min_e_count", "max_e_count", "sector", "answerChosen", "forAnswer_id") VALUES ('Q008REC003', 'a', 'j', NULL, TRUE, 42);
+INSERT INTO "survey_recommendations" ("textKey", "min_e_count", "max_e_count", "sector", "answerChosen", "forAnswer_id") VALUES ('Q008REC004', 'a', 'j', NULL, FALSE, 43);
+INSERT INTO "survey_recommendations" ("textKey", "min_e_count", "max_e_count", "sector", "answerChosen", "forAnswer_id") VALUES ('Q008REC005', 'a', 'j', NULL, FALSE, 44);
+INSERT INTO "survey_recommendations" ("textKey", "min_e_count", "max_e_count", "sector", "answerChosen", "forAnswer_id") VALUES ('Q008REC006', 'a', 'j', NULL, FALSE, 45);
+INSERT INTO "survey_recommendations" ("textKey", "min_e_count", "max_e_count", "sector", "answerChosen", "forAnswer_id") VALUES ('Q008REC007', 'a', 'j', NULL, FALSE, 46);
+INSERT INTO "survey_recommendations" ("textKey", "min_e_count", "max_e_count", "sector", "answerChosen", "forAnswer_id") VALUES ('Q008REC008', 'a', 'j', NULL, FALSE, 47);
+INSERT INTO "survey_recommendations" ("textKey", "min_e_count", "max_e_count", "sector", "answerChosen", "forAnswer_id") VALUES ('Q008REC009', 'a', 'j', NULL, TRUE, 48);
+INSERT INTO "survey_recommendations" ("textKey", "min_e_count", "max_e_count", "sector", "answerChosen", "forAnswer_id") VALUES ('Q008REC010', 'a', 'j', NULL, FALSE, 49);
+
+INSERT INTO "survey_recommendations" ("textKey", "min_e_count", "max_e_count", "sector", "answerChosen", "forAnswer_id") VALUES ('Q009REC001', 'a', 'j', NULL, TRUE, 50);
+INSERT INTO "survey_recommendations" ("textKey", "min_e_count", "max_e_count", "sector", "answerChosen", "forAnswer_id") VALUES ('Q009REC002', 'a', 'j', NULL, TRUE, 51);
+INSERT INTO "survey_recommendations" ("textKey", "min_e_count", "max_e_count", "sector", "answerChosen", "forAnswer_id") VALUES ('Q009REC003', 'a', 'j', NULL, TRUE, 52);
+INSERT INTO "survey_recommendations" ("textKey", "min_e_count", "max_e_count", "sector", "answerChosen", "forAnswer_id") VALUES ('Q009REC004', 'a', 'j', NULL, FALSE, 53);
+INSERT INTO "survey_recommendations" ("textKey", "min_e_count", "max_e_count", "sector", "answerChosen", "forAnswer_id") VALUES ('Q009REC005', 'a', 'j', NULL, FALSE, 54);
+
+INSERT INTO "survey_recommendations" ("textKey", "min_e_count", "max_e_count", "sector", "answerChosen", "forAnswer_id") VALUES ('Q010REC001', 'a', 'j', NULL, TRUE, 55);
+INSERT INTO "survey_recommendations" ("textKey", "min_e_count", "max_e_count", "sector", "answerChosen", "forAnswer_id") VALUES ('Q010REC002', 'a', 'j', NULL, FALSE, 56);
+INSERT INTO "survey_recommendations" ("textKey", "min_e_count", "max_e_count", "sector", "answerChosen", "forAnswer_id") VALUES ('Q010REC003', 'a', 'j', NULL, FALSE, 57);
+INSERT INTO "survey_recommendations" ("textKey", "min_e_count", "max_e_count", "sector", "answerChosen", "forAnswer_id") VALUES ('Q010REC004', 'a', 'j', NULL, FALSE, 58);
+INSERT INTO "survey_recommendations" ("textKey", "min_e_count", "max_e_count", "sector", "answerChosen", "forAnswer_id") VALUES ('Q010REC005', 'a', 'j', NULL, FALSE, 59);
+INSERT INTO "survey_recommendations" ("textKey", "min_e_count", "max_e_count", "sector", "answerChosen", "forAnswer_id") VALUES ('Q010REC006', 'a', 'j', NULL, FALSE, 60);
+INSERT INTO "survey_recommendations" ("textKey", "min_e_count", "max_e_count", "sector", "answerChosen", "forAnswer_id") VALUES ('Q010REC007', 'a', 'j', NULL, FALSE, 61);
+
+INSERT INTO "survey_recommendations" ("textKey", "min_e_count", "max_e_count", "sector", "answerChosen", "forAnswer_id") VALUES ('Q011REC001', 'a', 'j', NULL, TRUE, 62);
+INSERT INTO "survey_recommendations" ("textKey", "min_e_count", "max_e_count", "sector", "answerChosen", "forAnswer_id") VALUES ('Q011REC002', 'a', 'j', NULL, FALSE, 63);
+INSERT INTO "survey_recommendations" ("textKey", "min_e_count", "max_e_count", "sector", "answerChosen", "forAnswer_id") VALUES ('Q011REC003', 'a', 'j', NULL, FALSE, 64);
+INSERT INTO "survey_recommendations" ("textKey", "min_e_count", "max_e_count", "sector", "answerChosen", "forAnswer_id") VALUES ('Q011REC004', 'a', 'j', NULL, FALSE, 65);
+INSERT INTO "survey_recommendations" ("textKey", "min_e_count", "max_e_count", "sector", "answerChosen", "forAnswer_id") VALUES ('Q011REC005', 'a', 'j', NULL, FALSE, 66);
+
+INSERT INTO "survey_recommendations" ("textKey", "min_e_count", "max_e_count", "sector", "answerChosen", "forAnswer_id") VALUES ('Q012REC001', 'a', 'j', NULL, TRUE, 67);
+INSERT INTO "survey_recommendations" ("textKey", "min_e_count", "max_e_count", "sector", "answerChosen", "forAnswer_id") VALUES ('Q012REC002', 'a', 'j', NULL, FALSE, 69);
+INSERT INTO "survey_recommendations" ("textKey", "min_e_count", "max_e_count", "sector", "answerChosen", "forAnswer_id") VALUES ('Q012REC003', 'a', 'j', NULL, FALSE, 70);
+INSERT INTO "survey_recommendations" ("textKey", "min_e_count", "max_e_count", "sector", "answerChosen", "forAnswer_id") VALUES ('Q012REC004', 'a', 'j', NULL, FALSE, 71);
+INSERT INTO "survey_recommendations" ("textKey", "min_e_count", "max_e_count", "sector", "answerChosen", "forAnswer_id") VALUES ('Q012REC005', 'a', 'j', NULL, FALSE, 72);
+INSERT INTO "survey_recommendations" ("textKey", "min_e_count", "max_e_count", "sector", "answerChosen", "forAnswer_id") VALUES ('Q012REC006', 'a', 'j', NULL, FALSE, 73);
+INSERT INTO "survey_recommendations" ("textKey", "min_e_count", "max_e_count", "sector", "answerChosen", "forAnswer_id") VALUES ('Q012REC007', 'a', 'j', NULL, FALSE, 74);
+INSERT INTO "survey_recommendations" ("textKey", "min_e_count", "max_e_count", "sector", "answerChosen", "forAnswer_id") VALUES ('Q012REC008', 'a', 'j', NULL, FALSE, 75);
+
+INSERT INTO "survey_recommendations" ("textKey", "min_e_count", "max_e_count", "sector", "answerChosen", "forAnswer_id") VALUES ('Q013REC001', 'a', 'j', NULL, TRUE, 76);
+INSERT INTO "survey_recommendations" ("textKey", "min_e_count", "max_e_count", "sector", "answerChosen", "forAnswer_id") VALUES ('Q013REC002', 'a', 'j', NULL, FALSE, 77);
+INSERT INTO "survey_recommendations" ("textKey", "min_e_count", "max_e_count", "sector", "answerChosen", "forAnswer_id") VALUES ('Q013REC003', 'a', 'j', NULL, FALSE, 78);
+INSERT INTO "survey_recommendations" ("textKey", "min_e_count", "max_e_count", "sector", "answerChosen", "forAnswer_id") VALUES ('Q013REC004', 'a', 'j', NULL, FALSE, 79);
+
+
+/* survey_translationkey */
+-- FR
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('SERVCAT001PWDS', 'Mots de passe', 'FR', 'C');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('SERVCAT002SNDA', 'Contrats (SLA/NDA)', 'FR', 'C');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('SERVCAT003WIFI', 'Wifi', 'FR', 'C');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('SERVCAT004RCHA', 'Règles/Chartes', 'FR', 'C');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('SERVCAT005TRAI', 'Formations', 'FR', 'C');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('SERVCAT006BACK', 'Backups', 'FR', 'C');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('SERVCAT007GDPR', 'GDPR', 'FR', 'C');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('SERVCAT008BYOD', 'BYOD', 'FR', 'C');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('SERVCAT009TELE', 'Télétravail/Mobilité', 'FR', 'C');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('SERVCAT010UPDT', 'Postes Utilisateurs/Mises à jour', 'FR', 'C');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('SERVCAT011AVIR', 'Antivirus', 'FR', 'C');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('SERVCAT012REIT', 'Responsabilités IT et Sécurité de l''Information', 'FR', 'C');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('SERVCAT013CLEA', 'Nettoyage des Locaux', 'FR', 'C');
+-- EN
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('SERVCAT001PWDS', 'Passwords', 'EN', 'C');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('SERVCAT002SNDA', 'Contracts (SLA/NDA)', 'EN', 'C');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('SERVCAT003WIFI', 'WiFi', 'EN', 'C');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('SERVCAT004RCHA', 'Rules/Charter', 'EN', 'C');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('SERVCAT005TRAI', 'Trainings', 'EN', 'C');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('SERVCAT006BACK', 'Backups', 'EN', 'C');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('SERVCAT007GDPR', 'GDPR', 'EN', 'C');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('SERVCAT008BYOD', 'BYOD', 'EN', 'C');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('SERVCAT009TELE', 'Home Office/Mobility', 'EN', 'C');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('SERVCAT010UPDT', 'User Work Stations/Updates', 'EN', 'C');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('SERVCAT011AVIR', 'Anti-virus', 'EN', 'C');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('SERVCAT012REIT', 'IT and Information Security Responsibilities', 'EN', 'C');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('SERVCAT013CLEA', 'Office Cleaning', 'EN', 'C');
+
+-- FR
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('SECTION001OC', 'Obligations et Conformités', 'FR', 'S');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('SECTION002GE', 'Gestion des Employés', 'FR', 'S');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('SECTION003GT', 'Gestion des Tiers', 'FR', 'S');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('SECTION004AL', 'Accès Logiques', 'FR', 'S');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('SECTION005RI', 'Réseau Interne', 'FR', 'S');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('SECTION006IT', 'Infrastructure IT', 'FR', 'S');
+-- EN
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('SECTION001OC', 'Awareness and Compliance', 'EN', 'S');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('SECTION002GE', 'Employee Management', 'EN', 'S');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('SECTION003GT', 'Third Party Management', 'EN', 'S');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('SECTION004AL', 'Logical Access', 'EN', 'S');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('SECTION005RI', 'Local Area Network', 'EN', 'S');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('SECTION006IT', 'Information System', 'EN', 'S');
+
+-- FR
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q001RCHA', 'Dans l''entreprise, les règles données aux employés sont', 'FR', 'Q');
+    INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q001A001', 'non explicités', 'FR', 'A');
+    INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q001A002', 'transmises oralement à tous', 'FR', 'A');
+    INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q001A003', 'écrites et données par mail', 'FR', 'A');
+    INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q001A004', 'lues et signées par tous, et inscrites dans une charte', 'FR', 'A');
+    INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q001A005', 'écrites/expliquées avec du vocabulaire simple, non spécifique à un métier', 'FR', 'A');
+    INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q001A006', 'assez longues, mais très précises', 'FR', 'A');
+    INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q001A007', 'donnés avec des conseils et des bonnes pratiques pour faciliter la vie des employés', 'FR', 'A');
+    INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q001A008', 'adaptés selon la personne la personne et/ou son rôle', 'FR', 'A');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q002GDPR', 'Dans l''entreprise, sont défini', 'FR', 'Q');
+    INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q002A001', 'aucune autre donnée personnelle que celles des employés, ou aucune gestion concernant les données personnelles', 'FR', 'A');
+    INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q002A002', 'une personne responsable de toutes les actions liées aux données personnelles', 'FR', 'A');
+    INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q002A003', 'une explication écrite sur le cycle de vie des données internes (comment elles sont récupérées, comment elles sont stockées, où et quand elles sont détruites...)', 'FR', 'A');
+    INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q002A004', 'une explication orale ou écrite pour les employés sur le comportement à adopter pour les cas concernant les données personnelles', 'FR', 'A');
+    INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q002A005', 'une vidéosurveillance ou une prise d''image comme donnée personnelle, particulièrement si elle contient une personne ou une identité avec un lieu', 'FR', 'A');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q003TRAI', 'Les employés sont formés', 'FR', 'Q');
+    INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q003A001', 'à leur métier par leurs étude ou cursus scolaire, mais aussi avec des formations supplémentaires pour mettre à jour les connaissances', 'FR', 'A');
+    INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q003A002', 'aux logiciels qu''ils utilisent quotidiennement', 'FR', 'A');
+    INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q003A003', 'à la sécurité de l''information pour avoir les clés pour se défendre contre d''éventuelles attaques', 'FR', 'A');
+    INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q003A004', 'en interne ou en externe par des spécialistes', 'FR', 'A');
+    INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q003A005', 'et sensibilisés à l''importance de conserver confidentielles les données, particulièrement si elles sont personnelles', 'FR', 'A');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q004REIT', 'Les responsabilités IT et Sécurité de l''Information', 'FR', 'Q');
+    INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q004A001', 'sont définies en interne, avec une personne spécialisée à régler les problèmes informatiques', 'FR', 'A');
+    INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q004A002', 'sont définies en interne, avec deux personnes aux formations et métiers spécialisés dans le domaine', 'FR', 'A');
+    INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q004A003', 'sont définies en externe, par un contrat', 'FR', 'A');
+    INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q004A004', 'sont définies en externe, sur demande selon les besoins, sans contrat pour lier les entreprises', 'FR', 'A');
+    INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q004A005', 'ne sont pas définies; chacun résout son problème ou fait appel à un autre employé avec plus de facilité dans le domaine', 'FR', 'A');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q005TELE', 'Les employés, lors d''un voyage à l''extérieur, utilisent', 'FR', 'Q');
+    INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q005A001', 'aucun appareil professionnel, car le télétravail n''est pas une pratique autorisée et la seule connexion possible au réseau d''entreprise est interne', 'FR', 'A');
+    INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q005A002', 'un VPN (Virtual Private Network) est utilisé pour chiffrer les données lors de toute connexion sur le serveur interne de l''entreprise', 'FR', 'A');
+    INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q005A003', 'un WiFi public, une connexion ouverte, ou une connexion protégée par mot de passe d''un organisme ou d''une personne externe', 'FR', 'A');
+    INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q005A004', 'une connexion privée ou du partage de réseau d''un téléphone personnel au professionnel', 'FR', 'A');
+    INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q005A005', 'un filtre à écran, ou offrent une attention particulière à la vision possible sur les écrans a travers les fenêtres ou dans les transports publics', 'FR', 'A');
+    INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q005A006', 'un matériel au stockage chiffré ou sans données confidentielles pour éviter toute perte involontaire de données', 'FR', 'A');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q006SNDA', 'Des contrats avec les différents prestataires (informatique, comptabilité...)', 'FR', 'Q');
+    INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q006A001', 'ne sont pas défini, et ces derniers n''interviennent uniquement en cas de besoin de façon ponctuelle', 'FR', 'A');
+    INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q006A002', 'définissent la confidentialité des données et la protection nécessaire de ces dernières', 'FR', 'A');
+    INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q006A003', 'définissent le temps maximum pour lequel ces derniers doivent intervenir', 'FR', 'A');
+    INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q006A004', 'sont régulièrement revus pour s''assurer qu''ils correspondent toujours aux besoins', 'FR', 'A');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q007CLEA', 'Le nettoyage des locaux de travail se déroule', 'FR', 'Q');
+    INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q007A001', 'en interne, par les employés, de façon ponctuelle', 'FR', 'A');
+    INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q007A002', 'pendant les heures de bureau', 'FR', 'A');
+    INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q007A003', 'sous couvert de règles données concernant ce qu''il faut éviter de faire, ou éviter de toucher', 'FR', 'A');
+    INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q007A004', 'sous couvert d''un contrat spécifiant la confidentialité à respecter', 'FR', 'A');
+    INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q007A005', 'alors que tous documents confidentiels sont verrouillés à clé, dans des armoires, des bureaux, ou une salle spécifique', 'FR', 'A');
+    INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q007A006', 'en évitant les salles ou les accès sont interdits, comme une salle archive ou une salle serveur', 'FR', 'A');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q008PWDS', 'Les mots de passe dans l''entreprise', 'FR', 'Q');
+    INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q008A001', 'ne sont pas soumis à des consignes ou conseils particuliers, ou sont laissés à discrétion de chacun', 'FR', 'A');
+    INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q008A002', 'sont centralisés dans un fichier, ou tous connus par une ou plusieurs personnes', 'FR', 'A');
+    INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q008A003', 'sont partagés selon le besoin d''accéder à une machine', 'FR', 'A');
+    INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q008A004', 'font 12 caractères ou plus, et possèdent au moins une majuscule, une minuscule, un chiffre et un caractère spécial', 'FR', 'A');
+    INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q008A005', 'ne forment pas des mots ou des dates cohérentes', 'FR', 'A');
+    INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q008A006', 'sont des phrases complètes', 'FR', 'A');
+    INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q008A007', 'sont changés régulièrement, tous les ans ou tous les deux ans', 'FR', 'A');
+    INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q008A008', 'sont inclus dans un gestionnaire de mots de passe', 'FR', 'A');
+    INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q008A009', 'sont retenus dans les navigateurs internet', 'FR', 'A');
+    INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q008A010', 'sont différents pour chaque application, même pour un même utilisateur', 'FR', 'A');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q009WIFI', 'Les réseaux sans fil', 'FR', 'Q');
+    INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q009A001', 'ne sont pas activés dans l''organisme', 'FR', 'A');
+    INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q009A002', 'sont utilisés sans distinctions par des externes comme des personnes internes à l''entreprise', 'FR', 'A');
+    INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q009A003', 'sont donnés sans distinctions à des externes comme des personnes internes à l''organisme et sans récolte d''identité', 'FR', 'A');
+    INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q009A004', 'sont protégés de mots de passe très longs (plus de 20 caractères) différents de celui par défaut', 'FR', 'A');
+    INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q009A005', 'des imprimantes sont protégées par un mot de passe', 'FR', 'A');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q010AVIR', 'Le logiciel antivirus', 'FR', 'Q');
+    INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q010A001', 'n''est pas installé ni utilisé', 'FR', 'A');
+    INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q010A002', 'est installé sur toutes les machines de bureau et les ordinateurs portables', 'FR', 'A');
+    INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q010A003', 'est mis à jour sur toutes les machines, de façon automatique comme manuelle', 'FR', 'A');
+    INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q010A004', 'est activé et protège les machines de façon proactive', 'FR', 'A');
+    INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q010A005', 'est installé sur tout les téléphones mobiles étant sur le réseau', 'FR', 'A');
+    INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q010A006', 'est utilisé de temps à autre pour analyser la bonne santé d''une machine, même sans évènements externes', 'FR', 'A');
+    INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q010A007', 'est utilisé pour analyser le réseau en cas de suspicion d''infection', 'FR', 'A');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q011UPDT', 'Les postes utilisateurs sont', 'FR', 'Q');
+    INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q011A001', 'laissés sans consignes à discrétion des utilisateurs', 'FR', 'A');
+    INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q011A002', 'mis à jour de façon automatique ou manuelle (logiciels comme système d''exploitation)', 'FR', 'A');
+    INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q011A003', 'soumis aux droits d''administration, qui empêche pour tout utilisateur d''installer un logiciel', 'FR', 'A');
+    INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q011A004', 'soumis a des règles et des consignes en ce qui concerne l''installation et le téléchargement de programme, comme sur l''illégalité, ou éviter d''installer sans faire attention', 'FR', 'A');
+    INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q011A005', 'verrouillés en cas d''absence rapide, même pour en temps très court', 'FR', 'A');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q012BACK', 'Les backups sont', 'FR', 'Q');
+    INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q012A001', 'inexistants: ils ne sont pas faits ou non fonctionnels', 'FR', 'A');
+    INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q012A002', 'transférés: le prestataire informatique en a la responsabilité à travers le Cloud', 'FR', 'A');
+    INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q012A003', 'exhaustifs: toutes les données qui doivent être incluses dans les backups, et tous les utilisateurs en sont conscients et ne stockent pas de données en local', 'FR', 'A');
+    INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q012A004', 'journaliers: les backups sont faits tous les jours ou plus', 'FR', 'A');
+    INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q012A005', 'retenus: il est possible de remonter dans le temps dans les backups à 1 mois ou plus ', 'FR', 'A');
+    INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q012A006', 'délocalisés: le serveur et les backups ne sont pas faits au même endroit, à plus de 3 kilomètres de distance', 'FR', 'A');
+    INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q012A007', 'déconnectés: au moins en partie débranchés du serveur une fois qu''ils ont été faits', 'FR', 'A');
+    INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q012A008', 'testés: un ou plusieurs fichiers sont restaurés à partir d''un backup de temps en temps', 'FR', 'A');
+    INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q012A009', 'chiffrés: s''ils sont amenés en dehors de l''entreprise, ils doivent être illisibles en les branchant simplement', 'FR', 'A');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q013BYOD', 'La pratique d''apport du matériel personnel informatique (Clé USB, disque dur, mobile, tablette, laptop ...) dans l''environnement professionnel (réseau qui se connecte au serveur)', 'FR', 'Q');
+    INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q013A001', 'est interdit ou impossible dans l''organisme', 'FR', 'A');
+    INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q013A002', 'est soumis à des règles précises, particulièrement en cas d''insertion sur le réseau interne de l''organisme', 'FR', 'A');
+    INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q013A003', 'est soumis à un contrôle antiviral strict', 'FR', 'A');
+    INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q013A004', 'a été expliqué aux employés à travers des formations ou des explications', 'FR', 'A');
+-- EN
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q001RCHA', 'In the company, rules are', 'EN', 'Q');
+    INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q001A001', 'not described', 'EN', 'A');
+    INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q001A002', 'orally given', 'EN', 'A');
+    INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q001A003', 'written and given by mail', 'EN', 'A');
+    INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q001A004', 'read and signed by everyone, in a user charter', 'EN', 'A');
+    INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q001A005', 'written and explained with simple words, which are non-specific to a type of work', 'EN', 'A');
+    INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q001A006', 'quite heavy, but really accurate', 'EN', 'A');
+    INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q001A007', 'given with advice and the best practices', 'EN', 'A');
+    INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q001A008', 'adapted depending on the role of the reader', 'EN', 'A');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q002GDPR', 'In the company, there is/are', 'EN', 'Q');
+    INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q002A001', 'no personal data other than the classic one, or nothing related to the personal data', 'EN', 'A');
+    INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q002A002', 'someone who does every action bound to personal data', 'EN', 'A');
+    INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q002A003', 'a written explanation about the personal data lifecycle (how there are get, stored, and when and how they are destroyed)', 'EN', 'A');
+    INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q002A004', 'an oral or a written explanation of what should be done when there is a problem with personal data', 'EN', 'A');
+    INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q002A005', 'some video surveillance, or some pictures taken, that contains face or people that are explained to everyone', 'EN', 'A');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q003TRAI', 'Employees are trained about', 'EN', 'Q');
+    INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q003A001', 'their work, their daily tasks by their studies, but also by some formation to update the knowledge', 'EN', 'A');
+    INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q003A002', 'the software they daily use', 'EN', 'A');
+    INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q003A003', 'information security, to have the key to protect themselves again attacks', 'EN', 'A');
+    INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q003A004', 'by specialists, that could be internal or external', 'EN', 'A');
+    INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q003A005', 'the importance to keep some data confidential, and more importantly if they are personal', 'EN', 'A');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q004REIT', 'IT and Information Security responsibilities are:', 'EN', 'Q');
+    INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q004A001', 'internally defined, with someone who is specialised in IT field', 'EN', 'A');
+    INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q004A002', 'internally defined, with at least two persons that were trained on the field', 'EN', 'A');
+    INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q004A003', 'externally defined, with a contract', 'EN', 'A');
+    INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q004A004', 'externally defined, depending on the needs, without any contract specified', 'EN', 'A');
+    INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q004A005', 'aren''t defined; anyone tries to resolve their problems, asking to someone else if they can', 'EN', 'A');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q005TELE', 'During any trip outside the company, employee uses', 'EN', 'Q');
+    INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q005A001', 'no professional tools because home office or travel is not allowed or necessary, or the only connection to the internal network is on the company premises', 'EN', 'A');
+    INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q005A002', 'VPN (Virtual Private Network) is used to cipher all data from any network to the internal server', 'EN', 'A');
+    INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q005A003', 'public Wi-Fi, open networks or connection protected by external organisation or person', 'EN', 'A');
+    INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q005A004', 'a private connection or a connection sharing from a private or professional smartphone', 'EN', 'A');
+    INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q005A005', 'a screen filter or their attention to ensure that no non-authorised person could see what is on the screen', 'EN', 'A');
+    INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q005A006', 'devices that are ciphered (protected by a password at boot) or without any confidential data', 'EN', 'A');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q006SNDA', 'Contracts that are signed with third parties', 'EN', 'Q');
+    INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q006A001', 'are not defined, because they only come punctually in case of an incident or needs', 'EN', 'A');
+    INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q006A002', 'define confidentiality of data, and their protection', 'EN', 'A');
+    INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q006A003', 'define the maximum time of intervention after an incident', 'EN', 'A');
+    INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q006A004', 'are regularly reviewed to ensure that they correspond to the needs', 'EN', 'A');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q007CLEA', 'The office cleaning is done', 'EN', 'Q');
+    INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q007A001', 'internally, by employees, punctually', 'EN', 'A');
+    INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q007A002', 'during the work time', 'EN', 'A');
+    INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q007A003', 'under rules of what should be done and what shouldn''t be done', 'EN', 'A');
+    INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q007A004', 'under a contract which specifies confidentiality of a contract', 'EN', 'A');
+    INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q007A005', 'with all confidential documents locked under a room, a desk or a closet', 'EN', 'A');
+    INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q007A006', 'done avoiding rooms which as restrained access, like an archive room or a server room', 'EN', 'A');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q008PWDS', 'Passwords in the company are', 'EN', 'Q');
+    INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q008A001', 'not under some advice or guidelines, or let to employees', 'EN', 'A');
+    INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q008A002', 'centralised in a file, or all known by one or more people', 'EN', 'A');
+    INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q008A003', 'shared whenever there is a need to access to a protected device', 'EN', 'A');
+    INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q008A004', 'made of 12 or more letters which are uppercase, lowercase, digits and special character', 'EN', 'A');
+    INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q008A005', 'do not form any words or dates', 'EN', 'A');
+    INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q008A006', 'complete sentences', 'EN', 'A');
+    INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q008A007', 'regularly changed, every year or two years', 'EN', 'A');
+    INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q008A008', 'included in a password manager', 'EN', 'A');
+    INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q008A009', 'included in web browsers', 'EN', 'A');
+    INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q008A010', 'different for each application used, even for one user', 'EN', 'A');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q009WIFI', 'Wireless networks', 'EN', 'Q');
+    INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q009A001', 'are not used in the company', 'EN', 'A');
+    INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q009A002', 'are used by everyone and access is granted to the company server', 'EN', 'A');
+    INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q009A003', 'are given to everyone, without any way to get identity of the persons', 'EN', 'A');
+    INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q009A004', 'are protected by long passwords of 20 characters or more', 'EN', 'A');
+    INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q009A005', 'of the printers are protected by a strong password', 'EN', 'A');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q010AVIR', 'Antivirus software', 'EN', 'Q');
+    INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q010A001', 'are not installed or used', 'EN', 'A');
+    INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q010A002', 'is installed on computers and laptops', 'EN', 'A');
+    INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q010A003', 'is updated on all computers, automatically or manually', 'EN', 'A');
+    INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q010A004', 'is activated and protect computers', 'EN', 'A');
+    INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q010A005', 'is installed on all mobile phones that are on networks', 'EN', 'A');
+    INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q010A006', 'is used from time to time in order to analyse the computer, even without external events', 'EN', 'A');
+    INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q010A007', 'is used to analyse the network whenever a suspicious event occurs', 'EN', 'A');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q011UPDT', 'The user workstations are', 'EN', 'Q');
+    INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q011A001', 'let without any rules, and users have to take care of their computer', 'EN', 'A');
+    INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q011A002', 'automatically or manually updated, software as operating system', 'EN', 'A');
+    INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q011A003', 'under administration rights, which won''t let users install software', 'EN', 'A');
+    INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q011A004', 'under rules or advice that about installation and downloading software, concerning illegality or the danger to install something without authorisation', 'EN', 'A');
+    INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q011A005', 'locked whenever the user is not at his desk, even for a short time', 'EN', 'A');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q012BACK', 'Backups are', 'EN', 'Q');
+    INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q012A001', 'not existed: they are not done or not working', 'EN', 'A');
+    INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q012A002', 'shared: a third party as the responsibility of the backup', 'EN', 'A');
+    INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q012A003', 'exhaustive: all data should be in backups, and all users know it, and avoid storing it locally', 'EN', 'A');
+    INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q012A004', 'daily done: backups are made every day or more', 'EN', 'A');
+    INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q012A005', 'retained: it should be possible to get back a month before or more', 'EN', 'A');
+    INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q012A006', 'dislocated: the server, and at least a complete backup are separated by 3 kilometres', 'EN', 'A');
+    INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q012A007', 'disconnected: they are disconnected from the server once they are done', 'EN', 'A');
+    INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q012A008', 'tested: one or all the files are restored form a backup from time to time', 'EN', 'A');
+    INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q012A009', 'ciphered: when they are brought outside the company, they can''t be read', 'EN', 'A');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q013BYOD', 'Having some personal IT devices (USB Key, Hard Drive, Smartphone, Tablet, Laptop ...) in the professional environment (network that is connected to the server)', 'EN', 'Q');
+    INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q013A001', 'is forbidden or impossible in the company', 'EN', 'A');
+    INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q013A002', 'is under precise rules, particularly before connecting to the company network', 'EN', 'A');
+    INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q013A003', 'is under a strict anti-virus control', 'EN', 'A');
+    INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q013A004', 'has been explained to employees through training or explanations', 'EN', 'A');
+
+-- FR
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q001REC001', 'L''entreprise doit définir des règles pour éviter toutes incompréhensions.', 'FR', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q001REC002', 'Les règles (qu''elles soient organisationnelles, métier, ou à l''usage de l''informatique) doivent être connues et expliquées à tous, au moins oralement au possible.', 'FR', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q001REC003', 'Si une transmission orale suffit dans un cadre "familial", les règles devraient être mises dans une charte ou un règlement, écrites et signées par tous, particulièrement en cas de croissance.', 'FR', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q001REC004', 'Une transmission uniquement orale peut rapidement devenir compliquée quand il y a beaucoup de personnes, et devient vite ingérable lors des phases de départ et d''arrivée du personnel importante.', 'FR', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q001REC005', 'Les règles écrites et signées ont l''avantage :
+	- d''éviter les oublis.
+	- d''avoir une preuve juridique que les règles sont connues.', 'FR', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q001REC006', 'Dans la mesure du possible, ses dernières doivent être simples et courtes surtout pour être attractive et lisible.', 'FR', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q001REC007', 'Des règles trop longues ou trop lourdes de vocabulaire technique pourront devenir confuses pour les employés.', 'FR', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q001REC008', 'Si c''est possible, il ne faut pas hésiter à donner des astuces pour aider au respect des règles, voire parfois, expliquer en quoi elles sont nécessaires.', 'FR', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q001REC009', 'Également, des petites adaptations doivent être pensées selon le rôle, ou si le contrat est temporaire par exemple.', 'FR', 'R');
+
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q002REC001', 'Pour le moment l''entreprise ne dispose que peu de données personnelles. Cependant, particulièrement si le nombre de traitements auguemente, ou si rien de particulier n''a été fait, il faut penser:', 'FR', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q002REC002', 'Définir, dans la mesure du possible, une personne qui est responsable de la gestion des données pour éviter le manque de réponse en cas d''incident.', 'FR', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q002REC003', 'Le cycle de vie des données personnelles doit être accessible pour n''importe qui (registre de traitement) [Schéma ?] ;
+	- Comment sont-elles obtenues ?
+	- Comment sont-elles traitées ?
+	- Comment sont-elles accessibles et par qui, sous quelles clauses ?
+	- Comment sont-elles modifiables ?
+	- Combien de temps sont-elles conservées ?
+	- Comment sont-elles détruites ?
+Cela doit être précisé dès lors d''une demande, mais peut-être précisé (contrat de vente, site web, fichier présentable en cas d''interrogation ...).', 'FR', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q002REC004', 'Dans l''idéal, les employés, principalement au contact des clients, doivent connaître la personne responsable pour renvoyer correctement la requête, mais aussi la sensibilité des données manipulées.', 'FR', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q002REC005', 'Une autorisation doit être demandée pour le droit à l''image (droit de prendre le cliché comme sa diffusion), et les personnes doivent être conscientes d''une vidéosurveillance.', 'FR', 'R');
+
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q003REC001', 'Les formations métier sont importantes et doivent être mises régulièrement à jour pour s''assurer d''avoir les dernières pratiques et éviter les pertes de temps inutiles.', 'FR', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q003REC002', 'Des formations sur les logiciels utilisés de façon quotidienne évitent principalement les mauvaises gestions et les erreurs de manipulations.', 'FR', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q003REC003', 'S''informer sur les différents types d''attaques existants et les moyens pouvant mis être en oeuvre pour une attaque permet au possible d''éviter des comportements menant à la réussite de ces dernières.', 'FR', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q003REC004', 'Des formations faites en interne n''ont parfois pas le même impact que celles faites en externe, mais sont tout aussi valables, et parfois même plus appropriées par la maîtrise du sujet et de la bonne orientation du discours.', 'FR', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q003REC005', 'Sensibiliser les utilisateurs à la sensibilité des informations manipulés pour attirer leur attention sur les protections à mettre en oeuvre.', 'FR', 'R');
+
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q004REC001', 'Il est important de définir les responsabilités, que ce soit en interne ou en externe, avec une ou plusieurs personnes, ou une entreprise vraiment spécialisée dans le domaine de la responsabilité, avec au possible une formation.', 'FR', 'R');
+
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q005REC001', 'Pour le moment, aucun travail à l''extérieur n''est fait. Si cela est néanmoins amené à changer à jour, il est important de faire attention :
+	- Les connexions extérieures non contrôlées doivent être évitées pour éviter d''éventuelles pertes de données.', 'FR', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q005REC002', 'Quand une connexion est faite de l''extérieur vers l''entreprise, il est important d''accéder au réseau interne par l''intermédiaire d''un VPN pour s''assurer que les données restent confidentielles.', 'FR', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q005REC003', 'Les connexions extérieures non contrôlées doivent être évitées pour éviter d''éventuelles pertes de données.', 'FR', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q005REC004', 'Une attention particulière doit être apportée à l''environnement visuel pour éviter les regards indiscrets ou de l''éventuel espionnage.', 'FR', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q005REC005', 'Le matériel doit être chiffré s''il contient des données confidentielles pour éviter toute perte de confidentialité.', 'FR', 'R');
+
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q006REC001', 'Pour le moment, aucun contrat avec les prestataires n''est signé. Si cela est néanmoins amené a changer à jour, il est important de faire attention:', 'FR', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q006REC002', 'Si des données confidentielles sont accessibles par différents prestataires, par exemple des données financières par une fiduciaire, ou des données sur un serveur accessible à un prestataire informatique, il est nécessaire de les protéger avec un contrat de confidentialité.', 'FR', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q006REC003', 'Si les moyens et le contexte le permettent et le nécessitent, un contrat est nécessaire pour assurer la disponibilité, tant les informations nécessaires, que le matériel pour les manipuler.', 'FR', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q006REC004', 'Il faut régulièrement revoir les contrats assurant une certaine disponibilité pour s''assurer:
+	- de ne pas se retrouver sans intervention dans un délai où cette dernière serait indispensable;
+	- de ne pas surpayer un prestataire pour un temps d''intervention trop élevé;
+	- que les services rendus sont d''un niveau de qualité suffisant à ce qui est nécessaire.', 'FR', 'R');
+
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q007REC001', 'Pour le moment, aucun prestataire ne réalise le nettoyage des locaux. Si cela est néanmoins amené a changer à jour, il est important de faire attention:', 'FR', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q007REC002', 'Le nettoyage des locaux doit se faire, dans la mesure du possible, pendant les heures de bureau pour éviter des éventuels vols de données.', 'FR', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q007REC003', 'Des règles doivent être données pour principalement spécifier ce qu''il faut faire où éviter de toucher.', 'FR', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q007REC004', 'Il faut également un contrat de confidentialité, car il est souvent possible d''entendre ou de remarquer des données confidentielles, même si l''accès n''est pas spécifiquement officiel.', 'FR', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q007REC005', 'Pour éviter les problèmes de curiosité humaine, les documents confidentiels doivent être inaccessibles, surtout à première vue.', 'FR', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q007REC006', 'Le personnel d''entretien ne doit pas intervenir dans un local à accès restreint, comme une salle archive ou une salle serveur.', 'FR', 'R');
+
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q008REC001', 'Il est nécessaire de donner des consignes pour éviter les mots de passe faibles. Des astuces et techniques peuvent être données pour éviter l''oubli fréquent de ces derniers. En voici quelques exemples :
+	- Les mots de passe doivent être personnels, et personne d''autre ne doit en avoir la connaissance. En cas de besoin, chacun doit pouvoir accéder aux fichiers à partir de son mot de passe personnel.
+	- Il faut éviter d''avoir une machine accessible par un seul et unique accès, et partagée. Si c''est inévitable, alors il est nécessaire de définir un responsable de cette machine, chargé d''en assurer sa bonne utilisation, et de donner les accès les plus limités possible.
+	- Les navigateurs internet ne stockent pas les mots de passe de façon protégés, et cette fonctionnalité est donc à éviter.', 'FR', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q008REC002', 'Ces derniers doivent également être personnels, et personne d''autre ne doit en avoir la connaissance. En cas de besoin, chacun doit pouvoir accéder aux fichiers à partir de son mot de passe personnel.', 'FR', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q008REC003', 'Il faut éviter d''avoir une machine accessible par un seul et unique accès. Si c''est inévitable, alors il est nécessaire de définir un responsable de cette machine, chargé d''en assurer sa bonne utilisation, et de donner les accès les plus limités possible.', 'FR', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q008REC004', 'Il est nécessaire d''avoir des mots de passe ayant au moins une majuscule, une minuscule, un chiffre et un caractère spécial, pour un total de 12 caractères ou plus.', 'FR', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q008REC005', 'Les mots de passe ne doivent pas former des mots ou des dates cohérentes pour qu''ils ne soient pas facilement devinables.', 'FR', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q008REC006', 'Des phrases complètes peuvent être utilisées comme mot de passe, même s''ils forment des mots complets.', 'FR', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q008REC007', 'Les mots de passe doivent être changés de temps à autre pour prévenir une possible fuite de ses dernières.', 'FR', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q008REC008', 'Des gestionnaires de mot de passe peuvent être utilisés pour faciliter la gestion et leur stockage.', 'FR', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q008REC009', 'Les navigateurs internet ne stockent pas les mots de passe de façon protégés, et cette fonctionnalité est donc à éviter.', 'FR', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q008REC010', 'Les mots de passe réutilisés dans d''autres sites offrent plus de chance de divulgation. De plus, une seule perte de mot de passe suffit à compromettre la totalité des accès.', 'FR', 'R');
+
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q009REC001', 'Pour le moment, les réseaux sans fil ne sont pas activés dans l''entreprise. Si cela est néanmoins amené à changer à jour, il est important de faire attention:
+	- Dans l''idéal, les réseaux sans fil doivent être séparés entre les utilisateurs externes et internes pour éviter de nombreux problèmes d''accès.
+	- Si un réseau sans fil pour des personnes externes, des protections lourdes doivent être mises en place, comme une récolte d''identité pour désigner le responsable d''une connexion à du contenu qui outrepasserait le cadre légal.', 'FR', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q009REC002', 'Dans l''idéal, les réseaux sans fil doivent être séparés entre les utilisateurs externes et internes pour éviter de nombreux problèmes d''accès.', 'FR', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q009REC003', 'Si un réseau sans fil pour des personnes externes, des protections lourdes doivent être mises en place, comme une récolte d''identité pour désigner le responsable d''une connexion à du contenu qui outrepasserait le cadre légal.', 'FR', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q009REC004', 'Le mot de passe du réseau sans fil ne doit pas être facilement devinable pour éviter des connexions imprévues externes.', 'FR', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q009REC005', 'Les réseaux WiFi d''imprimante, s''ils sont nécessaires, doivent être protégés pour éviter toute fuite des documents imprimés et scannés.', 'FR', 'R');
+
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q010REC001', 'L''entreprise doit se munir d''antivirus, et faire attention:', 'FR', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q010REC002', 'Un logiciel antivirus doit être installé sur les machines pour empêcher au possible les infections virales.', 'FR', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q010REC003', 'Ce dernier doit être mis à jour, au moins de façon automatique pour couvrir le plus de menaces possible.', 'FR', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q010REC004', 'Il doit être également activé en permanence pour protéger en continu la machine.', 'FR', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q010REC005', 'Tout appareil, y compris des appareils plus nomades comme les ordinateurs portables, comme les téléphones et les tablettes doivent avoir un antivirus, même ceux proposés par défaut dans les systèmes d''exploitation.', 'FR', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q010REC006', 'Dans l''idéal, il ne faut pas hésiter à faire des tests de temps à autre.', 'FR', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q010REC007', 'Des tests doivent être réalisés dès lors d''une suspicion d''infection.', 'FR', 'R');
+
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q011REC001', 'Des consignes et un encadrement précis doivent être donnés aux utilisateurs de station de travail. Voici des points à donner:', 'FR', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q011REC002', 'Une machine doit être le plus à jour possible pour éviter le plus de faille, et ainsi éviter au possible les attaques par intrusion dans le réseau. Si beaucoup de systèmes d''exploitation se mettent à jour sans aide particulière, les logiciels doivent recevoir une attention particulière.', 'FR', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q011REC003', 'Les droits d''administration peuvent être laissés à des utilisateurs avertis et informés des consignes pour utiliser leur machine, mais nécessitent des règles précises.', 'FR', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q011REC004', 'Les téléchargements doivent être sur les sites officiels, tant pour éviter d''éventuels téléchargements illégaux que les différents virus, et ces consignes doivent être donnés.', 'FR', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q011REC005', 'Les machines doivent être verrouillées pour éviter toute usurpation d''identité.', 'FR', 'R');
+
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q012REC001', 'Il est important d''avoir des backups pour de nombreuses raisons, comme s''assurer d''avoir une redondance des données à leur disparition. Il est important d''avoir et de respecter:', 'FR', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q012REC002', 'Les backups doivent concerner toutes les données de l''entreprise, et il est important d''en faire le rappel aux utilisateurs pour qu''ils puissent entreposer leurs données sur un endroit qui aura une telle copie.', 'FR', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q012REC003', 'Les backups doivent être faits de façon journalière pour éviter des pertes trop importantes.', 'FR', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q012REC004', 'Les backups doivent avoir une durée de rétention supérieure a 1 mois pour éviter les problèmes comme les cryptoransomwares.', 'FR', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q012REC005', 'Les backups doivent être délocalisés, dans la mesure du possible à plus de 3 kilomètres.', 'FR', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q012REC006', 'Les backups doivent être déconnectés, débranchés de l''infrastructure, au moins en partie, pour ne pas être détectables par des cryptoransomwares.', 'FR', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q012REC007', 'Les backups doivent être testés, pour s''assurer qu''ils sont bien faits et fonctionnels.', 'FR', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q012REC008', 'Les backups doivent être chiffrés, particulièrement s''ils sont déplacés.', 'FR', 'R');
+
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q013REC001', 'Pour le moment, la pratique de l''apport de matériel personnel dans l''environnement professionnel n''est pas possible dans l''organisme. Si cela est néanmoins amené a changer à jour, il est important de faire attention:', 'FR', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q013REC002', 'Le matériel personnel ne peut pas être utilisé dans un organisme sans contrôles et explications préalables. Les explications endiguent certaines attaques, particulièrement dès lors que la distinction des dangers et des choses qui peuvent arriver est faite.', 'FR', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q013REC003', 'Il doit être sous un contrôle antiviral pour s''assurer d''éviter un maximum d''infection sur le réseau.', 'FR', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q013REC004', 'Cette pratique nécessite des explications pour être comprise au mieux possible.', 'FR', 'R');
+
+-- EN
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q001REC001', '', 'EN', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q001REC002', '', 'EN', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q001REC003', '', 'EN', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q001REC004', '', 'EN', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q001REC005', '', 'EN', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q001REC006', '', 'EN', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q001REC007', '', 'EN', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q001REC008', '', 'EN', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q001REC009', '', 'EN', 'R');
+
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q002REC001', '', 'EN', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q002REC002', '', 'EN', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q002REC003', '', 'EN', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q002REC004', '', 'EN', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q002REC005', '', 'EN', 'R');
+
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q003REC001', '', 'EN', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q003REC002', '', 'EN', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q003REC003', '', 'EN', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q003REC004', '', 'EN', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q003REC005', '', 'EN', 'R');
+
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q004REC001', '', 'EN', 'R');
+
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q005REC001', '', 'EN', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q005REC002', '', 'EN', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q005REC003', '', 'EN', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q005REC004', '', 'EN', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q005REC005', '', 'EN', 'R');
+
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q006REC001', '', 'EN', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q006REC002', '', 'EN', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q006REC003', '', 'EN', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q006REC004', '', 'EN', 'R');
+
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q007REC001', '', 'EN', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q007REC002', '', 'EN', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q007REC003', '', 'EN', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q007REC004', '', 'EN', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q007REC005', '', 'EN', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q007REC006', '', 'EN', 'R');
+
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q008REC001', '', 'EN', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q008REC002', '', 'EN', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q008REC003', '', 'EN', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q008REC004', '', 'EN', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q008REC005', '', 'EN', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q008REC006', '', 'EN', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q008REC007', '', 'EN', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q008REC008', '', 'EN', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q008REC009', '', 'EN', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q008REC010', '', 'EN', 'R');
+
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q009REC001', '', 'EN', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q009REC002', '', 'EN', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q009REC003', '', 'EN', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q009REC004', '', 'EN', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q009REC005', '', 'EN', 'R');
+
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q010REC001', '', 'EN', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q010REC002', '', 'EN', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q010REC003', '', 'EN', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q010REC004', '', 'EN', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q010REC005', '', 'EN', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q010REC006', '', 'EN', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q010REC007', '', 'EN', 'R');
+
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q011REC001', '', 'EN', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q011REC002', '', 'EN', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q011REC003', '', 'EN', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q011REC004', '', 'EN', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q011REC005', '', 'EN', 'R');
+
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q012REC001', '', 'EN', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q012REC002', '', 'EN', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q012REC003', '', 'EN', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q012REC004', '', 'EN', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q012REC005', '', 'EN', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q012REC006', '', 'EN', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q012REC007', '', 'EN', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q012REC008', '', 'EN', 'R');
+
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q013REC001', '', 'EN', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q013REC002', '', 'EN', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q013REC003', '', 'EN', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q013REC004', '', 'EN', 'R');
