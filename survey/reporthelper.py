@@ -9,10 +9,11 @@ from utils.radarFactory import radar_factory
 import matplotlib.pyplot as plt
 
 
+
 def getRecommendations(cuser):
     allAnswers = SurveyQuestionAnswer.objects.all().order_by('question__qindex', 'aindex')
 
-    finalReportRecs = []
+    finalReportRecs = {}
 
     for a in allAnswers:
         userAnswer = SurveyUserAnswer.objects.all().filter(user=cuser).filter(answer=a)[0]
@@ -21,13 +22,19 @@ def getRecommendations(cuser):
         if not recommendation.exists():
             continue
 
+        if a.question.id not in finalReportRecs:
+            finalReportRecs[a.question.id] = []
+
         for rec in recommendation:
             if rec.min_e_count.lower() > cuser.e_count.lower() or rec.max_e_count.lower() < cuser.e_count.lower():
                 continue
             if userAnswer.uvalue > 0 and rec.answerChosen:
-                finalReportRecs.append(str(rec))
+                finalReportRecs[a.question.id].append(str(rec))
             elif userAnswer.uvalue <= 0 and not rec.answerChosen:
-                finalReportRecs.append(str(rec))
+                finalReportRecs[a.question.id].append(str(rec))
+        
+        if len(finalReportRecs[a.question.id])<=0:
+            del finalReportRecs[a.question.id]
 
     return finalReportRecs
 
@@ -111,14 +118,44 @@ def createAndSendReport(user: SurveyUser, lang):
     run = paragraph.add_run()
     run.add_picture(chart_png_file)
 
-
+    doc.add_paragraph()
     recommendationList = getRecommendations(user)
     #recommendationList = "\n\n".join(recommendationList)
 
-    for rec in recommendationList:
-        doc.add_paragraph(rec, style='List Paragraph')
+    doc.add_page_break()
 
 
+    recs = ""
+    file_path = os.path.join(filepath, lang.lower() + '_recs.txt')
+    try:
+        with open(file_path, 'r') as f:
+            recs = f.read()
+    except Exception as e:
+        #raise e
+        raise Exception('Missing file: {}'.format(file_path))
+
+    recs = recs.replace("\n\r", "\n")
+    recs = recs.split("\n\n")
+    x = 0
+    for i in recs:
+        if x == 0:
+            doc.add_heading(i, level=1)
+            x += 1
+            continue
+        doc.add_paragraph(i)
+
+
+    x=1
+    for recLst in recommendationList:
+        doc.add_paragraph(str(x)+". ")
+        rec = recommendationList[recLst]
+        rec = "\n".join(rec)
+        doc.add_paragraph(rec, "List Paragraph")
+        x+=1
+
+
+
+    doc.add_page_break()
 
     doc.add_heading(TRANSLATION_UI['document']['questions'][lang.lower()], level=1)
 
@@ -153,11 +190,13 @@ def createAndSendReport(user: SurveyUser, lang):
             row_cells[1].text = str(a)
 
         col = table.columns[0]
-        col.width = Cm(1.5)
+        col.width = Cm(1.0)
         col = table.columns[1]
         col.width = Cm(14.0)
         for cell in table.columns[0].cells:
-            cell.width = Cm(1.5)
+            cell.width = Cm(1.0)
+        for cell in table.columns[1].cells:
+            cell.width = Cm(14.0)
 
         doc.add_paragraph()
         x += 1
@@ -229,6 +268,9 @@ def createAndSendReport(user: SurveyUser, lang):
     # then call getcompanies when button is hit
 
     return response
+
+
+
 
 
 def calculateResult(user: SurveyUser):
@@ -306,3 +348,4 @@ def generate_chart_png(user: SurveyUser, max_eval, evaluation, sections_list, la
     plt.savefig(file_name)
 
     return file_name
+

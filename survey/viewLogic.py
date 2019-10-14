@@ -138,11 +138,17 @@ def findUserById(user_id):
 
 def getRecommendationsReport(user: SurveyUser):
 
+    allRecs = getRecommendations(user)
+
     report = []
-    for reportRec in getRecommendations(user):
-        txt = reportRec
-        txt = txt.replace("\n", "<br>")
-        report.append(str(txt))
+    for reportRec in allRecs:
+        lst = []
+        for x in allRecs[reportRec]:
+            txt = x
+            txt = txt.replace("\n", "<br>")
+            lst.append(str(txt))
+        
+        report.append("\n".join(lst))
 
     return report
 
