@@ -1,15 +1,34 @@
 # CybersecurityStarterKit
 
 New implementation with many more features and simplified questions compared to
-the Startup security kit
+the Startup security kit.
 
 
-## Deployment
+
+## Deploy with a Dockerized environment (for development purposes)
+
+### Install Docker
+
+- [Get started](https://docs.docker.com/get-started/);
+- [Manage Docker as a non-root user](https://docs.docker.com/install/linux/linux-postinstall/)
+
+
+### Start the containers
+
+
+```bash
+$ docker-compose up -d
+```
+
+The server will be listening on
+
+
+## Deploy manually
 
 ### Requirements
 
 ```bash
-$ sudo apt install npm gettext # later: postgresql or mariadb
+$ sudo apt install npm gettext # later: postgresql
 ```
 
 
@@ -93,21 +112,11 @@ Then you can use a tool like
 [poedit](https://poedit.net) to translate the strings and you can compile with
 the previously mentioned command.
 
-## Use dockerized environment (for development purposes)
-
-### Unstall Docker
-```bash
-https://docs.docker.com/get-started/
-```
-
-## Sources
-```bash
-$ docker-compose up -d
-```
 
 
-- https://pbpython.com/python-word-template.html
-- https://stackoverflow.com/questions/19400089/downloadable-docx-file-in-django
-- https://stackoverflow.com/questions/54260657/python-script-insert-image-using-mailmerge-into-docx-file
-- https://pypi.org/project/docx-mailmerge/
-- https://python-docx.readthedocs.io/en/latest/
+## License
+
+This software is licensed under
+[GNU Affero General Public License version 3](https://www.gnu.org/licenses/agpl-3.0.html)
+
+* Copyright (C) 2019 SMILE gie securitymadein.lu
