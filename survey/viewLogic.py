@@ -156,9 +156,8 @@ def get_answer_choices(survey_question: SurveyQuestion, user_lang: str):
     for answer_choice in answer_choices:
         translation_key = TranslationKey.objects.filter(lang=user_lang, key=answer_choice.answerKey)
         if translation_key.count() == 0:
-            raise Exception('The translation has to be do for the answers ' +
-                'choices. It is not possible to continue with this ' +
-                'language. We are Sorry.')
+            raise Exception('The translation has to be done for the answers choices. ' +
+                'Please choose an another language.')
 
         tuple_answers.append(
             (
