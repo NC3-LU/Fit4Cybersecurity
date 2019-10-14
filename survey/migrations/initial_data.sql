@@ -24,17 +24,17 @@ INSERT INTO "survey_surveysection" ("id", "sectionTitleKey") VALUES (6, 'SECTION
 /* survey_surveyquestion */
 INSERT INTO "survey_surveyquestion" ("id", "titleKey", "qtype", "qindex", "section_id", "service_category_id", "maxPoints") VALUES (1, 'Q001RCHA', 'M', 10, 4, 1, 0);
 INSERT INTO "survey_surveyquestion" ("id", "titleKey", "qtype", "qindex", "section_id", "service_category_id", "maxPoints") VALUES (2, 'Q002GDPR', 'M', 20, 7, 1, 0);
-INSERT INTO "survey_surveyquestion" ("id", "titleKey", "qtype", "qindex", "section_id", "service_category_id", "maxPoints") VALUES (3, 'Q003TRAI', 'M', 10, 5, 2, 0);
-INSERT INTO "survey_surveyquestion" ("id", "titleKey", "qtype", "qindex", "section_id", "service_category_id", "maxPoints") VALUES (4, 'Q004REIT', 'M', 20, 12, 2, 0);
-INSERT INTO "survey_surveyquestion" ("id", "titleKey", "qtype", "qindex", "section_id", "service_category_id", "maxPoints") VALUES (5, 'Q005TELE', 'M', 30, 9, 2, 0);
-INSERT INTO "survey_surveyquestion" ("id", "titleKey", "qtype", "qindex", "section_id", "service_category_id", "maxPoints") VALUES (6, 'Q006SNDA', 'M', 10, 2, 3, 0);
-INSERT INTO "survey_surveyquestion" ("id", "titleKey", "qtype", "qindex", "section_id", "service_category_id", "maxPoints") VALUES (7, 'Q007CLEA', 'M', 20, 13, 3, 0);
-INSERT INTO "survey_surveyquestion" ("id", "titleKey", "qtype", "qindex", "section_id", "service_category_id", "maxPoints") VALUES (8, 'Q008PWDS', 'M', 10, 1, 4, 0);
-INSERT INTO "survey_surveyquestion" ("id", "titleKey", "qtype", "qindex", "section_id", "service_category_id", "maxPoints") VALUES (9, 'Q009WIFI', 'M', 10, 3, 5, 0);
-INSERT INTO "survey_surveyquestion" ("id", "titleKey", "qtype", "qindex", "section_id", "service_category_id", "maxPoints") VALUES (10, 'Q010AVIR', 'M', 20, 11, 5, 0);
-INSERT INTO "survey_surveyquestion" ("id", "titleKey", "qtype", "qindex", "section_id", "service_category_id", "maxPoints") VALUES (11, 'Q011UPDT', 'M', 10, 10, 6, 0);
-INSERT INTO "survey_surveyquestion" ("id", "titleKey", "qtype", "qindex", "section_id", "service_category_id", "maxPoints") VALUES (12, 'Q012BACK', 'M', 20, 6, 6, 0);
-INSERT INTO "survey_surveyquestion" ("id", "titleKey", "qtype", "qindex", "section_id", "service_category_id", "maxPoints") VALUES (13, 'Q013BYOD', 'M', 30, 8, 6, 0);
+INSERT INTO "survey_surveyquestion" ("id", "titleKey", "qtype", "qindex", "section_id", "service_category_id", "maxPoints") VALUES (3, 'Q003TRAI', 'M', 30, 5, 2, 0);
+INSERT INTO "survey_surveyquestion" ("id", "titleKey", "qtype", "qindex", "section_id", "service_category_id", "maxPoints") VALUES (4, 'Q004REIT', 'M', 40, 12, 2, 0);
+INSERT INTO "survey_surveyquestion" ("id", "titleKey", "qtype", "qindex", "section_id", "service_category_id", "maxPoints") VALUES (5, 'Q005TELE', 'M', 50, 9, 2, 0);
+INSERT INTO "survey_surveyquestion" ("id", "titleKey", "qtype", "qindex", "section_id", "service_category_id", "maxPoints") VALUES (6, 'Q006SNDA', 'M', 60, 2, 3, 0);
+INSERT INTO "survey_surveyquestion" ("id", "titleKey", "qtype", "qindex", "section_id", "service_category_id", "maxPoints") VALUES (7, 'Q007CLEA', 'M', 70, 13, 3, 0);
+INSERT INTO "survey_surveyquestion" ("id", "titleKey", "qtype", "qindex", "section_id", "service_category_id", "maxPoints") VALUES (8, 'Q008PWDS', 'M', 80, 1, 4, 0);
+INSERT INTO "survey_surveyquestion" ("id", "titleKey", "qtype", "qindex", "section_id", "service_category_id", "maxPoints") VALUES (9, 'Q009WIFI', 'M', 90, 3, 5, 0);
+INSERT INTO "survey_surveyquestion" ("id", "titleKey", "qtype", "qindex", "section_id", "service_category_id", "maxPoints") VALUES (10, 'Q010AVIR', 'M', 100, 11, 5, 0);
+INSERT INTO "survey_surveyquestion" ("id", "titleKey", "qtype", "qindex", "section_id", "service_category_id", "maxPoints") VALUES (11, 'Q011UPDT', 'M', 110, 10, 6, 0);
+INSERT INTO "survey_surveyquestion" ("id", "titleKey", "qtype", "qindex", "section_id", "service_category_id", "maxPoints") VALUES (12, 'Q012BACK', 'M', 120, 6, 6, 0);
+INSERT INTO "survey_surveyquestion" ("id", "titleKey", "qtype", "qindex", "section_id", "service_category_id", "maxPoints") VALUES (13, 'Q013BYOD', 'M', 130, 8, 6, 0);
 
 /* survey_surveyquestionanswer */
 INSERT INTO "survey_surveyquestionanswer" ("id", "answerKey", "aindex", "question_id", "uniqueAnswer", "score") VALUES (1, 'Q001A001', 10, 1, TRUE, 0);
