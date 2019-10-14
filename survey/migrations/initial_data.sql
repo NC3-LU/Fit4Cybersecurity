@@ -25,7 +25,7 @@ INSERT INTO "survey_surveysection" ("id", "sectionTitleKey") VALUES (6, 'SECTION
 INSERT INTO "survey_surveyquestion" ("id", "titleKey", "qtype", "qindex", "service_category_id", "section_id", "maxPoints") VALUES (1, 'Q001RCHA', 'M', 10, 4, 1, 45);
 INSERT INTO "survey_surveyquestion" ("id", "titleKey", "qtype", "qindex", "service_category_id", "section_id", "maxPoints") VALUES (2, 'Q002GDPR', 'M', 20, 7, 1, 30);
 INSERT INTO "survey_surveyquestion" ("id", "titleKey", "qtype", "qindex", "service_category_id", "section_id", "maxPoints") VALUES (3, 'Q003TRAI', 'M', 30, 5, 2, 35);
-INSERT INTO "survey_surveyquestion" ("id", "titleKey", "qtype", "qindex", "service_category_id", "section_id", "maxPoints") VALUES (4, 'Q004REIT', 'M', 40, 12, 2, 15);
+INSERT INTO "survey_surveyquestion" ("id", "titleKey", "qtype", "qindex", "service_category_id", "section_id", "maxPoints") VALUES (4, 'Q004REIT', 'S', 40, 12, 2, 15);
 INSERT INTO "survey_surveyquestion" ("id", "titleKey", "qtype", "qindex", "service_category_id", "section_id", "maxPoints") VALUES (5, 'Q005TELE', 'M', 50, 9, 2, 35);
 INSERT INTO "survey_surveyquestion" ("id", "titleKey", "qtype", "qindex", "service_category_id", "section_id", "maxPoints") VALUES (6, 'Q006SNDA', 'M', 60, 2, 3, 15);
 INSERT INTO "survey_surveyquestion" ("id", "titleKey", "qtype", "qindex", "service_category_id", "section_id", "maxPoints") VALUES (7, 'Q007CLEA', 'M', 70, 13, 3, 30);
@@ -57,7 +57,7 @@ INSERT INTO "survey_surveyquestionanswer" ("id", "answerKey", "aindex", "questio
 INSERT INTO "survey_surveyquestionanswer" ("id", "answerKey", "aindex", "question_id", "uniqueAnswer", "score") VALUES (16, 'Q003A003', 30, 3, FALSE, 5);
 INSERT INTO "survey_surveyquestionanswer" ("id", "answerKey", "aindex", "question_id", "uniqueAnswer", "score") VALUES (17, 'Q003A004', 40, 3, FALSE, 5);
 INSERT INTO "survey_surveyquestionanswer" ("id", "answerKey", "aindex", "question_id", "uniqueAnswer", "score") VALUES (18, 'Q003A005', 50, 3, FALSE, 5);
--- consider to add a flag to survey_surveyquestion.are_answers_unique(bool) and create radiobutton in the form instead of checkboxes.
+
 INSERT INTO "survey_surveyquestionanswer" ("id", "answerKey", "aindex", "question_id", "uniqueAnswer", "score") VALUES (19, 'Q004A001', 10, 4, TRUE, 15);
 INSERT INTO "survey_surveyquestionanswer" ("id", "answerKey", "aindex", "question_id", "uniqueAnswer", "score") VALUES (20, 'Q004A002', 20, 4, TRUE, 15);
 INSERT INTO "survey_surveyquestionanswer" ("id", "answerKey", "aindex", "question_id", "uniqueAnswer", "score") VALUES (21, 'Q004A003', 30, 4, TRUE, 15);
