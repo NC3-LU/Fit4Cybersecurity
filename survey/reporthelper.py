@@ -43,6 +43,7 @@ def createAndSendReport(user: SurveyUser, lang):
     from docx import Document
     from docx.shared import Cm, Pt
     from docx.enum.style import WD_STYLE_TYPE
+    from docx.enum.text import WD_ALIGN_PARAGRAPH
     from datetime import date
 
     filepath = settings.BASE_DIR+"/wtemps/"
@@ -80,6 +81,7 @@ def createAndSendReport(user: SurveyUser, lang):
         raise Exception('Missing file: {}'.format(file_path))
 
     methodDescr = methodDescr.replace("\n\r", "\n")
+    methodDescr = methodDescr.replace("$$qnumber$$", str(len(SurveyQuestion.objects.all())))
     methodDescr = methodDescr.split("\n\n")
     x = 0
     for i in methodDescr:
@@ -100,7 +102,7 @@ def createAndSendReport(user: SurveyUser, lang):
     score, detail_max, details, section_list = calculateResult(user)
 
     results = results.replace("\n\r", "\n")
-    results = results.replace("$$result$$", str(score))
+    #results = results.replace("$$result$$", str(score))
     results = results.split("\n\n")
 
     x = 0
@@ -110,7 +112,21 @@ def createAndSendReport(user: SurveyUser, lang):
             x += 1
 
             continue
-        doc.add_paragraph(i)
+        if "$$result$$" in i:
+            i = i.split("$$result$$")
+            p = doc.add_paragraph()
+            ind = 1
+            for x in i:
+                p.add_run(x)
+                p.alignment = WD_ALIGN_PARAGRAPH.CENTER
+                if ind < len (i):
+                    px = p.add_run(str(score))
+                    px.font.bold = True
+                ind += 1
+        else:
+            doc.add_paragraph(i)
+
+    
 
     chart_png_file = generate_chart_png(user, detail_max, details, section_list, lang)
     doc.add_paragraph()
