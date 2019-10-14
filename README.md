@@ -20,7 +20,7 @@ the Startup security kit.
 $ docker-compose up -d
 ```
 
-The server will be listening on
+The server will be listening at http://127.0.0.1:8000.
 
 
 ## Deploy manually
