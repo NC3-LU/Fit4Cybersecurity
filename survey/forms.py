@@ -31,12 +31,16 @@ class AnswerMChoice(forms.Form):
     userid = forms.CharField(widget=forms.HiddenInput())
     questionid = forms.IntegerField(widget=forms.HiddenInput())
 
-    answers = forms.MultipleChoiceField(required=True, choices=[], widget=forms.CheckboxSelectMultiple(), label='')
-
     def __init__(self, tanswers=None, *args, **kwargs):
         self.lang = kwargs.pop('lang')
+        answers_field_type = kwargs.pop('answers_field_type')
 
         super().__init__(*args, **kwargs)
+
+        if answers_field_type == 'M':
+            self.fields['answers'] = forms.MultipleChoiceField(required=True, choices=[], widget=forms.CheckboxSelectMultiple, label='')
+        elif answers_field_type == 'S':
+            self.fields['answers'] = forms.ChoiceField(required=True, choices=[], widget=forms.RadioSelect, label='')
 
         self.fields['answers'].error_messages = {
             'required': TRANSLATION_UI["form"]["error_messages"]["answer"]["required"][self.lang.lower()]
@@ -53,6 +57,8 @@ class AnswerMChoice(forms.Form):
 
     def clean_answers(self):
         answers = self.cleaned_data['answers']
+        if self.fields['answers'].widget.input_type == 'radio':
+            answers = [answers]
 
         if len(answers) > 1:
             unique_answer = SurveyQuestionAnswer.objects.filter(pk__in=answers, uniqueAnswer=1)

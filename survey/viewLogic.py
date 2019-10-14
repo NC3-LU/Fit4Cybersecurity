@@ -44,7 +44,7 @@ def handleStartSurvey(user: SurveyUser, request):
             except Exception as e:
                 raise e
 
-            form = AnswerMChoice(answer_choices, lang=user.chosenLang)
+            form = AnswerMChoice(answer_choices, lang=user.chosenLang, answers_field_type=survey_question.qtype)
             form.setUID(user.user_id)
             form.set_question_id(survey_question.id)
 
@@ -78,7 +78,8 @@ def saveAndGetQuestion(user: SurveyUser, request):
 
     if request.method == 'POST' and user.current_question == int(request.POST['questionid']):
 
-        form = AnswerMChoice(tuple_answers, data=request.POST, lang=user.chosenLang)
+        form = AnswerMChoice(tuple_answers, data=request.POST,
+                     lang=user.chosenLang, answers_field_type=survey_question.qtype)
 
         if form.is_valid():
 
@@ -94,7 +95,7 @@ def saveAndGetQuestion(user: SurveyUser, request):
                     tuple_answers = get_answer_choices(survey_question, user.chosenLang)
                 except Exception as e:
                     raise e
-                form = AnswerMChoice(tuple_answers, lang=user.chosenLang)
+                form = AnswerMChoice(tuple_answers, lang=user.chosenLang, answers_field_type=survey_question.qtype)
             else:
                 #FINAL QUESTION return the new interface
                 user.survey_done = True
@@ -102,7 +103,7 @@ def saveAndGetQuestion(user: SurveyUser, request):
 
                 return -1
     else:
-        form = AnswerMChoice(tuple_answers, lang=user.chosenLang)
+        form = AnswerMChoice(tuple_answers, lang=user.chosenLang, answers_field_type=survey_question.qtype)
 
     form.setUID(user.user_id)
     form.set_question_id(survey_question.id)
