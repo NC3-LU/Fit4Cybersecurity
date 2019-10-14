@@ -80,7 +80,7 @@ $ python manager.py runserver # not for production
 
 
 
-## Upgrading
+## Upgrading the application
 
 ### Updating the models
 
