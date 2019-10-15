@@ -1,14 +1,14 @@
 FROM python:3
 
 RUN apt-get update \
-    && apt-get install -y gettext libgettextpo-dev
+    && apt-get install -y gettext libgettextpo-dev postgresql-client-common postgresql-client
 
 ENV PYTHONUNBUFFERED 1
 
 RUN mkdir /csskp
 WORKDIR /csskp
 COPY requirements.txt /csskp/
-RUN pip install -r requirements.txt
+RUN pip3 install -r requirements.txt
 COPY . /csskp/
 
-RUN python manage.py compilemessages
+RUN python3 manage.py compilemessages
