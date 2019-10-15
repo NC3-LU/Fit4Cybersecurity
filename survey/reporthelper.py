@@ -2,6 +2,7 @@ import os
 from django.http import HttpResponse
 from django.conf import settings
 
+from csskp.settings import PICTURE_DIR
 from survey.models import SurveyQuestion, SurveyQuestionAnswer, SurveyUser, SurveyUserAnswer, Recommendations, \
     TranslationKey
 from survey.globals import TRANSLATION_UI
@@ -134,7 +135,10 @@ def createAndSendReport(user: SurveyUser, lang):
     doc.add_paragraph()
     paragraph = doc.add_paragraph()
     run = paragraph.add_run()
-    run.add_picture(chart_png_file)
+    try:
+        run.add_picture(chart_png_file)
+    except:
+        print('oups')
 
     doc.add_paragraph()
     recommendationList = getRecommendations(user, lang)
@@ -362,7 +366,15 @@ def generate_chart_png(user: SurveyUser, max_eval, evaluation, sections_list, la
              horizontalalignment='center', color='black', weight='bold',
              size='large')
 
-    file_name = '/tmp/csskp/survey-' + str(user.user_id) + '.png'
-    plt.savefig(file_name)
+    if not os.path.isdir(PICTURE_DIR):
+        os.makedirs(PICTURE_DIR)
+    file_name = os.path.join(PICTURE_DIR, 'survey-{}.png'.format(user.user_id))
+    try:
+        res = plt.savefig(file_name)
+    except Exception as e:
+        raise Exception('Problem when generating picture for the report.')
+        return ''
+    finally:
+        plt.close()
 
     return file_name
