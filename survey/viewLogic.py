@@ -139,7 +139,7 @@ def findUserById(user_id):
 
 def getRecommendationsReport(user: SurveyUser):
 
-    allRecs = getRecommendations(user)
+    allRecs = getRecommendations(user, user.chosenLang)
 
     report = []
     for reportRec in allRecs:
@@ -148,7 +148,7 @@ def getRecommendationsReport(user: SurveyUser):
             txt = x
             txt = txt.replace("\n", "<br>")
             lst.append(str(txt))
-        
+
         report.append("\n".join(lst))
 
     return report
