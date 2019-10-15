@@ -43,6 +43,8 @@ def getRecommendations(user: SurveyUser, lang: str):
 
 
 def createAndSendReport(user: SurveyUser, lang):
+    """Generates the report as a .dox file, then returns it to the view.
+    """
     from docx import Document
     from docx.shared import Cm, Pt
     from docx.enum.style import WD_STYLE_TYPE
@@ -129,23 +131,20 @@ def createAndSendReport(user: SurveyUser, lang):
         else:
             doc.add_paragraph(i)
 
-
-
-    chart_png_file = generate_chart_png(user, detail_max, details, section_list, lang)
-    doc.add_paragraph()
-    paragraph = doc.add_paragraph()
-    run = paragraph.add_run()
     try:
+        chart_png_file = generate_chart_png(user, detail_max, details, section_list, lang)
+        doc.add_paragraph()
+        paragraph = doc.add_paragraph()
+        run = paragraph.add_run()
         run.add_picture(chart_png_file)
     except:
-        print('oups')
+        pass
 
     doc.add_paragraph()
     recommendationList = getRecommendations(user, lang)
     #recommendationList = "\n\n".join(recommendationList)
 
     doc.add_page_break()
-
 
     recs = ""
     file_path = os.path.join(filepath, lang.lower() + '_recs.txt')
@@ -174,8 +173,6 @@ def createAndSendReport(user: SurveyUser, lang):
         rec = "\n".join(rec)
         doc.add_paragraph(rec, "List Paragraph")
         x+=1
-
-
 
     doc.add_page_break()
 
@@ -292,9 +289,6 @@ def createAndSendReport(user: SurveyUser, lang):
     return response
 
 
-
-
-
 def calculateResult(user: SurveyUser):
     allUserAnswers = SurveyUserAnswer.objects.filter(uvalue__gt=0, user=user).order_by('answer__question__qindex',
                                                                                        'answer__aindex')
@@ -335,6 +329,9 @@ def calculateResult(user: SurveyUser):
 
 
 def generate_chart_png(user: SurveyUser, max_eval, evaluation, sections_list, lang):
+    """Generates the chart with Matplotlib and returns the path of the generated
+    graph which will be included in the report.
+    """
     n = len(sections_list)
     theta = radar_factory(n, frame='polygon')
 
