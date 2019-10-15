@@ -6,7 +6,8 @@ set -e
 host="$1"
 shift
 
-until PGPASSWORD=postgres psql -h db -U "postgres" -c '\q'; do
+until ( ! command -v psql || PGPASSWORD=postgres psql -h db -U "postgres" -c '\q' )
+do
   >&2 echo "Postgres is unavailable - sleeping"
   sleep 1
 done

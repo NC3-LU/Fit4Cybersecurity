@@ -10,29 +10,31 @@ import matplotlib.pyplot as plt
 
 
 
-def getRecommendations(cuser):
+def getRecommendations(user: SurveyUser, lang: str):
     allAnswers = SurveyQuestionAnswer.objects.all().order_by('question__qindex', 'aindex')
+    translations = TranslationKey.objects.filter(lang=lang, ttype='R')
+    translation_key_values = {}
+    for translation in translations:
+        translation_key_values[translation.key] = translation.text
 
     finalReportRecs = {}
 
     for a in allAnswers:
-        userAnswer = SurveyUserAnswer.objects.all().filter(user=cuser).filter(answer=a)[0]
-        recommendation = Recommendations.objects.all().filter(forAnswer=a)
+        userAnswer = SurveyUserAnswer.objects.filter(user=user).filter(answer=a)[0]
+        recommendations = Recommendations.objects.filter(forAnswer=a)
 
-        if not recommendation.exists():
+        if not recommendations.exists():
             continue
 
         if a.question.id not in finalReportRecs:
             finalReportRecs[a.question.id] = []
 
-        for rec in recommendation:
-            if rec.min_e_count.lower() > cuser.e_count.lower() or rec.max_e_count.lower() < cuser.e_count.lower():
+        for rec in recommendations:
+            if rec.min_e_count.lower() > user.e_count.lower() or rec.max_e_count.lower() < user.e_count.lower():
                 continue
-            if userAnswer.uvalue > 0 and rec.answerChosen:
-                finalReportRecs[a.question.id].append(str(rec))
-            elif userAnswer.uvalue <= 0 and not rec.answerChosen:
-                finalReportRecs[a.question.id].append(str(rec))
-        
+            if (userAnswer.uvalue > 0 and rec.answerChosen) or (userAnswer.uvalue <= 0 and not rec.answerChosen):
+                finalReportRecs[a.question.id].append(translation_key_values[rec.textKey])
+
         if len(finalReportRecs[a.question.id])<=0:
             del finalReportRecs[a.question.id]
 
@@ -126,7 +128,7 @@ def createAndSendReport(user: SurveyUser, lang):
         else:
             doc.add_paragraph(i)
 
-    
+
 
     chart_png_file = generate_chart_png(user, detail_max, details, section_list, lang)
     doc.add_paragraph()
@@ -135,7 +137,7 @@ def createAndSendReport(user: SurveyUser, lang):
     run.add_picture(chart_png_file)
 
     doc.add_paragraph()
-    recommendationList = getRecommendations(user)
+    recommendationList = getRecommendations(user, lang)
     #recommendationList = "\n\n".join(recommendationList)
 
     doc.add_page_break()
@@ -229,7 +231,7 @@ def createAndSendReport(user: SurveyUser, lang):
         if user.e_count == a:
             compSize = b
 
-    recommendationList = getRecommendations(user)
+    recommendationList = getRecommendations(user, lang)
     recommendationList = "\n\n".join(recommendationList)
 
     table = []
@@ -364,4 +366,3 @@ def generate_chart_png(user: SurveyUser, max_eval, evaluation, sections_list, la
     plt.savefig(file_name)
 
     return file_name
-
