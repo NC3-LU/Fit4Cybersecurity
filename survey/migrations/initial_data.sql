@@ -374,10 +374,10 @@ INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q0
     INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q012A008', 'testées: un ou plusieurs fichiers sont restaurés à partir d''une sauvegarde de temps en temps', 'FR', 'A');
     INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q012A009', 'chiffrées: si elles sont amenées en dehors de l''entreprise, elles doivent être illisibles', 'FR', 'A');
 INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q013BYOD', 'La pratique d''amener du matériel personnel informatique (Clé USB, disque dur, mobile, tablette, laptop ...) dans l''environnement professionnel (réseau qui se connecte au serveur)', 'FR', 'Q');
-    INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q013A001', 'est interdit ou impossible dans l''organisme', 'FR', 'A');
-    INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q013A002', 'est soumis à des règles précises, particulièrement en cas d''insertion sur le réseau interne de l''organisme', 'FR', 'A');
-    INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q013A003', 'est soumis à un contrôle antiviral strict', 'FR', 'A');
-    INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q013A004', 'a été expliqué aux employés à travers des formations ou des explications', 'FR', 'A');
+    INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q013A001', 'est interdite ou impossible dans l''organisme', 'FR', 'A');
+    INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q013A002', 'est soumise à des règles précises, particulièrement en cas d''insertion sur le réseau interne de l''organisme', 'FR', 'A');
+    INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q013A003', 'est soumise à un contrôle strict', 'FR', 'A');
+    INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q013A004', 'a été expliquée aux employés à travers des formations ou des explications', 'FR', 'A');
 -- EN
 INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q001RCHA', 'In the company, rules are', 'EN', 'Q');
     INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q001A001', 'not described', 'EN', 'A');
@@ -580,14 +580,14 @@ INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q0
 
 INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q002REC001', 'Pour le moment l''entreprise ne dispose que peu de données personnelles. Cependant, particulièrement si le nombre de traitements auguemente, ou si rien de particulier n''a été fait, il faut penser:', 'FR', 'R');
 INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q002REC002', 'Définir, dans la mesure du possible, une personne qui est responsable de la gestion des données pour éviter le manque de réponse en cas d''incident.', 'FR', 'R');
-INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q002REC003', 'Le cycle de vie des données personnelles doit être accessible pour n''importe qui (registre de traitement) [Schéma ?] ;
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q002REC003', 'Le cycle de vie des données personnelles doit être accessible pour n''importe qui (registre de traitement) ;
 	- Comment sont-elles obtenues ?
 	- Comment sont-elles traitées ?
 	- Comment sont-elles accessibles et par qui, sous quelles clauses ?
 	- Comment sont-elles modifiables ?
 	- Combien de temps sont-elles conservées ?
 	- Comment sont-elles détruites ?
-Cela doit être précisé dès lors d''une demande, mais peut-être précisé (contrat de vente, site web, fichier présentable en cas d''interrogation ...).', 'FR', 'R');
+Ce cycle devrait être décrit quelque part et accessible à tous (contrat de vente, site web, fichier présentable en cas d''interrogation ...).', 'FR', 'R');
 INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q002REC004', 'Dans l''idéal, les employés, principalement au contact des clients, doivent connaître la personne responsable pour renvoyer correctement la requête, mais aussi la sensibilité des données manipulées.', 'FR', 'R');
 INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q002REC005', 'Une autorisation doit être demandée pour le droit à l''image (droit de prendre le cliché comme sa diffusion), et les personnes doivent être conscientes d''une vidéosurveillance.', 'FR', 'R');
 
