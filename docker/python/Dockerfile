@@ -2,7 +2,7 @@
 
 FROM python:3
 
-ARG user
+ARG user=james-bond
 
 RUN apt-get update \
     && apt-get install -y gettext libgettextpo-dev postgresql-client-common postgresql-client
