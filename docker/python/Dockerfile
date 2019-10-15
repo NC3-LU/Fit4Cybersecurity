@@ -19,5 +19,4 @@ COPY . /csskp/
 RUN chown -R $user:$user /csskp
 USER $user
 RUN mkdir /tmp/csskp
-
 RUN python3 manage.py compilemessages
