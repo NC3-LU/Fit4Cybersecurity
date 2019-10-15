@@ -331,7 +331,7 @@ INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q0
     INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q007A003', 'sous couvert de règles données concernant ce qu''il faut éviter de faire, ou éviter de toucher', 'FR', 'A');
     INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q007A004', 'sous couvert d''un contrat spécifiant la confidentialité à respecter', 'FR', 'A');
     INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q007A005', 'alors que tous documents confidentiels sont verrouillés à clé, dans des armoires, des bureaux, ou une salle spécifique', 'FR', 'A');
-    INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q007A006', 'en évitant les salles ou les accès sont interdits, comme une salle archive ou une salle serveur', 'FR', 'A');
+    INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q007A006', 'en évitant les salles ou les accès sont interdits, comme une salle d''archive ou une salle serveur', 'FR', 'A');
 INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q008PWDS', 'Les mots de passe dans l''entreprise', 'FR', 'Q');
     INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q008A001', 'ne sont pas soumis à des consignes ou conseils particuliers, ou sont laissés à discrétion de chacun', 'FR', 'A');
     INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q008A002', 'sont centralisés dans un fichier, ou tous connus par une ou plusieurs personnes', 'FR', 'A');
@@ -619,7 +619,7 @@ INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q0
 INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q007REC003', 'Des règles doivent être données pour principalement spécifier ce qu''il faut faire où éviter de toucher.', 'FR', 'R');
 INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q007REC004', 'Il faut également un contrat de confidentialité, car il est souvent possible d''entendre ou de remarquer des données confidentielles, même si l''accès n''est pas spécifiquement officiel.', 'FR', 'R');
 INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q007REC005', 'Pour éviter les problèmes de curiosité humaine, les documents confidentiels doivent être inaccessibles, surtout à première vue.', 'FR', 'R');
-INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q007REC006', 'Le personnel d''entretien ne doit pas intervenir dans un local à accès restreint, comme une salle archive ou une salle serveur.', 'FR', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q007REC006', 'Le personnel d''entretien ne doit pas intervenir dans un local à accès restreint, comme une salle d''archive ou une salle serveur.', 'FR', 'R');
 
 INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q008REC001', 'Il est nécessaire de donner des consignes pour éviter les mots de passe faibles. Des astuces et techniques peuvent être données pour éviter l''oubli fréquent de ces derniers. En voici quelques exemples :
 	- Les mots de passe doivent être personnels, et personne d''autre ne doit en avoir la connaissance. En cas de besoin, chacun doit pouvoir accéder aux fichiers à partir de son mot de passe personnel.
