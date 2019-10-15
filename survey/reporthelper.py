@@ -118,7 +118,7 @@ def createAndSendReport(user: SurveyUser, lang):
             ind = 1
             for x in i:
                 p.add_run(x)
-                p.alignment = WD_ALIGN_PARAGRAPH.CENTER
+                #p.alignment = WD_ALIGN_PARAGRAPH.CENTER
                 if ind < len (i):
                     px = p.add_run(str(score))
                     px.font.bold = True
@@ -360,7 +360,7 @@ def generate_chart_png(user: SurveyUser, max_eval, evaluation, sections_list, la
              horizontalalignment='center', color='black', weight='bold',
              size='large')
 
-    file_name = './static/users/survey-' + str(user.user_id) + '.png'
+    file_name = '/tmp/csskp/survey-' + str(user.user_id) + '.png'
     plt.savefig(file_name)
 
     return file_name
