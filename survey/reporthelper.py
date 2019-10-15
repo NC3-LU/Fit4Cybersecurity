@@ -178,13 +178,12 @@ def createAndSendReport(user: SurveyUser, lang):
 
     doc.add_heading(TRANSLATION_UI['document']['questions'][lang.lower()], level=1)
 
-    x = 1
-    for i in everyQuestion:
+    for index, question in enumerate(everyQuestion):
         table = doc.add_table(rows=1, cols=2)
         table.autofit = False
         hdr_cells = table.rows[0].cells
-        hdr_cells[0].text = str(x)
-        hdr_cells[1].text = str(i)
+        hdr_cells[0].text = str(index+1)
+        hdr_cells[1].text = str(question)
 
         bX = hdr_cells[0].paragraphs[0].runs[0]
         bX.font.bold = True
@@ -193,7 +192,7 @@ def createAndSendReport(user: SurveyUser, lang):
         bX.font.bold = True
         bX.font.size = Pt(13)
 
-        answerlist = SurveyQuestionAnswer.objects.filter(question=i).order_by('aindex')
+        answerlist = SurveyQuestionAnswer.objects.filter(question=question).order_by('aindex')
 
         for a in answerlist:
             row_cells = table.add_row().cells
@@ -218,7 +217,6 @@ def createAndSendReport(user: SurveyUser, lang):
             cell.width = Cm(14.0)
 
         doc.add_paragraph()
-        x += 1
 
     '''
     sectorName = str(user.sector)
@@ -237,7 +235,7 @@ def createAndSendReport(user: SurveyUser, lang):
 
     table = []
     ind = 0
-    for i in everyQuestion:
+    for question in everyQuestion:
         ind += 1
         if ind > 1:
             table.append({'ca':"", 'surveyAnswers':""})
@@ -369,7 +367,7 @@ def generate_chart_png(user: SurveyUser, max_eval, evaluation, sections_list, la
     try:
         res = plt.savefig(file_name)
     except Exception as e:
-        raise Exception('Problem when generating picture for the report.')
+        print('Error: Problem when generating picture for the report.')
         return ''
     finally:
         plt.close()

@@ -121,9 +121,9 @@ TRANSLATION_UI = {
     'question': {
         'continue_later': {
             'button': {
-                'en': "continue later",
-                'fr': "continuer plus tard",
-                'de': "später weitermachen",
+                'en': "Continue later",
+                'fr': "Continuer plus tard",
+                'de': "Später weitermachen",
             },
             'title': {
                 'en': "Continue the evaluation later",
@@ -148,7 +148,7 @@ TRANSLATION_UI = {
         },
         'next_button': {
             'en': "Next",
-            'fr': "Prochain",
+            'fr': "Suite",
             'de': "Nächster",
         },
         'description': {
