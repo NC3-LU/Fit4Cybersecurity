@@ -287,14 +287,14 @@ INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('SE
 
 -- FR
 INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q001RCHA', 'Dans l''entreprise, les règles données aux employés sont', 'FR', 'Q');
-    INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q001A001', 'non explicités', 'FR', 'A');
-    INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q001A002', 'transmises oralement à tous', 'FR', 'A');
+    INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q001A001', 'non décrites', 'FR', 'A');
+    INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q001A002', 'transmises oralement à toutes et tous', 'FR', 'A');
     INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q001A003', 'écrites et données par mail', 'FR', 'A');
     INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q001A004', 'lues et signées par tous, et inscrites dans une charte', 'FR', 'A');
     INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q001A005', 'écrites/expliquées avec du vocabulaire simple, non spécifique à un métier', 'FR', 'A');
     INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q001A006', 'assez longues, mais très précises', 'FR', 'A');
-    INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q001A007', 'donnés avec des conseils et des bonnes pratiques pour faciliter la vie des employés', 'FR', 'A');
-    INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q001A008', 'adaptés selon la personne la personne et/ou son rôle', 'FR', 'A');
+    INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q001A007', 'données avec des conseils et des bonnes pratiques pour faciliter la vie des employés', 'FR', 'A');
+    INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q001A008', 'adaptées selon la personne la personne et/ou son rôle', 'FR', 'A');
 INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q002GDPR', 'Dans l''entreprise, sont défini', 'FR', 'Q');
     INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q002A001', 'aucune autre donnée personnelle que celles des employés, ou aucune gestion concernant les données personnelles', 'FR', 'A');
     INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q002A002', 'une personne responsable de toutes les actions liées aux données personnelles', 'FR', 'A');
@@ -304,7 +304,7 @@ INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q0
 INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q003TRAI', 'Les employés sont formés', 'FR', 'Q');
     INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q003A001', 'à leur métier par leurs études ou cursus scolaire, mais aussi avec des formations supplémentaires pour mettre à jour les connaissances', 'FR', 'A');
     INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q003A002', 'aux logiciels qu''ils utilisent quotidiennement', 'FR', 'A');
-    INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q003A003', 'à la sécurité de l''information pour avoir les clés afin de défendre contre d''éventuelles attaques', 'FR', 'A');
+    INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q003A003', 'à la sécurité de l''information pour avoir les clés en main afin de se défendre contre d''éventuelles attaques', 'FR', 'A');
     INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q003A004', 'en interne ou en externe par des spécialistes', 'FR', 'A');
     INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q003A005', 'et sensibilisés à l''importance de conserver confidentiellement les données, particulièrement si elles sont personnelles', 'FR', 'A');
 INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q004REIT', 'Les responsabilités IT et Sécurité de l''Information', 'FR', 'Q');
