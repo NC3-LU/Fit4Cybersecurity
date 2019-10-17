@@ -27,17 +27,33 @@
 
         {% block content %}{% endblock %}
     </div>
-    <footer class="footer">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col">
-                    <a href="https://cases.lu" target="_blank">CASES</a>
-                    &nbsp;&nbsp;&nbsp;
-                    <a href="/terms">Terms</a>
-                    &nbsp;&nbsp;&nbsp;
-                    <a href="https://securitymadein.lu" target="_blank">Copyright © 2019 SMILE</a>
-                </div>
-            </div>
+
+    <div class="footer">
+        <div class="d-flex justify-content-between">
+            <ul class="nav flex-column flex-sm-row">
+                <li class="nav-item">
+                    <a class="nav-link" href="https://www.cases.lu" target="_blank">
+                        <img class="img-fluid" src="{% static _('images/logo-CASES.png') %}" width="32px"
+                        title="A service provided by CASES.LU"
+                        alt="A service provided by CASES.LU" />
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://github.com/CASES-LU/CybersecurityStarterKit" target="_blank">
+                        <img class="img-fluid" src="{% static _('images/github-9-512.png') %}" width="32px"
+                        title="Source code on GitHub"
+                        alt="Source code on GitHub" />
+                    </a>
+                </li>
+            </ul>
+            <ul class="nav flex-column flex-sm-row">
+                <li class="nav-item">
+                    <a class="nav-link" href="/terms" title="Terms of this service." alt="Terms of this service.">Terms</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://securitymadein.lu" target="_blank">Copyright © 2019 Security made in Lëtzebuerg g.i.e.</a>
+                </li>
+            </ul>
         </div>
-    </footer>
+    </div>
 {% endblock %}
