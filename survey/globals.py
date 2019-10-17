@@ -78,7 +78,7 @@ TRANSLATION_UI = {
             },
             'button_close': {
                 'en': "Close",
-                'fr': "Proche",
+                'fr': "Fermer",
                 'de': "Schließen",
             },
         },
@@ -183,9 +183,9 @@ TRANSLATION_UI = {
                     'de': "Sie müssen mindestens eine Antwort auswählen",
                 },
                 'unique': {
-                    'en': "You can't choose multiple answers if the answer '%(value)s' is choosen",
-                    'fr': "Vous ne pouvez pas choisir plusieurs réponses si la réponse '%(value)s' est choisie",
-                    'de': "Sie können nicht mehrere Antworten auswählen, wenn die Antwort '%(value)s' ausgewählt ist",
+                    'en': "You can't choose multiple answers if the answer \"%(value)s\" is choosen",
+                    'fr': "Vous ne pouvez pas choisir plusieurs réponses si la réponse \"%(value)s\" est choisie",
+                    'de': "Sie können nicht mehrere Antworten auswählen, wenn die Antwort \"%(value)s\" ausgewählt ist",
                 },
             },
         },

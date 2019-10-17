@@ -38,9 +38,17 @@ class AnswerMChoice(forms.Form):
         super().__init__(*args, **kwargs)
 
         if answers_field_type == 'M':
-            self.fields['answers'] = forms.MultipleChoiceField(required=True, choices=[], widget=forms.CheckboxSelectMultiple, label='')
+            self.fields['answers'] = forms.MultipleChoiceField(
+                required=True,
+                choices=[],
+                widget=forms.CheckboxSelectMultiple(attrs={'class': 'multiple-selection'}),
+                label='')
         elif answers_field_type == 'S':
-            self.fields['answers'] = forms.ChoiceField(required=True, choices=[], widget=forms.RadioSelect, label='')
+            self.fields['answers'] = forms.ChoiceField(
+                required=True,
+                choices=[],
+                widget=forms.RadioSelect(attrs={'class': 'radio-buttons'}),
+                label='')
 
         self.fields['answers'].error_messages = {
             'required': TRANSLATION_UI["form"]["error_messages"]["answer"]["required"][self.lang.lower()]
@@ -61,13 +69,15 @@ class AnswerMChoice(forms.Form):
             answers = [answers]
 
         if len(answers) > 1:
-            unique_answer = SurveyQuestionAnswer.objects.filter(pk__in=answers, uniqueAnswer=1)
+            unique_answer = SurveyQuestionAnswer.objects.filter(
+                pk__in=answers, uniqueAnswer=1)
             if unique_answer.count():
-                translation_key = TranslationKey.objects.filter(lang=self.lang, key=unique_answer[0].answerKey)
+                translation_key = TranslationKey.objects.filter(
+                    lang=self.lang, key=unique_answer[0].answerKey)
                 answer_text = translation_key[0].text
 
-                raise forms.ValidationError(TRANSLATION_UI["form"]["error_messages"]
-                            ["answer"]["unique"][self.lang.lower()], params={'value': answer_text})
-
+                raise forms.ValidationError(
+                    TRANSLATION_UI["form"]["error_messages"]["answer"]["unique"][self.lang.lower()],
+                    params={'value': answer_text})
 
         return answers

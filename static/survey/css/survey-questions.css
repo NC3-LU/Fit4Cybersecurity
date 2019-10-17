@@ -51,21 +51,37 @@
     user-select: none;
 }
 
-.form-check-label input {
+.multiple-selection .form-check-label input {
     position: absolute;
     opacity: 0;
     cursor: pointer;
     height: 0;
     width: 0;
-  }
+}
 
-.checkmark {
+.radio-buttons .form-check-label input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.multiple-selection .checkmark {
     position: absolute;
     top: 0;
     left: 0;
     height: 25px;
     width: 25px;
     background-color: #eee;
+}
+
+.radio-buttons .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border-radius: 50%;
 }
 
 .form-check-label:hover input ~ .checkmark {
@@ -76,17 +92,23 @@
     background-color: #2196F3;
 }
 
-.form-check-label:after {
+.multiple-selection .form-check-label .checkmark:after {
     content: " ";
     position: absolute;
     display: none;
+}
+
+.radio-buttons .form-check-label .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
 }
 
 .form-check-label input:checked ~ .checkmark:after {
     display: block;
 }
 
-.form-check-label .checkmark:after {
+.multiple-selection .form-check-label .checkmark:after {
     left: 9px;
     top: 5px;
     width: 5px;
@@ -96,6 +118,15 @@
     -webkit-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
+}
+
+.radio-buttons .form-check-label .checkmark:after {
+    top: 9px;
+	left: 9px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: white;
 }
 
 .invalid-feedback {
