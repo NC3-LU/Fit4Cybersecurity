@@ -78,7 +78,7 @@ TRANSLATION_UI = {
             },
             'button_close': {
                 'en': "Close",
-                'fr': "Proche",
+                'fr': "Fermer",
                 'de': "Schließen",
             },
         },
