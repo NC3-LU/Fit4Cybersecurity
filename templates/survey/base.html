@@ -4,6 +4,10 @@
 
 {% load staticfiles %}
 
+{% block bootstrap4_extra_head %}
+    <link rel="stylesheet" type="text/css" href="{% static "survey/css/custom.css" %}" />
+{% endblock %}
+
 {% block title %}
     {{ _('Fit4Cybersecurity a CASES self-assessment tool!') }}
 {% endblock %}

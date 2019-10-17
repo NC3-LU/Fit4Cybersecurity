@@ -5,8 +5,9 @@
 {% load staticfiles %}
 
 {% block bootstrap4_extra_head %}
+    {{ block.super }}
     <link rel="stylesheet" type="text/css" href="{% static "survey/css/survey-questions.css" %}" />
-    <link rel="stylesheet" type="text/css" href="{% static "survey/css/custom.css" %}" />
+
     <script type="text/javascript" src="{% static "survey/js/survey-questions.js" %}"></script>
 {% endblock %}
 
