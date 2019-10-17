@@ -24,13 +24,18 @@
 
             <div>
                 {% buttons %}
-                    <div class="d-flex flex-row justify-content-between">
-                        <button class="btn btn-link" type="button" name="continue-later" data-toggle="modal" data-target="#modal" data-tooltip>{{ translations.continue_later.button }}</button>
+                    <div class="d-flex flex-row justify-content-between float-right">
                         <input class="btn btn-primary" type="submit" value="{{ translations.next_button }}">
                     </div>
                 {% endbuttons %}
             </div>
         </form>
+    </div>
+    <div class="spacer-50"></div>
+    <div class="row">
+        <div class="col">
+            <button class="btn btn-link" type="button" name="continue-later" data-toggle="modal" data-target="#modal" data-tooltip>{{ translations.continue_later.button }}</button>
+        </div>
     </div>
 
     {% include 'survey/continue.html' %}
