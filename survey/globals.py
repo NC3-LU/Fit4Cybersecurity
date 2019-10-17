@@ -132,7 +132,7 @@ TRANSLATION_UI = {
             },
             'text': {
                 'en': "To continue the evaluation process later you can copy the provided link, create a bookmark or use the code to resume later on the main page:",
-                'fr': "Pour continuer le processus d’évaluation plus tard, vous pouvez copier le lien fourni, créer un signet ou utilisez le code pour reprendre plus tard sur la page principale:",
+                'fr': "Pour continuer le processus d’évaluation plus tard, vous pouvez copier le lien fourni, créer un signet ou utiliser le code pour reprendre plus tard sur la page principale:",
                 'de': "Um den Evaluierungsprozess später fortzusetzen, können Sie den bereitgestellten Link kopieren und ein Lesezeichen erstellen oder verwenden Sie den Code, um später auf der Hauptseite fortzufahren:",
             },
             'button_download': {
@@ -142,7 +142,7 @@ TRANSLATION_UI = {
             },
             'button_close': {
                 'en': "Close",
-                'fr': "Proche",
+                'fr': "Fermer",
                 'de': "Schließen",
             },
         },

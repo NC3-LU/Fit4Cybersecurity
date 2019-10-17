@@ -129,3 +129,7 @@ def add_form_translations(data, user, topic='question'):
         },
         'next_button': next_button_text,
     }
+
+
+def getTerms(request):
+    return render(request, 'survey/terms.html')
