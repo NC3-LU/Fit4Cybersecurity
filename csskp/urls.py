@@ -23,4 +23,5 @@ urlpatterns = [
     path('', views.index, name="index"),
     path('survey/', include('survey.urls')),
     path('admin/', admin.site.urls),
+    path('terms', views.getTerms),
 ]
