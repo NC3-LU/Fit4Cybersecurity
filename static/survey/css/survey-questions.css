@@ -51,7 +51,7 @@
     user-select: none;
 }
 
-.checkbox .form-check-label input {
+.multiple-selection .form-check-label input {
     position: absolute;
     opacity: 0;
     cursor: pointer;
@@ -59,13 +59,13 @@
     width: 0;
 }
 
-.radio .form-check-label input {
+.radio-buttons .form-check-label input {
     position: absolute;
     opacity: 0;
     cursor: pointer;
 }
 
-.checkbox .checkmark {
+.multiple-selection .checkmark {
     position: absolute;
     top: 0;
     left: 0;
@@ -74,7 +74,7 @@
     background-color: #eee;
 }
 
-.radio .checkmark {
+.radio-buttons .checkmark {
     position: absolute;
     top: 0;
     left: 0;
@@ -92,13 +92,13 @@
     background-color: #2196F3;
 }
 
-.checkbox .form-check-label .checkmark:after {
+.multiple-selection .form-check-label .checkmark:after {
     content: " ";
     position: absolute;
     display: none;
 }
 
-.radio .form-check-label .checkmark:after {
+.radio-buttons .form-check-label .checkmark:after {
   content: "";
   position: absolute;
   display: none;
@@ -108,7 +108,7 @@
     display: block;
 }
 
-.checkbox .form-check-label .checkmark:after {
+.multiple-selection .form-check-label .checkmark:after {
     left: 9px;
     top: 5px;
     width: 5px;
@@ -120,7 +120,7 @@
     transform: rotate(45deg);
 }
 
-.radio .form-check-label .checkmark:after {
+.radio-buttons .form-check-label .checkmark:after {
     top: 9px;
 	left: 9px;
 	width: 8px;
