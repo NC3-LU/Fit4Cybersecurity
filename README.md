@@ -1,7 +1,7 @@
-# CybersecurityStarterKit
+# Fit4Cybersecurity
 
-New implementation with many more features and simplified questions compared to
-the Startup security kit.
+Fit4Cybersecurity is a self-assessment tool by [CASES](https://www.cases.lu)
+to help business owners implement a better cybersecurity strategy.
 
 
 
