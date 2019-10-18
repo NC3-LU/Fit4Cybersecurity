@@ -1,22 +1,14 @@
-# when building remember to add --build-arg user=<<USER>>
-
 FROM python:3
-
-ARG user=james-bond
-
-RUN apt-get update \
-    && apt-get install -y gettext libgettextpo-dev postgresql-client-common postgresql-client
-
 ENV PYTHONUNBUFFERED 1
 
-RUN mkdir /csskp
-RUN useradd -ms /bin/bash $user
-WORKDIR /csskp
-COPY requirements.txt /csskp/
-RUN pip3 install -r requirements.txt
-COPY . /csskp/
+RUN apt-get update
+RUN apt-get install -y gettext libgettextpo-dev postgresql-client-common postgresql-client
 
-RUN chown -R $user:$user /csskp
-USER $user
+RUN pip install pipenv
+
+WORKDIR /csskp
+COPY ./Pipfile* /app/
+COPY . /csskp/
 RUN mkdir /tmp/csskp
-RUN python3 manage.py compilemessages
+RUN pipenv install
+RUN pipenv run python manage.py compilemessages

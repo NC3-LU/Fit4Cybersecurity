@@ -17,6 +17,7 @@ the Startup security kit.
 
 
 ```bash
+$ docker-compose build
 $ docker-compose up -d
 ```
 
