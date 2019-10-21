@@ -672,20 +672,20 @@ INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q0
 INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q013REC004', 'Cette pratique nécessite des explications pour être comprise au mieux possible.', 'FR', 'R');
 
 -- EN
-INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q001REC001', 'The company should define rules in order to avoid misapprehensions.', 'EN', 'R');
-INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q001REC002', 'Rules (organisational, IT or working ones) should be known and explained to everyone, at least orally.', 'EN', 'R');
-INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q001REC003', 'If an oral transmission could be enough for a small company, rules still should be written in a charter, read and signed by everyone, more importantly if the company grows.', 'EN', 'R');
-INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q001REC004', 'An oral transmission could be a lot more complicated when there are lots of different people or work, and is really impossible when lots of people come in and out.', 'EN', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q001REC001', 'The company should define rules in order to avoid misunderstandings.', 'EN', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q001REC002', 'Rules (organisational, IT or working ones) should be known and explained to everyone, at the very least orally.', 'EN', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q001REC003', 'If an oral transmission could be enough for a small company, rules should still be written in a charter, read and signed by everyone, very important if the company grows.', 'EN', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q001REC004', 'An oral transmission could be a lot more complicated when there are lots of employees, and is really impossible when lots of people are hired and leaving.', 'EN', 'R');
 INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q001REC005', 'Besides, written rules can :
 	- avoid to forget some points
 	- have a legal proof if the rules have been read.', 'EN', 'R');
 INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q001REC006', 'If it''s possible, rules should be as short and as easy as possible to be attractive and readable.', 'EN', 'R');
 INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q001REC007', 'Rules that are too long or too heavy with technical vocabulary could become confusing.', 'EN', 'R');
-INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q001REC008', 'Each time when it''s possible, some advice or some best practices should be given, or sometime explained.', 'EN', 'R');
-INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q001REC009', 'Some differences could be done depending on the role, or if it''s a temporary contract for instance.', 'EN', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q001REC008', 'Each time when it''s possible, some advice or some best practices should be given, and sometime explained.', 'EN', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q001REC009', 'Some differences might be appropriate depending on the role, or if it''s a temporary contract for instance.', 'EN', 'R');
 
 INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q002REC001', 'For the moment, the company does not have a lot of personal data, or haven''t done anything to it. If there is more personal data, or if nothing were done, the company should think:', 'EN', 'R');
-INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q002REC002', 'Define, whenever it''s possible, someone should be responsible for the personal data in order to avoid the lack of response when there is an incident.', 'EN', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q002REC002', 'Define, whenever possible, someone responsible for the personal data in order to avoid the lack of response when there is an incident.', 'EN', 'R');
 INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q002REC003', 'Data Lifecycle should be accessible by everyone :
 	- How they are obtained
 	- How they are used
@@ -694,14 +694,14 @@ INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q0
 	- How much time they are stored
 	- How they are destroyed
 This cycle should be described somewhere and accessible by anyone (sell contracts, websites, files that could be shown ...).', 'EN', 'R');
-INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q002REC004', 'People should know who is the responsible in order to ask all the necessary questions, or the data sensibility.', 'EN', 'R');
-INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q002REC005', 'Concerning the image rights, some authorisations should be asked (to take an image and to diffuse it), and people should know when a place is under video surveillance.', 'EN', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q002REC004', 'People should know who is the responsible person for the data in order to ask all the necessary questions, requests and about data manipulation or data sensitivity.', 'EN', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q002REC005', 'Concerning the image rights, some authorisations are required (to take an image and to diffuse it), and people need to know when a place is under video surveillance.', 'EN', 'R');
 
-INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q003REC001', 'Training about daily tasks is important to avoid all the basic mistakes and loss of time, and should always be updated during the lifetime to have the best practices.', 'EN', 'R');
-INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q003REC002', 'Learning to use software also avoid time loss, data loss and wrong manipulation.', 'EN', 'R');
-INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q003REC003', 'By informing about attacks that are common or well-known, people could more easily guess and avoid doing anything wrong.', 'EN', 'R');
-INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q003REC004', 'Some training that is done in intern does not have the same impact as external, but could be more appropriate by the mastered subject of the company environment.', 'EN', 'R');
-INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q003REC005', 'Alert users on manipulated information sensibility to in order to put their attention on protections to have.', 'EN', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q003REC001', 'Training about daily tasks is important to avoid all the basic mistakes and loss of time and be updated on the latest best practices.', 'EN', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q003REC002', 'Learning to use software is important to avoid time loss, data loss and manipulation mistakes.', 'EN', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q003REC003', 'By informing about attacks that are current, common or well-known, employees could more easily identify them and avoid falling for them.', 'EN', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q003REC004', 'Trainings that are done internally do not have the same impact as external ones, but could be more appropriate by the mastery of the subject within the company environment.', 'EN', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q003REC005', 'Train users on the sensitivity of the manipulated information, in order to put their attention on how to protect them.', 'EN', 'R');
 
 INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q004REC001', 'It''s important to define responsibilities, externally or internally, with one person or more, or a company, but specialised into their own domain, if possible with training.', 'EN', 'R');
 
