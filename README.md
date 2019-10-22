@@ -3,6 +3,7 @@
 Fit4Cybersecurity is a self-assessment tool by [CASES](https://www.cases.lu)
 to help business owners implement a better cybersecurity strategy.
 
+The official CASES instance is available [here](https://startup.cases.lu).
 
 
 ## Deploy with a Dockerized environment (for development purposes)
@@ -29,7 +30,7 @@ The server will be listening at http://127.0.0.1:8000.
 ### Requirements
 
 ```bash
-$ sudo apt install npm gettext # later: postgresql
+$ sudo apt install gettext postgresql
 ```
 
 
@@ -43,8 +44,8 @@ to easily manage Python versions on your system and to install the latest
 version of Python:
 
 ```bash
-$ pyenv install 3.7.4 # install Python
-$ pyenv global 3.7.4 # make this version default for the whole system
+$ pyenv install 3.8.0 # install Python
+$ pyenv global 3.8.0 # make this version default for the whole system
 $ pyenv versions # check
 ```
 
@@ -60,16 +61,13 @@ example WSGI.
 
 
 ```bash
-$ git clone https://github.com/CASES-LU/CybersecurityStarterKit.git
-$ cd CybersecurityStarterKit/csskp
-$ npm --prefix ./static install ./static
+$ git clone https://github.com/CASES-LU/Fit4Cybersecurity.git
+$ cd Fit4Cybersecurity/
 $ pipenv install
 ```
 
 
 ### Configure and run the application
-
-Still in the folder `csskp`:
 
 ```bash
 $ pipenv shell
@@ -86,11 +84,9 @@ $ python manage.py runserver # not for production
 ### Updating the models
 
 ```bash
-$ cd CybersecurityStarterKit/
+$ cd Fit4Cybersecurity/
 $ git pull origin master
-$ cd csskp/
 $ pipenv shell
-$ python manage.py makemigrations
 $ python manage.py migrate
 ```
 
