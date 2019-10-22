@@ -40,17 +40,18 @@
 
     </div>
     <div class="py-2 px-4">
-    <h2>{{ txtreport }}:</h2>
-    {{ description }}
+        <h2>{{ txtreport }}:</h2>
+        {{ description }}
     </div>
     <div class="py-2 px-4 text-center">
         <div style="width: 400px; height: 400px; margin: 0 auto 0 auto"><canvas id="resultChart" width='100%' height='100%'></canvas></div>
         <script>
             var ctx = document.getElementById('resultChart');
+            var labels = {{ chartTitles | safe }}
             var resultChart = new Chart(ctx, {
                 type: 'radar',
                 data: {
-                    labels: {{ chartTitles | safe }},
+                    labels: labels.reverse(),
                     datasets: [
                         {
                             label: '{{ chartlabelYou | safe }}',
@@ -107,5 +108,7 @@
     <button class="btn btn-link" type="button" name="continue-later" data-toggle="modal" data-target="#modal" data-tooltip>{{ translations.continue_later.button }}</button>
 
     {% include 'survey/continue.html' %}
+
+    {% include 'survey/leaveSurvey.html' %}
 
 {% endblock %}

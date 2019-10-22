@@ -28,4 +28,24 @@ $(document).ready(function() {
     $('#resume-later-code').on('mouseup', function() {
         $(this).select();
     });
+
+    $('.logo-link').click(function(e) {
+        let preventRedirectUris = ['/survey/question', '/survey/finish'];
+        if (preventRedirectUris.includes(window.location.pathname)) {
+            e.preventDefault();
+            $("#modal-leave-survey").modal();
+        }
+    });
+
+    $('#redirect-home').click(function() {
+        window.location.replace('/');
+    });
+
+    var checkboxes = $("input[type='checkbox'], input[type='radio']"),
+        submitButton = $("input[type='submit']");
+    submitButton.attr("disabled", checkboxes.length > 0);
+
+    checkboxes.click(function() {
+        submitButton.attr("disabled", !checkboxes.is(":checked"));
+    });
 });

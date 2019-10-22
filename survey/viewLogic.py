@@ -38,20 +38,7 @@ def handleStartSurvey(user: SurveyUser, request):
             user.current_question = 1
             user.save()
 
-            survey_question = SurveyQuestion.objects.order_by('qindex').first()
-            try:
-                answer_choices = get_answer_choices(survey_question, user.chosenLang)
-            except Exception as e:
-                raise e
-
-            form = AnswerMChoice(answer_choices, lang=user.chosenLang, answers_field_type=survey_question.qtype)
-            form.setUID(user.user_id)
-            form.set_question_id(survey_question.id)
-
-            action = '/survey/question'
-            title += " " + str(user.current_question)
-            question = TranslationKey.objects.filter(lang=user.chosenLang, key=survey_question.titleKey)[0].text
-
+            return None
     else:
         form = InitialStartForm(lang=user.chosenLang)
         form.setUID(user.user_id)

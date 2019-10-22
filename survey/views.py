@@ -29,6 +29,8 @@ def start(request, lang="EN"):
 
     try:
         form_data = handleStartSurvey(user, request)
+        if form_data is None:
+            return HttpResponseRedirect('/survey/question')
     except Exception as e:
         messages.error(request, e)
         return HttpResponseRedirect('/')
@@ -128,6 +130,11 @@ def add_form_translations(data, user, topic='question'):
             'button_close': TRANSLATION_UI[topic]['continue_later']['button_close'][user.chosenLang.lower()],
         },
         'next_button': next_button_text,
+        'leave_survey': {
+            'title': TRANSLATION_UI[topic]['leave_survey']['title'][user.chosenLang.lower()],
+            'yes': TRANSLATION_UI[topic]['leave_survey']['yes'][user.chosenLang.lower()],
+            'no': TRANSLATION_UI[topic]['leave_survey']['no'][user.chosenLang.lower()],
+        }
     }
 
 

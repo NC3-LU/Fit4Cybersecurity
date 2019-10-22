@@ -82,6 +82,23 @@ TRANSLATION_UI = {
                 'de': "Schließen",
             },
         },
+        'leave_survey': {
+            'title': {
+                'en': "Would like to leave the results page?",
+                'fr': "Voulez vous quitter la page de résultats?",
+                'de': "Möchten Sie die Ergebnisseite verlassen?",
+            },
+            'yes': {
+                'en': "Yes",
+                'fr': "Oui",
+                'de': "Ya",
+            },
+            'no': {
+                'en': "No",
+                'fr': "Non",
+                'de': "Nein",
+            },
+        },
         'download': {
             'en': "Download",
             'fr': "Téléchargement",
@@ -165,6 +182,23 @@ TRANSLATION_UI = {
             'en': "Let's start",
             'fr': "Commençons",
             'de': "Lasst uns beginnen",
+        },
+        'leave_survey': {
+            'title': {
+                'en': "Would like to leave survey?",
+                'fr': "Voulez vous quitter l'enquête?",
+                'de': "Möchten Sie die Umfrage verlassen?",
+            },
+            'yes': {
+                'en': "Yes",
+                'fr': "Oui",
+                'de': "Ya",
+            },
+            'no': {
+                'en': "No",
+                'fr': "Non",
+                'de': "Nein",
+            },
         },
     },
     'document': {
