@@ -780,105 +780,105 @@ INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q0
 -- DE
 INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q001REC001', 'Das Unternehmen sollte Regeln definieren, um Missverständnisse zu vermeiden.', 'DE', 'R');
 INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q001REC002', 'Regeln (organisatorische, IT- oder Arbeitsregeln) sollten zumindest mündlich bekannt sein und jedem erklärt werden.', 'DE', 'R');
-INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q001REC003', 'Wenn eine mündliche Übermittlung für ein kleines Unternehmen ausreichen könnte, sollten die Regeln dennoch in einer Charta festgehalten, von allen gelesen und unterzeichnet werden, was noch wichtiger ist, wenn das Unternehmen wächst.', 'DE', 'R');
-INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q001REC004', 'Eine mündliche Übermittlung könnte viel komplizierter sein, wenn es viele verschiedene Leute oder Arbeiten gibt, und ist wirklich unmöglich, wenn viele Leute rein und raus kommen.', 'DE', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q001REC003', 'Wenn eine mündliche Übermittlung für ein kleines Unternehmen ausreichen könnte, sollten die Regeln dennoch in einer Charta festgehalten, von allen gelesen und unterzeichnet werden, was noch wichtiger wird, wenn das Unternehmen wächst.', 'DE', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q001REC004', 'Eine mündliche Übermittlung könnte viel komplizierter sein, wenn es viele verschiedene Leute oder Arbeiten gibt, und ist wirklich unmöglich, wenn viel Personalwechsel existiert.', 'DE', 'R');
 INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q001REC005', 'Außerdem können schriftliche Regeln:
-	- einige Punkte nicht vergessen
-	- einen gesetzlichen Nachweis haben, wenn die Regeln gelesen wurden.', 'DE', 'R');
-INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q001REC006', 'Wenn es möglich ist, sollten die Regeln so kurz und einfach wie möglich sein, um attraktiv und lesbar zu sein.', 'DE', 'R');
-INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q001REC007', 'Zu lange oder zu strenge Regeln mit technischem Vokabular können verwirrend werden.', 'DE', 'R');
-INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q001REC008', 'Jedes Mal, wenn es möglich ist, sollten einige Ratschläge oder Best Practices gegeben oder irgendwann erklärt werden.', 'DE', 'R');
+	- dem Vergessen einiger Punkte vorbeugen
+	- einen gesetzlichen Nachweis sein, wenn die Regeln gelesen und unterzeichnet wurden.', 'DE', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q001REC006', 'Wenn es möglich ist, sollten die Regeln so kurz und einfach wie möglich sein, um attraktiv und merbar zu sein.', 'DE', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q001REC007', 'Zu lange oder zu strenge Regeln mit technischem Vokabular können verwirrend wirken.', 'DE', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q001REC008', 'Jedes Mal, wenn es möglich ist, sollten einige Ratschläge oder Best Practices gegeben und gegebenenfalls erklärt werden.', 'DE', 'R');
 INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q001REC009', 'Einige Unterschiede können je nach Rolle oder zum Beispiel bei einem befristeten Vertrag auftreten.', 'DE', 'R');
 
-INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q002REC001', 'Derzeit verfügt das Unternehmen nicht über viele personenbezogene Daten oder hat nichts dagegen unternommen. Wenn es mehr personenbezogene Daten gibt oder wenn nichts unternommen wurde, sollte das Unternehmen folgende Überlegungen anstellen:', 'DE', 'R');
-INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q002REC002', 'Definieren Sie, wann immer es möglich ist, jemanden, der für die personenbezogenen Daten verantwortlich ist, um zu vermeiden, dass bei einem Vorfall keine Reaktion erfolgt.', 'DE', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q002REC001', 'Derzeit verfügt das Unternehmen nicht über personenbezogene Daten oder hat nichts dagegen unternommen. Wenn es doch personenbezogene Daten gibt oder wenn nichts unternommen wurde, sollte das Unternehmen folgende Überlegungen anstellen:', 'DE', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q002REC002', 'Definieren Sie, wann immer es möglich ist, jemanden, der für die personenbezogenen Daten verantwortlich ist, um zu vermeiden, dass ein Vorfall reaktionslos bleibt.', 'DE', 'R');
 INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q002REC003', 'Der Datenlebenszyklus sollte für alle zugänglich sein:
 	- Wie sie erhalten werden
 	- Wie sie verwendet werden
-	- Wie sind sie zugänglich, von wem und dem Vertrag verbunden
+	- Wie sind sie zugänglich, von wem und sind diese vertraglich geregelt
 	- Wie sie veränderbar sind
-	- Wie viel Zeit sind sie gespeichert
+	- Wie lange sind oder werden sie gespeichert
 	- Wie sie zerstört werden
-Dieser Zyklus sollte irgendwo beschrieben und für jedermann zugänglich sein (Verkaufsverträge, Websites, Dateien, die angezeigt werden könnten ...).', 'DE', 'R');
-INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q002REC004', 'Die Leute sollten wissen, wer der Verantwortliche ist, um alle notwendigen Fragen oder die Sensibilität der Daten zu stellen.', 'DE', 'R');
-INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q002REC005', 'In Bezug auf die Bildrechte sollten einige Autorisierungen angefordert werden (um ein Bild aufzunehmen und zu verbreiten), und die Leute sollten wissen, wann ein Ort unter Videoüberwachung steht.', 'DE', 'R');
+Dieser Zyklus sollte irgendwo beschrieben und für jeden zugänglich sein (Verkaufsverträge, Websites, Dateien, die angezeigt werden könnten ...).', 'DE', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q002REC004', 'Die Leute sollten wissen, wer der Verantwortliche ist, um alle notwendigen Fragen oder die Vertraulichkeit der Daten sicher zu stellen.', 'DE', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q002REC005', 'In Bezug auf die Bildrechte müssen einige Autorisierungen angefragt werden (um ein Bild aufzunehmen und zu verbreiten), und die Leute sollten wissen, wann ein Ort unter Videoüberwachung steht.', 'DE', 'R');
 
-INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q003REC001', 'Das Training der täglichen Aufgaben ist wichtig, um alle grundlegenden Fehler und Zeitverluste zu vermeiden. Es sollte im Laufe des Lebens stets aktualisiert werden, um die besten Vorgehensweisen zu erhalten.', 'DE', 'R');
-INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q003REC002', 'Das Erlernen des Gebrauchs von Software vermeidet auch Zeitverlust, Datenverlust und falsche Manipulation.', 'DE', 'R');
-INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q003REC003', 'Durch das Informieren über häufige oder bekannte Angriffe könnten die Leute leichter erraten und vermeiden, dass etwas falsch gemacht wird.', 'DE', 'R');
-INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q003REC004', 'Einige Schulungen, die in Praktika durchgeführt werden, haben nicht die gleichen Auswirkungen wie externe, könnten jedoch für das beherrschte Thema des Unternehmensumfelds angemessener sein.', 'DE', 'R');
-INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q003REC005', 'Benutzer auf manipulierte Informationen sensibilisieren, um ihre Aufmerksamkeit auf Schutzmaßnahmen zu lenken.', 'DE', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q003REC001', 'Die Aktualisierung der Best Practices für die täglichen Aufgaben ist wichtig, um alle grundlegenden Fehler und Zeitverluste zu vermeiden.', 'DE', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q003REC002', 'Das Erlernen des Gebrauchs von Software ist wichtig, um Zeitverlust, Datenverlust und Manipulationsfehler zu vermeiden.', 'DE', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q003REC003', 'Durch das Informieren über aktuelle, häufige oder bekannte Angriffe können Mitarbeiter diese leichter identifizieren und vermeiden, auf sie hereinzufallen.', 'DE', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q003REC004', 'Intern durchgeführte Schulungen haben nicht die gleichen Auswirkungen wie externe, könnten jedoch durch die Beherrschung des Fachs im Unternehmensumfeld angemessener sein.', 'DE', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q003REC005', 'Schulung der Benutzer in Bezug auf die Sensibilität der manipulierten Informationen, um ihre Aufmerksamkeit darauf zu lenken, wie sie geschützt werden sollen.', 'DE', 'R');
 
-INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q004REC001', 'Es ist wichtig, die Verantwortlichkeiten extern oder intern mit einer oder mehreren Personen oder einem Unternehmen zu definieren, die jedoch, wenn möglich mit Schulungen, auf ihre eigene Domäne spezialisiert sind.', 'DE', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q004REC001', 'Es ist wichtig, die Verantwortlichkeiten entweder extern oder intern mit einer oder mehreren Personen oder einem Unternehmen zu definieren, das jedoch auf seine eigene Domäne spezialisiert ist, möglicherweise mit einer Schulung.', 'DE', 'R');
 
-INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q005REC001', 'Im Moment wird keine Außenarbeit geleistet. Wenn es geändert wird, ist es wichtig, auf Folgendes zu achten:
-	- Externe Verbindungen, die nicht kontrolliert werden, sollten vermieden werden, um Datenverlust zu vermeiden.', 'DE', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q005REC001', 'Im Moment wird keine Außenarbeit geleistet. Wenn es sich geändert hat, ist es wichtig darauf zu achten, dass:
+- Externe Verbindungen, die nicht kontrolliert und überwacht werden, vermieden werden, um so Datenverlust zu vermeiden.', 'DE', 'R');
 INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q005REC002', 'Immer wenn Benutzer im Freien arbeiten müssen, vom Heimbüro bis zu Aufgaben außerhalb des Unternehmens, müssen sie über eine VPN-Verbindung verfügen, um eine Verbindung zum Server herstellen zu können.', 'DE', 'R');
-INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q005REC003', 'Externe Verbindungen, die nicht kontrolliert werden, sollten vermieden werden, um Datenverlust zu vermeiden.', 'DE', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q005REC003', 'Externe Verbindungen, die nicht kontrolliert und überwacht werden, sollten vermieden werden, um Datenverlust zu vermeiden.', 'DE', 'R');
 INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q005REC004', 'Die visuelle Umgebung ist sehr wichtig, um Neugierde und Spionage zu vermeiden.', 'DE', 'R');
-INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q005REC005', 'Bei Geräten, die entfernt werden und vertrauliche Daten enthalten, sollte der interne Speicher immer verschlüsselt sein, um Datenverlust zu vermeiden.', 'DE', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q005REC005', 'Bei Geräten, die entfernt wurden und vertrauliche Daten enthalten, sollte der interne Speicher immer verschlüsselt sein, um Datenverlust zu vermeiden.', 'DE', 'R');
 
-INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q006REC001', 'Derzeit werden keine Verträge mit Dritten abgeschlossen. Wenn es geändert wird, ist es wichtig:', 'DE', 'R');
-INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q006REC002', 'Wenn vertrauliche Daten für verschiedene Dritte zugänglich sind, sollten sie immer einer Geheimhaltungsvereinbarung (Non Disclosure Agreement, NDA) unterliegen. Eine IT, die auf alle verwendeten Daten zugreifen kann, das Reinigungspersonal oder ein Treuhänder, der Finanzdaten abruft, sind nur Beispiele.', 'DE', 'R');
-INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q006REC003', 'Wenn Mittel und Anforderungen dies zulassen, sollte ein Vertrag unterzeichnet werden, um sicherzustellen, dass der externe IT-Manager das System zu einem Zeitpunkt einsatzbereit macht, der unter der erforderlichen Betriebszeit liegt.', 'DE', 'R');
-INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q006REC004', 'Es ist notwendig, die Verträge zu überprüfen, um sicherzustellen, dass:
-	- keine Lösungen zu haben, wenn es notwendig ist
-	- nicht zu viel für eine Dienstleistung zu bezahlen, die nicht notwendig ist
-	- um zu sehen, ob die bezahlten Leistungen das wert sind, was sie kosten', 'DE', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q006REC001', 'Derzeit werden keine Verträge mit Dritten abgeschlossen. Wenn es sich geändert hat, ist es wichtig:', 'DE', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q006REC002', 'Wenn verschiedene Dritte wie externe Wartungsunternehmen auf vertrauliche Daten für Finanzdaten eines Treuhänders zugreifen können, sollte mit ihnen eine Geheimhaltungsvereinbarung (Non Disclosure Agreement, NDA) unterzeichnet werden.', 'DE', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q006REC003', 'Wenn Mittel und Bedürfnisse dies zulassen, sollte ein Vertrag unterzeichnet werden, um sicherzustellen, dass der externe IT-Anbieter die Verfügbarkeit des Systems sicherstellt, um betriebsbereit zu bleiben.', 'DE', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q006REC004', 'Es ist notwendig, die Verträge zu überprüfen, um eine bestimmte Verfügbarkeit zu gewährleisten:
+- keine Interventionslösung zu haben, wenn es notwendig ist
+- nicht zu viel für eine Dienstleistung zu bezahlen, die nicht notwendig ist
+- zu beurteilen, ob die bezahlten Leistungen den erforderlichen Anforderungen entsprechen', 'DE', 'R');
 
 INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q007REC001', 'Derzeit reinigen keine Dritten die Räumlichkeiten. Wenn es sich ändert, ist es wichtig:', 'DE', 'R');
-INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q007REC002', 'Die Büroreinigung sollte, wann immer es möglich ist, während der Arbeitszeit erfolgen, um die Überwachung zu gewährleisten.', 'DE', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q007REC002', 'Die Büroreinigung sollte nach Möglichkeit während der Arbeitszeit durchgeführt werden, um möglichen Datendiebstahl zu vermeiden.', 'DE', 'R');
 INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q007REC003', 'Regeln sollten hauptsächlich angegeben werden, um zu spezifizieren, was getan oder vermieden werden soll.', 'DE', 'R');
-INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q007REC004', 'Wenn das Reinigungspersonal extern ist, ist es wichtig, alle Verträge zu definieren, die zur Vertraulichkeit verpflichtet sind, indem vertrauliche Daten angehört oder angezeigt werden.', 'DE', 'R');
-INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q007REC005', 'In Bezug auf die menschliche Neugier ist es wichtig, einen auf den ersten Blick unzugänglichen, sauberen Schreibtisch zu haben.', 'DE', 'R');
-INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q007REC006', 'Das Personal sollte keine Räume reinigen, in denen keine vernünftigen Geräte oder Daten vorhanden sind, z. B. Archiv- oder IT-Räume.', 'DE', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q007REC004', 'Es ist wichtig, in allen Verträgen eine Vertraulichkeitsklausel zu definieren, um die Vertraulichkeit der gehörten oder gesehenen Informationen zu gewährleisten.', 'DE', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q007REC005', 'Um Probleme aufgrund menschlicher Neugierde zu vermeiden, ist es wichtig, eine Richtlinie für saubere Schreibtische zu haben, um zu verhindern, dass vertrauliche Dokumente angezeigt werden.', 'DE', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q007REC006', 'Das Personal sollte keine Bereiche mit eingeschränktem Zugang wie Archivräume oder IT-Räume reinigen.', 'DE', 'R');
 
-INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q008REC001', 'Es sollten Hinweise gegeben werden, um schwache Passwörter zu vermeiden. Einige Tipps oder Techniken könnten gegeben werden, um ein häufiges Vergessen durch die Mitarbeiter zu vermeiden. Hier einige Beispiele:
-	- Passwörter sollten geheim und persönlich gehalten werden. Jeder sollte mit seinem Passwort auf seine Daten zugreifen, auch von einem Computer eines anderen.
-	- Es sollte keinen Computer geben, der mit einem eindeutigen Kennwort geteilt wird. Wenn es unvermeidlich ist, sollte ein Verantwortlicher definiert werden und der Zugang sollte wirklich eingeschränkt sein.
-	- Beim Speichern von Passwörtern im Internetbrowser ist Vorsicht geboten, da diese nicht geschützt sind.', 'DE', 'R');
-INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q008REC002', 'Passwörter sollten geheim und persönlich gehalten werden. Wenn dies nicht möglich ist, sollte der Computer dafür verantwortlich sein, seine Verwendung sicherzustellen und einen Mindestzugriff zu gewähren.', 'DE', 'R');
-INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q008REC003', 'Passwörter sollten geheim und persönlich gehalten werden. Jeder sollte mit seinem Passwort auf seine Daten zugreifen, auch von einem Computer eines anderen.', 'DE', 'R');
-INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q008REC004', 'Kennwörter mit mindestens einem Groß-, Klein-, Ziffern- und Sonderzeichen müssen mindestens 12 Zeichen lang sein.', 'DE', 'R');
-INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q008REC005', 'Passwörter sollten kein zusammenhängendes Wort oder Datum sein, mit Ausnahme eines vollständigen Satzes.', 'DE', 'R');
-INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q008REC006', 'Es können vollständige Sätze verwendet werden, auch wenn sie vollständige Wörter darstellen.', 'DE', 'R');
-INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q008REC007', 'Passwörter sollten von Zeit zu Zeit geändert werden, um ein Leck zu gewährleisten.', 'DE', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q008REC001', 'Es sollten Hinweise gegeben werden, um schwache Passwörter zu vermeiden. Angestellte können Tipps oder Techniken erhalten, um sich ihre Passwörter zu merken. Hier einige Beispiele:
+- Passwörter sollten geheim und persönlich gehalten werden. Jeder sollte mit seinem Passwort auf seine Daten zugreifen, auch von einem Computer eines anderen.
+- Es sollte keinen Computer geben, auf dem ein einziges und eindeutiges Kennwort festgelegt ist. Wenn es unvermeidlich ist, sollte eine wahrheitsgemäße Person als verantwortlich definiert werden und der Zugang sollte wirklich eingeschränkt sein.
+- Beim Speichern von Passwörtern im Internetbrowser ist Vorsicht geboten, da diese nicht geschützt sind.', 'DE', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q008REC002', 'Passwörter sollten geheim und persönlich gehalten werden. Wenn dies nicht möglich ist, sollte es eine vertrauenswürdige Person geben, die für den Computer verantwortlich ist, um dessen Verwendung zu gewährleisten und einen Mindestzugriff zu gewähren.', 'DE', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q008REC003', 'Passwörter sollten geheim und persönlich gehalten werden. Jeder sollte mit seinem Passwort auf seine Daten zugreifen, auch vom Computer einer anderen Person aus.', 'DE', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q008REC004', 'Es sind Kennwörter mit mindestens einem Groß- und Kleinbuchstaben, einer Ziffer und einem Sonderzeichen sowie mindestens 12 Zeichen erforderlich.', 'DE', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q008REC005', 'Passwörter sollten kein zusammenhängendes Wort oder Datum sein, es sei denn, sie bestehen aus einem vollständigen Satz.', 'DE', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q008REC006', 'Es können vollständige Sätze verwendet werden, auch wenn sie vollständige Wörter beinhalten.', 'DE', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q008REC007', 'Passwörter sollten von Zeit zu Zeit geändert werden, um schwerwiegende Folgen im Falle eines Lecks zu vermeiden.', 'DE', 'R');
 INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q008REC008', 'Um die Speicherung zu vereinfachen, könnte ein Passwort-Manager verwendet werden.', 'DE', 'R');
 INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q008REC009', 'Beim Speichern von Passwörtern im Internetbrowser ist Vorsicht geboten, da diese nicht geschützt sind.', 'DE', 'R');
-INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q008REC010', 'Dieselben Passwörter, die auf verschiedenen Websites verwendet werden, erleichtern das Auslaufen. Außerdem ist nur ein Leck ausreichend, um den gesamten Zugriff zu gefährden, der gleich ist.', 'DE', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q008REC010', 'Dieselben Passwörter, die auf verschiedenen Websites verwendet werden, erleichtern das Durchsickern. Außerdem ist nur ein Leck ausreichend, um den gesamten Zugriff mit demselben Kennwort zu gefährden.', 'DE', 'R');
 
 INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q009REC001', 'Derzeit ist das drahtlose Netzwerk in der Firma nicht aktiviert. Wenn es geändert wird, ist es wichtig:
-	- Das drahtlose Netzwerk sollte zwischen internen und externen Benutzern aufgeteilt werden, um Zugriffsprobleme zu vermeiden.
-	- Wenn ein drahtloses Netzwerk für externe Personen verwendet wird, sollten einige strenge Sicherheitsvorkehrungen getroffen werden, beispielsweise eine Identitätserfassung.', 'DE', 'R');
+- Das drahtlose Netzwerk sollte zwischen internen und externen Benutzern aufgeteilt werden, um Zugriffsprobleme zu vermeiden.
+- Wenn ein drahtloses Netzwerk für externe Personen verwendet wird, sollten strenge Vorsichtsmaßnahmen getroffen werden, z. B. das Sammeln einer Identität.', 'DE', 'R');
 INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q009REC002', 'Das drahtlose Netzwerk sollte zwischen internen und externen Benutzern aufgeteilt werden, um Zugriffsprobleme zu vermeiden.', 'DE', 'R');
-INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q009REC003', 'Wenn ein drahtloses Netzwerk für externe Personen verwendet wird, sollten einige umfassende Schutzmaßnahmen getroffen werden, z. B. eine Identitätserfassung.', 'DE', 'R');
-INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q009REC004', 'Das Passwort sollte nicht leicht zu erraten sein, um eine unerwünschte Verbindung zu vermeiden.', 'DE', 'R');
-INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q009REC005', 'Ein drahtloses Netzwerk von Druckern sollte ebenfalls geschützt werden, um das Auslaufen aller gedruckten Dokumente zu vermeiden.', 'DE', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q009REC003', 'Wenn ein drahtloses Netzwerk für externe Personen verwendet wird, sollten strenge Vorsichtsmaßnahmen getroffen werden, z. B. das Sammeln einer Identität.', 'DE', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q009REC004', 'Das Passwort sollte nicht leicht zu erraten sein, um unerwünschte Verbindungen zu vermeiden.', 'DE', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q009REC005', 'Drahtlose Netzwerke von Druckern sollten ebenfalls geschützt werden, um das Auslaufen aller gedruckten Dokumente zu vermeiden.', 'DE', 'R');
 
 INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q010REC001', 'Das Unternehmen sollte über ein Virenschutzprogramm verfügen und Folgendes beachten:', 'DE', 'R');
 INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q010REC002', 'Auf allen Geräten muss eine Antivirensoftware installiert sein.', 'DE', 'R');
-INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q010REC003', 'Es sollte auf dem neuesten Stand sein, zumindest automatisch, um so viele abzudecken.', 'DE', 'R');
-INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q010REC004', 'Es sollte in jedem Fall aktiviert werden, um das Gerät dauerhaft zu schützen.', 'DE', 'R');
-INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q010REC005', 'Alle Geräte, wie Smartphones und Tablets, sollten mit einem Antivirenprogramm ausgestattet sein, auch wenn dieses standardmäßig im Betriebssystem installiert ist.', 'DE', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q010REC003', 'Es sollte auf dem neuesten Stand sein, vorzugsweise automatisch, um so viele Bedrohungen wie möglich abzudecken.', 'DE', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q010REC004', 'Sie sollte auf jeden Fall aktiviert werden, um das Gerät dauerhaft zu schützen.', 'DE', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q010REC005', 'Alle Geräte, wie Smartphones und Tablets, sollten mit einem Antivirenprogramm ausgestattet sein, auch wenn dieses standardmäßig vom Betriebssystem stammt.', 'DE', 'R');
 INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q010REC006', 'Einige Tests sollten von Zeit zu Zeit durchgeführt werden.', 'DE', 'R');
 INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q010REC007', 'Bei Verdacht auf eine Infektion sollten einige Tests durchgeführt werden.', 'DE', 'R');
 
-INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q011REC001', 'Einige Regeln und spezielle Hinweise sollten in Bezug auf Benutzerstationen oder Laptops gegeben werden. Einige wichtige Punkte:', 'DE', 'R');
-INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q011REC002', 'Ein Gerät sollte immer auf dem neuesten Stand sein, um Sicherheitsprobleme und auch das Eindringen in das Netzwerk zu vermeiden. Viele Betriebssysteme führen ihre Updates jetzt automatisch durch, aber die Software benötigt noch einige Berechtigungen, die erteilt werden sollten.', 'DE', 'R');
-INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q011REC003', 'Administratorrechte sollten nur an Benutzer vergeben werden, die auf IT spezialisiert sind oder mit Ratschlägen und Regeln gut informiert sind.', 'DE', 'R');
-INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q011REC004', 'Downloads sollten von den Entwicklern der Software auf der offiziellen Website durchgeführt werden, um illegale Downloads oder Infektionen zu vermeiden.', 'DE', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q011REC001', 'Einige Regeln und spezielle Ratschläge sollten in Bezug auf Benutzerstationen oder Laptops gegeben werden. Einige wichtige Punkte:', 'DE', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q011REC002', 'Ein Gerät sollte immer auf dem neuesten Stand sein, um Sicherheitsprobleme und auch das Eindringen in das Netzwerk zu vermeiden. Viele Betriebssysteme werden jetzt automatisch aktualisiert, aber die installierte Software benötigt eine Erlaubnis oder manuelle Wartung.', 'DE', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q011REC003', 'Administratorrechte sollten nur Benutzern überlassen werden, die auf IT spezialisiert sind oder die die Regeln gut einhalten.', 'DE', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q011REC004', 'Downloads sollten nur von den offiziellen Websites, von den Originalentwicklern der Software, gemacht werden, um illegale Downloads oder Infektionen zu vermeiden.', 'DE', 'R');
 INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q011REC005', 'Geräte sollten gesperrt sein, um Identitätsdiebstahl zu vermeiden.', 'DE', 'R');
 
-INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q012REC001', 'Es ist aus vielen Gründen wichtig, Backups zu haben, damit die Daten redundant sind, wenn sie verschwunden sind. Es ist wichtig zu haben:', 'DE', 'R');
-INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q012REC002', 'Backups sollten das gesamte Unternehmen betreffen, und jeder sollte sich bewusst sein, alle Daten zu speichern, um sicherzustellen, dass eine Kopie davon vorliegt.', 'DE', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q012REC001', 'Es ist wichtig, Backups aus verschiedenen Gründen zu haben, damit die Daten redundant sind. Es ist wichtig zu haben:', 'DE', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q012REC002', 'Backups sollten das gesamte Unternehmen betreffen, und jeder sollte sich dessen bewusst sein, alle Daten auf den zu sichernden Systemen abzulegen, um sicherzustellen, dass eine Kopie davon vorliegt.', 'DE', 'R');
 INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q012REC003', 'Backups sollten täglich durchgeführt werden, um Datenverluste zu vermeiden.', 'DE', 'R');
-INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q012REC004', 'Backups sollten mindestens einen Monat aufbewahrt werden, um Ransomware zu vermeiden.', 'DE', 'R');
-INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q012REC005', 'Backups sollten sich außerhalb des Geländes über 3 Kilometer befinden.', 'DE', 'R');
-INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q012REC006', 'Backups sollten außerhalb des lokalen Netzwerks getrennt werden, damit sie von Cryptoransomware nicht erkannt werden.', 'DE', 'R');
-INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q012REC007', 'Backups sollten von Zeit zu Zeit getestet werden, um sicherzustellen, dass sie richtig sind.', 'DE', 'R');
-INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q012REC008', 'Backups sollten verschlüsselt werden, um Probleme mit dem Datendiebstahl zu vermeiden, vor allem, wenn sie verschoben werden.', 'DE', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q012REC004', 'Backups sollten mindestens einen Monat aufbewahrt werden, um Probleme durch Ransomware zu minimieren', 'DE', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q012REC005', 'Backups sollten sich außerhalb der Räumlichkeiten befinden und mehr als 3 Kilometer voneinander entfernt sein.', 'DE', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q012REC006', 'Backups sollten außerhalb des lokalen Netzwerks und nach Abschluss vom System getrennt werden, damit sie von Cryptoransomware nicht erkannt werden.', 'DE', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q012REC007', 'Backups sollten von Zeit zu Zeit getestet werden, um sicherzustellen, dass die Daten lesbar und integer sind.', 'DE', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q012REC008', 'Backups sollten verschlüsselt werden, um Probleme mit dem Datendiebstahl zu vermeiden, vor allem, wenn sie transportiert werden.', 'DE', 'R');
 
-INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q013REC001', 'Derzeit bringen die persönlichen Geräte kein lokales Netzwerk ein. Wenn es geändert wird, ist es wichtig:', 'DE', 'R');
-INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q013REC002', 'Persönliche Geräte sollten nicht ohne Kontrollen oder Erklärungen in der Firma verwendet werden. Wenn Sie alle Unterschiede kennen, mit denen ein Organismus angegriffen werden kann, können Sie einige Angriffe stoppen oder sich bei verdächtigen Kontakten warnen lassen.', 'DE', 'R');
-INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q013REC003', 'Persönliche Geräte sollten unter Virenschutz gestellt werden, um möglichst viele Angriffe zu vermeiden.', 'DE', 'R');
-INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q013REC004', 'Präzise Regeln tragen zum Schutz des internen Netzwerks bei.', 'DE', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q013REC001', 'Derzeit sind die persönlichen Geräte nicht mit dem lokalen Netzwerk verbunden. Wenn es geändert wird, ist es wichtig:', 'DE', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q013REC002', 'Persönliche Geräte sollten nicht ohne Kontrollen, Regeln und Erklärungen in der Firma verwendet werden. Wenn Sie die verschiedenen Möglichkeiten kennen, einen Organismus anzugreifen, können Sie Angriffe besser erkennen', 'DE', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q013REC003', 'Auf persönlichen Geräten sollte ein Virenschutzprogramm installiert, aktualisiert und aktiviert sein, um so viele Bedrohungen wie möglich zu vermeiden.', 'DE', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q013REC004', 'Das Definieren von Regeln und Best Practices trägt zum Schutz der internen Netzwerke bei.', 'DE', 'R');
