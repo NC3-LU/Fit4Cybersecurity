@@ -19,9 +19,9 @@ services:
     volumes:
       - .:/csskp:ro
     ports:
-      - "8000:8000"
+      - "8000:80"
     expose:
       - '8000'
     depends_on:
       - db
-    command: ["./wait-for-postgres.sh", "db"]
+    command: bash -c "./wait-for-postgres.sh db && apache2ctl -D FOREGROUND"

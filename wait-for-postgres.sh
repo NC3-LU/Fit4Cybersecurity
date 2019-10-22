@@ -3,7 +3,6 @@
 
 set -e
 
-host="$1"
 shift
 
 until (! command -v psql || PGPASSWORD=postgres psql -h db -U "postgres" -c '\q' )
@@ -14,4 +13,3 @@ done
 
 >&2 echo "Postgres is up - executing command"
 pipenv run python manage.py migrate
-pipenv run python manage.py runserver 0.0.0.0:8000

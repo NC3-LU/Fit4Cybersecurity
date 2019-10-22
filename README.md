@@ -75,8 +75,8 @@ Still in the folder `csskp`:
 $ pipenv shell
 $ python manage.py compilemessages # compile the translations
 $ # I suppose we need to initialize the DB with manager.py...
-$ python manager.py createsuperuser --username <username>
-$ python manager.py runserver # not for production
+$ python manage.py createsuperuser --username <username>
+$ python manage.py runserver # not for production
 ```
 
 

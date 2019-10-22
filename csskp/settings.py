@@ -14,6 +14,11 @@ import os
 import sys
 from django.utils.translation import ugettext_lazy as _
 
+try:
+    from csskp import config_prod as config
+except:
+    from csskp import config_dev as config
+
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -37,7 +42,7 @@ SECRET_KEY = 'u__*z&=urjtc0t)b)@5qbt_a#3-354=k9x(j)@eu#h7sb=-66s'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = config.ALLOWED_HOSTS
 
 
 # Application definition
@@ -89,15 +94,8 @@ WSGI_APPLICATION = 'csskp.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
-DATABASES = {
-     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'postgres',
-        'USER': 'postgres',
-        'HOST': 'db',
-        'PORT': 5432,
-    }
-}
+DATABASES = config.DATABASES
+
 
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators

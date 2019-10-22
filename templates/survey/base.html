@@ -14,21 +14,23 @@
 
 {% block bootstrap4_content %}
     <div class="container">
-        <div class="d-flex px-3 py-2 border-bottom border-primary">
-            <div class="flex-grow-1">
-                <h1><a href="/"><img src="{% static _('images/logoFull-en.png') %}" width="500px" alt="Fit4Cybersecurity"></a></h1>
-            </div>
-            <div>
-            {% block langselect %}{% endblock %}
+        <div class="row">
+            <div class="col text-center">
+                <div class="border-bottom border-primary">
+                    <h1><a href="/"><img src="{% static _('images/logoFull-en.png') %}" width="75%" alt="Fit4Cybersecurity"></a></h1>
+                </div>
             </div>
         </div>
+        <!-- <div>
+        {% block langselect %}{% endblock %}
+        </div> -->
 
         {% autoescape off %}{% bootstrap_messages %}{% endautoescape %}
 
         {% block content %}{% endblock %}
     </div>
 
-    <div class="footer">
+    <div class="footer d-none d-md-block">
         <div class="d-flex justify-content-between">
             <ul class="nav flex-column flex-sm-row">
                 <li class="nav-item">
