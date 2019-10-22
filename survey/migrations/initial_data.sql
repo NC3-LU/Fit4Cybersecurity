@@ -697,35 +697,35 @@ This cycle should be described somewhere and accessible by anyone (sell contract
 INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q002REC004', 'People should know who is the responsible person for the data in order to ask all the necessary questions, requests and about data manipulation or data sensitivity.', 'EN', 'R');
 INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q002REC005', 'Concerning the image rights, some authorisations are required (to take an image and to diffuse it), and people need to know when a place is under video surveillance.', 'EN', 'R');
 
-INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q003REC001', 'Training about daily tasks is important to avoid all the basic mistakes and loss of time and be updated on the latest best practices.', 'EN', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q003REC001', 'Updating the best practices for daily tasks is important to avoid all the basic mistakes and loss of time.', 'EN', 'R');
 INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q003REC002', 'Learning to use software is important to avoid time loss, data loss and manipulation mistakes.', 'EN', 'R');
 INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q003REC003', 'By informing about attacks that are current, common or well-known, employees could more easily identify them and avoid falling for them.', 'EN', 'R');
 INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q003REC004', 'Trainings that are done internally do not have the same impact as external ones, but could be more appropriate by the mastery of the subject within the company environment.', 'EN', 'R');
 INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q003REC005', 'Train users on the sensitivity of the manipulated information, in order to put their attention on how to protect them.', 'EN', 'R');
 
-INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q004REC001', 'It''s important to define responsibilities, externally or internally, with one person or more, or a company, but specialised into their own domain, if possible with training.', 'EN', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q004REC001', 'It''s important to define responsibilities, either externally or internally, with one person or more, or a company, but specialised into their own domain, with possibly a training.', 'EN', 'R');
 
-INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q005REC001', 'For now, no outside work is done. If it''s changed, it''s important to take care of:
-	- External connection which is not controlled should be avoided to avoid data loss.', 'EN', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q005REC001', 'For now, no outside work is done. If it''s changed, it''s important to take care that:
+	- External connections which are not controlled and monitored should be avoided to avoid data loss.', 'EN', 'R');
 INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q005REC002', 'Whenever users have the need to work outside, from home office to missions outside the premises, they must have a VPN connection to connect to the server.', 'EN', 'R');
-INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q005REC003', 'External connection which is not controlled should be avoided to avoid data loss.', 'EN', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q005REC003', 'External connection which is not controlled and monitored should be avoided to avoid data loss.', 'EN', 'R');
 INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q005REC004', 'The visual environment is really important, to avoid curiosity or spying.', 'EN', 'R');
-INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q005REC005', 'Devices that are taken away and that contains confidential data should always have their intern memory ciphered to avoid data loss.', 'EN', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q005REC005', 'Devices that are taken away and that contains confidential data should always have their internal memory encrypted to avoid data loss.', 'EN', 'R');
 
 INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q006REC001', 'For now, no contracts with third parties are signed. If it''s changed, it''s important to:', 'EN', 'R');
-INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q006REC002', 'If confidential data are accessible by different third parties, it should always be under a Non-Disclosure Agreement (NDA). An IT who can access to all the data used, the cleaning staff, or a fiduciary that get financial data are only examples.', 'EN', 'R');
-INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q006REC003', 'If means and needs permit-it, a contract should be signed to ensure that the external IT manager will ensure the system to be operational on a time amount that is under the uptime needed.', 'EN', 'R');
-INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q006REC004', 'It''s necessary to review the contracts to ensure :
-	- not to have solutions whenever it''s essential
-	- not to pay too much for a service which is not necessary
-	- to see if the services paid worth what they cost', 'EN', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q006REC002', 'If confidential data is accessible by different third parties, like external maintenace companies, or financial data by a fiduciary, a Non-Disclosure Agreement (NDA) should be signed with them.', 'EN', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q006REC003', 'If means and needs permit it, a contract should be signed to ensure that the external IT provider will ensure the availability of system to remain operational.', 'EN', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q006REC004', 'It''s necessary to review the contracts to ensuring a certain availability :
+	- not having an intervention solution whenever it''s essential
+	- to not pay too much for a service which is not necessary
+	- to evaluate if the services paid are satisfying the necessary', 'EN', 'R');
 
-INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q007REC001', 'For now, no third parties clean the premises. If it change, it''s important to:', 'EN', 'R');
-INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q007REC002', 'The office cleaning should be done, whenever it''s possible, during work time to ensure surveillance.', 'EN', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q007REC001', 'For now, no third parties clean the premises. If it changes, it''s important to:', 'EN', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q007REC002', 'The office cleaning should be done, whenever possible, during work time to avoid potential data theft.', 'EN', 'R');
 INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q007REC003', 'Rules should be given mainly to specify what should be done or avoided.', 'EN', 'R');
-INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q007REC004', 'If the cleaning staff is external, it''s important to define all the contracts that are bound to the confidentiality by hearing or seeing confidential data.', 'EN', 'R');
-INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q007REC005', 'Concerning the human curiosity, it is important to have a clean desk, inaccessible at first sight.', 'EN', 'R');
-INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q007REC006', 'The staff shouldn''t clean rooms that do not have any sensible equipment or data, such as archive room or IT room.', 'EN', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q007REC004', 'It''s important to define a confidentiality clause in all the contracts to ensure the confidentiality of information heard or seen.', 'EN', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q007REC005', 'To avoid problems due to the human curiosity, it is important to have a clean desk policy to avoid confidential documents being seen.', 'EN', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q007REC006', 'The staff shouldn''t clean restricted access areas, such as archive room or IT room.', 'EN', 'R');
 
 INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q008REC001', 'Advice should be given to avoid weak passwords. Some tips or techniques could be given to avoid frequent forget from employees. Here some examples:
 	- Passwords should be kept secret and personal. Each and everyone should access their data by using their password, even from a computer of someone else.
