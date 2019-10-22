@@ -71,6 +71,7 @@ $ pipenv install
 
 ```bash
 $ pipenv shell
+$ python manage.py collectstatic # copy static files required by Django Admin
 $ python manage.py compilemessages # compile the translations
 $ # I suppose we need to initialize the DB with manager.py...
 $ python manage.py createsuperuser --username <username>
