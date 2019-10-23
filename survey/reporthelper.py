@@ -10,7 +10,6 @@ from utils.radarFactory import radar_factory
 import matplotlib.pyplot as plt
 
 
-
 def getRecommendations(user: SurveyUser, lang: str):
     allAnswers = SurveyQuestionAnswer.objects.all().order_by('question__qindex', 'aindex')
     translation_key_values = get_formatted_translations(lang, 'R')
@@ -40,7 +39,7 @@ def getRecommendations(user: SurveyUser, lang: str):
 
 
 def createAndSendReport(user: SurveyUser, lang: str):
-    """Generates the report as a .dox file, then returns it to the view.
+    """Generates the report as a .docx file, then returns it to the view.
     """
     from docx import Document
     from docx.shared import Cm, Pt

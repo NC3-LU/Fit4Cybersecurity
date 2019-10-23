@@ -4,7 +4,7 @@ from django.utils.translation import gettext as _
 
 from survey.viewLogic import createUser, handleStartSurvey, saveAndGetQuestion, findUserById, getRecommendationsReport
 from survey.reporthelper import calculateResult, createAndSendReport
-from survey.globals import TRANSLATION_UI
+from survey.globals import TRANSLATION_UI, MIN_ACCEPTABLE_SCORE
 from django.contrib import messages
 
 
@@ -90,6 +90,7 @@ def finish(request):
         'chartdataYou': str(radar_current),
         'chartdataMax': str(radar_max),
         'chartMax': max(radar_max),
+        'min_acceptable_score': MIN_ACCEPTABLE_SCORE,
     }
 
     add_form_translations(textLayout, user, 'report')
