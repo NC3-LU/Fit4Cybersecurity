@@ -310,10 +310,6 @@ def calculateResult(user: SurveyUser, lang: str):
         if q.section.id not in maxeval:
             maxeval[q.section.id] = 0
 
-        print(lang)
-        print(translation_key_values)
-        print(q.section.sectionTitleKey)
-
         sectionlist[q.section.id] = translation_key_values[q.section.sectionTitleKey]
 
         maxeval[q.section.id] += q.maxPoints
@@ -373,7 +369,6 @@ def generate_chart_png(user: SurveyUser, max_eval, evaluation, sections_list, la
     try:
         res = plt.savefig(file_name)
     except Exception as e:
-        print('Error: Problem when generating picture for the report.')
         return ''
     finally:
         plt.close()
@@ -383,10 +378,8 @@ def generate_chart_png(user: SurveyUser, max_eval, evaluation, sections_list, la
 
 def get_formatted_translations(lang: str, type: str):
     translations = TranslationKey.objects.filter(lang=lang, ttype=type)
-    print(TranslationKey.objects.filter(lang=lang.lower(), ttype=type).query)
     translation_key_values = {}
     for translation in translations:
-        print(translation.key)
         translation_key_values[translation.key] = translation.text
 
     return translation_key_values
