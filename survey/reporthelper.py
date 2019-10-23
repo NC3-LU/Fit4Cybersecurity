@@ -206,9 +206,12 @@ def createAndSendReport(user: SurveyUser, lang):
                 row_cells[0].text = " "
 
             if u.uvalue > 0:
-                bX = row_cells[1].paragraphs[0].runs[0]
-                bX.font.bold = True
-                
+                try:
+                    bX = row_cells[1].paragraphs[0].runs[0]
+                    bX.font.bold = True
+                except:
+                    pass
+
             row_cells[1].text = str(a)
 
         col = table.columns[0]
