@@ -51,7 +51,7 @@
             var resultChart = new Chart(ctx, {
                 type: 'radar',
                 data: {
-                    labels: labels.reverse(),
+                    labels: labels,
                     datasets: [
                         {
                             label: '{{ chartlabelYou | safe }}',
