@@ -63,6 +63,7 @@ example WSGI.
 ```bash
 $ git clone https://github.com/CASES-LU/Fit4Cybersecurity.git
 $ cd Fit4Cybersecurity/
+$ npm install
 $ pipenv install
 ```
 
@@ -70,15 +71,20 @@ $ pipenv install
 ### Configure and run the application
 
 ```bash
+$ cp csskp/config_dev.py csskp/config_prod.py # configure production settings
 $ pipenv shell
 $ python manage.py collectstatic # copy static files required by Django Admin
 $ python manage.py compilemessages # compile the translations
-$ # I suppose we need to initialize the DB with manager.py...
 $ python manage.py createsuperuser --username <username>
+```
+
+Run the application:
+
+```bash
 $ python manage.py runserver # not for production
 ```
 
-
+For production you can use mod_wsgi.
 
 ## Upgrading the application
 
