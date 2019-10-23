@@ -73,7 +73,7 @@ def finish(request):
     # also needs saving here!
     # show a "Thank you" and a "get your report" button
 
-    txt_score, radar_max, radar_current, sections_list = calculateResult(user)
+    txt_score, radar_max, radar_current, sections_list = calculateResult(user, user_lang.upper())
 
     textLayout = {
         'title': "Fit4Cybersecurity - " + TRANSLATION_UI['report']['title'][user_lang],

@@ -13,10 +13,7 @@ import matplotlib.pyplot as plt
 
 def getRecommendations(user: SurveyUser, lang: str):
     allAnswers = SurveyQuestionAnswer.objects.all().order_by('question__qindex', 'aindex')
-    translations = TranslationKey.objects.filter(lang=lang, ttype='R')
-    translation_key_values = {}
-    for translation in translations:
-        translation_key_values[translation.key] = translation.text
+    translation_key_values = get_formatted_translations(lang, 'R')
 
     finalReportRecs = {}
 
@@ -42,7 +39,7 @@ def getRecommendations(user: SurveyUser, lang: str):
     return finalReportRecs
 
 
-def createAndSendReport(user: SurveyUser, lang):
+def createAndSendReport(user: SurveyUser, lang: str):
     """Generates the report as a .dox file, then returns it to the view.
     """
     from docx import Document
@@ -104,7 +101,7 @@ def createAndSendReport(user: SurveyUser, lang):
     except:
         raise Exception('Missing file: {}'.format(file_path))
 
-    score, detail_max, details, section_list = calculateResult(user)
+    score, detail_max, details, section_list = calculateResult(user, lang)
 
     results = results.replace("\n\r", "\n")
     #results = results.replace("$$result$$", str(score))
@@ -178,12 +175,15 @@ def createAndSendReport(user: SurveyUser, lang):
 
     doc.add_heading(TRANSLATION_UI['document']['questions'][lang.lower()], level=1)
 
+    questions_translations = get_formatted_translations(lang, 'Q')
+    answers_translations = get_formatted_translations(lang, 'A')
+
     for index, question in enumerate(everyQuestion):
         table = doc.add_table(rows=1, cols=2)
         table.autofit = False
         hdr_cells = table.rows[0].cells
         hdr_cells[0].text = str(index+1)
-        hdr_cells[1].text = str(question)
+        hdr_cells[1].text = questions_translations[question.titleKey]
 
         bX = hdr_cells[0].paragraphs[0].runs[0]
         bX.font.bold = True
@@ -192,22 +192,22 @@ def createAndSendReport(user: SurveyUser, lang):
         bX.font.bold = True
         bX.font.size = Pt(13)
 
-        answerlist = SurveyQuestionAnswer.objects.filter(question=question).order_by('aindex')
+        answers_list = SurveyQuestionAnswer.objects.filter(question=question).order_by('aindex')
 
-        for a in answerlist:
+        for answer in answers_list:
             row_cells = table.add_row().cells
-            u = SurveyUserAnswer.objects.filter(answer=a)[0]
+            user_answer = SurveyUserAnswer.objects.filter(answer=answer)[0]
 
-            if u.uvalue > 0:
+            if user_answer.uvalue > 0:
                 row_cells[0].text = "X"
                 bX = row_cells[0].paragraphs[0].runs[0]
                 bX.font.bold = True
             else:
                 row_cells[0].text = " "
 
-            row_cells[1].text = str(a)
+            row_cells[1].text = answers_translations[answer.titleKey]
 
-            if u.uvalue > 0:
+            if user_answer.uvalue > 0:
                 bX = row_cells[1].paragraphs[0].runs[0]
                 bX.font.bold = True
 
@@ -244,11 +244,11 @@ def createAndSendReport(user: SurveyUser, lang):
         if ind > 1:
             table.append({'ca':"", 'surveyAnswers':""})
 
-        answerlist = SurveyQuestionAnswer.objects.filter(question=i).order_by('aindex')
+        answers_list = SurveyQuestionAnswer.objects.filter(question=i).order_by('aindex')
         headingLine = {'ca':str(ind), 'surveyAnswers':str(i)}
         table.append(headingLine)
 
-        for a in answerlist:
+        for a in answers_list:
             line = {'ca':"", 'surveyAnswers':""}
             u = SurveyUserAnswer.objects.filter(answer=a)[0]
 
@@ -291,7 +291,7 @@ def createAndSendReport(user: SurveyUser, lang):
     return response
 
 
-def calculateResult(user: SurveyUser):
+def calculateResult(user: SurveyUser, lang: str):
     allUserAnswers = SurveyUserAnswer.objects.filter(uvalue__gt=0, user=user).order_by('answer__question__qindex',
                                                                                        'answer__aindex')
     totalscore = sum([x.answer.score for x in allUserAnswers])
@@ -301,10 +301,7 @@ def calculateResult(user: SurveyUser):
     sectionlist = {}
     maxscore = 0
 
-    translations = TranslationKey.objects.filter(lang=user.chosenLang, ttype='S')
-    translation_key_values = {}
-    for translation in translations:
-        translation_key_values[translation.key] = translation.text
+    translation_key_values = get_formatted_translations(lang, 'S')
 
     for q in SurveyQuestion.objects.all():
         maxscore += q.maxPoints
@@ -312,6 +309,11 @@ def calculateResult(user: SurveyUser):
             evaluation[q.section.id] = 0
         if q.section.id not in maxeval:
             maxeval[q.section.id] = 0
+
+        print(lang)
+        print(translation_key_values)
+        print(q.section.sectionTitleKey)
+
         sectionlist[q.section.id] = translation_key_values[q.section.sectionTitleKey]
 
         maxeval[q.section.id] += q.maxPoints
@@ -377,3 +379,14 @@ def generate_chart_png(user: SurveyUser, max_eval, evaluation, sections_list, la
         plt.close()
 
     return file_name
+
+
+def get_formatted_translations(lang: str, type: str):
+    translations = TranslationKey.objects.filter(lang=lang, ttype=type)
+    print(TranslationKey.objects.filter(lang=lang.lower(), ttype=type).query)
+    translation_key_values = {}
+    for translation in translations:
+        print(translation.key)
+        translation_key_values[translation.key] = translation.text
+
+    return translation_key_values
