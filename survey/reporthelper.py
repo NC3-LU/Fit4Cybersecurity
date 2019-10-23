@@ -205,7 +205,7 @@ def createAndSendReport(user: SurveyUser, lang: str):
             else:
                 row_cells[0].text = " "
 
-            row_cells[1].text = answers_translations[answer.titleKey]
+            row_cells[1].text = answers_translations[answer.answerKey]
 
             if user_answer.uvalue > 0:
                 bX = row_cells[1].paragraphs[0].runs[0]
