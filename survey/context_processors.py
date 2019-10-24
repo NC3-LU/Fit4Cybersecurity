@@ -10,7 +10,7 @@ def get_version(request):
             version = "{}.{}.{}".format(data['major'], data['minor'],
                                             data['hotfix'])
     except:
-        version = "0.0.1"
+        version = "0.0.0"
     return {
         'app_version': version
     }
