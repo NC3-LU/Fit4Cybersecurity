@@ -5,8 +5,11 @@
 {% load staticfiles %}
 
 {% block bootstrap4_extra_head %}
-    <link rel="stylesheet" type="text/css" href="{% static "survey/css/custom.css" %}" />
-    <link href="/static/images/favicon.png" rel="shortcut icon" type="image/png">
+    <meta name="description" content="Fit4Cybersecurity by CASES.LU" />
+    <link rel="stylesheet" type="text/css" href="{% static 'survey/css/custom.css' %}" />
+    <link rel="icon" type="image/x-icon" href="{% static 'images/favicon.png' %}" />
+    <link rel="apple-touch-icon" sizes="152x152" href="{% static 'images/apple-touch-icon.png' %}" />
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'images/apple-touch-icon.png' %}" />
 {% endblock %}
 
 {% block title %}
@@ -34,27 +37,27 @@
                 <li class="nav-item">
 
                     <a class="nav-link" href="https://www.cases.lu" target="_blank">
-                        <img class="img-fluid" src="{% static _('images/logo-CASES.png') %}" width="32px"
-                        title="A service provided by CASES.LU"
-                        alt="A service provided by CASES.LU" />
+                        <img class="img-fluid" src="{% static 'images/logo-CASES.png' %}" width="32px"
+                        title="{{ _('A service provided by CASES.LU') }}"
+                        alt="{{ _('A service provided by CASES.LU') }}" />
                     </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="https://github.com/CASES-LU/CybersecurityStarterKit" target="_blank">
-                        <img class="img-fluid" src="{% static _('images/github-9-512.png') %}" width="32px"
-                        title="Source code on GitHub"
-                        alt="Source code on GitHub" />
+                        <img class="img-fluid" src="{% static 'images/github-9-512.png' %}" width="32px"
+                        title="{{ _('Source code on GitHub') }}"
+                        alt="{{ _('Source code on GitHub') }}" />
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="https://github.com/CASES-LU/Fit4Cybersecurity/releases/tag/v{{ app_version }}" title="Version of Fit4Cybersecurity." alt="Version of Fit4Cybersecurity." target="_blank">
+                    <a class="nav-link" href="https://github.com/CASES-LU/Fit4Cybersecurity/releases/tag/v{{ app_version }}" title="{{ _('Version of Fit4Cybersecurity') }}" alt="{{ _('Version of Fit4Cybersecurity') }}" target="_blank">
                         v{{ app_version }}
                     </a>
                 </li>
             </ul>
             <ul class="nav flex-column flex-sm-row">
                 <li class="nav-item">
-                    <a class="nav-link" href="/terms" title="Terms of this service." alt="Terms of Service">Terms</a>
+                    <a class="nav-link" href="/terms" title="{{ _('Terms of service') }}" alt="{{ _('Terms of Service') }}">Terms</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="https://securitymadein.lu" target="_blank">Copyright © 2019 Security made in Lëtzebuerg g.i.e.</a>

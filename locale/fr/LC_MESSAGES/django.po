@@ -3,22 +3,22 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-10-24 08:23+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"POT-Creation-Date: 2019-10-24 13:33+0000\n"
+"PO-Revision-Date: 2019-10-24 15:33+0200\n"
+"Last-Translator: Cédric Bonhomme <cedric@cedricbonhomme.org>\n"
+"Language-Team: \n"
+"Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Poedit 2.2.1\n"
 
-#: survey/views.py:80
+#: survey/views.py:78
 msgid ""
 "This is the list of recommendations to improve the information security "
 "maturity in your company, provided that your answers did correctly reflect "
@@ -33,25 +33,40 @@ msgstr ""
 "le niveau de maturité de la sécurité de l'information. Par conséquent, nous "
 "ne sommes pas responsables des résultats de cette enquête."
 
-#: templates/survey/base.html:13
+#: survey/views.py:109
+msgid ""
+"We could not find a survey with the requested key, please start a new one."
+msgstr ""
+"Nous n'avons pas pu trouver un sondage avec la clé demandée, veuillez en "
+"commencer un nouveau."
+
+#: templates/survey/base.html:16
 msgid "Fit4Cybersecurity a CASES self-assessment tool!"
 msgstr "Fit4Cybersecurity est un outil d’auto-évaluation CASES!"
 
-#: templates/survey/base.html:21
+#: templates/survey/base.html:24
 msgid "images/logoFull-en.png"
 msgstr "images/logoFull-fr.png"
 
-#: templates/survey/base.html:36
-#, fuzzy
-#| msgid "images/logoFull-en.png"
-msgid "images/logo-CASES.png"
-msgstr "images/logoFull-fr.png"
+#: templates/survey/base.html:41 templates/survey/base.html:42
+msgid "A service provided by CASES.LU"
+msgstr "Un service fourni par CASES.LU"
 
-#: templates/survey/base.html:43
-#, fuzzy
-#| msgid "images/logoFull-en.png"
-msgid "images/github-9-512.png"
-msgstr "images/logoFull-fr.png"
+#: templates/survey/base.html:48 templates/survey/base.html:49
+msgid "Source code on GitHub"
+msgstr "Code source sur GitHub"
+
+#: templates/survey/base.html:53
+msgid "Version of Fit4Cybersecurity"
+msgstr "Version de Fit4Cybersecurity"
+
+#: templates/survey/base.html:60
+msgid "Terms of service"
+msgstr "Conditions d'utilisation"
+
+#: templates/survey/base.html:60
+msgid "Terms of Service"
+msgstr "Conditions d'utilisation"
 
 #: templates/survey/finishedSurvey.html:31
 msgid "You can request a Diagnostic"
@@ -68,9 +83,9 @@ msgid ""
 "This survey will ask some questions and present some recommendations, based "
 "on your sector, company size and your answers. Keep in mind, thought, that "
 "it is a self-assessment tool and that it only touches the surface of "
-"information security by giving a very basic marturity level estimate and "
-"some basic recommendations. And that due to the aforementioned reasons, we "
-"are not liable for the result or recommendation implementations."
+"information security by giving a very basic maturity level estimate and some "
+"basic recommendations. And that due to the aforementioned reasons, we are "
+"not liable for the result or recommendation implementations."
 msgstr ""
 "Ce sondage posera des questions et présentera des recommandations, en "
 "fonction de votre secteur, de la taille de votre entreprise et de vos "
@@ -88,11 +103,21 @@ msgstr "Continuer une enquête précédente"
 msgid "Please insert your code to continue the survey or go to your results"
 msgstr ""
 "Veuillez insérer votre code pour continuer l’enquête ou consulter vos "
-"résultats."
+"résultats"
 
 #: templates/survey/resume.html:13
 msgid "Confirm"
 msgstr "Confirmer"
+
+#, fuzzy
+#~| msgid "images/logoFull-en.png"
+#~ msgid "images/logo-CASES.png"
+#~ msgstr "images/logoFull-fr.png"
+
+#, fuzzy
+#~| msgid "images/logoFull-en.png"
+#~ msgid "images/github-9-512.png"
+#~ msgstr "images/logoFull-fr.png"
 
 #~ msgid "English"
 #~ msgstr "Anglais"

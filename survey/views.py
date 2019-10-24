@@ -9,9 +9,7 @@ from django.contrib import messages
 
 
 def index(request):
-    james = {'the_title': "Fit4Cybersecurity - Welcome!"}
-
-    return render(request, 'survey/index.html', context=james)
+    return render(request, 'survey/index.html')
 
 
 def start(request, lang="EN"):
@@ -108,9 +106,8 @@ def finish(request):
 
 
 def getCompanies(request):
-
-    # get Companies contained in certain category
-    # just a company list related to the selected recommendations
+    """Get Companies contained in certain category.
+    Returns a company list related to the selected recommendations"""
     return HttpResponse("Here is the JSON list of companies that are related to that category")
 
 
@@ -118,7 +115,7 @@ def resume(request, userId):
     try:
         findUserById(str(userId))
     except:
-        messages.warning(request, 'We could not find a survey with te requested key, please start a new one.')
+        messages.warning(request, _('We could not find a survey with the requested key, please start a new one.'))
         return HttpResponseRedirect('/')
 
     request.session['user_id'] = str(userId)

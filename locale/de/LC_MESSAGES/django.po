@@ -3,22 +3,22 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-10-24 08:23+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"POT-Creation-Date: 2019-10-24 13:33+0000\n"
+"PO-Revision-Date: 2019-10-24 15:34+0200\n"
+"Last-Translator: Cédric Bonhomme <cedric@cedricbonhomme.org>\n"
+"Language-Team: \n"
+"Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 2.2.1\n"
 
-#: survey/views.py:80
+#: survey/views.py:78
 msgid ""
 "This is the list of recommendations to improve the information security "
 "maturity in your company, provided that your answers did correctly reflect "
@@ -27,25 +27,40 @@ msgid ""
 "and thus, we are not liable for the results of this survey."
 msgstr ""
 
-#: templates/survey/base.html:13
-msgid "Fit4Cybersecurity a CASES self-assessment tool!"
+#: survey/views.py:109
+msgid ""
+"We could not find a survey with the requested key, please start a new one."
 msgstr ""
+"Wir konnten keine Umfrage mit dem angeforderten Schlüssel finden. Bitte "
+"starten Sie eine neue."
 
-#: templates/survey/base.html:21
+#: templates/survey/base.html:16
+msgid "Fit4Cybersecurity a CASES self-assessment tool!"
+msgstr "Fit4Cybersecurity ein CASES-Selbstbewertungstool!"
+
+#: templates/survey/base.html:24
 msgid "images/logoFull-en.png"
 msgstr "images/logoFull-de.png"
 
-#: templates/survey/base.html:36
-#, fuzzy
-#| msgid "images/logoFull-en.png"
-msgid "images/logo-CASES.png"
-msgstr "images/logoFull-de.png"
+#: templates/survey/base.html:41 templates/survey/base.html:42
+msgid "A service provided by CASES.LU"
+msgstr "Ein Service von CASES.LU"
 
-#: templates/survey/base.html:43
-#, fuzzy
-#| msgid "images/logoFull-en.png"
-msgid "images/github-9-512.png"
-msgstr "images/logoFull-de.png"
+#: templates/survey/base.html:48 templates/survey/base.html:49
+msgid "Source code on GitHub"
+msgstr "Quellcode auf GitHub"
+
+#: templates/survey/base.html:53
+msgid "Version of Fit4Cybersecurity"
+msgstr "Version von Fit4Cybersecurity"
+
+#: templates/survey/base.html:60
+msgid "Terms of service"
+msgstr "Nutzungsbedingungen"
+
+#: templates/survey/base.html:60
+msgid "Terms of Service"
+msgstr "Nutzungsbedingungen"
 
 #: templates/survey/finishedSurvey.html:31
 msgid "You can request a Diagnostic"
@@ -54,15 +69,16 @@ msgstr "Sie können eine Diagnostic anfordern"
 #: templates/survey/index.html:17
 msgid "Welcome to the all new CASES self-assessment tool: Fit4Cybersecurity"
 msgstr ""
+"Willkommen beim brandneuen CASES-Tool zur Selbstbewertung: Fit4Cybersecurity"
 
 #: templates/survey/index.html:18
 msgid ""
 "This survey will ask some questions and present some recommendations, based "
 "on your sector, company size and your answers. Keep in mind, thought, that "
 "it is a self-assessment tool and that it only touches the surface of "
-"information security by giving a very basic marturity level estimate and "
-"some basic recommendations. And that due to the aforementioned reasons, we "
-"are not liable for the result or recommendation implementations."
+"information security by giving a very basic maturity level estimate and some "
+"basic recommendations. And that due to the aforementioned reasons, we are "
+"not liable for the result or recommendation implementations."
 msgstr ""
 
 #: templates/survey/index.html:51
@@ -72,7 +88,9 @@ msgstr "Setzen Sie eine vorherige Umfrage fort"
 #: templates/survey/resume.html:4
 msgid "Please insert your code to continue the survey or go to your results"
 msgstr ""
+"Bitte geben Sie Ihren Code ein, um die Umfrage fortzusetzen oder zu Ihren "
+"Ergebnissen zu gelangen"
 
 #: templates/survey/resume.html:13
 msgid "Confirm"
-msgstr ""
+msgstr "Bestätigen"
