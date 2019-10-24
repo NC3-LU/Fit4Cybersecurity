@@ -9,7 +9,7 @@
     <link rel="stylesheet" type="text/css" href="{% static "survey/css/Chart.css" %}" />
 
     <script type="text/javascript" src="{% static "survey/js/survey-questions.js" %}"></script>
-    {% if txtscore < min_acceptable_score %}
+    {% if txtscore >= min_acceptable_score %}
         <script type="text/javascript" src="{% static "survey/js/send-email.js" %}"></script>
     {% endif %}
     <script type="text/javascript" src="{% static "survey/js/Chart.bundle.min.js" %}"></script>
@@ -30,7 +30,7 @@
                 {% endif %}
                 /100
             </h3>
-            {% if txtscore < min_acceptable_score %}
+            {% if txtscore >= min_acceptable_score %}
                 <h5>
                     {% include 'survey/requestDiagnosticLink.html' %}
                 </h5>
@@ -51,7 +51,7 @@
         <h2>{{ translations.txtreport }}:</h2>
         {{ description }}
     </div>
-    {% if txtscore < min_acceptable_score %}
+    {% if txtscore >= min_acceptable_score %}
         <div class="py-2 px-4">
             <h2>{{ translations.request_diagnostic.title }}:</h2>
             {{ translations.request_diagnostic.description }}<br />
