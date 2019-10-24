@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-10-10 12:46+0000\n"
+"POT-Creation-Date: 2019-10-24 08:21+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,19 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: csskp/settings.py:123
-msgid "English"
-msgstr ""
-
-#: csskp/settings.py:124
-msgid "French"
-msgstr ""
-
-#: csskp/settings.py:125
-msgid "Deutsch"
-msgstr ""
-
-#: survey/views.py:78
+#: survey/views.py:80
 msgid ""
 "This is the list of recommendations to improve the information security "
 "maturity in your company, provided that your answers did correctly reflect "
@@ -39,19 +27,35 @@ msgid ""
 "and thus, we are not liable for the results of this survey."
 msgstr ""
 
-#: templates/survey/base.html:8
+#: templates/survey/base.html:13
 msgid "Fit4Cybersecurity a CASES self-assessment tool!"
 msgstr ""
 
-#: templates/survey/base.html:15
+#: templates/survey/base.html:21
 msgid "images/logoFull-en.png"
 msgstr "images/logoFull-de.png"
 
-#: templates/survey/index.html:15
+#: templates/survey/base.html:36
+#, fuzzy
+#| msgid "images/logoFull-en.png"
+msgid "images/logo-CASES.png"
+msgstr "images/logoFull-de.png"
+
+#: templates/survey/base.html:43
+#, fuzzy
+#| msgid "images/logoFull-en.png"
+msgid "images/github-9-512.png"
+msgstr "images/logoFull-de.png"
+
+#: templates/survey/finishedSurvey.html:31
+msgid "You can request a Diagnostic"
+msgstr "Sie können eine Diagnostic anfordern"
+
+#: templates/survey/index.html:17
 msgid "Welcome to the all new CASES self-assessment tool: Fit4Cybersecurity"
 msgstr ""
 
-#: templates/survey/index.html:16
+#: templates/survey/index.html:18
 msgid ""
 "This survey will ask some questions and present some recommendations, based "
 "on your sector, company size and your answers. Keep in mind, thought, that "
@@ -61,7 +65,7 @@ msgid ""
 "are not liable for the result or recommendation implementations."
 msgstr ""
 
-#: templates/survey/index.html:49
+#: templates/survey/index.html:51
 msgid "Continue a previous survey"
 msgstr "Setzen Sie eine vorherige Umfrage fort"
 
