@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-10-24 08:23+0000\n"
+"POT-Creation-Date: 2019-10-24 12:33+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -27,25 +27,29 @@ msgid ""
 "and thus, we are not liable for the results of this survey."
 msgstr ""
 
-#: templates/survey/base.html:13
+#: templates/survey/base.html:16
 msgid "Fit4Cybersecurity a CASES self-assessment tool!"
-msgstr ""
+msgstr "Fit4Cybersecurity ein CASES-Selbstbewertungstool!"
 
-#: templates/survey/base.html:21
+#: templates/survey/base.html:24
 msgid "images/logoFull-en.png"
 msgstr "images/logoFull-de.png"
 
-#: templates/survey/base.html:36
-#, fuzzy
-#| msgid "images/logoFull-en.png"
-msgid "images/logo-CASES.png"
-msgstr "images/logoFull-de.png"
+#: templates/survey/base.html:41 templates/survey/base.html:42
+msgid "A service provided by CASES.LU"
+msgstr "Ein Service von CASES.LU"
 
-#: templates/survey/base.html:43
-#, fuzzy
-#| msgid "images/logoFull-en.png"
-msgid "images/github-9-512.png"
-msgstr "images/logoFull-de.png"
+#: templates/survey/base.html:48 templates/survey/base.html:49
+msgid "Source code on GitHub"
+msgstr "Quellcode auf GitHub"
+
+#: templates/survey/base.html:53
+msgid "Version of Fit4Cybersecurity"
+msgstr "Version von Fit4Cybersecurity"
+
+#: templates/survey/base.html:60
+msgid "Terms of Service"
+msgstr "Nutzungsbedingungen"
 
 #: templates/survey/finishedSurvey.html:31
 msgid "You can request a Diagnostic"
@@ -54,6 +58,7 @@ msgstr "Sie können eine Diagnostic anfordern"
 #: templates/survey/index.html:17
 msgid "Welcome to the all new CASES self-assessment tool: Fit4Cybersecurity"
 msgstr ""
+"Willkommen beim brandneuen CASES-Tool zur Selbstbewertung: Fit4Cybersecurity"
 
 #: templates/survey/index.html:18
 msgid ""
@@ -72,7 +77,9 @@ msgstr "Setzen Sie eine vorherige Umfrage fort"
 #: templates/survey/resume.html:4
 msgid "Please insert your code to continue the survey or go to your results"
 msgstr ""
+"Bitte geben Sie Ihren Code ein, um die Umfrage fortzusetzen oder zu Ihren "
+"Ergebnissen zu gelangen"
 
 #: templates/survey/resume.html:13
 msgid "Confirm"
-msgstr ""
+msgstr "Bestätigen"

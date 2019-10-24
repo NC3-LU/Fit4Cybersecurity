@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-10-24 08:23+0000\n"
+"POT-Creation-Date: 2019-10-24 12:33+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -33,25 +33,29 @@ msgstr ""
 "le niveau de maturité de la sécurité de l'information. Par conséquent, nous "
 "ne sommes pas responsables des résultats de cette enquête."
 
-#: templates/survey/base.html:13
+#: templates/survey/base.html:16
 msgid "Fit4Cybersecurity a CASES self-assessment tool!"
 msgstr "Fit4Cybersecurity est un outil d’auto-évaluation CASES!"
 
-#: templates/survey/base.html:21
+#: templates/survey/base.html:24
 msgid "images/logoFull-en.png"
 msgstr "images/logoFull-fr.png"
 
-#: templates/survey/base.html:36
-#, fuzzy
-#| msgid "images/logoFull-en.png"
-msgid "images/logo-CASES.png"
-msgstr "images/logoFull-fr.png"
+#: templates/survey/base.html:41 templates/survey/base.html:42
+msgid "A service provided by CASES.LU"
+msgstr "Un service fourni par CASES.LU"
 
-#: templates/survey/base.html:43
-#, fuzzy
-#| msgid "images/logoFull-en.png"
-msgid "images/github-9-512.png"
-msgstr "images/logoFull-fr.png"
+#: templates/survey/base.html:48 templates/survey/base.html:49
+msgid "Source code on GitHub"
+msgstr "Code source sur GitHub"
+
+#: templates/survey/base.html:53
+msgid "Version of Fit4Cybersecurity"
+msgstr "Version de Fit4Cybersecurity"
+
+#: templates/survey/base.html:60
+msgid "Terms of service"
+msgstr "Conditions d'utilisation"
 
 #: templates/survey/finishedSurvey.html:31
 msgid "You can request a Diagnostic"
@@ -93,6 +97,16 @@ msgstr ""
 #: templates/survey/resume.html:13
 msgid "Confirm"
 msgstr "Confirmer"
+
+#, fuzzy
+#~| msgid "images/logoFull-en.png"
+#~ msgid "images/logo-CASES.png"
+#~ msgstr "images/logoFull-fr.png"
+
+#, fuzzy
+#~| msgid "images/logoFull-en.png"
+#~ msgid "images/github-9-512.png"
+#~ msgstr "images/logoFull-fr.png"
 
 #~ msgid "English"
 #~ msgstr "Anglais"
