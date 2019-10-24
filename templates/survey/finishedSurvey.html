@@ -27,8 +27,8 @@
                 {% endif %}
                 /100
             </h3>
-            {% if txtscore < min_acceptable_score %}
-                <a href="mailto:info@cases.lu?subject=Diagnostic%20Request&amp;body=Dear&nbsp;Cases&nbsp;Team,&nbsp;&nbsp;We%20would%20like%20to%20request%20diagnostic%20for%20the%20following%20results&nbsp;&nbsp;{% if request.is_secure %}https{% else %}http{% endif %}&#58;&#47;&#47;{{ request.get_host }}&#47;survey&#47;resume&#47;{{userId }}">Request diagnostic</a>
+            {% if txtscore >= min_acceptable_score %}
+                <a href="mailto:info@cases.lu?subject=Diagnostic%20Request&amp;body=Dear&nbsp;Cases&nbsp;Team,&nbsp;&nbsp;We%20would%20like%20to%20request%20diagnostic%20for%20the%20following%20results&nbsp;&nbsp;{% if request.is_secure %}https{% else %}http{% endif %}&#58;&#47;&#47;{{ request.get_host }}&#47;survey&#47;resume&#47;{{userId }}">{{ _('You can request a Diagnostic') }}</a>
             {% endif %}
         </div>
         <div><h4>{{ txtdownload }}:</h4></div>
