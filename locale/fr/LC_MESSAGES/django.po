@@ -3,20 +3,20 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-10-24 12:33+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"POT-Creation-Date: 2019-10-24 12:38+0000\n"
+"PO-Revision-Date: 2019-10-24 14:41+0200\n"
+"Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Last-Translator: Cédric Bonhomme <cedric@cedricbonhomme.org>\n"
+"Language-Team: \n"
+"X-Generator: Poedit 2.2.1\n"
 
 #: survey/views.py:80
 msgid ""
@@ -57,6 +57,10 @@ msgstr "Version de Fit4Cybersecurity"
 msgid "Terms of service"
 msgstr "Conditions d'utilisation"
 
+#: templates/survey/base.html:60
+msgid "Terms of Service"
+msgstr "Conditions d'utilisation"
+
 #: templates/survey/finishedSurvey.html:31
 msgid "You can request a Diagnostic"
 msgstr "Vous pouvez demander un Diagnostic"
@@ -72,9 +76,9 @@ msgid ""
 "This survey will ask some questions and present some recommendations, based "
 "on your sector, company size and your answers. Keep in mind, thought, that "
 "it is a self-assessment tool and that it only touches the surface of "
-"information security by giving a very basic maturity level estimate and "
-"some basic recommendations. And that due to the aforementioned reasons, we "
-"are not liable for the result or recommendation implementations."
+"information security by giving a very basic maturity level estimate and some "
+"basic recommendations. And that due to the aforementioned reasons, we are "
+"not liable for the result or recommendation implementations."
 msgstr ""
 "Ce sondage posera des questions et présentera des recommandations, en "
 "fonction de votre secteur, de la taille de votre entreprise et de vos "
@@ -92,7 +96,7 @@ msgstr "Continuer une enquête précédente"
 msgid "Please insert your code to continue the survey or go to your results"
 msgstr ""
 "Veuillez insérer votre code pour continuer l’enquête ou consulter vos "
-"résultats."
+"résultats"
 
 #: templates/survey/resume.html:13
 msgid "Confirm"
