@@ -32,6 +32,7 @@
         <div class="d-flex justify-content-between">
             <ul class="nav flex-column flex-sm-row">
                 <li class="nav-item">
+
                     <a class="nav-link" href="https://www.cases.lu" target="_blank">
                         <img class="img-fluid" src="{% static _('images/logo-CASES.png') %}" width="32px"
                         title="A service provided by CASES.LU"
@@ -43,6 +44,11 @@
                         <img class="img-fluid" src="{% static _('images/github-9-512.png') %}" width="32px"
                         title="Source code on GitHub"
                         alt="Source code on GitHub" />
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://github.com/CASES-LU/Fit4Cybersecurity/releases/tag/v{{ app_version }}" title="Version of Fit4Cybersecurity." alt="Version of Fit4Cybersecurity." target="_blank">
+                        v{{ app_version }}
                     </a>
                 </li>
             </ul>
