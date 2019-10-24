@@ -75,14 +75,14 @@ def finish(request):
 
     txt_score, radar_max, radar_current, sections_list = calculateResult(user, user_lang.upper())
 
+    diagnostic_email_body = TRANSLATION_UI['report']['request_diagnostic']['email_body'][user_lang]
+
     textLayout = {
         'title': "Fit4Cybersecurity - " + TRANSLATION_UI['report']['title'][user_lang],
-        'description': _('This is the list of recommendations to improve the information security maturity in your company, provided that your answers did correctly reflect the state in your company. Also keep in mind that it is a self-assessment and only scratches the surface of the information security maturity level and thus, we are not liable for the results of this survey.'),
+        'description': TRANSLATION_UI['report']['description'][user_lang],
         'recommendations': getRecommendationsReport(user),
         'userId': user_id,
         'reportlink': "/survey/report",
-        'txtdownload': TRANSLATION_UI['report']['download'][user_lang],
-        'txtreport': TRANSLATION_UI['report']['report'][user_lang],
         'txtscore': txt_score,
         'chartTitles': str(sections_list),
         'chartlabelYou': TRANSLATION_UI['report']['result'][user_lang],
@@ -94,6 +94,15 @@ def finish(request):
     }
 
     add_form_translations(textLayout, user, 'report')
+    textLayout['translations']['request_diagnostic'] = {
+        'title': TRANSLATION_UI['report']['request_diagnostic']['title'][user_lang],
+        'description': TRANSLATION_UI['report']['request_diagnostic']['description'][user_lang],
+        'service_fee': TRANSLATION_UI['report']['request_diagnostic']['service_fee'][user_lang],
+        'email_subject': TRANSLATION_UI['report']['request_diagnostic']['email_subject'][user_lang],
+        'email_body': diagnostic_email_body.replace('{userId}', user_id)
+    }
+    textLayout['translations']['txtdownload'] = TRANSLATION_UI['report']['download'][user_lang]
+    textLayout['translations']['txtreport'] = TRANSLATION_UI['report']['report'][user_lang]
 
     return render(request, 'survey/finishedSurvey.html', context=textLayout)
 
