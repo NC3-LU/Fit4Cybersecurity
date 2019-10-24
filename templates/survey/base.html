@@ -5,8 +5,11 @@
 {% load staticfiles %}
 
 {% block bootstrap4_extra_head %}
-    <link rel="stylesheet" type="text/css" href="{% static "survey/css/custom.css" %}" />
-    <link href="/static/images/favicon.png" rel="shortcut icon" type="image/png">
+    <meta name="description" content="Fit4Cybersecurity by CASES.LU" />
+    <link rel="stylesheet" type="text/css" href="{% static 'survey/css/custom.css' %}" />
+    <link rel="icon" type="image/x-icon" href="{% static 'images/favicon.png' %}" />
+    <link rel="apple-touch-icon" sizes="152x152" href="{% static 'images/apple-touch-icon.png' %}" />
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'images/apple-touch-icon.png' %}" />
 {% endblock %}
 
 {% block title %}
