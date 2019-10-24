@@ -106,7 +106,7 @@ def resume(request, userId):
     try:
         findUserById(str(userId))
     except:
-        messages.warning(request, _('We could not find a survey with te requested key, please start a new one.'))
+        messages.warning(request, _('We could not find a survey with the requested key, please start a new one.'))
         return HttpResponseRedirect('/')
 
     request.session['user_id'] = str(userId)

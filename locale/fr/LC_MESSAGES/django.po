@@ -7,18 +7,18 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-10-24 12:38+0000\n"
-"PO-Revision-Date: 2019-10-24 14:41+0200\n"
+"POT-Creation-Date: 2019-10-24 13:33+0000\n"
+"PO-Revision-Date: 2019-10-24 15:33+0200\n"
+"Last-Translator: Cédric Bonhomme <cedric@cedricbonhomme.org>\n"
+"Language-Team: \n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"Last-Translator: Cédric Bonhomme <cedric@cedricbonhomme.org>\n"
-"Language-Team: \n"
 "X-Generator: Poedit 2.2.1\n"
 
-#: survey/views.py:80
+#: survey/views.py:78
 msgid ""
 "This is the list of recommendations to improve the information security "
 "maturity in your company, provided that your answers did correctly reflect "
@@ -32,6 +32,13 @@ msgstr ""
 "non plus qu'il s'agit d'une auto-évaluation et qu'elle ne fait qu'effleurer "
 "le niveau de maturité de la sécurité de l'information. Par conséquent, nous "
 "ne sommes pas responsables des résultats de cette enquête."
+
+#: survey/views.py:109
+msgid ""
+"We could not find a survey with the requested key, please start a new one."
+msgstr ""
+"Nous n'avons pas pu trouver un sondage avec la clé demandée, veuillez en "
+"commencer un nouveau."
 
 #: templates/survey/base.html:16
 msgid "Fit4Cybersecurity a CASES self-assessment tool!"
