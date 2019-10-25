@@ -136,6 +136,33 @@ TRANSLATION_UI = {
             'fr': "Votre tableau de résultats",
             'de': "Ihr Ergebnisdiagramm",
         },
+        'request_diagnostic': {
+            'title': {
+                'en': "About the CASES Diagnostic",
+                'fr': "À propos du Diagnostic CASES",
+                'de': "About the CASES Diagnostic",
+            },
+            'description': {
+                'en': "The CASES Diagnostic is a service which analyses the company maturity in the information security depending on company's requirements. The analyse duration can take approxymately 2 hours. A consultant from CASES will come to your companie's premises, and ask around 30 questions concerning your information security, mostly organizational questions and possibly some technical questions. You will receive a detailed report which will contain a maturity estimation as well as recommendations to enhance the information security maturity.",
+                'fr': "Le diagnostic CASES est un service destiné à l'analyse de la maturité d'une entreprise face à la sécurité de l'information qui lui est nécessaire. Avec une durée d'environ 2 heures, un consultant CASES se déplace dans les locaux de l'entreprise, et pose une trentaine de questions pouvant être sur le côté organisationnel aussi bien que le côté un peu plus technique. À l'issue de ce diagnostic, un rapport est envoyé, et il contiendra une estimation de la maturité ainsi que des recommandations pour améliorer la maturité en la sécurité de l'information.",
+                'de': "Der Diagnostic CASES ist ein Service zur Analyse des Reifegrads eines Unternehmens im Hinblick auf die Sicherheit der benötigten Informationen. Mit einer Dauer von ungefähr 2 Stunden kommt ein CASES-Berater zu Ihnen auf ihr Firmengelände und stellt ungefähr 30 Fragen, die sowohl organisatorischer als auch etwas technischer Natur sein können. Am Ende dieses Diagnostic wird ein Bericht verfasst und Ihnen kurze Zeit später übermittelt: er enthält eine Schätzung der Laufzeit sowie Empfehlungen zur Verbesserung der Laufzeit der Informationssicherheit.",
+            },
+            'service_fee': {
+                'en': "The CASES Diagnostic is free of charge and possible for all the companies located in Luxembourg.",
+                'fr': "Le Diagnostic est gratuit et possible pour toute entreprise ayant des locaux au Luxembourg.",
+                'de': "Der Diagnostic ist für jedes Unternehmen mit Sitz in Luxemburg möglich und kostenlos.",
+            },
+            'email_subject': {
+                'en': "Request diagnostic",
+                'fr': "Demander un diagnostic",
+                'de': "Diagnose anfordern",
+            },
+            'email_body': {
+                'en': "Dear Cases Team,\n\nWe would like to request a Diagnostic CASES from you.\n\nHere is our evaluation results identifier: {userId}\n\nHere also additional information that could be useful: \nLastname of the contact: \nFirstname of the contact: \nEmail address of the contact: \nAddress of the company and for the Diagnostic (Luxembourg only): \nDesired language for the Diagnostic: ",
+                'fr': "À l'attention de l'équipe CASES,\n\nNous aimerions planifier un Diagnostic CASES.\n\nVoici l'identifiant lié à notre évaluation: {userId}\n\nVoici également les informations qui vous seront nécessaires: \nNom du point de contact: \nPrénom du point de contact: \nAdresse mail du point de contact: \nAdresse de l'entreprise et du Diagnostic (Luxembourg uniquement): \nLangue souhaitée du Diagnostic: ",
+                'de': "Sehr geehrtes CASES Team, \n\nWir möchten ein Diagnostic CASES mit Ihnen anfordern. \n\nHier finden Sie die ID unserer Bewertungsergebnisse: {userId} \n\nHier finden Sie auch andere nützliche Informationen: \nNachname des Kontakts: \nVorname des Kontakts: \nE-Mail-Adresse des Kontakts: \nAdresse des Unternehmens und des Ortes für den Diagnostic CASES: (nur in Luxemburg): \nGewünschte Sprache für den Diagnostic CASES:",
+            },
+        },
     },
     'question': {
         'continue_later': {

@@ -9,6 +9,9 @@
     <link rel="stylesheet" type="text/css" href="{% static "survey/css/Chart.css" %}" />
 
     <script type="text/javascript" src="{% static "survey/js/survey-questions.js" %}"></script>
+    {% if txtscore >= min_acceptable_score %}
+        <script type="text/javascript" src="{% static "survey/js/send-email.js" %}"></script>
+    {% endif %}
     <script type="text/javascript" src="{% static "survey/js/Chart.bundle.min.js" %}"></script>
 {% endblock %}
 
@@ -28,10 +31,12 @@
                 /100
             </h3>
             {% if txtscore >= min_acceptable_score %}
-                <a href="mailto:info@cases.lu?subject=Diagnostic%20Request&amp;body=Dear&nbsp;Cases&nbsp;Team,&nbsp;&nbsp;We%20would%20like%20to%20request%20diagnostic%20for%20the%20following%20results&nbsp;&nbsp;{% if request.is_secure %}https{% else %}http{% endif %}&#58;&#47;&#47;{{ request.get_host }}&#47;survey&#47;resume&#47;{{userId }}">{{ _('You can request a Diagnostic') }}</a>
+                <h5>
+                    {% include 'survey/requestDiagnosticLink.html' %}
+                </h5>
             {% endif %}
         </div>
-        <div><h4>{{ txtdownload }}:</h4></div>
+        <div><h4>{{ translations.txtdownload }}:</h4></div>
         <div class="text-center py-2">
             <img src="{% static "images/reportLogo.png" %}" alt="DOC ICON">
         </div>
@@ -43,9 +48,17 @@
 
     </div>
     <div class="py-2 px-4">
-        <h2>{{ txtreport }}:</h2>
+        <h2>{{ translations.txtreport }}:</h2>
         {{ description }}
     </div>
+    {% if txtscore >= min_acceptable_score %}
+        <div class="py-2 px-4">
+            <h2>{{ translations.request_diagnostic.title }}:</h2>
+            {{ translations.request_diagnostic.description }}<br />
+            {{ translations.request_diagnostic.service_fee }}<br />
+            {% include 'survey/requestDiagnosticLink.html' %}
+        </div>
+    {% endif %}
     <div class="py-2 px-4 text-center">
         <div style="width: 450px; height: 450px; margin: 0 auto 0 auto"><canvas id="resultChart" width='100%' height='100%'></canvas></div>
         <script>
