@@ -192,11 +192,15 @@ def createAndSendReport(user: SurveyUser, lang: str):
         bX.font.size = Pt(13)
 
         answers_list = SurveyQuestionAnswer.objects.filter(question=question).order_by('aindex')
+        user_answers = SurveyUserAnswer.objects.filter(user=user)
+        user_answers_values = {}
+        for user_answer in user_answers:
+            user_answers_values[user_answer.answer_id] = user_answer
 
         for answer in answers_list:
             row_cells = table.add_row().cells
-            user_answer = SurveyUserAnswer.objects.filter(answer=answer)[0]
 
+            user_answer = user_answers_values[answer.id]
             if user_answer.uvalue > 0:
                 row_cells[0].text = "X"
                 bX = row_cells[0].paragraphs[0].runs[0]
