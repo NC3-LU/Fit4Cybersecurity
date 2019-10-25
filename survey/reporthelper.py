@@ -12,7 +12,8 @@ import matplotlib.pyplot as plt
 
 def getRecommendations(user: SurveyUser, lang: str):
     allAnswers = SurveyQuestionAnswer.objects.all().order_by('question__qindex', 'aindex')
-    translation_key_values = get_formatted_translations(lang, 'R')
+    recommendations_translations = get_formatted_translations(lang, 'R')
+    categories_translations = get_formatted_translations(lang, 'C')
 
     finalReportRecs = {}
 
@@ -23,17 +24,14 @@ def getRecommendations(user: SurveyUser, lang: str):
         if not recommendations.exists():
             continue
 
-        if a.question.id not in finalReportRecs:
-            finalReportRecs[a.question.id] = []
-
         for rec in recommendations:
             if rec.min_e_count.lower() > user.e_count.lower() or rec.max_e_count.lower() < user.e_count.lower():
                 continue
             if (userAnswer.uvalue > 0 and rec.answerChosen) or (userAnswer.uvalue <= 0 and not rec.answerChosen):
-                finalReportRecs[a.question.id].append(translation_key_values[rec.textKey])
-
-        if len(finalReportRecs[a.question.id])<=0:
-            del finalReportRecs[a.question.id]
+                category_name = categories_translations[rec.forAnswer.question.service_category.titleKey]
+                if category_name not in finalReportRecs:
+                    finalReportRecs[category_name] = []
+                finalReportRecs[category_name].append(recommendations_translations[rec.textKey])
 
     return finalReportRecs
 
@@ -138,7 +136,6 @@ def createAndSendReport(user: SurveyUser, lang: str):
 
     doc.add_paragraph()
     recommendationList = getRecommendations(user, lang)
-    #recommendationList = "\n\n".join(recommendationList)
 
     doc.add_page_break()
 
@@ -162,13 +159,13 @@ def createAndSendReport(user: SurveyUser, lang: str):
         doc.add_paragraph(i)
 
 
-    x=1
-    for recLst in recommendationList:
-        doc.add_paragraph(str(x)+". ")
-        rec = recommendationList[recLst]
-        rec = "\n".join(rec)
-        doc.add_paragraph(rec, "List Paragraph")
-        x+=1
+
+    for category, items in recommendationList.items():
+        doc.add_heading(category, level=2)
+        point_number = 1
+        for recommendation in items:
+            doc.add_paragraph(str(point_number) + ". " + recommendation, "List Paragraph")
+            point_number += 1
 
     doc.add_page_break()
 

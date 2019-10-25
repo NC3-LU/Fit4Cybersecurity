@@ -2,8 +2,8 @@ from django.shortcuts import render
 from django.http import HttpResponse, HttpResponseRedirect
 from django.utils.translation import gettext as _
 
-from survey.viewLogic import createUser, handleStartSurvey, saveAndGetQuestion, findUserById, getRecommendationsReport
-from survey.reporthelper import calculateResult, createAndSendReport
+from survey.viewLogic import createUser, handleStartSurvey, saveAndGetQuestion, findUserById
+from survey.reporthelper import calculateResult, createAndSendReport, getRecommendations
 from survey.globals import TRANSLATION_UI, MIN_ACCEPTABLE_SCORE
 from django.contrib import messages
 
@@ -66,7 +66,7 @@ def finish(request):
     textLayout = {
         'title': "Fit4Cybersecurity - " + TRANSLATION_UI['report']['title'][user_lang],
         'description': TRANSLATION_UI['report']['description'][user_lang],
-        'recommendations': getRecommendationsReport(user),
+        'recommendations': getRecommendations(user, user_lang.upper()),
         'userId': user_id,
         'reportlink': "/survey/report",
         'txtscore': txt_score,

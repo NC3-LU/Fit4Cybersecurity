@@ -123,23 +123,6 @@ def findUserById(user_id):
     return SurveyUser.objects.filter(user_id=user_id)[0]
 
 
-def getRecommendationsReport(user: SurveyUser):
-
-    allRecs = getRecommendations(user, user.chosenLang)
-
-    report = []
-    for reportRec in allRecs:
-        lst = []
-        for x in allRecs[reportRec]:
-            txt = x
-            txt = txt.replace("\n", "<br>")
-            lst.append(str(txt))
-
-        report.append("\n".join(lst))
-
-    return report
-
-
 def get_answer_choices(survey_question: SurveyQuestion, user_lang: str):
 
     tuple_answers = []

@@ -122,11 +122,14 @@
         </script>
     </div>
     <div class="py-2 px-4">
-        <ol>
-        {% for x in recommendations %}
-            <li>{{ x | safe }}</li>
+        {% for category, items in recommendations.items %}
+            <h4>{{ category | safe }}</h4>
+            <ol>
+                {% for recommendation in items %}
+                    <li>{{ recommendation | safe }}</li>
+                {% endfor %}
+            </ol>
         {% endfor %}
-        </ol>
     </div>
 
     <button class="btn btn-link" type="button" name="continue-later" data-toggle="modal" data-target="#modal" data-tooltip>{{ translations.continue_later.button }}</button>
