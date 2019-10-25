@@ -6,9 +6,11 @@ from survey.globals import LANG_SELECT, TRANSLATION_UI
 from survey.reporthelper import getRecommendations
 
 
-def createUser(lang):
-
+def createUser(lang: str, sector: str, company_size: str):
     user = SurveyUser()
+    user.sector = sector
+    user.e_count = company_size
+    user.current_question = 1
 
     # prevent the use of custom languages
     langs = [x[0] for x in LANG_SELECT]
@@ -22,33 +24,30 @@ def createUser(lang):
     return user
 
 
-def handleStartSurvey(user: SurveyUser, request):
+def handleStartSurvey(request, lang: str):
 
-    action = '/survey/start/' + user.chosenLang
-    question = TRANSLATION_UI['question']['description'][user.chosenLang.lower()]
-    title = "Fit4Cybersecurity - " + TRANSLATION_UI['question']['title'][user.chosenLang.lower()]
+    action = '/survey/start/' + lang
+    question = TRANSLATION_UI['question']['description'][lang.lower()]
+    title = "Fit4Cybersecurity - " + TRANSLATION_UI['question']['title'][lang.lower()]
 
     if request.method == 'POST':
-
-        form = InitialStartForm(data=request.POST, lang=user.chosenLang)
+        form = InitialStartForm(data=request.POST, lang=lang)
 
         if form.is_valid():
-            user.sector = form.cleaned_data['sector']
-            user.e_count = form.cleaned_data['compSize']
-            user.current_question = 1
-            user.save()
+            user = createUser(lang, form.cleaned_data['sector'], form.cleaned_data['compSize'])
+
+            request.session['lang'] = lang
+            request.session['user_id'] = str(user.user_id)
 
             return None
     else:
-        form = InitialStartForm(lang=user.chosenLang)
-        form.setUID(user.user_id)
+        form = InitialStartForm(lang=lang)
 
     return {
         'title': title,
         'question': question,
         'form': form,
         'action': action,
-        'userId': user.user_id,
     }
 
 def saveAndGetQuestion(user: SurveyUser, request):

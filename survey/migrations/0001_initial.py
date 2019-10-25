@@ -3,6 +3,7 @@
 from django.db import migrations, models
 import django.db.models.deletion
 import uuid
+from survey.globals import COMPANY_SIZE, SECTOR_CHOICES, LANG_SELECT, QUESTION_TYPES, COUNTRIES, TRANSLATION_TYPES, SERVICE_TARGETS
 
 
 class Migration(migrations.Migration):
@@ -18,7 +19,7 @@ class Migration(migrations.Migration):
             fields=[
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('titleKey', models.CharField(max_length=32)),
-                ('qtype', models.CharField(choices=[('M', 'Multiple Choice'), ('S', 'Single Choice'), ('I', 'Integer Slider')], default='M', max_length=1)),
+                ('qtype', models.CharField(choices=QUESTION_TYPES, default='M', max_length=1)),
                 ('qindex', models.IntegerField(unique=True)),
             ],
         ),
@@ -55,9 +56,9 @@ class Migration(migrations.Migration):
             fields=[
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('user_id', models.UUIDField(default=uuid.uuid4)),
-                ('sector', models.CharField(choices=[('gov', 'Government'), ('adm', 'Public Administrations'), ('fin', 'Sinancial Sector'), ('it', 'Information Technology (IT)')], default='gov', max_length=4)),
-                ('e_count', models.CharField(choices=[(0, '1-5'), (1, '6-10'), (2, '10-20'), (3, '20-50'), (4, '50-100'), (5, '100-200'), (6, '200-500'), (7, '500-1000'), (8, '1000-5000'), (9, '5000+')], default=0, max_length=2)),
-                ('chosenLang', models.CharField(choices=[('EN', 'English'), ('FR', 'Français'), ('DE', 'Deutsch')], default='EN', max_length=2)),
+                ('sector', models.CharField(choices=SECTOR_CHOICES, max_length=4)),
+                ('e_count', models.CharField(choices=COMPANY_SIZE, max_length=2)),
+                ('chosenLang', models.CharField(choices=LANG_SELECT, default='EN', max_length=2)),
                 ('current_question', models.IntegerField(default=0)),
                 ('survey_done', models.BooleanField(default=False)),
             ],
@@ -68,8 +69,8 @@ class Migration(migrations.Migration):
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('key', models.CharField(max_length=32)),
                 ('text', models.TextField()),
-                ('lang', models.CharField(choices=[('EN', 'English'), ('FR', 'Français'), ('DE', 'Deutsch')], default='EN', max_length=2)),
-                ('ttype', models.CharField(choices=[('Q', ' Question'), ('A', 'Answer'), ('R', 'Recommendation'), ('S', 'Question Section'), ('C', 'Company Service Category')], default='Q', max_length=1)),
+                ('lang', models.CharField(choices=LANG_SELECT, default='EN', max_length=2)),
+                ('ttype', models.CharField(choices=TRANSLATION_TYPES, default='Q', max_length=1)),
             ],
             options={
                 'unique_together': {('lang', 'id')},
@@ -104,9 +105,9 @@ class Migration(migrations.Migration):
             fields=[
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('textKey', models.CharField(max_length=32)),
-                ('min_e_count', models.CharField(choices=[('a', '1-5'), ('b', '6-10'), ('c', '10-20'), ('d', '20-50'), ('e', '50-100'), ('f', '100-200'), ('g', '200-500'), ('h', '500-1000'), ('i', '1000-5000'), ('j', '5000+')], default='a', max_length=2)),
-                ('max_e_count', models.CharField(choices=[('a', '1-5'), ('b', '6-10'), ('c', '10-20'), ('d', '20-50'), ('e', '50-100'), ('f', '100-200'), ('g', '200-500'), ('h', '500-1000'), ('i', '1000-5000'), ('j', '5000+')], default='j', max_length=2)),
-                ('sector', models.CharField(blank=True, choices=[('gov', 'Government'), ('adm', 'Public Administrations'), ('fin', 'Sinancial Sector'), ('it', 'Information Technology (IT)')], default=None, max_length=4, null=True)),
+                ('min_e_count', models.CharField(choices=COMPANY_SIZE, default='a', max_length=2)),
+                ('max_e_count', models.CharField(choices=COMPANY_SIZE, default='j', max_length=2)),
+                ('sector', models.CharField(blank=True, choices=SECTOR_CHOICES, default=None, max_length=4, null=True)),
                 ('answerChosen', models.BooleanField(default=False)),
                 ('forAnswer', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='survey.SurveyQuestionAnswer')),
             ],
@@ -120,7 +121,7 @@ class Migration(migrations.Migration):
                 ('contact_tel', models.TextField(max_length=32)),
                 ('contact_address_street', models.CharField(max_length=128)),
                 ('contact_address_city', models.CharField(max_length=64)),
-                ('contact_address_country', models.CharField(choices=[('LU', 'Luxembourg'), ('DE', 'Deutschland'), ('BE', 'Belgique'), ('FR', 'France')], max_length=2)),
+                ('contact_address_country', models.CharField(choices=COUNTRIES, max_length=2)),
                 ('contact_address_number', models.IntegerField()),
                 ('contact_address_postcode', models.CharField(max_length=10)),
                 ('notes', models.TextField()),
@@ -130,7 +131,7 @@ class Migration(migrations.Migration):
             name='CompanyService',
             fields=[
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('target', models.CharField(choices=[('SME', 'Small to Medium Size Entreprises'), ('BC', 'Big Company'), ('MN', 'Multinationals Coorporations'), ('IND', 'Independent'), ('PRI', 'Private Person')], max_length=3)),
+                ('target', models.CharField(choices=SERVICE_TARGETS, max_length=3)),
                 ('category', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='survey.SurveyQuestionServiceCategory')),
                 ('company', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='survey.Company')),
             ],

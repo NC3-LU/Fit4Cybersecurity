@@ -13,27 +13,15 @@ def index(request):
 
 
 def start(request, lang="EN"):
-
-    if request.method == 'GET':
-        user = createUser(lang)
-
-        request.session['lang'] = user.chosenLang
-        request.session['user_id'] = str(user.user_id)
-    else:
-        if request.session.get('user_id', None) is None:
-            return HttpResponseRedirect('/')
-
-        user = findUserById(request.session['user_id'])
-
     try:
-        form_data = handleStartSurvey(user, request)
+        form_data = handleStartSurvey(request, lang)
         if form_data is None:
             return HttpResponseRedirect('/survey/question')
     except Exception as e:
         messages.error(request, e)
         return HttpResponseRedirect('/')
 
-    add_form_translations(form_data, user, 'question')
+    add_form_translations(form_data, lang, 'question')
 
     return render(request, 'survey/questions.html', context=form_data)
 
@@ -49,7 +37,7 @@ def getQuestion(request):
     if form_data == -1:
         return finish(request)
 
-    add_form_translations(form_data, user, 'question')
+    add_form_translations(form_data, user.chosenLang, 'question')
 
     return render(request, 'survey/questions.html', context=form_data)
 
@@ -91,7 +79,8 @@ def finish(request):
         'min_acceptable_score': MIN_ACCEPTABLE_SCORE,
     }
 
-    add_form_translations(textLayout, user, 'report')
+    add_form_translations(textLayout, user.chosenLang, 'report')
+
     textLayout['translations']['request_diagnostic'] = {
         'title': TRANSLATION_UI['report']['request_diagnostic']['title'][user_lang],
         'description': TRANSLATION_UI['report']['request_diagnostic']['description'][user_lang],
@@ -123,24 +112,24 @@ def resume(request, userId):
     return HttpResponseRedirect('/survey/question')
 
 
-def add_form_translations(data, user, topic='question'):
+def add_form_translations(data, lang: str, topic='question'):
     next_button_text = ''
     if 'next_button' in TRANSLATION_UI[topic]:
-        next_button_text = TRANSLATION_UI[topic]['next_button'][user.chosenLang.lower()]
+        next_button_text = TRANSLATION_UI[topic]['next_button'][lang.lower()]
 
     data['translations'] = {
         'continue_later': {
-            'button': TRANSLATION_UI[topic]['continue_later']['button'][user.chosenLang.lower()],
-            'title': TRANSLATION_UI[topic]['continue_later']['title'][user.chosenLang.lower()],
-            'text': TRANSLATION_UI[topic]['continue_later']['text'][user.chosenLang.lower()],
-            'button_download': TRANSLATION_UI[topic]['continue_later']['button_download'][user.chosenLang.lower()],
-            'button_close': TRANSLATION_UI[topic]['continue_later']['button_close'][user.chosenLang.lower()],
+            'button': TRANSLATION_UI[topic]['continue_later']['button'][lang.lower()],
+            'title': TRANSLATION_UI[topic]['continue_later']['title'][lang.lower()],
+            'text': TRANSLATION_UI[topic]['continue_later']['text'][lang.lower()],
+            'button_download': TRANSLATION_UI[topic]['continue_later']['button_download'][lang.lower()],
+            'button_close': TRANSLATION_UI[topic]['continue_later']['button_close'][lang.lower()],
         },
         'next_button': next_button_text,
         'leave_survey': {
-            'title': TRANSLATION_UI[topic]['leave_survey']['title'][user.chosenLang.lower()],
-            'yes': TRANSLATION_UI[topic]['leave_survey']['yes'][user.chosenLang.lower()],
-            'no': TRANSLATION_UI[topic]['leave_survey']['no'][user.chosenLang.lower()],
+            'title': TRANSLATION_UI[topic]['leave_survey']['title'][lang.lower()],
+            'yes': TRANSLATION_UI[topic]['leave_survey']['yes'][lang.lower()],
+            'no': TRANSLATION_UI[topic]['leave_survey']['no'][lang.lower()],
         }
     }
 

@@ -1,7 +1,7 @@
 from django.db import models
 
 # import global constants
-from survey.globals import SECTOR_CHOICES,QUESTION_TYPES,COMPANY_SIZE, LANG_SELECT, TRANSLATION_TYPES,COUNTRIES,SERVICE_TARGETS
+from survey.globals import SECTOR_CHOICES, QUESTION_TYPES, COMPANY_SIZE, LANG_SELECT, TRANSLATION_TYPES, COUNTRIES, SERVICE_TARGETS
 import uuid
 
 # Create your models here.
@@ -33,7 +33,7 @@ class TranslationKey(models.Model):
 
     class Meta:
         unique_together = ('lang','id')
-    
+
     def __str__(self):
         return str(self.text)
 
@@ -54,7 +54,7 @@ class SurveySection(models.Model):
     # Section title
 
     sectionTitleKey = models.CharField(max_length=32)
-    
+
     def __str__(self):
         return str(TranslationKey.objects.filter(lang=LOCAL_DEFAULT_LANG).filter(key=self.sectionTitleKey)[0])
 
@@ -102,8 +102,8 @@ class SurveyUser(models.Model):
     # number of employees
 
     user_id = models.UUIDField(default=uuid.uuid4)
-    sector = models.CharField(max_length=4, choices=SECTOR_CHOICES, default=SECTOR_CHOICES[0][0])
-    e_count = models.CharField(max_length=2, choices=COMPANY_SIZE, default=COMPANY_SIZE[0][0])
+    sector = models.CharField(max_length=4, choices=SECTOR_CHOICES)
+    e_count = models.CharField(max_length=2, choices=COMPANY_SIZE)
 
     chosenLang = models.CharField(max_length=2, choices=LANG_SELECT, default=LANG_SELECT[0][0])
 

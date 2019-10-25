@@ -12,8 +12,7 @@ def load_data_from_sql(apps, schema_editor):
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('survey', '0001_initial'),
-        ('survey', '0002_auto_20191010_1212'),
+        ('survey', '0001_initial')
     ]
 
     operations = [

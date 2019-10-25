@@ -7,7 +7,9 @@
 {% block bootstrap4_extra_head %}
     {{ block.super }}
     <link rel="stylesheet" type="text/css" href="{% static "survey/css/survey-questions.css" %}" />
-    <script type="text/javascript" src="{% static "survey/js/survey-questions.js" %}"></script>
+    {% if 'question' in action %}
+        <script type="text/javascript" src="{% static "survey/js/survey-questions.js" %}"></script>
+    {% endif %}
 {% endblock %}
 
 {% block title %}{{ title }}{% endblock %}
@@ -30,14 +32,16 @@
             </div>
         </form>
     </div>
-    <div class="spacer-50"></div>
-    <div class="row">
-        <div class="col">
-            <button class="btn btn-link" type="button" name="continue-later" data-toggle="modal" data-target="#modal" data-tooltip>{{ translations.continue_later.button }}</button>
+
+    {% if 'question' in action %}
+        <div class="spacer-50"></div>
+        <div class="row">
+            <div class="col">
+                <button class="btn btn-link" type="button" name="continue-later" data-toggle="modal" data-target="#modal" data-tooltip>{{ translations.continue_later.button }}</button>
+            </div>
         </div>
-    </div>
 
-    {% include 'survey/continue.html' %}
-
-    {% include 'survey/leaveSurvey.html' %}
+        {% include 'survey/continue.html' %}
+        {% include 'survey/leaveSurvey.html' %}
+    {% endif %}
 {% endblock %}

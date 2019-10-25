@@ -5,7 +5,6 @@ from survey.models import SurveyQuestionAnswer, TranslationKey
 
 
 class InitialStartForm(forms.Form):
-    userid = forms.CharField(widget=forms.HiddenInput())
     sector = forms.ChoiceField(required=True, widget=forms.Select)
     compSize = forms.ChoiceField(required=True, widget=forms.Select, choices=COMPANY_SIZE)
 
@@ -22,9 +21,6 @@ class InitialStartForm(forms.Form):
 
         self.fields['sector'].choices = sectors
         self.fields['compSize'].label = TRANSLATION_UI["form"]["start_form"]["size_question"][lang.lower()]
-
-    def setUID(self, uid):
-        self.fields['userid'].initial = uid
 
 
 class AnswerMChoice(forms.Form):

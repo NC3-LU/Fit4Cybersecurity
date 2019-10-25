@@ -1,8 +1,18 @@
 SECTOR_CHOICES = [
-    ("gov", "Government"),
-    ("adm", "Public Administrations"),
-    ("fin", "Financial Sector"),
-    ("it", "Information Technology (IT)"),
+    ("BANK", "Banking, insurance and real estate"),
+    ("SALE", "Trading, sales and mass distribution"),
+    ("MARK", "Marketing, media and multimedia"),
+    ("BUIL", "Construction industries and civil engineering"),
+    ("REST", "Hotel and restoration, tourism and entertainment"),
+    ("INDU", "Industry"),
+    ("INST", "Installation and maintenance"),
+    ("ARTI", "Creation or placing of objects that are artistic and decorative"),
+    ("HEAL", "Health"),
+    ("SERV", "Home-Care Service or Community Service"),
+    ("SHOW", "Shows"),
+    ("SUPP", "Company Support"),
+    ("LOGI", "Transport and Logistics"),
+    ("FARM", "Farming and fishing, natural spaces and green spaces, animal care"),
 ]
 
 COUNTRIES = [
@@ -46,7 +56,7 @@ LANG_SELECT = [
 ]
 
 TRANSLATION_TYPES = [
-    ("Q", " Question"),
+    ("Q", "Question"),
     ("A", "Answer"),
     ("R", "Recommendation"),
     ("S", "Question Section"),
@@ -259,25 +269,75 @@ TRANSLATION_UI = {
                 'de': "Was ist Ihre Branche?",
             },
             'sector_list': {
-                'gov': {
-                    'en': "Government",
-                    'fr': "Gouvernement",
-                    'de': "Regierung",
+                'BANK': {
+                    'en': "Banking, insurance and real estate",
+                    'fr': "Banque, assurances et immobilier",
+                    'de': "Banken, Versicherungen und Immobilien",
                 },
-                'adm': {
-                    'en': "Public Administrations",
-                    'fr': "Administrations publiques",
-                    'de': "Öffentliche Verwaltungen",
+                'SALE': {
+                    'en': "Trading, sales and mass distribution",
+                    'fr': "Commerce, vente et grande distribution",
+                    'de': "Handel, Verkauf und Massenverteilung",
                 },
-                'fin': {
-                    'en': "Financial Sector",
-                    'fr': "Secteur financier",
-                    'de': "Finanzsektor",
+                'MARK': {
+                    'en': "Marketing, media and multimedia",
+                    'fr': "Communication, média et multimédia",
+                    'de': "Marketing, Medien und Multimedia",
                 },
-                'it': {
-                    'en': "Information Technology (IT)",
-                    'fr': "Information Technologique (IT)",
-                    'de': "Informationstechnologie (IT)",
+                'BUIL': {
+                    'en': "Construction industries and civil engineering",
+                    'fr': "Construction, bâtiment et travaux publics",
+                    'de': "Baugewerbe und Tiefbau",
+                },
+                'REST': {
+                    'en': "Hotel and restoration, tourism and entertainment",
+                    'fr': "Hôtellerie - restauration, tourisme, loisirs et animation",
+                    'de': "Hotel und Gastronomie, Tourismus und Unterhaltung",
+                },
+                'INDU': {
+                    'en': "Industry",
+                    'fr': "Industrie",
+                    'de': "Industrie",
+                },
+                'INST': {
+                    'en': "Installation and maintenance",
+                    'fr': "Installation et maintenance",
+                    'de': "Installation und Wartung",
+                },
+                'ARTI': {
+                    'en': "Creation or placing of objects that are artistic and decorative",
+                    'fr': "Réalisation ou placement d'objets artistiques et décoratifs.",
+                    'de': "Kreation oder Platzierung von künstlerischen und dekorativen Objekten",
+                },
+                'HEAL': {
+                    'en': "Health",
+                    'fr': "Santé",
+                    'de': "Gesundheit",
+                },
+                'SERV': {
+                    'en': "Home-Care Service or Community Service",
+                    'fr': "Services à la personne et à la collectivité",
+                    'de': "Hauspflege oder Zivildienst",
+                },
+                'SHOW': {
+                    'en': "Shows",
+                    'fr': "Spectacle",
+                    'de': "Veranstaltungen",
+                },
+                'SUPP': {
+                    'en': "Company Support",
+                    'fr': "Support à l'entreprise",
+                    'de': "Firmenunterstützung",
+                },
+                'LOGI': {
+                    'en': "Transport and Logistics",
+                    'fr': "Transport et logistique",
+                    'de': "Transport und Logistik",
+                },
+                'FARM': {
+                    'en': "Farming and fishing, natural spaces and green spaces, animal care",
+                    'fr': "Agriculture et pêche, espaces naturels et espaces verts, soins aux animaux",
+                    'de': "Landwirtschaft und Fischerei, Natur- und Grünflächen, Tierpflege",
                 },
             },
             'size_question': {
