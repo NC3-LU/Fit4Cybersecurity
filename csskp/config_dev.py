@@ -1,6 +1,10 @@
 
 ALLOWED_HOSTS = []
 
+SECRET_KEY = 'u__*z&=urjtc0t)b)@5qbt_a#3-354=k9x(j)@eu#h7sb=-66s'
+
+DEBUG = True
+
 DATABASES = {
      'default': {
         'ENGINE': 'django.db.backends.postgresql',
