@@ -33,6 +33,9 @@ def radar_factory(num_vars, frame='circle'):
             super().__init__(*args, **kwargs)
             # rotate plot such that the first axis is at the top
             self.set_theta_zero_location('N')
+            self.set_theta_offset(np.pi / 2)
+            self.set_theta_direction(-1)
+
 
         def fill(self, *args, closed=True, **kwargs):
             """Override fill so that line is closed by default"""

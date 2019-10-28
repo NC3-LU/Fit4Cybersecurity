@@ -59,7 +59,7 @@ def finish(request):
     # also needs saving here!
     # show a "Thank you" and a "get your report" button
 
-    txt_score, radar_max, radar_current, sections_list = calculateResult(user, user_lang.upper())
+    txt_score, radar_current, sections_list = calculateResult(user, user_lang.upper())
 
     diagnostic_email_body = TRANSLATION_UI['report']['request_diagnostic']['email_body'][user_lang]
 
@@ -72,10 +72,7 @@ def finish(request):
         'txtscore': txt_score,
         'chartTitles': str(sections_list),
         'chartlabelYou': TRANSLATION_UI['report']['result'][user_lang],
-        'chartlabelMax': TRANSLATION_UI['report']['resultMax'][user_lang],
         'chartdataYou': str(radar_current),
-        'chartdataMax': str(radar_max),
-        'chartMax': max(radar_max),
         'min_acceptable_score': MIN_ACCEPTABLE_SCORE,
     }
 

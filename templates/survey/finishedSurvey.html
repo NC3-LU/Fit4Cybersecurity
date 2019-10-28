@@ -79,16 +79,6 @@
                             pointHoverBackgroundColor: '#fff',
                             pointHoverBorderColor: 'rgb(255, 99, 132)',
                             data: {{ chartdataYou | safe }},
-                        }, {
-                            label: '{{ chartlabelMax | safe }}',
-                            fill: true,
-                            backgroundColor: 'rgba(54, 162, 235, 0.2)',
-                            borderColor: 'rgba(54, 162, 235)',
-                            pointBackgroundColor: 'rgb(54, 162, 235)',
-                            pointBorderColor: '#fff',
-                            pointHoverBackgroundColor: '#fff',
-                            pointHoverBorderColor: 'rgb(54, 162, 235)',
-                            data: {{ chartdataMax | safe }},
                         }
                     ]
                 },
@@ -97,7 +87,7 @@
                         ticks: {
                             beginAtZero: true,
                             min: 0,
-                            max: {{ chartMax | safe }},
+                            max: 100,
                         }
                     },
                     elements:{

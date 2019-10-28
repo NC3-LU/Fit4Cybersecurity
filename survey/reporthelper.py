@@ -98,7 +98,7 @@ def createAndSendReport(user: SurveyUser, lang: str):
     except:
         raise Exception('Missing file: {}'.format(file_path))
 
-    score, detail_max, details, section_list = calculateResult(user, lang)
+    score, details, section_list = calculateResult(user, lang)
 
     results = results.replace("\n\r", "\n")
     #results = results.replace("$$result$$", str(score))
@@ -126,7 +126,7 @@ def createAndSendReport(user: SurveyUser, lang: str):
             doc.add_paragraph(i)
 
     try:
-        chart_png_file = generate_chart_png(user, detail_max, details, section_list, lang)
+        chart_png_file = generate_chart_png(user, details, section_list, lang)
         doc.add_paragraph()
         paragraph = doc.add_paragraph()
         run = paragraph.add_run()
@@ -292,43 +292,47 @@ def createAndSendReport(user: SurveyUser, lang: str):
 
 
 def calculateResult(user: SurveyUser, lang: str):
-    allUserAnswers = SurveyUserAnswer.objects.filter(uvalue__gt=0, user=user).order_by('answer__question__qindex',
-                                                                                       'answer__aindex')
-    totalscore = sum([x.answer.score for x in allUserAnswers])
-
-    maxeval = {}
-    evaluation = {}
-    sectionlist = {}
-    maxscore = 0
+    total_questions_score = 0
+    total_user_score = 0
+    user_evaluations_per_section = {}
+    max_evaluations_per_section = {}
+    sections_list = []
 
     translation_key_values = get_formatted_translations(lang, 'S')
 
-    for q in SurveyQuestion.objects.all():
-        maxscore += q.maxPoints
-        if q.section.id not in evaluation:
-            evaluation[q.section.id] = 0
-        if q.section.id not in maxeval:
-            maxeval[q.section.id] = 0
+    for question in SurveyQuestion.objects.all():
+        total_questions_score += question.maxPoints
 
-        sectionlist[q.section.id] = translation_key_values[q.section.sectionTitleKey]
+        if question.section.id not in max_evaluations_per_section:
+            max_evaluations_per_section[question.section.id] = 0
+        max_evaluations_per_section[question.section.id] += question.maxPoints
 
-        maxeval[q.section.id] += q.maxPoints
+        section_title = translation_key_values[question.section.sectionTitleKey]
+        if section_title not in sections_list:
+            sections_list.append(section_title)
 
-        uanswers = SurveyUserAnswer.objects.filter(user=user, uvalue__gt=0, answer__question__id=q.id)
-        scores = [x.answer.score for x in uanswers]
-        evaluation[q.section.id] += sum(scores)
+    user_selected_answers = SurveyUserAnswer.objects.filter(user=user, uvalue__gt=0).order_by('answer__question__qindex',
+                                                                                       'answer__aindex')
+    for user_selected_answer in user_selected_answers:
+        section_id = user_selected_answer.answer.question.section.id
 
-    # get the score in percent! with then 100 being maxscore
-    totalscore = round((totalscore * 100) / maxscore)
+        total_user_score += user_selected_answer.answer.score
 
-    sectionlist = [sectionlist[x] for x in sectionlist]
-    evaluation = [evaluation[x] for x in evaluation]
-    maxeval = [maxeval[x] for x in maxeval]
+        if section_id not in user_evaluations_per_section:
+            user_evaluations_per_section[section_id] = 0
+        user_evaluations_per_section[section_id] += user_selected_answer.answer.score
 
-    return totalscore, maxeval, evaluation, sectionlist
+    # get the score in percent! with then 100 being total_questions_score
+    total_user_score = round(total_user_score * 100 / total_questions_score)
+
+    user_evaluations = []
+    for section_id, user_evaluation_per_section in user_evaluations_per_section.items():
+        user_evaluations.append(round(user_evaluation_per_section * 100 / max_evaluations_per_section[section_id]))
+
+    return total_user_score, user_evaluations, sections_list
 
 
-def generate_chart_png(user: SurveyUser, max_eval, evaluation, sections_list, lang):
+def generate_chart_png(user: SurveyUser, evaluation, sections_list, lang):
     """Generates the chart with Matplotlib and returns the path of the generated
     graph which will be included in the report.
     """
@@ -343,20 +347,15 @@ def generate_chart_png(user: SurveyUser, max_eval, evaluation, sections_list, la
                              subplot_kw=dict(projection='radar'))
     fig.subplots_adjust(wspace=0.25, hspace=0.20, top=0.85, bottom=0.05)
 
-    grid_step = max(max_eval) / 5
-    ax.set_rgrids([0, grid_step, grid_step * 2, grid_step * 3, grid_step * 4])
-    ax.set_ylim(0, max(max_eval))
+    ax.set_rgrids([0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100])
+    ax.set_ylim(0, 100)
 
     ax.plot(theta, evaluation, color='r')
     ax.fill(theta, evaluation, facecolor='r', alpha=0.25)
 
-    ax.plot(theta, max_eval, color='b')
-    ax.fill(theta, max_eval, facecolor='b', alpha=0.25)
-
     ax.set_varlabels(spoke_labels)
 
-    ax.legend([TRANSLATION_UI['report']['result'][lang.lower()],
-               TRANSLATION_UI['report']['resultMax'][lang.lower()]], loc=(0.9, .95),
+    ax.legend([TRANSLATION_UI['report']['result'][lang.lower()]], loc=(0.9, .95),
               labelspacing=0.1, fontsize='small')
 
     fig.text(1.0, 1.0, TRANSLATION_UI['report']['chart'][lang.lower()],
