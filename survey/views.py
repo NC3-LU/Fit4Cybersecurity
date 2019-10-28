@@ -6,6 +6,7 @@ from survey.viewLogic import createUser, handleStartSurvey, saveAndGetQuestion, 
 from survey.reporthelper import calculateResult, createAndSendReport, getRecommendations
 from survey.globals import TRANSLATION_UI, MIN_ACCEPTABLE_SCORE
 from django.contrib import messages
+from uuid import UUID
 
 
 def index(request):
@@ -68,6 +69,7 @@ def finish(request):
         'description': TRANSLATION_UI['report']['description'][user_lang],
         'recommendations': getRecommendations(user, user_lang.upper()),
         'userId': user_id,
+        'surveyId': user_id,
         'reportlink': "/survey/report",
         'txtscore': txt_score,
         'chartTitles': str(sections_list),
@@ -97,14 +99,16 @@ def getCompanies(request):
     return HttpResponse("Here is the JSON list of companies that are related to that category")
 
 
-def resume(request, userId):
+def resume(request):
     try:
-        findUserById(str(userId))
+        user_id = UUID(request.GET.get('user_id'))
+
+        findUserById(str(user_id))
     except:
         messages.warning(request, _('We could not find a survey with the requested key, please start a new one.'))
         return HttpResponseRedirect('/')
 
-    request.session['user_id'] = str(userId)
+    request.session['user_id'] = str(user_id)
 
     return HttpResponseRedirect('/survey/question')
 

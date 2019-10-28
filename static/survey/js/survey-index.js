@@ -19,7 +19,7 @@ $(document).ready(function() {
         let resumeCode = $('#resume-code-input').val();
 
         if (resumeCode !== '') {
-            window.location.replace($('#resume-code-input').data('link') + resumeCode);
+            window.location.replace($('#resume-code-input').data('link') + '?user_id=' + resumeCode);
         }
     });
 });

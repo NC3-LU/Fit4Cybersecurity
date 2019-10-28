@@ -7,7 +7,7 @@ urlpatterns = [
     path('start', views.start),
     path('start/<slug:lang>', views.start),
     path('question', views.getQuestion),
-    path('resume/<str:userId>', views.resume),
+    path('resume/', views.resume),
     path('finish', views.finish),
     path('report', views.finish),
     path('report/<slug:lang>', views.showReport),
