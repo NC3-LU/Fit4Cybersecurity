@@ -132,9 +132,9 @@ TRANSLATION_UI = {
             'de': "Zusammenfassung",
         },
         'result': {
-            'en': "Current",
-            'fr': "Maintenant",
-            'de': "Jetzt",
+            'en': "Your results",
+            'fr': "Vos résultats",
+            'de': "Ihre Ergebnisse",
         },
         'chart': {
             'en': "Your results chart",
