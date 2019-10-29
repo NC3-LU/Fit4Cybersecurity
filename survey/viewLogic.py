@@ -87,7 +87,7 @@ def saveAndGetQuestion(user: SurveyUser, request):
                 user.survey_done = True
                 user.save()
 
-                return -1
+                return None
     else:
         form = AnswerMChoice(tuple_answers, lang=user.chosenLang, answers_field_type=survey_question.qtype)
 

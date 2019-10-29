@@ -35,10 +35,13 @@ def getQuestion(request):
         return HttpResponseRedirect('/')
 
     user = findUserById(request.session['user_id'])
+    if user.survey_done:
+        return HttpResponseRedirect('/survey/finish')
+
     form_data = saveAndGetQuestion(user, request)
 
-    if form_data == -1:
-        return finish(request)
+    if form_data is None:
+        return HttpResponseRedirect('/survey/finish')
 
     add_form_translations(form_data, user.chosenLang, 'question')
 

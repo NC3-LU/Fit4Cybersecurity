@@ -45,7 +45,9 @@ $(document).ready(function() {
         submitButton = $("input[type='submit']");
     submitButton.attr("disabled", checkboxes.length > 0);
 
-    checkboxes.click(function() {
+    checkboxes.click(function(element) {
         submitButton.attr("disabled", !checkboxes.is(":checked"));
+
+        $(element).data('is_unique')
     });
 });
