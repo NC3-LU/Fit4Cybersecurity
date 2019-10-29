@@ -7,6 +7,8 @@ from survey.reporthelper import calculateResult, createAndSendReport, getRecomme
 from survey.globals import TRANSLATION_UI, MIN_ACCEPTABLE_SCORE
 from django.contrib import messages
 from uuid import UUID
+from csskp.settings import HASH_KEY
+from cryptography.fernet import Fernet
 
 
 def index(request):
@@ -80,12 +82,14 @@ def finish(request):
 
     add_form_translations(textLayout, user.chosenLang, 'report')
 
+    crypter = Fernet(HASH_KEY)
+
     textLayout['translations']['request_diagnostic'] = {
         'title': TRANSLATION_UI['report']['request_diagnostic']['title'][user_lang],
         'description': TRANSLATION_UI['report']['request_diagnostic']['description'][user_lang],
         'service_fee': TRANSLATION_UI['report']['request_diagnostic']['service_fee'][user_lang],
         'email_subject': TRANSLATION_UI['report']['request_diagnostic']['email_subject'][user_lang],
-        'email_body': diagnostic_email_body.replace('{userId}', user_id)
+        'email_body': diagnostic_email_body.replace('{userId}', str(crypter.encrypt(user_id.encode('utf-8'))))
     }
     textLayout['translations']['txtdownload'] = TRANSLATION_UI['report']['download'][user_lang]
     textLayout['translations']['txtreport'] = TRANSLATION_UI['report']['report'][user_lang]
