@@ -45,9 +45,9 @@ def createAndSendReport(user: SurveyUser, lang: str):
     from docx.enum.text import WD_ALIGN_PARAGRAPH
     from datetime import date
 
-    filepath = settings.BASE_DIR+"/wtemps/"
+    filepath = settings.BASE_DIR + "/wtemps/"
 
-    template = filepath + "template.docx"
+    template = filepath + "template-" + lang.lower() + ".docx"
     doc = Document(template)
 
     everyQuestion = SurveyQuestion.objects.all().order_by('qindex')
@@ -157,8 +157,6 @@ def createAndSendReport(user: SurveyUser, lang: str):
             x += 1
             continue
         doc.add_paragraph(i)
-
-
 
     for category, items in recommendationList.items():
         doc.add_heading(category, level=2)
@@ -277,12 +275,12 @@ def createAndSendReport(user: SurveyUser, lang: str):
     section = doc.sections[0]
     header = section.header
     paragraph = header.paragraphs[0]
-    paragraph.text = str(date.today())+"\t\tFit4Cybersecurity"
+    paragraph.text = str(date.today()) + "\t\tFit4Cybersecurity"
     paragraph.style = doc.styles["Header"]
 
 
     response = HttpResponse(content_type='application/vnd.openxmlformats-officedocument.wordprocessingml.document')
-    response['Content-Disposition'] = 'attachment; filename=result-'+lang.lower()+'.docx'
+    response['Content-Disposition'] = 'attachment; filename=Report_Fit4Cybersecurity_' + str(date.today()) + '_' + lang.lower() + '.docx'
     doc.save(response)
 
     # make checkboxes to recommendation and a single button of get companies

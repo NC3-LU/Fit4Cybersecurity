@@ -153,7 +153,7 @@ TRANSLATION_UI = {
                 'de': "Der Diagnostic CASES ist ein Service zur Analyse des Reifegrads eines Unternehmens im Hinblick auf die Sicherheit der benötigten Informationen. Mit einer Dauer von ungefähr 2 Stunden kommt ein CASES-Berater zu Ihnen auf ihr Firmengelände und stellt ungefähr 30 Fragen, die sowohl organisatorischer als auch etwas technischer Natur sein können. Am Ende dieses Diagnostic wird ein Bericht verfasst und Ihnen kurze Zeit später übermittelt: er enthält eine Schätzung der Laufzeit sowie Empfehlungen zur Verbesserung der Laufzeit der Informationssicherheit.",
             },
             'service_fee': {
-                'en': "The CASES Diagnostic is free of charge and possible for all the companies located in Luxembourg.",
+                'en': "The CASES Diagnostic is available for all the companies located in Luxembourg and free of charge.",
                 'fr': "Le Diagnostic est gratuit et possible pour toute entreprise ayant des locaux au Luxembourg.",
                 'de': "Der Diagnostic ist für jedes Unternehmen mit Sitz in Luxemburg möglich und kostenlos.",
             },
