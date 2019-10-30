@@ -103,7 +103,7 @@ TRANSLATION_UI = {
             'yes': {
                 'en': "Yes",
                 'fr': "Oui",
-                'de': "Ya",
+                'de': "Ja",
             },
             'no': {
                 'en': "No",
@@ -203,9 +203,9 @@ TRANSLATION_UI = {
             'de': "Nächster",
         },
         'description': {
-            'en': "Before we start, we need a little information to be able to give you useful recommendations, once the self-assessment is done.",
-            'fr': "Avant de commencer, nous avons besoin de quelques informations pour pouvoir vous faire des recommandations utiles, une fois l’auto-évaluation terminée.",
-            'de': "Bevor wir beginnen, benötigen wir einige Informationen, um Ihnen nützliche Empfehlungen geben zu können, sobald die Selbsteinschätzung abgeschlossen ist.",
+            'en': "We need a little information to be able to give you useful recommendations, once the self-assessment is done.",
+            'fr': "Nous avons besoin de quelques informations pour pouvoir vous faire des recommandations utiles, une fois l’auto-évaluation terminée.",
+            'de': "Benötigen wir einige Informationen, um Ihnen nützliche Empfehlungen geben zu können, sobald die Selbsteinschätzung abgeschlossen ist.",
         },
         'question': {
             'en': "Question",
@@ -226,7 +226,7 @@ TRANSLATION_UI = {
             'yes': {
                 'en': "Yes",
                 'fr': "Oui",
-                'de': "Ya",
+                'de': "Ja",
             },
             'no': {
                 'en': "No",
@@ -301,7 +301,7 @@ TRANSLATION_UI = {
                 },
                 'ARTI': {
                     'en': "Creation or placing of objects that are artistic and decorative",
-                    'fr': "Réalisation ou placement d'objets artistiques et décoratifs.",
+                    'fr': "Réalisation ou placement d'objets artistiques et décoratifs",
                     'de': "Kreation oder Platzierung von künstlerischen und dekorativen Objekten",
                 },
                 'HEAL': {
