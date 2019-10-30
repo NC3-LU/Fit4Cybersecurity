@@ -15,6 +15,11 @@
 {% block title %}{{ title }}{% endblock %}
 
 {% block content %}
+    {% if 'question' in action %}
+        <div class="progress m-2" style="background-color: #C1CBD5; height: 30px;">
+            <div class="progress-bar" role="progressbar" style="font-size: 1rem; width: {% widthratio current_question_num total_questions_num 100 %}%;" aria-valuenow="{% widthratio current_question_num total_questions_num 100 %}" aria-valuemin="0" aria-valuemax="100">{{ current_question_num }} of {{ total_questions_num }}</div>
+        </div>
+    {% endif %}
     <div class="m-2 p-3">
         <div class="card-title">{{ question }}</div>
 

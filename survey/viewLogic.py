@@ -104,6 +104,8 @@ def saveAndGetQuestion(user: SurveyUser, request):
         'form': form,
         'action': '/survey/question',
         'userId': user.user_id,
+        'current_question_num': user.current_question,
+        'total_questions_num': len(survey_questions),
     }
 
 
