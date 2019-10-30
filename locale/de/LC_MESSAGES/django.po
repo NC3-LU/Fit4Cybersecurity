@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-10-24 13:33+0000\n"
+"POT-Creation-Date: 2019-10-30 07:45+0000\n"
 "PO-Revision-Date: 2019-10-24 15:34+0200\n"
 "Last-Translator: Cédric Bonhomme <cedric@cedricbonhomme.org>\n"
 "Language-Team: \n"
@@ -18,16 +18,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Poedit 2.2.1\n"
 
-#: survey/views.py:78
-msgid ""
-"This is the list of recommendations to improve the information security "
-"maturity in your company, provided that your answers did correctly reflect "
-"the state in your company. Also keep in mind that it is a self-assessment "
-"and only scratches the surface of the information security maturity level "
-"and thus, we are not liable for the results of this survey."
-msgstr ""
-
-#: survey/views.py:109
+#: survey/views.py:115
 msgid ""
 "We could not find a survey with the requested key, please start a new one."
 msgstr ""
@@ -62,10 +53,6 @@ msgstr "Nutzungsbedingungen"
 msgid "Terms of Service"
 msgstr "Nutzungsbedingungen"
 
-#: templates/survey/finishedSurvey.html:31
-msgid "You can request a Diagnostic"
-msgstr "Sie können eine Diagnostic anfordern"
-
 #: templates/survey/index.html:17
 msgid "Welcome to the all new CASES self-assessment tool: Fit4Cybersecurity"
 msgstr ""
@@ -74,11 +61,11 @@ msgstr ""
 #: templates/survey/index.html:18
 msgid ""
 "This survey will ask some questions and present some recommendations, based "
-"on your sector, company size and your answers. Keep in mind, thought, that "
-"it is a self-assessment tool and that it only touches the surface of "
-"information security by giving a very basic maturity level estimate and some "
-"basic recommendations. And that due to the aforementioned reasons, we are "
-"not liable for the result or recommendation implementations."
+"on your sector, company size and your answers. Keep in mind, that it is a "
+"self-assessment tool and that it only touches the surface of information "
+"security by giving a very basic maturity level estimate and some basic "
+"recommendations. And that due to the aforementioned reasons, we are not "
+"liable for the result or recommendation implementations."
 msgstr ""
 
 #: templates/survey/index.html:51
@@ -94,3 +81,6 @@ msgstr ""
 #: templates/survey/resume.html:13
 msgid "Confirm"
 msgstr "Bestätigen"
+
+#~ msgid "You can request a Diagnostic"
+#~ msgstr "Sie können eine Diagnostic anfordern"
