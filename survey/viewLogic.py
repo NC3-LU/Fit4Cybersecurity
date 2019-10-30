@@ -94,6 +94,10 @@ def saveAndGetQuestion(user: SurveyUser, request):
     form.setUID(user.user_id)
     form.set_question_id(survey_question.id)
 
+    uniqueAnswers = SurveyQuestionAnswer.objects.filter(question=survey_question, uniqueAnswer=True)
+    uniqueAnswers = ','.join(str(uniqueAnswer.id) for uniqueAnswer in uniqueAnswers)
+    form.set_unique_answers(uniqueAnswers)
+
     return {
         'title': "Fit4Cybersecurity - " + TRANSLATION_UI['question']['question'][user.chosenLang.lower()] + " " + str(user.current_question),
         'question': TranslationKey.objects.filter(lang=user.chosenLang).filter(key=survey_question.titleKey)[0].text,

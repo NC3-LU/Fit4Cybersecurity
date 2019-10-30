@@ -41,13 +41,46 @@ $(document).ready(function() {
         window.location.replace('/');
     });
 
-    var checkboxes = $("input[type='checkbox'], input[type='radio']"),
+    var checkboxesAndRadios = $("input[type='checkbox'], input[type='radio']"),
+        checkboxes = $("input[type='checkbox']"),
         submitButton = $("input[type='submit']");
-    submitButton.attr("disabled", checkboxes.length > 0);
+    submitButton.attr("disabled", checkboxesAndRadios.length > 0);
 
-    checkboxes.click(function(element) {
-        submitButton.attr("disabled", !checkboxes.is(":checked"));
+    checkboxesAndRadios.click(function() {
+        submitButton.attr("disabled", !checkboxesAndRadios.is(":checked"));
 
-        $(element).data('is_unique')
+        if (checkboxes.length == 0) {
+            return;
+        }
+
+        let currentCheckbox = $(this);
+        let uniqueAnswers = $("input[name=unique_answers]").val().split(',');
+
+        if (uniqueAnswers.length > 0) {
+            if (uniqueAnswers.includes(currentCheckbox.val())) {
+                checkboxesAndRadios.each(function() {
+                    if ($(this).val() != currentCheckbox.val()) {
+                        $(this).prop("disabled", currentCheckbox.is(":checked"));
+                        $(this).parent("label").css("color", currentCheckbox.is(":checked") ? "#ccc" : "");
+                    }
+                });
+            } else {
+                if (currentCheckbox.is(":checked")) {
+                    checkboxesAndRadios.each(function() {
+                        if (uniqueAnswers.includes($(this).val())) {
+                            $(this).prop("disabled", true);
+                            $(this).parent("label").css("color", "#ccc");
+                        }
+                    });
+                } else if (!checkboxesAndRadios.is(":checked")) {
+                    checkboxesAndRadios.each(function() {
+                        if (uniqueAnswers.includes($(this).val())) {
+                            $(this).prop("disabled", false);
+                            $(this).parent("label").css("color", "");
+                        }
+                    });
+                }
+            }
+        }
     });
 });

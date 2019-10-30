@@ -26,6 +26,7 @@ class InitialStartForm(forms.Form):
 class AnswerMChoice(forms.Form):
     userid = forms.CharField(widget=forms.HiddenInput())
     questionid = forms.IntegerField(widget=forms.HiddenInput())
+    unique_answers = forms.CharField(widget=forms.HiddenInput(), required=False)
 
     def __init__(self, tanswers=None, *args, **kwargs):
         self.lang = kwargs.pop('lang')
@@ -58,6 +59,9 @@ class AnswerMChoice(forms.Form):
 
     def set_question_id(self, question_id):
         self.fields['questionid'].initial = question_id
+
+    def set_unique_answers(self, unique_answers_ids):
+        self.fields['unique_answers'].initial = unique_answers_ids
 
     def clean_answers(self):
         answers = self.cleaned_data['answers']
