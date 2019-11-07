@@ -30,42 +30,33 @@ $(document).ready(function() {
     });
 
     $('.logo-link').click(function(e) {
-        let preventRedirectUris = ['/survey/question', '/survey/finish'];
-        if (preventRedirectUris.includes(window.location.pathname)) {
-            e.preventDefault();
-            $("#modal-leave-survey").modal();
-        }
+        e.preventDefault();
+        $("#modal-leave-survey").modal();
     });
 
     $('#redirect-home').click(function() {
         window.location.replace('/');
     });
 
-    var checkboxesAndRadios = $("input[type='checkbox'], input[type='radio']"),
-        checkboxes = $("input[type='checkbox']"),
-        submitButton = $("input[type='submit']");
-    submitButton.attr("disabled", checkboxesAndRadios.length > 0);
-
-    checkboxesAndRadios.click(function() {
+    let processCheckboxSelection = function(checkbox) {
         submitButton.attr("disabled", !checkboxesAndRadios.is(":checked"));
 
         if (checkboxes.length == 0) {
             return;
         }
 
-        let currentCheckbox = $(this);
         let uniqueAnswers = $("input[name=unique_answers]").val().split(',');
 
         if (uniqueAnswers.length > 0) {
-            if (uniqueAnswers.includes(currentCheckbox.val())) {
+            if (uniqueAnswers.includes(checkbox.val())) {
                 checkboxesAndRadios.each(function() {
-                    if ($(this).val() != currentCheckbox.val()) {
-                        $(this).prop("disabled", currentCheckbox.is(":checked"));
-                        $(this).parent("label").css("color", currentCheckbox.is(":checked") ? "#ccc" : "");
+                    if ($(this).val() != checkbox.val()) {
+                        $(this).prop("disabled", checkbox.is(":checked"));
+                        $(this).parent("label").css("color", checkbox.is(":checked") ? "#ccc" : "");
                     }
                 });
             } else {
-                if (currentCheckbox.is(":checked")) {
+                if (checkbox.is(":checked")) {
                     checkboxesAndRadios.each(function() {
                         if (uniqueAnswers.includes($(this).val())) {
                             $(this).prop("disabled", true);
@@ -82,5 +73,28 @@ $(document).ready(function() {
                 }
             }
         }
+    }
+
+    var checkboxesAndRadios = $("input[type='checkbox'], input[type='radio']"),
+        checkboxes = $("input[type='checkbox']"),
+        submitButton = $("input[type='submit']");
+    if (checkboxesAndRadios.length > 0) {
+        processCheckboxSelection(checkboxesAndRadios.filter(':checked').first());
+    }
+
+    if (checkboxes.length > 0) {
+        $(".select-multi-info").show();
+    }
+
+    checkboxesAndRadios.click(function() {
+        processCheckboxSelection($(this));
+    });
+
+    $('.return-to-question').click(function() {
+        window.location.replace('/survey/question/' + $(this).data("return-to-question"));
+    });
+
+    $('.cancel-modifications').click(function() {
+        window.location.replace('/survey/preview#question-' + $(this).data('question-index'));
     });
 });

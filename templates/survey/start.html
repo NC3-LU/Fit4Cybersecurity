@@ -1,0 +1,32 @@
+{% extends 'survey/base.html' %}
+
+{% load bootstrap4 %}
+
+{% load staticfiles %}
+
+{% block bootstrap4_extra_head %}
+    {{ block.super }}
+    <link rel="stylesheet" type="text/css" href="{% static "survey/css/survey-questions.css" %}" />
+{% endblock %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+    <div class="m-2 p-3">
+        <div class="card-title">{{ question }}</div>
+
+        <form action="{{ action }}" method="post" class="form">
+            {% csrf_token %}
+
+            {% bootstrap_form form %}
+
+            {% buttons %}
+                <div class="form-group pt-4">
+                    <div class="d-flex flex-row justify-content-between float-right">
+                        <input class="btn btn-primary" type="submit" value="{{ translations.next_button }}">
+                    </div>
+                </div>
+            {% endbuttons %}
+        </form>
+    </div>
+{% endblock %}

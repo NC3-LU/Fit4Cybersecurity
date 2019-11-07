@@ -23,6 +23,9 @@ Each question has only a question ID - multilanguage
 '''
 
 LOCAL_DEFAULT_LANG = LANG_SELECT[1][0]
+SURVEY_STATUS_IN_PROGRESS = 1
+SURVEY_STATUS_PREVIEW = 2
+SURVEY_STATUS_FINISHED = 3
 
 
 class TranslationKey(models.Model):
@@ -107,11 +110,17 @@ class SurveyUser(models.Model):
 
     chosenLang = models.CharField(max_length=2, choices=LANG_SELECT, default=LANG_SELECT[0][0])
 
-    current_question = models.IntegerField(default=0)
-    survey_done = models.BooleanField(default=False)
+    current_qindex = models.IntegerField(default=0)
+    status = models.SmallIntegerField(default=SURVEY_STATUS_IN_PROGRESS)
+
+    created_at = models.DateField(auto_now_add=True, blank=True)
+    updated_at = models.DateField(auto_now=True, blank=True)
 
     def __str__(self):
         return str(self.user_id)
+
+    def is_survey_in_progress(self):
+        return self.status == SURVEY_STATUS_IN_PROGRESS
 
 
 '''

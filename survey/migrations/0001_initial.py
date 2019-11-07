@@ -4,6 +4,7 @@ from django.db import migrations, models
 import django.db.models.deletion
 import uuid
 from survey.globals import COMPANY_SIZE, SECTOR_CHOICES, LANG_SELECT, QUESTION_TYPES, COUNTRIES, TRANSLATION_TYPES, SERVICE_TARGETS
+from survey.models import SURVEY_STATUS_IN_PROGRESS
 
 
 class Migration(migrations.Migration):
@@ -59,8 +60,10 @@ class Migration(migrations.Migration):
                 ('sector', models.CharField(choices=SECTOR_CHOICES, max_length=4)),
                 ('e_count', models.CharField(choices=COMPANY_SIZE, max_length=2)),
                 ('chosenLang', models.CharField(choices=LANG_SELECT, default='EN', max_length=2)),
-                ('current_question', models.IntegerField(default=0)),
-                ('survey_done', models.BooleanField(default=False)),
+                ('current_qindex', models.IntegerField(default=0)),
+                ('status', models.SmallIntegerField(default=SURVEY_STATUS_IN_PROGRESS)),
+                ('created_at', models.DateField(auto_now_add=True)),
+                ('updated_at', models.DateField(auto_now=True)),
             ],
         ),
         migrations.CreateModel(

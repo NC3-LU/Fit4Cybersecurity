@@ -7,46 +7,46 @@
 {% block bootstrap4_extra_head %}
     {{ block.super }}
     <link rel="stylesheet" type="text/css" href="{% static "survey/css/survey-questions.css" %}" />
-    {% if 'question' in action %}
-        <script type="text/javascript" src="{% static "survey/js/survey-questions.js" %}"></script>
-    {% endif %}
+    <script type="text/javascript" src="{% static "survey/js/survey-questions.js" %}"></script>
 {% endblock %}
 
 {% block title %}{{ title }}{% endblock %}
 
 {% block content %}
-    {% if 'question' in action %}
+    {% if user.is_survey_in_progress %}
         <div class="progress m-2" style="background-color: #C1CBD5; height: 30px;">
-            <div class="progress-bar" role="progressbar" style="font-size: 1rem; width: {% widthratio current_question_num total_questions_num 100 %}%;" aria-valuenow="{% widthratio current_question_num total_questions_num 100 %}" aria-valuemin="0" aria-valuemax="100">{{ current_question_num }} of {{ total_questions_num }}</div>
+            <div class="progress-bar" role="progressbar" style="font-size: 1rem; width: {% widthratio current_question_index total_questions_num 100 %}%;" aria-valuenow="{% widthratio current_question_index total_questions_num 100 %}" aria-valuemin="0" aria-valuemax="100">{{ current_question_index }} of {{ total_questions_num }}</div>
         </div>
     {% endif %}
     <div class="m-2 p-3">
         <div class="card-title">{{ question }}</div>
-
         <form action="{{ action }}" method="post" class="form">
             {% csrf_token %}
 
             {% bootstrap_form form %}
 
-            <div>
-                {% buttons %}
-                    <div class="d-flex flex-row justify-content-between float-right">
-                        <input class="btn btn-primary" type="submit" value="{{ translations.next_button }}">
+            <p class="select-multi-info text-muted pl-4 small" style="display: none;">
+                ** {{ translations.select_multi_descr }}
+            </p>
+
+            {% buttons %}
+                <div class="form-group pt-4">
+                    <div class="d-flex flex-row justify-content-between">
+                        {% if user.is_survey_in_progress %}
+                            {% if current_question_index > 1 %}
+                                <button class="btn btn-primary return-to-question" data-return-to-question="{{ previous_question_index }}" type="button">{{ translations.back_button }}</button>
+                            {% endif %}
+                        {% else %}
+                            <button class="btn btn-primary cancel-modifications" data-question-index="{{ current_question_index }}" type="button">{{ translations.cancel_button }}</button>
+                        {% endif %}
+                        <button class="btn btn-light border border-rounded" type="button" name="continue-later" data-toggle="modal" data-target="#modal">{{ translations.continue_later.button }}</button>
+                        <input class="btn btn-primary" type="submit" value="{% if user.is_survey_in_progress %}{{ translations.next_button }}{% else %}{{ translations.modify_button }}{% endif %}" data-question-index="{{ current_question_index }}">
                     </div>
-                {% endbuttons %}
-            </div>
+                </div>
+            {% endbuttons %}
         </form>
     </div>
 
-    {% if 'question' in action %}
-        <div class="spacer-50"></div>
-        <div class="row">
-            <div class="col">
-                <button class="btn btn-link" type="button" name="continue-later" data-toggle="modal" data-target="#modal" data-tooltip>{{ translations.continue_later.button }}</button>
-            </div>
-        </div>
-
-        {% include 'survey/continue.html' %}
-        {% include 'survey/leaveSurvey.html' %}
-    {% endif %}
+    {% include 'survey/continue.html' %}
+    {% include 'survey/leaveSurvey.html' %}
 {% endblock %}

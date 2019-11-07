@@ -2,6 +2,6 @@
     class="{% if type == 'button' %}btn btn-success{% else %}text-success{% endif %} send-diagnostic-email"
     data-subject="{{ translations.request_diagnostic.email_subject }}"
     data-body="{{ translations.request_diagnostic.email_body }}"
-    data-user-id="{{ userId }}"
+    data-user-id="{{ user.user_id }}"
     href="#"
 >{{ translations.request_diagnostic.email_subject }}</a>

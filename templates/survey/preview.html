@@ -1,0 +1,47 @@
+{% extends 'survey/base.html' %}
+
+{% load bootstrap4 %}
+
+{% load staticfiles %}
+{% block bootstrap4_extra_head %}
+    {{ block.super }}
+    <link rel="stylesheet" type="text/css" href="{% static "survey/css/survey-questions.css" %}" />
+    <script type="text/javascript" src="{% static "survey/js/survey-questions.js" %}"></script>
+    <script type="text/javascript" src="{% static "survey/js/survey-preview.js" %}"></script>
+{% endblock %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+    <div class="py-3 px-4">
+        <h3>{{ translations.title }}</h3>
+        <ol class="pt-4">
+            {% for question_index, question_answers in questions_with_user_answers.items %}
+                <li><h5 id="question-{{ question_index }}">{{ question_answers.question_title | safe }}</h5>
+                    <ul>
+                        {% for user_answer in question_answers.user_answers %}
+                            <li class="{% if user_answer.value > 0 %}text-nowrap font-weight-bold{% else %}disabled text-muted font-weight-light{% endif %}">{{ user_answer.title | safe }}</li>
+                        {% endfor %}
+                    </ul>
+                </li>
+                <div class="p-3">
+                    <button class="btn btn-light border border-rounded modify-question" data-question="{{ question_index }}">{{ translations.modify_button }}</button>
+                </div>
+            {% endfor %}
+        </ol>
+    </div>
+
+    <div class="d-flex flex-row justify-content-between pb-4">
+        <button class="btn btn-light border border-rounded" type="button" name="continue-later" data-toggle="modal" data-target="#modal">{{ translations.continue_later.button }}</button>
+        <form action="{{ action }}" method="post" class="form">
+            {% csrf_token %}
+
+            <input class="btn btn-primary" type="submit" value="{{ translations.validate_answers_button }}">
+        </form>
+    </div>
+
+    {% include 'survey/continue.html' %}
+
+    {% include 'survey/leaveSurvey.html' %}
+
+{% endblock %}

@@ -202,6 +202,21 @@ TRANSLATION_UI = {
             'fr': "Suite",
             'de': "Nächster",
         },
+        'back_button': {
+            'en': "Back",
+            'fr': "Précédent",
+            'de': "Bisherige",
+        },
+        'cancel_button': {
+            'en': 'Cancel',
+            'fr': 'Annuler',
+            'de': 'Stornieren',
+        },
+        'modify_button': {
+            'en': 'Modify',
+            'fr': 'Modifier',
+            'de': 'Ändern',
+        },
         'description': {
             'en': "We need a little information to be able to give you useful recommendations, once the self-assessment is done.",
             'fr': "Nous avons besoin de quelques informations pour pouvoir vous faire des recommandations utiles, une fois l’auto-évaluation terminée.",
@@ -233,6 +248,28 @@ TRANSLATION_UI = {
                 'fr': "Non",
                 'de': "Nein",
             },
+        },
+        'select_multi_descr': {
+            'en': "Multiple answers are possible.",
+            'fr': "Plusieurs réponses sont possibles.",
+            'de': "ehrere Antworten sind gleichzeitig wählbar.",
+        },
+    },
+    'preview': {
+        'title': {
+            'en': "Your answers preview",
+            'fr': "Votre aperçu des réponses",
+            'de': "Ihre Antworten Vorschau",
+        },
+        'modify_button': {
+            'en': "Modify answers",
+            'fr': "Modifier les réponses",
+            'de': "Ändern Sie die Antworten",
+        },
+        'validate_answers_button': {
+            'en': "Validate answers",
+            'fr': "Valider les réponses",
+            'de': "Antworten validieren",
         },
     },
     'document': {
