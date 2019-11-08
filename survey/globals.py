@@ -378,5 +378,17 @@ TRANSLATION_UI = {
                 'de': "Wie viele mitarbeiter?",
             },
         },
+        'questions': {
+            'feedback_label': {
+                'en': "Your feedback",
+                'fr': "Votre retour",
+                'de': "Ihre Rückmeldung",
+            },
+            'feedback_placeholder': {
+                'en': "Please let us know if anything is missing",
+                'fr': "S'il vous plaît laissez-nous savoir si quelque chose est manquant",
+                'de': "Bitte lassen Sie uns wissen, wenn etwas fehlt",
+            }
+        },
     },
 }
