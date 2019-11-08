@@ -102,6 +102,7 @@ def review(request):
             'title': TRANSLATION_UI['review']['title'][lang],
             'validate_answers_button': TRANSLATION_UI['review']['validate_answers_button'][lang],
             'modify_button': TRANSLATION_UI['review']['modify_button'][lang],
+            'feedback_label': TRANSLATION_UI['form']['questions']['feedback_label'][lang],
             'continue_later': {
                 'button': TRANSLATION_UI['question']['continue_later']['button'][lang],
                 'title': TRANSLATION_UI['question']['continue_later']['title'][lang],

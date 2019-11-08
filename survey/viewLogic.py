@@ -187,12 +187,25 @@ def get_questions_with_user_answers(user: SurveyUser):
     questions_translations = get_formatted_translations(user.chosenLang, 'Q')
     answers_translations = get_formatted_translations(user.chosenLang, 'A')
 
+    user_feedbacks = SurveyUserFeedback.objects.filter(user=user, question__isnull=False)
+    feedbacks_per_question = {}
+    for user_feedback in user_feedbacks:
+        feedbacks_per_question[user_feedback.question.qindex] = user_feedback.feedback
+
     questions_with_user_answers = {}
     for survey_user_answer in survey_user_answers:
         question_title = questions_translations[survey_user_answer.answer.question.titleKey]
         question_index = survey_user_answer.answer.question.qindex
         if question_index not in questions_with_user_answers:
-            questions_with_user_answers[question_index] = {'question_title': question_title, 'user_answers': []}
+            feedback = ''
+            if question_index in feedbacks_per_question:
+                feedback = feedbacks_per_question[question_index]
+
+            questions_with_user_answers[question_index] = {
+                'question_title': question_title,
+                'feedback': feedback,
+                'user_answers': []
+            }
 
         questions_with_user_answers[question_index]['user_answers'].append({
             'value': survey_user_answer.uvalue,
