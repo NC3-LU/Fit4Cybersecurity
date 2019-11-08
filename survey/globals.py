@@ -255,9 +255,9 @@ TRANSLATION_UI = {
             'de': "ehrere Antworten sind gleichzeitig wählbar.",
         },
     },
-    'preview': {
+    'review': {
         'title': {
-            'en': "Your answers preview",
+            'en': "Your answers review",
             'fr': "Votre aperçu des réponses",
             'de': "Ihre Antworten Vorschau",
         },

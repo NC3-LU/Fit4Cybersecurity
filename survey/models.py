@@ -24,7 +24,7 @@ Each question has only a question ID - multilanguage
 
 LOCAL_DEFAULT_LANG = LANG_SELECT[1][0]
 SURVEY_STATUS_IN_PROGRESS = 1
-SURVEY_STATUS_PREVIEW = 2
+SURVEY_STATUS_UNDER_REVIEW = 2
 SURVEY_STATUS_FINISHED = 3
 
 
@@ -122,6 +122,12 @@ class SurveyUser(models.Model):
     def is_survey_in_progress(self):
         return self.status == SURVEY_STATUS_IN_PROGRESS
 
+    def is_survey_under_review(self):
+        return self.status == SURVEY_STATUS_UNDER_REVIEW
+
+    def is_survey_finished(self):
+        return self.status == SURVEY_STATUS_FINISHED
+
 
 '''
 class SurveyUserAnswers(models.Model):
@@ -148,6 +154,14 @@ class SurveyUserAnswer(models.Model):
     def __str__(self):
         return str(self.answer)
 
+
+class SurveyUserFeedback(models.Model):
+    user = models.ForeignKey(SurveyUser, on_delete=models.CASCADE)
+    question = models.ForeignKey(SurveyQuestion, on_delete=models.CASCADE, null=True)
+    feedback = models.TextField(null=False, blank=True, default='')
+
+    def __str__(self):
+        return str(self.feedback)
 
 
 class Recommendations(models.Model):

@@ -6,7 +6,7 @@ from django import forms
 from survey.viewLogic import handle_start_survey, handle_question_answers_request, find_user_by_id, get_questions_with_user_answers
 from survey.reporthelper import calculateResult, createAndSendReport, getRecommendations
 from survey.globals import TRANSLATION_UI, MIN_ACCEPTABLE_SCORE
-from survey.models import SURVEY_STATUS_IN_PROGRESS, SURVEY_STATUS_PREVIEW, SURVEY_STATUS_FINISHED, SurveyUser
+from survey.models import SurveyUser, SURVEY_STATUS_FINISHED
 from django.contrib import messages
 from uuid import UUID
 from csskp.settings import HASH_KEY
@@ -36,22 +36,23 @@ def handle_question_form(request, question_index: int):
         return HttpResponseRedirect('/')
 
     user = find_user_by_id(request.session['user_id'])
-    if user.status == SURVEY_STATUS_FINISHED:
+
+    if user.is_survey_finished():
         return HttpResponseRedirect('/survey/finish')
     elif user.current_qindex < question_index or question_index <= 0:
         return HttpResponseRedirect('/survey/question/' + str(user.current_qindex))
 
-    preview_ancher = ''
-    if user.status == SURVEY_STATUS_PREVIEW:
-        preview_ancher = '#question-' + str(question_index)
+    review_ancher = ''
+    if user.is_survey_under_review():
+        review_ancher = '#question-' + str(question_index)
 
     form_data = handle_question_answers_request(request, user, question_index)
 
     if form_data is None:
-        if user.status == SURVEY_STATUS_PREVIEW:
-            return HttpResponseRedirect('/survey/preview' + preview_ancher)
-        else:
-            return HttpResponseRedirect('/survey/question/' + str(user.current_qindex))
+        if user.is_survey_under_review():
+            return HttpResponseRedirect('/survey/review' + review_ancher)
+
+        return HttpResponseRedirect('/survey/question/' + str(user.current_qindex))
 
     add_form_translations(form_data, user.chosenLang, 'question')
 
@@ -61,7 +62,8 @@ def handle_question_form(request, question_index: int):
 def show_report(request, lang):
     user_id = request.session['user_id']
     user = find_user_by_id(user_id)
-    if user.status != SURVEY_STATUS_FINISHED:
+
+    if not user.is_survey_finished():
         messages.error(request, _('To generate a report you have to finish the survey.'))
 
         return HttpResponseRedirect('/')
@@ -74,10 +76,10 @@ def show_report(request, lang):
     return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
 
 
-def preview(request):
+def review(request):
     user_id = request.session['user_id']
     user = find_user_by_id(user_id)
-    if user.status == SURVEY_STATUS_FINISHED:
+    if user.is_survey_finished():
         return HttpResponseRedirect('/survey/finish')
     elif user.is_survey_in_progress():
         return HttpResponseRedirect('/survey/question/' + str(user.current_qindex))
@@ -97,9 +99,9 @@ def preview(request):
         'form': forms.Form(),
         'user': user,
         'translations': {
-            'title': TRANSLATION_UI['preview']['title'][lang],
-            'validate_answers_button': TRANSLATION_UI['preview']['validate_answers_button'][lang],
-            'modify_button': TRANSLATION_UI['preview']['modify_button'][lang],
+            'title': TRANSLATION_UI['review']['title'][lang],
+            'validate_answers_button': TRANSLATION_UI['review']['validate_answers_button'][lang],
+            'modify_button': TRANSLATION_UI['review']['modify_button'][lang],
             'continue_later': {
                 'button': TRANSLATION_UI['question']['continue_later']['button'][lang],
                 'title': TRANSLATION_UI['question']['continue_later']['title'][lang],
@@ -107,16 +109,21 @@ def preview(request):
                 'button_download': TRANSLATION_UI['question']['continue_later']['button_download'][lang],
                 'button_close': TRANSLATION_UI['question']['continue_later']['button_close'][lang],
             },
+            'leave_survey': {
+                'title': TRANSLATION_UI['question']['leave_survey']['title'][lang.lower()],
+                'yes': TRANSLATION_UI['question']['leave_survey']['yes'][lang.lower()],
+                'no': TRANSLATION_UI['question']['leave_survey']['no'][lang.lower()],
+            }
         },
     }
 
-    return render(request, 'survey/preview.html', context=textLayout)
+    return render(request, 'survey/review.html', context=textLayout)
 
 
 def finish(request):
     user_id = request.session['user_id']
     user = find_user_by_id(user_id)
-    if user.status != SURVEY_STATUS_FINISHED:
+    if not user.is_survey_finished():
         return HttpResponseRedirect('/')
 
     user_lang = user.chosenLang.lower()
@@ -184,10 +191,10 @@ def resume(request):
     if user.is_survey_in_progress():
         return HttpResponseRedirect('/survey/question/' + str(user.current_qindex))
 
-    if user.status == SURVEY_STATUS_PREVIEW:
-        return HttpResponseRedirect('/survey/preview')
+    if user.is_survey_under_review():
+        return HttpResponseRedirect('/survey/review')
 
-    if user.status == SURVEY_STATUS_FINISHED:
+    if user.is_survey_finished():
         return HttpResponseRedirect('/survey/finish')
 
     return HttpResponseRedirect('/')

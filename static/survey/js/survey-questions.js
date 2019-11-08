@@ -95,6 +95,15 @@ $(document).ready(function() {
     });
 
     $('.cancel-modifications').click(function() {
-        window.location.replace('/survey/preview#question-' + $(this).data('question-index'));
+        window.location.replace('/survey/review#question-' + $(this).data('question-index'));
+    });
+
+    let feedbackTextarea = $('#id_feedback')
+    if (feedbackTextarea.length > 0 && feedbackTextarea.val() == '') {
+        feedbackTextarea.hide();
+    }
+    $('.feedback-label').click(function() {
+        feedbackTextarea.toggle();
+        $(this).button('toggle');
     });
 });

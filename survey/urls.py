@@ -8,7 +8,7 @@ urlpatterns = [
     path('start/<slug:lang>', views.start),
     path('question/<int:question_index>', views.handle_question_form),
     path('resume/', views.resume),
-    path('preview', views.preview),
+    path('review', views.review),
     path('finish', views.finish),
     path('report', views.finish),
     path('report/<slug:lang>', views.show_report),

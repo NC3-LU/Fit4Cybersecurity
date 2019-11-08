@@ -140,3 +140,27 @@
 .send-diagnostic-email {
     white-space: nowrap;
 }
+
+.feedback-label {
+    display: inline-block;
+    padding: .25em .4em;
+    font-size: 100%;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    padding: 6px 12px;
+}
+.feedback-label:hover {
+    cursor: pointer;
+}
+
+.feedback-label:-webkit-any-link {
+    color: -webkit-link;
+    cursor: pointer;
+}
+
+#id_feedback {
+  height: 120px;
+}

@@ -23,11 +23,13 @@
         <form action="{{ action }}" method="post" class="form">
             {% csrf_token %}
 
-            {% bootstrap_form form %}
+            {% bootstrap_form form exclude="feedback" %}
 
             <p class="select-multi-info text-muted pl-4 small" style="display: none;">
                 ** {{ translations.select_multi_descr }}
             </p>
+
+            {% bootstrap_field form.feedback label_class="btn btn-light border border-rounded feedback-label" %}
 
             {% buttons %}
                 <div class="form-group pt-4">

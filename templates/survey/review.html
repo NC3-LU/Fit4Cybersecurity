@@ -3,11 +3,12 @@
 {% load bootstrap4 %}
 
 {% load staticfiles %}
+
 {% block bootstrap4_extra_head %}
     {{ block.super }}
     <link rel="stylesheet" type="text/css" href="{% static "survey/css/survey-questions.css" %}" />
     <script type="text/javascript" src="{% static "survey/js/survey-questions.js" %}"></script>
-    <script type="text/javascript" src="{% static "survey/js/survey-preview.js" %}"></script>
+    <script type="text/javascript" src="{% static "survey/js/survey-review.js" %}"></script>
 {% endblock %}
 
 {% block title %}{{ title }}{% endblock %}
@@ -41,7 +42,5 @@
     </div>
 
     {% include 'survey/continue.html' %}
-
     {% include 'survey/leaveSurvey.html' %}
-
 {% endblock %}

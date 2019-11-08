@@ -2,7 +2,7 @@ from django.contrib import admin
 from django.template.response import TemplateResponse
 from django.urls import path
 
-from survey.models import SurveyQuestion,SurveyQuestionAnswer,SurveyQuestionServiceCategory,SurveySection,SurveyUser,SurveyUserAnswer,Recommendations,TranslationKey
+from survey.models import SurveyQuestion,SurveyQuestionAnswer,SurveyQuestionServiceCategory,SurveySection,SurveyUser,SurveyUserAnswer,Recommendations,TranslationKey, SurveyUserFeedback
 
 from csskp.settings import HASH_KEY
 from cryptography.fernet import Fernet
@@ -36,9 +36,19 @@ class SurveyUserAdmin(admin.ModelAdmin):
     list_filter = (
         FindUserByHashFilter,
     )
+    list_display = ['id', 'user_id', 'status', 'created_at', 'updated_at']
 
 
-# Register your models here.
+@admin.register(SurveyUserFeedback)
+class SurveyUserFeedbackAdmin(admin.ModelAdmin):
+    list_filter = ['user']
+    list_display = ['id', 'user', 'feedback']
+
+@admin.register(TranslationKey)
+class TranslationKeyAdmin(admin.ModelAdmin):
+    list_filter = ['key']
+    list_display = ['key', 'lang', 'ttype', 'text']
+
 
 admin.site.register(SurveyQuestion)
 admin.site.register(SurveyQuestionAnswer)
@@ -46,4 +56,3 @@ admin.site.register(SurveyQuestionServiceCategory)
 admin.site.register(SurveySection)
 admin.site.register(SurveyUserAnswer)
 admin.site.register(Recommendations)
-admin.site.register(TranslationKey)

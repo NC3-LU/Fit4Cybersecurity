@@ -1,6 +1,6 @@
 from django.utils.html import format_html, mark_safe
 
-from survey.models import SurveyUser, SurveyQuestion, SurveyQuestionAnswer, SurveyUserAnswer, TranslationKey, SURVEY_STATUS_PREVIEW, SURVEY_STATUS_FINISHED
+from survey.models import SurveyUser, SurveyQuestion, SurveyQuestionAnswer, SurveyUserAnswer, TranslationKey, SurveyUserFeedback, SURVEY_STATUS_UNDER_REVIEW
 from survey.forms import InitialStartForm, AnswerMChoice
 from survey.globals import LANG_SELECT, TRANSLATION_UI
 from survey.reporthelper import getRecommendations, get_formatted_translations
@@ -64,14 +64,25 @@ def handle_question_answers_request(request, user: SurveyUser, question_index: i
                      lang=user.chosenLang, answers_field_type=current_question.qtype)
 
         if form.is_valid():
-
             answers = form.cleaned_data['answers']
             save_answers(tuple_answers, answers, user)
+
+            feedback = form.cleaned_data['feedback']
+            if feedback:
+                user_feedback = SurveyUserFeedback.objects.filter(user=user, question=current_question)[:1]
+                if not user_feedback:
+                    user_feedback = SurveyUserFeedback()
+                    user_feedback.user = user
+                    user_feedback.question = current_question
+                else:
+                    user_feedback = user_feedback[0]
+                user_feedback.feedback = feedback
+                user_feedback.save()
 
             if next_question != None:
                 user.current_qindex = next_question.qindex
             else:
-                user.status = SURVEY_STATUS_PREVIEW
+                user.status = SURVEY_STATUS_UNDER_REVIEW
 
             user.save()
 
@@ -82,10 +93,12 @@ def handle_question_answers_request(request, user: SurveyUser, question_index: i
         for user_answer in user_answers:
             selected_answers.append(user_answer.answer.id)
 
+        user_feedback = SurveyUserFeedback.objects.filter(user=user, question=current_question)[:1]
+
         form = AnswerMChoice(tuple_answers, lang=user.chosenLang, answers_field_type=current_question.qtype)
         form.set_answers(selected_answers)
-
-    form.setUID(user.user_id)
+        if user_feedback:
+            form.set_feedback(user_feedback[0].feedback)
 
     uniqueAnswers = SurveyQuestionAnswer.objects.filter(question=current_question, uniqueAnswer=True)
     uniqueAnswers = ','.join(str(uniqueAnswer.id) for uniqueAnswer in uniqueAnswers)
@@ -93,7 +106,7 @@ def handle_question_answers_request(request, user: SurveyUser, question_index: i
 
     return {
         'title': "Fit4Cybersecurity - " + TRANSLATION_UI['question']['question'][user.chosenLang.lower()] + " " + str(current_question.qindex),
-        'question': TranslationKey.objects.filter(lang=user.chosenLang).filter(key=current_question.titleKey)[0].text,
+        'question': TranslationKey.objects.filter(key=current_question.titleKey, lang=user.chosenLang)[0].text,
         'form': form,
         'action': '/survey/question/' + str(current_question.qindex),
         'user': user,
@@ -111,11 +124,10 @@ def save_answers(answer_choices, answers, user):
         if not answer:
             answer = SurveyUserAnswer()
             answer.user = user
+            qanswer = SurveyQuestionAnswer.objects.filter(id=a)[:1]
+            answer.answer = qanswer[0]
         else:
             answer = answer[0]
-
-        qanswer = SurveyQuestionAnswer.objects.filter(id=a)[0]
-        answer.answer = qanswer
 
         answer.uvalue = 0
         if a in user_answers:

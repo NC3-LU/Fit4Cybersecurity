@@ -24,8 +24,10 @@ class InitialStartForm(forms.Form):
 
 
 class AnswerMChoice(forms.Form):
-    userid = forms.CharField(widget=forms.HiddenInput())
     unique_answers = forms.CharField(widget=forms.HiddenInput(), required=False)
+    feedback = forms.CharField(label="Your feedback",
+        widget=forms.Textarea(attrs={'placeholder': 'Please provide a feedback if something is missed'}),
+        required=False)
 
     def __init__(self, tanswers=None, *args, **kwargs):
         self.lang = kwargs.pop('lang')
@@ -53,9 +55,6 @@ class AnswerMChoice(forms.Form):
         if tanswers != None:
             self.fields['answers'].choices = tanswers
 
-    def setUID(self, uid):
-        self.fields['userid'].initial = uid
-
     def set_unique_answers(self, unique_answers_ids):
         self.fields['unique_answers'].initial = unique_answers_ids
 
@@ -80,3 +79,6 @@ class AnswerMChoice(forms.Form):
                     params={'value': answer_text})
 
         return answers
+
+    def set_feedback(self, feedback):
+        self.fields['feedback'].initial = feedback
