@@ -23,10 +23,8 @@ class InitialStartForm(forms.Form):
         self.fields['sector'].choices = sectors
         self.fields['compSize'].label = TRANSLATION_UI["form"]["start_form"]["size_question"][lang.lower()]
 
-        country_label = TRANSLATION_UI["form"]["start_form"]["country"]["label"][lang.lower()]
-        required_error_message = TRANSLATION_UI["form"]["start_form"]["country"]["required_error_message"][lang.lower()]
-        self.fields['country'] = CountryField(blank=False).formfield(label=country_label,
-            required=True, initial="LU", error_messages = {'required': required_error_message})
+        country_label = TRANSLATION_UI["form"]["start_form"]["country_label"][lang.lower()]
+        self.fields['country'] = CountryField(blank=False).formfield(label=country_label, required=True, initial="LU")
 
 
 class AnswerMChoice(forms.Form):
