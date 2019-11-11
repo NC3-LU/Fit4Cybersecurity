@@ -377,6 +377,23 @@ TRANSLATION_UI = {
                 'fr': "Combien d'employés?",
                 'de': "Wie viele mitarbeiter?",
             },
+            'country': {
+                'label': {
+                    'en': "Please select your country",
+                    'fr': "S'il vous plaît sélectionnez votre pays",
+                    'de': "Bitte wählen Sie Ihr Land",
+                },
+                'blank_label': {
+                    'en': "<select country>",
+                    'fr': "<choisissez le pays>",
+                    'de': "<land auswählen>",
+                },
+                'required_error_message': {
+                    'en': "Please select your country",
+                    'fr': "S'il vous plaît sélectionnez votre pays",
+                    'de': "Bitte wählen Sie Ihr Land",
+                },
+            },
         },
         'questions': {
             'feedback_label': {

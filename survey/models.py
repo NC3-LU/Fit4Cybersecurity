@@ -109,6 +109,7 @@ class SurveyUser(models.Model):
     e_count = models.CharField(max_length=2, choices=COMPANY_SIZE)
 
     chosenLang = models.CharField(max_length=2, choices=LANG_SELECT, default=LANG_SELECT[0][0])
+    country_code = models.CharField(max_length=2, blank=False, default='LU')
 
     current_qindex = models.IntegerField(default=0)
     status = models.SmallIntegerField(default=SURVEY_STATUS_IN_PROGRESS)

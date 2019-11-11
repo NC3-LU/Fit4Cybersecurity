@@ -11,6 +11,8 @@
 
 {% block title %}{{ title }}{% endblock %}
 
+{% load i18n %}
+
 {% block content %}
     <div class="m-2 p-3">
         <div class="card-title">{{ question }}</div>
@@ -18,7 +20,9 @@
         <form action="{{ action }}" method="post" class="form">
             {% csrf_token %}
 
-            {% bootstrap_form form %}
+            {% language choosen_lang %}
+                {% bootstrap_form form %}
+            {% endlanguage %}
 
             {% buttons %}
                 <div class="form-group pt-4">

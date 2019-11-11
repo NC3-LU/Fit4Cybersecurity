@@ -58,6 +58,7 @@ INSTALLED_APPS = [
     'django.contrib.sites',
     'survey',
     'bootstrap4',
+    'django_countries',
 ]
 
 MIDDLEWARE = [

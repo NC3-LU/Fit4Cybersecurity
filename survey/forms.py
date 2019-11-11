@@ -2,6 +2,7 @@ from django import forms
 
 from survey.globals import SECTOR_CHOICES, COMPANY_SIZE, TRANSLATION_UI
 from survey.models import SurveyQuestionAnswer, TranslationKey
+from django_countries.fields import CountryField
 
 
 class InitialStartForm(forms.Form):
@@ -21,6 +22,12 @@ class InitialStartForm(forms.Form):
 
         self.fields['sector'].choices = sectors
         self.fields['compSize'].label = TRANSLATION_UI["form"]["start_form"]["size_question"][lang.lower()]
+
+        country_blank_label = TRANSLATION_UI["form"]["start_form"]["country"]["blank_label"][lang.lower()]
+        country_label = TRANSLATION_UI["form"]["start_form"]["country"]["label"][lang.lower()]
+        required_error_message = TRANSLATION_UI["form"]["start_form"]["country"]["required_error_message"][lang.lower()]
+        self.fields['country'] = CountryField(blank_label=country_blank_label).formfield(label=country_label,
+            required=True, error_messages = {'required': required_error_message})
 
 
 class AnswerMChoice(forms.Form):

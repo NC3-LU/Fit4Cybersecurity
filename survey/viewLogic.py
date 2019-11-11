@@ -6,10 +6,11 @@ from survey.globals import LANG_SELECT, TRANSLATION_UI
 from survey.reporthelper import getRecommendations, get_formatted_translations
 
 
-def create_user(lang: str, sector: str, company_size: str):
+def create_user(lang: str, sector: str, company_size: str, country: str):
     user = SurveyUser()
     user.sector = sector
     user.e_count = company_size
+    user.country_code = country
     survey_question = SurveyQuestion.objects.order_by('qindex')[:1]
     user.current_qindex = survey_question[0].qindex
 
@@ -34,7 +35,7 @@ def handle_start_survey(request, lang: str):
         form = InitialStartForm(data=request.POST, lang=lang)
 
         if form.is_valid():
-            user = create_user(lang, form.cleaned_data['sector'], form.cleaned_data['compSize'])
+            user = create_user(lang, form.cleaned_data['sector'], form.cleaned_data['compSize'], form.cleaned_data['country'])
 
             request.session['lang'] = lang
             request.session['user_id'] = str(user.user_id)
@@ -48,6 +49,7 @@ def handle_start_survey(request, lang: str):
         'question': question,
         'form': form,
         'action': action,
+        'choosen_lang': lang,
     }
 
 
