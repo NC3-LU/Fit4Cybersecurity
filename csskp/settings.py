@@ -174,3 +174,15 @@ MESSAGE_TAGS = {
 
 # Default settings
 BOOTSTRAP4 = config.BOOTSTRAP4
+
+# First displayed countries on start survey page
+COUNTRIES_FIRST = [
+    'LU',
+    'BE',
+    'FR',
+    'DE',
+    'NL',
+    'GB',
+]
+
+COUNTRIES_FIRST_BREAK = '---------------------'

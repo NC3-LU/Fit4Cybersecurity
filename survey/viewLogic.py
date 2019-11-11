@@ -17,9 +17,9 @@ def create_user(lang: str, sector: str, company_size: str, country: str):
     # prevent the use of custom languages
     langs = [x[0] for x in LANG_SELECT]
     if lang in langs:
-        user.chosenLang = lang
+        user.choosen_lang = lang
     else:
-        user.chosenLang = LANG_SELECT[0][0]
+        user.choosen_lang = LANG_SELECT[0][0]
 
     user.save()
 
@@ -28,8 +28,8 @@ def create_user(lang: str, sector: str, company_size: str, country: str):
 
 def handle_start_survey(request, lang: str):
     action = '/survey/start/' + lang
-    question = TRANSLATION_UI['question']['description'][lang.lower()]
-    title = "Fit4Cybersecurity - " + TRANSLATION_UI['question']['title'][lang.lower()]
+    question = TRANSLATION_UI['question']['description'][lang]
+    title = "Fit4Cybersecurity - " + TRANSLATION_UI['question']['title'][lang]
 
     if request.method == 'POST':
         form = InitialStartForm(data=request.POST, lang=lang)
@@ -57,13 +57,13 @@ def handle_question_answers_request(request, user: SurveyUser, question_index: i
     previous_question, current_question, next_question, total_questions_num = get_questions_slice(question_index)
 
     try:
-        tuple_answers = get_answer_choices(current_question, user.chosenLang)
+        tuple_answers = get_answer_choices(current_question, user.choosen_lang)
     except Exception as e:
         raise e
 
     if request.method == 'POST':
         form = AnswerMChoice(tuple_answers, data=request.POST,
-                     lang=user.chosenLang, answers_field_type=current_question.qtype)
+                     lang=user.choosen_lang, answers_field_type=current_question.qtype)
 
         if form.is_valid():
             answers = form.cleaned_data['answers']
@@ -97,7 +97,7 @@ def handle_question_answers_request(request, user: SurveyUser, question_index: i
 
         user_feedback = SurveyUserFeedback.objects.filter(user=user, question=current_question)[:1]
 
-        form = AnswerMChoice(tuple_answers, lang=user.chosenLang, answers_field_type=current_question.qtype)
+        form = AnswerMChoice(tuple_answers, lang=user.choosen_lang, answers_field_type=current_question.qtype)
         form.set_answers(selected_answers)
         if user_feedback:
             form.set_feedback(user_feedback[0].feedback)
@@ -107,14 +107,15 @@ def handle_question_answers_request(request, user: SurveyUser, question_index: i
     form.set_unique_answers(uniqueAnswers)
 
     return {
-        'title': "Fit4Cybersecurity - " + TRANSLATION_UI['question']['question'][user.chosenLang.lower()] + " " + str(current_question.qindex),
-        'question': TranslationKey.objects.filter(key=current_question.titleKey, lang=user.chosenLang)[0].text,
+        'title': "Fit4Cybersecurity - " + TRANSLATION_UI['question']['question'][user.choosen_lang] + " " + str(current_question.qindex),
+        'question': TranslationKey.objects.filter(key=current_question.titleKey, lang=user.choosen_lang)[0].text,
         'form': form,
         'action': '/survey/question/' + str(current_question.qindex),
         'user': user,
         'current_question_index': current_question.qindex,
         'previous_question_index': previous_question.qindex,
         'total_questions_num': total_questions_num,
+        'available_langs': [lang[0] for lang in LANG_SELECT],
     }
 
 
@@ -186,8 +187,8 @@ def get_questions_slice(question_index: int):
 
 def get_questions_with_user_answers(user: SurveyUser):
     survey_user_answers = SurveyUserAnswer.objects.filter(user=user).order_by('answer__question__qindex', 'answer__aindex')
-    questions_translations = get_formatted_translations(user.chosenLang, 'Q')
-    answers_translations = get_formatted_translations(user.chosenLang, 'A')
+    questions_translations = get_formatted_translations(user.choosen_lang, 'Q')
+    answers_translations = get_formatted_translations(user.choosen_lang, 'A')
 
     user_feedbacks = SurveyUserFeedback.objects.filter(user=user, question__isnull=False)
     feedbacks_per_question = {}

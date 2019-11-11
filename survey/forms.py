@@ -4,7 +4,6 @@ from survey.globals import SECTOR_CHOICES, COMPANY_SIZE, TRANSLATION_UI
 from survey.models import SurveyQuestionAnswer, TranslationKey
 from django_countries.fields import CountryField
 
-
 class InitialStartForm(forms.Form):
     sector = forms.ChoiceField(required=True, widget=forms.Select)
     compSize = forms.ChoiceField(required=True, widget=forms.Select, choices=COMPANY_SIZE)
@@ -14,17 +13,19 @@ class InitialStartForm(forms.Form):
 
         super().__init__(*args, **kwargs)
 
-        self.fields['sector'].label = TRANSLATION_UI["form"]["start_form"]["sector_question"][lang.lower()]
+        self.fields['sector'].label = TRANSLATION_UI["form"]["start_form"]["sector_question"][lang]
         sectors = []
         for sector_choise in SECTOR_CHOICES:
             sectors.append((sector_choise[0], TRANSLATION_UI["form"]
-               ["start_form"]["sector_list"][sector_choise[0]][lang.lower()]))
+               ["start_form"]["sector_list"][sector_choise[0]][lang]))
 
         self.fields['sector'].choices = sectors
-        self.fields['compSize'].label = TRANSLATION_UI["form"]["start_form"]["size_question"][lang.lower()]
+        self.fields['compSize'].label = TRANSLATION_UI["form"]["start_form"]["size_question"][lang]
 
-        country_label = TRANSLATION_UI["form"]["start_form"]["country_label"][lang.lower()]
-        self.fields['country'] = CountryField(blank=False).formfield(label=country_label, required=True, initial="LU")
+        country_label = TRANSLATION_UI["form"]["start_form"]["country"]["label"][lang]
+        required_error_message = TRANSLATION_UI["form"]["start_form"]["country"]["required_error_message"][lang.lower()]
+        self.fields['country'] = CountryField().formfield(label=country_label, required=True, initial="LU",
+            error_messages = {'required': required_error_message})
 
 
 class AnswerMChoice(forms.Form):
@@ -50,14 +51,14 @@ class AnswerMChoice(forms.Form):
                 label='')
 
         self.fields['answers'].error_messages = {
-            'required': TRANSLATION_UI["form"]["error_messages"]["answer"]["required"][self.lang.lower()]
+            'required': TRANSLATION_UI["form"]["error_messages"]["answer"]["required"][self.lang]
         }
 
         if tanswers != None:
             self.fields['answers'].choices = tanswers
 
-        self.fields['feedback'] = forms.CharField(label=TRANSLATION_UI['form']['questions']['feedback_label'][self.lang.lower()],
-            widget=forms.Textarea(attrs={'placeholder': TRANSLATION_UI['form']['questions']['feedback_placeholder'][self.lang.lower()]}),
+        self.fields['feedback'] = forms.CharField(label=TRANSLATION_UI['form']['questions']['feedback_label'][self.lang],
+            widget=forms.Textarea(attrs={'placeholder': TRANSLATION_UI['form']['questions']['feedback_placeholder'][self.lang]}),
             required=False)
 
     def set_unique_answers(self, unique_answers_ids):
@@ -80,7 +81,7 @@ class AnswerMChoice(forms.Form):
                 answer_text = translation_key[0].text
 
                 raise forms.ValidationError(
-                    TRANSLATION_UI["form"]["error_messages"]["answer"]["unique"][self.lang.lower()],
+                    TRANSLATION_UI["form"]["error_messages"]["answer"]["unique"][self.lang],
                     params={'value': answer_text})
 
         return answers

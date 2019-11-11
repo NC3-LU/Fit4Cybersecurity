@@ -25,7 +25,7 @@ def getRecommendations(user: SurveyUser, lang: str):
             continue
 
         for rec in recommendations:
-            if rec.min_e_count.lower() > user.e_count.lower() or rec.max_e_count.lower() < user.e_count.lower():
+            if rec.min_e_count > user.e_count or rec.max_e_count < user.e_count:
                 continue
             if (userAnswer.uvalue > 0 and rec.answerChosen) or (userAnswer.uvalue <= 0 and not rec.answerChosen):
                 category_name = categories_translations[rec.forAnswer.question.service_category.titleKey]
@@ -47,13 +47,13 @@ def createAndSendReport(user: SurveyUser, lang: str):
 
     filepath = settings.BASE_DIR + "/wtemps/"
 
-    template = filepath + "template-" + lang.lower() + ".docx"
+    template = filepath + "template-" + lang + ".docx"
     doc = Document(template)
 
     everyQuestion = SurveyQuestion.objects.all().order_by('qindex')
 
     introduction = ""
-    file_path = os.path.join(filepath, lang.lower() + '_intro.txt')
+    file_path = os.path.join(filepath, lang + '_intro.txt')
     try:
         with open(file_path, 'r') as f:
             introduction = f.read()
@@ -72,7 +72,7 @@ def createAndSendReport(user: SurveyUser, lang: str):
         doc.add_paragraph(i)
 
     methodDescr = ""
-    file_path = os.path.join(filepath, lang.lower() + '_description.txt')
+    file_path = os.path.join(filepath, lang + '_description.txt')
     try:
         with open(file_path, 'r') as f:
             methodDescr = f.read()
@@ -91,7 +91,7 @@ def createAndSendReport(user: SurveyUser, lang: str):
         doc.add_paragraph(i)
 
     results = ""
-    file_path = os.path.join(filepath, lang.lower() + '_resultdisclaimer.txt')
+    file_path = os.path.join(filepath, lang + '_resultdisclaimer.txt')
     try:
         with open(file_path, 'r') as f:
             results = f.read()
@@ -140,7 +140,7 @@ def createAndSendReport(user: SurveyUser, lang: str):
     doc.add_page_break()
 
     recs = ""
-    file_path = os.path.join(filepath, lang.lower() + '_recs.txt')
+    file_path = os.path.join(filepath, lang + '_recs.txt')
     try:
         with open(file_path, 'r') as f:
             recs = f.read()
@@ -167,7 +167,7 @@ def createAndSendReport(user: SurveyUser, lang: str):
 
     doc.add_page_break()
 
-    doc.add_heading(TRANSLATION_UI['document']['questions'][lang.lower()], level=1)
+    doc.add_heading(TRANSLATION_UI['document']['questions'][lang], level=1)
 
     questions_translations = get_formatted_translations(lang, 'Q')
     answers_translations = get_formatted_translations(lang, 'A')
@@ -280,7 +280,7 @@ def createAndSendReport(user: SurveyUser, lang: str):
 
 
     response = HttpResponse(content_type='application/vnd.openxmlformats-officedocument.wordprocessingml.document')
-    response['Content-Disposition'] = 'attachment; filename=Report_Fit4Cybersecurity_' + str(date.today()) + '_' + lang.lower() + '.docx'
+    response['Content-Disposition'] = 'attachment; filename=Report_Fit4Cybersecurity_' + str(date.today()) + '_' + lang + '.docx'
     doc.save(response)
 
     # make checkboxes to recommendation and a single button of get companies
@@ -353,10 +353,10 @@ def generate_chart_png(user: SurveyUser, evaluation, sections_list, lang):
 
     ax.set_varlabels(spoke_labels)
 
-    ax.legend([TRANSLATION_UI['report']['result'][lang.lower()]], loc=(0.9, .95),
+    ax.legend([TRANSLATION_UI['report']['result'][lang]], loc=(0.9, .95),
               labelspacing=0.1, fontsize='small')
 
-    fig.text(1.0, 1.0, TRANSLATION_UI['report']['chart'][lang.lower()],
+    fig.text(1.0, 1.0, TRANSLATION_UI['report']['chart'][lang],
              horizontalalignment='center', color='black', weight='bold',
              size='large')
 

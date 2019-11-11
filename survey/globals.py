@@ -50,9 +50,9 @@ QUESTION_TYPES = [
 ]
 
 LANG_SELECT = [
-    ("EN", "English"),
-    ("FR", "Français"),
-    ("DE", "Deutsch"),
+    ("en", "English"),
+    ("fr", "Français"),
+    ("de", "Deutsch"),
 ]
 
 TRANSLATION_TYPES = [
@@ -377,10 +377,17 @@ TRANSLATION_UI = {
                 'fr': "Combien d'employés?",
                 'de': "Wie viele mitarbeiter?",
             },
-            'country_label': {
-                'en': "Please select your country",
-                'fr': "S'il vous plaît sélectionnez votre pays",
-                'de': "Bitte wählen Sie Ihr Land",
+            'country': {
+                'label': {
+                    'en': "Please select your country",
+                    'fr': "S'il vous plaît sélectionnez votre pays",
+                    'de': "Bitte wählen Sie Ihr Land",
+                },
+                'required_error_message': {
+                    'en': "Please select your country",
+                    'fr': "S'il vous plaît sélectionnez votre pays",
+                    'de': "Bitte wählen Sie Ihr Land",
+                },
             },
         },
         'questions': {

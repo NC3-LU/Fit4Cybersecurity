@@ -5,7 +5,7 @@ from django import forms
 
 from survey.viewLogic import handle_start_survey, handle_question_answers_request, find_user_by_id, get_questions_with_user_answers
 from survey.reporthelper import calculateResult, createAndSendReport, getRecommendations
-from survey.globals import TRANSLATION_UI, MIN_ACCEPTABLE_SCORE
+from survey.globals import TRANSLATION_UI, MIN_ACCEPTABLE_SCORE, LANG_SELECT
 from survey.models import SurveyUser, SURVEY_STATUS_FINISHED
 from django.contrib import messages
 from uuid import UUID
@@ -54,9 +54,29 @@ def handle_question_form(request, question_index: int):
 
         return HttpResponseRedirect('/survey/question/' + str(user.current_qindex))
 
-    add_form_translations(form_data, user.chosenLang, 'question')
+    add_form_translations(form_data, user.choosen_lang, 'question')
 
     return render(request, 'survey/questions.html', context=form_data)
+
+
+def change_lang(request, lang: str):
+    if request.session.get('user_id', None) is None:
+        return HttpResponseRedirect('/')
+
+    user = find_user_by_id(request.session['user_id'])
+    user.choosen_lang = lang
+    user.save()
+
+    if user.is_survey_in_progress():
+        return HttpResponseRedirect('/survey/question/' + str(user.current_qindex))
+
+    if user.is_survey_under_review():
+        return HttpResponseRedirect('/survey/review')
+
+    if user.is_survey_finished():
+        return HttpResponseRedirect('/survey/finish')
+
+    return HttpResponseRedirect('/')
 
 
 def show_report(request, lang):
@@ -92,7 +112,7 @@ def review(request):
 
     questions_with_user_answers = get_questions_with_user_answers(user)
 
-    lang = user.chosenLang.lower()
+    lang = user.choosen_lang
 
     textLayout = {
         'questions_with_user_answers': questions_with_user_answers,
@@ -111,11 +131,12 @@ def review(request):
                 'button_close': TRANSLATION_UI['question']['continue_later']['button_close'][lang],
             },
             'leave_survey': {
-                'title': TRANSLATION_UI['question']['leave_survey']['title'][lang.lower()],
-                'yes': TRANSLATION_UI['question']['leave_survey']['yes'][lang.lower()],
-                'no': TRANSLATION_UI['question']['leave_survey']['no'][lang.lower()],
+                'title': TRANSLATION_UI['question']['leave_survey']['title'][lang],
+                'yes': TRANSLATION_UI['question']['leave_survey']['yes'][lang],
+                'no': TRANSLATION_UI['question']['leave_survey']['no'][lang],
             }
         },
+        'available_langs': [lang[0] for lang in LANG_SELECT],
     }
 
     return render(request, 'survey/review.html', context=textLayout)
@@ -127,17 +148,17 @@ def finish(request):
     if not user.is_survey_finished():
         return HttpResponseRedirect('/')
 
-    user_lang = user.chosenLang.lower()
+    user_lang = user.choosen_lang
 
     # make survey readonly and show results.
     # also needs saving here!
     # show a "Thank you" and a "get your report" button
 
-    txt_score, radar_current, sections_list = calculateResult(user, user_lang.upper())
+    txt_score, radar_current, sections_list = calculateResult(user, user_lang)
 
     diagnostic_email_body = TRANSLATION_UI['report']['request_diagnostic']['email_body'][user_lang]
 
-    recommendations = getRecommendations(user, user_lang.upper())
+    recommendations = getRecommendations(user, user_lang)
     # To properly display breaking lines \n on html page.
     for rx in recommendations:
         recommendations[rx] = [x.replace("\n", "<br>") for x in recommendations[rx]]
@@ -153,9 +174,10 @@ def finish(request):
         'chartlabelYou': TRANSLATION_UI['report']['result'][user_lang],
         'chartdataYou': str(radar_current),
         'min_acceptable_score': MIN_ACCEPTABLE_SCORE,
+        'available_langs': [lang[0] for lang in LANG_SELECT],
     }
 
-    add_form_translations(textLayout, user.chosenLang, 'report')
+    add_form_translations(textLayout, user.choosen_lang, 'report')
 
     crypter = Fernet(HASH_KEY)
 
@@ -204,29 +226,29 @@ def resume(request):
 def add_form_translations(data, lang: str, topic='question'):
     data['translations'] = {
         'continue_later': {
-            'button': TRANSLATION_UI[topic]['continue_later']['button'][lang.lower()],
-            'title': TRANSLATION_UI[topic]['continue_later']['title'][lang.lower()],
-            'text': TRANSLATION_UI[topic]['continue_later']['text'][lang.lower()],
-            'button_download': TRANSLATION_UI[topic]['continue_later']['button_download'][lang.lower()],
-            'button_close': TRANSLATION_UI[topic]['continue_later']['button_close'][lang.lower()],
+            'button': TRANSLATION_UI[topic]['continue_later']['button'][lang],
+            'title': TRANSLATION_UI[topic]['continue_later']['title'][lang],
+            'text': TRANSLATION_UI[topic]['continue_later']['text'][lang],
+            'button_download': TRANSLATION_UI[topic]['continue_later']['button_download'][lang],
+            'button_close': TRANSLATION_UI[topic]['continue_later']['button_close'][lang],
         },
         'leave_survey': {
-            'title': TRANSLATION_UI[topic]['leave_survey']['title'][lang.lower()],
-            'yes': TRANSLATION_UI[topic]['leave_survey']['yes'][lang.lower()],
-            'no': TRANSLATION_UI[topic]['leave_survey']['no'][lang.lower()],
+            'title': TRANSLATION_UI[topic]['leave_survey']['title'][lang],
+            'yes': TRANSLATION_UI[topic]['leave_survey']['yes'][lang],
+            'no': TRANSLATION_UI[topic]['leave_survey']['no'][lang],
         }
     }
 
     if 'next_button' in TRANSLATION_UI[topic]:
-        data['translations']['next_button'] = TRANSLATION_UI[topic]['next_button'][lang.lower()]
+        data['translations']['next_button'] = TRANSLATION_UI[topic]['next_button'][lang]
     if 'back_button' in TRANSLATION_UI[topic]:
-        data['translations']['back_button'] = TRANSLATION_UI[topic]['back_button'][lang.lower()]
+        data['translations']['back_button'] = TRANSLATION_UI[topic]['back_button'][lang]
     if 'modify_button' in TRANSLATION_UI[topic]:
-        data['translations']['modify_button'] = TRANSLATION_UI[topic]['modify_button'][lang.lower()]
+        data['translations']['modify_button'] = TRANSLATION_UI[topic]['modify_button'][lang]
     if 'cancel_button' in TRANSLATION_UI[topic]:
-        data['translations']['cancel_button'] = TRANSLATION_UI[topic]['cancel_button'][lang.lower()]
+        data['translations']['cancel_button'] = TRANSLATION_UI[topic]['cancel_button'][lang]
     if 'select_multi_descr' in TRANSLATION_UI[topic]:
-        data['translations']['select_multi_descr'] = TRANSLATION_UI[topic]['select_multi_descr'][lang.lower()]
+        data['translations']['select_multi_descr'] = TRANSLATION_UI[topic]['select_multi_descr'][lang]
 
 
 def get_terms(request):

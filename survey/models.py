@@ -108,7 +108,7 @@ class SurveyUser(models.Model):
     sector = models.CharField(max_length=4, choices=SECTOR_CHOICES)
     e_count = models.CharField(max_length=2, choices=COMPANY_SIZE)
 
-    chosenLang = models.CharField(max_length=2, choices=LANG_SELECT, default=LANG_SELECT[0][0])
+    choosen_lang = models.CharField(max_length=2, choices=LANG_SELECT, default=LANG_SELECT[0][0])
     country_code = models.CharField(max_length=2, blank=False, default='LU')
 
     current_qindex = models.IntegerField(default=0)
