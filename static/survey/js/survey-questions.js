@@ -103,6 +103,8 @@ $(document).ready(function() {
             $(this).css('height', '120px');
         })
         .focusout(function() {
-            $(this).css('height', '40px');
+            $(this).css('height', '60px');
         });
+
+
 });
