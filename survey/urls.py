@@ -13,5 +13,6 @@ urlpatterns = [
     path('finish', views.finish),
     path('report', views.finish),
     path('report/<slug:lang>', views.show_report),
+    path('feedback', views.save_general_feedback),
     path('companies', views.get_companies),
 ]

@@ -32,8 +32,6 @@
                 ** {{ translations.select_multi_descr }}
             </p>
 
-            {% bootstrap_field form.feedback label_class="feedback-label" %}
-
             {% buttons %}
                 <div class="form-group pt-4">
                     <div class="d-flex flex-row justify-content-between">
@@ -49,6 +47,16 @@
                     </div>
                 </div>
             {% endbuttons %}
+
+            <div class="form-group pt-4">
+                {% bootstrap_field form.feedback label_class="feedback-label" %}
+                <p class="select-multi-info text-muted pl-4 mb-0 small"">
+                    * {{ translations.feedback_descr1 }}
+                </p>
+                <p class="select-multi-info text-muted pl-4 mb-0 small"">
+                    ** {{ translations.feedback_descr2 }}
+                </p>
+            </div>
         </form>
     </div>
 

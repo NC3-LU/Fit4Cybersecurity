@@ -88,3 +88,17 @@ class AnswerMChoice(forms.Form):
 
     def set_feedback(self, feedback):
         self.fields['feedback'].initial = feedback
+
+
+class GeneralFeedback(forms.Form):
+    def __init__(self, *args, **kwargs):
+        lang = kwargs.pop('lang')
+
+        super().__init__(*args, **kwargs)
+
+        self.fields['general_feedback'] = forms.CharField(label=TRANSLATION_UI['report']['general_feedback']['label'][lang],
+            widget=forms.Textarea(attrs={'placeholder': TRANSLATION_UI['report']['general_feedback']['placeholder'][lang]}),
+            required=True)
+
+    def set_general_feedback(self, feedback):
+        self.fields['general_feedback'].initial = feedback

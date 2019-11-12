@@ -101,10 +101,10 @@ $(document).ready(function() {
     $('#id_feedback')
         .click(function() {
             $(this).css('height', '120px');
+            $(this).css('width', '80%');
         })
         .focusout(function() {
             $(this).css('height', '60px');
+            $(this).css('width', 'auto');
         });
-
-
 });

@@ -1,7 +1,7 @@
 from django.utils.html import format_html, mark_safe
 
 from survey.models import SurveyUser, SurveyQuestion, SurveyQuestionAnswer, SurveyUserAnswer, TranslationKey, SurveyUserFeedback, SURVEY_STATUS_UNDER_REVIEW
-from survey.forms import InitialStartForm, AnswerMChoice
+from survey.forms import InitialStartForm, AnswerMChoice, GeneralFeedback
 from survey.globals import LANG_SELECT, TRANSLATION_UI
 from survey.reporthelper import getRecommendations, get_formatted_translations
 
@@ -216,3 +216,30 @@ def get_questions_with_user_answers(user: SurveyUser):
         })
 
     return questions_with_user_answers
+
+
+def handle_general_feedback(user: SurveyUser(), request):
+    user_feedback = SurveyUserFeedback.objects.filter(user=user, question__isnull=True)[:1]
+
+    if request.method == 'POST':
+        general_feedback_form = GeneralFeedback(data=request.POST, lang=user.choosen_lang)
+
+        if general_feedback_form.is_valid():
+            if user_feedback:
+                user_feedback = user_feedback[0]
+            else:
+                user_feedback = SurveyUserFeedback()
+                user_feedback.user = user
+
+            user_feedback.feedback = general_feedback_form.cleaned_data['general_feedback']
+            user_feedback.save()
+
+            return general_feedback_form
+    else:
+        general_feedback_form = GeneralFeedback(lang=user.choosen_lang)
+
+    if user_feedback:
+        general_feedback_form.set_general_feedback(user_feedback[0].feedback)
+
+
+    return general_feedback_form

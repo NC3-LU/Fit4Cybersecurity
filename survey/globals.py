@@ -69,9 +69,9 @@ TRANSLATION_UI = {
     'report': {
         'continue_later': {
             'button': {
-                'en': "restore results",
-                'fr': "restaurer les résultats",
-                'de': "ergebnisse wiederherstellen",
+                'en': "Your results link",
+                'fr': "Votre lien de résultats",
+                'de': "Ihr Ergebnislink",
             },
             'title': {
                 'en': "Get the results later",
@@ -168,6 +168,38 @@ TRANSLATION_UI = {
                 'de': "Sehr geehrtes CASES Team, \n\nWir möchten ein Diagnostic CASES mit Ihnen anfordern. \n\nHier finden Sie die ID unserer Bewertungsergebnisse: {userId} \n\nHier finden Sie auch andere nützliche Informationen: \nNachname des Kontakts: \nVorname des Kontakts: \nE-Mail-Adresse des Kontakts: \nAdresse des Unternehmens und des Ortes für den Diagnostic CASES: (nur in Luxemburg): \nGewünschte Sprache für den Diagnostic CASES:",
             },
         },
+        'general_feedback': {
+            'button': {
+                'en': "Your feedback",
+                'fr': "Vos retours",
+                'de': "Ihre Rückmeldung",
+            },
+            'title': {
+                'en': "Please provide your feedback",
+                'fr': "S'il vous plaît fournir vos commentaires",
+                'de': "Bitte geben Sie Ihr Feedback",
+            },
+            'button_close': {
+                'en': "Close",
+                'fr': "Fermer",
+                'de': "Schließen",
+            },
+            'button_send': {
+                'en': "Send",
+                'fr': "Envoyer",
+                'de': "Senden",
+            },
+            'label': {
+                'en': "Your feedback",
+                'fr': "Vos retours",
+                'de': "Ihre Rückmeldung",
+            },
+            'placeholder': {
+                'en': "Please share your opinion about our tool",
+                'fr': "S'il vous plaît partagez votre opinion sur notre outil",
+                'de': "Bitte teilen Sie Ihre Meinung zu unserem Tool",
+            },
+        },
     },
     'question': {
         'continue_later': {
@@ -254,6 +286,16 @@ TRANSLATION_UI = {
             'fr': "Plusieurs réponses sont possibles.",
             'de': "ehrere Antworten sind gleichzeitig wählbar.",
         },
+        'feedback_descr1': {
+            'en': "This text field should not be used to answer on the question.",
+            'fr': "Ce champ de texte ne doit pas être utilisé pour répondre à la question.",
+            'de': "Dieses Textfeld sollte nicht zur Beantwortung der Frage verwendet werden.",
+        },
+        'feedback_descr2': {
+            'en': "Please do not provide any sensitive or confidential data which may refer to your identity.",
+            'fr': "Veuillez ne fournir aucune donnée sensible ou confidentielle pouvant faire référence à votre identité.",
+            'de': "Bitte geben Sie keine sensiblen oder vertraulichen Daten an, die sich auf Ihre Identität beziehen könnten.",
+        }
     },
     'review': {
         'title': {

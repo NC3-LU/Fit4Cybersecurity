@@ -3,7 +3,7 @@ from django.http import HttpResponse, HttpResponseRedirect
 from django.utils.translation import gettext as _
 from django import forms
 
-from survey.viewLogic import handle_start_survey, handle_question_answers_request, find_user_by_id, get_questions_with_user_answers
+from survey.viewLogic import handle_start_survey, handle_question_answers_request, find_user_by_id, get_questions_with_user_answers, handle_general_feedback
 from survey.reporthelper import calculateResult, createAndSendReport, getRecommendations
 from survey.globals import TRANSLATION_UI, MIN_ACCEPTABLE_SCORE, LANG_SELECT
 from survey.models import SurveyUser, SURVEY_STATUS_FINISHED
@@ -175,6 +175,7 @@ def finish(request):
         'chartdataYou': str(radar_current),
         'min_acceptable_score': MIN_ACCEPTABLE_SCORE,
         'available_langs': [lang[0] for lang in LANG_SELECT],
+        'general_feedback_form': handle_general_feedback(user, request)
     }
 
     add_form_translations(textLayout, user.choosen_lang, 'report')
@@ -190,6 +191,12 @@ def finish(request):
     }
     textLayout['translations']['txtdownload'] = TRANSLATION_UI['report']['download'][user_lang]
     textLayout['translations']['txtreport'] = TRANSLATION_UI['report']['report'][user_lang]
+    textLayout['translations']['general_feedback'] = {
+        'button': TRANSLATION_UI['report']['general_feedback']['button'][user_lang],
+        'title': TRANSLATION_UI['report']['general_feedback']['title'][user_lang],
+        'button_close': TRANSLATION_UI['report']['general_feedback']['button_close'][user_lang],
+        'button_send': TRANSLATION_UI['report']['general_feedback']['button_send'][user_lang],
+    }
 
     return render(request, 'survey/finishedSurvey.html', context=textLayout)
 
@@ -223,6 +230,29 @@ def resume(request):
     return HttpResponseRedirect('/')
 
 
+def save_general_feedback(request):
+    user_id = request.session['user_id']
+    user = find_user_by_id(user_id)
+    if not user.is_survey_finished():
+        return HttpResponseRedirect('/')
+
+    form = handle_general_feedback(user, request)
+
+    if user.is_survey_finished():
+        if form.errors:
+            messages.warning(request, _('Feedback sending errors: ' + form.errors.split(', ')))
+
+        return HttpResponseRedirect('/survey/finish')
+
+    if user.is_survey_in_progress():
+        return HttpResponseRedirect('/survey/question/' + str(user.current_qindex))
+
+    if user.is_survey_under_review():
+        return HttpResponseRedirect('/survey/review')
+
+    return HttpResponseRedirect('/')
+
+
 def add_form_translations(data, lang: str, topic='question'):
     data['translations'] = {
         'continue_later': {
@@ -249,6 +279,9 @@ def add_form_translations(data, lang: str, topic='question'):
         data['translations']['cancel_button'] = TRANSLATION_UI[topic]['cancel_button'][lang]
     if 'select_multi_descr' in TRANSLATION_UI[topic]:
         data['translations']['select_multi_descr'] = TRANSLATION_UI[topic]['select_multi_descr'][lang]
+    if 'feedback_descr1' in TRANSLATION_UI[topic] and 'feedback_descr2' in TRANSLATION_UI[topic]:
+        data['translations']['feedback_descr1'] = TRANSLATION_UI[topic]['feedback_descr1'][lang]
+        data['translations']['feedback_descr2'] = TRANSLATION_UI[topic]['feedback_descr2'][lang]
 
 
 def get_terms(request):

@@ -50,6 +50,8 @@
 
         <h2>{{ translations.txtreport }}:</h2>
         {{ description }}
+
+        <p><button class="pl-0 btn btn-link" type="button" name="continue-later" data-toggle="modal" data-target="#modal">{{ translations.continue_later.button }}</button></p>
     </div>
     {% if txtscore >= min_acceptable_score %}
         <div class="py-2 px-4">
@@ -122,7 +124,29 @@
         {% endfor %}
     </div>
 
-    <button class="btn btn-link" type="button" name="continue-later" data-toggle="modal" data-target="#modal">{{ translations.continue_later.button }}</button>
+    <div class="pb-4" style="text-align: center">
+        <button class="btn btn-light border border-rounded" type="button" name="general-feedback" data-toggle="modal" data-target="#modal-feedback">{{ translations.general_feedback.button }}</button>
+    </div>
+
+    <div class="modal fade" tabindex="-2" role="dialog" id="modal-feedback" aria-labelledby="Fit4Cybersecurity Feedback" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-header">
+                <h4>{{ translations.general_feedback.title }}</h4>
+            </div>
+            <div class="modal-content">
+                <form action="/survey/feedback" method="POST">
+                    {% csrf_token %}
+
+                    {% bootstrap_form general_feedback_form label_class="d-none" %}
+
+                    <div class="content">
+                        <button class="close-popup btn btn-link float-left" type="button" data-dismiss="modal">{{ translations.general_feedback.button_close }}</button>
+                        <input type="submit" class="btn btn-primary float-right" value="{{ translations.general_feedback.button_send }}" />
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
 
     {% include 'survey/continue.html' %}
     {% include 'survey/leaveSurvey.html' %}
