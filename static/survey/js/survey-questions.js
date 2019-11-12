@@ -98,12 +98,11 @@ $(document).ready(function() {
         window.location.replace('/survey/review#question-' + $(this).data('question-index'));
     });
 
-    let feedbackTextarea = $('#id_feedback')
-    if (feedbackTextarea.length > 0 && feedbackTextarea.val() == '') {
-        feedbackTextarea.hide();
-    }
-    $('.feedback-label').click(function() {
-        feedbackTextarea.toggle();
-        $(this).button('toggle');
-    });
+    $('#id_feedback')
+        .click(function() {
+            $(this).css('height', '120px');
+        })
+        .focusout(function() {
+            $(this).css('height', '40px');
+        });
 });
