@@ -1,6 +1,18 @@
 Fit4Cybersecurity Changelog
 ===========================
 
+## 1.0.0 (not yet released)
+
+### Improvements
+
+- add country to the first question [#4](https://github.com/CASES-LU/Fit4Cybersecurity/issues/4);
+- change language at any moment in the survey [#6](https://github.com/CASES-LU/Fit4Cybersecurity/issues/6);
+- feedback Box in questions form and display the on review page [#7](https://github.com/CASES-LU/Fit4Cybersecurity/issues/7);
+- add a general tool feedback form [#8](https://github.com/CASES-LU/Fit4Cybersecurity/issues/8);
+- rename and move to the top "restore results" link [#9](https://github.com/CASES-LU/Fit4Cybersecurity/issues/9);
+- change countries selector display style [#10](https://github.com/CASES-LU/Fit4Cybersecurity/issues/10).
+
+
 ## 0.0.2 (not yet released)
 
 ### Improvements
