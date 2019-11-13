@@ -13,7 +13,7 @@ Fit4Cybersecurity Changelog
 - change countries selector display style [#10](https://github.com/CASES-LU/Fit4Cybersecurity/issues/10).
 
 
-## 0.0.2 (not yet released)
+## 0.0.2 (2019-10-30)
 
 ### Improvements
 
