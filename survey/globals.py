@@ -287,15 +287,15 @@ TRANSLATION_UI = {
             'de': "ehrere Antworten sind gleichzeitig wählbar.",
         },
         'feedback_descr1': {
-            'en': "This text field should not be used to answer on the question.",
+            'en': "This text field should not be used to answer the question.",
             'fr': "Ce champ de texte ne doit pas être utilisé pour répondre à la question.",
             'de': "Dieses Textfeld sollte nicht zur Beantwortung der Frage verwendet werden.",
         },
         'feedback_descr2': {
-            'en': "Please do not provide any sensitive or confidential data which may refer to your identity.",
-            'fr': "Veuillez ne fournir aucune donnée sensible ou confidentielle pouvant faire référence à votre identité.",
-            'de': "Bitte geben Sie keine sensiblen oder vertraulichen Daten an, die sich auf Ihre Identität beziehen könnten.",
-        }
+            'en': "Please do not provide any sensitive or confidential information refering to your identity.",
+            'fr': "Veuillez ne fournir aucune donnée sensible ou confidentielle faisant référence à votre identité.",
+            'de': "Bitte geben Sie keine sensiblen oder vertraulichen Datenan, die Ihre Identität veraten könnte.",
+        },
     },
     'review': {
         'title': {
