@@ -1,7 +1,7 @@
 Fit4Cybersecurity Changelog
 ===========================
 
-## 1.0.0 (not yet released)
+## 1.0.0 (2019-11-25)
 
 ### Improvements
 
