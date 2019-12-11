@@ -13,6 +13,7 @@
         <script type="text/javascript" src="{% static "survey/js/send-email.js" %}"></script>
     {% endif %}
     <script type="text/javascript" src="{% static "survey/js/Chart.bundle.min.js" %}"></script>
+    <script type="text/javascript" src="{% static "survey/js/QRCode.min.js" %}"></script>
 {% endblock %}
 
 {% block title %}{{ title }}{% endblock %}
@@ -124,6 +125,11 @@
         {% endfor %}
     </div>
 
+    <div id="qrcode"></div>
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <g id="qrcode"/>
+    </svg>
+
     <div class="pb-4" style="text-align: center">
         <button class="btn btn-light border border-rounded" type="button" name="general-feedback" data-toggle="modal" data-target="#modal-feedback">{{ translations.general_feedback.button }}</button>
     </div>
@@ -150,4 +156,11 @@
 
     {% include 'survey/continue.html' %}
     {% include 'survey/leaveSurvey.html' %}
+
+    <script type="text/javascript">
+        var qrcode = new QRCode(document.getElementById("qrcode"), {
+            useSVG: true
+        })
+        qrcode.makeCode($('#direct-link').data('link'));
+    </script>
 {% endblock %}
