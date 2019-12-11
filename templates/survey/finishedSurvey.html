@@ -51,11 +51,13 @@
         {% include 'survey/changeLang.html' %}
 
         <h2>{{ translations.txtreport }}:</h2>
+        <div class="qrcode"></div>
         {{ description }}
 
         <div class="py-2">
-            <p class="continue-later-link"><button class="pl-0 btn btn-link" type="button" name="continue-later" data-toggle="modal" data-target="#modal">{{ translations.continue_later.button }}</button></p>
-            <div class="qrcode"></div>
+            <p class="continue-later-link">
+                <button class="pl-0 btn btn-link" type="button" name="continue-later" data-toggle="modal" data-target="#modal">{{ translations.continue_later.button }}</button>
+            </p>
         </div>
     </div>
 
