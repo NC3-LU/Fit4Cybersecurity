@@ -170,8 +170,12 @@
     text-decoration: none;
 }
 
-#qrcode {
-  width:160px;
-  height:160px;
-  margin-top:10px;
+.continue-later-link {
+    display: inline-block;
+}
+
+.qrcode {
+    display: inline-block;
+    float: right;
+    margin-top:10px;
 }
