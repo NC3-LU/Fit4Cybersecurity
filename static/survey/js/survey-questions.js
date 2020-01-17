@@ -107,4 +107,16 @@ $(document).ready(function() {
             $(this).css('height', '60px');
             $(this).css('width', 'auto');
         });
+
+    var qrcodes = $('.qrcode');
+    if (qrcodes.length > 0) {
+        qrcodes.each(function() {
+            var qrcode = new QRCode(this, {
+                width: 120,
+                height: 120,
+                useSVG: true
+            });
+            qrcode.makeCode($('#direct-link').data('link'));
+        });
+    }
 });

@@ -8,11 +8,13 @@
     <link rel="stylesheet" type="text/css" href="{% static "survey/css/survey-questions.css" %}" />
     <link rel="stylesheet" type="text/css" href="{% static "survey/css/Chart.css" %}" />
 
+    <script type="text/javascript" src="{% static "survey/js/qrcode.min.js" %}"></script>
+    <script type="text/javascript" src="{% static "survey/js/Chart.bundle.min.js" %}"></script>
+
     <script type="text/javascript" src="{% static "survey/js/survey-questions.js" %}"></script>
     {% if txtscore >= min_acceptable_score %}
         <script type="text/javascript" src="{% static "survey/js/send-email.js" %}"></script>
     {% endif %}
-    <script type="text/javascript" src="{% static "survey/js/Chart.bundle.min.js" %}"></script>
 {% endblock %}
 
 {% block title %}{{ title }}{% endblock %}
@@ -43,16 +45,22 @@
             <a href="{{ reportlink }}/fr" class="p-2"><img src="{% static "images/flags/fr.png" %}" alt="fr"></a>
             <a href="{{ reportlink }}/de" class="p-2"><img src="{% static "images/flags/de.png" %}" alt="de"></a>
         </div>
-
     </div>
+
     <div class="py-2 px-4">
         {% include 'survey/changeLang.html' %}
 
         <h2>{{ translations.txtreport }}:</h2>
+        <div class="qrcode"></div>
         {{ description }}
 
-        <p><button class="pl-0 btn btn-link" type="button" name="continue-later" data-toggle="modal" data-target="#modal">{{ translations.continue_later.button }}</button></p>
+        <div class="py-2">
+            <p class="continue-later-link">
+                <button class="pl-0 btn btn-link" type="button" name="continue-later" data-toggle="modal" data-target="#modal">{{ translations.continue_later.button }}</button>
+            </p>
+        </div>
     </div>
+
     {% if txtscore >= min_acceptable_score %}
         <div class="py-2 px-4">
             <h2>{{ translations.request_diagnostic.title }}:</h2>
@@ -61,6 +69,7 @@
             {% include 'survey/requestDiagnosticLink.html' with type='link' %}
         </div>
     {% endif %}
+
     <div class="py-2 px-4 text-center">
         <div style="width: 450px; height: 450px; margin: 0 auto 0 auto"><canvas id="resultChart" width='100%' height='100%'></canvas></div>
         <script>
@@ -150,4 +159,5 @@
 
     {% include 'survey/continue.html' %}
     {% include 'survey/leaveSurvey.html' %}
+
 {% endblock %}
