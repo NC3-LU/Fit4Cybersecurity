@@ -25,7 +25,7 @@
             <h3>
                 {% if txtscore < 50 %}
                     <span class="font-weight-bold text-danger">{{ txtscore }}</span>
-                {% elif txtscore < 80 %}
+                {% elif txtscore < min_acceptable_score %}
                     <span class="font-weight-bold text-warning">{{ txtscore }}</span>
                 {% else %}
                     <span class="font-weight-bold text-success">{{ txtscore }}</span>
