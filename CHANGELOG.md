@@ -5,7 +5,7 @@ Fit4Cybersecurity Changelog
 
 ### Changes
 
-- changed the minimum acceptable trashehold to request a diagnostic;
+- changed the minimum acceptable threshold to request a diagnostic to 65;
 - migrated to Django 3.
 
 
