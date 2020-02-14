@@ -36,26 +36,11 @@ $ sudo apt install gettext postgresql
 
 ### Set up your Python environment
 
-Before to begin you will need to install
-[pipenv](https://github.com/pypa/pipenv).  
-A convenient way to do so is to first install
-[pyenv](https://github.com/pyenv/pyenv). With pyenv you will be able
-to easily manage Python versions on your system and to install the latest
-version of Python:
-
 ```bash
-$ pyenv install 3.8.0 # install Python
-$ pyenv global 3.8.0 # make this version default for the whole system
+$ pyenv install 3.8.1 # install Python
+$ pyenv global 3.8.1 # make this version default for the whole system
 $ pyenv versions # check
 ```
-
-Then install
-[pipx](https://github.com/pipxproject/pipx).  
-And finally install pipenv with pipx.
-
-Later on, this Python environment can be used on production with for
-example WSGI.
-
 
 ### Install the application
 
@@ -64,7 +49,7 @@ example WSGI.
 $ git clone https://github.com/CASES-LU/Fit4Cybersecurity.git
 $ cd Fit4Cybersecurity/
 $ npm install
-$ pipenv install
+$ poetry install
 ```
 
 
@@ -72,7 +57,7 @@ $ pipenv install
 
 ```bash
 $ cp csskp/config_dev.py csskp/config_prod.py # configure production settings
-$ pipenv shell
+$ poetry shell
 $ python manage.py collectstatic # copy static files required by Django Admin
 $ python manage.py compilemessages # compile the translations
 $ python manage.py createsuperuser --username <username>
@@ -93,7 +78,7 @@ For production you can use mod_wsgi.
 ```bash
 $ cd Fit4Cybersecurity/
 $ git pull origin master
-$ pipenv shell
+$ poetry shell
 $ python manage.py migrate
 ```
 
