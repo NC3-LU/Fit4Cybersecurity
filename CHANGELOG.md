@@ -1,6 +1,13 @@
 Fit4Cybersecurity Changelog
 ===========================
 
+## 1.0.1 (2020-02-14)
+
+### Changes
+
+- changed the minimum acceptable trashehold to request a diagnostic;
+
+
 ## 1.0.0 (2019-11-25)
 
 ### Improvements
