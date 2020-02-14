@@ -63,7 +63,7 @@ TRANSLATION_TYPES = [
     ("C", "Company Service Category"),
 ]
 
-MIN_ACCEPTABLE_SCORE = 80
+MIN_ACCEPTABLE_SCORE = 65
 
 TRANSLATION_UI = {
     'report': {

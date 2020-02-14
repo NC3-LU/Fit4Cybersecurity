@@ -11,6 +11,12 @@
     <link rel="icon" type="image/x-icon" href="{% static 'images/favicon.png' %}" />
     <link rel="apple-touch-icon" sizes="152x152" href="{% static 'images/apple-touch-icon.png' %}" />
     <link rel="apple-touch-icon" sizes="180x180" href="{% static 'images/apple-touch-icon.png' %}" />
+    <!--[if IE]>
+    <style type="text/css">
+        #ie-warning { display:block; }
+        #content-body { display: none; }
+    </style>
+    <![endif]-->
 {% endblock %}
 
 {% block title %}
@@ -29,7 +35,23 @@
 
         {% autoescape off %}{% bootstrap_messages %}{% endautoescape %}
 
-        {% block content %}{% endblock %}
+        <div id="content-body">
+            {% block content %}{% endblock %}
+        </div>
+
+        <div id="ie-warning">
+            <h4>Your web browser (Internet Explorer) is not compatible.</h4>
+            <p>Please, change your browser to continue the security assesment on our website.</p>
+            <p>Recommended browsers:</p>
+            <ul id="browsers-list">
+                <li class="bc"><a href="https://www.google.com/chrome/" target="_blank">Chrome</a></li>
+                <li class="bf"><a href="https://www.mozilla.org/firefox/new/" target="_blank">Firefox</a></li>
+                <li class="bs"><a href="https://support.apple.com/downloads/safari" target="_blank">Safari</a></li>
+                <li class="be"><a href="https://www.microsoft.com/edge" target="_blank">Edge</a></li>
+                <li class="bo"><a href="https://www.opera.com/download" target="_blank">Opera</a></li>
+            </ul>
+        </div>
+
     </div>
 
     <div class="footer d-none d-md-block">
