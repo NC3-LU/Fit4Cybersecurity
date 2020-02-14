@@ -6,6 +6,7 @@ Fit4Cybersecurity Changelog
 ### Changes
 
 - changed the minimum acceptable trashehold to request a diagnostic;
+- migrated to Django 3.
 
 
 ## 1.0.0 (2019-11-25)
