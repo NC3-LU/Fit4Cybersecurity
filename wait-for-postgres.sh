@@ -12,7 +12,7 @@ do
 done
 
 >&2 echo "Postgres is up - executing command"
-pipenv run python manage.py migrate
+poetry run python manage.py migrate
 # Can be used one of apache service or python server.
 #apache2ctl -D FOREGROUND
-pipenv run python manage.py runserver 0.0.0.0:80
+poetry run python manage.py runserver 0.0.0.0:80
