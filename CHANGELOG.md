@@ -1,6 +1,11 @@
 Fit4Cybersecurity Changelog
 ===========================
 
+## 1.0.2 (2020-02-15)
+
+- poetry is now used instead of pipenv.
+
+
 ## 1.0.1 (2020-02-14)
 
 ### Changes
