@@ -1,16 +1,32 @@
 
 import os
-import json
+import subprocess
 from csskp.settings import BASE_DIR
 
+
 def get_version(request):
-    try:
-        with open(os.path.join(BASE_DIR,'VERSION.json'), 'r') as json_file:
-            data = json.load(json_file)
-            version = "{}.{}.{}".format(data['major'], data['minor'],
-                                            data['hotfix'])
-    except:
-        version = "0.0.0"
+    version = (
+        os.environ.get("PKGVER")
+        or subprocess.run(["git",
+                           "-C",
+                           BASE_DIR,
+                           "describe",
+                           "--tags"], stdout=subprocess.PIPE)
+        .stdout.decode()
+        .strip()
+    )
+    version = version.split("-")
+    if len(version) == 1:
+        app_version = version[0]
+        version_url = "https://github.com/CASES-LU/Fit4Cybersecurity/releases/tag/{}".format(
+            version[0]
+        )
+    else:
+        app_version = "{} - {}".format(version[0], version[2][1:])
+        version_url = "https://github.com/CASES-LU/Fit4Cybersecurity/commits/{}".format(
+            version[2][1:]
+        )
     return {
-        'app_version': version
+        'app_version': app_version,
+        'version_url': version_url
     }
