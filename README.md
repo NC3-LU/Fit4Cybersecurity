@@ -6,26 +6,7 @@ to help business owners implement a better cybersecurity strategy.
 The official CASES instance is available [here](https://startup.cases.lu).
 
 
-## Deploy with a Dockerized environment (for development purposes)
-
-### Install Docker
-
-- [Get started](https://docs.docker.com/get-started/);
-- [Manage Docker as a non-root user](https://docs.docker.com/install/linux/linux-postinstall/)
-
-
-### Start the containers
-
-
-```bash
-$ docker-compose build
-$ docker-compose up -d
-```
-
-The server will be listening at http://127.0.0.1:8000.
-
-
-## Deploy manually
+## Deployment
 
 ### Requirements
 
@@ -69,7 +50,29 @@ Run the application:
 $ python manage.py runserver # not for production
 ```
 
-For production you can use mod_wsgi.
+For production you can use [Gunicorn](https://gunicorn.org) or mod_wsgi.
+
+
+
+## Deploy with a Dockerized environment (for development purposes)
+
+### Install Docker
+
+- [Get started](https://docs.docker.com/get-started/);
+- [Manage Docker as a non-root user](https://docs.docker.com/install/linux/linux-postinstall/)
+
+
+### Start the containers
+
+
+```bash
+$ docker-compose build
+$ docker-compose up -d
+```
+
+The server will be listening at http://127.0.0.1:8000.
+
+
 
 ## Upgrading the application
 
