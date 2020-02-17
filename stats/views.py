@@ -12,7 +12,7 @@ from survey.models import (
 
 
 @login_required
-def get_stats(request):
+def index(request):
     allAnswers = SurveyQuestionAnswer.objects.all().order_by(
         "question__qindex", "aindex"
     )

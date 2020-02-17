@@ -17,14 +17,13 @@ from django.contrib import admin
 from django.urls import path
 from django.conf.urls import include
 
-from stats.views import get_stats
 from survey import views
 
 urlpatterns = [
     path("", views.index, name="index"),
     path("admin/", include("django.contrib.auth.urls")),
     path("admin/", admin.site.urls),
-    path("admin/stats", get_stats),
+    path("admin/stats/", include("stats.urls")),
     path("survey/", include("survey.urls")),
     path("terms", views.get_terms),
 ]
