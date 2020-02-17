@@ -11,14 +11,15 @@
 {% endblock %}
 
 {% block content %}
-
 <div class="container">
-    <h2>Login</h2>
-    <form method="post">
-      {% csrf_token %}
-      {{ form.as_p }}
-      <button class="btn btn-link" type="submit">Login</button>
-    </form>
+    <div class="row">
+        <div class="form mx-auto text-center p-4">
+            <form method="post" class="justify-content-center">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button class="btn btn-link" type="submit">Login</button>
+            </form>
+        </div>
+    </div>
 </div>
-
 {% endblock %}
