@@ -11,10 +11,6 @@ from survey.models import (
 )
 
 
-def index(request):
-    return render(request, "survey/index.html")
-
-
 @login_required
 def get_stats(request):
     allAnswers = SurveyQuestionAnswer.objects.all().order_by(
