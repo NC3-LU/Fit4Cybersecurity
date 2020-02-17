@@ -1,7 +1,24 @@
 <!-- templates/registration/login.html -->
-<h2>Login</h2>
-<form method="post">
-  {% csrf_token %}
-  {{ form.as_p }}
-  <button type="submit">Login</button>
-</form>
+
+{% extends 'survey/base.html' %}
+
+{% load bootstrap4 %}
+
+{% load static %}
+
+{% block bootstrap4_extra_head %}
+    <link rel="stylesheet" type="text/css" href="{% static "survey/css/custom.css" %}" />
+{% endblock %}
+
+{% block content %}
+
+<div class="container">
+    <h2>Login</h2>
+    <form method="post">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <button class="btn btn-link" type="submit">Login</button>
+    </form>
+</div>
+
+{% endblock %}
