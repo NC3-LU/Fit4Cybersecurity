@@ -6,13 +6,13 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('survey', '1000_surveyuserfeedback'),
+        ("survey", "1000_surveyuserfeedback"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='surveyuser',
-            name='country_code',
-            field=models.CharField(default='LU', max_length=2),
+            model_name="surveyuser",
+            name="country_code",
+            field=models.CharField(default="LU", max_length=2),
         ),
     ]

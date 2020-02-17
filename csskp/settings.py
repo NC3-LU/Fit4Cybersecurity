@@ -27,11 +27,11 @@ BOOTSTRAP4_FOLDER = os.path.abspath(os.path.join(BASE_DIR, "..", "bootstrap4"))
 if BOOTSTRAP4_FOLDER not in sys.path:
     sys.path.insert(0, BOOTSTRAP4_FOLDER)
 
-MAIN_TEMPLATE_DIR = os.path.join(BASE_DIR,"templates")
+MAIN_TEMPLATE_DIR = os.path.join(BASE_DIR, "templates")
 
-STATIC_DIR = os.path.join(BASE_DIR,"static")
+STATIC_DIR = os.path.join(BASE_DIR, "static")
 
-PICTURE_DIR = '/tmp/csskp/'
+PICTURE_DIR = "/tmp/csskp/"
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
@@ -49,49 +49,49 @@ ALLOWED_HOSTS = config.ALLOWED_HOSTS
 # Application definition
 
 INSTALLED_APPS = [
-    'django.contrib.admin',
-    'django.contrib.auth',
-    'django.contrib.contenttypes',
-    'django.contrib.sessions',
-    'django.contrib.messages',
-    'django.contrib.staticfiles',
-    'django.contrib.sites',
-    'survey',
-    'bootstrap4',
-    'django_countries',
+    "django.contrib.admin",
+    "django.contrib.auth",
+    "django.contrib.contenttypes",
+    "django.contrib.sessions",
+    "django.contrib.messages",
+    "django.contrib.staticfiles",
+    "django.contrib.sites",
+    "survey",
+    "bootstrap4",
+    "django_countries",
 ]
 
 MIDDLEWARE = [
-    'django.middleware.security.SecurityMiddleware',
-    'django.contrib.sessions.middleware.SessionMiddleware',
-    'django.middleware.common.CommonMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',
-    'django.contrib.auth.middleware.AuthenticationMiddleware',
-    'django.contrib.messages.middleware.MessageMiddleware',
-    'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'django.middleware.locale.LocaleMiddleware'
+    "django.middleware.security.SecurityMiddleware",
+    "django.contrib.sessions.middleware.SessionMiddleware",
+    "django.middleware.common.CommonMiddleware",
+    "django.middleware.csrf.CsrfViewMiddleware",
+    "django.contrib.auth.middleware.AuthenticationMiddleware",
+    "django.contrib.messages.middleware.MessageMiddleware",
+    "django.middleware.clickjacking.XFrameOptionsMiddleware",
+    "django.middleware.locale.LocaleMiddleware",
 ]
 
-ROOT_URLCONF = 'csskp.urls'
+ROOT_URLCONF = "csskp.urls"
 
 TEMPLATES = [
     {
-        'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [MAIN_TEMPLATE_DIR,],
-        'APP_DIRS': True,
-        'OPTIONS': {
-            'context_processors': [
-                'django.template.context_processors.debug',
-                'django.template.context_processors.request',
-                'django.contrib.auth.context_processors.auth',
-                'django.contrib.messages.context_processors.messages',
-                'survey.context_processors.get_version',
+        "BACKEND": "django.template.backends.django.DjangoTemplates",
+        "DIRS": [MAIN_TEMPLATE_DIR,],
+        "APP_DIRS": True,
+        "OPTIONS": {
+            "context_processors": [
+                "django.template.context_processors.debug",
+                "django.template.context_processors.request",
+                "django.contrib.auth.context_processors.auth",
+                "django.contrib.messages.context_processors.messages",
+                "survey.context_processors.get_version",
             ],
         },
     },
 ]
 
-WSGI_APPLICATION = 'csskp.wsgi.application'
+WSGI_APPLICATION = "csskp.wsgi.application"
 
 
 # Database
@@ -104,36 +104,28 @@ DATABASES = config.DATABASES
 
 AUTH_PASSWORD_VALIDATORS = [
     {
-        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
+        "NAME": "django.contrib.auth.password_validation.UserAttributeSimilarityValidator",
     },
-    {
-        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
-    },
-    {
-        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
-    },
-    {
-        'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
-    },
+    {"NAME": "django.contrib.auth.password_validation.MinimumLengthValidator",},
+    {"NAME": "django.contrib.auth.password_validation.CommonPasswordValidator",},
+    {"NAME": "django.contrib.auth.password_validation.NumericPasswordValidator",},
 ]
 
 
 # Internationalization
 # https://docs.djangoproject.com/en/2.2/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = "en-us"
 
 LANGUAGES = (
-    ('en', _('English')),
-    ('fr', _('French')),
-    ('de', _('Deutsch')),
+    ("en", _("English")),
+    ("fr", _("French")),
+    ("de", _("Deutsch")),
 )
 
-LOCALE_PATHS = (
-    os.path.join(BASE_DIR, 'locale'),
-)
+LOCALE_PATHS = (os.path.join(BASE_DIR, "locale"),)
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = "UTC"
 
 USE_I18N = True
 
@@ -146,8 +138,8 @@ SITE_ID = 1
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
-STATIC_URL = '/static/'
-#STATIC_ROOT = 'static/'
+STATIC_URL = "/static/"
+# STATIC_ROOT = 'static/'
 
 STATICFILES_DIRS = [
     STATIC_DIR,
@@ -164,11 +156,11 @@ BOOTSTRAP4 = {
 from django.contrib.messages import constants as messages
 
 MESSAGE_TAGS = {
-    messages.DEBUG: 'alert-info',
-    messages.INFO: 'alert-info',
-    messages.SUCCESS: 'alert-success',
-    messages.WARNING: 'alert-warning',
-    messages.ERROR: 'alert-danger',
+    messages.DEBUG: "alert-info",
+    messages.INFO: "alert-info",
+    messages.SUCCESS: "alert-success",
+    messages.WARNING: "alert-warning",
+    messages.ERROR: "alert-danger",
 }
 
 
@@ -177,12 +169,12 @@ BOOTSTRAP4 = config.BOOTSTRAP4
 
 # First displayed countries on start survey page
 COUNTRIES_FIRST = [
-    'LU',
-    'BE',
-    'FR',
-    'DE',
-    'NL',
-    'GB',
+    "LU",
+    "BE",
+    "FR",
+    "DE",
+    "NL",
+    "GB",
 ]
 
-COUNTRIES_FIRST_BREAK = '---------------------'
+COUNTRIES_FIRST_BREAK = "---------------------"

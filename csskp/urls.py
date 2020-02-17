@@ -20,8 +20,8 @@ from django.conf.urls import include
 from survey import views
 
 urlpatterns = [
-    path('', views.index, name="index"),
-    path('survey/', include('survey.urls')),
-    path('admin/', admin.site.urls),
-    path('terms', views.get_terms),
+    path("", views.index, name="index"),
+    path("survey/", include("survey.urls")),
+    path("admin/", admin.site.urls),
+    path("terms", views.get_terms),
 ]

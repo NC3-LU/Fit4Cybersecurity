@@ -6,22 +6,27 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('survey', '1001_surveyuser_country_code'),
+        ("survey", "1001_surveyuser_country_code"),
     ]
 
     operations = [
-        migrations.RemoveField(
-            model_name='surveyuser',
-            name='chosenLang',
-        ),
+        migrations.RemoveField(model_name="surveyuser", name="chosenLang",),
         migrations.AddField(
-            model_name='surveyuser',
-            name='choosen_lang',
-            field=models.CharField(choices=[('en', 'English'), ('fr', 'Français'), ('de', 'Deutsch')], default='en', max_length=2),
+            model_name="surveyuser",
+            name="choosen_lang",
+            field=models.CharField(
+                choices=[("en", "English"), ("fr", "Français"), ("de", "Deutsch")],
+                default="en",
+                max_length=2,
+            ),
         ),
         migrations.AlterField(
-            model_name='translationkey',
-            name='lang',
-            field=models.CharField(choices=[('en', 'English'), ('fr', 'Français'), ('de', 'Deutsch')], default='en', max_length=2),
+            model_name="translationkey",
+            name="lang",
+            field=models.CharField(
+                choices=[("en", "English"), ("fr", "Français"), ("de", "Deutsch")],
+                default="en",
+                max_length=2,
+            ),
         ),
     ]
