@@ -22,9 +22,9 @@ from survey import views
 
 urlpatterns = [
     path("", views.index, name="index"),
-    path("accounts/", include("django.contrib.auth.urls")),
-    path("survey/", include("survey.urls")),
+    path("admin/", include("django.contrib.auth.urls")),
     path("admin/", admin.site.urls),
     path("admin/stats", get_stats),
+    path("survey/", include("survey.urls")),
     path("terms", views.get_terms),
 ]
