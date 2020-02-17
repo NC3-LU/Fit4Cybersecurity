@@ -94,6 +94,7 @@ TEMPLATES = [
 WSGI_APPLICATION = "csskp.wsgi.application"
 
 LOGIN_URL = "/admin/login/"
+LOGIN_REDIRECT_URL = "/admin/"
 
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
