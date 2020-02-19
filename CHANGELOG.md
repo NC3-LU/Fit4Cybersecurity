@@ -3,7 +3,10 @@ Fit4Cybersecurity Changelog
 
 ## 1.0.2 (not yet released)
 
-- poetry is now used instead of pipenv.
+- poetry is now used instead of pipenv;
+- added simple statistics export function. This new feature is available via
+  a new dashboard for the administrator
+  [#12](https://github.com/CASES-LU/Fit4Cybersecurity/issues/12).
 
 
 ## 1.0.1 (2020-02-14)
