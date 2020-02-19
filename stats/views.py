@@ -1,13 +1,8 @@
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render
 from datetime import datetime
-from django.http import (
-    StreamingHttpResponse,
-    HttpResponseRedirect
-)
-from stats.stats_logic import (
-    get_finished_surveys_list
-)
+from django.http import StreamingHttpResponse, HttpResponseRedirect
+from stats.stats_logic import get_finished_surveys_list
 
 
 @login_required

@@ -59,7 +59,7 @@ INSTALLED_APPS = [
     "survey",
     "bootstrap4",
     "django_countries",
-    'bootstrap_datepicker_plus',
+    "bootstrap_datepicker_plus",
 ]
 
 MIDDLEWARE = [
@@ -143,7 +143,7 @@ SITE_ID = 1
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = "/static/"
-#STATIC_ROOT = 'static/'
+# STATIC_ROOT = 'static/'
 
 STATICFILES_DIRS = [
     STATIC_DIR,
