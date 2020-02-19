@@ -64,8 +64,6 @@ def createAndSendReport(user: SurveyUser, lang: str):
     template = filepath + "template-" + lang + ".docx"
     doc = Document(template)
 
-    everyQuestion = SurveyQuestion.objects.all().order_by("qindex")
-
     introduction = ""
     file_path = os.path.join(filepath, lang + "_intro.txt")
     try:
@@ -151,6 +149,7 @@ def createAndSendReport(user: SurveyUser, lang: str):
         pass
 
     doc.add_paragraph()
+
     recommendationList = getRecommendations(user, lang)
 
     doc.add_page_break()
@@ -190,7 +189,9 @@ def createAndSendReport(user: SurveyUser, lang: str):
     questions_translations = get_formatted_translations(lang, "Q")
     answers_translations = get_formatted_translations(lang, "A")
 
-    for index, question in enumerate(everyQuestion):
+    questions = SurveyQuestion.objects.all().order_by("qindex")
+
+    for index, question in enumerate(questions):
         table = doc.add_table(rows=1, cols=2)
         table.autofit = False
         hdr_cells = table.rows[0].cells
@@ -239,58 +240,6 @@ def createAndSendReport(user: SurveyUser, lang: str):
             cell.width = Cm(14.0)
 
         doc.add_paragraph()
-
-    """
-    sectorName = str(user.sector)
-    # SECTOR_CHOICES is removed!
-    for a,b in SECTOR_CHOICES:
-        if user.sector == a:
-            sectorName = str(b)
-
-    compSize = str(user.e_count)
-    for a,b in COMPANY_SIZE:
-        if user.e_count == a:
-            compSize = b
-
-    recommendationList = getRecommendations(user, lang)
-    recommendationList = "\n\n".join(recommendationList)
-
-    table = []
-    ind = 0
-    for question in everyQuestion:
-        ind += 1
-        if ind > 1:
-            table.append({'ca':"", 'surveyAnswers':""})
-
-        answers_list = SurveyQuestionAnswer.objects.filter(question=i).order_by('aindex')
-        headingLine = {'ca':str(ind), 'surveyAnswers':str(i)}
-        table.append(headingLine)
-
-        for a in answers_list:
-            line = {'ca':"", 'surveyAnswers':""}
-            u = SurveyUserAnswer.objects.filter(answer=a)[0]
-
-            if u.uvalue > 0:
-                line['ca'] = "X"
-            else:
-                line['ca'] = " "
-
-            line['surveyAnswers'] = str(a)
-            table.append(line)
-
-    everyQuestionAndAnswer = table
-
-    document.merge(
-        result=str(theResult)+"/100",
-        companysize=compSize,
-        resultGraph=theImage,
-        #surveyAnswers=everyQuestionAndAnswer,
-        ca=everyQuestionAndAnswer,
-        sector=sectorName,
-        generationDate=str(date.today()),
-        recommendationsList=recommendationList,
-        )
-    """
 
     section = doc.sections[0]
     header = section.header

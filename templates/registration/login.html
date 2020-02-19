@@ -1,0 +1,25 @@
+<!-- templates/registration/login.html -->
+
+{% extends 'survey/base.html' %}
+
+{% load bootstrap4 %}
+
+{% load static %}
+
+{% block bootstrap4_extra_head %}
+    <link rel="stylesheet" type="text/css" href="{% static "survey/css/custom.css" %}" />
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="form mx-auto text-center p-4">
+            <form method="post" class="justify-content-center">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button class="btn btn-light border border-rounded" type="submit">Login</button>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

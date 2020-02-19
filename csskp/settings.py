@@ -59,6 +59,7 @@ INSTALLED_APPS = [
     "survey",
     "bootstrap4",
     "django_countries",
+    'bootstrap_datepicker_plus',
 ]
 
 MIDDLEWARE = [
@@ -93,6 +94,9 @@ TEMPLATES = [
 
 WSGI_APPLICATION = "csskp.wsgi.application"
 
+LOGIN_URL = "/admin/login/"
+LOGIN_REDIRECT_URL = "/admin/"
+LOGOUT_REDIRECT_URL = "/"
 
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
@@ -139,7 +143,7 @@ SITE_ID = 1
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = "/static/"
-# STATIC_ROOT = 'static/'
+#STATIC_ROOT = 'static/'
 
 STATICFILES_DIRS = [
     STATIC_DIR,
