@@ -310,8 +310,6 @@ def calculateResult(user: SurveyUser, lang: str):
             )
         )
 
-    print(total_user_score)
-    print(total_questions_score)
     return total_user_score, user_evaluations, sections_list
 
 
