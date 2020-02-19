@@ -1,23 +1,19 @@
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render
-
-from survey.models import (
-    SurveyQuestion,
-    SurveyQuestionAnswer,
-    SurveyUser,
-    SurveyUserAnswer,
-    Recommendations,
-    TranslationKey,
+from datetime import datetime
+from django.http import (
+    StreamingHttpResponse,
+    HttpResponseRedirect
+)
+from stats.stats_logic import (
+    get_finished_surveys_list
 )
 
 
 @login_required
 def index(request):
-    allAnswers = SurveyQuestionAnswer.objects.all().order_by(
-        "question__qindex", "aindex"
-    )
-    for answer in allAnswers:
-        userAnswer = SurveyUserAnswer.objects.filter(answer=answer)[0]
-        print(userAnswer)
+    result = get_finished_surveys_list(request)
+    if result is None:
+        return HttpResponseRedirect("/admin/statistics/")
 
-    return render(request, "admin/stats.html")
+    return render(request, "admin/stats.html", result)

@@ -7,12 +7,12 @@ RUN apt-get update
 #RUN apt-get install -y curl apache2 apache2-utils libapache2-mod-wsgi-py3
 RUN apt-get install -y gettext libgettextpo-dev postgresql-client-common postgresql-client
 
-RUN curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python
-
 WORKDIR /csskp
-COPY ./Pipfile* /app/
+COPY ./poetry.lock ./pyproject.toml /csskp/
 COPY . /csskp/
 RUN mkdir /tmp/csskp
+
+RUN pip install "poetry==1.0.2"
 RUN poetry install
 
 RUN sed -i -r 's/#STATIC_ROOT/STATIC_ROOT/g' "/csskp/csskp/settings.py"
