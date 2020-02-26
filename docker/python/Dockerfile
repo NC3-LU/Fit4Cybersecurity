@@ -10,16 +10,13 @@ RUN apt-get install -y gettext libgettextpo-dev postgresql-client-common postgre
 WORKDIR /csskp
 COPY ./poetry.lock ./pyproject.toml /csskp/
 COPY ./package.json ./package-lock.json /csskp/
-RUN npm install
 COPY . /csskp/
 RUN mkdir /tmp/csskp
 
-RUN pip install "poetry==1.0.2"
-RUN poetry install
+RUN npm install
 
-RUN sed -i -r 's/#STATIC_ROOT/STATIC_ROOT/g' "/csskp/csskp/settings.py"
-RUN poetry run python manage.py collectstatic --noinput
-RUN sed -i -r 's/STATIC_ROOT/#STATIC_ROOT/g' "/csskp/csskp/settings.py"
+RUN pip install "poetry"
+RUN poetry install
 
 RUN poetry run python manage.py compilemessages
 
