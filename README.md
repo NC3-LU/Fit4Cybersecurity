@@ -41,6 +41,7 @@ $ cp csskp/config_dev.py csskp/config_prod.py # configure production settings
 $ poetry shell
 $ python manage.py collectstatic # copy static files required by Django Admin
 $ python manage.py compilemessages # compile the translations
+$ python manage.py migrate # need to initialize before create the first user
 $ python manage.py createsuperuser --username <username>
 ```
 
