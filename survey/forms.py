@@ -22,7 +22,7 @@ class InitialStartForm(forms.Form):
 
         self.fields["sector"].label = TRANSLATION_UI["form"]["start_form"]["sector_question"][lang]
         sectors = []
-        for sector_choise in sorted_sectors_choices:
+        for sector_choise in SECTOR_CHOICES:
             sectors.append(
                 (
                     sector_choise[0],
