@@ -13,6 +13,7 @@ SECTOR_CHOICES = [
     ("SUPP", "Company Support"),
     ("LOGI", "Transport and Logistics"),
     ("FARM", "Farming and fishing, natural spaces and green spaces, animal care"),
+    ("PUBL", "Public administration"),
 ]
 
 COUNTRIES = [
@@ -331,6 +332,11 @@ TRANSLATION_UI = {
                     "fr": "Agriculture et pêche, espaces naturels et espaces verts, soins aux animaux",
                     "de": "Landwirtschaft und Fischerei, Natur- und Grünflächen, Tierpflege",
                 },
+                "PUBL": {
+                    "en": "Public administration",
+                    "fr": "Administration publique",
+                    "de": "Öffentliche Verwaltungen",
+                }
             },
             "size_question": {
                 "en": "How many employees?",
