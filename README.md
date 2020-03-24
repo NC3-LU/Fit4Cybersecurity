@@ -74,8 +74,6 @@ be *password*.
 
 ## Upgrading the application
 
-### Updating the models
-
 ```bash
 $ cd Fit4Cybersecurity/
 $ git pull origin master
