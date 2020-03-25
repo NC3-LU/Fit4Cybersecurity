@@ -22,7 +22,8 @@ services:
       dockerfile: ./docker/python/Dockerfile
     tty: true
     volumes:
-      - .:/csskp:ro
+      - .:/csskp:rw
+      - /csskp/static/npm_components/
     ports:
       - "8000:8000"
     expose:

@@ -38,7 +38,10 @@ RUN mkdir /tmp/csskp
 
 RUN chmod +x ./wait-for-postgres.sh
 
+RUN mkdir node_modules
+RUN npm install
+RUN mkdir -p static/npm_components
+RUN cp -R node_modules/* static/npm_components/
 
 RUN pip install poetry
 RUN poetry install
-RUN poetry run python manage.py compilemessages
