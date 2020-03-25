@@ -1,8 +1,6 @@
 #!/bin/ash
 # wait-for-postgres.sh
 
-set -e
-
 shift
 
 until (! command -v psql || PGPASSWORD=password psql -h db -U "postgres" -c '\q' )
@@ -16,7 +14,7 @@ poetry run python manage.py migrate
 export DJANGO_SUPERUSER_USERNAME=admin
 export DJANGO_SUPERUSER_PASSWORD=password
 export DJANGO_SUPERUSER_EMAIL=admin@admin.localhost
-poetry run python manage.py createsuperuser --noinput 2>/dev/null
+poetry run python manage.py createsuperuser --noinput || echo "superuser already created"
 # Can be used one of apache service or python server.
 #apache2ctl -D FOREGROUND
 poetry run python manage.py runserver 0.0.0.0:8000
