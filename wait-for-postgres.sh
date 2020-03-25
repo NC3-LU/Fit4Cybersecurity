@@ -10,6 +10,7 @@ do
 done
 
 >&2 echo "Postgres is up - executing command"
+poetry run python manage.py compilemessages
 poetry run python manage.py migrate
 export DJANGO_SUPERUSER_USERNAME=admin
 export DJANGO_SUPERUSER_PASSWORD=password
