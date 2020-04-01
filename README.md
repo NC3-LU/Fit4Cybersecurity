@@ -57,42 +57,28 @@ For production you can use [Gunicorn](https://gunicorn.org) or mod_wsgi.
 
 ## Deploy with a Dockerized environment (for development purposes)
 
-### Install Docker
 
 - [Get started](https://docs.docker.com/get-started/);
 - [Manage Docker as a non-root user](https://docs.docker.com/install/linux/linux-postinstall/)
 
 
-### Start the containers
-
-
 ```bash
-$ docker-compose build
 $ docker-compose up -d
 ```
 
 The server will be listening at http://127.0.0.1:8000.
 
+The login for the Django Admin interface will be *admin* and the password will
+be *password*.
 
 
 ## Upgrading the application
 
-### Updating the models
-
 ```bash
 $ cd Fit4Cybersecurity/
 $ git pull origin master
-$ poetry shell
-$ python manage.py migrate
-```
-
-
-### Internationalization
-
-Simply compile the new translations:
-
-```bash
-$ python manage.py compilemessages
+$ poetry run python manage.py migrate
+$ poetry run python manage.py compilemessages
 ```
 
 If you want to update the translations, you must first run:
@@ -112,4 +98,4 @@ the previously mentioned command.
 This software is licensed under
 [GNU Affero General Public License version 3](https://www.gnu.org/licenses/agpl-3.0.html)
 
-* Copyright (C) 2019-2020 SMILE gie securitymadein.lu
+Copyright (C) 2019-2020 SMILE gie securitymadein.lu
