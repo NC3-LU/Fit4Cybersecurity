@@ -54,17 +54,17 @@ def handle_question_form(request, question_index: int):
     if user.is_survey_under_review():
         review_ancher = "#question-" + str(question_index)
 
-    form_data = handle_question_answers_request(request, user, question_index)
+    result = handle_question_answers_request(request, user, question_index)
 
-    if form_data is None:
-        if user.is_survey_under_review():
+    if type(result) is SurveyUser:
+        if result.is_survey_under_review():
             return HttpResponseRedirect("/survey/review" + review_ancher)
 
-        return HttpResponseRedirect("/survey/question/" + str(user.current_qindex))
+        return HttpResponseRedirect("/survey/question/" + str(result.current_qindex))
 
-    add_form_translations(form_data, user.choosen_lang, "question")
+    add_form_translations(result, user.choosen_lang, "question")
 
-    return render(request, "survey/questions.html", context=form_data)
+    return render(request, "survey/questions.html", context=result)
 
 
 def change_lang(request, lang: str):

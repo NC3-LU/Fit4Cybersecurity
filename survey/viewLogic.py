@@ -115,7 +115,7 @@ def handle_question_answers_request(request, user: SurveyUser, question_index: i
 
                 user.save()
 
-            return None
+                return user
     else:
         user_answers = SurveyUserAnswer.objects.filter(
             user=user, answer__question=current_question, uvalue__gt=0
