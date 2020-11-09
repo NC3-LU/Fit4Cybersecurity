@@ -68,10 +68,11 @@ def handle_question_form(request, question_index: int):
 
 
 def change_lang(request, lang: str):
-    if request.session.get("user_id", None) is None:
+    user_id = request.session.get("user_id", None)
+    if user_id == None:
         return HttpResponseRedirect("/")
 
-    user = find_user_by_id(request.session["user_id"])
+    user = find_user_by_id(user_id)
     user.choosen_lang = lang
     user.save()
 
@@ -88,7 +89,10 @@ def change_lang(request, lang: str):
 
 
 def show_report(request, lang):
-    user_id = request.session["user_id"]
+    user_id = request.session.get("user_id", None)
+    if user_id == None:
+        return HttpResponseRedirect("/")
+
     user = find_user_by_id(user_id)
 
     if not user.is_survey_finished():
@@ -107,7 +111,10 @@ def show_report(request, lang):
 
 
 def review(request):
-    user_id = request.session["user_id"]
+    user_id = request.session.get("user_id", None)
+    if user_id == None:
+        return HttpResponseRedirect("/")
+
     user = find_user_by_id(user_id)
     if user.is_survey_finished():
         return HttpResponseRedirect("/survey/finish")
@@ -161,7 +168,10 @@ def review(request):
 
 
 def finish(request):
-    user_id = request.session["user_id"]
+    user_id = request.session.get("user_id", None)
+    if user_id == None:
+        return HttpResponseRedirect("/")
+
     user = find_user_by_id(user_id)
     if not user.is_survey_finished():
         return HttpResponseRedirect("/")
