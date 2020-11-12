@@ -12,9 +12,7 @@
     <script type="text/javascript" src="{% static "survey/js/Chart.bundle.min.js" %}"></script>
 
     <script type="text/javascript" src="{% static "survey/js/survey-questions.js" %}"></script>
-    {% if txtscore >= min_acceptable_score %}
-        <script type="text/javascript" src="{% static "survey/js/send-email.js" %}"></script>
-    {% endif %}
+    <script type="text/javascript" src="{% static "survey/js/send-email.js" %}"></script>
 {% endblock %}
 
 {% block title %}{{ title }}{% endblock %}
@@ -32,8 +30,11 @@
                 {% endif %}
                 /100
             </h3>
-            {% if txtscore >= min_acceptable_score %}
-                <h5>{% include 'survey/requestDiagnosticLink.html' with type='button' %}</h5>
+            {% if user.country_code == 'LU' %}
+                {% if txtscore >= min_acceptable_score %}
+                    <h5>{% include 'survey/requestDiagnosticLink.html' with type='button' %}</h5>
+                {% endif %}
+                <h5>{% include 'survey/requestTrainingLink.html' with type='button' %}</h5>
             {% endif %}
         </div>
         <div><h4>{{ translations.txtdownload }}:</h4></div>
@@ -52,7 +53,10 @@
 
         <h2>{{ translations.txtreport }}:</h2>
         <div class="qrcode"></div>
-        {{ description }}
+        <p>{{ description }}</p>
+        {% if user.country_code == 'LU' and txtscore < min_acceptable_score %}
+            <p>{{ translations.request_training.description }}{% include 'survey/requestTrainingLink.html' with type='link' %}</p>
+        {% endif %}
 
         <div class="py-2">
             <p class="continue-later-link">
@@ -61,7 +65,7 @@
         </div>
     </div>
 
-    {% if txtscore >= min_acceptable_score %}
+    {% if user.country_code == 'LU' and txtscore >= min_acceptable_score %}
         <div class="py-2 px-4">
             <h2>{{ translations.request_diagnostic.title }}:</h2>
             {{ translations.request_diagnostic.description }}<br />
