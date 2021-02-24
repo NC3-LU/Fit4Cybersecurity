@@ -91,7 +91,11 @@ Then you can use a tool like
 [poedit](https://poedit.net) to translate the strings and you can compile with
 the previously mentioned command.
 
+If you want to re-generate the .pot file:
 
+```bash
+$ python manage.py makemessages --keep-pot
+```
 
 ## License
 
