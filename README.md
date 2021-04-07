@@ -1,9 +1,12 @@
 # Fit4Cybersecurity
 
+[![Translation status](https://translate.monarc.lu/widgets/fit4cybersecurity/-/88x31-white.png)](https://translate.monarc.lu/engage/fit4cybersecurity/)
+
+
 Fit4Cybersecurity is a self-assessment tool by [CASES](https://www.cases.lu)
 to help business owners implement a better cybersecurity strategy.
 
-The official CASES instance is available [here](https://startup.cases.lu).
+The official CASES instance is available [here](https://fit4cybersecurity.cases.lu).
 
 
 ## Deployment
@@ -102,4 +105,4 @@ $ python manage.py makemessages --keep-pot
 This software is licensed under
 [GNU Affero General Public License version 3](https://www.gnu.org/licenses/agpl-3.0.html)
 
-Copyright (C) 2019-2020 SMILE gie securitymadein.lu
+Copyright (C) 2019-2021 SECURITYMADEIN.LU
