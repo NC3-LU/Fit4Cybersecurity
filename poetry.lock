@@ -109,19 +109,14 @@ Django = ">=1.8"
 
 [[package]]
 name = "django-bootstrap4"
-version = "2.3.1"
+version = "1.1.1"
 description = "Bootstrap support for Django projects"
 category = "main"
 optional = false
-python-versions = ">=3.6,<4.0"
+python-versions = "*"
 
 [package.dependencies]
-beautifulsoup4 = ">=4.8.0,<5.0.0"
-django = ">=2.2,<4.0"
-importlib-metadata = {version = "<3", markers = "python_version < \"3.8\""}
-
-[package.extras]
-docs = ["sphinx (>=2.4,<3.0)", "sphinx_rtd_theme (>=0.4.3,<0.5.0)", "m2r2 (>=0.2.5,<0.3.0)"]
+beautifulsoup4 = "*"
 
 [[package]]
 name = "django-countries"
@@ -136,21 +131,6 @@ dev = ["tox", "black", "django", "pytest", "pytest-django", "djangorestframework
 maintainer = ["transifex-client", "zest.releaser", "django"]
 pyuca = ["pyuca"]
 test = ["pytest", "pytest-django", "pytest-cov", "graphene-django"]
-
-[[package]]
-name = "importlib-metadata"
-version = "2.1.1"
-description = "Read metadata from Python packages"
-category = "main"
-optional = false
-python-versions = "!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,!=3.4.*,>=2.7"
-
-[package.dependencies]
-zipp = ">=0.5"
-
-[package.extras]
-docs = ["sphinx", "rst.linker"]
-testing = ["packaging", "pep517", "unittest2", "importlib-resources (>=1.3)"]
 
 [[package]]
 name = "kiwisolver"
@@ -292,22 +272,10 @@ category = "main"
 optional = false
 python-versions = "*"
 
-[[package]]
-name = "zipp"
-version = "3.4.1"
-description = "Backport of pathlib-compatible object wrapper for zip files"
-category = "main"
-optional = false
-python-versions = ">=3.6"
-
-[package.extras]
-docs = ["sphinx", "jaraco.packaging (>=8.2)", "rst.linker (>=1.9)"]
-testing = ["pytest (>=4.6)", "pytest-checkdocs (>=1.2.3)", "pytest-flake8", "pytest-cov", "pytest-enabler", "jaraco.itertools", "func-timeout", "pytest-black (>=0.3.7)", "pytest-mypy"]
-
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.7"
-content-hash = "f0957f26a6bbf25e9e00894d641255aa76ad3154a9a457eb610f49a2ee6f6fa6"
+content-hash = "b93a02217634247ab5725074c800a330ad22d65463e4911034a7d2eca0ab1831"
 
 [metadata.files]
 asgiref = [
@@ -388,16 +356,12 @@ django-bootstrap-modal-forms = [
     {file = "django-bootstrap-modal-forms-1.5.0.tar.gz", hash = "sha256:38592e15617cf152ee4537f80306dff346ce2954c00cf9a664590fb43c79635c"},
 ]
 django-bootstrap4 = [
-    {file = "django-bootstrap4-2.3.1.tar.gz", hash = "sha256:2c199020ac38866cdf8d1c5561ce7468116b9685b455a29843c0225ef8568879"},
-    {file = "django_bootstrap4-2.3.1-py3-none-any.whl", hash = "sha256:b68f073b647b20ec7894a252a0ca4e06b7b8dafdbad995cb0cdc783d0bb4629d"},
+    {file = "django-bootstrap4-1.1.1.tar.gz", hash = "sha256:39f97cbce85eb66f6d76be2029bae171bd3863d0c6932b1c2dae7f299c569b90"},
+    {file = "django_bootstrap4-1.1.1-py3-none-any.whl", hash = "sha256:0fcd84f8414a58b43df0b331c00c8b2f1786ae28f75f419b4d33b06fca43e0d1"},
 ]
 django-countries = [
     {file = "django-countries-7.1.tar.gz", hash = "sha256:058e3cd82705ebf8ef680fb623b1da2d47bc03b816a71589a8279d2e5a7a5389"},
     {file = "django_countries-7.1-py3-none-any.whl", hash = "sha256:94170e99465f7ea504da828c8e64f36d94440a86907fc8ecb56c5336aafae0cd"},
-]
-importlib-metadata = [
-    {file = "importlib_metadata-2.1.1-py2.py3-none-any.whl", hash = "sha256:c2d6341ff566f609e89a2acb2db190e5e1d23d5409d6cc8d2fe34d72443876d4"},
-    {file = "importlib_metadata-2.1.1.tar.gz", hash = "sha256:b8de9eff2b35fb037368f28a7df1df4e6436f578fa74423505b6c6a778d5b5dd"},
 ]
 kiwisolver = [
     {file = "kiwisolver-1.3.1-cp36-cp36m-macosx_10_9_x86_64.whl", hash = "sha256:fd34fbbfbc40628200730bc1febe30631347103fc8d3d4fa012c21ab9c11eca9"},
@@ -622,8 +586,4 @@ typing-extensions = [
     {file = "typing_extensions-3.7.4.3-py2-none-any.whl", hash = "sha256:dafc7639cde7f1b6e1acc0f457842a83e722ccca8eef5270af2d74792619a89f"},
     {file = "typing_extensions-3.7.4.3-py3-none-any.whl", hash = "sha256:7cb407020f00f7bfc3cb3e7881628838e69d8f3fcab2f64742a5e76b2f841918"},
     {file = "typing_extensions-3.7.4.3.tar.gz", hash = "sha256:99d4073b617d30288f569d3f13d2bd7548c3a7e4c8de87db09a9d29bb3a4a60c"},
-]
-zipp = [
-    {file = "zipp-3.4.1-py3-none-any.whl", hash = "sha256:51cb66cc54621609dd593d1787f286ee42a5c0adbb4b29abea5a63edc3e03098"},
-    {file = "zipp-3.4.1.tar.gz", hash = "sha256:3607921face881ba3e026887d8150cca609d517579abe052ac81fc5aeffdbd76"},
 ]
