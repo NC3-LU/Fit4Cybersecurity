@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-10-30 07:45+0000\n"
-"PO-Revision-Date: 2019-10-24 15:34+0200\n"
+"POT-Creation-Date: 2021-04-07 22:33+0000\n"
+"PO-Revision-Date: 2021-04-08 00:36+0200\n"
 "Last-Translator: Cédric Bonhomme <cedric@cedricbonhomme.org>\n"
 "Language-Team: \n"
 "Language: de\n"
@@ -16,59 +16,81 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 2.2.1\n"
+"X-Generator: Poedit 2.3\n"
 
-#: survey/views.py:115
+#: csskp/settings.py:126
+msgid "English"
+msgstr ""
+
+#: csskp/settings.py:127
+msgid "French"
+msgstr ""
+
+#: csskp/settings.py:128
+msgid "Deutsch"
+msgstr ""
+
+#: survey/views.py:105
+msgid "To generate a report you have to finish the survey."
+msgstr ""
+
+#: survey/views.py:268
 msgid ""
 "We could not find a survey with the requested key, please start a new one."
 msgstr ""
 "Wir konnten keine Umfrage mit dem angeforderten Schlüssel finden. Bitte "
 "starten Sie eine neue."
 
-#: templates/survey/base.html:16
+#: survey/views.py:298
+msgid "Feedback sending errors: "
+msgstr ""
+
+#: templates/survey/base.html:27
 msgid "Fit4Cybersecurity a CASES self-assessment tool!"
 msgstr "Fit4Cybersecurity ein CASES-Selbstbewertungstool!"
 
-#: templates/survey/base.html:24
+#: templates/survey/base.html:60
 msgid "images/logoFull-en.png"
 msgstr "images/logoFull-de.png"
 
-#: templates/survey/base.html:41 templates/survey/base.html:42
+#: templates/survey/base.html:93 templates/survey/base.html:94
 msgid "A service provided by CASES.LU"
 msgstr "Ein Service von CASES.LU"
 
-#: templates/survey/base.html:48 templates/survey/base.html:49
+#: templates/survey/base.html:100 templates/survey/base.html:101
 msgid "Source code on GitHub"
 msgstr "Quellcode auf GitHub"
 
-#: templates/survey/base.html:53
+#: templates/survey/base.html:105
 msgid "Version of Fit4Cybersecurity"
 msgstr "Version von Fit4Cybersecurity"
 
-#: templates/survey/base.html:60
+#: templates/survey/base.html:112
 msgid "Terms of service"
 msgstr "Nutzungsbedingungen"
 
-#: templates/survey/base.html:60
+#: templates/survey/base.html:112
 msgid "Terms of Service"
 msgstr "Nutzungsbedingungen"
 
-#: templates/survey/index.html:17
-msgid "Welcome to the all new CASES self-assessment tool: Fit4Cybersecurity"
-msgstr ""
-"Willkommen beim brandneuen CASES-Tool zur Selbstbewertung: Fit4Cybersecurity"
-
 #: templates/survey/index.html:18
-msgid ""
-"This survey will ask some questions and present some recommendations, based "
-"on your sector, company size and your answers. Keep in mind, that it is a "
-"self-assessment tool and that it only touches the surface of information "
-"security by giving a very basic maturity level estimate and some basic "
-"recommendations. And that due to the aforementioned reasons, we are not "
-"liable for the result or recommendation implementations."
-msgstr ""
+msgid "Welcome to the CASES self-assessment tool: Fit4Cybersecurity"
+msgstr "Willkommen beim CASES-Tool zur Selbstbewertung: Fit4Cybersecurity"
 
-#: templates/survey/index.html:51
+#: templates/survey/index.html:19
+msgid ""
+"This survey will ask a few questions and provide recommendations. Keep in "
+"mind, that it is a self-assessment tool and that it only touches the surface "
+"of information security by giving a very basic maturity level estimate and "
+"some basic recommendations."
+msgstr ""
+"Diese Umfrage stellt ein paar Fragen ein und bietet Empfehlungen an. Denken "
+"Sie daran, dass es sich um ein Instrument zur Selbstbewertung handelt, das "
+"nur die Oberfläche der Informationssicherheit betrifft, indem er eine sehr "
+"grundlegende Fälligkeitsspezialisierung und einige grundlegende Empfehlungen "
+"ergibt."
+
+#: templates/survey/index.html:52
 msgid "Continue a previous survey"
 msgstr "Setzen Sie eine vorherige Umfrage fort"
 

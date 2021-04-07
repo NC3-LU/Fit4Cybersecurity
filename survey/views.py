@@ -14,6 +14,7 @@ from survey.reporthelper import calculateResult, createAndSendReport, getRecomme
 from survey.globals import TRANSLATION_UI, MIN_ACCEPTABLE_SCORE, LANG_SELECT
 from survey.models import SurveyUser, SURVEY_STATUS_FINISHED
 from django.contrib import messages
+from django.utils import translation
 from uuid import UUID
 from csskp.settings import HASH_KEY
 from cryptography.fernet import Fernet
@@ -26,6 +27,10 @@ def index(request):
 def start(request, lang="EN"):
     try:
         form_data = handle_start_survey(request, lang)
+
+        translation.activate(lang)
+        request.session[translation.LANGUAGE_SESSION_KEY] = lang
+
         if isinstance(form_data, SurveyUser):
             return HttpResponseRedirect(
                 "/survey/question/" + str(form_data.current_qindex)
@@ -130,6 +135,8 @@ def review(request):
     questions_with_user_answers = get_questions_with_user_answers(user)
 
     lang = user.choosen_lang
+    translation.activate(lang)
+    request.session[translation.LANGUAGE_SESSION_KEY] = lang
 
     textLayout = {
         "questions_with_user_answers": questions_with_user_answers,
@@ -177,6 +184,8 @@ def finish(request):
         return HttpResponseRedirect("/")
 
     user_lang = user.choosen_lang
+    translation.activate(user_lang)
+    request.session[translation.LANGUAGE_SESSION_KEY] = user_lang
 
     # make survey readonly and show results.
     # also needs saving here!

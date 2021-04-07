@@ -1,5 +1,6 @@
 from django.utils.html import format_html, mark_safe
 from django.db import transaction
+from django.utils import translation
 
 from survey.models import (
     SurveyUser,
@@ -40,6 +41,9 @@ def handle_start_survey(request, lang: str):
     question = TRANSLATION_UI["question"]["description"][lang]
     title = "Fit4Cybersecurity - " + TRANSLATION_UI["question"]["title"][lang]
 
+    translation.activate(lang)
+    request.session[translation.LANGUAGE_SESSION_KEY] = lang
+
     if request.method == "POST":
         form = InitialStartForm(data=request.POST, lang=lang)
 
@@ -51,7 +55,6 @@ def handle_start_survey(request, lang: str):
                 form.cleaned_data["country"],
             )
 
-            request.session["lang"] = lang
             request.session["user_id"] = str(user.user_id)
 
             return user
@@ -79,6 +82,9 @@ def handle_question_answers_request(request, user: SurveyUser, question_index: i
         tuple_answers = get_answer_choices(current_question, user.choosen_lang)
     except Exception as e:
         raise e
+
+    translation.activate(user.choosen_lang)
+    request.session[translation.LANGUAGE_SESSION_KEY] = user.choosen_lang
 
     if request.method == "POST":
         form = AnswerMChoice(

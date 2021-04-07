@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-02-24 15:47+0000\n"
+"POT-Creation-Date: 2021-04-07 22:33+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,28 +17,28 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: csskp/settings.py:125
+#: csskp/settings.py:126
 msgid "English"
 msgstr ""
 
-#: csskp/settings.py:126
+#: csskp/settings.py:127
 msgid "French"
 msgstr ""
 
-#: csskp/settings.py:127
+#: csskp/settings.py:128
 msgid "Deutsch"
 msgstr ""
 
-#: survey/views.py:100
+#: survey/views.py:105
 msgid "To generate a report you have to finish the survey."
 msgstr ""
 
-#: survey/views.py:259
+#: survey/views.py:268
 msgid ""
 "We could not find a survey with the requested key, please start a new one."
 msgstr ""
 
-#: survey/views.py:289
+#: survey/views.py:298
 msgid "Feedback sending errors: "
 msgstr ""
 
@@ -70,21 +70,19 @@ msgstr ""
 msgid "Terms of Service"
 msgstr ""
 
-#: templates/survey/index.html:17
-msgid "Welcome to the all new CASES self-assessment tool: Fit4Cybersecurity"
-msgstr ""
-
 #: templates/survey/index.html:18
-msgid ""
-"This survey will ask some questions and present some recommendations, based "
-"on your sector, company size and your answers. Keep in mind, that it is a "
-"self-assessment tool and that it only touches the surface of information "
-"security by giving a very basic maturity level estimate and some basic "
-"recommendations. And that due to the aforementioned reasons, we are not "
-"liable for the result or recommendation implementations."
+msgid "Welcome to the CASES self-assessment tool: Fit4Cybersecurity"
 msgstr ""
 
-#: templates/survey/index.html:51
+#: templates/survey/index.html:19
+msgid ""
+"This survey will ask a few questions and provide recommendations. Keep in "
+"mind, that it is a self-assessment tool and that it only touches the surface "
+"of information security by giving a very basic maturity level estimate and "
+"some basic recommendations."
+msgstr ""
+
+#: templates/survey/index.html:52
 msgid "Continue a previous survey"
 msgstr ""
 
