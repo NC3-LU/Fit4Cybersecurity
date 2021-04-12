@@ -3,8 +3,8 @@
 <div class="px-2 text-right min-width">
     {% for lang in available_langs %}
         {% if user.choosen_lang != lang %}<a class="language-link" href="/survey/language/{{ lang }}">{% endif %}
-            {% with 'images/flags/'|add:lang|add:'.png' as static_image %}
-                <img {% if user.choosen_lang == lang %}style="opacity:0.3" {% endif %}class="mr-2" src="{% static static_image %}" alt="{{ lang }}">
+            {% with 'images/flags/'|add:lang|add:'.svg' as static_image %}
+                <img {% if user.choosen_lang == lang %}style="opacity:0.3" {% endif %}class="mr-2 flag" src="{% static static_image %}" alt="{{ lang }}">
             {% endwith %}
         {% if user.choosen_lang != lang %}</a>{% endif %}
     {% endfor %}
