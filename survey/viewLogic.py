@@ -1,4 +1,6 @@
 from django.utils.html import format_html, mark_safe
+from django.db import transaction
+from django.utils import translation
 
 from survey.models import (
     SurveyUser,
@@ -39,6 +41,9 @@ def handle_start_survey(request, lang: str):
     question = TRANSLATION_UI["question"]["description"][lang]
     title = "Fit4Cybersecurity - " + TRANSLATION_UI["question"]["title"][lang]
 
+    translation.activate(lang)
+    request.session[translation.LANGUAGE_SESSION_KEY] = lang
+
     if request.method == "POST":
         form = InitialStartForm(data=request.POST, lang=lang)
 
@@ -50,7 +55,6 @@ def handle_start_survey(request, lang: str):
                 form.cleaned_data["country"],
             )
 
-            request.session["lang"] = lang
             request.session["user_id"] = str(user.user_id)
 
             return user
@@ -79,6 +83,9 @@ def handle_question_answers_request(request, user: SurveyUser, question_index: i
     except Exception as e:
         raise e
 
+    translation.activate(user.choosen_lang)
+    request.session[translation.LANGUAGE_SESSION_KEY] = user.choosen_lang
+
     if request.method == "POST":
         form = AnswerMChoice(
             tuple_answers,
@@ -88,31 +95,33 @@ def handle_question_answers_request(request, user: SurveyUser, question_index: i
         )
 
         if form.is_valid():
-            answers = form.cleaned_data["answers"]
-            save_answers(tuple_answers, answers, user)
+            with transaction.atomic():
+                user = SurveyUser.objects.select_for_update(nowait=True).filter(id=user.id)[0]
+                answers = form.cleaned_data["answers"]
+                save_answers(tuple_answers, answers, user)
 
-            feedback = form.cleaned_data["feedback"]
-            if feedback:
-                user_feedback = SurveyUserFeedback.objects.filter(
-                    user=user, question=current_question
-                )[:1]
-                if not user_feedback:
-                    user_feedback = SurveyUserFeedback()
-                    user_feedback.user = user
-                    user_feedback.question = current_question
+                feedback = form.cleaned_data["feedback"]
+                if feedback:
+                    user_feedback = SurveyUserFeedback.objects.filter(
+                        user=user, question=current_question
+                    )[:1]
+                    if not user_feedback:
+                        user_feedback = SurveyUserFeedback()
+                        user_feedback.user = user
+                        user_feedback.question = current_question
+                    else:
+                        user_feedback = user_feedback[0]
+                    user_feedback.feedback = feedback
+                    user_feedback.save()
+
+                if next_question != None:
+                    user.current_qindex = next_question.qindex
                 else:
-                    user_feedback = user_feedback[0]
-                user_feedback.feedback = feedback
-                user_feedback.save()
+                    user.status = SURVEY_STATUS_UNDER_REVIEW
 
-            if next_question != None:
-                user.current_qindex = next_question.qindex
-            else:
-                user.status = SURVEY_STATUS_UNDER_REVIEW
+                user.save()
 
-            user.save()
-
-            return None
+                return user
     else:
         user_answers = SurveyUserAnswer.objects.filter(
             user=user, answer__question=current_question, uvalue__gt=0
@@ -158,11 +167,11 @@ def handle_question_answers_request(request, user: SurveyUser, question_index: i
     }
 
 
-def save_answers(answer_choices, answers, user):
+def save_answers(answer_choices, answers, user: SurveyUser):
     existing_answer_ids = [int(i[0]) for i in answer_choices]
     user_answers = [int(i) for i in answers]
     for a in existing_answer_ids:
-        answer = SurveyUserAnswer.objects.filter(user=user, answer__id=a)
+        answer = SurveyUserAnswer.objects.filter(user=user, answer__id=a)[:1]
         if not answer:
             answer = SurveyUserAnswer()
             answer.user = user

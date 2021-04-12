@@ -1,9 +1,12 @@
 # Fit4Cybersecurity
 
+[![Translation status](https://translate.monarc.lu/widgets/fit4cybersecurity/-/88x31-white.png)](https://translate.monarc.lu/engage/fit4cybersecurity/)
+
+
 Fit4Cybersecurity is a self-assessment tool by [CASES](https://www.cases.lu)
 to help business owners implement a better cybersecurity strategy.
 
-The official CASES instance is available [here](https://startup.cases.lu).
+The official CASES instance is available [here](https://fit4cybersecurity.cases.lu).
 
 
 ## Deployment
@@ -18,8 +21,8 @@ $ sudo apt install gettext postgresql
 ### Set up your Python environment
 
 ```bash
-$ pyenv install 3.8.1 # install Python
-$ pyenv global 3.8.1 # make this version default for the whole system
+$ pyenv install 3.9.2 # install Python
+$ pyenv global 3.9.2 # make this version default for the whole system
 $ pyenv versions # check
 ```
 
@@ -57,59 +60,49 @@ For production you can use [Gunicorn](https://gunicorn.org) or mod_wsgi.
 
 ## Deploy with a Dockerized environment (for development purposes)
 
-### Install Docker
 
 - [Get started](https://docs.docker.com/get-started/);
 - [Manage Docker as a non-root user](https://docs.docker.com/install/linux/linux-postinstall/)
 
 
-### Start the containers
-
-
 ```bash
-$ docker-compose build
 $ docker-compose up -d
 ```
 
 The server will be listening at http://127.0.0.1:8000.
 
+The login for the Django Admin interface will be *admin* and the password will
+be *password*.
 
 
 ## Upgrading the application
 
-### Updating the models
-
 ```bash
 $ cd Fit4Cybersecurity/
 $ git pull origin master
-$ poetry shell
-$ python manage.py migrate
-```
-
-
-### Internationalization
-
-Simply compile the new translations:
-
-```bash
-$ python manage.py compilemessages
+$ poetry run python manage.py migrate
+$ poetry run python manage.py compilemessages
 ```
 
 If you want to update the translations, you must first run:
 
 ```bash
-$ python manage.py makemessages # extract the translations
+$ python manage.py makemessages -a --keep-pot # extract the translations
 ```
 
 Then you can use a tool like
 [poedit](https://poedit.net) to translate the strings and you can compile with
 the previously mentioned command.
 
+If you want to re-generate the .pot file:
 
+```bash
+$ python manage.py makemessages --keep-pot
+```
 
 ## License
 
 This software is licensed under
 [GNU Affero General Public License version 3](https://www.gnu.org/licenses/agpl-3.0.html)
 
-* Copyright (C) 2019-2020 SMILE gie securitymadein.lu
+Copyright (C) 2019-2021 SECURITYMADEIN.LU

@@ -13,6 +13,7 @@ SECTOR_CHOICES = [
     ("SUPP", "Company Support"),
     ("LOGI", "Transport and Logistics"),
     ("FARM", "Farming and fishing, natural spaces and green spaces, animal care"),
+    ("PUBL", "Public administration"),
 ]
 
 COUNTRIES = [
@@ -143,9 +144,31 @@ TRANSLATION_UI = {
                 "de": "Diagnose anfordern",
             },
             "email_body": {
-                "en": "Dear Cases Team,\n\nWe would like to request a Diagnostic CASES from you.\n\nHere is our evaluation results identifier: {userId}\n\nHere also additional information that could be useful: \nLastname of the contact: \nFirstname of the contact: \nEmail address of the contact: \nAddress of the company and for the Diagnostic (Luxembourg only): \nDesired language for the Diagnostic: ",
+                "en": "Dear Cases Team,\n\nWe would like to request a Diagnostic CASES from you.\n\nHere is our evaluation results identifier: {userId}\n\nHere also additional information that could be useful: \nLastname of the contact: \nFirstname of the contact: \nEmail address of the contact: \nAddress of the company for the Diagnostic (Luxembourg only): \nDesired language for the Diagnostic: ",
                 "fr": "À l'attention de l'équipe CASES,\n\nNous aimerions planifier un Diagnostic CASES.\n\nVoici l'identifiant lié à notre évaluation: {userId}\n\nVoici également les informations qui vous seront nécessaires: \nNom du point de contact: \nPrénom du point de contact: \nAdresse mail du point de contact: \nAdresse de l'entreprise et du Diagnostic (Luxembourg uniquement): \nLangue souhaitée du Diagnostic: ",
-                "de": "Sehr geehrtes CASES Team, \n\nWir möchten ein Diagnostic CASES mit Ihnen anfordern. \n\nHier finden Sie die ID unserer Bewertungsergebnisse: {userId} \n\nHier finden Sie auch andere nützliche Informationen: \nNachname des Kontakts: \nVorname des Kontakts: \nE-Mail-Adresse des Kontakts: \nAdresse des Unternehmens und des Ortes für den Diagnostic CASES: (nur in Luxemburg): \nGewünschte Sprache für den Diagnostic CASES:",
+                "de": "Sehr geehrtes CASES-Team, \n\nWir möchten ein Diagnostic CASES mit Ihnen anfordern. \n\nHier finden Sie die ID unserer Bewertungsergebnisse: {userId} \n\nHier finden Sie auch andere nützliche Informationen: \nNachname des Kontakts: \nVorname des Kontakts: \nE-Mail-Adresse des Kontakts: \nAdresse des Unternehmens und des Ortes für den Diagnostic CASES: (nur in Luxemburg): \nGewünschte Sprache für den Diagnostic CASES:",
+            },
+        },
+        "request_training": {
+            "description": {
+                "en": "Based on your score {score}, the CASES Diagnostic is not available for your organization at this moment. We recommend you improve the information security maturity level by implementing the recommendations listed below. If you need any information security training to raise awareness in your company, do not hesitate to ",
+                "fr": "Sur base de votre score de {score}, le diagnostic CASES n'est pas disponible pour votre organisation pour le moment. Nous vous recommandons d'améliorer le niveau de maturité de la sécurité de l'information en mettant en œuvre les recommandations ci-dessous. Si vous avez besoin d'une formation à la sécurité de l'information pour sensibiliser votre entreprise, n'hésitez pas à ",
+                "de": "Basierend auf Ihrem Ergebnis von {score} ist das Diagnostic CASES derzeit für Ihr Unternehmen nicht verfügbar. Wir empfehlen Ihnen, Ihren Informationssicherheit-Reifegrad zu verbessern, indem Sie die unten aufgeführten Empfehlungen umsetzen. Wenn Sie die Informationssicherheits-Kenntnisse in Ihrem Unternehmen durch eine Schulung verbessern möchten, zögern Sie nicht ",
+            },
+            "let_us_know": {
+                "en": "let us know.",
+                "fr": "nous le faire savoir.",
+                "de": "uns dies mitzuteilen.",
+            },
+            "email_subject": {
+                "en": "Request training offer",
+                "fr": "Demander une offre de formation",
+                "de": "Schulungsangebot anfragen",
+            },
+            "email_body": {
+                "en": "Dear Cases Team, \n\nWe would like an information about security awareness training offer. \n\nHere is our evaluation results identifier: {userId} \n\nHere is also the information necessary to establish the offer: \n\nContact details: \n- Name of the contact: \n- Email address of the contact: \n\nOrganization: \n- Company Name: \n- Company address: \n- Postal code: \n- City: \n- VAT number (if applicable): \n\nTraining: \n- Number of participants*: \n- Desired language(s) for the training(s): \n- Personalized topics to discuss: \n\n* For a number of people greater than 25, the training will be done in several installments, involving a higher cost.\n",
+                "fr": "À l'attention de l'équipe CASES, \n\nNous souhaitons une offre de sensibilisation à la sécurité de l'information.\n\nVoici l'identifiant lié à notre évaluation: {userId}\n\nVoici également les informations nécessaires à l'établissement de l'offre: \n\nPoint de contact: \n- Nom du point de contact: \n- Adresse mail du point de contact: \n\nEntreprise: \n- Nom de l'entreprise: \n- Adresse de l'entreprise: \n- Adresse de l'entreprise: \n- Code postal: \n- Ville: \n- Numéro TVA (si applicable): \n\nFormations: \n- Nombre de personnes à sensibiliser*: \n- Langue(s) souhaitée(s) pour la/les formation(s): \n- Sujets personnalisés à aborder: \n\n*Pour un nombre de personnes supérieur à 25, la formation sera alors faite en plusieurs fois, impliquant un cout plus élevé.\n",
+                "de": "Sehr geehrtes CASES-Team, \n\nWir möchten ein Angebot für eine Einführung/Sensibilisierung zum Thema Informationssicherheit. \n\nHier ist die Kennung unserer Bewertung: {userId} \n\nHier finden Sie auch die Informationen, die zur Erstellung des Angebots erforderlich sind: \n\nAnlaufstelle: \n- Name der Kontaktstelle: \n- E-Mail-Adresse der Kontaktstelle: \n\nUnternehmen: \n- Name der Firma: \n- Firmenanschrift: \n- Postleitzahl: \n- Stadt: \n- Umsatzsteuer-Identifikationsnummer (falls zutreffend): \n\nAusbildung: \n- Anzahl der Teilnehmer *: \n- Gewünschte Sprache(n) für die Ausbildung(en): \n- gewünschte Themenschwerpunkte: \n\n* Wenn die Teilnehmerzahl die 25 überschreitet, wird die Schulung in mehreren Sitzungen durchgeführt, was mit höheren Kosten verbunden ist. \n",
             },
         },
         "general_feedback": {
@@ -331,6 +354,11 @@ TRANSLATION_UI = {
                     "fr": "Agriculture et pêche, espaces naturels et espaces verts, soins aux animaux",
                     "de": "Landwirtschaft und Fischerei, Natur- und Grünflächen, Tierpflege",
                 },
+                "PUBL": {
+                    "en": "Public administration",
+                    "fr": "Administration publique",
+                    "de": "Öffentliche Verwaltungen",
+                }
             },
             "size_question": {
                 "en": "How many employees?",

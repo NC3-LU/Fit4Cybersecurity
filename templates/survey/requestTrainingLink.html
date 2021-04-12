@@ -1,0 +1,7 @@
+<a
+    class="{% if type == 'button' %}btn btn-success{% else %}text-success{% endif %} send-email-to-cases"
+    data-subject="{{ translations.request_training.email_subject }}"
+    data-body="{{ translations.request_training.email_body }}"
+    data-user-id="{{ user.user_id }}"
+    href="#"
+>{% if type == 'button' %}{{ translations.request_training.email_subject }}{% else %}{{ translations.request_training.let_us_know }}{% endif %}</a>
