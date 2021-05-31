@@ -17,9 +17,7 @@ services:
       - ./docker/postgres/data:/var/lib/postgresql/data
 
   app:
-    build:
-      context: .
-      dockerfile: ./docker/python/Dockerfile
+    build: .
     tty: true
     volumes:
       - .:/csskp:rw

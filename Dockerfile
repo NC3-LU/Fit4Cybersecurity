@@ -1,35 +1,12 @@
-FROM python:3.9-alpine
+FROM ubuntu:focal
+ENV LC_ALL=C.UTF-8
+ENV LANG=C.UTF-8
+ENV DEBIAN_FRONTEND=noninteractive
 
-RUN apk update && \
-  apk add \
-  build-base \
-  cargo \
-  curl \
-  freetype-dev \
-  fribidi-dev \
-  gcc \
-  gettext \
-  git \
-  harfbuzz-dev \
-  lcms2-dev \
-  libffi-dev \
-  libjpeg-turbo-dev \
-  libpng-dev \
-  libpq \
-  libressl-dev \
-  libwebp-dev \
-  libxml2-dev \
-  libxslt-dev \
-  musl-dev \
-  npm \
-  openssl-dev \
-  postgresql-client \
-  postgresql-dev \
-  python3-dev \
-  tcl-dev \
-  tk-dev \
-  zlib \
-  rust
+RUN apt-get update
+RUN apt-get -y upgrade
+RUN apt-get -y install wget python3-dev git python3-venv python3-pip npm
+RUN pip3 install poetry
 
 WORKDIR csskp
 
