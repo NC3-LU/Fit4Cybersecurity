@@ -5,19 +5,19 @@ services:
     image: postgres:latest
     hostname: db
     restart: always
+    container_name: fit4cybersecurity_db
     environment:
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=password
       - POSTGRES_DB=postgres
     ports:
-      - '5532:5432'
-    expose:
-      - '5532'
+      - '5432:5432'
     volumes:
-      - ./docker/postgres/data:/var/lib/postgresql/data
+      - postgres_data:/var/lib/postgresql/data/
 
   app:
     build: .
+    container_name: fit4cybersecurity_web
     tty: true
     command: "./wait-for-postgres.sh db"
     volumes:
@@ -30,3 +30,6 @@ services:
     depends_on:
       - db
     command: "./wait-for-postgres.sh db"
+
+volumes:
+  postgres_data:
