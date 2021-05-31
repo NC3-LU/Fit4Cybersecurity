@@ -19,6 +19,7 @@ services:
   app:
     build: .
     tty: true
+    command: "./wait-for-postgres.sh db"
     volumes:
       - .:/csskp:rw
       - /csskp/static/npm_components/

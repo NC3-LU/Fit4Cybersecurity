@@ -36,3 +36,6 @@ RUN cp -R node_modules/* static/npm_components/
 
 RUN pip install poetry
 RUN poetry install
+
+EXPOSE 8000
+CMD ["./wait-for-postgres.sh", "db"]
