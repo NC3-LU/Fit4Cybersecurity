@@ -15,6 +15,36 @@ from survey.globals import TRANSLATION_UI
 from utils.radarFactory import radar_factory
 import matplotlib.pyplot as plt
 
+# remove html tags from the report https://stackoverflow.com/questions/753052/strip-html-from-strings-in-python
+from io import StringIO
+from html.parser import HTMLParser
+
+import docx
+from docx import Document
+from docx.shared import Cm, Pt
+# from docx.enum.text import WD_ALIGN_PARAGRAPH
+from docx.enum.dml import MSO_THEME_COLOR_INDEX
+from datetime import date
+import re
+
+
+class MLStripper(HTMLParser):
+    def __init__(self):
+        super().__init__()
+        self.reset()
+        self.strict = False
+        self.convert_charrefs= True
+        self.text = StringIO()
+    def handle_data(self, d):
+        self.text.write(d)
+    def get_data(self):
+        return self.text.getvalue()
+
+def strip_tags(html):
+    s = MLStripper()
+    s.feed(html)
+    return s.get_data()
+
 
 def getRecommendations(user: SurveyUser, lang: str):
     allAnswers = SurveyQuestionAnswer.objects.all().order_by(
@@ -41,6 +71,11 @@ def getRecommendations(user: SurveyUser, lang: str):
                 category_name = categories_translations[
                     rec.forAnswer.question.service_category.titleKey
                 ]
+
+                translated_recommendation = recommendations_translations[rec.textKey]
+                if is_recommendation_already_added(translated_recommendation, finalReportRecs):
+                    continue
+
                 if category_name not in finalReportRecs:
                     finalReportRecs[category_name] = []
                 finalReportRecs[category_name].append(
@@ -49,15 +84,17 @@ def getRecommendations(user: SurveyUser, lang: str):
 
     return finalReportRecs
 
+def is_recommendation_already_added(recommendation: str, recommendations: dict):
+    if recommendations:
+        for category, recommendations_per_category in recommendations.items():
+            if recommendation in recommendations_per_category:
+                return True
+
+    return False
 
 def createAndSendReport(user: SurveyUser, lang: str):
     """Generates the report as a .docx file, then returns it to the view.
     """
-    from docx import Document
-    from docx.shared import Cm, Pt
-    from docx.enum.style import WD_STYLE_TYPE
-    from docx.enum.text import WD_ALIGN_PARAGRAPH
-    from datetime import date
 
     filepath = settings.BASE_DIR + "/wtemps/"
 
@@ -177,9 +214,20 @@ def createAndSendReport(user: SurveyUser, lang: str):
         doc.add_heading(category, level=2)
         point_number = 1
         for recommendation in items:
-            doc.add_paragraph(
-                str(point_number) + ". " + recommendation, "List Paragraph"
-            )
+            # Create hyperlinks in the document.
+            split_links = re.split('\<a href=\"(.+?)\".*>([\w\s]+)\<\/a\>', recommendation)
+            elements_number = len(split_links)
+            if elements_number > 1:
+                paragraph = doc.add_paragraph(str(point_number) + ". ", "List Paragraph")
+                for index, string_part in enumerate(split_links):
+                    if index % 3 == 0:
+                        paragraph.add_run(string_part)
+                        if elements_number > index + 1:
+                            add_hyperlink(paragraph, split_links[index + 2], split_links[index + 1])
+            else:
+                doc.add_paragraph(
+                    str(point_number) + ". " + strip_tags(recommendation), "List Paragraph"
+                )
             point_number += 1
 
     doc.add_page_break()
@@ -196,7 +244,7 @@ def createAndSendReport(user: SurveyUser, lang: str):
         table.autofit = False
         hdr_cells = table.rows[0].cells
         hdr_cells[0].text = str(index + 1)
-        hdr_cells[1].text = questions_translations[question.titleKey]
+        hdr_cells[1].text = strip_tags(questions_translations[question.titleKey])
 
         bX = hdr_cells[0].paragraphs[0].runs[0]
         bX.font.bold = True
@@ -224,7 +272,7 @@ def createAndSendReport(user: SurveyUser, lang: str):
             else:
                 row_cells[0].text = " "
 
-            row_cells[1].text = answers_translations[answer.answerKey]
+            row_cells[1].text = strip_tags(answers_translations[answer.answerKey])
 
             if user_answer.uvalue > 0:
                 bX = row_cells[1].paragraphs[0].runs[0]
@@ -374,3 +422,31 @@ def get_formatted_translations(lang: str, type: str):
         translation_key_values[translation.key] = translation.text
 
     return translation_key_values
+
+
+def add_hyperlink(paragraph, text: str, url: str):
+    # This gets access to the document.xml.rels file and gets a new relation id value
+    part = paragraph.part
+    r_id = part.relate_to(url, docx.opc.constants.RELATIONSHIP_TYPE.HYPERLINK, is_external=True)
+
+    # Create the w:hyperlink tag and add needed values
+    hyperlink = docx.oxml.shared.OxmlElement('w:hyperlink')
+    hyperlink.set(docx.oxml.shared.qn('r:id'), r_id, )
+
+    # Create a w:r element and a new w:rPr element
+    new_run = docx.oxml.shared.OxmlElement('w:r')
+    rPr = docx.oxml.shared.OxmlElement('w:rPr')
+
+    # Set link color and underline
+    c = docx.oxml.shared.OxmlElement('w:color')
+    c.set(docx.oxml.shared.qn('w:val'), 'FF8822')
+    rPr.append(c)
+
+    # Join all the xml elements together add add the required text to the w:r element
+    new_run.append(rPr)
+    new_run.text = text
+    hyperlink.append(new_run)
+
+    paragraph._p.append(hyperlink)
+
+    return hyperlink
