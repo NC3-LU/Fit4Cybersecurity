@@ -102,8 +102,6 @@ def handle_question_answers_request(request, user: SurveyUser, question_index: i
             answers_field_type=current_question.qtype,
             question_answers=question_answers,
         )
-        # TODO: change required value of textarea of free text if to validate it if free_text_answer is selected or not for question types MT ST.
-
         if form.is_valid():
             with transaction.atomic():
                 user = SurveyUser.objects.select_for_update(nowait=True).filter(id=user.id)[0]
