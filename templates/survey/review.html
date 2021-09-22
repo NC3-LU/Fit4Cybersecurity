@@ -26,6 +26,11 @@
                     <ul>
                         {% for user_answer in question_answers.user_answers %}
                             <li class="{% if user_answer.value > 0 %}text-nowrap font-weight-bold{% else %}disabled text-muted font-weight-light{% endif %}">{{ user_answer.title | safe }}</li>
+                            {% if user_answer.content != '' %}
+                                <p class="text-muted pt-2 pl-4 small">
+                                     <span class="font-weight-bold">{{ translations.custom_response }}:</span> {{ user_answer.content }}
+                                </p>
+                            {% endif %}
                         {% endfor %}
                     </ul>
                 </li>

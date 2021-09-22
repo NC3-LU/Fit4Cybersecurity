@@ -882,3 +882,10 @@ INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q0
 INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q013REC002', 'Persönliche Geräte sollten nicht ohne Kontrollen, Regeln und Erklärungen in der Firma verwendet werden. Wenn Sie die verschiedenen Möglichkeiten kennen, einen Organismus anzugreifen, können Sie Angriffe besser erkennen', 'de', 'R');
 INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q013REC003', 'Auf persönlichen Geräten sollte ein Virenschutzprogramm installiert, aktualisiert und aktiviert sein, um so viele Bedrohungen wie möglich zu vermeiden.', 'de', 'R');
 INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q013REC004', 'Das Definieren von Regeln und Best Practices trägt zum Schutz der internen Netzwerke bei.', 'de', 'R');
+
+
+-- Update the sequences IDs
+SELECT setval('survey_surveysection_id_seq', (SELECT MAX(id) from "survey_surveysection"));
+SELECT setval('survey_surveyquestionservicecategory_id_seq', (SELECT MAX(id) from "survey_surveyquestionservicecategory"));
+SELECT setval('survey_surveyquestion_id_seq', (SELECT MAX(id) from "survey_surveyquestion"));
+SELECT setval('survey_surveyquestionanswer_id_seq', (SELECT MAX(id) from "survey_surveyquestionanswer"));

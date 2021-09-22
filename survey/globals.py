@@ -47,7 +47,14 @@ COMPANY_SIZE = [
 QUESTION_TYPES = [
     ("M", "Multiple Choice"),
     ("S", "Single Choice"),
-    ("I", "Integer Slider"),
+    ("T", "Free text"),
+    ("MT", "Multiple Choice + Free Text"),
+    ("ST", "Single Choice + Free Text"),
+]
+
+ANSWER_TYPES = [
+    ("P", "Predefined answer"),
+    ("T", "Free text"),
 ]
 
 LANG_SELECT = [
@@ -388,6 +395,11 @@ TRANSLATION_UI = {
                 "en": "Please let us know if anything is missing",
                 "fr": "S'il vous plaît laissez-nous savoir si quelque chose est manquant",
                 "de": "Bitte lassen Sie uns wissen, wenn etwas fehlt",
+            },
+            "custom_response": {
+                "en": "Custom response",
+                "fr": "Réponse personnalisée",
+                "de": "Benutzerdefinierte Antwort",
             },
         },
     },

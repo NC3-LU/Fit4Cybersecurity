@@ -45,14 +45,18 @@ class InitialStartForm(forms.Form):
 
 class AnswerMChoice(forms.Form):
     unique_answers = forms.CharField(widget=forms.HiddenInput(), required=False)
+    free_text_answer_id = forms.CharField(widget=forms.HiddenInput(), required=False)
 
     def __init__(self, tanswers=None, *args, **kwargs):
         self.lang = kwargs.pop("lang")
         answers_field_type = kwargs.pop("answers_field_type")
+        self.question_type = answers_field_type
+        question_answers = kwargs.pop("question_answers")
+        data = kwargs.get("data")
 
         super().__init__(*args, **kwargs)
 
-        if answers_field_type == "M":
+        if answers_field_type[0] == "M":
             self.fields["answers"] = forms.MultipleChoiceField(
                 required=True,
                 choices=[],
@@ -61,20 +65,48 @@ class AnswerMChoice(forms.Form):
                 ),
                 label="",
             )
-        elif answers_field_type == "S":
+        elif answers_field_type[0] == "S":
             self.fields["answers"] = forms.ChoiceField(
                 required=True,
                 choices=[],
                 widget=forms.RadioSelect(attrs={"class": "radio-buttons"}),
                 label="",
             )
+        elif answers_field_type == "T":
+            self.fields["answers"] = forms.ChoiceField(
+                required=True,
+                choices=[],
+                widget=forms.RadioSelect(attrs={"class": "radio-buttons"}),
+                label="",
+                initial=tanswers[0][0]
+            )
 
         self.fields["answers"].error_messages = {
             "required": TRANSLATION_UI["form"]["error_messages"]["answer"]["required"][self.lang]
         }
 
-        if tanswers != None:
+        if tanswers is not None:
             self.fields["answers"].choices = tanswers
+
+        for question_answer in question_answers:
+            if question_answer.atype == 'T':
+                isAnswerContentRequired = False
+                if data is not None and data['free_text_answer_id'] != 0:
+                    selected_answers = data['answers']
+                    if answers_field_type[0] == "S":
+                        selected_answers = [data['answers']]
+                    if data['free_text_answer_id'] in selected_answers:
+                        isAnswerContentRequired = True
+
+                self.fields["answer_content"] = forms.CharField(
+                    label="",
+                    widget=forms.Textarea(
+                        attrs={
+                            "placeholder": "",
+                        }
+                    ),
+                    required=isAnswerContentRequired,
+                )
 
         self.fields["feedback"] = forms.CharField(
             label=TRANSLATION_UI["form"]["questions"]["feedback_label"][self.lang],
@@ -91,11 +123,16 @@ class AnswerMChoice(forms.Form):
     def set_unique_answers(self, unique_answers_ids):
         self.fields["unique_answers"].initial = unique_answers_ids
 
+    def set_free_text_answer_id(self, answer_id):
+        self.fields["free_text_answer_id"].initial = answer_id
+
     def set_answers(self, answers_ids):
-        self.fields["answers"].initial = answers_ids
+        if self.question_type != "T":
+            self.fields["answers"].initial = answers_ids
 
     def clean_answers(self):
         answers = self.cleaned_data["answers"]
+
         if self.fields["answers"].widget.input_type == "radio":
             answers = [answers]
 
@@ -115,6 +152,9 @@ class AnswerMChoice(forms.Form):
                 )
 
         return answers
+
+    def set_answer_content(self, answer_content):
+        self.fields["answer_content"].initial = answer_content
 
     def set_feedback(self, feedback):
         self.fields["feedback"].initial = feedback

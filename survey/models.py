@@ -4,6 +4,7 @@ from django.db import models
 from survey.globals import (
     SECTOR_CHOICES,
     QUESTION_TYPES,
+    ANSWER_TYPES,
     COMPANY_SIZE,
     LANG_SELECT,
     TRANSLATION_TYPES,
@@ -91,7 +92,7 @@ class SurveyQuestion(models.Model):
     section = models.ForeignKey(SurveySection, on_delete=models.CASCADE)
     titleKey = models.CharField(max_length=32)
     qtype = models.CharField(
-        max_length=1, choices=QUESTION_TYPES, default=QUESTION_TYPES[0][0]
+        max_length=2, choices=QUESTION_TYPES, default=QUESTION_TYPES[0][0]
     )
     qindex = models.IntegerField(unique=True)
     maxPoints = models.IntegerField(default=10)
@@ -113,6 +114,9 @@ class SurveyQuestionAnswer(models.Model):
     aindex = models.IntegerField()
     uniqueAnswer = models.BooleanField(default=False)
     score = models.IntegerField(default=0)
+    atype = models.CharField(
+        max_length=2, choices=ANSWER_TYPES, default=ANSWER_TYPES[0][0]
+    )
 
     def __str__(self):
         return str(
@@ -159,28 +163,14 @@ class SurveyUser(models.Model):
         return self.status == SURVEY_STATUS_FINISHED
 
 
-"""
-class SurveyUserAnswers(models.Model):
-    # UUID user
-    # QuestionID
-    # AnswerListID
-
-    user = models.ForeignKey(SurveyUser,on_delete=models.CASCADE)
-    question = models.ForeignKey(SurveyQuestion,on_delete=models.CASCADE)
-
-    def __str__(self):
-        return str(self.user)
-
-"""
-
-
 class SurveyUserAnswer(models.Model):
     # AnswerID
     # AnswerListID
     user = models.ForeignKey(SurveyUser, on_delete=models.CASCADE)
     answer = models.ForeignKey(SurveyQuestionAnswer, on_delete=models.CASCADE)
-    # 0, 1 for true, false selections, or -inf to +inf for value slider questions
+    # 0, 1 for true, false selections
     uvalue = models.IntegerField(default=0)
+    content = models.TextField(null=False, blank=True, default="")
 
     def __str__(self):
         return str(self.answer)

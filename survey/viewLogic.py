@@ -79,9 +79,17 @@ def handle_question_answers_request(request, user: SurveyUser, question_index: i
     ) = get_questions_slice(question_index)
 
     try:
-        tuple_answers = get_answer_choices(current_question, user.choosen_lang)
+        question_answers = SurveyQuestionAnswer.objects.order_by("aindex").filter(
+            question=current_question
+        )
+        tuple_answers = get_answer_choices(question_answers, user.choosen_lang)
     except Exception as e:
         raise e
+
+    free_text_answer_id = 0
+    for question_answer in question_answers:
+        if question_answer.atype == 'T':
+            free_text_answer_id = question_answer.id
 
     translation.activate(user.choosen_lang)
     request.session[translation.LANGUAGE_SESSION_KEY] = user.choosen_lang
@@ -92,13 +100,19 @@ def handle_question_answers_request(request, user: SurveyUser, question_index: i
             data=request.POST,
             lang=user.choosen_lang,
             answers_field_type=current_question.qtype,
+            question_answers=question_answers,
         )
+        # TODO: change required value of textarea of free text if to validate it if free_text_answer is selected or not for question types MT ST.
 
         if form.is_valid():
             with transaction.atomic():
                 user = SurveyUser.objects.select_for_update(nowait=True).filter(id=user.id)[0]
                 answers = form.cleaned_data["answers"]
-                save_answers(tuple_answers, answers, user)
+                answer_content = ''
+                if "answer_content" in form.cleaned_data:
+                    answer_content = form.cleaned_data["answer_content"]
+
+                save_answers(user, current_question, question_answers, answers, answer_content)
 
                 feedback = form.cleaned_data["feedback"]
                 if feedback:
@@ -123,22 +137,25 @@ def handle_question_answers_request(request, user: SurveyUser, question_index: i
 
                 return user
     else:
-        user_answers = SurveyUserAnswer.objects.filter(
-            user=user, answer__question=current_question, uvalue__gt=0
+        form = AnswerMChoice(
+            tuple_answers,
+            lang=user.choosen_lang,
+            answers_field_type=current_question.qtype,
+            question_answers=question_answers,
         )
+
+        user_answers = SurveyUserAnswer.objects.filter(user=user, answer__question=current_question)
         selected_answers = []
         for user_answer in user_answers:
-            selected_answers.append(user_answer.answer.id)
+            if user_answer.uvalue > 0:
+                selected_answers.append(user_answer.answer.id)
+            if user_answer.content:
+                form.set_answer_content(user_answer.content)
 
         user_feedback = SurveyUserFeedback.objects.filter(
             user=user, question=current_question
         )[:1]
 
-        form = AnswerMChoice(
-            tuple_answers,
-            lang=user.choosen_lang,
-            answers_field_type=current_question.qtype,
-        )
         form.set_answers(selected_answers)
         if user_feedback:
             form.set_feedback(user_feedback[0].feedback)
@@ -148,6 +165,7 @@ def handle_question_answers_request(request, user: SurveyUser, question_index: i
     )
     uniqueAnswers = ",".join(str(uniqueAnswer.id) for uniqueAnswer in uniqueAnswers)
     form.set_unique_answers(uniqueAnswers)
+    form.set_free_text_answer_id(free_text_answer_id)
 
     return {
         "title": "Fit4Cybersecurity - "
@@ -167,39 +185,37 @@ def handle_question_answers_request(request, user: SurveyUser, question_index: i
     }
 
 
-def save_answers(answer_choices, answers, user: SurveyUser):
-    existing_answer_ids = [int(i[0]) for i in answer_choices]
-    user_answers = [int(i) for i in answers]
-    for a in existing_answer_ids:
-        answer = SurveyUserAnswer.objects.filter(user=user, answer__id=a)[:1]
-        if not answer:
-            answer = SurveyUserAnswer()
-            answer.user = user
-            qanswer = SurveyQuestionAnswer.objects.filter(id=a)[:1]
-            answer.answer = qanswer[0]
+def save_answers(user: SurveyUser, current_question: SurveyQuestion, question_answers, posted_answers, answer_content):
+    posted_answers_ids = [int(i) for i in posted_answers]
+    for question_answer in question_answers:
+        user_answers = SurveyUserAnswer.objects.filter(user=user, answer=question_answer)[:1]
+        if not user_answers:
+            user_answer = SurveyUserAnswer()
+            user_answer.user = user
+            user_answer.answer = question_answer
         else:
-            answer = answer[0]
+            user_answer = user_answers[0]
 
-        answer.uvalue = 0
-        if a in user_answers:
-            answer.uvalue = 1
+        if question_answer.atype == 'T':
+            user_answer.content = answer_content
 
-        answer.save()
+        user_answer.uvalue = 0
+        if question_answer.id in posted_answers_ids:
+            user_answer.uvalue = 1
+
+        user_answer.save()
 
 
 def find_user_by_id(user_id):
     return SurveyUser.objects.filter(user_id=user_id)[0]
 
 
-def get_answer_choices(survey_question: SurveyQuestion, user_lang: str):
+def get_answer_choices(question_answers, user_lang: str):
     tuple_answers = []
-    answer_choices = SurveyQuestionAnswer.objects.order_by("aindex").filter(
-        question=survey_question
-    )
 
-    for answer_choice in answer_choices:
+    for question_answer in question_answers:
         translation_key = TranslationKey.objects.filter(
-            lang=user_lang, key=answer_choice.answerKey
+            lang=user_lang, key=question_answer.answerKey
         )
         if translation_key.count() == 0:
             raise Exception(
@@ -209,12 +225,12 @@ def get_answer_choices(survey_question: SurveyQuestion, user_lang: str):
 
         tuple_answers.append(
             (
-                answer_choice.id,
+                question_answer.id,
                 format_html(
                     "{}{}",
                     mark_safe('<span class="checkmark"></span>'),
                     translation_key[0].text,
-                ),
+                )
             )
         )
 
@@ -263,16 +279,20 @@ def get_questions_with_user_answers(user: SurveyUser):
             feedback = ""
             if question_index in feedbacks_per_question:
                 feedback = feedbacks_per_question[question_index]
-
             questions_with_user_answers[question_index] = {
                 "question_title": question_title,
                 "feedback": feedback,
                 "user_answers": [],
             }
 
+        user_answer_content = ""
+        if survey_user_answer.answer.atype == 'T' and survey_user_answer.uvalue == 1:
+            user_answer_content = survey_user_answer.content
+
         questions_with_user_answers[question_index]["user_answers"].append(
             {
                 "value": survey_user_answer.uvalue,
+                "content": user_answer_content,
                 "title": answers_translations[survey_user_answer.answer.answerKey],
             }
         )

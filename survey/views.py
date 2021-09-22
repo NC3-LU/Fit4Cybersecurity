@@ -151,6 +151,9 @@ def review(request):
             "feedback_label": TRANSLATION_UI["form"]["questions"]["feedback_label"][
                 lang
             ],
+            "custom_response": TRANSLATION_UI["form"]["questions"]["custom_response"][
+                lang
+            ],
             "continue_later": {
                 "button": TRANSLATION_UI["question"]["continue_later"]["button"][lang],
                 "title": TRANSLATION_UI["question"]["continue_later"]["title"][lang],
