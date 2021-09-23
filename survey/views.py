@@ -73,11 +73,10 @@ def handle_question_form(request, question_index: int):
 
 
 def change_lang(request, lang: str):
-    user_id = request.session.get("user_id", None)
-    if user_id == None:
+    if request.session.get("user_id", None) is None:
         return HttpResponseRedirect("/")
 
-    user = find_user_by_id(user_id)
+    user = find_user_by_id(request.session["user_id"])
     user.choosen_lang = lang
     user.save()
 
@@ -97,7 +96,6 @@ def show_report(request, lang):
     user_id = request.session.get("user_id", None)
     if user_id == None:
         return HttpResponseRedirect("/")
-
     user = find_user_by_id(user_id)
 
     if not user.is_survey_finished():
@@ -119,8 +117,8 @@ def review(request):
     user_id = request.session.get("user_id", None)
     if user_id == None:
         return HttpResponseRedirect("/")
-
     user = find_user_by_id(user_id)
+
     if user.is_survey_finished():
         return HttpResponseRedirect("/survey/finish")
     elif user.is_survey_in_progress():
@@ -149,9 +147,6 @@ def review(request):
             ][lang],
             "modify_button": TRANSLATION_UI["review"]["modify_button"][lang],
             "feedback_label": TRANSLATION_UI["form"]["questions"]["feedback_label"][
-                lang
-            ],
-            "custom_response": TRANSLATION_UI["form"]["questions"]["custom_response"][
                 lang
             ],
             "continue_later": {
@@ -187,6 +182,8 @@ def finish(request):
         return HttpResponseRedirect("/")
 
     user_lang = user.choosen_lang
+
+    user_lang = user.choosen_lang
     translation.activate(user_lang)
     request.session[translation.LANGUAGE_SESSION_KEY] = user_lang
 
@@ -196,7 +193,9 @@ def finish(request):
 
     txt_score, radar_current, sections_list = calculateResult(user, user_lang)
 
-    diagnostic_email_body = TRANSLATION_UI["report"]["request_diagnostic"]["email_body"][user_lang]
+    diagnostic_email_body = TRANSLATION_UI["report"]["request_diagnostic"][
+        "email_body"
+    ][user_lang]
 
     recommendations = getRecommendations(user, user_lang)
     # To properly display breaking lines \n on html page.
@@ -204,7 +203,7 @@ def finish(request):
         recommendations[rx] = [x.replace("\n", "<br>") for x in recommendations[rx]]
 
     textLayout = {
-        "title": "Fit4Cybersecurity - " + TRANSLATION_UI["report"]["title"][user_lang],
+        "title": "Fit4Privacy - " + TRANSLATION_UI["report"]["title"][user_lang],
         "description": TRANSLATION_UI["report"]["description"][user_lang],
         "recommendations": recommendations,
         "user": user,
@@ -224,28 +223,34 @@ def finish(request):
 
     textLayout["translations"]["request_diagnostic"] = {
         "title": TRANSLATION_UI["report"]["request_diagnostic"]["title"][user_lang],
-        "description": TRANSLATION_UI["report"]["request_diagnostic"]["description"][user_lang],
-        "service_fee": TRANSLATION_UI["report"]["request_diagnostic"]["service_fee"][user_lang],
-        "email_subject": TRANSLATION_UI["report"]["request_diagnostic"]["email_subject"][user_lang],
-        "email_body": diagnostic_email_body.replace("{userId}", str(crypter.encrypt(user_id.encode("utf-8")))),
-    }
-    textLayout["translations"]["request_training"] = {
-        "description": TRANSLATION_UI["report"]["request_training"]["description"][user_lang].replace(
-            "{score}", str(txt_score) + "/100"
-        ),
-        "let_us_know": TRANSLATION_UI["report"]["request_training"]["let_us_know"][user_lang],
-        "email_subject": TRANSLATION_UI["report"]["request_training"]["email_subject"][user_lang],
-        "email_body": TRANSLATION_UI["report"]["request_training"]["email_body"][user_lang].replace(
+        "description": TRANSLATION_UI["report"]["request_diagnostic"]["description"][
+            user_lang
+        ],
+        "service_fee": TRANSLATION_UI["report"]["request_diagnostic"]["service_fee"][
+            user_lang
+        ],
+        "email_subject": TRANSLATION_UI["report"]["request_diagnostic"][
+            "email_subject"
+        ][user_lang],
+        "email_body": diagnostic_email_body.replace(
             "{userId}", str(crypter.encrypt(user_id.encode("utf-8")))
         ),
     }
-    textLayout["translations"]["txtdownload"] = TRANSLATION_UI["report"]["download"][user_lang]
-    textLayout["translations"]["txtreport"] = TRANSLATION_UI["report"]["report"][user_lang]
+    textLayout["translations"]["txtdownload"] = TRANSLATION_UI["report"]["download"][
+        user_lang
+    ]
+    textLayout["translations"]["txtreport"] = TRANSLATION_UI["report"]["report"][
+        user_lang
+    ]
     textLayout["translations"]["general_feedback"] = {
         "button": TRANSLATION_UI["report"]["general_feedback"]["button"][user_lang],
         "title": TRANSLATION_UI["report"]["general_feedback"]["title"][user_lang],
-        "button_close": TRANSLATION_UI["report"]["general_feedback"]["button_close"][user_lang],
-        "button_send": TRANSLATION_UI["report"]["general_feedback"]["button_send"][user_lang],
+        "button_close": TRANSLATION_UI["report"]["general_feedback"]["button_close"][
+            user_lang
+        ],
+        "button_send": TRANSLATION_UI["report"]["general_feedback"]["button_send"][
+            user_lang
+        ],
     }
 
     return render(request, "survey/finishedSurvey.html", context=textLayout)

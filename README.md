@@ -1,13 +1,7 @@
-# Fit4Cybersecurity
+# Fit4Privacy
 
-[![Translation status](https://translate.monarc.lu/widgets/fit4cybersecurity/-/88x31-white.png)](https://translate.monarc.lu/engage/fit4cybersecurity/)
-
-
-Fit4Cybersecurity is a self-assessment tool by [CASES](https://www.cases.lu)
-to help business owners implement a better cybersecurity strategy.
-
-The official CASES instance is available [here](https://fit4cybersecurity.cases.lu).
-
+Fit4Privacy is a self-assessment tool by [CASES](https://www.cases.lu)
+to help business owners implement a better data protection and privacy approach.
 
 ## Deployment
 
@@ -30,8 +24,9 @@ $ pyenv versions # check
 
 
 ```bash
-$ git clone https://github.com/CASES-LU/Fit4Cybersecurity.git
-$ cd Fit4Cybersecurity/
+$ git clone https://github.com/CASES-LU/fit4cybersecurity.git ./fit4privacy
+$ cd fit4privacy/
+$ git checkout fit4privacy
 $ npm install
 $ poetry install
 ```
@@ -78,7 +73,7 @@ be *password*.
 ## Upgrading the application
 
 ```bash
-$ cd Fit4Cybersecurity/
+$ cd fit4privacy/
 $ git pull origin master
 $ poetry run python manage.py migrate
 $ poetry run python manage.py compilemessages
@@ -94,11 +89,7 @@ Then you can use a tool like
 [poedit](https://poedit.net) to translate the strings and you can compile with
 the previously mentioned command.
 
-If you want to re-generate the .pot file:
 
-```bash
-$ python manage.py makemessages --keep-pot
-```
 
 ## License
 

@@ -7,7 +7,7 @@
 {% load static %}
 
 {% block bootstrap4_extra_head %}
-    <meta name="description" content="Fit4Cybersecurity by CASES.LU" />
+    <meta name="description" content="Fit4Privacy by CASES.LU" />
     <link rel="stylesheet" type="text/css" href="{% static 'survey/css/custom.css' %}" />
     <link rel="icon" type="image/x-icon" href="{% static 'images/favicon.png' %}" />
     <link rel="apple-touch-icon" sizes="152x152" href="{% static 'images/apple-touch-icon.png' %}" />
@@ -24,7 +24,7 @@
 {% endblock %}
 
 {% block title %}
-    {{ _('Fit4Cybersecurity a CASES self-assessment tool!') }}
+    {{ _('Fit4Privacy a CASES self-assessment tool!') }}
 {% endblock %}
 
 {% block bootstrap4_content %}
@@ -57,7 +57,7 @@
         <div class="row">
             <div class="col text-center">
                 <div class="border-bottom border-primary">
-                    <h1><a href="/" class="logo-link"><img src="{% static _('images/logoFull-en.png') %}" width="50%" alt="Fit4Cybersecurity"></a></h1>
+                    <h1><a href="/" class="logo-link"><img src="{% static _('images/logoFull-en.png') %}" width="50%" alt="Fit4Privacy"></a></h1>
                 </div>
             </div>
         </div>
@@ -95,14 +95,14 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="https://github.com/CASES-LU/Fit4Cybersecurity" target="_blank">
+                    <a class="nav-link" href="https://github.com/CASES-LU/fit4cybersecurity/tree/fit4privacy" target="_blank">
                         <img class="img-fluid" src="{% static 'images/github-9-512.png' %}" width="32px"
                         title="{{ _('Source code on GitHub') }}"
                         alt="{{ _('Source code on GitHub') }}" />
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ version_url }}" title="{{ _('Version of Fit4Cybersecurity') }}" alt="{{ _('Version of Fit4Cybersecurity') }}" target="_blank">
+                    <a class="nav-link" href="{{ version_url }}" title="{{ _('Version of Fit4Privacy') }}" alt="{{ _('Version of Fit4Privacy') }}" target="_blank">
                         {{ app_version }}
                     </a>
                 </li>
@@ -112,7 +112,7 @@
                     <a class="nav-link" href="/terms" title="{{ _('Terms of service') }}" alt="{{ _('Terms of Service') }}">Terms</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="https://securitymadein.lu" target="_blank">Copyright © 2019-{% now "Y" %} - SECURITYMADEIN.LU</a>
+                    <a class="nav-link" href="https://securitymadein.lu" target="_blank">Copyright © {% now "Y" %} - SECURITYMADEIN.LU</a>
                 </li>
             </ul>
         </div>

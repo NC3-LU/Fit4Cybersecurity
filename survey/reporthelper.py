@@ -277,10 +277,6 @@ def createAndSendReport(user: SurveyUser, lang: str):
             if user_answer.uvalue > 0:
                 bX = row_cells[1].paragraphs[0].runs[0]
                 bX.font.bold = True
-                if user_answer.content != '':
-                    content_row_cells = table.add_row().cells
-                    content_row_cells[0].text = ' '
-                    content_row_cells[1].text = strip_tags(user_answer.content)
 
         col = table.columns[0]
         col.width = Cm(1.0)
@@ -296,14 +292,14 @@ def createAndSendReport(user: SurveyUser, lang: str):
     section = doc.sections[0]
     header = section.header
     paragraph = header.paragraphs[0]
-    paragraph.text = str(date.today()) + "\t\tFit4Cybersecurity"
+    paragraph.text = str(date.today()) + "\t\tFit4Privacy"
     paragraph.style = doc.styles["Header"]
 
     response = HttpResponse(
         content_type="application/vnd.openxmlformats-officedocument.wordprocessingml.document"
     )
     response["Content-Disposition"] = (
-        "attachment; filename=Report_Fit4Cybersecurity_"
+        "attachment; filename=Report_Fit4Privacy_"
         + str(date.today())
         + "_"
         + lang

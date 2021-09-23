@@ -47,14 +47,7 @@ COMPANY_SIZE = [
 QUESTION_TYPES = [
     ("M", "Multiple Choice"),
     ("S", "Single Choice"),
-    ("T", "Free text"),
-    ("MT", "Multiple Choice + Free Text"),
-    ("ST", "Single Choice + Free Text"),
-]
-
-ANSWER_TYPES = [
-    ("P", "Predefined answer"),
-    ("T", "Free text"),
+    ("I", "Integer Slider"),
 ]
 
 LANG_SELECT = [
@@ -110,9 +103,9 @@ TRANSLATION_UI = {
         "download": {"en": "Download", "fr": "Téléchargement", "de": "Herunterladen",},
         "report": {"en": "Summary", "fr": "Résumé", "de": "Zusammenfassung",},
         "description": {
-            "en": "This is the list of recommendations to improve the information security maturity in your company, provided that your answers did correctly reflect the state in your company. Also keep in mind that it is a self-assessment and only scratches the surface of the information security maturity level and thus, we are not liable for the results of this survey.",
-            "fr": "Voici la liste des recommandations visant à améliorer la maturité de la sécurité de l'information dans votre entreprise, à condition que vos réponses reflètent correctement l'état de votre entreprise. N'oubliez pas non plus qu'il s'agit d'une auto-évaluation et qu'elle ne fait qu'effleurer le niveau de maturité de la sécurité de l'information. Par conséquent, nous ne sommes pas responsables des résultats de cette enquête.",
-            "de": "Dies ist die Liste der Empfehlungen zur Verbesserung der Informationssicherheitsreife in Ihrem Unternehmen, sofern Ihre Antworten den Status in Ihrem Unternehmen korrekt widerspiegeln. Denken Sie auch daran, dass es sich um eine Selbsteinschätzung handelt, die nur die Oberfläche des Reifegrads der Informationssicherheit abbilden kann, und wir daher nicht für die Ergebnisse dieser Umfrage haften.",
+            "en": "This is the list of recommendations to improve the maturity of your company in the field of privacy and data protection, provided that your answers correctly reflected the state of practice in your company. Also keep in mind that it is a self-assessment and only scratches the surface of the privacy and data protection maturity level and thus, we are not liable for the results of this survey. Also remember that GDPR is about accountability: your company is expected to put measures in place to be able to demonstrate it is respecting GDPR, and that these measure are effective.",
+            "fr": "Voici la liste des recommandations visant à améliorer la maturité de la protection des données à caractère personnel dans votre entreprise, à condition que vos réponses reflètent correctement l'état de votre entreprise. N'oubliez pas non plus qu'il s'agit d'une auto-évaluation et qu'elle ne fait qu'effleurer le niveau de maturité de la protection de la vie privée et protection des données. Par conséquent, nous ne sommes pas responsables des résultats de cette enquête. Aussi, n'oubliez pas que le RGPD concerne la responsabilité : votre entreprise doit mettre en place des mesures pour pouvoir démontrer qu'elle respecte le RGPD et que ces mesures sont efficaces.",
+            "de": "Dies ist die Liste der Empfehlungen zur Verbesserung der Datenschutz in Ihrem Unternehmen, sofern Ihre Antworten den Status in Ihrem Unternehmen korrekt widerspiegeln. Denken Sie auch daran, dass es sich um eine Selbsteinschätzung handelt, die nur die Oberfläche des Reifegrads der Datenschutz abbilden kann, und wir daher nicht für die Ergebnisse dieser Umfrage haften. Denken Sie daran, dass es bei der DSGVO um Rechenschaftspflicht geht: Von Ihrem Unternehmen wird erwartet, dass es Maßnahmen ergreift, um nachweisen zu können, dass es die DSGVO einhält und dass diese Maßnahmen wirksam sind.",
         },
         "title": {
             "en": "final summary",
@@ -151,31 +144,9 @@ TRANSLATION_UI = {
                 "de": "Diagnose anfordern",
             },
             "email_body": {
-                "en": "Dear Cases Team,\n\nWe would like to request a Diagnostic CASES from you.\n\nHere is our evaluation results identifier: {userId}\n\nHere also additional information that could be useful: \nLastname of the contact: \nFirstname of the contact: \nEmail address of the contact: \nAddress of the company for the Diagnostic (Luxembourg only): \nDesired language for the Diagnostic: ",
+                "en": "Dear Cases Team,\n\nWe would like to request a Diagnostic CASES from you.\n\nHere is our evaluation results identifier: {userId}\n\nHere also additional information that could be useful: \nLastname of the contact: \nFirstname of the contact: \nEmail address of the contact: \nAddress of the company and for the Diagnostic (Luxembourg only): \nDesired language for the Diagnostic: ",
                 "fr": "À l'attention de l'équipe CASES,\n\nNous aimerions planifier un Diagnostic CASES.\n\nVoici l'identifiant lié à notre évaluation: {userId}\n\nVoici également les informations qui vous seront nécessaires: \nNom du point de contact: \nPrénom du point de contact: \nAdresse mail du point de contact: \nAdresse de l'entreprise et du Diagnostic (Luxembourg uniquement): \nLangue souhaitée du Diagnostic: ",
-                "de": "Sehr geehrtes CASES-Team, \n\nWir möchten ein Diagnostic CASES mit Ihnen anfordern. \n\nHier finden Sie die ID unserer Bewertungsergebnisse: {userId} \n\nHier finden Sie auch andere nützliche Informationen: \nNachname des Kontakts: \nVorname des Kontakts: \nE-Mail-Adresse des Kontakts: \nAdresse des Unternehmens und des Ortes für den Diagnostic CASES: (nur in Luxemburg): \nGewünschte Sprache für den Diagnostic CASES:",
-            },
-        },
-        "request_training": {
-            "description": {
-                "en": "Based on your score {score}, the CASES Diagnostic is not available for your organization at this moment. We recommend you improve the information security maturity level by implementing the recommendations listed below. If you need any information security training to raise awareness in your company, do not hesitate to ",
-                "fr": "Sur base de votre score de {score}, le diagnostic CASES n'est pas disponible pour votre organisation pour le moment. Nous vous recommandons d'améliorer le niveau de maturité de la sécurité de l'information en mettant en œuvre les recommandations ci-dessous. Si vous avez besoin d'une formation à la sécurité de l'information pour sensibiliser votre entreprise, n'hésitez pas à ",
-                "de": "Basierend auf Ihrem Ergebnis von {score} ist das Diagnostic CASES derzeit für Ihr Unternehmen nicht verfügbar. Wir empfehlen Ihnen, Ihren Informationssicherheit-Reifegrad zu verbessern, indem Sie die unten aufgeführten Empfehlungen umsetzen. Wenn Sie die Informationssicherheits-Kenntnisse in Ihrem Unternehmen durch eine Schulung verbessern möchten, zögern Sie nicht ",
-            },
-            "let_us_know": {
-                "en": "let us know.",
-                "fr": "nous le faire savoir.",
-                "de": "uns dies mitzuteilen.",
-            },
-            "email_subject": {
-                "en": "Request training offer",
-                "fr": "Demander une offre de formation",
-                "de": "Schulungsangebot anfragen",
-            },
-            "email_body": {
-                "en": "Dear Cases Team, \n\nWe would like an information about security awareness training offer. \n\nHere is our evaluation results identifier: {userId} \n\nHere is also the information necessary to establish the offer: \n\nContact details: \n- Name of the contact: \n- Email address of the contact: \n\nOrganization: \n- Company Name: \n- Company address: \n- Postal code: \n- City: \n- VAT number (if applicable): \n\nTraining: \n- Number of participants*: \n- Desired language(s) for the training(s): \n- Personalized topics to discuss: \n\n* For a number of people greater than 25, the training will be done in several installments, involving a higher cost.\n",
-                "fr": "À l'attention de l'équipe CASES, \n\nNous souhaitons une offre de sensibilisation à la sécurité de l'information.\n\nVoici l'identifiant lié à notre évaluation: {userId}\n\nVoici également les informations nécessaires à l'établissement de l'offre: \n\nPoint de contact: \n- Nom du point de contact: \n- Adresse mail du point de contact: \n\nEntreprise: \n- Nom de l'entreprise: \n- Adresse de l'entreprise: \n- Adresse de l'entreprise: \n- Code postal: \n- Ville: \n- Numéro TVA (si applicable): \n\nFormations: \n- Nombre de personnes à sensibiliser*: \n- Langue(s) souhaitée(s) pour la/les formation(s): \n- Sujets personnalisés à aborder: \n\n*Pour un nombre de personnes supérieur à 25, la formation sera alors faite en plusieurs fois, impliquant un cout plus élevé.\n",
-                "de": "Sehr geehrtes CASES-Team, \n\nWir möchten ein Angebot für eine Einführung/Sensibilisierung zum Thema Informationssicherheit. \n\nHier ist die Kennung unserer Bewertung: {userId} \n\nHier finden Sie auch die Informationen, die zur Erstellung des Angebots erforderlich sind: \n\nAnlaufstelle: \n- Name der Kontaktstelle: \n- E-Mail-Adresse der Kontaktstelle: \n\nUnternehmen: \n- Name der Firma: \n- Firmenanschrift: \n- Postleitzahl: \n- Stadt: \n- Umsatzsteuer-Identifikationsnummer (falls zutreffend): \n\nAusbildung: \n- Anzahl der Teilnehmer *: \n- Gewünschte Sprache(n) für die Ausbildung(en): \n- gewünschte Themenschwerpunkte: \n\n* Wenn die Teilnehmerzahl die 25 überschreitet, wird die Schulung in mehreren Sitzungen durchgeführt, was mit höheren Kosten verbunden ist. \n",
+                "de": "Sehr geehrtes CASES Team, \n\nWir möchten ein Diagnostic CASES mit Ihnen anfordern. \n\nHier finden Sie die ID unserer Bewertungsergebnisse: {userId} \n\nHier finden Sie auch andere nützliche Informationen: \nNachname des Kontakts: \nVorname des Kontakts: \nE-Mail-Adresse des Kontakts: \nAdresse des Unternehmens und des Ortes für den Diagnostic CASES: (nur in Luxemburg): \nGewünschte Sprache für den Diagnostic CASES:",
             },
         },
         "general_feedback": {
@@ -395,11 +366,6 @@ TRANSLATION_UI = {
                 "en": "Please let us know if anything is missing",
                 "fr": "S'il vous plaît laissez-nous savoir si quelque chose est manquant",
                 "de": "Bitte lassen Sie uns wissen, wenn etwas fehlt",
-            },
-            "custom_response": {
-                "en": "Custom response",
-                "fr": "Réponse personnalisée",
-                "de": "Benutzerdefinierte Antwort",
             },
         },
     },

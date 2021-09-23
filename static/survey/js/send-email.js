@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    $('.send-email-to-cases').click(function() {
+    $('.send-diagnostic-email').click(function() {
         const subject = encodeURIComponent($(this).data('subject'));
         const body = encodeURIComponent($(this).data('body'));
 

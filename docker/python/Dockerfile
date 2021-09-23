@@ -3,33 +3,18 @@ FROM python:3.9-alpine
 RUN apk update && \
   apk add \
   build-base \
-  cargo \
   curl \
-  freetype-dev \
-  fribidi-dev \
-  gcc \
-  gettext \
   git \
-  harfbuzz-dev \
-  lcms2-dev \
+  gettext \
+  freetype-dev \
   libffi-dev \
-  libjpeg-turbo-dev \
-  libpng-dev \
-  libpq \
-  libressl-dev \
-  libwebp-dev \
+  openssl-dev \
   libxml2-dev \
   libxslt-dev \
-  musl-dev \
-  npm \
-  openssl-dev \
+  libpq \
   postgresql-client \
   postgresql-dev \
-  python3-dev \
-  tcl-dev \
-  tk-dev \
-  zlib \
-  rust
+  npm
 
 WORKDIR csskp
 

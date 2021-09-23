@@ -41,15 +41,6 @@ $(document).ready(function() {
     let processCheckboxSelection = function(checkbox) {
         submitButton.attr("disabled", !checkboxesAndRadios.is(":checked"));
 
-        let answerContentTextarea = $('#id_answer_content');
-        if (checkbox.is(":checked") && freeTextAnswerId == checkbox.val()) {
-            answerContentTextarea.show();
-            answerContentTextarea.prop('required', true);
-        } else {
-            answerContentTextarea.hide();
-            answerContentTextarea.prop('required', false);
-        }
-
         if (checkboxes.length == 0) {
             return;
         }
@@ -93,22 +84,6 @@ $(document).ready(function() {
 
     if (checkboxes.length > 0) {
         $(".select-multi-info").show();
-    }
-
-    var answerContentTextarea = $('#id_answer_content');
-    if (answerContentTextarea) {
-        answerContentTextarea.hide();
-        answerContentTextarea.prop('required', false);
-    }
-    var freeTextAnswerId = $('#id_free_text_answer_id').val();
-    if (freeTextAnswerId != 0) {
-        checkboxesAndRadios.each(function() {
-            let element = $(this);
-            if (element.is(":checked") && element.val() == freeTextAnswerId) {
-                answerContentTextarea.show();
-                answerContentTextarea.prop('required', true);
-            }
-        });
     }
 
     checkboxesAndRadios.click(function() {
