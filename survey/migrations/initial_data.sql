@@ -34,11 +34,11 @@ INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('SE
 
 INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q001T', 'Question with free text only (question type "T") ?', 'en', 'Q');
     INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q001A001', 'Please tell about your experience', 'en', 'A');
-INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q001T', 'Question with multi choice and free text (question type "MT") ?', 'en', 'Q');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q002MT', 'Question with multi choice and free text (question type "MT") ?', 'en', 'Q');
     INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q002A001', 'If you would like to have a nice advice, then tick me!', 'en', 'A');
     INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q002A002', 'Please tick me if like want to get 10 points.', 'en', 'A');
     INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q002A003', 'Your opinion', 'en', 'A');
-INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q001T', 'Question with single choice and free text (question type "ST") ?', 'en', 'Q');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q003ST', 'Question with single choice and free text (question type "ST") ?', 'en', 'Q');
     INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q003A001', 'I like Cases...', 'en', 'A');
     INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q003A002', 'I love Cases :)', 'en', 'A');
     INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q003A003', 'I passionated to Cases ;)', 'en', 'A');
