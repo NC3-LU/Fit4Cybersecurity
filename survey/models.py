@@ -31,7 +31,7 @@ Each question has a type (see above)
 Each question has only a question ID - multilanguage
 """
 
-LOCAL_DEFAULT_LANG = LANG_SELECT[1][0]
+LOCAL_DEFAULT_LANG = LANG_SELECT[0][0]
 SURVEY_STATUS_IN_PROGRESS = 1
 SURVEY_STATUS_UNDER_REVIEW = 2
 SURVEY_STATUS_FINISHED = 3
