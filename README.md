@@ -30,8 +30,9 @@ $ pyenv versions # check
 
 
 ```bash
-$ git clone https://github.com/CASES-LU/Fit4Cybersecurity.git
-$ cd Fit4Cybersecurity/
+$ git clone https://github.com/CASES-LU/Fit4Cybersecurity.git ./Fit4Ilr
+$ cd Fit4Ilr
+$ git checkout fit4ilr
 $ npm install
 $ poetry install
 ```
