@@ -31,10 +31,11 @@
                 /100
             </h3>
             {% if user.country_code == 'LU' %}
-                {% if txtscore >= min_acceptable_score %}
-                    <h5>{% include 'survey/requestDiagnosticLink.html' with type='button' %}</h5>
-                {% endif %}
-                <h5>{% include 'survey/requestTrainingLink.html' with type='button' %}</h5>
+                {# {% if txtscore >= min_acceptable_score %} #}
+                <span class="">{{ translations.training_reference_description }}</span>
+                <h5><a href="">{{ translations.request_diagnostic.training_reference_link }}</a></h5>
+                {# {% endif %} #}
+                {# <h5>{% include 'survey/requestTrainingLink.html' with type='button' %}</h5> #}
             {% endif %}
         </div>
         <div><h4>{{ translations.txtdownload }}:</h4></div>

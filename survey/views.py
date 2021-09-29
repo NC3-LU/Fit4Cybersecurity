@@ -216,6 +216,8 @@ def finish(request):
         "min_acceptable_score": MIN_ACCEPTABLE_SCORE,
         "available_langs": [lang[0] for lang in LANG_SELECT],
         "general_feedback_form": handle_general_feedback(user, request),
+        "training_reference_description": TRANSLATION_UI["report"]["training_reference"]["description"][user_lang],
+        "training_reference_link": TRANSLATION_UI["report"]["training_reference"]["link_text"][user_lang],
     }
 
     add_form_translations(textLayout, user.choosen_lang, "report")

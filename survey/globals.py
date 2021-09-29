@@ -202,6 +202,18 @@ TRANSLATION_UI = {
                 "de": "Bitte teilen Sie Ihre Meinung zu unserem Tool",
             },
         },
+        "training_reference": {
+            "description": {
+                "en": "TODO",
+                "fr": "",
+                "de": "",
+            },
+            "link_text": {
+                "en": "Inscribe to the workshop",
+                "fr": "Inscription au workshop",
+                "de": "In die Werkstatt einschreiben",
+            }
+        },
     },
     "question": {
         "continue_later": {
