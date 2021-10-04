@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-04-07 22:33+0000\n"
+"POT-Creation-Date: 2021-10-04 14:22+0000\n"
 "PO-Revision-Date: 2021-04-08 00:38+0200\n"
 "Last-Translator: Cédric Bonhomme <cedric@cedricbonhomme.org>\n"
 "Language-Team: \n"
@@ -34,14 +34,14 @@ msgstr "Allemand"
 msgid "To generate a report you have to finish the survey."
 msgstr "Pour générer un rapport vous devez finir l'enquête."
 
-#: survey/views.py:268
+#: survey/views.py:271
 msgid ""
 "We could not find a survey with the requested key, please start a new one."
 msgstr ""
 "Nous n'avons pas pu trouver un sondage avec la clé demandée, veuillez en "
 "commencer un nouveau."
 
-#: survey/views.py:298
+#: survey/views.py:301
 msgid "Feedback sending errors: "
 msgstr ""
 
@@ -74,7 +74,9 @@ msgid "Terms of Service"
 msgstr "Conditions d'utilisation"
 
 #: templates/survey/index.html:18
-msgid "Welcome to the CASES self-assessment tool: Fit4Cybersecurity"
+#, fuzzy
+#| msgid "Welcome to the CASES self-assessment tool: Fit4Cybersecurity"
+msgid "Welcome to the ACRC self-assessment tool: Fit4Cybersecurity"
 msgstr "Bienvenue dans l'outil d'auto-évaluation CASES: Fit4Cybersecurity"
 
 #: templates/survey/index.html:19
