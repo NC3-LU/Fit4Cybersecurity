@@ -216,8 +216,6 @@ def finish(request):
         "min_acceptable_score": MIN_ACCEPTABLE_SCORE,
         "available_langs": [lang[0] for lang in LANG_SELECT],
         "general_feedback_form": handle_general_feedback(user, request),
-        "training_reference_description": TRANSLATION_UI["report"]["training_reference"]["description"][user_lang],
-        "training_reference_link": TRANSLATION_UI["report"]["training_reference"]["link_text"][user_lang],
     }
 
     add_form_translations(textLayout, user.choosen_lang, "report")
@@ -248,6 +246,12 @@ def finish(request):
         "title": TRANSLATION_UI["report"]["general_feedback"]["title"][user_lang],
         "button_close": TRANSLATION_UI["report"]["general_feedback"]["button_close"][user_lang],
         "button_send": TRANSLATION_UI["report"]["general_feedback"]["button_send"][user_lang],
+    }
+    textLayout["translations"]["training_reference"] = {
+        "desc_top": TRANSLATION_UI["report"]["training_reference"]["description_top"][user_lang],
+        "desc_bottom1": TRANSLATION_UI["report"]["training_reference"]["description_bottom1"][user_lang],
+        "desc_bottom2": TRANSLATION_UI["report"]["training_reference"]["description_bottom2"][user_lang],
+        "link": TRANSLATION_UI["report"]["training_reference"]["link_text"][user_lang],
     }
 
     return render(request, "survey/finishedSurvey.html", context=textLayout)

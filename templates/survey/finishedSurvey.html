@@ -32,8 +32,6 @@
             </h3>
             {% if user.country_code == 'LU' %}
                 {# {% if txtscore >= min_acceptable_score %} #}
-                <span class="">{{ translations.training_reference_description }}</span>
-                <h5><a href="">{{ translations.request_diagnostic.training_reference_link }}</a></h5>
                 {# {% endif %} #}
                 {# <h5>{% include 'survey/requestTrainingLink.html' with type='button' %}</h5> #}
             {% endif %}
@@ -55,8 +53,14 @@
         <h2>{{ translations.txtreport }}:</h2>
         <div class="qrcode"></div>
         <p>{{ description }}</p>
+        {% comment %}
         {% if user.country_code == 'LU' and txtscore < min_acceptable_score %}
             <p>{{ translations.request_training.description }}{% include 'survey/requestTrainingLink.html' with type='link' %}</p>
+        {% endif %}
+        {% endcomment %}
+        {% if user.country_code == 'LU' %}
+            <p>{{ translations.training_reference.desc_top }} <a href="https://app.livestorm.co/chambre-de-commerce/workshop-online-initiation-a-la-securite-de-linformation?type=detailed" target="_blank">{{ translations.training_reference.link }}</a>.</p>
+            <p>{{ translations.training_reference.desc_bottom1 }} <a href="https://www.luxinnovation.lu/fr/fit-4-digital-packages-fr" target="_blank">Fit4Digital Packages</a> {{ translations.training_reference.desc_bottom2 }}</p>
         {% endif %}
 
         <div class="py-2">
@@ -66,6 +70,7 @@
         </div>
     </div>
 
+    {% comment %}
     {% if user.country_code == 'LU' and txtscore >= min_acceptable_score %}
         <div class="py-2 px-4">
             <h2>{{ translations.request_diagnostic.title }}:</h2>
@@ -74,6 +79,7 @@
             {% include 'survey/requestDiagnosticLink.html' with type='link' %}
         </div>
     {% endif %}
+    {% endcomment %}
 
     <div class="py-2 px-4 text-center">
         <div style="width: 450px; height: 450px; margin: 0 auto 0 auto"><canvas id="resultChart" width='100%' height='100%'></canvas></div>

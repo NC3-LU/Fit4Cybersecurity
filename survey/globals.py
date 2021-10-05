@@ -203,16 +203,26 @@ TRANSLATION_UI = {
             },
         },
         "training_reference": {
-            "description": {
-                "en": "TODO",
-                "fr": "",
-                "de": "",
+            "description_top": {
+                "en": "To enhance your knowledge in the cybersecurity field, and better understand the stakes, we invite you to join the workshop:",
+                "fr": "Pour parfaire vos connaissances dans le domaine de la Cybersécurité, et comprendre les enjeux, nous vous invitons à rejoindre le workshop:",
+                "de": "Um Ihr Wissen im Bereich Cybersicherheit zu erweitern und die Herausforderungen besser zu verstehen, laden wir Sie ein, an dem Workshop teilzunehmen:",
             },
             "link_text": {
                 "en": "Inscribe to the workshop",
                 "fr": "Inscription au workshop",
                 "de": "In die Werkstatt einschreiben",
-            }
+            },
+            "description_bottom1": {
+                "en": "You also can also participate in the program called",
+                "fr": "Vous pouvez également profiter d'un programme nommé le",
+                "de": "Sie können auch an dem Programm",
+            },
+            "description_bottom2": {
+                "en": "to help you in your activities, but more details should be given during the workshop.",
+                "fr": "pour vous aider dans votre activité, mais plus de détails vous seront donnés lors du workshop.",
+                "de": "teilnehmen, das Sie bei Ihren Aktivitäten unterstützt, aber weitere Details sollten während des Workshops gegeben werden.",
+            },
         },
     },
     "question": {
