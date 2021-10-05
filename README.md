@@ -21,8 +21,8 @@ $ sudo apt install gettext postgresql
 ### Set up your Python environment
 
 ```bash
-$ pyenv install 3.9.2 # install Python
-$ pyenv global 3.9.2 # make this version default for the whole system
+$ pyenv install 3.9.7 # install Python
+$ pyenv global 3.9.7 # make this version default for the whole system
 $ pyenv versions # check
 ```
 
