@@ -38,7 +38,7 @@ class InitialStartForm(forms.Form):
         self.fields["country"] = CountryField().formfield(
             label=country_label,
             required=True,
-            initial="LU",
+            initial="SN",
             error_messages={"required": required_error_message},
         )
 

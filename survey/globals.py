@@ -1,5 +1,9 @@
 SECTOR_CHOICES = [
-    ("BANK", "Banking, insurance and real estate"),
+    ("FINA", "Banking"),
+    ("FINA", "Central Bank"),
+    ("FINA", "Micro-Finance"),
+    ("FINA", "Micro Assurance"),
+    ("FINA", "Mobile Money"),
     ("SALE", "Trading, sales and mass distribution"),
     ("MARK", "Marketing, media and multimedia"),
     ("BUIL", "Construction industries and civil engineering"),
@@ -14,13 +18,14 @@ SECTOR_CHOICES = [
     ("LOGI", "Transport and Logistics"),
     ("FARM", "Farming and fishing, natural spaces and green spaces, animal care"),
     ("PUBL", "Public administration"),
+    ("MINE", "Oil & Gas"),
 ]
 
 COUNTRIES = [
-    ("LU", "Luxembourg"),
-    ("DE", "Deutschland"),
-    ("BE", "Belgique"),
-    ("FR", "France"),
+    ("SE", "Senegal"),
+    ("RW", "Rwanda"),
+    ("CI", "Ivory Coast"),
+    ("NG", "Nigeria"),
 ]
 
 SERVICE_TARGETS = [
@@ -131,19 +136,19 @@ TRANSLATION_UI = {
         },
         "request_diagnostic": {
             "title": {
-                "en": "About the CASES Diagnostic",
-                "fr": "À propos du Diagnostic CASES",
-                "de": "About the CASES Diagnostic",
+                "en": "About the ACRC Diagnostic",
+                "fr": "À propos du Diagnostic ACRC",
+                "de": "About the ACRC Diagnostic",
             },
             "description": {
-                "en": "The CASES Diagnostic is a service which analyses the company maturity in the information security depending on company's requirements. The analyse duration can take approxymately 2 hours. A consultant from CASES will come to your companie's premises, and ask around 30 questions concerning your information security, mostly organizational questions and possibly some technical questions. You will receive a detailed report which will contain a maturity estimation as well as recommendations to enhance the information security maturity.",
-                "fr": "Le diagnostic CASES est un service destiné à l'analyse de la maturité d'une entreprise face à la sécurité de l'information qui lui est nécessaire. Avec une durée d'environ 2 heures, un consultant CASES se déplace dans les locaux de l'entreprise, et pose une trentaine de questions pouvant être sur le côté organisationnel aussi bien que le côté un peu plus technique. À l'issue de ce diagnostic, un rapport est envoyé, et il contiendra une estimation de la maturité ainsi que des recommandations pour améliorer la maturité en la sécurité de l'information.",
-                "de": "Der Diagnostic CASES ist ein Service zur Analyse des Reifegrads eines Unternehmens im Hinblick auf die Sicherheit der benötigten Informationen. Mit einer Dauer von ungefähr 2 Stunden kommt ein CASES-Berater zu Ihnen auf ihr Firmengelände und stellt ungefähr 30 Fragen, die sowohl organisatorischer als auch etwas technischer Natur sein können. Am Ende dieses Diagnostic wird ein Bericht verfasst und Ihnen kurze Zeit später übermittelt: er enthält eine Schätzung der Laufzeit sowie Empfehlungen zur Verbesserung der Laufzeit der Informationssicherheit.",
+                "en": "The CASES Diagnostic is a service which analyses the company maturity in the information security depending on company's requirements. The analyse duration can take approxymately 2 hours. A consultant from ACRC will come to your companie's premises, and ask around 30 questions concerning your information security, mostly organizational questions and possibly some technical questions. You will receive a detailed report which will contain a maturity estimation as well as recommendations to enhance the information security maturity.",
+                "fr": "Le diagnostic CASES est un service destiné à l'analyse de la maturité d'une entreprise face à la sécurité de l'information qui lui est nécessaire. Avec une durée d'environ 2 heures, un consultant ACRC se déplace dans les locaux de l'entreprise, et pose une trentaine de questions pouvant être sur le côté organisationnel aussi bien que le côté un peu plus technique. À l'issue de ce diagnostic, un rapport est envoyé, et il contiendra une estimation de la maturité ainsi que des recommandations pour améliorer la maturité en la sécurité de l'information.",
+                "de": "Der Diagnostic ACRC ist ein Service zur Analyse des Reifegrads eines Unternehmens im Hinblick auf die Sicherheit der benötigten Informationen. Mit einer Dauer von ungefähr 2 Stunden kommt ein CASES-Berater zu Ihnen auf ihr Firmengelände und stellt ungefähr 30 Fragen, die sowohl organisatorischer als auch etwas technischer Natur sein können. Am Ende dieses Diagnostic wird ein Bericht verfasst und Ihnen kurze Zeit später übermittelt: er enthält eine Schätzung der Laufzeit sowie Empfehlungen zur Verbesserung der Laufzeit der Informationssicherheit.",
             },
             "service_fee": {
-                "en": "The CASES Diagnostic is available for all the companies located in Luxembourg and free of charge.",
-                "fr": "Le Diagnostic est gratuit et possible pour toute entreprise ayant des locaux au Luxembourg.",
-                "de": "Der Diagnostic ist für jedes Unternehmen mit Sitz in Luxemburg möglich und kostenlos.",
+                "en": "The ACRC Diagnostic is available for all the companies located in Senegal and free of charge.",
+                "fr": "Le Diagnostic ACRC est gratuit et possible pour toute entreprise ayant des locaux au Sénégal.",
+                "de": "Der Diagnostic ist für jedes Unternehmen mit Sitz in Senegal möglich und kostenlos.",
             },
             "email_subject": {
                 "en": "Request diagnostic",
@@ -151,16 +156,16 @@ TRANSLATION_UI = {
                 "de": "Diagnose anfordern",
             },
             "email_body": {
-                "en": "Dear Cases Team,\n\nWe would like to request a Diagnostic CASES from you.\n\nHere is our evaluation results identifier: {userId}\n\nHere also additional information that could be useful: \nLastname of the contact: \nFirstname of the contact: \nEmail address of the contact: \nAddress of the company for the Diagnostic (Luxembourg only): \nDesired language for the Diagnostic: ",
-                "fr": "À l'attention de l'équipe CASES,\n\nNous aimerions planifier un Diagnostic CASES.\n\nVoici l'identifiant lié à notre évaluation: {userId}\n\nVoici également les informations qui vous seront nécessaires: \nNom du point de contact: \nPrénom du point de contact: \nAdresse mail du point de contact: \nAdresse de l'entreprise et du Diagnostic (Luxembourg uniquement): \nLangue souhaitée du Diagnostic: ",
-                "de": "Sehr geehrtes CASES-Team, \n\nWir möchten ein Diagnostic CASES mit Ihnen anfordern. \n\nHier finden Sie die ID unserer Bewertungsergebnisse: {userId} \n\nHier finden Sie auch andere nützliche Informationen: \nNachname des Kontakts: \nVorname des Kontakts: \nE-Mail-Adresse des Kontakts: \nAdresse des Unternehmens und des Ortes für den Diagnostic CASES: (nur in Luxemburg): \nGewünschte Sprache für den Diagnostic CASES:",
+                "en": "Dear ACRC Team,\n\nWe would like to request a Diagnostic ACRC from you.\n\nHere is our evaluation results identifier: {userId}\n\nHere also additional information that could be useful: \nLastname of the contact: \nFirstname of the contact: \nEmail address of the contact: \nAddress of the company for the Diagnostic (Senegal only): \nDesired language for the Diagnostic: ",
+                "fr": "À l'attention de l'équipe ACRC,\n\nNous aimerions planifier un Diagnostic CASES.\n\nVoici l'identifiant lié à notre évaluation: {userId}\n\nVoici également les informations qui vous seront nécessaires: \nNom du point de contact: \nPrénom du point de contact: \nAdresse mail du point de contact: \nAdresse de l'entreprise et du Diagnostic (Senegal uniquement): \nLangue souhaitée du Diagnostic: ",
+                "de": "Sehr geehrtes ACRC-Team, \n\nWir möchten ein Diagnostic ACRC mit Ihnen anfordern. \n\nHier finden Sie die ID unserer Bewertungsergebnisse: {userId} \n\nHier finden Sie auch andere nützliche Informationen: \nNachname des Kontakts: \nVorname des Kontakts: \nE-Mail-Adresse des Kontakts: \nAdresse des Unternehmens und des Ortes für den Diagnostic CASES: (nur in Senegal): \nGewünschte Sprache für den Diagnostic ACRC:",
             },
         },
         "request_training": {
             "description": {
-                "en": "Based on your score {score}, the CASES Diagnostic is not available for your organization at this moment. We recommend you improve the information security maturity level by implementing the recommendations listed below. If you need any information security training to raise awareness in your company, do not hesitate to ",
-                "fr": "Sur base de votre score de {score}, le diagnostic CASES n'est pas disponible pour votre organisation pour le moment. Nous vous recommandons d'améliorer le niveau de maturité de la sécurité de l'information en mettant en œuvre les recommandations ci-dessous. Si vous avez besoin d'une formation à la sécurité de l'information pour sensibiliser votre entreprise, n'hésitez pas à ",
-                "de": "Basierend auf Ihrem Ergebnis von {score} ist das Diagnostic CASES derzeit für Ihr Unternehmen nicht verfügbar. Wir empfehlen Ihnen, Ihren Informationssicherheit-Reifegrad zu verbessern, indem Sie die unten aufgeführten Empfehlungen umsetzen. Wenn Sie die Informationssicherheits-Kenntnisse in Ihrem Unternehmen durch eine Schulung verbessern möchten, zögern Sie nicht ",
+                "en": "Based on your score {score}, the ACRC Diagnostic is not available for your organization at this moment. We recommend you improve the information security maturity level by implementing the recommendations listed below. If you need any information security training to raise awareness in your company, do not hesitate to ",
+                "fr": "Sur base de votre score de {score}, le diagnostic ACRC n'est pas disponible pour votre organisation pour le moment. Nous vous recommandons d'améliorer le niveau de maturité de la sécurité de l'information en mettant en œuvre les recommandations ci-dessous. Si vous avez besoin d'une formation à la sécurité de l'information pour sensibiliser votre entreprise, n'hésitez pas à ",
+                "de": "Basierend auf Ihrem Ergebnis von {score} ist das Diagnostic ACRC derzeit für Ihr Unternehmen nicht verfügbar. Wir empfehlen Ihnen, Ihren Informationssicherheit-Reifegrad zu verbessern, indem Sie die unten aufgeführten Empfehlungen umsetzen. Wenn Sie die Informationssicherheits-Kenntnisse in Ihrem Unternehmen durch eine Schulung verbessern möchten, zögern Sie nicht ",
             },
             "let_us_know": {
                 "en": "let us know.",
@@ -173,9 +178,9 @@ TRANSLATION_UI = {
                 "de": "Schulungsangebot anfragen",
             },
             "email_body": {
-                "en": "Dear Cases Team, \n\nWe would like an information about security awareness training offer. \n\nHere is our evaluation results identifier: {userId} \n\nHere is also the information necessary to establish the offer: \n\nContact details: \n- Name of the contact: \n- Email address of the contact: \n\nOrganization: \n- Company Name: \n- Company address: \n- Postal code: \n- City: \n- VAT number (if applicable): \n\nTraining: \n- Number of participants*: \n- Desired language(s) for the training(s): \n- Personalized topics to discuss: \n\n* For a number of people greater than 25, the training will be done in several installments, involving a higher cost.\n",
-                "fr": "À l'attention de l'équipe CASES, \n\nNous souhaitons une offre de sensibilisation à la sécurité de l'information.\n\nVoici l'identifiant lié à notre évaluation: {userId}\n\nVoici également les informations nécessaires à l'établissement de l'offre: \n\nPoint de contact: \n- Nom du point de contact: \n- Adresse mail du point de contact: \n\nEntreprise: \n- Nom de l'entreprise: \n- Adresse de l'entreprise: \n- Adresse de l'entreprise: \n- Code postal: \n- Ville: \n- Numéro TVA (si applicable): \n\nFormations: \n- Nombre de personnes à sensibiliser*: \n- Langue(s) souhaitée(s) pour la/les formation(s): \n- Sujets personnalisés à aborder: \n\n*Pour un nombre de personnes supérieur à 25, la formation sera alors faite en plusieurs fois, impliquant un cout plus élevé.\n",
-                "de": "Sehr geehrtes CASES-Team, \n\nWir möchten ein Angebot für eine Einführung/Sensibilisierung zum Thema Informationssicherheit. \n\nHier ist die Kennung unserer Bewertung: {userId} \n\nHier finden Sie auch die Informationen, die zur Erstellung des Angebots erforderlich sind: \n\nAnlaufstelle: \n- Name der Kontaktstelle: \n- E-Mail-Adresse der Kontaktstelle: \n\nUnternehmen: \n- Name der Firma: \n- Firmenanschrift: \n- Postleitzahl: \n- Stadt: \n- Umsatzsteuer-Identifikationsnummer (falls zutreffend): \n\nAusbildung: \n- Anzahl der Teilnehmer *: \n- Gewünschte Sprache(n) für die Ausbildung(en): \n- gewünschte Themenschwerpunkte: \n\n* Wenn die Teilnehmerzahl die 25 überschreitet, wird die Schulung in mehreren Sitzungen durchgeführt, was mit höheren Kosten verbunden ist. \n",
+                "en": "Dear ACRC Team, \n\nWe would like an information about security awareness training offer. \n\nHere is our evaluation results identifier: {userId} \n\nHere is also the information necessary to establish the offer: \n\nContact details: \n- Name of the contact: \n- Email address of the contact: \n\nOrganization: \n- Company Name: \n- Company address: \n- Postal code: \n- City: \n- VAT number (if applicable): \n\nTraining: \n- Number of participants*: \n- Desired language(s) for the training(s): \n- Personalized topics to discuss: \n\n* For a number of people greater than 25, the training will be done in several installments, involving a higher cost.\n",
+                "fr": "À l'attention de l'équipe ACRC, \n\nNous souhaitons une offre de sensibilisation à la sécurité de l'information.\n\nVoici l'identifiant lié à notre évaluation: {userId}\n\nVoici également les informations nécessaires à l'établissement de l'offre: \n\nPoint de contact: \n- Nom du point de contact: \n- Adresse mail du point de contact: \n\nEntreprise: \n- Nom de l'entreprise: \n- Adresse de l'entreprise: \n- Adresse de l'entreprise: \n- Code postal: \n- Ville: \n- Numéro TVA (si applicable): \n\nFormations: \n- Nombre de personnes à sensibiliser*: \n- Langue(s) souhaitée(s) pour la/les formation(s): \n- Sujets personnalisés à aborder: \n\n*Pour un nombre de personnes supérieur à 25, la formation sera alors faite en plusieurs fois, impliquant un cout plus élevé.\n",
+                "de": "Sehr geehrtes ACRC-Team, \n\nWir möchten ein Angebot für eine Einführung/Sensibilisierung zum Thema Informationssicherheit. \n\nHier ist die Kennung unserer Bewertung: {userId} \n\nHier finden Sie auch die Informationen, die zur Erstellung des Angebots erforderlich sind: \n\nAnlaufstelle: \n- Name der Kontaktstelle: \n- E-Mail-Adresse der Kontaktstelle: \n\nUnternehmen: \n- Name der Firma: \n- Firmenanschrift: \n- Postleitzahl: \n- Stadt: \n- Umsatzsteuer-Identifikationsnummer (falls zutreffend): \n\nAusbildung: \n- Anzahl der Teilnehmer *: \n- Gewünschte Sprache(n) für die Ausbildung(en): \n- gewünschte Themenschwerpunkte: \n\n* Wenn die Teilnehmerzahl die 25 überschreitet, wird die Schulung in mehreren Sitzungen durchgeführt, was mit höheren Kosten verbunden ist. \n",
             },
         },
         "general_feedback": {
@@ -303,6 +308,32 @@ TRANSLATION_UI = {
                 "de": "Was ist Ihre Branche?",
             },
             "sector_list": {
+                "FINA": {
+                    "en": "Banking",
+                    "fr": "Banque",
+                    "de": "Banken",
+                },
+                "FINA": {
+                    "en": "Central Bank",
+                    "fr": "Banque Centrale",
+                    "de": "Zentralbank",
+                },
+                "FINA": {
+                    "en": "Microfinance",
+                    "fr": "Microfiance",
+                    "de": "Mikrofinanz",
+                },
+                "FINA": {
+                    "en": "Micro-assurance",
+                    "fr": "Microinsurance",
+                    "de": "Mikroversicherung",
+                },
+                "FINA": {
+                    "en": "Mobile Money",
+                    "fr": "Mobile Money",
+                    "de": "Mobiles Geld",
+                },
+
                 "BANK": {
                     "en": "Banking, insurance and real estate",
                     "fr": "Banque, assurances et immobilier",
@@ -365,7 +396,17 @@ TRANSLATION_UI = {
                     "en": "Public administration",
                     "fr": "Administration publique",
                     "de": "Öffentliche Verwaltungen",
-                }
+                },
+                "MINE": {
+                    "en": "Oil & Gas",
+                    "fr": "Gaz de pétrole",
+                    "de": "Ölbenzin",
+                },
+                "MINE": { 
+                    "en": "Other Mines",
+                    "fr": "Autres mines",
+                    "de": "Andere Minen",
+                    },
             },
             "size_question": {
                 "en": "How many employees?",
