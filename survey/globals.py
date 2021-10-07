@@ -96,7 +96,11 @@ TRANSLATION_UI = {
                 "fr": "Télécharger le lien direct",
                 "de": "Direkten Link herunterladen",
             },
-            "button_close": {"en": "Close", "fr": "Fermer", "de": "Schließen",},
+            "button_close": {
+                "en": "Close",
+                "fr": "Fermer",
+                "de": "Schließen",
+            },
         },
         "leave_survey": {
             "title": {
@@ -104,11 +108,27 @@ TRANSLATION_UI = {
                 "fr": "Voulez vous quitter la page de résultats?",
                 "de": "Möchten Sie die Ergebnisseite verlassen?",
             },
-            "yes": {"en": "Yes", "fr": "Oui", "de": "Ja",},
-            "no": {"en": "No", "fr": "Non", "de": "Nein",},
+            "yes": {
+                "en": "Yes",
+                "fr": "Oui",
+                "de": "Ja",
+            },
+            "no": {
+                "en": "No",
+                "fr": "Non",
+                "de": "Nein",
+            },
         },
-        "download": {"en": "Download", "fr": "Téléchargement", "de": "Herunterladen",},
-        "report": {"en": "Summary", "fr": "Résumé", "de": "Zusammenfassung",},
+        "download": {
+            "en": "Download",
+            "fr": "Téléchargement",
+            "de": "Herunterladen",
+        },
+        "report": {
+            "en": "Summary",
+            "fr": "Résumé",
+            "de": "Zusammenfassung",
+        },
         "description": {
             "en": "This is the list of recommendations to improve the information security maturity in your company, provided that your answers did correctly reflect the state in your company. Also keep in mind that it is a self-assessment and only scratches the surface of the information security maturity level and thus, we are not liable for the results of this survey.",
             "fr": "Voici la liste des recommandations visant à améliorer la maturité de la sécurité de l'information dans votre entreprise, à condition que vos réponses reflètent correctement l'état de votre entreprise. N'oubliez pas non plus qu'il s'agit d'une auto-évaluation et qu'elle ne fait qu'effleurer le niveau de maturité de la sécurité de l'information. Par conséquent, nous ne sommes pas responsables des résultats de cette enquête.",
@@ -189,8 +209,16 @@ TRANSLATION_UI = {
                 "fr": "S'il vous plaît fournir vos commentaires",
                 "de": "Bitte geben Sie Ihr Feedback",
             },
-            "button_close": {"en": "Close", "fr": "Fermer", "de": "Schließen",},
-            "button_send": {"en": "Send", "fr": "Envoyer", "de": "Senden",},
+            "button_close": {
+                "en": "Close",
+                "fr": "Fermer",
+                "de": "Schließen",
+            },
+            "button_send": {
+                "en": "Send",
+                "fr": "Envoyer",
+                "de": "Senden",
+            },
             "label": {
                 "en": "Your feedback",
                 "fr": "Vos retours",
@@ -225,27 +253,63 @@ TRANSLATION_UI = {
                 "fr": "Télécharger le lien direct",
                 "de": "Direkten Link herunterladen",
             },
-            "button_close": {"en": "Close", "fr": "Fermer", "de": "Schließen",},
+            "button_close": {
+                "en": "Close",
+                "fr": "Fermer",
+                "de": "Schließen",
+            },
         },
-        "next_button": {"en": "Next", "fr": "Suite", "de": "Nächster",},
-        "back_button": {"en": "Back", "fr": "Précédent", "de": "Bisherige",},
-        "cancel_button": {"en": "Cancel", "fr": "Annuler", "de": "Stornieren",},
-        "modify_button": {"en": "Modify", "fr": "Modifier", "de": "Ändern",},
+        "next_button": {
+            "en": "Next",
+            "fr": "Suite",
+            "de": "Nächster",
+        },
+        "back_button": {
+            "en": "Back",
+            "fr": "Précédent",
+            "de": "Bisherige",
+        },
+        "cancel_button": {
+            "en": "Cancel",
+            "fr": "Annuler",
+            "de": "Stornieren",
+        },
+        "modify_button": {
+            "en": "Modify",
+            "fr": "Modifier",
+            "de": "Ändern",
+        },
         "description": {
             "en": "We need a little information to be able to give you useful recommendations, once the self-assessment is done.",
             "fr": "Nous avons besoin de quelques informations pour pouvoir vous faire des recommandations utiles, une fois l’auto-évaluation terminée.",
             "de": "Benötigen wir einige Informationen, um Ihnen nützliche Empfehlungen geben zu können, sobald die Selbsteinschätzung abgeschlossen ist.",
         },
-        "question": {"en": "Question", "fr": "Question", "de": "Frage",},
-        "title": {"en": "Let's start", "fr": "Commençons", "de": "Lasst uns beginnen",},
+        "question": {
+            "en": "Question",
+            "fr": "Question",
+            "de": "Frage",
+        },
+        "title": {
+            "en": "Let's start",
+            "fr": "Commençons",
+            "de": "Lasst uns beginnen",
+        },
         "leave_survey": {
             "title": {
                 "en": "Would like to leave survey?",
                 "fr": "Voulez vous quitter l'enquête?",
                 "de": "Möchten Sie die Umfrage verlassen?",
             },
-            "yes": {"en": "Yes", "fr": "Oui", "de": "Ja",},
-            "no": {"en": "No", "fr": "Non", "de": "Nein",},
+            "yes": {
+                "en": "Yes",
+                "fr": "Oui",
+                "de": "Ja",
+            },
+            "no": {
+                "en": "No",
+                "fr": "Non",
+                "de": "Nein",
+            },
         },
         "select_multi_descr": {
             "en": "Multiple answers are possible.",
@@ -280,7 +344,13 @@ TRANSLATION_UI = {
             "de": "Antworten validieren",
         },
     },
-    "document": {"questions": {"en": "Questions", "fr": "Questions", "de": "Fragen",},},
+    "document": {
+        "questions": {
+            "en": "Questions",
+            "fr": "Questions",
+            "de": "Fragen",
+        },
+    },
     "form": {
         "error_messages": {
             "answer": {
@@ -328,7 +398,11 @@ TRANSLATION_UI = {
                     "fr": "Hôtellerie - restauration, tourisme, loisirs et animation",
                     "de": "Hotel und Gastronomie, Tourismus und Unterhaltung",
                 },
-                "INDU": {"en": "Industry", "fr": "Industrie", "de": "Industrie",},
+                "INDU": {
+                    "en": "Industry",
+                    "fr": "Industrie",
+                    "de": "Industrie",
+                },
                 "INST": {
                     "en": "Installation and maintenance",
                     "fr": "Installation et maintenance",
@@ -339,13 +413,21 @@ TRANSLATION_UI = {
                     "fr": "Réalisation ou placement d'objets artistiques et décoratifs",
                     "de": "Kreation oder Platzierung von künstlerischen und dekorativen Objekten",
                 },
-                "HEAL": {"en": "Health", "fr": "Santé", "de": "Gesundheit",},
+                "HEAL": {
+                    "en": "Health",
+                    "fr": "Santé",
+                    "de": "Gesundheit",
+                },
                 "SERV": {
                     "en": "Home-Care Service or Community Service",
                     "fr": "Services à la personne et à la collectivité",
                     "de": "Hauspflege oder Zivildienst",
                 },
-                "SHOW": {"en": "Shows", "fr": "Spectacle", "de": "Veranstaltungen",},
+                "SHOW": {
+                    "en": "Shows",
+                    "fr": "Spectacle",
+                    "de": "Veranstaltungen",
+                },
                 "SUPP": {
                     "en": "Company Support",
                     "fr": "Support à l'entreprise",
@@ -365,7 +447,7 @@ TRANSLATION_UI = {
                     "en": "Public administration",
                     "fr": "Administration publique",
                     "de": "Öffentliche Verwaltungen",
-                }
+                },
             },
             "size_question": {
                 "en": "How many employees?",

@@ -196,7 +196,9 @@ def finish(request):
 
     txt_score, radar_current, sections_list = calculateResult(user, user_lang)
 
-    diagnostic_email_body = TRANSLATION_UI["report"]["request_diagnostic"]["email_body"][user_lang]
+    diagnostic_email_body = TRANSLATION_UI["report"]["request_diagnostic"][
+        "email_body"
+    ][user_lang]
 
     recommendations = getRecommendations(user, user_lang)
     # To properly display breaking lines \n on html page.
@@ -224,28 +226,48 @@ def finish(request):
 
     textLayout["translations"]["request_diagnostic"] = {
         "title": TRANSLATION_UI["report"]["request_diagnostic"]["title"][user_lang],
-        "description": TRANSLATION_UI["report"]["request_diagnostic"]["description"][user_lang],
-        "service_fee": TRANSLATION_UI["report"]["request_diagnostic"]["service_fee"][user_lang],
-        "email_subject": TRANSLATION_UI["report"]["request_diagnostic"]["email_subject"][user_lang],
-        "email_body": diagnostic_email_body.replace("{userId}", str(crypter.encrypt(user_id.encode("utf-8")))),
-    }
-    textLayout["translations"]["request_training"] = {
-        "description": TRANSLATION_UI["report"]["request_training"]["description"][user_lang].replace(
-            "{score}", str(txt_score) + "/100"
-        ),
-        "let_us_know": TRANSLATION_UI["report"]["request_training"]["let_us_know"][user_lang],
-        "email_subject": TRANSLATION_UI["report"]["request_training"]["email_subject"][user_lang],
-        "email_body": TRANSLATION_UI["report"]["request_training"]["email_body"][user_lang].replace(
+        "description": TRANSLATION_UI["report"]["request_diagnostic"]["description"][
+            user_lang
+        ],
+        "service_fee": TRANSLATION_UI["report"]["request_diagnostic"]["service_fee"][
+            user_lang
+        ],
+        "email_subject": TRANSLATION_UI["report"]["request_diagnostic"][
+            "email_subject"
+        ][user_lang],
+        "email_body": diagnostic_email_body.replace(
             "{userId}", str(crypter.encrypt(user_id.encode("utf-8")))
         ),
     }
-    textLayout["translations"]["txtdownload"] = TRANSLATION_UI["report"]["download"][user_lang]
-    textLayout["translations"]["txtreport"] = TRANSLATION_UI["report"]["report"][user_lang]
+    textLayout["translations"]["request_training"] = {
+        "description": TRANSLATION_UI["report"]["request_training"]["description"][
+            user_lang
+        ].replace("{score}", str(txt_score) + "/100"),
+        "let_us_know": TRANSLATION_UI["report"]["request_training"]["let_us_know"][
+            user_lang
+        ],
+        "email_subject": TRANSLATION_UI["report"]["request_training"]["email_subject"][
+            user_lang
+        ],
+        "email_body": TRANSLATION_UI["report"]["request_training"]["email_body"][
+            user_lang
+        ].replace("{userId}", str(crypter.encrypt(user_id.encode("utf-8")))),
+    }
+    textLayout["translations"]["txtdownload"] = TRANSLATION_UI["report"]["download"][
+        user_lang
+    ]
+    textLayout["translations"]["txtreport"] = TRANSLATION_UI["report"]["report"][
+        user_lang
+    ]
     textLayout["translations"]["general_feedback"] = {
         "button": TRANSLATION_UI["report"]["general_feedback"]["button"][user_lang],
         "title": TRANSLATION_UI["report"]["general_feedback"]["title"][user_lang],
-        "button_close": TRANSLATION_UI["report"]["general_feedback"]["button_close"][user_lang],
-        "button_send": TRANSLATION_UI["report"]["general_feedback"]["button_send"][user_lang],
+        "button_close": TRANSLATION_UI["report"]["general_feedback"]["button_close"][
+            user_lang
+        ],
+        "button_send": TRANSLATION_UI["report"]["general_feedback"]["button_send"][
+            user_lang
+        ],
     }
 
     return render(request, "survey/finishedSurvey.html", context=textLayout)
