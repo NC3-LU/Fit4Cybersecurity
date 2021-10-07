@@ -1,7 +1,6 @@
 # Fit4Cybersecurity
 
-[![Translation status](https://translate.monarc.lu/widgets/fit4cybersecurity/-/88x31-white.png)](https://translate.monarc.lu/engage/fit4cybersecurity/)
-
+[![Translation status](https://translate.monarc.lu/widgets/Fit4Cybersecurity/-/glossary/svg-badge.svg)](https://translate.monarc.lu/engage/Fit4Cybersecurity/)
 
 Fit4Cybersecurity is a self-assessment tool by [CASES](https://www.cases.lu)
 to help business owners implement a better cybersecurity strategy.
@@ -15,15 +14,20 @@ The official CASES instance is available [here](https://fit4cybersecurity.cases.
 
 ```bash
 $ sudo apt install gettext postgresql
+$ sudo apt install make build-essential libssl-dev zlib1g-dev libbz2-dev \
+libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev \
+xz-utils tk-dev libffi-dev liblzma-dev libxml2-dev libxslt-dev libpq-dev python3-openssl
+$ curl https://pyenv.run | bash
 ```
 
 
 ### Set up your Python environment
 
 ```bash
-$ pyenv install 3.9.7 # install Python
-$ pyenv global 3.9.7 # make this version default for the whole system
+$ pyenv install 3.10.0 # install latest stable Python
+$ pyenv global 3.10.0 # make this version default for the whole system
 $ pyenv versions # check
+$ curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/install-poetry.py | python -
 ```
 
 ### Install the application
@@ -31,7 +35,7 @@ $ pyenv versions # check
 
 ```bash
 $ git clone https://github.com/CASES-LU/Fit4Cybersecurity.git
-$ cd Fit4Cybersecurity/
+$ cd  Fit4Cybersecurity/
 $ npm install
 $ poetry install
 ```
@@ -48,13 +52,32 @@ $ python manage.py migrate # need to initialize before create the first user
 $ python manage.py createsuperuser --username <username>
 ```
 
-Run the application:
+In the configuration file ```config_prod.py``` you **must** set **your** secret
+keys:
+
+Here is an example for the Fernet hash key:
+
+```bash
+$ python
+Python 3.10.0 (default, Oct  7 2021, 11:22:39) [GCC 10.3.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> from cryptography.fernet import Fernet
+>>> Fernet.generate_key()
+b'-MsdIsPZMnJ1eGhtnw0rYR1HH0N1iLxzcTO69ERbik0='
+```
+
+For the Django secret key, you can for example use ```from django.utils.crypto import get_random_string```,
+at your convenience.
+
+
+### Run the application
 
 ```bash
 $ python manage.py runserver # not for production
 ```
 
-For production you can use [Gunicorn](https://gunicorn.org) or mod_wsgi.
+For production you can use [Gunicorn](https://gunicorn.org) or mod_wsgi and turn
+off the debug mode in the configuration file.
 
 
 
@@ -84,7 +107,8 @@ $ poetry run python manage.py migrate
 $ poetry run python manage.py compilemessages
 ```
 
-If you want to update the translations, you must first run:
+If you want to update the translations (in the case you have
+changed the source code), you must first run:
 
 ```bash
 $ python manage.py makemessages -a --keep-pot # extract the translations
