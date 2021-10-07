@@ -3,8 +3,8 @@
 [![Translation status](https://translate.monarc.lu/widgets/Fit4Cybersecurity/-/fitcyber4africa/svg-badge.svg)](https://translate.monarc.lu/engage/Fit4Cybersecurity/)
 
 
-Fit4Cybersecurity is a self-assessment tool by [CASES](https://www.cases.lu)
-to help business owners implement a better cybersecurity strategy.
+Fitcyber4Africa is a self-assessment tool by [CASES](https://www.cases.lu)
+to help business owners from Africa implement a better cybersecurity strategy.
 
 The official instance is available [here](#).
 
@@ -25,18 +25,19 @@ $ curl https://pyenv.run | bash
 ### Set up your Python environment
 
 ```bash
-$ pyenv install 3.10.0 # install Python
+$ pyenv install 3.10.0 # install latest stable Python
 $ pyenv global 3.10.0 # make this version default for the whole system
 $ pyenv versions # check
 $ curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/install-poetry.py | python -
 ```
 
+
 ### Install the application
 
 
 ```bash
-$ git clone https://github.com/CASES-LU/Fit4Cybersecurity.git
-$ cd Fit4Cybersecurity/
+$ git clone https://github.com/CASES-LU/Fit4Cybersecurity.git Fitcyber4Africa
+$ cd  Fitcyber4Africa/
 $ git checkout fitcyber4africa
 $ npm install
 $ poetry install
@@ -71,7 +72,6 @@ b'-MsdIsPZMnJ1eGhtnw0rYR1HH0N1iLxzcTO69ERbik0='
 For the Django secret key, you can for example use ```from django.utils.crypto import get_random_string```, at your convenience.
 
 
-
 ### Run the application
 
 ```bash
@@ -104,13 +104,14 @@ be *password*.
 ## Upgrading the application
 
 ```bash
-$ cd Fit4Cybersecurity/
-$ git pull origin fitcyber4africa
+$ cd Fitcyber4Africa/
+$ git pull origin fitcyber4africa --tags
 $ poetry run python manage.py migrate
 $ poetry run python manage.py compilemessages
 ```
 
-If you want to update the translations, you must first run:
+If you want to update the translations (in the case you have
+changed the source code), you must first run:
 
 ```bash
 $ python manage.py makemessages -a --keep-pot # extract the translations
@@ -120,7 +121,7 @@ Then you can use a tool like
 [poedit](https://poedit.net) to translate the strings and you can compile with
 the previously mentioned command.
 
-If you want to re-generate the .pot file:
+If you want to re-generate the .pot template file:
 
 ```bash
 $ python manage.py makemessages --keep-pot
