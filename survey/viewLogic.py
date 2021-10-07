@@ -88,7 +88,7 @@ def handle_question_answers_request(request, user: SurveyUser, question_index: i
 
     free_text_answer_id = 0
     for question_answer in question_answers:
-        if question_answer.atype == 'T':
+        if question_answer.atype == "T":
             free_text_answer_id = question_answer.id
 
     translation.activate(user.choosen_lang)
@@ -104,13 +104,17 @@ def handle_question_answers_request(request, user: SurveyUser, question_index: i
         )
         if form.is_valid():
             with transaction.atomic():
-                user = SurveyUser.objects.select_for_update(nowait=True).filter(id=user.id)[0]
+                user = SurveyUser.objects.select_for_update(nowait=True).filter(
+                    id=user.id
+                )[0]
                 answers = form.cleaned_data["answers"]
-                answer_content = ''
+                answer_content = ""
                 if "answer_content" in form.cleaned_data:
                     answer_content = form.cleaned_data["answer_content"]
 
-                save_answers(user, current_question, question_answers, answers, answer_content)
+                save_answers(
+                    user, current_question, question_answers, answers, answer_content
+                )
 
                 feedback = form.cleaned_data["feedback"]
                 if feedback:
@@ -142,7 +146,9 @@ def handle_question_answers_request(request, user: SurveyUser, question_index: i
             question_answers=question_answers,
         )
 
-        user_answers = SurveyUserAnswer.objects.filter(user=user, answer__question=current_question)
+        user_answers = SurveyUserAnswer.objects.filter(
+            user=user, answer__question=current_question
+        )
         selected_answers = []
         for user_answer in user_answers:
             if user_answer.uvalue > 0:
@@ -183,10 +189,18 @@ def handle_question_answers_request(request, user: SurveyUser, question_index: i
     }
 
 
-def save_answers(user: SurveyUser, current_question: SurveyQuestion, question_answers, posted_answers, answer_content):
+def save_answers(
+    user: SurveyUser,
+    current_question: SurveyQuestion,
+    question_answers,
+    posted_answers,
+    answer_content,
+):
     posted_answers_ids = [int(i) for i in posted_answers]
     for question_answer in question_answers:
-        user_answers = SurveyUserAnswer.objects.filter(user=user, answer=question_answer)[:1]
+        user_answers = SurveyUserAnswer.objects.filter(
+            user=user, answer=question_answer
+        )[:1]
         if not user_answers:
             user_answer = SurveyUserAnswer()
             user_answer.user = user
@@ -194,7 +208,7 @@ def save_answers(user: SurveyUser, current_question: SurveyQuestion, question_an
         else:
             user_answer = user_answers[0]
 
-        if question_answer.atype == 'T':
+        if question_answer.atype == "T":
             user_answer.content = answer_content
 
         user_answer.uvalue = 0
@@ -228,7 +242,7 @@ def get_answer_choices(question_answers, user_lang: str):
                     "{}{}",
                     mark_safe('<span class="checkmark"></span>'),
                     translation_key[0].text,
-                )
+                ),
             )
         )
 
@@ -284,7 +298,7 @@ def get_questions_with_user_answers(user: SurveyUser):
             }
 
         user_answer_content = ""
-        if survey_user_answer.answer.atype == 'T' and survey_user_answer.uvalue == 1:
+        if survey_user_answer.answer.atype == "T" and survey_user_answer.uvalue == 1:
             user_answer_content = survey_user_answer.content
 
         questions_with_user_answers[question_index]["user_answers"].append(

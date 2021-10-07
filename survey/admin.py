@@ -45,7 +45,15 @@ class FindUserByHashFilter(InputFilter):
 @admin.register(SurveyUser)
 class SurveyUserAdmin(admin.ModelAdmin):
     list_filter = (FindUserByHashFilter,)
-    list_display = ["id", "user_id", "status", "country_code", "choosen_lang", "created_at", "updated_at"]
+    list_display = [
+        "id",
+        "user_id",
+        "status",
+        "country_code",
+        "choosen_lang",
+        "created_at",
+        "updated_at",
+    ]
 
 
 @admin.register(SurveyUserFeedback)

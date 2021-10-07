@@ -6,24 +6,37 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('survey', '1002_auto_20191111_1432'),
+        ("survey", "1002_auto_20191111_1432"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='surveyquestionanswer',
-            name='atype',
-            field=models.CharField(choices=[('P', 'Predefined answer'), ('T', 'Free text')], default='P', max_length=2),
+            model_name="surveyquestionanswer",
+            name="atype",
+            field=models.CharField(
+                choices=[("P", "Predefined answer"), ("T", "Free text")],
+                default="P",
+                max_length=2,
+            ),
         ),
         migrations.AlterField(
-            model_name='surveyquestion',
-            name='qtype',
-            field=models.CharField(choices=[('M', 'Multiple Choice'), ('S', 'Single Choice'), ('T', 'Free text'),
-            ('MT', 'Multiple Choice + Free Text'), ('ST', 'Single Choice + Free Text')], default='M', max_length=2),
+            model_name="surveyquestion",
+            name="qtype",
+            field=models.CharField(
+                choices=[
+                    ("M", "Multiple Choice"),
+                    ("S", "Single Choice"),
+                    ("T", "Free text"),
+                    ("MT", "Multiple Choice + Free Text"),
+                    ("ST", "Single Choice + Free Text"),
+                ],
+                default="M",
+                max_length=2,
+            ),
         ),
         migrations.AddField(
-            model_name='surveyuseranswer',
-            name='content',
-            field=models.TextField(blank=True, default=''),
+            model_name="surveyuseranswer",
+            name="content",
+            field=models.TextField(blank=True, default=""),
         ),
     ]
