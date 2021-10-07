@@ -37,6 +37,7 @@ $ curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/instal
 ```bash
 $ git clone https://github.com/CASES-LU/Fit4Cybersecurity.git
 $ cd Fit4Cybersecurity/
+$ git checkout fitcyber4africa
 $ npm install
 $ poetry install
 ```
@@ -53,7 +54,8 @@ $ python manage.py migrate # need to initialize before create the first user
 $ python manage.py createsuperuser --username <username>
 ```
 
-In the configuration you **must** set your secret keys:
+In the configuration file ```config_prod.py``` you **must** set **your** secret
+keys:
 
 Here is an example for the Fernet hash key:
 
@@ -76,7 +78,8 @@ For the Django secret key, you can for example use ```from django.utils.crypto i
 $ python manage.py runserver # not for production
 ```
 
-For production you can use [Gunicorn](https://gunicorn.org) or mod_wsgi.
+For production you can use [Gunicorn](https://gunicorn.org) or mod_wsgi and turn
+off the debug mode in the configuration file.
 
 
 
@@ -102,7 +105,7 @@ be *password*.
 
 ```bash
 $ cd Fit4Cybersecurity/
-$ git pull origin master
+$ git pull origin fitcyber4africa
 $ poetry run python manage.py migrate
 $ poetry run python manage.py compilemessages
 ```
