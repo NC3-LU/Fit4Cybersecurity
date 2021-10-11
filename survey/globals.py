@@ -1,9 +1,9 @@
 SECTOR_CHOICES = [
-    ("FINA", "Banking"),
+    ("BANK", "Banking"),
     ("FINA", "Central Bank"),
-    ("FINA", "Micro-Finance"),
-    ("FINA", "Micro Assurance"),
-    ("FINA", "Mobile Money"),
+    ("MIFI", "Micro-Finance"),
+    ("MIAS", "Micro Assurance"),
+    ("MOMO", "Mobile Money"),
     ("SALE", "Trading, sales and mass distribution"),
     ("MARK", "Marketing, media and multimedia"),
     ("BUIL", "Construction industries and civil engineering"),
@@ -19,10 +19,11 @@ SECTOR_CHOICES = [
     ("FARM", "Farming and fishing, natural spaces and green spaces, animal care"),
     ("PUBL", "Public administration"),
     ("MINE", "Oil & Gas"),
+    ("OTMI", "Other Mines"),
 ]
 
 COUNTRIES = [
-    ("SE", "Senegal"),
+    ("SN", "Senegal"),
     ("RW", "Rwanda"),
     ("CI", "Ivory Coast"),
     ("NG", "Nigeria"),
@@ -141,9 +142,9 @@ TRANSLATION_UI = {
                 "de": "About the ACRC Diagnostic",
             },
             "description": {
-                "en": "The CASES Diagnostic is a service which analyses the company maturity in the information security depending on company's requirements. The analyse duration can take approxymately 2 hours. A consultant from ACRC will come to your companie's premises, and ask around 30 questions concerning your information security, mostly organizational questions and possibly some technical questions. You will receive a detailed report which will contain a maturity estimation as well as recommendations to enhance the information security maturity.",
-                "fr": "Le diagnostic CASES est un service destiné à l'analyse de la maturité d'une entreprise face à la sécurité de l'information qui lui est nécessaire. Avec une durée d'environ 2 heures, un consultant ACRC se déplace dans les locaux de l'entreprise, et pose une trentaine de questions pouvant être sur le côté organisationnel aussi bien que le côté un peu plus technique. À l'issue de ce diagnostic, un rapport est envoyé, et il contiendra une estimation de la maturité ainsi que des recommandations pour améliorer la maturité en la sécurité de l'information.",
-                "de": "Der Diagnostic ACRC ist ein Service zur Analyse des Reifegrads eines Unternehmens im Hinblick auf die Sicherheit der benötigten Informationen. Mit einer Dauer von ungefähr 2 Stunden kommt ein CASES-Berater zu Ihnen auf ihr Firmengelände und stellt ungefähr 30 Fragen, die sowohl organisatorischer als auch etwas technischer Natur sein können. Am Ende dieses Diagnostic wird ein Bericht verfasst und Ihnen kurze Zeit später übermittelt: er enthält eine Schätzung der Laufzeit sowie Empfehlungen zur Verbesserung der Laufzeit der Informationssicherheit.",
+                "en": "The ACRC Diagnostic is a service which analyses the company maturity in the information security depending on company's requirements. The analyse duration can take approxymately 2 hours. A consultant from ACRC will come to your companie's premises, and ask around 30 questions concerning your information security, mostly organizational questions and possibly some technical questions. You will receive a detailed report which will contain a maturity estimation as well as recommendations to enhance the information security maturity.",
+                "fr": "Le diagnostic ACRC est un service destiné à l'analyse de la maturité d'une entreprise face à la sécurité de l'information qui lui est nécessaire. Avec une durée d'environ 2 heures, un consultant ACRC se déplace dans les locaux de l'entreprise, et pose une trentaine de questions pouvant être sur le côté organisationnel aussi bien que le côté un peu plus technique. À l'issue de ce diagnostic, un rapport est envoyé, et il contiendra une estimation de la maturité ainsi que des recommandations pour améliorer la maturité en la sécurité de l'information.",
+                "de": "Der Diagnostic ACRC ist ein Service zur Analyse des Reifegrads eines Unternehmens im Hinblick auf die Sicherheit der benötigten Informationen. Mit einer Dauer von ungefähr 2 Stunden kommt ein ACRC-Berater zu Ihnen auf ihr Firmengelände und stellt ungefähr 30 Fragen, die sowohl organisatorischer als auch etwas technischer Natur sein können. Am Ende dieses Diagnostic wird ein Bericht verfasst und Ihnen kurze Zeit später übermittelt: er enthält eine Schätzung der Laufzeit sowie Empfehlungen zur Verbesserung der Laufzeit der Informationssicherheit.",
             },
             "service_fee": {
                 "en": "The ACRC Diagnostic is available for all the companies located in Senegal and free of charge.",
@@ -158,7 +159,7 @@ TRANSLATION_UI = {
             "email_body": {
                 "en": "Dear ACRC Team,\n\nWe would like to request a Diagnostic ACRC from you.\n\nHere is our evaluation results identifier: {userId}\n\nHere also additional information that could be useful: \nLastname of the contact: \nFirstname of the contact: \nEmail address of the contact: \nAddress of the company for the Diagnostic (Senegal only): \nDesired language for the Diagnostic: ",
                 "fr": "À l'attention de l'équipe ACRC,\n\nNous aimerions planifier un Diagnostic CASES.\n\nVoici l'identifiant lié à notre évaluation: {userId}\n\nVoici également les informations qui vous seront nécessaires: \nNom du point de contact: \nPrénom du point de contact: \nAdresse mail du point de contact: \nAdresse de l'entreprise et du Diagnostic (Senegal uniquement): \nLangue souhaitée du Diagnostic: ",
-                "de": "Sehr geehrtes ACRC-Team, \n\nWir möchten ein Diagnostic ACRC mit Ihnen anfordern. \n\nHier finden Sie die ID unserer Bewertungsergebnisse: {userId} \n\nHier finden Sie auch andere nützliche Informationen: \nNachname des Kontakts: \nVorname des Kontakts: \nE-Mail-Adresse des Kontakts: \nAdresse des Unternehmens und des Ortes für den Diagnostic CASES: (nur in Senegal): \nGewünschte Sprache für den Diagnostic ACRC:",
+                "de": "Sehr geehrtes ACRC-Team, \n\nWir möchten ein Diagnostic ACRC mit Ihnen anfordern. \n\nHier finden Sie die ID unserer Bewertungsergebnisse: {userId} \n\nHier finden Sie auch andere nützliche Informationen: \nNachname des Kontakts: \nVorname des Kontakts: \nE-Mail-Adresse des Kontakts: \nAdresse des Unternehmens und des Ortes für den Diagnostic ACRC: (nur in Senegal): \nGewünschte Sprache für den Diagnostic ACRC:",
             },
         },
         "request_training": {
@@ -308,7 +309,7 @@ TRANSLATION_UI = {
                 "de": "Was ist Ihre Branche?",
             },
             "sector_list": {
-                "FINA": {
+                "BANK": {
                     "en": "Banking",
                     "fr": "Banque",
                     "de": "Banken",
@@ -318,26 +319,20 @@ TRANSLATION_UI = {
                     "fr": "Banque Centrale",
                     "de": "Zentralbank",
                 },
-                "FINA": {
+                "MIFI": {
                     "en": "Microfinance",
                     "fr": "Microfiance",
                     "de": "Mikrofinanz",
                 },
-                "FINA": {
+                "MIAS": {
                     "en": "Micro-assurance",
                     "fr": "Microinsurance",
                     "de": "Mikroversicherung",
                 },
-                "FINA": {
+                "MOMO": {
                     "en": "Mobile Money",
                     "fr": "Mobile Money",
                     "de": "Mobiles Geld",
-                },
-
-                "BANK": {
-                    "en": "Banking, insurance and real estate",
-                    "fr": "Banque, assurances et immobilier",
-                    "de": "Banken, Versicherungen und Immobilien",
                 },
                 "SALE": {
                     "en": "Trading, sales and mass distribution",
@@ -402,7 +397,7 @@ TRANSLATION_UI = {
                     "fr": "Gaz de pétrole",
                     "de": "Ölbenzin",
                 },
-                "MINE": { 
+                "OTMI": { 
                     "en": "Other Mines",
                     "fr": "Autres mines",
                     "de": "Andere Minen",

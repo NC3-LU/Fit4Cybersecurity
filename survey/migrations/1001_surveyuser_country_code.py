@@ -13,6 +13,6 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name="surveyuser",
             name="country_code",
-            field=models.CharField(default="SE", max_length=2),
+            field=models.CharField(default="SN", max_length=2),
         ),
     ]

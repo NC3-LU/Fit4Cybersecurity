@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse, HttpResponseRedirect
 from django.utils.translation import gettext as _
 from django import forms
+import traceback
 
 from survey.viewLogic import (
     handle_start_survey,
@@ -37,6 +38,7 @@ def start(request, lang="EN"):
             )
     except Exception as e:
         messages.error(request, e)
+        messages.error(traceback.format_exc())
         return HttpResponseRedirect("/")
 
     add_form_translations(form_data, lang, "question")

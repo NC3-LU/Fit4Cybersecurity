@@ -175,7 +175,7 @@ COUNTRIES_FIRST = [
     "CI",
     "RW",
     "NG",
-    "KE",
+    "BF",
     "ZA",
 ]
 
