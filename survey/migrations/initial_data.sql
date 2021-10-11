@@ -752,18 +752,15 @@ INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q0
 
 
 
-
-INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q014REC001', 'Having a backup power supply to switch to in case of an outage is imperative to insure business continuity.', 'en', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q014REC001', 'Il est impératif de disposer d''une alimentation électrique de secours en cas de panne.', 'fr', 'R');
 /*INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q014REC002', 'Backup power supply can be a generator or any form of renewable energy such as solar energy.', 'en', 'R');*/
-INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q014REC003', 'Backup power supply can be a generator or any form of renewable energy such as solar energy.', 'en', 'R');
-INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q014REC004', 'The usage of UPS for critical infrastructure systems is also important to maintain continuity of power to the respective load while the system is transitioning to backup power, hence preventing potential data loss.', 'en', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q014REC003', 'L''alimentation de secours peut être un générateur ou toute forme d''énergie renouvelable comme l''énergie solaire.', 'fr', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q014REC004', 'L''utilisation d''un onduleur fournit une source d''alimentation de secours sous la forme d''un système de stockage d''énergie pour maintenir la continuité de l''alimentation de la charge pendant que le système passe à l''alimentation de secours, évitant ainsi toute perte potentielle de données.', 'fr', 'R');
 
 /*INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q015REC001', '', 'en', 'R');*/
-INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q015REC002', 'The company''s premises should be equipped with the minimum fire detection and/or prevention systems.', 'en', 'R');
-INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q015REC003', 'The installation of video surveillance system is very effective in deterring any intention of theft.', 'en', 'R');
-INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q015REC004', 'Physical security is as much important as information and systems security, hence access to the offices and server rooms must be granted based on the profile of each person.', 'en', 'R');
-
-
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q015REC002', 'La sécurité physique est aussi importante que la sécurité des informations et des systèmes, c''est pourquoi l''accès aux bureaux et aux salles de serveurs doit être accordé en fonction du profil de chaque personne.', 'fr', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q015REC003', 'L''installation d''un système de vidéosurveillance est très efficace pour dissuader toute intention de vol.', 'fr', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q015REC004', 'Les locaux de l''entreprise doivent être équipés des systèmes minimaux de détection et/ou de prévention des incendies.', 'fr', 'R');
 
 -- EN
 INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q001REC001', 'The company should define rules in order to avoid misunderstandings.', 'en', 'R');
@@ -989,6 +986,16 @@ INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q0
 INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q013REC003', 'Auf persönlichen Geräten sollte ein Virenschutzprogramm installiert, aktualisiert und aktiviert sein, um so viele Bedrohungen wie möglich zu vermeiden.', 'de', 'R');
 INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q013REC004', 'Das Definieren von Regeln und Best Practices trägt zum Schutz der internen Netzwerke bei.', 'de', 'R');
 
+
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q014REC001', 'Eine Notstromversorgung, auf die man im Falle eines Stromausfalls umschalten kann, ist unerlässlich.', 'de', 'R');
+/*INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q014REC002', 'Backup power supply can be a generator or any form of renewable energy such as solar energy.', 'en', 'R');*/
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q014REC003', 'Die Notstromversorgung kann ein Generator oder eine Form von erneuerbarer Energie wie Solarenergie sein.', 'de', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q014REC004', 'Die Verwendung von USV bietet eine Quelle für die Notstromversorgung in Form eines Energiespeichersystems, um die Kontinuität der Stromversorgung für die Last aufrechtzuerhalten, während das System auf die Notstromversorgung umschaltet, und somit einen möglichen Datenverlust zu verhindern.', 'de', 'R');
+
+/*INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q015REC001', '', 'en', 'R');*/
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q015REC002', 'Die Räumlichkeiten des Unternehmens sollten mit einem Mindestmaß an Brandmelde- und/oder Brandschutzsystemen ausgestattet sein.', 'de', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q015REC003', 'Die Installation eines Videoüberwachungssystems ist ein sehr wirksames Mittel zur Abschreckung von Diebstahlsabsichten.', 'de', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q015REC004', 'Die physische Sicherheit ist ebenso wichtig wie die Informations- und Systemsicherheit, daher muss der Zugang zu den Büros und Serverräumen auf der Grundlage des Profils der einzelnen Personen gewährt werden.', 'de', 'R');
 
 -- Update the sequences IDs
 SELECT setval('survey_surveysection_id_seq', (SELECT MAX(id) from "survey_surveysection"));
