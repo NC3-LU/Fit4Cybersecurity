@@ -238,7 +238,7 @@ INSERT INTO "survey_recommendations" ("textKey", "min_e_count", "max_e_count", "
 INSERT INTO "survey_recommendations" ("textKey", "min_e_count", "max_e_count", "sector", "answerChosen", "forAnswer_id") VALUES ('Q014REC003', 'a', 'j', NULL, FALSE, 82);
 INSERT INTO "survey_recommendations" ("textKey", "min_e_count", "max_e_count", "sector", "answerChosen", "forAnswer_id") VALUES ('Q014REC004', 'a', 'j', NULL, FALSE, 83);
 
-/*INSERT INTO "survey_recommendations" ("textKey", "min_e_count", "max_e_count", "sector", "answerChosen", "forAnswer_id") VALUES ('Q015EC001', 'a', 'j', NULL, FALSE, 84);*/
+/*INSERT INTO "survey_recommendations" ("textKey", "min_e_count", "max_e_count", "sector", "answerChosen", "forAnswer_id") VALUES ('Q015REC001', 'a', 'j', NULL, FALSE, 84);*/
 INSERT INTO "survey_recommendations" ("textKey", "min_e_count", "max_e_count", "sector", "answerChosen", "forAnswer_id") VALUES ('Q015REC002', 'a', 'j', NULL, FALSE, 85);
 INSERT INTO "survey_recommendations" ("textKey", "min_e_count", "max_e_count", "sector", "answerChosen", "forAnswer_id") VALUES ('Q015REC003', 'a', 'j', NULL, FALSE, 86);
 INSERT INTO "survey_recommendations" ("textKey", "min_e_count", "max_e_count", "sector", "answerChosen", "forAnswer_id") VALUES ('Q015REC004', 'a', 'j', NULL, FALSE, 87);
