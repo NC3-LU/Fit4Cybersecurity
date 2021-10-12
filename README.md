@@ -6,7 +6,7 @@
 Fitcyber4Africa is a self-assessment tool by [CASES](https://www.cases.lu)
 to help business owners from Africa implement a better cybersecurity strategy.
 
-The official instance is available [here](#).
+The official instance is available [here](https://start.cyber4africa.org).
 
 
 ## Deployment
