@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-10-05 08:24+0000\n"
-"PO-Revision-Date: 2021-10-07 05:52+0200\n"
+"POT-Creation-Date: 2021-10-12 12:33+0000\n"
+"PO-Revision-Date: 2021-10-12 14:39+0200\n"
 "Last-Translator: Cédric Bonhomme <cedric@cedricbonhomme.org>\n"
 "Language-Team: \n"
 "Language: de\n"
@@ -16,37 +16,39 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 2.3\n"
-
-#: csskp/settings.py:126
-msgid "English"
-msgstr ""
+"X-Generator: Poedit 3.0\n"
 
 #: csskp/settings.py:127
-msgid "French"
-msgstr ""
+msgid "English"
+msgstr "Englisch"
 
 #: csskp/settings.py:128
+msgid "French"
+msgstr "Französisch"
+
+#: csskp/settings.py:129
 msgid "Deutsch"
-msgstr ""
+msgstr "Deutsch"
 
-#: survey/views.py:105
+#: survey/views.py:107
 msgid "To generate a report you have to finish the survey."
-msgstr ""
+msgstr "Um einen Bericht zu erstellen, müssen Sie die Umfrage abschließen."
 
-#: survey/views.py:271
+#: survey/views.py:295
 msgid ""
 "We could not find a survey with the requested key, please start a new one."
 msgstr ""
 "Wir konnten keine Umfrage mit dem angeforderten Schlüssel finden. Bitte "
 "starten Sie eine neue."
 
-#: survey/views.py:301
+#: survey/views.py:325
 msgid "Feedback sending errors: "
-msgstr ""
+msgstr "Fehler beim Senden von Rückmeldungen: "
 
 #: templates/survey/base.html:27
-msgid "Fit4Cybersecurity a CASES self-assessment tool!"
+#, fuzzy
+#| msgid "Fit4Cybersecurity a CASES self-assessment tool!"
+msgid "Fitcyber4Africa a CASES self-assessment tool!"
 msgstr "Fit4Cybersecurity ein CASES-Selbstbewertungstool!"
 
 #: templates/survey/base.html:60
@@ -54,8 +56,8 @@ msgid "images/logoFull-en.png"
 msgstr "images/logoFull-de.png"
 
 #: templates/survey/base.html:93 templates/survey/base.html:94
-msgid "A service provided by CASES.LU"
-msgstr "Ein Service von CASES.LU"
+msgid "A service provided by ACRC"
+msgstr "Ein Service von ACRC"
 
 #: templates/survey/base.html:100 templates/survey/base.html:101
 msgid "Source code on GitHub"
