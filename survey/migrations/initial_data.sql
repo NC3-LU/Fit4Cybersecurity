@@ -234,7 +234,7 @@ INSERT INTO "survey_recommendations" ("textKey", "min_e_count", "max_e_count", "
 
 
 INSERT INTO "survey_recommendations" ("textKey", "min_e_count", "max_e_count", "sector", "answerChosen", "forAnswer_id") VALUES ('Q014REC001', 'a', 'j', NULL, FALSE, 80);
-INSERT INTO "survey_recommendations" ("textKey", "min_e_count", "max_e_count", "sector", "answerChosen", "forAnswer_id") VALUES ('Q014REC002', 'a', 'j', NULL, FALSE, 81);
+/*INSERT INTO "survey_recommendations" ("textKey", "min_e_count", "max_e_count", "sector", "answerChosen", "forAnswer_id") VALUES ('Q014REC002', 'a', 'j', NULL, FALSE, 81);*/
 INSERT INTO "survey_recommendations" ("textKey", "min_e_count", "max_e_count", "sector", "answerChosen", "forAnswer_id") VALUES ('Q014REC003', 'a', 'j', NULL, FALSE, 82);
 INSERT INTO "survey_recommendations" ("textKey", "min_e_count", "max_e_count", "sector", "answerChosen", "forAnswer_id") VALUES ('Q014REC004', 'a', 'j', NULL, FALSE, 83);
 
