@@ -38,7 +38,7 @@ def start(request, lang="EN"):
             )
     except Exception as e:
         messages.error(request, e)
-        messages.error(traceback.format_exc())
+        #messages.error(traceback.format_exc())
         return HttpResponseRedirect("/")
 
     add_form_translations(form_data, lang, "question")

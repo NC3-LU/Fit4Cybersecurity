@@ -404,14 +404,11 @@ TRANSLATION_UI = {
                     "fr": "Mobile Money",
                     "de": "Mobiles Geld",
                 },
-<<<<<<< HEAD
-=======
                 "BANK": {
                     "en": "Banking, insurance and real estate",
                     "fr": "Banque, assurances et immobilier",
                     "de": "Banken, Versicherungen und Immobilien",
                 },
->>>>>>> 840e09c6f50082d7dbf8e700cbb56cd0d9c09331
                 "SALE": {
                     "en": "Trading, sales and mass distribution",
                     "fr": "Commerce, vente et grande distribution",
@@ -487,11 +484,7 @@ TRANSLATION_UI = {
                     "fr": "Gaz de pétrole",
                     "de": "Ölbenzin",
                 },
-<<<<<<< HEAD
                 "OTMI": { 
-=======
-                "MINE": {
->>>>>>> 840e09c6f50082d7dbf8e700cbb56cd0d9c09331
                     "en": "Other Mines",
                     "fr": "Autres mines",
                     "de": "Andere Minen",
