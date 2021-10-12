@@ -25,7 +25,7 @@ $ curl https://pyenv.run | bash
 ### Set up your Python environment
 
 ```bash
-$ pyenv install 3.10.0 # install latest stable Python
+$ CONFIGURE_OPTS=--enable-shared pyenv install 3.10.0 # install latest stable Python with shared libraries support, only if you want to use mod_wsgi later.
 $ pyenv global 3.10.0 # make this version default for the whole system
 $ pyenv versions # check
 $ curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/install-poetry.py | python -
@@ -34,12 +34,11 @@ $ curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/instal
 
 ### Install the application
 
-
 ```bash
 $ git clone https://github.com/CASES-LU/Fit4Cybersecurity.git Fitcyber4Africa
 $ cd  Fitcyber4Africa/
 $ git checkout fitcyber4africa
-$ npm install
+$ npm ci
 $ poetry install
 ```
 
@@ -81,6 +80,41 @@ $ python manage.py runserver # not for production
 For production you can use [Gunicorn](https://gunicorn.org) or mod_wsgi and turn
 off the debug mode in the configuration file.
 
+
+### Configuration with Apache and mod_wsgi
+
+```bash
+$ sudo apt install apache2 apache2-dev # apxs2
+$ wget https://github.com/GrahamDumpleton/mod_wsgi/archive/refs/tags/4.9.0.tar.gz
+$ tar -xzvf 4.9.0.tar.gz
+$ cd mod_wsgi-4.9.0/ 
+$ ./configure --with-apxs=/usr/bin/apxs2 --with-python=/home/<user>/.pyenv/shims/python
+$ make
+$ sudo make install
+```
+
+Then in ```/etc/apache2/apache2.conf``` add the lines:
+
+```bash
+LoadFile /home/<user>/.pyenv/versions/3.10.0/lib/libpython3.10.so
+LoadModule wsgi_module /usr/lib/apache2/modules/mod_wsgi.so
+```
+
+Restart Apache:
+
+```bash
+sudo systemctl restart apache2.service
+```
+
+Create an Apache VirtualHost, then configure HTTPS properly. Below is an
+example:
+
+```bash
+sudo apt install certbot python3-certbot-apache
+sudo certbot --standalone -d start.cyber4africa.org
+sudo a2enmod rewrite
+sudo systemctl restart apache2.service
+```
 
 
 ## Deploy with a Dockerized environment (for development purposes)
