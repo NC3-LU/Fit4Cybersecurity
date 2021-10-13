@@ -41,7 +41,7 @@ $ poetry install --no-dev
 ```
 
 
-### Configure and run the application
+### Configure application
 
 ```bash
 $ cp csskp/config_dev.py csskp/config_prod.py # configure production settings
