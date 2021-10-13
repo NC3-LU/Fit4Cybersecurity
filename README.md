@@ -24,7 +24,7 @@ $ curl https://pyenv.run | bash
 ### Set up your Python environment
 
 ```bash
-$ pyenv install 3.10.0 # install latest stable Python
+$ CONFIGURE_OPTS=--enable-shared pyenv install 3.10.0 # install latest stable Python with shared libraries support, only if you want to use mod_wsgi later.
 $ pyenv global 3.10.0 # make this version default for the whole system
 $ pyenv versions # check
 $ curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/install-poetry.py | python -
@@ -36,8 +36,8 @@ $ curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/instal
 ```bash
 $ git clone https://github.com/CASES-LU/Fit4Cybersecurity.git
 $ cd  Fit4Cybersecurity/
-$ npm install
-$ poetry install
+$ npm ci
+$ poetry install --no-dev
 ```
 
 
@@ -80,6 +80,41 @@ For production you can use [Gunicorn](https://gunicorn.org) or mod_wsgi and turn
 off the debug mode in the configuration file.
 
 
+### Configuration with Apache and mod_wsgi
+
+```bash
+$ sudo apt install apache2 apache2-dev # apxs2
+$ wget https://github.com/GrahamDumpleton/mod_wsgi/archive/refs/tags/4.9.0.tar.gz
+$ tar -xzvf 4.9.0.tar.gz
+$ cd mod_wsgi-4.9.0/ 
+$ ./configure --with-apxs=/usr/bin/apxs2 --with-python=/home/<user>/.pyenv/shims/python
+$ make
+$ sudo make install
+```
+
+Then in ```/etc/apache2/apache2.conf``` add the lines:
+
+```bash
+LoadFile /home/<user>/.pyenv/versions/3.10.0/lib/libpython3.10.so
+LoadModule wsgi_module /usr/lib/apache2/modules/mod_wsgi.so
+```
+
+Restart Apache:
+
+```bash
+sudo systemctl restart apache2.service
+```
+
+Create an Apache VirtualHost, then configure HTTPS properly. Below is an
+example:
+
+```bash
+sudo apt install certbot python3-certbot-apache
+sudo certbot --standalone -d fit4cybersecurity.cases.lu
+sudo a2enmod rewrite
+sudo systemctl restart apache2.service
+```
+
 
 ## Deploy with a Dockerized environment (for development purposes)
 
@@ -102,12 +137,20 @@ be *password*.
 
 ```bash
 $ cd Fit4Cybersecurity/
-$ git pull origin master
+$ git pull origin master --tags
+$ npm ci
+$ poetry install --no-dev
+$ poetry run python manage.py collectstatic
 $ poetry run python manage.py migrate
 $ poetry run python manage.py compilemessages
 ```
 
-If you want to update the translations (in the case you have
+Restart Apache if needed.
+
+
+## Updating the translations
+
+If you want to update the translations (in the case **you have locally**
 changed the source code), you must first run:
 
 ```bash
@@ -118,11 +161,12 @@ Then you can use a tool like
 [poedit](https://poedit.net) to translate the strings and you can compile with
 the previously mentioned command.
 
-If you want to re-generate the .pot file:
+If you want to re-generate the .pot template file:
 
 ```bash
 $ python manage.py makemessages --keep-pot
 ```
+
 
 ## License
 
