@@ -259,7 +259,7 @@ class Migration(migrations.Migration):
                 ("contact_address_city", models.CharField(max_length=64)),
                 (
                     "contact_address_country",
-                    models.CharField(choices=COUNTRIES, max_length=2),
+                    models.CharField(choices=COUNTRIES, max_length=4),
                 ),
                 ("contact_address_number", models.IntegerField()),
                 ("contact_address_postcode", models.CharField(max_length=10)),

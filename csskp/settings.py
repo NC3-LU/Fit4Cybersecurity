@@ -171,12 +171,6 @@ MESSAGE_TAGS = {
 
 # First displayed countries on start survey page
 COUNTRIES_FIRST = [
-    "LU",
-    "BE",
-    "FR",
-    "DE",
-    "NL",
-    "GB",
 ]
 
 COUNTRIES_FIRST_BREAK = "---------------------"

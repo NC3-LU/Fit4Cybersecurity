@@ -218,7 +218,7 @@ class Company(models.Model):
     contact_tel = models.TextField(max_length=32)
     contact_address_street = models.CharField(max_length=128)
     contact_address_city = models.CharField(max_length=64)
-    contact_address_country = models.CharField(max_length=2, choices=COUNTRIES)
+    contact_address_country = models.CharField(max_length=4)
     contact_address_number = models.IntegerField()
     contact_address_postcode = models.CharField(max_length=10)
     notes = models.TextField()

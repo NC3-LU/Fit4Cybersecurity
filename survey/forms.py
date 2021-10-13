@@ -1,13 +1,15 @@
 from django import forms
 
-from survey.globals import SECTOR_CHOICES, COMPANY_SIZE, TRANSLATION_UI
+from survey.globals import SECTOR_CHOICES, COMPANY_SIZE, TRANSLATION_UI, COUNTRIES
 from survey.models import SurveyQuestionAnswer, TranslationKey
 from django_countries.fields import CountryField
+
 
 def sort_tuple_alphabetically(tuple, elementNumber):
     tuple.sort(key = lambda x: x[elementNumber])
 
     return tuple
+
 
 class InitialStartForm(forms.Form):
     sector = forms.ChoiceField(required=True, widget=forms.Select)
@@ -41,6 +43,7 @@ class InitialStartForm(forms.Form):
             initial="LU",
             error_messages={"required": required_error_message},
         )
+        self.fields["country"].choices = COUNTRIES
 
 
 class AnswerMChoice(forms.Form):

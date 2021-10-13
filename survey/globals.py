@@ -18,9 +18,9 @@ SECTOR_CHOICES = [
 
 COUNTRIES = [
     ("LU", "Luxembourg"),
-    ("DE", "Deutschland"),
-    ("BE", "Belgique"),
-    ("FR", "France"),
+    ("EEA", "EEA"),
+    ("NEEA", "Not EEA"),
+    ("EU", "Europe"),
 ]
 
 SERVICE_TARGETS = [
