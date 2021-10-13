@@ -39,7 +39,7 @@ $ git clone https://github.com/CASES-LU/Fit4Cybersecurity.git Fitcyber4Africa
 $ cd  Fitcyber4Africa/
 $ git checkout fitcyber4africa
 $ npm ci
-$ poetry install
+$ poetry install --no-dev
 ```
 
 
@@ -140,11 +140,17 @@ be *password*.
 ```bash
 $ cd Fitcyber4Africa/
 $ git pull origin fitcyber4africa --tags
+$ npm ci
+$ poetry install --no-dev
+$ poetry run python manage.py collectstatic
 $ poetry run python manage.py migrate
 $ poetry run python manage.py compilemessages
 ```
 
-If you want to update the translations (in the case you have
+
+## Updating the translations
+
+If you want to update the translations (in the case **you have locally**
 changed the source code), you must first run:
 
 ```bash
@@ -160,6 +166,7 @@ If you want to re-generate the .pot template file:
 ```bash
 $ python manage.py makemessages --keep-pot
 ```
+
 
 ## License
 
