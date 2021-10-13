@@ -28,7 +28,7 @@ STATIC_DIR = os.path.join(BASE_DIR, "static")
 PICTURE_DIR = "/tmp/csskp/"
 
 # Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
+# See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = config.SECRET_KEY
@@ -93,13 +93,13 @@ LOGIN_REDIRECT_URL = "/admin/"
 LOGOUT_REDIRECT_URL = "/"
 
 # Database
-# https://docs.djangoproject.com/en/2.2/ref/settings/#databases
+# https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 DATABASES = config.DATABASES
 
 DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
 
 # Password validation
-# https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
+# https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
 
 AUTH_PASSWORD_VALIDATORS = [
     {
@@ -112,7 +112,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 
 # Internationalization
-# https://docs.djangoproject.com/en/2.2/topics/i18n/
+# https://docs.djangoproject.com/en/3.2/topics/i18n/
 
 LANGUAGE_CODE = "en-us"
 
@@ -149,8 +149,6 @@ BOOTSTRAP4 = {
     "javascript_in_head": True,
     "include_jquery": True,
 }
-
-from django.contrib.messages import constants as messages
 
 MESSAGE_TAGS = {
     messages.DEBUG: "alert-info",
