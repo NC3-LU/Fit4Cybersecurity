@@ -6,7 +6,7 @@ from django_countries.fields import CountryField
 
 
 def sort_tuple_alphabetically(tuple, elementNumber):
-    tuple.sort(key = lambda x: x[elementNumber])
+    tuple.sort(key=lambda x: x[elementNumber])
 
     return tuple
 
@@ -22,21 +22,29 @@ class InitialStartForm(forms.Form):
 
         super().__init__(*args, **kwargs)
 
-        self.fields["sector"].label = TRANSLATION_UI["form"]["start_form"]["sector_question"][lang]
+        self.fields["sector"].label = TRANSLATION_UI["form"]["start_form"][
+            "sector_question"
+        ][lang]
         sectors = []
         for sector_choise in SECTOR_CHOICES:
             sectors.append(
                 (
                     sector_choise[0],
-                    TRANSLATION_UI["form"]["start_form"]["sector_list"][sector_choise[0]][lang],
+                    TRANSLATION_UI["form"]["start_form"]["sector_list"][
+                        sector_choise[0]
+                    ][lang],
                 )
             )
 
         self.fields["sector"].choices = sort_tuple_alphabetically(sectors, 1)
-        self.fields["compSize"].label = TRANSLATION_UI["form"]["start_form"]["size_question"][lang]
+        self.fields["compSize"].label = TRANSLATION_UI["form"]["start_form"][
+            "size_question"
+        ][lang]
 
         country_label = TRANSLATION_UI["form"]["start_form"]["country"]["label"][lang]
-        required_error_message = TRANSLATION_UI["form"]["start_form"]["country"]["required_error_message"][lang.lower()]
+        required_error_message = TRANSLATION_UI["form"]["start_form"]["country"][
+            "required_error_message"
+        ][lang.lower()]
         self.fields["country"] = CountryField().formfield(
             label=country_label,
             required=True,
@@ -81,24 +89,26 @@ class AnswerMChoice(forms.Form):
                 choices=[],
                 widget=forms.RadioSelect(attrs={"class": "radio-buttons"}),
                 label="",
-                initial=tanswers[0][0]
+                initial=tanswers[0][0],
             )
 
         self.fields["answers"].error_messages = {
-            "required": TRANSLATION_UI["form"]["error_messages"]["answer"]["required"][self.lang]
+            "required": TRANSLATION_UI["form"]["error_messages"]["answer"]["required"][
+                self.lang
+            ]
         }
 
         if tanswers is not None:
             self.fields["answers"].choices = tanswers
 
         for question_answer in question_answers:
-            if question_answer.atype == 'T':
+            if question_answer.atype == "T":
                 isAnswerContentRequired = False
-                if data is not None and data['free_text_answer_id'] != 0:
-                    selected_answers = data['answers']
+                if data is not None and data["free_text_answer_id"] != 0:
+                    selected_answers = data["answers"]
                     if answers_field_type[0] == "S":
-                        selected_answers = [data['answers']]
-                    if data['free_text_answer_id'] in selected_answers:
+                        selected_answers = [data["answers"]]
+                    if data["free_text_answer_id"] in selected_answers:
                         isAnswerContentRequired = True
 
                 self.fields["answer_content"] = forms.CharField(
@@ -150,7 +160,9 @@ class AnswerMChoice(forms.Form):
                 answer_text = translation_key[0].text
 
                 raise forms.ValidationError(
-                    TRANSLATION_UI["form"]["error_messages"]["answer"]["unique"][self.lang],
+                    TRANSLATION_UI["form"]["error_messages"]["answer"]["unique"][
+                        self.lang
+                    ],
                     params={"value": answer_text},
                 )
 
@@ -173,7 +185,9 @@ class GeneralFeedback(forms.Form):
             label=TRANSLATION_UI["report"]["general_feedback"]["label"][lang],
             widget=forms.Textarea(
                 attrs={
-                    "placeholder": TRANSLATION_UI["report"]["general_feedback"]["placeholder"][lang]
+                    "placeholder": TRANSLATION_UI["report"]["general_feedback"][
+                        "placeholder"
+                    ][lang]
                 }
             ),
             required=True,

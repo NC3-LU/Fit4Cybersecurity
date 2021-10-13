@@ -6,24 +6,41 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
+<<<<<<< HEAD:survey/migrations/0005_auto_20210920_1503.py
         ('survey', '0004_auto_20191111_1432'),
+=======
+        ("survey", "1002_auto_20191111_1432"),
+>>>>>>> 8ce78f158e85115aafa8bdd70c9b9d4a4181d667:survey/migrations/1003_auto_20210920_1503.py
     ]
 
     operations = [
         migrations.AddField(
-            model_name='surveyquestionanswer',
-            name='atype',
-            field=models.CharField(choices=[('P', 'Predefined answer'), ('T', 'Free text')], default='P', max_length=2),
+            model_name="surveyquestionanswer",
+            name="atype",
+            field=models.CharField(
+                choices=[("P", "Predefined answer"), ("T", "Free text")],
+                default="P",
+                max_length=2,
+            ),
         ),
         migrations.AlterField(
-            model_name='surveyquestion',
-            name='qtype',
-            field=models.CharField(choices=[('M', 'Multiple Choice'), ('S', 'Single Choice'), ('T', 'Free text'),
-            ('MT', 'Multiple Choice + Free Text'), ('ST', 'Single Choice + Free Text')], default='M', max_length=2),
+            model_name="surveyquestion",
+            name="qtype",
+            field=models.CharField(
+                choices=[
+                    ("M", "Multiple Choice"),
+                    ("S", "Single Choice"),
+                    ("T", "Free text"),
+                    ("MT", "Multiple Choice + Free Text"),
+                    ("ST", "Single Choice + Free Text"),
+                ],
+                default="M",
+                max_length=2,
+            ),
         ),
         migrations.AddField(
-            model_name='surveyuseranswer',
-            name='content',
-            field=models.TextField(blank=True, default=''),
+            model_name="surveyuseranswer",
+            name="content",
+            field=models.TextField(blank=True, default=""),
         ),
     ]

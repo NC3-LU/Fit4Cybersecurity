@@ -66,7 +66,9 @@ class Migration(migrations.Migration):
                 ("uniqueAnswer", models.BooleanField(default=False)),
                 ("score", models.IntegerField(default=0)),
             ],
-            options={"unique_together": {("aindex", "question")},},
+            options={
+                "unique_together": {("aindex", "question")},
+            },
         ),
         migrations.CreateModel(
             name="SurveyQuestionServiceCategory",
@@ -148,7 +150,9 @@ class Migration(migrations.Migration):
                     ),
                 ),
             ],
-            options={"unique_together": {("lang", "id")},},
+            options={
+                "unique_together": {("lang", "id")},
+            },
         ),
         migrations.CreateModel(
             name="SurveyUserAnswer",

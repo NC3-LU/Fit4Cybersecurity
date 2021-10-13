@@ -10,7 +10,10 @@ class Migration(migrations.Migration):
     ]
 
     operations = [
-        migrations.RemoveField(model_name="surveyuser", name="chosenLang",),
+        migrations.RemoveField(
+            model_name="surveyuser",
+            name="chosenLang",
+        ),
         migrations.AddField(
             model_name="surveyuser",
             name="choosen_lang",
