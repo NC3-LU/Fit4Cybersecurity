@@ -1,6 +1,7 @@
 # Fit4Cybersecurity
 
-[![Translation status](https://translate.monarc.lu/widgets/Fit4Cybersecurity/-/glossary/svg-badge.svg)](https://translate.monarc.lu/engage/Fit4Cybersecurity/)
+[![Translation status](https://translate.monarc.lu/widgets/fit4cybersecurity/-/88x31-white.png)](https://translate.monarc.lu/engage/fit4cybersecurity/)
+
 
 Fit4Cybersecurity is a self-assessment tool by [CASES](https://www.cases.lu)
 to help business owners implement a better cybersecurity strategy.
@@ -14,10 +15,6 @@ The official CASES instance is available [here](https://fit4cybersecurity.cases.
 
 ```bash
 $ sudo apt install gettext postgresql
-$ sudo apt install make build-essential libssl-dev zlib1g-dev libbz2-dev \
-libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev \
-xz-utils tk-dev libffi-dev liblzma-dev libxml2-dev libxslt-dev libpq-dev python3-openssl
-$ curl https://pyenv.run | bash
 ```
 
 
@@ -27,7 +24,6 @@ $ curl https://pyenv.run | bash
 $ CONFIGURE_OPTS=--enable-shared pyenv install 3.10.0 # install latest stable Python with shared libraries support, only if you want to use mod_wsgi later.
 $ pyenv global 3.10.0 # make this version default for the whole system
 $ pyenv versions # check
-$ curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/install-poetry.py | python -
 ```
 
 ### Install the application
@@ -37,8 +33,8 @@ $ curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/instal
 $ git clone https://github.com/CASES-LU/Fit4Cybersecurity.git ./Fit4Ilr
 $ cd Fit4Ilr
 $ git checkout fit4ilr
-$ npm install
-$ poetry install
+$ npm ci
+$ poetry install --no-dev
 ```
 
 
@@ -138,7 +134,7 @@ be *password*.
 
 ```bash
 $ cd Fit4Cybersecurity/
-$ git pull origin master --tags
+$ git pull origin fit4ilr --tags
 $ npm ci
 $ poetry install --no-dev
 $ poetry run python manage.py collectstatic
@@ -167,7 +163,6 @@ If you want to re-generate the .pot template file:
 ```bash
 $ python manage.py makemessages --keep-pot
 ```
-
 
 ## License
 
