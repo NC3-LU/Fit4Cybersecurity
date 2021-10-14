@@ -98,13 +98,13 @@ INSERT INTO "survey_surveyquestionanswer" ("id", "answerKey", "aindex", "questio
 INSERT INTO "survey_surveyquestionanswer" ("id", "answerKey", "aindex", "question_id", "uniqueAnswer", "score", "atype") VALUES (46, 'Q014A010', 100, 14, FALSE, 0, 'P');
 INSERT INTO "survey_surveyquestionanswer" ("id", "answerKey", "aindex", "question_id", "uniqueAnswer", "score", "atype") VALUES (47, 'Q014A011', 110, 14, FALSE, 0, 'T');
 
-INSERT INTO "survey_surveyquestionanswer" ("id", "answerKey", "aindex", "question_id", "uniqueAnswer", "score", "atype") VALUES (48, 'Q015A001', 10, 15, TRUE, 0, 'P');
+INSERT INTO "survey_surveyquestionanswer" ("id", "answerKey", "aindex", "question_id", "uniqueAnswer", "score", "atype") VALUES (48, 'Q015A001', 10, 15, FALSE, 0, 'P');
 INSERT INTO "survey_surveyquestionanswer" ("id", "answerKey", "aindex", "question_id", "uniqueAnswer", "score", "atype") VALUES (49, 'Q015A002', 20, 15, FALSE, 0, 'P');
 INSERT INTO "survey_surveyquestionanswer" ("id", "answerKey", "aindex", "question_id", "uniqueAnswer", "score", "atype") VALUES (50, 'Q015A003', 30, 15, FALSE, 0, 'P');
 INSERT INTO "survey_surveyquestionanswer" ("id", "answerKey", "aindex", "question_id", "uniqueAnswer", "score", "atype") VALUES (51, 'Q015A004', 40, 15, FALSE, 0, 'P');
 INSERT INTO "survey_surveyquestionanswer" ("id", "answerKey", "aindex", "question_id", "uniqueAnswer", "score", "atype") VALUES (52, 'Q015A005', 50, 15, FALSE, 0, 'P');
 INSERT INTO "survey_surveyquestionanswer" ("id", "answerKey", "aindex", "question_id", "uniqueAnswer", "score", "atype") VALUES (53, 'Q015A006', 60, 15, FALSE, 0, 'P');
-INSERT INTO "survey_surveyquestionanswer" ("id", "answerKey", "aindex", "question_id", "uniqueAnswer", "score", "atype") VALUES (54, 'Q015A007', 70, 15, FALSE, 0, 'P');
+INSERT INTO "survey_surveyquestionanswer" ("id", "answerKey", "aindex", "question_id", "uniqueAnswer", "score", "atype") VALUES (54, 'Q015A007', 70, 15, TRUE, 0, 'P');
 INSERT INTO "survey_surveyquestionanswer" ("id", "answerKey", "aindex", "question_id", "uniqueAnswer", "score", "atype") VALUES (55, 'Q015A008', 80, 15, FALSE, 0, 'T');
 
 INSERT INTO "survey_surveyquestionanswer" ("id", "answerKey", "aindex", "question_id", "uniqueAnswer", "score", "atype") VALUES (56, 'Q016A001', 10, 16, TRUE, 0, 'T');
@@ -133,17 +133,17 @@ INSERT INTO "survey_surveyquestionanswer" ("id", "answerKey", "aindex", "questio
 INSERT INTO "survey_surveyquestionanswer" ("id", "answerKey", "aindex", "question_id", "uniqueAnswer", "score", "atype") VALUES (73, 'Q022A002', 20, 22, FALSE, 0, 'P');
 INSERT INTO "survey_surveyquestionanswer" ("id", "answerKey", "aindex", "question_id", "uniqueAnswer", "score", "atype") VALUES (74, 'Q022A003', 30, 22, FALSE, 0, 'P');
 
-INSERT INTO "survey_surveyquestionanswer" ("id", "answerKey", "aindex", "question_id", "uniqueAnswer", "score", "atype") VALUES (75, 'Q023A001', 10, 23, TRUE, 0, 'P');
-INSERT INTO "survey_surveyquestionanswer" ("id", "answerKey", "aindex", "question_id", "uniqueAnswer", "score", "atype") VALUES (76, 'Q023A002', 20, 23, TRUE, 0, 'P');
-INSERT INTO "survey_surveyquestionanswer" ("id", "answerKey", "aindex", "question_id", "uniqueAnswer", "score", "atype") VALUES (77, 'Q023A003', 30, 23, TRUE, 0, 'P');
-INSERT INTO "survey_surveyquestionanswer" ("id", "answerKey", "aindex", "question_id", "uniqueAnswer", "score", "atype") VALUES (78, 'Q023A004', 40, 23, TRUE, 0, 'P');
-INSERT INTO "survey_surveyquestionanswer" ("id", "answerKey", "aindex", "question_id", "uniqueAnswer", "score", "atype") VALUES (79, 'Q023A005', 50, 23, TRUE, 0, 'T');
+INSERT INTO "survey_surveyquestionanswer" ("id", "answerKey", "aindex", "question_id", "uniqueAnswer", "score", "atype") VALUES (75, 'Q023A001', 10, 23, FALSE, 0, 'P');
+INSERT INTO "survey_surveyquestionanswer" ("id", "answerKey", "aindex", "question_id", "uniqueAnswer", "score", "atype") VALUES (76, 'Q023A002', 20, 23, FALSE, 0, 'P');
+INSERT INTO "survey_surveyquestionanswer" ("id", "answerKey", "aindex", "question_id", "uniqueAnswer", "score", "atype") VALUES (77, 'Q023A003', 30, 23, FALSE, 0, 'P');
+INSERT INTO "survey_surveyquestionanswer" ("id", "answerKey", "aindex", "question_id", "uniqueAnswer", "score", "atype") VALUES (78, 'Q023A004', 40, 23, FALSE, 0, 'P');
+INSERT INTO "survey_surveyquestionanswer" ("id", "answerKey", "aindex", "question_id", "uniqueAnswer", "score", "atype") VALUES (79, 'Q023A005', 50, 23, FALSE, 0, 'T');
 
-INSERT INTO "survey_surveyquestionanswer" ("id", "answerKey", "aindex", "question_id", "uniqueAnswer", "score", "atype") VALUES (80, 'Q024A001', 10, 24, FALSE, 0, 'P');
-INSERT INTO "survey_surveyquestionanswer" ("id", "answerKey", "aindex", "question_id", "uniqueAnswer", "score", "atype") VALUES (81, 'Q024A002', 20, 24, TRUE, 0, 'P');
-INSERT INTO "survey_surveyquestionanswer" ("id", "answerKey", "aindex", "question_id", "uniqueAnswer", "score", "atype") VALUES (82, 'Q024A003', 30, 24, TRUE, 0, 'P');
-INSERT INTO "survey_surveyquestionanswer" ("id", "answerKey", "aindex", "question_id", "uniqueAnswer", "score", "atype") VALUES (83, 'Q024A004', 40, 24, TRUE, 0, 'P');
-INSERT INTO "survey_surveyquestionanswer" ("id", "answerKey", "aindex", "question_id", "uniqueAnswer", "score", "atype") VALUES (84, 'Q024A005', 50, 24, TRUE, 0, 'T');
+INSERT INTO "survey_surveyquestionanswer" ("id", "answerKey", "aindex", "question_id", "uniqueAnswer", "score", "atype") VALUES (80, 'Q024A001', 10, 24, TRUE, 0, 'P');
+INSERT INTO "survey_surveyquestionanswer" ("id", "answerKey", "aindex", "question_id", "uniqueAnswer", "score", "atype") VALUES (81, 'Q024A002', 20, 24, FALSE, 0, 'P');
+INSERT INTO "survey_surveyquestionanswer" ("id", "answerKey", "aindex", "question_id", "uniqueAnswer", "score", "atype") VALUES (82, 'Q024A003', 30, 24, FALSE, 0, 'P');
+INSERT INTO "survey_surveyquestionanswer" ("id", "answerKey", "aindex", "question_id", "uniqueAnswer", "score", "atype") VALUES (83, 'Q024A004', 40, 24, FALSE, 0, 'P');
+INSERT INTO "survey_surveyquestionanswer" ("id", "answerKey", "aindex", "question_id", "uniqueAnswer", "score", "atype") VALUES (84, 'Q024A005', 50, 24, FALSE, 0, 'T');
 
 INSERT INTO "survey_surveyquestionanswer" ("id", "answerKey", "aindex", "question_id", "uniqueAnswer", "score", "atype") VALUES (85, 'Q025A001', 10, 25, TRUE, 0, 'P');
 INSERT INTO "survey_surveyquestionanswer" ("id", "answerKey", "aindex", "question_id", "uniqueAnswer", "score", "atype") VALUES (86, 'Q025A002', 20, 25, TRUE, 0, 'P');
