@@ -42,13 +42,13 @@ INSERT INTO "survey_surveyquestion" ("id", "titleKey", "qtype", "qindex", "servi
 
 
 /* survey_surveyquestionanswer */
-INSERT INTO "survey_surveyquestionanswer" ("id", "answerKey", "aindex", "question_id", "uniqueAnswer", "score", "atype") VALUES (1, 'Q001A001', 10, 1, FALSE, 0, 'P');
-INSERT INTO "survey_surveyquestionanswer" ("id", "answerKey", "aindex", "question_id", "uniqueAnswer", "score", "atype") VALUES (2, 'Q001A002', 11, 1, TRUE, 0, 'P');
-INSERT INTO "survey_surveyquestionanswer" ("id", "answerKey", "aindex", "question_id", "uniqueAnswer", "score", "atype") VALUES (3, 'Q001A003', 12, 1, TRUE, 0, 'P');
-INSERT INTO "survey_surveyquestionanswer" ("id", "answerKey", "aindex", "question_id", "uniqueAnswer", "score", "atype") VALUES (4, 'Q001A004', 13, 1, TRUE, 0, 'P');
-INSERT INTO "survey_surveyquestionanswer" ("id", "answerKey", "aindex", "question_id", "uniqueAnswer", "score", "atype") VALUES (5, 'Q001A005', 14, 1, TRUE, 0, 'P');
-INSERT INTO "survey_surveyquestionanswer" ("id", "answerKey", "aindex", "question_id", "uniqueAnswer", "score", "atype") VALUES (6, 'Q001A006', 15, 1, TRUE, 0, 'P');
-INSERT INTO "survey_surveyquestionanswer" ("id", "answerKey", "aindex", "question_id", "uniqueAnswer", "score", "atype") VALUES (7, 'Q001A007', 16, 1, TRUE, 0, 'T');
+INSERT INTO "survey_surveyquestionanswer" ("id", "answerKey", "aindex", "question_id", "uniqueAnswer", "score", "atype") VALUES (1, 'Q001A001', 10, 1, TRUE, 0, 'P');
+INSERT INTO "survey_surveyquestionanswer" ("id", "answerKey", "aindex", "question_id", "uniqueAnswer", "score", "atype") VALUES (2, 'Q001A002', 11, 1, FALSE, 0, 'P');
+INSERT INTO "survey_surveyquestionanswer" ("id", "answerKey", "aindex", "question_id", "uniqueAnswer", "score", "atype") VALUES (3, 'Q001A003', 12, 1, FALSE, 0, 'P');
+INSERT INTO "survey_surveyquestionanswer" ("id", "answerKey", "aindex", "question_id", "uniqueAnswer", "score", "atype") VALUES (4, 'Q001A004', 13, 1, FALSE, 0, 'P');
+INSERT INTO "survey_surveyquestionanswer" ("id", "answerKey", "aindex", "question_id", "uniqueAnswer", "score", "atype") VALUES (5, 'Q001A005', 14, 1, FALSE, 0, 'P');
+INSERT INTO "survey_surveyquestionanswer" ("id", "answerKey", "aindex", "question_id", "uniqueAnswer", "score", "atype") VALUES (6, 'Q001A006', 15, 1, FALSE, 0, 'P');
+INSERT INTO "survey_surveyquestionanswer" ("id", "answerKey", "aindex", "question_id", "uniqueAnswer", "score", "atype") VALUES (7, 'Q001A007', 16, 1, FALSE, 0, 'T');
 
 INSERT INTO "survey_surveyquestionanswer" ("id", "answerKey", "aindex", "question_id", "uniqueAnswer", "score", "atype") VALUES (8, 'Q002A001', 10, 2, TRUE, 0, 'T');
 INSERT INTO "survey_surveyquestionanswer" ("id", "answerKey", "aindex", "question_id", "uniqueAnswer", "score", "atype") VALUES (9, 'Q003A001', 10, 3, TRUE, 0, 'T');
@@ -158,9 +158,23 @@ INSERT INTO "survey_surveyquestionanswer" ("id", "answerKey", "aindex", "questio
 INSERT INTO "survey_surveyquestionanswer" ("id", "answerKey", "aindex", "question_id", "uniqueAnswer", "score", "atype") VALUES (93, 'Q026A006', 60, 26, FALSE, 0, 'T');
 
 /* survey_recommendations */
-INSERT INTO "survey_recommendations" ("textKey", "min_e_count", "max_e_count", "sector", "answerChosen", "forAnswer_id") VALUES ('Q002REC001', 'a', 'j', NULL, TRUE, 9);
-INSERT INTO "survey_recommendations" ("textKey", "min_e_count", "max_e_count", "sector", "answerChosen", "forAnswer_id") VALUES ('Q003REC001', 'a', 'j', NULL, TRUE, 17);
+INSERT INTO "survey_recommendations" ("textKey", "min_e_count", "max_e_count", "sector", "answerChosen", "forAnswer_id") VALUES ('Q013REC001', 'a', 'j', NULL, TRUE, 32);
+INSERT INTO "survey_recommendations" ("textKey", "min_e_count", "max_e_count", "sector", "answerChosen", "forAnswer_id") VALUES ('Q013REC001', 'a', 'j', NULL, TRUE, 33);
+INSERT INTO "survey_recommendations" ("textKey", "min_e_count", "max_e_count", "sector", "answerChosen", "forAnswer_id") VALUES ('Q013REC001', 'a', 'j', NULL, TRUE, 35);
+INSERT INTO "survey_recommendations" ("textKey", "min_e_count", "max_e_count", "sector", "answerChosen", "forAnswer_id") VALUES ('Q013REC001', 'a', 'j', NULL, TRUE, 36);
+INSERT INTO "survey_recommendations" ("textKey", "min_e_count", "max_e_count", "sector", "answerChosen", "forAnswer_id") VALUES ('Q013REC002', 'a', 'j', NULL, TRUE, 34);
 
+INSERT INTO "survey_recommendations" ("textKey", "min_e_count", "max_e_count", "sector", "answerChosen", "forAnswer_id") VALUES ('Q014REC001', 'a', 'j', NULL, TRUE, 37);
+INSERT INTO "survey_recommendations" ("textKey", "min_e_count", "max_e_count", "sector", "answerChosen", "forAnswer_id") VALUES ('Q014REC001', 'a', 'j', NULL, TRUE, 38);
+INSERT INTO "survey_recommendations" ("textKey", "min_e_count", "max_e_count", "sector", "answerChosen", "forAnswer_id") VALUES ('Q014REC001', 'a', 'j', NULL, TRUE, 39);
+INSERT INTO "survey_recommendations" ("textKey", "min_e_count", "max_e_count", "sector", "answerChosen", "forAnswer_id") VALUES ('Q014REC001', 'a', 'j', NULL, TRUE, 40);
+INSERT INTO "survey_recommendations" ("textKey", "min_e_count", "max_e_count", "sector", "answerChosen", "forAnswer_id") VALUES ('Q014REC001', 'a', 'j', NULL, TRUE, 41);
+INSERT INTO "survey_recommendations" ("textKey", "min_e_count", "max_e_count", "sector", "answerChosen", "forAnswer_id") VALUES ('Q014REC001', 'a', 'j', NULL, TRUE, 42);
+INSERT INTO "survey_recommendations" ("textKey", "min_e_count", "max_e_count", "sector", "answerChosen", "forAnswer_id") VALUES ('Q014REC001', 'a', 'j', NULL, TRUE, 43);
+INSERT INTO "survey_recommendations" ("textKey", "min_e_count", "max_e_count", "sector", "answerChosen", "forAnswer_id") VALUES ('Q014REC001', 'a', 'j', NULL, TRUE, 44);
+INSERT INTO "survey_recommendations" ("textKey", "min_e_count", "max_e_count", "sector", "answerChosen", "forAnswer_id") VALUES ('Q014REC001', 'a', 'j', NULL, TRUE, 45);
+INSERT INTO "survey_recommendations" ("textKey", "min_e_count", "max_e_count", "sector", "answerChosen", "forAnswer_id") VALUES ('Q014REC001', 'a', 'j', NULL, TRUE, 46);
+INSERT INTO "survey_recommendations" ("textKey", "min_e_count", "max_e_count", "sector", "answerChosen", "forAnswer_id") VALUES ('Q014REC001', 'a', 'j', NULL, TRUE, 47);
 
 /* survey_translationkey */
 INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('SERVCAT001', 'Category: Risk Management', 'en', 'C');
@@ -325,9 +339,9 @@ INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q0
     INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q026A006', 'Other - please describe:', 'en', 'A');
 
 
-INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q002REC001', 'The only true wisdom is in knowing you know nothing.', 'en', 'R');
-INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q003REC001', 'Wonder is the beginning of wisdom.', 'en', 'R');
-
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q013REC001', 'If you are a simple SME, you can consider the guidance from ENISA <a href=“https://www.enisa.europa.eu/publications/cybersecurity-guide-for-smes” target="_blank">here</a>  and <a href=“https://www.enisa.europa.eu/publications/enisa-report-cybersecurity-for-smes“ target="_blank">here</a>.', 'en', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q013REC002', 'If you are obliged to comply with the NIS directive, then you should consider <a href="https://www.enisa.europa.eu/topics/nis-directive/minimum-security-measures-for-operators-of-essentials-services” target="_blank">this mapping table</a> of security measures provided by ENISA. In addition, if you are a digital service provider, you should consider <a href=“https://www.enisa.europa.eu/publications/minimum-security-measures-for-digital-service-providers” target="_blank">this document</a>. If you are in the telecom sector, <a href=“https://www.enisa.europa.eu/publications/guideline-on-security-measures-under-the-eecc” target="_blank">this document</a>. If you are in the healthcare sector, <a href=“https://www.enisa.europa.eu/publications/cloud-security-for-healthcare-services” target="_blank">a first document</a>, then <a href=“https://www.enisa.europa.eu/publications/good-practices-for-the-security-of-healthcare-services” target="_blank">a second document</a> and <a href=“https://www.enisa.europa.eu/publications/cloud-security-for-healthcare-services” target="_blank">a third document</a>. In the transport sector (railways), consider <a href=“https://www.enisa.europa.eu/publications/railway-cybersecurity” target="_blank">this document</a>. In the energy sector, consider <a href=“https://www.enisa.europa.eu/publications/communication-network-interdependencies-in-smart-grids” target="_blank">this document</a> and <a href=“https://www.enisa.europa.eu/publications/power-sector-dependency” target="_blank">this document</a>. Finally, in the financial sector, consider <a href=“https://www.enisa.europa.eu/publications/EU_Cybersecurity_Initiatives_in_the_Finance_Sector” target="_blank">this document</a>, <a href=“https://www.enisa.europa.eu/publications/mobile-payments-security” target="_blank">this document</a>, <a href=“https://www.enisa.europa.eu/publications/blockchain-security” target="_blank">this document</a> and <a href=“https://www.enisa.europa.eu/publications/network-and-information-security-in-the-finance-sector” target="_blank">this document</a>.', 'en', 'R');
+INSERT INTO "survey_translationkey" ("key", "text", "lang", "ttype") VALUES ('Q014REC001', 'Irrespective of your obligations in terms of risk management and cybersecurity, you should consider the 29 Security Objectives listed by ENISA to check if you have implemented security measures in your company in a meaningful and risk-aware way. You can find them <a href=“https://www.enisa.europa.eu/publications/guideline-on-security-measures-under-the-eecc” target="_blank">here</a>, split in 8 areas, and ordered by level of sophistication.', 'en', 'R');
 
 -- Update the sequences IDs
 SELECT setval('survey_surveysection_id_seq', (SELECT MAX(id) from "survey_surveysection"));
