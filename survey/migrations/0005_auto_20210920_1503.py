@@ -6,11 +6,7 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-<<<<<<< HEAD:survey/migrations/0005_auto_20210920_1503.py
         ('survey', '0004_auto_20191111_1432'),
-=======
-        ("survey", "1002_auto_20191111_1432"),
->>>>>>> 8ce78f158e85115aafa8bdd70c9b9d4a4181d667:survey/migrations/1003_auto_20210920_1503.py
     ]
 
     operations = [
