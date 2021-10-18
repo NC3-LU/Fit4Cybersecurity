@@ -8,6 +8,9 @@ import sys
 from django.contrib.messages import constants as messages
 from django.utils.translation import ugettext_lazy as _
 
+# Quick-start development settings - unsuitable for production
+# See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
+
 try:
     from csskp import config_prod as config
 except Exception:
@@ -17,6 +20,19 @@ except Exception:
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 
+# Loads the custom configuration variables from the config file.
+try:
+    # SECURITY WARNING: keep the keys used in production, secret!
+    SECRET_KEY = config.SECRET_KEY
+    HASH_KEY = config.HASH_KEY
+    # SECURITY WARNING: don't run with debug turned on in production!
+    DEBUG = config.DEBUG
+    ALLOWED_HOSTS = config.ALLOWED_HOSTS
+    LOGGING = config.LOGGING
+except AttributeError as e:
+    raise Exception("Module not found: {}".format(e))
+except Exception as e:
+    raise e
 
 # Include BOOTSTRAP4_FOLDER in path
 BOOTSTRAP4_FOLDER = os.path.abspath(os.path.join(BASE_DIR, "..", "bootstrap4"))
@@ -24,19 +40,6 @@ if BOOTSTRAP4_FOLDER not in sys.path:
     sys.path.insert(0, BOOTSTRAP4_FOLDER)
 
 MAIN_TEMPLATE_DIR = os.path.join(BASE_DIR, "templates")
-
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
-
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = config.SECRET_KEY
-HASH_KEY = config.HASH_KEY
-
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = config.DEBUG
-
-ALLOWED_HOSTS = config.ALLOWED_HOSTS
-
 
 # Application definition
 
@@ -155,6 +158,7 @@ BOOTSTRAP4 = {
     "javascript_in_head": True,
     "include_jquery": True,
 }
+
 
 MESSAGE_TAGS = {
     messages.DEBUG: "alert-info",
