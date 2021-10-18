@@ -112,7 +112,7 @@ def createAndSendReport(user: SurveyUser, lang: str):
     doc = Document(template)
 
     introduction = ""
-    file_path = os.path.join(filepath, lang + "_intr.txt")
+    file_path = os.path.join(filepath, lang + "_intro.txt")
     try:
         with open(file_path, encoding="UTF-8") as f:
             introduction = f.read()
