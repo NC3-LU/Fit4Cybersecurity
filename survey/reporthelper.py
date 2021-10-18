@@ -54,7 +54,7 @@ def getRecommendations(user: SurveyUser, lang: str):
     allAnswers = SurveyQuestionAnswer.objects.all().order_by(
         "question__qindex", "aindex"
     )
-    recommendations_translations = get_formatted_translations(lang, "R")
+    recommendations_translations = get_formatted_translations(lang, encoding="UTF-8")
     categories_translations = get_formatted_translations(lang, "C")
 
     finalReportRecs = {}
@@ -111,11 +111,11 @@ def createAndSendReport(user: SurveyUser, lang: str):
     introduction = ""
     file_path = os.path.join(filepath, lang + "_intro.txt")
     try:
-        with open(file_path, "r") as f:
+        with open(file_path, encoding="UTF-8") as f:
             introduction = f.read()
     except Exception as e:
         # raise e
-        raise Exception("Missing file: {}".format(file_path))
+        raise Exception("Error when reading template: {}".format(str(e)))
 
     introduction = introduction.replace("\n\r", "\n")
     introduction = introduction.split("\n\n")
@@ -130,10 +130,11 @@ def createAndSendReport(user: SurveyUser, lang: str):
     methodDescr = ""
     file_path = os.path.join(filepath, lang + "_description.txt")
     try:
-        with open(file_path, "r") as f:
+        with open(file_path, encoding="UTF-8") as f:
             methodDescr = f.read()
-    except:
-        raise Exception("Missing file: {}".format(file_path))
+    except Exception as e:
+        # raise e
+        raise Exception("Error when reading template: {}".format(str(e)))
 
     methodDescr = methodDescr.replace("\n\r", "\n")
     methodDescr = methodDescr.replace(
@@ -151,10 +152,11 @@ def createAndSendReport(user: SurveyUser, lang: str):
     results = ""
     file_path = os.path.join(filepath, lang + "_resultdisclaimer.txt")
     try:
-        with open(file_path, "r") as f:
+        with open(file_path, encoding="UTF-8") as f:
             results = f.read()
-    except:
-        raise Exception("Missing file: {}".format(file_path))
+    except Exception as e:
+        # raise e
+        raise Exception("Error when reading template: {}".format(str(e)))
 
     score, details, section_list = calculateResult(user, lang)
 
@@ -201,7 +203,7 @@ def createAndSendReport(user: SurveyUser, lang: str):
     recs = ""
     file_path = os.path.join(filepath, lang + "_recs.txt")
     try:
-        with open(file_path, "r") as f:
+        with open(file_path, encoding="UTF-8") as f:
             recs = f.read()
     except Exception as e:
         # raise e
