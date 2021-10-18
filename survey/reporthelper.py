@@ -1,4 +1,5 @@
 import os
+import logging
 from django.http import HttpResponse
 from django.conf import settings
 
@@ -24,9 +25,11 @@ from docx import Document
 from docx.shared import Cm, Pt
 
 # from docx.enum.text import WD_ALIGN_PARAGRAPH
-from docx.enum.dml import MSO_THEME_COLOR_INDEX
 from datetime import date
 import re
+
+# Get an instance of a logger
+logger = logging.getLogger(__name__)
 
 
 class MLStripper(HTMLParser):
@@ -54,7 +57,7 @@ def getRecommendations(user: SurveyUser, lang: str):
     allAnswers = SurveyQuestionAnswer.objects.all().order_by(
         "question__qindex", "aindex"
     )
-    recommendations_translations = get_formatted_translations(lang, encoding="UTF-8")
+    recommendations_translations = get_formatted_translations(lang, "R")
     categories_translations = get_formatted_translations(lang, "C")
 
     finalReportRecs = {}
@@ -109,13 +112,13 @@ def createAndSendReport(user: SurveyUser, lang: str):
     doc = Document(template)
 
     introduction = ""
-    file_path = os.path.join(filepath, lang + "_intro.txt")
+    file_path = os.path.join(filepath, lang + "_intr.txt")
     try:
         with open(file_path, encoding="UTF-8") as f:
             introduction = f.read()
     except Exception as e:
-        # raise e
-        raise Exception("Error when reading template: {}".format(str(e)))
+        logger.error("Error when reading template: {}".format(e))
+        raise Exception("Oooops... something went wrong!")
 
     introduction = introduction.replace("\n\r", "\n")
     introduction = introduction.split("\n\n")
@@ -133,8 +136,8 @@ def createAndSendReport(user: SurveyUser, lang: str):
         with open(file_path, encoding="UTF-8") as f:
             methodDescr = f.read()
     except Exception as e:
-        # raise e
-        raise Exception("Error when reading template: {}".format(str(e)))
+        logger.error("Error when reading template: {}".format(e))
+        raise Exception("Oooops... something went wrong!")
 
     methodDescr = methodDescr.replace("\n\r", "\n")
     methodDescr = methodDescr.replace(
@@ -155,8 +158,8 @@ def createAndSendReport(user: SurveyUser, lang: str):
         with open(file_path, encoding="UTF-8") as f:
             results = f.read()
     except Exception as e:
-        # raise e
-        raise Exception("Error when reading template: {}".format(str(e)))
+        logger.error("Error when reading template: {}".format(e))
+        raise Exception("Oooops... something went wrong!")
 
     score, details, section_list = calculateResult(user, lang)
 
@@ -206,8 +209,8 @@ def createAndSendReport(user: SurveyUser, lang: str):
         with open(file_path, encoding="UTF-8") as f:
             recs = f.read()
     except Exception as e:
-        # raise e
-        raise Exception("Missing file: {}".format(file_path))
+        logger.error("Error when reading template: {}".format(e))
+        raise Exception("Oooops... something went wrong!")
 
     recs = recs.replace("\n\r", "\n")
     recs = recs.split("\n\n")
