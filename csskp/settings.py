@@ -172,8 +172,7 @@ MESSAGE_TAGS = {
 
 
 # First displayed countries on start survey page
-COUNTRIES_FIRST = []
-
+COUNTRIES_FIRST = CUSTOM.get("countries_first", [])
 COUNTRIES_FIRST_BREAK = "---------------------"
 
 
