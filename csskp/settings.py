@@ -12,6 +12,9 @@ try:
 except Exception:
     from csskp import config_dev as config
 
+# Initialization of the custom variables (strings, templates, icons)
+CUSTOM = {key: value for key, value in getattr(config, "CUSTOM", {}).items()}
+
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
@@ -81,7 +84,7 @@ TEMPLATES = [
                 "django.contrib.auth.context_processors.auth",
                 "django.contrib.messages.context_processors.messages",
                 "survey.context_processors.get_version",
-                "survey.context_processors.get_fit4tool_name",
+                "survey.context_processors.get_tool_name",
             ],
         },
     },

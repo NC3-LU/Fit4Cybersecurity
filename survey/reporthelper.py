@@ -2,7 +2,7 @@ import os
 from django.http import HttpResponse
 from django.conf import settings
 
-from csskp.settings import PICTURE_DIR
+from csskp.settings import PICTURE_DIR, CUSTOM
 from survey.models import (
     SurveyQuestion,
     SurveyQuestionAnswer,
@@ -11,7 +11,7 @@ from survey.models import (
     Recommendations,
     TranslationKey,
 )
-from survey.globals import TRANSLATION_UI, FIT4TOOL_NAME
+from survey.globals import TRANSLATION_UI
 from utils.radarFactory import radar_factory
 import matplotlib.pyplot as plt
 
@@ -312,7 +312,7 @@ def createAndSendReport(user: SurveyUser, lang: str):
     section = doc.sections[0]
     header = section.header
     paragraph = header.paragraphs[0]
-    paragraph.text = str(date.today()) + "\t\t" + FIT4TOOL_NAME
+    paragraph.text = str(date.today()) + "\t\t" + CUSTOM["tool_name"]
     paragraph.style = doc.styles["Header"]
 
     response = HttpResponse(
@@ -320,7 +320,7 @@ def createAndSendReport(user: SurveyUser, lang: str):
     )
     response["Content-Disposition"] = (
         "attachment; filename=Report_"
-        + FIT4TOOL_NAME
+        + CUSTOM["tool_name"]
         + "_"
         + str(date.today())
         + "_"

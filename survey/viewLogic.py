@@ -12,8 +12,9 @@ from survey.models import (
     SURVEY_STATUS_UNDER_REVIEW,
 )
 from survey.forms import InitialStartForm, AnswerMChoice, GeneralFeedback
-from survey.globals import LANG_SELECT, TRANSLATION_UI, FIT4TOOL_NAME
+from survey.globals import LANG_SELECT, TRANSLATION_UI
 from survey.reporthelper import getRecommendations, get_formatted_translations
+from csskp.settings import CUSTOM
 
 
 def create_user(lang: str, sector: str, company_size: str, country: str):
@@ -39,7 +40,7 @@ def create_user(lang: str, sector: str, company_size: str, country: str):
 def handle_start_survey(request, lang: str):
     action = "/survey/start/" + lang
     question = TRANSLATION_UI["question"]["description"][lang]
-    title = FIT4TOOL_NAME + " - " + TRANSLATION_UI["question"]["title"][lang]
+    title = CUSTOM["tool_name"] + " - " + TRANSLATION_UI["question"]["title"][lang]
 
     translation.activate(lang)
     request.session[translation.LANGUAGE_SESSION_KEY] = lang
@@ -172,7 +173,7 @@ def handle_question_answers_request(request, user: SurveyUser, question_index: i
     form.set_free_text_answer_id(free_text_answer_id)
 
     return {
-        "title": FIT4TOOL_NAME + " - "
+        "title": CUSTOM["tool_name"] + " - "
         + TRANSLATION_UI["question"]["question"][user.choosen_lang]
         + " "
         + str(current_question.qindex),

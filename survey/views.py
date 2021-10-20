@@ -11,12 +11,12 @@ from survey.viewLogic import (
     handle_general_feedback,
 )
 from survey.reporthelper import calculateResult, createAndSendReport, getRecommendations
-from survey.globals import TRANSLATION_UI, MIN_ACCEPTABLE_SCORE, LANG_SELECT, FIT4TOOL_NAME
+from survey.globals import TRANSLATION_UI, MIN_ACCEPTABLE_SCORE, LANG_SELECT
 from survey.models import SurveyUser, SURVEY_STATUS_FINISHED
 from django.contrib import messages
 from django.utils import translation
 from uuid import UUID
-from csskp.settings import HASH_KEY
+from csskp.settings import HASH_KEY, CUSTOM
 from cryptography.fernet import Fernet
 
 
@@ -206,7 +206,7 @@ def finish(request):
         recommendations[rx] = [x.replace("\n", "<br>") for x in recommendations[rx]]
 
     textLayout = {
-        "title": FIT4TOOL_NAME + " - " + TRANSLATION_UI["report"]["title"][user_lang],
+        "title": CUSTOM["tool_name"] + " - " + TRANSLATION_UI["report"]["title"][user_lang],
         "description": TRANSLATION_UI["report"]["description"][user_lang],
         "recommendations": recommendations,
         "user": user,
