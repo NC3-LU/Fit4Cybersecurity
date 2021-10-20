@@ -43,7 +43,9 @@
         </div>
         <div class="text-center py-2">
             {% for lang in custom.languages %}
-            <a href="{{ reportlink }}/{{ lang }}" class="p-1"><img class="flag" src="{% static 'images/flags/'|add:lang|add:'.svg' %}" alt="{{ lang }}"></a>
+                <a href="{{ reportlink }}/{{ lang }}" class="p-1">
+                    <img class="flag" src="{% static 'images/flags/'|add:lang|add:'.svg' %}" alt="{{ lang }}">
+                </a>
             {% endfor %}
         </div>
     </div>
