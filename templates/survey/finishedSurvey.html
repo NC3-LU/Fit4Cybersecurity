@@ -42,9 +42,9 @@
             <img src="{% static "images/reportLogo.png" %}" alt="DOC ICON">
         </div>
         <div class="text-center py-2">
-            <a href="{{ reportlink }}/en" class="p-1">{% comment %}<img class="flag" src="{% static "images/flags/en.svg" %}" alt="en">{% endcomment %}Report</a>
-            {# <a href="{{ reportlink }}/fr" class="p-2"><img class="flag" src="{% static "images/flags/fr.svg" %}" alt="fr"></a> #}
-            {# <a href="{{ reportlink }}/de" class="p-2"><img class="flag" src="{% static "images/flags/de.svg" %}" alt="de"></a> #}
+            {% for lang in custom.languages %}
+            <a href="{{ reportlink }}/{{ lang }}" class="p-1"><img class="flag" src="{% static 'images/flags/'|add:lang|add:'.svg' %}" alt="{{ lang }}"></a>
+            {% endfor %}
         </div>
     </div>
 
