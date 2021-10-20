@@ -2,6 +2,7 @@ import os
 import subprocess
 from csskp.settings import BASE_DIR, CUSTOM
 
+
 def get_version(request):
     version = (
         os.environ.get("PKGVER")
@@ -25,6 +26,7 @@ def get_version(request):
             version[2][1:]
         )
     return {"app_version": app_version, "version_url": version_url}
+
 
 def instance_configurations(request):
     configurations = {

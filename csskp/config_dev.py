@@ -1,4 +1,3 @@
-
 from django.utils.translation import gettext_lazy
 
 ALLOWED_HOSTS = []
@@ -39,11 +38,7 @@ LOGGING = {
         },
     },
     "loggers": {
-        "django": {
-            "handlers": ["file"],
-            "level": "INFO",
-            "propagate": True
-        },
+        "django": {"handlers": ["file"], "level": "INFO", "propagate": True},
     },
     "formatters": {
         "app": {

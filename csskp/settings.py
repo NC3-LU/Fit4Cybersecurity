@@ -75,7 +75,9 @@ ROOT_URLCONF = "csskp.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [MAIN_TEMPLATE_DIR,],
+        "DIRS": [
+            MAIN_TEMPLATE_DIR,
+        ],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
@@ -100,7 +102,7 @@ LOGOUT_REDIRECT_URL = "/"
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 DATABASES = config.DATABASES
 
-DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
+DEFAULT_AUTO_FIELD = "django.db.models.AutoField"
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
@@ -109,9 +111,15 @@ AUTH_PASSWORD_VALIDATORS = [
     {
         "NAME": "django.contrib.auth.password_validation.UserAttributeSimilarityValidator",
     },
-    {"NAME": "django.contrib.auth.password_validation.MinimumLengthValidator",},
-    {"NAME": "django.contrib.auth.password_validation.CommonPasswordValidator",},
-    {"NAME": "django.contrib.auth.password_validation.NumericPasswordValidator",},
+    {
+        "NAME": "django.contrib.auth.password_validation.MinimumLengthValidator",
+    },
+    {
+        "NAME": "django.contrib.auth.password_validation.CommonPasswordValidator",
+    },
+    {
+        "NAME": "django.contrib.auth.password_validation.NumericPasswordValidator",
+    },
 ]
 
 
@@ -164,8 +172,7 @@ MESSAGE_TAGS = {
 
 
 # First displayed countries on start survey page
-COUNTRIES_FIRST = [
-]
+COUNTRIES_FIRST = []
 
 COUNTRIES_FIRST_BREAK = "---------------------"
 
@@ -220,8 +227,12 @@ BOOTSTRAP4 = BOOTSTRAP4 = {
     # Class to indicate success, meaning the field has valid input (better to set this in your Django form)
     "success_css_class": "is-valid",
     # Renderers (only set these if you have studied the source and understand the inner workings)
-    "formset_renderers": {"default": "bootstrap4.renderers.FormsetRenderer",},
-    "form_renderers": {"default": "bootstrap4.renderers.FormRenderer",},
+    "formset_renderers": {
+        "default": "bootstrap4.renderers.FormsetRenderer",
+    },
+    "form_renderers": {
+        "default": "bootstrap4.renderers.FormRenderer",
+    },
     "field_renderers": {
         "default": "bootstrap4.renderers.FieldRenderer",
         "inline": "bootstrap4.renderers.InlineFieldRenderer",

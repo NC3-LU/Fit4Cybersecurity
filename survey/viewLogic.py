@@ -173,7 +173,8 @@ def handle_question_answers_request(request, user: SurveyUser, question_index: i
     form.set_free_text_answer_id(free_text_answer_id)
 
     return {
-        "title": CUSTOM["tool_name"] + " - "
+        "title": CUSTOM["tool_name"]
+        + " - "
         + TRANSLATION_UI["question"]["question"][user.choosen_lang]
         + " "
         + str(current_question.qindex),
