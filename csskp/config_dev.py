@@ -16,3 +16,7 @@ DATABASES = {
         "PORT": 5432,
     }
 }
+
+CUSTOM = {
+    "tool_name": "<TOOL_NAME>",
+}

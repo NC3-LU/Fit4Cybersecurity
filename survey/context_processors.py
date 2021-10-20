@@ -26,5 +26,9 @@ def get_version(request):
         )
     return {"app_version": app_version, "version_url": version_url}
 
-def get_tool_name(request):
-    return {"tool_name" : CUSTOM["tool_name"]}
+def instance_configurations(request):
+    configurations = {
+        "custom": CUSTOM,
+    }
+
+    return configurations
