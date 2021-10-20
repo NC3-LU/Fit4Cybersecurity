@@ -1,5 +1,6 @@
 from django import template
 from django.utils import translation
+
 register = template.Library()
 
 
