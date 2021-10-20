@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-04-07 22:33+0000\n"
-"PO-Revision-Date: 2021-10-14 10:13+0000\n"
+"POT-Creation-Date: 2021-10-20 15:15+0000\n"
+"PO-Revision-Date: 2021-10-20 17:17+0200\n"
 "Last-Translator: Juan Rocha <juan.rocha@cases.lu>\n"
 "Language-Team: French <https://translate.monarc.lu/projects/"
 "Fit4Cybersecurity/fit4ilr/fr/>\n"
@@ -17,17 +17,25 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 4.9-dev\n"
+"X-Generator: Poedit 3.0\n"
 
-#: csskp/settings.py:126
+#: csskp/config_dev.py:24 csskp/config_prod.py:24
+msgid "Description from a string or a file."
+msgstr ""
+
+#: csskp/config_dev.py:25 csskp/config_prod.py:25
+msgid "/static/images/logoFull-en.png"
+msgstr "/static/images/logoFull-fr.png"
+
+#: csskp/settings.py:132
 msgid "English"
 msgstr "Anglais"
 
-#: csskp/settings.py:127
+#: csskp/settings.py:133
 msgid "French"
 msgstr "Français"
 
-#: csskp/settings.py:128
+#: csskp/settings.py:134
 msgid "Deutsch"
 msgstr "Allemand"
 
@@ -35,20 +43,20 @@ msgstr "Allemand"
 msgid "To generate a report you have to finish the survey."
 msgstr "Pour générer un rapport vous devez finir l'enquête."
 
-#: survey/views.py:268
+#: survey/views.py:295
 msgid ""
 "We could not find a survey with the requested key, please start a new one."
 msgstr ""
 "Nous n'avons pas pu trouver un sondage avec la clé demandée, veuillez en "
 "commencer un nouveau."
 
-#: survey/views.py:298
+#: survey/views.py:325
 msgid "Feedback sending errors: "
 msgstr "Erreurs d'envoi du retour d'information : "
 
 #: templates/survey/base.html:27
-msgid "Fit4Cybersecurity a CASES self-assessment tool!"
-msgstr "Fit4Cybersecurity est un outil d’auto-évaluation CASES !"
+msgid "a CASES self-assessment tool!"
+msgstr "est un outil d’auto-évaluation CASES !"
 
 #: templates/survey/base.html:60
 msgid "images/logoFull-en.png"
@@ -63,8 +71,8 @@ msgid "Source code on GitHub"
 msgstr "Code source sur GitHub"
 
 #: templates/survey/base.html:105
-msgid "Version of Fit4Cybersecurity"
-msgstr "Version de Fit4Cybersecurity"
+msgid "Version of"
+msgstr "Version de"
 
 #: templates/survey/base.html:112
 msgid "Terms of service"
@@ -74,23 +82,15 @@ msgstr "Conditions d'utilisation"
 msgid "Terms of Service"
 msgstr "Conditions d'utilisation"
 
-#: templates/survey/index.html:18
-msgid "Welcome to the CASES self-assessment tool: Fit4Cybersecurity"
-msgstr "Bienvenue dans l'outil d'auto-évaluation CASES : Fit4Cybersecurity"
+#: templates/survey/index.html:17
+msgid "Welcome to the CASES self-assessment tool:"
+msgstr "Bienvenue dans l'outil d'auto-évaluation CASES :"
 
-#: templates/survey/index.html:19
-msgid ""
-"This survey will ask a few questions and provide recommendations. Keep in "
-"mind, that it is a self-assessment tool and that it only touches the surface "
-"of information security by giving a very basic maturity level estimate and "
-"some basic recommendations."
-msgstr ""
-"Ce sondage posera des questions et présentera des recommandations en "
-"fonction de vos réponses. Rappelez-vous qu’il s’agit d’un outil d’auto-"
-"évaluation et qu’il ne fait que toucher à la surface de la sécurité de "
-"l’information en fournissant une estimation et des recommandations de base."
+#: templates/survey/index.html:28
+msgid "Start"
+msgstr "Démarrer"
 
-#: templates/survey/index.html:52
+#: templates/survey/index.html:37
 msgid "Continue a previous survey"
 msgstr "Continuer une enquête précédente"
 
@@ -103,31 +103,3 @@ msgstr ""
 #: templates/survey/resume.html:13
 msgid "Confirm"
 msgstr "Confirmer"
-
-#~ msgid ""
-#~ "This is the list of recommendations to improve the information security "
-#~ "maturity in your company, provided that your answers did correctly "
-#~ "reflect the state in your company. Also keep in mind that it is a self-"
-#~ "assessment and only scratches the surface of the information security "
-#~ "maturity level and thus, we are not liable for the results of this survey."
-#~ msgstr ""
-#~ "Voici la liste des recommandations visant à améliorer la maturité de la "
-#~ "sécurité des informations dans votre entreprise, à condition que vos "
-#~ "réponses reflètent correctement l'état de votre entreprise. N'oubliez pas "
-#~ "non plus qu'il s'agit d'une auto-évaluation et qu'elle ne fait "
-#~ "qu'effleurer le niveau de maturité de la sécurité de l'information. Par "
-#~ "conséquent, nous ne sommes pas responsables des résultats de cette "
-#~ "enquête."
-
-#~ msgid "You can request a Diagnostic"
-#~ msgstr "Vous pouvez demander un Diagnostic"
-
-#, fuzzy
-#~| msgid "images/logoFull-en.png"
-#~ msgid "images/logo-CASES.png"
-#~ msgstr "images/logoFull-fr.png"
-
-#, fuzzy
-#~| msgid "images/logoFull-en.png"
-#~ msgid "images/github-9-512.png"
-#~ msgstr "images/logoFull-fr.png"

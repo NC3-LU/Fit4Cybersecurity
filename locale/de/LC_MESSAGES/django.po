@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-04-07 22:33+0000\n"
-"PO-Revision-Date: 2021-10-14 10:13+0000\n"
+"POT-Creation-Date: 2021-10-20 15:15+0000\n"
+"PO-Revision-Date: 2021-10-20 17:18+0200\n"
 "Last-Translator: Juan Rocha <juan.rocha@cases.lu>\n"
 "Language-Team: German <https://translate.monarc.lu/projects/"
 "Fit4Cybersecurity/fit4ilr/de/>\n"
@@ -17,17 +17,25 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.9-dev\n"
+"X-Generator: Poedit 3.0\n"
 
-#: csskp/settings.py:126
+#: csskp/config_dev.py:24 csskp/config_prod.py:24
+msgid "Description from a string or a file."
+msgstr ""
+
+#: csskp/config_dev.py:25 csskp/config_prod.py:25
+msgid "/static/images/logoFull-en.png"
+msgstr "/static/images/logoFull-de.png"
+
+#: csskp/settings.py:132
 msgid "English"
 msgstr "Englisch"
 
-#: csskp/settings.py:127
+#: csskp/settings.py:133
 msgid "French"
 msgstr "Französisch"
 
-#: csskp/settings.py:128
+#: csskp/settings.py:134
 msgid "Deutsch"
 msgstr "Deutsch"
 
@@ -36,20 +44,20 @@ msgid "To generate a report you have to finish the survey."
 msgstr ""
 "Um einen Bericht zu erstellen, muss erst die Umfrage beantwortet werden."
 
-#: survey/views.py:268
+#: survey/views.py:295
 msgid ""
 "We could not find a survey with the requested key, please start a new one."
 msgstr ""
 "Wir konnten keine Umfrage mit dem angeforderten Schlüssel finden. Bitte "
 "starten Sie eine neue."
 
-#: survey/views.py:298
+#: survey/views.py:325
 msgid "Feedback sending errors: "
 msgstr "Fehler beim Senden von Rückmeldungen: "
 
 #: templates/survey/base.html:27
-msgid "Fit4Cybersecurity a CASES self-assessment tool!"
-msgstr "Fit4Cybersecurity ein CASES-Selbstbewertungstool!"
+msgid "a CASES self-assessment tool!"
+msgstr "ein CASES-Selbstbewertungstool!"
 
 #: templates/survey/base.html:60
 msgid "images/logoFull-en.png"
@@ -64,8 +72,8 @@ msgid "Source code on GitHub"
 msgstr "Quellcode auf GitHub"
 
 #: templates/survey/base.html:105
-msgid "Version of Fit4Cybersecurity"
-msgstr "Version von Fit4Cybersecurity"
+msgid "Version of"
+msgstr "Version von"
 
 #: templates/survey/base.html:112
 msgid "Terms of service"
@@ -75,24 +83,15 @@ msgstr "Nutzungsbedingungen"
 msgid "Terms of Service"
 msgstr "Nutzungsbedingungen"
 
-#: templates/survey/index.html:18
-msgid "Welcome to the CASES self-assessment tool: Fit4Cybersecurity"
-msgstr "Willkommen beim CASES-Tool zur Selbstbewertung: Fit4Cybersecurity"
+#: templates/survey/index.html:17
+msgid "Welcome to the CASES self-assessment tool:"
+msgstr "Willkommen beim CASES-Tool zur Selbstbewertung:"
 
-#: templates/survey/index.html:19
-msgid ""
-"This survey will ask a few questions and provide recommendations. Keep in "
-"mind, that it is a self-assessment tool and that it only touches the surface "
-"of information security by giving a very basic maturity level estimate and "
-"some basic recommendations."
-msgstr ""
-"Diese Umfrage stellt ein paar Fragen ein und bietet Empfehlungen an. Denken "
-"Sie daran, dass es sich um ein Instrument zur Selbstbewertung handelt, das "
-"nur die Oberfläche der Informationssicherheit betrifft, indem er eine sehr "
-"grundlegende Fälligkeitsspezialisierung und einige grundlegende Empfehlungen "
-"ergibt."
+#: templates/survey/index.html:28
+msgid "Start"
+msgstr "Starten"
 
-#: templates/survey/index.html:52
+#: templates/survey/index.html:37
 msgid "Continue a previous survey"
 msgstr "Setzen Sie eine vorherige Umfrage fort"
 
@@ -105,6 +104,3 @@ msgstr ""
 #: templates/survey/resume.html:13
 msgid "Confirm"
 msgstr "Bestätigen"
-
-#~ msgid "You can request a Diagnostic"
-#~ msgstr "Sie können eine Diagnostic anfordern"

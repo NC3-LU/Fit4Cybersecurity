@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-04-07 22:33+0000\n"
+"POT-Creation-Date: 2021-10-20 15:15+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,15 +17,23 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: csskp/settings.py:126
+#: csskp/config_dev.py:24 csskp/config_prod.py:24
+msgid "Description from a string or a file."
+msgstr ""
+
+#: csskp/config_dev.py:25 csskp/config_prod.py:25
+msgid "/static/images/logoFull-en.png"
+msgstr ""
+
+#: csskp/settings.py:132
 msgid "English"
 msgstr ""
 
-#: csskp/settings.py:127
+#: csskp/settings.py:133
 msgid "French"
 msgstr ""
 
-#: csskp/settings.py:128
+#: csskp/settings.py:134
 msgid "Deutsch"
 msgstr ""
 
@@ -33,17 +41,17 @@ msgstr ""
 msgid "To generate a report you have to finish the survey."
 msgstr ""
 
-#: survey/views.py:268
+#: survey/views.py:295
 msgid ""
 "We could not find a survey with the requested key, please start a new one."
 msgstr ""
 
-#: survey/views.py:298
+#: survey/views.py:325
 msgid "Feedback sending errors: "
 msgstr ""
 
 #: templates/survey/base.html:27
-msgid "Fit4Cybersecurity a CASES self-assessment tool!"
+msgid "a CASES self-assessment tool!"
 msgstr ""
 
 #: templates/survey/base.html:60
@@ -59,7 +67,7 @@ msgid "Source code on GitHub"
 msgstr ""
 
 #: templates/survey/base.html:105
-msgid "Version of Fit4Cybersecurity"
+msgid "Version of"
 msgstr ""
 
 #: templates/survey/base.html:112
@@ -70,19 +78,15 @@ msgstr ""
 msgid "Terms of Service"
 msgstr ""
 
-#: templates/survey/index.html:18
-msgid "Welcome to the CASES self-assessment tool: Fit4Cybersecurity"
+#: templates/survey/index.html:17
+msgid "Welcome to the CASES self-assessment tool:"
 msgstr ""
 
-#: templates/survey/index.html:19
-msgid ""
-"This survey will ask a few questions and provide recommendations. Keep in "
-"mind, that it is a self-assessment tool and that it only touches the surface "
-"of information security by giving a very basic maturity level estimate and "
-"some basic recommendations."
+#: templates/survey/index.html:28
+msgid "Start"
 msgstr ""
 
-#: templates/survey/index.html:52
+#: templates/survey/index.html:37
 msgid "Continue a previous survey"
 msgstr ""
 
