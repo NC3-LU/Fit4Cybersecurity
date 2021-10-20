@@ -6,7 +6,7 @@
 Fit4Cybersecurity is a self-assessment tool by [CASES](https://www.cases.lu)
 to help business owners implement a better cybersecurity strategy.
 
-This toll allows to instantiate new self-assessment products such as:
+This tool allows to instantiate new self-assessment products such as:
 
 - [Fit4Cybersecurity](https://fit4cybersecurity.cases.lu),
 - [Fit4Privacy](https://fit4privacy.cases.lu),
