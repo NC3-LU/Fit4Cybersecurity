@@ -14,9 +14,8 @@
 {% block content %}
     <div class="d-flex flex-row align-items-center px-3">
         <div class="p-2 flex-grow-1 text-justify">
-            <br />
             <h5>{{ _('Welcome to the CASES self-assessment tool:') }} {{ custom.tool_name }}.</h5>
-            {{ _('This survey will ask a few questions and provide recommendations. Keep in mind, that it is a self-assessment tool and that it only touches the surface of information security by giving a very basic maturity level estimate and some basic recommendations.') }}
+            {{ custom.intro_text }}
         </div>
     </div>
 
@@ -24,16 +23,15 @@
         <div class="col">
             <a href="/survey/start/en" class="text-primary">
                 <div class="px-2 py-4 text-center align-content-center min-width">
-                    {# <img class="flag" src="{% static "images/flags/en.svg" %}" alt="EN"><br> #}
+                    <img class="flag" src="{% static "images/flags/en.svg" %}" alt="EN"><br>
                     Start
                 </div>
             </a>
         </div>
-        {% comment %}
         <div class="col">
             <a href="/survey/start/fr" class="text-primary">
                 <div class="px-2 py-4 text-center align-content-center min-width">
-                    <img  class="flag" src="{% static "images/flags/fr.svg" %}" alt="FR"><br>
+                    <img class="flag" src="{% static "images/flags/fr.svg" %}" alt="FR"><br>
                     Démarrer
                 </div>
             </a>
@@ -46,10 +44,9 @@
                 </div>
             </a>
         </div>
-        {% endcomment %}
     </div>
 
-    <div class="row">
+    <div class="row py-3">
         <div class="col">
             <button class="btn btn-link" type="button" name="resume-show-popup" data-toggle="modal" data-target="#modal" data-tooltip>{{ _('Continue a previous survey') }}</button>
         </div>
