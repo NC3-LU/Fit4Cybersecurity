@@ -1,6 +1,7 @@
 import os
 import subprocess
 from csskp.settings import BASE_DIR
+from survey.globals import FIT4TOOL_NAME
 
 
 def get_version(request):
@@ -26,3 +27,6 @@ def get_version(request):
             version[2][1:]
         )
     return {"app_version": app_version, "version_url": version_url}
+
+def get_fit4tool_name(request):
+    return {"fit4tool_name" : FIT4TOOL_NAME}

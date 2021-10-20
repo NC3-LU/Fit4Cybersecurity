@@ -1,3 +1,5 @@
+FIT4TOOL_NAME = "Fit4ILR"
+
 SECTOR_CHOICES = [
     ("BANK", "Banking, insurance and real estate"),
     ("SALE", "Trading, sales and mass distribution"),

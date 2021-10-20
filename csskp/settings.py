@@ -81,6 +81,7 @@ TEMPLATES = [
                 "django.contrib.auth.context_processors.auth",
                 "django.contrib.messages.context_processors.messages",
                 "survey.context_processors.get_version",
+                "survey.context_processors.get_fit4tool_name",
             ],
         },
     },
