@@ -1,7 +1,7 @@
 {% extends 'survey/base.html' %}
 
 {% load bootstrap4 %}
-
+{% load apptags %}
 {% load static %}
 
 {% block bootstrap4_extra_head %}
@@ -25,7 +25,7 @@
                 <a href="/survey/start/{{ lang }}"}} class="text-primary">
                     <div class="px-2 py-4 text-center align-content-center min-width">
                         <img class="flag" src="{% static 'images/flags/'|add:lang|add:'.svg' %}" alt="{{ lang }}"><br>
-                        {{ _('Start') }}
+                        {{ 'Start' | translate:lang }}
                     </div>
                 </a>
             </div>
