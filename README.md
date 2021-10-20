@@ -1,6 +1,6 @@
 # Fit4Cybersecurity
 
-[![Translation status](https://translate.monarc.lu/widgets/fit4cybersecurity/-/88x31-white.png)](https://translate.monarc.lu/engage/fit4cybersecurity/)
+[![Translation status](https://translate.monarc.lu/widgets/Fit4Cybersecurity/-/svg-badge.svg)](https://translate.monarc.lu/engage/Fit4Cybersecurity/)
 
 
 Fit4Cybersecurity is a self-assessment tool by [CASES](https://www.cases.lu)
@@ -15,6 +15,10 @@ The official CASES instance is available [here](https://fit4cybersecurity.cases.
 
 ```bash
 $ sudo apt install gettext postgresql
+$ sudo apt install make build-essential libssl-dev zlib1g-dev libbz2-dev \
+libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev \
+xz-utils tk-dev libffi-dev liblzma-dev libxml2-dev libxslt-dev libpq-dev python3-openssl
+$ curl https://pyenv.run | bash
 ```
 
 
@@ -24,6 +28,7 @@ $ sudo apt install gettext postgresql
 $ CONFIGURE_OPTS=--enable-shared pyenv install 3.10.0 # install latest stable Python with shared libraries support, only if you want to use mod_wsgi later.
 $ pyenv global 3.10.0 # make this version default for the whole system
 $ pyenv versions # check
+$ curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/install-poetry.py | python -
 ```
 
 ### Install the application
