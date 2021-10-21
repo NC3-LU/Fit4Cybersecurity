@@ -28,7 +28,7 @@
                             <img class="flag" src="{% static 'images/flags/'|add:lang|add:'.svg' %}" alt="{{ lang }}"><br>
                             {{ _('Start') | translate:lang }}
                         {% else %}
-                            <button class="btn border border-rounded btn-primary" type="button">{{ _('Start') }}</button>
+                            <button class="btn border border-rounded btn-primary" type="button">{{ _('Start') | translate:lang }}</button>
                         {% endif %}
                     </div>
                 </a>
