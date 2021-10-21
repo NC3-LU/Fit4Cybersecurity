@@ -1,9 +1,7 @@
 {% extends 'survey/bootstrap.html' %}
 
 {% load i18n %}
-
 {% load bootstrap4 %}
-
 {% load static %}
 
 {% block bootstrap4_extra_head %}
@@ -12,15 +10,8 @@
     <link rel="icon" type="image/x-icon" href="{% static 'images/favicon.png' %}" />
     <link rel="apple-touch-icon" sizes="152x152" href="{% static 'images/apple-touch-icon.png' %}" />
     <link rel="apple-touch-icon" sizes="180x180" href="{% static 'images/apple-touch-icon.png' %}" />
-
     <link rel="stylesheet" type="text/css" href="{% static 'survey/css/custom.css' %}" />
     <link rel="stylesheet" href="/static/npm_components/fork-awesome/css/fork-awesome.min.css">
-    <!--[if IE]>
-    <style type="text/css">
-        #ie-warning { display:block; }
-        #content-body { display: none; }
-    </style>
-    <![endif]-->
 {% endblock %}
 
 {% block title %}
@@ -57,7 +48,7 @@
         <div class="row">
             <div class="col text-center">
                 <div class="border-bottom border-primary">
-                    <h1><a href="/" class="logo-link"><img src="{% static _('images/logoFull-en.png') %}" width="50%" alt="{{ custom.tool_name }}"></a></h1>
+                    {% include custom.templates_parts.main_logo %}
                 </div>
             </div>
         </div>
@@ -67,20 +58,6 @@
         <div id="content-body">
             {% block content %}{% endblock %}
         </div>
-
-        <div id="ie-warning">
-            <h4>Your web browser (Internet Explorer) is not compatible.</h4>
-            <p>Please, change your browser to continue the security assesment on our website.</p>
-            <p>Recommended browsers:</p>
-            <ul id="browsers-list">
-                <li class="bc"><a href="https://www.google.com/chrome/" target="_blank">Chrome</a></li>
-                <li class="bf"><a href="https://www.mozilla.org/firefox/new/" target="_blank">Firefox</a></li>
-                <li class="bs"><a href="https://support.apple.com/downloads/safari" target="_blank">Safari</a></li>
-                <li class="be"><a href="https://www.microsoft.com/edge" target="_blank">Edge</a></li>
-                <li class="bo"><a href="https://www.opera.com/download" target="_blank">Opera</a></li>
-            </ul>
-        </div>
-
     </div>
 
     <div class="footer d-none d-md-block">
