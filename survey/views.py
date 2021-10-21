@@ -39,7 +39,7 @@ def start(request, lang="EN"):
         messages.error(request, e)
         return HttpResponseRedirect("/")
 
-    add_form_translations(form_data, lang, "question")
+    add_form_translations(form_data, "question")
 
     return render(request, "survey/start.html", context=form_data)
 
@@ -67,7 +67,7 @@ def handle_question_form(request, question_index: int):
 
         return HttpResponseRedirect("/survey/question/" + str(result.current_qindex))
 
-    add_form_translations(result, user.choosen_lang, "question")
+    add_form_translations(result, "question")
 
     return render(request, "survey/questions.html", context=result)
 
@@ -167,7 +167,6 @@ def review(request):
                 "no": TRANSLATION_UI["question"]["leave_survey"]["no"],
             },
         },
-        "available_langs": [lang[0] for lang in LANG_SELECT],
     }
 
     return render(request, "survey/review.html", context=textLayout)
@@ -214,11 +213,10 @@ def finish(request):
         "chartlabelYou": TRANSLATION_UI["report"]["result"],
         "chartdataYou": str(radar_current),
         "min_acceptable_score": MIN_ACCEPTABLE_SCORE,
-        "available_langs": [lang[0] for lang in LANG_SELECT],
         "general_feedback_form": handle_general_feedback(user, request),
     }
 
-    add_form_translations(textLayout, user.choosen_lang, "report")
+    add_form_translations(textLayout, "report")
 
     crypter = Fernet(HASH_KEY)
 
@@ -312,15 +310,13 @@ def save_general_feedback(request):
     return HttpResponseRedirect("/")
 
 
-def add_form_translations(data, lang: str, topic="question"):
+def add_form_translations(data, topic="question"):
     data["translations"] = {
         "continue_later": {
             "button": TRANSLATION_UI[topic]["continue_later"]["button"],
             "title": TRANSLATION_UI[topic]["continue_later"]["title"],
             "text": TRANSLATION_UI[topic]["continue_later"]["text"],
-            "button_download": TRANSLATION_UI[topic]["continue_later"][
-                "button_download"
-            ],
+            "button_download": TRANSLATION_UI[topic]["continue_later"]["button_download"],
             "button_close": TRANSLATION_UI[topic]["continue_later"]["button_close"],
         },
         "leave_survey": {
@@ -339,19 +335,13 @@ def add_form_translations(data, lang: str, topic="question"):
     if "cancel_button" in TRANSLATION_UI[topic]:
         data["translations"]["cancel_button"] = TRANSLATION_UI[topic]["cancel_button"]
     if "select_multi_descr" in TRANSLATION_UI[topic]:
-        data["translations"]["select_multi_descr"] = TRANSLATION_UI[topic][
-            "select_multi_descr"
-        ]
+        data["translations"]["select_multi_descr"] = TRANSLATION_UI[topic]["select_multi_descr"]
     if (
         "feedback_descr1" in TRANSLATION_UI[topic]
         and "feedback_descr2" in TRANSLATION_UI[topic]
     ):
-        data["translations"]["feedback_descr1"] = TRANSLATION_UI[topic][
-            "feedback_descr1"
-        ]
-        data["translations"]["feedback_descr2"] = TRANSLATION_UI[topic][
-            "feedback_descr2"
-        ]
+        data["translations"]["feedback_descr1"] = TRANSLATION_UI[topic]["feedback_descr1"]
+        data["translations"]["feedback_descr2"] = TRANSLATION_UI[topic]["feedback_descr2"]
 
 
 def get_terms(request):

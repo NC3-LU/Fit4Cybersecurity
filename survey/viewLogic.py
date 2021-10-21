@@ -187,7 +187,6 @@ def handle_question_answers_request(request, user: SurveyUser, question_index: i
         "current_question_index": current_question.qindex,
         "previous_question_index": previous_question.qindex,
         "total_questions_num": total_questions_num,
-        "available_langs": [lang[0] for lang in LANG_SELECT],
     }
 
 
