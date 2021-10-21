@@ -26,8 +26,10 @@
                     <div class="px-2 py-4 text-center align-content-center min-width">
                         {% if custom.languages|length > 1 %}
                             <img class="flag" src="{% static 'images/flags/'|add:lang|add:'.svg' %}" alt="{{ lang }}"><br>
+                            {{ _('Start') | translate:lang }}
+                        {% else %}
+                            <button class="btn border border-rounded btn-primary" type="button">{{ _('Start') }}</button>
                         {% endif %}
-                        {{ _('Start') | translate:lang }}
                     </div>
                 </a>
             </div>
