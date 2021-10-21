@@ -29,6 +29,7 @@ CUSTOM = {
     "templates_parts": {
         "terms": "parts/terms.html",
         "footer": "parts/footer.html",
+        "main_logo": "parts/logo.html",
     }
 }
 
