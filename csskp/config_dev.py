@@ -27,9 +27,9 @@ CUSTOM = {
     "languages": ["en", "fr", "de"],
 
     "templates_parts": {
-        "terms": "parts/terms.html",
-        "footer": "parts/footer.html",
-        "main_logo": "parts/logo.html",
+        "terms": "terms_part.html",
+        "footer": "footer_part.html",
+        "main_logo": "logo_part.html",
     }
 }
 

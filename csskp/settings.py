@@ -25,6 +25,7 @@ if BOOTSTRAP4_FOLDER not in sys.path:
     sys.path.insert(0, BOOTSTRAP4_FOLDER)
 
 MAIN_TEMPLATE_DIR = os.path.join(BASE_DIR, "templates")
+PARTS_TEMPLATE_DIR = os.path.join(BASE_DIR, "templates_parts")
 
 STATIC_DIR = os.path.join(BASE_DIR, "static")
 
@@ -77,6 +78,7 @@ TEMPLATES = [
         "BACKEND": "django.template.backends.django.DjangoTemplates",
         "DIRS": [
             MAIN_TEMPLATE_DIR,
+            PARTS_TEMPLATE_DIR,
         ],
         "APP_DIRS": True,
         "OPTIONS": {
