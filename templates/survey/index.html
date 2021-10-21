@@ -24,7 +24,9 @@
             <div class="col">
                 <a href="/survey/start/{{ lang }}"}} class="text-primary">
                     <div class="px-2 py-4 text-center align-content-center min-width">
-                        <img class="flag" src="{% static 'images/flags/'|add:lang|add:'.svg' %}" alt="{{ lang }}"><br>
+                        {% if custom.languages|length > 1 %}
+                            <img class="flag" src="{% static 'images/flags/'|add:lang|add:'.svg' %}" alt="{{ lang }}"><br>
+                        {% endif %}
                         {{ _('Start') | translate:lang }}
                     </div>
                 </a>
