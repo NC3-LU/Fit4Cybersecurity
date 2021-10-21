@@ -25,6 +25,11 @@ CUSTOM = {
     "logoFull": gettext_lazy("/static/images/logoFull-en.png"),
     "countries_first": [],
     "languages": ["en", "fr", "de"],
+
+    "templates_parts": {
+        "terms": "parts/terms.html",
+        "footer": "parts/footer.html",
+    }
 }
 
 LOGGING = {
