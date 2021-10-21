@@ -20,20 +20,25 @@ DATABASES = {
 }
 
 CUSTOM = {
+    # Generic configurations
     "tool_name": "<TOOL_NAME>",
     "intro_text": gettext_lazy("Description from a string or a file."),
     "logoFull": gettext_lazy("/static/images/logoFull-en.png"),
     "countries_first": [],
     "languages": ["en", "fr", "de"],
 
+    # Custom parts of templates
+    #   main dir for PARTS_TEMPLATE_DIR:
     "templates_parts_dir": "templates_parts",
     "templates_parts": {
+        # path of the templates parts
         "terms": "terms_part.html",
         "footer": "footer_part.html",
         "main_logo": "logo_part.html",
     }
 }
 
+# Logging mechanism
 LOGGING = {
     "version": 1,
     "disable_existing_loggers": False,
