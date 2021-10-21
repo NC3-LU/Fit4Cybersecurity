@@ -74,7 +74,7 @@ def handle_question_form(request, question_index: int):
 
 def change_lang(request, lang: str):
     user_id = request.session.get("user_id", None)
-    if user_id == None:
+    if user_id is None:
         return HttpResponseRedirect("/")
 
     user = find_user_by_id(user_id)
@@ -95,7 +95,7 @@ def change_lang(request, lang: str):
 
 def show_report(request, lang):
     user_id = request.session.get("user_id", None)
-    if user_id == None:
+    if user_id is None:
         return HttpResponseRedirect("/")
 
     user = find_user_by_id(user_id)
@@ -117,7 +117,7 @@ def show_report(request, lang):
 
 def review(request):
     user_id = request.session.get("user_id", None)
-    if user_id == None:
+    if user_id is None:
         return HttpResponseRedirect("/")
 
     user = find_user_by_id(user_id)
@@ -179,7 +179,7 @@ def review(request):
 
 def finish(request):
     user_id = request.session.get("user_id", None)
-    if user_id == None:
+    if user_id is None:
         return HttpResponseRedirect("/")
 
     user = find_user_by_id(user_id)
