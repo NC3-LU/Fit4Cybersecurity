@@ -39,8 +39,8 @@ def create_user(lang: str, sector: str, company_size: str, country: str):
 
 def handle_start_survey(request, lang: str):
     action = "/survey/start/" + lang
-    question = TRANSLATION_UI["question"]["description"][lang]
-    title = CUSTOM["tool_name"] + " - " + TRANSLATION_UI["question"]["title"][lang]
+    question = TRANSLATION_UI["question"]["description"]
+    title = CUSTOM["tool_name"] + " - " + TRANSLATION_UI["question"]["title"]
 
     translation.activate(lang)
     request.session[translation.LANGUAGE_SESSION_KEY] = lang
@@ -175,7 +175,7 @@ def handle_question_answers_request(request, user: SurveyUser, question_index: i
     return {
         "title": CUSTOM["tool_name"]
         + " - "
-        + TRANSLATION_UI["question"]["question"][user.choosen_lang]
+        + TRANSLATION_UI["question"]["question"]
         + " "
         + str(current_question.qindex),
         "question": TranslationKey.objects.filter(

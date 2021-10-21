@@ -143,32 +143,28 @@ def review(request):
         "form": forms.Form(),
         "user": user,
         "translations": {
-            "title": TRANSLATION_UI["review"]["title"][lang],
+            "title": TRANSLATION_UI["review"]["title"],
             "validate_answers_button": TRANSLATION_UI["review"][
                 "validate_answers_button"
-            ][lang],
-            "modify_button": TRANSLATION_UI["review"]["modify_button"][lang],
-            "feedback_label": TRANSLATION_UI["form"]["questions"]["feedback_label"][
-                lang
             ],
-            "custom_response": TRANSLATION_UI["form"]["questions"]["custom_response"][
-                lang
-            ],
+            "modify_button": TRANSLATION_UI["review"]["modify_button"],
+            "feedback_label": TRANSLATION_UI["form"]["questions"]["feedback_label"],
+            "custom_response": TRANSLATION_UI["form"]["questions"]["custom_response"],
             "continue_later": {
-                "button": TRANSLATION_UI["question"]["continue_later"]["button"][lang],
-                "title": TRANSLATION_UI["question"]["continue_later"]["title"][lang],
-                "text": TRANSLATION_UI["question"]["continue_later"]["text"][lang],
+                "button": TRANSLATION_UI["question"]["continue_later"]["button"],
+                "title": TRANSLATION_UI["question"]["continue_later"]["title"],
+                "text": TRANSLATION_UI["question"]["continue_later"]["text"],
                 "button_download": TRANSLATION_UI["question"]["continue_later"][
                     "button_download"
-                ][lang],
+                ],
                 "button_close": TRANSLATION_UI["question"]["continue_later"][
                     "button_close"
-                ][lang],
+                ],
             },
             "leave_survey": {
-                "title": TRANSLATION_UI["question"]["leave_survey"]["title"][lang],
-                "yes": TRANSLATION_UI["question"]["leave_survey"]["yes"][lang],
-                "no": TRANSLATION_UI["question"]["leave_survey"]["no"][lang],
+                "title": TRANSLATION_UI["question"]["leave_survey"]["title"],
+                "yes": TRANSLATION_UI["question"]["leave_survey"]["yes"],
+                "no": TRANSLATION_UI["question"]["leave_survey"]["no"],
             },
         },
         "available_langs": [lang[0] for lang in LANG_SELECT],
@@ -198,7 +194,7 @@ def finish(request):
 
     diagnostic_email_body = TRANSLATION_UI["report"]["request_diagnostic"][
         "email_body"
-    ][user_lang]
+    ]
 
     recommendations = getRecommendations(user, user_lang)
     # To properly display breaking lines \n on html page.
@@ -208,14 +204,14 @@ def finish(request):
     textLayout = {
         "title": CUSTOM["tool_name"]
         + " - "
-        + TRANSLATION_UI["report"]["title"][user_lang],
-        "description": TRANSLATION_UI["report"]["description"][user_lang],
+        + TRANSLATION_UI["report"]["title"],
+        "description": TRANSLATION_UI["report"]["description"],
         "recommendations": recommendations,
         "user": user,
         "reportlink": "/survey/report",
         "txtscore": txt_score,
         "chartTitles": str(sections_list),
-        "chartlabelYou": TRANSLATION_UI["report"]["result"][user_lang],
+        "chartlabelYou": TRANSLATION_UI["report"]["result"],
         "chartdataYou": str(radar_current),
         "min_acceptable_score": MIN_ACCEPTABLE_SCORE,
         "available_langs": [lang[0] for lang in LANG_SELECT],
@@ -227,49 +223,29 @@ def finish(request):
     crypter = Fernet(HASH_KEY)
 
     textLayout["translations"]["request_diagnostic"] = {
-        "title": TRANSLATION_UI["report"]["request_diagnostic"]["title"][user_lang],
-        "description": TRANSLATION_UI["report"]["request_diagnostic"]["description"][
-            user_lang
-        ],
-        "service_fee": TRANSLATION_UI["report"]["request_diagnostic"]["service_fee"][
-            user_lang
-        ],
+        "title": TRANSLATION_UI["report"]["request_diagnostic"]["title"],
+        "description": TRANSLATION_UI["report"]["request_diagnostic"]["description"],
+        "service_fee": TRANSLATION_UI["report"]["request_diagnostic"]["service_fee"],
         "email_subject": TRANSLATION_UI["report"]["request_diagnostic"][
             "email_subject"
-        ][user_lang],
+        ],
         "email_body": diagnostic_email_body.replace(
             "{userId}", str(crypter.encrypt(user_id.encode("utf-8")))
         ),
     }
     textLayout["translations"]["request_training"] = {
-        "description": TRANSLATION_UI["report"]["request_training"]["description"][
-            user_lang
-        ].replace("{score}", str(txt_score) + "/100"),
-        "let_us_know": TRANSLATION_UI["report"]["request_training"]["let_us_know"][
-            user_lang
-        ],
-        "email_subject": TRANSLATION_UI["report"]["request_training"]["email_subject"][
-            user_lang
-        ],
-        "email_body": TRANSLATION_UI["report"]["request_training"]["email_body"][
-            user_lang
-        ].replace("{userId}", str(crypter.encrypt(user_id.encode("utf-8")))),
+        "description": TRANSLATION_UI["report"]["request_training"]["description"].replace("{score}", str(txt_score) + "/100"),
+        "let_us_know": TRANSLATION_UI["report"]["request_training"]["let_us_know"],
+        "email_subject": TRANSLATION_UI["report"]["request_training"]["email_subject"],
+        "email_body": TRANSLATION_UI["report"]["request_training"]["email_body"].replace("{userId}", str(crypter.encrypt(user_id.encode("utf-8")))),
     }
-    textLayout["translations"]["txtdownload"] = TRANSLATION_UI["report"]["download"][
-        user_lang
-    ]
-    textLayout["translations"]["txtreport"] = TRANSLATION_UI["report"]["report"][
-        user_lang
-    ]
+    textLayout["translations"]["txtdownload"] = TRANSLATION_UI["report"]["download"]
+    textLayout["translations"]["txtreport"] = TRANSLATION_UI["report"]["report"]
     textLayout["translations"]["general_feedback"] = {
-        "button": TRANSLATION_UI["report"]["general_feedback"]["button"][user_lang],
-        "title": TRANSLATION_UI["report"]["general_feedback"]["title"][user_lang],
-        "button_close": TRANSLATION_UI["report"]["general_feedback"]["button_close"][
-            user_lang
-        ],
-        "button_send": TRANSLATION_UI["report"]["general_feedback"]["button_send"][
-            user_lang
-        ],
+        "button": TRANSLATION_UI["report"]["general_feedback"]["button"],
+        "title": TRANSLATION_UI["report"]["general_feedback"]["title"],
+        "button_close": TRANSLATION_UI["report"]["general_feedback"]["button_close"],
+        "button_send": TRANSLATION_UI["report"]["general_feedback"]["button_send"],
     }
 
     return render(request, "survey/finishedSurvey.html", context=textLayout)
@@ -339,49 +315,43 @@ def save_general_feedback(request):
 def add_form_translations(data, lang: str, topic="question"):
     data["translations"] = {
         "continue_later": {
-            "button": TRANSLATION_UI[topic]["continue_later"]["button"][lang],
-            "title": TRANSLATION_UI[topic]["continue_later"]["title"][lang],
-            "text": TRANSLATION_UI[topic]["continue_later"]["text"][lang],
+            "button": TRANSLATION_UI[topic]["continue_later"]["button"],
+            "title": TRANSLATION_UI[topic]["continue_later"]["title"],
+            "text": TRANSLATION_UI[topic]["continue_later"]["text"],
             "button_download": TRANSLATION_UI[topic]["continue_later"][
                 "button_download"
-            ][lang],
-            "button_close": TRANSLATION_UI[topic]["continue_later"]["button_close"][
-                lang
             ],
+            "button_close": TRANSLATION_UI[topic]["continue_later"]["button_close"],
         },
         "leave_survey": {
-            "title": TRANSLATION_UI[topic]["leave_survey"]["title"][lang],
-            "yes": TRANSLATION_UI[topic]["leave_survey"]["yes"][lang],
-            "no": TRANSLATION_UI[topic]["leave_survey"]["no"][lang],
+            "title": TRANSLATION_UI[topic]["leave_survey"]["title"],
+            "yes": TRANSLATION_UI[topic]["leave_survey"]["yes"],
+            "no": TRANSLATION_UI[topic]["leave_survey"]["no"],
         },
     }
 
     if "next_button" in TRANSLATION_UI[topic]:
-        data["translations"]["next_button"] = TRANSLATION_UI[topic]["next_button"][lang]
+        data["translations"]["next_button"] = TRANSLATION_UI[topic]["next_button"]
     if "back_button" in TRANSLATION_UI[topic]:
-        data["translations"]["back_button"] = TRANSLATION_UI[topic]["back_button"][lang]
+        data["translations"]["back_button"] = TRANSLATION_UI[topic]["back_button"]
     if "modify_button" in TRANSLATION_UI[topic]:
-        data["translations"]["modify_button"] = TRANSLATION_UI[topic]["modify_button"][
-            lang
-        ]
+        data["translations"]["modify_button"] = TRANSLATION_UI[topic]["modify_button"]
     if "cancel_button" in TRANSLATION_UI[topic]:
-        data["translations"]["cancel_button"] = TRANSLATION_UI[topic]["cancel_button"][
-            lang
-        ]
+        data["translations"]["cancel_button"] = TRANSLATION_UI[topic]["cancel_button"]
     if "select_multi_descr" in TRANSLATION_UI[topic]:
         data["translations"]["select_multi_descr"] = TRANSLATION_UI[topic][
             "select_multi_descr"
-        ][lang]
+        ]
     if (
         "feedback_descr1" in TRANSLATION_UI[topic]
         and "feedback_descr2" in TRANSLATION_UI[topic]
     ):
         data["translations"]["feedback_descr1"] = TRANSLATION_UI[topic][
             "feedback_descr1"
-        ][lang]
+        ]
         data["translations"]["feedback_descr2"] = TRANSLATION_UI[topic][
             "feedback_descr2"
-        ][lang]
+        ]
 
 
 def get_terms(request):

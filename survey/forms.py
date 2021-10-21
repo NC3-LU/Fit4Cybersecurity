@@ -24,7 +24,7 @@ class InitialStartForm(forms.Form):
 
         self.fields["sector"].label = TRANSLATION_UI["form"]["start_form"][
             "sector_question"
-        ][lang]
+        ]
         sectors = []
         for sector_choise in SECTOR_CHOICES:
             sectors.append(
@@ -32,19 +32,19 @@ class InitialStartForm(forms.Form):
                     sector_choise[0],
                     TRANSLATION_UI["form"]["start_form"]["sector_list"][
                         sector_choise[0]
-                    ][lang],
+                    ],
                 )
             )
 
         self.fields["sector"].choices = sort_tuple_alphabetically(sectors, 1)
         self.fields["compSize"].label = TRANSLATION_UI["form"]["start_form"][
             "size_question"
-        ][lang]
+        ]
 
-        country_label = TRANSLATION_UI["form"]["start_form"]["country"]["label"][lang]
+        country_label = TRANSLATION_UI["form"]["start_form"]["country"]["label"]
         required_error_message = TRANSLATION_UI["form"]["start_form"]["country"][
             "required_error_message"
-        ][lang.lower()]
+        ]
         self.fields["country"] = CountryField().formfield(
             label=country_label,
             required=True,
@@ -93,9 +93,7 @@ class AnswerMChoice(forms.Form):
             )
 
         self.fields["answers"].error_messages = {
-            "required": TRANSLATION_UI["form"]["error_messages"]["answer"]["required"][
-                self.lang
-            ]
+            "required": TRANSLATION_UI["form"]["error_messages"]["answer"]["required"]
         }
 
         if tanswers is not None:
@@ -122,12 +120,12 @@ class AnswerMChoice(forms.Form):
                 )
 
         self.fields["feedback"] = forms.CharField(
-            label=TRANSLATION_UI["form"]["questions"]["feedback_label"][self.lang],
+            label=TRANSLATION_UI["form"]["questions"]["feedback_label"],
             widget=forms.Textarea(
                 attrs={
                     "placeholder": TRANSLATION_UI["form"]["questions"][
                         "feedback_placeholder"
-                    ][self.lang]
+                    ]
                 }
             ),
             required=False,
@@ -160,9 +158,7 @@ class AnswerMChoice(forms.Form):
                 answer_text = translation_key[0].text
 
                 raise forms.ValidationError(
-                    TRANSLATION_UI["form"]["error_messages"]["answer"]["unique"][
-                        self.lang
-                    ],
+                    TRANSLATION_UI["form"]["error_messages"]["answer"]["unique"],
                     params={"value": answer_text},
                 )
 
@@ -182,12 +178,12 @@ class GeneralFeedback(forms.Form):
         super().__init__(*args, **kwargs)
 
         self.fields["general_feedback"] = forms.CharField(
-            label=TRANSLATION_UI["report"]["general_feedback"]["label"][lang],
+            label=TRANSLATION_UI["report"]["general_feedback"]["label"],
             widget=forms.Textarea(
                 attrs={
                     "placeholder": TRANSLATION_UI["report"]["general_feedback"][
                         "placeholder"
-                    ][lang]
+                    ]
                 }
             ),
             required=True,
