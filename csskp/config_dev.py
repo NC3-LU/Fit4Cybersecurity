@@ -26,6 +26,7 @@ CUSTOM = {
     "countries_first": [],
     "languages": ["en", "fr", "de"],
 
+    "templates_parts_dir": "templates_parts",
     "templates_parts": {
         "terms": "terms_part.html",
         "footer": "footer_part.html",
