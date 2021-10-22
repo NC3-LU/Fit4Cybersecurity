@@ -35,6 +35,13 @@ CUSTOM = {
         "terms": "terms_part.html",
         "footer": "footer_part.html",
         "main_logo": "logo_part.html",
+    },
+
+    # Available modules
+    "modules": {
+        "requestDiagnostic": True,
+        "requestTraining": True,
+        "resultChart": True,
     }
 }
 
