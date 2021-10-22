@@ -18,41 +18,43 @@
 {% block title %}{{ title }}{% endblock %}
 
 {% block content %}
-    <div class="float-right mx-4 my-2 p-2 border rounded border-primary bg-bright-blue" styles="width: 200px">
-        <div class="text-center">
-            <h3>
-                {% if txtscore < 50 %}
-                    <span class="font-weight-bold text-danger">{{ txtscore }}</span>
-                {% elif txtscore < min_acceptable_score %}
-                    <span class="font-weight-bold text-warning">{{ txtscore }}</span>
-                {% else %}
-                    <span class="font-weight-bold text-success">{{ txtscore }}</span>
-                {% endif %}
-                /100
-            </h3>
-            {% if user.country_code == 'LU' and custom.modules.requestTraining %}
-                {% if txtscore >= min_acceptable_score and custom.modules.requestDiagnostic %}
-                    <h5>{% include 'survey/requestDiagnosticLink.html' with type='button' %}</h5>
-                {% endif %}
-                <h5>{% include 'survey/requestTrainingLink.html' with type='button' %}</h5>
-            {% endif %}
-        </div>
-        <div><h4>{{ translations.txtdownload }}:</h4></div>
-        <div class="text-center py-2">
-            <img src="{% static "images/reportLogo.png" %}" alt="DOC ICON">
-        </div>
-        <div class="text-center py-2">
-            {% for lang in custom.languages %}
-                <a href="{{ reportlink }}/{{ lang }}" class="p-1">
-                    {% if custom.languages|length > 1 %}
-                        <img class="flag" src="{% static 'images/flags/'|add:lang|add:'.svg' %}" alt="{{ lang }}">
+    {% if custom.modules.reportDownload %}
+        <div class="float-right mx-4 my-2 p-2 border rounded border-primary bg-bright-blue" styles="width: 200px">
+            <div class="text-center">
+                <h3>
+                    {% if txtscore < 50 %}
+                        <span class="font-weight-bold text-danger">{{ txtscore }}</span>
+                    {% elif txtscore < min_acceptable_score %}
+                        <span class="font-weight-bold text-warning">{{ txtscore }}</span>
                     {% else %}
-                        {{ _('Report') }}
+                        <span class="font-weight-bold text-success">{{ txtscore }}</span>
                     {% endif %}
-                </a>
-            {% endfor %}
+                    /100
+                </h3>
+                {% if user.country_code == 'LU' and custom.modules.requestTraining %}
+                    {% if txtscore >= min_acceptable_score and custom.modules.requestDiagnostic %}
+                        <h5>{% include 'survey/requestDiagnosticLink.html' with type='button' %}</h5>
+                    {% endif %}
+                    <h5>{% include 'survey/requestTrainingLink.html' with type='button' %}</h5>
+                {% endif %}
+            </div>
+            <div><h4>{{ translations.txtdownload }}:</h4></div>
+            <div class="text-center py-2">
+                <img src="{% static "images/reportLogo.png" %}" alt="DOC ICON">
+            </div>
+            <div class="text-center py-2">
+                {% for lang in custom.languages %}
+                    <a href="{{ reportlink }}/{{ lang }}" class="p-1">
+                        {% if custom.languages|length > 1 %}
+                            <img class="flag" src="{% static 'images/flags/'|add:lang|add:'.svg' %}" alt="{{ lang }}">
+                        {% else %}
+                            {{ _('Report') }}
+                        {% endif %}
+                    </a>
+                {% endfor %}
+            </div>
         </div>
-    </div>
+    {% endif %}
 
     <div class="py-2 px-4">
         {% include 'survey/changeLang.html' %}

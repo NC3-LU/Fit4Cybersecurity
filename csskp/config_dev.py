@@ -39,6 +39,7 @@ CUSTOM = {
 
     # Available modules
     "modules": {
+        "reportDownload": True,
         "requestDiagnostic": True,
         "requestTraining": True,
         "resultChart": True,
