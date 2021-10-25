@@ -106,7 +106,7 @@ def is_recommendation_already_added(recommendation: str, recommendations: dict):
 def createAndSendReport(user: SurveyUser, lang: str):
     """Generates the report as a .docx file, then returns it to the view."""
 
-    filepath = settings.BASE_DIR + "/wtemps/"
+    filepath = os.path.join(settings.BASE_DIR, settings.WORD_TEMPLATES_DIR)
 
     template = filepath + "template-" + lang + ".docx"
     doc = Document(template)

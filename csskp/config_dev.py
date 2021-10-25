@@ -26,7 +26,6 @@ CUSTOM = {
     "logoFull": gettext_lazy("/static/images/logoFull-en.png"),
     "countries_first": [],
     "languages": ["en", "fr", "de"],
-
     # Custom parts of templates
     #   main dir for PARTS_TEMPLATE_DIR:
     "templates_parts_dir": "templates_parts",
@@ -36,14 +35,13 @@ CUSTOM = {
         "footer": "footer_part.html",
         "main_logo": "logo_part.html",
     },
-
     # Available modules
     "modules": {
         "reportDownload": True,
         "requestDiagnostic": True,
         "requestTraining": True,
         "resultChart": True,
-    }
+    },
 }
 
 # Logging mechanism

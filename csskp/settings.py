@@ -32,6 +32,8 @@ PARTS_TEMPLATE_DIR = os.path.join(
 STATIC_DIR = os.path.join(BASE_DIR, "static")
 
 PICTURE_DIR = "/tmp/csskp/"
+WORD_TEMPLATES_DIR = "wtemps"
+
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/

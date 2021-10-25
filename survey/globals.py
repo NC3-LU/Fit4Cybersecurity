@@ -203,7 +203,9 @@ TRANSLATION_UI = {
                 "SALE": gettext_lazy("Trading, sales and mass distribution"),
                 "MARK": gettext_lazy("Marketing, media and multimedia"),
                 "BUIL": gettext_lazy("Construction industries and civil engineering"),
-                "REST": gettext_lazy("Hotel and restoration, tourism and entertainment"),
+                "REST": gettext_lazy(
+                    "Hotel and restoration, tourism and entertainment"
+                ),
                 "INDU": gettext_lazy("Industry"),
                 "INST": gettext_lazy("Installation and maintenance"),
                 "ARTI": gettext_lazy(

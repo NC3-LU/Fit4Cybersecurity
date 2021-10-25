@@ -191,9 +191,7 @@ def finish(request):
 
     txt_score, radar_current, sections_list = calculateResult(user, user_lang)
 
-    diagnostic_email_body = TRANSLATION_UI["report"]["request_diagnostic"][
-        "email_body"
-    ]
+    diagnostic_email_body = TRANSLATION_UI["report"]["request_diagnostic"]["email_body"]
 
     recommendations = getRecommendations(user, user_lang)
     # To properly display breaking lines \n on html page.
@@ -201,9 +199,7 @@ def finish(request):
         recommendations[rx] = [x.replace("\n", "<br>") for x in recommendations[rx]]
 
     textLayout = {
-        "title": CUSTOM["tool_name"]
-        + " - "
-        + TRANSLATION_UI["report"]["title"],
+        "title": CUSTOM["tool_name"] + " - " + TRANSLATION_UI["report"]["title"],
         "description": TRANSLATION_UI["report"]["description"],
         "recommendations": recommendations,
         "user": user,
@@ -232,10 +228,14 @@ def finish(request):
         ),
     }
     textLayout["translations"]["request_training"] = {
-        "description": TRANSLATION_UI["report"]["request_training"]["description"].replace("{score}", str(txt_score) + "/100"),
+        "description": TRANSLATION_UI["report"]["request_training"][
+            "description"
+        ].replace("{score}", str(txt_score) + "/100"),
         "let_us_know": TRANSLATION_UI["report"]["request_training"]["let_us_know"],
         "email_subject": TRANSLATION_UI["report"]["request_training"]["email_subject"],
-        "email_body": TRANSLATION_UI["report"]["request_training"]["email_body"].replace("{userId}", str(crypter.encrypt(user_id.encode("utf-8")))),
+        "email_body": TRANSLATION_UI["report"]["request_training"][
+            "email_body"
+        ].replace("{userId}", str(crypter.encrypt(user_id.encode("utf-8")))),
     }
     textLayout["translations"]["txtdownload"] = TRANSLATION_UI["report"]["download"]
     textLayout["translations"]["txtreport"] = TRANSLATION_UI["report"]["report"]
@@ -316,7 +316,9 @@ def add_form_translations(data, topic="question"):
             "button": TRANSLATION_UI[topic]["continue_later"]["button"],
             "title": TRANSLATION_UI[topic]["continue_later"]["title"],
             "text": TRANSLATION_UI[topic]["continue_later"]["text"],
-            "button_download": TRANSLATION_UI[topic]["continue_later"]["button_download"],
+            "button_download": TRANSLATION_UI[topic]["continue_later"][
+                "button_download"
+            ],
             "button_close": TRANSLATION_UI[topic]["continue_later"]["button_close"],
         },
         "leave_survey": {
@@ -335,13 +337,19 @@ def add_form_translations(data, topic="question"):
     if "cancel_button" in TRANSLATION_UI[topic]:
         data["translations"]["cancel_button"] = TRANSLATION_UI[topic]["cancel_button"]
     if "select_multi_descr" in TRANSLATION_UI[topic]:
-        data["translations"]["select_multi_descr"] = TRANSLATION_UI[topic]["select_multi_descr"]
+        data["translations"]["select_multi_descr"] = TRANSLATION_UI[topic][
+            "select_multi_descr"
+        ]
     if (
         "feedback_descr1" in TRANSLATION_UI[topic]
         and "feedback_descr2" in TRANSLATION_UI[topic]
     ):
-        data["translations"]["feedback_descr1"] = TRANSLATION_UI[topic]["feedback_descr1"]
-        data["translations"]["feedback_descr2"] = TRANSLATION_UI[topic]["feedback_descr2"]
+        data["translations"]["feedback_descr1"] = TRANSLATION_UI[topic][
+            "feedback_descr1"
+        ]
+        data["translations"]["feedback_descr2"] = TRANSLATION_UI[topic][
+            "feedback_descr2"
+        ]
 
 
 def get_terms(request):
