@@ -11,7 +11,7 @@ from survey.viewLogic import (
     handle_general_feedback,
 )
 from survey.reporthelper import calculateResult, createAndSendReport, getRecommendations
-from survey.globals import TRANSLATION_UI, MIN_ACCEPTABLE_SCORE, LANG_SELECT
+from survey.globals import TRANSLATION_UI, MIN_ACCEPTABLE_SCORE
 from survey.models import SurveyUser, SURVEY_STATUS_FINISHED
 from django.contrib import messages
 from django.utils import translation

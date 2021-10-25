@@ -13,7 +13,7 @@ from survey.models import (
 )
 from survey.forms import InitialStartForm, AnswerMChoice, GeneralFeedback
 from survey.globals import LANG_SELECT, TRANSLATION_UI
-from survey.reporthelper import getRecommendations, get_formatted_translations
+from survey.reporthelper import get_formatted_translations
 from csskp.settings import CUSTOM
 
 
@@ -71,6 +71,7 @@ def handle_start_survey(request, lang: str):
     }
 
 
+@transaction.atomic
 def handle_question_answers_request(request, user: SurveyUser, question_index: int):
     (
         previous_question,
@@ -103,67 +104,64 @@ def handle_question_answers_request(request, user: SurveyUser, question_index: i
             answers_field_type=current_question.qtype,
             question_answers=question_answers,
         )
-        if form.is_valid():
-            with transaction.atomic():
-                user = SurveyUser.objects.select_for_update(nowait=True).filter(
-                    id=user.id
-                )[0]
-                answers = form.cleaned_data["answers"]
-                answer_content = ""
-                if "answer_content" in form.cleaned_data:
-                    answer_content = form.cleaned_data["answer_content"]
+        if not form.is_valid():
+            return form.errors
 
-                save_answers(
-                    user, current_question, question_answers, answers, answer_content
-                )
+        user = SurveyUser.objects.select_for_update(nowait=True).filter(id=user.id)[0]
+        answers = form.cleaned_data["answers"]
+        answer_content = ""
+        if "answer_content" in form.cleaned_data:
+            answer_content = form.cleaned_data["answer_content"]
 
-                feedback = form.cleaned_data["feedback"]
-                if feedback:
-                    user_feedback = SurveyUserFeedback.objects.filter(
-                        user=user, question=current_question
-                    )[:1]
-                    if not user_feedback:
-                        user_feedback = SurveyUserFeedback()
-                        user_feedback.user = user
-                        user_feedback.question = current_question
-                    else:
-                        user_feedback = user_feedback[0]
-                    user_feedback.feedback = feedback
-                    user_feedback.save()
+        save_answers(user, current_question, question_answers, answers, answer_content)
 
-                if next_question != None:
-                    user.current_qindex = next_question.qindex
-                else:
-                    user.status = SURVEY_STATUS_UNDER_REVIEW
+        feedback = form.cleaned_data["feedback"]
+        if feedback:
+            user_feedback = SurveyUserFeedback.objects.filter(
+                user=user, question=current_question
+            )[:1]
+            if not user_feedback:
+                user_feedback = SurveyUserFeedback()
+                user_feedback.user = user
+                user_feedback.question = current_question
+            else:
+                user_feedback = user_feedback[0]
+            user_feedback.feedback = feedback
+            user_feedback.save()
 
-                user.save()
+        if next_question is not None:
+            user.current_qindex = next_question.qindex
+        else:
+            user.status = SURVEY_STATUS_UNDER_REVIEW
 
-                return user
-    else:
-        form = AnswerMChoice(
-            tuple_answers,
-            lang=user.choosen_lang,
-            answers_field_type=current_question.qtype,
-            question_answers=question_answers,
-        )
+        user.save()
 
-        user_answers = SurveyUserAnswer.objects.filter(
-            user=user, answer__question=current_question
-        )
-        selected_answers = []
-        for user_answer in user_answers:
-            if user_answer.uvalue > 0:
-                selected_answers.append(user_answer.answer.id)
-            if user_answer.content:
-                form.set_answer_content(user_answer.content)
+        return user
 
-        user_feedback = SurveyUserFeedback.objects.filter(
-            user=user, question=current_question
-        )[:1]
+    form = AnswerMChoice(
+        tuple_answers,
+        lang=user.choosen_lang,
+        answers_field_type=current_question.qtype,
+        question_answers=question_answers,
+    )
 
-        form.set_answers(selected_answers)
-        if user_feedback:
-            form.set_feedback(user_feedback[0].feedback)
+    user_answers = SurveyUserAnswer.objects.filter(
+        user=user, answer__question=current_question
+    )
+    selected_answers = []
+    for user_answer in user_answers:
+        if user_answer.uvalue > 0:
+            selected_answers.append(user_answer.answer.id)
+        if user_answer.content:
+            form.set_answer_content(user_answer.content)
+
+    user_feedback = SurveyUserFeedback.objects.filter(
+        user=user, question=current_question
+    )[:1]
+
+    form.set_answers(selected_answers)
+    if user_feedback:
+        form.set_feedback(user_feedback[0].feedback)
 
     uniqueAnswers = SurveyQuestionAnswer.objects.filter(
         question=current_question, uniqueAnswer=True
