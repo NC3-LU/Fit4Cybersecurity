@@ -17,7 +17,7 @@
 <div class="container">
     <h1>Survey statistics</h1>
     <div class="row">
-        <form action="/admin/statistics/" method="post" class="dates-limit-form">
+        <form action="/export/statistics/" method="post" class="dates-limit-form">
             {% csrf_token %}
 
             {{ dates_limit_form.media }}

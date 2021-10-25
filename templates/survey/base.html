@@ -1,9 +1,7 @@
 {% extends 'survey/bootstrap.html' %}
 
 {% load i18n %}
-
 {% load bootstrap4 %}
-
 {% load static %}
 
 {% block bootstrap4_extra_head %}
@@ -15,12 +13,6 @@
 
     <link rel="stylesheet" type="text/css" href="{% static 'survey/css/custom.css' %}" />
     <link rel="stylesheet" href="/static/npm_components/fork-awesome/css/fork-awesome.min.css">
-    <!--[if IE]>
-    <style type="text/css">
-        #ie-warning { display:block; }
-        #content-body { display: none; }
-    </style>
-    <![endif]-->
 {% endblock %}
 
 {% block title %}
@@ -40,7 +32,7 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownAdmin" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-cogs"></i></a>
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownAdmin"></div>
-                        <a class="dropdown-item" href="/admin/statistics" title="Dashboard">Statistics</a>
+                        <a class="dropdown-item" href="/export/statistics" title="Dashboard">Statistics</a>
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="/admin" title="Dashboard">Django Administration</a>
                     </li>
@@ -68,19 +60,6 @@
             {% block content %}{% endblock %}
         </div>
 
-        <div id="ie-warning">
-            <h4>Your web browser (Internet Explorer) is not compatible.</h4>
-            <p>Please, change your browser to continue the security assesment on our website.</p>
-            <p>Recommended browsers:</p>
-            <ul id="browsers-list">
-                <li class="bc"><a href="https://www.google.com/chrome/" target="_blank">Chrome</a></li>
-                <li class="bf"><a href="https://www.mozilla.org/firefox/new/" target="_blank">Firefox</a></li>
-                <li class="bs"><a href="https://support.apple.com/downloads/safari" target="_blank">Safari</a></li>
-                <li class="be"><a href="https://www.microsoft.com/edge" target="_blank">Edge</a></li>
-                <li class="bo"><a href="https://www.opera.com/download" target="_blank">Opera</a></li>
-            </ul>
-        </div>
-
     </div>
 
     <div class="footer d-none d-md-block">
@@ -88,21 +67,21 @@
             <ul class="nav flex-column flex-sm-row">
                 <li class="nav-item">
 
-                    <a class="nav-link" href="https://www.cases.lu" target="_blank">
+                    <a class="nav-link" href="https://www.cases.lu" target="_blank" rel="noopener noreferrer">
                         <img class="img-fluid" src="{% static 'images/logo-CASES.png' %}" width="32px"
                         title="{{ _('A service provided by CASES.LU') }}"
                         alt="{{ _('A service provided by CASES.LU') }}" />
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="https://github.com/CASES-LU/Fit4Cybersecurity" target="_blank">
+                    <a class="nav-link" href="https://github.com/CASES-LU/Fit4Cybersecurity" target="_blank" rel="noopener noreferrer">
                         <img class="img-fluid" src="{% static 'images/github-9-512.png' %}" width="32px"
                         title="{{ _('Source code on GitHub') }}"
                         alt="{{ _('Source code on GitHub') }}" />
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ version_url }}" title="{{ _('Version of Fit4Cybersecurity') }}" alt="{{ _('Version of Fit4Cybersecurity') }}" target="_blank">
+                    <a class="nav-link" href="{{ version_url }}" title="{{ _('Version of Fit4Cybersecurity') }}" alt="{{ _('Version of Fit4Cybersecurity') }}" target="_blank" rel="noopener noreferrer">
                         {{ app_version }}
                     </a>
                 </li>
@@ -112,7 +91,7 @@
                     <a class="nav-link" href="/terms" title="{{ _('Terms of service') }}" alt="{{ _('Terms of Service') }}">Terms</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="https://securitymadein.lu" target="_blank">Copyright © 2019-{% now "Y" %} - SECURITYMADEIN.LU</a>
+                    <a class="nav-link" href="https://securitymadein.lu" target="_blank" rel="noopener noreferrer">Copyright © 2019-{% now "Y" %} - SECURITYMADEIN.LU</a>
                 </li>
             </ul>
         </div>
