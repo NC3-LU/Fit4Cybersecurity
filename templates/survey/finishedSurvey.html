@@ -18,41 +18,43 @@
 {% block title %}{{ title }}{% endblock %}
 
 {% block content %}
-    <div class="float-right mx-4 my-2 p-2 border rounded border-primary bg-bright-blue" styles="width: 200px">
-        <div class="text-center">
-            <h3>
-                {% if txtscore < 50 %}
-                    <span class="font-weight-bold text-danger">{{ txtscore }}</span>
-                {% elif txtscore < min_acceptable_score %}
-                    <span class="font-weight-bold text-warning">{{ txtscore }}</span>
-                {% else %}
-                    <span class="font-weight-bold text-success">{{ txtscore }}</span>
-                {% endif %}
-                /100
-            </h3>
-            {% if user.country_code == 'LU' %}
-                {% if txtscore >= min_acceptable_score %}
-                    <h5>{% include 'survey/requestDiagnosticLink.html' with type='button' %}</h5>
-                {% endif %}
-                <h5>{% include 'survey/requestTrainingLink.html' with type='button' %}</h5>
-            {% endif %}
-        </div>
-        <div><h4>{{ translations.txtdownload }}:</h4></div>
-        <div class="text-center py-2">
-            <img src="{% static "images/reportLogo.png" %}" alt="DOC ICON">
-        </div>
-        <div class="text-center py-2">
-            {% for lang in custom.languages %}
-                <a href="{{ reportlink }}/{{ lang }}" class="p-1">
-                    {% if custom.languages|length > 1 %}
-                        <img class="flag" src="{% static 'images/flags/'|add:lang|add:'.svg' %}" alt="{{ lang }}">
+    {% if custom.modules.reportDownload %}
+        <div class="float-right mx-4 my-2 p-2 border rounded border-primary bg-bright-blue" styles="width: 200px">
+            <div class="text-center">
+                <h3>
+                    {% if txtscore < 50 %}
+                        <span class="font-weight-bold text-danger">{{ txtscore }}</span>
+                    {% elif txtscore < min_acceptable_score %}
+                        <span class="font-weight-bold text-warning">{{ txtscore }}</span>
                     {% else %}
-                        {{ _('Report') }}
+                        <span class="font-weight-bold text-success">{{ txtscore }}</span>
                     {% endif %}
-                </a>
-            {% endfor %}
+                    /100
+                </h3>
+                {% if user.country_code == 'LU' and custom.modules.requestTraining %}
+                    {% if txtscore >= min_acceptable_score and custom.modules.requestDiagnostic %}
+                        <h5>{% include 'survey/requestDiagnosticLink.html' with type='button' %}</h5>
+                    {% endif %}
+                    <h5>{% include 'survey/requestTrainingLink.html' with type='button' %}</h5>
+                {% endif %}
+            </div>
+            <div><h4>{{ translations.txtdownload }}:</h4></div>
+            <div class="text-center py-2">
+                <img src="{% static "images/reportLogo.png" %}" alt="DOC ICON">
+            </div>
+            <div class="text-center py-2">
+                {% for lang in custom.languages %}
+                    <a href="{{ reportlink }}/{{ lang }}" class="p-1">
+                        {% if custom.languages|length > 1 %}
+                            <img class="flag" src="{% static 'images/flags/'|add:lang|add:'.svg' %}" alt="{{ lang }}">
+                        {% else %}
+                            {{ _('Report') }}
+                        {% endif %}
+                    </a>
+                {% endfor %}
+            </div>
         </div>
-    </div>
+    {% endif %}
 
     <div class="py-2 px-4">
         {% include 'survey/changeLang.html' %}
@@ -60,7 +62,7 @@
         <h2>{{ translations.txtreport }}:</h2>
         <div class="qrcode"></div>
         <p>{{ description }}</p>
-        {% if user.country_code == 'LU' and txtscore < min_acceptable_score %}
+        {% if user.country_code == 'LU' and custom.modules.requestTraining and txtscore < min_acceptable_score %}
             <p>{{ translations.request_training.description }}{% include 'survey/requestTrainingLink.html' with type='link' %}</p>
         {% endif %}
 
@@ -71,7 +73,7 @@
         </div>
     </div>
 
-    {% if user.country_code == 'LU' and txtscore >= min_acceptable_score %}
+    {% if user.country_code == 'LU' and custom.modules.requestDiagnostic and txtscore >= min_acceptable_score %}
         <div class="py-2 px-4">
             <h2>{{ translations.request_diagnostic.title }}:</h2>
             {{ translations.request_diagnostic.description }}<br />
@@ -80,58 +82,61 @@
         </div>
     {% endif %}
 
-    <div class="py-2 px-4 text-center">
-        <div style="width: 450px; height: 450px; margin: 0 auto 0 auto"><canvas id="resultChart" width='100%' height='100%'></canvas></div>
-        <script>
-            var ctx = document.getElementById('resultChart');
-            var labels = {{ chartTitles | safe }}
-            var resultChart = new Chart(ctx, {
-                type: 'radar',
-                data: {
-                    labels: labels,
-                    datasets: [
-                        {
-                            label: '{{ chartlabelYou | safe }}',
-                            fill: true,
-                            backgroundColor: 'rgba(255, 99, 132, 0.2)',
-                            borderColor: 'rgba(255, 99, 132, 1)',
-                            pointBackgroundColor: 'rgb(255, 99, 132)',
-                            pointBorderColor: '#fff',
-                            pointHoverBackgroundColor: '#fff',
-                            pointHoverBorderColor: 'rgb(255, 99, 132)',
-                            data: {{ chartdataYou | safe }},
-                        }
-                    ]
-                },
-                options: {
-                    scale: {
-                        ticks: {
-                            beginAtZero: true,
-                            min: 0,
-                            max: 100,
-                        }
+    {% if custom.modules.resultChart %}
+        <div class="py-2 px-4 text-center">
+            <div style="width: 450px; height: 450px; margin: 0 auto 0 auto"><canvas id="resultChart" width='100%' height='100%'></canvas></div>
+            <script>
+                var ctx = document.getElementById('resultChart');
+                var labels = {{ chartTitles | safe }}
+                var resultChart = new Chart(ctx, {
+                    type: 'radar',
+                    data: {
+                        labels: labels,
+                        datasets: [
+                            {
+                                label: '{{ chartlabelYou | safe }}',
+                                fill: true,
+                                backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                                borderColor: 'rgba(255, 99, 132, 1)',
+                                pointBackgroundColor: 'rgb(255, 99, 132)',
+                                pointBorderColor: '#fff',
+                                pointHoverBackgroundColor: '#fff',
+                                pointHoverBorderColor: 'rgb(255, 99, 132)',
+                                data: {{ chartdataYou | safe }},
+                            }
+                        ]
                     },
-                    elements:{
-                        line:{
-                            tension: 0,
-                            borderWidth: 3
-                        }
-                    },
-                    title: {
-                        display: false,
-                    },
-                    layout: {
-                        padding: {
-                            left: 5,
-                            right: 5,
-                            top: 5,
-                            bottom: 5
+                    options: {
+                        scale: {
+                            ticks: {
+                                beginAtZero: true,
+                                min: 0,
+                                max: 100,
+                            }
+                        },
+                        elements:{
+                            line:{
+                                tension: 0,
+                                borderWidth: 3
+                            }
+                        },
+                        title: {
+                            display: false,
+                        },
+                        layout: {
+                            padding: {
+                                left: 5,
+                                right: 5,
+                                top: 5,
+                                bottom: 5
+                            }
                         }
                     }
-                }
-            });
-        </script>
-    </div>
+                });
+            </script>
+        </div>
+    {% endif %}
+
     <div class="py-2 px-4">
         {% for category, items in recommendations.items %}
             <h4>{{ category | safe }}</h4>
