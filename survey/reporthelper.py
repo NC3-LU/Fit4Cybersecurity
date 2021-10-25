@@ -108,7 +108,7 @@ def createAndSendReport(user: SurveyUser, lang: str):
 
     filepath = os.path.join(settings.BASE_DIR, settings.WORD_TEMPLATES_DIR)
 
-    template = filepath + "template-" + lang + ".docx"
+    template = os.path.join(filepath, "template-" + lang + ".docx")
     doc = Document(template)
 
     introduction = ""

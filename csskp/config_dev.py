@@ -44,6 +44,8 @@ CUSTOM = {
     },
 }
 
+WORD_TEMPLATES_DIR = "./wtemps"
+
 # Logging mechanism
 LOGGING = {
     "version": 1,

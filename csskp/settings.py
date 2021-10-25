@@ -12,7 +12,7 @@ try:
 except Exception:
     from csskp import config_dev as config
 
-# Initialization of the custom variables (strings, templates, icons)
+# Initialization of the custom variables (strings, templates, icons, active modules)
 CUSTOM = {key: value for key, value in getattr(config, "CUSTOM", {}).items()}
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -32,7 +32,7 @@ PARTS_TEMPLATE_DIR = os.path.join(
 STATIC_DIR = os.path.join(BASE_DIR, "static")
 
 PICTURE_DIR = "/tmp/csskp/"
-WORD_TEMPLATES_DIR = "wtemps"
+WORD_TEMPLATES_DIR = config.WORD_TEMPLATES_DIR
 
 
 # Quick-start development settings - unsuitable for production
