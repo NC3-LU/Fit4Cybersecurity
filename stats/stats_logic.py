@@ -1,4 +1,5 @@
-from datetime import datetime
+# -*- coding: utf-8 -*-
+
 import json
 from stats.forms import DatesLimitForm, DEFAULT_DATE_FORMAT
 from survey.models import (
@@ -8,7 +9,7 @@ from survey.models import (
     SurveyUserAnswer,
     SURVEY_STATUS_FINISHED,
 )
-from survey.reporthelper import get_formatted_translations
+
 from survey.globals import COMPANY_SIZE
 
 
@@ -51,7 +52,7 @@ def get_finished_surveys_list(request):
         feedbacks_per_question = []
         has_general_feedback = 0
         for survey_user_feedback in survey_user_feedbacks:
-            if survey_user_feedback.question == None:
+            if survey_user_feedback.question is None:
                 has_general_feedback = 1
             else:
                 feedbacks_per_question.append(survey_user_feedback.question.id)

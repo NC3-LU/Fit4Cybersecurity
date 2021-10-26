@@ -29,6 +29,13 @@ django-bootstrap-modal-forms = "^1.5.0"
 
 [tool.poetry.dev-dependencies]
 gitchangelog = "^3.0.4"
+mypy = "^0.910"
+flake8 = "^4.0.1"
+
+[tool.flake8]
+max-line-length = 127
+extend-ignore = "E203,"
+max-complexity = 15
 
 [build-system]
 requires = ["poetry>=0.12"]

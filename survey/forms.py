@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 from django import forms
 
 from survey.globals import SECTOR_CHOICES, COMPANY_SIZE, TRANSLATION_UI, COUNTRIES
@@ -18,7 +20,7 @@ class InitialStartForm(forms.Form):
     )
 
     def __init__(self, translations=None, *args, **kwargs):
-        lang = kwargs.pop("lang")
+        kwargs.pop("lang")
 
         super().__init__(*args, **kwargs)
 
@@ -173,7 +175,7 @@ class AnswerMChoice(forms.Form):
 
 class GeneralFeedback(forms.Form):
     def __init__(self, *args, **kwargs):
-        lang = kwargs.pop("lang")
+        kwargs.pop("lang")
 
         super().__init__(*args, **kwargs)
 

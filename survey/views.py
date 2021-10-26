@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 from django.shortcuts import render
 from django.http import HttpResponse, HttpResponseRedirect
 from django.utils.translation import gettext as _
@@ -261,8 +263,8 @@ def resume(request):
     try:
         user_id = UUID(request.GET.get("user_id"))
 
-        user = find_user_by_id(str(user_id))
-    except:
+        user = find_user_by_id(user_id)
+    except Exception:
         messages.warning(
             request,
             _(

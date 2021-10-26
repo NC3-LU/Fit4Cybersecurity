@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 from django.db import models
 
 # import global constants
@@ -8,7 +10,6 @@ from survey.globals import (
     COMPANY_SIZE,
     LANG_SELECT,
     TRANSLATION_TYPES,
-    COUNTRIES,
     SERVICE_TARGETS,
 )
 import uuid

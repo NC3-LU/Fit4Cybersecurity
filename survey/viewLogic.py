@@ -1,3 +1,8 @@
+# -*- coding: utf-8 -*-
+
+from typing import Union, List, Dict, Tuple
+from uuid import UUID
+from django.http import HttpRequest
 from django.utils.html import format_html, mark_safe
 from django.db import transaction
 from django.utils import translation
@@ -17,7 +22,7 @@ from survey.reporthelper import get_formatted_translations
 from csskp.settings import CUSTOM
 
 
-def create_user(lang: str, sector: str, company_size: str, country: str):
+def create_user(lang: str, sector: str, company_size: str, country: str) -> SurveyUser:
     user = SurveyUser()
     user.sector = sector
     user.e_count = company_size
@@ -37,7 +42,7 @@ def create_user(lang: str, sector: str, company_size: str, country: str):
     return user
 
 
-def handle_start_survey(request, lang: str):
+def handle_start_survey(request: HttpRequest, lang: str) -> Union[Dict, SurveyUser]:
     action = "/survey/start/" + lang
     question = TRANSLATION_UI["question"]["description"]
     title = CUSTOM["tool_name"] + " - " + TRANSLATION_UI["question"]["title"]
@@ -47,7 +52,6 @@ def handle_start_survey(request, lang: str):
 
     if request.method == "POST":
         form = InitialStartForm(data=request.POST, lang=lang)
-
         if form.is_valid():
             user = create_user(
                 lang,
@@ -55,9 +59,7 @@ def handle_start_survey(request, lang: str):
                 form.cleaned_data["compSize"],
                 form.cleaned_data["country"],
             )
-
             request.session["user_id"] = str(user.user_id)
-
             return user
     else:
         form = InitialStartForm(lang=lang)
@@ -72,7 +74,9 @@ def handle_start_survey(request, lang: str):
 
 
 @transaction.atomic
-def handle_question_answers_request(request, user: SurveyUser, question_index: int):
+def handle_question_answers_request(
+    request: HttpRequest, user: SurveyUser, question_index: int
+) -> Union[Dict, SurveyUser]:
     (
         previous_question,
         current_question,
@@ -191,10 +195,10 @@ def handle_question_answers_request(request, user: SurveyUser, question_index: i
 def save_answers(
     user: SurveyUser,
     current_question: SurveyQuestion,
-    question_answers,
-    posted_answers,
-    answer_content,
-):
+    question_answers: List[SurveyQuestionAnswer],
+    posted_answers: List[SurveyQuestionAnswer],
+    answer_content: str,
+) -> None:
     posted_answers_ids = [int(i) for i in posted_answers]
     for question_answer in question_answers:
         user_answers = SurveyUserAnswer.objects.filter(
@@ -217,11 +221,13 @@ def save_answers(
         user_answer.save()
 
 
-def find_user_by_id(user_id):
+def find_user_by_id(user_id: UUID) -> SurveyUser:
     return SurveyUser.objects.filter(user_id=user_id)[0]
 
 
-def get_answer_choices(question_answers, user_lang: str):
+def get_answer_choices(
+    question_answers: List[SurveyQuestionAnswer], user_lang: str
+) -> List[Tuple[int, str]]:
     tuple_answers = []
 
     for question_answer in question_answers:
@@ -311,11 +317,10 @@ def get_questions_with_user_answers(user: SurveyUser):
     return questions_with_user_answers
 
 
-def handle_general_feedback(user: SurveyUser(), request):
+def handle_general_feedback(user: SurveyUser, request: HttpRequest) -> GeneralFeedback:
     user_feedback = SurveyUserFeedback.objects.filter(user=user, question__isnull=True)[
         :1
     ]
-
     if request.method == "POST":
         general_feedback_form = GeneralFeedback(
             data=request.POST, lang=user.choosen_lang
