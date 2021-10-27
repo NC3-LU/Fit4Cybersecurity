@@ -12,6 +12,8 @@
     <link rel="apple-touch-icon" sizes="180x180" href="{% static 'images/apple-touch-icon.png' %}" />
     <link rel="stylesheet" type="text/css" href="{% static 'survey/css/custom.css' %}" />
     <link rel="stylesheet" href="/static/npm_components/fork-awesome/css/fork-awesome.min.css">
+    <link rel="stylesheet" href="/static/npm_components/flag-icon-css\css\flag-icons.min.css">
+    <script type="text/javascript" src="{% static "survey/js/language-selector.js" %}"></script>
 {% endblock %}
 
 {% block title %}
@@ -52,6 +54,24 @@
                 </div>
             </div>
         </div>
+
+        <ul class="navbar-nav nav">
+            <li class="nav-item dropdown" id="language-selector" >
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown">
+                <span class="flag-icon flag-icon-gb"></span> English</a>
+                <div class="dropdown-menu" aria-labelledby="language-selector">
+                    <a class="dropdown-item" value='gb'>
+                        <span class="flag-icon flag-icon-gb"></span> English
+                    </a>
+                    <a class="dropdown-item" value='fr'>
+                        <span class="flag-icon flag-icon-fr"></span> French
+                    </a>
+                    <a class="dropdown-item" value='de'>
+                        <span class="flag-icon flag-icon-de"></span> German
+                    </a>
+                </div>
+            </li>
+        </ul>
 
         {% autoescape off %}{% bootstrap_messages %}{% endautoescape %}
 
