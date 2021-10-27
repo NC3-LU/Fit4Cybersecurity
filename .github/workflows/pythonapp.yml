@@ -33,4 +33,4 @@ jobs:
 
     - name: Type check
       run: |
-        poetry run mypy --ignore-missing-imports stats/ survey/
+        poetry run mypy .

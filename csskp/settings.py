@@ -11,8 +11,8 @@ from django.utils.translation import ugettext_lazy as _
 
 try:
     from csskp import config_prod as config
-except Exception:
-    from csskp import config_dev as config
+except ImportError:  # pragma: no cover
+    from csskp import config_dev as config  # type: ignore
 
 # Initialization of the custom variables (strings, templates, icons, active modules)
 CUSTOM = {key: value for key, value in getattr(config, "CUSTOM", {}).items()}
