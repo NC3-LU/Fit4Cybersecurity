@@ -180,7 +180,7 @@ def createAndSendReport(user: SurveyUser, lang: str):
             for idx, elem in enumerate(i_list):
                 p.add_run(elem)
                 # p.alignment = WD_ALIGN_PARAGRAPH.CENTER
-                if idx+1 < len(i_list):
+                if idx + 1 < len(i_list):
                     px = p.add_run(str(score))
                     px.font.bold = True
         else:
