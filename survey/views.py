@@ -75,6 +75,8 @@ def handle_question_form(request, question_index: int):
 
 
 def change_lang(request, lang: str):
+    translation.activate(lang)
+    request.session[translation.LANGUAGE_SESSION_KEY] = lang
     user_id = request.session.get("user_id", None)
     if user_id is None:
         return HttpResponseRedirect("/")
