@@ -59,11 +59,7 @@
         <div class="dropdown d-flex flex-row-reverse" id="language-selector" >
             <a class=" btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <span class="flag-icon flag-icon-{% if LANGUAGE_CODE == "en" %}gb{% else %}{{LANGUAGE_CODE}}{% endif %}"></span>
-                    {% for lang in custom.languages %}
-                        {% if lang.code == LANGUAGE_CODE %}
-                            {{ lang.label }}
-                        {% endif %}
-                    {% endfor %}
+                    {{ LANGUAGE_CODE|language_name_translated }}
             </a>
             <div class="dropdown-menu">
                 {% for lang in custom.languages %}
