@@ -15,8 +15,6 @@
 {% block title %}{{ title }}{% endblock %}
 
 {% block content %}
-    {% include 'survey/changeLang.html' %}
-
     {% if user.is_survey_in_progress %}
         <div class="progress m-2" style="background-color: #C1CBD5; height: 30px;">
             <div class="progress-bar" role="progressbar" style="font-size: 1rem; width: {% widthratio current_question_index total_questions_num 100 %}%;" aria-valuenow="{% widthratio current_question_index total_questions_num 100 %}" aria-valuemin="0" aria-valuemax="100">{{ current_question_index }} of {{ total_questions_num }}</div>
