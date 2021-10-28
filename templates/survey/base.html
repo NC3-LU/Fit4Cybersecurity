@@ -55,24 +55,24 @@
             </div>
         </div>
 
-        <ul class="navbar-nav nav">
-            <li class="nav-item dropdown" id="language-selector" >
-                <a class="nav-link dropdown-toggle" data-toggle="dropdown">
-                <span class="flag-icon flag-icon-gb"></span> English</a>
-                <div class="dropdown-menu" aria-labelledby="language-selector">
-                    <a class="dropdown-item" value='gb'>
-                        <span class="flag-icon flag-icon-gb"></span> English
-                    </a>
-                    <a class="dropdown-item" value='fr'>
-                        <span class="flag-icon flag-icon-fr"></span> French
-                    </a>
-                    <a class="dropdown-item" value='de'>
-                        <span class="flag-icon flag-icon-de"></span> German
-                    </a>
-                </div>
-            </li>
-        </ul>
-
+        {% get_current_language as LANGUAGE_CODE %}
+        <div class="dropdown d-flex flex-row-reverse" id="language-selector" >
+            <a class=" btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <span class="flag-icon flag-icon-{% if LANGUAGE_CODE == "en" %}gb{% else %}{{LANGUAGE_CODE}}{% endif %}"></span>
+                    {% for lang in custom.languages %}
+                        {% if lang.code == LANGUAGE_CODE %}
+                            {{ lang.label }}
+                        {% endif %}
+                    {% endfor %}
+            </a>
+            <div class="dropdown-menu">
+                {% for lang in custom.languages %}
+                        <a class="dropdown-item" value={% if lang.code == "en" %}'gb'{% else %}{{lang.code}}{% endif %}>
+                            <span class="flag-icon flag-icon-{% if lang.code == "en" %}gb{% else %}{{lang.code}}{% endif %}"></span> {{ lang.label }}
+                        </a>
+                {% endfor %}
+            </div>
+        </div>
         {% autoescape off %}{% bootstrap_messages %}{% endautoescape %}
 
         <div id="content-body">
