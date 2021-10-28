@@ -79,7 +79,11 @@ def change_lang(request, lang: str):
     request.session[translation.LANGUAGE_SESSION_KEY] = lang
     user_id = request.session.get("user_id", None)
     if user_id is None:
-        return HttpResponseRedirect("/")
+        return HttpResponseRedirect("/survey/start/"+lang)
+
+    user = find_user_by_id(user_id)
+    user.choosen_lang = lang
+    user.save()
 
     user = find_user_by_id(user_id)
     user.choosen_lang = lang
