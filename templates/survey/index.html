@@ -19,21 +19,10 @@
         </div>
     </div>
 
-    <div class="row align-items-center px-3">
-        {% for lang in custom.languages %}
-            <div class="col">
-                <a href="/survey/start/{{ lang.code }}"}} class="text-primary">
-                    <div class="px-2 py-4 text-center align-content-center min-width">
-                        {% if custom.languages|length > 1 %}
-                            <img class="flag" src="{% static 'images/flags/'|add:lang.code|add:'.svg' %}" alt="{{ lang.code }}"><br>
-                            {{ _('Start') | translate:lang.code }}
-                        {% else %}
-                            <button class="btn border border-rounded btn-primary" type="button">{{ _('Start') | translate:lang.code }}</button>
-                        {% endif %}
-                    </div>
-                </a>
-            </div>
-        {% endfor %}
+    <div class="col px-2 py-4 text-center">
+        <a href="/survey/start/{{ LANGUAGE_CODE }}">
+            <button class="btn border border-rounded btn-primary" type="button">{{ _('Start') }}</button>
+        </a>
     </div>
 
     <div class="row py-3">
