@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
 from django.db import models
+from csskp.settings import LANGUAGES, LANGUAGE_CODE
 
 # import global constants
 from survey.globals import (
@@ -8,7 +9,6 @@ from survey.globals import (
     QUESTION_TYPES,
     ANSWER_TYPES,
     COMPANY_SIZE,
-    LANG_SELECT,
     TRANSLATION_TYPES,
     SERVICE_TARGETS,
 )
@@ -32,7 +32,7 @@ Each question has a type (see above)
 Each question has only a question ID - multilanguage
 """
 
-LOCAL_DEFAULT_LANG = LANG_SELECT[0][0]
+LOCAL_DEFAULT_LANG = LANGUAGE_CODE
 SURVEY_STATUS_IN_PROGRESS = 1
 SURVEY_STATUS_UNDER_REVIEW = 2
 SURVEY_STATUS_FINISHED = 3
@@ -42,7 +42,7 @@ class TranslationKey(models.Model):
     key = models.CharField(max_length=32)
     text = models.TextField()
     lang = models.CharField(
-        max_length=2, choices=LANG_SELECT, default=LANG_SELECT[0][0]
+        max_length=2, choices=LANGUAGES, default=LOCAL_DEFAULT_LANG
     )
     ttype = models.CharField(
         max_length=1, choices=TRANSLATION_TYPES, default=TRANSLATION_TYPES[0][0]
@@ -141,7 +141,7 @@ class SurveyUser(models.Model):
     e_count = models.CharField(max_length=2, choices=COMPANY_SIZE)
 
     choosen_lang = models.CharField(
-        max_length=2, choices=LANG_SELECT, default=LANG_SELECT[0][0]
+        max_length=2, choices=LANGUAGES, default=LOCAL_DEFAULT_LANG
     )
     country_code = models.CharField(max_length=4, blank=False, default="LU")
 

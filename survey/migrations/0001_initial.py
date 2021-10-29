@@ -2,17 +2,19 @@
 
 from django.db import migrations, models
 import django.db.models.deletion
+from csskp.settings import LANGUAGES, LANGUAGE_CODE
 import uuid
 from survey.globals import (
     COMPANY_SIZE,
     SECTOR_CHOICES,
-    LANG_SELECT,
     QUESTION_TYPES,
     COUNTRIES,
     TRANSLATION_TYPES,
     SERVICE_TARGETS,
 )
 from survey.models import SURVEY_STATUS_IN_PROGRESS
+
+LOCAL_DEFAULT_LANG = LANGUAGE_CODE
 
 
 class Migration(migrations.Migration):
@@ -117,7 +119,7 @@ class Migration(migrations.Migration):
                 ("e_count", models.CharField(choices=COMPANY_SIZE, max_length=2)),
                 (
                     "chosenLang",
-                    models.CharField(choices=LANG_SELECT, default="EN", max_length=2),
+                    models.CharField(choices=LANGUAGES, default=LOCAL_DEFAULT_LANG, max_length=2),
                 ),
                 ("current_qindex", models.IntegerField(default=0)),
                 ("status", models.SmallIntegerField(default=SURVEY_STATUS_IN_PROGRESS)),
@@ -141,7 +143,7 @@ class Migration(migrations.Migration):
                 ("text", models.TextField()),
                 (
                     "lang",
-                    models.CharField(choices=LANG_SELECT, default="EN", max_length=2),
+                    models.CharField(choices=LANGUAGES, default=LOCAL_DEFAULT_LANG, max_length=2),
                 ),
                 (
                     "ttype",

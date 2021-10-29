@@ -17,10 +17,11 @@ from survey.models import (
     SURVEY_STATUS_UNDER_REVIEW,
 )
 from survey.forms import InitialStartForm, AnswerMChoice, GeneralFeedback
-from survey.globals import LANG_SELECT, TRANSLATION_UI
+from survey.globals import TRANSLATION_UI
 from survey.reporthelper import get_formatted_translations
-from csskp.settings import CUSTOM
+from csskp.settings import CUSTOM, LANGUAGES, LANGUAGE_CODE
 
+LOCAL_DEFAULT_LANG = LANGUAGE_CODE
 
 def create_user(lang: str, sector: str, company_size: str, country: str) -> SurveyUser:
     user = SurveyUser()
@@ -31,11 +32,11 @@ def create_user(lang: str, sector: str, company_size: str, country: str) -> Surv
     user.current_qindex = survey_question[0].qindex
 
     # prevent the use of custom languages
-    langs = [x[0] for x in LANG_SELECT]
+    langs = [x[0] for x in LANGUAGES]
     if lang in langs:
         user.choosen_lang = lang
     else:
-        user.choosen_lang = LANG_SELECT[0][0]
+        user.choosen_lang = LOCAL_DEFAULT_LANG
 
     user.save()
 

@@ -61,12 +61,6 @@ ANSWER_TYPES = [
     ("T", "Free text"),
 ]
 
-LANG_SELECT = [
-    ("en", "English"),
-    ("fr", "Français"),
-    ("de", "Deutsch"),
-]
-
 TRANSLATION_TYPES = [
     ("Q", "Question"),
     ("A", "Answer"),

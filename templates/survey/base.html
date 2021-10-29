@@ -21,6 +21,9 @@
 {% endblock %}
 
 {% block bootstrap4_content %}
+{% get_current_language as LANGUAGE_CODE %}
+{% get_available_languages as LANGUAGES %}
+{% get_language_info_list for LANGUAGES as languages %}
 
     {% if user.is_authenticated %}
         <nav class="navbar navbar-expand-lg navbar-dark bg-cssk-blue">
@@ -55,16 +58,15 @@
             </div>
         </div>
 
-        {% get_current_language as LANGUAGE_CODE %}
         <div class="dropdown d-flex flex-row-reverse" id="language-selector" >
             <a class=" btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <span class="flag-icon flag-icon-{% if LANGUAGE_CODE == "en" %}gb{% else %}{{LANGUAGE_CODE}}{% endif %}"></span>
                     {{ LANGUAGE_CODE|language_name_translated }}
             </a>
             <div class="dropdown-menu">
-                {% for lang in custom.languages %}
+                {% for lang in languages %}
                         <a class="dropdown-item" href="/survey/language/{{ lang.code }}" value={% if lang.code == "en" %}'gb'{% else %}{{lang.code}}{% endif %}>
-                            <span class="flag-icon flag-icon-{% if lang.code == "en" %}gb{% else %}{{lang.code}}{% endif %}"></span> {{ lang.label }}
+                            <span class="flag-icon flag-icon-{% if lang.code == "en" %}gb{% else %}{{lang.code}}{% endif %}"></span> {{ lang.name_translated }}
                         </a>
                 {% endfor %}
             </div>
