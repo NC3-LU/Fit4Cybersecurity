@@ -22,7 +22,9 @@ from csskp.settings import HASH_KEY, CUSTOM
 from cryptography.fernet import Fernet
 
 
-def index(request):
+def index(request,lang='en'):
+    translation.activate(lang)
+    request.session[translation.LANGUAGE_SESSION_KEY] = lang
     return render(request, "survey/index.html")
 
 
@@ -78,8 +80,13 @@ def change_lang(request, lang: str):
     translation.activate(lang)
     request.session[translation.LANGUAGE_SESSION_KEY] = lang
     user_id = request.session.get("user_id", None)
+    previous_path = request.META.get('HTTP_REFERER', "/")
+
+    if previous_path.__contains__('/survey/start/'):
+        return HttpResponseRedirect("/survey/start/" + lang)
+
     if user_id is None:
-        return HttpResponseRedirect("/survey/start/"+lang)
+        return HttpResponseRedirect("/" + lang)
 
     user = find_user_by_id(user_id)
     user.choosen_lang = lang
@@ -89,16 +96,16 @@ def change_lang(request, lang: str):
     user.choosen_lang = lang
     user.save()
 
-    if user.is_survey_in_progress():
+    if user.is_survey_in_progress() and previous_path.__contains__('/survey/question/'):
         return HttpResponseRedirect("/survey/question/" + str(user.current_qindex))
 
-    if user.is_survey_under_review():
+    if user.is_survey_under_review() and previous_path.__contains__('/survey/review/'):
         return HttpResponseRedirect("/survey/review")
 
-    if user.is_survey_finished():
+    if user.is_survey_finished() and previous_path.__contains__('/survey/finish/'):
         return HttpResponseRedirect("/survey/finish")
 
-    return HttpResponseRedirect("/")
+    return HttpResponseRedirect("/" + lang)
 
 
 def show_report(request, lang):
