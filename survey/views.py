@@ -18,11 +18,11 @@ from survey.models import SurveyUser, SURVEY_STATUS_FINISHED
 from django.contrib import messages
 from django.utils import translation
 from uuid import UUID
-from csskp.settings import HASH_KEY, CUSTOM
+from csskp.settings import HASH_KEY, CUSTOM, LANGUAGE_CODE
 from cryptography.fernet import Fernet
 
 
-def index(request,lang='en'):
+def index(request,lang=LANGUAGE_CODE):
     translation.activate(lang)
     request.session[translation.LANGUAGE_SESSION_KEY] = lang
     return render(request, "survey/index.html")
