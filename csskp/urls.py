@@ -23,7 +23,7 @@ urlpatterns = [
     path("", views.index, name="index"),
     path("admin/", include("django.contrib.auth.urls")),
     path("admin/", admin.site.urls),
-    path("admin/statistics/", include("stats.urls")),
+    path("export/statistics/", include("stats.urls")),
     path("survey/", include("survey.urls")),
     path("terms", views.get_terms),
 ]
