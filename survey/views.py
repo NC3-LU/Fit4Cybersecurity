@@ -22,7 +22,7 @@ from csskp.settings import HASH_KEY, CUSTOM, LANGUAGE_CODE
 from cryptography.fernet import Fernet
 
 
-def index(request,lang=LANGUAGE_CODE):
+def index(request, lang=LANGUAGE_CODE):
     translation.activate(lang)
     request.session[translation.LANGUAGE_SESSION_KEY] = lang
     return render(request, "survey/index.html")

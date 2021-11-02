@@ -25,11 +25,11 @@ CUSTOM = {
     "intro_text": gettext_lazy("Description from a string or a file."),
     "logoFull": gettext_lazy("/static/images/logoFull-en.png"),
     "countries_first": [],
-    "defaultLanguage" : "en",
+    "defaultLanguage": "en",
     "languages": [
-        ("en",gettext_lazy("English")),
-        ("fr",gettext_lazy("French")),
-        ("de",gettext_lazy("German")),
+        ("en", gettext_lazy("English")),
+        ("fr", gettext_lazy("French")),
+        ("de", gettext_lazy("German")),
 
     ],
     # Custom parts of templates

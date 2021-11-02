@@ -91,7 +91,8 @@ def handle_question_answers_request(
         )
         tuple_answers = get_answer_choices(question_answers, user.choosen_lang)
     except Exception as e:
-        raise e
+        # raise e
+        tuple_answers = get_answer_choices(question_answers, LOCAL_DEFAULT_LANG)
 
     free_text_answer_id = 0
     for question_answer in question_answers:
@@ -236,9 +237,12 @@ def get_answer_choices(
             lang=user_lang, key=question_answer.answerKey
         )
         if translation_key.count() == 0:
-            raise Exception(
-                "The translation has to be done for the answers choices. "
-                + "Please choose an another language."
+            # raise Exception(
+            #     "The translation has to be done for the answers choices. "
+            #     + "Please choose an another language."
+            # )
+            translation_key = TranslationKey.objects.filter(
+                lang=LOCAL_DEFAULT_LANG, key=question_answer.answerKey
             )
 
         tuple_answers.append(
