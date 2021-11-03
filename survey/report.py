@@ -1,14 +1,11 @@
 # -*- coding: utf-8 -*-
 
 import os
-import base64
 from weasyprint import HTML
 from jinja2 import Environment, FileSystemLoader
 
-
 from django.conf import settings
 from survey.models import SurveyUser
-
 
 from django.utils.translation import gettext, ngettext
 
@@ -45,9 +42,3 @@ def makepdf(html):
     """Generate a PDF file from a string of HTML."""
     htmldoc = HTML(string=html)
     return htmldoc.write_pdf()
-
-    # other example:
-    pdf_content = HTML(string=html).write_pdf()
-    b64_content = base64.b64encode(pdf_content)
-    return pdf_content
-    # return {'pdf': b64_content}

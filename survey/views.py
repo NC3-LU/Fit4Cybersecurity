@@ -122,12 +122,9 @@ def show_report(request, lang):
     try:
         html_report = create_html_report(user, lang)
         pdf_report = makepdf(html_report)
-        try:
-            response = HttpResponse(pdf_report, content_type="application/pdf")
-            response["Content-Disposition"] = 'attachment;filename="report.pdf"'
-            return response
-        except FileNotFoundError:
-            raise Http404()
+        response = HttpResponse(pdf_report, content_type="application/pdf")
+        response["Content-Disposition"] = 'attachment;filename="report.pdf"'
+        return response
     except Exception as e:
         messages.warning(request, e)
 
