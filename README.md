@@ -51,7 +51,7 @@ $ poetry install --no-dev
 ### Configure application
 
 ```bash
-$ cp csskp/config_dev.py csskp/config_prod.py # configure production settings
+$ cp csskp/config_dev.py csskp/config.py # configure production settings
 $ poetry shell
 $ python manage.py collectstatic # copy static files required by Django Admin
 $ python manage.py compilemessages # compile the translations
@@ -59,7 +59,7 @@ $ python manage.py migrate # need to initialize before create the first user
 $ python manage.py createsuperuser --username <username>
 ```
 
-In the configuration file ```config_prod.py``` you **must** set **your** secret
+In the configuration file ```config.py``` you **must** set **your** secret
 keys:
 
 Here is an example for the Fernet hash key:

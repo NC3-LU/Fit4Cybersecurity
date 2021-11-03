@@ -24,15 +24,15 @@ class InitialStartForm(forms.Form):
 
         super().__init__(*args, **kwargs)
 
-        self.fields["sector"].label = _('What is your sector?')
+        self.fields["sector"].label = _("What is your sector?")
         self.fields["sector"].choices = sort_tuple_alphabetically(SECTOR_CHOICES, 1)
-        self.fields["compSize"].label = _('How many employees?')
+        self.fields["compSize"].label = _("How many employees?")
 
         self.fields["country"] = CountryField().formfield(
-            label= _('Please select your country'),
+            label=_("Please select your country"),
             required=True,
             initial="LU",
-            error_messages={"required": _('Please select your country')},
+            error_messages={"required": _("Please select your country")},
         )
         self.fields["country"].choices = COUNTRIES
 
@@ -76,7 +76,7 @@ class AnswerMChoice(forms.Form):
             )
 
         self.fields["answers"].error_messages = {
-            "required": _('You need to choose at least one answer')
+            "required": _("You need to choose at least one answer")
         }
 
         if tanswers is not None:
@@ -103,11 +103,9 @@ class AnswerMChoice(forms.Form):
                 )
 
         self.fields["feedback"] = forms.CharField(
-            label=_('Your feedback'),
+            label=_("Your feedback"),
             widget=forms.Textarea(
-                attrs={
-                    "placeholder": _('Please let us know if anything is missing')
-                }
+                attrs={"placeholder": _("Please let us know if anything is missing")}
             ),
             required=False,
         )
@@ -139,7 +137,9 @@ class AnswerMChoice(forms.Form):
                 answer_text = translation_key[0].text
 
                 raise forms.ValidationError(
-                    _('You can\'t choose multiple answers if the answer "%(value)s" is choosen'),
+                    _(
+                        'You can\'t choose multiple answers if the answer "%(value)s" is choosen'
+                    ),
                     params={"value": answer_text},
                 )
 
@@ -159,11 +159,9 @@ class GeneralFeedback(forms.Form):
         super().__init__(*args, **kwargs)
 
         self.fields["general_feedback"] = forms.CharField(
-            label=_('Your feedback'),
+            label=_("Your feedback"),
             widget=forms.Textarea(
-                attrs={
-                    "placeholder": _('Please let us know if anything is missing')
-                }
+                attrs={"placeholder": _("Please let us know if anything is missing")}
             ),
             required=True,
         )

@@ -41,9 +41,7 @@ SURVEY_STATUS_FINISHED = 3
 class TranslationKey(models.Model):
     key = models.CharField(max_length=32)
     text = models.TextField()
-    lang = models.CharField(
-        max_length=2, choices=LANGUAGES, default=LOCAL_DEFAULT_LANG
-    )
+    lang = models.CharField(max_length=2, choices=LANGUAGES, default=LOCAL_DEFAULT_LANG)
     ttype = models.CharField(
         max_length=1, choices=TRANSLATION_TYPES, default=TRANSLATION_TYPES[0][0]
     )

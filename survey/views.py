@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 from django.shortcuts import render
-from django.http import HttpResponse, HttpResponseRedirect
+from django.http import HttpResponse, HttpResponseRedirect, Http404
 from django.utils.translation import gettext as _
 from django import forms
 
@@ -12,7 +12,8 @@ from survey.viewLogic import (
     get_questions_with_user_answers,
     handle_general_feedback,
 )
-from survey.reporthelper import calculateResult, createAndSendReport, getRecommendations
+from survey.reporthelper import calculateResult, getRecommendations
+from survey.report import create_html_report, makepdf
 from survey.globals import MIN_ACCEPTABLE_SCORE
 from survey.models import SurveyUser, SURVEY_STATUS_FINISHED
 from django.contrib import messages
@@ -76,9 +77,9 @@ def change_lang(request, lang: str):
     translation.activate(lang)
     request.session[translation.LANGUAGE_SESSION_KEY] = lang
     user_id = request.session.get("user_id", None)
-    previous_path = request.META.get('HTTP_REFERER', "/")
+    previous_path = request.META.get("HTTP_REFERER", "/")
 
-    if previous_path.__contains__('/survey/start/'):
+    if previous_path.__contains__("/survey/start/"):
         return HttpResponseRedirect("/survey/start/" + lang)
 
     if user_id is None:
@@ -92,13 +93,13 @@ def change_lang(request, lang: str):
     user.choosen_lang = lang
     user.save()
 
-    if user.is_survey_in_progress() and previous_path.__contains__('/survey/question/'):
+    if user.is_survey_in_progress() and previous_path.__contains__("/survey/question/"):
         return HttpResponseRedirect("/survey/question/" + str(user.current_qindex))
 
-    if user.is_survey_under_review() and previous_path.__contains__('/survey/review'):
+    if user.is_survey_under_review() and previous_path.__contains__("/survey/review"):
         return HttpResponseRedirect("/survey/review")
 
-    if user.is_survey_finished() and previous_path.__contains__('/survey/finish'):
+    if user.is_survey_finished() and previous_path.__contains__("/survey/finish"):
         return HttpResponseRedirect("/survey/finish")
 
     return HttpResponseRedirect("/" + lang)
@@ -119,7 +120,14 @@ def show_report(request, lang):
         return HttpResponseRedirect("/")
 
     try:
-        return createAndSendReport(user, lang)
+        html_report = create_html_report(user, lang)
+        pdf_report = makepdf(html_report)
+        try:
+            response = HttpResponse(pdf_report, content_type="application/pdf")
+            response["Content-Disposition"] = 'attachment;filename="report.pdf"'
+            return response
+        except FileNotFoundError:
+            raise Http404()
     except Exception as e:
         messages.warning(request, e)
 
@@ -184,15 +192,15 @@ def finish(request):
         recommendations[rx] = [x.replace("\n", "<br>") for x in recommendations[rx]]
 
     textLayout = {
-        "title": CUSTOM["tool_name"] + " - " + _('Final summary'),
+        "title": CUSTOM["tool_name"] + " - " + _("Final summary"),
         "recommendations": recommendations,
         "user": user,
-        "userId" : str(crypter.encrypt(user_id.encode("utf-8"))),
+        "userId": str(crypter.encrypt(user_id.encode("utf-8"))),
         "reportlink": "/survey/report",
         "txtscore": txt_score,
         "string_score": str(txt_score),
         "chartTitles": str(sections_list),
-        "chartlabelYou": _('Your results'),
+        "chartlabelYou": _("Your results"),
         "chartdataYou": str(radar_current),
         "min_acceptable_score": MIN_ACCEPTABLE_SCORE,
         "general_feedback_form": handle_general_feedback(user, request),

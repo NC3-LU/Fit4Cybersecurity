@@ -177,7 +177,7 @@ def handle_question_answers_request(
     return {
         "title": CUSTOM["tool_name"]
         + " - "
-        + _('Question')
+        + _("Question")
         + " "
         + str(current_question.qindex),
         "question": TranslationKey.objects.filter(

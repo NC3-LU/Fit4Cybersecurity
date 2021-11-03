@@ -250,7 +250,7 @@ def createAndSendReport(user: SurveyUser, lang: str):
 
     doc.add_page_break()
 
-    doc.add_heading(_('Questions'), level=1)
+    doc.add_heading(_("Questions"), level=1)
 
     questions_translations = get_formatted_translations(lang, "Q")
     answers_translations = get_formatted_translations(lang, "A")
@@ -412,7 +412,7 @@ def generate_chart_png(user: SurveyUser, evaluation, sections_list, lang) -> str
     ax.set_varlabels(spoke_labels)
 
     ax.legend(
-        _('Your results'),
+        _("Your results"),
         loc=(0.9, 0.95),
         labelspacing=0.1,
         fontsize="small",
@@ -421,7 +421,7 @@ def generate_chart_png(user: SurveyUser, evaluation, sections_list, lang) -> str
     fig.text(
         1.0,
         1.0,
-        _('Your results chart'),
+        _("Your results chart"),
         horizontalalignment="center",
         color="black",
         weight="bold",

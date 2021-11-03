@@ -119,7 +119,9 @@ class Migration(migrations.Migration):
                 ("e_count", models.CharField(choices=COMPANY_SIZE, max_length=2)),
                 (
                     "chosenLang",
-                    models.CharField(choices=LANGUAGES, default=LOCAL_DEFAULT_LANG, max_length=2),
+                    models.CharField(
+                        choices=LANGUAGES, default=LOCAL_DEFAULT_LANG, max_length=2
+                    ),
                 ),
                 ("current_qindex", models.IntegerField(default=0)),
                 ("status", models.SmallIntegerField(default=SURVEY_STATUS_IN_PROGRESS)),
@@ -143,7 +145,9 @@ class Migration(migrations.Migration):
                 ("text", models.TextField()),
                 (
                     "lang",
-                    models.CharField(choices=LANGUAGES, default=LOCAL_DEFAULT_LANG, max_length=2),
+                    models.CharField(
+                        choices=LANGUAGES, default=LOCAL_DEFAULT_LANG, max_length=2
+                    ),
                 ),
                 (
                     "ttype",
