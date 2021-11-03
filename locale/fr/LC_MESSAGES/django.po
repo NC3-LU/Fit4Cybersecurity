@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-10-21 10:47+0000\n"
-"PO-Revision-Date: 2021-10-21 12:58+0000\n"
+"POT-Creation-Date: 2021-11-03 14:59+0000\n"
+"PO-Revision-Date: 2021-11-03 16:02+0100\n"
 "Last-Translator: Juan Rocha <juan.rocha@cases.lu>\n"
 "Language-Team: French <https://translate.monarc.lu/projects/"
 "Fit4Cybersecurity/fit4ilr/fr/>\n"
@@ -17,73 +17,188 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 4.9-dev\n"
+"X-Generator: Poedit 3.0\n"
 
-#: csskp/config_dev.py:25 csskp/config_prod.py:24
+#: csskp/config.py:25 csskp/config_dev.py:25
 msgid "Description from a string or a file."
 msgstr "Description à partir d'une chaîne de caractères ou d'un fichier."
 
-#: csskp/config_dev.py:26 csskp/config_prod.py:25
+#: csskp/config.py:26 csskp/config_dev.py:26
 msgid "/static/images/logoFull-en.png"
 msgstr "/static/images/logoFull-fr.png"
 
-#: csskp/settings.py:136
-msgid "English"
-msgstr "Anglais"
+#: survey/forms.py:27
+msgid "What is your sector?"
+msgstr "Quel est votre secteur ?"
 
-#: csskp/settings.py:137
-msgid "French"
-msgstr "Français"
+#: survey/forms.py:29
+msgid "How many employees?"
+msgstr "Combien d'employés ?"
 
-#: csskp/settings.py:138
-msgid "Deutsch"
-msgstr "Allemand"
+#: survey/forms.py:32 survey/forms.py:35
+msgid "Please select your country"
+msgstr "S'il vous plaît sélectionnez votre pays"
 
-#: survey/globals.py:81
-msgid "Your results link"
-msgstr "Votre lien de résultats"
+#: survey/forms.py:79
+msgid "You need to choose at least one answer"
+msgstr "Vous devez choisir au moins une réponse"
 
-#: survey/globals.py:82
-msgid "Get the results later"
-msgstr "Obtenez les résultats plus tard"
+#: survey/forms.py:106 survey/forms.py:162
+#: templates/survey/finishedSurvey.html:184
+#: templates/survey/finishedSurvey.html:191 templates/survey/review.html:43
+msgid "Your feedback"
+msgstr "Vos retours"
 
-#: survey/globals.py:84
+#: survey/forms.py:109 survey/forms.py:165
+msgid "Please let us know if anything is missing"
+msgstr "S'il vous plaît laissez-nous savoir si quelque chose est manquant"
+
+#: survey/forms.py:142
+#, python-format
 msgid ""
-"To restore the results later you can copy the provided link, create a "
-"bookmark or use the code on the main page:"
+"You can't choose multiple answers if the answer \"%(value)s\" is choosen"
 msgstr ""
-"Pour restaurer les résultats ultérieurement, vous pouvez copier le lien "
-"fourni, créer un signet ou utilisez le code sur la page principale :"
+"Vous ne pouvez pas choisir plusieurs réponses si la réponse \"%(value)s\" "
+"est choisie"
 
-#: survey/globals.py:86 survey/globals.py:157
+#: survey/globals.py:6
+msgid "Banking, insurance and real estate"
+msgstr "Banque, assurances et immobilier"
+
+#: survey/globals.py:7
+msgid "Trading, sales and mass distribution"
+msgstr "Commerce, vente et grande distribution"
+
+#: survey/globals.py:8
+msgid "Marketing, media and multimedia"
+msgstr "Communication, média et multimédia"
+
+#: survey/globals.py:9
+msgid "Construction industries and civil engineering"
+msgstr "Construction, bâtiment et travaux publics"
+
+#: survey/globals.py:10
+msgid "Hotel and restoration, tourism and entertainment"
+msgstr "Hôtellerie - restauration, tourisme, loisirs et animation"
+
+#: survey/globals.py:11
+msgid "Industry"
+msgstr "Industrie"
+
+#: survey/globals.py:12
+msgid "Installation and maintenance"
+msgstr "Installation et maintenance"
+
+#: survey/globals.py:13
+msgid "Creation or placing of objects that are artistic and decorative"
+msgstr "Réalisation ou placement d'objets artistiques et décoratifs"
+
+#: survey/globals.py:14
+msgid "Health"
+msgstr "Santé"
+
+#: survey/globals.py:15
+msgid "Home-Care Service or Community Service"
+msgstr "Services à la personne et à la collectivité"
+
+#: survey/globals.py:16
+msgid "Shows"
+msgstr "Spectacle"
+
+#: survey/globals.py:17
+msgid "Company Support"
+msgstr "Support à l'entreprise"
+
+#: survey/globals.py:18
+msgid "Transport and Logistics"
+msgstr "Transport et logistique"
+
+#: survey/globals.py:19
+msgid "Farming and fishing, natural spaces and green spaces, animal care"
+msgstr ""
+"Agriculture et pêche, espaces naturels et espaces verts, soins aux animaux"
+
+#: survey/globals.py:20
+msgid "Public administration"
+msgstr "Administration publique"
+
+#: survey/reporthelper.py:253
+msgid "Questions"
+msgstr "Questions"
+
+#: survey/reporthelper.py:415 survey/views.py:195
+msgid "Your results"
+msgstr "Vos résultats"
+
+#: survey/reporthelper.py:424
+msgid "Your results chart"
+msgstr "Votre tableau de résultats"
+
+#: survey/viewLogic.py:49
+msgid "Let's start"
+msgstr "Commençons"
+
+#: survey/viewLogic.py:180
+msgid "Question"
+msgstr "Question"
+
+#: survey/views.py:116
+msgid "To generate a report you have to finish the survey."
+msgstr "Pour générer un rapport vous devez finir l'enquête."
+
+#: survey/views.py:187
+msgid "Final summary"
+msgstr "Résumé final"
+
+#: survey/views.py:221
+msgid ""
+"We could not find a survey with the requested key, please start a new one."
+msgstr ""
+"Nous n'avons pas pu trouver un sondage avec la clé demandée, veuillez en "
+"commencer un nouveau."
+
+#: survey/views.py:251
+msgid "Feedback sending errors: "
+msgstr "Erreurs d'envoi du retour d'information : "
+
+#: templates/survey/base.html:20
+msgid "a CASES self-assessment tool!"
+msgstr "est un outil d’auto-évaluation CASES !"
+
+#: templates/survey/continue.html:4
+msgid "Continue the evaluation later"
+msgstr "Continuer l'évaluation plus tard"
+
+#: templates/survey/continue.html:9
+msgid ""
+"To continue the evaluation process later you can copy the provided link, "
+"create a bookmark or use the code to resume later on the main page:"
+msgstr ""
+"Pour continuer le processus d’évaluation plus tard, vous pouvez copier le "
+"lien fourni, créer un signet ou utiliser le code pour reprendre plus tard "
+"sur la page principale :"
+
+#: templates/survey/continue.html:23
 msgid "Download direct link"
 msgstr "Télécharger le lien direct"
 
-#: survey/globals.py:87 survey/globals.py:144 survey/globals.py:158
+#: templates/survey/continue.html:26 templates/survey/finishedSurvey.html:199
 msgid "Close"
 msgstr "Fermer"
 
-#: survey/globals.py:90
-msgid "Would like to leave the results page?"
-msgstr "Voulez vous quitter la page de résultats ?"
+#: templates/survey/finishedSurvey.html:42
+msgid "Report"
+msgstr "Rapport"
 
-#: survey/globals.py:91 survey/globals.py:171
-msgid "Yes"
-msgstr "Oui"
-
-#: survey/globals.py:92 survey/globals.py:172
-msgid "No"
-msgstr "Non"
-
-#: survey/globals.py:94
+#: templates/survey/finishedSurvey.html:49
 msgid "Download"
 msgstr "Téléchargement"
 
-#: survey/globals.py:95
+#: templates/survey/finishedSurvey.html:57
 msgid "Summary"
 msgstr "Résumé"
 
-#: survey/globals.py:97
+#: templates/survey/finishedSurvey.html:60
 msgid ""
 "This is the list of recommendations to improve the information security "
 "maturity in your company, provided that your answers did correctly reflect "
@@ -98,23 +213,31 @@ msgstr ""
 "le niveau de maturité de la sécurité de l'information. Par conséquent, nous "
 "ne sommes pas responsables des résultats de cette enquête."
 
-#: survey/globals.py:101
-msgid "final summary"
-msgstr "résumé final"
+#: templates/survey/finishedSurvey.html:71
+#, python-format
+msgid ""
+"Based on your score %(score)s, the CASES Diagnostic is not available for "
+"your organization at this moment. We recommend you improve the information "
+"security maturity level by implementing the recommendations listed below. If "
+"you need any information security training to raise awareness in your "
+"company, do not hesitate to"
+msgstr ""
+"Sur base de votre score de %(score)s, le diagnostic CASES n'est pas "
+"disponible pour votre organisation pour le moment. Nous vous recommandons "
+"d'améliorer le niveau de maturité de la sécurité de l'information en mettant "
+"en œuvre les recommandations ci-dessous. Si vous avez besoin d'une formation "
+"à la sécurité de l'information pour sensibiliser votre entreprise, n'hésitez "
+"pas à"
 
-#: survey/globals.py:102
-msgid "Your results"
-msgstr "Vos résultats"
+#: templates/survey/finishedSurvey.html:86
+msgid "Your results link"
+msgstr "Votre lien de résultats"
 
-#: survey/globals.py:103
-msgid "Your results chart"
-msgstr "Votre tableau de résultats"
-
-#: survey/globals.py:105
+#: templates/survey/finishedSurvey.html:94
 msgid "About the CASES Diagnostic"
 msgstr "À propos du Diagnostic CASES"
 
-#: survey/globals.py:107
+#: templates/survey/finishedSurvey.html:95
 msgid ""
 "The CASES Diagnostic is a service which analyses the company maturity in the "
 "information security depending on company's requirements. The analyse "
@@ -134,7 +257,7 @@ msgstr ""
 "maturité ainsi que des recommandations pour améliorer la maturité en la "
 "sécurité de l'information."
 
-#: survey/globals.py:114
+#: templates/survey/finishedSurvey.html:106
 msgid ""
 "The CASES Diagnostic is available for all the companies located in "
 "Luxembourg and free of charge."
@@ -142,102 +265,150 @@ msgstr ""
 "Le Diagnostic est gratuit et possible pour toute entreprise ayant des locaux "
 "au Luxembourg."
 
-#: survey/globals.py:116
+#: templates/survey/finishedSurvey.html:201
+msgid "Send"
+msgstr "Envoyer"
+
+#: templates/survey/index.html:17
+msgid "Welcome to the CASES self-assessment tool:"
+msgstr "Bienvenue dans l'outil d'auto-évaluation CASES :"
+
+#: templates/survey/index.html:26
+msgid "Start"
+msgstr "Démarrer"
+
+#: templates/survey/index.html:34
+msgid "Continue a previous survey"
+msgstr "Continuer une enquête précédente"
+
+#: templates/survey/leaveSurvey.html:5
+msgid "Would like to leave survey?"
+msgstr "Voulez vous quitter l'enquête ?"
+
+#: templates/survey/leaveSurvey.html:11
+msgid "Yes"
+msgstr "Oui"
+
+#: templates/survey/leaveSurvey.html:15
+msgid "No"
+msgstr "Non"
+
+#: templates/survey/questions.html:39
+msgid "Multiple answers are possible."
+msgstr "Plusieurs réponses sont possibles."
+
+#: templates/survey/questions.html:51
+msgid "Back"
+msgstr "Précédent"
+
+#: templates/survey/questions.html:59
+msgid "Cancel"
+msgstr "Annuler"
+
+#: templates/survey/questions.html:68 templates/survey/review.html:59
+msgid "Continue later"
+msgstr "Continuer plus tard"
+
+#: templates/survey/questions.html:73 templates/survey/start.html:32
+msgid "Next"
+msgstr "Suite"
+
+#: templates/survey/questions.html:73
+msgid "Modify"
+msgstr "Modifier"
+
+#: templates/survey/questions.html:82
+msgid "This text field should not be used to answer the question."
+msgstr ""
+"Ce champ de texte ne doit pas être utilisé pour répondre à la question."
+
+#: templates/survey/questions.html:85
+msgid ""
+"Please do not provide any sensitive or confidential information refering to "
+"your identity."
+msgstr ""
+"Veuillez ne fournir aucune donnée sensible ou confidentielle faisant "
+"référence à votre identité."
+
+#: templates/survey/requestDiagnosticLink.html:5
+#: templates/survey/requestDiagnosticLink.html:21
 msgid "Request diagnostic"
 msgstr "Demander un diagnostic"
 
-#: survey/globals.py:118
-#, python-brace-format
+#: templates/survey/requestDiagnosticLink.html:6
+#, python-format
 msgid ""
 "Dear Cases Team,\n"
 "\n"
 "We would like to request a Diagnostic CASES from you.\n"
 "\n"
-"Here is our evaluation results identifier: {userId}\n"
+"Here is our evaluation results identifier: %(userId)s\n"
 "\n"
-"Here also additional information that could be useful: \n"
-"Lastname of the contact: \n"
-"Firstname of the contact: \n"
-"Email address of the contact: \n"
-"Address of the company for the Diagnostic (Luxembourg only): \n"
-"Desired language for the Diagnostic: "
+"Here also additional information that could be useful:\n"
+"\n"
+"Lastname of the contact:\n"
+"Firstname of the contact:\n"
+"Email address of the contact:\n"
+"Address of the company for the Diagnostic (Luxembourg only):\n"
+"Desired language for the Diagnostic:\n"
 msgstr ""
 "À l'attention de l'équipe CASES,\n"
 "\n"
 "Nous aimerions planifier un Diagnostic CASES.\n"
 "\n"
-"Voici l'identifiant lié à notre évaluation : {userId}\n"
+"Voici l'identifiant lié à notre évaluation : %(userId)s\n"
 "\n"
 "Voici également les informations qui vous seront nécessaires : \n"
 "Nom du point de contact : \n"
 "Prénom du point de contact : \n"
 "Adresse mail du point de contact : \n"
 "Adresse de l'entreprise et du Diagnostic (Luxembourg uniquement) : \n"
-"Langue souhaitée du Diagnostic : "
+"Langue souhaitée du Diagnostic :\n"
 
-#: survey/globals.py:126
-#, python-brace-format
-msgid ""
-"Based on your score {score}, the CASES Diagnostic is not available for your "
-"organization at this moment. We recommend you improve the information "
-"security maturity level by implementing the recommendations listed below. If "
-"you need any information security training to raise awareness in your "
-"company, do not hesitate to "
-msgstr ""
-"Sur base de votre score de {score}, le diagnostic CASES n'est pas disponible "
-"pour votre organisation pour le moment. Nous vous recommandons d'améliorer "
-"le niveau de maturité de la sécurité de l'information en mettant en œuvre "
-"les recommandations ci-dessous. Si vous avez besoin d'une formation à la "
-"sécurité de l'information pour sensibiliser votre entreprise, n'hésitez pas "
-"à "
-
-#: survey/globals.py:130
-msgid "let us know."
-msgstr "nous le faire savoir."
-
-#: survey/globals.py:131
+#: templates/survey/requestTrainingLink.html:5
+#: templates/survey/requestTrainingLink.html:35
 msgid "Request training offer"
 msgstr "Demander une offre de formation"
 
-#: survey/globals.py:133
-#, python-brace-format
+#: templates/survey/requestTrainingLink.html:6
+#, python-format
 msgid ""
-"Dear Cases Team, \n"
+"Dear Cases Team,\n"
 "\n"
-"We would like an information about security awareness training offer. \n"
+"We would like an information about security awareness training offer.\n"
 "\n"
-"Here is our evaluation results identifier: {userId} \n"
+"Here is our evaluation results identifier: %(userId)s\n"
 "\n"
-"Here is also the information necessary to establish the offer: \n"
+"Here is also the information necessary to establish the offer:\n"
 "\n"
-"Contact details: \n"
-"- Name of the contact: \n"
-"- Email address of the contact: \n"
+"Contact details:\n"
+"    - Name of the contact:\n"
+"    - Email address of the contact:\n"
 "\n"
-"Organization: \n"
-"- Company Name: \n"
-"- Company address: \n"
-"- Postal code: \n"
-"- City: \n"
-"- VAT number (if applicable): \n"
+"Organization:\n"
+"    - Company Name:\n"
+"    - Company address:\n"
+"    - Postal code:\n"
+"    - City:\n"
+"    - VAT number (if applicable):\n"
 "\n"
-"Training: \n"
-"- Number of participants*: \n"
-"- Desired language(s) for the training(s): \n"
-"- Personalized topics to discuss: \n"
+"Training:\n"
+"    - Number of participants*:\n"
+"    - Desired language(s) for the training(s):\n"
+"    - Personalized topics to discuss:\n"
 "\n"
 "* For a number of people greater than 25, the training will be done in "
 "several installments, involving a higher cost.\n"
 msgstr ""
 "À l'attention de l'équipe CASES, \n"
 "\n"
-"Nous souhaitons une offre de sensibilisation à la sécurité de l'information."
+"Nous souhaitons une offre de sensibilisation à la sécurité de "
+"l'information.\n"
 "\n"
+"Voici l'identifiant lié à notre évaluation : %(userId)s\n"
 "\n"
-"Voici l'identifiant lié à notre évaluation : {userId}\n"
-"\n"
-"Voici également les informations nécessaires à l'établissement de l'offre : "
-"\n"
+"Voici également les informations nécessaires à l'établissement de "
+"l'offre : \n"
 "\n"
 "Point de contact : \n"
 "- Nom du point de contact : \n"
@@ -259,245 +430,43 @@ msgstr ""
 "*Pour un nombre de personnes supérieur à 25, la formation sera alors faite "
 "en plusieurs fois, impliquant un cout plus élevé.\n"
 
-#: survey/globals.py:142 survey/globals.py:146 survey/globals.py:229
-msgid "Your feedback"
-msgstr "Vos retours"
+#: templates/survey/requestTrainingLink.html:37
+msgid "let us know."
+msgstr "nous le faire savoir."
 
-#: survey/globals.py:143
-msgid "Please provide your feedback"
-msgstr "S'il vous plaît fournir vos commentaires"
-
-#: survey/globals.py:145
-msgid "Send"
-msgstr "Envoyer"
-
-#: survey/globals.py:147
-msgid "Please share your opinion about our tool"
-msgstr "S'il vous plaît partagez votre opinion sur notre outil"
-
-#: survey/globals.py:152
-msgid "Continue later"
-msgstr "Continuer plus tard"
-
-#: survey/globals.py:153
-msgid "Continue the evaluation later"
-msgstr "Continuer l'évaluation plus tard"
-
-#: survey/globals.py:155
-msgid ""
-"To continue the evaluation process later you can copy the provided link, "
-"create a bookmark or use the code to resume later on the main page:"
+#: templates/survey/resume.html:5
+msgid "Please insert your code to continue the survey or go to your results"
 msgstr ""
-"Pour continuer le processus d’évaluation plus tard, vous pouvez copier le "
-"lien fourni, créer un signet ou utiliser le code pour reprendre plus tard "
-"sur la page principale :"
+"Veuillez insérer votre code pour continuer l’enquête ou consulter vos "
+"résultats"
 
-#: survey/globals.py:160
-msgid "Next"
-msgstr "Suite"
+#: templates/survey/resume.html:16
+msgid "Confirm"
+msgstr "Confirmer"
 
-#: survey/globals.py:161
-msgid "Back"
-msgstr "Précédent"
+#: templates/survey/review.html:19
+msgid "Your answers review"
+msgstr "Votre aperçu des réponses"
 
-#: survey/globals.py:162
-msgid "Cancel"
-msgstr "Annuler"
+#: templates/survey/review.html:32
+msgid "Custom response"
+msgstr "Réponse personnalisée"
 
-#: survey/globals.py:163
-msgid "Modify"
-msgstr "Modifier"
+#: templates/survey/review.html:50
+msgid "Modify answers"
+msgstr "Modifier les réponses"
 
-#: survey/globals.py:165
+#: templates/survey/review.html:63
+msgid "Validate answers"
+msgstr "Valider les réponses"
+
+#: templates/survey/start.html:19
 msgid ""
 "We need a little information to be able to give you useful recommendations, "
 "once the self-assessment is done."
 msgstr ""
 "Nous avons besoin de quelques informations pour pouvoir vous faire des "
 "recommandations utiles, une fois l’auto-évaluation terminée."
-
-#: survey/globals.py:167
-msgid "Question"
-msgstr "Question"
-
-#: survey/globals.py:168
-msgid "Let's start"
-msgstr "Commençons"
-
-#: survey/globals.py:170
-msgid "Would like to leave survey?"
-msgstr "Voulez vous quitter l'enquête ?"
-
-#: survey/globals.py:174
-msgid "Multiple answers are possible."
-msgstr "Plusieurs réponses sont possibles."
-
-#: survey/globals.py:176
-msgid "This text field should not be used to answer the question."
-msgstr ""
-"Ce champ de texte ne doit pas être utilisé pour répondre à la question."
-
-#: survey/globals.py:179
-msgid ""
-"Please do not provide any sensitive or confidential information refering to "
-"your identity."
-msgstr ""
-"Veuillez ne fournir aucune donnée sensible ou confidentielle faisant "
-"référence à votre identité."
-
-#: survey/globals.py:183
-msgid "Your answers review"
-msgstr "Votre aperçu des réponses"
-
-#: survey/globals.py:184
-msgid "Modify answers"
-msgstr "Modifier les réponses"
-
-#: survey/globals.py:185
-msgid "Validate answers"
-msgstr "Valider les réponses"
-
-#: survey/globals.py:188
-msgid "Questions"
-msgstr "Questions"
-
-#: survey/globals.py:193
-msgid "You need to choose at least one answer"
-msgstr "Vous devez choisir au moins une réponse"
-
-#: survey/globals.py:195
-#, python-format
-msgid ""
-"You can't choose multiple answers if the answer \"%(value)s\" is choosen"
-msgstr ""
-"Vous ne pouvez pas choisir plusieurs réponses si la réponse \"%(value)s\" "
-"est choisie"
-
-#: survey/globals.py:200
-msgid "What is your sector?"
-msgstr "Quel est votre secteur ?"
-
-#: survey/globals.py:202
-msgid "Banking, insurance and real estate"
-msgstr "Banque, assurances et immobilier"
-
-#: survey/globals.py:203
-msgid "Trading, sales and mass distribution"
-msgstr "Commerce, vente et grande distribution"
-
-#: survey/globals.py:204
-msgid "Marketing, media and multimedia"
-msgstr "Communication, média et multimédia"
-
-#: survey/globals.py:205
-msgid "Construction industries and civil engineering"
-msgstr "Construction, bâtiment et travaux publics"
-
-#: survey/globals.py:206
-msgid "Hotel and restoration, tourism and entertainment"
-msgstr "Hôtellerie - restauration, tourisme, loisirs et animation"
-
-#: survey/globals.py:207
-msgid "Industry"
-msgstr "Industrie"
-
-#: survey/globals.py:208
-msgid "Installation and maintenance"
-msgstr "Installation et maintenance"
-
-#: survey/globals.py:210
-msgid "Creation or placing of objects that are artistic and decorative"
-msgstr "Réalisation ou placement d'objets artistiques et décoratifs"
-
-#: survey/globals.py:212
-msgid "Health"
-msgstr "Santé"
-
-#: survey/globals.py:213
-msgid "Home-Care Service or Community Service"
-msgstr "Services à la personne et à la collectivité"
-
-#: survey/globals.py:214
-msgid "Shows"
-msgstr "Spectacle"
-
-#: survey/globals.py:215
-msgid "Company Support"
-msgstr "Support à l'entreprise"
-
-#: survey/globals.py:216
-msgid "Transport and Logistics"
-msgstr "Transport et logistique"
-
-#: survey/globals.py:218
-msgid "Farming and fishing, natural spaces and green spaces, animal care"
-msgstr ""
-"Agriculture et pêche, espaces naturels et espaces verts, soins aux animaux"
-
-#: survey/globals.py:220
-msgid "Public administration"
-msgstr "Administration publique"
-
-#: survey/globals.py:222
-msgid "How many employees?"
-msgstr "Combien d'employés ?"
-
-#: survey/globals.py:224 survey/globals.py:225
-msgid "Please select your country"
-msgstr "S'il vous plaît sélectionnez votre pays"
-
-#: survey/globals.py:231
-msgid "Please let us know if anything is missing"
-msgstr "S'il vous plaît laissez-nous savoir si quelque chose est manquant"
-
-#: survey/globals.py:233
-msgid "Custom response"
-msgstr "Réponse personnalisée"
-
-#: survey/views.py:105
-msgid "To generate a report you have to finish the survey."
-msgstr "Pour générer un rapport vous devez finir l'enquête."
-
-#: survey/views.py:295
-msgid ""
-"We could not find a survey with the requested key, please start a new one."
-msgstr ""
-"Nous n'avons pas pu trouver un sondage avec la clé demandée, veuillez en "
-"commencer un nouveau."
-
-#: survey/views.py:325
-msgid "Feedback sending errors: "
-msgstr "Erreurs d'envoi du retour d'information : "
-
-#: templates/survey/base.html:18
-msgid "a CASES self-assessment tool!"
-msgstr "est un outil d’auto-évaluation CASES !"
-
-#: templates/survey/finishedSurvey.html:50
-msgid "Report"
-msgstr "Rapport"
-
-#: templates/survey/index.html:17
-msgid "Welcome to the CASES self-assessment tool:"
-msgstr "Bienvenue dans l'outil d'auto-évaluation CASES :"
-
-#: templates/survey/index.html:31
-msgid "Start"
-msgstr "Démarrer"
-
-#: templates/survey/index.html:40
-msgid "Continue a previous survey"
-msgstr "Continuer une enquête précédente"
-
-#: templates/survey/resume.html:4
-msgid "Please insert your code to continue the survey or go to your results"
-msgstr ""
-"Veuillez insérer votre code pour continuer l’enquête ou consulter vos "
-"résultats"
-
-#: templates/survey/resume.html:13
-msgid "Confirm"
-msgstr "Confirmer"
 
 #: templates_parts/footer_part.html:8 templates_parts/footer_part.html:9
 msgid "A service provided by CASES.LU"
@@ -512,13 +481,39 @@ msgid "Version of"
 msgstr "Version de"
 
 #: templates_parts/footer_part.html:27
-msgid "Terms of service"
-msgstr "Conditions d'utilisation"
-
-#: templates_parts/footer_part.html:27
 msgid "Terms of Service"
 msgstr "Conditions d'utilisation"
 
-#: templates_parts/logo_part.html:2
-msgid "images/logoFull-en.png"
-msgstr "images/logoFull-fr.png"
+#~ msgid "English"
+#~ msgstr "Anglais"
+
+#~ msgid "French"
+#~ msgstr "Français"
+
+#~ msgid "Deutsch"
+#~ msgstr "Allemand"
+
+#~ msgid "Get the results later"
+#~ msgstr "Obtenez les résultats plus tard"
+
+#~ msgid ""
+#~ "To restore the results later you can copy the provided link, create a "
+#~ "bookmark or use the code on the main page:"
+#~ msgstr ""
+#~ "Pour restaurer les résultats ultérieurement, vous pouvez copier le lien "
+#~ "fourni, créer un signet ou utilisez le code sur la page principale :"
+
+#~ msgid "Would like to leave the results page?"
+#~ msgstr "Voulez vous quitter la page de résultats ?"
+
+#~ msgid "Please provide your feedback"
+#~ msgstr "S'il vous plaît fournir vos commentaires"
+
+#~ msgid "Please share your opinion about our tool"
+#~ msgstr "S'il vous plaît partagez votre opinion sur notre outil"
+
+#~ msgid "Terms of service"
+#~ msgstr "Conditions d'utilisation"
+
+#~ msgid "images/logoFull-en.png"
+#~ msgstr "images/logoFull-fr.png"
