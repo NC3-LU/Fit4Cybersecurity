@@ -7,27 +7,32 @@
 {% block bootstrap4_extra_head %}
     {{ block.super }}
     <link rel="stylesheet" type="text/css" href="{% static "survey/css/survey-index.css" %}" />
-
     <script type="text/javascript" src="{% static "survey/js/survey-index.js" %}"></script>
 {% endblock %}
 
 {% block content %}
     <div class="d-flex flex-row align-items-center px-3">
         <div class="p-2 flex-grow-1 text-justify">
-            <h5>{{ _('Welcome to the CASES self-assessment tool:') }} {{ custom.tool_name }}.</h5>
+            <h5>
+                {{ _('Welcome to the CASES self-assessment tool:') }} {{ custom.tool_name }}.
+            </h5>
             {{ custom.intro_text }}
         </div>
     </div>
 
     <div class="col px-2 py-4 text-center">
         <a href="/survey/start/{{ LANGUAGE_CODE }}">
-            <button class="btn border border-rounded btn-primary" type="button">{{ _('Start') }}</button>
+            <button class="btn border border-rounded btn-primary" type="button">
+                {{ _('Start') }}
+            </button>
         </a>
     </div>
 
     <div class="row py-3">
         <div class="col">
-            <button class="btn btn-link" type="button" name="resume-show-popup" data-toggle="modal" data-target="#modal" data-tooltip>{{ _('Continue a previous survey') }}</button>
+            <button class="btn btn-link" type="button" name="resume-show-popup" data-toggle="modal" data-target="#modal" data-tooltip>
+                {{ _('Continue a previous survey') }}
+            </button>
         </div>
     </div>
 

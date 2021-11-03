@@ -1,7 +1,9 @@
 <div class="modal fade" tabindex="-1" role="dialog" id="modal" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-header">
-            <h4>{{ _('Please insert your code to continue the survey or go to your results') }}</h4>
+            <h4>
+                {{ _('Please insert your code to continue the survey or go to your results') }}
+            </h4>
         </div>
         <div class="modal-content">
             <input type="text"
@@ -10,7 +12,9 @@
                    value=""
                    data-link="{% if request.is_secure %}https{% else %}http{% endif %}://{{ request.get_host }}/survey/resume/"
             />
-            <button disabled id="resume-code-submit" class="btn btn-link" type="button">{{ _('Confirm') }}</button>
+            <button disabled id="resume-code-submit" class="btn btn-link" type="button">
+                {{ _('Confirm') }}
+            </button>
         </div>
     </div>
 </div>

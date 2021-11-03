@@ -1,7 +1,21 @@
+{% load i18n %}
+
 <a
-    class="{% if type == 'button' %}btn btn-success{% else %}text-success{% endif %} send-email-to-cases"
-    data-subject="{{ translations.request_diagnostic.email_subject }}"
-    data-body="{{ translations.request_diagnostic.email_body }}"
-    data-user-id="{{ user.user_id }}"
-    href="#"
->{{ translations.request_diagnostic.email_subject }}</a>
+class="{% if type == 'button' %}btn btn-success{% else %}text-success{% endif %} send-email-to-cases"
+data-subject="{{ _('Request diagnostic') }}"
+data-body="{% blocktranslate with userId=userId %}Dear Cases Team,
+
+We would like to request a Diagnostic CASES from you.
+
+Here is our evaluation results identifier: {{ userId }}
+
+Here also additional information that could be useful:
+
+Lastname of the contact:
+Firstname of the contact:
+Email address of the contact:
+Address of the company for the Diagnostic (Luxembourg only):
+Desired language for the Diagnostic:
+{% endblocktranslate  %}"
+href="#"
+>{{ _('Request diagnostic') }}</a>

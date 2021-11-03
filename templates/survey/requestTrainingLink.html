@@ -1,7 +1,39 @@
+{% load i18n %}
+
 <a
-    class="{% if type == 'button' %}btn btn-success{% else %}text-success{% endif %} send-email-to-cases"
-    data-subject="{{ translations.request_training.email_subject }}"
-    data-body="{{ translations.request_training.email_body }}"
-    data-user-id="{{ user.user_id }}"
-    href="#"
->{% if type == 'button' %}{{ translations.request_training.email_subject }}{% else %}{{ translations.request_training.let_us_know }}{% endif %}</a>
+class="{% if type == 'button' %}btn btn-success{% else %}text-success{% endif %} send-email-to-cases"
+data-subject="{{ _('Request training offer') }}"
+data-body="{% blocktranslate with userId=userId %}Dear Cases Team,
+
+We would like an information about security awareness training offer.
+
+Here is our evaluation results identifier: {{ userId }}
+
+Here is also the information necessary to establish the offer:
+
+Contact details:
+    - Name of the contact:
+    - Email address of the contact:
+
+Organization:
+    - Company Name:
+    - Company address:
+    - Postal code:
+    - City:
+    - VAT number (if applicable):
+
+Training:
+    - Number of participants*:
+    - Desired language(s) for the training(s):
+    - Personalized topics to discuss:
+
+* For a number of people greater than 25, the training will be done in several installments, involving a higher cost.
+{% endblocktranslate  %}"
+href="#"
+>
+{% if type == 'button' %}
+    {{ _('Request training offer') }}
+{% else %}
+    {{ _('let us know.') }}
+{% endif %}
+</a>

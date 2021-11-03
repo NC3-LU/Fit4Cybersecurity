@@ -13,7 +13,7 @@ from survey.viewLogic import (
     handle_general_feedback,
 )
 from survey.reporthelper import calculateResult, createAndSendReport, getRecommendations
-from survey.globals import TRANSLATION_UI, MIN_ACCEPTABLE_SCORE
+from survey.globals import MIN_ACCEPTABLE_SCORE
 from survey.models import SurveyUser, SURVEY_STATUS_FINISHED
 from django.contrib import messages
 from django.utils import translation
@@ -43,8 +43,6 @@ def start(request, lang="EN"):
         messages.error(request, e)
         return HttpResponseRedirect("/")
 
-    add_form_translations(form_data, "question")
-
     return render(request, "survey/start.html", context=form_data)
 
 
@@ -70,8 +68,6 @@ def handle_question_form(request, question_index: int):
             return HttpResponseRedirect("/survey/review" + review_ancher)
 
         return HttpResponseRedirect("/survey/question/" + str(result.current_qindex))
-
-    add_form_translations(result, "question")
 
     return render(request, "survey/questions.html", context=result)
 
@@ -99,10 +95,10 @@ def change_lang(request, lang: str):
     if user.is_survey_in_progress() and previous_path.__contains__('/survey/question/'):
         return HttpResponseRedirect("/survey/question/" + str(user.current_qindex))
 
-    if user.is_survey_under_review() and previous_path.__contains__('/survey/review/'):
+    if user.is_survey_under_review() and previous_path.__contains__('/survey/review'):
         return HttpResponseRedirect("/survey/review")
 
-    if user.is_survey_finished() and previous_path.__contains__('/survey/finish/'):
+    if user.is_survey_finished() and previous_path.__contains__('/survey/finish'):
         return HttpResponseRedirect("/survey/finish")
 
     return HttpResponseRedirect("/" + lang)
@@ -157,37 +153,13 @@ def review(request):
         "questions_with_user_answers": questions_with_user_answers,
         "form": forms.Form(),
         "user": user,
-        "translations": {
-            "title": TRANSLATION_UI["review"]["title"],
-            "validate_answers_button": TRANSLATION_UI["review"][
-                "validate_answers_button"
-            ],
-            "modify_button": TRANSLATION_UI["review"]["modify_button"],
-            "feedback_label": TRANSLATION_UI["form"]["questions"]["feedback_label"],
-            "custom_response": TRANSLATION_UI["form"]["questions"]["custom_response"],
-            "continue_later": {
-                "button": TRANSLATION_UI["question"]["continue_later"]["button"],
-                "title": TRANSLATION_UI["question"]["continue_later"]["title"],
-                "text": TRANSLATION_UI["question"]["continue_later"]["text"],
-                "button_download": TRANSLATION_UI["question"]["continue_later"][
-                    "button_download"
-                ],
-                "button_close": TRANSLATION_UI["question"]["continue_later"][
-                    "button_close"
-                ],
-            },
-            "leave_survey": {
-                "title": TRANSLATION_UI["question"]["leave_survey"]["title"],
-                "yes": TRANSLATION_UI["question"]["leave_survey"]["yes"],
-                "no": TRANSLATION_UI["question"]["leave_survey"]["no"],
-            },
-        },
     }
 
     return render(request, "survey/review.html", context=textLayout)
 
 
 def finish(request):
+    crypter = Fernet(HASH_KEY)
     user_id = request.session.get("user_id", None)
     if user_id is None:
         return HttpResponseRedirect("/")
@@ -206,59 +178,24 @@ def finish(request):
 
     txt_score, radar_current, sections_list = calculateResult(user, user_lang)
 
-    diagnostic_email_body = TRANSLATION_UI["report"]["request_diagnostic"]["email_body"]
-
     recommendations = getRecommendations(user, user_lang)
     # To properly display breaking lines \n on html page.
     for rx in recommendations:
         recommendations[rx] = [x.replace("\n", "<br>") for x in recommendations[rx]]
 
     textLayout = {
-        "title": CUSTOM["tool_name"] + " - " + TRANSLATION_UI["report"]["title"],
-        "description": TRANSLATION_UI["report"]["description"],
+        "title": CUSTOM["tool_name"] + " - " + _('Final summary'),
         "recommendations": recommendations,
         "user": user,
+        "userId" : str(crypter.encrypt(user_id.encode("utf-8"))),
         "reportlink": "/survey/report",
         "txtscore": txt_score,
+        "string_score": str(txt_score),
         "chartTitles": str(sections_list),
-        "chartlabelYou": TRANSLATION_UI["report"]["result"],
+        "chartlabelYou": _('Your results'),
         "chartdataYou": str(radar_current),
         "min_acceptable_score": MIN_ACCEPTABLE_SCORE,
         "general_feedback_form": handle_general_feedback(user, request),
-    }
-
-    add_form_translations(textLayout, "report")
-
-    crypter = Fernet(HASH_KEY)
-
-    textLayout["translations"]["request_diagnostic"] = {
-        "title": TRANSLATION_UI["report"]["request_diagnostic"]["title"],
-        "description": TRANSLATION_UI["report"]["request_diagnostic"]["description"],
-        "service_fee": TRANSLATION_UI["report"]["request_diagnostic"]["service_fee"],
-        "email_subject": TRANSLATION_UI["report"]["request_diagnostic"][
-            "email_subject"
-        ],
-        "email_body": diagnostic_email_body.replace(
-            "{userId}", str(crypter.encrypt(user_id.encode("utf-8")))
-        ),
-    }
-    textLayout["translations"]["request_training"] = {
-        "description": TRANSLATION_UI["report"]["request_training"][
-            "description"
-        ].replace("{score}", str(txt_score) + "/100"),
-        "let_us_know": TRANSLATION_UI["report"]["request_training"]["let_us_know"],
-        "email_subject": TRANSLATION_UI["report"]["request_training"]["email_subject"],
-        "email_body": TRANSLATION_UI["report"]["request_training"][
-            "email_body"
-        ].replace("{userId}", str(crypter.encrypt(user_id.encode("utf-8")))),
-    }
-    textLayout["translations"]["txtdownload"] = TRANSLATION_UI["report"]["download"]
-    textLayout["translations"]["txtreport"] = TRANSLATION_UI["report"]["report"]
-    textLayout["translations"]["general_feedback"] = {
-        "button": TRANSLATION_UI["report"]["general_feedback"]["button"],
-        "title": TRANSLATION_UI["report"]["general_feedback"]["title"],
-        "button_close": TRANSLATION_UI["report"]["general_feedback"]["button_close"],
-        "button_send": TRANSLATION_UI["report"]["general_feedback"]["button_send"],
     }
 
     return render(request, "survey/finishedSurvey.html", context=textLayout)
@@ -323,48 +260,6 @@ def save_general_feedback(request):
         return HttpResponseRedirect("/survey/review")
 
     return HttpResponseRedirect("/")
-
-
-def add_form_translations(data, topic="question"):
-    data["translations"] = {
-        "continue_later": {
-            "button": TRANSLATION_UI[topic]["continue_later"]["button"],
-            "title": TRANSLATION_UI[topic]["continue_later"]["title"],
-            "text": TRANSLATION_UI[topic]["continue_later"]["text"],
-            "button_download": TRANSLATION_UI[topic]["continue_later"][
-                "button_download"
-            ],
-            "button_close": TRANSLATION_UI[topic]["continue_later"]["button_close"],
-        },
-        "leave_survey": {
-            "title": TRANSLATION_UI[topic]["leave_survey"]["title"],
-            "yes": TRANSLATION_UI[topic]["leave_survey"]["yes"],
-            "no": TRANSLATION_UI[topic]["leave_survey"]["no"],
-        },
-    }
-
-    if "next_button" in TRANSLATION_UI[topic]:
-        data["translations"]["next_button"] = TRANSLATION_UI[topic]["next_button"]
-    if "back_button" in TRANSLATION_UI[topic]:
-        data["translations"]["back_button"] = TRANSLATION_UI[topic]["back_button"]
-    if "modify_button" in TRANSLATION_UI[topic]:
-        data["translations"]["modify_button"] = TRANSLATION_UI[topic]["modify_button"]
-    if "cancel_button" in TRANSLATION_UI[topic]:
-        data["translations"]["cancel_button"] = TRANSLATION_UI[topic]["cancel_button"]
-    if "select_multi_descr" in TRANSLATION_UI[topic]:
-        data["translations"]["select_multi_descr"] = TRANSLATION_UI[topic][
-            "select_multi_descr"
-        ]
-    if (
-        "feedback_descr1" in TRANSLATION_UI[topic]
-        and "feedback_descr2" in TRANSLATION_UI[topic]
-    ):
-        data["translations"]["feedback_descr1"] = TRANSLATION_UI[topic][
-            "feedback_descr1"
-        ]
-        data["translations"]["feedback_descr2"] = TRANSLATION_UI[topic][
-            "feedback_descr2"
-        ]
 
 
 def get_terms(request):
