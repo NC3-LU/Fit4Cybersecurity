@@ -27,10 +27,9 @@ CUSTOM = {
     "countries_first": [],
     "defaultLanguage": "en",
     "languages": [
-        ("en", gettext_lazy("English")),
-        ("fr", gettext_lazy("French")),
-        ("de", gettext_lazy("German")),
-
+        ("en", "English"),
+        ("fr", "French"),
+        ("de", "German"),
     ],
     # Custom parts of templates
     #   main dir for PARTS_TEMPLATE_DIR:
