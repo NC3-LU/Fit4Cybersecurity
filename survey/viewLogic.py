@@ -3,6 +3,7 @@
 from typing import Union, List, Dict, Tuple
 from uuid import UUID
 from django.http import HttpRequest
+from django.utils.translation import gettext_lazy as _
 from django.utils.html import format_html, mark_safe
 from django.db import transaction
 from django.utils import translation
@@ -17,7 +18,6 @@ from survey.models import (
     SURVEY_STATUS_UNDER_REVIEW,
 )
 from survey.forms import InitialStartForm, AnswerMChoice, GeneralFeedback
-from survey.globals import TRANSLATION_UI
 from survey.reporthelper import get_formatted_translations
 from csskp.settings import CUSTOM, LANGUAGES, LANGUAGE_CODE
 
@@ -46,8 +46,7 @@ def create_user(lang: str, sector: str, company_size: str, country: str) -> Surv
 
 def handle_start_survey(request: HttpRequest, lang: str) -> Union[Dict, SurveyUser]:
     action = "/survey/start/" + lang
-    question = TRANSLATION_UI["question"]["description"]
-    title = CUSTOM["tool_name"] + " - " + TRANSLATION_UI["question"]["title"]
+    title = CUSTOM["tool_name"] + " - " + _("Let's start")
 
     translation.activate(lang)
     request.session[translation.LANGUAGE_SESSION_KEY] = lang
@@ -68,7 +67,6 @@ def handle_start_survey(request: HttpRequest, lang: str) -> Union[Dict, SurveyUs
 
     return {
         "title": title,
-        "question": question,
         "form": form,
         "action": action,
         "choosen_lang": lang,
@@ -179,7 +177,7 @@ def handle_question_answers_request(
     return {
         "title": CUSTOM["tool_name"]
         + " - "
-        + TRANSLATION_UI["question"]["question"]
+        + _('Question')
         + " "
         + str(current_question.qindex),
         "question": TranslationKey.objects.filter(

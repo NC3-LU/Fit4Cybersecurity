@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 
 from django import forms
-
-from survey.globals import SECTOR_CHOICES, COMPANY_SIZE, TRANSLATION_UI, COUNTRIES
+from django.utils.translation import gettext_lazy as _
+from survey.globals import SECTOR_CHOICES, COMPANY_SIZE, COUNTRIES
 from survey.models import SurveyQuestionAnswer, TranslationKey
 from django_countries.fields import CountryField
 
@@ -24,34 +24,15 @@ class InitialStartForm(forms.Form):
 
         super().__init__(*args, **kwargs)
 
-        self.fields["sector"].label = TRANSLATION_UI["form"]["start_form"][
-            "sector_question"
-        ]
-        sectors = []
-        for sector_choise in SECTOR_CHOICES:
-            sectors.append(
-                (
-                    sector_choise[0],
-                    TRANSLATION_UI["form"]["start_form"]["sector_list"][
-                        sector_choise[0]
-                    ],
-                )
-            )
+        self.fields["sector"].label = _('What is your sector?')
+        self.fields["sector"].choices = sort_tuple_alphabetically(SECTOR_CHOICES, 1)
+        self.fields["compSize"].label = _('How many employees?')
 
-        self.fields["sector"].choices = sort_tuple_alphabetically(sectors, 1)
-        self.fields["compSize"].label = TRANSLATION_UI["form"]["start_form"][
-            "size_question"
-        ]
-
-        country_label = TRANSLATION_UI["form"]["start_form"]["country"]["label"]
-        required_error_message = TRANSLATION_UI["form"]["start_form"]["country"][
-            "required_error_message"
-        ]
         self.fields["country"] = CountryField().formfield(
-            label=country_label,
+            label= _('Please select your country'),
             required=True,
             initial="LU",
-            error_messages={"required": required_error_message},
+            error_messages={"required": _('Please select your country')},
         )
         self.fields["country"].choices = COUNTRIES
 
@@ -95,7 +76,7 @@ class AnswerMChoice(forms.Form):
             )
 
         self.fields["answers"].error_messages = {
-            "required": TRANSLATION_UI["form"]["error_messages"]["answer"]["required"]
+            "required": _('You need to choose at least one answer')
         }
 
         if tanswers is not None:
@@ -122,12 +103,10 @@ class AnswerMChoice(forms.Form):
                 )
 
         self.fields["feedback"] = forms.CharField(
-            label=TRANSLATION_UI["form"]["questions"]["feedback_label"],
+            label=_('Your feedback'),
             widget=forms.Textarea(
                 attrs={
-                    "placeholder": TRANSLATION_UI["form"]["questions"][
-                        "feedback_placeholder"
-                    ]
+                    "placeholder": _('Please let us know if anything is missing')
                 }
             ),
             required=False,
@@ -160,7 +139,7 @@ class AnswerMChoice(forms.Form):
                 answer_text = translation_key[0].text
 
                 raise forms.ValidationError(
-                    TRANSLATION_UI["form"]["error_messages"]["answer"]["unique"],
+                    _('You can\'t choose multiple answers if the answer "%(value)s" is choosen'),
                     params={"value": answer_text},
                 )
 
@@ -180,12 +159,10 @@ class GeneralFeedback(forms.Form):
         super().__init__(*args, **kwargs)
 
         self.fields["general_feedback"] = forms.CharField(
-            label=TRANSLATION_UI["report"]["general_feedback"]["label"],
+            label=_('Your feedback'),
             widget=forms.Textarea(
                 attrs={
-                    "placeholder": TRANSLATION_UI["report"]["general_feedback"][
-                        "placeholder"
-                    ]
+                    "placeholder": _('Please let us know if anything is missing')
                 }
             ),
             required=True,
