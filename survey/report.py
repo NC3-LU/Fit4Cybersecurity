@@ -6,8 +6,9 @@ from weasyprint import HTML, CSS
 from jinja2 import Environment, FileSystemLoader
 
 from django.conf import settings
+from django.utils.translation import gettext as _
 from survey.models import SurveyUser
-from csskp.settings import CUSTOM, REPORT_TEMPLATE_DIR, BASE_DIR
+from csskp.settings import CUSTOM
 from survey.reporthelper import generate_chart_png, calculateResult, getRecommendations  # temporary imports
 
 from django.utils.translation import gettext, ngettext
@@ -48,9 +49,9 @@ def create_html_report(user: SurveyUser, lang: str) -> str:
     env = environment()
     template = env.get_template("template.html")
 
-    cases_logo = REPORT_TEMPLATE_DIR + "images/cases_logo.svg"
-    secin_logo = REPORT_TEMPLATE_DIR + "images/secin_logo.svg"
-    tool_logo = os.path.abspath(BASE_DIR + CUSTOM["logoFull"])
+    cases_logo = os.path.abspath(os.path.join(settings.REPORT_TEMPLATE_DIR, "images/cases_logo.svg"))
+    secin_logo = os.path.abspath(os.path.join(settings.REPORT_TEMPLATE_DIR, "images/secin_logo.svg"))
+    tool_logo = os.path.abspath(os.path.join(settings.BASE_DIR, CUSTOM["logoFull"]))
 
     # Calculate the result
     score, details, section_list = calculateResult(user, lang)
@@ -67,7 +68,7 @@ def create_html_report(user: SurveyUser, lang: str) -> str:
 
     # Render the HTML file
     output_from_parsed_template = template.render(
-        REPORT_TITLE="Fit4Cybersecurity report",
+        REPORT_TITLE= _("Final report"),
         DATE=datetime.today(),
         SURVEY_USER=user,
         CHART=chart_png_base64,
@@ -83,5 +84,5 @@ def create_html_report(user: SurveyUser, lang: str) -> str:
 def makepdf(html: str) -> bytes:
     """Generate a PDF file from a string of HTML."""
     htmldoc = HTML(string=html)
-    stylesheets = [CSS(REPORT_TEMPLATE_DIR + "css/custom.css")]
+    stylesheets = [CSS(os.path.abspath(os.path.join(settings.REPORT_TEMPLATE_DIR, "css/custom.css")))]
     return htmldoc.write_pdf(stylesheets=stylesheets)
