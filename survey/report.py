@@ -7,7 +7,7 @@ from jinja2 import Environment, FileSystemLoader
 
 from django.conf import settings
 from survey.models import SurveyUser
-from csskp.settings import CUSTOM, WORD_TEMPLATES_DIR, BASE_DIR
+from csskp.settings import CUSTOM, REPORT_TEMPLATE_DIR, BASE_DIR
 from survey.reporthelper import generate_chart_png, calculateResult, getRecommendations  # temporary imports
 
 from django.utils.translation import gettext, ngettext
@@ -27,7 +27,7 @@ def format_datetime(value: str, format: str = 'medium') -> str:
 def environment() -> Environment:
     """Define an environment for Jinja, adds the i18n extension, the filters
     and make available the variable CUSTOM."""
-    filepath = os.path.join(settings.BASE_DIR, settings.WORD_TEMPLATES_DIR)
+    filepath = os.path.join(settings.BASE_DIR, settings.REPORT_TEMPLATE_DIR)
     # i18n extension
     options = {}
     options["extensions"] = [
@@ -48,9 +48,9 @@ def create_html_report(user: SurveyUser, lang: str) -> str:
     env = environment()
     template = env.get_template("template.html")
 
-    cases_logo = os.path.abspath(BASE_DIR + "/static/images/cases_logo.png")
+    cases_logo = REPORT_TEMPLATE_DIR + "images/cases_logo.svg"
+    secin_logo = REPORT_TEMPLATE_DIR + "static/images/cases_logo.svg"
     tool_logo = os.path.abspath(BASE_DIR + CUSTOM["logoFull"])
-    print(tool_logo)
 
     # Calculate the result
     score, details, section_list = calculateResult(user, lang)
@@ -73,6 +73,7 @@ def create_html_report(user: SurveyUser, lang: str) -> str:
         CHART=chart_png_base64,
         recommendations=recommendationList,
         CASES_LOGO=cases_logo,
+        SECIN_LOGO=secin_logo,
         TOOL_LOGO=tool_logo,
     )
 
@@ -82,5 +83,5 @@ def create_html_report(user: SurveyUser, lang: str) -> str:
 def makepdf(html: str) -> bytes:
     """Generate a PDF file from a string of HTML."""
     htmldoc = HTML(string=html)
-    stylesheets = [CSS(WORD_TEMPLATES_DIR + "/custom.css")]
+    stylesheets = [CSS(REPORT_TEMPLATE_DIR + "css/custom.css")]
     return htmldoc.write_pdf(stylesheets=stylesheets)

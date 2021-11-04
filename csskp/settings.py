@@ -33,7 +33,7 @@ PARTS_TEMPLATE_DIR = os.path.join(
 STATIC_DIR = os.path.join(BASE_DIR, "static")
 
 PICTURE_DIR = "/tmp/csskp/"
-WORD_TEMPLATES_DIR = config.WORD_TEMPLATES_DIR
+REPORT_TEMPLATE_DIR = config.REPORT_TEMPLATE_DIR
 
 
 # Quick-start development settings - unsuitable for production

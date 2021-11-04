@@ -23,6 +23,7 @@ CUSTOM = {
     # Generic configurations
     "tool_name": "<TOOL_NAME>",
     "intro_text": gettext_lazy("Description from a string or a file."),
+    "logoFull": "/static/images/logoFull-en.png",
     "countries_first": [],
     "defaultLanguage": "en",
     "languages": [
@@ -48,7 +49,7 @@ CUSTOM = {
     },
 }
 
-WORD_TEMPLATES_DIR = "./wtemps"
+REPORT_TEMPLATE_DIR = "./wtemps"
 
 # Logging mechanism
 LOGGING = {
