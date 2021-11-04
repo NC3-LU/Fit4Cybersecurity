@@ -24,20 +24,19 @@
 
         <img class="footer" style="width:30%" src="file:{{ SECIN_LOGO }}" />
         <img class="footer" style="right: 0; width:40%" src="file:{{ CASES_LOGO }}" />
-
-
-
-
         <p class="page-break" ></p>
-        <h2>{{ _('Summary') }}</h2>
 
+
+        <h2>{{ _('Summary') }}</h2>
         <img
           class="imgLogo"
           align="center"
           src="data:image/png;base64,{{ CHART }}" />
 
 
-        <p class="page-break" ></p>
+        {% include 'footer.html' %}
+
+
         <h2>{{ _('Recommendations') }}</h2>
 
         {% for recommendation in recommendations %}
@@ -45,7 +44,9 @@
         {% endfor %}
 
 
-        <p class="page-break" ></p>
+
+        {% include 'footer.html' %}
+
         <h2>{{ _('Conclusion') }}</h2>
 
     </body>
