@@ -48,9 +48,9 @@
 
 <div>
 <ul class="ba">
-<li>Date: {{ DATE | format_datetime("full") }}</li>
-<li>Your id: {{ SURVEY_USER.user_id }}</li>
-<li>Sector: {{ SURVEY_USER.sector }}</<li>
+<li>{{ _('Date') }}: {{ DATE | format_datetime("full") }}</li>
+<li>{{ _('Your id') }}: {{ SURVEY_USER.user_id }}</li>
+<li>{{ _('Sector') }}: {{ SURVEY_USER.sector }}</<li>
 </ul>
 </div>
 
