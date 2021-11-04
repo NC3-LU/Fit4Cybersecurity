@@ -7,7 +7,7 @@ from jinja2 import Environment, FileSystemLoader
 
 from django.conf import settings
 from survey.models import SurveyUser
-from csskp.settings import CUSTOM, WORD_TEMPLATES_DIR
+from csskp.settings import CUSTOM, WORD_TEMPLATES_DIR, BASE_DIR
 from survey.reporthelper import generate_chart_png, calculateResult, getRecommendations  # temporary imports
 
 from django.utils.translation import gettext, ngettext
@@ -48,16 +48,19 @@ def create_html_report(user: SurveyUser, lang: str) -> str:
     env = environment()
     template = env.get_template("template.html")
 
+    cases_logo = os.path.abspath(BASE_DIR + "/static/images/cases_logo.png")
+    tool_logo = os.path.abspath(BASE_DIR + CUSTOM["logoFull"])
+    print(tool_logo)
+
     # Calculate the result
     score, details, section_list = calculateResult(user, lang)
 
     # Generate the chart
     try:
-        chart_png_file = generate_chart_png(user, details, section_list, lang)
+        chart_png_base64 = generate_chart_png(user, details, section_list, lang, "base64")
     except Exception as e:
-        chart_png_file = None
+        chart_png_base64 = None
         print(e)
-    print(chart_png_file)
 
     # Get the list of recommendations
     recommendationList = getRecommendations(user, lang)
@@ -67,8 +70,10 @@ def create_html_report(user: SurveyUser, lang: str) -> str:
         REPORT_TITLE="Fit4Cybersecurity report",
         DATE=datetime.today(),
         SURVEY_USER=user,
-        CHART=chart_png_file,
+        CHART=chart_png_base64,
         recommendations=recommendationList,
+        CASES_LOGO=cases_logo,
+        TOOL_LOGO=tool_logo,
     )
 
     return output_from_parsed_template

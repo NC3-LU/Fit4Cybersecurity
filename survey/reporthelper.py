@@ -1,7 +1,9 @@
 # -*- coding: utf-8 -*-
 
 from typing import Dict, List
+import io
 import os
+import base64
 import logging
 from django.http import HttpResponse
 from django.conf import settings
@@ -387,7 +389,7 @@ def calculateResult(user: SurveyUser, lang: str):
     return total_user_score, user_evaluations, sections_list
 
 
-def generate_chart_png(user: SurveyUser, evaluation, sections_list, lang) -> str:
+def generate_chart_png(user: SurveyUser, evaluation, sections_list, lang, output_type="file") -> str:
     """Generates the chart with Matplotlib and returns the path of the generated
     graph which will be included in the report.
     """
@@ -432,6 +434,12 @@ def generate_chart_png(user: SurveyUser, evaluation, sections_list, lang) -> str
         os.makedirs(PICTURE_DIR)
     file_name = os.path.join(PICTURE_DIR, "survey-{}.png".format(user.user_id))
     try:
+        if output_type == "base64":
+            stringIObytes = io.BytesIO()
+            plt.savefig(stringIObytes, format='png')
+            stringIObytes.seek(0)
+            return base64.b64encode(stringIObytes.read())
+
         plt.savefig(file_name)
     except Exception as e:
         raise Exception("{}".format(e))

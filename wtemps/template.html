@@ -10,10 +10,15 @@
   <title>{{ REPORT_TITLE }}</title>
 </head>
 <body>
+  <img
+    class="imgLogo"
+    align="center"
+    src="file:{{ CASES_LOGO }}" />
+
 <img
   class="imgLogo"
   align="center"
-  src="https://raw.githubusercontent.com/CASES-LU/Fit4Cybersecurity/master/static/images/logoFull-en.png" />
+  src="file:{{ TOOL_LOGO }}" />
 
 <hr />
 
@@ -33,7 +38,7 @@
 <img
   class="imgLogo"
   align="center"
-  src="{{ CHART }}" />
+  src="data:image/png;base64,{{ CHART }}" />
 
 
 <p style="page-break-before: always" ></p>
