@@ -49,7 +49,7 @@ def create_html_report(user: SurveyUser, lang: str) -> str:
     template = env.get_template("template.html")
 
     cases_logo = REPORT_TEMPLATE_DIR + "images/cases_logo.svg"
-    secin_logo = REPORT_TEMPLATE_DIR + "static/images/cases_logo.svg"
+    secin_logo = REPORT_TEMPLATE_DIR + "images/secin_logo.svg"
     tool_logo = os.path.abspath(BASE_DIR + CUSTOM["logoFull"])
 
     # Calculate the result
