@@ -6,23 +6,35 @@
   <meta name="title" content="{{ REPORT_TITLE }}" />
   <meta name="author" content="Fit4Cybersecurity" />
   <meta name="description" content="Generated with Fit4Cybersecurity" />
-
   <link rel="stylesheet" href="style.css" />
-
   <title>{{ REPORT_TITLE }}</title>
 
   <style>
-      @page {
-        size: A4; /* Change from the default size of A4 */
-        margin: 3.5mm; /* Set margin on each page */
-      }
-       .imgLogo{
-         display: block;
-         margin-left: auto;
-         margin-right: auto;
-         width: 50%;
-       }
-     </style>
+  @page {
+    size: A4; /* Change from the default size of A4 */
+    margin: 3.5mm; /* Set margin on each page */
+  }
+  p, li, div {
+    margin-bottom: 10px;
+  }
+  h1{font-size:26px; margin-bottom: 40px;}
+  h2{font-size:24px;}
+  h3{font-size:22px;}
+  h4{font-size:20px;}
+  h5{font-size:18px;}
+  h6{font-size:16px;}
+  .imgLogo{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
+  ul.ba {
+    list-style-type: none;
+    margin-left: 0px;
+    padding-left: 0px;
+  }
+  </style>
 </head>
 <body>
 <img
@@ -32,10 +44,15 @@
 
 <hr />
 
-<h1>{{ REPORT_TITLE }}</h1>
+<h1>{{ REPORT_TITLE }} - {{ DATE | format_datetime("compact") }}</h1>
 
-<p>Your id: {{ SURVEY_USER.user_id }}<br />
-Sector: {{ SURVEY_USER.sector }}</p>
+<div>
+<ul class="ba">
+<li>Date: {{ DATE | format_datetime("full") }}</li>
+<li>Your id: {{ SURVEY_USER.user_id }}</li>
+<li>Sector: {{ SURVEY_USER.sector }}</<li>
+</ul>
+</div>
 
 <p style="page-break-before: always" ></p>
 <h2>{{ _('Summary') }}</h2>

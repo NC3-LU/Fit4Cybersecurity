@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
 import os
+from datetime import datetime
 from weasyprint import HTML
 from jinja2 import Environment, FileSystemLoader
 
@@ -10,8 +11,19 @@ from survey.models import SurveyUser
 from django.utils.translation import gettext, ngettext
 
 
+def format_datetime(value: str, format: str = 'medium') -> str:
+    """Custom Jinja filter to format a datetime object."""
+    if format == 'full':
+        format = "%Y-%m-%d %H:%M"
+    elif format == 'medium':
+        format = "%Y-%m-%d %H:%M"
+    elif format == 'compact':
+        format = "%Y-%m-%d"
+    return value.strftime(format)
+
+
 def environment() -> Environment:
-    """Define an environment for Jinja and adds the i18n extension."""
+    """Define an environment for Jinja, adds the i18n extension and filters."""
     filepath = os.path.join(settings.BASE_DIR, settings.WORD_TEMPLATES_DIR)
     # i18n extension
     options = {}
@@ -23,6 +35,7 @@ def environment() -> Environment:
     env = Environment(**options, loader=FileSystemLoader(filepath))
     # i18n template functions
     env.install_gettext_callables(gettext=gettext, ngettext=ngettext, newstyle=True)
+    env.filters['format_datetime'] = format_datetime
     return env
 
 
@@ -32,13 +45,14 @@ def create_html_report(user: SurveyUser, lang: str) -> str:
     template = env.get_template("template.html")
     output_from_parsed_template = template.render(
         REPORT_TITLE="Fit4Cybersecurity report",
+        DATE=datetime.today(),
         SURVEY_USER=user,
     )
 
     return output_from_parsed_template
 
 
-def makepdf(html):
+def makepdf(html: str) -> bytes:
     """Generate a PDF file from a string of HTML."""
     htmldoc = HTML(string=html)
     return htmldoc.write_pdf()

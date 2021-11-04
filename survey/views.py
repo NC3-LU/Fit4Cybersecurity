@@ -1,7 +1,8 @@
 # -*- coding: utf-8 -*-
 
+from datetime import date
 from django.shortcuts import render
-from django.http import HttpResponse, HttpResponseRedirect, Http404
+from django.http import HttpResponse, HttpResponseRedirect
 from django.utils.translation import gettext as _
 from django import forms
 
@@ -123,7 +124,7 @@ def show_report(request, lang):
         html_report = create_html_report(user, lang)
         pdf_report = makepdf(html_report)
         response = HttpResponse(pdf_report, content_type="application/pdf")
-        response["Content-Disposition"] = 'attachment;filename="report.pdf"'
+        response["Content-Disposition"] = "attachment;filename=Report_{}.pdf".format(date.today())
         return response
     except Exception as e:
         messages.warning(request, e)
