@@ -7,6 +7,7 @@ from jinja2 import Environment, FileSystemLoader
 
 from django.conf import settings
 from survey.models import SurveyUser
+from csskp.settings import CUSTOM
 
 from django.utils.translation import gettext, ngettext
 
@@ -23,7 +24,8 @@ def format_datetime(value: str, format: str = 'medium') -> str:
 
 
 def environment() -> Environment:
-    """Define an environment for Jinja, adds the i18n extension and filters."""
+    """Define an environment for Jinja, adds the i18n extension, the filters
+    and make available the variable CUSTOM."""
     filepath = os.path.join(settings.BASE_DIR, settings.WORD_TEMPLATES_DIR)
     # i18n extension
     options = {}
@@ -36,6 +38,7 @@ def environment() -> Environment:
     # i18n template functions
     env.install_gettext_callables(gettext=gettext, ngettext=ngettext, newstyle=True)
     env.filters['format_datetime'] = format_datetime
+    env.globals['CUSTOM'] = CUSTOM
     return env
 
 
