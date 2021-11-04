@@ -2,12 +2,12 @@
 
 import os
 from datetime import datetime
-from weasyprint import HTML
+from weasyprint import HTML, CSS
 from jinja2 import Environment, FileSystemLoader
 
 from django.conf import settings
 from survey.models import SurveyUser
-from csskp.settings import CUSTOM
+from csskp.settings import CUSTOM, WORD_TEMPLATES_DIR
 from survey.reporthelper import generate_chart_png, calculateResult, getRecommendations  # temporary imports
 
 from django.utils.translation import gettext, ngettext
@@ -77,4 +77,5 @@ def create_html_report(user: SurveyUser, lang: str) -> str:
 def makepdf(html: str) -> bytes:
     """Generate a PDF file from a string of HTML."""
     htmldoc = HTML(string=html)
-    return htmldoc.write_pdf()
+    stylesheets = [CSS(WORD_TEMPLATES_DIR + "/custom.css")]
+    return htmldoc.write_pdf(stylesheets=stylesheets)
