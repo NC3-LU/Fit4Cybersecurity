@@ -8,6 +8,7 @@ from jinja2 import Environment, FileSystemLoader
 from django.conf import settings
 from survey.models import SurveyUser
 from csskp.settings import CUSTOM
+from survey.reporthelper import generate_chart_png, calculateResult, getRecommendations  # temporary imports
 
 from django.utils.translation import gettext, ngettext
 
@@ -46,10 +47,28 @@ def create_html_report(user: SurveyUser, lang: str) -> str:
     """Generate a HTML report."""
     env = environment()
     template = env.get_template("template.html")
+
+    # Calculate the result
+    score, details, section_list = calculateResult(user, lang)
+
+    # Generate the chart
+    try:
+        chart_png_file = generate_chart_png(user, details, section_list, lang)
+    except Exception as e:
+        chart_png_file = None
+        print(e)
+    print(chart_png_file)
+
+    # Get the list of recommendations
+    recommendationList = getRecommendations(user, lang)
+
+    # Render the HTML file
     output_from_parsed_template = template.render(
         REPORT_TITLE="Fit4Cybersecurity report",
         DATE=datetime.today(),
         SURVEY_USER=user,
+        CHART=chart_png_file,
+        recommendations=recommendationList,
     )
 
     return output_from_parsed_template

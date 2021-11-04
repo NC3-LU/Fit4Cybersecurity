@@ -57,9 +57,18 @@
 <p style="page-break-before: always" ></p>
 <h2>{{ _('Summary') }}</h2>
 
+<img
+  class="imgLogo"
+  align="center"
+  src="{{ CHART }}" />
+
 
 <p style="page-break-before: always" ></p>
 <h2>{{ _('Recommendations') }}</h2>
+
+{% for recommendation in recommendations %}
+<h3>{{ recommendation }}</h3>
+{% endfor %}
 
 
 <p style="page-break-before: always" ></p>
