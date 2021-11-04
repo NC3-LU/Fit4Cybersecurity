@@ -1,53 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="title" content="{{ REPORT_TITLE }}" />
-  <meta name="author" content="Fit4Cybersecurity" />
-  <meta name="description" content="Generated with Fit4Cybersecurity" />
-  <link rel="stylesheet" href="style.css" />
-  <title>{{ REPORT_TITLE }}</title>
-</head>
-<body>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="title" content="{{ REPORT_TITLE }}" />
+        <meta name="author" content="Fit4Cybersecurity" />
+        <meta name="description" content="Generated with Fit4Cybersecurity" />
+        <link rel="stylesheet" href="style.css" />
+        <title>{{ REPORT_TITLE }}</title>
+    </head>
+    <body>
 
-<img class="imgLogo" data:"image/svg+xml" src="file:{{ TOOL_LOGO }}" />
-<img class="imgLogo" data:"image/svg+xml" src="file:{{ SECIN_LOGO }}" />
-<img class="imgLogo" data:"image/svg+xml" src="file:{{ CASES_LOGO }}" />
+        <img class="center" style="width:80%;" src="file:{{ TOOL_LOGO }}" />
 
+        <hr />
+        <h1>{{ REPORT_TITLE }}</h1>
+        <div>
+            <ul class="ba">
+                <li>{{ _('Date') }}: {{ DATE | format_datetime("full") }}</li>
+                <li>{{ _('Your id') }}: {{ SURVEY_USER.user_id }}</li>
+            </ul>
+        </div>
 
-
-<hr />
-
-<h1>{{ REPORT_TITLE }} / {{ CUSTOM.tool_name }}</h1>
-
-<div>
-<ul class="ba">
-<li>{{ _('Date') }}: {{ DATE | format_datetime("full") }}</li>
-<li>{{ _('Your id') }}: {{ SURVEY_USER.user_id }}</li>
-<li>{{ _('Sector') }}: {{ SURVEY_USER.sector }}</<li>
-</ul>
-</div>
-
-<p style="page-break-before: always" ></p>
-<h2>{{ _('Summary') }}</h2>
-
-<img
-  class="imgLogo"
-  align="center"
-  src="data:image/png;base64,{{ CHART }}" />
+        <img class="footer" style="width:30%" src="file:{{ SECIN_LOGO }}" />
+        <img class="footer" style="right: 0; width:40%" src="file:{{ CASES_LOGO }}" />
 
 
-<p style="page-break-before: always" ></p>
-<h2>{{ _('Recommendations') }}</h2>
-
-{% for recommendation in recommendations %}
-<h3>{{ recommendation }}</h3>
-{% endfor %}
 
 
-<p style="page-break-before: always" ></p>
-<h2>{{ _('Conclusion') }}</h2>
+        <p class="page-break" ></p>
+        <h2>{{ _('Summary') }}</h2>
 
-</body>
+        <img
+          class="imgLogo"
+          align="center"
+          src="data:image/png;base64,{{ CHART }}" />
+
+
+        <p class="page-break" ></p>
+        <h2>{{ _('Recommendations') }}</h2>
+
+        {% for recommendation in recommendations %}
+        <h3>{{ recommendation }}</h3>
+        {% endfor %}
+
+
+        <p class="page-break" ></p>
+        <h2>{{ _('Conclusion') }}</h2>
+
+    </body>
 </html>

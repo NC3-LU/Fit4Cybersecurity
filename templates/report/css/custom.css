@@ -14,16 +14,30 @@ h4{font-size:20px;}
 h5{font-size:18px;}
 h6{font-size:16px;}
 
-/* img {
-    image-resolution: 1200dpi
-} */
-
-.imgLogo{
+.center {
     display: block;
+    margin-top: 30%;
     margin-left: auto;
     margin-right: auto;
-    width: 20%;
 }
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.page-break {
+    page-break-before: always
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+}
+
 ul.ba {
     list-style-type: none;
     margin-left: 0px;
