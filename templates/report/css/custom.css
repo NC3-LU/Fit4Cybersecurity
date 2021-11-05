@@ -3,16 +3,15 @@
   margin: 2.5cm; /* Set margin on each page */
 }
 
+p {
+    text-align: justify;
+    text-justify: inter-word;
+}
+
 p, li, div {
   margin-bottom: 10px;
 }
 
-footer {
-    clear: both;
-    position: relative;
-    height: 200px;
-    margin-top: -200px;
-}
 
 h1{font-size:26px; margin-bottom: 40px;}
 h2{font-size:24px;}
@@ -21,9 +20,10 @@ h4{font-size:20px;}
 h5{font-size:18px;}
 h6{font-size:16px;}
 
+/* POSITION */
+
 .center {
     display: block;
-    margin-top: 30%;
     margin-left: auto;
     margin-right: auto;
 }
@@ -36,13 +36,38 @@ h6{font-size:16px;}
     float: right;
 }
 
+.bottom {
+    position: absolute;
+    bottom: 0;
+}
+
 .page-break {
     page-break-before: always
 }
 
 .footer {
+    clear: both;
     position: absolute;
-    bottom: 0;
+    height: 20px;
+    bottom: -70px;
+}
+
+/* LOGOS */
+
+.tool_logo {
+    margin-top: 30%;
+    width: 80%;
+}
+
+
+
+.secin_logo {
+    width: 30%;
+}
+
+.cases_logo {
+    width:40%;
+    right: 0;
 }
 
 ul.ba {

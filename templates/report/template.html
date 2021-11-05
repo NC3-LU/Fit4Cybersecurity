@@ -11,43 +11,17 @@
     </head>
     <body>
 
-        <img class="center" style="width:80%;" src="file:{{ TOOL_LOGO }}" />
+        {% include 'cover.html' %}
 
-        <hr />
-        <h1>{{ REPORT_TITLE }}</h1>
-        <div>
-            <ul class="ba">
-                <li>{{ _('Date') }}: {{ DATE | format_datetime("full") }}</li>
-                <li>{{ _('Your id') }}: {{ SURVEY_USER.user_id }}</li>
-            </ul>
-        </div>
+        {% include 'intro.html' %}
 
-        <img class="footer" style="width:30%" src="file:{{ SECIN_LOGO }}" />
-        <img class="footer" style="right: 0; width:40%" src="file:{{ CASES_LOGO }}" />
-        <p class="page-break" ></p>
+        {% include 'description.html' %}
 
+        {% include 'results.html' %}
 
-        <h2>{{ _('Summary') }}</h2>
-        <img
-          class="imgLogo"
-          align="center"
-          src="data:image/png;base64,{{ CHART }}" />
+        {% include 'recommendations.html' %}
 
-
-        {% include 'footer.html' %}
-
-
-        <h2>{{ _('Recommendations') }}</h2>
-
-        {% for recommendation in recommendations %}
-        <h3>{{ recommendation }}</h3>
-        {% endfor %}
-
-
-
-        {% include 'footer.html' %}
-
-        <h2>{{ _('Conclusion') }}</h2>
+        {% include 'questions.html' %}
 
     </body>
 </html>

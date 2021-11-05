@@ -1,0 +1,11 @@
+<h2>{{ _('Recommendations') }}</h2>
+
+<p>
+    {{ _('Here is the list of recommendations, based on your answers.') }}
+</p>
+
+{% for recommendation in recommendations %}
+    <h5>{{ recommendation }}</h5>
+{% endfor %}
+
+{% include 'footer.html' %}

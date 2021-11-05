@@ -1,0 +1,14 @@
+<img class="center tool_logo" src="file:{{ TOOL_LOGO }}" />
+
+<hr />
+<h1>{{ REPORT_TITLE }}</h1>
+<div>
+    <ul class="ba">
+        <li>{{ _('Date') }}: {{ DATE | format_datetime("full") }}</li>
+        <li>{{ _('Your id') }}: {{ SURVEY_USER.user_id }}</li>
+    </ul>
+</div>
+
+<img class="bottom secin_logo" src="file:{{ SECIN_LOGO }}" />
+<img class="bottom cases_logo" src="file:{{ CASES_LOGO }}" />
+<p class="page-break" ></p>
