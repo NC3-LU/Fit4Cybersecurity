@@ -1,15 +1,22 @@
 @page {
-  size: A4; /* Change from the default size of A4 */
-  margin: 2.5cm; /* Set margin on each page */
+    size: A4; /* Change from the default size of A4 */
+    margin: 2.5cm; /* Set margin on each page */
+    @bottom-right {
+        content: counter(page);
+        height: 2,5cm;
+        text-align: center;
+    }
 }
-
-p {
-    text-align: justify;
-    text-justify: inter-word;
+@page:first {
+    @bottom-right {
+        content: none;
+    }
 }
 
 p, li, div {
   margin-bottom: 10px;
+  text-align: justify;
+  text-justify: inter-word;
 }
 
 

@@ -4,8 +4,14 @@
     {{ _('Here is the list of recommendations, based on your answers.') }}
 </p>
 
-{% for recommendation in recommendations %}
-    <h5>{{ recommendation }}</h5>
+{% for category, items in recommendations.items() %}
+    <h5>{{ category }}</h5>
+    <ol>
+        {% for recommendation in items %}
+            <li>{{ recommendation }}</li>
+        {% endfor %}
+    </ol>
+
 {% endfor %}
 
 {% include 'footer.html' %}

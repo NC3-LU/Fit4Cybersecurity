@@ -69,13 +69,16 @@ def create_html_report(user: SurveyUser, lang: str) -> str:
     # Render the HTML file
     output_from_parsed_template = template.render(
         REPORT_TITLE= _("Final report"),
-        DATE=datetime.today(),
-        SURVEY_USER=user,
-        CHART=chart_png_base64,
-        recommendations=recommendationList,
         CASES_LOGO=cases_logo,
         SECIN_LOGO=secin_logo,
         TOOL_LOGO=tool_logo,
+        TOOL_NAME=CUSTOM["tool_name"],
+        DATE=datetime.today(),
+        SURVEY_USER=user,
+        CHART=chart_png_base64,
+        SCORE=score,
+        recommendations=recommendationList,
+
     )
 
     return output_from_parsed_template
