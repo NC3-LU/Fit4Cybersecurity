@@ -49,7 +49,7 @@ CUSTOM = {
     },
 }
 
-REPORT_TEMPLATE_DIR = "./wtemps"
+REPORT_TEMPLATE_DIR = "./templates/report/"
 
 # Logging mechanism
 LOGGING = {
