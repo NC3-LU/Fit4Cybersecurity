@@ -1,10 +1,12 @@
+{% load apptags %}
+
 <img class="center tool_logo" src="file:{{ TOOL_LOGO }}" />
 
 <hr />
 <h1>{{ REPORT_TITLE }}</h1>
 <div>
     <ul class="ba">
-        <li>{{ _('Date') }}: {{ DATE }}</li>
+        <li>{{ _('Date') }}: {{ DATE|format_datetime:"compact" }}</li>
         <li>{{ _('Your id') }}: {{ SURVEY_USER.user_id }}</li>
     </ul>
 </div>

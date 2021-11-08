@@ -10,3 +10,15 @@ register = template.Library()
 def translate(string: str, language: str) -> str:
     with translation.override(language):
         return translation.gettext(string)
+
+
+@register.filter(name="format_datetime")
+def format_datetime(value: str, format: str = "medium") -> str:
+    """Custom Jinja filter to format a datetime object."""
+    if format == "full":
+        format = "%Y-%m-%d %H:%M"
+    elif format == "medium":
+        format = "%Y-%m-%d %H:%M"
+    elif format == "compact":
+        format = "%Y-%m-%d"
+    return value.strftime(format)
