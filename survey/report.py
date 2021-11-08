@@ -7,12 +7,13 @@ from jinja2 import Environment, FileSystemLoader
 
 from django.conf import settings
 from django.utils.translation import gettext as _
-from survey.models import SurveyUser
+from survey.models import SurveyUser, SurveyQuestion, SurveyQuestionAnswer, SurveyUserAnswer
 from csskp.settings import CUSTOM
 from survey.reporthelper import (
     generate_chart_png,
     calculateResult,
     getRecommendations,
+    get_formatted_translations,
 )  # temporary imports
 
 from django.utils.translation import gettext, ngettext
@@ -74,7 +75,33 @@ def create_html_report(user: SurveyUser, lang: str) -> str:
         print(e)
 
     # Get the list of recommendations
-    recommendationList = getRecommendations(user, lang)
+    recommendations_list = getRecommendations(user, lang)
+
+    # Get the list of questions
+    # questions_translations = get_formatted_translations(lang, "Q")
+    # answers_translations = get_formatted_translations(lang, "A")
+    questions_list = SurveyQuestion.objects.all().order_by("qindex")
+    # answers_list = []
+    # user_answers_values = []
+    questions = []
+    for index, question in enumerate(questions_list):
+
+        questions.append({
+            "question": question,
+            "possible_answers": SurveyQuestionAnswer.objects.filter(question=question).order_by(
+                "aindex"
+            ),
+            "user_answers": SurveyUserAnswer.objects.filter(user=user, )
+        })
+        # answers_list = SurveyQuestionAnswer.objects.filter(question=question).order_by(
+        #     "aindex"
+        # )
+        # user_answers = SurveyUserAnswer.objects.filter(user=user)
+        # user_answers_values = {}
+        # for user_answer in user_answers:
+        #     user_answers_values[user_answer.answer_id] = user_answer
+        # for answer in answers_list:
+        #     user_answer = user_answers_values[answer.id]
 
     # Render the HTML file
     output_from_parsed_template = template.render(
@@ -87,7 +114,8 @@ def create_html_report(user: SurveyUser, lang: str) -> str:
         SURVEY_USER=user,
         CHART=chart_png_base64,
         SCORE=score,
-        recommendations=recommendationList,
+        recommendations=recommendations_list,
+        questions=questions,
     )
 
     return output_from_parsed_template
