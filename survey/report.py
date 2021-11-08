@@ -21,6 +21,7 @@ from survey.reporthelper import (
     getRecommendations,
     get_formatted_translations,
 )  # temporary imports
+from survey.viewLogic import get_questions_with_user_answers
 
 
 def create_html_report(user: SurveyUser, lang: str) -> str:
@@ -49,34 +50,7 @@ def create_html_report(user: SurveyUser, lang: str) -> str:
     recommendations_list = getRecommendations(user, lang)
 
     # Get the list of questions
-    # questions_translations = get_formatted_translations(lang, "Q")
-    # answers_translations = get_formatted_translations(lang, "A")
-    questions_list = SurveyQuestion.objects.all().order_by("qindex")
-    # answers_list = []
-    # user_answers_values = []
-    questions = []
-    for index, question in enumerate(questions_list):
-
-        questions.append(
-            {
-                "question": question,
-                "possible_answers": SurveyQuestionAnswer.objects.filter(
-                    question=question
-                ).order_by("aindex"),
-                "user_answers": SurveyUserAnswer.objects.filter(
-                    user=user,
-                ),
-            }
-        )
-        # answers_list = SurveyQuestionAnswer.objects.filter(question=question).order_by(
-        #     "aindex"
-        # )
-        # user_answers = SurveyUserAnswer.objects.filter(user=user)
-        # user_answers_values = {}
-        # for user_answer in user_answers:
-        #     user_answers_values[user_answer.answer_id] = user_answer
-        # for answer in answers_list:
-        #     user_answer = user_answers_values[answer.id]
+    question_list = get_questions_with_user_answers(user)
 
     # Render the HTML file
     output_from_parsed_template = render_to_string(
@@ -92,7 +66,7 @@ def create_html_report(user: SurveyUser, lang: str) -> str:
             "CHART": chart_png_base64,
             "SCORE": score,
             "recommendations": recommendations_list,
-            "questions": questions,
+            "questions": question_list,
         },
     )
 

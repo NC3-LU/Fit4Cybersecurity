@@ -1,13 +1,23 @@
 <h2>{{ _('Questions') }}</h2>
-
-{% for question in questions %}
-
-<p>{{ question.question }}</p>
-
-  <ul>
-  {% for possible_answer in question.possible_answers %}
-    <li>{{ possible_answer }}</li>
-  {% endfor %}
-  </ul>
-
-{% endfor %}
+<ol>
+    {% for index, question in questions.items %}
+        <li>
+            <h5>{{ question.question_title | safe }}</h5>
+            <ul>
+                {% for user_answer in question.user_answers %}
+                    <li class="{% if user_answer.value > 0 %}answer{% endif %}">
+                         {{ user_answer.title | safe }}
+                    </li>
+                    {% if user_answer.content != '' %}
+                        <p>
+                             <span>
+                                 {{ _('Custom response') }}:
+                             </span>
+                             {{ user_answer.content }}
+                        </p>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+        </li>
+    {% endfor %}
+</ol>
