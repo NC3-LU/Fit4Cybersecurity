@@ -25,7 +25,7 @@
                 <h3>
                     {% if txtscore < 50 %}
                         <span class="font-weight-bold text-danger">{{ txtscore }}</span>
-                    {% elif txtscore < min_acceptable_score %}
+                    {% elif txtscore < CUSTOM.minimal_acceptable_score %}
                         <span class="font-weight-bold text-warning">{{ txtscore }}</span>
                     {% else %}
                         <span class="font-weight-bold text-success">{{ txtscore }}</span>
@@ -33,7 +33,7 @@
                     /100
                 </h3>
                 {% if user.country_code == 'LU' and custom.modules.requestTraining %}
-                    {% if txtscore >= min_acceptable_score and custom.modules.requestDiagnostic %}
+                    {% if txtscore >= CUSTOM.minimal_acceptable_score and custom.modules.requestDiagnostic %}
                         <h5>{% include 'survey/requestDiagnosticLink.html' with type='button' %}</h5>
                     {% endif %}
                     <h5>{% include 'survey/requestTrainingLink.html' with type='button' %}</h5>
@@ -66,7 +66,7 @@
                 and thus, we are not liable for the results of this survey.
             {% endblocktranslate %}
         </p>
-        {% if user.country_code == 'LU' and custom.modules.requestTraining and txtscore < min_acceptable_score %}
+        {% if user.country_code == 'LU' and custom.modules.requestTraining and txtscore < CUSTOM.minimal_acceptable_score %}
             <p>
                 {% blocktranslate with score=string_score|add:'/100' trimmed %}
                     Based on your score {{ score }}, the CASES Diagnostic
@@ -89,7 +89,7 @@
         </div>
     </div>
 
-    {% if user.country_code == 'LU' and custom.modules.requestDiagnostic and txtscore >= min_acceptable_score %}
+    {% if user.country_code == 'LU' and custom.modules.requestDiagnostic and txtscore >= CUSTOM.minimal_acceptable_score %}
         <div class="py-2 px-4">
             <h2>{{ _('About the CASES Diagnostic') }}:</h2>
             {% blocktranslate trimmed %}

@@ -7,9 +7,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-03 14:59+0000\n"
-"PO-Revision-Date: 2021-11-03 16:02+0100\n"
-"Last-Translator: Juan Rocha <juan.rocha@cases.lu>\n"
+"POT-Creation-Date: 2021-11-08 10:08+0000\n"
+"PO-Revision-Date: 2021-11-08 11:09+0100\n"
+"Last-Translator: Cédric Bonhomme <cedric@cedricbonhomme.org>\n"
 "Language-Team: French <https://translate.monarc.lu/projects/"
 "Fit4Cybersecurity/fit4ilr/fr/>\n"
 "Language: fr\n"
@@ -17,15 +17,11 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Poedit 3.0\n"
+"X-Generator: Poedit 2.4.2\n"
 
-#: csskp/config.py:25 csskp/config_dev.py:25
+#: csskp/config.py:27 csskp/config_dev.py:25
 msgid "Description from a string or a file."
 msgstr "Description à partir d'une chaîne de caractères ou d'un fichier."
-
-#: csskp/config.py:26 csskp/config_dev.py:26
-msgid "/static/images/logoFull-en.png"
-msgstr "/static/images/logoFull-fr.png"
 
 #: survey/forms.py:27
 msgid "What is your sector?"
@@ -49,11 +45,11 @@ msgstr "Vous devez choisir au moins une réponse"
 msgid "Your feedback"
 msgstr "Vos retours"
 
-#: survey/forms.py:109 survey/forms.py:165
+#: survey/forms.py:108 survey/forms.py:164
 msgid "Please let us know if anything is missing"
 msgstr "S'il vous plaît laissez-nous savoir si quelque chose est manquant"
 
-#: survey/forms.py:142
+#: survey/forms.py:141
 #, python-format
 msgid ""
 "You can't choose multiple answers if the answer \"%(value)s\" is choosen"
@@ -122,15 +118,19 @@ msgstr ""
 msgid "Public administration"
 msgstr "Administration publique"
 
-#: survey/reporthelper.py:253
+#: survey/report.py:81
+msgid "Final report"
+msgstr "Rapport final"
+
+#: survey/reporthelper.py:255 templates/report/questions.html:1
 msgid "Questions"
 msgstr "Questions"
 
-#: survey/reporthelper.py:415 survey/views.py:195
+#: survey/reporthelper.py:419 survey/views.py:204
 msgid "Your results"
 msgstr "Vos résultats"
 
-#: survey/reporthelper.py:424
+#: survey/reporthelper.py:428
 msgid "Your results chart"
 msgstr "Votre tableau de résultats"
 
@@ -142,24 +142,171 @@ msgstr "Commençons"
 msgid "Question"
 msgstr "Question"
 
-#: survey/views.py:116
+#: survey/views.py:117
 msgid "To generate a report you have to finish the survey."
 msgstr "Pour générer un rapport vous devez finir l'enquête."
 
-#: survey/views.py:187
+#: survey/views.py:196
 msgid "Final summary"
 msgstr "Résumé final"
 
-#: survey/views.py:221
+#: survey/views.py:229
 msgid ""
 "We could not find a survey with the requested key, please start a new one."
 msgstr ""
 "Nous n'avons pas pu trouver un sondage avec la clé demandée, veuillez en "
 "commencer un nouveau."
 
-#: survey/views.py:251
+#: survey/views.py:259
 msgid "Feedback sending errors: "
 msgstr "Erreurs d'envoi du retour d'information : "
+
+#: templates/report/cover.html:7
+msgid "Date"
+msgstr "Date"
+
+#: templates/report/cover.html:8
+msgid "Your id"
+msgstr "Votre id"
+
+#: templates/report/description.html:1
+msgid "Description"
+msgstr "Description"
+
+#: templates/report/description.html:4
+msgid ""
+"This self-assessment tool is named Fit4Cybersecurity to highlight the "
+"introduction to information security."
+msgstr ""
+"Cet outil d'auto-évaluation est nommé Fit4Cybersecurity pour souligner "
+"l'introduction à la sécurité de l'information."
+
+#: templates/report/description.html:5
+msgid ""
+"It is also a prerequisite for doing a CASES Diagnostic: a minimum score of "
+"65/100 is required."
+msgstr ""
+"C'est aussi un prérequis pour faire un diagnostic CASES : un score minimum "
+"de 65/100 est requis."
+
+#: templates/report/description.html:6
+msgid ""
+"The purpose for this restriction gives us the opportunity to better tailor "
+"the recommendations to your organization during the Diagnostic."
+msgstr ""
+"Le but de cette restriction nous donne l'opportunité de mieux adapter les "
+"recommandations à votre organisation lors du Diagnostic."
+
+#: templates/report/description.html:8
+msgid ""
+"During this self-assessment multiple choice questions were asked. After "
+"analyzing your answers, recommendations have been provided."
+msgstr ""
+"Au cours de cette auto-évaluation, des questions à choix multiples ont été "
+"posées. Après analyse de vos réponses, des recommandations ont été fournies."
+
+#: templates/report/description.html:10
+msgid ""
+"Finally, you can download a report, which will help you to communicate the "
+"results to your suppliers, if necessary."
+msgstr ""
+"Enfin, vous pouvez télécharger un rapport, qui vous aidera à communiquer les "
+"résultats à vos fournisseurs, si nécessaire."
+
+#: templates/report/footer.html:2
+msgid "Bottom of the page - Copyright 2021"
+msgstr "Bas de page - Copyright 2021"
+
+#: templates/report/intro.html:1
+msgid "Introduction and Warning"
+msgstr "Introduction et avertissement"
+
+#: templates/report/intro.html:4
+msgid ""
+"The objective of the self-assessment tool, is to assess the maturity of an "
+"organization in terms of applicable good practices in the field of "
+"information security."
+msgstr ""
+"L'objectif de l'outil d'auto-évaluation, est d'évaluer la maturité d'une "
+"organisation en termes de bonnes pratiques applicables dans le domaine de la "
+"sécurité de l'information."
+
+#: templates/report/intro.html:6
+msgid ""
+"This document is intended exclusively for the user. It is in this respect "
+"confidential."
+msgstr ""
+"Ce document est destiné exclusivement à l'utilisateur. Il est à cet égard "
+"confidentiel."
+
+#: templates/report/intro.html:8
+msgid ""
+"In view of the methodology used and the fact that it is a self-assessment, "
+"it is understood that the recommendations and overall results can not in any "
+"way be exhaustive. As such, the actual risk assessment or the list of "
+"identified risks and vulnerabilities are based on the information provided "
+"by the user. The analysis resulting from this assessment can engage only the "
+"user for any omission or error that would be due to third parties or not."
+msgstr ""
+"À la vue de la méthodologie utilisée et du fait qu'il s'agit d'une auto-"
+"évaluation, il est entendu que les recommandations et les résultats globaux "
+"ne peuvent en aucun cas être exhaustifs. À ce titre, l'évaluation réelle des "
+"risques ou la liste des risques et vulnérabilités identifiés sont basés sur "
+"les informations fournies par l'utilisateur. L'analyse résultante de cette "
+"évaluation ne peut engager que l'utilisateur pour toute omission ou erreur "
+"qui serait du fait de tiers ou non."
+
+#: templates/report/intro.html:10
+msgid ""
+"It should also be noted that the information you have provided to us will be "
+"recorded for statistical reasons. Due to the nature of the data, we can not "
+"identify you. Unless you later contact us to perform a CASES Diagnostic."
+msgstr ""
+"Il est également à noter que les informations que vous nous avez fournies "
+"seront enregistrées à des fins statistiques. En raison de la nature des "
+"données, nous ne pouvons pas vous identifier. Sauf si vous nous contactez "
+"ultérieurement pour effectuer un diagnostic CASES."
+
+#: templates/report/recommendations.html:1
+msgid "Recommendations"
+msgstr "Recommandations"
+
+#: templates/report/recommendations.html:4
+msgid "Here is the list of recommendations, based on your answers."
+msgstr "Voici la liste des recommandations, basée sur vos réponses."
+
+#: templates/report/results.html:1
+msgid "Result"
+msgstr "Résultat"
+
+#: templates/report/results.html:4
+msgid "You have achieved"
+msgstr "Vous avez atteint"
+
+#: templates/report/results.html:4
+msgid "with your answers"
+msgstr "avec vos réponses"
+
+#: templates/report/results.html:6
+msgid "You must reach at least"
+msgstr "Vous devez atteindre au moins"
+
+#: templates/report/results.html:6
+msgid "to be able to make a CASES Diagnosis."
+msgstr "afin de pouvoir faire un diagnostic CASES."
+
+#: templates/report/results.html:8
+msgid ""
+"We remind you that this is a self-assessment and it is important to "
+"understand that all the results can not in any way be exhaustive."
+msgstr ""
+"Nous vous rappelons qu'il s'agit d'une auto-évaluation et qu'il est "
+"important de comprendre que tous les résultats ne peuvent en aucun cas être "
+"exhaustifs."
+
+#: templates/report/template.html:8
+msgid "Generated with Fit4Cybersecurity"
+msgstr "Généré avec Fit4Cybersecurity"
 
 #: templates/survey/base.html:20
 msgid "a CASES self-assessment tool!"
@@ -483,6 +630,9 @@ msgstr "Version de"
 #: templates_parts/footer_part.html:27
 msgid "Terms of Service"
 msgstr "Conditions d'utilisation"
+
+#~ msgid "/static/images/logoFull-en.png"
+#~ msgstr "/static/images/logoFull-fr.png"
 
 #~ msgid "English"
 #~ msgstr "Anglais"

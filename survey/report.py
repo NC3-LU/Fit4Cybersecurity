@@ -9,18 +9,22 @@ from django.conf import settings
 from django.utils.translation import gettext as _
 from survey.models import SurveyUser
 from csskp.settings import CUSTOM
-from survey.reporthelper import generate_chart_png, calculateResult, getRecommendations  # temporary imports
+from survey.reporthelper import (
+    generate_chart_png,
+    calculateResult,
+    getRecommendations,
+)  # temporary imports
 
 from django.utils.translation import gettext, ngettext
 
 
-def format_datetime(value: str, format: str = 'medium') -> str:
+def format_datetime(value: str, format: str = "medium") -> str:
     """Custom Jinja filter to format a datetime object."""
-    if format == 'full':
+    if format == "full":
         format = "%Y-%m-%d %H:%M"
-    elif format == 'medium':
+    elif format == "medium":
         format = "%Y-%m-%d %H:%M"
-    elif format == 'compact':
+    elif format == "compact":
         format = "%Y-%m-%d"
     return value.strftime(format)
 
@@ -39,8 +43,8 @@ def environment() -> Environment:
     env = Environment(**options, loader=FileSystemLoader(filepath))
     # i18n template functions
     env.install_gettext_callables(gettext=gettext, ngettext=ngettext, newstyle=True)
-    env.filters['format_datetime'] = format_datetime
-    env.globals['CUSTOM'] = CUSTOM
+    env.filters["format_datetime"] = format_datetime
+    env.globals["CUSTOM"] = CUSTOM
     return env
 
 
@@ -49,8 +53,12 @@ def create_html_report(user: SurveyUser, lang: str) -> str:
     env = environment()
     template = env.get_template("template.html")
 
-    cases_logo = os.path.abspath(os.path.join(settings.REPORT_TEMPLATE_DIR, "images/cases_logo.svg"))
-    secin_logo = os.path.abspath(os.path.join(settings.REPORT_TEMPLATE_DIR, "images/secin_logo.svg"))
+    cases_logo = os.path.abspath(
+        os.path.join(settings.REPORT_TEMPLATE_DIR, "images/cases_logo.svg")
+    )
+    secin_logo = os.path.abspath(
+        os.path.join(settings.REPORT_TEMPLATE_DIR, "images/secin_logo.svg")
+    )
     tool_logo = os.path.abspath(os.path.join(settings.BASE_DIR, CUSTOM["logoFull"]))
 
     # Calculate the result
@@ -58,7 +66,9 @@ def create_html_report(user: SurveyUser, lang: str) -> str:
 
     # Generate the chart
     try:
-        chart_png_base64 = generate_chart_png(user, details, section_list, lang, "base64")
+        chart_png_base64 = generate_chart_png(
+            user, details, section_list, lang, "base64"
+        )
     except Exception as e:
         chart_png_base64 = None
         print(e)
@@ -68,7 +78,7 @@ def create_html_report(user: SurveyUser, lang: str) -> str:
 
     # Render the HTML file
     output_from_parsed_template = template.render(
-        REPORT_TITLE= _("Final report"),
+        REPORT_TITLE=_("Final report"),
         CASES_LOGO=cases_logo,
         SECIN_LOGO=secin_logo,
         TOOL_LOGO=tool_logo,
@@ -78,7 +88,6 @@ def create_html_report(user: SurveyUser, lang: str) -> str:
         CHART=chart_png_base64,
         SCORE=score,
         recommendations=recommendationList,
-
     )
 
     return output_from_parsed_template
@@ -87,5 +96,11 @@ def create_html_report(user: SurveyUser, lang: str) -> str:
 def makepdf(html: str) -> bytes:
     """Generate a PDF file from a string of HTML."""
     htmldoc = HTML(string=html)
-    stylesheets = [CSS(os.path.abspath(os.path.join(settings.REPORT_TEMPLATE_DIR, "css/custom.css")))]
+    stylesheets = [
+        CSS(
+            os.path.abspath(
+                os.path.join(settings.REPORT_TEMPLATE_DIR, "css/custom.css")
+            )
+        )
+    ]
     return htmldoc.write_pdf(stylesheets=stylesheets)

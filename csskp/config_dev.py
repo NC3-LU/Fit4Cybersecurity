@@ -31,6 +31,7 @@ CUSTOM = {
         ("fr", "French"),
         ("de", "German"),
     ],
+    "minimal_acceptable_score": 65,
     # Custom parts of templates
     #   main dir for PARTS_TEMPLATE_DIR:
     "templates_parts_dir": "templates_parts",

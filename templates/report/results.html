@@ -1,7 +1,11 @@
 <h2>{{ _('Result') }}</h2>
 
 <p>
-    {{ _('You have achieved %(score)s/ 100 with your answers. You must reach at least 80/100 to be able to make a CASES Diagnosis. We remind you that this is a self-assessment and it is important to understand that all the results can not in any way be exhaustive.', score=SCORE) }}
+{{ _('You have achieved') }} {{ SCORE }}/100 {{ _('with your answers') }}.
+<br /><br />
+{{ _('You must reach at least') }} {{ CUSTOM.minimal_acceptable_score }}/100 {{ _('to be able to make a CASES Diagnosis.') }}
+<br /><br />
+{{ _('We remind you that this is a self-assessment and it is important to understand that all the results can not in any way be exhaustive.') }}
 </p>
 
 <img  class="center" src="data:image/png;base64,{{ CHART }}" />
