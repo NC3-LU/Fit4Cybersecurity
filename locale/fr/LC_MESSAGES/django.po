@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-08 09:44+0000\n"
-"PO-Revision-Date: 2021-11-08 10:45+0100\n"
+"POT-Creation-Date: 2021-11-08 10:08+0000\n"
+"PO-Revision-Date: 2021-11-08 11:09+0100\n"
 "Last-Translator: Cédric Bonhomme <cedric@cedricbonhomme.org>\n"
 "Language-Team: French <https://translate.monarc.lu/projects/"
 "Fit4Cybersecurity/fit4ilr/fr/>\n"
@@ -126,7 +126,7 @@ msgstr "Rapport final"
 msgid "Questions"
 msgstr "Questions"
 
-#: survey/reporthelper.py:419 survey/views.py:205
+#: survey/reporthelper.py:419 survey/views.py:204
 msgid "Your results"
 msgstr "Vos résultats"
 
@@ -142,22 +142,22 @@ msgstr "Commençons"
 msgid "Question"
 msgstr "Question"
 
-#: survey/views.py:118
+#: survey/views.py:117
 msgid "To generate a report you have to finish the survey."
 msgstr "Pour générer un rapport vous devez finir l'enquête."
 
-#: survey/views.py:197
+#: survey/views.py:196
 msgid "Final summary"
 msgstr "Résumé final"
 
-#: survey/views.py:231
+#: survey/views.py:229
 msgid ""
 "We could not find a survey with the requested key, please start a new one."
 msgstr ""
 "Nous n'avons pas pu trouver un sondage avec la clé demandée, veuillez en "
 "commencer un nouveau."
 
-#: survey/views.py:261
+#: survey/views.py:259
 msgid "Feedback sending errors: "
 msgstr "Erreurs d'envoi du retour d'information : "
 
@@ -278,6 +278,31 @@ msgstr "Voici la liste des recommandations, basée sur vos réponses."
 #: templates/report/results.html:1
 msgid "Result"
 msgstr "Résultat"
+
+#: templates/report/results.html:4
+msgid "You have achieved"
+msgstr "Vous avez atteint"
+
+#: templates/report/results.html:4
+msgid "with your answers"
+msgstr "avec vos réponses"
+
+#: templates/report/results.html:6
+msgid "You must reach at least"
+msgstr "Vous devez atteindre au moins"
+
+#: templates/report/results.html:6
+msgid "to be able to make a CASES Diagnosis."
+msgstr "afin de pouvoir faire un diagnostic CASES."
+
+#: templates/report/results.html:8
+msgid ""
+"We remind you that this is a self-assessment and it is important to "
+"understand that all the results can not in any way be exhaustive."
+msgstr ""
+"Nous vous rappelons qu'il s'agit d'une auto-évaluation et qu'il est "
+"important de comprendre que tous les résultats ne peuvent en aucun cas être "
+"exhaustifs."
 
 #: templates/report/template.html:8
 msgid "Generated with Fit4Cybersecurity"

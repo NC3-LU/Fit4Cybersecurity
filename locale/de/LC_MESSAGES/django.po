@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-08 09:44+0000\n"
+"POT-Creation-Date: 2021-11-08 10:08+0000\n"
 "PO-Revision-Date: 2021-11-03 16:06+0100\n"
 "Last-Translator: Juan Rocha <juan.rocha@cases.lu>\n"
 "Language-Team: German <https://translate.monarc.lu/projects/"
@@ -125,7 +125,7 @@ msgstr ""
 msgid "Questions"
 msgstr "Fragen"
 
-#: survey/reporthelper.py:419 survey/views.py:205
+#: survey/reporthelper.py:419 survey/views.py:204
 msgid "Your results"
 msgstr "Ihre Ergebnisse"
 
@@ -141,23 +141,23 @@ msgstr "Lasst uns beginnen"
 msgid "Question"
 msgstr "Frage"
 
-#: survey/views.py:118
+#: survey/views.py:117
 msgid "To generate a report you have to finish the survey."
 msgstr ""
 "Um einen Bericht zu erstellen, muss erst die Umfrage beantwortet werden."
 
-#: survey/views.py:197
+#: survey/views.py:196
 msgid "Final summary"
 msgstr "Zusammenfassung"
 
-#: survey/views.py:231
+#: survey/views.py:229
 msgid ""
 "We could not find a survey with the requested key, please start a new one."
 msgstr ""
 "Wir konnten keine Umfrage mit dem angeforderten Schlüssel finden. Bitte "
 "starten Sie eine neue."
 
-#: survey/views.py:261
+#: survey/views.py:259
 msgid "Feedback sending errors: "
 msgstr "Fehler beim Senden von Rückmeldungen: "
 
@@ -255,6 +255,32 @@ msgstr ""
 
 #: templates/report/results.html:1
 msgid "Result"
+msgstr ""
+
+#: templates/report/results.html:4
+msgid "You have achieved"
+msgstr ""
+
+#: templates/report/results.html:4
+#, fuzzy
+#| msgid "Modify answers"
+msgid "with your answers"
+msgstr "Ändern Sie die Antworten"
+
+#: templates/report/results.html:6
+msgid "You must reach at least"
+msgstr ""
+
+#: templates/report/results.html:6
+#, fuzzy
+#| msgid "About the CASES Diagnostic"
+msgid "to be able to make a CASES Diagnosis."
+msgstr "Über die CASES-Diagnose"
+
+#: templates/report/results.html:8
+msgid ""
+"We remind you that this is a self-assessment and it is important to "
+"understand that all the results can not in any way be exhaustive."
 msgstr ""
 
 #: templates/report/template.html:8
