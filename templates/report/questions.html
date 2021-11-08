@@ -1,9 +1,9 @@
 <h2>{{ _('Questions') }}</h2>
-<ol>
+<ol >
     {% for index, question in questions.items %}
-        <li>
-            <h5>{{ question.question_title | safe }}</h5>
-            <ul>
+        <li class="question">
+            <p>{{ question.question_title | safe }}</p>
+            <ul class="choices">
                 {% for user_answer in question.user_answers %}
                     <li class="{% if user_answer.value > 0 %}answer{% endif %}">
                          {{ user_answer.title | safe }}
