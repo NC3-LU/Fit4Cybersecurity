@@ -4,7 +4,7 @@
     {{ _('Here is the list of recommendations, based on your answers.') }}
 </p>
 
-{% for category, items in recommendations.items() %}
+{% for category, items in recommendations.items %}
     <h5>{{ category }}</h5>
     <ol>
         {% for recommendation in items %}

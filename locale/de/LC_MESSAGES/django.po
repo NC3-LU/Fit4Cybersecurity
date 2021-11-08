@@ -7,9 +7,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-08 10:08+0000\n"
-"PO-Revision-Date: 2021-11-03 16:06+0100\n"
-"Last-Translator: Juan Rocha <juan.rocha@cases.lu>\n"
+"POT-Creation-Date: 2021-11-08 12:33+0000\n"
+"PO-Revision-Date: 2021-11-08 13:34+0100\n"
+"Last-Translator: Cédric Bonhomme <cedric@cedricbonhomme.org>\n"
 "Language-Team: German <https://translate.monarc.lu/projects/"
 "Fit4Cybersecurity/fit4ilr/de/>\n"
 "Language: de\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Poedit 3.0\n"
+"X-Generator: Poedit 2.4.2\n"
 
 #: csskp/config.py:27 csskp/config_dev.py:25
 msgid "Description from a string or a file."
@@ -117,7 +117,7 @@ msgstr "Landwirtschaft und Fischerei, Natur- und Grünflächen, Tierpflege"
 msgid "Public administration"
 msgstr "Öffentliche Verwaltungen"
 
-#: survey/report.py:81
+#: survey/report.py:98
 msgid "Final report"
 msgstr ""
 
@@ -125,7 +125,7 @@ msgstr ""
 msgid "Questions"
 msgstr "Fragen"
 
-#: survey/reporthelper.py:419 survey/views.py:204
+#: survey/reporthelper.py:419 survey/views.py:203
 msgid "Your results"
 msgstr "Ihre Ergebnisse"
 
@@ -146,18 +146,18 @@ msgid "To generate a report you have to finish the survey."
 msgstr ""
 "Um einen Bericht zu erstellen, muss erst die Umfrage beantwortet werden."
 
-#: survey/views.py:196
+#: survey/views.py:195
 msgid "Final summary"
 msgstr "Zusammenfassung"
 
-#: survey/views.py:229
+#: survey/views.py:228
 msgid ""
 "We could not find a survey with the requested key, please start a new one."
 msgstr ""
 "Wir konnten keine Umfrage mit dem angeforderten Schlüssel finden. Bitte "
 "starten Sie eine neue."
 
-#: survey/views.py:259
+#: survey/views.py:258
 msgid "Feedback sending errors: "
 msgstr "Fehler beim Senden von Rückmeldungen: "
 
@@ -171,78 +171,52 @@ msgstr ""
 msgid "Your id"
 msgstr "Ihre Rückmeldung"
 
-#: templates/report/description.html:1
-#, fuzzy
-#| msgid "Question"
-msgid "Description"
-msgstr "Frage"
-
-#: templates/report/description.html:4
-msgid ""
-"This self-assessment tool is named Fit4Cybersecurity to highlight the "
-"introduction to information security."
-msgstr ""
-
-#: templates/report/description.html:5
-msgid ""
-"It is also a prerequisite for doing a CASES Diagnostic: a minimum score of "
-"65/100 is required."
-msgstr ""
-
 #: templates/report/description.html:6
 msgid ""
+"\n"
+"This self-assessment tool is named Fit4Cybersecurity to highlight the "
+"introduction to information security.\n"
+"It is also a prerequisite for doing a CASES Diagnostic: a minimum score of "
+"65/100 is required.\n"
 "The purpose for this restriction gives us the opportunity to better tailor "
-"the recommendations to your organization during the Diagnostic."
-msgstr ""
-
-#: templates/report/description.html:8
-msgid ""
+"the recommendations to your organization during the Diagnostic.\n"
+"<br /><br />\n"
 "During this self-assessment multiple choice questions were asked. After "
-"analyzing your answers, recommendations have been provided."
-msgstr ""
-
-#: templates/report/description.html:10
-msgid ""
+"analyzing your answers, recommendations have been provided.\n"
+"<br />\n"
 "Finally, you can download a report, which will help you to communicate the "
-"results to your suppliers, if necessary."
+"results to your suppliers, if necessary.\n"
 msgstr ""
 
-#: templates/report/footer.html:2
-msgid "Bottom of the page - Copyright 2021"
-msgstr ""
-
-#: templates/report/intro.html:1
+#: templates/report/intro.html:3
 msgid "Introduction and Warning"
 msgstr ""
 
-#: templates/report/intro.html:4
-msgid ""
-"The objective of the self-assessment tool, is to assess the maturity of an "
-"organization in terms of applicable good practices in the field of "
-"information security."
-msgstr ""
-
 #: templates/report/intro.html:6
+#, python-format
 msgid ""
-"This document is intended exclusively for the user. It is in this respect "
-"confidential."
-msgstr ""
-
-#: templates/report/intro.html:8
-msgid ""
+"\n"
+"The objective of the self-assessment tool, %(tool_name)s is to assess the "
+"maturity of an organization in terms of applicable good practices in the "
+"field of information security.\n"
+"<br><br>\n"
+"This document, based on the %(tool_name)s, is for the exclusive use of the "
+"customer. It is in this respect confidential.\n"
+"<br><br>\n"
 "In view of the methodology used and the fact that it is a self-assessment, "
-"it is understood that the recommendations and overall results can not in any "
-"way be exhaustive. As such, the actual risk assessment or the list of "
-"identified risks and vulnerabilities are based on the information provided "
-"by the user. The analysis resulting from this assessment can engage only the "
-"user for any omission or error that would be due to third parties or not."
-msgstr ""
-
-#: templates/report/intro.html:10
-msgid ""
+"it is understood that the overall results can not in any way be exhaustive.\n"
+"As such, the actual risk assessment or the list of identified risks and "
+"vulnerabilities are based on the information provided by the client.\n"
+"The analysis resulting from this assessment can engage only the customer for "
+"any omission or error that would be due to third parties or not.<br><br>\n"
+"The tool, %(tool_name)s can possibly provide recommendations. It is "
+"understood by the client that the recommendations are neither exclusive nor "
+"exhaustive.\n"
+"<br><br>\n"
 "It should also be noted that the information you have provided to us will be "
-"recorded for statistical reasons. Due to the nature of the data, we can not "
-"identify you. Unless you later contact us to perform a CASES Diagnostic."
+"recorded for statistical reasons.\n"
+"Due to the nature of the data, we can not identify you. Unless you later "
+"contact us to do a Diagnostic CASES.\n"
 msgstr ""
 
 #: templates/report/recommendations.html:1
@@ -253,37 +227,20 @@ msgstr ""
 msgid "Here is the list of recommendations, based on your answers."
 msgstr ""
 
-#: templates/report/results.html:1
-msgid "Result"
-msgstr ""
-
-#: templates/report/results.html:4
-msgid "You have achieved"
-msgstr ""
-
-#: templates/report/results.html:4
-#, fuzzy
-#| msgid "Modify answers"
-msgid "with your answers"
-msgstr "Ändern Sie die Antworten"
-
 #: templates/report/results.html:6
-msgid "You must reach at least"
-msgstr ""
-
-#: templates/report/results.html:6
-#, fuzzy
-#| msgid "About the CASES Diagnostic"
-msgid "to be able to make a CASES Diagnosis."
-msgstr "Über die CASES-Diagnose"
-
-#: templates/report/results.html:8
+#, python-format
 msgid ""
+"\n"
+"You have achieved %(SCORE)s/100 with your answers.\n"
+"<br /><br />\n"
+"You must reach at least %(minimal_acceptable_score)s/100 to be able to make "
+"a CASES Diagnosis.\n"
+"<br /><br />\n"
 "We remind you that this is a self-assessment and it is important to "
-"understand that all the results can not in any way be exhaustive."
+"understand that all the results can not in any way be exhaustive.\n"
 msgstr ""
 
-#: templates/report/template.html:8
+#: templates/report/template.html:11
 msgid "Generated with Fit4Cybersecurity"
 msgstr ""
 
@@ -608,41 +565,3 @@ msgstr "Version von"
 #: templates_parts/footer_part.html:27
 msgid "Terms of Service"
 msgstr "Nutzungsbedingungen"
-
-#~ msgid "/static/images/logoFull-en.png"
-#~ msgstr "/static/images/logoFull-de.png"
-
-#~ msgid "English"
-#~ msgstr "Englisch"
-
-#~ msgid "French"
-#~ msgstr "Französisch"
-
-#~ msgid "Deutsch"
-#~ msgstr "Deutsch"
-
-#~ msgid "Get the results later"
-#~ msgstr "Die Ergebnisse erhalten Sie später"
-
-#~ msgid ""
-#~ "To restore the results later you can copy the provided link, create a "
-#~ "bookmark or use the code on the main page:"
-#~ msgstr ""
-#~ "Um die Ergebnisse später wiederherzustellen, können Sie den "
-#~ "bereitgestellten Link kopieren und ein Lesezeichen erstellen oder "
-#~ "verwenden Sie den Code auf der Hauptseite:"
-
-#~ msgid "Would like to leave the results page?"
-#~ msgstr "Möchten Sie die Ergebnisseite verlassen?"
-
-#~ msgid "Please provide your feedback"
-#~ msgstr "Bitte geben Sie Ihr Feedback"
-
-#~ msgid "Please share your opinion about our tool"
-#~ msgstr "Bitte teilen Sie Ihre Meinung zu unserem Tool"
-
-#~ msgid "Terms of service"
-#~ msgstr "Nutzungsbedingungen"
-
-#~ msgid "images/logoFull-en.png"
-#~ msgstr "images/logoFull-de.png"

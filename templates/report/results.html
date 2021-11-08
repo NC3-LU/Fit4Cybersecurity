@@ -1,11 +1,15 @@
-<h2>{{ _('Result') }}</h2>
+{% load i18n %}
+
+<h2>Result</h2>
 
 <p>
-{{ _('You have achieved') }} {{ SCORE }}/100 {{ _('with your answers') }}.
+{% blocktranslate with minimal_acceptable_score=CUSTOM.minimal_acceptable_score %}
+You have achieved {{ SCORE }}/100 with your answers.
 <br /><br />
-{{ _('You must reach at least') }} {{ CUSTOM.minimal_acceptable_score }}/100 {{ _('to be able to make a CASES Diagnosis.') }}
+You must reach at least {{ minimal_acceptable_score }}/100 to be able to make a CASES Diagnosis.
 <br /><br />
-{{ _('We remind you that this is a self-assessment and it is important to understand that all the results can not in any way be exhaustive.') }}
+We remind you that this is a self-assessment and it is important to understand that all the results can not in any way be exhaustive.
+{% endblocktranslate  %}
 </p>
 
 <img  class="center" src="data:image/png;base64,{{ CHART }}" />

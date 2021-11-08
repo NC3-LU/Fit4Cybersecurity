@@ -3,11 +3,17 @@
 import os
 from datetime import datetime
 from weasyprint import HTML, CSS
-from jinja2 import Environment, FileSystemLoader
+
+from django.template.loader import render_to_string
 
 from django.conf import settings
 from django.utils.translation import gettext as _
-from survey.models import SurveyUser, SurveyQuestion, SurveyQuestionAnswer, SurveyUserAnswer
+from survey.models import (
+    SurveyUser,
+    SurveyQuestion,
+    SurveyQuestionAnswer,
+    SurveyUserAnswer,
+)
 from csskp.settings import CUSTOM
 from survey.reporthelper import (
     generate_chart_png,
@@ -30,30 +36,8 @@ def format_datetime(value: str, format: str = "medium") -> str:
     return value.strftime(format)
 
 
-def environment() -> Environment:
-    """Define an environment for Jinja, adds the i18n extension, the filters
-    and make available the variable CUSTOM."""
-    filepath = os.path.join(settings.BASE_DIR, settings.REPORT_TEMPLATE_DIR)
-    # i18n extension
-    options = {}
-    options["extensions"] = [
-        "jinja2.ext.i18n",
-        "jinja2.ext.autoescape",
-        "jinja2.ext.with_",
-    ]
-    env = Environment(**options, loader=FileSystemLoader(filepath))
-    # i18n template functions
-    env.install_gettext_callables(gettext=gettext, ngettext=ngettext, newstyle=True)
-    env.filters["format_datetime"] = format_datetime
-    env.globals["CUSTOM"] = CUSTOM
-    return env
-
-
 def create_html_report(user: SurveyUser, lang: str) -> str:
     """Generate a HTML report."""
-    env = environment()
-    template = env.get_template("template.html")
-
     cases_logo = os.path.abspath(
         os.path.join(settings.REPORT_TEMPLATE_DIR, "images/cases_logo.svg")
     )
@@ -86,13 +70,17 @@ def create_html_report(user: SurveyUser, lang: str) -> str:
     questions = []
     for index, question in enumerate(questions_list):
 
-        questions.append({
-            "question": question,
-            "possible_answers": SurveyQuestionAnswer.objects.filter(question=question).order_by(
-                "aindex"
-            ),
-            "user_answers": SurveyUserAnswer.objects.filter(user=user, )
-        })
+        questions.append(
+            {
+                "question": question,
+                "possible_answers": SurveyQuestionAnswer.objects.filter(
+                    question=question
+                ).order_by("aindex"),
+                "user_answers": SurveyUserAnswer.objects.filter(
+                    user=user,
+                ),
+            }
+        )
         # answers_list = SurveyQuestionAnswer.objects.filter(question=question).order_by(
         #     "aindex"
         # )
@@ -104,18 +92,21 @@ def create_html_report(user: SurveyUser, lang: str) -> str:
         #     user_answer = user_answers_values[answer.id]
 
     # Render the HTML file
-    output_from_parsed_template = template.render(
-        REPORT_TITLE=_("Final report"),
-        CASES_LOGO=cases_logo,
-        SECIN_LOGO=secin_logo,
-        TOOL_LOGO=tool_logo,
-        TOOL_NAME=CUSTOM["tool_name"],
-        DATE=datetime.today(),
-        SURVEY_USER=user,
-        CHART=chart_png_base64,
-        SCORE=score,
-        recommendations=recommendations_list,
-        questions=questions,
+    output_from_parsed_template = render_to_string(
+        "report/template.html",
+        {
+            "REPORT_TITLE": _("Final report"),
+            "CASES_LOGO": cases_logo,
+            "SECIN_LOGO": secin_logo,
+            "TOOL_LOGO": tool_logo,
+            "TOOL_NAME": CUSTOM["tool_name"],
+            "DATE": datetime.today(),
+            "SURVEY_USER": user,
+            "CHART": chart_png_base64,
+            "SCORE": score,
+            "recommendations": recommendations_list,
+            "questions": questions,
+        },
     )
 
     return output_from_parsed_template

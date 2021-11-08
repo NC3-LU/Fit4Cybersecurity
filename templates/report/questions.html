@@ -2,15 +2,12 @@
 
 {% for question in questions %}
 
-<p>{{ question["question"] }}</p>
+<p>{{ question.question }}</p>
 
   <ul>
-  {% for possible_answer in question["possible_answers"] %}
+  {% for possible_answer in question.possible_answers %}
     <li>{{ possible_answer }}</li>
   {% endfor %}
   </ul>
 
 {% endfor %}
-
-
-{% include 'footer.html' %}
