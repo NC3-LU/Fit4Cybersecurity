@@ -2,6 +2,11 @@
 
 from django import template
 from django.utils import translation
+from csskp.settings import LANGUAGE_CODE
+
+from survey.models import (
+    TranslationKey,
+)
 
 register = template.Library()
 
@@ -22,3 +27,8 @@ def format_datetime(value: str, format: str = "medium") -> str:
     elif format == "compact":
         format = "%Y-%m-%d"
     return value.strftime(format)
+
+
+@register.filter(name="ifinlist")
+def ifinlist(value, list):
+    return True if str(value) in list else False
