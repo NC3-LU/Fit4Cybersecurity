@@ -23,19 +23,6 @@ from survey.reporthelper import (
 )  # temporary imports
 from survey.viewLogic import get_questions_with_user_answers
 
-from django.utils.translation import gettext, ngettext
-
-
-def format_datetime(value: str, format: str = "medium") -> str:
-    """Custom Jinja filter to format a datetime object."""
-    if format == "full":
-        format = "%Y-%m-%d %H:%M"
-    elif format == "medium":
-        format = "%Y-%m-%d %H:%M"
-    elif format == "compact":
-        format = "%Y-%m-%d"
-    return value.strftime(format)
-
 
 def create_html_report(user: SurveyUser, lang: str) -> str:
     """Generate a HTML report."""
