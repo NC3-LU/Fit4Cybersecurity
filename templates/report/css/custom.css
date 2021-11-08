@@ -1,13 +1,14 @@
 @page {
     size: A4; /* Change from the default size of A4 */
-    margin: 2.5cm; /* Set margin on each page */
+    margin: 2.5cm 2cm 2cm 2.5cm; /* Set margin on each page */
+    padding: 15px 0 15px 0;
     @top-left {
         background: url("../../../static/images/logoFull-en.png") no-repeat;
         content: '';
         background-size: 100%;
         background-position: center bottom;
         margin-bottom: 5px;
-        height: 2,5cm;
+        height: 2.5cm;
         width: 25%;
     }
     @top-center {
@@ -15,16 +16,16 @@
         content: '';
         display: block;
         height: 0.2px;
-        opacity: .5;
+        opacity: 0.5;
         width: 100%;
     }
     @bottom-left {
         background: url("../images/secin_logo.svg") no-repeat;
         content: '';
-        background-size: 60%;
+        background-size: 50%;
         background-position: left center;
         margin-bottom: 5px;
-        height: 1,5cm;
+        height: 2cm;
         width: 25%;
     }
     @bottom-center {
@@ -32,15 +33,15 @@
         content: '';
         display: block;
         height: 0.2px;
-        opacity: .5;
-        margin-top: 15px;
+        opacity: 0.5;
         width: 100%;
     }
     @bottom-right {
         content: counter(page);
-        height: 2,5cm;
+        height: 2cm;
         width: 1cm;
         text-align: center;
+        font-size: 14px;
     }
 }
 @page:first {
@@ -90,21 +91,12 @@ h6{font-size:16px;}
     page-break-before: always
 }
 
-.footer {
-    clear: both;
-    position: absolute;
-    height: 20px;
-    bottom: -70px;
-}
-
 /* LOGOS */
 
 .tool_logo {
     margin-top: 30%;
     width: 80%;
 }
-
-
 
 .secin_logo {
     width: 30%;
@@ -115,8 +107,9 @@ h6{font-size:16px;}
     right: 0;
 }
 
-ul.ba {
-    list-style-type: none;
-    margin-left: 0px;
-    padding-left: 0px;
+/* QUESTIONS */
+
+.answer {
+    font-weight:bold;
+    list-style-type:disc;
 }
