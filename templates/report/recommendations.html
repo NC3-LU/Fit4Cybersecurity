@@ -5,7 +5,7 @@
 </p>
 
 {% for category, items in recommendations.items %}
-    <h5>{{ category }}</h5>
+    <h5 id="{{ category }}">{{ category }}</h5>
     <ol>
         {% for recommendation in items %}
             <li>{{ recommendation | safe }}</li>
