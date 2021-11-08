@@ -1,16 +1,54 @@
 @page {
     size: A4; /* Change from the default size of A4 */
     margin: 2.5cm; /* Set margin on each page */
+    @top-left {
+        background: url("../../../static/images/logoFull-en.png") no-repeat;
+        content: '';
+        background-size: 100%;
+        background-position: center bottom;
+        margin-bottom: 5px;
+        height: 2,5cm;
+        width: 25%;
+    }
+    @top-center {
+        background: #404040;
+        content: '';
+        display: block;
+        height: 0.2px;
+        opacity: .5;
+        width: 100%;
+    }
+    @bottom-left {
+        background: url("../images/secin_logo.svg") no-repeat;
+        content: '';
+        background-size: 60%;
+        background-position: left center;
+        margin-bottom: 5px;
+        height: 1,5cm;
+        width: 25%;
+    }
+    @bottom-center {
+        background: #404040;
+        content: '';
+        display: block;
+        height: 0.2px;
+        opacity: .5;
+        margin-top: 15px;
+        width: 100%;
+    }
     @bottom-right {
         content: counter(page);
         height: 2,5cm;
+        width: 1cm;
         text-align: center;
     }
 }
 @page:first {
-    @bottom-right {
-        content: none;
-    }
+    @top-left { content: none;}
+    @top-center { content: none;}
+    @bottom-left { content: none;}
+    @bottom-center { content: none;}
+    @bottom-right { content: none;}
 }
 
 p, li, div {
@@ -20,7 +58,7 @@ p, li, div {
 }
 
 
-h1{font-size:26px; margin-bottom: 40px;}
+h1{font-size:26px;}
 h2{font-size:24px;}
 h3{font-size:22px;}
 h4{font-size:20px;}
