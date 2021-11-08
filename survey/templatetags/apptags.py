@@ -2,11 +2,6 @@
 
 from django import template
 from django.utils import translation
-from csskp.settings import LANGUAGE_CODE
-
-from survey.models import (
-    TranslationKey,
-)
 
 register = template.Library()
 

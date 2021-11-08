@@ -10,16 +10,12 @@ from django.conf import settings
 from django.utils.translation import gettext as _
 from survey.models import (
     SurveyUser,
-    SurveyQuestion,
-    SurveyQuestionAnswer,
-    SurveyUserAnswer,
 )
 from csskp.settings import CUSTOM
 from survey.reporthelper import (
     generate_chart_png,
     calculateResult,
     getRecommendations,
-    get_formatted_translations,
 )  # temporary imports
 from survey.viewLogic import get_questions_with_user_answers
 
