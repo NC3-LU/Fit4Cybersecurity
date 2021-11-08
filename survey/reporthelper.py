@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from typing import Dict, List
+from typing import Dict, List, Union
 import io
 import os
 import base64
@@ -391,7 +391,7 @@ def calculateResult(user: SurveyUser, lang: str):
 
 def generate_chart_png(
     user: SurveyUser, evaluation, sections_list, lang, output_type="file"
-) -> str:
+) -> Union[str, bytes, None]:
     """Generates the chart with Matplotlib and returns the path of the generated
     graph which will be included in the report.
     """

@@ -2,6 +2,7 @@
 
 from django import template
 from django.utils import translation
+from datetime import datetime
 
 register = template.Library()
 
@@ -13,7 +14,7 @@ def translate(string: str, language: str) -> str:
 
 
 @register.filter(name="format_datetime")
-def format_datetime(value: str, format: str = "medium") -> str:
+def format_datetime(value: datetime, format: str = "medium") -> str:
     """Custom Jinja filter to format a datetime object."""
     if format == "full":
         format = "%Y-%m-%d %H:%M"
