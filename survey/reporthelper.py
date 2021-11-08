@@ -389,7 +389,9 @@ def calculateResult(user: SurveyUser, lang: str):
     return total_user_score, user_evaluations, sections_list
 
 
-def generate_chart_png(user: SurveyUser, evaluation, sections_list, lang, output_type="file") -> str:
+def generate_chart_png(
+    user: SurveyUser, evaluation, sections_list, lang, output_type="file"
+) -> str:
     """Generates the chart with Matplotlib and returns the path of the generated
     graph which will be included in the report.
     """
@@ -436,7 +438,7 @@ def generate_chart_png(user: SurveyUser, evaluation, sections_list, lang, output
     try:
         if output_type == "base64":
             stringIObytes = io.BytesIO()
-            plt.savefig(stringIObytes, format='png')
+            plt.savefig(stringIObytes, format="png")
             stringIObytes.seek(0)
             return base64.b64encode(stringIObytes.read())
 

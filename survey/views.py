@@ -124,7 +124,9 @@ def show_report(request, lang):
         html_report = create_html_report(user, lang)
         pdf_report = makepdf(html_report)
         response = HttpResponse(pdf_report, content_type="application/pdf")
-        response["Content-Disposition"] = "attachment;filename=Report_{}.pdf".format(date.today())
+        response["Content-Disposition"] = "attachment;filename=Report_{}.pdf".format(
+            date.today()
+        )
         return response
     except Exception as e:
         messages.warning(request, e)
