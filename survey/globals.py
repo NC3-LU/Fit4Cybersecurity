@@ -68,5 +68,3 @@ TRANSLATION_TYPES = [
     ("S", "Question Section"),
     ("C", "Company Service Category"),
 ]
-
-MIN_ACCEPTABLE_SCORE = 65

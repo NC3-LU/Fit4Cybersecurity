@@ -15,7 +15,6 @@ from survey.viewLogic import (
 )
 from survey.reporthelper import calculateResult, getRecommendations
 from survey.report import create_html_report, makepdf
-from survey.globals import MIN_ACCEPTABLE_SCORE
 from survey.models import SurveyUser, SURVEY_STATUS_FINISHED
 from django.contrib import messages
 from django.utils import translation
@@ -121,6 +120,8 @@ def show_report(request, lang):
         return HttpResponseRedirect("/")
 
     try:
+        translation.activate("fr")
+        request.session[translation.LANGUAGE_SESSION_KEY] = "fr"
         html_report = create_html_report(user, lang)
         pdf_report = makepdf(html_report)
         response = HttpResponse(pdf_report, content_type="application/pdf")
@@ -202,7 +203,6 @@ def finish(request):
         "chartTitles": str(sections_list),
         "chartlabelYou": _("Your results"),
         "chartdataYou": str(radar_current),
-        "min_acceptable_score": MIN_ACCEPTABLE_SCORE,
         "general_feedback_form": handle_general_feedback(user, request),
     }
 
