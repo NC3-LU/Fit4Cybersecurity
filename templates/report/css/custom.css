@@ -120,3 +120,45 @@ h6{font-size:16px;}
     font-weight:bold;
     list-style-type:disc;
 }
+
+/* TOC */
+
+.toc {
+    list-style: none;
+    padding-left: 0;
+}
+
+.toc li {
+    border-bottom: .25pt solid #c1c1c1;
+    margin: .25cm 0;
+    padding-top: .25cm;
+}
+
+.toc li a {
+    color: inherit;
+    text-decoration-line: inherit;
+}
+
+.toc li a::before {
+    content: target-text(attr(href));
+}
+
+.toc li a::after {
+    content: target-counter(attr(href), page);
+    float: right;
+}
+
+.toc li > ul {
+    padding-left: 20px;
+}
+
+.sub_chapiter {
+    list-style: none;
+    margin: .1cm 0 !important;
+    padding-top: .1cm !important;
+}
+.sub_chapiter a::before {
+    content: target-text(attr(href));
+    font-size: 14px;
+    font-style: italic !important;
+}
