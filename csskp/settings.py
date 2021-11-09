@@ -33,21 +33,32 @@ PARTS_TEMPLATE_DIR = os.path.join(
 STATIC_DIR = os.path.join(BASE_DIR, "static")
 
 PICTURE_DIR = "/tmp/csskp/"
-REPORT_TEMPLATE_DIR = config.REPORT_TEMPLATE_DIR
+
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = config.SECRET_KEY
-HASH_KEY = config.HASH_KEY
+try:
+    REPORT_TEMPLATE_DIR = config.REPORT_TEMPLATE_DIR
 
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = config.DEBUG
+    # SECURITY WARNING: keep the secret key used in production secret!
+    SECRET_KEY = config.SECRET_KEY
+    HASH_KEY = config.HASH_KEY
 
-ALLOWED_HOSTS = config.ALLOWED_HOSTS
-PUBLIC_URL = config.PUBLIC_URL
-OPERATOR_EMAIL = config.OPERATOR_EMAIL
+    # SECURITY WARNING: don't run with debug turned on in production!
+    DEBUG = config.DEBUG
+
+    # Database
+    # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
+    DATABASES = config.DATABASES
+
+    ALLOWED_HOSTS = config.ALLOWED_HOSTS
+    PUBLIC_URL = config.PUBLIC_URL
+    OPERATOR_EMAIL = config.OPERATOR_EMAIL
+except AttributeError as e:
+    print("Please check you configuration file for the missing configuration variable:")
+    print("  {}".format(e))
+    exit(1)
 
 
 # Application definition
@@ -105,10 +116,6 @@ WSGI_APPLICATION = "csskp.wsgi.application"
 LOGIN_URL = "/admin/login/"
 LOGIN_REDIRECT_URL = "/admin/"
 LOGOUT_REDIRECT_URL = "/"
-
-# Database
-# https://docs.djangoproject.com/en/3.2/ref/settings/#databases
-DATABASES = config.DATABASES
 
 DEFAULT_AUTO_FIELD = "django.db.models.AutoField"
 
