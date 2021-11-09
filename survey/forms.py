@@ -138,9 +138,10 @@ class AnswerMChoice(forms.Form):
 
                 raise forms.ValidationError(
                     _(
-                        'You can\'t choose multiple answers if the answer "%(value)s" is choosen'
-                    ),
-                    params={"value": answer_text},
+                        "You can't choose multiple answers if the answer {} is choosen.".format(
+                            answer_text
+                        )
+                    )
                 )
 
         return answers

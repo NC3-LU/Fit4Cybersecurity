@@ -209,10 +209,12 @@ BOOTSTRAP4 = BOOTSTRAP4 = {
         "url": "/static/npm_components/popper.js/dist/umd/popper.min.js",
         "crossorigin": "anonymous",
     },
-    # Put JavaScript in the HEAD section of the HTML document (only relevant if you use bootstrap4.html)
+    # Put JavaScript in the HEAD section of the HTML document (only relevant if you use
+    # bootstrap4.html)
     "javascript_in_head": True,
     # Include jQuery with Bootstrap JavaScript False|falsy|slim|full (default=False)
-    # False - means tag bootstrap_javascript use default value - `falsy` and does not include jQuery)
+    # False - means tag bootstrap_javascript use default value - `falsy` and does not
+    # include jQuery)
     "include_jquery": True,
     # Label class to use in horizontal forms
     "horizontal_label_class": "col-md-3",
@@ -224,9 +226,11 @@ BOOTSTRAP4 = BOOTSTRAP4 = {
     "required_css_class": "",
     # Class to indicate error (better to set this in your Django form)
     "error_css_class": "is-invalid",
-    # Class to indicate success, meaning the field has valid input (better to set this in your Django form)
+    # Class to indicate success, meaning the field has valid input
+    # (better to set this in your Django form)
     "success_css_class": "is-valid",
-    # Renderers (only set these if you have studied the source and understand the inner workings)
+    # Renderers (only set these if you have studied the source and understand the inner
+    # workings)
     "formset_renderers": {
         "default": "bootstrap4.renderers.FormsetRenderer",
     },
