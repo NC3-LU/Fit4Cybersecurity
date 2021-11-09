@@ -36,7 +36,7 @@ CUSTOM = {
     "minimal_acceptable_score": 65,
     # Custom parts of templates
     #   main dir for PARTS_TEMPLATE_DIR:
-    "templates_parts_dir": "templates_parts",
+    "templates_parts_dir": "templates/parts",
     "templates_parts": {
         # path of the templates parts
         "terms": "terms_part.html",
