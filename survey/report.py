@@ -5,6 +5,7 @@ from datetime import datetime
 from weasyprint import HTML, CSS
 from django.template.loader import render_to_string
 from django.conf import settings
+from django.utils import translation
 from django.utils.translation import gettext as _
 from survey.models import SurveyUser
 from csskp.settings import CUSTOM
@@ -18,6 +19,7 @@ from survey.viewLogic import get_questions_with_user_answers
 
 def create_html_report(user: SurveyUser, lang: str) -> str:
     """Generate a HTML report."""
+    translation.activate(lang)
     cases_logo = os.path.abspath(
         os.path.join(settings.REPORT_TEMPLATE_DIR, "images/cases_logo.svg")
     )
