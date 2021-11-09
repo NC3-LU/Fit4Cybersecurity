@@ -2,8 +2,7 @@
 
 <h2 id="results">{{ _('Result') }}</h2>
 
-<p>
-{% blocktranslate with minimal_acceptable_score=CUSTOM.minimal_acceptable_score %}
+<p>{% blocktranslate with minimal_acceptable_score=CUSTOM.minimal_acceptable_score %}
 You have achieved {{ SCORE }}/100 with your answers.
 <br /><br />
 You must reach at least {{ minimal_acceptable_score }}/100 to be able to make a CASES Diagnosis.

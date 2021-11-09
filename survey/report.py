@@ -50,11 +50,10 @@ def create_html_report(user: SurveyUser, lang: str) -> str:
     output_from_parsed_template = render_to_string(
         "report/template.html",
         {
-            "REPORT_TITLE": _("Final report"),
+            "CUSTOM": CUSTOM,
             "CASES_LOGO": cases_logo,
             "SECIN_LOGO": secin_logo,
             "TOOL_LOGO": tool_logo,
-            "TOOL_NAME": CUSTOM["tool_name"],
             "DATE": datetime.today(),
             "SURVEY_USER": user,
             "CHART": chart_png_base64,
