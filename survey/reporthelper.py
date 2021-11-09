@@ -101,32 +101,30 @@ def calculateResult(user: SurveyUser, lang: str):
         if section_title not in sections_list:
             sections_list.append(section_title)
 
-    # user_selected_answers = SurveyUserAnswer.objects.filter(
-    #     user=user, uvalue__gt=0
-    # ).order_by("answer__question__qindex", "answer__aindex")
-    # for user_selected_answer in user_selected_answers:
-    #     section_id = user_selected_answer.answer.question.section.id
-    #
-    #     total_user_score += user_selected_answer.answer.score
-    #
-    #     if section_id not in user_evaluations_per_section:
-    #         user_evaluations_per_section[section_id] = 0
-    #     user_evaluations_per_section[section_id] += user_selected_answer.answer.score
+    user_selected_answers = SurveyUserAnswer.objects.filter(
+        user=user, uvalue__gt=0
+    ).order_by("answer__question__qindex", "answer__aindex")
+    for user_selected_answer in user_selected_answers:
+        section_id = user_selected_answer.answer.question.section.id
+
+        total_user_score += user_selected_answer.answer.score
+
+        if section_id not in user_evaluations_per_section:
+            user_evaluations_per_section[section_id] = 0
+        user_evaluations_per_section[section_id] += user_selected_answer.answer.score
 
     # get the score in percent! with then 100 being total_questions_score
-    # total_user_score = round(total_user_score * 100 / total_questions_score)
+    total_user_score = round(total_user_score * 100 / total_questions_score)
 
     user_evaluations: List[int] = []
-    # for section_id, user_evaluation_per_section in user_evaluations_per_section.items():
-    #     user_evaluations.append(
-    #         round(
-    #             user_evaluation_per_section
-    #             * 100
-    #             / max_evaluations_per_section[section_id]
-    #         )
-    #     )
-
-    total_user_score = 0
+    for section_id, user_evaluation_per_section in user_evaluations_per_section.items():
+        user_evaluations.append(
+            round(
+                user_evaluation_per_section
+                * 100
+                / max_evaluations_per_section[section_id]
+            )
+        )
 
     return total_user_score, user_evaluations, sections_list
 
