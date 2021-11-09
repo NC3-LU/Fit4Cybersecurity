@@ -33,7 +33,7 @@ mypy = "^0.910"
 flake8 = "^4.0.1"
 
 [tool.flake8]
-max-line-length = 127
+max-line-length = 100
 extend-ignore = "E203,"
 max-complexity = 15
 
