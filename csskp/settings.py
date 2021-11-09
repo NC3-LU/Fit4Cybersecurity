@@ -27,7 +27,7 @@ if BOOTSTRAP4_FOLDER not in sys.path:
 
 MAIN_TEMPLATE_DIR = os.path.join(BASE_DIR, "templates")
 PARTS_TEMPLATE_DIR = os.path.join(
-    BASE_DIR, CUSTOM.get("templates_parts_dir", "templates_parts")
+    BASE_DIR, CUSTOM.get("templates_parts_dir", "templates/parts")
 )
 
 STATIC_DIR = os.path.join(BASE_DIR, "static")
@@ -46,6 +46,8 @@ HASH_KEY = config.HASH_KEY
 DEBUG = config.DEBUG
 
 ALLOWED_HOSTS = config.ALLOWED_HOSTS
+PUBLIC_URL = config.PUBLIC_URL
+OPERATOR_EMAIL = config.OPERATOR_EMAIL
 
 
 # Application definition
