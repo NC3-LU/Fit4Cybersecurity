@@ -120,11 +120,11 @@ def show_report(request, lang):
         return HttpResponseRedirect("/")
 
     try:
-        # translation.activate("fr") # force French translation for the report
         html_report = create_html_report(user, lang)
         pdf_report = makepdf(html_report)
         response = HttpResponse(pdf_report, content_type="application/pdf")
-        response["Content-Disposition"] = "attachment;filename=Report_{}.pdf".format(
+        response["Content-Disposition"] = "attachment;filename=Report{}_{}.pdf".format(
+            CUSTOM["tool_name"],
             date.today()
         )
         return response
