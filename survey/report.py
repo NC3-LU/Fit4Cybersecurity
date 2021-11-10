@@ -35,7 +35,7 @@ def create_html_report(user: SurveyUser, lang: str) -> str:
     try:
         chart_png_base64 = generate_chart_png(
             user, details, section_list, lang, "base64"
-        )
+        ).decode()
     except Exception as e:
         chart_png_base64 = None
         print(e)
