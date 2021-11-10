@@ -24,14 +24,11 @@ urlpatterns = [
     path("", views.index, name="index"),
     path("terms", views.get_terms),
     path("<slug:lang>", views.index),
-
     # Stats
     path("admin/export/statistics/", include("stats.urls")),
-
     # Django admin
     path("admin/", include("django.contrib.auth.urls")),
     path("admin/", admin.site.urls),
-
     # Survey
     path("survey/", include("survey.urls")),
 ]

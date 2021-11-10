@@ -1,7 +1,7 @@
 from django.utils.translation import gettext_lazy
 
 PUBLIC_URL = ""
-ALLOWED_HOSTS = ['127.0.0.1', locals().get("PUBLIC_URL", "")]
+ALLOWED_HOSTS = ["127.0.0.1", locals().get("PUBLIC_URL", "")]
 OPERATOR_EMAIL = "info@example.org"
 
 SECRET_KEY = "u__*z&=urjtc0t)b)@5qbt_a#3-354=k9x(j)@eu#h7sb=-66s"

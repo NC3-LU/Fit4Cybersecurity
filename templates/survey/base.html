@@ -51,6 +51,7 @@
 {% endif %}
 
 <div class="container">
+  {% block main_logo %}
   <div class="row">
     <div class="col text-center">
       <div class="border-bottom border-primary">
@@ -58,6 +59,7 @@
       </div>
     </div>
   </div>
+  {% endblock %}
 
   {% if languages|length > 1 %}
   <div class="dropdown d-flex flex-row-reverse" id="language-selector" >

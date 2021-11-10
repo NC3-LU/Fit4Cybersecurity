@@ -124,8 +124,7 @@ def show_report(request, lang):
         pdf_report = makepdf(html_report)
         response = HttpResponse(pdf_report, content_type="application/pdf")
         response["Content-Disposition"] = "attachment;filename=Report{}_{}.pdf".format(
-            CUSTOM["tool_name"],
-            date.today()
+            CUSTOM["tool_name"], date.today()
         )
         return response
     except Exception as e:
