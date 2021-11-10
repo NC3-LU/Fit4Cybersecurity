@@ -32,11 +32,11 @@ CUSTOM = {
         ("fr", "French"),
         ("de", "German"),
     ],
-    #Logos paths
+    # Logos paths
     "tool_logo": "static/images/logoFull-en.png",
     "cases_logo": "templates/report/images/cases_logo.svg",
     "secin_logo": "templates/report/images/secin_logo.svg",
-    #Minimal score
+    # Minimal score
     "minimal_acceptable_score": 65,
     # Custom parts of templates
     #   main dir for PARTS_TEMPLATE_DIR:

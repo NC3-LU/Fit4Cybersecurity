@@ -20,6 +20,7 @@ tool_logo = os.path.abspath(os.path.join(settings.BASE_DIR, CUSTOM["tool_logo"])
 cases_logo = os.path.abspath(os.path.join(settings.BASE_DIR, CUSTOM["cases_logo"]))
 secin_logo = os.path.abspath(os.path.join(settings.BASE_DIR, CUSTOM["secin_logo"]))
 
+
 def create_html_report(user: SurveyUser, lang: str) -> str:
     """Generate a HTML report."""
     translation.activate(lang)
@@ -31,7 +32,7 @@ def create_html_report(user: SurveyUser, lang: str) -> str:
     try:
         chart_png_base64 = generate_chart_png(
             user, details, section_list, lang, "base64"
-        ).decode()
+        )
     except Exception as e:
         chart_png_base64 = None
         print(e)
@@ -65,23 +66,26 @@ def create_html_report(user: SurveyUser, lang: str) -> str:
 
 def makepdf(html: str) -> bytes:
     """Generate a PDF file from a string of HTML."""
-    htmldoc = HTML(
-        string=html,
-        base_url=os.path.abspath(settings.REPORT_TEMPLATE_DIR)
-    )
+    htmldoc = HTML(string=html, base_url=os.path.abspath(settings.REPORT_TEMPLATE_DIR))
 
     stylesheets = [
-        CSS(string='''
+        CSS(
+            string='''
             :root {
-                --tool_logo_url: url("'''+ tool_logo +'''");
-                --secin_logo_url: url("'''+ secin_logo + '''");
+                --tool_logo_url: url("'''
+            + tool_logo
+            + '''");
+                --secin_logo_url: url("'''
+            + secin_logo
+            + """");
             }
-            '''),
+            """
+        ),
         CSS(
             os.path.abspath(
                 os.path.join(settings.REPORT_TEMPLATE_DIR, "css/custom.css")
             )
         ),
     ]
-    
+
     return htmldoc.write_pdf(stylesheets=stylesheets)

@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from typing import Dict, List, Union
+from typing import Dict, List, Optional
 import io
 import os
 import base64
@@ -131,32 +131,29 @@ def calculateResult(user: SurveyUser, lang: str):
 
 def generate_chart_png(
     user: SurveyUser, evaluation, sections_list, lang, output_type="file"
-) -> Union[str, bytes, None]:
+) -> Optional[str]:
     """Generates the chart with Matplotlib and returns the path of the generated
     graph which will be included in the report.
+    Returns a graph in base 64 as a string or writes the graph in a file on the disk.
     """
     n = len(sections_list)
     theta = radar_factory(n, frame="polygon")
-
-    spoke_labels = []
-    for section in sections_list:
-        spoke_labels.append(section)
 
     fig, ax = plt.subplots(
         figsize=(7, 5), dpi=150, nrows=1, ncols=1, subplot_kw=dict(projection="radar")
     )
     fig.subplots_adjust(wspace=0.25, hspace=0.20, top=0.85, bottom=0.05)
 
-    ax.set_rgrids([0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100])
+    ax.set_rgrids([0, 20, 40, 60, 80, 100], angle=90)
     ax.set_ylim(0, 100)
 
     ax.plot(theta, evaluation, color="r")
     ax.fill(theta, evaluation, facecolor="r", alpha=0.25)
 
-    ax.set_varlabels(spoke_labels)
+    ax.set_varlabels(sections_list)
 
     ax.legend(
-        _("Your results"),
+        [_('Your results')],
         loc=(0.9, 0.95),
         labelspacing=0.1,
         fontsize="small",
@@ -180,7 +177,7 @@ def generate_chart_png(
             stringIObytes = io.BytesIO()
             plt.savefig(stringIObytes, format="png")
             stringIObytes.seek(0)
-            return base64.b64encode(stringIObytes.read())
+            return base64.b64encode(stringIObytes.read()).decode()
 
         plt.savefig(file_name)
     except Exception as e:
