@@ -26,7 +26,7 @@ def create_html_report(user: SurveyUser, lang: str) -> str:
     secin_logo = os.path.abspath(
         os.path.join(settings.REPORT_TEMPLATE_DIR, "images/secin_logo.svg")
     )
-    tool_logo = os.path.abspath(os.path.join(settings.BASE_DIR, CUSTOM["logoFull"]))
+    tool_logo = os.path.abspath(os.path.join(settings.BASE_DIR, CUSTOM["tool_logo"]))
 
     # Calculate the result
     score, details, section_list = calculateResult(user, lang)
