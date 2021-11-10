@@ -6,6 +6,7 @@ from weasyprint import HTML, CSS
 from django.template.loader import render_to_string
 from django.conf import settings
 from django.utils import translation
+from django.utils.translation import gettext as _
 from survey.models import SurveyUser
 from csskp.settings import CUSTOM
 from survey.reporthelper import (
@@ -34,7 +35,7 @@ def create_html_report(user: SurveyUser, lang: str) -> str:
     try:
         chart_png_base64 = generate_chart_png(
             user, details, section_list, lang, "base64"
-        )
+        ).decode()
     except Exception as e:
         chart_png_base64 = None
         print(e)
