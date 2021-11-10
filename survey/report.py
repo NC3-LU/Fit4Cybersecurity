@@ -69,12 +69,21 @@ def create_html_report(user: SurveyUser, lang: str) -> str:
 
 def makepdf(html: str) -> bytes:
     """Generate a PDF file from a string of HTML."""
-    htmldoc = HTML(string=html)
+    htmldoc = HTML(
+        string=html,
+        base_url=os.path.abspath(settings.REPORT_TEMPLATE_DIR)
+    )
     stylesheets = [
+        CSS(string='''
+            :root {
+                --tool_logo_url: url("../../static/images/logoFull-en.png");
+                --secin_logo_url: url("images/secin_logo.svg");
+            }
+            '''),
         CSS(
             os.path.abspath(
                 os.path.join(settings.REPORT_TEMPLATE_DIR, "css/custom.css")
             )
-        )
+        ),
     ]
     return htmldoc.write_pdf(stylesheets=stylesheets)

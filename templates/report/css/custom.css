@@ -3,7 +3,8 @@
     margin: 2.5cm 2cm 2cm 2.5cm; /* Set margin on each page */
     padding: 15px 0 15px 0;
     @top-left {
-        background: url("../../../static/images/logoFull-en.png") no-repeat;
+        background-image: var(--tool_logo_url);
+        background-repeat: no-repeat;
         content: '';
         background-size: 100%;
         background-position: center bottom;
@@ -20,7 +21,8 @@
         width: 100%;
     }
     @bottom-left {
-        background: url("../images/secin_logo.svg") no-repeat;
+        background-image: var(--secin_logo_url);
+        background-repeat: no-repeat;
         content: '';
         background-size: 50%;
         background-position: left center;
