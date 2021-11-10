@@ -16,17 +16,17 @@ from survey.reporthelper import (
 )  # temporary imports
 from survey.viewLogic import get_questions_with_user_answers
 
+cases_logo = os.path.abspath(
+    os.path.join(settings.REPORT_TEMPLATE_DIR, "images/cases_logo.svg")
+)
+secin_logo = os.path.abspath(
+    os.path.join(settings.REPORT_TEMPLATE_DIR, "images/secin_logo.svg")
+)
+tool_logo = os.path.abspath(os.path.join(settings.BASE_DIR, CUSTOM["tool_logo"]))
 
 def create_html_report(user: SurveyUser, lang: str) -> str:
     """Generate a HTML report."""
     translation.activate(lang)
-    cases_logo = os.path.abspath(
-        os.path.join(settings.REPORT_TEMPLATE_DIR, "images/cases_logo.svg")
-    )
-    secin_logo = os.path.abspath(
-        os.path.join(settings.REPORT_TEMPLATE_DIR, "images/secin_logo.svg")
-    )
-    tool_logo = os.path.abspath(os.path.join(settings.BASE_DIR, CUSTOM["tool_logo"]))
 
     # Calculate the result
     score, details, section_list = calculateResult(user, lang)
@@ -73,11 +73,12 @@ def makepdf(html: str) -> bytes:
         string=html,
         base_url=os.path.abspath(settings.REPORT_TEMPLATE_DIR)
     )
+    
     stylesheets = [
         CSS(string='''
             :root {
-                --tool_logo_url: url("../../static/images/logoFull-en.png");
-                --secin_logo_url: url("images/secin_logo.svg");
+                --tool_logo_url: url("'''+ tool_logo +'''");
+                --secin_logo_url: url("'''+ secin_logo + '''");
             }
             '''),
         CSS(
