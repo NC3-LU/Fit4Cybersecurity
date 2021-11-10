@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-10 08:36+0000\n"
+"POT-Creation-Date: 2021-11-10 09:44+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: csskp/config.py:25 csskp/config_dev.py:25
+#: csskp/config.py:27 csskp/config_dev.py:27
 msgid "Description from a string or a file."
 msgstr ""
 
@@ -113,11 +113,11 @@ msgstr ""
 msgid "Public administration"
 msgstr ""
 
-#: survey/report.py:53
+#: survey/report.py:52
 msgid "Final report"
 msgstr ""
 
-#: survey/reporthelper.py:159 survey/views.py:203
+#: survey/reporthelper.py:159 survey/views.py:202
 msgid "Your results"
 msgstr ""
 
@@ -137,17 +137,33 @@ msgstr ""
 msgid "To generate a report you have to finish the survey."
 msgstr ""
 
-#: survey/views.py:195
+#: survey/views.py:194
 msgid "Final summary"
 msgstr ""
 
-#: survey/views.py:228
+#: survey/views.py:227
 msgid ""
 "We could not find a survey with the requested key, please start a new one."
 msgstr ""
 
-#: survey/views.py:258
+#: survey/views.py:257
 msgid "Feedback sending errors: "
+msgstr ""
+
+#: templates/parts/footer_part.html:8 templates/parts/footer_part.html:9
+msgid "A service provided by CASES.LU"
+msgstr ""
+
+#: templates/parts/footer_part.html:15 templates/parts/footer_part.html:16
+msgid "Source code on GitHub"
+msgstr ""
+
+#: templates/parts/footer_part.html:20
+msgid "Version of"
+msgstr ""
+
+#: templates/parts/footer_part.html:27
+msgid "Terms of Service"
 msgstr ""
 
 #: templates/report/cover.html:10
@@ -467,20 +483,4 @@ msgstr ""
 msgid ""
 "We need a little information to be able to give you useful recommendations, "
 "once the self-assessment is done."
-msgstr ""
-
-#: templates_parts/footer_part.html:8 templates_parts/footer_part.html:9
-msgid "A service provided by CASES.LU"
-msgstr ""
-
-#: templates_parts/footer_part.html:15 templates_parts/footer_part.html:16
-msgid "Source code on GitHub"
-msgstr ""
-
-#: templates_parts/footer_part.html:20
-msgid "Version of"
-msgstr ""
-
-#: templates_parts/footer_part.html:27
-msgid "Terms of Service"
 msgstr ""
