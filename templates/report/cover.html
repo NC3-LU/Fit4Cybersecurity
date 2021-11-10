@@ -7,8 +7,18 @@
 <div class="cover_information">
     <h1 >{{ REPORT_TITLE }}</h1>
     <ul>
-        <li>{{ _('Date') }}: {{ DATE|format_datetime:"compact" }}</li>
-        <li>{{ _('Self-assessment id') }}: {{ SURVEY_USER.user_id }}</li>
+        <li>
+            <span class="bold">
+                {{ _('Date') }}
+            </span>
+            : {{ DATE|format_datetime:"compact" }}
+        </li>
+        <li>
+            <span class="bold">
+                {{ _('Self-assessment id') }}
+            </span>
+            : {{ SURVEY_USER.user_id }}
+        </li>
     </ul>
 </div>
 
