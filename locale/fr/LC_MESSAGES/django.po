@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-08 12:33+0000\n"
-"PO-Revision-Date: 2021-11-08 13:34+0100\n"
+"POT-Creation-Date: 2021-11-10 08:36+0000\n"
+"PO-Revision-Date: 2021-11-10 10:06+0100\n"
 "Last-Translator: Cédric Bonhomme <cedric@cedricbonhomme.org>\n"
 "Language-Team: French <https://translate.monarc.lu/projects/"
 "Fit4Cybersecurity/fit4ilr/fr/>\n"
@@ -17,9 +17,9 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Poedit 2.4.2\n"
+"X-Generator: Poedit 3.0\n"
 
-#: csskp/config.py:27 csskp/config_dev.py:25
+#: csskp/config.py:25 csskp/config_dev.py:25
 msgid "Description from a string or a file."
 msgstr "Description à partir d'une chaîne de caractères ou d'un fichier."
 
@@ -39,23 +39,23 @@ msgstr "S'il vous plaît sélectionnez votre pays"
 msgid "You need to choose at least one answer"
 msgstr "Vous devez choisir au moins une réponse"
 
-#: survey/forms.py:106 survey/forms.py:162
+#: survey/forms.py:106 survey/forms.py:163
 #: templates/survey/finishedSurvey.html:184
 #: templates/survey/finishedSurvey.html:191 templates/survey/review.html:43
 msgid "Your feedback"
 msgstr "Vos retours"
 
-#: survey/forms.py:108 survey/forms.py:164
+#: survey/forms.py:108 survey/forms.py:165
 msgid "Please let us know if anything is missing"
 msgstr "S'il vous plaît laissez-nous savoir si quelque chose est manquant"
 
 #: survey/forms.py:141
-#, python-format
+#, python-brace-format
 msgid ""
-"You can't choose multiple answers if the answer \"%(value)s\" is choosen"
+"You can't choose multiple answers if the answer {answer_text} is choosen."
 msgstr ""
-"Vous ne pouvez pas choisir plusieurs réponses si la réponse \"%(value)s\" "
-"est choisie"
+"Vous ne pouvez pas choisir plusieurs réponses si la réponse {answer_text} "
+"est choisie."
 
 #: survey/globals.py:6
 msgid "Banking, insurance and real estate"
@@ -118,19 +118,15 @@ msgstr ""
 msgid "Public administration"
 msgstr "Administration publique"
 
-#: survey/report.py:98
+#: survey/report.py:53
 msgid "Final report"
 msgstr "Rapport final"
 
-#: survey/reporthelper.py:255 templates/report/questions.html:1
-msgid "Questions"
-msgstr "Questions"
-
-#: survey/reporthelper.py:419 survey/views.py:203
+#: survey/reporthelper.py:159 survey/views.py:203
 msgid "Your results"
 msgstr "Vos résultats"
 
-#: survey/reporthelper.py:428
+#: survey/reporthelper.py:168
 msgid "Your results chart"
 msgstr "Votre tableau de résultats"
 
@@ -161,30 +157,41 @@ msgstr ""
 msgid "Feedback sending errors: "
 msgstr "Erreurs d'envoi du retour d'information : "
 
-#: templates/report/cover.html:7
+#: templates/report/cover.html:10
 msgid "Date"
 msgstr "Date"
 
-#: templates/report/cover.html:8
-msgid "Your id"
-msgstr "Votre id"
+#: templates/report/cover.html:11
+msgid "Self-assessment id"
+msgstr "Auto-évaluation id"
+
+#: templates/report/description.html:3
+msgid "Description"
+msgstr "Description"
 
 #: templates/report/description.html:6
+#, python-format
 msgid ""
-"\n"
-"This self-assessment tool is named Fit4Cybersecurity to highlight the "
-"introduction to information security.\n"
-"It is also a prerequisite for doing a CASES Diagnostic: a minimum score of "
-"65/100 is required.\n"
-"The purpose for this restriction gives us the opportunity to better tailor "
-"the recommendations to your organization during the Diagnostic.\n"
-"<br /><br />\n"
-"During this self-assessment multiple choice questions were asked. After "
-"analyzing your answers, recommendations have been provided.\n"
-"<br />\n"
-"Finally, you can download a report, which will help you to communicate the "
-"results to your suppliers, if necessary.\n"
+"This self-assessment tool is named %(tool_name)s to highlight the "
+"introduction to information security. It is also a prerequisite for doing a "
+"CASES Diagnostic: a minimum score of %(minimal_acceptable_score)s/100 is "
+"required. The purpose for this restriction gives us the opportunity to "
+"better tailor the recommendations to your organization during the "
+"Diagnostic. <br><br> During this self-assessment multiple choice questions "
+"were asked. After analyzing your answers, recommendations have been "
+"provided. <br><br> Finally, you can download a report, which will help you "
+"to communicate the results to your suppliers, if necessary."
 msgstr ""
+"Cet outil d'auto-évaluation est nommé %(tool_name)s pour souligner "
+"l'introduction à la sécurité de l'information. Il est aussi un prérequis "
+"pour faire un Diagnostic CASES: un score minimal de "
+"%(minimal_acceptable_score)s/100 est requis. Le but pour cette restriction "
+"nous donne la possibilité pour mieux adapter les recommandations à votre "
+"organisation lors du Diagnostic. <br><br> Durant cette auto-evaluation "
+"questions à choix multiples vous ont été posées. Après avoir analysé vos "
+"réponses, des recommandations vous ont été fournies. <br><br> Finalement, "
+"vous pouvez télécharger ce document qui vous aidera pour communiquer les "
+"résultats à vos fournisseurs si besoin."
 
 #: templates/report/intro.html:3
 msgid "Introduction and Warning"
@@ -193,29 +200,48 @@ msgstr "Introduction et avertissement"
 #: templates/report/intro.html:6
 #, python-format
 msgid ""
-"\n"
 "The objective of the self-assessment tool, %(tool_name)s is to assess the "
 "maturity of an organization in terms of applicable good practices in the "
-"field of information security.\n"
-"<br><br>\n"
-"This document, based on the %(tool_name)s, is for the exclusive use of the "
-"customer. It is in this respect confidential.\n"
-"<br><br>\n"
-"In view of the methodology used and the fact that it is a self-assessment, "
-"it is understood that the overall results can not in any way be exhaustive.\n"
-"As such, the actual risk assessment or the list of identified risks and "
-"vulnerabilities are based on the information provided by the client.\n"
-"The analysis resulting from this assessment can engage only the customer for "
-"any omission or error that would be due to third parties or not.<br><br>\n"
-"The tool, %(tool_name)s can possibly provide recommendations. It is "
-"understood by the client that the recommendations are neither exclusive nor "
-"exhaustive.\n"
-"<br><br>\n"
-"It should also be noted that the information you have provided to us will be "
-"recorded for statistical reasons.\n"
-"Due to the nature of the data, we can not identify you. Unless you later "
-"contact us to do a Diagnostic CASES.\n"
+"field of information security. <br><br> This document, based on the "
+"%(tool_name)s, is for the exclusive use of the customer. It is in this "
+"respect confidential. <br><br> In view of the methodology used and the fact "
+"that it is a self-assessment, it is understood that the overall results can "
+"not in any way be exhaustive. As such, the actual risk assessment or the "
+"list of identified risks and vulnerabilities are based on the information "
+"provided by the client. The analysis resulting from this assessment can "
+"engage only the customer for any omission or error that would be due to "
+"third parties or not.<br><br> The tool, %(tool_name)s can possibly provide "
+"recommendations. It is understood by the client that the recommendations are "
+"neither exclusive nor exhaustive. <br><br> It should also be noted that the "
+"information you have provided to us will be recorded for statistical "
+"reasons. Due to the nature of the data, we can not identify you. Unless you "
+"later contact us to do a Diagnostic CASES."
 msgstr ""
+"L'outil d'auto-évaluation, %(tool_name)s, a pour objectif d’apprécier la "
+"maturité d’une organisation au regard des bonnes pratiques applicables en "
+"matière de la sécurité de l'information. <br><br> Le présent document, basé "
+"sur le %(tool_name)s, est destiné à l’usage exclusif du client. Il est à ce "
+"titre confidentiel. <br><br> En vu de la méthodologie employée et du fait "
+"qu'il s'agit d'une auto-évaluation, il est entendu que l’ensemble des "
+"résultats ne peut en aucune manière être exhaustif. À ce titre, "
+"l’appréciation du risque réel ou la liste des risques et vulnérabilités "
+"détectés sont basées sur les informations fournies par le client. L’analyse "
+"issue de cette appréciation ne peut engager que le client pour toute "
+"omission ou erreur qui serait due à des tiers ou non. <br><br> L'outil, "
+"%(tool_name)s peut éventuellement fournir des recommandations. Il est "
+"entendu par le client que les recommandations ne sont ni exclusives ni "
+"exhaustives. <br><br> Il faut aussi noter que les informations que vous nous "
+"avez fourni seront enregistrés pour des raisons de statistiques. De part de "
+"la nature des données, nous ne pouvons vous identifier. Sauf si par la suite "
+"vous nous contacter pour faire un diagnostic CASES."
+
+#: templates/report/questions.html:1
+msgid "Questions"
+msgstr "Questions"
+
+#: templates/report/questions.html:14 templates/survey/review.html:32
+msgid "Custom response"
+msgstr "Réponse personnalisée"
 
 #: templates/report/recommendations.html:1
 msgid "Recommendations"
@@ -225,28 +251,32 @@ msgstr "Recommandations"
 msgid "Here is the list of recommendations, based on your answers."
 msgstr "Voici la liste des recommandations, basée sur vos réponses."
 
-#: templates/report/results.html:6
-#, fuzzy, python-format
-#| msgid ""
-#| "We remind you that this is a self-assessment and it is important to "
-#| "understand that all the results can not in any way be exhaustive."
-msgid ""
-"\n"
-"You have achieved %(SCORE)s/100 with your answers.\n"
-"<br /><br />\n"
-"You must reach at least %(minimal_acceptable_score)s/100 to be able to make "
-"a CASES Diagnosis.\n"
-"<br /><br />\n"
-"We remind you that this is a self-assessment and it is important to "
-"understand that all the results can not in any way be exhaustive.\n"
-msgstr ""
-"Nous vous rappelons qu'il s'agit d'une auto-évaluation et qu'il est "
-"important de comprendre que tous les résultats ne peuvent en aucun cas être "
-"exhaustifs."
+#: templates/report/results.html:3
+msgid "Result"
+msgstr "Résultat"
 
-#: templates/report/template.html:11
-msgid "Generated with Fit4Cybersecurity"
-msgstr "Généré avec Fit4Cybersecurity"
+#: templates/report/results.html:6
+#, python-format
+msgid ""
+"You have achieved %(SCORE)s/100 with your answers. You must reach at least "
+"%(minimal_acceptable_score)s/100 to be able to make a CASES Diagnosis. "
+"<br><br> We remind you that this is a self-assessment and it is important to "
+"understand that all the results can not in any way be exhaustive."
+msgstr ""
+"Vous avez atteint %(SCORE)s/100 avec vos réponses. Vous devez atteindre au "
+"moins %(minimal_acceptable_score)s/100 pour pouvoir faire un Diagnostic "
+"CASES. <br><br> Nous vous rappelons qu'il s'agit d'une auto-évaluation, il "
+"est entendu que l’ensemble des résultats ne peut en aucune manière être "
+"exhaustif."
+
+#: templates/report/template.html:13
+#, python-format
+msgid "Generated with %(tool_name)s"
+msgstr "Généré avec %(tool_name)s"
+
+#: templates/report/toc.html:1
+msgid "Table of contents"
+msgstr "Table des matières"
 
 #: templates/survey/base.html:20
 msgid "a CASES self-assessment tool!"
@@ -534,10 +564,6 @@ msgstr "Confirmer"
 #: templates/survey/review.html:19
 msgid "Your answers review"
 msgstr "Votre aperçu des réponses"
-
-#: templates/survey/review.html:32
-msgid "Custom response"
-msgstr "Réponse personnalisée"
 
 #: templates/survey/review.html:50
 msgid "Modify answers"
