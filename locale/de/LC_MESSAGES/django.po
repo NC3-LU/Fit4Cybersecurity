@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-10 08:36+0000\n"
-"PO-Revision-Date: 2021-11-10 10:06+0100\n"
+"POT-Creation-Date: 2021-11-10 09:44+0000\n"
+"PO-Revision-Date: 2021-11-10 10:54+0100\n"
 "Last-Translator: Cédric Bonhomme <cedric@cedricbonhomme.org>\n"
 "Language-Team: German <https://translate.monarc.lu/projects/"
 "Fit4Cybersecurity/fit4ilr/de/>\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Poedit 3.0\n"
 
-#: csskp/config.py:25 csskp/config_dev.py:25
+#: csskp/config.py:27 csskp/config_dev.py:27
 msgid "Description from a string or a file."
 msgstr "Beschreibung aus einer Zeichenkette oder einer Datei."
 
@@ -117,11 +117,11 @@ msgstr "Landwirtschaft und Fischerei, Natur- und Grünflächen, Tierpflege"
 msgid "Public administration"
 msgstr "Öffentliche Verwaltungen"
 
-#: survey/report.py:53
+#: survey/report.py:52
 msgid "Final report"
 msgstr "Abschlussbericht"
 
-#: survey/reporthelper.py:159 survey/views.py:203
+#: survey/reporthelper.py:159 survey/views.py:202
 msgid "Your results"
 msgstr "Ihre Ergebnisse"
 
@@ -142,20 +142,36 @@ msgid "To generate a report you have to finish the survey."
 msgstr ""
 "Um einen Bericht zu erstellen, muss erst die Umfrage beantwortet werden."
 
-#: survey/views.py:195
+#: survey/views.py:194
 msgid "Final summary"
 msgstr "Zusammenfassung"
 
-#: survey/views.py:228
+#: survey/views.py:227
 msgid ""
 "We could not find a survey with the requested key, please start a new one."
 msgstr ""
 "Wir konnten keine Umfrage mit dem angeforderten Schlüssel finden. Bitte "
 "starten Sie eine neue."
 
-#: survey/views.py:258
+#: survey/views.py:257
 msgid "Feedback sending errors: "
 msgstr "Fehler beim Senden von Rückmeldungen: "
+
+#: templates/parts/footer_part.html:8 templates/parts/footer_part.html:9
+msgid "A service provided by CASES.LU"
+msgstr "Ein Service von CASES.LU"
+
+#: templates/parts/footer_part.html:15 templates/parts/footer_part.html:16
+msgid "Source code on GitHub"
+msgstr "Quellcode auf GitHub"
+
+#: templates/parts/footer_part.html:20
+msgid "Version of"
+msgstr "Version von"
+
+#: templates/parts/footer_part.html:27
+msgid "Terms of Service"
+msgstr "Nutzungsbedingungen"
 
 #: templates/report/cover.html:10
 msgid "Date"
@@ -580,19 +596,3 @@ msgid ""
 msgstr ""
 "Benötigen wir einige Informationen, um Ihnen nützliche Empfehlungen geben zu "
 "können, sobald die Selbsteinschätzung abgeschlossen ist."
-
-#: templates_parts/footer_part.html:8 templates_parts/footer_part.html:9
-msgid "A service provided by CASES.LU"
-msgstr "Ein Service von CASES.LU"
-
-#: templates_parts/footer_part.html:15 templates_parts/footer_part.html:16
-msgid "Source code on GitHub"
-msgstr "Quellcode auf GitHub"
-
-#: templates_parts/footer_part.html:20
-msgid "Version of"
-msgstr "Version von"
-
-#: templates_parts/footer_part.html:27
-msgid "Terms of Service"
-msgstr "Nutzungsbedingungen"
