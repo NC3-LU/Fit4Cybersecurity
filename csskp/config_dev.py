@@ -25,7 +25,6 @@ CUSTOM = {
     # Generic configurations
     "tool_name": "<TOOL_NAME>",
     "intro_text": gettext_lazy("Description from a string or a file."),
-    "tool_logo": "static/images/logoFull-en.png",
     "countries_first": [],
     "defaultLanguage": "en",
     "languages": [
@@ -33,6 +32,11 @@ CUSTOM = {
         ("fr", "French"),
         ("de", "German"),
     ],
+    #Logos paths
+    "tool_logo": "static/images/logoFull-en.png",
+    "cases_logo": "templates/report/images/cases_logo.svg",
+    "secin_logo": "templates/report/images/secin_logo.svg",
+    #Minimal score
     "minimal_acceptable_score": 65,
     # Custom parts of templates
     #   main dir for PARTS_TEMPLATE_DIR:

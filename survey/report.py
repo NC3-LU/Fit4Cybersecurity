@@ -16,13 +16,9 @@ from survey.reporthelper import (
 )  # temporary imports
 from survey.viewLogic import get_questions_with_user_answers
 
-cases_logo = os.path.abspath(
-    os.path.join(settings.REPORT_TEMPLATE_DIR, "images/cases_logo.svg")
-)
-secin_logo = os.path.abspath(
-    os.path.join(settings.REPORT_TEMPLATE_DIR, "images/secin_logo.svg")
-)
 tool_logo = os.path.abspath(os.path.join(settings.BASE_DIR, CUSTOM["tool_logo"]))
+cases_logo = os.path.abspath(os.path.join(settings.BASE_DIR, CUSTOM["cases_logo"]))
+secin_logo = os.path.abspath(os.path.join(settings.BASE_DIR, CUSTOM["secin_logo"]))
 
 def create_html_report(user: SurveyUser, lang: str) -> str:
     """Generate a HTML report."""
@@ -73,7 +69,7 @@ def makepdf(html: str) -> bytes:
         string=html,
         base_url=os.path.abspath(settings.REPORT_TEMPLATE_DIR)
     )
-    
+
     stylesheets = [
         CSS(string='''
             :root {
@@ -87,4 +83,5 @@ def makepdf(html: str) -> bytes:
             )
         ),
     ]
+    
     return htmldoc.write_pdf(stylesheets=stylesheets)
