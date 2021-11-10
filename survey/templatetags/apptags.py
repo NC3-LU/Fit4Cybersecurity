@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
 from django import template
+from django.conf import settings
 from django.utils import translation
 from datetime import datetime
 
@@ -28,3 +29,8 @@ def format_datetime(value: datetime, format: str = "medium") -> str:
 @register.filter(name="ifinlist")
 def ifinlist(value, list):
     return True if str(value) in list else False
+
+
+@register.simple_tag
+def settings_value(name):
+    return getattr(settings, name, "")

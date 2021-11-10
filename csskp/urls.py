@@ -20,11 +20,18 @@ from django.conf.urls import include
 from survey import views
 
 urlpatterns = [
+    # Root
     path("", views.index, name="index"),
+    path("terms", views.get_terms),
     path("<slug:lang>", views.index),
+
+    # Stats
+    path("admin/export/statistics/", include("stats.urls")),
+
+    # Django admin
     path("admin/", include("django.contrib.auth.urls")),
     path("admin/", admin.site.urls),
-    path("export/statistics/", include("stats.urls")),
+
+    # Survey
     path("survey/", include("survey.urls")),
-    path("terms", views.get_terms),
 ]

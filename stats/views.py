@@ -10,6 +10,6 @@ from stats.stats_logic import get_finished_surveys_list
 def index(request):
     result = get_finished_surveys_list(request)
     if result is None:
-        return HttpResponseRedirect("/admin/statistics/")
+        return HttpResponseRedirect("/admin/export/statistics/")
 
     return render(request, "admin/stats.html", result)

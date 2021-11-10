@@ -1,6 +1,8 @@
 from django.utils.translation import gettext_lazy
 
-ALLOWED_HOSTS = []
+PUBLIC_URL = ""
+ALLOWED_HOSTS = ['127.0.0.1', locals().get("PUBLIC_URL", "")]
+OPERATOR_EMAIL = "info@example.org"
 
 SECRET_KEY = "u__*z&=urjtc0t)b)@5qbt_a#3-354=k9x(j)@eu#h7sb=-66s"
 
@@ -34,7 +36,7 @@ CUSTOM = {
     "minimal_acceptable_score": 65,
     # Custom parts of templates
     #   main dir for PARTS_TEMPLATE_DIR:
-    "templates_parts_dir": "templates_parts",
+    "templates_parts_dir": "templates/parts",
     "templates_parts": {
         # path of the templates parts
         "terms": "terms_part.html",

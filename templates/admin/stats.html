@@ -8,7 +8,6 @@
 
 {% block bootstrap4_extra_head %}
     <link rel="stylesheet" type="text/css" href="{% static "survey/css/custom.css" %}" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fork-awesome/1.1.7/css/fork-awesome.min.css">
     <script type="text/javascript" src="{% static "stats/js/stats.js" %}"></script>
 {% endblock %}
 
@@ -17,7 +16,7 @@
 <div class="container">
     <h1>Survey statistics</h1>
     <div class="row">
-        <form action="/export/statistics/" method="post" class="dates-limit-form">
+        <form action="/admin/export/statistics/" method="post" class="dates-limit-form">
             {% csrf_token %}
 
             {{ dates_limit_form.media }}
