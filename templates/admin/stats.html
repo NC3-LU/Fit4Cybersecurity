@@ -1,18 +1,9 @@
 {% extends 'survey/base.html' %}
 
 {% load bootstrap4 %}
-{% bootstrap_css %}
-{% bootstrap_javascript jquery='full' %}
-
 {% load static %}
 
-{% block bootstrap4_extra_head %}
-    <link rel="stylesheet" type="text/css" href="{% static "survey/css/custom.css" %}" />
-    <script type="text/javascript" src="{% static "stats/js/stats.js" %}"></script>
-{% endblock %}
-
 {% block content %}
-
 <div class="container">
     <h1>Survey statistics</h1>
     <div class="row">
