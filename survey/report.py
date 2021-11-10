@@ -6,6 +6,7 @@ from weasyprint import HTML, CSS
 from django.template.loader import render_to_string
 from django.conf import settings
 from django.utils import translation
+from django.utils.translation import gettext as _
 from survey.models import SurveyUser
 from csskp.settings import CUSTOM
 from survey.reporthelper import (
