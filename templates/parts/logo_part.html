@@ -1,7 +1,12 @@
-{% load static %}
 {% load i18n %}
 {% get_current_language as LANGUAGE_CODE %}
 
-{% with 'images/logoFull-'|add:LANGUAGE_CODE|add:'.png' as logo %}
-<h1><a href="/{{LANGUAGE_CODE}}" class="logo-link"><img src="{% static logo %}" width="50%" alt="{{ custom.tool_name }}" title="{{ custom.tool_name }}"></a></h1>
-{% endwith %}
+<h1>
+    <a href="/{{LANGUAGE_CODE}}" class="logo-link">
+        <img
+            src="/{{ custom.tool_logo }}"
+            width="50%"
+            alt="{{ custom.tool_name }}"
+            title="{{ custom.tool_name }}">
+    </a>
+</h1>
