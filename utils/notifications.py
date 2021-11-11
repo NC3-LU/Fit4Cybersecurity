@@ -7,7 +7,7 @@ from django.template.loader import render_to_string
 from csskp.settings import CUSTOM, OPERATOR_EMAIL
 
 
-def send_report(email_address: str, pdf_data):
+def send_report(email_address: str, pdf_data) -> None:
     """
     Send a survey report to an email address.
     """
