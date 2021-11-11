@@ -4,14 +4,14 @@
 from django.core.mail import EmailMultiAlternatives
 from django.template.loader import render_to_string
 
-from csskp.settings import CONFIG, OPERATOR_EMAIL
+from csskp.settings import CUSTOM, OPERATOR_EMAIL
 
 
-def send_report(email_address, pdf_data):
+def send_report(email_address: str, pdf_data):
     """
     Send a survey report to an email address.
     """
-    subject = "[{}] Your report".format(CONFIG["tool_name"])
+    subject = "[{}] Your report".format(CUSTOM["tool_name"])
     from_email = OPERATOR_EMAIL
     to = email_address
     text_content = render_to_string(
