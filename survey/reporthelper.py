@@ -5,7 +5,6 @@ import io
 import os
 import base64
 import logging
-from django.utils.translation import gettext_lazy as _
 
 from csskp.settings import PICTURE_DIR
 from survey.models import (
