@@ -16,6 +16,7 @@ from survey.viewLogic import (
 from survey.reporthelper import calculateResult, getRecommendations
 from survey.report import create_html_report, makepdf
 from survey.models import SurveyUser, SURVEY_STATUS_FINISHED
+from utils.notifications import send_report
 from django.contrib import messages
 from django.utils import translation
 from uuid import UUID
@@ -105,7 +106,7 @@ def change_lang(request, lang: str):
     return HttpResponseRedirect("/" + lang)
 
 
-def show_report(request, lang):
+def show_report(request, lang, email=0):
     user_id = request.session.get("user_id", None)
     if user_id is None:
         return HttpResponseRedirect("/")
@@ -119,16 +120,25 @@ def show_report(request, lang):
 
         return HttpResponseRedirect("/")
 
+    email_address = request.GET.get('email-address', False)
+
+    # Generation of the PDF report
     try:
         html_report = create_html_report(user, lang)
         pdf_report = makepdf(html_report)
+    except Exception as e:
+        messages.warning(request, e)
+
+    if CUSTOM["modules"]["reportEmail"] and email_address:
+        # Send the report via email
+        send_report(email_address, pdf_report)
+    else:
+        # Return the report in the HTTP answer
         response = HttpResponse(pdf_report, content_type="application/pdf")
         response["Content-Disposition"] = "attachment;filename=Report{}_{}.pdf".format(
             CUSTOM["tool_name"], date.today()
         )
         return response
-    except Exception as e:
-        messages.warning(request, e)
 
     return HttpResponseRedirect(request.META.get("HTTP_REFERER", "/"))
 
