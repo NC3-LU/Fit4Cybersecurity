@@ -140,34 +140,17 @@ def generate_chart_png(
     theta = radar_factory(n, frame="polygon")
 
     fig, ax = plt.subplots(
-        figsize=(7, 5), dpi=150, nrows=1, ncols=1, subplot_kw=dict(projection="radar")
+        figsize=(7, 7), dpi=300, nrows=1, ncols=1, subplot_kw=dict(projection="radar")
     )
     fig.subplots_adjust(wspace=0.25, hspace=0.20, top=0.85, bottom=0.05)
 
-    ax.set_rgrids([0, 20, 40, 60, 80, 100], angle=90)
+    ax.set_rgrids([0, 20, 40, 60, 80, 100], angle=0)
     ax.set_ylim(0, 100)
 
     ax.plot(theta, evaluation, color="r")
     ax.fill(theta, evaluation, facecolor="r", alpha=0.25)
 
     ax.set_varlabels(sections_list)
-
-    ax.legend(
-        [_('Your results')],
-        loc=(0.9, 0.95),
-        labelspacing=0.1,
-        fontsize="small",
-    )
-
-    fig.text(
-        1.0,
-        1.0,
-        _("Your results chart"),
-        horizontalalignment="center",
-        color="black",
-        weight="bold",
-        size="large",
-    )
 
     if not os.path.isdir(PICTURE_DIR):
         os.makedirs(PICTURE_DIR)
