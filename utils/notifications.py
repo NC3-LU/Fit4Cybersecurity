@@ -20,24 +20,28 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 
+from django.core.mail import EmailMultiAlternatives
 from django.template.loader import render_to_string
 
 from csskp.settings import CONFIG
-from utils import emails
+# from utils import emails
 
 
-def send_report(email_address):
+def send_report(email_address, pdf_data):
     """
     Send a survey report to an email address.
     """
-    plaintext_email_from_parsed_template = render_to_string(
+    subject = "[{}] Your report".format(CONFIG["tool_name"])
+    from_email = " "
+    to = email_address
+    text_content = render_to_string(
         "emails/send_report.txt",
         {
             "user": email_address,
         },
     )
-    emails.send(
-        to=email_address,
-        subject="[{}] Your report".format(CONFIG["tool_name"]),
-        plaintext=plaintext_email_from_parsed_template,
-    )
+    html_content = ""
+    msg = EmailMultiAlternatives(subject, text_content, from_email, [to])
+    msg.attach_alternative(html_content, "text/html")
+    msg.attach('report.pdf', pdf_data, 'application/pdf')
+    msg.send()

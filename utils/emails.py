@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 # Fit4Cybersecurity
-# Copyright (C) SECURITYMADEIN.LU
+# Copyright (C) 2021 SECURITYMADEIN.LU
 #
 # For more information: https://github.com/CASES-LU/Fit4Cybersecurity
 #
