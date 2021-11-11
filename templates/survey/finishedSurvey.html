@@ -49,9 +49,11 @@
         {{ _('Download') }}
       </button>
     </a>
+    {% if custom.modules.reportEmail %}
     <button class="btn border border-rounded btn-primary" type="button" name="modal-send-report" data-toggle="modal" data-target="#modal-send-report">
       {{ _('Email') }}
     </button>
+    {% endif %}
   </div>
 </div>
 {% endif %}

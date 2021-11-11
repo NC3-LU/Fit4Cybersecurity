@@ -17,13 +17,13 @@ def send_report(email_address: str, pdf_data) -> None:
     text_content = render_to_string(
         "emails/send_report.txt",
         {
-            "user": email_address,
+            "tool_name": CUSTOM["tool_name"],
         },
     )
     html_content = render_to_string(
         "emails/send_report.html",
         {
-            "user": email_address,
+            "tool_name": CUSTOM["tool_name"],
         },
     )
     msg = EmailMultiAlternatives(subject, text_content, from_email, [to])

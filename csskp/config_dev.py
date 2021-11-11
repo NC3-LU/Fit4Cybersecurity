@@ -50,6 +50,7 @@ CUSTOM = {
     # Available modules
     "modules": {
         "reportDownload": True,
+        "reportEmail": False,
         "requestDiagnostic": True,
         "requestTraining": True,
         "resultChart": True,

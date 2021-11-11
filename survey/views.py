@@ -129,7 +129,7 @@ def show_report(request, lang, email=0):
     except Exception as e:
         messages.warning(request, e)
 
-    if email_address:
+    if CUSTOM["modules"]["reportEmail"] and email_address:
         # Send the report via email
         send_report(email_address, pdf_report)
     else:
