@@ -58,6 +58,9 @@ CUSTOM = {
 
 REPORT_TEMPLATE_DIR = "./templates/report/"
 
+EMAIL_HOST = "localhost"
+EMAIL_PORT = 25
+
 # Logging mechanism
 LOGGING = {
     "version": 1,

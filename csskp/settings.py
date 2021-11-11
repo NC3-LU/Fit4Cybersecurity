@@ -55,6 +55,9 @@ try:
     ALLOWED_HOSTS = config.ALLOWED_HOSTS
     PUBLIC_URL = config.PUBLIC_URL
     OPERATOR_EMAIL = config.OPERATOR_EMAIL
+
+    EMAIL_HOST = config.EMAIL_HOST
+    EMAIL_PORT = config.EMAIL_PORT
 except AttributeError as e:
     print("Please check you configuration file for the missing configuration variable:")
     print("  {}".format(e))
