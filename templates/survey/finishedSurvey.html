@@ -7,10 +7,11 @@
 {% block bootstrap4_extra_head %}
 {{ block.super }}
     <link rel="stylesheet" type="text/css" href="{% static "survey/css/survey-questions.css" %}" />
-    <link rel="stylesheet" type="text/css" href="{% static "survey/css/Chart.css" %}" />
+    <link rel="stylesheet" type="text/css" href="{% static "survey/css/chart.css" %}" />
 
     <script type="text/javascript" src="{% static "survey/js/qrcode.min.js" %}"></script>
     <script type="text/javascript" src="/static/npm_components/chart.js/dist/chart.min.js"></script>
+    <script type="text/javascript" src="{% static "survey/js/chart.js" %}"></script>
     <script type="text/javascript" src="{% static "survey/js/survey-questions.js" %}"></script>
     <script type="text/javascript" src="{% static "survey/js/send-email.js" %}"></script>
 {% endblock %}
@@ -117,57 +118,13 @@
 
 {% if custom.modules.resultChart %}
 <div class="py-2 px-4 text-center">
-  <div style="width: 450px; height: 450px; margin: 0 auto 0 auto">
-    <canvas id="resultChart" width='100%' height='100%'></canvas>
+  <div class="chartContainer">
+    <canvas id="resultChart"></canvas>
   </div>
   <script>
-    var ctx = document.getElementById('resultChart');
-    var labels = {{ chartTitles | safe }}
-    var resultChart = new Chart(ctx, {
-      type: 'radar',
-      data: {
-        labels: labels,
-        datasets: [
-        {
-          label: '{{ chartlabelYou | safe }}',
-          fill: true,
-          backgroundColor: 'rgba(255, 99, 132, 0.2)',
-          borderColor: 'rgba(255, 99, 132, 1)',
-          pointBackgroundColor: 'rgb(255, 99, 132)',
-          pointBorderColor: '#fff',
-          pointHoverBackgroundColor: '#fff',
-          pointHoverBorderColor: 'rgb(255, 99, 132)',
-          data: {{ chartdataYou | safe }},
-        }
-        ]
-      },
-      options: {
-        scales: {
-          r: {
-            beginAtZero: true,
-            min: 0,
-            max: 100,
-          }
-        },
-        elements:{
-          line:{
-            tension: 0,
-            borderWidth: 3
-          }
-        },
-        title: {
-          display: false,
-        },
-        layout: {
-          padding: {
-            left: 5,
-            right: 5,
-            top: 5,
-            bottom: 5
-          }
-        }
-      }
-    });
+    var chartTitle = '{{ chartlabelYou | safe }}'
+    var chartLabels = {{ chartTitles | safe }}
+    var chartData = {{ chartdataYou | safe }}
   </script>
 </div>
 {% endif %}
