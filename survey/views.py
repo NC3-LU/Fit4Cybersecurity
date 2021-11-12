@@ -209,7 +209,6 @@ def finish(request):
         "txtscore": txt_score,
         "string_score": str(txt_score),
         "chartTitles": str(sections_list),
-        "chartlabelYou": _("Your results"),
         "chartdataYou": str(radar_current),
         "general_feedback_form": handle_general_feedback(user, request),
     }
