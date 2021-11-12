@@ -1,12 +1,11 @@
 $(document).ready(function() {
-    var ctx = document.getElementById('resultChart');
-    var resultChart = new Chart(ctx, {
+    let ctx = document.getElementById('resultChart');
+    let resultChart = new Chart(ctx, {
       type: 'radar',
       data: {
         labels: chartLabels,
         datasets: [
         {
-          label: chartTitle,
           fill: true,
           backgroundColor: 'rgba(255, 99, 132, 0.2)',
           borderColor: 'rgba(255, 99, 132, 1)',
@@ -19,6 +18,11 @@ $(document).ready(function() {
         ]
       },
       options: {
+        plugins: {
+            legend: {
+                display: false,
+            }
+        },
         scales: {
           r: {
             beginAtZero: true,
@@ -28,21 +32,9 @@ $(document).ready(function() {
         },
         elements:{
           line:{
-            tension: 0,
             borderWidth: 3
           }
         },
-        title: {
-          display: false,
-        },
-        layout: {
-          padding: {
-            left: 5,
-            right: 5,
-            top: 5,
-            bottom: 5
-          }
-        }
       }
     });
 });
