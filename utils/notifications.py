@@ -28,5 +28,5 @@ def send_report(email_address: str, pdf_data) -> None:
     )
     msg = EmailMultiAlternatives(subject, text_content, from_email, [to])
     msg.attach_alternative(html_content, "text/html")
-    msg.attach('report.pdf', pdf_data, 'application/pdf')
+    msg.attach("report.pdf", pdf_data, "application/pdf")
     msg.send()

@@ -120,7 +120,7 @@ def show_report(request, lang, email=0):
 
         return HttpResponseRedirect("/")
 
-    email_address = request.GET.get('email-address', False)
+    email_address = request.GET.get("email-address", False)
 
     # Generation of the PDF report
     try:
