@@ -51,11 +51,21 @@ $ poetry install --no-dev
 ### Configure application
 
 ```bash
-$ cp csskp/config_dev.py csskp/config.py # configure production settings
+$ cp csskp/config_dev.py csskp/config.py # Configure production settings
 $ poetry shell
-$ python manage.py collectstatic # copy static files required by Django Admin
-$ python manage.py compilemessages # compile the translations
-$ python manage.py migrate # need to initialize before create the first user
+
+$ python manage.py collectstatic # Copy static files required by Django Admin
+$ python manage.py compilemessages # Compile the translations
+
+$ python manage.py migrate # Initialize the database
+$ python manage.py import_questions data/fit4ilr/questions-fit4ilr.json # Import questions and answers
+$ python manage.py import_translations data/fit4ilr/translations-fit4ilr.json # Import translations
+$ python manage.py createsuperuser --username <username>
+```
+
+In order to access to the admin interface:
+
+```bash
 $ python manage.py createsuperuser --username <username>
 ```
 
