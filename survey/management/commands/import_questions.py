@@ -7,6 +7,7 @@ from survey.models import (
     SurveyQuestion,
     SurveyQuestionServiceCategory,
     SurveyQuestionAnswer,
+    Recommendations
 )
 
 
@@ -57,5 +58,16 @@ class Command(BaseCommand):
                     atype=answer["atype"],
                 )
                 answer_obj.save()
+
+                for reco in answer.get("recommendations", []):
+                    reco_obj = Recommendations.objects.create(
+                        textKey=reco["textKey"],
+                        min_e_count=reco["min_e_count"],
+                        max_e_count=reco["max_e_count"],
+                        sector=reco["sector"],
+                        forAnswer=answer_obj,
+                        answerChosen=reco["answerChosen"]
+                    )
+                    reco_obj.save()
 
         self.stdout.write(self.style.SUCCESS("Data imported."))
