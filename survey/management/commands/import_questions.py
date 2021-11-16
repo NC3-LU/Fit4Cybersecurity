@@ -26,13 +26,15 @@ class Command(BaseCommand):
             section, created = SurveySection.objects.get_or_create(
                 sectionTitleKey=question["section"]
             )
-            section.save()
+            if created:
+                section.save()
 
             # Get or create the service category
             service_cat, created = SurveyQuestionServiceCategory.objects.get_or_create(
                 titleKey=question["service_category"]
             )
-            service_cat.save()
+            if created:
+                service_cat.save()
 
             # Create the question
             question_obj = SurveyQuestion.objects.create(
