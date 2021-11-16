@@ -17,12 +17,11 @@ categories = [
 ]
 questions = [elem for elem in data if elem["model"] == "survey.surveyquestion"]
 answers = [elem for elem in data if elem["model"] == "survey.surveyquestionanswer"]
-translations = [elem for elem in data if elem["model"] == "survey.translationkey"]
 recommendations = [elem for elem in data if elem["model"] == "survey.recommendations"]
+translations = [elem for elem in data if elem["model"] == "survey.translationkey"]
 
 
 questions_json = []
-
 for question in questions:
 
     new_question = question["fields"]
@@ -72,9 +71,14 @@ for question in questions:
     questions_json.append(new_question)
 
 
+translations_json = [translation["fields"] for translation in translations]
+
 
 with open("questions.json", "w") as f:
     f.write(json.dumps(questions_json, indent=4, sort_keys=False))
+
+with open("translations.json", "w") as f:
+    f.write(json.dumps(translations_json, indent=4, sort_keys=False))
 
 
 # print(questions_json)
