@@ -1,9 +1,16 @@
 # -*- coding: utf-8 -*-
 
-"""
-Generate JSON files with the output of the command:
+"""importq.py - Generate JSON files with the output of the command:
 
 $ python manage.py dumpdata --indent 2 survey > ./contrib/out.json
+
+importq.py will create two files:
+- questions.json
+- translations.json
+
+Those can be imported in your instance:
+$ python manage.py import_questions contrib/questions.json
+$ python manage.py import_translations contrib/translations.json
 """
 
 import json
@@ -51,8 +58,6 @@ for question in questions:
             for recommendation in recommendations
             if recommendation["fields"]["forAnswer"] == answer["pk"]
         ]
-
-        print(related_recommendations)
 
         new_question["answers"].append(
             {
