@@ -7,7 +7,7 @@ from survey.models import (
     SurveyQuestion,
     SurveyQuestionServiceCategory,
     SurveyQuestionAnswer,
-    Recommendations
+    Recommendations,
 )
 
 
@@ -66,7 +66,7 @@ class Command(BaseCommand):
                         max_e_count=reco["max_e_count"],
                         sector=reco["sector"],
                         forAnswer=answer_obj,
-                        answerChosen=reco["answerChosen"]
+                        answerChosen=reco["answerChosen"],
                     )
                     reco_obj.save()
 

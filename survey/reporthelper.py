@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from typing import Dict, List, Optional
+from typing import Dict, List, Optional, Tuple
 import io
 import os
 import base64
@@ -31,7 +31,7 @@ def get_formatted_translations(lang: str, type: str) -> Dict:
     return translation_key_values
 
 
-def getRecommendations(user: SurveyUser, lang: str):
+def getRecommendations(user: SurveyUser, lang: str) -> Dict[str, List[str]]:
     allAnswers = SurveyQuestionAnswer.objects.all().order_by(
         "question__qindex", "aindex"
     )
@@ -71,21 +71,20 @@ def getRecommendations(user: SurveyUser, lang: str):
     return finalReportRecs
 
 
-def is_recommendation_already_added(recommendation: str, recommendations: dict):
+def is_recommendation_already_added(recommendation: str, recommendations: dict) -> bool:
     if recommendations:
         for category, recommendations_per_category in recommendations.items():
             if recommendation in recommendations_per_category:
                 return True
-
     return False
 
 
-def calculateResult(user: SurveyUser, lang: str):
+def calculateResult(user: SurveyUser, lang: str) -> Tuple[int, List[int], List[str]]:
     total_questions_score = 0
     total_user_score = 0
-    user_evaluations_per_section: Dict[int, int] = {}  # noqa
+    user_evaluations_per_section: Dict[int, int] = {}
     max_evaluations_per_section: Dict[int, int] = {}
-    sections_list = []
+    sections_list: List[str] = []
 
     translation_key_values = get_formatted_translations(lang, "S")
 

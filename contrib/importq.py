@@ -66,7 +66,7 @@ for question in questions:
                 "uniqueAnswer": answer["fields"]["uniqueAnswer"],
                 "score": answer["fields"]["score"],
                 "atype": answer["fields"]["atype"],
-                "recommendations": related_recommendations
+                "recommendations": related_recommendations,
             }
         )
 
