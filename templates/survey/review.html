@@ -27,10 +27,7 @@
                                 {{ user_answer.title | safe }}
                             </li>
                             {% if user_answer.content != '' %}
-                                <p class="pt-2 pl-4 small">
-                                     <span class="font-weight-bold">
-                                         {{ _('Custom response') }}:
-                                     </span>
+                                <p class="pt-2">
                                      {{ user_answer.content }}
                                 </p>
                             {% endif %}
