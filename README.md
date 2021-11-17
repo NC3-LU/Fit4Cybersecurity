@@ -58,8 +58,8 @@ $ python manage.py collectstatic # Copy static files required by Django Admin
 $ python manage.py compilemessages # Compile the translations
 
 $ python manage.py migrate # Initialize the database
-$ python manage.py import_questions data/fit4ilr/questions-fit4ilr.json # Import questions and answers
-$ python manage.py import_translations data/fit4ilr/translations-fit4ilr.json # Import translations
+$ python manage.py import_questions data/fit4ilr/questions.json # Import questions and answers
+$ python manage.py import_translations data/fit4ilr/translations.json # Import translations
 $ python manage.py createsuperuser --username <username>
 ```
 
