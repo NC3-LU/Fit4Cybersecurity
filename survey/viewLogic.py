@@ -25,26 +25,28 @@ LOCAL_DEFAULT_LANG = LANGUAGE_CODE
 
 
 def create_user(lang: str, sector: str, company_size: str, country: str) -> SurveyUser:
+    """Creates a new SurveyUser object.
+    This function is called by the function handle_start_surveyonce, once the user has
+    answered the first questions before the start of the survey."""
     user = SurveyUser()
     user.sector = sector
     user.e_count = company_size
     user.country_code = country
     survey_question = SurveyQuestion.objects.order_by("qindex")[:1]
     user.current_qindex = survey_question[0].qindex
-
-    # prevent the use of custom languages
-    langs = [x[0] for x in LANGUAGES]
+    # Ensures the submitted languages is accepted
+    langs, _ = zip(*LANGUAGES)
     if lang in langs:
         user.choosen_lang = lang
     else:
         user.choosen_lang = LOCAL_DEFAULT_LANG
-
     user.save()
-
     return user
 
 
 def handle_start_survey(request: HttpRequest, lang: str) -> Union[Dict, SurveyUser]:
+    """Handles the start of the survey.
+    """
     action = "/survey/start/" + lang
     title = CUSTOM["tool_name"] + " - " + _("Let's start")
 
