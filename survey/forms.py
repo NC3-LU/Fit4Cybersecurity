@@ -96,7 +96,7 @@ class AnswerMChoice(forms.Form):
                     label="",
                     widget=forms.Textarea(
                         attrs={
-                            "placeholder": "",
+                            "autofocus": True,
                         }
                     ),
                     required=isAnswerContentRequired,
