@@ -106,7 +106,7 @@ def change_lang(request, lang: str):
     return HttpResponseRedirect("/" + lang)
 
 
-def show_report(request, lang, email=0):
+def show_report(request, lang: str, email: str = "0") -> HttpResponseRedirect:
     user_id = request.session.get("user_id", None)
     if user_id is None:
         return HttpResponseRedirect("/")

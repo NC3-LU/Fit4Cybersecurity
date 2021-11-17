@@ -5,9 +5,11 @@ from django.core.mail import EmailMultiAlternatives
 from django.template.loader import render_to_string
 
 from csskp.settings import CUSTOM, OPERATOR_EMAIL
+from utils.decorators import async_maker
 
 
-def send_report(email_address: str, pdf_data) -> None:
+@async_maker
+def send_report(email_address: str, pdf_data: bytes) -> None:
     """
     Send a survey report to an email address.
     """
