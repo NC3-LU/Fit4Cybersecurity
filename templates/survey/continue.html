@@ -1,12 +1,14 @@
 <div class="modal fade" tabindex="-1" role="dialog" id="modal" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-header">
-            <h4>{{ translations.continue_later.title }}</h4>
+            <h4>{{ _('Continue the evaluation later') }}</h4>
         </div>
         <div class="modal-content">
             <div class="content text-left">
                 <p class="text-info">
-                    <span>{{ translations.continue_later.text }} <input type="text" class="input-no-border" id="resume-later-code" value="{{ user.user_id }}" readonly="readonly" /></span>
+                    <span>{{ _('To continue the evaluation process later you can copy the provided link, create a bookmark or use the code to resume later on the main page:') }}
+                        <input type="text" class="input-no-border" id="resume-later-code" value="{{ user.user_id }}" readonly="readonly" />
+                    </span>
                 </p>
             </div>
             <div class="content text-left">
@@ -17,8 +19,12 @@
                 >{% if request.is_secure %}https{% else %}http{% endif %}://{{ request.get_host }}/survey/resume/?user_id={{ user.user_id }}</textarea>
             </div>
             <div class="content">
-                <button class="btn btn-primary" id="download-direct-link">{{ translations.continue_later.button_download }}</button>
-                <button class="close-popup btn btn-link" type="button" data-dismiss="modal">{{ translations.continue_later.button_close }}</button>
+                <button class="btn btn-primary" id="download-direct-link">
+                    {{ _('Download direct link') }}
+                </button>
+                <button class="close-popup btn btn-link" type="button" data-dismiss="modal">
+                    {{ _('Close') }}
+                </button>
             </div>
             <div class="qrcode" align="center"></div>
         </div>

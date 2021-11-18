@@ -1,7 +1,7 @@
 """csskp URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
-    https://docs.djangoproject.com/en/2.2/topics/http/urls/
+    https://docs.djangoproject.com/en/3.2/topics/http/urls/
 Examples:
 Function views
     1. Add an import:  from my_app import views
@@ -20,10 +20,15 @@ from django.conf.urls import include
 from survey import views
 
 urlpatterns = [
+    # Root
     path("", views.index, name="index"),
+    path("terms", views.get_terms),
+    path("<slug:lang>", views.index),
+    # Stats
+    path("admin/export/statistics/", include("stats.urls")),
+    # Django admin
     path("admin/", include("django.contrib.auth.urls")),
     path("admin/", admin.site.urls),
-    path("admin/statistics/", include("stats.urls")),
+    # Survey
     path("survey/", include("survey.urls")),
-    path("terms", views.get_terms),
 ]

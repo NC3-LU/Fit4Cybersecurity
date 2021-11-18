@@ -1,38 +1,24 @@
+# -*- coding: utf-8 -*-
+
 """
 Django settings for csskp project.
-
 """
 
 import os
 import sys
 from django.contrib.messages import constants as messages
-from django.utils.translation import ugettext_lazy as _
-
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 try:
-    from csskp import config_prod as config
-except Exception:
+    from csskp import config  # type: ignore
+except ImportError:  # pragma: no cover
     from csskp import config_dev as config
+
+# Initialization of the custom variables (strings, templates, icons, active modules)
+CUSTOM = {key: value for key, value in getattr(config, "CUSTOM", {}).items()}
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
-
-# Loads the custom configuration variables from the config file.
-try:
-    # SECURITY WARNING: keep the keys used in production, secret!
-    SECRET_KEY = config.SECRET_KEY
-    HASH_KEY = config.HASH_KEY
-    # SECURITY WARNING: don't run with debug turned on in production!
-    DEBUG = config.DEBUG
-    ALLOWED_HOSTS = config.ALLOWED_HOSTS
-    LOGGING = config.LOGGING
-except AttributeError as e:
-    raise Exception("Module not found: {}".format(e))
-except Exception as e:
-    raise e
 
 # Include BOOTSTRAP4_FOLDER in path
 BOOTSTRAP4_FOLDER = os.path.abspath(os.path.join(BASE_DIR, "..", "bootstrap4"))
@@ -40,6 +26,43 @@ if BOOTSTRAP4_FOLDER not in sys.path:
     sys.path.insert(0, BOOTSTRAP4_FOLDER)
 
 MAIN_TEMPLATE_DIR = os.path.join(BASE_DIR, "templates")
+PARTS_TEMPLATE_DIR = os.path.join(
+    BASE_DIR, CUSTOM.get("templates_parts_dir", "templates/parts")
+)
+
+STATIC_DIR = os.path.join(BASE_DIR, "static")
+
+PICTURE_DIR = "/tmp/csskp/"
+
+
+# Quick-start development settings - unsuitable for production
+# See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
+
+try:
+    REPORT_TEMPLATE_DIR = config.REPORT_TEMPLATE_DIR
+
+    # SECURITY WARNING: keep the secret key used in production secret!
+    SECRET_KEY = config.SECRET_KEY
+    HASH_KEY = config.HASH_KEY
+
+    # SECURITY WARNING: don't run with debug turned on in production!
+    DEBUG = config.DEBUG
+
+    # Database
+    # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
+    DATABASES = config.DATABASES
+
+    ALLOWED_HOSTS = config.ALLOWED_HOSTS
+    PUBLIC_URL = config.PUBLIC_URL
+    OPERATOR_EMAIL = config.OPERATOR_EMAIL
+
+    EMAIL_HOST = config.EMAIL_HOST
+    EMAIL_PORT = config.EMAIL_PORT
+except AttributeError as e:
+    print("Please check you configuration file for the missing configuration variable:")
+    print("  {}".format(e))
+    exit(1)
+
 
 # Application definition
 
@@ -75,6 +98,7 @@ TEMPLATES = [
         "BACKEND": "django.template.backends.django.DjangoTemplates",
         "DIRS": [
             MAIN_TEMPLATE_DIR,
+            PARTS_TEMPLATE_DIR,
         ],
         "APP_DIRS": True,
         "OPTIONS": {
@@ -84,6 +108,7 @@ TEMPLATES = [
                 "django.contrib.auth.context_processors.auth",
                 "django.contrib.messages.context_processors.messages",
                 "survey.context_processors.get_version",
+                "survey.context_processors.instance_configurations",
             ],
         },
     },
@@ -94,10 +119,6 @@ WSGI_APPLICATION = "csskp.wsgi.application"
 LOGIN_URL = "/admin/login/"
 LOGIN_REDIRECT_URL = "/admin/"
 LOGOUT_REDIRECT_URL = "/"
-
-# Database
-# https://docs.djangoproject.com/en/3.2/ref/settings/#databases
-DATABASES = config.DATABASES
 
 DEFAULT_AUTO_FIELD = "django.db.models.AutoField"
 
@@ -123,14 +144,9 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/3.2/topics/i18n/
 
-LANGUAGE_CODE = "en-us"
+LANGUAGE_CODE = CUSTOM.get("defaultLanguage", "en")
 
-LANGUAGES = (
-    ("en", _("English")),
-    ("fr", _("French")),
-    ("de", _("Deutsch")),
-)
-
+LANGUAGES = CUSTOM.get("languages", [])
 LOCALE_PATHS = (os.path.join(BASE_DIR, "locale"),)
 
 TIME_ZONE = "UTC"
@@ -159,7 +175,6 @@ BOOTSTRAP4 = {
     "include_jquery": True,
 }
 
-
 MESSAGE_TAGS = {
     messages.DEBUG: "alert-info",
     messages.INFO: "alert-info",
@@ -170,15 +185,7 @@ MESSAGE_TAGS = {
 
 
 # First displayed countries on start survey page
-COUNTRIES_FIRST = [
-    "LU",
-    "BE",
-    "FR",
-    "DE",
-    "NL",
-    "GB",
-]
-
+COUNTRIES_FIRST = CUSTOM.get("countries_first", [])
 COUNTRIES_FIRST_BREAK = "---------------------"
 
 
@@ -214,10 +221,12 @@ BOOTSTRAP4 = BOOTSTRAP4 = {
         "url": "/static/npm_components/popper.js/dist/umd/popper.min.js",
         "crossorigin": "anonymous",
     },
-    # Put JavaScript in the HEAD section of the HTML document (only relevant if you use bootstrap4.html)
+    # Put JavaScript in the HEAD section of the HTML document (only relevant if you use
+    # bootstrap4.html)
     "javascript_in_head": True,
     # Include jQuery with Bootstrap JavaScript False|falsy|slim|full (default=False)
-    # False - means tag bootstrap_javascript use default value - `falsy` and does not include jQuery)
+    # False - means tag bootstrap_javascript use default value - `falsy` and does not
+    # include jQuery)
     "include_jquery": True,
     # Label class to use in horizontal forms
     "horizontal_label_class": "col-md-3",
@@ -229,9 +238,11 @@ BOOTSTRAP4 = BOOTSTRAP4 = {
     "required_css_class": "",
     # Class to indicate error (better to set this in your Django form)
     "error_css_class": "is-invalid",
-    # Class to indicate success, meaning the field has valid input (better to set this in your Django form)
+    # Class to indicate success, meaning the field has valid input
+    # (better to set this in your Django form)
     "success_css_class": "is-valid",
-    # Renderers (only set these if you have studied the source and understand the inner workings)
+    # Renderers (only set these if you have studied the source and understand the inner
+    # workings)
     "formset_renderers": {
         "default": "bootstrap4.renderers.FormsetRenderer",
     },

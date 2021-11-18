@@ -7,126 +7,592 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-04-07 22:33+0000\n"
-"PO-Revision-Date: 2021-04-08 00:38+0200\n"
-"Last-Translator: Cédric Bonhomme <cedric@cedricbonhomme.org>\n"
-"Language-Team: \n"
+"POT-Creation-Date: 2021-11-10 09:44+0000\n"
+"PO-Revision-Date: 2021-11-11 13:01+0000\n"
+"Last-Translator: Juan Rocha <juan.rocha@cases.lu>\n"
+"Language-Team: French <https://translate.monarc.lu/projects/"
+"Fit4Cybersecurity/fit4ilr/fr/>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Poedit 2.3\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 4.9-dev\n"
 
-#: csskp/settings.py:126
-msgid "English"
-msgstr "Anglais"
+#: csskp/config.py:27 csskp/config_dev.py:27
+msgid "Description from a string or a file."
+msgstr "Description à partir d'une chaîne de caractères ou d'un fichier."
 
-#: csskp/settings.py:127
-msgid "French"
-msgstr "Français"
+#: survey/forms.py:27
+msgid "What is your sector?"
+msgstr "Quel est votre secteur ?"
 
-#: csskp/settings.py:128
-msgid "Deutsch"
-msgstr "Allemand"
+#: survey/forms.py:29
+msgid "How many employees?"
+msgstr "Combien d'employés ?"
 
-#: survey/views.py:105
+#: survey/forms.py:32 survey/forms.py:35
+msgid "Please select your country"
+msgstr "S'il vous plaît sélectionnez votre pays"
+
+#: survey/forms.py:79
+msgid "You need to choose at least one answer"
+msgstr "Vous devez choisir au moins une réponse"
+
+#: survey/forms.py:106 survey/forms.py:163
+#: templates/survey/finishedSurvey.html:184
+#: templates/survey/finishedSurvey.html:191 templates/survey/review.html:43
+msgid "Your feedback"
+msgstr "Vos retours"
+
+#: survey/forms.py:108 survey/forms.py:165
+msgid "Please let us know if anything is missing"
+msgstr "S'il vous plaît laissez-nous savoir si quelque chose est manquant"
+
+#: survey/forms.py:141
+#, python-brace-format
+msgid ""
+"You can't choose multiple answers if the answer {answer_text} is choosen."
+msgstr ""
+"Vous ne pouvez pas choisir plusieurs réponses si la réponse {answer_text} "
+"est choisie."
+
+#: survey/globals.py:6
+msgid "Banking, insurance and real estate"
+msgstr "Banque, assurances et immobilier"
+
+#: survey/globals.py:7
+msgid "Trading, sales and mass distribution"
+msgstr "Commerce, vente et grande distribution"
+
+#: survey/globals.py:8
+msgid "Marketing, media and multimedia"
+msgstr "Communication, média et multimédia"
+
+#: survey/globals.py:9
+msgid "Construction industries and civil engineering"
+msgstr "Construction, bâtiment et travaux publics"
+
+#: survey/globals.py:10
+msgid "Hotel and restoration, tourism and entertainment"
+msgstr "Hôtellerie - restauration, tourisme, loisirs et animation"
+
+#: survey/globals.py:11
+msgid "Industry"
+msgstr "Industrie"
+
+#: survey/globals.py:12
+msgid "Installation and maintenance"
+msgstr "Installation et maintenance"
+
+#: survey/globals.py:13
+msgid "Creation or placing of objects that are artistic and decorative"
+msgstr "Réalisation ou placement d'objets artistiques et décoratifs"
+
+#: survey/globals.py:14
+msgid "Health"
+msgstr "Santé"
+
+#: survey/globals.py:15
+msgid "Home-Care Service or Community Service"
+msgstr "Services à la personne et à la collectivité"
+
+#: survey/globals.py:16
+msgid "Shows"
+msgstr "Spectacle"
+
+#: survey/globals.py:17
+msgid "Company Support"
+msgstr "Support à l'entreprise"
+
+#: survey/globals.py:18
+msgid "Transport and Logistics"
+msgstr "Transport et logistique"
+
+#: survey/globals.py:19
+msgid "Farming and fishing, natural spaces and green spaces, animal care"
+msgstr ""
+"Agriculture et pêche, espaces naturels et espaces verts, soins aux animaux"
+
+#: survey/globals.py:20
+msgid "Public administration"
+msgstr "Administration publique"
+
+#: survey/report.py:52
+msgid "Final report"
+msgstr "Rapport final"
+
+#: survey/reporthelper.py:159 survey/views.py:202
+msgid "Your results"
+msgstr "Vos résultats"
+
+#: survey/reporthelper.py:168
+msgid "Your results chart"
+msgstr "Votre tableau de résultats"
+
+#: survey/viewLogic.py:49
+msgid "Let's start"
+msgstr "Commençons"
+
+#: survey/viewLogic.py:180
+msgid "Question"
+msgstr "Question"
+
+#: survey/views.py:117
 msgid "To generate a report you have to finish the survey."
 msgstr "Pour générer un rapport vous devez finir l'enquête."
 
-#: survey/views.py:268
+#: survey/views.py:194
+msgid "Final summary"
+msgstr "Résumé final"
+
+#: survey/views.py:227
 msgid ""
 "We could not find a survey with the requested key, please start a new one."
 msgstr ""
 "Nous n'avons pas pu trouver un sondage avec la clé demandée, veuillez en "
 "commencer un nouveau."
 
-#: survey/views.py:298
+#: survey/views.py:257
 msgid "Feedback sending errors: "
-msgstr ""
+msgstr "Erreurs d'envoi du retour d'information : "
 
-#: templates/survey/base.html:27
-msgid "Fit4Cybersecurity a CASES self-assessment tool!"
-msgstr "Fit4Cybersecurity est un outil d’auto-évaluation CASES!"
-
-#: templates/survey/base.html:60
-msgid "images/logoFull-en.png"
-msgstr "images/logoFull-fr.png"
-
-#: templates/survey/base.html:93 templates/survey/base.html:94
+#: templates/parts/footer_part.html:8 templates/parts/footer_part.html:9
 msgid "A service provided by CASES.LU"
 msgstr "Un service fourni par CASES.LU"
 
-#: templates/survey/base.html:100 templates/survey/base.html:101
+#: templates/parts/footer_part.html:15 templates/parts/footer_part.html:16
 msgid "Source code on GitHub"
 msgstr "Code source sur GitHub"
 
-#: templates/survey/base.html:105
-msgid "Version of Fit4Cybersecurity"
-msgstr "Version de Fit4Cybersecurity"
+#: templates/parts/footer_part.html:20
+msgid "Version of"
+msgstr "Version de"
 
-#: templates/survey/base.html:112
-msgid "Terms of service"
-msgstr "Conditions d'utilisation"
-
-#: templates/survey/base.html:112
+#: templates/parts/footer_part.html:27
 msgid "Terms of Service"
 msgstr "Conditions d'utilisation"
 
-#: templates/survey/index.html:18
-msgid "Welcome to the CASES self-assessment tool: Fit4Cybersecurity"
-msgstr "Bienvenue dans l'outil d'auto-évaluation CASES: Fit4Cybersecurity"
+#: templates/report/cover.html:10
+msgid "Date"
+msgstr "Date"
 
-#: templates/survey/index.html:19
+#: templates/report/cover.html:11
+msgid "Self-assessment id"
+msgstr "Auto-évaluation id"
+
+#: templates/report/description.html:3
+msgid "Description"
+msgstr "Description"
+
+#: templates/report/description.html:6
+#, python-format
 msgid ""
-"This survey will ask a few questions and provide recommendations. Keep in "
-"mind, that it is a self-assessment tool and that it only touches the surface "
-"of information security by giving a very basic maturity level estimate and "
-"some basic recommendations."
+"This self-assessment tool is named %(tool_name)s to highlight the "
+"introduction to information security. It is also a prerequisite for doing a "
+"CASES Diagnostic: a minimum score of %(minimal_acceptable_score)s/100 is "
+"required. The purpose for this restriction gives us the opportunity to "
+"better tailor the recommendations to your organization during the "
+"Diagnostic. <br><br> During this self-assessment multiple choice questions "
+"were asked. After analyzing your answers, recommendations have been "
+"provided. <br><br> Finally, you can download a report, which will help you "
+"to communicate the results to your suppliers, if necessary."
 msgstr ""
-"Ce sondage posera des questions et présentera des recommandations en "
-"fonction de vos réponses. Rappelez-vous qu’il s’agit d’un outil d’auto-"
-"évaluation et qu’il ne fait que toucher à la surface de la sécurité de "
-"l’information en fournissant une estimation et des recommandations de base."
+"Cet outil d'auto-évaluation est nommé %(tool_name)s pour souligner "
+"l'introduction à la sécurité de l'information. Il est aussi un prérequis "
+"pour faire un Diagnostic CASES : un score minimal de "
+"%(minimal_acceptable_score)s/100 est requis. Le but pour cette restriction "
+"nous donne la possibilité pour mieux adapter les recommandations à votre "
+"organisation lors du Diagnostic. <br><br> Durant cette auto-evaluation "
+"questions à choix multiples vous ont été posées. Après avoir analysé vos "
+"réponses, des recommandations vous ont été fournies. <br><br> Finalement, "
+"vous pouvez télécharger ce document qui vous aidera pour communiquer les "
+"résultats à vos fournisseurs si besoin."
 
-#: templates/survey/index.html:52
+#: templates/report/intro.html:3
+msgid "Introduction and Warning"
+msgstr "Introduction et avertissement"
+
+#: templates/report/intro.html:6
+#, python-format
+msgid ""
+"The objective of the self-assessment tool, %(tool_name)s is to assess the "
+"maturity of an organization in terms of applicable good practices in the "
+"field of information security. <br><br> This document, based on the "
+"%(tool_name)s, is for the exclusive use of the customer. It is in this "
+"respect confidential. <br><br> In view of the methodology used and the fact "
+"that it is a self-assessment, it is understood that the overall results can "
+"not in any way be exhaustive. As such, the actual risk assessment or the "
+"list of identified risks and vulnerabilities are based on the information "
+"provided by the client. The analysis resulting from this assessment can "
+"engage only the customer for any omission or error that would be due to "
+"third parties or not.<br><br> The tool, %(tool_name)s can possibly provide "
+"recommendations. It is understood by the client that the recommendations are "
+"neither exclusive nor exhaustive. <br><br> It should also be noted that the "
+"information you have provided to us will be recorded for statistical "
+"reasons. Due to the nature of the data, we can not identify you. Unless you "
+"later contact us to do a Diagnostic CASES."
+msgstr ""
+"L'outil d'auto-évaluation, %(tool_name)s, a pour objectif d’apprécier la "
+"maturité d’une organisation au regard des bonnes pratiques applicables en "
+"matière de la sécurité de l'information. <br><br> Le présent document, basé "
+"sur le %(tool_name)s, est destiné à l’usage exclusif du client. Il est à ce "
+"titre confidentiel. <br><br> En vu de la méthodologie employée et du fait "
+"qu'il s'agit d'une auto-évaluation, il est entendu que l’ensemble des "
+"résultats ne peut en aucune manière être exhaustif. À ce titre, "
+"l’appréciation du risque réel ou la liste des risques et vulnérabilités "
+"détectés sont basées sur les informations fournies par le client. L’analyse "
+"issue de cette appréciation ne peut engager que le client pour toute "
+"omission ou erreur qui serait due à des tiers ou non. <br><br> L'outil, "
+"%(tool_name)s peut éventuellement fournir des recommandations. Il est "
+"entendu par le client que les recommandations ne sont ni exclusives ni "
+"exhaustives. <br><br> Il faut aussi noter que les informations que vous nous "
+"avez fourni seront enregistrés pour des raisons de statistiques. De part de "
+"la nature des données, nous ne pouvons vous identifier. Sauf si par la suite "
+"vous nous contacter pour faire un diagnostic CASES."
+
+#: templates/report/questions.html:1
+msgid "Questions"
+msgstr "Questions"
+
+#: templates/report/questions.html:14 templates/survey/review.html:32
+msgid "Custom response"
+msgstr "Réponse personnalisée"
+
+#: templates/report/recommendations.html:1
+msgid "Recommendations"
+msgstr "Recommandations"
+
+#: templates/report/recommendations.html:4
+msgid "Here is the list of recommendations, based on your answers."
+msgstr "Voici la liste des recommandations, basée sur vos réponses."
+
+#: templates/report/results.html:3
+msgid "Result"
+msgstr "Résultat"
+
+#: templates/report/results.html:6
+#, python-format
+msgid ""
+"You have achieved %(SCORE)s/100 with your answers. You must reach at least "
+"%(minimal_acceptable_score)s/100 to be able to make a CASES Diagnosis. "
+"<br><br> We remind you that this is a self-assessment and it is important to "
+"understand that all the results can not in any way be exhaustive."
+msgstr ""
+"Vous avez atteint %(SCORE)s/100 avec vos réponses. Vous devez atteindre au "
+"moins %(minimal_acceptable_score)s/100 pour pouvoir faire un Diagnostic "
+"CASES. <br><br> Nous vous rappelons qu'il s'agit d'une auto-évaluation, il "
+"est entendu que l’ensemble des résultats ne peut en aucune manière être "
+"exhaustif."
+
+#: templates/report/template.html:13
+#, python-format
+msgid "Generated with %(tool_name)s"
+msgstr "Généré avec %(tool_name)s"
+
+#: templates/report/toc.html:1
+msgid "Table of contents"
+msgstr "Table des matières"
+
+#: templates/survey/base.html:20
+msgid "a CASES self-assessment tool!"
+msgstr "est un outil d’auto-évaluation CASES !"
+
+#: templates/survey/continue.html:4
+msgid "Continue the evaluation later"
+msgstr "Continuer l'évaluation plus tard"
+
+#: templates/survey/continue.html:9
+msgid ""
+"To continue the evaluation process later you can copy the provided link, "
+"create a bookmark or use the code to resume later on the main page:"
+msgstr ""
+"Pour continuer le processus d’évaluation plus tard, vous pouvez copier le "
+"lien fourni, créer un signet ou utiliser le code pour reprendre plus tard "
+"sur la page principale :"
+
+#: templates/survey/continue.html:23
+msgid "Download direct link"
+msgstr "Télécharger le lien direct"
+
+#: templates/survey/continue.html:26 templates/survey/finishedSurvey.html:199
+msgid "Close"
+msgstr "Fermer"
+
+#: templates/survey/finishedSurvey.html:42
+msgid "Report"
+msgstr "Rapport"
+
+#: templates/survey/finishedSurvey.html:49
+msgid "Download"
+msgstr "Téléchargement"
+
+#: templates/survey/finishedSurvey.html:57
+msgid "Summary"
+msgstr "Résumé"
+
+#: templates/survey/finishedSurvey.html:60
+msgid ""
+"This is the list of recommendations to improve the information security "
+"maturity in your company, provided that your answers did correctly reflect "
+"the state in your company. Also keep in mind that it is a self-assessment "
+"and only scratches the surface of the information security maturity level "
+"and thus, we are not liable for the results of this survey."
+msgstr ""
+"Voici la liste des recommandations visant à améliorer la maturité de la "
+"sécurité de l'information dans votre entreprise, à condition que vos "
+"réponses reflètent correctement l'état de votre entreprise. N'oubliez pas "
+"non plus qu'il s'agit d'une auto-évaluation et qu'elle ne fait qu'effleurer "
+"le niveau de maturité de la sécurité de l'information. Par conséquent, nous "
+"ne sommes pas responsables des résultats de cette enquête."
+
+#: templates/survey/finishedSurvey.html:71
+#, python-format
+msgid ""
+"Based on your score %(score)s, the CASES Diagnostic is not available for "
+"your organization at this moment. We recommend you improve the information "
+"security maturity level by implementing the recommendations listed below. If "
+"you need any information security training to raise awareness in your "
+"company, do not hesitate to"
+msgstr ""
+"Sur base de votre score de %(score)s, le diagnostic CASES n'est pas "
+"disponible pour votre organisation pour le moment. Nous vous recommandons "
+"d'améliorer le niveau de maturité de la sécurité de l'information en mettant "
+"en œuvre les recommandations ci-dessous. Si vous avez besoin d'une formation "
+"à la sécurité de l'information pour sensibiliser votre entreprise, n'hésitez "
+"pas à"
+
+#: templates/survey/finishedSurvey.html:86
+msgid "Your results link"
+msgstr "Votre lien de résultats"
+
+#: templates/survey/finishedSurvey.html:94
+msgid "About the CASES Diagnostic"
+msgstr "À propos du Diagnostic CASES"
+
+#: templates/survey/finishedSurvey.html:95
+msgid ""
+"The CASES Diagnostic is a service which analyses the company maturity in the "
+"information security depending on company's requirements. The analyse "
+"duration can take approxymately 2 hours. A consultant from CASES will come "
+"to your companie's premises, and ask around 30 questions concerning your "
+"information security, mostly organizational questions and possibly some "
+"technical questions. You will receive a detailed report which will contain a "
+"maturity estimation as well as recommendations to enhance the information "
+"security maturity."
+msgstr ""
+"Le diagnostic CASES est un service destiné à l'analyse de la maturité d'une "
+"entreprise face à la sécurité de l'information qui lui est nécessaire. Avec "
+"une durée d'environ 2 heures, un consultant CASES se déplace dans les locaux "
+"de l'entreprise, et pose une trentaine de questions pouvant être sur le côté "
+"organisationnel aussi bien que le côté un peu plus technique. À l'issue de "
+"ce diagnostic, un rapport est envoyé, et il contiendra une estimation de la "
+"maturité ainsi que des recommandations pour améliorer la maturité en la "
+"sécurité de l'information."
+
+#: templates/survey/finishedSurvey.html:106
+msgid ""
+"The CASES Diagnostic is available for all the companies located in "
+"Luxembourg and free of charge."
+msgstr ""
+"Le Diagnostic est gratuit et possible pour toute entreprise ayant des locaux "
+"au Luxembourg."
+
+#: templates/survey/finishedSurvey.html:201
+msgid "Send"
+msgstr "Envoyer"
+
+#: templates/survey/index.html:17
+msgid "Welcome to the CASES self-assessment tool:"
+msgstr "Bienvenue dans l'outil d'auto-évaluation CASES :"
+
+#: templates/survey/index.html:26
+msgid "Start"
+msgstr "Démarrer"
+
+#: templates/survey/index.html:34
 msgid "Continue a previous survey"
 msgstr "Continuer une enquête précédente"
 
-#: templates/survey/resume.html:4
+#: templates/survey/leaveSurvey.html:5
+msgid "Would like to leave survey?"
+msgstr "Voulez vous quitter l'enquête ?"
+
+#: templates/survey/leaveSurvey.html:11
+msgid "Yes"
+msgstr "Oui"
+
+#: templates/survey/leaveSurvey.html:15
+msgid "No"
+msgstr "Non"
+
+#: templates/survey/questions.html:39
+msgid "Multiple answers are possible."
+msgstr "Plusieurs réponses sont possibles."
+
+#: templates/survey/questions.html:51
+msgid "Back"
+msgstr "Précédent"
+
+#: templates/survey/questions.html:59
+msgid "Cancel"
+msgstr "Annuler"
+
+#: templates/survey/questions.html:68 templates/survey/review.html:59
+msgid "Continue later"
+msgstr "Continuer plus tard"
+
+#: templates/survey/questions.html:73 templates/survey/start.html:32
+msgid "Next"
+msgstr "Suite"
+
+#: templates/survey/questions.html:73
+msgid "Modify"
+msgstr "Modifier"
+
+#: templates/survey/questions.html:82
+msgid "This text field should not be used to answer the question."
+msgstr ""
+"Ce champ de texte ne doit pas être utilisé pour répondre à la question."
+
+#: templates/survey/questions.html:85
+msgid ""
+"Please do not provide any sensitive or confidential information refering to "
+"your identity."
+msgstr ""
+"Veuillez ne fournir aucune donnée sensible ou confidentielle faisant "
+"référence à votre identité."
+
+#: templates/survey/requestDiagnosticLink.html:5
+#: templates/survey/requestDiagnosticLink.html:21
+msgid "Request diagnostic"
+msgstr "Demander un diagnostic"
+
+#: templates/survey/requestDiagnosticLink.html:6
+#, python-format
+msgid ""
+"Dear Cases Team,\n"
+"\n"
+"We would like to request a Diagnostic CASES from you.\n"
+"\n"
+"Here is our evaluation results identifier: %(userId)s\n"
+"\n"
+"Here also additional information that could be useful:\n"
+"\n"
+"Lastname of the contact:\n"
+"Firstname of the contact:\n"
+"Email address of the contact:\n"
+"Address of the company for the Diagnostic (Luxembourg only):\n"
+"Desired language for the Diagnostic:\n"
+msgstr ""
+"À l'attention de l'équipe CASES,\n"
+"\n"
+"Nous aimerions planifier un Diagnostic CASES.\n"
+"\n"
+"Voici l'identifiant lié à notre évaluation : %(userId)s\n"
+"\n"
+"Voici également les informations qui vous seront nécessaires :\n"
+"\n"
+"Nom du point de contact :\n"
+"Prénom du point de contact :\n"
+"Adresse mail du point de contact :\n"
+"Adresse de l'entreprise et du Diagnostic (Luxembourg uniquement) :\n"
+"Langue souhaitée du Diagnostic :\n"
+
+#: templates/survey/requestTrainingLink.html:5
+#: templates/survey/requestTrainingLink.html:35
+msgid "Request training offer"
+msgstr "Demander une offre de formation"
+
+#: templates/survey/requestTrainingLink.html:6
+#, python-format
+msgid ""
+"Dear Cases Team,\n"
+"\n"
+"We would like an information about security awareness training offer.\n"
+"\n"
+"Here is our evaluation results identifier: %(userId)s\n"
+"\n"
+"Here is also the information necessary to establish the offer:\n"
+"\n"
+"Contact details:\n"
+"    - Name of the contact:\n"
+"    - Email address of the contact:\n"
+"\n"
+"Organization:\n"
+"    - Company Name:\n"
+"    - Company address:\n"
+"    - Postal code:\n"
+"    - City:\n"
+"    - VAT number (if applicable):\n"
+"\n"
+"Training:\n"
+"    - Number of participants*:\n"
+"    - Desired language(s) for the training(s):\n"
+"    - Personalized topics to discuss:\n"
+"\n"
+"* For a number of people greater than 25, the training will be done in "
+"several installments, involving a higher cost.\n"
+msgstr ""
+"À l'attention de l'équipe CASES,\n"
+"\n"
+"Nous souhaitons une offre de sensibilisation à la sécurité de l'information."
+"\n"
+"\n"
+"Voici l'identifiant lié à notre évaluation : %(userId)s\n"
+"\n"
+"Voici également les informations nécessaires à l'établissement de l'offre :\n"
+"\n"
+"Point de contact :\n"
+"    - Nom du point de contact :\n"
+"    - Adresse mail du point de contact :\n"
+"\n"
+"Entreprise :\n"
+"    - Nom de l'entreprise :\n"
+"    - Adresse de l'entreprise :\n"
+"    - Adresse de l'entreprise :\n"
+"    - Code postal :\n"
+"    - Ville :\n"
+"    - Numéro TVA (si applicable) :\n"
+"\n"
+"Formations :\n"
+"    - Nombre de personnes à sensibiliser* :\n"
+"    - Langue(s) souhaitée(s) pour la/les formation(s) :\n"
+"    - Sujets personnalisés à aborder :\n"
+"\n"
+"*Pour un nombre de personnes supérieur à 25, la formation sera alors faite "
+"en plusieurs fois, impliquant un cout plus élevé.\n"
+
+#: templates/survey/requestTrainingLink.html:37
+msgid "let us know."
+msgstr "nous le faire savoir."
+
+#: templates/survey/resume.html:5
 msgid "Please insert your code to continue the survey or go to your results"
 msgstr ""
 "Veuillez insérer votre code pour continuer l’enquête ou consulter vos "
 "résultats"
 
-#: templates/survey/resume.html:13
+#: templates/survey/resume.html:16
 msgid "Confirm"
 msgstr "Confirmer"
 
-#~ msgid ""
-#~ "This is the list of recommendations to improve the information security "
-#~ "maturity in your company, provided that your answers did correctly "
-#~ "reflect the state in your company. Also keep in mind that it is a self-"
-#~ "assessment and only scratches the surface of the information security "
-#~ "maturity level and thus, we are not liable for the results of this survey."
-#~ msgstr ""
-#~ "Voici la liste des recommandations visant à améliorer la maturité de la "
-#~ "sécurité des informations dans votre entreprise, à condition que vos "
-#~ "réponses reflètent correctement l'état de votre entreprise. N'oubliez pas "
-#~ "non plus qu'il s'agit d'une auto-évaluation et qu'elle ne fait "
-#~ "qu'effleurer le niveau de maturité de la sécurité de l'information. Par "
-#~ "conséquent, nous ne sommes pas responsables des résultats de cette "
-#~ "enquête."
+#: templates/survey/review.html:19
+msgid "Your answers review"
+msgstr "Votre aperçu des réponses"
 
-#~ msgid "You can request a Diagnostic"
-#~ msgstr "Vous pouvez demander un Diagnostic"
+#: templates/survey/review.html:50
+msgid "Modify answers"
+msgstr "Modifier les réponses"
 
-#, fuzzy
-#~| msgid "images/logoFull-en.png"
-#~ msgid "images/logo-CASES.png"
-#~ msgstr "images/logoFull-fr.png"
+#: templates/survey/review.html:63
+msgid "Validate answers"
+msgstr "Valider les réponses"
 
-#, fuzzy
-#~| msgid "images/logoFull-en.png"
-#~ msgid "images/github-9-512.png"
-#~ msgstr "images/logoFull-fr.png"
+#: templates/survey/start.html:19
+msgid ""
+"We need a little information to be able to give you useful recommendations, "
+"once the self-assessment is done."
+msgstr ""
+"Nous avons besoin de quelques informations pour pouvoir vous faire des "
+"recommandations utiles, une fois l’auto-évaluation terminée."

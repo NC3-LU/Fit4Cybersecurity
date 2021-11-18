@@ -1,55 +1,38 @@
 {% extends 'survey/base.html' %}
 
 {% load bootstrap4 %}
-
+{% load apptags %}
 {% load static %}
 
 {% block bootstrap4_extra_head %}
     {{ block.super }}
     <link rel="stylesheet" type="text/css" href="{% static "survey/css/survey-index.css" %}" />
-
     <script type="text/javascript" src="{% static "survey/js/survey-index.js" %}"></script>
 {% endblock %}
 
 {% block content %}
     <div class="d-flex flex-row align-items-center px-3">
         <div class="p-2 flex-grow-1 text-justify">
-            <br />
-            <h5>{{ _('Welcome to the CASES self-assessment tool: Fit4Cybersecurity') }}.</h5>
-            {{ _('This survey will ask a few questions and provide recommendations. Keep in mind, that it is a self-assessment tool and that it only touches the surface of information security by giving a very basic maturity level estimate and some basic recommendations.') }}
+            <h5>
+                {{ _('Welcome to the CASES self-assessment tool:') }} {{ custom.tool_name }}.
+            </h5>
+            {{ custom.intro_text }}
         </div>
     </div>
 
-    <div class="row align-items-center px-3">
-        <div class="col">
-            <a href="/survey/start/en" class="text-primary">
-                <div class="px-2 py-4 text-center align-content-center min-width">
-                    <img class="flag" src="{% static "images/flags/en.svg" %}" alt="EN"><br>
-                    Start
-                </div>
-            </a>
-        </div>
-        <div class="col">
-            <a href="/survey/start/fr" class="text-primary">
-                <div class="px-2 py-4 text-center align-content-center min-width">
-                    <img  class="flag" src="{% static "images/flags/fr.svg" %}" alt="FR"><br>
-                    Démarrer
-                </div>
-            </a>
-        </div>
-        <div class="col">
-            <a href="/survey/start/de" class="text-primary">
-                <div class="px-2 py-4 text-center align-content-center min-width">
-                    <img class="flag" src="{% static "images/flags/de.svg" %}" alt="DE"><br>
-                    Starten
-                </div>
-            </a>
-        </div>
+    <div class="col px-2 py-4 text-center">
+        <a href="/survey/start/{{ LANGUAGE_CODE }}">
+            <button class="btn border border-rounded btn-primary" type="button">
+                {{ _('Start') }}
+            </button>
+        </a>
     </div>
 
-    <div class="row">
+    <div class="row py-3">
         <div class="col">
-            <button class="btn btn-link" type="button" name="resume-show-popup" data-toggle="modal" data-target="#modal" data-tooltip>{{ _('Continue a previous survey') }}</button>
+            <button class="btn btn-link" type="button" name="resume-show-popup" data-toggle="modal" data-target="#modal" data-tooltip>
+                {{ _('Continue a previous survey') }}
+            </button>
         </div>
     </div>
 

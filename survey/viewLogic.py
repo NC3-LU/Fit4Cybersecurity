@@ -1,3 +1,9 @@
+# -*- coding: utf-8 -*-
+
+from typing import Union, List, Dict, Tuple
+from uuid import UUID
+from django.http import HttpRequest
+from django.utils.translation import gettext_lazy as _
 from django.utils.html import format_html, mark_safe
 from django.db import transaction
 from django.utils import translation
@@ -7,46 +13,46 @@ from survey.models import (
     SurveyQuestion,
     SurveyQuestionAnswer,
     SurveyUserAnswer,
-    TranslationKey,
     SurveyUserFeedback,
     SURVEY_STATUS_UNDER_REVIEW,
 )
 from survey.forms import InitialStartForm, AnswerMChoice, GeneralFeedback
-from survey.globals import LANG_SELECT, TRANSLATION_UI
-from survey.reporthelper import getRecommendations, get_formatted_translations
+from survey.reporthelper import get_translation
+from csskp.settings import CUSTOM, LANGUAGES, LANGUAGE_CODE
+
+LOCAL_DEFAULT_LANG = LANGUAGE_CODE
 
 
-def create_user(lang: str, sector: str, company_size: str, country: str):
+def create_user(lang: str, sector: str, company_size: str, country: str) -> SurveyUser:
+    """Creates a new SurveyUser object.
+    This function is called by the function handle_start_surveyonce, once the user has
+    answered the first questions before the start of the survey."""
     user = SurveyUser()
     user.sector = sector
     user.e_count = company_size
     user.country_code = country
     survey_question = SurveyQuestion.objects.order_by("qindex")[:1]
     user.current_qindex = survey_question[0].qindex
-
-    # prevent the use of custom languages
-    langs = [x[0] for x in LANG_SELECT]
+    # Ensures the submitted languages is accepted
+    langs, _ = zip(*LANGUAGES)
     if lang in langs:
         user.choosen_lang = lang
     else:
-        user.choosen_lang = LANG_SELECT[0][0]
-
+        user.choosen_lang = LOCAL_DEFAULT_LANG
     user.save()
-
     return user
 
 
-def handle_start_survey(request, lang: str):
+def handle_start_survey(request: HttpRequest, lang: str) -> Union[Dict, SurveyUser]:
+    """Handles the start of the survey."""
     action = "/survey/start/" + lang
-    question = TRANSLATION_UI["question"]["description"][lang]
-    title = "Fit4Cybersecurity - " + TRANSLATION_UI["question"]["title"][lang]
+    title = CUSTOM["tool_name"] + " - " + _("Let's start")
 
     translation.activate(lang)
     request.session[translation.LANGUAGE_SESSION_KEY] = lang
 
     if request.method == "POST":
         form = InitialStartForm(data=request.POST, lang=lang)
-
         if form.is_valid():
             user = create_user(
                 lang,
@@ -54,23 +60,23 @@ def handle_start_survey(request, lang: str):
                 form.cleaned_data["compSize"],
                 form.cleaned_data["country"],
             )
-
             request.session["user_id"] = str(user.user_id)
-
             return user
     else:
         form = InitialStartForm(lang=lang)
 
     return {
         "title": title,
-        "question": question,
         "form": form,
         "action": action,
         "choosen_lang": lang,
     }
 
 
-def handle_question_answers_request(request, user: SurveyUser, question_index: int):
+@transaction.atomic
+def handle_question_answers_request(
+    request: HttpRequest, user: SurveyUser, question_index: int
+) -> Union[Dict, SurveyUser]:
     (
         previous_question,
         current_question,
@@ -102,67 +108,64 @@ def handle_question_answers_request(request, user: SurveyUser, question_index: i
             answers_field_type=current_question.qtype,
             question_answers=question_answers,
         )
-        if form.is_valid():
-            with transaction.atomic():
-                user = SurveyUser.objects.select_for_update(nowait=True).filter(
-                    id=user.id
-                )[0]
-                answers = form.cleaned_data["answers"]
-                answer_content = ""
-                if "answer_content" in form.cleaned_data:
-                    answer_content = form.cleaned_data["answer_content"]
+        if not form.is_valid():
+            return form.errors
 
-                save_answers(
-                    user, current_question, question_answers, answers, answer_content
-                )
+        user = SurveyUser.objects.select_for_update(nowait=True).filter(id=user.id)[0]
+        answers = form.cleaned_data["answers"]
+        answer_content = ""
+        if "answer_content" in form.cleaned_data:
+            answer_content = form.cleaned_data["answer_content"]
 
-                feedback = form.cleaned_data["feedback"]
-                if feedback:
-                    user_feedback = SurveyUserFeedback.objects.filter(
-                        user=user, question=current_question
-                    )[:1]
-                    if not user_feedback:
-                        user_feedback = SurveyUserFeedback()
-                        user_feedback.user = user
-                        user_feedback.question = current_question
-                    else:
-                        user_feedback = user_feedback[0]
-                    user_feedback.feedback = feedback
-                    user_feedback.save()
+        save_answers(user, current_question, question_answers, answers, answer_content)
 
-                if next_question != None:
-                    user.current_qindex = next_question.qindex
-                else:
-                    user.status = SURVEY_STATUS_UNDER_REVIEW
+        feedback = form.cleaned_data["feedback"]
+        if feedback:
+            user_feedback = SurveyUserFeedback.objects.filter(
+                user=user, question=current_question
+            )[:1]
+            if not user_feedback:
+                user_feedback = SurveyUserFeedback()
+                user_feedback.user = user
+                user_feedback.question = current_question
+            else:
+                user_feedback = user_feedback[0]
+            user_feedback.feedback = feedback
+            user_feedback.save()
 
-                user.save()
+        if next_question is not None:
+            user.current_qindex = next_question.qindex
+        else:
+            user.status = SURVEY_STATUS_UNDER_REVIEW
 
-                return user
-    else:
-        form = AnswerMChoice(
-            tuple_answers,
-            lang=user.choosen_lang,
-            answers_field_type=current_question.qtype,
-            question_answers=question_answers,
-        )
+        user.save()
 
-        user_answers = SurveyUserAnswer.objects.filter(
-            user=user, answer__question=current_question
-        )
-        selected_answers = []
-        for user_answer in user_answers:
-            if user_answer.uvalue > 0:
-                selected_answers.append(user_answer.answer.id)
-            if user_answer.content:
-                form.set_answer_content(user_answer.content)
+        return user
 
-        user_feedback = SurveyUserFeedback.objects.filter(
-            user=user, question=current_question
-        )[:1]
+    form = AnswerMChoice(
+        tuple_answers,
+        lang=user.choosen_lang,
+        answers_field_type=current_question.qtype,
+        question_answers=question_answers,
+    )
 
-        form.set_answers(selected_answers)
-        if user_feedback:
-            form.set_feedback(user_feedback[0].feedback)
+    user_answers = SurveyUserAnswer.objects.filter(
+        user=user, answer__question=current_question
+    )
+    selected_answers = []
+    for user_answer in user_answers:
+        if user_answer.uvalue > 0:
+            selected_answers.append(user_answer.answer.id)
+        if user_answer.content:
+            form.set_answer_content(user_answer.content)
+
+    user_feedback = SurveyUserFeedback.objects.filter(
+        user=user, question=current_question
+    )[:1]
+
+    form.set_answers(selected_answers)
+    if user_feedback:
+        form.set_feedback(user_feedback[0].feedback)
 
     uniqueAnswers = SurveyQuestionAnswer.objects.filter(
         question=current_question, uniqueAnswer=True
@@ -172,30 +175,28 @@ def handle_question_answers_request(request, user: SurveyUser, question_index: i
     form.set_free_text_answer_id(free_text_answer_id)
 
     return {
-        "title": "Fit4Cybersecurity - "
-        + TRANSLATION_UI["question"]["question"][user.choosen_lang]
+        "title": CUSTOM["tool_name"]
+        + " - "
+        + _("Question")
         + " "
         + str(current_question.qindex),
-        "question": TranslationKey.objects.filter(
-            key=current_question.titleKey, lang=user.choosen_lang
-        )[0].text,
+        "question": get_translation(current_question.label, user.choosen_lang),
         "form": form,
         "action": "/survey/question/" + str(current_question.qindex),
         "user": user,
         "current_question_index": current_question.qindex,
         "previous_question_index": previous_question.qindex,
         "total_questions_num": total_questions_num,
-        "available_langs": [lang[0] for lang in LANG_SELECT],
     }
 
 
 def save_answers(
     user: SurveyUser,
     current_question: SurveyQuestion,
-    question_answers,
-    posted_answers,
-    answer_content,
-):
+    question_answers: List[SurveyQuestionAnswer],
+    posted_answers: List[SurveyQuestionAnswer],
+    answer_content: str,
+) -> None:
     posted_answers_ids = [int(i) for i in posted_answers]
     for question_answer in question_answers:
         user_answers = SurveyUserAnswer.objects.filter(
@@ -218,30 +219,24 @@ def save_answers(
         user_answer.save()
 
 
-def find_user_by_id(user_id):
+def find_user_by_id(user_id: UUID) -> SurveyUser:
     return SurveyUser.objects.filter(user_id=user_id)[0]
 
 
-def get_answer_choices(question_answers, user_lang: str):
+def get_answer_choices(
+    question_answers: List[SurveyQuestionAnswer], user_lang: str
+) -> List[Tuple[int, str]]:
     tuple_answers = []
 
     for question_answer in question_answers:
-        translation_key = TranslationKey.objects.filter(
-            lang=user_lang, key=question_answer.answerKey
-        )
-        if translation_key.count() == 0:
-            raise Exception(
-                "The translation has to be done for the answers choices. "
-                + "Please choose an another language."
-            )
-
+        translation = get_translation(question_answer.label, user_lang)
         tuple_answers.append(
             (
                 question_answer.id,
                 format_html(
                     "{}{}",
                     mark_safe('<span class="checkmark"></span>'),
-                    translation_key[0].text,
+                    translation,
                 ),
             )
         )
@@ -271,8 +266,6 @@ def get_questions_with_user_answers(user: SurveyUser):
     survey_user_answers = SurveyUserAnswer.objects.filter(user=user).order_by(
         "answer__question__qindex", "answer__aindex"
     )
-    questions_translations = get_formatted_translations(user.choosen_lang, "Q")
-    answers_translations = get_formatted_translations(user.choosen_lang, "A")
 
     user_feedbacks = SurveyUserFeedback.objects.filter(
         user=user, question__isnull=False
@@ -283,9 +276,9 @@ def get_questions_with_user_answers(user: SurveyUser):
 
     questions_with_user_answers = {}
     for survey_user_answer in survey_user_answers:
-        question_title = questions_translations[
-            survey_user_answer.answer.question.titleKey
-        ]
+        question_title = get_translation(
+            survey_user_answer.answer.question.label, user.choosen_lang
+        )
         question_index = survey_user_answer.answer.question.qindex
         if question_index not in questions_with_user_answers:
             feedback = ""
@@ -305,18 +298,19 @@ def get_questions_with_user_answers(user: SurveyUser):
             {
                 "value": survey_user_answer.uvalue,
                 "content": user_answer_content,
-                "title": answers_translations[survey_user_answer.answer.answerKey],
+                "title": get_translation(
+                    survey_user_answer.answer.label, user.choosen_lang
+                ),
             }
         )
 
     return questions_with_user_answers
 
 
-def handle_general_feedback(user: SurveyUser(), request):
+def handle_general_feedback(user: SurveyUser, request: HttpRequest) -> GeneralFeedback:
     user_feedback = SurveyUserFeedback.objects.filter(user=user, question__isnull=True)[
         :1
     ]
-
     if request.method == "POST":
         general_feedback_form = GeneralFeedback(
             data=request.POST, lang=user.choosen_lang

@@ -1,7 +1,10 @@
-from django import forms
+# -*- coding: utf-8 -*-
 
-from survey.globals import SECTOR_CHOICES, COMPANY_SIZE, TRANSLATION_UI
-from survey.models import SurveyQuestionAnswer, TranslationKey
+from django import forms
+from django.utils.translation import gettext_lazy as _
+from survey.globals import SECTOR_CHOICES, COMPANY_SIZE, COUNTRIES
+from survey.models import SurveyQuestionAnswer
+from survey.reporthelper import get_translation
 from django_countries.fields import CountryField
 
 
@@ -18,39 +21,21 @@ class InitialStartForm(forms.Form):
     )
 
     def __init__(self, translations=None, *args, **kwargs):
-        lang = kwargs.pop("lang")
+        kwargs.pop("lang")
 
         super().__init__(*args, **kwargs)
 
-        self.fields["sector"].label = TRANSLATION_UI["form"]["start_form"][
-            "sector_question"
-        ][lang]
-        sectors = []
-        for sector_choise in SECTOR_CHOICES:
-            sectors.append(
-                (
-                    sector_choise[0],
-                    TRANSLATION_UI["form"]["start_form"]["sector_list"][
-                        sector_choise[0]
-                    ][lang],
-                )
-            )
+        self.fields["sector"].label = _("What is your sector?")
+        self.fields["sector"].choices = sort_tuple_alphabetically(SECTOR_CHOICES, 1)
+        self.fields["compSize"].label = _("How many employees?")
 
-        self.fields["sector"].choices = sort_tuple_alphabetically(sectors, 1)
-        self.fields["compSize"].label = TRANSLATION_UI["form"]["start_form"][
-            "size_question"
-        ][lang]
-
-        country_label = TRANSLATION_UI["form"]["start_form"]["country"]["label"][lang]
-        required_error_message = TRANSLATION_UI["form"]["start_form"]["country"][
-            "required_error_message"
-        ][lang.lower()]
         self.fields["country"] = CountryField().formfield(
-            label=country_label,
+            label=_("Please select your country"),
             required=True,
             initial="LU",
-            error_messages={"required": required_error_message},
+            error_messages={"required": _("Please select your country")},
         )
+        self.fields["country"].choices = COUNTRIES
 
 
 class AnswerMChoice(forms.Form):
@@ -92,9 +77,7 @@ class AnswerMChoice(forms.Form):
             )
 
         self.fields["answers"].error_messages = {
-            "required": TRANSLATION_UI["form"]["error_messages"]["answer"]["required"][
-                self.lang
-            ]
+            "required": _("You need to choose at least one answer")
         }
 
         if tanswers is not None:
@@ -114,20 +97,16 @@ class AnswerMChoice(forms.Form):
                     label="",
                     widget=forms.Textarea(
                         attrs={
-                            "placeholder": "",
+                            "autofocus": True,
                         }
                     ),
                     required=isAnswerContentRequired,
                 )
 
         self.fields["feedback"] = forms.CharField(
-            label=TRANSLATION_UI["form"]["questions"]["feedback_label"][self.lang],
+            label=_("Your feedback"),
             widget=forms.Textarea(
-                attrs={
-                    "placeholder": TRANSLATION_UI["form"]["questions"][
-                        "feedback_placeholder"
-                    ][self.lang]
-                }
+                attrs={"placeholder": _("Please let us know if anything is missing")}
             ),
             required=False,
         )
@@ -153,16 +132,14 @@ class AnswerMChoice(forms.Form):
                 pk__in=answers, uniqueAnswer=1
             )
             if unique_answer.count():
-                translation_key = TranslationKey.objects.filter(
-                    lang=self.lang, key=unique_answer[0].answerKey
-                )
-                answer_text = translation_key[0].text
+                answer_text = get_translation(unique_answer[0].label, self.lang)
 
                 raise forms.ValidationError(
-                    TRANSLATION_UI["form"]["error_messages"]["answer"]["unique"][
-                        self.lang
-                    ],
-                    params={"value": answer_text},
+                    _(
+                        "You can't choose multiple answers if the answer {stri} is choosen.".format(
+                            stri=answer_text
+                        )
+                    )
                 )
 
         return answers
@@ -176,18 +153,14 @@ class AnswerMChoice(forms.Form):
 
 class GeneralFeedback(forms.Form):
     def __init__(self, *args, **kwargs):
-        lang = kwargs.pop("lang")
+        kwargs.pop("lang")
 
         super().__init__(*args, **kwargs)
 
         self.fields["general_feedback"] = forms.CharField(
-            label=TRANSLATION_UI["report"]["general_feedback"]["label"][lang],
+            label=_("Your feedback"),
             widget=forms.Textarea(
-                attrs={
-                    "placeholder": TRANSLATION_UI["report"]["general_feedback"][
-                        "placeholder"
-                    ][lang]
-                }
+                attrs={"placeholder": _("Please let us know if anything is missing")}
             ),
             required=True,
         )

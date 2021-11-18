@@ -1,6 +1,6 @@
+# -*- coding: utf-8 -*-
+
 from django.contrib import admin
-from django.template.response import TemplateResponse
-from django.urls import path
 
 from survey.models import (
     SurveyQuestion,
@@ -10,8 +10,8 @@ from survey.models import (
     SurveyUser,
     SurveyUserAnswer,
     Recommendations,
-    TranslationKey,
     SurveyUserFeedback,
+    Translation,
 )
 
 from csskp.settings import HASH_KEY
@@ -62,10 +62,10 @@ class SurveyUserFeedbackAdmin(admin.ModelAdmin):
     list_display = ["id", "user", "feedback"]
 
 
-@admin.register(TranslationKey)
-class TranslationKeyAdmin(admin.ModelAdmin):
-    list_filter = ["key"]
-    list_display = ["key", "lang", "ttype", "text"]
+@admin.register(Translation)
+class TranslationAdmin(admin.ModelAdmin):
+    list_filter = ["original"]
+    list_display = ["original", "lang", "translated"]
 
 
 admin.site.register(SurveyQuestion)
@@ -74,3 +74,4 @@ admin.site.register(SurveyQuestionServiceCategory)
 admin.site.register(SurveySection)
 admin.site.register(SurveyUserAnswer)
 admin.site.register(Recommendations)
+# admin.site.register(Translation)

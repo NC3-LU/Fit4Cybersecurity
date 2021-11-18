@@ -1,0 +1,20 @@
+<h2>{{ _('Table of contents') }}</h2>
+
+<ul class="toc">
+    <li><a href="#intro"></a></li>
+    <li><a href="#description"></a></li>
+    <li><a href="#results"></a></li>
+    <li><a href="#recommendations"></a></li>
+    <ul>
+        {% for category, items in recommendations.items %}
+            <li class="sub_chapiter">
+                <a href="#{{ category }}"></a>
+            </li>
+        {% endfor %}
+    </ul>
+    <li>
+        <a href="#questions"></a>
+    </li>
+</ul>
+
+<p class="page-break" ></p>

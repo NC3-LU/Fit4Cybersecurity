@@ -1,7 +1,8 @@
+# -*- coding: utf-8 -*-
+
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render
-from datetime import datetime
-from django.http import StreamingHttpResponse, HttpResponseRedirect
+from django.http import HttpResponseRedirect
 from stats.stats_logic import get_finished_surveys_list
 
 
@@ -9,6 +10,6 @@ from stats.stats_logic import get_finished_surveys_list
 def index(request):
     result = get_finished_surveys_list(request)
     if result is None:
-        return HttpResponseRedirect("/admin/statistics/")
+        return HttpResponseRedirect("/admin/export/statistics/")
 
     return render(request, "admin/stats.html", result)

@@ -1,16 +1,17 @@
 {% extends 'survey/base.html' %}
 
 {% load bootstrap4 %}
-
+{% load i18n %}
 {% load static %}
+
 {% block bootstrap4_extra_head %}
-    {{ block.super }}
+{{ block.super }}
     <link rel="stylesheet" type="text/css" href="{% static "survey/css/survey-questions.css" %}" />
-    <link rel="stylesheet" type="text/css" href="{% static "survey/css/Chart.css" %}" />
+    <link rel="stylesheet" type="text/css" href="{% static "survey/css/chart.css" %}" />
 
     <script type="text/javascript" src="{% static "survey/js/qrcode.min.js" %}"></script>
-    <script type="text/javascript" src="{% static "survey/js/Chart.bundle.min.js" %}"></script>
-
+    <script type="text/javascript" src="/static/npm_components/chart.js/dist/chart.min.js"></script>
+    <script type="text/javascript" src="{% static "survey/js/chart.js" %}"></script>
     <script type="text/javascript" src="{% static "survey/js/survey-questions.js" %}"></script>
     <script type="text/javascript" src="{% static "survey/js/send-email.js" %}"></script>
 {% endblock %}
@@ -18,150 +19,154 @@
 {% block title %}{{ title }}{% endblock %}
 
 {% block content %}
-    <div class="float-right mx-4 my-2 p-2 border rounded border-primary bg-bright-blue" styles="width: 200px">
-        <div class="text-center">
-            <h3>
-                {% if txtscore < 50 %}
-                    <span class="font-weight-bold text-danger">{{ txtscore }}</span>
-                {% elif txtscore < min_acceptable_score %}
-                    <span class="font-weight-bold text-warning">{{ txtscore }}</span>
-                {% else %}
-                    <span class="font-weight-bold text-success">{{ txtscore }}</span>
-                {% endif %}
-                /100
-            </h3>
-            {% if user.country_code == 'LU' %}
-                {% if txtscore >= min_acceptable_score %}
-                    <h5>{% include 'survey/requestDiagnosticLink.html' with type='button' %}</h5>
-                {% endif %}
-                <h5>{% include 'survey/requestTrainingLink.html' with type='button' %}</h5>
-            {% endif %}
-        </div>
-        <div><h4>{{ translations.txtdownload }}:</h4></div>
-        <div class="text-center py-2">
-            <img src="{% static "images/reportLogo.png" %}" alt="DOC ICON">
-        </div>
-        <div class="text-center py-2">
-            <a href="{{ reportlink }}/en" class="p-1"><img class="flag" src="{% static "images/flags/en.svg" %}" alt="en"></a>
-            <a href="{{ reportlink }}/fr" class="p-2"><img class="flag" src="{% static "images/flags/fr.svg" %}" alt="fr"></a>
-            <a href="{{ reportlink }}/de" class="p-2"><img class="flag" src="{% static "images/flags/de.svg" %}" alt="de"></a>
-        </div>
-    </div>
-
-    <div class="py-2 px-4">
-        {% include 'survey/changeLang.html' %}
-
-        <h2>{{ translations.txtreport }}:</h2>
-        <div class="qrcode"></div>
-        <p>{{ description }}</p>
-        {% if user.country_code == 'LU' and txtscore < min_acceptable_score %}
-            <p>{{ translations.request_training.description }}{% include 'survey/requestTrainingLink.html' with type='link' %}</p>
-        {% endif %}
-
-        <div class="py-2">
-            <p class="continue-later-link">
-                <button class="pl-0 btn btn-link" type="button" name="continue-later" data-toggle="modal" data-target="#modal">{{ translations.continue_later.button }}</button>
-            </p>
-        </div>
-    </div>
-
-    {% if user.country_code == 'LU' and txtscore >= min_acceptable_score %}
-        <div class="py-2 px-4">
-            <h2>{{ translations.request_diagnostic.title }}:</h2>
-            {{ translations.request_diagnostic.description }}<br />
-            {{ translations.request_diagnostic.service_fee }}
-            {% include 'survey/requestDiagnosticLink.html' with type='link' %}
-        </div>
+{% if custom.modules.reportDownload %}
+<div class="float-right mx-4 my-2 p-2 border rounded border-primary bg-bright-blue" styles="width: 200px">
+  <div class="text-center">
+    <h3>
+      {% if txtscore < 50 %}
+      <span class="font-weight-bold text-danger">{{ txtscore }}</span>
+      {% elif txtscore < CUSTOM.minimal_acceptable_score %}
+      <span class="font-weight-bold text-warning">{{ txtscore }}</span>
+      {% else %}
+      <span class="font-weight-bold text-success">{{ txtscore }}</span>
+      {% endif %}
+      /100
+    </h3>
+    {% if user.country_code == 'LU' and custom.modules.requestTraining %}
+    {% if txtscore >= CUSTOM.minimal_acceptable_score and custom.modules.requestDiagnostic %}
+    <h5>{% include 'survey/requestDiagnosticLink.html' with type='button' %}</h5>
     {% endif %}
+    <h5>{% include 'survey/requestTrainingLink.html' with type='button' %}</h5>
+    {% endif %}
+  </div>
+  <h4>{{ _('Report') }}:</h4>
+  <div class="text-center py-2">
+    <img src="{% static "images/reportLogo.png" %}" alt="DOC ICON">
+  </div>
+  <div class="text-center py-2">
+    <a href="{{ reportlink }}/{{ LANGUAGE_CODE }}">
+      <button class="btn border border-rounded btn-primary" type="button">
+        {{ _('Download') }}
+      </button>
+    </a>
+    {% if custom.modules.reportEmail %}
+    <button class="btn border border-rounded btn-primary" type="button" name="modal-send-report" data-toggle="modal" data-target="#modal-send-report">
+      {{ _('Email') }}
+    </button>
+    {% endif %}
+  </div>
+</div>
+{% endif %}
 
-    <div class="py-2 px-4 text-center">
-        <div style="width: 450px; height: 450px; margin: 0 auto 0 auto"><canvas id="resultChart" width='100%' height='100%'></canvas></div>
-        <script>
-            var ctx = document.getElementById('resultChart');
-            var labels = {{ chartTitles | safe }}
-            var resultChart = new Chart(ctx, {
-                type: 'radar',
-                data: {
-                    labels: labels,
-                    datasets: [
-                        {
-                            label: '{{ chartlabelYou | safe }}',
-                            fill: true,
-                            backgroundColor: 'rgba(255, 99, 132, 0.2)',
-                            borderColor: 'rgba(255, 99, 132, 1)',
-                            pointBackgroundColor: 'rgb(255, 99, 132)',
-                            pointBorderColor: '#fff',
-                            pointHoverBackgroundColor: '#fff',
-                            pointHoverBorderColor: 'rgb(255, 99, 132)',
-                            data: {{ chartdataYou | safe }},
-                        }
-                    ]
-                },
-                options: {
-                    scale: {
-                        ticks: {
-                            beginAtZero: true,
-                            min: 0,
-                            max: 100,
-                        }
-                    },
-                    elements:{
-                        line:{
-                            tension: 0,
-                            borderWidth: 3
-                        }
-                    },
-                    title: {
-                        display: false,
-                    },
-                    layout: {
-                        padding: {
-                            left: 5,
-                            right: 5,
-                            top: 5,
-                            bottom: 5
-                        }
-                    }
-                }
-            });
-        </script>
+<div class="py-2 px-4">
+  <h2>{{ _('Summary') }}:</h2>
+  <div class="qrcode"></div>
+  <p>
+    {% blocktranslate trimmed %}
+    This is the list of recommendations to improve the information
+    security maturity in your company, provided that your answers
+    did correctly reflect the state in your company.
+    Also keep in mind that it is a self-assessment and only
+    scratches the surface of the information security maturity level
+    and thus, we are not liable for the results of this survey.
+    {% endblocktranslate %}
+  </p>
+  {% if user.country_code == 'LU' and custom.modules.requestTraining and txtscore < CUSTOM.minimal_acceptable_score %}
+  <p>
+    {% blocktranslate with score=string_score|add:'/100' trimmed %}
+    Based on your score {{ score }}, the CASES Diagnostic
+    is not available for your organization at this moment.
+    We recommend you improve the information security maturity
+    level by implementing the recommendations listed below.
+    If you need any information security training to
+    raise awareness in your company, do not hesitate to
+    {% endblocktranslate %}
+    {% include 'survey/requestTrainingLink.html' with type='link' %}
+  </p>
+  {% endif %}
+
+  <div class="py-2">
+    <p class="continue-later-link">
+      <button class="pl-0 btn btn-link" type="button" name="continue-later" data-toggle="modal" data-target="#modal">
+        {{ _('Your results link') }}
+      </button>
+    </p>
+  </div>
+</div>
+
+{% if user.country_code == 'LU' and custom.modules.requestDiagnostic and txtscore >= CUSTOM.minimal_acceptable_score %}
+<div class="py-2 px-4">
+  <h2>{{ _('About the CASES Diagnostic') }}:</h2>
+  {% blocktranslate trimmed %}
+  The CASES Diagnostic is a service which analyses the company maturity
+  in the information security depending on company's requirements.
+  The analyse duration can take approxymately 2 hours.
+  A consultant from CASES will come to your companie's premises,
+  and ask around 30 questions concerning your information security,
+  mostly organizational questions and possibly some technical questions.
+  You will receive a detailed report which will contain a maturity estimation
+  as well as recommendations to enhance the information security maturity.
+  {% endblocktranslate %}
+  <br />
+  {% blocktranslate trimmed %}
+  The CASES Diagnostic is available for all the companies
+  located in Luxembourg and free of charge.
+  {% endblocktranslate %}
+  {% include 'survey/requestDiagnosticLink.html' with type='link' %}
+</div>
+{% endif %}
+
+{% if custom.modules.resultChart %}
+<div class="py-2 px-4 text-center">
+  <div class="chartContainer">
+    <canvas id="resultChart"></canvas>
+  </div>
+  <script>
+    var chartLabels = {{ chartTitles | safe }}
+    var chartData = {{ chartdataYou | safe }}
+  </script>
+</div>
+{% endif %}
+
+<div class="py-2 px-4">
+  {% for category, items in recommendations.items %}
+  <h4>{{ category | safe }}</h4>
+  <ol>
+    {% for recommendation in items %}
+    <li>{{ recommendation | safe }}</li>
+    {% endfor %}
+  </ol>
+  {% endfor %}
+</div>
+
+<div class="pb-4" style="text-align: center">
+  <button class="btn btn-light border border-rounded" type="button" name="general-feedback" data-toggle="modal" data-target="#modal-feedback">
+    {{ _('Your feedback') }}
+  </button>
+</div>
+
+<div class="modal fade" tabindex="-2" role="dialog" id="modal-feedback" aria-labelledby="{{ custom.tool_name }} Feedback" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-header">
+      <h4>{{ _('Your feedback') }}</h4>
     </div>
-    <div class="py-2 px-4">
-        {% for category, items in recommendations.items %}
-            <h4>{{ category | safe }}</h4>
-            <ol>
-                {% for recommendation in items %}
-                    <li>{{ recommendation | safe }}</li>
-                {% endfor %}
-            </ol>
-        {% endfor %}
-    </div>
-
-    <div class="pb-4" style="text-align: center">
-        <button class="btn btn-light border border-rounded" type="button" name="general-feedback" data-toggle="modal" data-target="#modal-feedback">{{ translations.general_feedback.button }}</button>
-    </div>
-
-    <div class="modal fade" tabindex="-2" role="dialog" id="modal-feedback" aria-labelledby="Fit4Cybersecurity Feedback" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-header">
-                <h4>{{ translations.general_feedback.title }}</h4>
-            </div>
-            <div class="modal-content">
-                <form action="/survey/feedback" method="POST">
-                    {% csrf_token %}
-
-                    {% bootstrap_form general_feedback_form label_class="d-none" %}
-
-                    <div class="content">
-                        <button class="close-popup btn btn-link float-left" type="button" data-dismiss="modal">{{ translations.general_feedback.button_close }}</button>
-                        <input type="submit" class="btn btn-primary float-right" value="{{ translations.general_feedback.button_send }}" />
-                    </div>
-                </form>
-            </div>
+    <div class="modal-content">
+      <form action="/survey/feedback" method="POST">
+        {% csrf_token %}
+        {% bootstrap_form general_feedback_form label_class="d-none" %}
+        <div class="content">
+          <button class="close-popup btn btn-link float-left" type="button" data-dismiss="modal">
+            {{ _('Close') }}
+          </button>
+          <input type="submit" class="btn btn-primary float-right" value="{{ _('Send') }}" />
         </div>
+      </form>
     </div>
+  </div>
+</div>
 
-    {% include 'survey/continue.html' %}
-    {% include 'survey/leaveSurvey.html' %}
+{% include 'survey/continue.html' %}
+{% include 'survey/leaveSurvey.html' %}
+{% include 'survey/sendReportEmail.html' %}
 
 {% endblock %}

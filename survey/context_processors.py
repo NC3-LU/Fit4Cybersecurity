@@ -1,18 +1,20 @@
+# -*- coding: utf-8 -*-
+
 import os
 import subprocess
-from csskp.settings import BASE_DIR
+from csskp.settings import BASE_DIR, CUSTOM
 
 
 def get_version(request):
-    version = (
+    version_res = (
         os.environ.get("PKGVER")
         or subprocess.run(
             ["git", "-C", BASE_DIR, "describe", "--tags"], stdout=subprocess.PIPE
         )
         .stdout.decode()
         .strip()
-    )
-    version = version.split("-")
+    )  # Type: str
+    version = version_res.split("-")
     if len(version) == 1:
         app_version = version[0]
         version_url = (
@@ -26,3 +28,11 @@ def get_version(request):
             version[2][1:]
         )
     return {"app_version": app_version, "version_url": version_url}
+
+
+def instance_configurations(request):
+    configurations = {
+        "custom": CUSTOM,
+    }
+
+    return configurations

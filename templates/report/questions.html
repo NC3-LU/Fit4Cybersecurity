@@ -1,0 +1,20 @@
+<h2 id="questions">{{ _('Questions') }}</h2>
+<ol >
+    {% for index, question in questions.items %}
+        <li class="question">
+            <p>{{ question.question_title | safe }}</p>
+            <ul class="choices">
+                {% for user_answer in question.user_answers %}
+                    <li class="{% if user_answer.value > 0 %}answer{% endif %}">
+                         {{ user_answer.title | safe }}
+                    </li>
+                    {% if user_answer.content != '' %}
+                        <p>
+                             {{ user_answer.content }}
+                        </p>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+        </li>
+    {% endfor %}
+</ol>

@@ -1,0 +1,17 @@
+{% load i18n %}
+
+<h2 id="description">{{ _('Description') }}</h2>
+
+<p>
+{% blocktranslate trimmed with tool_name=CUSTOM.tool_name minimal_acceptable_score=CUSTOM.minimal_acceptable_score %}
+This self-assessment tool is named {{ tool_name }} to highlight the introduction to information security.
+It is also a prerequisite for doing a CASES Diagnostic: a minimum score of {{ minimal_acceptable_score }}/100 is required.
+The purpose for this restriction gives us the opportunity to better tailor the recommendations to your organization during the Diagnostic.
+<br><br>
+During this self-assessment multiple choice questions were asked. After analyzing your answers, recommendations have been provided.
+<br><br>
+Finally, you can download a report, which will help you to communicate the results to your suppliers, if necessary.
+{% endblocktranslate  %}
+</p>
+
+<p class="page-break" ></p>

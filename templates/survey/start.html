@@ -15,7 +15,9 @@
 
 {% block content %}
     <div class="m-2 p-3">
-        <div class="card-title">{{ question }}</div>
+        <div class="card-title">
+            {{ _('We need a little information to be able to give you useful recommendations, once the self-assessment is done.') }}
+        </div>
 
         <form action="{{ action }}" method="post" class="form">
             {% csrf_token %}
@@ -27,7 +29,7 @@
             {% buttons %}
                 <div class="form-group pt-4">
                     <div class="d-flex flex-row justify-content-between float-right">
-                        <input class="btn btn-primary" type="submit" value="{{ translations.next_button }}">
+                        <input class="btn btn-primary" type="submit" value="{{ _('Next') }}">
                     </div>
                 </div>
             {% endbuttons %}

@@ -1,11 +1,17 @@
 # Fit4Cybersecurity
 
-[![Translation status](https://translate.monarc.lu/widgets/Fit4Cybersecurity/-/glossary/svg-badge.svg)](https://translate.monarc.lu/engage/Fit4Cybersecurity/)
+[![Translation status](https://translate.monarc.lu/widgets/Fit4Cybersecurity/-/svg-badge.svg)](https://translate.monarc.lu/engage/Fit4Cybersecurity/)
+
 
 Fit4Cybersecurity is a self-assessment tool by [CASES](https://www.cases.lu)
 to help business owners implement a better cybersecurity strategy.
 
-The official CASES instance is available [here](https://fit4cybersecurity.cases.lu).
+This tool allows to instantiate new self-assessment products such as:
+
+- [Fit4Cybersecurity](https://fit4cybersecurity.cases.lu),
+- [Fit4Privacy](https://fit4privacy.cases.lu),
+- [Fit4Contract](https://contract.cases.lu),
+- [Cyber4Africa](https://start.cyber4africa.org) and the like.
 
 
 ## Deployment
@@ -35,7 +41,7 @@ $ curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/instal
 
 ```bash
 $ git clone https://github.com/CASES-LU/Fit4Cybersecurity.git
-$ cd  Fit4Cybersecurity/
+$ cd Fit4Cybersecurity
 $ npm ci
 $ poetry install --no-dev
 ```
@@ -43,16 +49,37 @@ $ poetry install --no-dev
 
 ### Configure application
 
+Create and configure a file **csskp/config.py**.
+Settings in the __CUSTOM__ dictionnary will be automatically discovered by the software
+and can be used in HTML templates.
+
+
 ```bash
-$ cp csskp/config_dev.py csskp/config_prod.py # configure production settings
+# Configure production settings
+$ cp csskp/config_dev.py csskp/config.py 
+
+# Create a virtualenv, collect static files and compile the translations
 $ poetry shell
-$ python manage.py collectstatic # copy static files required by Django Admin
-$ python manage.py compilemessages # compile the translations
-$ python manage.py migrate # need to initialize before create the first user
+$ python manage.py collectstatic # Copy static files required by Django Admin
+$ python manage.py compilemessages # Compile the translations
+
+# Initialize the database
+$ python manage.py migrate 
+
+# Import questions, answers and recommendations
+$ python manage.py import_questions data/fit4Cybersecurity/questions.json 
+
+# Optionally, import translations
+$ python manage.py import_translations data/fit4Cybersecurity/translations.json
+```
+
+In order to access to the admin interface:
+
+```bash
 $ python manage.py createsuperuser --username <username>
 ```
 
-In the configuration file ```config_prod.py``` you **must** set **your** secret
+In the configuration file ```config.py``` you **must** set **your** secret
 keys:
 
 Here is an example for the Fernet hash key:
@@ -166,7 +193,6 @@ If you want to re-generate the .pot template file:
 ```bash
 $ python manage.py makemessages --keep-pot
 ```
-
 
 ## License
 
