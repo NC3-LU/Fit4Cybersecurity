@@ -24,7 +24,7 @@ DATABASES = {
 CUSTOM = {
     # Generic configurations
     "tool_name": "<TOOL_NAME>",
-    "intro_text": gettext_lazy("Description from a string or a file."),
+    "intro_text": gettext_lazy("Description of the toold."),
     "countries_first": [],
     "defaultLanguage": "en",
     "languages": [
