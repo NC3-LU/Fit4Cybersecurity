@@ -1,9 +1,10 @@
 # -*- coding: utf-8 -*-
 
+from datetime import datetime
 from django import template
 from django.conf import settings
 from django.utils import translation
-from datetime import datetime
+from survey.reporthelper import get_translation
 
 register = template.Library()
 
@@ -12,6 +13,11 @@ register = template.Library()
 def translate(string: str, language: str) -> str:
     with translation.override(language):
         return translation.gettext(string)
+
+
+@register.filter(name="translate_db")
+def translate_db(string: str, language: str) -> str:
+    return get_translation(string, language)
 
 
 @register.filter(name="format_datetime")

@@ -15,9 +15,9 @@ with open("translations.json") as f:
 
 def search(elems, key, lang="en"):
     try:
-        return next(elem for elem in elems if elem["key"] == key and elem["lang"] == lang)[
-            "text"
-        ]
+        return next(
+            elem for elem in elems if elem["key"] == key and elem["lang"] == lang
+        )["text"]
     except StopIteration:
         return key
 

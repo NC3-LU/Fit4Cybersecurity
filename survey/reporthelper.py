@@ -23,7 +23,8 @@ logger = logging.getLogger(__name__)
 
 
 def get_translation(original: str, lang: str) -> str:
-    """Look for the translation of a string."""
+    """Look for the translation of a string.
+    Returns the original string if the translation is not found."""
     translation = Translation.objects.filter(original=original, lang=lang)
     if translation.exists():
         return translation[0].translated
