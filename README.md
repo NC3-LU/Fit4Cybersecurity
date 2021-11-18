@@ -49,7 +49,7 @@ $ poetry install --no-dev
 
 ### Configure application
 
-Create and configure a file **csskp/config.py**.
+Create and configure a file **csskp/config.py** based on **csskp/config_dev.py**.
 Settings in the __CUSTOM__ dictionnary will be automatically discovered by the software
 and can be used in HTML templates.
 
@@ -71,16 +71,15 @@ $ python manage.py import_questions data/fit4Cybersecurity/questions.json
 
 # Optionally, import translations
 $ python manage.py import_translations data/fit4Cybersecurity/translations.json
-```
 
-In order to access to the admin interface:
-
-```bash
+# Create a user for the admin interface
 $ python manage.py createsuperuser --username <username>
 ```
 
-In the configuration file ```config.py``` you **must** set **your** secret
-keys:
+In the configuration file ```config.py``` , ensures that __PUBLIC_URL__ and the other
+variables are configured for your instance.
+
+You **must really** set **your** secret keys:
 
 Here is an example for the Fernet hash key:
 
@@ -103,8 +102,8 @@ at your convenience.
 $ python manage.py runserver # not for production
 ```
 
-For production you can use [Gunicorn](https://gunicorn.org) or mod_wsgi and turn
-off the debug mode in the configuration file.
+For production you can use [Gunicorn](https://gunicorn.org) or mod_wsgi and
+**turn off** the debug mode in the configuration file.
 
 
 ### Configuration with Apache and mod_wsgi
