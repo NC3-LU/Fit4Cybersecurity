@@ -62,10 +62,10 @@ class SurveyUserFeedbackAdmin(admin.ModelAdmin):
     list_display = ["id", "user", "feedback"]
 
 
-# @admin.register(Translation)
-# class TranslationAdmin(admin.ModelAdmin):
-#     list_filter = ["original"]
-#     list_display = ["original", "lang", "translated"]
+@admin.register(Translation)
+class TranslationAdmin(admin.ModelAdmin):
+    list_filter = ["original"]
+    list_display = ["original", "lang", "translated"]
 
 
 admin.site.register(SurveyQuestion)
@@ -74,4 +74,4 @@ admin.site.register(SurveyQuestionServiceCategory)
 admin.site.register(SurveySection)
 admin.site.register(SurveyUserAnswer)
 admin.site.register(Recommendations)
-admin.site.register(Translation)
+# admin.site.register(Translation)
