@@ -3,7 +3,7 @@
 import json
 from django.core.management.base import BaseCommand
 from survey.models import (
-    TranslationKey,
+    Translation,
 )
 
 
@@ -19,7 +19,7 @@ class Command(BaseCommand):
         json_data = json.loads(json_file)
 
         for translation in json_data:
-            translation_obj = TranslationKey.objects.create(**translation)
+            translation_obj = Translation.objects.create(**translation)
             translation_obj.save()
 
         self.stdout.write(self.style.SUCCESS("Translations imported."))

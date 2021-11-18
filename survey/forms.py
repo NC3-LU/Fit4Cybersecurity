@@ -3,7 +3,8 @@
 from django import forms
 from django.utils.translation import gettext_lazy as _
 from survey.globals import SECTOR_CHOICES, COMPANY_SIZE, COUNTRIES
-from survey.models import SurveyQuestionAnswer, TranslationKey
+from survey.models import SurveyQuestionAnswer
+from survey.reporthelper import get_translation
 from django_countries.fields import CountryField
 
 
@@ -131,10 +132,7 @@ class AnswerMChoice(forms.Form):
                 pk__in=answers, uniqueAnswer=1
             )
             if unique_answer.count():
-                translation_key = TranslationKey.objects.filter(
-                    lang=self.lang, key=unique_answer[0].answerKey
-                )
-                answer_text = translation_key[0].text
+                answer_text = get_translation(unique_answer[0].label, self.lang)
 
                 raise forms.ValidationError(
                     _(

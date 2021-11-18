@@ -25,21 +25,21 @@ class Command(BaseCommand):
         for question in json_data:
             # Get or create the section
             section, created = SurveySection.objects.get_or_create(
-                sectionTitleKey=question["section"]
+                label=question["section"]
             )
             if created:
                 section.save()
 
             # Get or create the service category
             service_cat, created = SurveyQuestionServiceCategory.objects.get_or_create(
-                titleKey=question["service_category"]
+                label=question["service_category"]
             )
             if created:
                 service_cat.save()
 
             # Create the question
             question_obj = SurveyQuestion.objects.create(
-                titleKey=question["titleKey"],
+                label=question["label"],
                 qtype=question["qtype"],
                 section=section,
                 service_category=service_cat,
@@ -51,7 +51,7 @@ class Command(BaseCommand):
             for answer in question["answers"]:
                 answer_obj = SurveyQuestionAnswer.objects.create(
                     question=question_obj,
-                    answerKey=answer["answerKey"],
+                    label=answer["label"],
                     aindex=answer["aindex"],
                     uniqueAnswer=answer["uniqueAnswer"],
                     score=answer["score"],
@@ -61,7 +61,7 @@ class Command(BaseCommand):
 
                 for reco in answer.get("recommendations", []):
                     reco_obj = Recommendations.objects.create(
-                        textKey=reco["textKey"],
+                        label=reco["label"],
                         min_e_count=reco["min_e_count"],
                         max_e_count=reco["max_e_count"],
                         sector=reco["sector"],

@@ -13,7 +13,7 @@ from survey.models import (
     SurveyUser,
     SurveyUserAnswer,
     Recommendations,
-    TranslationKey,
+    Translation,
 )
 from utils.radarFactory import radar_factory
 import matplotlib.pyplot as plt
@@ -22,24 +22,20 @@ import matplotlib.pyplot as plt
 logger = logging.getLogger(__name__)
 
 
-def get_formatted_translations(lang: str, type: str) -> Dict:
-    translations = TranslationKey.objects.filter(lang=lang, ttype=type)
-    translation_key_values = {}
-    for translation in translations:
-        translation_key_values[translation.key] = translation.text
-
-    return translation_key_values
+def get_translation(original: str, lang: str) -> str:
+    """Look for the translation of a string."""
+    translation = Translation.objects.filter(original=original, lang=lang)
+    if translation.exists():
+        return translation[0].translated
+    else:
+        return original
 
 
 def getRecommendations(user: SurveyUser, lang: str) -> Dict[str, List[str]]:
     allAnswers = SurveyQuestionAnswer.objects.all().order_by(
         "question__qindex", "aindex"
     )
-    recommendations_translations = get_formatted_translations(lang, "R")
-    categories_translations = get_formatted_translations(lang, "C")
-
     finalReportRecs: Dict[str, List[str]] = {}
-
     for a in allAnswers:
         userAnswer = SurveyUserAnswer.objects.filter(user=user).filter(answer=a)[0]
         recommendations = Recommendations.objects.filter(forAnswer=a)
@@ -53,11 +49,11 @@ def getRecommendations(user: SurveyUser, lang: str) -> Dict[str, List[str]]:
             if (userAnswer.uvalue > 0 and rec.answerChosen) or (
                 userAnswer.uvalue <= 0 and not rec.answerChosen
             ):
-                category_name = categories_translations[
-                    rec.forAnswer.question.service_category.titleKey
-                ]
+                category_name = get_translation(
+                    rec.forAnswer.question.service_category.label, lang
+                )
 
-                translated_recommendation = recommendations_translations[rec.textKey]
+                translated_recommendation = get_translation(rec.label, lang)
                 if is_recommendation_already_added(
                     translated_recommendation, finalReportRecs
                 ):
@@ -65,9 +61,7 @@ def getRecommendations(user: SurveyUser, lang: str) -> Dict[str, List[str]]:
 
                 if category_name not in finalReportRecs:
                     finalReportRecs[category_name] = []
-                finalReportRecs[category_name].append(
-                    recommendations_translations[rec.textKey]
-                )
+                finalReportRecs[category_name].append(translated_recommendation)
     return finalReportRecs
 
 
@@ -86,8 +80,6 @@ def calculateResult(user: SurveyUser, lang: str) -> Tuple[int, List[int], List[s
     max_evaluations_per_section: Dict[int, int] = {}
     sections_list: List[str] = []
 
-    translation_key_values = get_formatted_translations(lang, "S")
-
     for question in SurveyQuestion.objects.all():
         total_questions_score += question.maxPoints
 
@@ -95,7 +87,7 @@ def calculateResult(user: SurveyUser, lang: str) -> Tuple[int, List[int], List[s
             max_evaluations_per_section[question.section.id] = 0
         max_evaluations_per_section[question.section.id] += question.maxPoints
 
-        section_title = translation_key_values[question.section.sectionTitleKey]
+        section_title = get_translation(question.section.label, lang)
         if section_title not in sections_list:
             sections_list.append(section_title)
 

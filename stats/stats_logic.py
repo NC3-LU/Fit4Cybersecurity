@@ -35,11 +35,9 @@ def get_finished_surveys_list(request):
     max_evaluations_per_section = {}
     for question in SurveyQuestion.objects.all():
         total_questions_score += question.maxPoints
-        if question.section.sectionTitleKey not in max_evaluations_per_section:
-            max_evaluations_per_section[question.section.sectionTitleKey] = 0
-        max_evaluations_per_section[
-            question.section.sectionTitleKey
-        ] += question.maxPoints
+        if question.section.id not in max_evaluations_per_section:
+            max_evaluations_per_section[question.section.id] = 0
+        max_evaluations_per_section[question.section.id] += question.maxPoints
 
     surveys_users_results = {
         "surveys_total_number": completed_surveys_users.count(),
@@ -83,7 +81,7 @@ def get_finished_surveys_list(request):
             user=completed_survey_user
         ).order_by("answer__question__qindex", "answer__aindex")
         for user_answer in user_answers:
-            section_title_key = user_answer.answer.question.section.sectionTitleKey
+            section_title_key = user_answer.answer.question.section.id
             if (
                 section_title_key
                 not in surveys_users_results["survey_users"][user_id]["sections"]
@@ -97,7 +95,7 @@ def get_finished_surveys_list(request):
 
             question = user_answer.answer.question
             if (
-                question.titleKey
+                question.id
                 not in surveys_users_results["survey_users"][user_id]["sections"][
                     section_title_key
                 ]["questions"]
@@ -107,7 +105,7 @@ def get_finished_surveys_list(request):
                     has_feedback = 1
                 surveys_users_results["survey_users"][user_id]["sections"][
                     section_title_key
-                ]["questions"][question.titleKey] = {
+                ]["questions"][question.id] = {
                     "score": 0,
                     "answers": [],
                     "has_feedback": has_feedback,
@@ -115,9 +113,9 @@ def get_finished_surveys_list(request):
 
             surveys_users_results["survey_users"][user_id]["sections"][
                 section_title_key
-            ]["questions"][question.titleKey]["answers"].append(
+            ]["questions"][question.id]["answers"].append(
                 {
-                    user_answer.answer.answerKey: {
+                    user_answer.answer.id: {
                         "value": user_answer.uvalue,
                         "score": user_answer.answer.score,
                     }
@@ -129,7 +127,7 @@ def get_finished_surveys_list(request):
                 total_points_number += answer_score
                 surveys_users_results["survey_users"][user_id]["sections"][
                     section_title_key
-                ]["questions"][question.titleKey]["score"] += round(
+                ]["questions"][question.id]["score"] += round(
                     answer_score * 100 / user_answer.answer.question.maxPoints
                 )
                 surveys_users_results["survey_users"][user_id]["sections"][

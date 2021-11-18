@@ -9,7 +9,6 @@ from survey.globals import (
     QUESTION_TYPES,
     ANSWER_TYPES,
     COMPANY_SIZE,
-    TRANSLATION_TYPES,
     SERVICE_TARGETS,
 )
 import uuid
@@ -38,46 +37,35 @@ SURVEY_STATUS_UNDER_REVIEW = 2
 SURVEY_STATUS_FINISHED = 3
 
 
-class TranslationKey(models.Model):
-    key = models.CharField(max_length=32)
-    text = models.TextField()
+class Translation(models.Model):
+    original = models.TextField()
+    translated = models.TextField()
     lang = models.CharField(max_length=2, choices=LANGUAGES, default=LOCAL_DEFAULT_LANG)
-    ttype = models.CharField(
-        max_length=1, choices=TRANSLATION_TYPES, default=TRANSLATION_TYPES[0][0]
-    )
 
     class Meta:
         unique_together = ("lang", "id")
 
     def __str__(self):
-        return str(self.text)
+        return self.original
 
 
 class SurveyQuestionServiceCategory(models.Model):
     # QuestionCatID
 
-    titleKey = models.CharField(max_length=32)
+    label = models.TextField()
 
     def __str__(self):
-        return str(
-            TranslationKey.objects.filter(lang=LOCAL_DEFAULT_LANG).filter(
-                key=self.titleKey
-            )[0]
-        )
+        return self.label
 
 
 class SurveySection(models.Model):
     # Section ID
     # Section title
 
-    sectionTitleKey = models.CharField(max_length=32)
+    label = models.TextField()
 
     def __str__(self):
-        return str(
-            TranslationKey.objects.filter(lang=LOCAL_DEFAULT_LANG).filter(
-                key=self.sectionTitleKey
-            )[0]
-        )
+        return self.label
 
 
 class SurveyQuestion(models.Model):
@@ -89,7 +77,7 @@ class SurveyQuestion(models.Model):
         SurveyQuestionServiceCategory, on_delete=models.CASCADE
     )
     section = models.ForeignKey(SurveySection, on_delete=models.CASCADE)
-    titleKey = models.CharField(max_length=32)
+    label = models.TextField()
     qtype = models.CharField(
         max_length=2, choices=QUESTION_TYPES, default=QUESTION_TYPES[0][0]
     )
@@ -97,11 +85,7 @@ class SurveyQuestion(models.Model):
     maxPoints = models.IntegerField(default=10)
 
     def __str__(self):
-        return str(
-            TranslationKey.objects.filter(lang=LOCAL_DEFAULT_LANG).filter(
-                key=self.titleKey
-            )[0]
-        )
+        return self.label
 
 
 class SurveyQuestionAnswer(models.Model):
@@ -109,7 +93,7 @@ class SurveyQuestionAnswer(models.Model):
     # Question id --> can be 1-question to multi-answers
 
     question = models.ForeignKey(SurveyQuestion, on_delete=models.CASCADE)
-    answerKey = models.CharField(max_length=32)
+    label = models.TextField()
     aindex = models.IntegerField()
     uniqueAnswer = models.BooleanField(default=False)
     score = models.IntegerField(default=0)
@@ -118,11 +102,7 @@ class SurveyQuestionAnswer(models.Model):
     )
 
     def __str__(self):
-        return str(
-            TranslationKey.objects.filter(lang=LOCAL_DEFAULT_LANG).filter(
-                key=self.answerKey
-            )[0]
-        )
+        return self.label
 
     class Meta:
         unique_together = ("aindex", "question")
@@ -185,7 +165,7 @@ class SurveyUserFeedback(models.Model):
 
 
 class Recommendations(models.Model):
-    textKey = models.CharField(max_length=32)
+    label = models.TextField()
     min_e_count = models.CharField(
         max_length=2, choices=COMPANY_SIZE, default=COMPANY_SIZE[0][0]
     )
@@ -199,11 +179,7 @@ class Recommendations(models.Model):
     answerChosen = models.BooleanField(default=False)
 
     def __str__(self):
-        return str(
-            TranslationKey.objects.filter(lang=LOCAL_DEFAULT_LANG).filter(
-                key=self.textKey
-            )[0]
-        )
+        return self.label
 
 
 class Company(models.Model):

@@ -3,6 +3,7 @@
 """importq.py - Generate JSON files with the output of the command:
 
 $ python manage.py dumpdata --indent 2 survey > ./contrib/out.json
+Based on the old structure of the Fit4Cybersecurity database.
 
 importq.py will create two files:
 - questions.json
@@ -80,10 +81,10 @@ translations_json = [translation["fields"] for translation in translations]
 
 
 with open("questions.json", "w") as f:
-    f.write(json.dumps(questions_json, indent=4, sort_keys=False))
+    f.write(json.dumps(questions_json, indent=2, sort_keys=False))
 
 with open("translations.json", "w") as f:
-    f.write(json.dumps(translations_json, indent=4, sort_keys=False))
+    f.write(json.dumps(translations_json, indent=2, sort_keys=False))
 
 
 # print(questions_json)

@@ -13,12 +13,11 @@ from survey.models import (
     SurveyQuestion,
     SurveyQuestionAnswer,
     SurveyUserAnswer,
-    TranslationKey,
     SurveyUserFeedback,
     SURVEY_STATUS_UNDER_REVIEW,
 )
 from survey.forms import InitialStartForm, AnswerMChoice, GeneralFeedback
-from survey.reporthelper import get_formatted_translations
+from survey.reporthelper import get_translation
 from csskp.settings import CUSTOM, LANGUAGES, LANGUAGE_CODE
 
 LOCAL_DEFAULT_LANG = LANGUAGE_CODE
@@ -45,8 +44,7 @@ def create_user(lang: str, sector: str, company_size: str, country: str) -> Surv
 
 
 def handle_start_survey(request: HttpRequest, lang: str) -> Union[Dict, SurveyUser]:
-    """Handles the start of the survey.
-    """
+    """Handles the start of the survey."""
     action = "/survey/start/" + lang
     title = CUSTOM["tool_name"] + " - " + _("Let's start")
 
@@ -182,9 +180,7 @@ def handle_question_answers_request(
         + _("Question")
         + " "
         + str(current_question.qindex),
-        "question": TranslationKey.objects.filter(
-            key=current_question.titleKey, lang=user.choosen_lang
-        )[0].text,
+        "question": get_translation(current_question.label, user.choosen_lang),
         "form": form,
         "action": "/survey/question/" + str(current_question.qindex),
         "user": user,
@@ -233,22 +229,14 @@ def get_answer_choices(
     tuple_answers = []
 
     for question_answer in question_answers:
-        translation_key = TranslationKey.objects.filter(
-            lang=user_lang, key=question_answer.answerKey
-        )
-        if translation_key.count() == 0:
-            raise Exception(
-                "The translation has to be done for the answers choices. "
-                + "Please choose an another language."
-            )
-
+        translation = get_translation(question_answer.label, user_lang)
         tuple_answers.append(
             (
                 question_answer.id,
                 format_html(
                     "{}{}",
                     mark_safe('<span class="checkmark"></span>'),
-                    translation_key[0].text,
+                    translation,
                 ),
             )
         )
@@ -278,8 +266,6 @@ def get_questions_with_user_answers(user: SurveyUser):
     survey_user_answers = SurveyUserAnswer.objects.filter(user=user).order_by(
         "answer__question__qindex", "answer__aindex"
     )
-    questions_translations = get_formatted_translations(user.choosen_lang, "Q")
-    answers_translations = get_formatted_translations(user.choosen_lang, "A")
 
     user_feedbacks = SurveyUserFeedback.objects.filter(
         user=user, question__isnull=False
@@ -290,9 +276,9 @@ def get_questions_with_user_answers(user: SurveyUser):
 
     questions_with_user_answers = {}
     for survey_user_answer in survey_user_answers:
-        question_title = questions_translations[
-            survey_user_answer.answer.question.titleKey
-        ]
+        question_title = get_translation(
+            survey_user_answer.answer.question.label, user.choosen_lang
+        )
         question_index = survey_user_answer.answer.question.qindex
         if question_index not in questions_with_user_answers:
             feedback = ""
@@ -312,7 +298,9 @@ def get_questions_with_user_answers(user: SurveyUser):
             {
                 "value": survey_user_answer.uvalue,
                 "content": user_answer_content,
-                "title": answers_translations[survey_user_answer.answer.answerKey],
+                "title": get_translation(
+                    survey_user_answer.answer.label, user.choosen_lang
+                ),
             }
         )
 
