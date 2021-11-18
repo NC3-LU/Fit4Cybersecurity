@@ -22,6 +22,7 @@
 {% if custom.modules.reportDownload %}
 <div class="float-right mx-4 my-2 p-2 border rounded border-primary bg-bright-blue" styles="width: 200px">
   <div class="text-center">
+    {% if custom.modules.displayScore %}
     <h3>
       {% if txtscore < 50 %}
       <span class="font-weight-bold text-danger">{{ txtscore }}</span>
@@ -32,6 +33,7 @@
       {% endif %}
       /100
     </h3>
+    {% endif %}
     {% if user.country_code == 'LU' and custom.modules.requestTraining %}
     {% if txtscore >= CUSTOM.minimal_acceptable_score and custom.modules.requestDiagnostic %}
     <h5>{% include 'survey/requestDiagnosticLink.html' with type='button' %}</h5>

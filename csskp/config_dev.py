@@ -24,7 +24,7 @@ DATABASES = {
 CUSTOM = {
     # Generic configurations
     "tool_name": "<TOOL_NAME>",
-    "intro_text": gettext_lazy("Description of the toold."),
+    "intro_text": gettext_lazy("Description of the tool."),
     "countries_first": [],
     "defaultLanguage": "en",
     "languages": [
@@ -54,6 +54,7 @@ CUSTOM = {
         "requestDiagnostic": True,
         "requestTraining": True,
         "resultChart": True,
+        "displayScore": True,
     },
 }
 

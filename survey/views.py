@@ -167,6 +167,7 @@ def review(request):
     request.session[translation.LANGUAGE_SESSION_KEY] = lang
 
     textLayout = {
+        "title": CUSTOM["tool_name"] + " - " + _("Answers review"),
         "questions_with_user_answers": questions_with_user_answers,
         "form": forms.Form(),
         "user": user,
