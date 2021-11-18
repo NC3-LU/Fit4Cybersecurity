@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
-from typing import Union, List, Dict, Tuple
+from typing import Union, List, Dict, Tuple, Any
+from typing_extensions import TypedDict
 from uuid import UUID
 from django.http import HttpRequest
 from django.utils.translation import gettext_lazy as _
@@ -21,6 +22,13 @@ from survey.reporthelper import get_translation
 from csskp.settings import CUSTOM, LANGUAGES, LANGUAGE_CODE
 
 LOCAL_DEFAULT_LANG = LANGUAGE_CODE
+
+
+class QuestionWithUserAnswers(TypedDict):
+    """Defines a type for a question with user answers"""
+    question_title: str
+    feedback: str
+    user_answers: list[Any]
 
 
 def create_user(lang: str, sector: str, company_size: str, country: str) -> SurveyUser:
@@ -274,7 +282,7 @@ def get_questions_with_user_answers(user: SurveyUser):
     for user_feedback in user_feedbacks:
         feedbacks_per_question[user_feedback.question.qindex] = user_feedback.feedback
 
-    questions_with_user_answers = {}
+    questions_with_user_answers: Dict[int, QuestionWithUserAnswers] = {}
     for survey_user_answer in survey_user_answers:
         question_title = get_translation(
             survey_user_answer.answer.question.label, user.choosen_lang
