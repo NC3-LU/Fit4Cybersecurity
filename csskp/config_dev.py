@@ -54,6 +54,7 @@ CUSTOM = {
         "requestDiagnostic": True,
         "requestTraining": True,
         "resultChart": True,
+        "displayScore": True,
     },
 }
 
