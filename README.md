@@ -40,9 +40,8 @@ $ curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/instal
 
 
 ```bash
-$ git clone https://github.com/CASES-LU/Fit4Cybersecurity.git ./Fit4Ilr
-$ cd Fit4Ilr
-$ git checkout fit4ilr
+$ git clone https://github.com/CASES-LU/Fit4Cybersecurity.git
+$ cd Fit4Cybersecurity
 $ npm ci
 $ poetry install --no-dev
 ```
@@ -50,17 +49,28 @@ $ poetry install --no-dev
 
 ### Configure application
 
-```bash
-$ cp csskp/config_dev.py csskp/config.py # Configure production settings
-$ poetry shell
+Create and configure a file **csskp/config.py**.
+Settings in the __CUSTOM__ dictionnary will be automatically discovered by the software
+and can be used in HTML templates.
 
+
+```bash
+# Configure production settings
+$ cp csskp/config_dev.py csskp/config.py 
+
+# Create a virtualenv, collect static files and compile the translations
+$ poetry shell
 $ python manage.py collectstatic # Copy static files required by Django Admin
 $ python manage.py compilemessages # Compile the translations
 
-$ python manage.py migrate # Initialize the database
-$ python manage.py import_questions data/fit4Cybersecurity/questions.json # Import questions and answers
-$ python manage.py import_translations data/fit4Cybersecurity/translations.json # Optionally import translations
-$ python manage.py createsuperuser --username <username>
+# Initialize the database
+$ python manage.py migrate 
+
+# Import questions, answers and recommendations
+$ python manage.py import_questions data/fit4Cybersecurity/questions.json 
+
+# Optionally, import translations
+$ python manage.py import_translations data/fit4Cybersecurity/translations.json
 ```
 
 In order to access to the admin interface:
@@ -154,7 +164,7 @@ be *password*.
 
 ```bash
 $ cd Fit4Cybersecurity/
-$ git pull origin fit4ilr --tags
+$ git pull origin master --tags
 $ npm ci
 $ poetry install --no-dev
 $ poetry run python manage.py collectstatic
