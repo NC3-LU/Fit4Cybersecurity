@@ -78,6 +78,7 @@ class SurveyQuestion(models.Model):
     )
     section = models.ForeignKey(SurveySection, on_delete=models.CASCADE)
     label = models.TextField()
+    tooltip = models.TextField(null=False, blank=True, default="")
     qtype = models.CharField(
         max_length=2, choices=QUESTION_TYPES, default=QUESTION_TYPES[0][0]
     )
