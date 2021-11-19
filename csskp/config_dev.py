@@ -53,8 +53,7 @@ CUSTOM = {
         "reportEmail": False,
         "requestDiagnostic": True,
         "requestTraining": True,
-        "resultChart": True,
-        "displayScore": True,
+        "displayResults": True,
     },
 }
 
