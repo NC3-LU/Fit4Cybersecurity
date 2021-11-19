@@ -45,7 +45,7 @@ class Migration(migrations.Migration):
                         default=""
                     ),
                 ),
-(
+                (
                     "qtype",
                     models.CharField(choices=QUESTION_TYPES, default="M", max_length=1),
                 ),
