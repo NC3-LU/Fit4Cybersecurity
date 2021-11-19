@@ -189,6 +189,7 @@ def handle_question_answers_request(
         + " "
         + str(current_question.qindex),
         "question": get_translation(current_question.label, user.choosen_lang),
+        "question_tooltip": get_translation(current_question.tooltip, user.choosen_lang),
         "form": form,
         "action": "/survey/question/" + str(current_question.qindex),
         "user": user,
@@ -238,13 +239,21 @@ def get_answer_choices(
 
     for question_answer in question_answers:
         translation = get_translation(question_answer.label, user_lang)
+        tooltip = get_translation(question_answer.tooltip, user_lang)
+
         tuple_answers.append(
             (
                 question_answer.id,
                 format_html(
                     "{}{}",
                     mark_safe('<span class="checkmark"></span>'),
-                    translation,
+                    mark_safe(
+                        '<span data-bs-toggle="tooltip" title="'
+                        + tooltip
+                        + '">'
+                        + translation
+                        + '</span>'
+                    ),
                 ),
             )
         )
