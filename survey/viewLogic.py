@@ -189,6 +189,7 @@ def handle_question_answers_request(
         + " "
         + str(current_question.qindex),
         "question": get_translation(current_question.label, user.choosen_lang),
+        "question_tooltip": get_translation(current_question.tooltip, user.choosen_lang),
         "form": form,
         "action": "/survey/question/" + str(current_question.qindex),
         "user": user,

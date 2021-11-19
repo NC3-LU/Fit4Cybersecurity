@@ -29,7 +29,9 @@
     {% endif %}
 
     <div class="m-2 p-3">
-        <div class="card-title">{{ question }}</div>
+        <div class="card-title" >
+            <span data-bs-toggle="tooltip" title="{{ question_tooltip }}">{{ question }}</span>
+        </div>
         <form action="{{ action }}" method="post" class="form">
             {% csrf_token %}
 
