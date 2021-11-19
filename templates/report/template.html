@@ -24,7 +24,9 @@
 
         {% include 'report/description.html' %}
 
-        {% include 'report/results.html' %}
+        {% if custom.modules.displayResults %}
+            {% include 'report/results.html' %}
+        {% endif %}
 
         {% include 'report/recommendations.html' %}
 

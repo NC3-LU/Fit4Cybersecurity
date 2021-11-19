@@ -22,7 +22,7 @@
 {% if custom.modules.reportDownload %}
 <div class="float-right mx-4 my-2 p-2 border rounded border-primary bg-bright-blue" styles="width: 200px">
   <div class="text-center">
-    {% if custom.modules.displayScore %}
+    {% if custom.modules.displayResults %}
     <h3>
       {% if txtscore < 50 %}
       <span class="font-weight-bold text-danger">{{ txtscore }}</span>
@@ -118,7 +118,7 @@
 </div>
 {% endif %}
 
-{% if custom.modules.resultChart %}
+{% if custom.modules.displayResults %}
 <div class="py-2 px-4 text-center">
   <div class="chartContainer">
     <canvas id="resultChart"></canvas>

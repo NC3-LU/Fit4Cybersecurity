@@ -3,7 +3,9 @@
 <ul class="toc">
     <li><a href="#intro"></a></li>
     <li><a href="#description"></a></li>
-    <li><a href="#results"></a></li>
+    {% if custom.modules.displayResults %}
+        <li><a href="#results"></a></li>
+    {% endif %}
     <li><a href="#recommendations"></a></li>
     <ul>
         {% for category, items in recommendations.items %}
