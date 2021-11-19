@@ -238,13 +238,22 @@ def get_answer_choices(
 
     for question_answer in question_answers:
         translation = get_translation(question_answer.label, user_lang)
+        tooltip = ""
+        # tooltip = get_translation(question_answer.tooltip, user_lang)
+
         tuple_answers.append(
             (
                 question_answer.id,
                 format_html(
                     "{}{}",
                     mark_safe('<span class="checkmark"></span>'),
-                    translation,
+                    mark_safe(
+                        '<span data-bs-toggle="tooltip" title="'
+                        + tooltip
+                        + '">'
+                        + translation
+                        + '</span>'
+                    ),
                 ),
             )
         )
