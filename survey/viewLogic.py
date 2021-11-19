@@ -238,8 +238,7 @@ def get_answer_choices(
 
     for question_answer in question_answers:
         translation = get_translation(question_answer.label, user_lang)
-        tooltip = ""
-        # tooltip = get_translation(question_answer.tooltip, user_lang)
+        tooltip = get_translation(question_answer.tooltip, user_lang)
 
         tuple_answers.append(
             (

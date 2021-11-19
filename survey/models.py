@@ -94,6 +94,7 @@ class SurveyQuestionAnswer(models.Model):
 
     question = models.ForeignKey(SurveyQuestion, on_delete=models.CASCADE)
     label = models.TextField()
+    tooltip = models.TextField(null=False, blank=True, default="")
     aindex = models.IntegerField()
     uniqueAnswer = models.BooleanField(default=False)
     score = models.IntegerField(default=0)

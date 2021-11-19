@@ -57,6 +57,14 @@ class Migration(migrations.Migration):
                     ),
                 ),
                 ("answerKey", models.CharField(max_length=32)),
+                (
+                    "tooltip",
+                    models.TextField(
+                        null=False,
+                        blank=True,
+                        default=""
+                    ),
+                ),
                 ("aindex", models.IntegerField()),
                 (
                     "question",
