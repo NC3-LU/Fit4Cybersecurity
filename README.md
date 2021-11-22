@@ -193,6 +193,16 @@ If you want to re-generate the .pot template file:
 $ python manage.py makemessages --keep-pot
 ```
 
+
+## Updating the OpenAPI Schema
+
+If you have update the API, you can generate a new OpenAPI Schema:
+
+```bash
+$ python manage.py generateschema --file static/survey/api/openapi-schema.yml
+```
+
+
 ## License
 
 This software is licensed under
