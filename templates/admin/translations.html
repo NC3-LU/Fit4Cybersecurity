@@ -52,6 +52,7 @@
       <h3>{{ forloop.counter }} - {{ question.label }}</h3>
 
       {% for lang in languages %}
+      {{ lang }}
       {% if translations|get_item:question.label and translations|get_item:question.label|get_item:lang %}
       <div class="form-group">
         <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" cols="80">{{ translations|get_item:question.label|get_item:lang }}</textarea>

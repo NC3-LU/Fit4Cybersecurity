@@ -31,7 +31,7 @@ def translations_questions(request):
             ):
                 to_translate.append(question)
 
-    page_number = request.GET.get('page')
+    page_number = request.GET.get("page")
     paginated_questions = paginator.get_page(page_number)
     return render(
         request,
