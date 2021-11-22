@@ -46,26 +46,21 @@
 
   <div class="row">
     <div class="col">
-
       {% for question in questions %}
-
       <h3>{{ forloop.counter }} - {{ question.label }}</h3>
-
       {% for lang in languages %}
       {{ lang }}
       {% if translations|get_item:question.label and translations|get_item:question.label|get_item:lang %}
       <div class="form-group">
-        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" cols="80">{{ translations|get_item:question.label|get_item:lang }}</textarea>
+        <textarea class="form-control" id="Textarea-{{ translations|get_item:question.label|get_item:lang|get_obj_attr:'id' }}" rows="3" cols="80">{{ translations|get_item:question.label|get_item:lang }}</textarea>
       </div>
       {% else %}
       <div class="form-group">
-        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" cols="80"></textarea>
+        <textarea class="form-control" id="Textarea" rows="3" cols="80"></textarea>
       </div>
       {% endif %}
       {% endfor %}
-
       {% endfor %}
-
     </div>
   </div>
 

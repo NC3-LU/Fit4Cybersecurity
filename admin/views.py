@@ -18,7 +18,7 @@ def translations_questions(request):
     paginator = Paginator(questions, 20)  # Show 20 questions per page.
     translations = tree()
     for translation in translations_query.all():
-        translations[translation.original][translation.lang] = translation.translated
+        translations[translation.original][translation.lang] = translation
 
     to_translate = []
     for question in questions:
