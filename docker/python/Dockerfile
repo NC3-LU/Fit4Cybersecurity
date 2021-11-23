@@ -1,35 +1,36 @@
-FROM python:3.9-alpine
+FROM python:3.10.0-buster
 
-RUN apk update && \
-  apk add \
-  build-base \
+RUN apt-get update && \
+  apt-get install -y \
+  build-essential \
+  npm \
   cargo \
   curl \
-  freetype-dev \
-  fribidi-dev \
+  freetype2-doc \
+  libfribidi-dev \
   gcc \
   gettext \
   git \
-  harfbuzz-dev \
-  lcms2-dev \
+  libharfbuzz-dev \
+  liblcms2-utils \
   libffi-dev \
-  libjpeg-turbo-dev \
+  libjpeg62-turbo \
   libpng-dev \
-  libpq \
-  libressl-dev \
+  libpq-dev \
+  libssl-dev \
   libwebp-dev \
   libxml2-dev \
   libxslt-dev \
   musl-dev \
-  npm \
-  openssl-dev \
   postgresql-client \
-  postgresql-dev \
+  postgresql \
+  openssl \
   python3-dev \
   tcl-dev \
   tk-dev \
-  zlib \
-  rust
+  zlib1g-dev \
+  rustc
+
 
 WORKDIR csskp
 
@@ -40,7 +41,6 @@ COPY stats stats/
 COPY survey survey/
 COPY templates templates/
 COPY utils utils/
-COPY wtemps wtemps/
 COPY README.md .
 COPY manage.py .
 COPY package.json .
@@ -56,6 +56,7 @@ RUN mkdir node_modules
 RUN npm install
 RUN mkdir -p static/npm_components
 RUN cp -R node_modules/* static/npm_components/
+RUN cp csskp/config_dev.py csskp/config.py
 
 RUN pip install poetry
 RUN poetry install
