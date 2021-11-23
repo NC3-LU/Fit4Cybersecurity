@@ -55,7 +55,7 @@ CUSTOM = {
         "requestTraining": True,
         "displayResults": True,
     },
-    "sectors":[],
+    "sectors": [],
     "company_size": [],
     "countries": [],
 }

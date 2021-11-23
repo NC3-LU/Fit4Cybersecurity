@@ -21,7 +21,9 @@ DEFAULT_SECTOR_CHOICES = [
     ("PUBL", _("Public administration")),
 ]
 
-SECTOR_CHOICES = CUSTOM["sectors"] if len(CUSTOM["sectors"]) > 0 else DEFAULT_SECTOR_CHOICES
+SECTOR_CHOICES = (
+    CUSTOM["sectors"] if len(CUSTOM["sectors"]) > 0 else DEFAULT_SECTOR_CHOICES
+)
 
 DEFAULT_COUNTRIES = [
     ("LU", "Luxembourg"),
@@ -53,7 +55,9 @@ DEFAULT_COMPANY_SIZE = [
     ("j", "5000+"),
 ]
 
-COMPANY_SIZE = CUSTOM["company_size"] if len(CUSTOM["company_size"]) > 0 else DEFAULT_COMPANY_SIZE
+COMPANY_SIZE = (
+    CUSTOM["company_size"] if len(CUSTOM["company_size"]) > 0 else DEFAULT_COMPANY_SIZE
+)
 
 
 QUESTION_TYPES = [
