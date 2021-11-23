@@ -52,7 +52,7 @@ class Migration(migrations.Migration):
                 ),
             ],
             options={
-                "unique_together": {("lang", "id")},
+                "unique_together": {("original", "lang")},
             },
         ),
     ]

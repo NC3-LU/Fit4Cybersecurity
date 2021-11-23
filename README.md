@@ -56,7 +56,7 @@ and can be used in HTML templates.
 
 ```bash
 # Configure production settings
-$ cp csskp/config_dev.py csskp/config.py 
+$ cp csskp/config_dev.py csskp/config.py
 
 # Create a virtualenv, collect static files and compile the translations
 $ poetry shell
@@ -64,10 +64,10 @@ $ python manage.py collectstatic # Copy static files required by Django Admin
 $ python manage.py compilemessages # Compile the translations
 
 # Initialize the database
-$ python manage.py migrate 
+$ python manage.py migrate
 
 # Import questions, answers and recommendations
-$ python manage.py import_questions data/fit4Cybersecurity/questions.json 
+$ python manage.py import_questions data/fit4Cybersecurity/questions.json
 
 # Optionally, import translations
 $ python manage.py import_translations data/fit4Cybersecurity/translations.json
@@ -112,7 +112,7 @@ For production you can use [Gunicorn](https://gunicorn.org) or mod_wsgi and
 $ sudo apt install apache2 apache2-dev # apxs2
 $ wget https://github.com/GrahamDumpleton/mod_wsgi/archive/refs/tags/4.9.0.tar.gz
 $ tar -xzvf 4.9.0.tar.gz
-$ cd mod_wsgi-4.9.0/ 
+$ cd mod_wsgi-4.9.0/
 $ ./configure --with-apxs=/usr/bin/apxs2 --with-python=/home/<user>/.pyenv/shims/python
 $ make
 $ sudo make install
@@ -150,8 +150,9 @@ sudo systemctl restart apache2.service
 
 
 ```bash
-$ docker-compose up -d
+$ whitelabel={NameOfWhitelabel} docker-compose up -d
 ```
+{NameOfWhitelabel} - is the launching site name (e.g. fit4Cybersecurity).
 
 The server will be listening at http://127.0.0.1:8000.
 
