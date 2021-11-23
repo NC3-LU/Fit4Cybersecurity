@@ -81,6 +81,16 @@ class Command(BaseCommand):
                         reco_obj.save()
 
         self.stdout.write(self.style.SUCCESS("Data imported."))
-        self.stdout.write(self.style.SUCCESS("  Number of questions: {}".format(nb_imported_questions)))
-        self.stdout.write(self.style.SUCCESS("  Number of answers: {}".format(nb_imported_answers)))
-        self.stdout.write(self.style.SUCCESS("  Number of recommendations: {}".format(nb_imported_recommendations)))
+        self.stdout.write(
+            self.style.SUCCESS(
+                "  Number of questions: {}".format(nb_imported_questions)
+            )
+        )
+        self.stdout.write(
+            self.style.SUCCESS("  Number of answers: {}".format(nb_imported_answers))
+        )
+        self.stdout.write(
+            self.style.SUCCESS(
+                "  Number of recommendations: {}".format(nb_imported_recommendations)
+            )
+        )
