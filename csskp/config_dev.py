@@ -55,6 +55,9 @@ CUSTOM = {
         "requestTraining": True,
         "displayResults": True,
     },
+    "sectors":[],
+    "company_size": [],
+    "countries": [],
 }
 
 REPORT_TEMPLATE_DIR = "./templates/report/"

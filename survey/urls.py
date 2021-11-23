@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from django.urls import path
+from django.urls import path, include
 
 from survey import views
 
@@ -17,4 +17,5 @@ urlpatterns = [
     path("report/<slug:lang>", views.show_report),
     path("feedback", views.save_general_feedback),
     path("companies", views.get_companies),
+    path("api/", include("survey.api.urls")),
 ]

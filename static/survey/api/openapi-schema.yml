@@ -1,0 +1,100 @@
+openapi: 3.0.2
+info:
+  title: ''
+  version: ''
+paths:
+  /survey/api/translations:
+    get:
+      operationId: listTranslationListApis
+      description: List all the Translation items for given requested user
+      parameters: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items: {}
+          description: ''
+      tags:
+      - survey
+    post:
+      operationId: createTranslationListApi
+      description: Create the Translation with given translation data
+      parameters: []
+      requestBody:
+        content:
+          application/json:
+            schema: {}
+          application/x-www-form-urlencoded:
+            schema: {}
+          multipart/form-data:
+            schema: {}
+      responses:
+        '201':
+          content:
+            application/json:
+              schema: {}
+          description: ''
+      tags:
+      - survey
+  /survey/api/translation/{translation_id}/:
+    get:
+      operationId: retrieveTranslationDetailApi
+      description: Retrieves the Todo with given translation_id
+      parameters:
+      - name: translation_id
+        in: path
+        required: true
+        description: ''
+        schema:
+          type: string
+      responses:
+        '200':
+          content:
+            application/json:
+              schema: {}
+          description: ''
+      tags:
+      - survey
+    put:
+      operationId: updateTranslationDetailApi
+      description: Updates the todo item with given translation_id if exists
+      parameters:
+      - name: translation_id
+        in: path
+        required: true
+        description: ''
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema: {}
+          application/x-www-form-urlencoded:
+            schema: {}
+          multipart/form-data:
+            schema: {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema: {}
+          description: ''
+      tags:
+      - survey
+    delete:
+      operationId: destroyTranslationDetailApi
+      description: Deletes the todo item with given translation_id if exists
+      parameters:
+      - name: translation_id
+        in: path
+        required: true
+        description: ''
+        schema:
+          type: string
+      responses:
+        '204':
+          description: ''
+      tags:
+      - survey

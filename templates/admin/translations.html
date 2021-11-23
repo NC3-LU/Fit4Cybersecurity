@@ -1,17 +1,88 @@
-{% extends 'survey/base.html' %}
+{% extends "admin/base_site.html" %}
+{% load i18n %}
+{% load apptags %}
 
-{% load bootstrap4 %}
+{% block breadcrumbs %}<div class="breadcrumbs"><a href="{% url 'admin:index' %}">{% trans 'Home' %}</a> › Translations management</div>{% endblock %}
+
 {% load static %}
 
 {% block content %}
 
-{% block main_logo %}{% endblock %}
-
-<div class="container">
+<div id="content-main">
   <div class="row">
     <div class="col">
       <h1>Translations management</h1>
     </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <h2>Questions</h2>
+      <p>Number of questions: {{ nb_questions }}</p>
+      <p>Questions with missing translations: {{ to_translate | length }}</p>
+    </div>
+  </div>
+
+  <br /><br />
+
+  <div class="pagination">
+    <span class="step-links">
+      {% if questions.has_previous %}
+      <a href="?page=1">&laquo; first</a>
+      <a href="?page={{ questions.previous_page_number }}">previous</a>
+      {% endif %}
+
+      <span class="current">
+        Page {{ questions.number }} of {{ questions.paginator.num_pages }}.
+      </span>
+
+      {% if questions.has_next %}
+      <a href="?page={{ questions.next_page_number }}">next</a>
+      <a href="?page={{ questions.paginator.num_pages }}">last &raquo;</a>
+      {% endif %}
+    </span>
+  </div>
+
+  <br /><hr />
+
+  <div class="row">
+    <div class="col">
+      {% for question in questions %}
+      <h3>{{ forloop.counter }} - {{ question.label }}</h3>
+      {% for lang in languages %}
+      {{ lang }}
+      {% if translations|get_item:question.label and translations|get_item:question.label|get_item:lang %}
+      <div class="form-group">
+        <textarea class="form-control" id="Textarea-{{ translations|get_item:question.label|get_item:lang|get_obj_attr:'id' }}" rows="3" cols="80">{{ translations|get_item:question.label|get_item:lang }}</textarea>
+      </div>
+      {% else %}
+      <div class="form-group">
+        <textarea class="form-control" id="Textarea" rows="3" cols="80"></textarea>
+      </div>
+      {% endif %}
+      {% endfor %}
+      {% endfor %}
+    </div>
+  </div>
+
+  <br />
+  <hr /><br />
+
+  <div class="pagination">
+    <span class="step-links">
+      {% if questions.has_previous %}
+      <a href="?page=1">&laquo; first</a>
+      <a href="?page={{ questions.previous_page_number }}">previous</a>
+      {% endif %}
+
+      <span class="current">
+        Page {{ questions.number }} of {{ questions.paginator.num_pages }}.
+      </span>
+
+      {% if questions.has_next %}
+      <a href="?page={{ questions.next_page_number }}">next</a>
+      <a href="?page={{ questions.paginator.num_pages }}">last &raquo;</a>
+      {% endif %}
+    </span>
   </div>
 </div>
 {% endblock %}

@@ -40,3 +40,13 @@ def ifinlist(value, list):
 @register.simple_tag
 def settings_value(name):
     return getattr(settings, name, "")
+
+
+@register.filter
+def get_item(dictionary, key):
+    return dictionary.get(key)
+
+
+@register.filter
+def get_obj_attr(obj, attr):
+    return getattr(obj, attr)
