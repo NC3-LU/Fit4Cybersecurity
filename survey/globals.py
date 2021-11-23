@@ -1,8 +1,9 @@
 # -*- coding: utf-8 -*-
 
 from django.utils.translation import gettext_lazy as _
+from csskp.settings import CUSTOM
 
-SECTOR_CHOICES = [
+DEFAULT_SECTOR_CHOICES = [
     ("BANK", _("Banking, insurance and real estate")),
     ("SALE", _("Trading, sales and mass distribution")),
     ("MARK", _("Marketing, media and multimedia")),
@@ -20,12 +21,16 @@ SECTOR_CHOICES = [
     ("PUBL", _("Public administration")),
 ]
 
-COUNTRIES = [
+SECTOR_CHOICES = CUSTOM["sectors"] if len(CUSTOM["sectors"]) > 0 else DEFAULT_SECTOR_CHOICES
+
+DEFAULT_COUNTRIES = [
     ("LU", "Luxembourg"),
-    ("EEA", "EEA"),
-    ("NEEA", "Not EEA"),
-    ("EU", "Europe"),
+    ("DE", "Deutschland"),
+    ("BE", "Belgique"),
+    ("FR", "France"),
 ]
+
+COUNTRIES = CUSTOM["countries"] if len(CUSTOM["countries"]) > 0 else DEFAULT_COUNTRIES
 
 SERVICE_TARGETS = [
     ("SME", "Small to Medium Size Entreprises"),
@@ -35,7 +40,7 @@ SERVICE_TARGETS = [
     ("PRI", "Private Person"),
 ]
 
-COMPANY_SIZE = [
+DEFAULT_COMPANY_SIZE = [
     ("a", "1-5"),
     ("b", "6-10"),
     ("c", "10-20"),
@@ -47,6 +52,9 @@ COMPANY_SIZE = [
     ("i", "1000-5000"),
     ("j", "5000+"),
 ]
+
+COMPANY_SIZE = CUSTOM["company_size"] if len(CUSTOM["company_size"]) > 0 else DEFAULT_COMPANY_SIZE
+
 
 QUESTION_TYPES = [
     ("M", "Multiple Choice"),
