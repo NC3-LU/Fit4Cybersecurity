@@ -232,11 +232,19 @@ class Migration(migrations.Migration):
                 ("textKey", models.CharField(max_length=32)),
                 (
                     "min_e_count",
-                    models.CharField(choices=COMPANY_SIZE, default="a", max_length=2),
+                    models.CharField(
+                        choices=COMPANY_SIZE,
+                        default=COMPANY_SIZE[0][0],
+                        max_length=2
+                    ),
                 ),
                 (
                     "max_e_count",
-                    models.CharField(choices=COMPANY_SIZE, default="j", max_length=2),
+                    models.CharField(
+                        choices=COMPANY_SIZE,
+                        default=COMPANY_SIZE[-1][0],
+                        max_length=2
+                    ),
                 ),
                 (
                     "sector",
