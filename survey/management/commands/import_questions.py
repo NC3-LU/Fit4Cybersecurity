@@ -22,6 +22,10 @@ class Command(BaseCommand):
             json_file = f.read()
         json_data = json.loads(json_file)
 
+        nb_imported_questions = 0
+        nb_imported_answers = 0
+        nb_imported_recommendations = 0
+
         for question in json_data:
             # Get or create the section
             section, created = SurveySection.objects.get_or_create(
@@ -38,18 +42,20 @@ class Command(BaseCommand):
                 service_cat.save()
 
             # Create the question
-            question_obj = SurveyQuestion.objects.create(
+            question_obj, created = SurveyQuestion.objects.get_or_create(
                 label=question["label"],
                 qtype=question["qtype"],
                 section=section,
                 service_category=service_cat,
                 qindex=question["qindex"],
             )
-            question_obj.save()
+            if created:
+                nb_imported_questions += 1
+                question_obj.save()
 
             # Create the answers
             for answer in question["answers"]:
-                answer_obj = SurveyQuestionAnswer.objects.create(
+                answer_obj, created = SurveyQuestionAnswer.objects.get_or_create(
                     question=question_obj,
                     label=answer["label"],
                     aindex=answer["aindex"],
@@ -57,10 +63,12 @@ class Command(BaseCommand):
                     score=answer["score"],
                     atype=answer["atype"],
                 )
-                answer_obj.save()
+                if created:
+                    nb_imported_answers += 1
+                    answer_obj.save()
 
                 for reco in answer.get("recommendations", []):
-                    reco_obj = Recommendations.objects.create(
+                    reco_obj, created = Recommendations.objects.get_or_create(
                         label=reco["label"],
                         min_e_count=reco["min_e_count"],
                         max_e_count=reco["max_e_count"],
@@ -68,6 +76,21 @@ class Command(BaseCommand):
                         forAnswer=answer_obj,
                         answerChosen=reco["answerChosen"],
                     )
-                    reco_obj.save()
+                    if created:
+                        nb_imported_recommendations += 1
+                        reco_obj.save()
 
         self.stdout.write(self.style.SUCCESS("Data imported."))
+        self.stdout.write(
+            self.style.SUCCESS(
+                "  Number of questions: {}".format(nb_imported_questions)
+            )
+        )
+        self.stdout.write(
+            self.style.SUCCESS("  Number of answers: {}".format(nb_imported_answers))
+        )
+        self.stdout.write(
+            self.style.SUCCESS(
+                "  Number of recommendations: {}".format(nb_imported_recommendations)
+            )
+        )
