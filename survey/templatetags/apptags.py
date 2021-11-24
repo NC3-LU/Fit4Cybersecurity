@@ -50,3 +50,16 @@ def get_item(dictionary, key):
 @register.filter
 def get_obj_attr(obj, attr):
     return getattr(obj, attr)
+
+
+@register.filter
+def find_tuple(list, key):
+    """Find an element in a list of tuples with key of the element
+    (first item of the tuple).
+    Example:
+    liste|find_tuple:'ENER'
+    """
+    try:
+        return next(elem[1] for elem in list if elem[0] == key)
+    except StopIteration:
+        return None
