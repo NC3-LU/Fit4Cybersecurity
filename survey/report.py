@@ -15,6 +15,7 @@ from survey.reporthelper import (
     getRecommendations,
 )  # temporary imports
 from survey.viewLogic import get_questions_with_user_answers
+from survey import globals
 
 tool_logo = os.path.abspath(os.path.join(settings.BASE_DIR, CUSTOM["tool_logo"]))
 cases_logo = os.path.abspath(os.path.join(settings.BASE_DIR, CUSTOM["cases_logo"]))
@@ -49,6 +50,7 @@ def create_html_report(user: SurveyUser, lang: str) -> str:
         {
             "REPORT_TITLE": _("Final report"),
             "CUSTOM": CUSTOM,
+            "GLOBALS": globals,
             "CASES_LOGO": cases_logo,
             "SECIN_LOGO": secin_logo,
             "TOOL_LOGO": tool_logo,
