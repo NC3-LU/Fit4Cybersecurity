@@ -1,6 +1,5 @@
 version: '3'
 services:
-
   db:
     image: postgres:latest
     hostname: db
@@ -30,4 +29,4 @@ services:
       - '8000'
     depends_on:
       - db
-    command: "./wait-for-postgres.sh db"
+    command: "sh ./wait-for-postgres.sh db ${whitelabel}"
