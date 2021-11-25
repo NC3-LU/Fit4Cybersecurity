@@ -16,7 +16,7 @@
             <h5>
                 {{ _('Welcome to the CASES self-assessment tool:') }} {{ custom.tool_name }}.
             </h5>
-            {{ custom.intro_text }}
+            {{ custom.intro_text | safe }}
         </div>
     </div>
 
