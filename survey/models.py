@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 
+import uuid
 from django.db import models
 from csskp.settings import LANGUAGES, LANGUAGE_CODE
 
@@ -11,7 +12,6 @@ from survey.globals import (
     COMPANY_SIZE,
     SERVICE_TARGETS,
 )
-import uuid
 
 # Create your models here.
 
@@ -37,13 +37,43 @@ SURVEY_STATUS_UNDER_REVIEW = 2
 SURVEY_STATUS_FINISHED = 3
 
 
-class Translation(models.Model):
+class RightMixin:
+    @staticmethod
+    def _fields_base_write():
+        return set()
+
+    @staticmethod
+    def _fields_base_read():
+        return set(["id"])
+
+    @classmethod
+    def fields_base_write(cls):
+        return cls._fields_base_write()
+
+    @classmethod
+    def fields_base_read(cls):
+        return cls._fields_base_write().union(cls._fields_base_read())
+
+    def dump(self):
+        dict = {k: getattr(self, k) for k in self.fields_base_read()}
+        return dict
+
+
+class Translation(models.Model, RightMixin):
     original = models.TextField()
     translated = models.TextField()
     lang = models.CharField(max_length=2, choices=LANGUAGES, default=LOCAL_DEFAULT_LANG)
 
     class Meta:
         unique_together = ("lang", "id")
+
+    @staticmethod
+    def _fields_base_read():
+        return {
+            "original",
+            "translated",
+            "lang",
+        }
 
     def __str__(self):
         return self.original
@@ -64,11 +94,21 @@ class SurveySection(models.Model):
 
     label = models.TextField()
 
+    @staticmethod
+    def _fields_base_read():
+        return {
+            "id",
+            "label"
+        }
+
+    def __repr__(self):
+        return self.label
+
     def __str__(self):
         return self.label
 
 
-class SurveyQuestion(models.Model):
+class SurveyQuestion(models.Model, RightMixin):
     # Question id --> translation in other table
     # QuestionCatID
     # Section ID
@@ -84,6 +124,15 @@ class SurveyQuestion(models.Model):
     )
     qindex = models.IntegerField(unique=True)
     maxPoints = models.IntegerField(default=10)
+
+    @staticmethod
+    def _fields_base_read():
+        return {
+            "id",
+            "label",
+            "section",
+            "maxPoints",
+        }
 
     def __str__(self):
         return self.label

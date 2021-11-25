@@ -147,7 +147,7 @@ example:
 
 ```bash
 sudo apt install certbot python3-certbot-apache
-sudo certbot --standalone -d fit4cybersecurity.cases.lu
+sudo certbot certonly --standalone -d fit4cybersecurity.example.org
 sudo a2enmod rewrite
 sudo systemctl restart apache2.service
 ```
