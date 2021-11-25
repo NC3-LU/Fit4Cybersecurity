@@ -43,7 +43,7 @@ generatepot:
 	python manage.py makemessages --keep-pot
 
 update:
-	npmci
+	npm ci
 	poetry install --no-dev
 	python manage.py collectstatic
 	python manage.py compilemessages
