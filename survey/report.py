@@ -68,7 +68,8 @@ def create_html_report(user: SurveyUser, lang: str) -> str:
 
 def makepdf(html: str) -> bytes:
     """Generate a PDF file from a string of HTML."""
-    htmldoc = HTML(string=html, base_url=os.path.abspath(settings.REPORT_TEMPLATE_DIR))
+    base_url = os.path.abspath(settings.REPORT_TEMPLATE_DIR)
+    htmldoc = HTML(string=html, base_url=base_url)
 
     stylesheets = [
         CSS(
@@ -84,8 +85,8 @@ def makepdf(html: str) -> bytes:
             """
         ),
         CSS(
-            os.path.abspath(
-                os.path.join(settings.REPORT_TEMPLATE_DIR, "css/custom.css")
+            os.path.join(
+                settings.BASE_DIR, settings.REPORT_TEMPLATE_DIR, "css/custom.css"
             )
         ),
     ]

@@ -96,10 +96,7 @@ class SurveySection(models.Model):
 
     @staticmethod
     def _fields_base_read():
-        return {
-            "id",
-            "label"
-        }
+        return {"id", "label"}
 
     def __repr__(self):
         return self.label
