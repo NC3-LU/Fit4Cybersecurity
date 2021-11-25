@@ -33,14 +33,13 @@ $ sudo apt install libtiff5-dev libjpeg8-dev libopenjp2-7-dev zlib1g-dev \
 
 # To install WeasyPrint inside a virtualenv using wheels
 $ sudo apt install libpango-1.0-0 libharfbuzz0b libpangoft2-1.0-0
-
-$ curl https://pyenv.run | bash
 ```
 
 
 ### Set up your Python environment
 
 ```bash
+$ curl https://pyenv.run | bash
 $ CONFIGURE_OPTS=--enable-shared pyenv install 3.10.0 # install latest stable Python with shared libraries support, only if you want to use mod_wsgi later.
 $ pyenv global 3.10.0 # make this version default for the whole system
 $ pyenv versions # check
