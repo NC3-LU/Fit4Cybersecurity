@@ -11,6 +11,7 @@ This tool allows to instantiate new self-assessment products such as:
 - [Fit4Cybersecurity](https://fit4cybersecurity.cases.lu),
 - [Fit4Privacy](https://fit4privacy.cases.lu),
 - [Fit4Contract](https://contract.cases.lu),
+- [Fit4OperatorSurvey](https://survey4operators.cases.lu),
 - [Cyber4Africa](https://start.cyber4africa.org) and the like.
 
 
