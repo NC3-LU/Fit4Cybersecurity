@@ -20,9 +20,19 @@ This tool allows to instantiate new self-assessment products such as:
 
 ```bash
 $ sudo apt install gettext postgresql
-$ sudo apt install make build-essential libssl-dev zlib1g-dev libbz2-dev \
-libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev \
-xz-utils tk-dev libffi-dev liblzma-dev libxml2-dev libxslt-dev libpq-dev python3-openssl
+
+$ sudo apt install make build-essential libssl-dev libbz2-dev \
+    libreadline-dev libsqlite3-dev curl llvm libncurses5-dev libncursesw5-dev \
+    xz-utils tk-dev libffi-dev liblzma-dev libxml2-dev libxslt-dev libpq-dev python3-openssl
+
+# Pillow prrerequisites for Ubuntu 16.04 LTS - 20.04 LTS:
+$ sudo apt-get install libtiff5-dev libjpeg8-dev libopenjp2-7-dev zlib1g-dev \
+    libfreetype6-dev liblcms2-dev libwebp-dev tcl8.6-dev tk8.6-dev python3-tk \
+    libharfbuzz-dev libfribidi-dev libxcb1-dev
+
+# To install WeasyPrint inside a virtualenv using wheels
+$ sudo apt-get install libpango-1.0-0 libharfbuzz0b libpangoft2-1.0-0
+
 $ curl https://pyenv.run | bash
 ```
 
@@ -33,7 +43,7 @@ $ curl https://pyenv.run | bash
 $ CONFIGURE_OPTS=--enable-shared pyenv install 3.10.0 # install latest stable Python with shared libraries support, only if you want to use mod_wsgi later.
 $ pyenv global 3.10.0 # make this version default for the whole system
 $ pyenv versions # check
-$ curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/install-poetry.py | python -
+$ curl -sSL https://install.python-poetry.org | python -
 ```
 
 ### Install the application
@@ -64,6 +74,7 @@ $ python manage.py collectstatic # Copy static files required by Django Admin
 $ python manage.py compilemessages # Compile the translations
 
 # Initialize the database
+$ sudo -u postgres createdb fit4Cybersecurity  # Name of the database as in config.py
 $ python manage.py migrate
 
 # Import questions, answers and recommendations
