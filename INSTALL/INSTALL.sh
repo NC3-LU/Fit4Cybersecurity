@@ -7,8 +7,6 @@ TOOL_NAME=$TOOL_NAME
 TOOL_DESCRIPTION='Description of the tool.'
 
 PROJECT_PATH='/home/ubuntu/Fit4Cybersecurity'
-SERVICE_HOST='0.0.0.0'
-SERVICE_PORT='5005'
 DB_NAME='csskp'
 DB_USER='csskp'
 DB_PASSWORD="csskp"
@@ -180,7 +178,6 @@ sudo -u postgres createuser $DB_USER
 sudo -u postgres createdb $DB_NAME
 sudo -u postgres psql -c "alter user $DB_USER with encrypted password '$DB_PASSWORD';"
 sudo -u postgres psql -c "grant all privileges on database $DB_NAME to $DB_USER;"
-echo "--- Initializaing database… ---"
 poetry run python manage.py migrate
 
 

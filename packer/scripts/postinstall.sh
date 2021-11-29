@@ -26,6 +26,9 @@ sleep 3
 sudo systemctl restart fit4cybersecurity.service > /dev/null
 
 
+echo "--- Configuring hostname to $HOSTNAME… ---"
+sudo hostnamectl set-hostname $HOSTNAME
+
 
 echo "--- Configuring /etc/issue… ---"
 sudo bash -c "cat << EOF > /etc/issue

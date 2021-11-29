@@ -15,18 +15,32 @@ export VERSION=$(curl --silent -H 'Content-Type: application/json' https://api.g
 export LATEST_COMMIT=$(curl --silent -H 'Content-Type: application/json' -s https://api.github.com/repos/CASES-LU/Fit4Cybersecurity/commits | jq -e -r '.[0] | .sha')
 
 # SHAsums to be computed
-SHA_SUMS="1 256 384 512"
+SHA_SUMS="1 256 512"
 
-# checkInstaller () {
-# }
+checkInstaller () {
+  for sum in $(echo ${SHA_SUMS}); do
+    /usr/bin/wget -q -O scripts/INSTALL.sh.sha${sum} https://raw.githubusercontent.com/CASES-LU/Fit4Cybersecurity/master/INSTALL/INSTALL.sh.sha${sum}
+    INSTsum=$(shasum -a ${sum} scripts/INSTALL.sh | cut -f1 -d\ )
+    chsum=$(cat scripts/INSTALL.sh.sha${sum} | cut -f1 -d\ )
+
+    if [[ "$chsum" == "$INSTsum" ]]; then
+      echo "sha${sum} matches"
+    else
+      echo "sha${sum}: ${chsum} does not match the installer sum of: ${INSTsum}"
+      echo "Deleting installer, please run again."
+      rm scripts/INSTALL.sh
+      exit 1
+    fi
+  done
+}
 
 # Fetch and check installer
 if [[ -f "scripts/INSTALL.sh" ]]; then
   echo "Checking checksums"
-  #checkInstaller
+  checkInstaller
 else
   /usr/bin/wget -q -O scripts/INSTALL.sh https://raw.githubusercontent.com/CASES-LU/Fit4Cybersecurity/master/INSTALL/INSTALL.sh
-  #checkInstaller
+  checkInstaller
 fi
 
 

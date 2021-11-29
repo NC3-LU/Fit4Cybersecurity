@@ -3,18 +3,14 @@
     {
       "format": "ova",
       "type": "virtualbox-iso",
-
       "guest_os_type": "ubuntu-64",
-      "memory": 1024,
       "name": "ubuntu-20.04",
       "iso_urls": [
         "http://cdimage.ubuntu.com/ubuntu-legacy-server/releases/20.04/release/ubuntu-20.04.1-legacy-server-amd64.iso"
       ],
       "iso_checksum": "sha256:f11bda2f2caed8f420802b59f382c25160b114ccc665dbac9c5046e7fceaced2",
-
       "http_directory": "http",
       "output_directory": "output/live-server",
-
       "boot_wait": "5s",
       "boot_command": [
         "<esc><wait>",
@@ -42,7 +38,8 @@
       "ssh_password": "{{user `ssh_password`}}",
       "ssh_pty": true,
       "ssh_timeout": "20m",
-      "ssh_handshake_attempts": "20"
+      "ssh_handshake_attempts": "20",
+      "vm_name": "{{user `vm_name`}}_{{user `vm_version`}}_{{user `latest_commit`}}"
     }
   ],
 
@@ -80,7 +77,8 @@
         "TOOL_NAME={{user `tool_name`}}",
         "SERVICE_PORT={{user `service_port`}}",
         "SERVICE_HOST={{user `service_host`}}",
-        "PROJECT_PATH={{user `project_path`}}"
+        "PROJECT_PATH={{user `project_path`}}",
+        "HOSTNAME={{user `hostname`}}"
       ],
       "execute_command": "echo '{{user `ssh_password`}}' | {{ .Vars }} sudo -E -S sh '{{ .Path }}'",
       "script": "scripts/postinstall.sh",
@@ -102,19 +100,21 @@
   "variables": {
     "tool_name": "Fit4Cybersecurity",
     "vm_description": "Fit4Cybersecurity",
-    "service_port": "5005",
+    "service_port": "5000",
     "service_host": "0.0.0.0",
+    "hostname": "fit4Cybersecurity",
     "project_path": "/home/ubuntu/Fit4Cybersecurity",
-    "vm_name": "Fit4Cybersecurity",
     "questions_set": "data/fit4Cybersecurity/questions.json",
     "translations_set": "data/fit4Cybersecurity/translations.json",
     "latest_commit": "{{env `LATEST_COMMIT`}}",
+    "vm_name": "Fit4Cybersecurity",
     "vm_version": "{{env `VERSION`}}",
     "ssh_fullname": "ubuntu",
     "ssh_name": "ubuntu",
     "ssh_password": "ubuntu",
     "vram": "32",
     "disk_size": "50000",
-    "memory": "4096"
+    "memory": "4096",
+    "cpus": "2"
   }
 }
