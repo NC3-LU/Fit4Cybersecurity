@@ -12,7 +12,7 @@ User=ubuntu
 Environment=LANG=en_US.UTF-8
 Environment=LC_ALL=en_US.UTF-8
 WorkingDirectory=$PROJECT_PATH
-ExecStart=/home/ubuntu/.pyenv/shims/python /home/ubuntu/.poetry/bin/poetry run python manage.py runserver
+ExecStart=/home/ubuntu/.local/bin/poetry run python manage.py runserver $SERVICE_HOST:$SERVICE_PORT
 Restart=always
 
 [Install]

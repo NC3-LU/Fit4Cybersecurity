@@ -13,6 +13,9 @@ Build a virtual machine for Fit4Cybersecurity based on Ubuntu 20.04 server
 
 ## Usage
 
+You can customize the image thanks to various variables in the file
+``ubuntu-20.04.json`` (in the _variables_ section).
+
 Launch the generation with the VirtualBox builder:
 
     $ ./build_vbox.sh
