@@ -1,0 +1,80 @@
+{
+  "builders": [
+    {
+      "format": "ova",
+      "type": "virtualbox-iso",
+
+      "guest_os_type": "ubuntu-64",
+      "memory": 1024,
+      "name": "ubuntu-20.04",
+      "iso_urls": [
+        "http://cdimage.ubuntu.com/ubuntu-legacy-server/releases/20.04/release/ubuntu-20.04.1-legacy-server-amd64.iso"
+      ],
+      "iso_checksum": "sha256:f11bda2f2caed8f420802b59f382c25160b114ccc665dbac9c5046e7fceaced2",
+
+      "http_directory": "http",
+      "output_directory": "output/live-server",
+
+      "boot_wait": "5s",
+      "boot_command": [
+        "<esc><wait>",
+        "<esc><wait>",
+        "<enter><wait>",
+        "/install/vmlinuz<wait>",
+        " initrd=/install/initrd.gz",
+        " auto-install/enable=true",
+        " debconf/priority=critical",
+        " preseed/url=http://{{ .HTTPIP }}:{{ .HTTPPort }}/preseed.cfg<wait>",
+        " -- <wait>",
+        "<enter><wait>"
+      ],
+      "export_opts": [
+        "--manifest",
+        "--vsys",
+        "0",
+        "--eulafile",
+        "/tmp/LICENSE",
+        "--description",
+        "{{user `vm_description`}}"
+      ],
+      "shutdown_command": "shutdown -P now",
+
+      "ssh_username": "ubuntu",
+      "ssh_password": "ubuntu",
+      "ssh_pty": true,
+      "ssh_timeout": "20m",
+      "ssh_handshake_attempts": "20"
+    }
+  ],
+
+  "provisioners": [
+    {
+      "destination": "/tmp/INSTALL.sh",
+      "source": "scripts/INSTALL.sh",
+      "type": "file"
+    },
+    {
+      "environment_vars": [
+        "PACKER=1",
+        "DEBIAN_FRONTEND=noninteractive"
+      ],
+      "execute_command": "echo '{{user `ssh_password`}}' | {{ .Vars }} sudo -u {{user `ssh_username`}}  -E -S bash '{{ .Path }}'",
+      "inline": [
+        "chmod u+x /tmp/INSTALL.sh",
+        "/tmp/INSTALL.sh -A -u"
+      ],
+      "pause_before": "10s",
+      "type": "shell"
+    }
+  ],
+
+  "variables": {
+    "disk_size": "50000",
+    "memory": "4096",
+    "vm_description": "Fit4Cybersecurity.",
+    "vm_name": "Fit4Cybersecurity",
+    "latest_commit": "{{env `LATEST_COMMIT`}}",
+    "vm_version": "{{env `VERSION`}}",
+    "vram": "32"
+  }
+}
