@@ -38,5 +38,5 @@ packer build ubuntu-20.04.json
 
 
 # Cleaning…
-rm -Rf scripts/INSTALL.sh 2> /dev/null
+# rm -Rf scripts/INSTALL.sh 2> /dev/null
 rm -Rf output/ 2> /dev/null

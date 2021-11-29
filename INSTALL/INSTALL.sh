@@ -167,3 +167,20 @@ LOGGING = {
 }
 
 EOF
+
+
+poetry run python manage.py collectstatic
+poetry run python manage.py compilemessages
+
+
+echo "--- Creating database… ---"
+sudo -u postgres createuser $DB_USER
+sudo -u postgres createdb $DB_NAME
+sudo -u postgres psql -c "alter user $DB_USER with encrypted password '$DB_PASSWORD';"
+sudo -u postgres psql -c "grant all privileges on database $DB_NAME to $DB_USER;"
+echo "--- Initializaing database… ---"
+poetry run python manage.py migrate
+
+
+echo "--- Importing data… ---"
+poetry run python manage.py import_questions data/fit4Cybersecurity/questions.json
