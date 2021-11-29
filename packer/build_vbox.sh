@@ -34,9 +34,9 @@ fi
 [[ ! -f /tmp/LICENSE ]] && wget -q -O /tmp/LICENSE https://raw.githubusercontent.com/CASES-LU/Fit4Cybersecurity/master/COPYING
 
 echo "Generating a virtual machine for Fit4Cybersecurity $VERSION (commit id: $LATEST_COMMIT)…"
+rm -Rf output/ 2> /dev/null
 packer build ubuntu-20.04.json
 
 
 # Cleaning…
 # rm -Rf scripts/INSTALL.sh 2> /dev/null
-rm -Rf output/ 2> /dev/null
