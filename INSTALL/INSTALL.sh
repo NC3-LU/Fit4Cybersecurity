@@ -3,9 +3,10 @@
 
 PYTHON_VERSION='3.10.0'
 
-TOOL_NAME='Fit4Cybersecurity'
+TOOL_NAME=$TOOL_NAME
 TOOL_DESCRIPTION='Description of the tool.'
 
+PROJECT_PATH='/home/ubuntu/Fit4Cybersecurity'
 SERVICE_HOST='0.0.0.0'
 SERVICE_PORT='5005'
 DB_NAME='csskp'
@@ -64,8 +65,8 @@ bash -c 'source /home/ubuntu/.bashrc'
 
 
 echo "--- Installing $TOOL_NAME… ---"
-git clone https://github.com/CASES-LU/Fit4Cybersecurity.git
-cd Fit4Cybersecurity/
+git clone https://github.com/CASES-LU/Fit4Cybersecurity.git $PROJECT_PATH
+cd $PROJECT_PATH
 npm ci
 poetry install --no-dev
 
@@ -183,4 +184,5 @@ poetry run python manage.py migrate
 
 
 echo "--- Importing data… ---"
-poetry run python manage.py import_questions data/fit4Cybersecurity/questions.json
+poetry run python manage.py import_questions $QUESTIONS_SET
+poetry run python manage.py import_translations $TRANSLATIONS_SET

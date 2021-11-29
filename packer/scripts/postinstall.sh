@@ -1,6 +1,33 @@
 #! /usr/bin/env bash
 
-echo "--- Post configurations… ---"
+
+echo "--- Configuring systemd service… ---"
+sudo bash -c "cat << EOF > /etc/systemd/system/fit4cybersecurity.service
+[Unit]
+Description=$TOOL_NAME service
+After=network.target
+
+[Service]
+User=ubuntu
+Environment=LANG=en_US.UTF-8
+Environment=LC_ALL=en_US.UTF-8
+WorkingDirectory=$PROJECT_PATH
+ExecStart=/home/ubuntu/.pyenv/shims/python /home/ubuntu/.poetry/bin/poetry run python manage.py runserver
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
+EOF"
+
+sudo systemctl daemon-reload > /dev/null
+sleep 1
+sudo systemctl enable fit4cybersecurity.service > /dev/null
+sleep 3
+sudo systemctl restart fit4cybersecurity.service > /dev/null
+
+
+
+echo "--- Configuring /etc/issue… ---"
 sudo bash -c "cat << EOF > /etc/issue
 Welcome to the $TOOL_NAME Virtual Machine!
 

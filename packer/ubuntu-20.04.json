@@ -37,10 +37,9 @@
         "--description",
         "{{user `vm_description`}}"
       ],
-      "shutdown_command": "shutdown -P now",
-
-      "ssh_username": "ubuntu",
-      "ssh_password": "ubuntu",
+      "shutdown_command": "echo {{user `ssh_password`}} | sudo -S shutdown -P now",
+      "ssh_username": "{{user `ssh_name`}}",
+      "ssh_password": "{{user `ssh_password`}}",
       "ssh_pty": true,
       "ssh_timeout": "20m",
       "ssh_handshake_attempts": "20"
@@ -49,6 +48,13 @@
 
   "provisioners": [
     {
+      "execute_command": "echo '{{user `ssh_password`}}' | {{ .Vars }} sudo -E -S sh '{{ .Path }}'",
+      "inline": [
+        "echo '%sudo    ALL=(ALL)  NOPASSWD:ALL' >> /etc/sudoers"
+      ],
+      "type": "shell"
+    },
+    {
       "destination": "/tmp/INSTALL.sh",
       "source": "scripts/INSTALL.sh",
       "type": "file"
@@ -56,7 +62,10 @@
     {
       "environment_vars": [
         "PACKER=1",
-        "DEBIAN_FRONTEND=noninteractive"
+        "DEBIAN_FRONTEND=noninteractive",
+        "TOOL_NAME={{user `tool_name`}}",
+        "QUESTIONS_SET={{user `questions_set`}}",
+        "TRANSLATIONS_SET={{user `translations_set`}}"
       ],
       "execute_command": "echo '{{user `ssh_password`}}' | {{ .Vars }} sudo -E -S sh '{{ .Path }}'",
       "inline": [
@@ -69,13 +78,15 @@
     {
       "environment_vars": [
         "TOOL_NAME={{user `tool_name`}}",
-        "SERVICE_PORT={{user `service_port`}}"
+        "SERVICE_PORT={{user `service_port`}}",
+        "SERVICE_HOST={{user `service_host`}}",
+        "PROJECT_PATH={{user `project_path`}}"
       ],
-     "execute_command": "echo '{{user `ssh_password`}}' | {{ .Vars }} sudo -E -S sh '{{ .Path }}'",
-     "script": "scripts/postinstall.sh",
-     "pause_before": "5s",
-     "type": "shell"
-   }
+      "execute_command": "echo '{{user `ssh_password`}}' | {{ .Vars }} sudo -E -S sh '{{ .Path }}'",
+      "script": "scripts/postinstall.sh",
+      "pause_before": "5s",
+      "type": "shell"
+    }
   ],
 
   "post-processors": [
@@ -92,9 +103,16 @@
     "tool_name": "Fit4Cybersecurity",
     "vm_description": "Fit4Cybersecurity",
     "service_port": "5005",
+    "service_host": "0.0.0.0",
+    "project_path": "/home/ubuntu/Fit4Cybersecurity",
     "vm_name": "Fit4Cybersecurity",
+    "questions_set": "data/fit4Cybersecurity/questions.json",
+    "translations_set": "data/fit4Cybersecurity/translations.json",
     "latest_commit": "{{env `LATEST_COMMIT`}}",
     "vm_version": "{{env `VERSION`}}",
+    "ssh_fullname": "ubuntu",
+    "ssh_name": "ubuntu",
+    "ssh_password": "ubuntu",
     "vram": "32",
     "disk_size": "50000",
     "memory": "4096"
