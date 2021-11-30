@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 
+import json
 from datetime import date
 from django.shortcuts import render
 from django.http import HttpResponse, HttpResponseRedirect
@@ -106,7 +107,7 @@ def change_lang(request, lang: str):
     return HttpResponseRedirect("/" + lang)
 
 
-def show_report(request, lang: str, email: str = "0") -> HttpResponseRedirect:
+def show_report(request, lang: str) -> HttpResponseRedirect:
     user_id = request.session.get("user_id", None)
     if user_id is None:
         return HttpResponseRedirect("/")
@@ -120,14 +121,20 @@ def show_report(request, lang: str, email: str = "0") -> HttpResponseRedirect:
 
         return HttpResponseRedirect("/")
 
-    email_address = request.GET.get("email-address", False)
-
     # Generation of the PDF report
     try:
         html_report = create_html_report(user, lang)
         pdf_report = makepdf(html_report)
     except Exception as e:
         messages.warning(request, e)
+
+    # Try to get the email address in case the user wants to send the report
+    try:
+        body_unicode = request.body.decode('utf-8')
+        body = json.loads(body_unicode)
+        email_address = body.get("email-address", None)
+    except Exception:
+        email_address = None
 
     if CUSTOM["modules"]["reportEmail"] and email_address:
         # Send the report via email

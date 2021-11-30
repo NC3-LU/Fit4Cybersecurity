@@ -1,4 +1,4 @@
-<div class="modal fade" tabindex="-1" role="dialog" id="modal-send-report" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal fade" tabindex="-1" role="dialog" id="modal-send-report" lang="{{ LANGUAGE_CODE }}" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-header">
       <h4>
@@ -7,14 +7,12 @@
     </div>
     <div class="modal-content">
       <div class="content text-left">
-        <form action="{{ reportlink }}/{{ LANGUAGE_CODE }}">
-          <div class="form-group">
-            <input type="email" id="email-input" name="email-address" class="form-control" placeholder="Please enter your email address."  required>
-          </div>
-           <button type="submit" class="btn btn-primary">
-             {{ _('Send') }}
-           </button>
-        </form>
+        <div class="form-group">
+          <input type="email" id="email-input" name="email-address" class="form-control" placeholder="Please enter your email address."  required>
+        </div>
+        <button class="btn btn-primary send-report-via-email">
+          {{ _('Send') }}
+        </button>
         <br />
         <p class="text-primary">{{ _("Your email address won't be stored.") }}</p>
       </div>
