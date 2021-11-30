@@ -26,7 +26,7 @@ Some variables you can configure:
 - _service_port_ (default: _5000_): port where the service is waiting for connections;
 - _hostname_ (default: _fit4Cybersecurity_): hostname of the system.
 
-Once the VM will be created you will still be able to change these configurations.
+Once the VM will be created you will still be able to change the configurations.
 
 The _hostname_ variable will be used in the ``ALLOWED_HOSTS`` configuration variable of
 the Django software. Pay attention that you internal DNS resolves it

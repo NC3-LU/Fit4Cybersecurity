@@ -9,7 +9,7 @@ else
   exit 1
 fi
 
-echo "Retrieving information about latest MONARC release…"
+echo "Retrieving information about latest Fit4Cybersecurity release…"
 export VERSION=$(curl --silent -H 'Content-Type: application/json' https://api.github.com/repos/CASES-LU/Fit4Cybersecurity/releases/latest | jq  -r '.tag_name')
 # Latest commit hash of MONARC
 export LATEST_COMMIT=$(curl --silent -H 'Content-Type: application/json' -s https://api.github.com/repos/CASES-LU/Fit4Cybersecurity/commits | jq -e -r '.[0] | .sha')
@@ -53,4 +53,4 @@ packer build ubuntu-20.04.json
 
 
 # Cleaning…
-# rm -Rf scripts/INSTALL.sh 2> /dev/null
+rm -Rf scripts/INSTALL.sh scripts/INSTALL.sh.sha1 scripts/INSTALL.sh.sha256 scripts/INSTALL.sh.sha512 2> /dev/null
