@@ -4,6 +4,7 @@ from datetime import datetime
 from django import template
 from django.conf import settings
 from django.utils import translation
+from csskp.settings import CUSTOM
 from survey.reporthelper import get_translation
 
 register = template.Library()
@@ -63,3 +64,11 @@ def find_tuple(list, key):
         return next(elem[1] for elem in list if elem[0] == key)
     except StopIteration:
         return None
+
+
+@register.filter
+def strreplace(text, changes):
+    chg_list = [arg.strip() for arg in changes.split(',')]
+    for from_, to in [(chg_list[0], chg_list[1])]:
+        text = text.replace(from_, CUSTOM[to], -1)
+    return text

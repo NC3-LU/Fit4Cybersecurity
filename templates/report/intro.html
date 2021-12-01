@@ -1,9 +1,10 @@
 {% load i18n %}
+{% load apptags %}
 
 <h2 id="intro">{{ _('Introduction and Warning') }}</h2>
 
 <p>
-    {{ CUSTOM.report_texts.introduction | safe }}
+    {{ CUSTOM.report_texts.introduction | strreplace:"%(tool_name)s,tool_name" | safe}}
 </p>
 
 <p class="page-break" ></p>

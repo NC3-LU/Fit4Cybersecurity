@@ -126,6 +126,7 @@ def show_report(request, lang: str) -> HttpResponseRedirect:
         html_report = create_html_report(user, lang)
         pdf_report = makepdf(html_report)
     except Exception as e:
+        # todo: handle exception
         messages.warning(request, e)
 
     # Try to get the email address in case the user wants to send the report
