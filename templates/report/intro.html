@@ -5,7 +5,7 @@
 
 <p>
     {% with '%(tool_name)s,'|add:CUSTOM.tool_name as tool_name %}
-        {{ CUSTOM.report_texts.introduction | strreplace:tool_name | safe}}
+        {{ CUSTOM.report_texts.introduction | str_replace:tool_name | safe}}
     {% endwith %}
 </p>
 

@@ -1,9 +1,12 @@
 {% load i18n %}
+{% load apptags %}
 
 <h2 id="description">{{ _('Description') }}</h2>
 
 <p>
-    {{ CUSTOM.report_texts.description | safe }}
+    {% with '%(tool_name)s,'|add:CUSTOM.tool_name as tool_name %}
+        {{ CUSTOM.report_texts.description | str_replace:tool_name | safe}}
+    {% endwith %}
 </p>
 
 <p class="page-break" ></p>
