@@ -4,7 +4,9 @@
 <h2 id="intro">{{ _('Introduction and Warning') }}</h2>
 
 <p>
-    {{ CUSTOM.report_texts.introduction | strreplace:"%(tool_name)s,tool_name" | safe}}
+    {% with '%(tool_name)s,'|add:CUSTOM.tool_name as tool_name %}
+        {{ CUSTOM.report_texts.introduction | strreplace:tool_name | safe}}
+    {% endwith %}
 </p>
 
 <p class="page-break" ></p>

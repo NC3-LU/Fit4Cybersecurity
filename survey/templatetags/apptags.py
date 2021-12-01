@@ -70,5 +70,5 @@ def find_tuple(list, key):
 def strreplace(text, changes):
     chg_list = [arg.strip() for arg in changes.split(',')]
     for from_, to in [(chg_list[0], chg_list[1])]:
-        text = text.replace(from_, CUSTOM[to], -1)
+        text = text.replace(from_, to, -1)
     return text
