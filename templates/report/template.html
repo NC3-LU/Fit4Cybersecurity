@@ -20,17 +20,26 @@
 
         {% include 'report/toc.html' %}
 
-        {% include 'report/intro.html' %}
+        {% if CUSTOM.report.introduction %}
+            {% include 'report/intro.html' %}
+        {% endif %}
 
-        {% include 'report/description.html' %}
+        {% if CUSTOM.report.description %}
+            {% include 'report/description.html' %}
+        {% endif %}
 
-        {% if CUSTOM.modules.displayResults %}
+        {% if CUSTOM.report.results %}
             {% include 'report/results.html' %}
         {% endif %}
 
-        {% include 'report/recommendations.html' %}
+        {% if CUSTOM.report.recommendations %}
+            {% include 'report/recommendations.html' %}
+        {% endif %}
 
-        {% include 'report/questions.html' %}
+        {% if CUSTOM.report.questions %}
+            {% include 'report/questions.html' %}
+        {% endif %}
+
 
     </body>
 </html>
