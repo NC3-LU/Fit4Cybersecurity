@@ -4,7 +4,6 @@ from datetime import datetime
 from django import template
 from django.conf import settings
 from django.utils import translation
-from csskp.settings import CUSTOM
 from survey.reporthelper import get_translation
 
 register = template.Library()
