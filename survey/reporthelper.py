@@ -143,20 +143,24 @@ def generate_chart_png(
 
     ax.set_varlabels(sections_list)
 
-    if not os.path.isdir(PICTURE_DIR):
-        os.makedirs(PICTURE_DIR)
-    file_name = os.path.join(PICTURE_DIR, "survey-{}.png".format(user.user_id))
-    try:
-        if output_type == "base64":
-            stringIObytes = io.BytesIO()
+    if output_type == "base64":
+        stringIObytes = io.BytesIO()
+        try:
             plt.savefig(stringIObytes, format="png")
-            stringIObytes.seek(0)
-            return base64.b64encode(stringIObytes.read()).decode()
-
-        plt.savefig(file_name)
-    except Exception as e:
-        raise Exception("{}".format(e))
-    finally:
-        plt.close()
-
-    return file_name
+        except Exception as e:
+            raise Exception("{}".format(e))
+        finally:
+            plt.close()
+        stringIObytes.seek(0)
+        return base64.b64encode(stringIObytes.read()).decode()
+    else:
+        if not os.path.isdir(PICTURE_DIR):
+            os.makedirs(PICTURE_DIR)
+        file_name = os.path.join(PICTURE_DIR, "survey-{}.png".format(user.user_id))
+        try:
+            plt.savefig(file_name)
+        except Exception as e:
+            raise Exception("{}".format(e))
+        finally:
+            plt.close()
+        return file_name
