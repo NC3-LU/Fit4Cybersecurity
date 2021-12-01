@@ -1,5 +1,8 @@
 # Fit4Cybersecurity
 
+[![Python application basic tests](https://github.com/CASES-LU/Fit4Cybersecurity/actions/workflows/pythonapp.yml/badge.svg)](https://github.com/CASES-LU/Fit4Cybersecurity/actions/workflows/pythonapp.yml)
+[![Latest release](https://img.shields.io/github/release/CASES-LU/Fit4Cybersecurity.svg?style=flat-square)](https://github.com/CASES-LU/Fit4Cybersecurity/releases/latest)
+[![License](https://img.shields.io/github/license/CASES-LU/Fit4Cybersecurity.svg?style=flat-square)](https://www.gnu.org/licenses/agpl-3.0.html)
 [![Translation status](https://translate.monarc.lu/widgets/Fit4Cybersecurity/-/svg-badge.svg)](https://translate.monarc.lu/engage/Fit4Cybersecurity/)
 
 
@@ -16,6 +19,9 @@ This tool allows to instantiate new self-assessment products such as:
 
 
 ## Deployment
+
+The following instructions are detailed in the
+[installation script](INSTALL/INSTALL.sh).
 
 ### Requirements
 

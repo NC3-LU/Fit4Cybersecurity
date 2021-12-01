@@ -67,6 +67,10 @@ def find_tuple(list, key):
 
 @register.filter
 def str_replace(text: str, changes: str) -> str:
+    """Replace a sequence of string by an other sequence of string in a text.
+    Example:
+    str_replace("Hello World", "l,L,r,R") -> "HeLLO WoRld"
+    """
     changes_list = iter([arg.strip() for arg in changes.split(',')])
     for from_, to in zip(changes_list, changes_list):
         text = text.replace(from_, str(to), -1)
