@@ -44,8 +44,12 @@ $(document).ready(function() {
         let answerContentTextarea = $('#id_answer_content');
         if (checkbox.is(":checked") && freeTextAnswerId == checkbox.val()) {
             answerContentTextarea.show();
+            answerContentTextarea.focus()
             answerContentTextarea.prop('required', true);
-        } else {
+        } else if (!checkbox.is(":checked") && freeTextAnswerId == checkbox.val() && checkbox.hasClass('multiple-selection')) {
+            answerContentTextarea.hide();
+            answerContentTextarea.prop('required', false);
+        } else if (checkbox.hasClass('radio-buttons')) {
             answerContentTextarea.hide();
             answerContentTextarea.prop('required', false);
         }
