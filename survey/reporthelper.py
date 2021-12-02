@@ -105,17 +105,21 @@ def calculateResult(user: SurveyUser, lang: str) -> Tuple[int, List[int], List[s
         user_evaluations_per_section[section_id] += user_selected_answer.answer.score
 
     # get the score in percent! with then 100 being total_questions_score
-    total_user_score = round(total_user_score * 100 / total_questions_score)
+    if total_user_score > 0:
+        total_user_score = round(total_user_score * 100 / total_questions_score)
 
     user_evaluations: List[int] = []
     for section_id, user_evaluation_per_section in user_evaluations_per_section.items():
-        user_evaluations.append(
-            round(
-                user_evaluation_per_section
-                * 100
-                / max_evaluations_per_section[section_id]
+        if max_evaluations_per_section[section_id] > 0:
+            user_evaluations.append(
+                round(
+                    user_evaluation_per_section
+                    * 100
+                    / max_evaluations_per_section[section_id]
+                )
             )
-        )
+        else:
+            user_evaluations.append(0)
 
     return total_user_score, user_evaluations, sections_list
 
