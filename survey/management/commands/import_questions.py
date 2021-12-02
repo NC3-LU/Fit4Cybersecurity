@@ -48,6 +48,7 @@ class Command(BaseCommand):
                 section=section,
                 service_category=service_cat,
                 qindex=question["qindex"],
+                maxPoints=question["maxPoints"]
             )
             if created:
                 nb_imported_questions += 1
