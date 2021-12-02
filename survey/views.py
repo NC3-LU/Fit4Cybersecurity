@@ -21,7 +21,7 @@ from utils.notifications import send_report
 from django.contrib import messages
 from django.utils import translation
 from uuid import UUID
-from csskp.settings import HASH_KEY, CUSTOM, LANGUAGE_CODE
+from csskp.settings import HASH_KEY, CUSTOM, LANGUAGE_CODE, PUBLIC_URL
 from cryptography.fernet import Fernet
 
 
@@ -126,6 +126,7 @@ def show_report(request, lang: str) -> HttpResponseRedirect:
         html_report = create_html_report(user, lang)
         pdf_report = makepdf(html_report)
     except Exception as e:
+        # todo: handle exception
         messages.warning(request, e)
 
     # Try to get the email address in case the user wants to send the report
@@ -147,7 +148,10 @@ def show_report(request, lang: str) -> HttpResponseRedirect:
         )
         return response
 
-    return HttpResponseRedirect(request.META.get("HTTP_REFERER", "/"))
+    target = request.META.get("HTTP_REFERER", "/")
+    if target not in PUBLIC_URL or target != "/":
+        target = "/"
+    return HttpResponseRedirect(target)
 
 
 def review(request):

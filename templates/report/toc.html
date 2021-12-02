@@ -1,22 +1,33 @@
 <h2>{{ _('Table of contents') }}</h2>
 
 <ul class="toc">
-    <li><a href="#intro"></a></li>
-    <li><a href="#description"></a></li>
-    {% if CUSTOM.modules.displayResults %}
+    {% if CUSTOM.report.introduction %}
+        <li><a href="#intro"></a></li>
+    {% endif %}
+
+    {% if CUSTOM.report.description %}
+        <li><a href="#description"></a></li>
+    {% endif %}
+
+    {% if CUSTOM.report.results %}
         <li><a href="#results"></a></li>
     {% endif %}
-    <li><a href="#recommendations"></a></li>
-    <ul>
-        {% for category, items in recommendations.items %}
-            <li class="sub_chapiter">
-                <a href="#{{ category }}"></a>
-            </li>
-        {% endfor %}
-    </ul>
-    <li>
-        <a href="#questions"></a>
-    </li>
+
+    {% if CUSTOM.report.recommendations %}
+        <li><a href="#recommendations"></a></li>
+        <ul>
+            {% for category, items in recommendations.items %}
+                <li class="sub_chapiter">
+                    <a href="#{{ category }}"></a>
+                </li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+
+
+    {% if CUSTOM.report.questions %}
+        <li><a href="#questions"></a></li>
+    {% endif %}
 </ul>
 
 <p class="page-break" ></p>
