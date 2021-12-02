@@ -4,8 +4,8 @@
 <h2 id="description">{{ _('Description') }}</h2>
 
 <p>
-    {% with '%(tool_name)s,'|add:CUSTOM.tool_name as tool_name %}
-        {{ CUSTOM.report_texts.description | str_replace:tool_name | safe}}
+    {% with '%(tool_name)s,'|add:CUSTOM.tool_name|add:',%(minimal_acceptable_score)s,'|add:minimal_acceptable_score as strings_to_replace %}
+        {{ CUSTOM.report_texts.description | str_replace:strings_to_replace | safe}}
     {% endwith %}
 </p>
 

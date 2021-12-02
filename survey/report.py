@@ -50,6 +50,7 @@ def create_html_report(user: SurveyUser, lang: str) -> str:
         {
             "REPORT_TITLE": _("Final report"),
             "CUSTOM": CUSTOM,
+            "minimal_acceptable_score": str(CUSTOM["minimal_acceptable_score"]),
             "GLOBALS": globals,
             "CASES_LOGO": cases_logo,
             "SECIN_LOGO": secin_logo,
@@ -57,7 +58,7 @@ def create_html_report(user: SurveyUser, lang: str) -> str:
             "DATE": datetime.today(),
             "SURVEY_USER": user,
             "CHART": chart_png_base64,
-            "SCORE": score,
+            "SCORE": str(score),
             "recommendations": recommendations_list,
             "questions": question_list,
         },
