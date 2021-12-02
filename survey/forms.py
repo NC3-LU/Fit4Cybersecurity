@@ -106,8 +106,8 @@ class AnswerMChoice(forms.Form):
                 )
             dependant_answers = question_answer.dependant_answers.all()
             if dependant_answers:
-                answers_dependencies.append({"leadId": question_answer.id,
-                    "dependantIds": [dep_answer.id for dep_answer in dependant_answers]})
+                answers_dependencies.append(
+                    {"leadId": question_answer.id, "dependantIds": [dep_answer.id for dep_answer in dependant_answers]})
                 self.fields["answers"].widget.attrs['data-dependant-ids'] = json.dumps(answers_dependencies)
 
         self.fields["feedback"] = forms.CharField(
