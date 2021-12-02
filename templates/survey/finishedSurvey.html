@@ -86,6 +86,11 @@
     {% include 'survey/requestTrainingLink.html' with type='link' %}
   </p>
   {% endif %}
+  {% if bonus_score > 0 %}
+  <p>
+      {{ bonus_score_title }}: {{ bonus_score }}%.
+  </p>
+  {% endif %}
 
   <div class="py-2">
     <p class="continue-later-link">

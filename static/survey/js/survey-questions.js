@@ -82,6 +82,24 @@ $(document).ready(function() {
                 }
             }
         }
+
+        /* Process answers dependencies. */
+        if (checkbox.data('dependant-ids')) {
+            var answersDependancies = checkbox.data('dependant-ids');
+            jQuery.each(answersDependancies, function(ind, answerDependancy) {
+                if (answerDependancy['leadId'] == checkbox.val()) {
+                    var dependantIds = answerDependancy['dependantIds'];
+                    for (var i = 0; i < dependantIds.length; i++) {
+                        checkboxesAndRadios.each(function() {
+                            if ($(this).val() == dependantIds[i]) {
+                                $(this).prop("disabled", checkbox.is(":checked"));
+                                $(this).parent("label").css("color", checkbox.is(":checked") ? "#ccc" : "");
+                            }
+                        });
+                    }
+                }
+            });
+        }
     }
 
     var checkboxesAndRadios = $("input[type='checkbox'], input[type='radio']"),

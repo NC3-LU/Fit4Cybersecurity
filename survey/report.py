@@ -27,7 +27,7 @@ def create_html_report(user: SurveyUser, lang: str) -> str:
     translation.activate(lang)
 
     # Calculate the result
-    score, details, section_list = calculateResult(user, lang)
+    score, bonus_score, details, section_list = calculateResult(user, lang)
 
     # Generate the chart
     try:
@@ -36,7 +36,7 @@ def create_html_report(user: SurveyUser, lang: str) -> str:
         )
     except Exception as e:
         chart_png_base64 = None
-        print(e)
+        raise
 
     # Get the list of recommendations
     recommendations_list = getRecommendations(user, lang)
@@ -58,6 +58,8 @@ def create_html_report(user: SurveyUser, lang: str) -> str:
             "SURVEY_USER": user,
             "CHART": chart_png_base64,
             "SCORE": score,
+            "BONUS_SCORE_TITLE": _("Bonus score"),
+            "BONUS_SCORE": bonus_score,
             "recommendations": recommendations_list,
             "questions": question_list,
         },
