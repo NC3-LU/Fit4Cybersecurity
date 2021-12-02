@@ -71,7 +71,7 @@ def str_replace(text: str, changes: str) -> str:
     Example:
     str_replace("Hello World", "l,L,r,R") -> "HeLLO WoRld"
     """
-    changes_list = iter([arg.strip() for arg in changes.split(',')])
+    changes_list = iter([arg.strip() for arg in changes.split(",")])
     for from_, to in zip(changes_list, changes_list):
         text = text.replace(from_, str(to), -1)
     return text
