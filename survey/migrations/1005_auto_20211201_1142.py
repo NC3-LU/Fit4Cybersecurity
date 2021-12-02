@@ -18,16 +18,20 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='surveyquestionanswer',
             name='dependant_answers',
-            field=models.ManyToManyField(blank=True, related_name='_survey_surveyquestionanswer_dependant_answers_+', to='survey.SurveyQuestionAnswer'),
+            field=models.ManyToManyField(blank=True,
+            related_name='_survey_surveyquestionanswer_dependant_answers_+',
+            to='survey.SurveyQuestionAnswer'),
         ),
         migrations.AlterField(
             model_name='surveyuser',
             name='choosen_lang',
-            field=models.CharField(choices=[('en', 'English'), ('fr', 'French'), ('de', 'German')], default='en', max_length=2),
+            field=models.CharField(choices=[('en', 'English'),
+            ('fr', 'French'), ('de', 'German')], default='en', max_length=2),
         ),
         migrations.AlterField(
             model_name='translation',
             name='lang',
-            field=models.CharField(choices=[('en', 'English'), ('fr', 'French'), ('de', 'German')], default='en', max_length=2),
+            field=models.CharField(choices=[('en', 'English'),
+            ('fr', 'French'), ('de', 'German')], default='en', max_length=2),
         ),
     ]

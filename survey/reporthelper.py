@@ -112,12 +112,9 @@ def calculateResult(user: SurveyUser, lang: str) -> Tuple[int, List[int], List[s
                 user_evaluations_per_section[section_id] = 0
             user_evaluations_per_section[section_id] += user_answer.answer.score
 
-    print(total_user_score)
-    print(total_questions_score)
     # get the score in percent! with then 100 being total_questions_score
     total_user_score = round(total_user_score * 100 / total_questions_score)
-    print(total_user_score)
-    user_bonus_points_percent = 0;
+    user_bonus_points_percent = 0
     if total_bonus_points != 0:
         user_bonus_points_percent = round(user_given_bonus_points * 100 / total_bonus_points)
 
