@@ -36,7 +36,7 @@ def create_html_report(user: SurveyUser, lang: str) -> str:
         )
     except Exception as e:
         chart_png_base64 = None
-        raise
+        raise e
 
     # Get the list of recommendations
     recommendations_list = getRecommendations(user, lang)

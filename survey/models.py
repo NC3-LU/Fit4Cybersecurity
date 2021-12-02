@@ -36,9 +36,6 @@ SURVEY_STATUS_IN_PROGRESS = 1
 SURVEY_STATUS_UNDER_REVIEW = 2
 SURVEY_STATUS_FINISHED = 3
 
-# Used to define relations between answers, when one disbale the other choices.
-ANSWER_DEPENDENCY_TYPE_DISABLE = 1
-
 
 class RightMixin:
     @staticmethod

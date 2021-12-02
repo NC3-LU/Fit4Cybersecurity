@@ -16,7 +16,6 @@ from survey.models import (
     SurveyUserAnswer,
     SurveyUserFeedback,
     SURVEY_STATUS_UNDER_REVIEW,
-    ANSWER_DEPENDENCY_TYPE_DISABLE,
 )
 from survey.forms import InitialStartForm, AnswerMChoice, GeneralFeedback
 from survey.reporthelper import get_translation
