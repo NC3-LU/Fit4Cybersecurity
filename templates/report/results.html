@@ -8,8 +8,8 @@ You have achieved {{ SCORE }}/100 with your answers. You must reach at least {{ 
 <br><br>
 We remind you that this is a self-assessment and it is important to understand that all the results can not in any way be exhaustive.
 {% endblocktranslate  %}
-<br>
-{% if bonus_score > 0 %}You also gained additional bonus score: {{ bonus_score }}% for following good practices. {% endif %}
+<br><br>
+{% if BONUS_SCORE > 0 %}You also gained additional {{ BONUS_SCORE }}% of bonus score for following the best practices.{% endif %}
 </p>
 
 <img class="chart center" src="data:image/png;base64,{{ CHART }}" />
