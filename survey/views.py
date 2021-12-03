@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
 import json
+import logging
 from datetime import date
 from django.shortcuts import render
 from django.http import HttpResponse, HttpResponseRedirect
@@ -21,8 +22,12 @@ from utils.notifications import send_report
 from django.contrib import messages
 from django.utils import translation
 from uuid import UUID
-from csskp.settings import HASH_KEY, CUSTOM, LANGUAGE_CODE, PUBLIC_URL
+from csskp.settings import HASH_KEY, CUSTOM, LANGUAGE_CODE
+from utils.utils import can_redirect
 from cryptography.fernet import Fernet
+
+# Get an instance of a logger
+logger = logging.getLogger(__name__)
 
 
 def index(request, lang=LANGUAGE_CODE):
@@ -121,17 +126,23 @@ def show_report(request, lang: str) -> HttpResponseRedirect:
 
         return HttpResponseRedirect("/")
 
+    # check that the redirect is authorised
+    target = request.META.get("HTTP_REFERER", "/")
+    if not can_redirect(target):
+        target = "/"
+
     # Generation of the PDF report
     try:
         html_report = create_html_report(user, lang)
         pdf_report = makepdf(html_report)
     except Exception as e:
-        # todo: handle exception
-        messages.warning(request, e)
+        logger.error(e)
+        messages.warning(request, "An error occured when generating the report.")
+        return HttpResponseRedirect(target)
 
     # Try to get the email address in case the user wants to send the report
     try:
-        body_unicode = request.body.decode('utf-8')
+        body_unicode = request.body.decode("utf-8")
         body = json.loads(body_unicode)
         email_address = body.get("email-address", None)
     except Exception:
@@ -139,7 +150,10 @@ def show_report(request, lang: str) -> HttpResponseRedirect:
 
     if CUSTOM["modules"]["reportEmail"] and email_address:
         # Send the report via email
-        send_report(email_address, pdf_report)
+        try:
+            send_report(email_address, pdf_report)
+        except Exception as e:
+            logger.error(e)
     else:
         # Return the report in the HTTP answer
         response = HttpResponse(pdf_report, content_type="application/pdf")
@@ -148,9 +162,6 @@ def show_report(request, lang: str) -> HttpResponseRedirect:
         )
         return response
 
-    target = request.META.get("HTTP_REFERER", "/")
-    if target not in PUBLIC_URL or target != "/":
-        target = "/"
     return HttpResponseRedirect(target)
 
 
