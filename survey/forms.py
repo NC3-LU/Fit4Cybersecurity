@@ -156,7 +156,6 @@ class AnswerMChoice(forms.Form):
                 for dependant_answer in dependant_answers:
                     if str(dependant_answer.id) in answers:
                         dependant_answers_str = [str(dep_answer) for dep_answer in dependant_answers]
-                        # TODO: generate locale for this:
                         raise forms.ValidationError(
                             _(
                                 "You can't choose the answers {dep_answers} if answer '{answer_text}' is choosen."

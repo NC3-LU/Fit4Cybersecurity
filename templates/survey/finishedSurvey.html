@@ -88,7 +88,9 @@
   {% endif %}
   {% if bonus_score > 0 %}
   <p>
-      {{ bonus_score_title }}: {{ bonus_score }}%.
+      {% blocktranslate trimmed %}
+      You have scored an additional {{ bonus_score }}% of bonus points for following best practices.
+      {% endblocktranslate %}
   </p>
   {% endif %}
 

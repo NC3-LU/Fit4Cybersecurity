@@ -39,6 +39,15 @@ msgstr "S'il vous plaît sélectionnez votre pays"
 msgid "You need to choose at least one answer"
 msgstr "Vous devez choisir au moins une réponse"
 
+#: survey/forms.py:162
+#, python-brace-format
+msgid ""
+"You can't choose the answers {dep_answers} if answer '{answer_text}' is "
+"choosen."
+msgstr ""
+"Vous ne pouvez pas choisir plusieurs réponses {dep_answers} si la réponse {answer_text} "
+"est choisie."
+
 #: survey/forms.py:106 survey/forms.py:163
 #: templates/survey/finishedSurvey.html:184
 #: templates/survey/finishedSurvey.html:191 templates/survey/review.html:43
@@ -285,6 +294,15 @@ msgstr ""
 "est entendu que l’ensemble des résultats ne peut en aucune manière être "
 "exhaustif."
 
+#: templates/report/results.html:13
+#, python-format
+msgid ""
+"You have scored an additional %(BONUS_SCORE)s% of bonus points for "
+"following best practices."
+msgstr ""
+"Vous avez obtenu %(BONUS_SCORE)s% de points bonus supplémentaires "
+"pour avoir suivi les meilleures pratiques."
+
 #: templates/report/template.html:13
 #, python-format
 msgid "Generated with %(tool_name)s"
@@ -365,6 +383,15 @@ msgstr ""
 #: templates/survey/finishedSurvey.html:86
 msgid "Your results link"
 msgstr "Votre lien de résultats"
+
+#: templates/survey/finishedSurvey.html:91
+#, python-format
+msgid ""
+"You have scored an additional %(bonus_score)s% of bonus points for "
+"following best practices."
+msgstr ""
+"Vous avez obtenu %(bonus_score)s% de points bonus supplémentaires "
+"pour avoir suivi les meilleures pratiques."
 
 #: templates/survey/finishedSurvey.html:94
 msgid "About the CASES Diagnostic"
