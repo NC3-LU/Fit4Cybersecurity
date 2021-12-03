@@ -246,6 +246,13 @@ msgid ""
 "understand that all the results can not in any way be exhaustive."
 msgstr ""
 
+#: templates/report/results.html:13
+#, python-format
+msgid ""
+"You have scored an additional %(BONUS_SCORE)s% of bonus points for "
+"following best practices."
+msgstr ""
+
 #: templates/report/template.html:13
 #, python-format
 msgid "Generated with %(tool_name)s"
@@ -310,6 +317,13 @@ msgstr ""
 
 #: templates/survey/finishedSurvey.html:86
 msgid "Your results link"
+msgstr ""
+
+#: templates/survey/finishedSurvey.html:91
+#, python-format
+msgid ""
+"You have scored an additional %(bonus_score)s% of bonus points for "
+"following best practices."
 msgstr ""
 
 #: templates/survey/finishedSurvey.html:94

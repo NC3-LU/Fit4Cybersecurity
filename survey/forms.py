@@ -6,6 +6,7 @@ from survey.globals import SECTOR_CHOICES, COMPANY_SIZE, COUNTRIES
 from survey.models import SurveyQuestionAnswer
 from survey.reporthelper import get_translation
 from django_countries.fields import CountryField
+import json
 
 
 def sort_tuple_alphabetically(tuple, elementNumber):
@@ -83,6 +84,7 @@ class AnswerMChoice(forms.Form):
         if tanswers is not None:
             self.fields["answers"].choices = tanswers
 
+        answers_dependencies = []
         for question_answer in question_answers:
             if question_answer.atype == "T":
                 isAnswerContentRequired = False
@@ -102,6 +104,11 @@ class AnswerMChoice(forms.Form):
                     ),
                     required=isAnswerContentRequired,
                 )
+            dependant_answers = question_answer.dependant_answers.all()
+            if dependant_answers:
+                answers_dependencies.append(
+                    {"leadId": question_answer.id, "dependantIds": [dep_answer.id for dep_answer in dependant_answers]})
+                self.fields["answers"].widget.attrs['data-dependant-ids'] = json.dumps(answers_dependencies)
 
         self.fields["feedback"] = forms.CharField(
             label=_("Your feedback"),
@@ -128,19 +135,33 @@ class AnswerMChoice(forms.Form):
             answers = [answers]
 
         if len(answers) > 1:
-            unique_answer = SurveyQuestionAnswer.objects.filter(
-                pk__in=answers, uniqueAnswer=1
-            )
-            if unique_answer.count():
-                answer_text = get_translation(unique_answer[0].label, self.lang)
+            question_answers = SurveyQuestionAnswer.objects.filter(
+                pk__in=answers
+            ).order_by("aindex")
+            for question_answer in question_answers:
+                # Validate if answer is unique.
+                if question_answer.uniqueAnswer:
+                    answer_text = get_translation(question_answer[0].label, self.lang)
 
-                raise forms.ValidationError(
-                    _(
-                        "You can't choose multiple answers if the answer {stri} is choosen.".format(
-                            stri=answer_text
+                    raise forms.ValidationError(
+                        _(
+                            "You can't choose multiple answers if the answer {answer_text} is choosen.".format(
+                                answer_text=answer_text
+                            )
                         )
                     )
-                )
+
+                # Validate answers' dependencies.
+                dependant_answers = question_answer.dependant_answers.all()
+                for dependant_answer in dependant_answers:
+                    if str(dependant_answer.id) in answers:
+                        dependant_answers_str = [str(dep_answer) for dep_answer in dependant_answers]
+                        raise forms.ValidationError(
+                            _(
+                                "You can't choose the answers {dep_answers} if answer '{answer_text}' is choosen."
+                                .format(dep_answers=dependant_answers_str, answer_text=question_answer)
+                            )
+                        )
 
         return answers
 

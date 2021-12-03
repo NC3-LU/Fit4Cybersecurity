@@ -56,6 +56,9 @@ class Command(BaseCommand):
 
             # Create the answers
             for answer in question["answers"]:
+                bonus_points = 0
+                if bonus_points in answer:
+                    answer["bonus_points"] = answer["bonus_points"]
                 answer_obj, created = SurveyQuestionAnswer.objects.get_or_create(
                     question=question_obj,
                     label=answer["label"],
@@ -63,6 +66,7 @@ class Command(BaseCommand):
                     uniqueAnswer=answer["uniqueAnswer"],
                     score=answer["score"],
                     atype=answer["atype"],
+                    bonus_points=bonus_points
                 )
                 if created:
                     nb_imported_answers += 1
