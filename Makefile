@@ -40,7 +40,7 @@ generateschema:
 	python manage.py generateschema --file $(schemapath)
 
 generatepot:
-	python manage.py makemessages --keep-pot
+	python manage.py makemessages -a --keep-pot
 
 update:
 	npm ci

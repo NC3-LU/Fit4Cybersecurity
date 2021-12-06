@@ -88,8 +88,8 @@
   {% endif %}
   {% if bonus_score > 0 %}
   <p>
-      {% blocktranslate trimmed %}
-      You have scored an additional {{ bonus_score }}% of bonus points for following best practices.
+      {% blocktranslate trimmed with bonus=bonus_score %}
+      You have scored an additional {{ bonus }} of bonus points for following best practices.
       {% endblocktranslate %}
   </p>
   {% endif %}
