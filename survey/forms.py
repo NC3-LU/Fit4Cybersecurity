@@ -107,8 +107,16 @@ class AnswerMChoice(forms.Form):
             dependant_answers = question_answer.dependant_answers.all()
             if dependant_answers:
                 answers_dependencies.append(
-                    {"leadId": question_answer.id, "dependantIds": [dep_answer.id for dep_answer in dependant_answers]})
-                self.fields["answers"].widget.attrs['data-dependant-ids'] = json.dumps(answers_dependencies)
+                    {
+                        "leadId": question_answer.id,
+                        "dependantIds": [
+                            dep_answer.id for dep_answer in dependant_answers
+                        ],
+                    }
+                )
+                self.fields["answers"].widget.attrs["data-dependant-ids"] = json.dumps(
+                    answers_dependencies
+                )
 
         self.fields["feedback"] = forms.CharField(
             label=_("Your feedback"),
@@ -155,11 +163,15 @@ class AnswerMChoice(forms.Form):
                 dependant_answers = question_answer.dependant_answers.all()
                 for dependant_answer in dependant_answers:
                     if str(dependant_answer.id) in answers:
-                        dependant_answers_str = [str(dep_answer) for dep_answer in dependant_answers]
+                        dependant_answers_str = [
+                            str(dep_answer) for dep_answer in dependant_answers
+                        ]
                         raise forms.ValidationError(
                             _(
-                                "You can't choose the answers {dep_answers} if answer '{answer_text}' is choosen."
-                                .format(dep_answers=dependant_answers_str, answer_text=question_answer)
+                                "You can't choose the answers {dep_answers} if answer '{answer_text}' is choosen.".format(
+                                    dep_answers=dependant_answers_str,
+                                    answer_text=question_answer,
+                                )
                             )
                         )
 

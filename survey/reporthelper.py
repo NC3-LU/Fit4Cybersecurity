@@ -74,7 +74,9 @@ def is_recommendation_already_added(recommendation: str, recommendations: dict) 
     return False
 
 
-def calculateResult(user: SurveyUser, lang: str) -> Tuple[int, int, List[int], List[str]]:
+def calculateResult(
+    user: SurveyUser, lang: str
+) -> Tuple[int, int, List[int], List[str]]:
     total_questions_score = 0
     total_user_score = 0
     total_bonus_points = 0
@@ -95,9 +97,9 @@ def calculateResult(user: SurveyUser, lang: str) -> Tuple[int, int, List[int], L
         if section_title not in sections_list:
             sections_list.append(section_title)
 
-    user_answers = SurveyUserAnswer.objects.filter(
-        user=user
-    ).order_by("answer__question__qindex", "answer__aindex")
+    user_answers = SurveyUserAnswer.objects.filter(user=user).order_by(
+        "answer__question__qindex", "answer__aindex"
+    )
     for user_answer in user_answers:
 
         total_bonus_points += user_answer.answer.bonus_points
@@ -117,7 +119,9 @@ def calculateResult(user: SurveyUser, lang: str) -> Tuple[int, int, List[int], L
     if total_user_score > 0:
         total_user_score = round(total_user_score * 100 / total_questions_score)
     if total_bonus_points > 0:
-        user_bonus_points_percent = round(user_given_bonus_points * 100 / total_bonus_points)
+        user_bonus_points_percent = round(
+            user_given_bonus_points * 100 / total_bonus_points
+        )
 
     user_evaluations: List[int] = []
     for section_id, user_evaluation_per_section in user_evaluations_per_section.items():
