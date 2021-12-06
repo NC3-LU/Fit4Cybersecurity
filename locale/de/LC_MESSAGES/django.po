@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-12-06 12:21+0000\n"
+"POT-Creation-Date: 2021-12-06 12:38+0000\n"
 "PO-Revision-Date: 2021-11-11 13:01+0000\n"
 "Last-Translator: Juan Rocha <juan.rocha@cases.lu>\n"
 "Language-Team: German <https://translate.monarc.lu/projects/"
@@ -171,41 +171,43 @@ msgstr ""
 msgid "What is your sector?"
 msgstr "Was ist Ihre Branche?"
 
-#: survey/forms.py:31
+#: survey/forms.py:33
 msgid "How many employees?"
 msgstr "Wie viele mitarbeiter?"
 
-#: survey/forms.py:34 survey/forms.py:37
+#: survey/forms.py:36 survey/forms.py:39
 msgid "Please select your country"
 msgstr "Bitte wählen Sie Ihr Land"
 
-#: survey/forms.py:81
+#: survey/forms.py:85
 msgid "You need to choose at least one answer"
 msgstr "Sie müssen mindestens eine Antwort auswählen"
 
-#: survey/forms.py:122 survey/forms.py:194
+#: survey/forms.py:126 survey/forms.py:204
 #: templates/survey/finishedSurvey.html:153
 #: templates/survey/finishedSurvey.html:160 templates/survey/review.html:40
 msgid "Your feedback"
 msgstr "Ihre Rückmeldung"
 
-#: survey/forms.py:124 survey/forms.py:196
+#: survey/forms.py:130 survey/forms.py:208
 msgid "Please let us know if anything is missing"
 msgstr "Bitte lassen Sie uns wissen, wenn etwas fehlt"
 
-#: survey/forms.py:156
-#, python-brace-format
-msgid ""
-"You can't choose multiple answers if the answer {answer_text} is choosen."
+#: survey/forms.py:166
+#, fuzzy
+#| msgid ""
+#| "You can't choose multiple answers if the answer {answer_text} is choosen."
+msgid "You can't choose multiple answers if the answer {} is choosen."
 msgstr ""
 "Sie können nicht mehrere Antworten wählen, wenn die Antwort {answer_text} "
 "gewählt wurde."
 
-#: survey/forms.py:171
-#, python-brace-format
-msgid ""
-"You can't choose the answers {dep_answers} if answer '{answer_text}' is "
-"choosen."
+#: survey/forms.py:181
+#, fuzzy
+#| msgid ""
+#| "You can't choose the answers {dep_answers} if answer '{answer_text}' is "
+#| "choosen."
+msgid "You can't choose the answers {} if answer '{}' is choosen."
 msgstr ""
 "Sie können nicht mehrere Antworten wählen {dep_answers}, wenn die Antwort "
 "'{answer_text}'' gewählt wurde."

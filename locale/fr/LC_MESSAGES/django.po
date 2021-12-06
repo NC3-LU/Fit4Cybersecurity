@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-12-06 12:21+0000\n"
-"PO-Revision-Date: 2021-12-06 13:21+0100\n"
+"POT-Creation-Date: 2021-12-06 12:38+0000\n"
+"PO-Revision-Date: 2021-12-06 13:39+0100\n"
 "Last-Translator: Cédric Bonhomme <cedric@cedricbonhomme.org>\n"
 "Language-Team: French <https://translate.monarc.lu/projects/"
 "Fit4Cybersecurity/fit4ilr/fr/>\n"
@@ -134,44 +134,38 @@ msgstr ""
 msgid "What is your sector?"
 msgstr "Quel est votre secteur ?"
 
-#: survey/forms.py:31
+#: survey/forms.py:33
 msgid "How many employees?"
 msgstr "Combien d'employés ?"
 
-#: survey/forms.py:34 survey/forms.py:37
+#: survey/forms.py:36 survey/forms.py:39
 msgid "Please select your country"
 msgstr "S'il vous plaît sélectionnez votre pays"
 
-#: survey/forms.py:81
+#: survey/forms.py:85
 msgid "You need to choose at least one answer"
 msgstr "Vous devez choisir au moins une réponse"
 
-#: survey/forms.py:122 survey/forms.py:194
+#: survey/forms.py:126 survey/forms.py:204
 #: templates/survey/finishedSurvey.html:153
 #: templates/survey/finishedSurvey.html:160 templates/survey/review.html:40
 msgid "Your feedback"
 msgstr "Vos retours"
 
-#: survey/forms.py:124 survey/forms.py:196
+#: survey/forms.py:130 survey/forms.py:208
 msgid "Please let us know if anything is missing"
 msgstr "S'il vous plaît laissez-nous savoir si quelque chose est manquant"
 
-#: survey/forms.py:156
-#, python-brace-format
-msgid ""
-"You can't choose multiple answers if the answer {answer_text} is choosen."
+#: survey/forms.py:166
+msgid "You can't choose multiple answers if the answer {} is choosen."
 msgstr ""
-"Vous ne pouvez pas choisir plusieurs réponses si la réponse {answer_text} "
-"est choisie."
+"Vous ne pouvez pas choisir plusieurs réponses si la réponse {} est choisie."
 
-#: survey/forms.py:171
-#, python-brace-format
-msgid ""
-"You can't choose the answers {dep_answers} if answer '{answer_text}' is "
-"choosen."
+#: survey/forms.py:181
+msgid "You can't choose the answers {} if answer '{}' is choosen."
 msgstr ""
-"Vous ne pouvez pas choisir plusieurs réponses {dep_answers} si la réponse "
-"{answer_text} est choisie."
+"Vous ne pouvez pas choisir plusieurs réponses {} si la réponse {} est "
+"choisie."
 
 #: survey/globals.py:7
 msgid "Banking, insurance and real estate"
@@ -668,14 +662,3 @@ msgid ""
 msgstr ""
 "Nous avons besoin de quelques informations pour pouvoir vous faire des "
 "recommandations utiles, une fois l’auto-évaluation terminée."
-
-#, fuzzy, python-format
-#~| msgid ""
-#~| "You have scored an additional %(bonus)s % of bonus points for following "
-#~| "best practices."
-#~ msgid ""
-#~ "You have scored an additional %(bonus)s %% of bonus points for following "
-#~ "best practices."
-#~ msgstr ""
-#~ "Vous avez obtenu %(bonus)s % de points bonus supplémentaires pour avoir "
-#~ "suivi les meilleures pratiques."

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-12-06 12:21+0000\n"
+"POT-Creation-Date: 2021-12-06 12:38+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -100,39 +100,34 @@ msgstr ""
 msgid "What is your sector?"
 msgstr ""
 
-#: survey/forms.py:31
+#: survey/forms.py:33
 msgid "How many employees?"
 msgstr ""
 
-#: survey/forms.py:34 survey/forms.py:37
+#: survey/forms.py:36 survey/forms.py:39
 msgid "Please select your country"
 msgstr ""
 
-#: survey/forms.py:81
+#: survey/forms.py:85
 msgid "You need to choose at least one answer"
 msgstr ""
 
-#: survey/forms.py:122 survey/forms.py:194
+#: survey/forms.py:126 survey/forms.py:204
 #: templates/survey/finishedSurvey.html:153
 #: templates/survey/finishedSurvey.html:160 templates/survey/review.html:40
 msgid "Your feedback"
 msgstr ""
 
-#: survey/forms.py:124 survey/forms.py:196
+#: survey/forms.py:130 survey/forms.py:208
 msgid "Please let us know if anything is missing"
 msgstr ""
 
-#: survey/forms.py:156
-#, python-brace-format
-msgid ""
-"You can't choose multiple answers if the answer {answer_text} is choosen."
+#: survey/forms.py:166
+msgid "You can't choose multiple answers if the answer {} is choosen."
 msgstr ""
 
-#: survey/forms.py:171
-#, python-brace-format
-msgid ""
-"You can't choose the answers {dep_answers} if answer '{answer_text}' is "
-"choosen."
+#: survey/forms.py:181
+msgid "You can't choose the answers {} if answer '{}' is choosen."
 msgstr ""
 
 #: survey/globals.py:7
