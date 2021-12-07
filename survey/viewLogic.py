@@ -205,7 +205,7 @@ def handle_question_answers_request(
         "form": form,
         "action": "/survey/question/" + str(current_question.qindex),
         "user": user,
-        "current_question_index": current_question.qindex-nb_context_question,
+        "current_question_index": current_question.qindex - nb_context_question,
         "previous_question_index": previous_question.qindex,
         "total_questions_num": total_questions_num,
     }

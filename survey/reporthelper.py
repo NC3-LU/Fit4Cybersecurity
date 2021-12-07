@@ -38,7 +38,10 @@ def getRecommendations(user: SurveyUser, lang: str) -> Dict[str, List[str]]:
     )
     finalReportRecs: Dict[str, List[str]] = {}
     for a in allAnswers:
-        userAnswer = SurveyUserAnswer.objects.filter(user=user).filter(answer=a)[0]
+        try:
+            userAnswer = SurveyUserAnswer.objects.filter(user=user).filter(answer=a)[0]
+        except IndexError:
+            continue
         recommendations = Recommendations.objects.filter(forAnswer=a)
 
         if not recommendations.exists():
@@ -86,10 +89,9 @@ def calculateResult(
     max_evaluations_per_section: Dict[int, int] = {}
     sections_list: List[str] = []
 
-    for question in SurveyQuestion.objects.all():
-        if question.section.label == "__context":
-            print("section skipped")
-            continue
+    for question in SurveyQuestion.objects.exclude(
+        section__label__contains="__context"
+    ).all():
         total_questions_score += question.maxPoints
 
         if question.section.id not in max_evaluations_per_section:
@@ -100,14 +102,10 @@ def calculateResult(
         if section_title not in sections_list:
             sections_list.append(section_title)
 
-    user_answers = SurveyUserAnswer.objects.filter(user=user).order_by(
+    user_answers = SurveyUserAnswer.objects.filter(user=user).exclude(answer__question__section__label="_context").order_by(
         "answer__question__qindex", "answer__aindex"
     )
     for user_answer in user_answers:
-        if user_answer.answer.question.section.label == "__context":
-            print("section skipped")
-            continue
-
         total_bonus_points += user_answer.answer.bonus_points
 
         if user_answer.uvalue > 0:
@@ -142,6 +140,7 @@ def calculateResult(
         else:
             user_evaluations.append(0)
 
+    print(total_user_score, user_bonus_points_percent, user_evaluations, sections_list)
     return total_user_score, user_bonus_points_percent, user_evaluations, sections_list
 
 
