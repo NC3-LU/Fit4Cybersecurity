@@ -87,6 +87,9 @@ def calculateResult(
     sections_list: List[str] = []
 
     for question in SurveyQuestion.objects.all():
+        if question.section.label == "__context":
+            print("section skipped")
+            continue
         total_questions_score += question.maxPoints
 
         if question.section.id not in max_evaluations_per_section:
@@ -101,6 +104,9 @@ def calculateResult(
         "answer__question__qindex", "answer__aindex"
     )
     for user_answer in user_answers:
+        if user_answer.answer.question.section.label == "__context":
+            print("section skipped")
+            continue
 
         total_bonus_points += user_answer.answer.bonus_points
 

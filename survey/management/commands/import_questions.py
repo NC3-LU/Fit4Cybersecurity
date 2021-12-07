@@ -64,7 +64,7 @@ class Command(BaseCommand):
                     label=answer["label"],
                     aindex=answer["aindex"],
                     uniqueAnswer=answer["uniqueAnswer"],
-                    score=answer["score"],
+                    score=answer.get("score", 0),
                     atype=answer["atype"],
                     bonus_points=bonus_points,
                 )
