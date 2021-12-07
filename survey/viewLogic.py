@@ -40,7 +40,10 @@ def create_user(lang: str, sector: str, company_size: str, country: str) -> Surv
     user.sector = sector
     user.e_count = company_size
     user.country_code = country
-    survey_question = SurveyQuestion.objects.order_by("qindex")[:1]
+    # defines the next question (exclude the context questions)
+    survey_question = SurveyQuestion.objects.exclude(
+        section__label__contains="__context"
+    ).order_by("qindex")[:1]
     user.current_qindex = survey_question[0].qindex
     # Ensures the submitted languages is accepted
     langs, _ = zip(*LANGUAGES)
@@ -92,6 +95,10 @@ def handle_question_answers_request(
         next_question,
         total_questions_num,
     ) = get_questions_slice(question_index)
+
+    nb_context_question = SurveyQuestion.objects.filter(
+        section__label__contains="__context"
+    ).count()
 
     try:
         question_answers = SurveyQuestionAnswer.objects.order_by("aindex").filter(
@@ -198,7 +205,7 @@ def handle_question_answers_request(
         "form": form,
         "action": "/survey/question/" + str(current_question.qindex),
         "user": user,
-        "current_question_index": current_question.qindex,
+        "current_question_index": current_question.qindex-nb_context_question,
         "previous_question_index": previous_question.qindex,
         "total_questions_num": total_questions_num,
     }
@@ -267,7 +274,9 @@ def get_answer_choices(
 
 
 def get_questions_slice(question_index: int):
-    survey_questions = SurveyQuestion.objects.order_by("qindex")
+    survey_questions = SurveyQuestion.objects.exclude(
+        section__label__contains="__context"
+    ).order_by("qindex")
     total_questions_num = len(survey_questions)
     previous_question = survey_questions[0]
     next_question = None

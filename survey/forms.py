@@ -27,9 +27,7 @@ class InitialStartForm(forms.Form):
         super().__init__(*args, **kwargs)
 
         self.fields["sector"].label = _("What is your sector?")
-        self.fields["sector"].choices = sort_tuple_alphabetically(
-            SECTOR_CHOICES, 1
-        )
+        self.fields["sector"].choices = sort_tuple_alphabetically(SECTOR_CHOICES, 1)
         self.fields["compSize"].label = _("How many employees?")
 
         self.fields["country"] = CountryField().formfield(
@@ -43,9 +41,7 @@ class InitialStartForm(forms.Form):
 
 class AnswerMChoice(forms.Form):
     unique_answers = forms.CharField(widget=forms.HiddenInput(), required=False)
-    free_text_answer_id = forms.CharField(
-        widget=forms.HiddenInput(), required=False
-    )
+    free_text_answer_id = forms.CharField(widget=forms.HiddenInput(), required=False)
 
     def __init__(self, tanswers=None, *args, **kwargs):
         self.lang = kwargs.pop("lang")
@@ -118,18 +114,14 @@ class AnswerMChoice(forms.Form):
                         ],
                     }
                 )
-                self.fields["answers"].widget.attrs[
-                    "data-dependant-ids"
-                ] = json.dumps(answers_dependencies)
+                self.fields["answers"].widget.attrs["data-dependant-ids"] = json.dumps(
+                    answers_dependencies
+                )
 
         self.fields["feedback"] = forms.CharField(
             label=_("Your feedback"),
             widget=forms.Textarea(
-                attrs={
-                    "placeholder": _(
-                        "Please let us know if anything is missing"
-                    )
-                }
+                attrs={"placeholder": _("Please let us know if anything is missing")}
             ),
             required=False,
         )
@@ -157,9 +149,7 @@ class AnswerMChoice(forms.Form):
             for question_answer in question_answers:
                 # Validate if answer is unique.
                 if question_answer.uniqueAnswer:
-                    answer_text = get_translation(
-                        question_answer[0].label, self.lang
-                    )
+                    answer_text = get_translation(question_answer[0].label, self.lang)
 
                     raise forms.ValidationError(
                         _(
@@ -203,11 +193,7 @@ class GeneralFeedback(forms.Form):
         self.fields["general_feedback"] = forms.CharField(
             label=_("Your feedback"),
             widget=forms.Textarea(
-                attrs={
-                    "placeholder": _(
-                        "Please let us know if anything is missing"
-                    )
-                }
+                attrs={"placeholder": _("Please let us know if anything is missing")}
             ),
             required=True,
         )
