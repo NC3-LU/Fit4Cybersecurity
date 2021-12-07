@@ -102,8 +102,10 @@ def calculateResult(
         if section_title not in sections_list:
             sections_list.append(section_title)
 
-    user_answers = SurveyUserAnswer.objects.filter(user=user).exclude(answer__question__section__label="_context").order_by(
-        "answer__question__qindex", "answer__aindex"
+    user_answers = (
+        SurveyUserAnswer.objects.filter(user=user)
+        .exclude(answer__question__section__label="_context")
+        .order_by("answer__question__qindex", "answer__aindex")
     )
     for user_answer in user_answers:
         total_bonus_points += user_answer.answer.bonus_points
