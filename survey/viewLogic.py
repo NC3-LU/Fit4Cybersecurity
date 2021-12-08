@@ -61,7 +61,9 @@ def handle_start_survey(request: HttpRequest, lang: str) -> Union[Dict, SurveyUs
     request.session[translation.LANGUAGE_SESSION_KEY] = lang
 
     forms = {}
-    questions = SurveyQuestion.objects.filter(section__label__contains="__context").all()
+    questions = SurveyQuestion.objects.filter(
+        section__label__contains="__context"
+    ).all()
     for question in questions:
         try:
             question_answers = SurveyQuestionAnswer.objects.order_by("aindex").filter(
@@ -76,16 +78,16 @@ def handle_start_survey(request: HttpRequest, lang: str) -> Union[Dict, SurveyUs
             lang=lang,
             answers_field_type=question.qtype,
             question_answers=question_answers,
-            prefix="form"+str(question.id),
+            prefix="form" + str(question.id),
         )
 
     if request.method == "POST":
         res_forms = {}
         for question in questions:
             try:
-                question_answers = SurveyQuestionAnswer.objects.order_by("aindex").filter(
-                    question=question
-                )
+                question_answers = SurveyQuestionAnswer.objects.order_by(
+                    "aindex"
+                ).filter(question=question)
                 tuple_answers = get_answer_choices(question_answers, lang)
             except Exception as e:
                 raise e
@@ -96,7 +98,7 @@ def handle_start_survey(request: HttpRequest, lang: str) -> Union[Dict, SurveyUs
                 lang=lang,
                 answers_field_type=question.qtype,
                 question_answers=question_answers,
-                prefix="form"+str(question.id),
+                prefix="form" + str(question.id),
             )
 
         if all([form.is_valid() for question_id, form in res_forms.items()]):
@@ -112,17 +114,15 @@ def handle_start_survey(request: HttpRequest, lang: str) -> Union[Dict, SurveyUs
                 answer_content = form.cleaned_data["answer_content"]
 
             try:
-                question_answers = SurveyQuestionAnswer.objects.order_by("aindex").filter(
-                    question=question
-                )
+                question_answers = SurveyQuestionAnswer.objects.order_by(
+                    "aindex"
+                ).filter(question=question)
                 tuple_answers = get_answer_choices(question_answers, lang)
             except Exception as e:
                 raise e
 
             # create the answers
-            save_answers(
-                user, question, question_answers, answers, answer_content
-            )
+            save_answers(user, question, question_answers, answers, answer_content)
 
         return user
     else:
