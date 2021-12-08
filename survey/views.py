@@ -216,7 +216,9 @@ def finish(request):
     # also needs saving here!
     # show a "Thank you" and a "get your report" button
 
-    txt_score, bonus_score, radar_current, sections_list = calculateResult(user, user_lang)
+    txt_score, bonus_score, radar_current, sections_list = calculateResult(
+        user, user_lang
+    )
 
     recommendations = getRecommendations(user, user_lang)
     # To properly display breaking lines \n on html page.

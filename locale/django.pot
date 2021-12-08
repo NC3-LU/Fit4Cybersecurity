@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-10 09:44+0000\n"
+"POT-Creation-Date: 2021-12-06 12:38+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,137 +17,214 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: csskp/config.py:27 csskp/config_dev.py:27
-msgid "Description from a string or a file."
+#: csskp/config.py:29 csskp/config_dev.py:28 csskp/config_prod.py:29
+msgid "Description of the tool."
 msgstr ""
 
-#: survey/forms.py:27
-msgid "What is your sector?"
+#: csskp/config.py:67 csskp/config_dev.py:69
+#, python-format
+msgid ""
+"The objective of the self-assessment tool,\n"
+"            %(tool_name)s is to assess the maturity of an organization in "
+"terms of\n"
+"            applicable good practices in the field of information security.\n"
+"            <br /><br />\n"
+"            This document, based on the %(tool_name)s, is for the exclusive "
+"use of\n"
+"            the customer. It is in this respect confidential.\n"
+"            <br /><br />\n"
+"            In view of the methodology used and the fact that it is a self-"
+"assessment,\n"
+"            it is understood that the overall results can not in any way be "
+"exhaustive.\n"
+"            As such, the actual risk assessment or the list of identified "
+"risks and\n"
+"            vulnerabilities are based on the information provided by the "
+"client.\n"
+"            The analysis resulting from this assessment can engage only the "
+"customer\n"
+"            for any omission or error that would be due to third parties or "
+"not.\n"
+"            <br /><br />\n"
+"            The tool, %(tool_name)s can possibly provide recommendations. It "
+"is\n"
+"            understood by the client that the recommendations are neither "
+"exclusive\n"
+"            nor exhaustive.\n"
+"            <br /><br />\n"
+"            It should also be noted that the information you have provided "
+"to us will\n"
+"            be recorded for statistical reasons.\n"
+"            Due to the nature of the data, we can not identify you. Unless "
+"you later\n"
+"            contact us to do a Diagnostic CASES."
+msgstr ""
+
+#: csskp/config.py:91 csskp/config_dev.py:93
+#, python-format
+msgid ""
+"This self-assessment tool is named %(tool_name)s\n"
+"            to highlight the introduction to information security.\n"
+"            It is also a prerequisite for doing a CASES Diagnostic: a "
+"minimum score of\n"
+"            %(minimal_acceptable_score)s/100 is required.\n"
+"            The purpose for this restriction gives us the opportunity to "
+"better\n"
+"            tailor the recommendations to your organization during the "
+"Diagnostic.\n"
+"            <br /><br />\n"
+"            During this self-assessment multiple choice questions were "
+"asked. After\n"
+"            analyzing your answers, recommendations have been provided.\n"
+"            <br /><br />\n"
+"            Finally, you can download a report, which will help you to "
+"communicate\n"
+"            the results to your suppliers, if necessary."
+msgstr ""
+
+#: csskp/config.py:105 csskp/config_dev.py:107
+#, python-format
+msgid ""
+"You have achieved %(SCORE)s/100 with your\n"
+"            answers. You must reach at least "
+"%(minimal_acceptable_score)s/100\n"
+"            to be able to make a CASES Diagnosis.\n"
+"            <br /><br />\n"
+"            We remind you that this is a self-assessment and it is "
+"important\n"
+"            to understand that all the results can not in any way be "
+"exhaustive."
 msgstr ""
 
 #: survey/forms.py:29
+msgid "What is your sector?"
+msgstr ""
+
+#: survey/forms.py:33
 msgid "How many employees?"
 msgstr ""
 
-#: survey/forms.py:32 survey/forms.py:35
+#: survey/forms.py:36 survey/forms.py:39
 msgid "Please select your country"
 msgstr ""
 
-#: survey/forms.py:79
+#: survey/forms.py:85
 msgid "You need to choose at least one answer"
 msgstr ""
 
-#: survey/forms.py:106 survey/forms.py:163
-#: templates/survey/finishedSurvey.html:184
-#: templates/survey/finishedSurvey.html:191 templates/survey/review.html:43
+#: survey/forms.py:126 survey/forms.py:204
+#: templates/survey/finishedSurvey.html:153
+#: templates/survey/finishedSurvey.html:160 templates/survey/review.html:40
 msgid "Your feedback"
 msgstr ""
 
-#: survey/forms.py:108 survey/forms.py:165
+#: survey/forms.py:130 survey/forms.py:208
 msgid "Please let us know if anything is missing"
 msgstr ""
 
-#: survey/forms.py:141
-#, python-brace-format
-msgid ""
-"You can't choose multiple answers if the answer {answer_text} is choosen."
+#: survey/forms.py:166
+msgid "You can't choose multiple answers if the answer {} is choosen."
 msgstr ""
 
-#: survey/globals.py:6
-msgid "Banking, insurance and real estate"
+#: survey/forms.py:181
+msgid "You can't choose the answers {} if answer '{}' is choosen."
 msgstr ""
 
 #: survey/globals.py:7
-msgid "Trading, sales and mass distribution"
+msgid "Banking, insurance and real estate"
 msgstr ""
 
 #: survey/globals.py:8
-msgid "Marketing, media and multimedia"
+msgid "Trading, sales and mass distribution"
 msgstr ""
 
 #: survey/globals.py:9
-msgid "Construction industries and civil engineering"
+msgid "Marketing, media and multimedia"
 msgstr ""
 
 #: survey/globals.py:10
-msgid "Hotel and restoration, tourism and entertainment"
+msgid "Construction industries and civil engineering"
 msgstr ""
 
 #: survey/globals.py:11
-msgid "Industry"
+msgid "Hotel and restoration, tourism and entertainment"
 msgstr ""
 
 #: survey/globals.py:12
-msgid "Installation and maintenance"
+msgid "Industry"
 msgstr ""
 
 #: survey/globals.py:13
-msgid "Creation or placing of objects that are artistic and decorative"
+msgid "Installation and maintenance"
 msgstr ""
 
 #: survey/globals.py:14
-msgid "Health"
+msgid "Creation or placing of objects that are artistic and decorative"
 msgstr ""
 
 #: survey/globals.py:15
-msgid "Home-Care Service or Community Service"
+msgid "Health"
 msgstr ""
 
 #: survey/globals.py:16
-msgid "Shows"
+msgid "Home-Care Service or Community Service"
 msgstr ""
 
 #: survey/globals.py:17
-msgid "Company Support"
+msgid "Shows"
 msgstr ""
 
 #: survey/globals.py:18
-msgid "Transport and Logistics"
+msgid "Company Support"
 msgstr ""
 
 #: survey/globals.py:19
-msgid "Farming and fishing, natural spaces and green spaces, animal care"
+msgid "Transport and Logistics"
 msgstr ""
 
 #: survey/globals.py:20
+msgid "Farming and fishing, natural spaces and green spaces, animal care"
+msgstr ""
+
+#: survey/globals.py:21
 msgid "Public administration"
 msgstr ""
 
-#: survey/report.py:52
+#: survey/report.py:51
 msgid "Final report"
 msgstr ""
 
-#: survey/reporthelper.py:159 survey/views.py:202
-msgid "Your results"
-msgstr ""
-
-#: survey/reporthelper.py:168
-msgid "Your results chart"
-msgstr ""
-
-#: survey/viewLogic.py:49
+#: survey/viewLogic.py:58
 msgid "Let's start"
 msgstr ""
 
-#: survey/viewLogic.py:180
+#: survey/viewLogic.py:191
 msgid "Question"
 msgstr ""
 
-#: survey/views.py:117
+#: survey/views.py:124
 msgid "To generate a report you have to finish the survey."
 msgstr ""
 
-#: survey/views.py:194
+#: survey/views.py:192
+msgid "Answers review"
+msgstr ""
+
+#: survey/views.py:229
 msgid "Final summary"
 msgstr ""
 
-#: survey/views.py:227
+#: survey/views.py:262
 msgid ""
 "We could not find a survey with the requested key, please start a new one."
 msgstr ""
 
-#: survey/views.py:257
+#: survey/views.py:292
 msgid "Feedback sending errors: "
+msgstr ""
+
+#: templates/admin/translations.html:5
+msgid "Home"
 msgstr ""
 
 #: templates/parts/footer_part.html:8 templates/parts/footer_part.html:9
@@ -166,91 +243,57 @@ msgstr ""
 msgid "Terms of Service"
 msgstr ""
 
-#: templates/report/cover.html:10
+#: templates/report/cover.html:12
 msgid "Date"
 msgstr ""
 
-#: templates/report/cover.html:11
+#: templates/report/cover.html:18
 msgid "Self-assessment id"
 msgstr ""
 
-#: templates/report/description.html:3
+#: templates/report/description.html:4
 msgid "Description"
 msgstr ""
 
-#: templates/report/description.html:6
-#, python-format
-msgid ""
-"This self-assessment tool is named %(tool_name)s to highlight the "
-"introduction to information security. It is also a prerequisite for doing a "
-"CASES Diagnostic: a minimum score of %(minimal_acceptable_score)s/100 is "
-"required. The purpose for this restriction gives us the opportunity to "
-"better tailor the recommendations to your organization during the "
-"Diagnostic. <br><br> During this self-assessment multiple choice questions "
-"were asked. After analyzing your answers, recommendations have been "
-"provided. <br><br> Finally, you can download a report, which will help you "
-"to communicate the results to your suppliers, if necessary."
-msgstr ""
-
-#: templates/report/intro.html:3
+#: templates/report/intro.html:4
 msgid "Introduction and Warning"
-msgstr ""
-
-#: templates/report/intro.html:6
-#, python-format
-msgid ""
-"The objective of the self-assessment tool, %(tool_name)s is to assess the "
-"maturity of an organization in terms of applicable good practices in the "
-"field of information security. <br><br> This document, based on the "
-"%(tool_name)s, is for the exclusive use of the customer. It is in this "
-"respect confidential. <br><br> In view of the methodology used and the fact "
-"that it is a self-assessment, it is understood that the overall results can "
-"not in any way be exhaustive. As such, the actual risk assessment or the "
-"list of identified risks and vulnerabilities are based on the information "
-"provided by the client. The analysis resulting from this assessment can "
-"engage only the customer for any omission or error that would be due to "
-"third parties or not.<br><br> The tool, %(tool_name)s can possibly provide "
-"recommendations. It is understood by the client that the recommendations are "
-"neither exclusive nor exhaustive. <br><br> It should also be noted that the "
-"information you have provided to us will be recorded for statistical "
-"reasons. Due to the nature of the data, we can not identify you. Unless you "
-"later contact us to do a Diagnostic CASES."
 msgstr ""
 
 #: templates/report/questions.html:1
 msgid "Questions"
 msgstr ""
 
-#: templates/report/questions.html:14 templates/survey/review.html:32
-msgid "Custom response"
-msgstr ""
-
-#: templates/report/recommendations.html:1
+#: templates/report/recommendations.html:3
 msgid "Recommendations"
 msgstr ""
 
-#: templates/report/recommendations.html:4
-msgid "Here is the list of recommendations, based on your answers."
+#: templates/report/recommendations.html:6
+msgid ""
+"The recommendations list was based in your company context and on your "
+"answers."
 msgstr ""
 
-#: templates/report/results.html:3
+#: templates/report/recommendations.html:10
+msgid "Sector :"
+msgstr ""
+
+#: templates/report/recommendations.html:14
+msgid "Size :"
+msgstr ""
+
+#: templates/report/recommendations.html:18
+msgid "Location :"
+msgstr ""
+
+#: templates/report/results.html:4
 msgid "Result"
 msgstr ""
 
-#: templates/report/results.html:6
+#: templates/report/results.html:13 templates/survey/finishedSurvey.html:91
 #, python-format
 msgid ""
-"You have achieved %(SCORE)s/100 with your answers. You must reach at least "
-"%(minimal_acceptable_score)s/100 to be able to make a CASES Diagnosis. "
-"<br><br> We remind you that this is a self-assessment and it is important to "
-"understand that all the results can not in any way be exhaustive."
-msgstr ""
-
-#: templates/report/results.html:13
-#, python-format
-msgid ""
-"You have scored an additional %(BONUS_SCORE)s% of bonus points for "
-"following best practices."
+"You have scored an additional %(bonus)s of bonus points for following best "
+"practices."
 msgstr ""
 
 #: templates/report/template.html:13
@@ -280,23 +323,27 @@ msgstr ""
 msgid "Download direct link"
 msgstr ""
 
-#: templates/survey/continue.html:26 templates/survey/finishedSurvey.html:199
+#: templates/survey/continue.html:26 templates/survey/finishedSurvey.html:168
 msgid "Close"
 msgstr ""
 
-#: templates/survey/finishedSurvey.html:42
+#: templates/survey/finishedSurvey.html:44
 msgid "Report"
 msgstr ""
 
-#: templates/survey/finishedSurvey.html:49
+#: templates/survey/finishedSurvey.html:51
 msgid "Download"
 msgstr ""
 
-#: templates/survey/finishedSurvey.html:57
+#: templates/survey/finishedSurvey.html:56
+msgid "Email"
+msgstr ""
+
+#: templates/survey/finishedSurvey.html:64
 msgid "Summary"
 msgstr ""
 
-#: templates/survey/finishedSurvey.html:60
+#: templates/survey/finishedSurvey.html:67
 msgid ""
 "This is the list of recommendations to improve the information security "
 "maturity in your company, provided that your answers did correctly reflect "
@@ -305,7 +352,7 @@ msgid ""
 "and thus, we are not liable for the results of this survey."
 msgstr ""
 
-#: templates/survey/finishedSurvey.html:71
+#: templates/survey/finishedSurvey.html:78
 #, python-format
 msgid ""
 "Based on your score %(score)s, the CASES Diagnostic is not available for "
@@ -315,22 +362,15 @@ msgid ""
 "company, do not hesitate to"
 msgstr ""
 
-#: templates/survey/finishedSurvey.html:86
+#: templates/survey/finishedSurvey.html:100
 msgid "Your results link"
 msgstr ""
 
-#: templates/survey/finishedSurvey.html:91
-#, python-format
-msgid ""
-"You have scored an additional %(bonus_score)s% of bonus points for "
-"following best practices."
-msgstr ""
-
-#: templates/survey/finishedSurvey.html:94
+#: templates/survey/finishedSurvey.html:108
 msgid "About the CASES Diagnostic"
 msgstr ""
 
-#: templates/survey/finishedSurvey.html:95
+#: templates/survey/finishedSurvey.html:109
 msgid ""
 "The CASES Diagnostic is a service which analyses the company maturity in the "
 "information security depending on company's requirements. The analyse "
@@ -342,13 +382,14 @@ msgid ""
 "security maturity."
 msgstr ""
 
-#: templates/survey/finishedSurvey.html:106
+#: templates/survey/finishedSurvey.html:120
 msgid ""
 "The CASES Diagnostic is available for all the companies located in "
 "Luxembourg and free of charge."
 msgstr ""
 
-#: templates/survey/finishedSurvey.html:201
+#: templates/survey/finishedSurvey.html:170
+#: templates/survey/sendReportEmail.html:14
 msgid "Send"
 msgstr ""
 
@@ -376,35 +417,35 @@ msgstr ""
 msgid "No"
 msgstr ""
 
-#: templates/survey/questions.html:39
+#: templates/survey/questions.html:41
 msgid "Multiple answers are possible."
 msgstr ""
 
-#: templates/survey/questions.html:51
+#: templates/survey/questions.html:53
 msgid "Back"
 msgstr ""
 
-#: templates/survey/questions.html:59
+#: templates/survey/questions.html:61
 msgid "Cancel"
 msgstr ""
 
-#: templates/survey/questions.html:68 templates/survey/review.html:59
+#: templates/survey/questions.html:70 templates/survey/review.html:56
 msgid "Continue later"
 msgstr ""
 
-#: templates/survey/questions.html:73 templates/survey/start.html:32
+#: templates/survey/questions.html:75 templates/survey/start.html:32
 msgid "Next"
 msgstr ""
 
-#: templates/survey/questions.html:73
+#: templates/survey/questions.html:75
 msgid "Modify"
 msgstr ""
 
-#: templates/survey/questions.html:82
+#: templates/survey/questions.html:84
 msgid "This text field should not be used to answer the question."
 msgstr ""
 
-#: templates/survey/questions.html:85
+#: templates/survey/questions.html:87
 msgid ""
 "Please do not provide any sensitive or confidential information refering to "
 "your identity."
@@ -485,12 +526,20 @@ msgstr ""
 msgid "Your answers review"
 msgstr ""
 
-#: templates/survey/review.html:50
+#: templates/survey/review.html:47
 msgid "Modify answers"
 msgstr ""
 
-#: templates/survey/review.html:63
+#: templates/survey/review.html:60
 msgid "Validate answers"
+msgstr ""
+
+#: templates/survey/sendReportEmail.html:5
+msgid "Send the report via email"
+msgstr ""
+
+#: templates/survey/sendReportEmail.html:17
+msgid "Your email address won't be stored."
 msgstr ""
 
 #: templates/survey/start.html:19
