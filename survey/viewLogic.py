@@ -32,14 +32,11 @@ class QuestionWithUserAnswers(TypedDict):
     user_answers: list[Any]
 
 
-def create_user(lang: str, sector: str, company_size: str, country: str) -> SurveyUser:
+def create_user(lang: str) -> SurveyUser:
     """Creates a new SurveyUser object.
     This function is called by the function handle_start_surveyonce, once the user has
     answered the first questions before the start of the survey."""
     user = SurveyUser()
-    user.sector = sector
-    user.e_count = company_size
-    user.country_code = country
     # defines the next question (exclude the context questions)
     survey_question = SurveyQuestion.objects.exclude(
         section__label__contains="__context"
@@ -63,23 +60,78 @@ def handle_start_survey(request: HttpRequest, lang: str) -> Union[Dict, SurveyUs
     translation.activate(lang)
     request.session[translation.LANGUAGE_SESSION_KEY] = lang
 
-    if request.method == "POST":
-        form = InitialStartForm(data=request.POST, lang=lang)
-        if form.is_valid():
-            user = create_user(
-                lang,
-                form.cleaned_data["sector"],
-                form.cleaned_data["compSize"],
-                form.cleaned_data["country"],
+    forms = {}
+    questions = SurveyQuestion.objects.filter(section__label__contains="__context").all()
+    for question in questions:
+        try:
+            question_answers = SurveyQuestionAnswer.objects.order_by("aindex").filter(
+                question=question
             )
+            tuple_answers = get_answer_choices(question_answers, lang)
+        except Exception as e:
+            raise e
+        forms[question.id] = AnswerMChoice(
+            tuple_answers,
+            data=request.POST,
+            lang=lang,
+            answers_field_type=question.qtype,
+            question_answers=question_answers,
+            prefix="form"+str(question.id),
+        )
+
+    if request.method == "POST":
+        res_forms = {}
+        for question in questions:
+            try:
+                question_answers = SurveyQuestionAnswer.objects.order_by("aindex").filter(
+                    question=question
+                )
+                tuple_answers = get_answer_choices(question_answers, lang)
+            except Exception as e:
+                raise e
+
+            res_forms[question.id] = AnswerMChoice(
+                tuple_answers,
+                data=request.POST,
+                lang=lang,
+                answers_field_type=question.qtype,
+                question_answers=question_answers,
+                prefix="form"+str(question.id),
+            )
+
+        if all([form.is_valid() for question_id, form in res_forms.items()]):
+            # create the user
+            user = create_user(lang)
             request.session["user_id"] = str(user.user_id)
-            return user
+
+        for question in questions:
+            form = res_forms[question.id]
+            answers = form.cleaned_data["answers"]
+            answer_content = ""
+            if "answer_content" in form.cleaned_data:
+                answer_content = form.cleaned_data["answer_content"]
+
+            try:
+                question_answers = SurveyQuestionAnswer.objects.order_by("aindex").filter(
+                    question=question
+                )
+                tuple_answers = get_answer_choices(question_answers, lang)
+            except Exception as e:
+                raise e
+
+            # create the answers
+            save_answers(
+                user, question, question_answers, answers, answer_content
+            )
+
+        return user
     else:
         form = InitialStartForm(lang=lang)
 
     return {
         "title": title,
         "form": form,
+        "forms": forms,
         "action": action,
         "choosen_lang": lang,
     }

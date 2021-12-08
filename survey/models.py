@@ -165,17 +165,11 @@ class SurveyUser(models.Model):
     # number of employees
 
     user_id = models.UUIDField(default=uuid.uuid4)
-    sector = models.CharField(max_length=4, choices=SECTOR_CHOICES)
-    e_count = models.CharField(max_length=2, choices=COMPANY_SIZE)
-
     choosen_lang = models.CharField(
         max_length=2, choices=LANGUAGES, default=LOCAL_DEFAULT_LANG
     )
-    country_code = models.CharField(max_length=4, blank=False, default="LU")
-
     current_qindex = models.IntegerField(default=0)
     status = models.SmallIntegerField(default=SURVEY_STATUS_IN_PROGRESS)
-
     created_at = models.DateField(auto_now_add=True, blank=True)
     updated_at = models.DateField(auto_now=True, blank=True)
 

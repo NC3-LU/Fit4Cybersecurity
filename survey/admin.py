@@ -49,7 +49,6 @@ class SurveyUserAdmin(admin.ModelAdmin):
         "id",
         "user_id",
         "status",
-        "country_code",
         "choosen_lang",
         "created_at",
         "updated_at",
