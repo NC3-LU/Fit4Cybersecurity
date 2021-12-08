@@ -80,14 +80,14 @@ $ python manage.py collectstatic # Copy static files required by Django Admin
 $ python manage.py compilemessages # Compile the translations
 
 # Initialize the database
-$ sudo -u postgres createdb fit4Cybersecurity  # Name of the database as in config.py
+$ sudo -u postgres createdb fit4cybersecurity  # Name of the database as in config.py
 $ python manage.py migrate
 
 # Import questions, answers and recommendations
-$ python manage.py import_questions data/fit4Cybersecurity/questions.json
+$ python manage.py import_questions data/fit4cybersecurity/questions.json
 
 # Optionally, import translations
-$ python manage.py import_translations data/fit4Cybersecurity/translations.json
+$ python manage.py import_translations data/fit4cybersecurity/translations.json
 
 # Create a user for the admin interface
 $ python manage.py createsuperuser --username <username>
@@ -169,7 +169,7 @@ sudo systemctl restart apache2.service
 ```bash
 $ whitelabel={NameOfWhitelabel} docker-compose up -d
 ```
-{NameOfWhitelabel} - is the launching site name (e.g. fit4Cybersecurity).
+{NameOfWhitelabel} - is the launching site name (e.g. fit4cybersecurity).
 
 The server will be listening at http://127.0.0.1:8000.
 
