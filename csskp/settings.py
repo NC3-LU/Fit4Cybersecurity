@@ -47,6 +47,8 @@ try:
 
     # SECURITY WARNING: don't run with debug turned on in production!
     DEBUG = config.DEBUG
+    LOGGING = config.LOGGING
+    LOG_DIRECTORY = config.LOG_DIRECTORY
 
     # Database
     # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
@@ -60,6 +62,15 @@ try:
     EMAIL_PORT = config.EMAIL_PORT
 except AttributeError as e:
     print("Please check you configuration file for the missing configuration variable:")
+    print("  {}".format(e))
+    exit(1)
+
+try:
+    if LOG_DIRECTORY:
+        # if not logging in stdout
+        os.makedirs(LOG_DIRECTORY, exist_ok=True)
+except Exception as e:
+    print("Impossible to create the log directory:")
     print("  {}".format(e))
     exit(1)
 

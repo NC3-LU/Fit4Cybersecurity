@@ -65,7 +65,7 @@ class Translation(models.Model, RightMixin):
     lang = models.CharField(max_length=2, choices=LANGUAGES, default=LOCAL_DEFAULT_LANG)
 
     class Meta:
-        unique_together = ("lang", "id")
+        unique_together = ("original", "lang")
 
     @staticmethod
     def _fields_base_read():
@@ -145,9 +145,11 @@ class SurveyQuestionAnswer(models.Model):
     aindex = models.IntegerField()
     uniqueAnswer = models.BooleanField(default=False)
     score = models.IntegerField(default=0)
+    bonus_points = models.IntegerField(default=0)
     atype = models.CharField(
         max_length=2, choices=ANSWER_TYPES, default=ANSWER_TYPES[0][0]
     )
+    dependant_answers = models.ManyToManyField("self", blank=True)
 
     def __str__(self):
         return self.label

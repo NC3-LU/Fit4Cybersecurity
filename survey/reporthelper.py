@@ -74,9 +74,14 @@ def is_recommendation_already_added(recommendation: str, recommendations: dict) 
     return False
 
 
-def calculateResult(user: SurveyUser, lang: str) -> Tuple[int, List[int], List[str]]:
+def calculateResult(
+    user: SurveyUser, lang: str
+) -> Tuple[int, int, List[int], List[str]]:
     total_questions_score = 0
     total_user_score = 0
+    total_bonus_points = 0
+    user_given_bonus_points = 0
+    user_bonus_points_percent = 0
     user_evaluations_per_section: Dict[int, int] = {}
     max_evaluations_per_section: Dict[int, int] = {}
     sections_list: List[str] = []
@@ -92,21 +97,31 @@ def calculateResult(user: SurveyUser, lang: str) -> Tuple[int, List[int], List[s
         if section_title not in sections_list:
             sections_list.append(section_title)
 
-    user_selected_answers = SurveyUserAnswer.objects.filter(
-        user=user, uvalue__gt=0
-    ).order_by("answer__question__qindex", "answer__aindex")
-    for user_selected_answer in user_selected_answers:
-        section_id = user_selected_answer.answer.question.section.id
+    user_answers = SurveyUserAnswer.objects.filter(user=user).order_by(
+        "answer__question__qindex", "answer__aindex"
+    )
+    for user_answer in user_answers:
 
-        total_user_score += user_selected_answer.answer.score
+        total_bonus_points += user_answer.answer.bonus_points
 
-        if section_id not in user_evaluations_per_section:
-            user_evaluations_per_section[section_id] = 0
-        user_evaluations_per_section[section_id] += user_selected_answer.answer.score
+        if user_answer.uvalue > 0:
+            section_id = user_answer.answer.question.section.id
 
-    # get the score in percent! with then 100 being total_questions_score
+            total_user_score += user_answer.answer.score
+
+            user_given_bonus_points += user_answer.answer.bonus_points
+
+            if section_id not in user_evaluations_per_section:
+                user_evaluations_per_section[section_id] = 0
+            user_evaluations_per_section[section_id] += user_answer.answer.score
+
+    # get the score in percent, with then 100 being total_questions_score
     if total_user_score > 0:
         total_user_score = round(total_user_score * 100 / total_questions_score)
+    if total_bonus_points > 0:
+        user_bonus_points_percent = round(
+            user_given_bonus_points * 100 / total_bonus_points
+        )
 
     user_evaluations: List[int] = []
     for section_id, user_evaluation_per_section in user_evaluations_per_section.items():
@@ -121,7 +136,7 @@ def calculateResult(user: SurveyUser, lang: str) -> Tuple[int, List[int], List[s
         else:
             user_evaluations.append(0)
 
-    return total_user_score, user_evaluations, sections_list
+    return total_user_score, user_bonus_points_percent, user_evaluations, sections_list
 
 
 def generate_chart_png(
@@ -147,20 +162,24 @@ def generate_chart_png(
 
     ax.set_varlabels(sections_list)
 
-    if not os.path.isdir(PICTURE_DIR):
-        os.makedirs(PICTURE_DIR)
-    file_name = os.path.join(PICTURE_DIR, "survey-{}.png".format(user.user_id))
-    try:
-        if output_type == "base64":
-            stringIObytes = io.BytesIO()
+    if output_type == "base64":
+        stringIObytes = io.BytesIO()
+        try:
             plt.savefig(stringIObytes, format="png")
-            stringIObytes.seek(0)
-            return base64.b64encode(stringIObytes.read()).decode()
-
-        plt.savefig(file_name)
-    except Exception as e:
-        raise Exception("{}".format(e))
-    finally:
-        plt.close()
-
-    return file_name
+        except Exception as e:
+            raise Exception("{}".format(e))
+        finally:
+            plt.close()
+        stringIObytes.seek(0)
+        return base64.b64encode(stringIObytes.read()).decode()
+    else:
+        if not os.path.isdir(PICTURE_DIR):
+            os.makedirs(PICTURE_DIR)
+        file_name = os.path.join(PICTURE_DIR, "survey-{}.png".format(user.user_id))
+        try:
+            plt.savefig(file_name)
+        except Exception as e:
+            raise Exception("{}".format(e))
+        finally:
+            plt.close()
+        return file_name

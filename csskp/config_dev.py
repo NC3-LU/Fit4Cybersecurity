@@ -1,3 +1,4 @@
+import os
 from django.utils.translation import gettext_lazy
 
 PUBLIC_URL = ""
@@ -64,7 +65,8 @@ CUSTOM = {
         "questions": True,
     },
     "report_texts": {
-        "introduction": gettext_lazy("""The objective of the self-assessment tool,
+        "introduction": gettext_lazy(
+            """The objective of the self-assessment tool,
             %(tool_name)s is to assess the maturity of an organization in terms of
             applicable good practices in the field of information security.
             <br /><br />
@@ -85,8 +87,10 @@ CUSTOM = {
             It should also be noted that the information you have provided to us will
             be recorded for statistical reasons.
             Due to the nature of the data, we can not identify you. Unless you later
-            contact us to do a Diagnostic CASES."""),
-        "description": gettext_lazy("""This self-assessment tool is named %(tool_name)s
+            contact us to do a Diagnostic CASES."""
+        ),
+        "description": gettext_lazy(
+            """This self-assessment tool is named %(tool_name)s
             to highlight the introduction to information security.
             It is also a prerequisite for doing a CASES Diagnostic: a minimum score of
             %(minimal_acceptable_score)s/100 is required.
@@ -97,13 +101,16 @@ CUSTOM = {
             analyzing your answers, recommendations have been provided.
             <br /><br />
             Finally, you can download a report, which will help you to communicate
-            the results to your suppliers, if necessary."""),
-        "results": gettext_lazy("""You have achieved %(SCORE)s/100 with your
+            the results to your suppliers, if necessary."""
+        ),
+        "results": gettext_lazy(
+            """You have achieved %(SCORE)s/100 with your
             answers. You must reach at least %(minimal_acceptable_score)s/100
             to be able to make a CASES Diagnosis.
             <br /><br />
             We remind you that this is a self-assessment and it is important
-            to understand that all the results can not in any way be exhaustive."""),
+            to understand that all the results can not in any way be exhaustive."""
+        ),
     },
     "sectors": [],
     "company_size": [],
@@ -116,6 +123,8 @@ EMAIL_HOST = "localhost"
 EMAIL_PORT = 25
 
 # Logging mechanism
+LOG_DIRECTORY = "./logs"
+LOG_FILE = "django.log"
 LOGGING = {
     "version": 1,
     "disable_existing_loggers": False,
@@ -124,7 +133,7 @@ LOGGING = {
         "file": {
             "level": "INFO",
             "class": "logging.FileHandler",
-            "filename": "./logs/django.log",
+            "filename": os.path.join(LOG_DIRECTORY, LOG_FILE),
             "formatter": "app",
         },
     },
