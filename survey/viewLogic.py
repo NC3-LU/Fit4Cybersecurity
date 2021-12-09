@@ -245,10 +245,6 @@ def handle_question_answers_request(
     )
     form.set_free_text_answer_id(free_text_answer_id)
 
-    nb_context_question = SurveyQuestion.objects.filter(
-        section__label__contains="__context"
-    ).count()
-
     return {
         "title": CUSTOM["tool_name"]
         + " - "
@@ -260,9 +256,7 @@ def handle_question_answers_request(
         "form": form,
         "action": "/survey/question/" + str(current_question.qindex),
         "user": user,
-        "current_question_index": current_question.qindex - nb_context_question
-        if current_question.qindex - nb_context_question > 0
-        else current_question.qindex,
+        "current_question_index": current_question.qindex,
         "previous_question_index": previous_question.qindex,
         "total_questions_num": total_questions_num,
     }
