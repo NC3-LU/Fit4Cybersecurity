@@ -2,9 +2,7 @@
 
 from django import forms
 from django.utils.translation import gettext_lazy as _
-from survey.globals import SECTOR_CHOICES, COMPANY_SIZE, COUNTRIES
 from survey.models import SurveyQuestionAnswer
-from django_countries.fields import CountryField
 import json
 
 
