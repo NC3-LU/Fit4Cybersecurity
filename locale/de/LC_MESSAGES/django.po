@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-12-09 13:40+0000\n"
-"PO-Revision-Date: 2021-12-09 13:18+0000\n"
+"PO-Revision-Date: 2021-12-09 14:12+0000\n"
 "Last-Translator: Juan Rocha <juan.rocha@cases.lu>\n"
 "Language-Team: German <https://translate.monarc.lu/projects/"
 "Fit4Cybersecurity/fit4ilr/de/>\n"
@@ -1592,7 +1592,7 @@ msgstr ""
 #: data/survey4operators/questions.json:934
 #: data/survey4operators/questions.json:935
 msgid "Risk Management"
-msgstr "=VLOOKUP(A:A,[1]DE!$A:$B,2,0)"
+msgstr "Risikomanagement"
 
 #: data/fit4ilr/questions.json:11 data/survey4operators/questions.json:11
 msgid "We do not really have one."
@@ -2295,12 +2295,12 @@ msgstr ""
 
 #: data/fit4privacy/questions.json:3 data/fit4privacy/questions.json:125
 msgid "Personal Data Processing"
-msgstr "=VLOOKUP(A:A,[1]DE!$A:$B,2,0)"
+msgstr "Geschäftsbetrieb und Verarbeitung personenbezogener Daten"
 
 #: data/fit4privacy/questions.json:4 data/fit4privacy/questions.json:126
 #: data/fit4privacy/questions.json:192
 msgid "Personal Data Management"
-msgstr "=VLOOKUP(A:A,[1]DE!$A:$B,2,0)"
+msgstr "Personal Data Management"
 
 #: data/fit4privacy/questions.json:20
 msgid ""
@@ -2314,10 +2314,8 @@ msgid ""
 msgstr ""
 
 #: data/fit4privacy/questions.json:23
-#, fuzzy
-#| msgid "No, we do not process any sensitive personal data at all."
 msgid "We don't process personal data at all."
-msgstr "=VLOOKUP(A:A,[1]DE!$A:$B,2,0)"
+msgstr "Wir verarbeiten überhaupt keine personenbezogenen Daten."
 
 #: data/fit4privacy/questions.json:36 data/fit4privacy/questions.json:68
 msgid ""
@@ -2336,7 +2334,9 @@ msgstr ""
 
 #: data/fit4privacy/questions.json:39
 msgid "We process some personal data (but very limited) of employees."
-msgstr "=VLOOKUP(A:A,[1]DE!$A:$B,2,0)"
+msgstr ""
+"Wir verarbeiten einige personenbezogene Daten von Mitarbeitern (allerdings "
+"im sehr begrenzten Umfang)."
 
 #: data/fit4privacy/questions.json:52 data/fit4privacy/questions.json:84
 #: data/fit4privacy/questions.json:100 data/fit4privacy/questions.json:116
@@ -2356,42 +2356,53 @@ msgstr ""
 
 #: data/fit4privacy/questions.json:55
 msgid "We process a lot of personal data of employees."
-msgstr "=VLOOKUP(A:A,[1]DE!$A:$B,2,0)"
+msgstr "Wir verarbeiten eine Menge personenbezogener Daten von Mitarbeitern."
 
 #: data/fit4privacy/questions.json:71
 msgid ""
 "We process some personal data of clients/users, and we have under 500 "
 "clients."
-msgstr "=VLOOKUP(A:A,[1]DE!$A:$B,2,0)"
+msgstr ""
+"Wir verarbeiten einige personenbezogene Daten von Kunden/Benutzern, und wir "
+"haben weniger als 500 Kunden/Benutzen."
 
 #: data/fit4privacy/questions.json:87
 msgid ""
 "We process some personal data of clients/users, and we have between 500 and "
 "10 000 clients/users."
-msgstr "=VLOOKUP(A:A,[1]DE!$A:$B,2,0)"
+msgstr ""
+"Wir verarbeiten einige personenbezogene Daten von Kunden/Benutzern, und wir "
+"haben zwischen 500 und 10.000 Kunden/Benutzer."
 
 #: data/fit4privacy/questions.json:103
 msgid ""
 "We process some personal data of clients/users, and we have over 10 000 "
 "clients/users."
-msgstr "=VLOOKUP(A:A,[1]DE!$A:$B,2,0)"
+msgstr ""
+"Wir verarbeiten einige personenbezogene Daten von Kunden/Benutzern, und wir "
+"haben mehr als 10.000 Kunden/Benutzer."
 
 #: data/fit4privacy/questions.json:119
 msgid ""
 "We monitor behaviour of data subjects as part of our business, and they are "
 "a lot."
-msgstr "=VLOOKUP(A:A,[1]DE!$A:$B,2,0)"
+msgstr ""
+"Im Rahmen unserer Geschäfte überwachen wir das Verhalten von betroffenen "
+"Personen, von denen es viele gibt."
 
 #: data/fit4privacy/questions.json:122
 msgid ""
 "If your company processes personal data, how much personal data (i.e. of how "
 "many data subjects, data quantity per data subject on average) does it "
 "process:"
-msgstr "=VLOOKUP(A:A,[1]DE!$A:$B,2,0)"
+msgstr ""
+"Wenn Ihr Unternehmen personenbezogene Daten verarbeitet, wie viele "
+"personenbezogene Daten (d. h. von wie vielen betroffenen Personen, welche "
+"durchschnittliche Datenmenge pro betroffene Person) verarbeitet es?"
 
 #: data/fit4privacy/questions.json:137
 msgid "No, we do not process any sensitive personal data at all."
-msgstr "=VLOOKUP(A:A,[1]DE!$A:$B,2,0)"
+msgstr "Nein, wir verarbeiten überhaupt keine sensiblen Daten."
 
 #: data/fit4privacy/questions.json:150
 msgid ""
@@ -2407,7 +2418,9 @@ msgstr ""
 msgid ""
 "We do not process any sensitive data from the above but we do process some "
 "criminal records when hiring."
-msgstr "=VLOOKUP(A:A,[1]DE!$A:$B,2,0)"
+msgstr ""
+"Wir verarbeiten keine sensiblen Daten aus der obigen Liste, aber bei "
+"Neueinstellungen verarbeiten wir einige Aufzeichnungen über Vorstrafen."
 
 #: data/fit4privacy/questions.json:166 data/fit4privacy/questions.json:182
 msgid ""
@@ -2424,11 +2437,11 @@ msgstr ""
 
 #: data/fit4privacy/questions.json:169
 msgid "Yes, we process at least one of the above."
-msgstr "=VLOOKUP(A:A,[1]DE!$A:$B,2,0)"
+msgstr "Ja, mindestens eine der oben genannten Kategorien."
 
 #: data/fit4privacy/questions.json:185
 msgid "We do not know if we do."
-msgstr "=VLOOKUP(A:A,[1]DE!$A:$B,2,0)"
+msgstr "Wir wissen nicht, ob wir das tun."
 
 #: data/fit4privacy/questions.json:188
 msgid ""
@@ -2442,7 +2455,7 @@ msgstr ""
 
 #: data/fit4privacy/questions.json:191
 msgid "Register of Processing activities"
-msgstr "=VLOOKUP(A:A,[1]DE!$A:$B,2,0)"
+msgstr "Datenverzeichnis"
 
 #: data/fit4privacy/questions.json:208
 msgid ""
@@ -2458,7 +2471,7 @@ msgstr ""
 
 #: data/fit4privacy/questions.json:211
 msgid "Such a registry is not needed in our business."
-msgstr "=VLOOKUP(A:A,[1]DE!$A:$B,2,0)"
+msgstr "Ein solches Register ist in unserem Unternehmen nicht erforderlich."
 
 #: data/fit4privacy/questions.json:224
 msgid ""
@@ -2475,7 +2488,9 @@ msgstr ""
 
 #: data/fit4privacy/questions.json:227
 msgid "It is needed but we have no clear idea what exactly to list there."
-msgstr "=VLOOKUP(A:A,[1]DE!$A:$B,2,0)"
+msgstr ""
+"Es ist erforderlich, aber wir haben keine klare Vorstellung davon, wie viel "
+"und was genau darin aufgezeichnet werden soll."
 
 #: data/fit4privacy/questions.json:240
 msgid ""
@@ -2493,7 +2508,10 @@ msgstr ""
 msgid ""
 "It is needed but we do not know the status right now. We let the data "
 "privacy responsible handle it, as it is his/her job."
-msgstr "=VLOOKUP(A:A,[1]DE!$A:$B,2,0)"
+msgstr ""
+"Es ist erforderlich, aber wir kennen seinen Status nicht. Wir überlassen die "
+"Ergreifung von Maßnahmen dem/der Datenschutzverantwortlichen, in dessen/"
+"deren Verantwortungsbereich es fällt."
 
 #: data/fit4privacy/questions.json:256
 msgid ""
@@ -2509,7 +2527,9 @@ msgstr ""
 msgid ""
 "We have started inventorying but we do not have a full record of processing "
 "activities yet."
-msgstr "=VLOOKUP(A:A,[1]DE!$A:$B,2,0)"
+msgstr ""
+"Wir haben damit begonnen, unsere Verarbeitungstätigkeiten zu "
+"inventarisieren, aber zurzeit besitzen wir kein vollständiges Verzeichnis."
 
 #: data/fit4privacy/questions.json:272
 msgid ""
@@ -2525,22 +2545,26 @@ msgstr ""
 msgid ""
 "We need it and we do have a full record of processing activities. It is "
 "maintained and regularly updated."
-msgstr "=VLOOKUP(A:A,[1]DE!$A:$B,2,0)"
+msgstr ""
+"Wir benötigen und wir besitzen ein vollständiges Verzeichnis unserer "
+"Verarbeitungstätigkeiten. Es wird regelmäßig auf dem neuesten Stand gehalten."
 
 #: data/fit4privacy/questions.json:278
 msgid ""
 "Do you need and do you have a registry (or record) of the personal data "
 "processing that happens within your company?"
-msgstr "=VLOOKUP(A:A,[1]DE!$A:$B,2,0)"
+msgstr ""
+"Benötigen Sie bzw. haben Sie ein Register (oder Verzeichnis), in dem die in "
+"Ihrem Unternehmen verarbeiteten personenbezogenen Daten aufgezeichnet werden?"
 
 #: data/fit4privacy/questions.json:281 data/fit4privacy/questions.json:282
 #: data/fit4privacy/questions.json:323 data/fit4privacy/questions.json:324
 msgid "Transparency"
-msgstr "=VLOOKUP(A:A,[1]DE!$A:$B,2,0)"
+msgstr "Transparenz"
 
 #: data/fit4privacy/questions.json:293
 msgid "No, as we don't have a website."
-msgstr ""
+msgstr "Nein, da wir keine Webseite haben."
 
 #: data/fit4privacy/questions.json:306
 msgid ""
@@ -2563,18 +2587,23 @@ msgstr ""
 
 #: data/fit4privacy/questions.json:309
 msgid "No, we have had no change on the website yet related to GDPR."
-msgstr "=VLOOKUP(A:A,[1]DE!$A:$B,2,0)"
+msgstr ""
+"Nein, bislang wurde die Website noch nicht im Zusammenhang mit der DSGVO "
+"geändert."
 
 #: data/fit4privacy/questions.json:317
 msgid "Yes, we have updated the website with regards to GDPR."
-msgstr "=VLOOKUP(A:A,[1]DE!$A:$B,2,0)"
+msgstr "Ja, wir haben die Website im Hinblick auf die DSGVO aktualisiert."
 
 #: data/fit4privacy/questions.json:320
 msgid ""
 "Have you updated your website with respect to data protection, after 25th "
 "May 2018? (e.g., anything related to the privacy notice, GDPR disclaimer, "
 "etc)"
-msgstr "=VLOOKUP(A:A,[1]DE!$A:$B,2,0)"
+msgstr ""
+"Haben Sie Ihre Website seit dem 25. Mai 2018 in Bezug auf Datenschutz "
+"aktualisiert (zum Beispiel im Zusammenhang mit Datenschutzhinweis, DSGVO-"
+"Erklärung usw.)?"
 
 #: data/fit4privacy/questions.json:340
 msgid ""
@@ -2596,7 +2625,7 @@ msgstr ""
 
 #: data/fit4privacy/questions.json:343
 msgid "We have given no information whatsoever."
-msgstr "=VLOOKUP(A:A,[1]DE!$A:$B,2,0)"
+msgstr "Wir haben sie in keiner Weise informiert."
 
 #: data/fit4privacy/questions.json:356 data/fit4privacy/questions.json:404
 #: data/fit4privacy/questions.json:420
@@ -2616,41 +2645,50 @@ msgstr ""
 
 #: data/fit4privacy/questions.json:359
 msgid "On the website we added a GDPR note."
-msgstr "=VLOOKUP(A:A,[1]DE!$A:$B,2,0)"
+msgstr "Wir haben auf der Website einen DSGVO-Hinweis hinzugefügt."
 
 #: data/fit4privacy/questions.json:372 data/fit4privacy/questions.json:388
 msgid ""
 "Make sure all data subjects are covered (clients AND employees), and that "
 "your company follows the points mentioned by Art. 13 and 14 of GDPR."
-msgstr "=VLOOKUP(A:A,[1]DE!$A:$B,2,0)"
+msgstr ""
+"Vergewissern Sie sich, dass alle betroffenen Personen (Kunden UND "
+"Mitarbeiter) einbezogen werden und dass Ihr Unternehmen die in Art. 13 und "
+"14 DSGVO genannten Punkte befolgt."
 
 #: data/fit4privacy/questions.json:375
 msgid "We updated terms and conditions for clients and contractors."
-msgstr "=VLOOKUP(A:A,[1]DE!$A:$B,2,0)"
+msgstr ""
+"Wir haben die Geschäftsbedingungen für Kunden und Auftragnehmer aktualisiert."
 
 #: data/fit4privacy/questions.json:391
 msgid ""
 "We updated contracts with our employees / we had them sign an addendum on "
 "GDPR."
-msgstr "=VLOOKUP(A:A,[1]DE!$A:$B,2,0)"
+msgstr ""
+"Wir haben die Arbeitsverträge unserer Mitarbeiter aktualisiert/unsere "
+"Mitarbeiter gebeten, einen Zusatz zu unterzeichnen."
 
 #: data/fit4privacy/questions.json:407
 msgid "We added stickers in our areas with video surveillance."
-msgstr "=VLOOKUP(A:A,[1]DE!$A:$B,2,0)"
+msgstr "In Bereichen mit Videoüberwachung haben wir Aufkleber angebracht."
 
 #: data/fit4privacy/questions.json:423
 msgid "We started an intranet page for employees on this topic."
-msgstr "=VLOOKUP(A:A,[1]DE!$A:$B,2,0)"
+msgstr ""
+"Wir haben eine Intranetseite für Mitarbeiter zu diesem Thema eingerichtet."
 
 #: data/fit4privacy/questions.json:426
 msgid ""
 "How did you inform the data subjects about the processing of their personal "
 "data performed by your company? "
-msgstr "=VLOOKUP(A:A,[1]DE!$A:$B,2,0) "
+msgstr ""
+"Wie haben Sie betroffene Personen über die Verarbeitung ihrer "
+"personenbezogenen Daten durch Ihr Unternehmen informiert? "
 
 #: data/fit4privacy/questions.json:429 data/fit4privacy/questions.json:479
 msgid "(Some) Principles of Processing"
-msgstr "=VLOOKUP(A:A,[1]DE!$A:$B,2,0)"
+msgstr "Einige Prinzipien der Verarbeitung"
 
 #: data/fit4privacy/questions.json:430 data/fit4privacy/questions.json:480
 msgid "Principles of processing"
@@ -2668,12 +2706,12 @@ msgid ""
 msgstr ""
 
 #: data/fit4privacy/questions.json:449
-#, fuzzy
-#| msgid "We have a legal basis for all the personal data we are processing."
 msgid ""
 "We don't know if we have a legal basis for most of the personal data "
 "processing we perform."
-msgstr "=VLOOKUP(A:A,[1]DE!$A:$B,2,0)"
+msgstr ""
+"Wir wissen nicht, ob wir für die von uns durchgeführte Verarbeitung von "
+"personenbezogenen Daten eine rechtliche Grundlage haben."
 
 #: data/fit4privacy/questions.json:462
 msgid ""
@@ -2691,18 +2729,26 @@ msgstr ""
 msgid ""
 "There is a chance we process some data without always a legal basis, but it "
 "shouldn't be a lot."
-msgstr "=VLOOKUP(A:A,[1]DE!$A:$B,2,0)"
+msgstr ""
+"Es besteht die Möglichkeit, dass wir einige Daten ohne rechtliche Grundlage "
+"verarbeiten, jedoch nur selten."
 
 #: data/fit4privacy/questions.json:473
 msgid "We have a legal basis for all the personal data we are processing."
-msgstr "=VLOOKUP(A:A,[1]DE!$A:$B,2,0)"
+msgstr ""
+"Wir haben für unsere gesamte Verarbeitung von personenbezogenen Daten eine "
+"rechtliche Grundlage."
 
 #: data/fit4privacy/questions.json:476
 msgid ""
 "To what extent do you know if your company is processing personal data with "
 "a legal basis (one of: contract execution, legal requirement, public/vital "
 "interest, legitimate interest, consent)?"
-msgstr "=VLOOKUP(A:A,[1]DE!$A:$B,2,0)"
+msgstr ""
+"Wie viele der Aktivitäten zur Verarbeitung personenbezogener Daten in Ihrem "
+"Unternehmen haben eine rechtliche Grundlage (wie Erfüllung eines Vertrags, "
+"gesetzliche Anforderungen, öffentliches/lebenswichtiges Interesse, "
+"berechtigtes Interesse, Einwilligung)?"
 
 #: data/fit4privacy/questions.json:496
 msgid ""
@@ -2719,7 +2765,7 @@ msgstr ""
 
 #: data/fit4privacy/questions.json:499
 msgid "We don't care, we keep this data forever."
-msgstr ""
+msgstr "Darum kümmern wir uns nicht, wir bewahren diese Daten unbegrenzt auf."
 
 #: data/fit4privacy/questions.json:512
 msgid ""
@@ -2738,7 +2784,7 @@ msgstr ""
 
 #: data/fit4privacy/questions.json:515
 msgid "We don't know for sure how to deal with it."
-msgstr ""
+msgstr "Wir sind uns nicht sicher, wie wir damit umgehen sollen."
 
 #: data/fit4privacy/questions.json:528
 msgid ""
@@ -2753,26 +2799,27 @@ msgstr ""
 
 #: data/fit4privacy/questions.json:531
 msgid "We have fixed some storage limits for certain data types."
-msgstr "=VLOOKUP(A:A,[1]DE!$A:$B,2,0)"
+msgstr "Für einige Datentypen haben wir die Dauer der Speicherung begrenzt."
 
 #: data/fit4privacy/questions.json:539
 msgid "We have data storage limits that are enforced on personal data."
-msgstr "=VLOOKUP(A:A,[1]DE!$A:$B,2,0)"
+msgstr ""
+"Für personenbezogene Daten setzen wir eine maximale Speicherdauer durch."
 
 #: data/fit4privacy/questions.json:542
 msgid ""
 "How do you deal with setting the limits for the duration of personal data "
 "processing?"
-msgstr "=VLOOKUP(A:A,[1]DE!$A:$B,2,0)"
+msgstr "Wie begrenzen Sie die Dauer der Verarbeitung personenbezogener Daten?"
 
 #: data/fit4privacy/questions.json:545
 msgid "Data Breaches"
-msgstr "=VLOOKUP(A:A,[1]DE!$A:$B,2,0)"
+msgstr "Datenschutzverstöße"
 
 #: data/fit4privacy/questions.json:546 data/fit4privacy/questions.json:636
 #: data/fit4privacy/questions.json:734
 msgid "Data breaches, Data rights, DPO"
-msgstr "=VLOOKUP(A:A,[1]DE!$A:$B,2,0)"
+msgstr "Datenschutzverstöße, DSB und Rechte von betroffenen Personen"
 
 #: data/fit4privacy/questions.json:562 data/fit4privacy/questions.json:578
 msgid ""
@@ -2793,13 +2840,15 @@ msgstr ""
 
 #: data/fit4privacy/questions.json:565
 msgid "No idea, as nothing like that has ever happened to our knowledge."
-msgstr "=VLOOKUP(A:A,[1]DE!$A:$B,2,0)"
+msgstr "Keine Ahnung, so etwas ist nach unserem Wissen noch nie passiert."
 
 #: data/fit4privacy/questions.json:581
 msgid ""
 "The reaction will be entirely case by case, as we have no specific procedure "
 "to follow in this situation."
-msgstr "=VLOOKUP(A:A,[1]DE!$A:$B,2,0)"
+msgstr ""
+"Die Reaktion wird von Fall zu Fall abgewägt, weil wir in dieser Situation "
+"kein spezifisches Verfahren haben, dem wir folgen müssen."
 
 #: data/fit4privacy/questions.json:594
 msgid ""
@@ -2823,7 +2872,9 @@ msgstr ""
 msgid ""
 "We would handle it internally based on our security incident management "
 "procedures."
-msgstr "=VLOOKUP(A:A,[1]DE!$A:$B,2,0)"
+msgstr ""
+"Wir behandeln so etwas intern auf Grundlage unserer Verfahrensweisen zur "
+"Reaktion auf Sicherheitsvorfälle."
 
 #: data/fit4privacy/questions.json:610 data/fit4privacy/questions.json:626
 msgid ""
@@ -2838,22 +2889,29 @@ msgstr ""
 msgid ""
 "We would report it to the national data protection authority within 72h, and "
 "the data subjects involved afterwards, if there are risks that concern them."
-msgstr "=VLOOKUP(A:A,[1]DE!$A:$B,2,0)"
+msgstr ""
+"Wir melden es innerhalb von 72 Stunden der nationalen Datenschutzbehörde und "
+"gegebenenfalls den betroffenen Personen."
 
 #: data/fit4privacy/questions.json:629
 msgid "We would only immediately inform the affected data subjects."
-msgstr "=VLOOKUP(A:A,[1]DE!$A:$B,2,0)"
+msgstr "Wir würden unverzüglich nur die betroffenen Personen informieren."
 
 #: data/fit4privacy/questions.json:632
 msgid ""
 "How would your company handle an incident that could be considered a "
 "personal data breach (e.g., accidental loss, destruction, alteration or "
 "theft of data that also is personal data)?"
-msgstr "=VLOOKUP(A:A,[1]DE!$A:$B,2,0)"
+msgstr ""
+"Wie würde Ihr Unternehmen auf einen Vorfall reagieren, der als Verstoß gegen "
+"den Schutz personenbezogener Daten betrachtet werden kann (z. B. "
+"versehentlicher Verlust, Vernichtung, Änderung oder Diebstahl von "
+"personenbezogenen Daten)?"
 
 #: data/fit4privacy/questions.json:635 data/fit4privacy/questions.json:733
 msgid "Data Protection Responsible and Data Subject Rights"
-msgstr "=VLOOKUP(A:A,[1]DE!$A:$B,2,0)"
+msgstr ""
+"Verantwortlicher für den Datenschutz und Rechte von betroffenen Personen"
 
 #: data/fit4privacy/questions.json:652
 msgid ""
@@ -2867,11 +2925,10 @@ msgid ""
 msgstr ""
 
 #: data/fit4privacy/questions.json:655
-#, fuzzy
-#| msgid ""
-#| "No idea what we have in place, but we do have transfers of personal data."
 msgid "Nothing, it would not happen to us as we don't have any personal data."
-msgstr "=VLOOKUP(A:A,[1]DE!$A:$B,2,0)"
+msgstr ""
+"Das würde nicht passieren, da wir keine persönlichen Daten von externen "
+"Quellen haben."
 
 #: data/fit4privacy/questions.json:668
 msgid ""
@@ -2885,7 +2942,9 @@ msgstr ""
 msgid ""
 "We would handle it to the legal department representative, to handle in the "
 "near future."
-msgstr "=VLOOKUP(A:A,[1]DE!$A:$B,2,0)"
+msgstr ""
+"Wir würden ihn an eine(n) Vertreter(in) der Rechtsabteilung weiterleiten, "
+"damit diese(r) sich in naher Zukunft darum kümmert."
 
 #: data/fit4privacy/questions.json:684
 msgid ""
@@ -2901,11 +2960,12 @@ msgstr ""
 msgid ""
 "It would arrive on the agenda of the privacy responsible, to handle in the "
 "near future."
-msgstr "=VLOOKUP(A:A,[1]DE!$A:$B,2,0)"
+msgstr ""
+"Der/die Datenschutzverantwortliche würde sich in naher Zukunft darum kümmern."
 
 #: data/fit4privacy/questions.json:695
 msgid "We would need to react within one month."
-msgstr "=VLOOKUP(A:A,[1]DE!$A:$B,2,0)"
+msgstr "Wir müssten innerhalb eines Monats darauf reagieren."
 
 #: data/fit4privacy/questions.json:708
 msgid ""
@@ -2921,7 +2981,9 @@ msgstr ""
 msgid ""
 "We would directly do what the person asked us to, regarding their personal "
 "data."
-msgstr "=VLOOKUP(A:A,[1]DE!$A:$B,2,0)"
+msgstr ""
+"Wir würden den Wunsch der Person in Bezug auf ihre persönlichen Daten sofort "
+"in die Tat umsetzen."
 
 #: data/fit4privacy/questions.json:724
 msgid ""
@@ -2935,13 +2997,15 @@ msgstr ""
 
 #: data/fit4privacy/questions.json:727
 msgid "We would ask the person to pay a fee."
-msgstr "=VLOOKUP(A:A,[1]DE!$A:$B,2,0)"
+msgstr "Wir würden die Person zur Zahlung einer Gebühr auffordern."
 
 #: data/fit4privacy/questions.json:730
 msgid ""
 "How would your company handle a request for the exercise of a data subject "
 "right, if that would appear now in your mailbox?"
-msgstr "=VLOOKUP(A:A,[1]DE!$A:$B,2,0)"
+msgstr ""
+"Wie würde sich Ihr Unternehmen verhalten, wenn in seinem Posteingang ein "
+"Antrag auf Ausübung eines der Rechte von betroffenen Personen eintrifft?"
 
 #: data/fit4privacy/questions.json:750 data/fit4privacy/questions.json:766
 #: data/fit4privacy/questions.json:790
@@ -2964,29 +3028,36 @@ msgstr ""
 #: data/fit4privacy/questions.json:753
 msgid "We don't need either of the two"
 msgstr ""
+"Diese beiden Positionen müssen in unserem Unternehmen nicht besetzt werden."
 
 #: data/fit4privacy/questions.json:769
 msgid "We don't yet have one as we are unsure if we need a DPO."
 msgstr ""
+"Wir haben noch keine(n) DSB, da wir nicht sicher sind, ob wir eine(n) "
+"benötigen."
 
 #: data/fit4privacy/questions.json:777
 msgid "We have an official DPO."
-msgstr "=VLOOKUP(A:A,[1]DE!$A:$B,2,0)"
+msgstr "Wir haben eine(n) offizielle(n) DSB."
 
 #: data/fit4privacy/questions.json:793
 msgid "We have a privacy responsible but not a formal DPO."
-msgstr "=VLOOKUP(A:A,[1]DE!$A:$B,2,0)"
+msgstr ""
+"Wir haben eine(n) Datenschutzverantwortliche(n), aber keine(n) offizielle(n) "
+"DBS."
 
 #: data/fit4privacy/questions.json:796
 msgid ""
 "Has your company appointed a privacy responsible or a Data Protection "
 "Officer (DPO)?"
-msgstr "=VLOOKUP(A:A,[1]DE!$A:$B,2,0)"
+msgstr ""
+"Hat Ihr Unternehmen eine(n) Datenschutzverantwortliche(n) oder "
+"Datenschutzbeauftragte(n) ernannt?"
 
 #: data/fit4privacy/questions.json:799 data/fit4privacy/questions.json:889
 #: data/fit4privacy/questions.json:947 data/fit4privacy/questions.json:1021
 msgid "Management of the Risks of the Organisation"
-msgstr "=VLOOKUP(A:A,[1]DE!$A:$B,2,0)"
+msgstr "Risikomanagement für die Gesellschaft"
 
 #: data/fit4privacy/questions.json:816
 msgid ""
@@ -3003,7 +3074,7 @@ msgstr ""
 
 #: data/fit4privacy/questions.json:819
 msgid "None whatsoever."
-msgstr "=VLOOKUP(A:A,[1]DE!$A:$B,2,0)"
+msgstr "Keine, da wir keine personenbezogenen Daten haben."
 
 #: data/fit4privacy/questions.json:832
 msgid ""
@@ -3025,7 +3096,7 @@ msgstr ""
 
 #: data/fit4privacy/questions.json:835
 msgid "A high-level analysis of GDPR risks."
-msgstr "=VLOOKUP(A:A,[1]DE!$A:$B,2,0)"
+msgstr "Wir haben eine allgemeinere DSGVO Risikoanalyse."
 
 #: data/fit4privacy/questions.json:848
 msgid ""
@@ -3042,7 +3113,9 @@ msgstr ""
 msgid ""
 "We have performed at least one data protection impact assessment after GDPR "
 "came into force."
-msgstr "=VLOOKUP(A:A,[1]DE!$A:$B,2,0)"
+msgstr ""
+"Seit Inkrafttreten der DSGVO haben wir mindestens eine Datenschutz-"
+"Folgenabschätzung durchgeführt."
 
 #: data/fit4privacy/questions.json:864
 msgid ""
@@ -3059,7 +3132,10 @@ msgstr ""
 msgid ""
 "We performed several data protection impact assessments before GDPR came "
 "into force, and the authority agreed with them so we keep them unchanged."
-msgstr "=VLOOKUP(A:A,[1]DE!$A:$B,2,0)"
+msgstr ""
+"Schon vor Inkrafttreten der DSGVO haben wir mehrere Datenschutz-"
+"Folgenabschätzungen durchgeführt, und die Behörde hat sie abgenommen, "
+"weswegen wir sie seitdem unverändert beibehalten."
 
 #: data/fit4privacy/questions.json:880
 msgid ""
@@ -3073,19 +3149,19 @@ msgstr ""
 
 #: data/fit4privacy/questions.json:883
 msgid "We have a risk analysis related to information security."
-msgstr "=VLOOKUP(A:A,[1]DE!$A:$B,2,0)"
+msgstr "Wir haben eine Risikoanalyse in Bezug auf Informationssicherheit."
 
 #: data/fit4privacy/questions.json:886
 msgid ""
 "What kind of risk analyses have you performed in what concerns GDPR and "
 "information security risks?"
-msgstr "=VLOOKUP(A:A,[1]DE!$A:$B,2,0)"
+msgstr ""
+"Welche Arten der Risikoanalyse haben Sie hinsichtlich der Datenschutzrisiken "
+"für betroffene Personen durchgeführt"
 
 #: data/fit4privacy/questions.json:901
-#, fuzzy
-#| msgid "None, but we have some contracts."
 msgid "None, we don't have any such contracts."
-msgstr "=VLOOKUP(A:A,[1]DE!$A:$B,2,0)"
+msgstr "Keine, wir haben keine derartigen Verträge."
 
 #: data/fit4privacy/questions.json:914 data/fit4privacy/questions.json:930
 msgid ""
@@ -3108,21 +3184,24 @@ msgstr ""
 
 #: data/fit4privacy/questions.json:917
 msgid "None, but we have some contracts."
-msgstr "=VLOOKUP(A:A,[1]DE!$A:$B,2,0)"
+msgstr "Keine, wir haben aber einige Verträge dieser Art."
 
 #: data/fit4privacy/questions.json:933
 msgid "Some of the contracts but not all."
-msgstr "=VLOOKUP(A:A,[1]DE!$A:$B,2,0)"
+msgstr "Einige der Verträge, aber nicht alle."
 
 #: data/fit4privacy/questions.json:941
 msgid "All of the contracts in place have been reviewed and updated."
-msgstr "=VLOOKUP(A:A,[1]DE!$A:$B,2,0)"
+msgstr "Alle gültigen Verträge wurden überprüft und aktualisiert."
 
 #: data/fit4privacy/questions.json:944
 msgid ""
 "How many contracts with contractors/ partners have you reviewed after May "
 "2018, with respect to GDPR clauses and personal data being processed?"
-msgstr "=VLOOKUP(A:A,[1]DE!$A:$B,2,0)"
+msgstr ""
+"Wie viele Verträge mit Auftragnehmern/Partnern haben Sie nach Mai 2018 "
+"hinsichtlich der DSGVO-Klauseln und der verarbeiteten personenbezogenen "
+"Daten überprüft?"
 
 #: data/fit4privacy/questions.json:964 data/fit4privacy/questions.json:980
 msgid ""
@@ -3144,7 +3223,7 @@ msgstr ""
 
 #: data/fit4privacy/questions.json:967
 msgid "We don't enable it."
-msgstr ""
+msgstr "Darum kümmern wir uns nicht."
 
 #: data/fit4privacy/questions.json:983
 #, fuzzy
@@ -3167,7 +3246,10 @@ msgstr ""
 msgid ""
 "We have some general legal paperwork on privacy by design and by default "
 "that is signed when new projects or products are launched."
-msgstr "=VLOOKUP(A:A,[1]DE!$A:$B,2,0)"
+msgstr ""
+"Wir haben einige allgemeine rechtliche Dokumente zum datenschutzfreundliche "
+"Voreinstellungen, die beim Start neuer Projekte oder Produkte unterzeichnet "
+"werden."
 
 #: data/fit4privacy/questions.json:1012
 msgid ""
@@ -3187,50 +3269,66 @@ msgid ""
 "We look briefly at what personal data will be used, and decide in relation "
 "to that what model of privacy by design and by default will be used in new "
 "projects or products."
-msgstr "=VLOOKUP(A:A,[1]DE!$A:$B,2,0)"
+msgstr ""
+"Wir werfen einen kurzen Blick auf die verwendeten personenbezogenen Daten "
+"und entscheiden auf dieser Grundlage darauf, welche datenschutzfreundliche "
+"Voreinstellungen in neuen Projekten oder Produkten verwendet wird."
 
 #: data/fit4privacy/questions.json:1018
 msgid ""
 "How do you enable privacy by default and by design in your new projects or "
 "products?"
-msgstr "=VLOOKUP(A:A,[1]DE!$A:$B,2,0)"
+msgstr ""
+"Wie gewährleisten Sie in neuen Projekten oder Produkten Datenschutz durch "
+"datenschutzfreundliche Voreinstellungen (Privacy by Default) und Datenschutz "
+"durch Technikgestaltung (Privacy by Design)?"
 
 #: data/fit4privacy/questions.json:1033
 msgid "We have no data transfers outside of EEA."
-msgstr "=VLOOKUP(A:A,[1]DE!$A:$B,2,0)"
+msgstr "Wir übertragen keine Daten an Orte außerhalb des EWR."
 
 #: data/fit4privacy/questions.json:1041
 msgid ""
 "We are transferring to 1/more adequacy decision countries, so nothing else "
 "to do for us."
-msgstr "=VLOOKUP(A:A,[1]DE!$A:$B,2,0)"
+msgstr ""
+"Wir übertragen Daten in ein Land/mehrere Länder auf Grundlage eines "
+"Angemessenheitsbeschlusses, wir müssen also nichts weiter tun."
 
 #: data/fit4privacy/questions.json:1049
 msgid ""
 "We have Standard Contractual Clauses or Binding Corporate Rules in place."
-msgstr "=VLOOKUP(A:A,[1]DE!$A:$B,2,0)"
+msgstr ""
+"Wir haben Standardvertragsklauseln oder verbindliche interne "
+"Datenschutzvorschriften."
 
 #: data/fit4privacy/questions.json:1057
 msgid ""
 "No idea what we have in place, but we do have transfers of personal data."
-msgstr "=VLOOKUP(A:A,[1]DE!$A:$B,2,0)"
+msgstr ""
+"Mir ist nicht bekannt, ob und welche Vorschriften gelten, aber wir "
+"übertragen definitiv personenbezogene Daten."
 
 #: data/fit4privacy/questions.json:1060
 msgid ""
 "If there are any transfers of personal data processed by your company, to "
 "the outside of the the European Economic Area (EU plus Iceland, "
 "Lichtenstein, Norway), what are the legal measures of protection in place?"
-msgstr "=VLOOKUP(A:A,[1]DE!$A:$B,2,0)"
+msgstr ""
+"Welche rechtlichen Schutzmaßnahmen bestehen für den Fall, dass von Ihrem "
+"Unternehmen verarbeitete personenbezogene Daten an einen Ort außerhalb des "
+"Europäischen Wirtschaftsraums (EU plus Island, Liechtenstein, Norwegen) "
+"übertragen werden?"
 
 #: data/fit4privacy/questions.json:1063 data/fit4privacy/questions.json:1129
 #: data/fit4privacy/questions.json:1179
 msgid "Information Security"
-msgstr "=VLOOKUP(A:A,[1]DE!$A:$B,2,0)"
+msgstr "Informationssicherheit"
 
 #: data/fit4privacy/questions.json:1064 data/fit4privacy/questions.json:1130
 #: data/fit4privacy/questions.json:1180
 msgid "Cybersecurity"
-msgstr "=VLOOKUP(A:A,[1]DE!$A:$B,2,0)"
+msgstr "Informationssicherheit"
 
 #: data/fit4privacy/questions.json:1080
 msgid ""
@@ -3246,7 +3344,7 @@ msgstr ""
 
 #: data/fit4privacy/questions.json:1083
 msgid "We don't handle them."
-msgstr ""
+msgstr "Wir beachten sie nicht."
 
 #: data/fit4privacy/questions.json:1096
 msgid ""
@@ -3264,6 +3362,8 @@ msgstr ""
 msgid ""
 "We have performed at some point a risk analysis but we don't iterate on it."
 msgstr ""
+"Wir haben eine einmalige Risikoanalyse durchgeführt, diese aber nicht "
+"wiederholt."
 
 #: data/fit4privacy/questions.json:1112
 msgid ""
@@ -3278,17 +3378,20 @@ msgstr ""
 
 #: data/fit4privacy/questions.json:1115
 msgid "We review our risks periodically."
-msgstr "=VLOOKUP(A:A,[1]DE!$A:$B,2,0)"
+msgstr "Wir führen regelmäßige Risikoprüfungen durch."
 
 #: data/fit4privacy/questions.json:1123
 msgid ""
 "We review our risks periodically and we perform external audit regularly or "
 "we have an information security certification (e.g ISO 2700x)."
-msgstr "=VLOOKUP(A:A,[1]DE!$A:$B,2,0)"
+msgstr ""
+"Wir führen regelmäßige Risikoprüfungen und regelmäßige externe Audits durch, "
+"oder wir besitzen eine Zertifizierung der Informationssicherheit (z. B. ISO "
+"27001)."
 
 #: data/fit4privacy/questions.json:1126
 msgid "How do you handle information security risks?"
-msgstr "=VLOOKUP(A:A,[1]DE!$A:$B,2,0)"
+msgstr "Wie gehen Sie mit Risiken der Informationssicherheit um?"
 
 #: data/fit4privacy/questions.json:1146 data/fit4privacy/questions.json:1162
 msgid ""
@@ -3301,19 +3404,20 @@ msgstr ""
 
 #: data/fit4privacy/questions.json:1149
 msgid "Never or not really."
-msgstr "=VLOOKUP(A:A,[1]DE!$A:$B,2,0)"
+msgstr "Niemals bzw. nicht wirklich."
 
 #: data/fit4privacy/questions.json:1165
 msgid "One time, when they are hired."
-msgstr "=VLOOKUP(A:A,[1]DE!$A:$B,2,0)"
+msgstr "Einmal zu Beginn des Beschäftigungsverhältnisses."
 
 #: data/fit4privacy/questions.json:1173
 msgid "We train them periodically."
-msgstr "=VLOOKUP(A:A,[1]DE!$A:$B,2,0)"
+msgstr "Es finden regelmäßige Schulungen statt."
 
 #: data/fit4privacy/questions.json:1176
 msgid "How often do you train your employees on information security?"
-msgstr "=VLOOKUP(A:A,[1]DE!$A:$B,2,0)"
+msgstr ""
+"Wie häufig schulen Sie Ihre Mitarbeiter in puncto Informationssicherheit?"
 
 #: data/fit4privacy/questions.json:1196
 msgid ""
@@ -3325,7 +3429,7 @@ msgstr ""
 
 #: data/fit4privacy/questions.json:1199
 msgid "They are not written."
-msgstr "=VLOOKUP(A:A,[1]DE!$A:$B,2,0)"
+msgstr "Sie sind nicht schriftlich fixiert."
 
 #: data/fit4privacy/questions.json:1212
 msgid ""
@@ -3340,20 +3444,27 @@ msgstr ""
 msgid ""
 "They were written some time ago, but not known to all employees, and not up "
 "to date."
-msgstr "=VLOOKUP(A:A,[1]DE!$A:$B,2,0)"
+msgstr ""
+"Sie wurden vor einiger Zeit niedergeschrieben, sind aber nicht allen "
+"Mitarbeitern bekannt und nicht auf dem neuesten Stand."
 
 #: data/fit4privacy/questions.json:1223
 msgid ""
 "They are written, approved by the management, known from all the employees "
 "and re-viewed periodically."
-msgstr "=VLOOKUP(A:A,[1]DE!$A:$B,2,0)"
+msgstr ""
+"Sie sind schriftlich fixiert, vom Management genehmigt, allen Mitarbeitern "
+"bekannt, und sie werden regelmäßig überprüft."
 
 #: data/fit4privacy/questions.json:1226
 msgid ""
 "To what extent are the rules (procedures / guidelines / good practices) "
 "concerning information security and privacy in your organisation written and "
 "known to your employees?"
-msgstr "=VLOOKUP(A:A,[1]DE!$A:$B,2,0)"
+msgstr ""
+"In welchem Umfang sind die Regeln (Verfahren/Richtlinien/bewährte Praktiken) "
+"zu Informationssicherheit und Datenschutz in Ihrem Unternehmen schriftlich "
+"fixiert und Ihren Mitarbeitern bekannt?"
 
 #: survey/forms.py:54
 msgid "You need to choose at least one answer"
