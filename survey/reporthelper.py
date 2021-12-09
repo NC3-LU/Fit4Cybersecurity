@@ -13,7 +13,6 @@ from survey.models import (
     SurveyUser,
     SurveyUserAnswer,
     Recommendations,
-    Translation,
 )
 from utils.radarFactory import radar_factory
 from django.utils.translation import gettext_lazy as _
