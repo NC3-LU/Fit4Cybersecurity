@@ -196,6 +196,8 @@ EMAIL_HOST = "localhost"
 EMAIL_PORT = 25
 
 # Logging mechanism
+LOG_DIRECTORY = "./logs"
+LOG_FILE = "django.log"
 LOGGING = {
     "version": 1,
     "disable_existing_loggers": False,
@@ -204,7 +206,7 @@ LOGGING = {
         "file": {
             "level": "INFO",
             "class": "logging.FileHandler",
-            "filename": "./logs/django.log",
+            "filename": os.path.join(LOG_DIRECTORY, LOG_FILE),
             "formatter": "app",
         },
     },
