@@ -75,13 +75,6 @@ class Command(BaseCommand):
                     tooltip=tooltip,
                 )
 
-                # Prepare the dependencies between answers.
-                if "dependant_answers" in answer.keys():
-                    answers_dependancies[answer["label"]] = {
-                        "object": answer_obj,
-                        "dependant_answers": answer["dependant_answers"]
-                    }
-
                 if created:
                     nb_imported_answers += 1
                     answer_obj.save()
