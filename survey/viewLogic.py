@@ -17,7 +17,7 @@ from survey.models import (
     SurveyUserFeedback,
     SURVEY_STATUS_UNDER_REVIEW,
 )
-from survey.forms import InitialStartForm, AnswerMChoice, GeneralFeedback
+from survey.forms import AnswerMChoice, GeneralFeedback
 from csskp.settings import CUSTOM, LANGUAGES, LANGUAGE_CODE
 
 LOCAL_DEFAULT_LANG = LANGUAGE_CODE
@@ -124,12 +124,9 @@ def handle_start_survey(request: HttpRequest, lang: str) -> Union[Dict, SurveyUs
             save_answers(user, question, question_answers, answers, answer_content)
 
         return user
-    else:
-        form = InitialStartForm(lang=lang)
 
     return {
         "title": title,
-        "form": form,
         "forms": forms,
         "action": action,
         "choosen_lang": lang,

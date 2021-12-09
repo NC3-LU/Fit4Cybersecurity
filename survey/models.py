@@ -60,26 +60,6 @@ class RightMixin:
         return dict
 
 
-class Translation(models.Model, RightMixin):
-    original = models.TextField()
-    translated = models.TextField()
-    lang = models.CharField(max_length=2, choices=LANGUAGES, default=LOCAL_DEFAULT_LANG)
-
-    class Meta:
-        unique_together = ("original", "lang")
-
-    @staticmethod
-    def _fields_base_read():
-        return {
-            "original",
-            "translated",
-            "lang",
-        }
-
-    def __str__(self):
-        return self.original
-
-
 class SurveyQuestionServiceCategory(models.Model):
     # QuestionCatID
 

@@ -1,0 +1,89 @@
+[
+  {
+    "label": "What is your sector?",
+    "service_category": "Context",
+    "section": "__context",
+    "qtype": "S",
+    "qindex": 14,
+    "maxPoints": 0,
+    "answers": [
+      {
+        "label": "Health",
+        "uniqueAnswer": true,
+        "atype": "P",
+        "aindex": 1
+      },
+      {
+        "label": "Insurance",
+        "uniqueAnswer": true,
+        "atype": "P",
+        "aindex": 2
+      },
+      {
+        "label": "Education / Research",
+        "uniqueAnswer": true,
+        "atype": "P",
+        "aindex": 3
+      }
+    ]
+  },
+  {
+    "label": "How many employees?",
+    "service_category": "Context",
+    "section": "__context",
+    "qtype": "S",
+    "qindex": 15,
+    "maxPoints": 0,
+    "answers": [
+      {
+        "label": "1-5",
+        "uniqueAnswer": true,
+        "atype": "P",
+        "score": 5,
+        "aindex": 1
+      },
+      {
+        "label": "5-10",
+        "uniqueAnswer": true,
+        "atype": "P",
+        "score": 10,
+        "aindex": 2
+      },
+      {
+        "label": "10+",
+        "uniqueAnswer": true,
+        "atype": "P",
+        "score": 15,
+        "aindex": 3
+      }
+    ]
+  },
+  {
+    "label": "Please select your country",
+    "service_category": "Context",
+    "section": "__context",
+    "qtype": "S",
+    "qindex": 16,
+    "maxPoints": 0,
+    "answers": [
+      {
+        "label": "Luxembourg",
+        "uniqueAnswer": true,
+        "atype": "P",
+        "aindex": 1
+      },
+      {
+        "label": "France",
+        "uniqueAnswer": true,
+        "atype": "P",
+        "aindex": 2
+      },
+      {
+        "label": "Autriche",
+        "uniqueAnswer": true,
+        "atype": "P",
+        "aindex": 3
+      }
+    ]
+  }
+]
