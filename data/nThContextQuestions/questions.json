@@ -1,5 +1,92 @@
 [
   {
+    "label": "What is your sector?",
+    "service_category": "",
+    "section": "__context",
+    "qtype": "S",
+    "qindex": 1,
+    "maxPoints": 0,
+    "answers": [
+      {
+        "label": "Health",
+        "uniqueAnswer": true,
+        "atype": "P",
+        "aindex": 1
+      },
+      {
+        "label": "Insurance",
+        "uniqueAnswer": true,
+        "atype": "P",
+        "aindex": 2
+      },
+      {
+        "label": "Education / Research",
+        "uniqueAnswer": true,
+        "atype": "P",
+        "aindex": 3
+      }
+    ]
+  },
+  {
+    "label": "How many employees?",
+    "service_category": "",
+    "section": "__context",
+    "qtype": "S",
+    "qindex": 2,
+    "maxPoints": 0,
+    "answers": [
+      {
+        "label": "1-5",
+        "uniqueAnswer": true,
+        "atype": "P",
+        "score": 5,
+        "aindex": 1
+      },
+      {
+        "label": "5-10",
+        "uniqueAnswer": true,
+        "atype": "P",
+        "score": 10,
+        "aindex": 2
+      },
+      {
+        "label": "10+",
+        "uniqueAnswer": true,
+        "atype": "P",
+        "score": 15,
+        "aindex": 3
+      }
+    ]
+  },
+  {
+    "label": "Please select your country",
+    "service_category": "",
+    "section": "__context",
+    "qtype": "S",
+    "qindex": 3,
+    "maxPoints": 0,
+    "answers": [
+      {
+        "label": "Luxembourg",
+        "uniqueAnswer": true,
+        "atype": "P",
+        "aindex": 1
+      },
+      {
+        "label": "France",
+        "uniqueAnswer": true,
+        "atype": "P",
+        "aindex": 2
+      },
+      {
+        "label": "Autriche",
+        "uniqueAnswer": true,
+        "atype": "P",
+        "aindex": 3
+      }
+    ]
+  },
+  {
     "label": "What is the risk management culture in your company?",
     "service_category": "Risk Management",
     "section": "Risk Management",
@@ -137,93 +224,6 @@
         "score": 0,
         "atype": "T",
         "recommendations": []
-      }
-    ]
-  },
-  {
-    "label": "What is your sector?",
-    "service_category": "",
-    "section": "__context",
-    "qtype": "S",
-    "qindex": 9,
-    "maxPoints": 0,
-    "answers": [
-      {
-        "label": "Health",
-        "uniqueAnswer": true,
-        "atype": "P",
-        "aindex": 1
-      },
-      {
-        "label": "Insurance",
-        "uniqueAnswer": true,
-        "atype": "P",
-        "aindex": 2
-      },
-      {
-        "label": "Education / Research",
-        "uniqueAnswer": true,
-        "atype": "P",
-        "aindex": 3
-      }
-    ]
-  },
-  {
-    "label": "How many employees?",
-    "service_category": "",
-    "section": "__context",
-    "qtype": "S",
-    "qindex": 10,
-    "maxPoints": 0,
-    "answers": [
-      {
-        "label": "1-5",
-        "uniqueAnswer": true,
-        "atype": "P",
-        "score": 5,
-        "aindex": 1
-      },
-      {
-        "label": "5-10",
-        "uniqueAnswer": true,
-        "atype": "P",
-        "score": 10,
-        "aindex": 2
-      },
-      {
-        "label": "10+",
-        "uniqueAnswer": true,
-        "atype": "P",
-        "score": 15,
-        "aindex": 3
-      }
-    ]
-  },
-  {
-    "label": "Please select your country",
-    "service_category": "",
-    "section": "__context",
-    "qtype": "S",
-    "qindex": 11,
-    "maxPoints": 0,
-    "answers": [
-      {
-        "label": "Luxembourg",
-        "uniqueAnswer": true,
-        "atype": "P",
-        "aindex": 1
-      },
-      {
-        "label": "France",
-        "uniqueAnswer": true,
-        "atype": "P",
-        "aindex": 2
-      },
-      {
-        "label": "Autriche",
-        "uniqueAnswer": true,
-        "atype": "P",
-        "aindex": 3
       }
     ]
   }

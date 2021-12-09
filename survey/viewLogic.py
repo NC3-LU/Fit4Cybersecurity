@@ -244,6 +244,11 @@ def handle_question_answers_request(
     form.set_unique_answers(uniqueAnswers)
     form.set_free_text_answer_id(free_text_answer_id)
 
+    if current_question.qindex - nb_context_question > 0:
+        current_question_qindex = current_question.qindex - nb_context_question
+    else:
+        current_question_qindex = current_question.qindex
+
     return {
         "title": CUSTOM["tool_name"]
         + " - "
@@ -257,7 +262,7 @@ def handle_question_answers_request(
         "form": form,
         "action": "/survey/question/" + str(current_question.qindex),
         "user": user,
-        "current_question_index": current_question.qindex - nb_context_question,
+        "current_question_index": current_question_qindex,
         "previous_question_index": previous_question.qindex,
         "total_questions_num": total_questions_num,
     }
@@ -329,7 +334,7 @@ def get_questions_slice(question_index: int):
     survey_questions = SurveyQuestion.objects.exclude(
         section__label__contains="__context"
     ).order_by("qindex")
-    total_questions_num = len(survey_questions)
+    total_questions_num = survey_questions.count()
     previous_question = survey_questions[0]
     next_question = None
     current_element_index = 0
