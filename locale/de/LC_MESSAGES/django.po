@@ -377,15 +377,12 @@ msgid "Result"
 msgstr "Ergebnis"
 
 #: templates/report/results.html:13 templates/survey/finishedSurvey.html:91
-#, fuzzy, python-format
-#| msgid ""
-#| "You have scored an additional %(bonus_score)s % of bonus points for "
-#| "following best practices."
+#, python-format
 msgid ""
-"You have scored an additional %(bonus)s % of bonus points for following best "
+"You have scored an additional %(bonus)s %% of bonus points for following best "
 "practices."
 msgstr ""
-"Sie haben zusätzliche %(bonus_score)s% Bonuspunkte für das Befolgen von Best "
+"Sie haben zusätzliche %(bonus)s %% Bonuspunkte für das Befolgen von Best "
 "Practices gesammelt."
 
 #: templates/report/template.html:13
@@ -713,41 +710,6 @@ msgid ""
 msgstr ""
 "Benötigen wir einige Informationen, um Ihnen nützliche Empfehlungen geben zu "
 "können, sobald die Selbsteinschätzung abgeschlossen ist."
-
-#, fuzzy, python-format
-#~| msgid ""
-#~| "You have scored an additional %(bonus_score)s % of bonus points for "
-#~| "following best practices."
-#~ msgid ""
-#~ "You have scored an additional %(bonus)s % of bonus points for following "
-#~ "best practices."
-#~ msgstr ""
-#~ "Sie haben zusätzliche %(bonus_score)s % Bonuspunkte für das Befolgen von "
-#~ "Best Practices gesammelt."
-
-#, fuzzy, python-format
-#~| msgid ""
-#~| "You have scored an additional %(bonus_score)s % of bonus points for "
-#~| "following best practices."
-#~ msgid ""
-#~ "\n"
-#~ "      You have scored an additional %(bonus)s % of bonus points for "
-#~ "following best practices.\n"
-#~ "      "
-#~ msgstr ""
-#~ "Sie haben zusätzliche %(bonus_score)s% Bonuspunkte für das Befolgen von "
-#~ "Best Practices gesammelt."
-
-#, fuzzy, python-format
-#~| msgid ""
-#~| "You have scored an additional %(BONUS_SCORE)s % of bonus points for "
-#~| "following best practices."
-#~ msgid ""
-#~ "You have scored an additional %(BONUS_SCORE)s % of bonus points for "
-#~ "following best practices."
-#~ msgstr ""
-#~ "Sie haben zusätzliche %(BONUS_SCORE)s% Bonuspunkte für das Befolgen von "
-#~ "Best Practices gesammelt."
 
 #~ msgid "Your results"
 #~ msgstr "Ihre Ergebnisse"

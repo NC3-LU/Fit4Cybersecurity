@@ -102,10 +102,13 @@ class Command(BaseCommand):
             # Process the answers' dependencies.
             for answer_label in answers_dependancies:
                 question_answer = answers_dependancies[answer_label]["object"]
-                for dependant_answer_label in answers_dependancies[answer_label]["dependant_answers"]:
-                    question_answer.dependant_answers.add(answers_dependancies[dependant_answer_label]['object'])
+                dependant_answers_labels = answers_dependancies[answer_label]["dependant_answers"]
+                for dependant_answer_label in dependant_answers_labels:
+                    question_answer.dependant_answers.add(
+                        answers_dependancies[dependant_answer_label]['object'])
                     question_answer.save()
-                    answers_dependancies[dependant_answer_label]['object'].dependant_answers.add(question_answer)
+                    answers_dependancies[dependant_answer_label]['object'].dependant_answers.add(
+                        question_answer)
                     answers_dependancies[dependant_answer_label]['object'].save()
 
         self.stdout.write(self.style.SUCCESS("Data imported."))
