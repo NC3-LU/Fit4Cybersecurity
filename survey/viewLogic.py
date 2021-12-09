@@ -63,6 +63,13 @@ def handle_start_survey(request: HttpRequest, lang: str) -> Union[Dict, SurveyUs
     questions = SurveyQuestion.objects.filter(
         section__label__contains="__context"
     ).all()
+
+    # if no context questions
+    if not questions.count() and request.method == "GET":
+        user = create_user(lang)
+        request.session["user_id"] = str(user.user_id)
+        return user
+
     for question in questions:
         try:
             question_answers = SurveyQuestionAnswer.objects.order_by("aindex").filter(
