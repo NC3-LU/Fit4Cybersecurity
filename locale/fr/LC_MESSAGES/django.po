@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-12-09 10:35+0000\n"
+"POT-Creation-Date: 2021-12-09 13:40+0000\n"
 "PO-Revision-Date: 2021-12-09 13:18+0000\n"
 "Last-Translator: Juan Rocha <juan.rocha@cases.lu>\n"
 "Language-Team: French <https://translate.monarc.lu/projects/"
@@ -19,47 +19,81 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
 "X-Generator: Weblate 4.9-dev\n"
 
-#: csskp/config.py:29 csskp/config_dev.py:28 csskp/config_prod.py:29
-msgid "Description of the tool."
-msgstr "Description de l'outil."
-
-#: csskp/config.py:67 csskp/config_dev.py:69
-#, python-format
+#: csskp/config.py:29
 msgid ""
-"The objective of the self-assessment tool,\n"
-"            %(tool_name)s is to assess the maturity of an organization in "
-"terms of\n"
-"            applicable good practices in the field of information security.\n"
-"            <br /><br />\n"
-"            This document, based on the %(tool_name)s, is for the exclusive "
-"use of\n"
-"            the customer. It is in this respect confidential.\n"
-"            <br /><br />\n"
-"            In view of the methodology used and the fact that it is a self-"
-"assessment,\n"
-"            it is understood that the overall results can not in any way be "
-"exhaustive.\n"
-"            As such, the actual risk assessment or the list of identified "
-"risks and\n"
-"            vulnerabilities are based on the information provided by the "
-"client.\n"
-"            The analysis resulting from this assessment can engage only the "
-"customer\n"
-"            for any omission or error that would be due to third parties or "
-"not.\n"
-"            <br /><br />\n"
-"            The tool, %(tool_name)s can possibly provide recommendations. It "
-"is\n"
-"            understood by the client that the recommendations are neither "
-"exclusive\n"
-"            nor exhaustive.\n"
-"            <br /><br />\n"
-"            It should also be noted that the information you have provided "
-"to us will\n"
-"            be recorded for statistical reasons.\n"
-"            Due to the nature of the data, we can not identify you. Unless "
-"you later\n"
-"            contact us to do a Diagnostic CASES."
+"This survey aims to identify the level of maturity of the operators in "
+"Luxembourg with respect to risk management and governance, collaboration on "
+"national and EU level and Incident reporting. We collect the answers to "
+"these 30 questions to understand where guidance and knowledge is already "
+"advanced and where there is room for improvement. As such, it is recommended "
+"that a person is taking this survey that is knowing the company's maturity "
+"on the aforementioned topics well.<br /><br />The survey will be online and "
+"available between December 2021 and March 31st 2022 .After the survey, the "
+"data will be processed and results will be interpreted. However, since the "
+"survey is completely anonymous, we cannot identify you nor your company and "
+"thus deletion of specific records is not possible: we cannot be sure that it "
+"is indeed your survey. The results will be made available through another "
+"channel.<br /><br />If you are not able to do the survey in one go and you "
+"want to later pick up where you have left off, please be sure to save the "
+"link by clicking on the \"continue later\" button. We will not be able to "
+"help you to find your answers again otherwise."
+msgstr ""
+
+#: csskp/config.py:89 csskp/config_dev.py:69
+#, fuzzy, python-format
+#| msgid ""
+#| "The objective of the self-assessment tool,\n"
+#| "            %(tool_name)s is to assess the maturity of an organization in "
+#| "terms of\n"
+#| "            applicable good practices in the field of information "
+#| "security.\n"
+#| "            <br /><br />\n"
+#| "            This document, based on the %(tool_name)s, is for the "
+#| "exclusive use of\n"
+#| "            the customer. It is in this respect confidential.\n"
+#| "            <br /><br />\n"
+#| "            In view of the methodology used and the fact that it is a "
+#| "self-assessment,\n"
+#| "            it is understood that the overall results can not in any way "
+#| "be exhaustive.\n"
+#| "            As such, the actual risk assessment or the list of identified "
+#| "risks and\n"
+#| "            vulnerabilities are based on the information provided by the "
+#| "client.\n"
+#| "            The analysis resulting from this assessment can engage only "
+#| "the customer\n"
+#| "            for any omission or error that would be due to third parties "
+#| "or not.\n"
+#| "            <br /><br />\n"
+#| "            The tool, %(tool_name)s can possibly provide recommendations. "
+#| "It is\n"
+#| "            understood by the client that the recommendations are neither "
+#| "exclusive\n"
+#| "            nor exhaustive.\n"
+#| "            <br /><br />\n"
+#| "            It should also be noted that the information you have "
+#| "provided to us will\n"
+#| "            be recorded for statistical reasons.\n"
+#| "            Due to the nature of the data, we can not identify you. "
+#| "Unless you later\n"
+#| "            contact us to do a Diagnostic CASES."
+msgid ""
+"The objective of the self-assessment tool, %(tool_name)s is to assess the "
+"maturity of an organization in terms of applicable good practices in the "
+"field of information security.<br /><br />This document, based on the "
+"%(tool_name)s, is for the exclusive use of the customer. It is in this "
+"respect confidential.<br /><br />In view of the methodology used and the "
+"fact that it is a self-assessment, it is understood that the overall results "
+"can not in any way be exhaustive. As such, the actual risk assessment or the "
+"list of identified risks and vulnerabilities are based on the information "
+"provided by the client. The analysis resulting from this assessment can "
+"engage only the customer for any omission or error that would be due to "
+"third parties or not.<br /><br />The tool, %(tool_name)s can possibly "
+"provide recommendations. It is understood by the client that the "
+"recommendations are neither exclusive nor exhaustive.<br /><br />It should "
+"also be noted that the information you have provided to us will be recorded "
+"for statistical reasons. Due to the nature of the data, we can not identify "
+"you. Unless you later contact us to do a Diagnostic CASES."
 msgstr ""
 "L'outil d'auto-évaluation, %(tool_name)s, a pour objectif d’apprécier la "
 "maturité d’une organisation au regard des bonnes pratiques applicables en "
@@ -79,26 +113,36 @@ msgstr ""
 "la nature des données, nous ne pouvons vous identifier. Sauf si par la suite "
 "vous nous contacter pour faire un diagnostic CASES."
 
-#: csskp/config.py:91 csskp/config_dev.py:93
-#, python-format
+#: csskp/config.py:113 csskp/config_dev.py:93
+#, fuzzy, python-format
+#| msgid ""
+#| "This self-assessment tool is named %(tool_name)s\n"
+#| "            to highlight the introduction to information security.\n"
+#| "            It is also a prerequisite for doing a CASES Diagnostic: a "
+#| "minimum score of\n"
+#| "            %(minimal_acceptable_score)s/100 is required.\n"
+#| "            The purpose for this restriction gives us the opportunity to "
+#| "better\n"
+#| "            tailor the recommendations to your organization during the "
+#| "Diagnostic.\n"
+#| "            <br /><br />\n"
+#| "            During this self-assessment multiple choice questions were "
+#| "asked. After\n"
+#| "            analyzing your answers, recommendations have been provided.\n"
+#| "            <br /><br />\n"
+#| "            Finally, you can download a report, which will help you to "
+#| "communicate\n"
+#| "            the results to your suppliers, if necessary."
 msgid ""
-"This self-assessment tool is named %(tool_name)s\n"
-"            to highlight the introduction to information security.\n"
-"            It is also a prerequisite for doing a CASES Diagnostic: a "
-"minimum score of\n"
-"            %(minimal_acceptable_score)s/100 is required.\n"
-"            The purpose for this restriction gives us the opportunity to "
-"better\n"
-"            tailor the recommendations to your organization during the "
-"Diagnostic.\n"
-"            <br /><br />\n"
-"            During this self-assessment multiple choice questions were "
-"asked. After\n"
-"            analyzing your answers, recommendations have been provided.\n"
-"            <br /><br />\n"
-"            Finally, you can download a report, which will help you to "
-"communicate\n"
-"            the results to your suppliers, if necessary."
+"This self-assessment tool is named %(tool_name)s to highlight the "
+"introduction to information security. It is also a prerequisite for doing a "
+"CASES Diagnostic: a minimum score of %(minimal_acceptable_score)s/100 is "
+"required. The purpose for this restriction gives us the opportunity to "
+"better tailor the recommendations to your organization during the Diagnostic."
+"<br /><br />During this self-assessment multiple choice questions were "
+"asked. After analyzing your answers, recommendations have been provided.<br /"
+"><br />Finally, you can download a report, which will help you to "
+"communicate the results to your suppliers, if necessary."
 msgstr ""
 "Cet outil d'auto-évaluation est nommé %(tool_name)s pour souligner "
 "l'introduction à la sécurité de l'information. Il est aussi un prérequis "
@@ -111,24 +155,188 @@ msgstr ""
 "vous pouvez télécharger ce document qui vous aidera pour communiquer les "
 "résultats à vos fournisseurs si besoin."
 
-#: csskp/config.py:105 csskp/config_dev.py:107
-#, python-format
+#: csskp/config.py:127 csskp/config_dev.py:107
+#, fuzzy, python-format
+#| msgid ""
+#| "You have achieved %(SCORE)s/100 with your\n"
+#| "            answers. You must reach at least "
+#| "%(minimal_acceptable_score)s/100\n"
+#| "            to be able to make a CASES Diagnosis.\n"
+#| "            <br /><br />\n"
+#| "            We remind you that this is a self-assessment and it is "
+#| "important\n"
+#| "            to understand that all the results can not in any way be "
+#| "exhaustive."
 msgid ""
-"You have achieved %(SCORE)s/100 with your\n"
-"            answers. You must reach at least "
-"%(minimal_acceptable_score)s/100\n"
-"            to be able to make a CASES Diagnosis.\n"
-"            <br /><br />\n"
-"            We remind you that this is a self-assessment and it is "
-"important\n"
-"            to understand that all the results can not in any way be "
-"exhaustive."
+"You have achieved %(SCORE)s/100 with your answers. You must reach at least "
+"%(minimal_acceptable_score)s/100 to be able to make a CASES Diagnosis.<br /"
+"><br />We remind you that this is a self-assessment and it is important to "
+"understand that all the results can not in any way be exhaustive."
 msgstr ""
 "Vous avez atteint %(SCORE)s/100 avec vos réponses. Vous devez atteindre au "
 "moins %(minimal_acceptable_score)s/100 pour pouvoir faire un Diagnostic "
 "CASES. <br><br> Nous vous rappelons qu'il s'agit d'une auto-évaluation, il "
 "est entendu que l’ensemble des résultats ne peut en aucune manière être "
 "exhaustif."
+
+#: csskp/config.py:136
+msgid "Energy"
+msgstr ""
+
+#: csskp/config.py:137
+#, fuzzy
+#| msgid "Transparency"
+msgid "Transport"
+msgstr "Transparence"
+
+#: csskp/config.py:138
+msgid "Banking"
+msgstr ""
+
+#: csskp/config.py:139
+msgid "Financial market infrastructure"
+msgstr ""
+
+#: csskp/config.py:140 data/fit4Cybersecurity/context-questions.json:11
+#: survey/globals.py:15
+msgid "Health"
+msgstr "Santé"
+
+#: csskp/config.py:141
+msgid "Dringking water"
+msgstr ""
+
+#: csskp/config.py:142
+msgid "Waste Water"
+msgstr ""
+
+#: csskp/config.py:143
+msgid "Digital Infrastructure and Service Providers"
+msgstr ""
+
+#: csskp/config.py:144
+#, fuzzy
+#| msgid "Public administration"
+msgid "Public Administration"
+msgstr "Administration publique"
+
+#: csskp/config.py:145
+msgid "Space"
+msgstr ""
+
+#: csskp/config.py:146
+msgid "Postal and Courrier Services"
+msgstr ""
+
+#: csskp/config.py:147
+#, fuzzy
+#| msgid "Risk Management"
+msgid "Waste Management"
+msgstr "Gestion des risques"
+
+#: csskp/config.py:148
+msgid "Manufacture, production and distribution of chemicals"
+msgstr ""
+
+#: csskp/config.py:149
+#, fuzzy
+#| msgid "Trading, sales and mass distribution"
+msgid "Food Production, processing and distribution"
+msgstr "Commerce, vente et grande distribution"
+
+#: csskp/config.py:150
+msgid "Manufacturing of medical devices"
+msgstr ""
+
+#: csskp/config.py:151
+msgid "Manufacture of computer, electronics and optical products"
+msgstr ""
+
+#: csskp/config.py:152
+msgid "Manufacture of electrical equipment"
+msgstr ""
+
+#: csskp/config.py:153
+msgid "Manufacture of machinery and equipment"
+msgstr ""
+
+#: csskp/config.py:156
+msgid "Under 10 employees"
+msgstr ""
+
+#: csskp/config.py:157
+msgid "From 10 to 49 employees"
+msgstr ""
+
+#: csskp/config.py:158
+msgid "From 50 to 249 employees"
+msgstr ""
+
+#: csskp/config.py:159
+msgid "Over 250 employees"
+msgstr ""
+
+#: csskp/config_dev.py:28
+msgid "Description of the tool."
+msgstr "Description de l'outil."
+
+#: data/fit4Cybersecurity/context-questions.json:3
+msgid "What is your sector?"
+msgstr "Quel est votre secteur ?"
+
+#: data/fit4Cybersecurity/context-questions.json:4
+#: data/fit4Cybersecurity/context-questions.json:32
+#: data/fit4Cybersecurity/context-questions.json:63
+msgid "Context"
+msgstr ""
+
+#: data/fit4Cybersecurity/context-questions.json:5
+#: data/fit4Cybersecurity/context-questions.json:33
+#: data/fit4Cybersecurity/context-questions.json:64
+msgid "__context"
+msgstr ""
+
+#: data/fit4Cybersecurity/context-questions.json:17
+msgid "Insurance"
+msgstr ""
+
+#: data/fit4Cybersecurity/context-questions.json:23
+msgid "Education / Research"
+msgstr ""
+
+#: data/fit4Cybersecurity/context-questions.json:31
+msgid "How many employees?"
+msgstr "Combien d'employés ?"
+
+#: data/fit4Cybersecurity/context-questions.json:39
+msgid "1-5"
+msgstr ""
+
+#: data/fit4Cybersecurity/context-questions.json:46
+msgid "5-10"
+msgstr ""
+
+#: data/fit4Cybersecurity/context-questions.json:53
+msgid "10+"
+msgstr ""
+
+#: data/fit4Cybersecurity/context-questions.json:62
+msgid "Please select your country"
+msgstr "S'il vous plaît sélectionnez votre pays"
+
+#: data/fit4Cybersecurity/context-questions.json:70
+msgid "Luxembourg"
+msgstr ""
+
+#: data/fit4Cybersecurity/context-questions.json:76
+#, fuzzy
+#| msgid "Cancel"
+msgid "France"
+msgstr "Annuler"
+
+#: data/fit4Cybersecurity/context-questions.json:82
+msgid "Autriche"
+msgstr ""
 
 #: data/fit4Cybersecurity/questions.json:3
 msgid "Rules/Charter"
@@ -1372,89 +1580,7 @@ msgstr ""
 "dur, mobile, tablette, laptop ...) dans l'environnement professionnel "
 "(réseau qui se connecte au serveur)"
 
-#: data/fit4Cybersecurity/questions.json:1356
-#: data/nThContextQuestions/questions.json:3 survey/forms.py:28
-msgid "What is your sector?"
-msgstr "Quel est votre secteur ?"
-
-#: data/fit4Cybersecurity/questions.json:1357
-#: data/fit4Cybersecurity/questions.json:1385
-#: data/fit4Cybersecurity/questions.json:1416
-#: data/nThContextQuestions/questions.json:4
-#: data/nThContextQuestions/questions.json:32
-#: data/nThContextQuestions/questions.json:63
-msgid "Context"
-msgstr ""
-
-#: data/fit4Cybersecurity/questions.json:1358
-#: data/fit4Cybersecurity/questions.json:1386
-#: data/fit4Cybersecurity/questions.json:1417
-#: data/nThContextQuestions/questions.json:5
-#: data/nThContextQuestions/questions.json:33
-#: data/nThContextQuestions/questions.json:64
-msgid "__context"
-msgstr ""
-
-#: data/fit4Cybersecurity/questions.json:1364
-#: data/nThContextQuestions/questions.json:11 survey/globals.py:15
-msgid "Health"
-msgstr "Santé"
-
-#: data/fit4Cybersecurity/questions.json:1370
-#: data/nThContextQuestions/questions.json:17
-msgid "Insurance"
-msgstr ""
-
-#: data/fit4Cybersecurity/questions.json:1376
-#: data/nThContextQuestions/questions.json:23
-msgid "Education / Research"
-msgstr ""
-
-#: data/fit4Cybersecurity/questions.json:1384
-#: data/nThContextQuestions/questions.json:31 survey/forms.py:30
-msgid "How many employees?"
-msgstr "Combien d'employés ?"
-
-#: data/fit4Cybersecurity/questions.json:1392
-#: data/nThContextQuestions/questions.json:39
-msgid "1-5"
-msgstr ""
-
-#: data/fit4Cybersecurity/questions.json:1399
-#: data/nThContextQuestions/questions.json:46
-msgid "5-10"
-msgstr ""
-
-#: data/fit4Cybersecurity/questions.json:1406
-#: data/nThContextQuestions/questions.json:53
-msgid "10+"
-msgstr ""
-
-#: data/fit4Cybersecurity/questions.json:1415
-#: data/nThContextQuestions/questions.json:62 survey/forms.py:33
-#: survey/forms.py:36
-msgid "Please select your country"
-msgstr "S'il vous plaît sélectionnez votre pays"
-
-#: data/fit4Cybersecurity/questions.json:1423
-#: data/nThContextQuestions/questions.json:70
-msgid "Luxembourg"
-msgstr ""
-
-#: data/fit4Cybersecurity/questions.json:1429
-#: data/nThContextQuestions/questions.json:76
-#, fuzzy
-#| msgid "Cancel"
-msgid "France"
-msgstr "Annuler"
-
-#: data/fit4Cybersecurity/questions.json:1435
-#: data/nThContextQuestions/questions.json:82
-msgid "Autriche"
-msgstr ""
-
-#: data/fit4ilr/questions.json:3 data/nThContextQuestions/questions.json:90
-#: data/survey4operators/questions.json:3
+#: data/fit4ilr/questions.json:3 data/survey4operators/questions.json:3
 msgid "What is the risk management culture in your company?"
 msgstr ""
 
@@ -1478,16 +1604,6 @@ msgstr ""
 #: data/fit4ilr/questions.json:934 data/fit4ilr/questions.json:935
 #: data/fit4privacy/questions.json:800 data/fit4privacy/questions.json:890
 #: data/fit4privacy/questions.json:948 data/fit4privacy/questions.json:1022
-#: data/nThContextQuestions/questions.json:91
-#: data/nThContextQuestions/questions.json:92
-#: data/nThContextQuestions/questions.json:160
-#: data/nThContextQuestions/questions.json:161
-#: data/nThContextQuestions/questions.json:178
-#: data/nThContextQuestions/questions.json:179
-#: data/nThContextQuestions/questions.json:196
-#: data/nThContextQuestions/questions.json:197
-#: data/nThContextQuestions/questions.json:214
-#: data/nThContextQuestions/questions.json:215
 #: data/survey4operators/questions.json:4
 #: data/survey4operators/questions.json:5
 #: data/survey4operators/questions.json:78
@@ -1527,55 +1643,46 @@ msgstr ""
 msgid "Risk Management"
 msgstr "Gestion des risques"
 
-#: data/fit4ilr/questions.json:11 data/nThContextQuestions/questions.json:98
-#: data/survey4operators/questions.json:11
+#: data/fit4ilr/questions.json:11 data/survey4operators/questions.json:11
 msgid "We do not really have one."
 msgstr ""
 
-#: data/fit4ilr/questions.json:18 data/nThContextQuestions/questions.json:105
-#: data/survey4operators/questions.json:18
+#: data/fit4ilr/questions.json:18 data/survey4operators/questions.json:18
 msgid ""
 "It is always advised to establish and maintain an appropriate governance and "
 "risk management framework, to identify and address risks for the all "
 "networks and services."
 msgstr ""
 
-#: data/fit4ilr/questions.json:27 data/nThContextQuestions/questions.json:114
-#: data/survey4operators/questions.json:27
+#: data/fit4ilr/questions.json:27 data/survey4operators/questions.json:27
 msgid "There are risk management governance responsibilities in place."
 msgstr ""
 
-#: data/fit4ilr/questions.json:35 data/nThContextQuestions/questions.json:121
-#: data/survey4operators/questions.json:35
+#: data/fit4ilr/questions.json:35 data/survey4operators/questions.json:35
 msgid "Our company performs a Risk Analysis at least once every year."
 msgstr ""
 
-#: data/fit4ilr/questions.json:43 data/nThContextQuestions/questions.json:128
-#: data/survey4operators/questions.json:43
+#: data/fit4ilr/questions.json:43 data/survey4operators/questions.json:43
 msgid ""
 "Our company has a documented strategy combining both reacting to incidents "
 "and the prevention of incidents."
 msgstr ""
 
-#: data/fit4ilr/questions.json:51 data/nThContextQuestions/questions.json:135
-#: data/survey4operators/questions.json:51
+#: data/fit4ilr/questions.json:51 data/survey4operators/questions.json:51
 msgid "Our company has third-party risk management in place."
 msgstr ""
 
-#: data/fit4ilr/questions.json:59 data/nThContextQuestions/questions.json:143
-#: data/survey4operators/questions.json:59
+#: data/fit4ilr/questions.json:59 data/survey4operators/questions.json:59
 msgid ""
 "Our company is covering critical risks even outside of service contracts "
 "with providers/third-parties."
 msgstr ""
 
-#: data/fit4ilr/questions.json:67 data/nThContextQuestions/questions.json:150
-#: data/survey4operators/questions.json:67
+#: data/fit4ilr/questions.json:67 data/survey4operators/questions.json:67
 msgid "There are other elements in place, like:"
 msgstr ""
 
-#: data/fit4ilr/questions.json:77 data/nThContextQuestions/questions.json:159
-#: data/survey4operators/questions.json:77
+#: data/fit4ilr/questions.json:77 data/survey4operators/questions.json:77
 msgid ""
 "Which risk management processes are imposed by the Luxembourg entity, and if "
 "applicable, by the company Group?"
@@ -1586,10 +1693,6 @@ msgstr ""
 #: data/fit4ilr/questions.json:157 data/fit4ilr/questions.json:175
 #: data/fit4ilr/questions.json:193 data/fit4ilr/questions.json:849
 #: data/fit4ilr/questions.json:941 data/fit4ilr/questions.json:1059
-#: data/nThContextQuestions/questions.json:167
-#: data/nThContextQuestions/questions.json:185
-#: data/nThContextQuestions/questions.json:203
-#: data/nThContextQuestions/questions.json:221
 #: data/survey4operators/questions.json:85
 #: data/survey4operators/questions.json:103
 #: data/survey4operators/questions.json:121
@@ -1603,22 +1706,19 @@ msgstr ""
 msgid "Please describe:"
 msgstr ""
 
-#: data/fit4ilr/questions.json:95 data/nThContextQuestions/questions.json:177
-#: data/survey4operators/questions.json:95
+#: data/fit4ilr/questions.json:95 data/survey4operators/questions.json:95
 msgid ""
 "What are the challenges related to performing existing Risk Management "
 "processes or practices? "
 msgstr ""
 
-#: data/fit4ilr/questions.json:113 data/nThContextQuestions/questions.json:195
-#: data/survey4operators/questions.json:113
+#: data/fit4ilr/questions.json:113 data/survey4operators/questions.json:113
 msgid ""
 "What can be improved about the existing Risk Management practices, in "
 "general?"
 msgstr ""
 
-#: data/fit4ilr/questions.json:131 data/nThContextQuestions/questions.json:213
-#: data/survey4operators/questions.json:131
+#: data/fit4ilr/questions.json:131 data/survey4operators/questions.json:131
 msgid ""
 "What are the requirements related to Information Security risks, that apply "
 "to your company and your sector?"
@@ -2263,21 +2363,23 @@ msgid ""
 msgstr ""
 
 #: data/fit4privacy/questions.json:23
-msgid "We don\\u2019t process personal data at all."
-msgstr ""
+#, fuzzy
+#| msgid "No, we do not process any sensitive personal data at all."
+msgid "We don't process personal data at all."
+msgstr "Non, nous ne traitons pas de données à caractère personnel sensibles."
 
 #: data/fit4privacy/questions.json:36 data/fit4privacy/questions.json:68
 msgid ""
 "It is essential to understand if your company is processing personal data, "
 "and consequently to weigh the personal data processing risks. Your company "
-"doesn\\u2019t seem to process data about a lot of data subjects - either "
-"employees or clients - but even if a DPO might not be mandatory, consider "
-"appointing at least a data privacy responsible and taking the first steps "
-"towards GDPR: understanding the data being processed, and documenting the "
-"risks. For definitions of personal data, you can consult Art. 4 of GDPR, and "
-"for the tasks for a responsible with data protection, Art. 39. In addition "
-"to that, you can also consider the <a href=\"https://edpb.europa.eu/our-work-"
-"tools/our-documents/guidelines/data-protection-officer_en\" target=\"_blank"
+"doesn't seem to process data about a lot of data subjects - either employees "
+"or clients - but even if a DPO might not be mandatory, consider appointing "
+"at least a data privacy responsible and taking the first steps towards GDPR: "
+"understanding the data being processed, and documenting the risks. For "
+"definitions of personal data, you can consult Art. 4 of GDPR, and for the "
+"tasks for a responsible with data protection, Art. 39. In addition to that, "
+"you can also consider the <a href=\"https://edpb.europa.eu/our-work-tools/"
+"our-documents/guidelines/data-protection-officer_en\" target=\"_blank"
 "\">guidelines</a> on this topic from the EDPB."
 msgstr ""
 
@@ -2508,7 +2610,7 @@ msgid "Transparency"
 msgstr "Transparence"
 
 #: data/fit4privacy/questions.json:293
-msgid "No, as we don\\u2019t have a website."
+msgid "No, as we don't have a website."
 msgstr ""
 
 #: data/fit4privacy/questions.json:306
@@ -2657,10 +2759,14 @@ msgid ""
 msgstr ""
 
 #: data/fit4privacy/questions.json:449
+#, fuzzy
+#| msgid "We have a legal basis for all the personal data we are processing."
 msgid ""
-"We don\\u2019t know if we have a legal basis for most of the personal data "
+"We don't know if we have a legal basis for most of the personal data "
 "processing we perform."
 msgstr ""
+"Nous avons une base légale pour tout traitement des données à caractère "
+"personnel au sein de notre société."
 
 #: data/fit4privacy/questions.json:462
 msgid ""
@@ -2713,7 +2819,7 @@ msgid ""
 msgstr ""
 
 #: data/fit4privacy/questions.json:499
-msgid "We don\\u2019t care, we keep this data forever."
+msgid "We don't care, we keep this data forever."
 msgstr ""
 
 #: data/fit4privacy/questions.json:512
@@ -2732,7 +2838,7 @@ msgid ""
 msgstr ""
 
 #: data/fit4privacy/questions.json:515
-msgid "We don\\u2019t know for sure how to deal with it."
+msgid "We don't know for sure how to deal with it."
 msgstr ""
 
 #: data/fit4privacy/questions.json:528
@@ -2879,9 +2985,11 @@ msgid ""
 msgstr ""
 
 #: data/fit4privacy/questions.json:655
-msgid ""
-"Nothing, it would not happen to us as we don\\u2019t have any personal data."
-msgstr ""
+#, fuzzy
+#| msgid ""
+#| "No idea what we have in place, but we do have transfers of personal data."
+msgid "Nothing, it would not happen to us as we don't have any personal data."
+msgstr "Nous ne sommes pas sûrs, mais nous avons des transferts de ce type."
 
 #: data/fit4privacy/questions.json:668
 msgid ""
@@ -2941,11 +3049,11 @@ msgstr ""
 
 #: data/fit4privacy/questions.json:724
 msgid ""
-"As per GDPR\\u2019s Art. 15, the replies to the requests of exercise of "
-"rights (esp. the right to access personal data) are not to be paid for. "
-"However, in some cases it is possible to ask the data subject for a fee "
-"(that can be justified by reasons) in case the person asks for extra copies, "
-"they make too many requests of the same type, or the answer requires a "
+"As per GDPR's Art. 15, the replies to the requests of exercise of rights "
+"(esp. the right to access personal data) are not to be paid for. However, in "
+"some cases it is possible to ask the data subject for a fee (that can be "
+"justified by reasons) in case the person asks for extra copies, they make "
+"too many requests of the same type, or the answer requires a "
 "disproportionate effort to produce. "
 msgstr ""
 
@@ -2980,11 +3088,11 @@ msgid ""
 msgstr ""
 
 #: data/fit4privacy/questions.json:753
-msgid "We don\\u2019t need either of the two"
+msgid "We don't need either of the two"
 msgstr ""
 
 #: data/fit4privacy/questions.json:769
-msgid "We don\\u2019t yet have one as we are unsure if we need a DPO."
+msgid "We don't yet have one as we are unsure if we need a DPO."
 msgstr ""
 
 #: data/fit4privacy/questions.json:777
@@ -3062,7 +3170,8 @@ msgstr ""
 msgid ""
 "We have performed at least one data protection impact assessment after GDPR "
 "came into force."
-msgstr "Nous avons éffectué au moins une analyse d'impact après le 25 mai 2018."
+msgstr ""
+"Nous avons éffectué au moins une analyse d'impact après le 25 mai 2018."
 
 #: data/fit4privacy/questions.json:864
 msgid ""
@@ -3107,13 +3216,15 @@ msgstr ""
 "protection des données / les risques RGPD?"
 
 #: data/fit4privacy/questions.json:901
-msgid "None, we don\\u2019t have any such contracts."
-msgstr ""
+#, fuzzy
+#| msgid "None, but we have some contracts."
+msgid "None, we don't have any such contracts."
+msgstr "Aucun, mais nous avons quelques contrats."
 
 #: data/fit4privacy/questions.json:914 data/fit4privacy/questions.json:930
 msgid ""
-"As per GDPR\\u2019s Art. 4-7 and 4-8, you are expected to know if your role "
-"is that of a data controller or data processor, and protect personal data as "
+"As per GDPR's Art. 4-7 and 4-8, you are expected to know if your role is "
+"that of a data controller or data processor, and protect personal data as "
 "such. It is expected that the responsibilities of the other entities that "
 "provide you with personal data, or that you provide with personal data, are "
 "clear and in line with GDPR requirements.  Therefore you should review and "
@@ -3157,8 +3268,8 @@ msgid ""
 "organisations should ensure that personal data is processed with the highest "
 "privacy protection (for example only the data necessary should be processed, "
 "short storage period, limited accessibility) so that by default personal "
-"data isn\\u2019t made accessible to an indefinite number of persons (also "
-"known as data protection by default). In short, it is easier to put in place "
+"data isn't made accessible to an indefinite number of persons (also known as "
+"data protection by default). In short, it is easier to put in place "
 "protection and the ability to respond to data rights exercise beforehand, "
 "than to fix leaks or breaches afterwards. For more information on this topic "
 "you can consult the guidelines issued by EDPB <a href=\"https://edpb.europa."
@@ -3168,7 +3279,7 @@ msgid ""
 msgstr ""
 
 #: data/fit4privacy/questions.json:967
-msgid "We don\\u2019t enable it."
+msgid "We don't enable it."
 msgstr ""
 
 #: data/fit4privacy/questions.json:983
@@ -3225,8 +3336,8 @@ msgid ""
 "How do you enable privacy by default and by design in your new projects or "
 "products?"
 msgstr ""
-"Comment avez-vous mis en place la protection des données dès la conception ("
-"'privacy by design') et la protection des données par defaut ('privacy by "
+"Comment avez-vous mis en place la protection des données dès la conception "
+"('privacy by design') et la protection des données par defaut ('privacy by "
 "default') dans le cadre des nouveaux projets ou produits?"
 
 #: data/fit4privacy/questions.json:1033
@@ -3278,15 +3389,15 @@ msgid ""
 "In line with GDPR's Art. 32, both data controllers and data processors need "
 "to put in place adequate measures with respect to identified risks. You "
 "should consider to take a closer look at the information security risks in "
-"your company, not just because of GDPR but for your own company\\u2019s "
-"continuity and operations point of view. You should consider the guidelines "
-"by ENISA, from 2016 to 2018, available <a href=\"https://www.enisa.europa.eu/"
-"topics/data-protection/security-of-personal-data/security-measures\" target="
-"\"_blank\">here</a>."
+"your company, not just because of GDPR but for your own company's continuity "
+"and operations point of view. You should consider the guidelines by ENISA, "
+"from 2016 to 2018, available <a href=\"https://www.enisa.europa.eu/topics/"
+"data-protection/security-of-personal-data/security-measures\" target=\"_blank"
+"\">here</a>."
 msgstr ""
 
 #: data/fit4privacy/questions.json:1083
-msgid "We don\\u2019t handle them."
+msgid "We don't handle them."
 msgstr ""
 
 #: data/fit4privacy/questions.json:1096
@@ -3303,8 +3414,7 @@ msgstr ""
 
 #: data/fit4privacy/questions.json:1099
 msgid ""
-"We have performed at some point a risk analysis but we don\\u2019t iterate "
-"on it."
+"We have performed at some point a risk analysis but we don't iterate on it."
 msgstr ""
 
 #: data/fit4privacy/questions.json:1112
@@ -3407,26 +3517,26 @@ msgstr ""
 "la sécurité de l'information et la protection des données sont-elles écrites "
 "et connues par vos employés?"
 
-#: survey/forms.py:80
+#: survey/forms.py:54
 msgid "You need to choose at least one answer"
 msgstr "Vous devez choisir au moins une réponse"
 
-#: survey/forms.py:121 survey/forms.py:193
+#: survey/forms.py:95 survey/forms.py:167
 #: templates/survey/finishedSurvey.html:153
 #: templates/survey/finishedSurvey.html:160 templates/survey/review.html:40
 msgid "Your feedback"
 msgstr "Vos retours"
 
-#: survey/forms.py:123 survey/forms.py:195
+#: survey/forms.py:97 survey/forms.py:169
 msgid "Please let us know if anything is missing"
 msgstr "S'il vous plaît laissez-nous savoir si quelque chose est manquant"
 
-#: survey/forms.py:155
+#: survey/forms.py:129
 msgid "You can't choose multiple answers if the answer {} is choosen."
 msgstr ""
 "Vous ne pouvez pas choisir plusieurs réponses si la réponse {} est choisie."
 
-#: survey/forms.py:170
+#: survey/forms.py:144
 msgid "You can't choose the answers {} if answer '{}' is choosen."
 msgstr ""
 "Vous ne pouvez pas choisir plusieurs réponses {} si la réponse {} est "
@@ -3497,7 +3607,7 @@ msgstr "Rapport final"
 msgid "Let's start"
 msgstr "Commençons"
 
-#: survey/viewLogic.py:254
+#: survey/viewLogic.py:255
 msgid "Question"
 msgstr "Question"
 
@@ -3749,7 +3859,7 @@ msgstr "Annuler"
 msgid "Continue later"
 msgstr "Continuer plus tard"
 
-#: templates/survey/questions.html:75 templates/survey/start.html:35
+#: templates/survey/questions.html:75 templates/survey/start.html:36
 msgid "Next"
 msgstr "Suite"
 
@@ -3904,20 +4014,10 @@ msgstr ""
 msgid "Your email address won't be stored."
 msgstr ""
 
-#: templates/survey/start.html:19
+#: templates/survey/start.html:20
 msgid ""
 "We need a little information to be able to give you useful recommendations, "
 "once the self-assessment is done."
 msgstr ""
 "Nous avons besoin de quelques informations pour pouvoir vous faire des "
 "recommandations utiles, une fois l’auto-évaluation terminée."
-
-#, fuzzy
-#~| msgid "Public administration"
-#~ msgid "Public Administration"
-#~ msgstr "Administration publique"
-
-#, fuzzy
-#~| msgid "Trading, sales and mass distribution"
-#~ msgid "Food Production, processing and distribution"
-#~ msgstr "Commerce, vente et grande distribution"
