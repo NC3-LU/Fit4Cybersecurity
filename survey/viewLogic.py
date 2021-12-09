@@ -18,7 +18,6 @@ from survey.models import (
     SURVEY_STATUS_UNDER_REVIEW,
 )
 from survey.forms import InitialStartForm, AnswerMChoice, GeneralFeedback
-from survey.reporthelper import get_translation
 from csskp.settings import CUSTOM, LANGUAGES, LANGUAGE_CODE
 
 LOCAL_DEFAULT_LANG = LANGUAGE_CODE
@@ -191,10 +190,8 @@ def handle_question_answers_request(
         + _("Question")
         + " "
         + str(current_question.qindex),
-        "question": get_translation(current_question.label, user.choosen_lang),
-        "question_tooltip": get_translation(
-            current_question.tooltip, user.choosen_lang
-        ),
+        "question": _(current_question.label),
+        "question_tooltip": _(current_question.tooltip),
         "form": form,
         "action": "/survey/question/" + str(current_question.qindex),
         "user": user,
@@ -243,8 +240,8 @@ def get_answer_choices(
     tuple_answers = []
 
     for question_answer in question_answers:
-        translation = get_translation(question_answer.label, user_lang)
-        tooltip = get_translation(question_answer.tooltip, user_lang)
+        translation = _(question_answer.label)
+        tooltip = _(question_answer.tooltip)
 
         tuple_answers.append(
             (
@@ -298,9 +295,7 @@ def get_questions_with_user_answers(user: SurveyUser):
 
     questions_with_user_answers: Dict[int, QuestionWithUserAnswers] = {}
     for survey_user_answer in survey_user_answers:
-        question_title = get_translation(
-            survey_user_answer.answer.question.label, user.choosen_lang
-        )
+        question_title = _(survey_user_answer.answer.question.label)
         question_index = survey_user_answer.answer.question.qindex
         if question_index not in questions_with_user_answers:
             feedback = ""
@@ -320,9 +315,7 @@ def get_questions_with_user_answers(user: SurveyUser):
             {
                 "value": survey_user_answer.uvalue,
                 "content": user_answer_content,
-                "title": get_translation(
-                    survey_user_answer.answer.label, user.choosen_lang
-                ),
+                "title": _(survey_user_answer.answer.label),
             }
         )
 

@@ -4,7 +4,6 @@ from django import forms
 from django.utils.translation import gettext_lazy as _
 from survey.globals import SECTOR_CHOICES, COMPANY_SIZE, COUNTRIES
 from survey.models import SurveyQuestionAnswer
-from survey.reporthelper import get_translation
 from django_countries.fields import CountryField
 import json
 
@@ -157,9 +156,7 @@ class AnswerMChoice(forms.Form):
             for question_answer in question_answers:
                 # Validate if answer is unique.
                 if question_answer.uniqueAnswer:
-                    answer_text = get_translation(
-                        question_answer[0].label, self.lang
-                    )
+                    answer_text = _(question_answer[0].label)
 
                     raise forms.ValidationError(
                         _(

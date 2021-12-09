@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-12-06 12:38+0000\n"
+"POT-Creation-Date: 2021-12-09 08:51+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,11 +17,41 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: csskp/config.py:29 csskp/config_dev.py:28 csskp/config_prod.py:29
-msgid "Description of the tool."
+#: csskp/config.py:28
+msgid ""
+"This survey aims to identify the level of maturity\n"
+"        of the operators in Luxembourg with respect to risk management and "
+"governance,\n"
+"        collaboration on national and EU level and Incident reporting. We "
+"collect the\n"
+"        answers to these 30 questions to understand where guidance and "
+"knowledge is\n"
+"        already advanced and where there is room for improvement.\n"
+"        As such, it is recommended that a person is taking this survey that "
+"is knowing\n"
+"        the company's maturity on the aforementioned topics well.\n"
+"        <br /><br />\n"
+"        The survey will be online and available between December 2021 and "
+"March 31st 2022.\n"
+"        After the survey, the data will be processed and results will be "
+"interpreted.\n"
+"        However, since the survey is completely anonymous, we cannot "
+"identify you nor\n"
+"        your company and thus deletion of specific records is not possible: "
+"we cannot\n"
+"        be sure that it is indeed your survey. The results will be made "
+"available\n"
+"        through another channel.\n"
+"        <br /><br />\n"
+"        If you are not able to do the survey in one go and you want to "
+"later\n"
+"        pick up where you have left off, please be sure to save the link by "
+"clicking\n"
+"        on the \"continue later\" button.\n"
+"        We will not be able to help you to find your answers again otherwise."
 msgstr ""
 
-#: csskp/config.py:67 csskp/config_dev.py:69
+#: csskp/config.py:87 csskp/config_dev.py:69
 #, python-format
 msgid ""
 "The objective of the self-assessment tool,\n"
@@ -60,7 +90,7 @@ msgid ""
 "            contact us to do a Diagnostic CASES."
 msgstr ""
 
-#: csskp/config.py:91 csskp/config_dev.py:93
+#: csskp/config.py:109 csskp/config_dev.py:93
 #, python-format
 msgid ""
 "This self-assessment tool is named %(tool_name)s\n"
@@ -82,7 +112,7 @@ msgid ""
 "            the results to your suppliers, if necessary."
 msgstr ""
 
-#: csskp/config.py:105 csskp/config_dev.py:107
+#: csskp/config.py:121 csskp/config_dev.py:107
 #, python-format
 msgid ""
 "You have achieved %(SCORE)s/100 with your\n"
@@ -96,37 +126,2913 @@ msgid ""
 "exhaustive."
 msgstr ""
 
-#: survey/forms.py:29
+#: csskp/config.py:129
+msgid "Energy"
+msgstr ""
+
+#: csskp/config.py:130
+msgid "Transport"
+msgstr ""
+
+#: csskp/config.py:131
+msgid "Banking"
+msgstr ""
+
+#: csskp/config.py:132
+msgid "Financial market infrastructure"
+msgstr ""
+
+#: csskp/config.py:133 survey/globals.py:15
+msgid "Health"
+msgstr ""
+
+#: csskp/config.py:134
+msgid "Dringking water"
+msgstr ""
+
+#: csskp/config.py:135
+msgid "Waste Water"
+msgstr ""
+
+#: csskp/config.py:136
+msgid "Digital Infrastructure and Service Providers"
+msgstr ""
+
+#: csskp/config.py:137
+msgid "Public Administration"
+msgstr ""
+
+#: csskp/config.py:138
+msgid "Space"
+msgstr ""
+
+#: csskp/config.py:139
+msgid "Postal and Courrier Services"
+msgstr ""
+
+#: csskp/config.py:140
+msgid "Waste Management"
+msgstr ""
+
+#: csskp/config.py:141
+msgid "Manufacture, production and distribution of chemicals"
+msgstr ""
+
+#: csskp/config.py:142
+msgid "Food Production, processing and distribution"
+msgstr ""
+
+#: csskp/config.py:143
+msgid "Manufacturing of medical devices"
+msgstr ""
+
+#: csskp/config.py:144
+msgid "Manufacture of computer, electronics and optical products"
+msgstr ""
+
+#: csskp/config.py:145
+msgid "Manufacture of electrical equipment"
+msgstr ""
+
+#: csskp/config.py:146
+msgid "Manufacture of machinery and equipment"
+msgstr ""
+
+#: csskp/config.py:149
+msgid "Under 10 employees"
+msgstr ""
+
+#: csskp/config.py:150
+msgid "From 10 to 49 employees"
+msgstr ""
+
+#: csskp/config.py:151
+msgid "From 50 to 249 employees"
+msgstr ""
+
+#: csskp/config.py:152
+msgid "Over 250 employees"
+msgstr ""
+
+#: csskp/config_dev.py:28
+msgid "Description of the tool."
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:3
+msgid "Rules/Charter"
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:4
+#: data/fit4Cybersecurity/questions.json:149
+msgid "Awareness and Compliance"
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:20
+msgid "The company should define rules in order to avoid misunderstandings."
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:23
+msgid "not described"
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:36
+msgid ""
+"Rules (organisational, IT or working ones) should be known and explained to "
+"everyone, at the very least orally."
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:39
+msgid "orally given"
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:52
+msgid ""
+"If an oral transmission could be enough for a small company, rules should "
+"still be written in a charter, read and signed by everyone, very important "
+"if the company grows."
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:59
+msgid ""
+"An oral transmission could be a lot more complicated when there are lots of "
+"employees, and is really impossible when lots of people are hired and "
+"leaving."
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:62
+msgid "written and given by mail"
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:75
+msgid ""
+"Besides, written rules can :\n"
+"\t- avoid to forget some points\n"
+"\t- have a legal proof if the rules have been read."
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:78
+msgid "read and signed by everyone, in a user charter"
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:91
+msgid ""
+"If it's possible, rules should be as short and as easy as possible to be "
+"attractive and readable."
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:94
+msgid ""
+"written and explained with simple words, which are non-specific to a type of "
+"work"
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:107
+msgid ""
+"Rules that are too long or too heavy with technical vocabulary could become "
+"confusing."
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:110
+msgid "quite heavy, but really accurate"
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:123
+msgid ""
+"Each time when it's possible, some advice or some best practices should be "
+"given, and sometime explained."
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:126
+msgid "given with advice and the best practices"
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:139
+msgid ""
+"Some differences might be appropriate depending on the role, or if it's a "
+"temporary contract for instance."
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:142
+msgid "adapted depending on the role of the reader"
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:145
+msgid "In the company, rules are"
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:148
+msgid "GDPR"
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:165
+msgid ""
+"For the moment, the company does not have a lot of personal data, or haven't "
+"done anything to it. If there is more personal data, or if nothing were "
+"done, the company should think:"
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:168
+msgid ""
+"no personal data other than the employee data, or nothing related to the "
+"personal data"
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:181
+msgid ""
+"Define, whenever possible, someone responsible for the personal data in "
+"order to avoid the lack of response when there is an incident."
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:184
+msgid "someone who does every action bound to personal data"
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:197
+msgid ""
+"Data Lifecycle should be accessible by everyone :\n"
+"\t- How they are obtained\n"
+"\t- How they are used\n"
+"\t- How they are accessible, by whom and the contract linked\n"
+"\t- How they are alterable\n"
+"\t- How much time they are stored\n"
+"\t- How they are destroyed\n"
+"This cycle should be described somewhere and accessible by anyone (sell "
+"contracts, websites, files that could be shown ...)."
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:200
+msgid ""
+"a written explanation about the personal data lifecycle (how there are get, "
+"stored, and when and how they are destroyed)"
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:213
+msgid ""
+"People should know who is the responsible person for the data in order to "
+"ask all the necessary questions, requests and about data manipulation or "
+"data sensitivity."
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:216
+msgid ""
+"an oral or a written explanation of what should be done when there is a "
+"problem with personal data"
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:229
+msgid ""
+"Concerning the image rights, some authorisations are required (to take an "
+"image and to diffuse it), and people need to know when a place is under "
+"video surveillance."
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:232
+msgid ""
+"some video surveillance, or some pictures taken, that contains face or "
+"people and possibly location data"
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:235
+msgid "In the company, there is/are"
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:238
+msgid "Trainings"
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:239
+#: data/fit4Cybersecurity/questions.json:329
+#: data/fit4Cybersecurity/questions.json:387
+msgid "Employee Management"
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:255
+msgid ""
+"Updating the best practices for daily tasks is important to avoid all the "
+"basic mistakes and loss of time."
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:258
+msgid ""
+"their work, their daily tasks by their studies, but also receive trainings "
+"to update their knowledge"
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:271
+msgid ""
+"Learning to use software is important to avoid time loss, data loss and "
+"manipulation mistakes."
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:274
+msgid "the software they daily use"
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:287
+msgid ""
+"By informing about attacks that are current, common or well-known, employees "
+"could more easily identify them and avoid falling for them."
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:290
+msgid ""
+"information security, to have the knowledge to protect themselves against "
+"attacks"
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:303
+msgid ""
+"Trainings that are done internally do not have the same impact as external "
+"ones, but could be more appropriate by the mastery of the subject within the "
+"company environment."
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:306
+msgid "by specialists, that could be internal or external"
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:319
+msgid ""
+"Train users on the sensitivity of the manipulated information, in order to "
+"put their attention on how to protect them."
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:322
+msgid ""
+"the importance to keep confidential data confidential, and more importantly "
+"if they are personal"
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:325
+msgid "Employees are trained for/in"
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:328
+msgid "IT and Information Security Responsibilities"
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:340
+msgid "internally defined, with someone who is specialised in IT field"
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:348
+msgid ""
+"internally defined, with at least two people that were trained in the field"
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:356
+msgid "externally defined, with a contract"
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:364
+msgid ""
+"externally defined, depending on the needs, without any contract specified"
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:377
+msgid ""
+"It's important to define responsibilities, either externally or internally, "
+"with one person or more, or a company, but specialised into their own "
+"domain, with possibly a training."
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:380
+msgid ""
+"aren't defined; anyone tries to resolve their problems, asking someone else "
+"if they can"
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:383
+msgid "IT and Information Security responsibilities are:"
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:386
+msgid "Home Office/Mobility"
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:403
+msgid ""
+"For now, no outside work is done. If it's changed, it's important to take "
+"care that:\n"
+"\t- External connections which are not controlled and monitored should be "
+"avoided to avoid data loss."
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:406
+msgid ""
+"no professional tools because home office or travel is not allowed or "
+"necessary, or the only connection to the internal network is on the company "
+"premises"
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:419
+msgid ""
+"Whenever users have the need to work outside, from home office to missions "
+"outside the premises, they must have a VPN connection to connect to the "
+"server."
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:422
+msgid ""
+"VPN (Virtual Private Network) is used to encrypt all data from any external "
+"network to the internal server"
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:430
+msgid ""
+"public Wi-Fi, open networks or connection protected by external organisation "
+"or person"
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:443
+msgid ""
+"External connection which is not controlled and monitored should be avoided "
+"to avoid data loss."
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:446
+msgid ""
+"a private connection or a connection sharing from a private or professional "
+"smartphone (tethering/hotspot)"
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:459
+msgid ""
+"The visual environment is really important, to avoid curiosity or spying."
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:462
+msgid ""
+"a screen filter or adjusts their position to ensure that no unauthorised "
+"person could see what is on the screen"
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:475
+msgid ""
+"Devices that are taken away and that contains confidential data should "
+"always have their internal memory encrypted to avoid data loss."
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:478
+msgid ""
+"devices that are encrypted (protected by a password at boot) or without any "
+"confidential data"
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:481
+msgid "During any trip outside the company, the employee uses"
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:484
+msgid "Contracts (SLA/NDA)"
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:485
+#: data/fit4Cybersecurity/questions.json:559
+msgid "Third Party Management"
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:501
+msgid ""
+"For now, no contracts with third parties are signed. If it's changed, it's "
+"important to:"
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:504
+msgid ""
+"are not defined, because they only come punctually in case of an incident or "
+"needs"
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:517
+msgid ""
+"If confidential data is accessible by different third parties, like external "
+"maintenace companies, or financial data by a fiduciary, a Non-Disclosure "
+"Agreement (NDA) should be signed with them."
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:520
+msgid "define confidentiality of data, and their protection"
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:533
+msgid ""
+"If means and needs permit it, a contract should be signed to ensure that the "
+"external IT provider will ensure the availability of system to remain "
+"operational."
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:536
+msgid "define the maximum time of intervention after an incident"
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:549
+msgid ""
+"It's necessary to review the contracts to ensuring a certain availability :\n"
+"\t- not having an intervention solution whenever it's essential\n"
+"\t- to not pay too much for a service which is not necessary\n"
+"\t- to evaluate if the services paid are satisfying the necessary"
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:552
+msgid "are regularly reviewed to ensure that they correspond to the needs"
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:555
+msgid "Contracts with third parties"
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:558
+msgid "Office Cleaning"
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:575
+msgid ""
+"For now, no third parties clean the premises. If it changes, it's important "
+"to:"
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:578
+msgid "internally, by employees, punctually"
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:591
+msgid ""
+"The office cleaning should be done, whenever possible, during work time to "
+"avoid potential data theft."
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:594
+msgid "during the work time"
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:607
+msgid "Rules should be given mainly to specify what should be done or avoided."
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:610
+msgid "with rules of what should be done and what should not be done"
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:623
+msgid ""
+"It's important to define a confidentiality clause in all the contracts to "
+"ensure the confidentiality of information heard or seen."
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:626
+msgid "with a contract which specifies confidentiality"
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:639
+msgid ""
+"To avoid problems due to the human curiosity, it is important to have a "
+"clean desk policy to avoid confidential documents being seen."
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:642
+msgid "with all confidential documents locked in a room, a desk or a closet"
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:655
+msgid ""
+"The staff shouldn't clean restricted access areas, such as archive room or "
+"IT room."
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:658
+msgid ""
+"while avoiding rooms which have restricted access, like an archive room or a "
+"server room"
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:661
+msgid "The office cleaning is done"
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:664
+msgid "Passwords"
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:665
+msgid "Logical Access"
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:681
+msgid ""
+"Advice should be given to avoid weak passwords. Some tips or techniques "
+"could be given to employees to remember their passwords. Here some "
+"examples:\n"
+"\t- Passwords should be kept secret and personal. Each and everyone should "
+"access their data by using their password, even from a computer of someone "
+"else.\n"
+"\t- There shouldn't be a computer which is shared with one and unique "
+"password. If it's inevitable, then a trsutworthy person should be defined "
+"responsible, and access should be really limited.\n"
+"\t- It's mandatory to be careful with the password storage in the internet "
+"browser as they are not protected."
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:684
+msgid "not having requirements or guidelines, employees are left on their own"
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:697
+msgid ""
+"Passwords should be kept secret and personal. If it's impossible, then there "
+"should be a trustworthy person named responsible for the computer to ensure "
+"its use, and give minimum access."
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:700
+msgid "centralised in a file, or are all known by one or more people"
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:713
+msgid ""
+"Passwords should be kept secret and personal. Each and everyone should "
+"access their data by using their password, even from the computer of someone "
+"else."
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:716
+msgid "shared whenever there is a need to access a protected device"
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:729
+msgid ""
+"It's necessary to have passwords which have at least one uppercase, "
+"lowercase, digit and special character, and a minimum of 12 characters."
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:732
+msgid ""
+"made up of 12 or more characters which are uppercase, lowercase, digits and "
+"special character"
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:745
+msgid ""
+"Passwords shouldn't be a coherent word or date, except if they are in a "
+"complete sentence."
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:748
+msgid "not forming any words or dates"
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:761
+msgid ""
+"Complete sentences could be used, even if they represent complete words."
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:764
+msgid "complete sentences"
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:777
+msgid ""
+"Passwords should be changed from time to time, to prevent serious "
+"consequences in case of a leak."
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:780
+msgid "regularly changed, every year or two"
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:793
+msgid "To make the storage easier, a password manager could be used."
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:796
+msgid "included in a password manager"
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:809
+msgid ""
+"It's mandatory to be careful with the password storage in the internet "
+"browser as they are not protected."
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:812
+msgid "included in web browsers"
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:825
+msgid ""
+"Same passwords used on different website makes a leak easier. Besides, only "
+"one leak is enough to compromise all the access using the same password."
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:828
+msgid "different for each application used, even for a user"
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:831
+msgid "Passwords in the company are"
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:834
+msgid "WiFi"
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:835
+#: data/fit4Cybersecurity/questions.json:925
+msgid "Local Area Network"
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:851
+msgid ""
+"For now, wireless network isn't activated in the company. If it is changed, "
+"it's important to:\n"
+"\t- Wireless Network should be split between internal and external users to "
+"avoid access problems.\n"
+"\t- If a wireless network is used for external people, strong precautions "
+"should be taken, for example the collection of an identity."
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:854
+msgid "are not used in the company"
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:867
+msgid ""
+"Wireless Network should be split between internal and external users to "
+"avoid access problems."
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:870
+msgid "are used by everyone and access is granted to the company server"
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:883
+msgid ""
+"If a wireless network is used for external people, strong precautions should "
+"be taken, for example the collection of an identity"
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:886
+msgid "are given to everyone, without any way to get identity of the persons"
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:899
+msgid ""
+"The password shouldn't be easily guessable, to avoid connections which are "
+"not wanted."
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:902
+msgid "are protected by long passwords of 20 characters or more"
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:915
+msgid ""
+"Also, wireless networks of printers should be protected to avoid the leak of "
+"all printed documents."
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:918
+msgid "of the printers are protected by a strong password"
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:921
+msgid "Wireless networks"
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:924
+msgid "Anti-virus"
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:941
+msgid "The company should have an anti-virus and be careful to:"
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:944
+msgid "is not installed or used"
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:957
+msgid "An anti-virus software must be on all devices."
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:960
+msgid "is installed on computers and laptops"
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:973
+msgid ""
+"It should be up to date, preferably automatically to cover as many threats "
+"as possible."
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:976
+msgid "is updated on all computers, automatically or manually"
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:989
+msgid "It should be activated in any case to protect the device continuously."
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:992
+msgid "is activated and protects computers"
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:1005
+msgid ""
+"All devices, like smartphones, tablets should have an anti-virus, even if "
+"it's the one by default from the operating system."
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:1008
+msgid "is installed on all mobile phones that are on networks"
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:1021
+msgid "Some tests should be done from time to time."
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:1024
+msgid ""
+"is used from time to time in order to analyse the computer, even without "
+"external events"
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:1037
+msgid "Some tests should be done in case of suspicion of infection."
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:1040
+msgid "is used to analyse the network whenever a suspicious event occurs"
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:1043
+msgid "Antivirus software"
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:1046
+msgid "User Work Stations/Updates"
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:1047
+#: data/fit4Cybersecurity/questions.json:1137
+#: data/fit4Cybersecurity/questions.json:1283
+msgid "Information System"
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:1063
+msgid ""
+"Some rules and specific advice should be given concerning users stations or "
+"laptop. Some points that are important:"
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:1066
+msgid ""
+"left without any rules, and users have to take care of their on workstations"
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:1079
+msgid ""
+"A device should always be up to date in order to avoid security problems, "
+"and also avoid network intrusion. Many operating system now update "
+"automatically, but installed software needs some permission to be given or "
+"manual maintenance."
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:1082
+msgid "automatically or manually updated; software and operating system"
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:1095
+msgid ""
+"Administrator rights should be left only to the users who are specialised in "
+"IT, or welladvised respecting the rules."
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:1098
+msgid ""
+"controlled by administrators, which won't let users install software because "
+"they do not have administrator rights"
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:1111
+msgid ""
+"Downloads should only be done from the official websites, the original "
+"developers of the software, to avoid illegal download or infections."
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:1114
+msgid ""
+"needed to comply with rules or guidelines about installation and downloading "
+"software, concerning illegality or the danger to install something without "
+"authorisation"
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:1127
+msgid "Devices should be locked to avoid identity theft."
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:1130
+msgid "locked whenever the user is not at his desk, even for a short time"
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:1133
+msgid "The user workstations are"
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:1136
+msgid "Backups"
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:1153
+msgid ""
+"It's important to have backups for various reason, to have redundancy of "
+"data if they disappeared. It's important to have:"
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:1156
+msgid "non existent: they are not done or not working"
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:1164
+msgid "shared: a third party has the responsibility of the backup"
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:1177
+msgid ""
+"Backups should concern the whole company, and everyone should be aware to "
+"put all data on the systems that are backed up, to ensure to have a copy of "
+"them."
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:1180
+msgid ""
+"exhaustive: all data is on backups, and all users know that and avoid "
+"storing information locally"
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:1193
+msgid "Backups should be done daily to avoid major data loss."
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:1196
+msgid "done daily: backups are made at least once daily"
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:1209
+msgid ""
+"Backups should be retained at least a month to avoid problems caused by "
+"ransomware."
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:1212
+msgid "retained: it is possible to get back a month or more"
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:1225
+msgid ""
+"Backups should be outside the premises, decentralized, with more than 3 "
+"kilometres between them."
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:1228
+msgid ""
+"decentralized: the server, and at least one full backup system is separated "
+"by at leaset 3 kilometres"
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:1241
+msgid ""
+"Backups should be disconnected, outside the local network, to be invisible "
+"by crypto-ransomwares."
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:1244
+msgid "disconnected: they are disconnected from the server once they are done"
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:1257
+msgid ""
+"Backups should be tested from time to time, just to ensure that the data is "
+"readable and has integrity."
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:1260
+msgid ""
+"tested: one or all the files are restored from a backup from occasionally"
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:1273
+msgid ""
+"Backups should be encrypted to avoid problems concerning the data theft, "
+"mainly if they are moved."
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:1276
+msgid ""
+"encrypted: so when they are taken outside the company, they can't be read"
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:1279
+msgid "Backups are"
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:1282
+msgid "BYOD"
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:1299
+msgid ""
+"For now, the personal devices are not connected in the local network. If "
+"it's changed, it's important to:"
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:1302
+msgid "is forbidden or impossible in the company"
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:1315
+msgid ""
+"Personal devices shouldn't be used in company without any controls, rules "
+"and explanations. By knowing all the different existing ways to attack an "
+"organism, it's possible to avoid them"
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:1318
+msgid ""
+"is subject to precise rules, particularly before connecting to the company "
+"network"
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:1331
+msgid ""
+"Personal devices should have an antivirus installed, updated and active to "
+"avoid as many threats as possible."
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:1334
+msgid "is under a strict anti-virus control"
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:1347
+msgid ""
+"Defining rules and best practices helps to protect the internal networks."
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:1350
+msgid "has been explained to employees through training or explanations"
+msgstr ""
+
+#: data/fit4Cybersecurity/questions.json:1353
+msgid ""
+"Having some personal IT devices (USB Key, Hard Drive, Smartphone, Tablet, "
+"Laptop ...) in the professional environment (network that is connected to "
+"the server)"
+msgstr ""
+
+#: data/fit4ilr/questions.json:3 data/survey4operators/questions.json:3
+msgid "What is the risk management culture in your company?"
+msgstr ""
+
+#: data/fit4ilr/questions.json:4 data/fit4ilr/questions.json:5
+#: data/fit4ilr/questions.json:78 data/fit4ilr/questions.json:79
+#: data/fit4ilr/questions.json:96 data/fit4ilr/questions.json:97
+#: data/fit4ilr/questions.json:114 data/fit4ilr/questions.json:115
+#: data/fit4ilr/questions.json:132 data/fit4ilr/questions.json:133
+#: data/fit4ilr/questions.json:150 data/fit4ilr/questions.json:151
+#: data/fit4ilr/questions.json:168 data/fit4ilr/questions.json:169
+#: data/fit4ilr/questions.json:186 data/fit4ilr/questions.json:187
+#: data/fit4ilr/questions.json:204 data/fit4ilr/questions.json:205
+#: data/fit4ilr/questions.json:278 data/fit4ilr/questions.json:279
+#: data/fit4ilr/questions.json:336 data/fit4ilr/questions.json:337
+#: data/fit4ilr/questions.json:386 data/fit4ilr/questions.json:387
+#: data/fit4ilr/questions.json:428 data/fit4ilr/questions.json:429
+#: data/fit4ilr/questions.json:518 data/fit4ilr/questions.json:519
+#: data/fit4ilr/questions.json:704 data/fit4ilr/questions.json:705
+#: data/fit4ilr/questions.json:842 data/fit4ilr/questions.json:843
+#: data/fit4ilr/questions.json:860 data/fit4ilr/questions.json:861
+#: data/fit4ilr/questions.json:934 data/fit4ilr/questions.json:935
+#: data/fit4privacy/questions.json:800 data/fit4privacy/questions.json:890
+#: data/fit4privacy/questions.json:948 data/fit4privacy/questions.json:1022
+#: data/survey4operators/questions.json:4
+#: data/survey4operators/questions.json:5
+#: data/survey4operators/questions.json:78
+#: data/survey4operators/questions.json:79
+#: data/survey4operators/questions.json:96
+#: data/survey4operators/questions.json:97
+#: data/survey4operators/questions.json:114
+#: data/survey4operators/questions.json:115
+#: data/survey4operators/questions.json:132
+#: data/survey4operators/questions.json:133
+#: data/survey4operators/questions.json:150
+#: data/survey4operators/questions.json:151
+#: data/survey4operators/questions.json:168
+#: data/survey4operators/questions.json:169
+#: data/survey4operators/questions.json:186
+#: data/survey4operators/questions.json:187
+#: data/survey4operators/questions.json:204
+#: data/survey4operators/questions.json:205
+#: data/survey4operators/questions.json:278
+#: data/survey4operators/questions.json:279
+#: data/survey4operators/questions.json:336
+#: data/survey4operators/questions.json:337
+#: data/survey4operators/questions.json:386
+#: data/survey4operators/questions.json:387
+#: data/survey4operators/questions.json:428
+#: data/survey4operators/questions.json:429
+#: data/survey4operators/questions.json:518
+#: data/survey4operators/questions.json:519
+#: data/survey4operators/questions.json:704
+#: data/survey4operators/questions.json:705
+#: data/survey4operators/questions.json:842
+#: data/survey4operators/questions.json:843
+#: data/survey4operators/questions.json:860
+#: data/survey4operators/questions.json:861
+#: data/survey4operators/questions.json:934
+#: data/survey4operators/questions.json:935
+msgid "Risk Management"
+msgstr ""
+
+#: data/fit4ilr/questions.json:11 data/survey4operators/questions.json:11
+msgid "We do not really have one."
+msgstr ""
+
+#: data/fit4ilr/questions.json:18 data/survey4operators/questions.json:18
+msgid ""
+"It is always advised to establish and maintain an appropriate governance and "
+"risk management framework, to identify and address risks for the all "
+"networks and services."
+msgstr ""
+
+#: data/fit4ilr/questions.json:27 data/survey4operators/questions.json:27
+msgid "There are risk management governance responsibilities in place."
+msgstr ""
+
+#: data/fit4ilr/questions.json:35 data/survey4operators/questions.json:35
+msgid "Our company performs a Risk Analysis at least once every year."
+msgstr ""
+
+#: data/fit4ilr/questions.json:43 data/survey4operators/questions.json:43
+msgid ""
+"Our company has a documented strategy combining both reacting to incidents "
+"and the prevention of incidents."
+msgstr ""
+
+#: data/fit4ilr/questions.json:51 data/survey4operators/questions.json:51
+msgid "Our company has third-party risk management in place."
+msgstr ""
+
+#: data/fit4ilr/questions.json:59 data/survey4operators/questions.json:59
+msgid ""
+"Our company is covering critical risks even outside of service contracts "
+"with providers/third-parties."
+msgstr ""
+
+#: data/fit4ilr/questions.json:67 data/survey4operators/questions.json:67
+msgid "There are other elements in place, like:"
+msgstr ""
+
+#: data/fit4ilr/questions.json:77 data/survey4operators/questions.json:77
+msgid ""
+"Which risk management processes are imposed by the Luxembourg entity, and if "
+"applicable, by the company Group?"
+msgstr ""
+
+#: data/fit4ilr/questions.json:85 data/fit4ilr/questions.json:103
+#: data/fit4ilr/questions.json:121 data/fit4ilr/questions.json:139
+#: data/fit4ilr/questions.json:157 data/fit4ilr/questions.json:175
+#: data/fit4ilr/questions.json:193 data/fit4ilr/questions.json:849
+#: data/fit4ilr/questions.json:941 data/fit4ilr/questions.json:1059
+#: data/survey4operators/questions.json:85
+#: data/survey4operators/questions.json:103
+#: data/survey4operators/questions.json:121
+#: data/survey4operators/questions.json:139
+#: data/survey4operators/questions.json:157
+#: data/survey4operators/questions.json:175
+#: data/survey4operators/questions.json:193
+#: data/survey4operators/questions.json:849
+#: data/survey4operators/questions.json:941
+#: data/survey4operators/questions.json:1059
+msgid "Please describe:"
+msgstr ""
+
+#: data/fit4ilr/questions.json:95 data/survey4operators/questions.json:95
+msgid ""
+"What are the challenges related to performing existing Risk Management "
+"processes or practices? "
+msgstr ""
+
+#: data/fit4ilr/questions.json:113 data/survey4operators/questions.json:113
+msgid ""
+"What can be improved about the existing Risk Management practices, in "
+"general?"
+msgstr ""
+
+#: data/fit4ilr/questions.json:131 data/survey4operators/questions.json:131
+msgid ""
+"What are the requirements related to Information Security risks, that apply "
+"to your company and your sector?"
+msgstr ""
+
+#: data/fit4ilr/questions.json:149 data/survey4operators/questions.json:149
+msgid ""
+"What is the complexity of the requirements described previously (if any)?"
+msgstr ""
+
+#: data/fit4ilr/questions.json:167 data/survey4operators/questions.json:167
+msgid ""
+"What are the contradictions among risk management requirements (if any)?"
+msgstr ""
+
+#: data/fit4ilr/questions.json:185 data/survey4operators/questions.json:185
+msgid "What are the overlaps among risk management requirements (if any)?"
+msgstr ""
+
+#: data/fit4ilr/questions.json:203 data/survey4operators/questions.json:203
+msgid ""
+"Which standardized risk management practices are recommended to you by the "
+"group (if any)?"
+msgstr ""
+
+#: data/fit4ilr/questions.json:211 data/fit4ilr/questions.json:285
+#: data/survey4operators/questions.json:211
+#: data/survey4operators/questions.json:285
+msgid "None."
+msgstr ""
+
+#: data/fit4ilr/questions.json:218 data/fit4ilr/questions.json:234
+#: data/fit4ilr/questions.json:250 data/fit4ilr/questions.json:266
+#: data/survey4operators/questions.json:218
+#: data/survey4operators/questions.json:234
+#: data/survey4operators/questions.json:250
+#: data/survey4operators/questions.json:266
+msgid ""
+"Having and maintaining an appropriate information security policy and "
+"charter. It should at least contain the basics as highlighted in the charter "
+"templates that can be found in the <a href=\"https://trustbox.cases.lu\" "
+"target=\"_blank\">CASES Trustbox</a>. But not only creating but correctly "
+"maintaining a more detailed security policy is essential and should be done "
+"as soon as possible."
+msgstr ""
+
+#: data/fit4ilr/questions.json:227 data/survey4operators/questions.json:227
+msgid "None and not needed nor desired."
+msgstr ""
+
+#: data/fit4ilr/questions.json:243 data/survey4operators/questions.json:243
+msgid "None, but we would love some support."
+msgstr ""
+
+#: data/fit4ilr/questions.json:259 data/survey4operators/questions.json:259
+msgid "Some. The list them includes:"
+msgstr ""
+
+#: data/fit4ilr/questions.json:277 data/survey4operators/questions.json:277
+msgid ""
+"What guidance do you have from national and international groups or "
+"authorities?"
+msgstr ""
+
+#: data/fit4ilr/questions.json:293 data/survey4operators/questions.json:293
+msgid "Help with identification of incidents."
+msgstr ""
+
+#: data/fit4ilr/questions.json:301 data/survey4operators/questions.json:301
+msgid "New relevant standards in the field."
+msgstr ""
+
+#: data/fit4ilr/questions.json:309 data/survey4operators/questions.json:309
+msgid "Educational Program(s)."
+msgstr ""
+
+#: data/fit4ilr/questions.json:317 data/survey4operators/questions.json:317
+msgid "National guidance."
+msgstr ""
+
+#: data/fit4ilr/questions.json:325 data/survey4operators/questions.json:325
+msgid "Other (please describe):"
+msgstr ""
+
+#: data/fit4ilr/questions.json:335 data/survey4operators/questions.json:335
+msgid ""
+"To what extent is there a dependency on the supply chain in your company, "
+"that creates security gaps and lack of proper oversight?"
+msgstr ""
+
+#: data/fit4ilr/questions.json:343 data/survey4operators/questions.json:343
+msgid "A lot."
+msgstr ""
+
+#: data/fit4ilr/questions.json:350 data/fit4ilr/questions.json:366
+#: data/survey4operators/questions.json:350
+#: data/survey4operators/questions.json:366
+msgid ""
+"In your industry, it is always important to establish and maintain "
+"mechanisms for monitoring and collecting information about relevant threats "
+"to the security of your networks and services"
+msgstr ""
+
+#: data/fit4ilr/questions.json:359 data/survey4operators/questions.json:359
+msgid "Little."
+msgstr ""
+
+#: data/fit4ilr/questions.json:375 data/survey4operators/questions.json:375
+msgid "None at all."
+msgstr ""
+
+#: data/fit4ilr/questions.json:385 data/survey4operators/questions.json:385
+msgid ""
+"Do you have specific regulations in your sector concerning cybersecurity?"
+msgstr ""
+
+#: data/fit4ilr/questions.json:393 data/fit4ilr/questions.json:451
+#: data/survey4operators/questions.json:393
+#: data/survey4operators/questions.json:451
+msgid "Telecom regulations."
+msgstr ""
+
+#: data/fit4ilr/questions.json:401 data/fit4ilr/questions.json:467
+#: data/survey4operators/questions.json:401
+#: data/survey4operators/questions.json:467
+msgid "The NIS Directive."
+msgstr ""
+
+#: data/fit4ilr/questions.json:409 data/fit4ilr/questions.json:483
+#: data/survey4operators/questions.json:409
+#: data/survey4operators/questions.json:483
+msgid "Aviation Regulations."
+msgstr ""
+
+#: data/fit4ilr/questions.json:417 data/survey4operators/questions.json:417
+msgid "Other - please list:"
+msgstr ""
+
+#: data/fit4ilr/questions.json:427 data/survey4operators/questions.json:427
+msgid "Are you obliged to comply with any of the following regulations?"
+msgstr ""
+
+#: data/fit4ilr/questions.json:435 data/survey4operators/questions.json:435
+msgid "No obligation to comply to any regulation."
+msgstr ""
+
+#: data/fit4ilr/questions.json:442 data/fit4ilr/questions.json:458
+#: data/fit4ilr/questions.json:490 data/fit4ilr/questions.json:506
+#: data/survey4operators/questions.json:442
+#: data/survey4operators/questions.json:458
+#: data/survey4operators/questions.json:490
+#: data/survey4operators/questions.json:506
+msgid ""
+"If you are a simple SME, you can consider the guidance from ENISA: "
+"<ul><li><a href=\"https://www.enisa.europa.eu/publications/cybersecurity-"
+"guide-for-smes\" target=\"_blank\">Cybersecurity guide for SMEs</a></"
+"li><li><a href=\"https://www.enisa.europa.eu/publications/enisa-report-"
+"cybersecurity-for-smes\" target=\"_blank\">Report cybersecurity for SMEs</"
+"a></li></ul>"
+msgstr ""
+
+#: data/fit4ilr/questions.json:474 data/survey4operators/questions.json:474
+msgid ""
+"If you are obliged to comply with the NIS directive, then you should "
+"consider <a href=\"https://www.enisa.europa.eu/topics/nis-directive/minimum-"
+"security-measures-for-operators-of-essentials-services\" target=\"_blank"
+"\">this mapping table</a> of security measures provided by ENISA. In "
+"addition, depending on your sector you should consider this documents:"
+"<ul><li>Digital service provider<ul><li><a href=\"https://www.enisa.europa."
+"eu/publications/minimum-security-measures-for-digital-service-providers\" "
+"target=\"_blank\">Minimum security measures for digital service providers</"
+"a></li></ul></li><li>Telecom sector<ul><li><a href=\"https://www.enisa."
+"europa.eu/publications/guideline-on-security-measures-under-the-eecc\" "
+"target=\"_blank\">Guideline on security measures under the EECC</a></li></"
+"ul></li><li>Healthcare sector<ul><li><a href=\"https://www.enisa.europa.eu/"
+"publications/cloud-security-for-healthcare-services\" target=\"_blank"
+"\">Cloud security for healthcare services</a></li><li><a href=\"https://www."
+"enisa.europa.eu/publications/good-practices-for-the-security-of-healthcare-"
+"services\" target=\"_blank\">Good practices for the security of healthcare "
+"services</a></li></ul></li><li>Transport sector (railways)<ul><li><a href="
+"\"https://www.enisa.europa.eu/publications/railway-cybersecurity\" target="
+"\"_blank\">Railway cybersecurity</a></li></ul></li><li>Energy "
+"sector<ul><li><a href=\"https://www.enisa.europa.eu/publications/"
+"communication-network-interdependencies-in-smart-grids\" target=\"_blank"
+"\">Communication network interdependencies in smart grids</a></li><li><a "
+"href=\"https://www.enisa.europa.eu/publications/power-sector-dependency\" "
+"target=\"_blank\">Power sector dependency</a></li></ul></li><li>Financial "
+"sector<ul><li><a href=\"https://www.enisa.europa.eu/publications/"
+"EU_Cybersecurity_Initiatives_in_the_Finance_Sector\" target=\"_blank\"> EU "
+"Cybersecurity Initiatives in the Finance Sector</a></li><li><a href="
+"\"https://www.enisa.europa.eu/publications/mobile-payments-security\" target="
+"\"_blank\">Mobile payments security</a></li><li><a href=\"https://www.enisa."
+"europa.eu/publications/blockchain-security\" target=\"_blank\">Blockchain "
+"security</a></li><li><a href=\"https://www.enisa.europa.eu/publications/"
+"network-and-information-security-in-the-finance-sector\" target=\"_blank"
+"\">Network and information security in the finance sector</a></li></ul></"
+"ul></li>"
+msgstr ""
+
+#: data/fit4ilr/questions.json:499 data/fit4ilr/questions.json:685
+#: data/survey4operators/questions.json:499
+#: data/survey4operators/questions.json:685
+msgid "Other:"
+msgstr ""
+
+#: data/fit4ilr/questions.json:517 data/survey4operators/questions.json:517
+msgid ""
+"Is your organization voluntarily compliant with any of the following "
+"standards and guidelines?"
+msgstr ""
+
+#: data/fit4ilr/questions.json:525 data/survey4operators/questions.json:525
+msgid "We are not compliant with any standards nor guidelines."
+msgstr ""
+
+#: data/fit4ilr/questions.json:532 data/fit4ilr/questions.json:548
+#: data/fit4ilr/questions.json:564 data/fit4ilr/questions.json:580
+#: data/fit4ilr/questions.json:596 data/fit4ilr/questions.json:612
+#: data/fit4ilr/questions.json:628 data/fit4ilr/questions.json:644
+#: data/fit4ilr/questions.json:660 data/fit4ilr/questions.json:676
+#: data/fit4ilr/questions.json:692 data/survey4operators/questions.json:532
+#: data/survey4operators/questions.json:548
+#: data/survey4operators/questions.json:564
+#: data/survey4operators/questions.json:580
+#: data/survey4operators/questions.json:596
+#: data/survey4operators/questions.json:612
+#: data/survey4operators/questions.json:628
+#: data/survey4operators/questions.json:644
+#: data/survey4operators/questions.json:660
+#: data/survey4operators/questions.json:676
+#: data/survey4operators/questions.json:692
+msgid ""
+"Irrespective of your obligations in terms of risk management and "
+"cybersecurity, you should consider <a href=\"https://www.enisa.europa.eu/"
+"publications/guideline-on-security-measures-under-the-eecc\" target=\"_blank"
+"\">the 29 Security Objectives</a> listed by ENISA split in 8 areas, and "
+"ordered by level of sophistication. To check if you have implemented "
+"security measures in your company in a meaningful and risk-aware way."
+msgstr ""
+
+#: data/fit4ilr/questions.json:541 data/survey4operators/questions.json:541
+msgid "Technical guidelines published by ENISA for our sector."
+msgstr ""
+
+#: data/fit4ilr/questions.json:557 data/survey4operators/questions.json:557
+msgid "Guidelines published by the NIS Cooperation group."
+msgstr ""
+
+#: data/fit4ilr/questions.json:573 data/survey4operators/questions.json:573
+msgid "NIST risk management or cybersecurity framework and standards."
+msgstr ""
+
+#: data/fit4ilr/questions.json:589 data/survey4operators/questions.json:589
+msgid "ISO27000 standards."
+msgstr ""
+
+#: data/fit4ilr/questions.json:605 data/survey4operators/questions.json:605
+msgid "CoBIT."
+msgstr ""
+
+#: data/fit4ilr/questions.json:621 data/survey4operators/questions.json:621
+msgid "NESAS – Network Equipment Security Assurance Scheme."
+msgstr ""
+
+#: data/fit4ilr/questions.json:637 data/survey4operators/questions.json:637
+msgid "eBIOS."
+msgstr ""
+
+#: data/fit4ilr/questions.json:653 data/survey4operators/questions.json:653
+msgid "CEER Guidelines."
+msgstr ""
+
+#: data/fit4ilr/questions.json:669 data/survey4operators/questions.json:669
+msgid "ACEER Guidelines."
+msgstr ""
+
+#: data/fit4ilr/questions.json:703 data/survey4operators/questions.json:703
+msgid ""
+"To your knowledge, to what extent has your organization performed the "
+"following?"
+msgstr ""
+
+#: data/fit4ilr/questions.json:711 data/survey4operators/questions.json:711
+msgid "Inventory of assets (primary and secondary)."
+msgstr ""
+
+#: data/fit4ilr/questions.json:718 data/fit4ilr/questions.json:734
+#: data/fit4ilr/questions.json:750 data/fit4ilr/questions.json:766
+#: data/fit4ilr/questions.json:782 data/fit4ilr/questions.json:798
+#: data/fit4ilr/questions.json:814 data/fit4ilr/questions.json:830
+#: data/survey4operators/questions.json:718
+#: data/survey4operators/questions.json:734
+#: data/survey4operators/questions.json:750
+#: data/survey4operators/questions.json:766
+#: data/survey4operators/questions.json:782
+#: data/survey4operators/questions.json:798
+#: data/survey4operators/questions.json:814
+#: data/survey4operators/questions.json:830
+msgid ""
+"In general, every company and operator should have an inventory of assets, "
+"critical assets, outsources services and service providers, a list of "
+"existing security measures depending on security objectives, threat "
+"modelling and, essentially, also a business continuity plan, to ensure "
+"continuity of the services and containment of the incident."
+msgstr ""
+
+#: data/fit4ilr/questions.json:727 data/survey4operators/questions.json:727
+msgid "Critical assets inventory."
+msgstr ""
+
+#: data/fit4ilr/questions.json:743 data/survey4operators/questions.json:743
+msgid "Inventory of third-party and outsourcing providers."
+msgstr ""
+
+#: data/fit4ilr/questions.json:759 data/survey4operators/questions.json:759
+msgid ""
+"Overview of existing security measures, depending on security objectives."
+msgstr ""
+
+#: data/fit4ilr/questions.json:775 data/survey4operators/questions.json:775
+msgid "Business continuity planning."
+msgstr ""
+
+#: data/fit4ilr/questions.json:791 data/survey4operators/questions.json:791
+msgid "Threat modelling and threat awareness."
+msgstr ""
+
+#: data/fit4ilr/questions.json:807 data/fit4ilr/questions.json:1025
+#: data/survey4operators/questions.json:807
+#: data/survey4operators/questions.json:1025
+msgid "None of the above."
+msgstr ""
+
+#: data/fit4ilr/questions.json:823 data/survey4operators/questions.json:823
+msgid ""
+"Any details you would like to share (for example, done/ongoing/not done/no "
+"idea what these actions mean):"
+msgstr ""
+
+#: data/fit4ilr/questions.json:841 data/survey4operators/questions.json:841
+msgid ""
+"What are the main challenges that you have faced when it comes to performing "
+"and maintaining good risk management practices?"
+msgstr ""
+
+#: data/fit4ilr/questions.json:859 data/survey4operators/questions.json:859
+msgid ""
+"When is the last time your organization been was audited in an independent "
+"audit that looked at ICT risk management?"
+msgstr ""
+
+#: data/fit4ilr/questions.json:867 data/fit4ilr/questions.json:959
+#: data/survey4operators/questions.json:867
+#: data/survey4operators/questions.json:959
+msgid "Never."
+msgstr ""
+
+#: data/fit4ilr/questions.json:874 data/fit4ilr/questions.json:890
+#: data/fit4ilr/questions.json:906 data/fit4ilr/questions.json:922
+#: data/survey4operators/questions.json:874
+#: data/survey4operators/questions.json:890
+#: data/survey4operators/questions.json:906
+#: data/survey4operators/questions.json:922
+msgid ""
+"It is always a good idea to have and maintain an appropriate policy for "
+"performing security assessments and monitoring the compliance to the "
+"standards and legal requirements."
+msgstr ""
+
+#: data/fit4ilr/questions.json:883 data/survey4operators/questions.json:883
+msgid "In the last 3 years."
+msgstr ""
+
+#: data/fit4ilr/questions.json:899 data/survey4operators/questions.json:899
+msgid "In the last 5 years."
+msgstr ""
+
+#: data/fit4ilr/questions.json:915 data/survey4operators/questions.json:915
+msgid "More than 5 years ago."
+msgstr ""
+
+#: data/fit4ilr/questions.json:933 data/survey4operators/questions.json:933
+msgid ""
+"What concrete tools are you using, or considering to use, for ICT risk "
+"management in your organisation?"
+msgstr ""
+
+#: data/fit4ilr/questions.json:951 data/survey4operators/questions.json:951
+msgid ""
+"How often does your organization communicate with the authorities in "
+"Luxembourg (e.g., CSSF, ILR, CNPD or others)?"
+msgstr ""
+
+#: data/fit4ilr/questions.json:952 data/fit4ilr/questions.json:953
+#: data/fit4ilr/questions.json:986 data/fit4ilr/questions.json:987
+#: data/fit4ilr/questions.json:1052 data/fit4ilr/questions.json:1053
+#: data/survey4operators/questions.json:952
+#: data/survey4operators/questions.json:953
+#: data/survey4operators/questions.json:986
+#: data/survey4operators/questions.json:987
+#: data/survey4operators/questions.json:1052
+#: data/survey4operators/questions.json:1053
+msgid "Collaboration at EU and National Level"
+msgstr ""
+
+#: data/fit4ilr/questions.json:967 data/survey4operators/questions.json:967
+msgid "Several times a year."
+msgstr ""
+
+#: data/fit4ilr/questions.json:975 data/survey4operators/questions.json:975
+msgid "Less than or exactly once a year"
+msgstr ""
+
+#: data/fit4ilr/questions.json:985 data/survey4operators/questions.json:985
+msgid ""
+"When is the last time you collaborated with ISACs, CSIRTs or similar "
+"organisations, or with the MISP community in your sector?"
+msgstr ""
+
+#: data/fit4ilr/questions.json:993 data/survey4operators/questions.json:993
+msgid "ENISA."
+msgstr ""
+
+#: data/fit4ilr/questions.json:1001 data/survey4operators/questions.json:1001
+msgid "ISACs."
+msgstr ""
+
+#: data/fit4ilr/questions.json:1009 data/survey4operators/questions.json:1009
+msgid "CSIRT or similar."
+msgstr ""
+
+#: data/fit4ilr/questions.json:1017 data/survey4operators/questions.json:1017
+msgid "MISP community."
+msgstr ""
+
+#: data/fit4ilr/questions.json:1032 data/survey4operators/questions.json:1032
+msgid ""
+"It is always advised to stay in contact with the CSIRT and MISP community to "
+"stay informed and be up to date on threats and incidents in relation to your "
+"services and networks."
+msgstr ""
+
+#: data/fit4ilr/questions.json:1041 data/survey4operators/questions.json:1041
+msgid "Please indicate the frequency or if it is another organisation:"
+msgstr ""
+
+#: data/fit4ilr/questions.json:1051 data/survey4operators/questions.json:1051
+msgid ""
+"In case of a security incident, does your organization interact with other "
+"service operators to solve the issue, or is it more in competition with them?"
+msgstr ""
+
+#: data/fit4ilr/questions.json:1066 data/survey4operators/questions.json:1066
+msgid ""
+"It is always a good approach to work with operators in the same sector as it "
+"collectively helps to mitigate attacks and provides better protection "
+"against complete blackouts. Additionally contracts between operators can be "
+"made to sub-rent some of their service platform to the attached operator so "
+"the clients do not have too much of a service interruption. One such way of "
+"collaboration could be through the MISP community and/or the ILR."
+msgstr ""
+
+#: data/fit4ilr/questions.json:1077 data/survey4operators/questions.json:1077
+msgid ""
+"What do you consider is the utility to you when your organisation has to "
+"report incidents to authorities?"
+msgstr ""
+
+#: data/fit4ilr/questions.json:1078 data/fit4ilr/questions.json:1079
+#: data/fit4ilr/questions.json:1112 data/fit4ilr/questions.json:1113
+#: data/fit4ilr/questions.json:1162 data/fit4ilr/questions.json:1163
+#: data/survey4operators/questions.json:1078
+#: data/survey4operators/questions.json:1079
+#: data/survey4operators/questions.json:1112
+#: data/survey4operators/questions.json:1113
+#: data/survey4operators/questions.json:1162
+#: data/survey4operators/questions.json:1163
+msgid "Incident Reporting"
+msgstr ""
+
+#: data/fit4ilr/questions.json:1085 data/survey4operators/questions.json:1085
+msgid "It is a burden for us."
+msgstr ""
+
+#: data/fit4ilr/questions.json:1093 data/survey4operators/questions.json:1093
+msgid "It is useful for us."
+msgstr ""
+
+#: data/fit4ilr/questions.json:1101 data/survey4operators/questions.json:1101
+msgid "Reporting neither helps nor hinders us."
+msgstr ""
+
+#: data/fit4ilr/questions.json:1111 data/survey4operators/questions.json:1111
+msgid "To whom to you report the same incident, when it appears?"
+msgstr ""
+
+#: data/fit4ilr/questions.json:1119 data/survey4operators/questions.json:1119
+msgid "Only to one authority."
+msgstr ""
+
+#: data/fit4ilr/questions.json:1127 data/survey4operators/questions.json:1127
+msgid "To multiple authorities."
+msgstr ""
+
+#: data/fit4ilr/questions.json:1135 data/survey4operators/questions.json:1135
+msgid "To National CERTs / CSIRTs."
+msgstr ""
+
+#: data/fit4ilr/questions.json:1143 data/survey4operators/questions.json:1143
+msgid "To sector-specific CERTs / CSIRTs."
+msgstr ""
+
+#: data/fit4ilr/questions.json:1151 data/fit4ilr/questions.json:1201
+#: data/fit4ilr/questions.json:1309 data/survey4operators/questions.json:1151
+#: data/survey4operators/questions.json:1201
+#: data/survey4operators/questions.json:1309
+msgid "Other - please describe:"
+msgstr ""
+
+#: data/fit4ilr/questions.json:1161 data/survey4operators/questions.json:1161
+msgid ""
+"What kind of feedback would you consider as helpful to receive from an "
+"authority following the mandatory incident reporting?"
+msgstr ""
+
+#: data/fit4ilr/questions.json:1169 data/survey4operators/questions.json:1169
+msgid "Nothing."
+msgstr ""
+
+#: data/fit4ilr/questions.json:1177 data/survey4operators/questions.json:1177
+msgid "Connecting to companies with the same issues."
+msgstr ""
+
+#: data/fit4ilr/questions.json:1185 data/survey4operators/questions.json:1185
+msgid "Guidance on solving the issue based on previous experience."
+msgstr ""
+
+#: data/fit4ilr/questions.json:1193 data/survey4operators/questions.json:1193
+msgid "Guidance on preventing those kinds of issues in the future."
+msgstr ""
+
+#: data/fit4ilr/questions.json:1211 data/survey4operators/questions.json:1211
+msgid ""
+"Do you consider you have a skill shortage in terms of cybersecurity and risk "
+"management?"
+msgstr ""
+
+#: data/fit4ilr/questions.json:1212 data/fit4ilr/questions.json:1213
+#: data/fit4ilr/questions.json:1262 data/fit4ilr/questions.json:1263
+#: data/survey4operators/questions.json:1212
+#: data/survey4operators/questions.json:1213
+#: data/survey4operators/questions.json:1262
+#: data/survey4operators/questions.json:1263
+msgid "Priorities and Steps Forward"
+msgstr ""
+
+#: data/fit4ilr/questions.json:1219 data/survey4operators/questions.json:1219
+msgid "Yes indeed, we don't have enough skills in these areas."
+msgstr ""
+
+#: data/fit4ilr/questions.json:1226 data/survey4operators/questions.json:1226
+msgid ""
+"During the employment for an employee or the contract of external "
+"collaborators, Interns and other employment, it is advised to ensure that "
+"personnel have sufficient security knowledge and that they are provided with "
+"regular security and awareness trainings. Additionally, it is important to "
+"have and correctly maintain an appropriate process for managing changes in "
+"personnel or changes in their roles and responsibilities, while verifying "
+"access to internal information an personnel accounts."
+msgstr ""
+
+#: data/fit4ilr/questions.json:1235 data/survey4operators/questions.json:1235
+msgid "No, we have the skills but the problems are elsewhere."
+msgstr ""
+
+#: data/fit4ilr/questions.json:1242 data/survey4operators/questions.json:1242
+msgid ""
+"Operational procedures for correctly operating and to ensure correct "
+"operation of your services, information systems and networks. Additionally, "
+"it is essential to have and maintain contingency plans and strategy for "
+"ensuring continuity of your services provided, information systems and "
+"networks."
+msgstr ""
+
+#: data/fit4ilr/questions.json:1251 data/survey4operators/questions.json:1251
+msgid "Any other details:"
+msgstr ""
+
+#: data/fit4ilr/questions.json:1261 data/survey4operators/questions.json:1261
+msgid "Which of the measures below would be of help to your organisation?"
+msgstr ""
+
+#: data/fit4ilr/questions.json:1269 data/survey4operators/questions.json:1269
+msgid ""
+"To be put in contact with other operators in Luxembourg and abroad, related "
+"to risk management and information security."
+msgstr ""
+
+#: data/fit4ilr/questions.json:1277 data/survey4operators/questions.json:1277
+msgid ""
+"To receive more guidance on both operational and technical areas, local or "
+"EU level."
+msgstr ""
+
+#: data/fit4ilr/questions.json:1285 data/survey4operators/questions.json:1285
+msgid ""
+"To have a central platform to help security experts from different "
+"operators, communicate and discuss issues."
+msgstr ""
+
+#: data/fit4ilr/questions.json:1293 data/survey4operators/questions.json:1293
+msgid ""
+"To have more transparency from the authorities in Luxembourg (what they want "
+"to see, what approach they will take to do any audits, etc)."
+msgstr ""
+
+#: data/fit4ilr/questions.json:1301 data/survey4operators/questions.json:1301
+msgid ""
+"A single reporting platform to report incidents to multiple authorities."
+msgstr ""
+
+#: data/fit4privacy/questions.json:3 data/fit4privacy/questions.json:125
+msgid "Personal Data Processing"
+msgstr ""
+
+#: data/fit4privacy/questions.json:4 data/fit4privacy/questions.json:126
+#: data/fit4privacy/questions.json:192
+msgid "Personal Data Management"
+msgstr ""
+
+#: data/fit4privacy/questions.json:20
+msgid ""
+"It is essential to understand if your company is processing personal data, "
+"and consequently to weigh the personal data processing risks. Personal data "
+"is information that relates to an identified or identifiable individuals (e."
+"g., a name, a number, a photo, a signature, a combination of IP address and "
+"cookies). For detailed definitions of personal data, Art. 4 of GDPR is the "
+"source to consult. If your company has employees or clients or both, it "
+"certainly processes personal data. Therefore, it must be subject to GDPR."
+msgstr ""
+
+#: data/fit4privacy/questions.json:23
+msgid "We don\\u2019t process personal data at all."
+msgstr ""
+
+#: data/fit4privacy/questions.json:36 data/fit4privacy/questions.json:68
+msgid ""
+"It is essential to understand if your company is processing personal data, "
+"and consequently to weigh the personal data processing risks. Your company "
+"doesn\\u2019t seem to process data about a lot of data subjects - either "
+"employees or clients - but even if a DPO might not be mandatory, consider "
+"appointing at least a data privacy responsible and taking the first steps "
+"towards GDPR: understanding the data being processed, and documenting the "
+"risks. For definitions of personal data, you can consult Art. 4 of GDPR, and "
+"for the tasks for a responsible with data protection, Art. 39. In addition "
+"to that, you can also consider the <a href=\"https://edpb.europa.eu/our-work-"
+"tools/our-documents/guidelines/data-protection-officer_en\" target=\"_blank"
+"\">guidelines</a> on this topic from the EDPB."
+msgstr ""
+
+#: data/fit4privacy/questions.json:39
+msgid "We process some personal data (but very limited) of employees."
+msgstr ""
+
+#: data/fit4privacy/questions.json:52 data/fit4privacy/questions.json:84
+#: data/fit4privacy/questions.json:100 data/fit4privacy/questions.json:116
+msgid ""
+"It is essential to understand if your company is processing personal data, "
+"and consequently to weigh the personal data processing risks. Personal data "
+"is information that relates to an identified or identifiable individuals (e."
+"g., a name, a number, a photo, a signature, a combination of IP address and "
+"cookies). For detailed definitions of personal data, Art. 4 of GDPR is the "
+"source to consult. In your case, your company seems to be processing a "
+"medium/large amount of personal data, therefore consider putting the people "
+"and resources (time, budgets) in place to quantify and document the risks "
+"relative to data processing. Consider in this respect the <a href=\"https://"
+"ec.europa.eu/newsroom/article29/items/611236\" target=\"_blank\">guidelines "
+"from the EDPB</a>."
+msgstr ""
+
+#: data/fit4privacy/questions.json:55
+msgid "We process a lot of personal data of employees."
+msgstr ""
+
+#: data/fit4privacy/questions.json:71
+msgid ""
+"We process some personal data of clients/users, and we have under 500 "
+"clients."
+msgstr ""
+
+#: data/fit4privacy/questions.json:87
+msgid ""
+"We process some personal data of clients/users, and we have between 500 and "
+"10 000 clients/users."
+msgstr ""
+
+#: data/fit4privacy/questions.json:103
+msgid ""
+"We process some personal data of clients/users, and we have over 10 000 "
+"clients/users."
+msgstr ""
+
+#: data/fit4privacy/questions.json:119
+msgid ""
+"We monitor behaviour of data subjects as part of our business, and they are "
+"a lot."
+msgstr ""
+
+#: data/fit4privacy/questions.json:122
+msgid ""
+"If your company processes personal data, how much personal data (i.e. of how "
+"many data subjects, data quantity per data subject on average) does it "
+"process:"
+msgstr ""
+
+#: data/fit4privacy/questions.json:137
+msgid "No, we do not process any sensitive personal data at all."
+msgstr ""
+
+#: data/fit4privacy/questions.json:150
+msgid ""
+"You should pay attention to the way you process data relative to criminal "
+"records. Art. 10 explains more about the requirements in this case. "
+"Processing criminal data is only possible if a law or regulation authorises "
+"this processing. For processing this data should should also be a business "
+"reason, as well as measures in place to minimise criminal record data risks "
+"and protect against theft, loss or disclosure."
+msgstr ""
+
+#: data/fit4privacy/questions.json:153
+msgid ""
+"We do not process any sensitive data from the above but we do process some "
+"criminal records when hiring."
+msgstr ""
+
+#: data/fit4privacy/questions.json:166 data/fit4privacy/questions.json:182
+msgid ""
+"You should investigate if, what, and why special personal data is being "
+"processed by your company. Art. 9 of GDPR gives the definition and explains "
+"the details, the main reason being that special personal data is considered "
+"by GDPR to be more dangerous to process from the point of view of the data "
+"subject, than other type of personal data. Therefore, it requires a higher "
+"level of protection. This means that there should always be a legal basis "
+"for processing such data, as well as a business reason, and measures in "
+"place to minimise this kind of data and protect it against theft, loss or "
+"disclosure."
+msgstr ""
+
+#: data/fit4privacy/questions.json:169
+msgid "Yes, we process at least one of the above."
+msgstr ""
+
+#: data/fit4privacy/questions.json:185
+msgid "We do not know if we do."
+msgstr ""
+
+#: data/fit4privacy/questions.json:188
+msgid ""
+"Does your company process personal data that can be sensitive (e.g., taken "
+"out of context, can be used to infer racial or ethnic origin, political "
+"opinions, religious or philosophical beliefs, trade union membership, "
+"genetic data, biometric data, sex life or sexual orientation)? (See <a href="
+"\"https://www.privacy-regulation.eu/en/article-9-processing-of-special-"
+"categories-of-personal-data-GDPR.htm\" target=\"_blank\">GDPR Article 9</a>)"
+msgstr ""
+
+#: data/fit4privacy/questions.json:191
+msgid "Register of Processing activities"
+msgstr ""
+
+#: data/fit4privacy/questions.json:208
+msgid ""
+"The main idea of GDPR is to have a risk-based approach to personal data "
+"processing, so without knowledge about what personal data is there and how "
+"it is processed, it will be impossible to know what the risks are. "
+"Therefore, you should consider, in your business, to acquire some "
+"understanding both on the quantity and risks of personal data that your "
+"company processes. In this case, Article 30 of GDPR should be the starting "
+"point in terms of minimal mandatory content of the register of processing "
+"activities. "
+msgstr ""
+
+#: data/fit4privacy/questions.json:211
+msgid "Such a registry is not needed in our business."
+msgstr ""
+
+#: data/fit4privacy/questions.json:224
+msgid ""
+"We suggest that you split the task in several sub-tasks: you can have "
+"different departments responsible of their own record of processing "
+"activities, relative to the data they process and the processes they own. In "
+"a second stage, the different records can be put together into a single one "
+"after a consistency review. In a third stage, the registry (or record) needs "
+"to be reviewed and maintained from one year to the next, or if there are any "
+"significant changes with respect to existing data processing activities. "
+"Article 30 of GDPR gives you the minimal mandatory content of the register "
+"of processing activities"
+msgstr ""
+
+#: data/fit4privacy/questions.json:227
+msgid "It is needed but we have no clear idea what exactly to list there."
+msgstr ""
+
+#: data/fit4privacy/questions.json:240
+msgid ""
+"It should not be the full responsibility of the DPO/data protection "
+"responsible only to inventory the data processing activities, because he/she "
+"should not be involved in most of those business activities anyway. It "
+"should be the business stakeholders to inventory data processing activities "
+"within all departments (Article 30 of GDPR gives the minimal mandatory "
+"content of the register of processing activities), and the role of the DPO "
+"or data privacy responsible, should be to challenge and have an overview of "
+"the inventory."
+msgstr ""
+
+#: data/fit4privacy/questions.json:243
+msgid ""
+"It is needed but we do not know the status right now. We let the data "
+"privacy responsible handle it, as it is his/her job."
+msgstr ""
+
+#: data/fit4privacy/questions.json:256
+msgid ""
+"It is good that your company started to inventory its data, yet it will be "
+"better to have it ready as soon as possible, to be prepared for any CNPD "
+"inspection or visit. The fuller the picture over the personal data "
+"processing that takes place within your company, the better the view over "
+"the risks incurred based on this picture, and hence the more accurate the "
+"action plans that follow."
+msgstr ""
+
+#: data/fit4privacy/questions.json:259
+msgid ""
+"We have started inventorying but we do not have a full record of processing "
+"activities yet."
+msgstr ""
+
+#: data/fit4privacy/questions.json:272
+msgid ""
+"It is great that your company has a clear idea over the data processing it "
+"performs. Remember that the inventory should give an accurate and complete "
+"picture of the processing activities within your company, so it should be "
+"reviewed and maintained from one year to the next. Its minimal structure and "
+"content should be based on the Article 30 of GDPR. The good news is that if "
+"it was done well once, it will be easy to update/change afterwards."
+msgstr ""
+
+#: data/fit4privacy/questions.json:275
+msgid ""
+"We need it and we do have a full record of processing activities. It is "
+"maintained and regularly updated."
+msgstr ""
+
+#: data/fit4privacy/questions.json:278
+msgid ""
+"Do you need and do you have a registry (or record) of the personal data "
+"processing that happens within your company?"
+msgstr ""
+
+#: data/fit4privacy/questions.json:281 data/fit4privacy/questions.json:282
+#: data/fit4privacy/questions.json:323 data/fit4privacy/questions.json:324
+msgid "Transparency"
+msgstr ""
+
+#: data/fit4privacy/questions.json:293
+msgid "No, as we don\\u2019t have a website."
+msgstr ""
+
+#: data/fit4privacy/questions.json:306
+msgid ""
+"You have an obligation to be transparent to all those concerned about the "
+"processing of personal data carried out by your company. The persons "
+"concerned can be employees, suppliers, customers, third parties. If your "
+"company uses a website to present its services to potential customers, and "
+"the use of this website involves processing of visitors' personal data (for "
+"example, if visitors can log in for a personalized experience, or if the "
+"site uses statistics engines such as Google Analytics which process certain "
+"personal data such as IPs), it is recommended to update the privacy notice "
+"on the website, to reflect GDPR conditions (the existence of personal data "
+"processing by the company, the existence of the DPO or not, the possibility "
+"to exercise rights, etc). This is independent from the requirement of asking "
+"for the consent of the user when the website uses non-essential cookies, "
+"which is required by the ePrivacy directive. Art. 13 or 14 of GDPR should be "
+"followed to update the privacy notice, as they list 12 elements that need to "
+"be shown to data subjects with the purpose of GDPR transparency. "
+msgstr ""
+
+#: data/fit4privacy/questions.json:309
+msgid "No, we have had no change on the website yet related to GDPR."
+msgstr ""
+
+#: data/fit4privacy/questions.json:317
+msgid "Yes, we have updated the website with regards to GDPR."
+msgstr ""
+
+#: data/fit4privacy/questions.json:320
+msgid ""
+"Have you updated your website with respect to data protection, after 25th "
+"May 2018? (e.g., anything related to the privacy notice, GDPR disclaimer, "
+"etc)"
+msgstr ""
+
+#: data/fit4privacy/questions.json:340
+msgid ""
+"Your company should consider informing all types of data subjects whose data "
+"it processes, of the existence of the processing, the conditions you put in "
+"place to protect their data, and their rights over their data. In relation "
+"to your employees or trainees, you should be transparent about the personal "
+"data processed at the time of hiring (for example, by updating\n"
+"  work or internship contracts), but also for the duration of their contract "
+"(for example, in the intranet, or with an amendment to the employment "
+"contract). If you have a website whose use involves processing of visitors' "
+"personal data, that site should also explain the data processed and the "
+"measures your organization has put in place to protect that data. To your "
+"customers, as well as to suppliers and third parties, you have a similar "
+"obligation to be transparent (for example, by updating contracts or terms "
+"and conditions). In terms of what to communicate to them, you should "
+"consider following Art. 13 and 14 of GDPR when it comes to this information."
+msgstr ""
+
+#: data/fit4privacy/questions.json:343
+msgid "We have given no information whatsoever."
+msgstr ""
+
+#: data/fit4privacy/questions.json:356 data/fit4privacy/questions.json:404
+#: data/fit4privacy/questions.json:420
+msgid ""
+"The controller must demonstrate that personal data is processed in a "
+"transparent manner with regard to the data subject. In order to avoid "
+"overwhelming data subjects with information, your company is therefore "
+"responsible for the quality, accessibility and intelligibility of the "
+"information provided to data subjects in terms of transparency.\n"
+"You should therefore present the information / communications in an "
+"efficient and succinct manner, and differentiate them from other non-privacy "
+"related information such as contractual clauses or general terms of use. For "
+"more inspiration on this topic, there is an EDPB guidance on transparency <a "
+"href=\"https://ec.europa.eu/newsroom/article29/items/622227/en\" target="
+"\"_blank\"> here </a>."
+msgstr ""
+
+#: data/fit4privacy/questions.json:359
+msgid "On the website we added a GDPR note."
+msgstr ""
+
+#: data/fit4privacy/questions.json:372 data/fit4privacy/questions.json:388
+msgid ""
+"Make sure all data subjects are covered (clients AND employees), and that "
+"your company follows the points mentioned by Art. 13 and 14 of GDPR."
+msgstr ""
+
+#: data/fit4privacy/questions.json:375
+msgid "We updated terms and conditions for clients and contractors."
+msgstr ""
+
+#: data/fit4privacy/questions.json:391
+msgid ""
+"We updated contracts with our employees / we had them sign an addendum on "
+"GDPR."
+msgstr ""
+
+#: data/fit4privacy/questions.json:407
+msgid "We added stickers in our areas with video surveillance."
+msgstr ""
+
+#: data/fit4privacy/questions.json:423
+msgid "We started an intranet page for employees on this topic."
+msgstr ""
+
+#: data/fit4privacy/questions.json:426
+msgid ""
+"How did you inform the data subjects about the processing of their personal "
+"data performed by your company? "
+msgstr ""
+
+#: data/fit4privacy/questions.json:429 data/fit4privacy/questions.json:479
+msgid "(Some) Principles of Processing"
+msgstr ""
+
+#: data/fit4privacy/questions.json:430 data/fit4privacy/questions.json:480
+msgid "Principles of processing"
+msgstr ""
+
+#: data/fit4privacy/questions.json:446
+msgid ""
+"In order to be compliant with GDPR, personal data needs to be processed "
+"legitimately and loyally. It follows that all personal data processing needs "
+"to have one/more legal reasons (or bases) why that information is processed. "
+"If already existing, your registry/record of personal data processing "
+"activities can also be used to document the legal basis for each data "
+"processing activity listed within. Consider consulting Art.6 of GDPR, from "
+"the point of view of definitions of different legal bases."
+msgstr ""
+
+#: data/fit4privacy/questions.json:449
+msgid ""
+"We don\\u2019t know if we have a legal basis for most of the personal data "
+"processing we perform."
+msgstr ""
+
+#: data/fit4privacy/questions.json:462
+msgid ""
+"In order to be compliant with GDPR, all personal data processing needs to "
+"have one/more legal reasons (or bases) why that information is processed "
+"(Art. 6 of GDPR). If your company has a purpose for that processing (i.e. a "
+"business reason), then a legal basis should be instated for that processing "
+"(e.g., contract execution, public/vital interest, legitimate interest, "
+"consent). If there is no business purpose, and no legal basis, then there "
+"should be no reason why that personal data should be processed. So, either "
+"you give up the processing, or you instate a legal basis for it. "
+msgstr ""
+
+#: data/fit4privacy/questions.json:465
+msgid ""
+"There is a chance we process some data without always a legal basis, but it "
+"shouldn't be a lot."
+msgstr ""
+
+#: data/fit4privacy/questions.json:473
+msgid "We have a legal basis for all the personal data we are processing."
+msgstr ""
+
+#: data/fit4privacy/questions.json:476
+msgid ""
+"To what extent do you know if your company is processing personal data with "
+"a legal basis (one of: contract execution, legal requirement, public/vital "
+"interest, legitimate interest, consent)?"
+msgstr ""
+
+#: data/fit4privacy/questions.json:496
+msgid ""
+"One of the principles of GDPR is to instate a duration of retention of "
+"personal data, because no processing can actually last forever. Therefore, "
+"your company should consider removing the personal data that is kept "
+"indefinitely if there is no reason for its processing, otherwise a duration "
+"of storage should be decided on, and enforced. Do not forget that if there "
+"is a new potential processing of personal data for a new purpose, it must "
+"always have a legal basis. This can be, for example, a law which applies to "
+"the activities of the company and which mentions a mandatory / maximum "
+"period of data retention."
+msgstr ""
+
+#: data/fit4privacy/questions.json:499
+msgid "We don\\u2019t care, we keep this data forever."
+msgstr ""
+
+#: data/fit4privacy/questions.json:512
+msgid ""
+"In order to fill in the record of processing activities, as per Art. 30 of "
+"GDPR, a duration of storage must be decided upon and enforced on the "
+"personal data that is processed by the organisation. If you discover that "
+"the storage limit has not been decided upon, then the recommendation is to "
+"consider all the important types of personal data for which there are limits "
+"that arrive from regulatory frameworks (e.g., financial data, criminal "
+"record data, anti-money laundering related data, etc). For other types of "
+"personal data for which there is no regulation to explicitly fix its storage "
+"time, the company can decide for a duration that makes sense, and take "
+"actions to put that limitation in practice for both paper and electronic "
+"support of such data"
+msgstr ""
+
+#: data/fit4privacy/questions.json:515
+msgid "We don\\u2019t know for sure how to deal with it."
+msgstr ""
+
+#: data/fit4privacy/questions.json:528
+msgid ""
+"While it is true that deciding on and enforcing data storage limitation is a "
+"considerable challenge for most organisations, what the GDPR and data "
+"protection authorities expect is enforcing this principle on all personal "
+"data types. Therefore, in your case, you should be able to explain (1) why "
+"for some personal data types you have this storage limitation in place, but "
+"not for other personal data types, and (2) how you plan to improve over time "
+"and hence extend storage limitation over all data types."
+msgstr ""
+
+#: data/fit4privacy/questions.json:531
+msgid "We have fixed some storage limits for certain data types."
+msgstr ""
+
+#: data/fit4privacy/questions.json:539
+msgid "We have data storage limits that are enforced on personal data."
+msgstr ""
+
+#: data/fit4privacy/questions.json:542
+msgid ""
+"How do you deal with setting the limits for the duration of personal data "
+"processing?"
+msgstr ""
+
+#: data/fit4privacy/questions.json:545
+msgid "Data Breaches"
+msgstr ""
+
+#: data/fit4privacy/questions.json:546 data/fit4privacy/questions.json:636
+#: data/fit4privacy/questions.json:734
+msgid "Data breaches, Data rights, DPO"
+msgstr ""
+
+#: data/fit4privacy/questions.json:562 data/fit4privacy/questions.json:578
+msgid ""
+"In terms of handling data breaches, the GDPR is strict: if there is a risk "
+"for the data subjects, a notification must be made to the data protection "
+"authorities within 72 hours from the moment when the company has knowledge "
+"of the incident. Also, if the risks towards the individuals involved are "
+"high, the company must support those affected to deal with the potential "
+"consequences of the violation. For the CNPD, there is a form to fill out "
+"answering several questions about the incident and the way it was handled <a "
+"href=\"https://cnpd.public.lu/content/dam/cnpd/fr/formulaires/formulaire-"
+"cnpd-data-breach-notification-FR-V2.docx\" target=\"_blank\">here</a>. "
+"Consider having a documented procedure or process for handling such "
+"incidents, and make sure that the responsibilities have been clearly "
+"identified and that the actions to be taken are clear to the personnel who "
+"will be involved in this process."
+msgstr ""
+
+#: data/fit4privacy/questions.json:565
+msgid "No idea, as nothing like that has ever happened to our knowledge."
+msgstr ""
+
+#: data/fit4privacy/questions.json:581
+msgid ""
+"The reaction will be entirely case by case, as we have no specific procedure "
+"to follow in this situation."
+msgstr ""
+
+#: data/fit4privacy/questions.json:594
+msgid ""
+"In terms of handling data breaches, the GDPR is strict: if there is a risk "
+"for the data subjects, a notification must be made to the data protection "
+"authorities within 72 hours from the moment when the company has knowledge "
+"of the incident. Also, if the risks towards the individuals involved are "
+"high, the company must support those affected to deal with the potential "
+"consequences of the violation. For the CNPD, there is a form to fill out "
+"answering several questions about the incident and the way it was handled <a "
+"href=\"https://cnpd.public.lu/content/dam/cnpd/fr/formulaires/formulaire-"
+"cnpd-data-breach-notification-FR-V2.docx\" target=\"_blank\">here</a>. It is "
+"good that you have an incident management procedure, but it should be "
+"modified to take into account the situations in which a data breach could "
+"have occurred (therefore, identify the impact on personal data , establish "
+"links with potential managers and ensure that the tasks are clear regarding "
+"the reaction to personal data breaches)."
+msgstr ""
+
+#: data/fit4privacy/questions.json:597
+msgid ""
+"We would handle it internally based on our security incident management "
+"procedures."
+msgstr ""
+
+#: data/fit4privacy/questions.json:610 data/fit4privacy/questions.json:626
+msgid ""
+"Make sure that there is a documented procedure or process to describe the "
+"concrete steps in responding to a data breach that involves risk to those "
+"affected. The first step is to notify the data protection authority of the "
+"breach, and a second step is to notify those affected, if deemed necessary "
+"due to high risk."
+msgstr ""
+
+#: data/fit4privacy/questions.json:613
+msgid ""
+"We would report it to the national data protection authority within 72h, and "
+"the data subjects involved afterwards, if there are risks that concern them."
+msgstr ""
+
+#: data/fit4privacy/questions.json:629
+msgid "We would only immediately inform the affected data subjects."
+msgstr ""
+
+#: data/fit4privacy/questions.json:632
+msgid ""
+"How would your company handle an incident that could be considered a "
+"personal data breach (e.g., accidental loss, destruction, alteration or "
+"theft of data that also is personal data)?"
+msgstr ""
+
+#: data/fit4privacy/questions.json:635 data/fit4privacy/questions.json:733
+msgid "Data Protection Responsible and Data Subject Rights"
+msgstr ""
+
+#: data/fit4privacy/questions.json:652
+msgid ""
+"As a matter of fact, if you have employees in your company then there is "
+"personal data processing. Any person (client, employee, collaborator, or "
+"complete stranger) who believes their data can be processed by your company "
+"can actually make a request to exercise their GDPR rights. Therefore it is "
+"possible you would receive such a request. Your answer should abide by "
+"certain requirements as per GDPR (particularly, to reply within one month, "
+"extensible to 3 months)."
+msgstr ""
+
+#: data/fit4privacy/questions.json:655
+msgid ""
+"Nothing, it would not happen to us as we don\\u2019t have any personal data."
+msgstr ""
+
+#: data/fit4privacy/questions.json:668
+msgid ""
+"The replies to data subjects should be performed by the DPO, if there is "
+"one. If the DPO does not exist, an equivalent data protection responsible "
+"should reply to the request, within the expected timeframe. It is therefore "
+"not mandatory that the legal department perform this task. "
+msgstr ""
+
+#: data/fit4privacy/questions.json:671
+msgid ""
+"We would handle it to the legal department representative, to handle in the "
+"near future."
+msgstr ""
+
+#: data/fit4privacy/questions.json:684
+msgid ""
+"The data protection responsible/DPO should be in contact with the person who "
+"asks for an exercise of his or her rights. The reply to the requesting "
+"individual should be delivered within a month (maximum extended by 2 months, "
+"so up to 3 months in total). It is likely that several departments would "
+"need to collaborate for the company to be able to reply to the request fully "
+"and within the deadline."
+msgstr ""
+
+#: data/fit4privacy/questions.json:687
+msgid ""
+"It would arrive on the agenda of the privacy responsible, to handle in the "
+"near future."
+msgstr ""
+
+#: data/fit4privacy/questions.json:695
+msgid "We would need to react within one month."
+msgstr ""
+
+#: data/fit4privacy/questions.json:708
+msgid ""
+"Replying to a data subject request and supplying the answer should, from a "
+"practical perspective, be precluded by a verification of the authenticity of "
+"the relation between the data subject and the company. This is to avoid a "
+"data breach, e.g. a situation where the person is either unknown the "
+"organisation, or is impersonating someone else. An identity verification "
+"would be critical to perform at this stage."
+msgstr ""
+
+#: data/fit4privacy/questions.json:711
+msgid ""
+"We would directly do what the person asked us to, regarding their personal "
+"data."
+msgstr ""
+
+#: data/fit4privacy/questions.json:724
+msgid ""
+"As per GDPR\\u2019s Art. 15, the replies to the requests of exercise of "
+"rights (esp. the right to access personal data) are not to be paid for. "
+"However, in some cases it is possible to ask the data subject for a fee "
+"(that can be justified by reasons) in case the person asks for extra copies, "
+"they make too many requests of the same type, or the answer requires a "
+"disproportionate effort to produce. "
+msgstr ""
+
+#: data/fit4privacy/questions.json:727
+msgid "We would ask the person to pay a fee."
+msgstr ""
+
+#: data/fit4privacy/questions.json:730
+msgid ""
+"How would your company handle a request for the exercise of a data subject "
+"right, if that would appear now in your mailbox?"
+msgstr ""
+
+#: data/fit4privacy/questions.json:750 data/fit4privacy/questions.json:766
+#: data/fit4privacy/questions.json:790
+msgid ""
+"As mentioned by Art. 37 of GDPR, the DPO is mandatory in a few cases (for a "
+"public sector entity, or if the core activities of the organisation consist "
+"in large scale processing of special categories of data, or if core "
+"activities require large scale, regular and systematic monitoring of "
+"individuals (for example, online behaviour tracking). Otherwise, when in "
+"doubt, better to have a DPO than not to have one. The DPO needs to be "
+"declared to the data protection authority (CNPD for Luxembourg). The role "
+"has to be supported by appropriate resources, and the person in this role "
+"needs to fulfil some conditions (competencies, independence, direct line of "
+"reporting to the management). A DPO can be internal or external, and can "
+"work either full-time or part-time if justified by the context of the "
+"processing (for example, little or no personal data, no special data "
+"processed, risk-free processing, etc)."
+msgstr ""
+
+#: data/fit4privacy/questions.json:753
+msgid "We don\\u2019t need either of the two"
+msgstr ""
+
+#: data/fit4privacy/questions.json:769
+msgid "We don\\u2019t yet have one as we are unsure if we need a DPO."
+msgstr ""
+
+#: data/fit4privacy/questions.json:777
+msgid "We have an official DPO."
+msgstr ""
+
+#: data/fit4privacy/questions.json:793
+msgid "We have a privacy responsible but not a formal DPO."
+msgstr ""
+
+#: data/fit4privacy/questions.json:796
+msgid ""
+"Has your company appointed a privacy responsible or a Data Protection "
+"Officer (DPO)?"
+msgstr ""
+
+#: data/fit4privacy/questions.json:799 data/fit4privacy/questions.json:889
+#: data/fit4privacy/questions.json:947 data/fit4privacy/questions.json:1021
+msgid "Management of the Risks of the Organisation"
+msgstr ""
+
+#: data/fit4privacy/questions.json:816
+msgid ""
+"It is highly unlikely that you have no personal data. If your company has "
+"employees or clients or both, it certainly processes personal data. "
+"Therefore, you are expected to look into the risks related to processing "
+"this data. Risk analysis is the main take-away from GDPR, in understanding "
+"the risks to personal data and how to improve protection with regards to "
+"those risks. Your company should consider performing a high-level analysis "
+"of what general risks there are with regards to protecting personal data, "
+"and also a more in-depth risk analysis regarding the impact of certain "
+"activities on data subjects (also known as Data Protection Impact Analyses)."
+msgstr ""
+
+#: data/fit4privacy/questions.json:819
+msgid "None whatsoever."
+msgstr ""
+
+#: data/fit4privacy/questions.json:832
+msgid ""
+"As your company processes some personal data (potentially even sensitive "
+"data), it is critical to understand the risks to data subjects in your "
+"context and how to improve protection with regards to those risks. Your "
+"company should consider performing a general analysis of what global risks "
+"there are with regards to protecting personal data, and also more in-depth "
+"risks regarding the impact of certain activities (also known as Data "
+"Protection Impact Analyses, or DPIAs). Also, consider what the data "
+"protection authority in your country has issued as blacklist of processing "
+"operations (i.e., what personal data processing is likely to require DPIAs). "
+"For Luxembourg, the list is available <a href=\"https://cnpd.public.lu/"
+"content/dam/cnpd/fr/actualites/national/2019/Delib-34-2019-du-6-mars-2019.pdf"
+"\" target=\"_blank\">in annex here</a>. If your company acts in multiple "
+"countries, ensure that you look at the recommendations of all data "
+"protection authorities in all countries you act in."
+msgstr ""
+
+#: data/fit4privacy/questions.json:835
+msgid "A high-level analysis of GDPR risks."
+msgstr ""
+
+#: data/fit4privacy/questions.json:848
+msgid ""
+"As your company processes some personal data, it is critical to understand "
+"the risks to data subjects in your context and how to improve protection "
+"with regards to those risks. Your company should consider performing a high-"
+"level analysis of what general risks there are with regards to protecting "
+"personal data. Should it be the case in the future, your company should "
+"perform more in-depth risks regarding the impact of certain activities (also "
+"known as Data Protection Impact Analyses, or DPIAs). "
+msgstr ""
+
+#: data/fit4privacy/questions.json:851
+msgid ""
+"We have performed at least one data protection impact assessment after GDPR "
+"came into force."
+msgstr ""
+
+#: data/fit4privacy/questions.json:864
+msgid ""
+"If you have performed DPIAs, you are expected to 1) follow-up on the "
+"observations from the DPIA analyses by setting up the measures for "
+"mitigating the risks on data subjects, and 2) review the analysis next year "
+"and make changes if needed. Also, DPIAs are not the only risk analyses "
+"required by GDPR; your company is expected to have an overall view over how "
+"it protects the personal data it processes, so you could consider having a "
+"higher-level risk analysis as such."
+msgstr ""
+
+#: data/fit4privacy/questions.json:867
+msgid ""
+"We performed several data protection impact assessments before GDPR came "
+"into force, and the authority agreed with them so we keep them unchanged."
+msgstr ""
+
+#: data/fit4privacy/questions.json:880
+msgid ""
+"Even if the CNPD has given its green light in the past for an impact "
+"analysis, it does not mean that the situation is the same now. They would "
+"expect that any changes in the processing from then to now, are accounted to "
+"in the (renewed) analysis. Also, do not forget that the CNPD published a "
+"black list of processing activities, that are likely to require an impact "
+"assessment. "
+msgstr ""
+
+#: data/fit4privacy/questions.json:883
+msgid "We have a risk analysis related to information security."
+msgstr ""
+
+#: data/fit4privacy/questions.json:886
+msgid ""
+"What kind of risk analyses have you performed in what concerns GDPR and "
+"information security risks?"
+msgstr ""
+
+#: data/fit4privacy/questions.json:901
+msgid "None, we don\\u2019t have any such contracts."
+msgstr ""
+
+#: data/fit4privacy/questions.json:914 data/fit4privacy/questions.json:930
+msgid ""
+"As per GDPR\\u2019s Art. 4-7 and 4-8, you are expected to know if your role "
+"is that of a data controller or data processor, and protect personal data as "
+"such. It is expected that the responsibilities of the other entities that "
+"provide you with personal data, or that you provide with personal data, are "
+"clear and in line with GDPR requirements.  Therefore you should review and "
+"update all your contracts with data processors if you are the data "
+"controller (because it is your responsibility as a controller). For this "
+"review, consider the points in Art.28-3 of GDPR as well as the guidelines "
+"from EDBP to be found <a href=\"https://edpb.europa.eu/our-work-tools/"
+"documents/public-consultations/2020/guidelines-072020-concepts-controller-"
+"and_en\" target=\"_blank\">here</a>. For the contracts where your company "
+"acts as data processor (that is, processes personal data on behalf of "
+"another company), you should review them to have the knowledge of your "
+"responsibilities (e.g., that you protect personal data and cooperate with "
+"the data controller wherever required)."
+msgstr ""
+
+#: data/fit4privacy/questions.json:917
+msgid "None, but we have some contracts."
+msgstr ""
+
+#: data/fit4privacy/questions.json:933
+msgid "Some of the contracts but not all."
+msgstr ""
+
+#: data/fit4privacy/questions.json:941
+msgid "All of the contracts in place have been reviewed and updated."
+msgstr ""
+
+#: data/fit4privacy/questions.json:944
+msgid ""
+"How many contracts with contractors/ partners have you reviewed after May "
+"2018, with respect to GDPR clauses and personal data being processed?"
+msgstr ""
+
+#: data/fit4privacy/questions.json:964 data/fit4privacy/questions.json:980
+msgid ""
+"Privacy by default and by design refers to implementing privacy into a "
+"project/product/service from the earliest possible stage of design, before "
+"the processing operations are even implemented. By default, companies/"
+"organisations should ensure that personal data is processed with the highest "
+"privacy protection (for example only the data necessary should be processed, "
+"short storage period, limited accessibility) so that by default personal "
+"data isn\\u2019t made accessible to an indefinite number of persons (also "
+"known as data protection by default). In short, it is easier to put in place "
+"protection and the ability to respond to data rights exercise beforehand, "
+"than to fix leaks or breaches afterwards. For more information on this topic "
+"you can consult the guidelines issued by EDPB <a href=\"https://edpb.europa."
+"eu/sites/default/files/files/file1/"
+"edpb_guidelines_201904_dataprotection_by_design_and_by_default_v2.0_en.pdf\" "
+"target=\"_blank\">here</a>."
+msgstr ""
+
+#: data/fit4privacy/questions.json:967
+msgid "We don\\u2019t enable it."
+msgstr ""
+
+#: data/fit4privacy/questions.json:983
+msgid "What is that?"
+msgstr ""
+
+#: data/fit4privacy/questions.json:996
+msgid ""
+"Some procedural documents to mention data privacy by design and by default, "
+"are good to have. However, they must be simple enough to read and implement, "
+"so that they are understood and applied. Therefore it would make sense to "
+"have a standard but simple update that ensures that, when a project starts, "
+"there is a discussion about what kind of personal data would be processed "
+"and if something specific might have to be put in place to protect such data "
+"from loss or disclosure. "
+msgstr ""
+
+#: data/fit4privacy/questions.json:999
+msgid ""
+"We have some general legal paperwork on privacy by design and by default "
+"that is signed when new projects or products are launched."
+msgstr ""
+
+#: data/fit4privacy/questions.json:1012
+msgid ""
+"GDPR applies to personal data of Europeans, worldwide. There have been "
+"discussions on the importance of protecting personal data outside of the "
+"EEA, and the data protection board (EPDB) insisted on the importance to have "
+"legal mechanisms (but also technical) to ensure that data is used for the "
+"same purpose and in the same way when transferred overseas. Using cloud "
+"services located outside of Europe are a typical example. A number of legal "
+"options are possible, and it is expected from the data controller to choose "
+"such mechanisms to ensure data protection towards data subjects, when data "
+"travels outside the borders of the EEA. "
+msgstr ""
+
+#: data/fit4privacy/questions.json:1015
+msgid ""
+"We look briefly at what personal data will be used, and decide in relation "
+"to that what model of privacy by design and by default will be used in new "
+"projects or products."
+msgstr ""
+
+#: data/fit4privacy/questions.json:1018
+msgid ""
+"How do you enable privacy by default and by design in your new projects or "
+"products?"
+msgstr ""
+
+#: data/fit4privacy/questions.json:1033
+msgid "We have no data transfers outside of EEA."
+msgstr ""
+
+#: data/fit4privacy/questions.json:1041
+msgid ""
+"We are transferring to 1/more adequacy decision countries, so nothing else "
+"to do for us."
+msgstr ""
+
+#: data/fit4privacy/questions.json:1049
+msgid ""
+"We have Standard Contractual Clauses or Binding Corporate Rules in place."
+msgstr ""
+
+#: data/fit4privacy/questions.json:1057
+msgid ""
+"No idea what we have in place, but we do have transfers of personal data."
+msgstr ""
+
+#: data/fit4privacy/questions.json:1060
+msgid ""
+"If there are any transfers of personal data processed by your company, to "
+"the outside of the the European Economic Area (EU plus Iceland, "
+"Lichtenstein, Norway), what are the legal measures of protection in place?"
+msgstr ""
+
+#: data/fit4privacy/questions.json:1063 data/fit4privacy/questions.json:1129
+#: data/fit4privacy/questions.json:1179
+msgid "Information Security"
+msgstr ""
+
+#: data/fit4privacy/questions.json:1064 data/fit4privacy/questions.json:1130
+#: data/fit4privacy/questions.json:1180
+msgid "Cybersecurity"
+msgstr ""
+
+#: data/fit4privacy/questions.json:1080
+msgid ""
+"In line with GDPR's Art. 32, both data controllers and data processors need "
+"to put in place adequate measures with respect to identified risks. You "
+"should consider to take a closer look at the information security risks in "
+"your company, not just because of GDPR but for your own company\\u2019s "
+"continuity and operations point of view. You should consider the guidelines "
+"by ENISA, from 2016 to 2018, available <a href=\"https://www.enisa.europa.eu/"
+"topics/data-protection/security-of-personal-data/security-measures\" target="
+"\"_blank\">here</a>."
+msgstr ""
+
+#: data/fit4privacy/questions.json:1083
+msgid "We don\\u2019t handle them."
+msgstr ""
+
+#: data/fit4privacy/questions.json:1096
+msgid ""
+"If you have already performed a risk analysis on information security "
+"domains, consider to update it because technology advances very fast, and so "
+"do risks and countermeasures. Your company is not expected to be perfect, "
+"but to be aware and continously improving. You can also get inspiration on "
+"evaluating potential risks and countermeasures from the guidelines by ENISA "
+"from 2016, 2017 and 2018, available <a href=\"https://www.enisa.europa.eu/"
+"topics/data-protection/security-of-personal-data/security-measures\" target="
+"\"_blank\">here</a>."
+msgstr ""
+
+#: data/fit4privacy/questions.json:1099
+msgid ""
+"We have performed at some point a risk analysis but we don\\u2019t iterate "
+"on it."
+msgstr ""
+
+#: data/fit4privacy/questions.json:1112
+msgid ""
+"Any single analysis can have blind spots, especially if done by the persons. "
+"Consider to complement the analysis by an external/different view, including "
+"exercises of business incidents occurring, audits, or certifications. You "
+"can also get some inspiration from the reports and guidelines by ENISA from "
+"2016, 2017 and 2018, available <a href=\"https://www.enisa.europa.eu/topics/"
+"data-protection/security-of-personal-data/security-measures\" target=\"_blank"
+"\">here</a>."
+msgstr ""
+
+#: data/fit4privacy/questions.json:1115
+msgid "We review our risks periodically."
+msgstr ""
+
+#: data/fit4privacy/questions.json:1123
+msgid ""
+"We review our risks periodically and we perform external audit regularly or "
+"we have an information security certification (e.g ISO 2700x)."
+msgstr ""
+
+#: data/fit4privacy/questions.json:1126
+msgid "How do you handle information security risks?"
+msgstr ""
+
+#: data/fit4privacy/questions.json:1146 data/fit4privacy/questions.json:1162
+msgid ""
+"Information security is a domain that evolves, and it is critical that "
+"employees are up to date with how to protect themselves. Repeating notions "
+"about good password management, new attacks, social engineering, are all "
+"good practices to train your employees periodically, not just once when "
+"hired. "
+msgstr ""
+
+#: data/fit4privacy/questions.json:1149
+msgid "Never or not really."
+msgstr ""
+
+#: data/fit4privacy/questions.json:1165
+msgid "One time, when they are hired."
+msgstr ""
+
+#: data/fit4privacy/questions.json:1173
+msgid "We train them periodically."
+msgstr ""
+
+#: data/fit4privacy/questions.json:1176
+msgid "How often do you train your employees on information security?"
+msgstr ""
+
+#: data/fit4privacy/questions.json:1196
+msgid ""
+"Consider to write some of the rules / guidelines / good practices, in order "
+"to ensure that your employees know where to look for references, and act in "
+"the same way when there is a problem. The management should approve these "
+"documents and they should be known by employees."
+msgstr ""
+
+#: data/fit4privacy/questions.json:1199
+msgid "They are not written."
+msgstr ""
+
+#: data/fit4privacy/questions.json:1212
+msgid ""
+"Consider to update the written practices / guidelines / procedures that your "
+"employees can access and use. The reason is that technology and information "
+"security evolves over time, just as the notion of \"Secure passwords\" and "
+"\"good practices\". The management should approve these documents and they "
+"should be known by employees."
+msgstr ""
+
+#: data/fit4privacy/questions.json:1215
+msgid ""
+"They were written some time ago, but not known to all employees, and not up "
+"to date."
+msgstr ""
+
+#: data/fit4privacy/questions.json:1223
+msgid ""
+"They are written, approved by the management, known from all the employees "
+"and re-viewed periodically."
+msgstr ""
+
+#: data/fit4privacy/questions.json:1226
+msgid ""
+"To what extent are the rules (procedures / guidelines / good practices) "
+"concerning information security and privacy in your organisation written and "
+"known to your employees?"
+msgstr ""
+
+#: survey/forms.py:28
 msgid "What is your sector?"
 msgstr ""
 
-#: survey/forms.py:33
+#: survey/forms.py:32
 msgid "How many employees?"
 msgstr ""
 
-#: survey/forms.py:36 survey/forms.py:39
+#: survey/forms.py:35 survey/forms.py:38
 msgid "Please select your country"
 msgstr ""
 
-#: survey/forms.py:85
+#: survey/forms.py:84
 msgid "You need to choose at least one answer"
 msgstr ""
 
-#: survey/forms.py:126 survey/forms.py:204
+#: survey/forms.py:125 survey/forms.py:201
 #: templates/survey/finishedSurvey.html:153
 #: templates/survey/finishedSurvey.html:160 templates/survey/review.html:40
 msgid "Your feedback"
 msgstr ""
 
-#: survey/forms.py:130 survey/forms.py:208
+#: survey/forms.py:129 survey/forms.py:205
 msgid "Please let us know if anything is missing"
 msgstr ""
 
-#: survey/forms.py:166
+#: survey/forms.py:163
 msgid "You can't choose multiple answers if the answer {} is choosen."
 msgstr ""
 
-#: survey/forms.py:181
+#: survey/forms.py:178
 msgid "You can't choose the answers {} if answer '{}' is choosen."
 msgstr ""
 
@@ -162,10 +3068,6 @@ msgstr ""
 msgid "Creation or placing of objects that are artistic and decorative"
 msgstr ""
 
-#: survey/globals.py:15
-msgid "Health"
-msgstr ""
-
 #: survey/globals.py:16
 msgid "Home-Care Service or Community Service"
 msgstr ""
@@ -194,11 +3096,11 @@ msgstr ""
 msgid "Final report"
 msgstr ""
 
-#: survey/viewLogic.py:58
+#: survey/viewLogic.py:57
 msgid "Let's start"
 msgstr ""
 
-#: survey/viewLogic.py:191
+#: survey/viewLogic.py:190
 msgid "Question"
 msgstr ""
 
