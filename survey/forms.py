@@ -14,30 +14,6 @@ def sort_tuple_alphabetically(tuple, elementNumber):
     return tuple
 
 
-class InitialStartForm(forms.Form):
-    sector = forms.ChoiceField(required=True, widget=forms.Select)
-    compSize = forms.ChoiceField(
-        required=True, widget=forms.Select, choices=COMPANY_SIZE
-    )
-
-    def __init__(self, translations=None, *args, **kwargs):
-        kwargs.pop("lang")
-
-        super().__init__(*args, **kwargs)
-
-        self.fields["sector"].label = _("What is your sector?")
-        self.fields["sector"].choices = sort_tuple_alphabetically(SECTOR_CHOICES, 1)
-        self.fields["compSize"].label = _("How many employees?")
-
-        self.fields["country"] = CountryField().formfield(
-            label=_("Please select your country"),
-            required=True,
-            initial="LU",
-            error_messages={"required": _("Please select your country")},
-        )
-        self.fields["country"].choices = COUNTRIES
-
-
 class AnswerMChoice(forms.Form):
     unique_answers = forms.CharField(widget=forms.HiddenInput(), required=False)
     free_text_answer_id = forms.CharField(widget=forms.HiddenInput(), required=False)
