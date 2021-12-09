@@ -346,7 +346,9 @@ def get_questions_slice(question_index: int):
 
 
 def get_questions_with_user_answers(user: SurveyUser):
-    survey_user_answers = SurveyUserAnswer.objects.filter(user=user).order_by(
+    survey_user_answers = SurveyUserAnswer.objects.filter(user=user).exclude(
+        answer__question__section__label="__context"
+    ).order_by(
         "answer__question__qindex", "answer__aindex"
     )
 

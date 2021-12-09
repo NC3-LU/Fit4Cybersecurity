@@ -47,8 +47,16 @@ def getRecommendations(user: SurveyUser, lang: str) -> Dict[str, List[str]]:
         if not recommendations.exists():
             continue
 
+        user_context = user.get_context()
+        try:
+            user_ecount = user_context.get("How many employees", 0).answer.score
+        except Exception:
+            user_ecount = 0
+
         for rec in recommendations:
-            if rec.min_e_count > user.e_count or rec.max_e_count < user.e_count:
+            if user_ecount and (
+                rec.min_e_count > user_ecount or rec.max_e_count < user_ecount
+            ):
                 continue
             if (userAnswer.uvalue > 0 and rec.answerChosen) or (
                 userAnswer.uvalue <= 0 and not rec.answerChosen
@@ -104,7 +112,7 @@ def calculateResult(
 
     user_answers = (
         SurveyUserAnswer.objects.filter(user=user)
-        .exclude(answer__question__section__label="_context")
+        .exclude(answer__question__section__label="__context")
         .order_by("answer__question__qindex", "answer__aindex")
     )
     for user_answer in user_answers:
@@ -142,7 +150,6 @@ def calculateResult(
         else:
             user_evaluations.append(0)
 
-    print(total_user_score, user_bonus_points_percent, user_evaluations, sections_list)
     return total_user_score, user_bonus_points_percent, user_evaluations, sections_list
 
 

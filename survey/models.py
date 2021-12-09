@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 
+from typing import Dict, Optional
 import uuid
 from django.db import models
 from csskp.settings import LANGUAGES, LANGUAGE_CODE
@@ -184,6 +185,20 @@ class SurveyUser(models.Model):
 
     def is_survey_finished(self):
         return self.status == SURVEY_STATUS_FINISHED
+
+    def get_context(self, question: Optional[str] = "") -> Dict[str, str]:
+        result = {}
+        user_answers = SurveyUserAnswer.objects.filter(user=self).filter(
+            answer__question__section__label="__context", uvalue__gte=0
+        )
+        if question:
+            user_answers = user_answers.filter(answer__question__label=question)
+        user_answers = user_answers.order_by(
+            "answer__question__qindex", "answer__aindex"
+        )
+        for user_answer in user_answers:
+            result[user_answer.answer.question.label] = user_answer
+        return result
 
 
 class SurveyUserAnswer(models.Model):
