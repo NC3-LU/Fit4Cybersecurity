@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from typing import Dict, Optional
+from typing import Optional
 import uuid
 from django.db import models
 from csskp.settings import LANGUAGES, LANGUAGE_CODE
@@ -166,7 +166,7 @@ class SurveyUser(models.Model):
     def is_survey_finished(self):
         return self.status == SURVEY_STATUS_FINISHED
 
-    def get_context(self, question: Optional[str] = "") -> Dict[str, str]:
+    def get_context(self, question: Optional[str] = ""):
         result = {}
         user_answers = SurveyUserAnswer.objects.filter(user=self).filter(
             answer__question__section__label="__context", uvalue__gte=0
