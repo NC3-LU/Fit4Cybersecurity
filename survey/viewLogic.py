@@ -238,9 +238,10 @@ def get_answer_choices(
     question_answers: List[SurveyQuestionAnswer], user_lang: str
 ) -> List[Tuple[int, str]]:
     tuple_answers = []
+    translation.activate(user_lang)
 
     for question_answer in question_answers:
-        translation = _(question_answer.label)
+        answer = _(question_answer.label)
         tooltip = _(question_answer.tooltip)
 
         tuple_answers.append(
@@ -253,7 +254,7 @@ def get_answer_choices(
                         '<span data-bs-toggle="tooltip" title="'
                         + tooltip
                         + '">'
-                        + translation
+                        + answer
                         + "</span>"
                     ),
                 ),
