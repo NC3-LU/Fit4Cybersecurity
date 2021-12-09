@@ -86,6 +86,7 @@ $ python manage.py migrate
 
 # Import questions, answers and recommendations
 $ python manage.py import_questions data/fit4Cybersecurity/questions.json
+$ python manage.py import_questions data/fit4Cybersecurity/context-questions.json
 
 # Create a user for the admin interface
 $ python manage.py createsuperuser --username <username>
