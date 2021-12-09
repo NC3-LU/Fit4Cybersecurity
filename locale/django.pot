@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-12-09 10:35+0000\n"
+"POT-Creation-Date: 2021-12-09 11:31+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,83 +17,161 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: csskp/config.py:29 csskp/config_dev.py:28 csskp/config_prod.py:29
+#: csskp/config.py:29
+msgid ""
+"This survey aims to identify the level of maturity of the operators in "
+"Luxembourg with respect to risk management and governance, collaboration on "
+"national and EU level and Incident reporting. We collect the answers to "
+"these 30 questions to understand where guidance and knowledge is already "
+"advanced and where there is room for improvement. As such, it is recommended "
+"that a person is taking this survey that is knowing the company's maturity "
+"on the aforementioned topics well.<br /><br />The survey will be online and "
+"available between December 2021 and March 31st 2022 .After the survey, the "
+"data will be processed and results will be interpreted. However, since the "
+"survey is completely anonymous, we cannot identify you nor your company and "
+"thus deletion of specific records is not possible: we cannot be sure that it "
+"is indeed your survey. The results will be made available through another "
+"channel.<br /><br />If you are not able to do the survey in one go and you "
+"want to later pick up where you have left off, please be sure to save the "
+"link by clicking on the \"continue later\" button. We will not be able to "
+"help you to find your answers again otherwise."
+msgstr ""
+
+#: csskp/config.py:89 csskp/config_dev.py:69
+#, python-format
+msgid ""
+"The objective of the self-assessment tool, %(tool_name)s is to assess the "
+"maturity of an organization in terms of applicable good practices in the "
+"field of information security.<br /><br />This document, based on the "
+"%(tool_name)s, is for the exclusive use of the customer. It is in this "
+"respect confidential.<br /><br />In view of the methodology used and the "
+"fact that it is a self-assessment, it is understood that the overall results "
+"can not in any way be exhaustive. As such, the actual risk assessment or the "
+"list of identified risks and vulnerabilities are based on the information "
+"provided by the client. The analysis resulting from this assessment can "
+"engage only the customer for any omission or error that would be due to "
+"third parties or not.<br /><br />The tool, %(tool_name)s can possibly "
+"provide recommendations. It is understood by the client that the "
+"recommendations are neither exclusive nor exhaustive.<br /><br />It should "
+"also be noted that the information you have provided to us will be recorded "
+"for statistical reasons. Due to the nature of the data, we can not identify "
+"you. Unless you later contact us to do a Diagnostic CASES."
+msgstr ""
+
+#: csskp/config.py:113 csskp/config_dev.py:93
+#, python-format
+msgid ""
+"This self-assessment tool is named %(tool_name)s to highlight the "
+"introduction to information security. It is also a prerequisite for doing a "
+"CASES Diagnostic: a minimum score of %(minimal_acceptable_score)s/100 is "
+"required. The purpose for this restriction gives us the opportunity to "
+"better tailor the recommendations to your organization during the Diagnostic."
+"<br /><br />During this self-assessment multiple choice questions were "
+"asked. After analyzing your answers, recommendations have been provided.<br /"
+"><br />Finally, you can download a report, which will help you to "
+"communicate the results to your suppliers, if necessary."
+msgstr ""
+
+#: csskp/config.py:127 csskp/config_dev.py:107
+#, python-format
+msgid ""
+"You have achieved %(SCORE)s/100 with your answers. You must reach at least "
+"%(minimal_acceptable_score)s/100 to be able to make a CASES Diagnosis.<br /"
+"><br />We remind you that this is a self-assessment and it is important to "
+"understand that all the results can not in any way be exhaustive."
+msgstr ""
+
+#: csskp/config.py:136
+msgid "Energy"
+msgstr ""
+
+#: csskp/config.py:137
+msgid "Transport"
+msgstr ""
+
+#: csskp/config.py:138
+msgid "Banking"
+msgstr ""
+
+#: csskp/config.py:139
+msgid "Financial market infrastructure"
+msgstr ""
+
+#: csskp/config.py:140 data/fit4Cybersecurity/questions.json:1364
+#: data/nThContextQuestions/questions.json:11 survey/globals.py:15
+msgid "Health"
+msgstr ""
+
+#: csskp/config.py:141
+msgid "Dringking water"
+msgstr ""
+
+#: csskp/config.py:142
+msgid "Waste Water"
+msgstr ""
+
+#: csskp/config.py:143
+msgid "Digital Infrastructure and Service Providers"
+msgstr ""
+
+#: csskp/config.py:144
+msgid "Public Administration"
+msgstr ""
+
+#: csskp/config.py:145
+msgid "Space"
+msgstr ""
+
+#: csskp/config.py:146
+msgid "Postal and Courrier Services"
+msgstr ""
+
+#: csskp/config.py:147
+msgid "Waste Management"
+msgstr ""
+
+#: csskp/config.py:148
+msgid "Manufacture, production and distribution of chemicals"
+msgstr ""
+
+#: csskp/config.py:149
+msgid "Food Production, processing and distribution"
+msgstr ""
+
+#: csskp/config.py:150
+msgid "Manufacturing of medical devices"
+msgstr ""
+
+#: csskp/config.py:151
+msgid "Manufacture of computer, electronics and optical products"
+msgstr ""
+
+#: csskp/config.py:152
+msgid "Manufacture of electrical equipment"
+msgstr ""
+
+#: csskp/config.py:153
+msgid "Manufacture of machinery and equipment"
+msgstr ""
+
+#: csskp/config.py:156
+msgid "Under 10 employees"
+msgstr ""
+
+#: csskp/config.py:157
+msgid "From 10 to 49 employees"
+msgstr ""
+
+#: csskp/config.py:158
+msgid "From 50 to 249 employees"
+msgstr ""
+
+#: csskp/config.py:159
+msgid "Over 250 employees"
+msgstr ""
+
+#: csskp/config_dev.py:28
 msgid "Description of the tool."
-msgstr ""
-
-#: csskp/config.py:67 csskp/config_dev.py:69
-#, python-format
-msgid ""
-"The objective of the self-assessment tool,\n"
-"            %(tool_name)s is to assess the maturity of an organization in "
-"terms of\n"
-"            applicable good practices in the field of information security.\n"
-"            <br /><br />\n"
-"            This document, based on the %(tool_name)s, is for the exclusive "
-"use of\n"
-"            the customer. It is in this respect confidential.\n"
-"            <br /><br />\n"
-"            In view of the methodology used and the fact that it is a self-"
-"assessment,\n"
-"            it is understood that the overall results can not in any way be "
-"exhaustive.\n"
-"            As such, the actual risk assessment or the list of identified "
-"risks and\n"
-"            vulnerabilities are based on the information provided by the "
-"client.\n"
-"            The analysis resulting from this assessment can engage only the "
-"customer\n"
-"            for any omission or error that would be due to third parties or "
-"not.\n"
-"            <br /><br />\n"
-"            The tool, %(tool_name)s can possibly provide recommendations. It "
-"is\n"
-"            understood by the client that the recommendations are neither "
-"exclusive\n"
-"            nor exhaustive.\n"
-"            <br /><br />\n"
-"            It should also be noted that the information you have provided "
-"to us will\n"
-"            be recorded for statistical reasons.\n"
-"            Due to the nature of the data, we can not identify you. Unless "
-"you later\n"
-"            contact us to do a Diagnostic CASES."
-msgstr ""
-
-#: csskp/config.py:91 csskp/config_dev.py:93
-#, python-format
-msgid ""
-"This self-assessment tool is named %(tool_name)s\n"
-"            to highlight the introduction to information security.\n"
-"            It is also a prerequisite for doing a CASES Diagnostic: a "
-"minimum score of\n"
-"            %(minimal_acceptable_score)s/100 is required.\n"
-"            The purpose for this restriction gives us the opportunity to "
-"better\n"
-"            tailor the recommendations to your organization during the "
-"Diagnostic.\n"
-"            <br /><br />\n"
-"            During this self-assessment multiple choice questions were "
-"asked. After\n"
-"            analyzing your answers, recommendations have been provided.\n"
-"            <br /><br />\n"
-"            Finally, you can download a report, which will help you to "
-"communicate\n"
-"            the results to your suppliers, if necessary."
-msgstr ""
-
-#: csskp/config.py:105 csskp/config_dev.py:107
-#, python-format
-msgid ""
-"You have achieved %(SCORE)s/100 with your\n"
-"            answers. You must reach at least "
-"%(minimal_acceptable_score)s/100\n"
-"            to be able to make a CASES Diagnosis.\n"
-"            <br /><br />\n"
-"            We remind you that this is a self-assessment and it is "
-"important\n"
-"            to understand that all the results can not in any way be "
-"exhaustive."
 msgstr ""
 
 #: data/fit4Cybersecurity/questions.json:3
@@ -1088,11 +1166,6 @@ msgstr ""
 #: data/nThContextQuestions/questions.json:33
 #: data/nThContextQuestions/questions.json:64
 msgid "__context"
-msgstr ""
-
-#: data/fit4Cybersecurity/questions.json:1364
-#: data/nThContextQuestions/questions.json:11 survey/globals.py:15
-msgid "Health"
 msgstr ""
 
 #: data/fit4Cybersecurity/questions.json:1370
