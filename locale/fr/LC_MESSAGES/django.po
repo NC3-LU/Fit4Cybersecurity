@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-12-09 10:35+0000\n"
-"PO-Revision-Date: 2021-12-09 10:04+0000\n"
+"PO-Revision-Date: 2021-12-09 13:18+0000\n"
 "Last-Translator: Juan Rocha <juan.rocha@cases.lu>\n"
 "Language-Team: French <https://translate.monarc.lu/projects/"
 "Fit4Cybersecurity/fit4ilr/fr/>\n"
@@ -1525,7 +1525,7 @@ msgstr ""
 #: data/survey4operators/questions.json:934
 #: data/survey4operators/questions.json:935
 msgid "Risk Management"
-msgstr ""
+msgstr "Gestion des risques"
 
 #: data/fit4ilr/questions.json:11 data/nThContextQuestions/questions.json:98
 #: data/survey4operators/questions.json:11
@@ -2244,12 +2244,12 @@ msgstr ""
 
 #: data/fit4privacy/questions.json:3 data/fit4privacy/questions.json:125
 msgid "Personal Data Processing"
-msgstr ""
+msgstr "Les traitements des données"
 
 #: data/fit4privacy/questions.json:4 data/fit4privacy/questions.json:126
 #: data/fit4privacy/questions.json:192
 msgid "Personal Data Management"
-msgstr ""
+msgstr "Le traitement des données"
 
 #: data/fit4privacy/questions.json:20
 msgid ""
@@ -2283,7 +2283,7 @@ msgstr ""
 
 #: data/fit4privacy/questions.json:39
 msgid "We process some personal data (but very limited) of employees."
-msgstr ""
+msgstr "Nous traitons quelques données à caractère personnel des employés."
 
 #: data/fit4privacy/questions.json:52 data/fit4privacy/questions.json:84
 #: data/fit4privacy/questions.json:100 data/fit4privacy/questions.json:116
@@ -2303,31 +2303,39 @@ msgstr ""
 
 #: data/fit4privacy/questions.json:55
 msgid "We process a lot of personal data of employees."
-msgstr ""
+msgstr "Nous traitons beaucoup de données à caractère personnel des employés."
 
 #: data/fit4privacy/questions.json:71
 msgid ""
 "We process some personal data of clients/users, and we have under 500 "
 "clients."
 msgstr ""
+"Nous traitons des données à caractère personnel des clients/usagers, et nous "
+"avons moins de 500 clients/usagers."
 
 #: data/fit4privacy/questions.json:87
 msgid ""
 "We process some personal data of clients/users, and we have between 500 and "
 "10 000 clients/users."
 msgstr ""
+"Nous traitons des données à caractère personnel des clients/usagers, et nous "
+"avons entre 500 et 10 000 clients/usagers."
 
 #: data/fit4privacy/questions.json:103
 msgid ""
 "We process some personal data of clients/users, and we have over 10 000 "
 "clients/users."
 msgstr ""
+"Nous traitons des données à caractère personnel des clients/usagers, et nous "
+"avons plus de 10 000 clients/usagers."
 
 #: data/fit4privacy/questions.json:119
 msgid ""
 "We monitor behaviour of data subjects as part of our business, and they are "
 "a lot."
 msgstr ""
+"Nous surveillons le comportement des personnes concernées dans le cadre de "
+"notre activité, et elles sont nombreuses."
 
 #: data/fit4privacy/questions.json:122
 msgid ""
@@ -2335,10 +2343,13 @@ msgid ""
 "many data subjects, data quantity per data subject on average) does it "
 "process:"
 msgstr ""
+"Si votre société traite des données à caractère personnel, combien de "
+"données (i.e. combien des personnes, quelle quantité moyenne de données par "
+"individu) traite-t'elle:"
 
 #: data/fit4privacy/questions.json:137
 msgid "No, we do not process any sensitive personal data at all."
-msgstr ""
+msgstr "Non, nous ne traitons pas de données à caractère personnel sensibles."
 
 #: data/fit4privacy/questions.json:150
 msgid ""
@@ -2355,6 +2366,8 @@ msgid ""
 "We do not process any sensitive data from the above but we do process some "
 "criminal records when hiring."
 msgstr ""
+"Nous ne traitons pas de données à caractère personnel sensibles de cette "
+"liste mais nous traitons le casier judiciaire."
 
 #: data/fit4privacy/questions.json:166 data/fit4privacy/questions.json:182
 msgid ""
@@ -2371,11 +2384,11 @@ msgstr ""
 
 #: data/fit4privacy/questions.json:169
 msgid "Yes, we process at least one of the above."
-msgstr ""
+msgstr "Oui, nous traitons au moins une catégorie de ces données."
 
 #: data/fit4privacy/questions.json:185
 msgid "We do not know if we do."
-msgstr ""
+msgstr "Nous ne savons pas."
 
 #: data/fit4privacy/questions.json:188
 msgid ""
@@ -2389,7 +2402,7 @@ msgstr ""
 
 #: data/fit4privacy/questions.json:191
 msgid "Register of Processing activities"
-msgstr ""
+msgstr "Registre des traitements"
 
 #: data/fit4privacy/questions.json:208
 msgid ""
@@ -2405,7 +2418,7 @@ msgstr ""
 
 #: data/fit4privacy/questions.json:211
 msgid "Such a registry is not needed in our business."
-msgstr ""
+msgstr "Il n'y a pas besoin d'un tel registre dans notre société."
 
 #: data/fit4privacy/questions.json:224
 msgid ""
@@ -2423,6 +2436,7 @@ msgstr ""
 #: data/fit4privacy/questions.json:227
 msgid "It is needed but we have no clear idea what exactly to list there."
 msgstr ""
+"Nous en avons besoin mais nous n'avons pas une idée claire sur son contenu."
 
 #: data/fit4privacy/questions.json:240
 msgid ""
@@ -2441,6 +2455,8 @@ msgid ""
 "It is needed but we do not know the status right now. We let the data "
 "privacy responsible handle it, as it is his/her job."
 msgstr ""
+"Nous en avons besoin mais nous ne savons pas son status. C'est le "
+"responsable à la protection des données qui s'en occupe."
 
 #: data/fit4privacy/questions.json:256
 msgid ""
@@ -2457,6 +2473,8 @@ msgid ""
 "We have started inventorying but we do not have a full record of processing "
 "activities yet."
 msgstr ""
+"Nous en avons besoin, nous avons commencé ce registre mais il n'est pas "
+"encore fini."
 
 #: data/fit4privacy/questions.json:272
 msgid ""
@@ -2473,17 +2491,21 @@ msgid ""
 "We need it and we do have a full record of processing activities. It is "
 "maintained and regularly updated."
 msgstr ""
+"Nous en avons besoin, et nous avons un tel registre d'activités de "
+"traitement au sein de notre société. Il est maintenu à jour régulièrement."
 
 #: data/fit4privacy/questions.json:278
 msgid ""
 "Do you need and do you have a registry (or record) of the personal data "
 "processing that happens within your company?"
 msgstr ""
+"Avez-vous besoin et avez-vous déja préparé le registre des traitements des "
+"données à caractère personnel au sein de votre société?"
 
 #: data/fit4privacy/questions.json:281 data/fit4privacy/questions.json:282
 #: data/fit4privacy/questions.json:323 data/fit4privacy/questions.json:324
 msgid "Transparency"
-msgstr ""
+msgstr "Transparence"
 
 #: data/fit4privacy/questions.json:293
 msgid "No, as we don\\u2019t have a website."
@@ -2511,10 +2533,13 @@ msgstr ""
 #: data/fit4privacy/questions.json:309
 msgid "No, we have had no change on the website yet related to GDPR."
 msgstr ""
+"Non, nous n'avons pas encore mis à jour notre site internet en relation avec "
+"le RGPD."
 
 #: data/fit4privacy/questions.json:317
 msgid "Yes, we have updated the website with regards to GDPR."
 msgstr ""
+"Oui, nous avons mis à jour notre site internet en relation avec le RGPD."
 
 #: data/fit4privacy/questions.json:320
 msgid ""
@@ -2522,6 +2547,9 @@ msgid ""
 "May 2018? (e.g., anything related to the privacy notice, GDPR disclaimer, "
 "etc)"
 msgstr ""
+"Avez-vous déjà mis à jour votre site internet par rapport à la protection "
+"des données à caractère personnel, après le 25 mai 2018? (e.g., soit sous la "
+"forme d'une notice sur la vie privée, un disclaimer RGPD, etc)"
 
 #: data/fit4privacy/questions.json:340
 msgid ""
@@ -2543,7 +2571,7 @@ msgstr ""
 
 #: data/fit4privacy/questions.json:343
 msgid "We have given no information whatsoever."
-msgstr ""
+msgstr "Nous ne l'avons pas fait."
 
 #: data/fit4privacy/questions.json:356 data/fit4privacy/questions.json:404
 #: data/fit4privacy/questions.json:420
@@ -2563,41 +2591,55 @@ msgstr ""
 
 #: data/fit4privacy/questions.json:359
 msgid "On the website we added a GDPR note."
-msgstr ""
+msgstr "Sur notre site, nous avons ajouté une notice RGPD."
 
 #: data/fit4privacy/questions.json:372 data/fit4privacy/questions.json:388
 msgid ""
 "Make sure all data subjects are covered (clients AND employees), and that "
 "your company follows the points mentioned by Art. 13 and 14 of GDPR."
 msgstr ""
+"Assurez-vous que toutes les personnes concernées sont informées (les clients "
+"mais aussi les employés, fournisseurs, stagiaires, tiers, etc.) et que les "
+"informations fournies couvrent les points mentionnés par les articles 13 et "
+"14 du RGPD."
 
 #: data/fit4privacy/questions.json:375
 msgid "We updated terms and conditions for clients and contractors."
 msgstr ""
+"Nous avons mis à jour les conditions générales pour nos clients et sous-"
+"traitants."
 
 #: data/fit4privacy/questions.json:391
 msgid ""
 "We updated contracts with our employees / we had them sign an addendum on "
 "GDPR."
 msgstr ""
+"Nous avons mis à jour les contrats avec nos employés / nos employés ont "
+"signé un addendum sur le RGPD."
 
 #: data/fit4privacy/questions.json:407
 msgid "We added stickers in our areas with video surveillance."
 msgstr ""
+"Nous avons ajouté des autocollants dans les zones avec de la "
+"vidéosurveillance."
 
 #: data/fit4privacy/questions.json:423
 msgid "We started an intranet page for employees on this topic."
 msgstr ""
+"Nous avons mis en place une page intranet pour nos employés sur le RGPD et "
+"comment nous traitons la vie privée au sein de notre société."
 
 #: data/fit4privacy/questions.json:426
 msgid ""
 "How did you inform the data subjects about the processing of their personal "
 "data performed by your company? "
 msgstr ""
+"Comment avez-vous informé les individus par rapport aux traitements de leur "
+"données à caractère personnel effectués par votre société? "
 
 #: data/fit4privacy/questions.json:429 data/fit4privacy/questions.json:479
 msgid "(Some) Principles of Processing"
-msgstr ""
+msgstr "(Quelques) Principes de traitement"
 
 #: data/fit4privacy/questions.json:430 data/fit4privacy/questions.json:480
 msgid "Principles of processing"
@@ -2637,10 +2679,14 @@ msgid ""
 "There is a chance we process some data without always a legal basis, but it "
 "shouldn't be a lot."
 msgstr ""
+"Il est possible que nous effectuons quelques traitements sans une base "
+"légale, mais ils ne sont pas beaucoup."
 
 #: data/fit4privacy/questions.json:473
 msgid "We have a legal basis for all the personal data we are processing."
 msgstr ""
+"Nous avons une base légale pour tout traitement des données à caractère "
+"personnel au sein de notre société."
 
 #: data/fit4privacy/questions.json:476
 msgid ""
@@ -2648,6 +2694,10 @@ msgid ""
 "a legal basis (one of: contract execution, legal requirement, public/vital "
 "interest, legitimate interest, consent)?"
 msgstr ""
+"Savez-vous si votre entreprise traite des données à caractère personnel avec "
+"une base légale (une des suivants: l'exécution d'un contrat, un requis légal "
+"ou règlementaire, l'intérêt vital ou publique, l'intérêt légitime, le "
+"consentement de l'individu)?"
 
 #: data/fit4privacy/questions.json:496
 msgid ""
@@ -2699,25 +2749,31 @@ msgstr ""
 #: data/fit4privacy/questions.json:531
 msgid "We have fixed some storage limits for certain data types."
 msgstr ""
+"Nous avons fixé quelques limites de stockage pour certaines catégories de "
+"données à caractère personnel."
 
 #: data/fit4privacy/questions.json:539
 msgid "We have data storage limits that are enforced on personal data."
 msgstr ""
+"Nous avons des limites de stockage pour toutes les catégories de données à "
+"caractère personnel et nous les respectons."
 
 #: data/fit4privacy/questions.json:542
 msgid ""
 "How do you deal with setting the limits for the duration of personal data "
 "processing?"
 msgstr ""
+"Quelle est votre approche par rapport à la durée de conservation des données "
+"à caractère personnel au sein de votre société?"
 
 #: data/fit4privacy/questions.json:545
 msgid "Data Breaches"
-msgstr ""
+msgstr "Violations de données"
 
 #: data/fit4privacy/questions.json:546 data/fit4privacy/questions.json:636
 #: data/fit4privacy/questions.json:734
 msgid "Data breaches, Data rights, DPO"
-msgstr ""
+msgstr "Violations des données, exercice des droits, DPO"
 
 #: data/fit4privacy/questions.json:562 data/fit4privacy/questions.json:578
 msgid ""
@@ -2738,13 +2794,15 @@ msgstr ""
 
 #: data/fit4privacy/questions.json:565
 msgid "No idea, as nothing like that has ever happened to our knowledge."
-msgstr ""
+msgstr "Aucune idée, à notre connaissance cela n'est jamais arrivé."
 
 #: data/fit4privacy/questions.json:581
 msgid ""
 "The reaction will be entirely case by case, as we have no specific procedure "
 "to follow in this situation."
 msgstr ""
+"La réaction sera en fonction de ce que s'est passé, comme il n'existe pas "
+"une procédure spécifique."
 
 #: data/fit4privacy/questions.json:594
 msgid ""
@@ -2769,6 +2827,7 @@ msgid ""
 "We would handle it internally based on our security incident management "
 "procedures."
 msgstr ""
+"Nous allons le traiter en utilisant nos procédures de gestion des incidents."
 
 #: data/fit4privacy/questions.json:610 data/fit4privacy/questions.json:626
 msgid ""
@@ -2784,10 +2843,15 @@ msgid ""
 "We would report it to the national data protection authority within 72h, and "
 "the data subjects involved afterwards, if there are risks that concern them."
 msgstr ""
+"Nous rapporterons l'incident à l'autorité de protection des données dans les "
+"72h suivantes, et, si besoin aussi aux individus, en cas de risque pour les "
+"personnes concernées par la violation."
 
 #: data/fit4privacy/questions.json:629
 msgid "We would only immediately inform the affected data subjects."
 msgstr ""
+"Nous le rapporterons directement et immédiatement aux personnes concernées "
+"par la violation."
 
 #: data/fit4privacy/questions.json:632
 msgid ""
@@ -2795,10 +2859,13 @@ msgid ""
 "personal data breach (e.g., accidental loss, destruction, alteration or "
 "theft of data that also is personal data)?"
 msgstr ""
+"Comment votre entreprise traiterait-elle un incident qui pourrait être "
+"considéré comme une violation de données à caractère personnel (e.g., une "
+"perte, destruction, changement illicite ou un vol des données)?"
 
 #: data/fit4privacy/questions.json:635 data/fit4privacy/questions.json:733
 msgid "Data Protection Responsible and Data Subject Rights"
-msgstr ""
+msgstr "Responsable Protection des Données et l'exercice des droits"
 
 #: data/fit4privacy/questions.json:652
 msgid ""
@@ -2829,6 +2896,8 @@ msgid ""
 "We would handle it to the legal department representative, to handle in the "
 "near future."
 msgstr ""
+"Notre société réagirait par voie du département juridique qui va s'en "
+"occuper dans un futur proche."
 
 #: data/fit4privacy/questions.json:684
 msgid ""
@@ -2845,10 +2914,12 @@ msgid ""
 "It would arrive on the agenda of the privacy responsible, to handle in the "
 "near future."
 msgstr ""
+"La requête arrivera sur le bureau du responsable de la vie privée, qui va "
+"s'en occuper dans un futur proche."
 
 #: data/fit4privacy/questions.json:695
 msgid "We would need to react within one month."
-msgstr ""
+msgstr "Notre société devrait répondre dans un mois."
 
 #: data/fit4privacy/questions.json:708
 msgid ""
@@ -2865,6 +2936,8 @@ msgid ""
 "We would directly do what the person asked us to, regarding their personal "
 "data."
 msgstr ""
+"Nous allons répondre immédiatement vers la personne avec les données "
+"demandées."
 
 #: data/fit4privacy/questions.json:724
 msgid ""
@@ -2878,13 +2951,15 @@ msgstr ""
 
 #: data/fit4privacy/questions.json:727
 msgid "We would ask the person to pay a fee."
-msgstr ""
+msgstr "La personne devrait payer des frais."
 
 #: data/fit4privacy/questions.json:730
 msgid ""
 "How would your company handle a request for the exercise of a data subject "
 "right, if that would appear now in your mailbox?"
 msgstr ""
+"Comment réagirait votre société vis-a-vis d'une requête d'exercise de droits "
+"d'une persone concernée, reçue par courriel ou courrier?"
 
 #: data/fit4privacy/questions.json:750 data/fit4privacy/questions.json:766
 #: data/fit4privacy/questions.json:790
@@ -2914,22 +2989,24 @@ msgstr ""
 
 #: data/fit4privacy/questions.json:777
 msgid "We have an official DPO."
-msgstr ""
+msgstr "Nous avons un DPD officiel."
 
 #: data/fit4privacy/questions.json:793
 msgid "We have a privacy responsible but not a formal DPO."
-msgstr ""
+msgstr "Nous avons un responsable privacy (vie privée) mais pas un DPD formel."
 
 #: data/fit4privacy/questions.json:796
 msgid ""
 "Has your company appointed a privacy responsible or a Data Protection "
 "Officer (DPO)?"
 msgstr ""
+"Est-ce que votre société a désigné un responsable privacy (vie privée) ou un "
+"Délégué de la Protection des Données (DPD)?"
 
 #: data/fit4privacy/questions.json:799 data/fit4privacy/questions.json:889
 #: data/fit4privacy/questions.json:947 data/fit4privacy/questions.json:1021
 msgid "Management of the Risks of the Organisation"
-msgstr ""
+msgstr "Gestion des risques pour la société"
 
 #: data/fit4privacy/questions.json:816
 msgid ""
@@ -2946,7 +3023,7 @@ msgstr ""
 
 #: data/fit4privacy/questions.json:819
 msgid "None whatsoever."
-msgstr ""
+msgstr "Aucune, car nous n'avons pas de données personnelles."
 
 #: data/fit4privacy/questions.json:832
 msgid ""
@@ -2968,7 +3045,7 @@ msgstr ""
 
 #: data/fit4privacy/questions.json:835
 msgid "A high-level analysis of GDPR risks."
-msgstr ""
+msgstr "Une analyse générale sur l'ensemble des risques RGPD."
 
 #: data/fit4privacy/questions.json:848
 msgid ""
@@ -2985,7 +3062,7 @@ msgstr ""
 msgid ""
 "We have performed at least one data protection impact assessment after GDPR "
 "came into force."
-msgstr ""
+msgstr "Nous avons éffectué au moins une analyse d'impact après le 25 mai 2018."
 
 #: data/fit4privacy/questions.json:864
 msgid ""
@@ -3003,6 +3080,9 @@ msgid ""
 "We performed several data protection impact assessments before GDPR came "
 "into force, and the authority agreed with them so we keep them unchanged."
 msgstr ""
+"Nous avons éffectué plusieurs analyses d'impact avant le 25 mai 2018, et "
+"elles sont restés comme cela dépuis car l'autorité de contrôle les a "
+"approuvé."
 
 #: data/fit4privacy/questions.json:880
 msgid ""
@@ -3016,13 +3096,15 @@ msgstr ""
 
 #: data/fit4privacy/questions.json:883
 msgid "We have a risk analysis related to information security."
-msgstr ""
+msgstr "Nous avons une analyse de risques cybersécurité."
 
 #: data/fit4privacy/questions.json:886
 msgid ""
 "What kind of risk analyses have you performed in what concerns GDPR and "
 "information security risks?"
 msgstr ""
+"Quels types d'analyse de risque avez-vous éffectué par rapport à la "
+"protection des données / les risques RGPD?"
 
 #: data/fit4privacy/questions.json:901
 msgid "None, we don\\u2019t have any such contracts."
@@ -3049,21 +3131,23 @@ msgstr ""
 
 #: data/fit4privacy/questions.json:917
 msgid "None, but we have some contracts."
-msgstr ""
+msgstr "Aucun, mais nous avons quelques contrats."
 
 #: data/fit4privacy/questions.json:933
 msgid "Some of the contracts but not all."
-msgstr ""
+msgstr "Nous en avons revu plusieurs mais pas tous."
 
 #: data/fit4privacy/questions.json:941
 msgid "All of the contracts in place have been reviewed and updated."
-msgstr ""
+msgstr "Touts nos contrats ont été revus et mis à jour."
 
 #: data/fit4privacy/questions.json:944
 msgid ""
 "How many contracts with contractors/ partners have you reviewed after May "
 "2018, with respect to GDPR clauses and personal data being processed?"
 msgstr ""
+"Combien de vos contrats avec des sous-traitans / partenaires avez-vous revu "
+"après le 25 mai 2018, par rapport au RGPD?"
 
 #: data/fit4privacy/questions.json:964 data/fit4privacy/questions.json:980
 msgid ""
@@ -3109,6 +3193,9 @@ msgid ""
 "We have some general legal paperwork on privacy by design and by default "
 "that is signed when new projects or products are launched."
 msgstr ""
+"Nous avons quelques documents généraux de nature juridique sur la Privacy "
+"dès la conception et par defaut qui devraient être signés avant le "
+"commencement du projet."
 
 #: data/fit4privacy/questions.json:1012
 msgid ""
@@ -3129,32 +3216,42 @@ msgid ""
 "to that what model of privacy by design and by default will be used in new "
 "projects or products."
 msgstr ""
+"Nous regardons brièvement quelles données à caractère personnel vont être "
+"traitées, et nous allons decider en fonction de cela quel modèle de 'privacy "
+"dès la conception' et 'privacy par defaut' utiliser ensuite."
 
 #: data/fit4privacy/questions.json:1018
 msgid ""
 "How do you enable privacy by default and by design in your new projects or "
 "products?"
 msgstr ""
+"Comment avez-vous mis en place la protection des données dès la conception ("
+"'privacy by design') et la protection des données par defaut ('privacy by "
+"default') dans le cadre des nouveaux projets ou produits?"
 
 #: data/fit4privacy/questions.json:1033
 msgid "We have no data transfers outside of EEA."
-msgstr ""
+msgstr "Nous n'avons pas de transferts de ce type."
 
 #: data/fit4privacy/questions.json:1041
 msgid ""
 "We are transferring to 1/more adequacy decision countries, so nothing else "
 "to do for us."
 msgstr ""
+"Nous avons des transferts vers 1/plusieurs pays ayant des mesures adéquates, "
+"donc rien de spécifique à mettre en place."
 
 #: data/fit4privacy/questions.json:1049
 msgid ""
 "We have Standard Contractual Clauses or Binding Corporate Rules in place."
 msgstr ""
+"Nous avons des transferts, et nous utilisons des Clauses Contractuelles "
+"Standard ou des \"Binding Corporate Rules\"."
 
 #: data/fit4privacy/questions.json:1057
 msgid ""
 "No idea what we have in place, but we do have transfers of personal data."
-msgstr ""
+msgstr "Nous ne sommes pas sûrs, mais nous avons des transferts de ce type."
 
 #: data/fit4privacy/questions.json:1060
 msgid ""
@@ -3162,16 +3259,19 @@ msgid ""
 "the outside of the the European Economic Area (EU plus Iceland, "
 "Lichtenstein, Norway), what are the legal measures of protection in place?"
 msgstr ""
+"Est-ce que votre société effectue des transferts des données à caractère "
+"personnel hors de l'Espace Economique Européen (EU plus l'Islande, "
+"Lichtenstein, Norvège), et si oui, avec quelles mesures de protection?"
 
 #: data/fit4privacy/questions.json:1063 data/fit4privacy/questions.json:1129
 #: data/fit4privacy/questions.json:1179
 msgid "Information Security"
-msgstr ""
+msgstr "Sécurité de l'information"
 
 #: data/fit4privacy/questions.json:1064 data/fit4privacy/questions.json:1130
 #: data/fit4privacy/questions.json:1180
 msgid "Cybersecurity"
-msgstr ""
+msgstr "Cybersécurité"
 
 #: data/fit4privacy/questions.json:1080
 msgid ""
@@ -3220,17 +3320,19 @@ msgstr ""
 
 #: data/fit4privacy/questions.json:1115
 msgid "We review our risks periodically."
-msgstr ""
+msgstr "Nous faisons une revue des risques de ce type périodiquement."
 
 #: data/fit4privacy/questions.json:1123
 msgid ""
 "We review our risks periodically and we perform external audit regularly or "
 "we have an information security certification (e.g ISO 2700x)."
 msgstr ""
+"Nous faisons une revue des risques périodiquement ainsi que des audits en "
+"vue d'avoir une certification (e.g. ISO 27001)."
 
 #: data/fit4privacy/questions.json:1126
 msgid "How do you handle information security risks?"
-msgstr ""
+msgstr "Comment gérez-vous les risques par rapport à la sécurité informatique?"
 
 #: data/fit4privacy/questions.json:1146 data/fit4privacy/questions.json:1162
 msgid ""
@@ -3243,19 +3345,20 @@ msgstr ""
 
 #: data/fit4privacy/questions.json:1149
 msgid "Never or not really."
-msgstr ""
+msgstr "Jamais entendu cela au sein de notre société."
 
 #: data/fit4privacy/questions.json:1165
 msgid "One time, when they are hired."
-msgstr ""
+msgstr "Oui, une fois, quand l'employé est embauché."
 
 #: data/fit4privacy/questions.json:1173
 msgid "We train them periodically."
-msgstr ""
+msgstr "Nous formons les employés réguliérement sur ce sujet."
 
 #: data/fit4privacy/questions.json:1176
 msgid "How often do you train your employees on information security?"
 msgstr ""
+"Votre société forme-t'elle ses employés dans la sécurité de l'information?"
 
 #: data/fit4privacy/questions.json:1196
 msgid ""
@@ -3267,7 +3370,7 @@ msgstr ""
 
 #: data/fit4privacy/questions.json:1199
 msgid "They are not written."
-msgstr ""
+msgstr "Elles ne sont pas écrites."
 
 #: data/fit4privacy/questions.json:1212
 msgid ""
@@ -3283,12 +3386,16 @@ msgid ""
 "They were written some time ago, but not known to all employees, and not up "
 "to date."
 msgstr ""
+"Elles sont écrites dépuis longtemps, mais elles ne sont pas très connues, et "
+"pas mises à jour."
 
 #: data/fit4privacy/questions.json:1223
 msgid ""
 "They are written, approved by the management, known from all the employees "
 "and re-viewed periodically."
 msgstr ""
+"Elles sont déjà écrites, approuvées par le management, connues par tous les "
+"employés et périodiquement mises à jour."
 
 #: data/fit4privacy/questions.json:1226
 msgid ""
@@ -3296,6 +3403,9 @@ msgid ""
 "concerning information security and privacy in your organisation written and "
 "known to your employees?"
 msgstr ""
+"Dans quelle mesures les regles (procédures / guides / bonnes pratiques) sur "
+"la sécurité de l'information et la protection des données sont-elles écrites "
+"et connues par vos employés?"
 
 #: survey/forms.py:80
 msgid "You need to choose at least one answer"
