@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-12-09 12:02+0000\n"
+"POT-Creation-Date: 2021-12-09 13:21+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -97,7 +97,7 @@ msgstr ""
 msgid "Financial market infrastructure"
 msgstr ""
 
-#: csskp/config.py:140 data/nThContextQuestions/questions.json:11
+#: csskp/config.py:140 data/fit4Cybersecurity/context-questions.json:11
 #: survey/globals.py:15
 msgid "Health"
 msgstr ""
@@ -172,6 +172,62 @@ msgstr ""
 
 #: csskp/config_dev.py:28
 msgid "Description of the tool."
+msgstr ""
+
+#: data/fit4Cybersecurity/context-questions.json:3
+msgid "What is your sector?"
+msgstr ""
+
+#: data/fit4Cybersecurity/context-questions.json:4
+#: data/fit4Cybersecurity/context-questions.json:32
+#: data/fit4Cybersecurity/context-questions.json:63
+msgid "Context"
+msgstr ""
+
+#: data/fit4Cybersecurity/context-questions.json:5
+#: data/fit4Cybersecurity/context-questions.json:33
+#: data/fit4Cybersecurity/context-questions.json:64
+msgid "__context"
+msgstr ""
+
+#: data/fit4Cybersecurity/context-questions.json:17
+msgid "Insurance"
+msgstr ""
+
+#: data/fit4Cybersecurity/context-questions.json:23
+msgid "Education / Research"
+msgstr ""
+
+#: data/fit4Cybersecurity/context-questions.json:31
+msgid "How many employees?"
+msgstr ""
+
+#: data/fit4Cybersecurity/context-questions.json:39
+msgid "1-5"
+msgstr ""
+
+#: data/fit4Cybersecurity/context-questions.json:46
+msgid "5-10"
+msgstr ""
+
+#: data/fit4Cybersecurity/context-questions.json:53
+msgid "10+"
+msgstr ""
+
+#: data/fit4Cybersecurity/context-questions.json:62
+msgid "Please select your country"
+msgstr ""
+
+#: data/fit4Cybersecurity/context-questions.json:70
+msgid "Luxembourg"
+msgstr ""
+
+#: data/fit4Cybersecurity/context-questions.json:76
+msgid "France"
+msgstr ""
+
+#: data/fit4Cybersecurity/context-questions.json:82
+msgid "Autriche"
 msgstr ""
 
 #: data/fit4Cybersecurity/questions.json:3
@@ -1145,8 +1201,7 @@ msgid ""
 "the server)"
 msgstr ""
 
-#: data/fit4ilr/questions.json:3 data/nThContextQuestions/questions.json:90
-#: data/survey4operators/questions.json:3
+#: data/fit4ilr/questions.json:3 data/survey4operators/questions.json:3
 msgid "What is the risk management culture in your company?"
 msgstr ""
 
@@ -1170,16 +1225,6 @@ msgstr ""
 #: data/fit4ilr/questions.json:934 data/fit4ilr/questions.json:935
 #: data/fit4privacy/questions.json:800 data/fit4privacy/questions.json:890
 #: data/fit4privacy/questions.json:948 data/fit4privacy/questions.json:1022
-#: data/nThContextQuestions/questions.json:91
-#: data/nThContextQuestions/questions.json:92
-#: data/nThContextQuestions/questions.json:160
-#: data/nThContextQuestions/questions.json:161
-#: data/nThContextQuestions/questions.json:178
-#: data/nThContextQuestions/questions.json:179
-#: data/nThContextQuestions/questions.json:196
-#: data/nThContextQuestions/questions.json:197
-#: data/nThContextQuestions/questions.json:214
-#: data/nThContextQuestions/questions.json:215
 #: data/survey4operators/questions.json:4
 #: data/survey4operators/questions.json:5
 #: data/survey4operators/questions.json:78
@@ -1219,55 +1264,46 @@ msgstr ""
 msgid "Risk Management"
 msgstr ""
 
-#: data/fit4ilr/questions.json:11 data/nThContextQuestions/questions.json:98
-#: data/survey4operators/questions.json:11
+#: data/fit4ilr/questions.json:11 data/survey4operators/questions.json:11
 msgid "We do not really have one."
 msgstr ""
 
-#: data/fit4ilr/questions.json:18 data/nThContextQuestions/questions.json:105
-#: data/survey4operators/questions.json:18
+#: data/fit4ilr/questions.json:18 data/survey4operators/questions.json:18
 msgid ""
 "It is always advised to establish and maintain an appropriate governance and "
 "risk management framework, to identify and address risks for the all "
 "networks and services."
 msgstr ""
 
-#: data/fit4ilr/questions.json:27 data/nThContextQuestions/questions.json:114
-#: data/survey4operators/questions.json:27
+#: data/fit4ilr/questions.json:27 data/survey4operators/questions.json:27
 msgid "There are risk management governance responsibilities in place."
 msgstr ""
 
-#: data/fit4ilr/questions.json:35 data/nThContextQuestions/questions.json:121
-#: data/survey4operators/questions.json:35
+#: data/fit4ilr/questions.json:35 data/survey4operators/questions.json:35
 msgid "Our company performs a Risk Analysis at least once every year."
 msgstr ""
 
-#: data/fit4ilr/questions.json:43 data/nThContextQuestions/questions.json:128
-#: data/survey4operators/questions.json:43
+#: data/fit4ilr/questions.json:43 data/survey4operators/questions.json:43
 msgid ""
 "Our company has a documented strategy combining both reacting to incidents "
 "and the prevention of incidents."
 msgstr ""
 
-#: data/fit4ilr/questions.json:51 data/nThContextQuestions/questions.json:135
-#: data/survey4operators/questions.json:51
+#: data/fit4ilr/questions.json:51 data/survey4operators/questions.json:51
 msgid "Our company has third-party risk management in place."
 msgstr ""
 
-#: data/fit4ilr/questions.json:59 data/nThContextQuestions/questions.json:143
-#: data/survey4operators/questions.json:59
+#: data/fit4ilr/questions.json:59 data/survey4operators/questions.json:59
 msgid ""
 "Our company is covering critical risks even outside of service contracts "
 "with providers/third-parties."
 msgstr ""
 
-#: data/fit4ilr/questions.json:67 data/nThContextQuestions/questions.json:150
-#: data/survey4operators/questions.json:67
+#: data/fit4ilr/questions.json:67 data/survey4operators/questions.json:67
 msgid "There are other elements in place, like:"
 msgstr ""
 
-#: data/fit4ilr/questions.json:77 data/nThContextQuestions/questions.json:159
-#: data/survey4operators/questions.json:77
+#: data/fit4ilr/questions.json:77 data/survey4operators/questions.json:77
 msgid ""
 "Which risk management processes are imposed by the Luxembourg entity, and if "
 "applicable, by the company Group?"
@@ -1278,10 +1314,6 @@ msgstr ""
 #: data/fit4ilr/questions.json:157 data/fit4ilr/questions.json:175
 #: data/fit4ilr/questions.json:193 data/fit4ilr/questions.json:849
 #: data/fit4ilr/questions.json:941 data/fit4ilr/questions.json:1059
-#: data/nThContextQuestions/questions.json:167
-#: data/nThContextQuestions/questions.json:185
-#: data/nThContextQuestions/questions.json:203
-#: data/nThContextQuestions/questions.json:221
 #: data/survey4operators/questions.json:85
 #: data/survey4operators/questions.json:103
 #: data/survey4operators/questions.json:121
@@ -1295,22 +1327,19 @@ msgstr ""
 msgid "Please describe:"
 msgstr ""
 
-#: data/fit4ilr/questions.json:95 data/nThContextQuestions/questions.json:177
-#: data/survey4operators/questions.json:95
+#: data/fit4ilr/questions.json:95 data/survey4operators/questions.json:95
 msgid ""
 "What are the challenges related to performing existing Risk Management "
 "processes or practices? "
 msgstr ""
 
-#: data/fit4ilr/questions.json:113 data/nThContextQuestions/questions.json:195
-#: data/survey4operators/questions.json:113
+#: data/fit4ilr/questions.json:113 data/survey4operators/questions.json:113
 msgid ""
 "What can be improved about the existing Risk Management practices, in "
 "general?"
 msgstr ""
 
-#: data/fit4ilr/questions.json:131 data/nThContextQuestions/questions.json:213
-#: data/survey4operators/questions.json:131
+#: data/fit4ilr/questions.json:131 data/survey4operators/questions.json:131
 msgid ""
 "What are the requirements related to Information Security risks, that apply "
 "to your company and your sector?"
@@ -2983,82 +3012,25 @@ msgid ""
 "known to your employees?"
 msgstr ""
 
-#: data/nThContextQuestions/questions.json:3 survey/forms.py:28
-msgid "What is your sector?"
-msgstr ""
-
-#: data/nThContextQuestions/questions.json:4
-#: data/nThContextQuestions/questions.json:32
-#: data/nThContextQuestions/questions.json:63
-msgid "Context"
-msgstr ""
-
-#: data/nThContextQuestions/questions.json:5
-#: data/nThContextQuestions/questions.json:33
-#: data/nThContextQuestions/questions.json:64
-msgid "__context"
-msgstr ""
-
-#: data/nThContextQuestions/questions.json:17
-msgid "Insurance"
-msgstr ""
-
-#: data/nThContextQuestions/questions.json:23
-msgid "Education / Research"
-msgstr ""
-
-#: data/nThContextQuestions/questions.json:31 survey/forms.py:30
-msgid "How many employees?"
-msgstr ""
-
-#: data/nThContextQuestions/questions.json:39
-msgid "1-5"
-msgstr ""
-
-#: data/nThContextQuestions/questions.json:46
-msgid "5-10"
-msgstr ""
-
-#: data/nThContextQuestions/questions.json:53
-msgid "10+"
-msgstr ""
-
-#: data/nThContextQuestions/questions.json:62 survey/forms.py:33
-#: survey/forms.py:36
-msgid "Please select your country"
-msgstr ""
-
-#: data/nThContextQuestions/questions.json:70
-msgid "Luxembourg"
-msgstr ""
-
-#: data/nThContextQuestions/questions.json:76
-msgid "France"
-msgstr ""
-
-#: data/nThContextQuestions/questions.json:82
-msgid "Autriche"
-msgstr ""
-
-#: survey/forms.py:80
+#: survey/forms.py:54
 msgid "You need to choose at least one answer"
 msgstr ""
 
-#: survey/forms.py:121 survey/forms.py:193
+#: survey/forms.py:95 survey/forms.py:167
 #: templates/survey/finishedSurvey.html:153
 #: templates/survey/finishedSurvey.html:160 templates/survey/review.html:40
 msgid "Your feedback"
 msgstr ""
 
-#: survey/forms.py:123 survey/forms.py:195
+#: survey/forms.py:97 survey/forms.py:169
 msgid "Please let us know if anything is missing"
 msgstr ""
 
-#: survey/forms.py:155
+#: survey/forms.py:129
 msgid "You can't choose multiple answers if the answer {} is choosen."
 msgstr ""
 
-#: survey/forms.py:170
+#: survey/forms.py:144
 msgid "You can't choose the answers {} if answer '{}' is choosen."
 msgstr ""
 
@@ -3126,7 +3098,7 @@ msgstr ""
 msgid "Let's start"
 msgstr ""
 
-#: survey/viewLogic.py:254
+#: survey/viewLogic.py:255
 msgid "Question"
 msgstr ""
 
@@ -3349,7 +3321,7 @@ msgstr ""
 msgid "Continue later"
 msgstr ""
 
-#: templates/survey/questions.html:75 templates/survey/start.html:35
+#: templates/survey/questions.html:75 templates/survey/start.html:36
 msgid "Next"
 msgstr ""
 
@@ -3458,7 +3430,7 @@ msgstr ""
 msgid "Your email address won't be stored."
 msgstr ""
 
-#: templates/survey/start.html:19
+#: templates/survey/start.html:20
 msgid ""
 "We need a little information to be able to give you useful recommendations, "
 "once the self-assessment is done."
