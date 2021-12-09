@@ -16,20 +16,11 @@ from survey.models import (
     Translation,
 )
 from utils.radarFactory import radar_factory
+from django.utils.translation import gettext_lazy as _
 import matplotlib.pyplot as plt
 
 # Get an instance of a logger
 logger = logging.getLogger(__name__)
-
-
-def get_translation(original: str, lang: str) -> str:
-    """Look for the translation of a string.
-    Returns the original string if the translation is not found."""
-    translation = Translation.objects.filter(original=original, lang=lang)
-    if translation.exists():
-        return translation[0].translated
-    else:
-        return original
 
 
 def getRecommendations(user: SurveyUser, lang: str) -> Dict[str, List[str]]:
@@ -61,11 +52,9 @@ def getRecommendations(user: SurveyUser, lang: str) -> Dict[str, List[str]]:
             if (userAnswer.uvalue > 0 and rec.answerChosen) or (
                 userAnswer.uvalue <= 0 and not rec.answerChosen
             ):
-                category_name = get_translation(
-                    rec.forAnswer.question.service_category.label, lang
-                )
+                category_name = _(rec.forAnswer.question.service_category.label)
 
-                translated_recommendation = get_translation(rec.label, lang)
+                translated_recommendation = _(rec.label)
                 if is_recommendation_already_added(
                     translated_recommendation, finalReportRecs
                 ):
@@ -106,7 +95,7 @@ def calculateResult(
             max_evaluations_per_section[question.section.id] = 0
         max_evaluations_per_section[question.section.id] += question.maxPoints
 
-        section_title = get_translation(question.section.label, lang)
+        section_title = _(question.section.label)
         if section_title not in sections_list:
             sections_list.append(section_title)
 
