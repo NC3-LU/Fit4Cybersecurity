@@ -1,6 +1,7 @@
 {% extends 'survey/base.html' %}
 
 {% load bootstrap4 %}
+{% load apptags %}
 
 {% load static %}
 
@@ -19,20 +20,24 @@
             {{ _('We need a little information to be able to give you useful recommendations, once the self-assessment is done.') }}
         </div>
 
-        <form action="{{ action }}" method="post" class="form">
-            {% csrf_token %}
-
-            {% language choosen_lang %}
-                {% bootstrap_form form %}
-            {% endlanguage %}
-
-            {% buttons %}
-                <div class="form-group pt-4">
-                    <div class="d-flex flex-row justify-content-between float-right">
-                        <input class="btn btn-primary" type="submit" value="{{ _('Next') }}">
-                    </div>
+        <form method="post">
+        {% csrf_token %}
+        {% for key, form in forms.items %}
+        <div class="card-title" >
+            <span data-bs-toggle="tooltip" title="{{ question_tooltip }}">{{ questions_per_id|get_item:key }}</span>
+        </div>
+          {% language choosen_lang %}
+            {% bootstrap_form form exclude="feedback" %}
+          {% endlanguage %}
+        {%  endfor %}
+        {% buttons %}
+            <div class="form-group pt-4">
+                <div class="d-flex flex-row justify-content-between float-right">
+                    <input class="btn btn-primary" type="submit" value="{{ _('Next') }}">
                 </div>
-            {% endbuttons %}
+            </div>
+        {% endbuttons %}
         </form>
+        <br />
     </div>
 {% endblock %}

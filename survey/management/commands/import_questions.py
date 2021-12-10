@@ -41,13 +41,36 @@ class Command(BaseCommand):
             if created:
                 service_cat.save()
 
+            # Before creating the question: check that the index is defined in the JSON
+            # file (better to not specify indexes for your context questions).
+            qindex = int(question.get("qindex", 0))
+            is_context_question = question["section"] == "__context"
+            if not qindex or is_context_question:
+                if is_context_question:
+                    # for a context question: change the index even if it is specified in
+                    # the JSON
+                    res = SurveyQuestion.objects.order_by("-qindex").all()
+                    if res.count():
+                        qindex = res[res.count() - 1].qindex - 1
+                    else:
+                        qindex = 1
+                    qindex = -abs(qindex)
+                else:
+                    # normal question. Normally the index should be defined in the JSON
+                    # file.
+                    res = SurveyQuestion.objects.order_by("qindex").all()
+                    if res.count():
+                        qindex = res[res.count() - 1].qindex + 1
+                    else:
+                        qindex = 1
+
             # Create the question
             question_obj, created = SurveyQuestion.objects.get_or_create(
                 label=question["label"],
                 qtype=question["qtype"],
                 section=section,
                 service_category=service_cat,
-                qindex=question["qindex"],
+                qindex=qindex,
                 maxPoints=question["maxPoints"],
             )
             if created:
@@ -64,7 +87,7 @@ class Command(BaseCommand):
                     label=answer["label"],
                     aindex=answer["aindex"],
                     uniqueAnswer=answer["uniqueAnswer"],
-                    score=answer["score"],
+                    score=answer.get("score", 0),
                     atype=answer["atype"],
                     bonus_points=bonus_points,
                 )

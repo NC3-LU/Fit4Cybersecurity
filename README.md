@@ -71,25 +71,25 @@ and can be used in HTML templates.
 
 
 ```bash
-# Configure production settings
+# Configure production settings:
 $ cp csskp/config_dev.py csskp/config.py
 
-# Create a virtualenv, collect static files and compile the translations
+# Create a virtualenv, collect static files and compile the translations:
 $ poetry shell
 $ python manage.py collectstatic # Copy static files required by Django Admin
+$ python manage.py makemessages -a --keep-pot -e html,txt,py,json  # extract the translations
 $ python manage.py compilemessages # Compile the translations
 
-# Initialize the database
+# Initialize the database:
 $ sudo -u postgres createdb fit4Cybersecurity  # Name of the database as in config.py
 $ python manage.py migrate
 
-# Import questions, answers and recommendations
+# Import questions, answers and recommendations:
 $ python manage.py import_questions data/fit4Cybersecurity/questions.json
+# Optionally, import the context questions (will be asked to the user before the survey start):
+$ python manage.py import_questions data/fit4Cybersecurity/context-questions.json
 
-# Optionally, import translations
-$ python manage.py import_translations data/fit4Cybersecurity/translations.json
-
-# Create a user for the admin interface
+# Create a user for the admin interface:
 $ python manage.py createsuperuser --username <username>
 ```
 
@@ -198,7 +198,7 @@ If you want to update the translations (in the case **you have locally**
 changed the source code), you must first run:
 
 ```bash
-$ python manage.py makemessages -a --keep-pot # extract the translations
+$ python manage.py makemessages -a --keep-pot -e html,txt,py,json # extract the translations
 ```
 
 Then you can use a tool like
@@ -208,7 +208,7 @@ the previously mentioned command.
 If you want to re-generate the .pot template file:
 
 ```bash
-$ python manage.py makemessages --keep-pot
+$ python manage.py makemessages -a --keep-pot
 ```
 
 

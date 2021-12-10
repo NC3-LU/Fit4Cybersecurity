@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 
+from typing import Optional, Union, Dict, Any
 import uuid
 from django.db import models
 from csskp.settings import LANGUAGES, LANGUAGE_CODE
@@ -57,26 +58,6 @@ class RightMixin:
     def dump(self):
         dict = {k: getattr(self, k) for k in self.fields_base_read()}
         return dict
-
-
-class Translation(models.Model, RightMixin):
-    original = models.TextField()
-    translated = models.TextField()
-    lang = models.CharField(max_length=2, choices=LANGUAGES, default=LOCAL_DEFAULT_LANG)
-
-    class Meta:
-        unique_together = ("original", "lang")
-
-    @staticmethod
-    def _fields_base_read():
-        return {
-            "original",
-            "translated",
-            "lang",
-        }
-
-    def __str__(self):
-        return self.original
 
 
 class SurveyQuestionServiceCategory(models.Model):
@@ -165,17 +146,11 @@ class SurveyUser(models.Model):
     # number of employees
 
     user_id = models.UUIDField(default=uuid.uuid4)
-    sector = models.CharField(max_length=4, choices=SECTOR_CHOICES)
-    e_count = models.CharField(max_length=2, choices=COMPANY_SIZE)
-
     choosen_lang = models.CharField(
         max_length=2, choices=LANGUAGES, default=LOCAL_DEFAULT_LANG
     )
-    country_code = models.CharField(max_length=4, blank=False, default="LU")
-
     current_qindex = models.IntegerField(default=0)
     status = models.SmallIntegerField(default=SURVEY_STATUS_IN_PROGRESS)
-
     created_at = models.DateField(auto_now_add=True, blank=True)
     updated_at = models.DateField(auto_now=True, blank=True)
 
@@ -190,6 +165,22 @@ class SurveyUser(models.Model):
 
     def is_survey_finished(self):
         return self.status == SURVEY_STATUS_FINISHED
+
+    def get_context(self, question: Optional[str] = "") -> Union[Dict[str, Any], str]:
+        """Returns in a dictionary the questions related to the context of the user.
+        If the label of a specific context question is given in parameter, the label
+        of the related answer is directly returned as a string (the empty string
+        is returned if the label is not found)."""
+        result = {}
+        user_answers = SurveyUserAnswer.objects.filter(user=self).filter(
+            answer__question__section__label="__context", uvalue=1
+        )
+        if question:
+            user_answers = user_answers.filter(answer__question__label=question)
+            return user_answers.first().answer.label if user_answers.count() else ""
+        for user_answer in user_answers:
+            result[user_answer.answer.question.label] = user_answer
+        return result
 
 
 class SurveyUserAnswer(models.Model):

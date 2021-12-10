@@ -57,6 +57,7 @@ def create_html_report(user: SurveyUser, lang: str) -> str:
             "TOOL_LOGO": tool_logo,
             "DATE": datetime.today(),
             "SURVEY_USER": user,
+            "CONTEXT": user.get_context(),
             "CHART": chart_png_base64,
             "SCORE": str(score),
             "BONUS_SCORE": bonus_score,
