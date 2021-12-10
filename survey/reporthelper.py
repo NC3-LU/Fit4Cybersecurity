@@ -6,7 +6,7 @@ import os
 import base64
 import logging
 
-from csskp.settings import PICTURE_DIR
+from csskp.settings import PICTURE_DIR, CUSTOM
 from survey.globals import COMPANY_SIZE
 from survey.models import (
     SurveyQuestion,
@@ -89,8 +89,12 @@ def calculateResult(
     max_evaluations_per_section: Dict[int, int] = {}
     sections_list: List[str] = []
 
+    chart_exclude_sections = ["__context"]
+    if "chart_exclude_sections" in CUSTOM.keys():
+        chart_exclude_sections = chart_exclude_sections + CUSTOM["chart_exclude_sections"]
+
     for question in SurveyQuestion.objects.exclude(
-        section__label__contains="__context"
+        section__label__in=chart_exclude_sections
     ).all():
         total_questions_score += question.maxPoints
 
@@ -104,7 +108,7 @@ def calculateResult(
 
     user_answers = (
         SurveyUserAnswer.objects.filter(user=user)
-        .exclude(answer__question__section__label="__context")
+        .exclude(answer__question__section__label__in=chart_exclude_sections)
         .order_by("answer__question__qindex", "answer__aindex")
     )
     for user_answer in user_answers:
