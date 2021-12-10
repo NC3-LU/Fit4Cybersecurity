@@ -81,13 +81,13 @@ $ python manage.py makemessages -a --keep-pot -e html,txt,py,json  # extract the
 $ python manage.py compilemessages # Compile the translations
 
 # Initialize the database:
-$ sudo -u postgres createdb fit4Cybersecurity  # Name of the database as in config.py
+$ sudo -u postgres createdb fit4Ccbersecurity  # Name of the database as in config.py
 $ python manage.py migrate
 
 # Import questions, answers and recommendations:
-$ python manage.py import_questions data/fit4Cybersecurity/questions.json
+$ python manage.py import_questions data/fit4cybersecurity/questions.json
 # Optionally, import the context questions (will be asked to the user before the survey start):
-$ python manage.py import_questions data/fit4Cybersecurity/context-questions.json
+$ python manage.py import_questions data/fit4cybersecurity/context-questions.json
 
 # Create a user for the admin interface:
 $ python manage.py createsuperuser --username <username>
@@ -169,7 +169,7 @@ sudo systemctl restart apache2.service
 ```bash
 $ whitelabel={NameOfWhitelabel} docker-compose up -d
 ```
-{NameOfWhitelabel} - is the launching site name (e.g. fit4Cybersecurity).
+{NameOfWhitelabel} - is the launching site name (e.g. fit4cybersecurity).
 
 The server will be listening at http://127.0.0.1:8000.
 
