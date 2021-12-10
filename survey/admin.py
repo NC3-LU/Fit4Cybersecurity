@@ -11,7 +11,6 @@ from survey.models import (
     SurveyUserAnswer,
     Recommendations,
     SurveyUserFeedback,
-    Translation,
 )
 
 from csskp.settings import HASH_KEY
@@ -49,7 +48,6 @@ class SurveyUserAdmin(admin.ModelAdmin):
         "id",
         "user_id",
         "status",
-        "country_code",
         "choosen_lang",
         "created_at",
         "updated_at",
@@ -62,16 +60,9 @@ class SurveyUserFeedbackAdmin(admin.ModelAdmin):
     list_display = ["id", "user", "feedback"]
 
 
-@admin.register(Translation)
-class TranslationAdmin(admin.ModelAdmin):
-    list_filter = ["original"]
-    list_display = ["original", "lang", "translated"]
-
-
 admin.site.register(SurveyQuestion)
 admin.site.register(SurveyQuestionAnswer)
 admin.site.register(SurveyQuestionServiceCategory)
 admin.site.register(SurveySection)
 admin.site.register(SurveyUserAnswer)
 admin.site.register(Recommendations)
-# admin.site.register(Translation)

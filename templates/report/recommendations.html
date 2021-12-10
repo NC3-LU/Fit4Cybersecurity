@@ -5,20 +5,14 @@
 <p>
     {{ _('The recommendations list was based in your company context and on your answers.') }}
 </p>
-    <ol>
-        <p>
-            <span class="bold">{{ _('Sector :') }}</span>
-            {{ GLOBALS.SECTOR_CHOICES | find_tuple:SURVEY_USER.sector }}
-        </p>
-        <p>
-            <span class="bold">{{ _('Size :') }}</span>
-            {{ GLOBALS.COMPANY_SIZE | find_tuple:SURVEY_USER.e_count }}
-        </p>
-        <p>
-            <span class="bold">{{ _('Location :') }}</span>
-            {{ GLOBALS.COUNTRIES | find_tuple:SURVEY_USER.country_code }}
-        </p>
-    </ol>
+<ol>
+{% for question, answer in CONTEXT.items %}
+    <p>
+      <span class="bold">{{ question }}</span>
+        {{ answer }}
+    </p>
+{% endfor %}
+</ol>
 
 
 {% for category, items in recommendations.items %}

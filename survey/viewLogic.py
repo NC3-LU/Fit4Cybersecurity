@@ -17,8 +17,7 @@ from survey.models import (
     SurveyUserFeedback,
     SURVEY_STATUS_UNDER_REVIEW,
 )
-from survey.forms import InitialStartForm, AnswerMChoice, GeneralFeedback
-from survey.reporthelper import get_translation
+from survey.forms import AnswerMChoice, GeneralFeedback
 from csskp.settings import CUSTOM, LANGUAGES, LANGUAGE_CODE
 
 LOCAL_DEFAULT_LANG = LANGUAGE_CODE
@@ -32,15 +31,15 @@ class QuestionWithUserAnswers(TypedDict):
     user_answers: list[Any]
 
 
-def create_user(lang: str, sector: str, company_size: str, country: str) -> SurveyUser:
+def create_user(lang: str) -> SurveyUser:
     """Creates a new SurveyUser object.
     This function is called by the function handle_start_surveyonce, once the user has
     answered the first questions before the start of the survey."""
     user = SurveyUser()
-    user.sector = sector
-    user.e_count = company_size
-    user.country_code = country
-    survey_question = SurveyQuestion.objects.order_by("qindex")[:1]
+    # defines the next question (exclude the context questions)
+    survey_question = SurveyQuestion.objects.exclude(
+        section__label__contains="__context"
+    ).order_by("qindex")[:1]
     user.current_qindex = survey_question[0].qindex
     # Ensures the submitted languages is accepted
     langs, _ = zip(*LANGUAGES)
@@ -60,23 +59,83 @@ def handle_start_survey(request: HttpRequest, lang: str) -> Union[Dict, SurveyUs
     translation.activate(lang)
     request.session[translation.LANGUAGE_SESSION_KEY] = lang
 
-    if request.method == "POST":
-        form = InitialStartForm(data=request.POST, lang=lang)
-        if form.is_valid():
-            user = create_user(
-                lang,
-                form.cleaned_data["sector"],
-                form.cleaned_data["compSize"],
-                form.cleaned_data["country"],
+    forms = {}
+    questions = SurveyQuestion.objects.filter(
+        section__label__contains="__context"
+    ).all()
+
+    # if no context questions
+    if not questions.count() and request.method == "GET":
+        user = create_user(lang)
+        request.session["user_id"] = str(user.user_id)
+        return user
+
+    for question in questions:
+        try:
+            question_answers = SurveyQuestionAnswer.objects.order_by("aindex").filter(
+                question=question
             )
+            tuple_answers = get_answer_choices(question_answers, lang)
+        except Exception as e:
+            raise e
+        forms[question.id] = AnswerMChoice(
+            tuple_answers,
+            data=request.POST,
+            lang=lang,
+            answers_field_type=question.qtype,
+            question_answers=question_answers,
+            prefix="form" + str(question.id),
+        )
+
+    if request.method == "POST":
+        res_forms = {}
+        for question in questions:
+            try:
+                question_answers = SurveyQuestionAnswer.objects.order_by(
+                    "aindex"
+                ).filter(question=question)
+                tuple_answers = get_answer_choices(question_answers, lang)
+            except Exception as e:
+                raise e
+
+            res_forms[question.id] = AnswerMChoice(
+                tuple_answers,
+                data=request.POST,
+                lang=lang,
+                answers_field_type=question.qtype,
+                question_answers=question_answers,
+                prefix="form" + str(question.id),
+            )
+
+        if all([form.is_valid() for question_id, form in res_forms.items()]):
+            # create the user
+            user = create_user(lang)
             request.session["user_id"] = str(user.user_id)
-            return user
-    else:
-        form = InitialStartForm(lang=lang)
+
+        for question in questions:
+            form = res_forms[question.id]
+            answers = form.cleaned_data["answers"]
+            answer_content = ""
+            if "answer_content" in form.cleaned_data:
+                answer_content = form.cleaned_data["answer_content"]
+
+            try:
+                question_answers = SurveyQuestionAnswer.objects.order_by(
+                    "aindex"
+                ).filter(question=question)
+                tuple_answers = get_answer_choices(question_answers, lang)
+            except Exception as e:
+                raise e
+
+            # create the answers
+            save_answers(user, question, question_answers, answers, answer_content)
+
+        return user
 
     return {
         "title": title,
-        "form": form,
+        "forms": forms,
+        "questions_per_id": {question.id: question for question in questions},
         "action": action,
         "choosen_lang": lang,
     }
@@ -150,7 +209,6 @@ def handle_question_answers_request(
                 user.status = SURVEY_STATUS_UNDER_REVIEW
 
             user.save()
-
             return user
     else:
         form = AnswerMChoice(
@@ -181,8 +239,9 @@ def handle_question_answers_request(
     uniqueAnswers = SurveyQuestionAnswer.objects.filter(
         question=current_question, uniqueAnswer=True
     )
-    uniqueAnswers = ",".join(str(uniqueAnswer.id) for uniqueAnswer in uniqueAnswers)
-    form.set_unique_answers(uniqueAnswers)
+    form.set_unique_answers(
+        ",".join(str(uniqueAnswer.id) for uniqueAnswer in uniqueAnswers)
+    )
     form.set_free_text_answer_id(free_text_answer_id)
 
     return {
@@ -191,10 +250,8 @@ def handle_question_answers_request(
         + _("Question")
         + " "
         + str(current_question.qindex),
-        "question": get_translation(current_question.label, user.choosen_lang),
-        "question_tooltip": get_translation(
-            current_question.tooltip, user.choosen_lang
-        ),
+        "question": _(current_question.label),
+        "question_tooltip": _(current_question.tooltip),
         "form": form,
         "action": "/survey/question/" + str(current_question.qindex),
         "user": user,
@@ -241,10 +298,11 @@ def get_answer_choices(
     question_answers: List[SurveyQuestionAnswer], user_lang: str
 ) -> List[Tuple[int, str]]:
     tuple_answers = []
+    translation.activate(user_lang)
 
     for question_answer in question_answers:
-        translation = get_translation(question_answer.label, user_lang)
-        tooltip = get_translation(question_answer.tooltip, user_lang)
+        answer = _(question_answer.label)
+        tooltip = _(question_answer.tooltip)
 
         tuple_answers.append(
             (
@@ -256,7 +314,7 @@ def get_answer_choices(
                         '<span data-bs-toggle="tooltip" title="'
                         + tooltip
                         + '">'
-                        + translation
+                        + answer
                         + "</span>"
                     ),
                 ),
@@ -267,8 +325,10 @@ def get_answer_choices(
 
 
 def get_questions_slice(question_index: int):
-    survey_questions = SurveyQuestion.objects.order_by("qindex")
-    total_questions_num = len(survey_questions)
+    survey_questions = SurveyQuestion.objects.exclude(
+        section__label__contains="__context"
+    ).order_by("qindex")
+    total_questions_num = survey_questions.count()
     previous_question = survey_questions[0]
     next_question = None
     current_element_index = 0
@@ -285,8 +345,10 @@ def get_questions_slice(question_index: int):
 
 
 def get_questions_with_user_answers(user: SurveyUser):
-    survey_user_answers = SurveyUserAnswer.objects.filter(user=user).order_by(
-        "answer__question__qindex", "answer__aindex"
+    survey_user_answers = (
+        SurveyUserAnswer.objects.filter(user=user)
+        .exclude(answer__question__section__label="__context")
+        .order_by("answer__question__qindex", "answer__aindex")
     )
 
     user_feedbacks = SurveyUserFeedback.objects.filter(
@@ -298,9 +360,7 @@ def get_questions_with_user_answers(user: SurveyUser):
 
     questions_with_user_answers: Dict[int, QuestionWithUserAnswers] = {}
     for survey_user_answer in survey_user_answers:
-        question_title = get_translation(
-            survey_user_answer.answer.question.label, user.choosen_lang
-        )
+        question_title = _(survey_user_answer.answer.question.label)
         question_index = survey_user_answer.answer.question.qindex
         if question_index not in questions_with_user_answers:
             feedback = ""
@@ -320,9 +380,7 @@ def get_questions_with_user_answers(user: SurveyUser):
             {
                 "value": survey_user_answer.uvalue,
                 "content": user_answer_content,
-                "title": get_translation(
-                    survey_user_answer.answer.label, user.choosen_lang
-                ),
+                "title": _(survey_user_answer.answer.label),
             }
         )
 

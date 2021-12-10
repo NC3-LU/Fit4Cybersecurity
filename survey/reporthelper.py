@@ -1,60 +1,63 @@
 # -*- coding: utf-8 -*-
 
-from typing import Dict, List, Optional, Tuple
+from typing import Optional, Dict, List, Tuple
 import io
 import os
 import base64
 import logging
 
 from csskp.settings import PICTURE_DIR
+from survey.globals import COMPANY_SIZE
 from survey.models import (
     SurveyQuestion,
     SurveyQuestionAnswer,
     SurveyUser,
     SurveyUserAnswer,
     Recommendations,
-    Translation,
 )
 from utils.radarFactory import radar_factory
+from django.utils.translation import gettext_lazy as _
 import matplotlib.pyplot as plt
 
 # Get an instance of a logger
 logger = logging.getLogger(__name__)
 
 
-def get_translation(original: str, lang: str) -> str:
-    """Look for the translation of a string.
-    Returns the original string if the translation is not found."""
-    translation = Translation.objects.filter(original=original, lang=lang)
-    if translation.exists():
-        return translation[0].translated
-    else:
-        return original
-
-
 def getRecommendations(user: SurveyUser, lang: str) -> Dict[str, List[str]]:
     allAnswers = SurveyQuestionAnswer.objects.all().order_by(
         "question__qindex", "aindex"
     )
+    user_ecount_label = user.get_context("How many employees?")
+    if user_ecount_label:
+        user_ecount = [
+            item[0] for item in COMPANY_SIZE if item[1] == user_ecount_label
+        ][0]
+    else:
+        user_ecount = None
+
     finalReportRecs: Dict[str, List[str]] = {}
     for a in allAnswers:
-        userAnswer = SurveyUserAnswer.objects.filter(user=user).filter(answer=a)[0]
+        try:
+            userAnswer = SurveyUserAnswer.objects.filter(user=user).filter(answer=a)[0]
+        except IndexError:
+            continue
         recommendations = Recommendations.objects.filter(forAnswer=a)
 
         if not recommendations.exists():
             continue
 
         for rec in recommendations:
-            if rec.min_e_count > user.e_count or rec.max_e_count < user.e_count:
+            if user_ecount and (
+                rec.min_e_count > user_ecount or rec.max_e_count < user_ecount
+            ):
                 continue
+
             if (userAnswer.uvalue > 0 and rec.answerChosen) or (
                 userAnswer.uvalue <= 0 and not rec.answerChosen
             ):
-                category_name = get_translation(
-                    rec.forAnswer.question.service_category.label, lang
-                )
+                category_name = _(rec.forAnswer.question.service_category.label)
 
-                translated_recommendation = get_translation(rec.label, lang)
+                translated_recommendation = _(rec.label)
                 if is_recommendation_already_added(
                     translated_recommendation, finalReportRecs
                 ):
@@ -86,22 +89,25 @@ def calculateResult(
     max_evaluations_per_section: Dict[int, int] = {}
     sections_list: List[str] = []
 
-    for question in SurveyQuestion.objects.all():
+    for question in SurveyQuestion.objects.exclude(
+        section__label__contains="__context"
+    ).all():
         total_questions_score += question.maxPoints
 
         if question.section.id not in max_evaluations_per_section:
             max_evaluations_per_section[question.section.id] = 0
         max_evaluations_per_section[question.section.id] += question.maxPoints
 
-        section_title = get_translation(question.section.label, lang)
+        section_title = _(question.section.label)
         if section_title not in sections_list:
             sections_list.append(section_title)
 
-    user_answers = SurveyUserAnswer.objects.filter(user=user).order_by(
-        "answer__question__qindex", "answer__aindex"
+    user_answers = (
+        SurveyUserAnswer.objects.filter(user=user)
+        .exclude(answer__question__section__label="__context")
+        .order_by("answer__question__qindex", "answer__aindex")
     )
     for user_answer in user_answers:
-
         total_bonus_points += user_answer.answer.bonus_points
 
         if user_answer.uvalue > 0:
