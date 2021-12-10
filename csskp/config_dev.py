@@ -115,6 +115,7 @@ CUSTOM = {
     "sectors": [],
     "company_size": [],
     "countries": [],
+    "chart_exclude_sections": ["eSanté"],
 }
 
 REPORT_TEMPLATE_DIR = "./templates/report/"
