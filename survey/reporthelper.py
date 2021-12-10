@@ -1,12 +1,13 @@
 # -*- coding: utf-8 -*-
 
-from typing import Dict, List, Optional, Tuple
+from typing import Optional, Dict, List, Tuple
 import io
 import os
 import base64
 import logging
 
 from csskp.settings import PICTURE_DIR
+from survey.globals import COMPANY_SIZE
 from survey.models import (
     SurveyQuestion,
     SurveyQuestionAnswer,
@@ -26,6 +27,14 @@ def getRecommendations(user: SurveyUser, lang: str) -> Dict[str, List[str]]:
     allAnswers = SurveyQuestionAnswer.objects.all().order_by(
         "question__qindex", "aindex"
     )
+    user_ecount_label = user.get_context("How many employees?")
+    if user_ecount_label:
+        user_ecount = [
+            item[0] for item in COMPANY_SIZE if item[1] == user_ecount_label
+        ][0]
+    else:
+        user_ecount = None
+
     finalReportRecs: Dict[str, List[str]] = {}
     for a in allAnswers:
         try:
@@ -37,17 +46,12 @@ def getRecommendations(user: SurveyUser, lang: str) -> Dict[str, List[str]]:
         if not recommendations.exists():
             continue
 
-        user_context = user.get_context()
-        try:
-            user_ecount = user_context.get("How many employees", 0).answer.score
-        except Exception:
-            user_ecount = 0
-
         for rec in recommendations:
             if user_ecount and (
                 rec.min_e_count > user_ecount or rec.max_e_count < user_ecount
             ):
                 continue
+
             if (userAnswer.uvalue > 0 and rec.answerChosen) or (
                 userAnswer.uvalue <= 0 and not rec.answerChosen
             ):

@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from typing import Optional
+from typing import Optional, Union, Dict, Any
 import uuid
 from django.db import models
 from csskp.settings import LANGUAGES, LANGUAGE_CODE
@@ -166,16 +166,18 @@ class SurveyUser(models.Model):
     def is_survey_finished(self):
         return self.status == SURVEY_STATUS_FINISHED
 
-    def get_context(self, question: Optional[str] = ""):
+    def get_context(self, question: Optional[str] = "") -> Union[Dict[str, Any], str]:
+        """Returns in a dictionary the questions related to the context of the user.
+        If the label of a specific context question is given in parameter, the label
+        of the related answer is directly returned as a string (the empty string
+        is returned if the label is not found)."""
         result = {}
         user_answers = SurveyUserAnswer.objects.filter(user=self).filter(
-            answer__question__section__label="__context", uvalue__gte=0
+            answer__question__section__label="__context", uvalue=1
         )
         if question:
             user_answers = user_answers.filter(answer__question__label=question)
-        user_answers = user_answers.order_by(
-            "answer__question__qindex", "answer__aindex"
-        )
+            return user_answers.first().answer.label if user_answers.count() else ""
         for user_answer in user_answers:
             result[user_answer.answer.question.label] = user_answer
         return result

@@ -10,8 +10,6 @@ from survey.models import (
     SURVEY_STATUS_FINISHED,
 )
 
-from survey.globals import COMPANY_SIZE
-
 
 def get_finished_surveys_list(request):
     if request.method == "POST":
@@ -33,7 +31,9 @@ def get_finished_surveys_list(request):
 
     total_questions_score = 0
     max_evaluations_per_section = {}
-    for question in SurveyQuestion.objects.all():
+    for question in SurveyQuestion.objects.exclude(
+        section__label__contains="__context"
+    ).all():
         total_questions_score += question.maxPoints
         if question.section.id not in max_evaluations_per_section:
             max_evaluations_per_section[question.section.id] = 0
@@ -58,13 +58,13 @@ def get_finished_surveys_list(request):
         user_id = str(completed_survey_user.user_id)
         surveys_users_results["survey_users"][user_id] = {
             "details": {
-                "sector": completed_survey_user.sector,
-                "employees_number": [
-                    item[1]
-                    for item in COMPANY_SIZE
-                    if item[0] == completed_survey_user.e_count
-                ][0],
-                "country_code": completed_survey_user.country_code,
+                "sector": completed_survey_user.get_context("What is your sector?"),
+                "employees_number": completed_survey_user.get_context(
+                    "How many employees?"
+                ),
+                "country_code": completed_survey_user.get_context(
+                    "Please select your country"
+                ),
                 "language": completed_survey_user.choosen_lang,
                 "survey_finish_date": completed_survey_user.updated_at.strftime(
                     DEFAULT_DATE_FORMAT
@@ -77,9 +77,11 @@ def get_finished_surveys_list(request):
 
         total_points_number = 0
 
-        user_answers = SurveyUserAnswer.objects.filter(
-            user=completed_survey_user
-        ).order_by("answer__question__qindex", "answer__aindex")
+        user_answers = (
+            SurveyUserAnswer.objects.filter(user=completed_survey_user)
+            .exclude(answer__question__section__label="__context")
+            .order_by("answer__question__qindex", "answer__aindex")
+        )
         for user_answer in user_answers:
             section_id = user_answer.answer.question.section.id
             if (
@@ -89,6 +91,7 @@ def get_finished_surveys_list(request):
                 surveys_users_results["survey_users"][user_id]["sections"][
                     section_id
                 ] = {
+                    "label": user_answer.answer.question.section.label,
                     "score": 0,
                     "questions": {},
                 }
@@ -116,6 +119,7 @@ def get_finished_surveys_list(request):
             ][question.id]["answers"].append(
                 {
                     user_answer.answer.id: {
+                        "label": user_answer.answer.label,
                         "value": user_answer.uvalue,
                         "score": user_answer.answer.score,
                     }

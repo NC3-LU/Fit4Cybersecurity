@@ -51,7 +51,7 @@ class Command(BaseCommand):
                     # the JSON
                     res = SurveyQuestion.objects.order_by("-qindex").all()
                     if res.count():
-                        qindex = res[res.count()-1].qindex - 1
+                        qindex = res[res.count() - 1].qindex - 1
                     else:
                         qindex = 1
                     qindex = -abs(qindex)
@@ -60,7 +60,7 @@ class Command(BaseCommand):
                     # file.
                     res = SurveyQuestion.objects.order_by("qindex").all()
                     if res.count():
-                        qindex = res[res.count()-1].qindex + 1
+                        qindex = res[res.count() - 1].qindex + 1
                     else:
                         qindex = 1
 
