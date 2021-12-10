@@ -71,6 +71,7 @@ poetry install --no-dev
 
 echo "--- Generation of the $TOOL_NAME configuration file… ---"
 sudo -u ubuntu cat > csskp/config.py <<EOF
+import os
 from django.utils.translation import gettext_lazy
 from socket import gethostname, gethostbyname
 
