@@ -160,7 +160,7 @@ def generate_chart_png(
     theta = radar_factory(n, frame="polygon")
 
     fig, ax = plt.subplots(
-        figsize=(7, 7), dpi=300, nrows=1, ncols=1, subplot_kw=dict(projection="radar")
+        figsize=(11, 11), dpi=400, nrows=1, ncols=1, subplot_kw=dict(projection="radar")
     )
     fig.subplots_adjust(wspace=0.25, hspace=0.20, top=0.85, bottom=0.05)
 
