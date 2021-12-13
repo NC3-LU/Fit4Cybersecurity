@@ -41,28 +41,15 @@ class Command(BaseCommand):
             if created:
                 service_cat.save()
 
-            # Before creating the question: check that the index is defined in the JSON
-            # file (better to not specify indexes for your context questions).
-            qindex = int(question.get("qindex", 0))
+            # For a context question: change the index even if it is specified in
+            # the JSON
+            qindex = int(question.get("qindex", 1))
             is_context_question = question["section"] == "__context"
-            if not qindex or is_context_question:
-                if is_context_question:
-                    # for a context question: change the index even if it is specified in
-                    # the JSON
-                    res = SurveyQuestion.objects.order_by("-qindex").all()
-                    if res.count():
-                        qindex = res[res.count() - 1].qindex - 1
-                    else:
-                        qindex = 1
-                    qindex = -abs(qindex)
-                else:
-                    # normal question. Normally the index should be defined in the JSON
-                    # file.
-                    res = SurveyQuestion.objects.order_by("qindex").all()
-                    if res.count():
-                        qindex = res[res.count() - 1].qindex + 1
-                    else:
-                        qindex = 1
+            if is_context_question:
+                res = SurveyQuestion.objects.order_by("-qindex").all()
+                # if res.count() is 0, qindex is 1
+                qindex = res[res.count() - 1].qindex - 1 if res.count() else qindex
+                qindex = -abs(qindex)
 
             # Create the question
             question_obj, created = SurveyQuestion.objects.get_or_create(
