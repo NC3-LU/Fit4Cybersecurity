@@ -133,6 +133,11 @@ $(document).ready(function() {
         });
     }
 
+    var contextQuestions = $('#context_questions').children(".form-group");
+    if (contextQuestions) {
+        contextQuestions.children(".form-control").removeClass("is-valid");
+    }
+
     checkboxesAndRadios.click(function() {
         processCheckboxSelection($(this));
     });

@@ -34,6 +34,13 @@ class AnswerMChoice(forms.Form):
                 ),
                 label="",
             )
+        elif answers_field_type == "SS":
+            self.fields["answers"] = forms.ChoiceField(
+                required=False,
+                choices=question_answers,
+                widget=forms.Select(),
+                label="",
+            )
         elif answers_field_type[0] == "S":
             self.fields["answers"] = forms.ChoiceField(
                 required=True,
@@ -111,6 +118,9 @@ class AnswerMChoice(forms.Form):
 
     def clean_answers(self):
         answers = self.cleaned_data["answers"]
+
+        if self.fields["answers"].widget.input_type == "select":
+            answers = [answers]
 
         if self.fields["answers"].widget.input_type == "radio":
             answers = [answers]

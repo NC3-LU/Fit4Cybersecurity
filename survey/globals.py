@@ -63,6 +63,7 @@ COMPANY_SIZE = (
 QUESTION_TYPES = [
     ("M", "Multiple Choice"),
     ("S", "Single Choice"),
+    ("SS", "Single Select Choice"),
     ("T", "Free text"),
     ("MT", "Multiple Choice + Free Text"),
     ("ST", "Single Choice + Free Text"),
