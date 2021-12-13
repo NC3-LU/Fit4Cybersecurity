@@ -161,7 +161,7 @@ def generate_chart_png(
     n = len(sections_list)
     theta = radar_factory(n, frame="polygon")
 
-    fig = Figure(figsize=(11, 11), dpi=400)
+    fig = Figure(figsize=(11, 11), dpi=150)
     ax = fig.subplots(nrows=1, ncols=1, subplot_kw=dict(projection="radar"))
     fig.subplots_adjust(wspace=0.25, hspace=0.20, top=0.85, bottom=0.05)
 
@@ -176,7 +176,7 @@ def generate_chart_png(
     if output_type == "base64":
         stringIObytes = io.BytesIO()
         try:
-            fig.savefig(stringIObytes, format="png")
+            fig.savefig(stringIObytes, format="svg")
         except Exception as e:
             raise Exception("{}".format(e))
         stringIObytes.seek(0)
@@ -184,7 +184,7 @@ def generate_chart_png(
     else:
         if not os.path.isdir(PICTURE_DIR):
             os.makedirs(PICTURE_DIR)
-        file_name = os.path.join(PICTURE_DIR, "survey-{}.png".format(user.user_id))
+        file_name = os.path.join(PICTURE_DIR, "survey-{}.svg".format(user.user_id))
         try:
             fig.savefig(file_name)
         except Exception as e:
