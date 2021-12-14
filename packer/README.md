@@ -19,6 +19,7 @@ You can customize the image thanks to various variables in the file
 Some variables you can configure:
 
 - _tool_name_ (default: _Fit4Cybersecurity_): name of the tool;
+- _site_name_ (default: _fit4cybersecurity_): name of the site/tool. Used to load custom params;
 - _vm_description_ (default: _Fit4Cybersecurity_): description of the virtual machine;
 - _questions_set_ (default: _data/fit4Cybersecurity/questions.json_): set of questions;
 - _translations_set_ (default: _data/fit4Cybersecurity/translations.json_): set of translations;

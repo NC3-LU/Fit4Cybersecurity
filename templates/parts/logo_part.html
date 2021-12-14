@@ -1,10 +1,11 @@
 {% load i18n %}
+{% load apptags %}
 {% get_current_language as LANGUAGE_CODE %}
 
 <h1>
-    <a href="/{{LANGUAGE_CODE}}" class="logo-link">
+    <a href="/{{ LANGUAGE_CODE }}" class="logo-link">
         <img
-            src="/{{ custom.tool_logo }}"
+            src="{% settings_value 'SITE_IMAGES_URL' %}/logo-{{ LANGUAGE_CODE }}.png"
             width="50%"
             alt="{{ custom.tool_name }}"
             title="{{ custom.tool_name }}">
