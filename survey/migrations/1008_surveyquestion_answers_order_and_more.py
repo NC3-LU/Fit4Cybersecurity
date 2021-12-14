@@ -18,7 +18,14 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='surveyquestion',
             name='qtype',
-            field=models.CharField(choices=[('M', 'Multiple Choice'), ('S', 'Single Choice'), ('SS', 'Single Select Choice'), ('T', 'Free text'), ('MT', 'Multiple Choice + Free Text'), ('ST', 'Single Choice + Free Text')], default='M', max_length=2),
+            field=models.CharField(choices=[
+                ('M', 'Multiple Choice'),
+                ('S', 'Single Choice'),
+                ('SS', 'Single Select Choice'),
+                ('T', 'Free text'),
+                ('MT', 'Multiple Choice + Free Text'),
+                ('ST', 'Single Choice + Free Text')
+            ], default='M', max_length=2),
         ),
         migrations.AlterField(
             model_name='surveyquestionanswer',

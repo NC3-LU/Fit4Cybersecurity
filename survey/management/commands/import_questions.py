@@ -128,10 +128,7 @@ class Command(BaseCommand):
 
     @staticmethod
     def does_question_exists(label: str, questions):
-        for question in questions:
-            if question.label == label:
-               return True
-        return False
+        return label in [question.label for question in questions]
 
     @staticmethod
     def process_answers_dependencies(answers_dependencies: Dict):
