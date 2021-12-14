@@ -76,7 +76,7 @@ def handle_start_survey(request: HttpRequest, lang: str) -> Union[Dict, SurveyUs
             question_answers = SurveyQuestionAnswer.objects.order_by("aindex").filter(
                 question=question
             )
-            tuple_answers = get_answer_choices(question_answers, lang)
+            tuple_answers = [(qa["id"], _(qa["label"])) for qa in question_answers.values()]
         except Exception as e:
             raise e
         forms[question.id] = AnswerMChoice(
@@ -95,7 +95,7 @@ def handle_start_survey(request: HttpRequest, lang: str) -> Union[Dict, SurveyUs
                 question_answers = SurveyQuestionAnswer.objects.order_by(
                     "aindex"
                 ).filter(question=question)
-                tuple_answers = get_answer_choices(question_answers, lang)
+                tuple_answers = [(qa["id"], _(qa["label"])) for qa in question_answers.values()]
             except Exception as e:
                 raise e
 
@@ -124,7 +124,6 @@ def handle_start_survey(request: HttpRequest, lang: str) -> Union[Dict, SurveyUs
                 question_answers = SurveyQuestionAnswer.objects.order_by(
                     "aindex"
                 ).filter(question=question)
-                tuple_answers = get_answer_choices(question_answers, lang)
             except Exception as e:
                 raise e
 

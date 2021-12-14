@@ -37,10 +37,18 @@ class AnswerMChoice(forms.Form):
         elif answers_field_type == "SS":
             self.fields["answers"] = forms.ChoiceField(
                 required=False,
-                choices=question_answers,
+                choices=[],
                 widget=forms.Select(),
                 label="",
             )
+        elif answers_field_type == "SO":
+            self.fields["answers"] = forms.ChoiceField(
+                required=False,
+                choices=[],
+                widget=forms.Select(),
+                label="",
+            )
+            tanswers = sort_tuple_alphabetically(tanswers,1)
         elif answers_field_type[0] == "S":
             self.fields["answers"] = forms.ChoiceField(
                 required=True,

@@ -64,6 +64,7 @@ QUESTION_TYPES = [
     ("M", "Multiple Choice"),
     ("S", "Single Choice"),
     ("SS", "Single Select Choice"),
+    ("SO", "Single Select Ordered Choice "),
     ("T", "Free text"),
     ("MT", "Multiple Choice + Free Text"),
     ("ST", "Single Choice + Free Text"),
