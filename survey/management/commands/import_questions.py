@@ -47,7 +47,11 @@ class Command(BaseCommand):
             qindex = int(question.get("qindex", 1))
             is_context_question = question["section"] == "__context"
             if is_context_question:
-                res = SurveyQuestion.objects.order_by("-qindex").all()
+                res = SurveyQuestion.objects.order_by("-qindex").filter(
+                    section__label__contains="__context"
+                )
+                if self.does_question_exists(question["label"], res):
+                    continue
                 # if res.count() is 0, qindex is 1
                 qindex = res[res.count() - 1].qindex - 1 if res.count() else qindex
                 qindex = -abs(qindex)
@@ -60,6 +64,7 @@ class Command(BaseCommand):
                 service_category=service_cat,
                 qindex=qindex,
                 maxPoints=question["maxPoints"],
+                answers_order=question.get("answers_order", "aindex")
             )
             if created:
                 nb_imported_questions += 1
@@ -68,13 +73,6 @@ class Command(BaseCommand):
             # Create the answers
             answers_dependencies = {}
             for answer in question["answers"]:
-                bonus_points = 0
-                if "bonus_points" in answer.keys():
-                    bonus_points = answer["bonus_points"]
-                tooltip = ""
-                if "tooltip" in answer.keys():
-                    tooltip = answer["tooltip"]
-
                 answer_obj, created = SurveyQuestionAnswer.objects.get_or_create(
                     question=question_obj,
                     label=answer["label"],
@@ -82,8 +80,8 @@ class Command(BaseCommand):
                     uniqueAnswer=answer["uniqueAnswer"],
                     score=answer.get("score", 0),
                     atype=answer["atype"],
-                    bonus_points=bonus_points,
-                    tooltip=tooltip,
+                    bonus_points=int(answer.get("bonus_points", 0)),
+                    tooltip=answer.get("tooltip", ""),
                 )
 
                 if created:
@@ -127,6 +125,10 @@ class Command(BaseCommand):
                 "  Number of recommendations: {}".format(nb_imported_recommendations)
             )
         )
+
+    @staticmethod
+    def does_question_exists(label: str, questions):
+        return label in [question.label for question in questions]
 
     @staticmethod
     def process_answers_dependencies(answers_dependencies: Dict):

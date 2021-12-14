@@ -8,7 +8,7 @@ from django.conf import settings
 from django.utils import translation
 from django.utils.translation import gettext as _
 from survey.models import SurveyUser
-from csskp.settings import CUSTOM
+from csskp.settings import CUSTOM, SITE_IMAGES_DIR
 from survey.reporthelper import (
     generate_chart_png,
     calculateResult,
@@ -17,7 +17,6 @@ from survey.reporthelper import (
 from survey.viewLogic import get_questions_with_user_answers
 from survey import globals
 
-tool_logo = os.path.abspath(os.path.join(settings.BASE_DIR, CUSTOM["tool_logo"]))
 cases_logo = os.path.abspath(os.path.join(settings.BASE_DIR, CUSTOM["cases_logo"]))
 secin_logo = os.path.abspath(os.path.join(settings.BASE_DIR, CUSTOM["secin_logo"]))
 
@@ -54,7 +53,7 @@ def create_html_report(user: SurveyUser, lang: str) -> str:
             "GLOBALS": globals,
             "CASES_LOGO": cases_logo,
             "SECIN_LOGO": secin_logo,
-            "TOOL_LOGO": tool_logo,
+            "TOOL_LOGO": SITE_IMAGES_DIR + "/logo-" + lang + ".png",
             "DATE": datetime.today(),
             "SURVEY_USER": user,
             "CONTEXT": user.get_context(),
@@ -69,7 +68,7 @@ def create_html_report(user: SurveyUser, lang: str) -> str:
     return output_from_parsed_template
 
 
-def makepdf(html: str) -> bytes:
+def makepdf(html: str, lang: str) -> bytes:
     """Generate a PDF file from a string of HTML."""
     base_url = os.path.abspath(settings.REPORT_TEMPLATE_DIR)
     htmldoc = HTML(string=html, base_url=base_url)
@@ -79,7 +78,7 @@ def makepdf(html: str) -> bytes:
             string='''
             :root {
                 --tool_logo_url: url("'''
-            + tool_logo
+            + SITE_IMAGES_DIR + "/logo-" + lang + '.png'
             + '''");
                 --secin_logo_url: url("'''
             + secin_logo

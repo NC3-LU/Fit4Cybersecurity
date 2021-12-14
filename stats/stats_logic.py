@@ -97,6 +97,8 @@ def get_finished_surveys_list(request):
                 }
 
             question = user_answer.answer.question
+            if question.maxPoints == 0:
+                continue
             if (
                 question.id
                 not in surveys_users_results["survey_users"][user_id]["sections"][

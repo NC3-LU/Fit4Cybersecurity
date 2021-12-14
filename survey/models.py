@@ -57,6 +57,19 @@ class RightMixin:
 
     def dump(self):
         dict = {k: getattr(self, k) for k in self.fields_base_read()}
+        # if hasattr(self, "__dump__"):
+        #     dict = self.__dump__()
+        for key, value in dict.items():
+            if isinstance(value, models.Model):
+                if hasattr(value, "dump"):
+                    dict[key] = value.dump()
+                else:
+                    dict[key] = str(value)
+            elif value.__class__.__name__ == "ManyRelatedManager":
+                if hasattr(value, "__dump__"):
+                    dict[key] = [elem.__dump__() for elem in value.all()]
+                else:
+                    dict[key] = [str(elem) for elem in value.all()]
         return dict
 
 
@@ -74,10 +87,6 @@ class SurveySection(models.Model):
     # Section title
 
     label = models.TextField()
-
-    @staticmethod
-    def _fields_base_read():
-        return {"id", "label"}
 
     def __repr__(self):
         return self.label
@@ -102,13 +111,16 @@ class SurveyQuestion(models.Model, RightMixin):
     )
     qindex = models.IntegerField(unique=True)
     maxPoints = models.IntegerField(default=10)
+    answers_order = models.CharField(max_length=100, default="aindex")
 
     @staticmethod
     def _fields_base_read():
         return {
-            "id",
             "label",
             "section",
+            "service_category",
+            "qtype",
+            "qindex",
             "maxPoints",
         }
 
@@ -116,7 +128,7 @@ class SurveyQuestion(models.Model, RightMixin):
         return self.label
 
 
-class SurveyQuestionAnswer(models.Model):
+class SurveyQuestionAnswer(models.Model, RightMixin):
     # Answer id --> translation in other table
     # Question id --> can be 1-question to multi-answers
 
@@ -131,6 +143,19 @@ class SurveyQuestionAnswer(models.Model):
         max_length=2, choices=ANSWER_TYPES, default=ANSWER_TYPES[0][0]
     )
     dependant_answers = models.ManyToManyField("self", blank=True)
+
+    @staticmethod
+    def _fields_base_read():
+        return {
+            "label",
+            "tooltip",
+            "aindex",
+            "uniqueAnswer",
+            "score",
+            "bonus_points",
+            "atype",
+            "dependant_answers",
+        }
 
     def __str__(self):
         return self.label
@@ -205,7 +230,7 @@ class SurveyUserFeedback(models.Model):
         return str(self.feedback)
 
 
-class Recommendations(models.Model):
+class Recommendations(models.Model, RightMixin):
     label = models.TextField()
     min_e_count = models.CharField(
         max_length=2, choices=COMPANY_SIZE, default=COMPANY_SIZE[0][0]
@@ -218,6 +243,10 @@ class Recommendations(models.Model):
     )
     forAnswer = models.ForeignKey(SurveyQuestionAnswer, on_delete=models.CASCADE)
     answerChosen = models.BooleanField(default=False)
+
+    @staticmethod
+    def _fields_base_read():
+        return {"label", "min_e_count", "max_e_count", "sector", "answerChosen"}
 
     def __str__(self):
         return self.label

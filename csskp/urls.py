@@ -27,6 +27,7 @@ urlpatterns = [
     # Stats
     path("admin/export/statistics/", include("stats.urls")),
     # Admin
+    path("admin/", include("admin.urls")),
     path("admin/", include("django.contrib.auth.urls")),
     path("admin/", admin.site.urls),
     # Survey
