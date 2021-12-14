@@ -3,7 +3,7 @@
 from survey.models import SurveyQuestion, SurveyQuestionAnswer, Recommendations
 
 
-def export_survey(with_ids):
+def export_survey(with_ids=False):
     """Export questions, answers, recommendations."""
     result = []
     questions = SurveyQuestion.objects.all()
