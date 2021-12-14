@@ -73,10 +73,10 @@ def handle_start_survey(request: HttpRequest, lang: str) -> Union[Dict, SurveyUs
 
     for question in questions:
         try:
-            question_answers = SurveyQuestionAnswer.objects.order_by("aindex").filter(
-                question=question
-            )
-            tuple_answers = [(qa["id"], _(qa["label"])) for qa in question_answers.values()]
+            question_answers = SurveyQuestionAnswer.objects.order_by(
+                question.answers_order
+            ).filter(question=question)
+            tuple_answers = get_answer_choices(question_answers, lang)
         except Exception as e:
             raise e
         forms[question.id] = AnswerMChoice(
@@ -89,46 +89,20 @@ def handle_start_survey(request: HttpRequest, lang: str) -> Union[Dict, SurveyUs
         )
 
     if request.method == "POST":
-        res_forms = {}
-        for question in questions:
-            try:
-                question_answers = SurveyQuestionAnswer.objects.order_by(
-                    "aindex"
-                ).filter(question=question)
-                tuple_answers = [(qa["id"], _(qa["label"])) for qa in question_answers.values()]
-            except Exception as e:
-                raise e
-
-            res_forms[question.id] = AnswerMChoice(
-                tuple_answers,
-                data=request.POST,
-                lang=lang,
-                answers_field_type=question.qtype,
-                question_answers=question_answers,
-                prefix="form" + str(question.id),
-            )
-
-        if all([form.is_valid() for question_id, form in res_forms.items()]):
+        if all([form.is_valid() for question_id, form in forms.items()]):
             # create the user
             user = create_user(lang)
             request.session["user_id"] = str(user.user_id)
 
         for question in questions:
-            form = res_forms[question.id]
+            form = forms[question.id]
             answers = form.cleaned_data["answers"]
             answer_content = ""
             if "answer_content" in form.cleaned_data:
                 answer_content = form.cleaned_data["answer_content"]
 
-            try:
-                question_answers = SurveyQuestionAnswer.objects.order_by(
-                    "aindex"
-                ).filter(question=question)
-            except Exception as e:
-                raise e
-
             # create the answers
-            save_answers(user, question, question_answers, answers, answer_content)
+            save_answers(user, question, answers, answer_content)
 
         return user
 
@@ -153,9 +127,9 @@ def handle_question_answers_request(
     ) = get_questions_slice(question_index)
 
     try:
-        question_answers = SurveyQuestionAnswer.objects.order_by("aindex").filter(
-            question=current_question
-        )
+        question_answers = SurveyQuestionAnswer.objects.order_by(
+            current_question.answers_order
+        ).filter(question=current_question)
         tuple_answers = get_answer_choices(question_answers, user.choosen_lang)
     except Exception as e:
         raise e
@@ -177,17 +151,13 @@ def handle_question_answers_request(
             question_answers=question_answers,
         )
         if form.is_valid():
-            user = SurveyUser.objects.select_for_update(nowait=True).filter(id=user.id)[
-                0
-            ]
+            user = SurveyUser.objects.select_for_update(nowait=True).filter(id=user.id)[0]
             answers = form.cleaned_data["answers"]
             answer_content = ""
             if "answer_content" in form.cleaned_data:
                 answer_content = form.cleaned_data["answer_content"]
 
-            save_answers(
-                user, current_question, question_answers, answers, answer_content
-            )
+            save_answers(user, current_question, answers, answer_content)
 
             feedback = form.cleaned_data["feedback"]
             if feedback:
@@ -264,12 +234,11 @@ def handle_question_answers_request(
 def save_answers(
     user: SurveyUser,
     current_question: SurveyQuestion,
-    question_answers: List[SurveyQuestionAnswer],
     posted_answers: List[SurveyQuestionAnswer],
     answer_content: str,
 ) -> None:
     posted_answers_ids = [int(i) for i in posted_answers]
-    for question_answer in question_answers:
+    for question_answer in current_question.surveyquestionanswer_set.all():
         user_answers = SurveyUserAnswer.objects.filter(
             user=user, answer=question_answer
         )[:1]

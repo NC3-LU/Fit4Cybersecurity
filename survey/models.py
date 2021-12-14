@@ -111,6 +111,7 @@ class SurveyQuestion(models.Model, RightMixin):
     )
     qindex = models.IntegerField(unique=True)
     maxPoints = models.IntegerField(default=10)
+    answers_order = models.CharField(max_length=100, default="aindex")
 
     @staticmethod
     def _fields_base_read():
