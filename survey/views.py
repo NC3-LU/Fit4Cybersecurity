@@ -4,6 +4,7 @@ import json
 import logging
 from datetime import date
 from django.shortcuts import render
+from django.conf import settings
 from django.http import HttpResponse, HttpResponseRedirect
 from django.utils.translation import gettext as _
 from django import forms
@@ -32,7 +33,7 @@ logger = logging.getLogger(__name__)
 
 def index(request, lang=LANGUAGE_CODE):
     translation.activate(lang)
-    request.session[translation.LANGUAGE_SESSION_KEY] = lang
+    request.session[settings.LANGUAGE_COOKIE_NAME] = lang
     return render(request, "survey/index.html")
 
 
@@ -41,7 +42,7 @@ def start(request, lang="EN"):
         form_data = handle_start_survey(request, lang)
 
         translation.activate(lang)
-        request.session[translation.LANGUAGE_SESSION_KEY] = lang
+        request.session[settings.LANGUAGE_COOKIE_NAME] = lang
 
         if isinstance(form_data, SurveyUser):
             return HttpResponseRedirect(
@@ -82,7 +83,7 @@ def handle_question_form(request, question_index: int):
 
 def change_lang(request, lang: str):
     translation.activate(lang)
-    request.session[translation.LANGUAGE_SESSION_KEY] = lang
+    request.session[settings.LANGUAGE_COOKIE_NAME] = lang
     user_id = request.session.get("user_id", None)
     previous_path = request.META.get("HTTP_REFERER", "/")
 
@@ -186,7 +187,7 @@ def review(request):
 
     lang = user.choosen_lang
     translation.activate(lang)
-    request.session[translation.LANGUAGE_SESSION_KEY] = lang
+    request.session[settings.LANGUAGE_COOKIE_NAME] = lang
 
     textLayout = {
         "title": CUSTOM["tool_name"] + " - " + _("Answers review"),
@@ -210,7 +211,7 @@ def finish(request):
 
     user_lang = user.choosen_lang
     translation.activate(user_lang)
-    request.session[translation.LANGUAGE_SESSION_KEY] = user_lang
+    request.session[settings.LANGUAGE_COOKIE_NAME] = user_lang
 
     # make survey readonly and show results.
     # also needs saving here!

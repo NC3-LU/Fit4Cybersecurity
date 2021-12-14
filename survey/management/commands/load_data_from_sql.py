@@ -5,7 +5,7 @@ from django.core.management.base import BaseCommand
 
 
 class Command(BaseCommand):
-    help = "Load data from SQL. Temporary solution. This command shoud not be used."
+    help = "Load data from SQL. Temporary solution. This command should not be used."
 
     def add_arguments(self, parser):
         parser.add_argument("sql_file", type=str, help="The path of the SQL file.")

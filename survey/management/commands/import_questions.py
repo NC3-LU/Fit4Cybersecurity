@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
 import json
+from typing import Dict
 from django.core.management.base import BaseCommand
 from survey.models import (
     SurveySection,
@@ -65,7 +66,7 @@ class Command(BaseCommand):
                 question_obj.save()
 
             # Create the answers
-            answers_dependancies = {}
+            answers_dependencies = {}
             for answer in question["answers"]:
                 bonus_points = 0
                 if "bonus_points" in answer.keys():
@@ -91,7 +92,7 @@ class Command(BaseCommand):
 
                     # Prepare the dependencies between answers.
                     if "dependant_answers" in answer.keys():
-                        answers_dependancies[answer["label"]] = {
+                        answers_dependencies[answer["label"]] = {
                             "object": answer_obj,
                             "dependant_answers": answer["dependant_answers"],
                         }
@@ -110,20 +111,7 @@ class Command(BaseCommand):
                         reco_obj.save()
 
             # Process the answers' dependencies.
-            for answer_label in answers_dependancies:
-                question_answer = answers_dependancies[answer_label]["object"]
-                dependant_answers_labels = answers_dependancies[answer_label][
-                    "dependant_answers"
-                ]
-                for dependant_answer_label in dependant_answers_labels:
-                    question_answer.dependant_answers.add(
-                        answers_dependancies[dependant_answer_label]["object"]
-                    )
-                    question_answer.save()
-                    answers_dependancies[dependant_answer_label][
-                        "object"
-                    ].dependant_answers.add(question_answer)
-                    answers_dependancies[dependant_answer_label]["object"].save()
+            self.process_answers_dependencies(answers_dependencies)
 
         self.stdout.write(self.style.SUCCESS("Data imported."))
         self.stdout.write(
@@ -139,3 +127,20 @@ class Command(BaseCommand):
                 "  Number of recommendations: {}".format(nb_imported_recommendations)
             )
         )
+
+    @staticmethod
+    def process_answers_dependencies(answers_dependencies: Dict):
+        for answer_label in answers_dependencies:
+            question_answer = answers_dependencies[answer_label]["object"]
+            dependant_answers_labels = answers_dependencies[answer_label][
+                "dependant_answers"
+            ]
+            for dependant_answer_label in dependant_answers_labels:
+                question_answer.dependant_answers.add(
+                    answers_dependencies[dependant_answer_label]["object"]
+                )
+                question_answer.save()
+                answers_dependencies[dependant_answer_label][
+                    "object"
+                ].dependant_answers.add(question_answer)
+                answers_dependencies[dependant_answer_label]["object"].save()
