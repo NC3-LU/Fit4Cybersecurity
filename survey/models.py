@@ -59,7 +59,7 @@ class RightMixin:
         dict = {k: getattr(self, k) for k in self.fields_base_read()}
         # if hasattr(self, "__dump__"):
         #     dict = self.__dump__()
-        for key, value in dict.items():  # preventing association proxy to die
+        for key, value in dict.items():
             if isinstance(value, models.Model):
                 if hasattr(value, "dump"):
                     dict[key] = value.dump()
