@@ -136,14 +136,14 @@ bcrypt = ["bcrypt"]
 
 [[package]]
 name = "django-bootstrap-datepicker-plus"
-version = "3.0.5"
-description = "Bootstrap3/Bootstrap4 DatePickerInput, TimePickerInput, DateTimePickerInput, MonthPickerInput, YearPickerInput with date-range-picker functionality for django version 2.1, 2.0, 1.11, 1.10 and 1.8"
+version = "4.0.0"
+description = "Bootstrap3/Bootstrap4/Bootstrap5 DatePickerInput, TimePickerInput, DateTimePickerInput, MonthPickerInput, YearPickerInput with date-range-picker functionality for django >= 2.0"
 category = "main"
 optional = false
-python-versions = ">=3"
+python-versions = ">=3.6"
 
 [package.dependencies]
-django = ">=1.8"
+django = ">=2,<5"
 
 [[package]]
 name = "django-bootstrap-modal-forms"
@@ -578,7 +578,7 @@ python-versions = "*"
 [metadata]
 lock-version = "1.1"
 python-versions = ">=3.8,<4.0"
-content-hash = "67fdf1031a2f5a5040bcea735e1349c34e3bedd12f0bb3667b8d9b27162e6a6b"
+content-hash = "8edc0b7575be3236021cd65c323bfc844bcd7009479b8fd1bddc4e1353335f4d"
 
 [metadata.files]
 asgiref = [
@@ -777,8 +777,8 @@ django = [
     {file = "Django-4.0.tar.gz", hash = "sha256:d5a8a14da819a8b9237ee4d8c78dfe056ff6e8a7511987be627192225113ee75"},
 ]
 django-bootstrap-datepicker-plus = [
-    {file = "django-bootstrap-datepicker-plus-3.0.5.tar.gz", hash = "sha256:490058eba99d47f48a7d24fa78581c0e36375bdc7aa9605783eeb170d51fd0df"},
-    {file = "django_bootstrap_datepicker_plus-3.0.5-py3-none-any.whl", hash = "sha256:a8bc19cc6846f97ff1e6c447f4e0387881d16e8afa1e8bd7a652c19e545c566b"},
+    {file = "django-bootstrap-datepicker-plus-4.0.0.tar.gz", hash = "sha256:2ce1eb7d0d45ac01fcef6fc5e9823b01e0727088b781b16c1be642bf76514ada"},
+    {file = "django_bootstrap_datepicker_plus-4.0.0-py3-none-any.whl", hash = "sha256:c5dce41585c2b57cda52e3f698f44544090ccf2eed1d1c5bb9e828f36951b3fc"},
 ]
 django-bootstrap-modal-forms = [
     {file = "django-bootstrap-modal-forms-1.5.0.tar.gz", hash = "sha256:38592e15617cf152ee4537f80306dff346ce2954c00cf9a664590fb43c79635c"},
