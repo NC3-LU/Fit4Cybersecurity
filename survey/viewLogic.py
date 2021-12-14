@@ -4,6 +4,7 @@ from typing import Union, List, Dict, Tuple, Any
 from typing_extensions import TypedDict
 from uuid import UUID
 from django.http import HttpRequest
+from django.conf import settings
 from django.utils.translation import gettext_lazy as _
 from django.utils.html import format_html, mark_safe
 from django.db import transaction
@@ -57,7 +58,7 @@ def handle_start_survey(request: HttpRequest, lang: str) -> Union[Dict, SurveyUs
     title = CUSTOM["tool_name"] + " - " + _("Let's start")
 
     translation.activate(lang)
-    request.session[translation.LANGUAGE_SESSION_KEY] = lang
+    request.session[settings.LANGUAGE_COOKIE_NAME] = lang
 
     forms = {}
     questions = SurveyQuestion.objects.filter(
@@ -135,7 +136,7 @@ def handle_start_survey(request: HttpRequest, lang: str) -> Union[Dict, SurveyUs
     return {
         "title": title,
         "forms": forms,
-        "questions_per_id": {question.id: question for question in questions},
+        "questions_per_id": {question.id: _(question.label) for question in questions},
         "action": action,
         "choosen_lang": lang,
     }
@@ -166,7 +167,7 @@ def handle_question_answers_request(
             free_text_answer_id = question_answer.id
 
     translation.activate(user.choosen_lang)
-    request.session[translation.LANGUAGE_SESSION_KEY] = user.choosen_lang
+    request.session[settings.LANGUAGE_COOKIE_NAME] = user.choosen_lang
 
     if request.method == "POST":
         form = AnswerMChoice(
