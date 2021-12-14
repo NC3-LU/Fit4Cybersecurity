@@ -6,12 +6,6 @@ from survey.models import SurveyQuestionAnswer
 import json
 
 
-def sort_tuple_alphabetically(tuple, elementNumber):
-    tuple.sort(key=lambda x: x[elementNumber])
-
-    return tuple
-
-
 class AnswerMChoice(forms.Form):
     unique_answers = forms.CharField(widget=forms.HiddenInput(), required=False)
     free_text_answer_id = forms.CharField(widget=forms.HiddenInput(), required=False)
@@ -37,18 +31,10 @@ class AnswerMChoice(forms.Form):
         elif answers_field_type == "SS":
             self.fields["answers"] = forms.ChoiceField(
                 required=False,
-                choices=[],
+                choices=question_answers,
                 widget=forms.Select(),
                 label="",
             )
-        elif answers_field_type == "SO":
-            self.fields["answers"] = forms.ChoiceField(
-                required=False,
-                choices=[],
-                widget=forms.Select(),
-                label="",
-            )
-            tanswers = sort_tuple_alphabetically(tanswers, 1)
         elif answers_field_type[0] == "S":
             self.fields["answers"] = forms.ChoiceField(
                 required=True,
