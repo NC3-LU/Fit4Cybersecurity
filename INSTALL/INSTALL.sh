@@ -4,6 +4,7 @@
 PYTHON_VERSION='3.10.0'
 
 TOOL_NAME=$TOOL_NAME
+TOOL_NAME=$SITE_NAME
 TOOL_DESCRIPTION='Description of the tool.'
 
 PROJECT_PATH='/home/ubuntu/Fit4Cybersecurity'
@@ -99,6 +100,8 @@ DATABASES = {
 CUSTOM = {
     # Generic configurations
     "tool_name": "$TOOL_NAME",
+    # The generic site/tool name. Used to load specific config, templates, styles, logos.
+    "site_name": "$SITE_NAME",,
     "intro_text": gettext_lazy("$TOOL_DESCRIPTION"),
     "countries_first": [],
     "defaultLanguage": "en",
@@ -108,7 +111,6 @@ CUSTOM = {
         ("de", "German"),
     ],
     # Logos paths
-    "tool_logo": "static/images/logoFull-en.png",
     "cases_logo": "templates/report/images/cases_logo.svg",
     "secin_logo": "templates/report/images/secin_logo.svg",
     # Minimal score

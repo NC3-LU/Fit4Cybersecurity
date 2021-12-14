@@ -135,7 +135,7 @@ def show_report(request, lang: str) -> HttpResponseRedirect:
     # Generation of the PDF report
     try:
         html_report = create_html_report(user, lang)
-        pdf_report = makepdf(html_report)
+        pdf_report = makepdf(html_report, lang)
     except Exception as e:
         logger.error(e)
         messages.warning(request, "An error occured when generating the report.")

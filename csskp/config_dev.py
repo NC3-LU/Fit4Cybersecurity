@@ -25,6 +25,8 @@ DATABASES = {
 CUSTOM = {
     # Generic configurations
     "tool_name": "<TOOL_NAME>",
+    # The generic site/tool name. Used to load specific config, templates, styles, logos.
+    "site_name": "fit4cybersecurity",
     "intro_text": gettext_lazy("Description of the tool."),
     "countries_first": [],
     "defaultLanguage": "en",
@@ -34,7 +36,6 @@ CUSTOM = {
         ("de", "German"),
     ],
     # Logos paths
-    "tool_logo": "static/images/logoFull-en.png",
     "cases_logo": "templates/report/images/cases_logo.svg",
     "secin_logo": "templates/report/images/secin_logo.svg",
     # Minimal score
