@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    if (chartData && chartLabels) {
+    if (typeof chartData !== 'undefined' && typeof chartLabels !== 'undefined') {
         let ctx = document.getElementById('result-chart');
         let resultChart = new Chart(ctx, {
             type: 'radar',
