@@ -136,7 +136,7 @@ def handle_start_survey(request: HttpRequest, lang: str) -> Union[Dict, SurveyUs
     return {
         "title": title,
         "forms": forms,
-        "questions_per_id": {question.id: question for question in questions},
+        "questions_per_id": {question.id: _(question.label) for question in questions},
         "action": action,
         "choosen_lang": lang,
     }
