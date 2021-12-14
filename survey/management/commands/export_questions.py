@@ -11,7 +11,7 @@ class Command(BaseCommand):
     Usage: ``python manage.py export_questions >> out.json``"""
 
     def add_arguments(self, parser):
-        parser.add_argument('--with-ids', action=argparse.BooleanOptionalAction)
+        parser.add_argument("--with-ids", action=argparse.BooleanOptionalAction)
 
     def handle(self, *args, **options):
         result = export_survey(options["with_ids"])
