@@ -8,16 +8,21 @@
 <div id="content-main">
   <div class="row">
     <div class="col">
-      <h1>Data management</h1>
+      <h2>Data management</h2>
       <p>Export the current survey (questions, answers, recommendations and sections): <a href="/admin/export/survey.json" download>survey.json</a></p>
     </div>
   </div>
   <div class="row">
     <div class="col">
-      <h1>Statistics</h1>
+      <h2>Statistics</h2>
       <p>Go to the <a href="{% url 'stats:index' %}">survey statistics page</a>.</p>
     </div>
   </div>
-  <br /><br />
+  <div class="row">
+    <div class="col">
+      <h2>Administration</h2>
+      <p>Regenerate the compiled translation files: <a href="/admin/compile-translations">execute</a>.</p>
+    </div>
+  </div>
 </div>
 {% endblock %}
