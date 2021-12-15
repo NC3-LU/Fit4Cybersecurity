@@ -1,0 +1,23 @@
+{% extends "admin/base_site.html" %}
+{% load i18n apptags static admin_urls %}
+
+{% block breadcrumbs %}<div class="breadcrumbs"><a href="{% url 'admin:index' %}">{% trans 'Home' %}</a> › Translations management</div>{% endblock %}
+
+{% block content %}
+
+<div id="content-main">
+  <div class="row">
+    <div class="col">
+      <h1>Data management</h1>
+      <p>Export the current survey (questions, answers, recommendations and sections): <a href="/admin/export/survey.json" download>survey.json</a></p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <h1>Statistics</h1>
+      <p>Go to the <a href="{% url 'stats:index' %}">survey statistics page</a>.</p>
+    </div>
+  </div>
+  <br /><br />
+</div>
+{% endblock %}
