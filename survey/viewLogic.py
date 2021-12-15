@@ -73,10 +73,8 @@ def handle_start_survey(request: HttpRequest, lang: str) -> Union[Dict, SurveyUs
 
     for question in questions:
         try:
-            question_answers = SurveyQuestionAnswer.objects.order_by(
-                question.answers_order
-            ).filter(question=question)
-            tuple_answers = get_answer_choices(question_answers, lang)
+            question_answers = SurveyQuestionAnswer.objects.filter(question=question)
+            tuple_answers = get_answer_choices(question, question_answers, lang)
         except Exception as e:
             raise e
         forms[question.id] = AnswerMChoice(
@@ -127,10 +125,12 @@ def handle_question_answers_request(
     ) = get_questions_slice(question_index)
 
     try:
-        question_answers = SurveyQuestionAnswer.objects.order_by(
-            current_question.answers_order
-        ).filter(question=current_question)
-        tuple_answers = get_answer_choices(question_answers, user.choosen_lang)
+        question_answers = SurveyQuestionAnswer.objects.filter(
+            question=current_question
+        )
+        tuple_answers = get_answer_choices(
+            current_question, question_answers, user.choosen_lang
+        )
     except Exception as e:
         raise e
 
@@ -266,10 +266,19 @@ def find_user_by_id(user_id: UUID) -> SurveyUser:
 
 
 def get_answer_choices(
-    question_answers: List[SurveyQuestionAnswer], user_lang: str
+    question, question_answers: List[SurveyQuestionAnswer], user_lang: str
 ) -> List[Tuple[int, str]]:
     tuple_answers = []
     translation.activate(user_lang)
+
+    question_answers = list(
+        sorted(
+            question_answers,
+            key=lambda obj: getattr(obj, question.answers_order)
+            if isinstance(getattr(obj, question.answers_order), int)
+            else _(str(getattr(obj, question.answers_order))),
+        )
+    )
 
     for question_answer in question_answers:
         answer = _(question_answer.label)
