@@ -10,7 +10,5 @@ urlpatterns = [
     path(
         "compile-translations", views.compile_translations, name="compile_translations"
     ),
-    path(
-        "migrate-database", views.migrate_database, name="migrate_database"
-    ),
+    path("migrate-database", views.migrate_database, name="migrate_database"),
 ]
