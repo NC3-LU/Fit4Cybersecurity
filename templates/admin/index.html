@@ -5,13 +5,6 @@
 {% endblock %}
 {% block content %}
 <div id="content-main">
-  {% if messages %}
-  <ul class="messages">
-    {% for message in messages %}
-    <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
-    {% endfor %}
-  </ul>
-  {% endif %}
   <div class="row">
     <div class="col">
       <h2>Data management</h2>
