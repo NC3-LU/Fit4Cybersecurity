@@ -1,0 +1,13 @@
+{% extends "admin/base.html" %}
+{% load i18n apptags static admin_urls %}
+{% block content %}
+<div id="content-main">
+  <div class="row">
+    <div class="col">
+      <p>Number of surveys: {{ nb_surveys }}</p>
+      <p>Number of finished surveys: {{ nb_finished_surveys }}</p>
+    </div>
+  </div>
+
+</div>
+{% endblock %}

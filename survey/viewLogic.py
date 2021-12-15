@@ -151,7 +151,9 @@ def handle_question_answers_request(
             question_answers=question_answers,
         )
         if form.is_valid():
-            user = SurveyUser.objects.select_for_update(nowait=True).filter(id=user.id)[0]
+            user = SurveyUser.objects.select_for_update(nowait=True).filter(id=user.id)[
+                0
+            ]
             answers = form.cleaned_data["answers"]
             answer_content = ""
             if "answer_content" in form.cleaned_data:

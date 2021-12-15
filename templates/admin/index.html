@@ -1,11 +1,17 @@
 {% extends "admin/base_site.html" %}
 {% load i18n apptags static admin_urls %}
-
-{% block breadcrumbs %}<div class="breadcrumbs"><a href="{% url 'admin:index' %}">{% trans 'Home' %}</a> › Translations management</div>{% endblock %}
-
+{% block extrastyle %}
+<link rel="stylesheet" href="/static/npm_components/fork-awesome/css/fork-awesome.min.css">
+{% endblock %}
 {% block content %}
-
 <div id="content-main">
+  {% if messages %}
+  <ul class="messages">
+    {% for message in messages %}
+    <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+    {% endfor %}
+  </ul>
+  {% endif %}
   <div class="row">
     <div class="col">
       <h2>Data management</h2>
@@ -16,12 +22,30 @@
     <div class="col">
       <h2>Statistics</h2>
       <p>Go to the <a href="{% url 'stats:index' %}">survey statistics page</a>.</p>
+      <p><a href="/admin/site_stats">Figures of interest</a>.</p>
     </div>
   </div>
   <div class="row">
     <div class="col">
-      <h2>Administration</h2>
-      <p>Regenerate the compiled translation files: <a href="/admin/compile-translations">execute</a>.</p>
+      <h2>Maintenance</h2>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">Action</th>
+            <th scope="col">Execute</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Regenerate the compiled translation files</td>
+            <td><a href="/admin/compile-translations"><i class="fa fa-cog" aria-hidden="true"></i></a></td>
+          </tr>
+          <tr>
+            <td>Migrate database</td>
+            <td><a href="/admin/migrate-database"><i class="fa fa-cog" aria-hidden="true"></i></a></td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   </div>
 </div>

@@ -78,7 +78,10 @@ def makepdf(html: str, lang: str) -> bytes:
             string='''
             :root {
                 --tool_logo_url: url("'''
-            + SITE_IMAGES_DIR + "/logo-" + lang + '.png'
+            + SITE_IMAGES_DIR
+            + "/logo-"
+            + lang
+            + ".png"
             + '''");
                 --secin_logo_url: url("'''
             + secin_logo

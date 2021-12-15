@@ -186,8 +186,10 @@ STATICFILES_DIRS = [
     STATIC_DIR,
 ]
 
-SITE_IMAGES_DIR = os.path.join(STATIC_DIR, 'images', CUSTOM.get("site_name", "fit4cybersecurity"))
-SITE_IMAGES_URL = STATIC_URL + 'images/' + CUSTOM.get("site_name", "fit4cybersecurity")
+SITE_IMAGES_DIR = os.path.join(
+    STATIC_DIR, "images", CUSTOM.get("site_name", "fit4cybersecurity")
+)
+SITE_IMAGES_URL = STATIC_URL + "images/" + CUSTOM.get("site_name", "fit4cybersecurity")
 
 # Settings for django-bootstrap4
 BOOTSTRAP4 = {
