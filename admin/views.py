@@ -6,6 +6,7 @@ from django.shortcuts import render
 from django.http import JsonResponse, HttpResponseRedirect
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
+from csskp.settings import BASE_DIR
 from survey.lib.utils import export_survey
 from survey.models import SurveyUser
 
@@ -31,7 +32,7 @@ def compile_translations(request):
         "manage.py",
         "compilemessages",
     ]
-    subprocess.Popen(cmd, stdout=subprocess.PIPE)
+    subprocess.Popen(cmd, stdout=subprocess.PIPE, cwd=BASE_DIR)
     messages.info(request, "Compiled translations files migrated.")
     return HttpResponseRedirect("/admin/")
 
@@ -43,6 +44,16 @@ def migrate_database(request):
         "manage.py",
         "migrate",
     ]
-    subprocess.Popen(cmd, stdout=subprocess.PIPE)
+    subprocess.Popen(cmd, stdout=subprocess.PIPE, cwd=BASE_DIR)
     messages.info(request, "Database up-to-date.")
+    return HttpResponseRedirect("/admin/")
+
+
+@login_required
+def update_software(request):
+    cmd = [
+        "./contrib/update.sh"
+    ]
+    subprocess.Popen(cmd, stdout=subprocess.PIPE, cwd=BASE_DIR)
+    messages.info(request, "Updated.")
     return HttpResponseRedirect("/admin/")

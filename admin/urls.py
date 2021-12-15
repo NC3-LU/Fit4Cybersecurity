@@ -11,4 +11,5 @@ urlpatterns = [
         "compile-translations", views.compile_translations, name="compile_translations"
     ),
     path("migrate-database", views.migrate_database, name="migrate_database"),
+    path("update-software", views.update_software, name="update_software"),
 ]
