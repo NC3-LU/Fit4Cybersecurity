@@ -51,9 +51,7 @@ def migrate_database(request):
 
 @login_required
 def update_software(request):
-    cmd = [
-        "./contrib/update.sh"
-    ]
+    cmd = ["./contrib/update.sh"]
     subprocess.Popen(cmd, stdout=subprocess.PIPE, cwd=BASE_DIR)
     messages.info(request, "Updated.")
     return HttpResponseRedirect("/admin/")
