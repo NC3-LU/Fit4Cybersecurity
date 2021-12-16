@@ -69,7 +69,7 @@ def compile_translations(request):
     ]
     result = exec_cmd(" ".join(cmd))
     print(result)  # TODO: log the result
-    messages.info(request, "Compiled translations files migrated.")
+    messages.info(request, "Translations files compiled.")
     return HttpResponseRedirect("/admin/")
 
 
