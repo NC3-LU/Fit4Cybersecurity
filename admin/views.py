@@ -1,14 +1,13 @@
 # -*- coding: utf-8 -*-
 
 import sys
-import subprocess
 from django.shortcuts import render
 from django.db.models import Count
 from django.http import JsonResponse, HttpResponseRedirect
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from django.conf.global_settings import LANGUAGES
-from csskp.settings import BASE_DIR
+from utils.utils import exec_cmd, exec_cmd_no_wait
 from survey.lib.utils import export_survey
 from survey.models import SurveyUser
 
@@ -58,12 +57,13 @@ def site_stats(request):
 @login_required
 def compile_translations(request):
     """Triggers the compilation of the translation files in a subprocess."""
-    cmd = [
+    cmd = " ".join([
         sys.exec_prefix + "/bin/python",
         "manage.py",
         "compilemessages",
-    ]
-    subprocess.Popen(cmd, stdout=subprocess.PIPE, cwd=BASE_DIR)
+    ])
+    result = exec_cmd(cmd)
+    print(result)
     messages.info(request, "Compiled translations files migrated.")
     return HttpResponseRedirect("/admin/")
 
@@ -71,12 +71,13 @@ def compile_translations(request):
 @login_required
 def migrate_database(request):
     """Triggers the execution of the database migration scripts."""
-    cmd = [
+    cmd = " ".join([
         sys.exec_prefix + "/bin/python",
         "manage.py",
         "migrate",
-    ]
-    subprocess.Popen(cmd, stdout=subprocess.PIPE, cwd=BASE_DIR)
+    ])
+    result = exec_cmd(cmd)
+    print(result)
     messages.info(request, "Database up-to-date.")
     return HttpResponseRedirect("/admin/")
 
@@ -85,6 +86,6 @@ def migrate_database(request):
 def update_software(request):
     """Triggers the execution of the script which will update the software."""
     cmd = ["./contrib/update.sh"]
-    subprocess.Popen(cmd, stdout=subprocess.PIPE, cwd=BASE_DIR)
+    exec_cmd_no_wait(cmd)
     messages.info(request, "Updated.")
     return HttpResponseRedirect("/admin/")
