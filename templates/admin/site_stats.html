@@ -1,4 +1,5 @@
 {% extends "admin/base_site.html" %}
+{% load apptags %}
 {% block title %}Admin site | Stats{% endblock %}
 {% block extrastyle %}
 {{ block.super }}
@@ -38,6 +39,7 @@ Some statistics about the current surveys.
           <th scope="col">Creation date</th>
           <th scope="col">Update date</th>
           <th scope="col">Choosen language</th>
+          <th scope="col">Result</th>
         </tr>
       </thead>
       <tbody>
@@ -47,6 +49,7 @@ Some statistics about the current surveys.
         <td>{{ survey.created_at }}</td>
         <td>{{ survey.updated_at }}</td>
         <td>{{ survey.choosen_lang }}</td>
+        <td>{{ survey_results|get_item:survey.id }}</td>
       </tr>
       {% endfor %}
       </tbody>
