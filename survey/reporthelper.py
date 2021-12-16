@@ -77,9 +77,7 @@ def is_recommendation_already_added(recommendation: str, recommendations: dict) 
     return False
 
 
-def calculateResult(
-    user: SurveyUser, lang: str
-) -> Tuple[int, int, List[int], List[str]]:
+def calculateResult(user: SurveyUser) -> Tuple[int, int, List[int], List[str]]:
     total_questions_score = 0
     total_user_score = 0
     total_bonus_points = 0

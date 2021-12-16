@@ -26,7 +26,7 @@ def create_html_report(user: SurveyUser, lang: str) -> str:
     translation.activate(lang)
 
     # Calculate the result
-    score, bonus_score, details, section_list = calculateResult(user, lang)
+    score, bonus_score, details, section_list = calculateResult(user)
 
     # Generate the chart
     try:
