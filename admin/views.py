@@ -23,7 +23,7 @@ def export_survey_json(request):
 def survey_status_count(request):
     """Returns the count for the SurveyUser status property."""
     result = SurveyUser.objects.values("status").annotate(count=Count("status"))
-    status = {1: "In progress", 2: "Under revies", 3: "Finished"}
+    status = {1: "In progress", 2: "Under reviews", 3: "Finished"}
     return JsonResponse(
         {status[item["status"]]: item["count"] for item in result.all()}
     )
@@ -50,20 +50,25 @@ def site_stats(request):
     """Returns the page which will display some statistics."""
     nb_finished_surveys = SurveyUser.objects.filter(status=3).count()
     nb_surveys = SurveyUser.objects.count()
-    context = {"nb_surveys": nb_surveys, "nb_finished_surveys": nb_finished_surveys}
+    last_surveys = SurveyUser.objects.filter(status=3).order_by("-created_at")[:10]
+    context = {
+        "nb_surveys": nb_surveys,
+        "nb_finished_surveys": nb_finished_surveys,
+        "last_surveys": last_surveys,
+    }
     return render(request, "admin/site_stats.html", context=context)
 
 
 @login_required
 def compile_translations(request):
     """Triggers the compilation of the translation files in a subprocess."""
-    cmd = " ".join([
+    cmd = [
         sys.exec_prefix + "/bin/python",
         "manage.py",
         "compilemessages",
-    ])
-    result = exec_cmd(cmd)
-    print(result)
+    ]
+    result = exec_cmd(" ".join(cmd))
+    print(result)  # TODO: log the result
     messages.info(request, "Compiled translations files migrated.")
     return HttpResponseRedirect("/admin/")
 
@@ -71,13 +76,13 @@ def compile_translations(request):
 @login_required
 def migrate_database(request):
     """Triggers the execution of the database migration scripts."""
-    cmd = " ".join([
+    cmd = [
         sys.exec_prefix + "/bin/python",
         "manage.py",
         "migrate",
-    ])
-    result = exec_cmd(cmd)
-    print(result)
+    ]
+    result = exec_cmd(" ".join(cmd))
+    print(result)  # TODO: log the result
     messages.info(request, "Database up-to-date.")
     return HttpResponseRedirect("/admin/")
 

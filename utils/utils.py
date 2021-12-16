@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from typing import List, NoReturn
+from typing import List
 import subprocess
 from csskp.settings import PUBLIC_URL, BASE_DIR
 from urllib.parse import urlparse
@@ -28,6 +28,6 @@ def exec_cmd(cmd: str) -> str:
     return result.strip()
 
 
-def exec_cmd_no_wait(cmd: List) -> NoReturn:
+def exec_cmd_no_wait(cmd: List) -> None:
     """Execute a command in a sub process."""
     subprocess.Popen(cmd, stdout=subprocess.PIPE, cwd=BASE_DIR)

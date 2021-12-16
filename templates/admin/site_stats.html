@@ -24,8 +24,34 @@ Some statistics about the current surveys.
 {% block content %}
 <div class="row">
   <div class="col-3">
+    <h2>Main figures</h2>
     <p>Number of surveys: {{ nb_surveys }}</p>
     <p>Number of finished surveys: {{ nb_finished_surveys }}</p>
+  </div>
+</div>
+<div class="row">
+  <div class="col-3">
+    <h2>Last 10 finished surveys</h2>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th scope="col">Survey ID</th>
+          <th scope="col">Creation date</th>
+          <th scope="col">Update date</th>
+          <th scope="col">Choosen language</th>
+        </tr>
+      </thead>
+      <tbody>
+      {% for survey in last_surveys %}
+      <tr>
+        <td><a href="/admin/survey/surveyuser/{{ survey.id }}/change/">{{ survey.user_id }}</a></td>
+        <td>{{ survey.created_at }}</td>
+        <td>{{ survey.updated_at }}</td>
+        <td>{{ survey.choosen_lang }}</td>
+      </tr>
+      {% endfor %}
+      </tbody>
+    </table>
   </div>
 </div>
 <div class="row">
