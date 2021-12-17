@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-12-13 13:33+0000\n"
-"PO-Revision-Date: 2021-12-14 14:22+0000\n"
+"POT-Creation-Date: 2021-12-17 12:17+0000\n"
+"PO-Revision-Date: 2021-12-17 13:23+0100\n"
 "Last-Translator: Juan Rocha <juan.rocha@cases.lu>\n"
 "Language-Team: French <https://translate.monarc.lu/projects/"
 "Fit4Cybersecurity/fit4ilr/fr/>\n"
@@ -17,29 +17,13 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 4.9-dev\n"
+"X-Generator: Poedit 3.0.1\n"
 
-#: csskp/config.py:29
-msgid ""
-"This survey aims to identify the level of maturity of the operators in "
-"Luxembourg with respect to risk management and governance, collaboration on "
-"national and EU level and Incident reporting. We collect the answers to "
-"these 30 questions to understand where guidance and knowledge is already "
-"advanced and where there is room for improvement. As such, it is recommended "
-"that a person is taking this survey that is knowing the company's maturity "
-"on the aforementioned topics well.<br /><br />The survey will be online and "
-"available between December 2021 and March 31st 2022 .After the survey, the "
-"data will be processed and results will be interpreted. However, since the "
-"survey is completely anonymous, we cannot identify you nor your company and "
-"thus deletion of specific records is not possible: we cannot be sure that it "
-"is indeed your survey. The results will be made available through another "
-"channel.<br /><br />If you are not able to do the survey in one go and you "
-"want to later pick up where you have left off, please be sure to save the "
-"link by clicking on the \"continue later\" button. We will not be able to "
-"help you to find your answers again otherwise."
-msgstr ""
+#: csskp/config.py:30 csskp/config_dev.py:30
+msgid "Description of the tool."
+msgstr "Description de l'outil."
 
-#: csskp/config.py:89 csskp/config_dev.py:69
+#: csskp/config.py:70 csskp/config_dev.py:70
 #, python-format
 msgid ""
 "The objective of the self-assessment tool, %(tool_name)s is to assess the "
@@ -77,7 +61,7 @@ msgstr ""
 "part de la nature des données, nous ne pouvons vous identifier. Sauf si par "
 "la suite vous nous contacter pour faire un diagnostic CASES."
 
-#: csskp/config.py:113 csskp/config_dev.py:93
+#: csskp/config.py:94 csskp/config_dev.py:94
 #, python-format
 msgid ""
 "This self-assessment tool is named %(tool_name)s to highlight the "
@@ -101,7 +85,7 @@ msgstr ""
 "Finalement, vous pouvez télécharger ce document qui vous aidera pour "
 "communiquer les résultats à vos fournisseurs si besoin."
 
-#: csskp/config.py:127 csskp/config_dev.py:107
+#: csskp/config.py:108 csskp/config_dev.py:108
 #, python-format
 msgid ""
 "You have achieved %(SCORE)s/100 with your answers. You must reach at least "
@@ -115,101 +99,6 @@ msgstr ""
 "il est entendu que l’ensemble des résultats ne peut en aucune manière être "
 "exhaustif."
 
-#: csskp/config.py:136 data/survey4operators/context-questions.json:10
-msgid "Energy"
-msgstr ""
-
-#: csskp/config.py:137 data/survey4operators/context-questions.json:16
-msgid "Transport"
-msgstr ""
-
-#: csskp/config.py:138 data/survey4operators/context-questions.json:22
-msgid "Banking"
-msgstr ""
-
-#: csskp/config.py:139 data/survey4operators/context-questions.json:28
-msgid "Financial market infrastructure"
-msgstr ""
-
-#: csskp/config.py:140 data/fit4cybersecurity/context-questions.json:58
-#: data/fit4ehealth/context-questions.json:10
-#: data/survey4operators/context-questions.json:34 survey/globals.py:15
-msgid "Health"
-msgstr "Santé"
-
-#: csskp/config.py:141 data/survey4operators/context-questions.json:40
-msgid "Dringking water"
-msgstr ""
-
-#: csskp/config.py:142 data/survey4operators/context-questions.json:46
-msgid "Waste Water"
-msgstr ""
-
-#: csskp/config.py:143 data/survey4operators/context-questions.json:52
-msgid "Digital Infrastructure and Service Providers"
-msgstr ""
-
-#: csskp/config.py:144 data/fit4cybersecurity/context-questions.json:94
-#: data/survey4operators/context-questions.json:58
-msgid "Public Administration"
-msgstr "Administration publique"
-
-#: csskp/config.py:145 data/survey4operators/context-questions.json:64
-msgid "Space"
-msgstr ""
-
-#: csskp/config.py:146 data/survey4operators/context-questions.json:70
-msgid "Postal and Courrier Services"
-msgstr ""
-
-#: csskp/config.py:147 data/survey4operators/context-questions.json:76
-msgid "Waste Management"
-msgstr ""
-
-#: csskp/config.py:148 data/survey4operators/context-questions.json:82
-msgid "Manufacture, production and distribution of chemicals"
-msgstr ""
-
-#: csskp/config.py:149 data/survey4operators/context-questions.json:88
-msgid "Food Production, processing and distribution"
-msgstr ""
-
-#: csskp/config.py:150 data/survey4operators/context-questions.json:94
-msgid "Manufacturing of medical devices"
-msgstr ""
-
-#: csskp/config.py:151 data/survey4operators/context-questions.json:100
-msgid "Manufacture of computer, electronics and optical products"
-msgstr ""
-
-#: csskp/config.py:152 data/survey4operators/context-questions.json:106
-msgid "Manufacture of electrical equipment"
-msgstr ""
-
-#: csskp/config.py:153 data/survey4operators/context-questions.json:112
-msgid "Manufacture of machinery and equipment"
-msgstr ""
-
-#: csskp/config.py:156 data/survey4operators/context-questions.json:127
-msgid "Under 10 employees"
-msgstr ""
-
-#: csskp/config.py:157 data/survey4operators/context-questions.json:133
-msgid "From 10 to 49 employees"
-msgstr ""
-
-#: csskp/config.py:158 data/survey4operators/context-questions.json:139
-msgid "From 50 to 249 employees"
-msgstr ""
-
-#: csskp/config.py:159 data/survey4operators/context-questions.json:145
-msgid "Over 250 employees"
-msgstr ""
-
-#: csskp/config_dev.py:28
-msgid "Description of the tool."
-msgstr "Description de l'outil."
-
 #: data/fit4cybersecurity/context-questions.json:3
 #: data/fit4ehealth/context-questions.json:3
 #: data/survey4operators/context-questions.json:3
@@ -217,146 +106,157 @@ msgid "What is your sector?"
 msgstr "Quel est votre secteur ?"
 
 #: data/fit4cybersecurity/context-questions.json:4
-#: data/fit4cybersecurity/context-questions.json:103
-#: data/fit4cybersecurity/context-questions.json:172
+#: data/fit4cybersecurity/context-questions.json:104
+#: data/fit4cybersecurity/context-questions.json:173
 #: data/fit4ehealth/context-questions.json:4
 #: data/fit4ehealth/context-questions.json:19
 #: data/survey4operators/context-questions.json:4
-#: data/survey4operators/context-questions.json:121
-#: data/survey4operators/context-questions.json:154
-#: data/survey4operators/context-questions.json:187
+#: data/survey4operators/context-questions.json:122
+#: data/survey4operators/context-questions.json:155
+#: data/survey4operators/context-questions.json:188
 msgid "Context"
 msgstr "Contexte"
 
 #: data/fit4cybersecurity/context-questions.json:5
-#: data/fit4cybersecurity/context-questions.json:104
-#: data/fit4cybersecurity/context-questions.json:173
+#: data/fit4cybersecurity/context-questions.json:105
+#: data/fit4cybersecurity/context-questions.json:174
 #: data/fit4ehealth/context-questions.json:5
 #: data/fit4ehealth/context-questions.json:20
 #: data/survey4operators/context-questions.json:5
-#: data/survey4operators/context-questions.json:122
-#: data/survey4operators/context-questions.json:155
-#: data/survey4operators/context-questions.json:188
+#: data/survey4operators/context-questions.json:123
+#: data/survey4operators/context-questions.json:156
+#: data/survey4operators/context-questions.json:189
 msgid "__context"
 msgstr "__context"
 
-#: data/fit4cybersecurity/context-questions.json:10 survey/globals.py:7
+#: data/fit4cybersecurity/context-questions.json:11 survey/globals.py:7
 msgid "Banking, insurance and real estate"
 msgstr "Banque, assurances et immobilier"
 
-#: data/fit4cybersecurity/context-questions.json:16 survey/globals.py:8
+#: data/fit4cybersecurity/context-questions.json:17 survey/globals.py:8
 msgid "Trading, sales and mass distribution"
 msgstr "Commerce, vente et grande distribution"
 
-#: data/fit4cybersecurity/context-questions.json:22 survey/globals.py:9
+#: data/fit4cybersecurity/context-questions.json:23 survey/globals.py:9
 msgid "Marketing, media and multimedia"
 msgstr "Communication, média et multimédia"
 
-#: data/fit4cybersecurity/context-questions.json:28 survey/globals.py:10
+#: data/fit4cybersecurity/context-questions.json:29 survey/globals.py:10
 msgid "Construction industries and civil engineering"
 msgstr "Construction, bâtiment et travaux publics"
 
-#: data/fit4cybersecurity/context-questions.json:34 survey/globals.py:11
+#: data/fit4cybersecurity/context-questions.json:35 survey/globals.py:11
 msgid "Hotel and restoration, tourism and entertainment"
 msgstr "Hôtellerie - restauration, tourisme, loisirs et animation"
 
-#: data/fit4cybersecurity/context-questions.json:40 survey/globals.py:12
+#: data/fit4cybersecurity/context-questions.json:41 survey/globals.py:12
 msgid "Industry"
 msgstr "Industrie"
 
-#: data/fit4cybersecurity/context-questions.json:46 survey/globals.py:13
+#: data/fit4cybersecurity/context-questions.json:47 survey/globals.py:13
 msgid "Installation and maintenance"
 msgstr "Installation et maintenance"
 
-#: data/fit4cybersecurity/context-questions.json:52 survey/globals.py:14
+#: data/fit4cybersecurity/context-questions.json:53 survey/globals.py:14
 msgid "Creation or placing of objects that are artistic and decorative"
 msgstr "Réalisation ou placement d'objets artistiques et décoratifs"
 
-#: data/fit4cybersecurity/context-questions.json:64 survey/globals.py:16
+#: data/fit4cybersecurity/context-questions.json:59
+#: data/fit4ehealth/context-questions.json:10
+#: data/survey4operators/context-questions.json:35 survey/globals.py:15
+msgid "Health"
+msgstr "Santé"
+
+#: data/fit4cybersecurity/context-questions.json:65 survey/globals.py:16
 msgid "Home-Care Service or Community Service"
 msgstr "Services à la personne et à la collectivité"
 
-#: data/fit4cybersecurity/context-questions.json:70 survey/globals.py:17
+#: data/fit4cybersecurity/context-questions.json:71 survey/globals.py:17
 msgid "Shows"
 msgstr "Spectacle"
 
-#: data/fit4cybersecurity/context-questions.json:76 survey/globals.py:18
+#: data/fit4cybersecurity/context-questions.json:77 survey/globals.py:18
 msgid "Company Support"
 msgstr "Support à l'entreprise"
 
-#: data/fit4cybersecurity/context-questions.json:82 survey/globals.py:19
+#: data/fit4cybersecurity/context-questions.json:83 survey/globals.py:19
 msgid "Transport and Logistics"
 msgstr "Transport et logistique"
 
-#: data/fit4cybersecurity/context-questions.json:88 survey/globals.py:20
+#: data/fit4cybersecurity/context-questions.json:89 survey/globals.py:20
 msgid "Farming and fishing, natural spaces and green spaces, animal care"
 msgstr ""
 "Agriculture et pêche, espaces naturels et espaces verts, soins aux animaux"
 
-#: data/fit4cybersecurity/context-questions.json:102
-#: data/survey4operators/context-questions.json:120
+#: data/fit4cybersecurity/context-questions.json:95
+#: data/survey4operators/context-questions.json:59
+msgid "Public Administration"
+msgstr "Administration publique"
+
+#: data/fit4cybersecurity/context-questions.json:103
+#: data/survey4operators/context-questions.json:121
 msgid "How many employees?"
 msgstr "Combien d'employés ?"
 
-#: data/fit4cybersecurity/context-questions.json:109
+#: data/fit4cybersecurity/context-questions.json:110
 msgid "1-5"
 msgstr "1-5"
 
-#: data/fit4cybersecurity/context-questions.json:115
+#: data/fit4cybersecurity/context-questions.json:116
 msgid "6-10"
 msgstr "6-10"
 
-#: data/fit4cybersecurity/context-questions.json:121
+#: data/fit4cybersecurity/context-questions.json:122
 msgid "10-20"
 msgstr "10-20"
 
-#: data/fit4cybersecurity/context-questions.json:127
+#: data/fit4cybersecurity/context-questions.json:128
 msgid "20-50"
 msgstr "20-50"
 
-#: data/fit4cybersecurity/context-questions.json:133
+#: data/fit4cybersecurity/context-questions.json:134
 msgid "50-100"
 msgstr "50-100"
 
-#: data/fit4cybersecurity/context-questions.json:139
+#: data/fit4cybersecurity/context-questions.json:140
 msgid "100-200"
 msgstr "100-200"
 
-#: data/fit4cybersecurity/context-questions.json:145
+#: data/fit4cybersecurity/context-questions.json:146
 msgid "200-500"
 msgstr "200-500"
 
-#: data/fit4cybersecurity/context-questions.json:151
+#: data/fit4cybersecurity/context-questions.json:152
 msgid "500-1000"
 msgstr "500-1000"
 
-#: data/fit4cybersecurity/context-questions.json:157
+#: data/fit4cybersecurity/context-questions.json:158
 msgid "1000-5000"
 msgstr "1000-5000"
 
-#: data/fit4cybersecurity/context-questions.json:163
+#: data/fit4cybersecurity/context-questions.json:164
 msgid "5000+"
 msgstr "5000+"
 
-#: data/fit4cybersecurity/context-questions.json:171
-#: data/survey4operators/context-questions.json:153
+#: data/fit4cybersecurity/context-questions.json:172
+#: data/survey4operators/context-questions.json:154
 msgid "What is your country?"
 msgstr "Quel est votre pays ?"
 
-#: data/fit4cybersecurity/context-questions.json:178
+#: data/fit4cybersecurity/context-questions.json:179
 #: data/fit4ehealth/context-questions.json:25
 msgid "Luxembourg"
 msgstr "Luxembourg"
 
-#: data/fit4cybersecurity/context-questions.json:184
+#: data/fit4cybersecurity/context-questions.json:185
 msgid "Germany"
 msgstr "Allemagne"
 
-#: data/fit4cybersecurity/context-questions.json:190
+#: data/fit4cybersecurity/context-questions.json:191
 msgid "Belgium"
 msgstr "Belgique"
 
-#: data/fit4cybersecurity/context-questions.json:196
+#: data/fit4cybersecurity/context-questions.json:197
 msgid "France"
 msgstr "France"
 
@@ -1691,31 +1591,22 @@ msgid "Organisational Awareness"
 msgstr ""
 
 #: data/fit4ehealth/questions.json:5
-#| msgid "In the company, rules are"
 msgid "In the establishment, rules are"
 msgstr ""
 
 #: data/fit4ehealth/questions.json:23
-#| msgid "The company should define rules in order to avoid misunderstandings."
 msgid ""
 "The company should define rules in order to avoid misunderstandings. Here "
 "some tips to do in order to have some:"
 msgstr ""
 
 #: data/fit4ehealth/questions.json:40
-#| msgid ""
-#| "Rules (organisational, IT or working ones) should be known and explained "
-#| "to everyone, at the very least orally."
 msgid ""
 "Rules (organizational, IT or working ones) should be known and explained to "
 "everyone, at the very least orally."
 msgstr ""
 
 #: data/fit4ehealth/questions.json:57
-#| msgid ""
-#| "If an oral transmission could be enough for a small company, rules should "
-#| "still be written in a charter, read and signed by everyone, very "
-#| "important if the company grows."
 msgid ""
 "Even if an oral transmission could be enough for a small doctor’s practice, "
 "rules should still be written in a charter, read and signed by everyone, "
@@ -1723,24 +1614,23 @@ msgid ""
 msgstr ""
 
 #: data/fit4ehealth/questions.json:66
-#| msgid "read and signed by everyone, in a user charter"
 msgid "read and signed by everyone, in a cabinet/practice charter or similar"
 msgstr ""
 
 #: data/fit4ehealth/questions.json:74
+#, fuzzy
 #| msgid ""
 #| "Besides, written rules can :<ul><li>avoid to forget some points</"
 #| "li><li>have a legal proof if the rules have been read.</li></ul>"
 msgid ""
-"Written rules can:\n"
-"\t- avoid to forget relevant points and can be consulted at any time;\n"
-"\t- have a legal proof if the rules have been read."
+"Written rules can :<ul><li>avoid to forget relevant points and can be "
+"consulted at any time</li><li>have a legal proof if the rules have been read."
+"</li></ul>"
 msgstr ""
+"Les règles écrites et signées ont l'avantage :<ul><li> d'éviter les oublis.</"
+"li><li>d'avoir une preuve juridique que les règles sont connues.</li></ul>"
 
 #: data/fit4ehealth/questions.json:91
-#| msgid ""
-#| "Each time when it's possible, some advice or some best practices should "
-#| "be given, and sometime explained."
 msgid ""
 "Each time when it's possible, some advice or some best practices should be "
 "given and explained."
@@ -1786,7 +1676,6 @@ msgid ""
 msgstr ""
 
 #: data/fit4ehealth/questions.json:149
-#| msgid "Data Breaches"
 msgid "Data Transfer"
 msgstr ""
 
@@ -1882,12 +1771,10 @@ msgid "Employee Management in Your Cabinet or Practice"
 msgstr ""
 
 #: data/fit4ehealth/questions.json:272
-#| msgid "Employees are trained for/in"
 msgid "All working professionals are trained for/in"
 msgstr ""
 
 #: data/fit4ehealth/questions.json:282
-#| msgid "the software they daily use"
 msgid "the software they use on a regular basis"
 msgstr ""
 
@@ -1899,18 +1786,12 @@ msgid ""
 msgstr ""
 
 #: data/fit4ehealth/questions.json:299
-#| msgid ""
-#| "information security, to have the knowledge to protect themselves against "
-#| "attacks"
 msgid ""
 "information security, to have the knowledge to protect themselves against "
 "attacks or information security issues"
 msgstr ""
 
 #: data/fit4ehealth/questions.json:307
-#| msgid ""
-#| "By informing about attacks that are current, common or well-known, "
-#| "employees could more easily identify them and avoid falling for them."
 msgid ""
 "By informing about attacks that are current, common or well known, employees "
 "could more easily identify them and avoid being affected by them."
@@ -1921,9 +1802,6 @@ msgid "the importance of correctly managing and protecting personal data"
 msgstr ""
 
 #: data/fit4ehealth/questions.json:324
-#| msgid ""
-#| "Train users on the sensitivity of the manipulated information, in order "
-#| "to put their attention on how to protect them."
 msgid ""
 "Train users on the sensitivity of the processed information, in order to put "
 "their attention on how to protect these data."
@@ -1938,7 +1816,6 @@ msgid "Responsibilities"
 msgstr ""
 
 #: data/fit4ehealth/questions.json:342
-#| msgid "IT and Information Security responsibilities are"
 msgid "IT and Information security tasks are:"
 msgstr ""
 
@@ -1951,10 +1828,6 @@ msgid "internally performed by someone at ease with computers"
 msgstr ""
 
 #: data/fit4ehealth/questions.json:369 data/fit4ehealth/questions.json:386
-#| msgid ""
-#| "It's important to define responsibilities, either externally or "
-#| "internally, with one person or more, or a company, but specialised into "
-#| "their own domain, with possibly a training."
 msgid ""
 "It's important to define responsibilities, either externally or internally, "
 "with one or more persons, or a company, but specialized into their own "
@@ -1968,7 +1841,6 @@ msgid ""
 msgstr ""
 
 #: data/fit4ehealth/questions.json:395
-#| msgid "externally defined, with a contract"
 msgid "externally by a third party with a contract"
 msgstr ""
 
@@ -1977,17 +1849,12 @@ msgid "Mobility"
 msgstr ""
 
 #: data/fit4ehealth/questions.json:404
-#| msgid "During any trip outside the company, the employee uses"
 msgid ""
 "During any work/visit outside the establishment, the medical professional "
 "uses"
 msgstr ""
 
 #: data/fit4ehealth/questions.json:414
-#| msgid ""
-#| "no professional tools because home office or travel is not allowed or "
-#| "necessary, or the only connection to the internal network is on the "
-#| "company premises"
 msgid ""
 "no professional tools/devices because home office or visits are not allowed "
 "or necessary, or the only connection to the internal network is on the "
@@ -1995,37 +1862,24 @@ msgid ""
 msgstr ""
 
 #: data/fit4ehealth/questions.json:422
-#| msgid ""
-#| "For now, no contracts with third parties are signed. If it's changed, "
-#| "it's important to:"
 msgid ""
 "For now, no outside work is done. If it's changed, it's important to take "
 "care that:"
 msgstr ""
 
 #: data/fit4ehealth/questions.json:429 data/fit4ehealth/questions.json:465
-#| msgid ""
-#| "External connection which is not controlled and monitored should be "
-#| "avoided to avoid data loss."
 msgid ""
 "External connection which is not controlled and monitored should be avoided "
 "to avoid data theft."
 msgstr ""
 
 #: data/fit4ehealth/questions.json:438
-#| msgid ""
-#| "VPN (Virtual Private Network) is used to encrypt all data from any "
-#| "external network to the internal server"
 msgid ""
 "VPN (Virtual Private Network) to encrypt all data from any external network "
 "to the internal server of the establishment"
 msgstr ""
 
 #: data/fit4ehealth/questions.json:447
-#| msgid ""
-#| "Whenever users have the need to work outside, from home office to "
-#| "missions outside the premises, they must have a VPN connection to connect "
-#| "to the server."
 msgid ""
 "Whenever users have the need to work outside, from home office or other "
 "missions outside the premises, they must have a VPN connection to connect to "
@@ -2033,18 +1887,12 @@ msgid ""
 msgstr ""
 
 #: data/fit4ehealth/questions.json:456
-#| msgid ""
-#| "public Wi-Fi, open networks or connection protected by external "
-#| "organisation or person"
 msgid ""
 "Public Internet, Wi-Fi, open networks or connection protected by external "
 "organizations or individuals"
 msgstr ""
 
 #: data/fit4ehealth/questions.json:474
-#| msgid ""
-#| "a private connection or a connection sharing from a private or "
-#| "professional smartphone (tethering/hotspot)"
 msgid ""
 "a private connection or connection sharing from a private or professional "
 "smartphone (tethering/hotspot)"
@@ -2057,9 +1905,6 @@ msgid ""
 msgstr ""
 
 #: data/fit4ehealth/questions.json:492
-#| msgid ""
-#| "a screen filter or adjusts their position to ensure that no unauthorised "
-#| "person could see what is on the screen"
 msgid ""
 "a screen filter or adjusts their position to ensure that no unauthorized "
 "person could see what is on the screen of their mobile device (tablet or "
@@ -2067,18 +1912,12 @@ msgid ""
 msgstr ""
 
 #: data/fit4ehealth/questions.json:509
-#| msgid ""
-#| "devices that are encrypted (protected by a password at boot) or without "
-#| "any confidential data"
 msgid ""
 "mobile devices that are encrypted (protected by a password at startup) or "
 "without any confidential data"
 msgstr ""
 
 #: data/fit4ehealth/questions.json:517
-#| msgid ""
-#| "Devices that are taken away and that contains confidential data should "
-#| "always have their internal memory encrypted to avoid data loss."
 msgid ""
 "Devices that are taken away and that contain confidential data should always "
 "have their internal memory encrypted to avoid data theft."
@@ -2097,14 +1936,10 @@ msgid ""
 msgstr ""
 
 #: data/fit4ehealth/questions.json:546
-#| msgid "Contracts (SLA/NDA)"
 msgid "Contracts"
 msgstr ""
 
 #: data/fit4ehealth/questions.json:558
-#| msgid ""
-#| "are not defined, because they only come punctually in case of an incident "
-#| "or needs"
 msgid ""
 "are not defined, because they only come in case of an incident or specific "
 "needs"
@@ -2143,17 +1978,12 @@ msgid ""
 msgstr ""
 
 #: data/fit4ehealth/questions.json:609
-#| msgid "define the maximum time of intervention after an incident"
 msgid ""
 "define the maximum time until intervention needs to be performed after an "
 "incident"
 msgstr ""
 
 #: data/fit4ehealth/questions.json:617
-#| msgid ""
-#| "If means and needs permit it, a contract should be signed to ensure that "
-#| "the external IT provider will ensure the availability of system to remain "
-#| "operational."
 msgid ""
 "If means and needs permit it, a contract should be signed to ensure that the "
 "external IT provider will ensure the availability of system to remain "
@@ -2161,12 +1991,6 @@ msgid ""
 msgstr ""
 
 #: data/fit4ehealth/questions.json:634
-#| msgid ""
-#| "It's necessary to review the contracts to ensuring a certain "
-#| "availability :<ul><li>not having an intervention solution whenever it's "
-#| "essential</li><li>to not pay too much for a service which is not "
-#| "necessary</li><li>to evaluate if the services paid are satisfying the "
-#| "necessary</li></ul>"
 msgid ""
 "It's necessary to review the contracts to ensure:\n"
 "\t- having an intervention solution whenever it is essential\n"
@@ -2187,7 +2011,6 @@ msgid ""
 msgstr ""
 
 #: data/fit4ehealth/questions.json:660
-#| msgid "They are not written."
 msgid "are in written form"
 msgstr ""
 
@@ -2198,17 +2021,14 @@ msgid ""
 msgstr ""
 
 #: data/fit4ehealth/questions.json:675
-#| msgid "Office Cleaning"
 msgid "Cleaning"
 msgstr ""
 
 #: data/fit4ehealth/questions.json:677
-#| msgid "The office cleaning is done"
 msgid "The establishment cleaning is done"
 msgstr ""
 
 #: data/fit4ehealth/questions.json:687
-#| msgid "internally, by employees, punctually"
 msgid "internally, by our employees"
 msgstr ""
 
@@ -2229,39 +2049,30 @@ msgid ""
 msgstr ""
 
 #: data/fit4ehealth/questions.json:728
-#| msgid "during the work time"
 msgid "during the working hours of the establishment"
 msgstr ""
 
 #: data/fit4ehealth/questions.json:736
-#| msgid ""
-#| "The office cleaning should be done, whenever possible, during work time "
-#| "to avoid potential data theft."
 msgid ""
 "The office cleaning should be done, whenever possible, during work time to "
 "avoid potential data or material theft."
 msgstr ""
 
 #: data/fit4ehealth/questions.json:745
-#| msgid "with rules of what should be done and what should not be done"
 msgid "with clear rules of what should be done and what shouldn't be done"
 msgstr ""
 
 #: data/fit4ehealth/questions.json:753
-#| msgid ""
-#| "Rules should be given mainly to specify what should be done or avoided."
 msgid ""
 "Rules should be given mainly to specify what should be done or avoided, as "
 "misunderstandings can happen."
 msgstr ""
 
 #: data/fit4ehealth/questions.json:762
-#| msgid "with a contract which specifies confidentiality"
 msgid "with a contract which specifies medical confidentiality"
 msgstr ""
 
 #: data/fit4ehealth/questions.json:779
-#| msgid "with all confidential documents locked in a room, a desk or a closet"
 msgid ""
 "with all confidential documents locked away in a room, a desk or a closet"
 msgstr ""
@@ -2333,12 +2144,10 @@ msgid ""
 msgstr ""
 
 #: data/fit4ehealth/questions.json:906
-#| msgid "Cybersecurity"
 msgid "Physical Security"
 msgstr ""
 
 #: data/fit4ehealth/questions.json:907
-#| msgid "Logical Access"
 msgid "Physical Access"
 msgstr ""
 
@@ -2434,8 +2243,6 @@ msgid ""
 msgstr ""
 
 #: data/fit4ehealth/questions.json:1067
-#| msgid ""
-#| "not having requirements or guidelines, employees are left on their own"
 msgid ""
 "not having requirements or guidelines, employees can manage them as they "
 "prefer"
@@ -2448,40 +2255,28 @@ msgid ""
 msgstr ""
 
 #: data/fit4ehealth/questions.json:1089
-#| msgid ""
-#| "Passwords should be kept secret and personal. Each and everyone should "
-#| "access their data by using their password, even from the computer of "
-#| "someone else."
 msgid ""
 "Each and everyone should access their data by using their password, even "
 "from the computer of someone else."
 msgstr ""
 
 #: data/fit4ehealth/questions.json:1096 data/fit4ehealth/questions.json:1216
-#| msgid ""
-#| "It's mandatory to be careful with the password storage in the internet "
-#| "browser as they are not protected."
 msgid ""
 "It's mandatory to be careful with the password storage in the internet "
 "browsers as they are not protected well."
 msgstr ""
 
 #: data/fit4ehealth/questions.json:1156
-#| msgid "not forming any words or dates"
 msgid "not forming any words or dates, or are complete sentences"
 msgstr ""
 
 #: data/fit4ehealth/questions.json:1181
-#| msgid ""
-#| "Passwords should be changed from time to time, to prevent serious "
-#| "consequences in case of a leak."
 msgid ""
 "Passwords should be changed from time to time, to prevent serious "
 "consequences in case of a leak or data theft."
 msgstr ""
 
 #: data/fit4ehealth/questions.json:1208
-#| msgid "included in web browsers"
 msgid "saved in web browsers"
 msgstr ""
 
@@ -2530,19 +2325,14 @@ msgid ""
 msgstr ""
 
 #: data/fit4ehealth/questions.json:1307
-#| msgid "Wireless networks"
 msgid "Wireless access"
 msgstr ""
 
 #: data/fit4ehealth/questions.json:1319
-#| msgid "are not used in the company"
 msgid "are not used in the establishment at all"
 msgstr ""
 
 #: data/fit4ehealth/questions.json:1327
-#| msgid ""
-#| "For now, the personal devices are not connected in the local network. If "
-#| "it's changed, it's important to:"
 msgid ""
 "For now, wireless network isn't activated in the company. If it is changed, "
 "it's important to:"
@@ -2553,8 +2343,6 @@ msgid "are closed and for professional use only"
 msgstr ""
 
 #: data/fit4ehealth/questions.json:1357
-#| msgid ""
-#| "are given to everyone, without any way to get identity of the persons"
 msgid ""
 "are given to everyone, without checking the identity of the user that "
 "connects to it"
@@ -2571,24 +2359,18 @@ msgid ""
 msgstr ""
 
 #: data/fit4ehealth/questions.json:1430
-#| msgid "Anti-virus"
 msgid "Antivirus"
 msgstr ""
 
 #: data/fit4ehealth/questions.json:1493
-#| msgid "is activated and protects computers"
 msgid "is activated and protects computer"
 msgstr ""
 
 #: data/fit4ehealth/questions.json:1510
-#| msgid "is installed on all mobile phones that are on networks"
 msgid "is installed on all mobile phones that are on network"
 msgstr ""
 
 #: data/fit4ehealth/questions.json:1518
-#| msgid ""
-#| "All devices, like smartphones, tablets should have an anti-virus, even if "
-#| "it's the one by default from the operating system."
 msgid ""
 " All devices, like smartphones, tablets should have an anti-virus, even if "
 "it is the one by default from the operating system."
@@ -2610,33 +2392,21 @@ msgid "Information Systems within the Establishment"
 msgstr ""
 
 #: data/fit4ehealth/questions.json:1571
-#| msgid ""
-#| "left without any rules, and users have to take care of their on "
-#| "workstations"
 msgid "used without any specific rules and users have to take care of them"
 msgstr ""
 
 #: data/fit4ehealth/questions.json:1579
-#| msgid ""
-#| "Some rules and specific advice should be given concerning users stations "
-#| "or laptop. Some points that are important:"
 msgid ""
 "Some rules and specific advice should be given concerning users workstations "
 "or laptops. Some points that are important:"
 msgstr ""
 
 #: data/fit4ehealth/questions.json:1588
-#| msgid "automatically or manually updated; software and operating system"
 msgid ""
 "automatically or manually updated regarding the software and operating system"
 msgstr ""
 
 #: data/fit4ehealth/questions.json:1596
-#| msgid ""
-#| "A device should always be up to date in order to avoid security problems, "
-#| "and also avoid network intrusion. Many operating system now update "
-#| "automatically, but installed software needs some permission to be given "
-#| "or manual maintenance."
 msgid ""
 "A device should always be up to date in order to avoid security problems, "
 "and also avoid network intrusion. Many operating systems now update "
@@ -2645,28 +2415,18 @@ msgid ""
 msgstr ""
 
 #: data/fit4ehealth/questions.json:1605
-#| msgid ""
-#| "controlled by administrators, which won't let users install software "
-#| "because they do not have administrator rights"
 msgid ""
 "controlled by one or more administrators, which won't let users install "
 "software because they do not have administrator right"
 msgstr ""
 
 #: data/fit4ehealth/questions.json:1613
-#| msgid ""
-#| "Administrator rights should be left only to the users who are specialised "
-#| "in IT, or welladvised respecting the rules."
 msgid ""
 "Administrator rights should be left only to the users who are specialised in "
 "IT, or well advised respecting the rules."
 msgstr ""
 
 #: data/fit4ehealth/questions.json:1622
-#| msgid ""
-#| "needed to comply with rules or guidelines about installation and "
-#| "downloading software, concerning illegality or the danger to install "
-#| "something without authorisation"
 msgid ""
 "needed to comply with rules or guidelines about installation and downloading "
 "software, concerning illegal or dangerous activities  e.g. installing "
@@ -2674,9 +2434,6 @@ msgid ""
 msgstr ""
 
 #: data/fit4ehealth/questions.json:1630
-#| msgid ""
-#| "Downloads should only be done from the official websites, the original "
-#| "developers of the software, to avoid illegal download or infections."
 msgid ""
 "Downloads should only be done from the official websites, the original "
 "developers of the software, to avoid manipulated download files or "
@@ -2727,9 +2484,6 @@ msgid "tested by me sometimes"
 msgstr ""
 
 #: data/fit4ehealth/questions.json:1746
-#| msgid ""
-#| "Backups should be tested from time to time, just to ensure that the data "
-#| "is readable and has integrity."
 msgid ""
 "Backups should be tested (restored) from time to time, just to ensure that "
 "the data is readable and has integrity."
@@ -2747,10 +2501,6 @@ msgid ""
 msgstr ""
 
 #: data/fit4ehealth/questions.json:1810
-#| msgid ""
-#| "Personal devices shouldn't be used in company without any controls, rules "
-#| "and explanations. By knowing all the different existing ways to attack an "
-#| "organism, it's possible to avoid them."
 msgid ""
 " Personal devices shouldn't be used in company without any controls, rules "
 "and explanations. By knowing all the different existing ways to attack an "
@@ -2758,8 +2508,6 @@ msgid ""
 msgstr ""
 
 #: data/fit4ehealth/questions.json:1844
-#| msgid ""
-#| "Defining rules and best practices helps to protect the internal networks."
 msgid ""
 "Defining rules and best practices help to protect the internal networks."
 msgstr ""
@@ -4479,35 +4227,114 @@ msgstr ""
 "la sécurité de l'information et la protection des données sont-elles écrites "
 "et connues par vos employés?"
 
-#: data/survey4operators/context-questions.json:160
+#: data/survey4operators/context-questions.json:11
+msgid "Energy"
+msgstr ""
+
+#: data/survey4operators/context-questions.json:17
+msgid "Transport"
+msgstr ""
+
+#: data/survey4operators/context-questions.json:23
+msgid "Banking"
+msgstr ""
+
+#: data/survey4operators/context-questions.json:29
+msgid "Financial market infrastructure"
+msgstr ""
+
+#: data/survey4operators/context-questions.json:41
+msgid "Dringking water"
+msgstr ""
+
+#: data/survey4operators/context-questions.json:47
+msgid "Waste Water"
+msgstr ""
+
+#: data/survey4operators/context-questions.json:53
+msgid "Digital Infrastructure and Service Providers"
+msgstr ""
+
+#: data/survey4operators/context-questions.json:65
+msgid "Space"
+msgstr ""
+
+#: data/survey4operators/context-questions.json:71
+msgid "Postal and Courrier Services"
+msgstr ""
+
+#: data/survey4operators/context-questions.json:77
+msgid "Waste Management"
+msgstr ""
+
+#: data/survey4operators/context-questions.json:83
+msgid "Manufacture, production and distribution of chemicals"
+msgstr ""
+
+#: data/survey4operators/context-questions.json:89
+msgid "Food Production, processing and distribution"
+msgstr ""
+
+#: data/survey4operators/context-questions.json:95
+msgid "Manufacturing of medical devices"
+msgstr ""
+
+#: data/survey4operators/context-questions.json:101
+msgid "Manufacture of computer, electronics and optical products"
+msgstr ""
+
+#: data/survey4operators/context-questions.json:107
+msgid "Manufacture of electrical equipment"
+msgstr ""
+
+#: data/survey4operators/context-questions.json:113
+msgid "Manufacture of machinery and equipment"
+msgstr ""
+
+#: data/survey4operators/context-questions.json:128
+msgid "Under 10 employees"
+msgstr ""
+
+#: data/survey4operators/context-questions.json:134
+msgid "From 10 to 49 employees"
+msgstr ""
+
+#: data/survey4operators/context-questions.json:140
+msgid "From 50 to 249 employees"
+msgstr ""
+
+#: data/survey4operators/context-questions.json:146
+msgid "Over 250 employees"
+msgstr ""
+
+#: data/survey4operators/context-questions.json:161
 msgid "In the EU"
 msgstr ""
 
-#: data/survey4operators/context-questions.json:166
+#: data/survey4operators/context-questions.json:167
 msgid "Outside of the EU but within EEA"
 msgstr ""
 
-#: data/survey4operators/context-questions.json:172
+#: data/survey4operators/context-questions.json:173
 msgid "Outside of the EEA"
 msgstr ""
 
-#: data/survey4operators/context-questions.json:178
-#| msgid "Luxembourg"
+#: data/survey4operators/context-questions.json:179
 msgid "Just in Luxembourg"
 msgstr ""
 
-#: data/survey4operators/context-questions.json:186
+#: data/survey4operators/context-questions.json:187
 msgid ""
 "If your company part of a bigger international company or group with its "
 "headquarters outside of Luxembourg?"
 msgstr ""
 
-#: data/survey4operators/context-questions.json:193
+#: data/survey4operators/context-questions.json:194
 #: templates/survey/leaveSurvey.html:11
 msgid "Yes"
 msgstr "Oui"
 
-#: data/survey4operators/context-questions.json:199
+#: data/survey4operators/context-questions.json:200
 #: templates/survey/leaveSurvey.html:15
 msgid "No"
 msgstr "Non"
@@ -4517,7 +4344,6 @@ msgid "What is the risk management culture in your company?"
 msgstr ""
 
 #: data/survey4operators/questions.json:11
-#| msgid "Never or not really."
 msgid "We do not really have one."
 msgstr ""
 
@@ -4572,7 +4398,6 @@ msgstr ""
 #: data/survey4operators/questions.json:849
 #: data/survey4operators/questions.json:941
 #: data/survey4operators/questions.json:1059
-#| msgid "not described"
 msgid "Please describe:"
 msgstr ""
 
@@ -4637,7 +4462,6 @@ msgid "None and not needed nor desired."
 msgstr ""
 
 #: data/survey4operators/questions.json:243
-#| msgid "None, but we have some contracts."
 msgid "None, but we would love some support."
 msgstr ""
 
@@ -4704,7 +4528,6 @@ msgstr ""
 
 #: data/survey4operators/questions.json:393
 #: data/survey4operators/questions.json:451
-#| msgid "Recommendations"
 msgid "Telecom regulations."
 msgstr ""
 
@@ -4901,7 +4724,6 @@ msgstr ""
 
 #: data/survey4operators/questions.json:807
 #: data/survey4operators/questions.json:1025
-#| msgid "None whatsoever."
 msgid "None of the above."
 msgstr ""
 
@@ -5181,26 +5003,26 @@ msgid ""
 "A single reporting platform to report incidents to multiple authorities."
 msgstr ""
 
-#: survey/forms.py:61
+#: survey/forms.py:55
 msgid "You need to choose at least one answer"
 msgstr "Vous devez choisir au moins une réponse"
 
-#: survey/forms.py:102 survey/forms.py:177
+#: survey/forms.py:96 survey/forms.py:171
 #: templates/survey/finishedSurvey.html:151
 #: templates/survey/finishedSurvey.html:158 templates/survey/review.html:40
 msgid "Your feedback"
 msgstr "Vos retours"
 
-#: survey/forms.py:104 survey/forms.py:179
+#: survey/forms.py:98 survey/forms.py:173
 msgid "Please let us know if anything is missing"
 msgstr "S'il vous plaît laissez-nous savoir si quelque chose est manquant"
 
-#: survey/forms.py:139
+#: survey/forms.py:133
 msgid "You can't choose multiple answers if the answer {} is choosen."
 msgstr ""
 "Vous ne pouvez pas choisir plusieurs réponses si la réponse {} est choisie."
 
-#: survey/forms.py:154
+#: survey/forms.py:148
 msgid "You can't choose the answers {} if answer '{}' is choosen."
 msgstr ""
 "Vous ne pouvez pas choisir plusieurs réponses {} si la réponse {} est "
@@ -5210,44 +5032,40 @@ msgstr ""
 msgid "Public administration"
 msgstr "Administration publique"
 
-#: survey/report.py:51
+#: survey/report.py:50
 msgid "Final report"
 msgstr "Rapport final"
 
-#: survey/viewLogic.py:57
+#: survey/viewLogic.py:58
 msgid "Let's start"
 msgstr "Commençons"
 
-#: survey/viewLogic.py:250
+#: survey/viewLogic.py:222
 msgid "Question"
 msgstr "Question"
 
-#: survey/views.py:124
+#: survey/views.py:125
 msgid "To generate a report you have to finish the survey."
 msgstr "Pour générer un rapport vous devez finir l'enquête."
 
-#: survey/views.py:192
+#: survey/views.py:193
 msgid "Answers review"
 msgstr "Votre aperçu des réponses"
 
-#: survey/views.py:229
+#: survey/views.py:228
 msgid "Final summary"
 msgstr "Résumé final"
 
-#: survey/views.py:262
+#: survey/views.py:261
 msgid ""
 "We could not find a survey with the requested key, please start a new one."
 msgstr ""
 "Nous n'avons pas pu trouver un sondage avec la clé demandée, veuillez en "
 "commencer un nouveau."
 
-#: survey/views.py:292
+#: survey/views.py:291
 msgid "Feedback sending errors: "
 msgstr "Erreurs d'envoi du retour d'information : "
-
-#: templates/admin/translations.html:5
-msgid "Home"
-msgstr ""
 
 #: templates/parts/footer_part.html:8 templates/parts/footer_part.html:9
 msgid "A service provided by CASES.LU"
@@ -5621,8 +5439,8 @@ msgstr "Votre adresse électronique ne sera pas conservée."
 
 #: templates/survey/start.html:21
 msgid ""
-"We need this information to be able to give you useful recommendations, "
-"once the self-assessment is done."
+"We need this information to be able to give you useful recommendations, once "
+"the self-assessment is done."
 msgstr ""
 "Nous avons besoin de quelques informations pour pouvoir vous faire des "
 "recommandations utiles, une fois l’auto-évaluation terminée."
