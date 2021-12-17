@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-12-17 12:17+0000\n"
+"POT-Creation-Date: 2021-12-17 13:34+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,50 +19,6 @@ msgstr ""
 
 #: csskp/config.py:30 csskp/config_dev.py:30
 msgid "Description of the tool."
-msgstr ""
-
-#: csskp/config.py:70 csskp/config_dev.py:70
-#, python-format
-msgid ""
-"The objective of the self-assessment tool, %(tool_name)s is to assess the "
-"maturity of an organization in terms of applicable good practices in the "
-"field of information security.<br /><br />This document, based on the "
-"%(tool_name)s, is for the exclusive use of the customer. It is in this "
-"respect confidential.<br /><br />In view of the methodology used and the "
-"fact that it is a self-assessment, it is understood that the overall results "
-"can not in any way be exhaustive. As such, the actual risk assessment or the "
-"list of identified risks and vulnerabilities are based on the information "
-"provided by the client. The analysis resulting from this assessment can "
-"engage only the customer for any omission or error that would be due to "
-"third parties or not.<br /><br />The tool, %(tool_name)s can possibly "
-"provide recommendations. It is understood by the client that the "
-"recommendations are neither exclusive nor exhaustive.<br /><br />It should "
-"also be noted that the information you have provided to us will be recorded "
-"for statistical reasons. Due to the nature of the data, we can not identify "
-"you. Unless you later contact us to do a Diagnostic CASES."
-msgstr ""
-
-#: csskp/config.py:94 csskp/config_dev.py:94
-#, python-format
-msgid ""
-"This self-assessment tool is named %(tool_name)s to highlight the "
-"introduction to information security. It is also a prerequisite for doing a "
-"CASES Diagnostic: a minimum score of %(minimal_acceptable_score)s/100 is "
-"required. The purpose for this restriction gives us the opportunity to "
-"better tailor the recommendations to your organization during the Diagnostic."
-"<br /><br />During this self-assessment multiple choice questions were "
-"asked. After analyzing your answers, recommendations have been provided.<br /"
-"><br />Finally, you can download a report, which will help you to "
-"communicate the results to your suppliers, if necessary."
-msgstr ""
-
-#: csskp/config.py:108 csskp/config_dev.py:108
-#, python-format
-msgid ""
-"You have achieved %(SCORE)s/100 with your answers. You must reach at least "
-"%(minimal_acceptable_score)s/100 to be able to make a CASES Diagnosis.<br /"
-"><br />We remind you that this is a self-assessment and it is important to "
-"understand that all the results can not in any way be exhaustive."
 msgstr ""
 
 #: data/fit4cybersecurity/context-questions.json:3
@@ -1282,7 +1238,7 @@ msgstr ""
 
 #: data/fit4ehealth/questions.json:74
 msgid ""
-"Written rules can :<ul><li>avoid to forget relevant points and can be "
+"Written rules can:<ul><li>avoid to forget relevant points and can be "
 "consulted at any time</li><li>have a legal proof if the rules have been read."
 "</li></ul>"
 msgstr ""
@@ -2029,8 +1985,8 @@ msgstr ""
 
 #: data/fit4ehealth/questions.json:1518
 msgid ""
-" All devices, like smartphones, tablets should have an anti-virus, even if "
-"it is the one by default from the operating system."
+"All devices, like smartphones, tablets should have an anti-virus, even if it "
+"is the one by default from the operating system."
 msgstr ""
 
 #: data/fit4ehealth/questions.json:1535
@@ -2159,7 +2115,7 @@ msgstr ""
 
 #: data/fit4ehealth/questions.json:1810
 msgid ""
-" Personal devices shouldn't be used in company without any controls, rules "
+"Personal devices shouldn't be used in company without any controls, rules "
 "and explanations. By knowing all the different existing ways to attack an "
 "organization, it's possible to avoid them."
 msgstr ""
@@ -2548,12 +2504,12 @@ msgstr ""
 
 #: data/fit4privacy/questions.json:340
 msgid ""
-"Your company should consider informing all types of data subjects whose data "
+" should consider informing all types of data subjects whose data "
 "it processes, of the existence of the processing, the conditions you put in "
 "place to protect their data, and their rights over their data. In relation "
 "to your employees or trainees, you should be transparent about the personal "
 "data processed at the time of hiring (for example, by updating\n"
-"  work or internship contracts), but also for the duration of their contract "
+" work or internship contracts), but also for the duration of their contract "
 "(for example, in the intranet, or with an amendment to the employment "
 "contract). If you have a website whose use involves processing of visitors' "
 "personal data, that site should also explain the data processed and the "
@@ -4159,37 +4115,61 @@ msgstr ""
 msgid "Public administration"
 msgstr ""
 
-#: survey/report.py:50
-msgid "Final report"
-msgstr ""
-
 #: survey/viewLogic.py:58
 msgid "Let's start"
 msgstr ""
 
-#: survey/viewLogic.py:222
+#: survey/viewLogic.py:220
 msgid "Question"
 msgstr ""
 
-#: survey/views.py:125
+#: survey/views.py:126
 msgid "To generate a report you have to finish the survey."
 msgstr ""
 
-#: survey/views.py:193
+#: survey/views.py:194
 msgid "Answers review"
 msgstr ""
 
-#: survey/views.py:228
+#: survey/views.py:231
 msgid "Final summary"
 msgstr ""
 
-#: survey/views.py:261
+#: survey/views.py:264
 msgid ""
 "We could not find a survey with the requested key, please start a new one."
 msgstr ""
 
-#: survey/views.py:291
+#: survey/views.py:294
 msgid "Feedback sending errors: "
+msgstr ""
+
+#: templates/admin/index.html:4
+msgid "Home"
+msgstr ""
+
+#: templates/admin/stats.html:10
+msgid "Django administration"
+msgstr ""
+
+#: templates/fit4ehealth/survey/start.html:5
+msgid "Please click the Next button to start the questionnaire."
+msgstr ""
+
+#: templates/fit4operatorsurvey/report/intro.html:6
+#, python-format
+msgid ""
+"The objective of the self-assessment tool, %(custom.tool_name)s is to "
+"understand the level of maturity in information security of operators, in "
+"preparation for informed governance and anticipation of the NISv2.<br /><br /"
+"> This document, based on the %(custom.tool_name)s, is for the exclusive use "
+"of the customer. It is in this respect confidential.<br /><br /> The tool, "
+"%(custom.tool_name)s can possibly provide recommendations. It is understood "
+"by the client that the recommendations are neither exclusive nor exhaustive."
+"<br /><br /> It should also be noted that the information you have provided "
+"to us will be recorded for statistical informational reasons. Due to the "
+"nature of the data, we can not identify you. Unless you later contact us and "
+"provide us your results."
 msgstr ""
 
 #: templates/parts/footer_part.html:8 templates/parts/footer_part.html:9
@@ -4220,8 +4200,43 @@ msgstr ""
 msgid "Description"
 msgstr ""
 
+#: templates/report/description.html:8
+#, python-format
+msgid ""
+"This self-assessment tool is named %(custom.tool_name)s to highlight the "
+"introduction to information security. It is also a prerequisite for doing a "
+"CASES Diagnostic: a minimum score of %(custom.minimal_acceptable_score)s/100 "
+"is required. The purpose for this restriction gives us the opportunity to "
+"better tailor the recommendations to your organization during the Diagnostic."
+"<br /><br /> During this self-assessment multiple choice questions were "
+"asked. After analyzing your answers, recommendations have been provided.<br /"
+"><br /> Finally, you can download a report, which will help you to "
+"communicate the results to your suppliers, if necessary."
+msgstr ""
+
 #: templates/report/intro.html:4
 msgid "Introduction and Warning"
+msgstr ""
+
+#: templates/report/intro.html:8
+#, python-format
+msgid ""
+"The objective of the self-assessment tool, %(custom.tool_name)s is to assess "
+"the maturity of an organization in terms of applicable good practices in the "
+"field of information security.<br /><br /> This document, based on the "
+"%(custom.tool_name)s, is for the exclusive use of the customer. It is in "
+"this respect confidential.<br /><br /> In view of the methodology used and "
+"the fact that it is a self-assessment, it is understood that the overall "
+"results can not in any way be exhaustive. As such, the actual risk "
+"assessment or the list of identified risks and vulnerabilities are based on "
+"the information provided by the client. The analysis resulting from this "
+"assessment can engage only the customer for any omission or error that would "
+"be due to third parties or not.<br /><br /> The tool, %(custom.tool_name)s "
+"can possibly provide recommendations. It is understood by the client that "
+"the recommendations are neither exclusive nor exhaustive.<br /><br /> It "
+"should also be noted that the information you have provided to us will be "
+"recorded for statistical reasons. Due to the nature of the data, we can not "
+"identify you. Unless you later contact us to do a Diagnostic CASES."
 msgstr ""
 
 #: templates/report/questions.html:1
@@ -4242,11 +4257,25 @@ msgstr ""
 msgid "Result"
 msgstr ""
 
-#: templates/report/results.html:13 templates/survey/finishedSurvey.html:91
+#: templates/report/results.html:8
+#, python-format
+msgid ""
+"You have achieved %(SCORE)s/100 with your answers. You must reach at least "
+"%(custom.minimal_acceptable_score)s/100 to be able to make a CASES Diagnosis."
+"<br /><br /> We remind you that this is a self-assessment, and it is "
+"important to understand that all the results can not in any way be "
+"exhaustive."
+msgstr ""
+
+#: templates/report/results.html:17 templates/survey/finishedSurvey.html:91
 #, python-format
 msgid ""
 "You have scored an additional %(bonus)s %% of bonus points for following "
 "best practices."
+msgstr ""
+
+#: templates/report/template.html:9 templates/report/template.html:14
+msgid "Final report"
 msgstr ""
 
 #: templates/report/template.html:13
@@ -4378,7 +4407,7 @@ msgstr ""
 msgid "Continue later"
 msgstr ""
 
-#: templates/survey/questions.html:75 templates/survey/start.html:37
+#: templates/survey/questions.html:75 templates/survey/start.html:39
 msgid "Next"
 msgstr ""
 
@@ -4487,7 +4516,7 @@ msgstr ""
 msgid "Your email address won't be stored."
 msgstr ""
 
-#: templates/survey/start.html:21
+#: templates/survey/start.html:22
 msgid ""
 "We need this information to be able to give you useful recommendations, once "
 "the self-assessment is done."

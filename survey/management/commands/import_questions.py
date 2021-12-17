@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 import json
-from typing import Dict
+from typing import Dict, List
 from django.core.management.base import BaseCommand
 from survey.models import (
     SurveySection,
@@ -127,7 +127,7 @@ class Command(BaseCommand):
         )
 
     @staticmethod
-    def does_question_exists(label: str, questions):
+    def does_question_exists(label: str, questions: List[SurveyQuestion]):
         return label in [question.label for question in questions]
 
     @staticmethod

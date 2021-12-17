@@ -4,13 +4,19 @@
 <h2 id="results">{{ _('Result') }}</h2>
 
 <p>
-    {% with '%(SCORE)s,'|add:SCORE|add:',%(minimal_acceptable_score)s,'|add:minimal_acceptable_score as strings_to_replace %}
-        {{ CUSTOM.report_texts.results | str_replace:strings_to_replace | safe}}
-    {% endwith %}
+{% block report_results %}
+{% blocktranslate trimmed %}
+You have achieved {{ SCORE }}/100 with your answers. You must reach at least {{ custom.minimal_acceptable_score }}/100 to be able to make a CASES Diagnosis.<br /><br />
+We remind you that this is a self-assessment, and it is important to understand that all the results can not in any way be exhaustive.
+{% endblocktranslate %}
+{% endblock %}
 </p>
+
 {% if BONUS_SCORE > 0 %}
 <p>
-    {% blocktranslate trimmed with bonus=BONUS_SCORE %}You have scored an additional {{ bonus }} % of bonus points for following best practices.{% endblocktranslate %}
+{% blocktranslate trimmed with bonus=BONUS_SCORE %}
+You have scored an additional {{ bonus }} % of bonus points for following best practices.
+{% endblocktranslate %}
 </p>
 {% endif %}
 

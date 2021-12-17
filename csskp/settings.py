@@ -19,6 +19,7 @@ CUSTOM = {key: value for key, value in getattr(config, "CUSTOM", {}).items()}
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
+SITE_NAME = CUSTOM.get("site_name", "fit4cybersecurity")
 
 # Include BOOTSTRAP4_FOLDER in path
 BOOTSTRAP4_FOLDER = os.path.abspath(os.path.join(BASE_DIR, "..", "bootstrap4"))
@@ -29,6 +30,7 @@ MAIN_TEMPLATE_DIR = os.path.join(BASE_DIR, "templates")
 PARTS_TEMPLATE_DIR = os.path.join(
     BASE_DIR, CUSTOM.get("templates_parts_dir", "templates/parts")
 )
+SITE_TEMPLATE_DIR = os.path.join(MAIN_TEMPLATE_DIR, SITE_NAME)
 
 STATIC_DIR = os.path.join(BASE_DIR, "static")
 
@@ -109,6 +111,7 @@ TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
         "DIRS": [
+            SITE_TEMPLATE_DIR,
             MAIN_TEMPLATE_DIR,
             PARTS_TEMPLATE_DIR,
         ],
@@ -186,10 +189,8 @@ STATICFILES_DIRS = [
     STATIC_DIR,
 ]
 
-SITE_IMAGES_DIR = os.path.join(
-    STATIC_DIR, "images", CUSTOM.get("site_name", "fit4cybersecurity")
-)
-SITE_IMAGES_URL = STATIC_URL + "images/" + CUSTOM.get("site_name", "fit4cybersecurity")
+SITE_IMAGES_DIR = os.path.join(STATIC_DIR, 'images', SITE_NAME)
+SITE_IMAGES_URL = STATIC_URL + 'images/' + SITE_NAME
 
 # Settings for django-bootstrap4
 BOOTSTRAP4 = {

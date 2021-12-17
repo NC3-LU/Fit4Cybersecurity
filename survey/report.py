@@ -6,7 +6,7 @@ from weasyprint import HTML, CSS
 from django.template.loader import render_to_string
 from django.conf import settings
 from django.utils import translation
-from django.utils.translation import gettext as _
+from django.http import HttpRequest
 from survey.models import SurveyUser
 from csskp.settings import CUSTOM, SITE_IMAGES_DIR
 from survey.reporthelper import (
@@ -21,7 +21,7 @@ cases_logo = os.path.abspath(os.path.join(settings.BASE_DIR, CUSTOM["cases_logo"
 secin_logo = os.path.abspath(os.path.join(settings.BASE_DIR, CUSTOM["secin_logo"]))
 
 
-def create_html_report(user: SurveyUser, lang: str) -> str:
+def create_html_report(user: SurveyUser, lang: str, request: HttpRequest) -> str:
     """Generate a HTML report."""
     translation.activate(lang)
 
@@ -47,9 +47,6 @@ def create_html_report(user: SurveyUser, lang: str) -> str:
     output_from_parsed_template = render_to_string(
         "report/template.html",
         {
-            "REPORT_TITLE": _("Final report"),
-            "CUSTOM": CUSTOM,
-            "minimal_acceptable_score": str(CUSTOM["minimal_acceptable_score"]),
             "GLOBALS": globals,
             "CASES_LOGO": cases_logo,
             "SECIN_LOGO": secin_logo,
@@ -63,6 +60,7 @@ def create_html_report(user: SurveyUser, lang: str) -> str:
             "recommendations": recommendations_list,
             "questions": question_list,
         },
+        request=request
     )
 
     return output_from_parsed_template
