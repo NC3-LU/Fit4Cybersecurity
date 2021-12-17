@@ -64,7 +64,7 @@ class Command(BaseCommand):
                 service_category=service_cat,
                 qindex=qindex,
                 maxPoints=question["maxPoints"],
-                answers_order=question.get("answers_order", "aindex")
+                answers_order=question.get("answers_order", "aindex"),
             )
             if created:
                 nb_imported_questions += 1

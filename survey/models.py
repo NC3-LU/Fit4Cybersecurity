@@ -171,7 +171,7 @@ class SurveyUser(models.Model):
     # number of employees
 
     user_id = models.UUIDField(default=uuid.uuid4)
-    choosen_lang = models.CharField(
+    chosen_lang = models.CharField(
         max_length=2, choices=LANGUAGES, default=LOCAL_DEFAULT_LANG
     )
     current_qindex = models.IntegerField(default=0)

@@ -26,7 +26,7 @@ def create_html_report(user: SurveyUser, lang: str, request: HttpRequest) -> str
     translation.activate(lang)
 
     # Calculate the result
-    score, bonus_score, details, section_list = calculateResult(user, lang)
+    score, bonus_score, details, section_list = calculateResult(user)
 
     # Generate the chart
     try:
@@ -76,7 +76,10 @@ def makepdf(html: str, lang: str) -> bytes:
             string='''
             :root {
                 --tool_logo_url: url("'''
-            + SITE_IMAGES_DIR + "/logo-" + lang + '.png'
+            + SITE_IMAGES_DIR
+            + "/logo-"
+            + lang
+            + ".png"
             + '''");
                 --secin_logo_url: url("'''
             + secin_logo
