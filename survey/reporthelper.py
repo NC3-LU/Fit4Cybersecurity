@@ -89,9 +89,7 @@ def calculateResult(user: SurveyUser) -> Tuple[int, int, List[int], List[str]]:
 
     chart_exclude_sections = ["__context"]
     if "chart_exclude_sections" in CUSTOM.keys():
-        chart_exclude_sections = (
-            chart_exclude_sections + CUSTOM["chart_exclude_sections"]
-        )
+        chart_exclude_sections = chart_exclude_sections + CUSTOM["chart_exclude_sections"]
 
     for question in SurveyQuestion.objects.exclude(
         section__label__in=chart_exclude_sections
@@ -106,6 +104,9 @@ def calculateResult(user: SurveyUser) -> Tuple[int, int, List[int], List[str]]:
         if section_title not in sections_list:
             sections_list.append(section_title)
 
+    # TODO: Comply with the following: Only "__context" questions are excluded.
+    # Even if a section is excluded from the chart, the score is used.
+    # Note: currently if we do it an error occurred on sections iteration.
     user_answers = (
         SurveyUserAnswer.objects.filter(user=user)
         .exclude(answer__question__section__label__in=chart_exclude_sections)
