@@ -6,7 +6,6 @@ from weasyprint import HTML, CSS
 from django.template.loader import render_to_string
 from django.conf import settings
 from django.utils import translation
-from django.utils.translation import gettext as _
 from django.http import HttpRequest
 from survey.models import SurveyUser
 from csskp.settings import CUSTOM, SITE_IMAGES_DIR

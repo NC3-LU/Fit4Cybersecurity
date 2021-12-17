@@ -7,7 +7,6 @@ from django.shortcuts import render
 from django.conf import settings
 from django.http import HttpResponse, HttpResponseRedirect
 from django.utils.translation import gettext as _
-from django.template.loader import select_template
 from django import forms
 
 from survey.viewLogic import (
