@@ -1,19 +1,19 @@
 <h2>{{ _('Table of contents') }}</h2>
 
 <ul class="toc">
-    {% if CUSTOM.report.introduction %}
+    {% if custom.report.introduction %}
         <li><a href="#intro"></a></li>
     {% endif %}
 
-    {% if CUSTOM.report.description %}
+    {% if custom.report.description %}
         <li><a href="#description"></a></li>
     {% endif %}
 
-    {% if CUSTOM.report.results %}
+    {% if custom.report.results %}
         <li><a href="#results"></a></li>
     {% endif %}
 
-    {% if CUSTOM.report.recommendations %}
+    {% if custom.report.recommendations %}
         <li><a href="#recommendations"></a></li>
         <ul>
             {% for category, items in recommendations.items %}
@@ -25,7 +25,7 @@
     {% endif %}
 
 
-    {% if CUSTOM.report.questions %}
+    {% if custom.report.questions %}
         <li><a href="#questions"></a></li>
     {% endif %}
 </ul>

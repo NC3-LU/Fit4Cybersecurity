@@ -7,6 +7,7 @@ from django.shortcuts import render
 from django.conf import settings
 from django.http import HttpResponse, HttpResponseRedirect
 from django.utils.translation import gettext as _
+from django.template.loader import select_template
 from django import forms
 
 from survey.viewLogic import (
@@ -134,7 +135,7 @@ def show_report(request, lang: str) -> HttpResponseRedirect:
 
     # Generation of the PDF report
     try:
-        html_report = create_html_report(user, lang)
+        html_report = create_html_report(user, lang, request)
         pdf_report = makepdf(html_report, lang)
     except Exception as e:
         logger.error(e)

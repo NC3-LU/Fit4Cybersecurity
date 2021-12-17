@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-12-13 13:33+0000\n"
-"PO-Revision-Date: 2021-12-14 14:22+0000\n"
+"POT-Creation-Date: 2021-12-17 13:34+0000\n"
+"PO-Revision-Date: 2021-12-16 15:23+0100\n"
 "Last-Translator: Juan Rocha <juan.rocha@cases.lu>\n"
 "Language-Team: French <https://translate.monarc.lu/projects/"
 "Fit4Cybersecurity/fit4ilr/fr/>\n"
@@ -17,196 +17,9 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 4.9-dev\n"
+"X-Generator: Poedit 3.0.1\n"
 
-#: csskp/config.py:29
-msgid ""
-"This survey aims to identify the level of maturity of the operators in "
-"Luxembourg with respect to risk management and governance, collaboration on "
-"national and EU level and Incident reporting. We collect the answers to "
-"these 30 questions to understand where guidance and knowledge is already "
-"advanced and where there is room for improvement. As such, it is recommended "
-"that a person is taking this survey that is knowing the company's maturity "
-"on the aforementioned topics well.<br /><br />The survey will be online and "
-"available between December 2021 and March 31st 2022 .After the survey, the "
-"data will be processed and results will be interpreted. However, since the "
-"survey is completely anonymous, we cannot identify you nor your company and "
-"thus deletion of specific records is not possible: we cannot be sure that it "
-"is indeed your survey. The results will be made available through another "
-"channel.<br /><br />If you are not able to do the survey in one go and you "
-"want to later pick up where you have left off, please be sure to save the "
-"link by clicking on the \"continue later\" button. We will not be able to "
-"help you to find your answers again otherwise."
-msgstr ""
-
-#: csskp/config.py:89 csskp/config_dev.py:69
-#, python-format
-msgid ""
-"The objective of the self-assessment tool, %(tool_name)s is to assess the "
-"maturity of an organization in terms of applicable good practices in the "
-"field of information security.<br /><br />This document, based on the "
-"%(tool_name)s, is for the exclusive use of the customer. It is in this "
-"respect confidential.<br /><br />In view of the methodology used and the "
-"fact that it is a self-assessment, it is understood that the overall results "
-"can not in any way be exhaustive. As such, the actual risk assessment or the "
-"list of identified risks and vulnerabilities are based on the information "
-"provided by the client. The analysis resulting from this assessment can "
-"engage only the customer for any omission or error that would be due to "
-"third parties or not.<br /><br />The tool, %(tool_name)s can possibly "
-"provide recommendations. It is understood by the client that the "
-"recommendations are neither exclusive nor exhaustive.<br /><br />It should "
-"also be noted that the information you have provided to us will be recorded "
-"for statistical reasons. Due to the nature of the data, we can not identify "
-"you. Unless you later contact us to do a Diagnostic CASES."
-msgstr ""
-"L'outil d'auto-évaluation, %(tool_name)s, a pour objectif d’apprécier la "
-"maturité d’une organisation au regard des bonnes pratiques applicables en "
-"matière de la sécurité de l'information.<br /><br />Le présent document, "
-"basé sur le %(tool_name)s, est destiné à l’usage exclusif du client. Il est "
-"à ce titre confidentiel.<br /><br /> En vu de la méthodologie employée et du "
-"fait qu'il s'agit d'une auto-évaluation, il est entendu que l’ensemble des "
-"résultats ne peut en aucune manière être exhaustif. À ce titre, "
-"l’appréciation du risque réel ou la liste des risques et vulnérabilités "
-"détectés sont basées sur les informations fournies par le client. L’analyse "
-"issue de cette appréciation ne peut engager que le client pour toute "
-"omission ou erreur qui serait due à des tiers ou non.<br /><br />L'outil, "
-"%(tool_name)s peut éventuellement fournir des recommandations. Il est "
-"entendu par le client que les recommandations ne sont ni exclusives ni "
-"exhaustives.<br /><br />Il faut aussi noter que les informations que vous "
-"nous avez fourni seront enregistrés pour des raisons de statistiques. De "
-"part de la nature des données, nous ne pouvons vous identifier. Sauf si par "
-"la suite vous nous contacter pour faire un diagnostic CASES."
-
-#: csskp/config.py:113 csskp/config_dev.py:93
-#, python-format
-msgid ""
-"This self-assessment tool is named %(tool_name)s to highlight the "
-"introduction to information security. It is also a prerequisite for doing a "
-"CASES Diagnostic: a minimum score of %(minimal_acceptable_score)s/100 is "
-"required. The purpose for this restriction gives us the opportunity to "
-"better tailor the recommendations to your organization during the Diagnostic."
-"<br /><br />During this self-assessment multiple choice questions were "
-"asked. After analyzing your answers, recommendations have been provided.<br /"
-"><br />Finally, you can download a report, which will help you to "
-"communicate the results to your suppliers, if necessary."
-msgstr ""
-"Cet outil d'auto-évaluation est nommé %(tool_name)s pour souligner "
-"l'introduction à la sécurité de l'information. Il est aussi un prérequis "
-"pour faire un Diagnostic CASES : un score minimal de "
-"%(minimal_acceptable_score)s/100 est requis. Le but pour cette restriction "
-"nous donne la possibilité pour mieux adapter les recommandations à votre "
-"organisation lors du Diagnostic. <br /><br /> Durant cette auto-evaluation "
-"questions à choix multiples vous ont été posées. Après avoir analysé vos "
-"réponses, des recommandations vous ont été fournies. <br /><br /> "
-"Finalement, vous pouvez télécharger ce document qui vous aidera pour "
-"communiquer les résultats à vos fournisseurs si besoin."
-
-#: csskp/config.py:127 csskp/config_dev.py:107
-#, python-format
-msgid ""
-"You have achieved %(SCORE)s/100 with your answers. You must reach at least "
-"%(minimal_acceptable_score)s/100 to be able to make a CASES Diagnosis.<br /"
-"><br />We remind you that this is a self-assessment and it is important to "
-"understand that all the results can not in any way be exhaustive."
-msgstr ""
-"Vous avez atteint %(SCORE)s/100 avec vos réponses. Vous devez atteindre au "
-"moins %(minimal_acceptable_score)s/100 pour pouvoir faire un Diagnostic "
-"CASES. <br /><br /> Nous vous rappelons qu'il s'agit d'une auto-évaluation, "
-"il est entendu que l’ensemble des résultats ne peut en aucune manière être "
-"exhaustif."
-
-#: csskp/config.py:136 data/survey4operators/context-questions.json:10
-msgid "Energy"
-msgstr ""
-
-#: csskp/config.py:137 data/survey4operators/context-questions.json:16
-msgid "Transport"
-msgstr ""
-
-#: csskp/config.py:138 data/survey4operators/context-questions.json:22
-msgid "Banking"
-msgstr ""
-
-#: csskp/config.py:139 data/survey4operators/context-questions.json:28
-msgid "Financial market infrastructure"
-msgstr ""
-
-#: csskp/config.py:140 data/fit4cybersecurity/context-questions.json:58
-#: data/fit4ehealth/context-questions.json:10
-#: data/survey4operators/context-questions.json:34 survey/globals.py:15
-msgid "Health"
-msgstr "Santé"
-
-#: csskp/config.py:141 data/survey4operators/context-questions.json:40
-msgid "Dringking water"
-msgstr ""
-
-#: csskp/config.py:142 data/survey4operators/context-questions.json:46
-msgid "Waste Water"
-msgstr ""
-
-#: csskp/config.py:143 data/survey4operators/context-questions.json:52
-msgid "Digital Infrastructure and Service Providers"
-msgstr ""
-
-#: csskp/config.py:144 data/fit4cybersecurity/context-questions.json:94
-#: data/survey4operators/context-questions.json:58
-msgid "Public Administration"
-msgstr "Administration publique"
-
-#: csskp/config.py:145 data/survey4operators/context-questions.json:64
-msgid "Space"
-msgstr ""
-
-#: csskp/config.py:146 data/survey4operators/context-questions.json:70
-msgid "Postal and Courrier Services"
-msgstr ""
-
-#: csskp/config.py:147 data/survey4operators/context-questions.json:76
-msgid "Waste Management"
-msgstr ""
-
-#: csskp/config.py:148 data/survey4operators/context-questions.json:82
-msgid "Manufacture, production and distribution of chemicals"
-msgstr ""
-
-#: csskp/config.py:149 data/survey4operators/context-questions.json:88
-msgid "Food Production, processing and distribution"
-msgstr ""
-
-#: csskp/config.py:150 data/survey4operators/context-questions.json:94
-msgid "Manufacturing of medical devices"
-msgstr ""
-
-#: csskp/config.py:151 data/survey4operators/context-questions.json:100
-msgid "Manufacture of computer, electronics and optical products"
-msgstr ""
-
-#: csskp/config.py:152 data/survey4operators/context-questions.json:106
-msgid "Manufacture of electrical equipment"
-msgstr ""
-
-#: csskp/config.py:153 data/survey4operators/context-questions.json:112
-msgid "Manufacture of machinery and equipment"
-msgstr ""
-
-#: csskp/config.py:156 data/survey4operators/context-questions.json:127
-msgid "Under 10 employees"
-msgstr ""
-
-#: csskp/config.py:157 data/survey4operators/context-questions.json:133
-msgid "From 10 to 49 employees"
-msgstr ""
-
-#: csskp/config.py:158 data/survey4operators/context-questions.json:139
-msgid "From 50 to 249 employees"
-msgstr ""
-
-#: csskp/config.py:159 data/survey4operators/context-questions.json:145
-msgid "Over 250 employees"
-msgstr ""
-
-#: csskp/config_dev.py:28
+#: csskp/config.py:30 csskp/config_dev.py:30
 msgid "Description of the tool."
 msgstr "Description de l'outil."
 
@@ -217,146 +30,157 @@ msgid "What is your sector?"
 msgstr "Quel est votre secteur ?"
 
 #: data/fit4cybersecurity/context-questions.json:4
-#: data/fit4cybersecurity/context-questions.json:103
-#: data/fit4cybersecurity/context-questions.json:172
+#: data/fit4cybersecurity/context-questions.json:104
+#: data/fit4cybersecurity/context-questions.json:173
 #: data/fit4ehealth/context-questions.json:4
 #: data/fit4ehealth/context-questions.json:19
 #: data/survey4operators/context-questions.json:4
-#: data/survey4operators/context-questions.json:121
-#: data/survey4operators/context-questions.json:154
-#: data/survey4operators/context-questions.json:187
+#: data/survey4operators/context-questions.json:122
+#: data/survey4operators/context-questions.json:155
+#: data/survey4operators/context-questions.json:188
 msgid "Context"
 msgstr "Contexte"
 
 #: data/fit4cybersecurity/context-questions.json:5
-#: data/fit4cybersecurity/context-questions.json:104
-#: data/fit4cybersecurity/context-questions.json:173
+#: data/fit4cybersecurity/context-questions.json:105
+#: data/fit4cybersecurity/context-questions.json:174
 #: data/fit4ehealth/context-questions.json:5
 #: data/fit4ehealth/context-questions.json:20
 #: data/survey4operators/context-questions.json:5
-#: data/survey4operators/context-questions.json:122
-#: data/survey4operators/context-questions.json:155
-#: data/survey4operators/context-questions.json:188
+#: data/survey4operators/context-questions.json:123
+#: data/survey4operators/context-questions.json:156
+#: data/survey4operators/context-questions.json:189
 msgid "__context"
 msgstr "__context"
 
-#: data/fit4cybersecurity/context-questions.json:10 survey/globals.py:7
+#: data/fit4cybersecurity/context-questions.json:11 survey/globals.py:7
 msgid "Banking, insurance and real estate"
 msgstr "Banque, assurances et immobilier"
 
-#: data/fit4cybersecurity/context-questions.json:16 survey/globals.py:8
+#: data/fit4cybersecurity/context-questions.json:17 survey/globals.py:8
 msgid "Trading, sales and mass distribution"
 msgstr "Commerce, vente et grande distribution"
 
-#: data/fit4cybersecurity/context-questions.json:22 survey/globals.py:9
+#: data/fit4cybersecurity/context-questions.json:23 survey/globals.py:9
 msgid "Marketing, media and multimedia"
 msgstr "Communication, média et multimédia"
 
-#: data/fit4cybersecurity/context-questions.json:28 survey/globals.py:10
+#: data/fit4cybersecurity/context-questions.json:29 survey/globals.py:10
 msgid "Construction industries and civil engineering"
 msgstr "Construction, bâtiment et travaux publics"
 
-#: data/fit4cybersecurity/context-questions.json:34 survey/globals.py:11
+#: data/fit4cybersecurity/context-questions.json:35 survey/globals.py:11
 msgid "Hotel and restoration, tourism and entertainment"
 msgstr "Hôtellerie - restauration, tourisme, loisirs et animation"
 
-#: data/fit4cybersecurity/context-questions.json:40 survey/globals.py:12
+#: data/fit4cybersecurity/context-questions.json:41 survey/globals.py:12
 msgid "Industry"
 msgstr "Industrie"
 
-#: data/fit4cybersecurity/context-questions.json:46 survey/globals.py:13
+#: data/fit4cybersecurity/context-questions.json:47 survey/globals.py:13
 msgid "Installation and maintenance"
 msgstr "Installation et maintenance"
 
-#: data/fit4cybersecurity/context-questions.json:52 survey/globals.py:14
+#: data/fit4cybersecurity/context-questions.json:53 survey/globals.py:14
 msgid "Creation or placing of objects that are artistic and decorative"
 msgstr "Réalisation ou placement d'objets artistiques et décoratifs"
 
-#: data/fit4cybersecurity/context-questions.json:64 survey/globals.py:16
+#: data/fit4cybersecurity/context-questions.json:59
+#: data/fit4ehealth/context-questions.json:10
+#: data/survey4operators/context-questions.json:35 survey/globals.py:15
+msgid "Health"
+msgstr "Santé"
+
+#: data/fit4cybersecurity/context-questions.json:65 survey/globals.py:16
 msgid "Home-Care Service or Community Service"
 msgstr "Services à la personne et à la collectivité"
 
-#: data/fit4cybersecurity/context-questions.json:70 survey/globals.py:17
+#: data/fit4cybersecurity/context-questions.json:71 survey/globals.py:17
 msgid "Shows"
 msgstr "Spectacle"
 
-#: data/fit4cybersecurity/context-questions.json:76 survey/globals.py:18
+#: data/fit4cybersecurity/context-questions.json:77 survey/globals.py:18
 msgid "Company Support"
 msgstr "Support à l'entreprise"
 
-#: data/fit4cybersecurity/context-questions.json:82 survey/globals.py:19
+#: data/fit4cybersecurity/context-questions.json:83 survey/globals.py:19
 msgid "Transport and Logistics"
 msgstr "Transport et logistique"
 
-#: data/fit4cybersecurity/context-questions.json:88 survey/globals.py:20
+#: data/fit4cybersecurity/context-questions.json:89 survey/globals.py:20
 msgid "Farming and fishing, natural spaces and green spaces, animal care"
 msgstr ""
 "Agriculture et pêche, espaces naturels et espaces verts, soins aux animaux"
 
-#: data/fit4cybersecurity/context-questions.json:102
-#: data/survey4operators/context-questions.json:120
+#: data/fit4cybersecurity/context-questions.json:95
+#: data/survey4operators/context-questions.json:59
+msgid "Public Administration"
+msgstr "Administration publique"
+
+#: data/fit4cybersecurity/context-questions.json:103
+#: data/survey4operators/context-questions.json:121
 msgid "How many employees?"
 msgstr "Combien d'employés ?"
 
-#: data/fit4cybersecurity/context-questions.json:109
+#: data/fit4cybersecurity/context-questions.json:110
 msgid "1-5"
 msgstr "1-5"
 
-#: data/fit4cybersecurity/context-questions.json:115
+#: data/fit4cybersecurity/context-questions.json:116
 msgid "6-10"
 msgstr "6-10"
 
-#: data/fit4cybersecurity/context-questions.json:121
+#: data/fit4cybersecurity/context-questions.json:122
 msgid "10-20"
 msgstr "10-20"
 
-#: data/fit4cybersecurity/context-questions.json:127
+#: data/fit4cybersecurity/context-questions.json:128
 msgid "20-50"
 msgstr "20-50"
 
-#: data/fit4cybersecurity/context-questions.json:133
+#: data/fit4cybersecurity/context-questions.json:134
 msgid "50-100"
 msgstr "50-100"
 
-#: data/fit4cybersecurity/context-questions.json:139
+#: data/fit4cybersecurity/context-questions.json:140
 msgid "100-200"
 msgstr "100-200"
 
-#: data/fit4cybersecurity/context-questions.json:145
+#: data/fit4cybersecurity/context-questions.json:146
 msgid "200-500"
 msgstr "200-500"
 
-#: data/fit4cybersecurity/context-questions.json:151
+#: data/fit4cybersecurity/context-questions.json:152
 msgid "500-1000"
 msgstr "500-1000"
 
-#: data/fit4cybersecurity/context-questions.json:157
+#: data/fit4cybersecurity/context-questions.json:158
 msgid "1000-5000"
 msgstr "1000-5000"
 
-#: data/fit4cybersecurity/context-questions.json:163
+#: data/fit4cybersecurity/context-questions.json:164
 msgid "5000+"
 msgstr "5000+"
 
-#: data/fit4cybersecurity/context-questions.json:171
-#: data/survey4operators/context-questions.json:153
+#: data/fit4cybersecurity/context-questions.json:172
+#: data/survey4operators/context-questions.json:154
 msgid "What is your country?"
 msgstr "Quel est votre pays ?"
 
-#: data/fit4cybersecurity/context-questions.json:178
+#: data/fit4cybersecurity/context-questions.json:179
 #: data/fit4ehealth/context-questions.json:25
 msgid "Luxembourg"
 msgstr "Luxembourg"
 
-#: data/fit4cybersecurity/context-questions.json:184
+#: data/fit4cybersecurity/context-questions.json:185
 msgid "Germany"
 msgstr "Allemagne"
 
-#: data/fit4cybersecurity/context-questions.json:190
+#: data/fit4cybersecurity/context-questions.json:191
 msgid "Belgium"
 msgstr "Belgique"
 
-#: data/fit4cybersecurity/context-questions.json:196
+#: data/fit4cybersecurity/context-questions.json:197
 msgid "France"
 msgstr "France"
 
@@ -1691,18 +1515,22 @@ msgid "Organisational Awareness"
 msgstr ""
 
 #: data/fit4ehealth/questions.json:5
+#, fuzzy
 #| msgid "In the company, rules are"
 msgid "In the establishment, rules are"
-msgstr ""
+msgstr "Dans l'entreprise, les règles données aux employés sont"
 
 #: data/fit4ehealth/questions.json:23
+#, fuzzy
 #| msgid "The company should define rules in order to avoid misunderstandings."
 msgid ""
 "The company should define rules in order to avoid misunderstandings. Here "
 "some tips to do in order to have some:"
 msgstr ""
+"L'entreprise doit définir des règles pour éviter toutes incompréhensions."
 
 #: data/fit4ehealth/questions.json:40
+#, fuzzy
 #| msgid ""
 #| "Rules (organisational, IT or working ones) should be known and explained "
 #| "to everyone, at the very least orally."
@@ -1710,8 +1538,12 @@ msgid ""
 "Rules (organizational, IT or working ones) should be known and explained to "
 "everyone, at the very least orally."
 msgstr ""
+"Les règles (qu'elles soient organisationnelles, métier, ou à l'usage de "
+"l'informatique) doivent être connues et expliquées à tous, au moins "
+"oralement au possible."
 
 #: data/fit4ehealth/questions.json:57
+#, fuzzy
 #| msgid ""
 #| "If an oral transmission could be enough for a small company, rules should "
 #| "still be written in a charter, read and signed by everyone, very "
@@ -1721,13 +1553,18 @@ msgid ""
 "rules should still be written in a charter, read and signed by everyone, "
 "which is very important for larger companies or if the company grows."
 msgstr ""
+"Si une transmission orale suffit dans un cadre \"familial\", les règles "
+"devraient être mises dans une charte ou un règlement, écrites et signées par "
+"tous, particulièrement en cas de croissance."
 
 #: data/fit4ehealth/questions.json:66
+#, fuzzy
 #| msgid "read and signed by everyone, in a user charter"
 msgid "read and signed by everyone, in a cabinet/practice charter or similar"
-msgstr ""
+msgstr "lues et signées par tous, et inscrites dans une charte"
 
 #: data/fit4ehealth/questions.json:74
+#, fuzzy
 #| msgid ""
 #| "Besides, written rules can :<ul><li>avoid to forget some points</"
 #| "li><li>have a legal proof if the rules have been read.</li></ul>"
@@ -1736,8 +1573,11 @@ msgid ""
 "\t- avoid to forget relevant points and can be consulted at any time;\n"
 "\t- have a legal proof if the rules have been read."
 msgstr ""
+"Les règles écrites et signées ont l'avantage :<ul><li> d'éviter les oublis.</"
+"li><li>d'avoir une preuve juridique que les règles sont connues.</li></ul>"
 
 #: data/fit4ehealth/questions.json:91
+#, fuzzy
 #| msgid ""
 #| "Each time when it's possible, some advice or some best practices should "
 #| "be given, and sometime explained."
@@ -1745,6 +1585,8 @@ msgid ""
 "Each time when it's possible, some advice or some best practices should be "
 "given and explained."
 msgstr ""
+"Si possible, il ne faut pas hésiter à donner des astuces pour aider au "
+"respect des règles, voire parfois, expliquer en quoi elles sont nécessaires."
 
 #: data/fit4ehealth/questions.json:100
 msgid ""
@@ -1786,9 +1628,10 @@ msgid ""
 msgstr ""
 
 #: data/fit4ehealth/questions.json:149
+#, fuzzy
 #| msgid "Data Breaches"
 msgid "Data Transfer"
-msgstr ""
+msgstr "Violations de données"
 
 #: data/fit4ehealth/questions.json:151
 msgid "Medical data of the establishment is"
@@ -1882,14 +1725,16 @@ msgid "Employee Management in Your Cabinet or Practice"
 msgstr ""
 
 #: data/fit4ehealth/questions.json:272
+#, fuzzy
 #| msgid "Employees are trained for/in"
 msgid "All working professionals are trained for/in"
-msgstr ""
+msgstr "Les employés sont formés"
 
 #: data/fit4ehealth/questions.json:282
+#, fuzzy
 #| msgid "the software they daily use"
 msgid "the software they use on a regular basis"
-msgstr ""
+msgstr "aux logiciels qu'ils utilisent quotidiennement"
 
 #: data/fit4ehealth/questions.json:290
 msgid ""
@@ -1899,6 +1744,7 @@ msgid ""
 msgstr ""
 
 #: data/fit4ehealth/questions.json:299
+#, fuzzy
 #| msgid ""
 #| "information security, to have the knowledge to protect themselves against "
 #| "attacks"
@@ -1906,8 +1752,11 @@ msgid ""
 "information security, to have the knowledge to protect themselves against "
 "attacks or information security issues"
 msgstr ""
+"à la sécurité de l'information pour avoir les clés en main afin de se "
+"défendre contre d'éventuelles attaques"
 
 #: data/fit4ehealth/questions.json:307
+#, fuzzy
 #| msgid ""
 #| "By informing about attacks that are current, common or well-known, "
 #| "employees could more easily identify them and avoid falling for them."
@@ -1915,12 +1764,16 @@ msgid ""
 "By informing about attacks that are current, common or well known, employees "
 "could more easily identify them and avoid being affected by them."
 msgstr ""
+"S'informer sur les différents types d'attaques existants et les moyens "
+"pouvant mis être en œuvre pour une attaque permet au possible d'éviter des "
+"comportements menant à la réussite de ces dernières."
 
 #: data/fit4ehealth/questions.json:316
 msgid "the importance of correctly managing and protecting personal data"
 msgstr ""
 
 #: data/fit4ehealth/questions.json:324
+#, fuzzy
 #| msgid ""
 #| "Train users on the sensitivity of the manipulated information, in order "
 #| "to put their attention on how to protect them."
@@ -1928,6 +1781,8 @@ msgid ""
 "Train users on the sensitivity of the processed information, in order to put "
 "their attention on how to protect these data."
 msgstr ""
+"Sensibiliser les utilisateurs à la sensibilité des informations manipulés "
+"pour attirer leur attention sur les protections à mettre en œuvre."
 
 #: data/fit4ehealth/questions.json:333
 msgid "neither of those cases"
@@ -1938,9 +1793,10 @@ msgid "Responsibilities"
 msgstr ""
 
 #: data/fit4ehealth/questions.json:342
+#, fuzzy
 #| msgid "IT and Information Security responsibilities are"
 msgid "IT and Information security tasks are:"
-msgstr ""
+msgstr "Les responsabilités IT et Sécurité de l'Information sont"
 
 #: data/fit4ehealth/questions.json:352
 msgid "internally performed by an IT specialist"
@@ -1951,6 +1807,7 @@ msgid "internally performed by someone at ease with computers"
 msgstr ""
 
 #: data/fit4ehealth/questions.json:369 data/fit4ehealth/questions.json:386
+#, fuzzy
 #| msgid ""
 #| "It's important to define responsibilities, either externally or "
 #| "internally, with one person or more, or a company, but specialised into "
@@ -1960,6 +1817,10 @@ msgid ""
 "with one or more persons, or a company, but specialized into their own "
 "domain, at best supported by relevant training."
 msgstr ""
+"Il est important de définir les responsabilités, que ce soit en interne ou "
+"en externe, avec une ou plusieurs personnes, ou une entreprise vraiment "
+"spécialisée dans le domaine de la responsabilité, avec au possible une "
+"formation."
 
 #: data/fit4ehealth/questions.json:378
 msgid ""
@@ -1968,22 +1829,25 @@ msgid ""
 msgstr ""
 
 #: data/fit4ehealth/questions.json:395
+#, fuzzy
 #| msgid "externally defined, with a contract"
 msgid "externally by a third party with a contract"
-msgstr ""
+msgstr "sont définis en externe, par un contrat"
 
 #: data/fit4ehealth/questions.json:402
 msgid "Mobility"
 msgstr ""
 
 #: data/fit4ehealth/questions.json:404
+#, fuzzy
 #| msgid "During any trip outside the company, the employee uses"
 msgid ""
 "During any work/visit outside the establishment, the medical professional "
 "uses"
-msgstr ""
+msgstr "Les employés, lors d'un voyage à l'extérieur, utilisent"
 
 #: data/fit4ehealth/questions.json:414
+#, fuzzy
 #| msgid ""
 #| "no professional tools because home office or travel is not allowed or "
 #| "necessary, or the only connection to the internal network is on the "
@@ -1993,8 +1857,11 @@ msgid ""
 "or necessary, or the only connection to the internal network is on the "
 "company premises"
 msgstr ""
+"aucun appareil professionnel, car le télétravail n'est pas une pratique "
+"autorisée et la seule connexion possible au réseau d'entreprise est interne"
 
 #: data/fit4ehealth/questions.json:422
+#, fuzzy
 #| msgid ""
 #| "For now, no contracts with third parties are signed. If it's changed, "
 #| "it's important to:"
@@ -2002,8 +1869,11 @@ msgid ""
 "For now, no outside work is done. If it's changed, it's important to take "
 "care that:"
 msgstr ""
+"Pour le moment, aucun contrat avec les prestataires n'est signé. Si cela est "
+"néanmoins amené a changer à jour, il est important de faire attention:"
 
 #: data/fit4ehealth/questions.json:429 data/fit4ehealth/questions.json:465
+#, fuzzy
 #| msgid ""
 #| "External connection which is not controlled and monitored should be "
 #| "avoided to avoid data loss."
@@ -2011,8 +1881,11 @@ msgid ""
 "External connection which is not controlled and monitored should be avoided "
 "to avoid data theft."
 msgstr ""
+"Les connexions extérieures non contrôlées doivent être évitées pour éviter "
+"d'éventuelles pertes de données."
 
 #: data/fit4ehealth/questions.json:438
+#, fuzzy
 #| msgid ""
 #| "VPN (Virtual Private Network) is used to encrypt all data from any "
 #| "external network to the internal server"
@@ -2020,8 +1893,11 @@ msgid ""
 "VPN (Virtual Private Network) to encrypt all data from any external network "
 "to the internal server of the establishment"
 msgstr ""
+"un VPN (Virtual Private Network) est utilisé pour chiffrer les données lors "
+"de toute connexion sur le serveur interne de l'entreprise"
 
 #: data/fit4ehealth/questions.json:447
+#, fuzzy
 #| msgid ""
 #| "Whenever users have the need to work outside, from home office to "
 #| "missions outside the premises, they must have a VPN connection to connect "
@@ -2031,8 +1907,12 @@ msgid ""
 "missions outside the premises, they must have a VPN connection to connect to "
 "the server/network of the organization."
 msgstr ""
+"Quand une connexion est faite de l'extérieur vers l'entreprise, il est "
+"important d'accéder au réseau interne par l'intermédiaire d'un VPN pour "
+"s'assurer que les données restent confidentielles."
 
 #: data/fit4ehealth/questions.json:456
+#, fuzzy
 #| msgid ""
 #| "public Wi-Fi, open networks or connection protected by external "
 #| "organisation or person"
@@ -2040,8 +1920,11 @@ msgid ""
 "Public Internet, Wi-Fi, open networks or connection protected by external "
 "organizations or individuals"
 msgstr ""
+"un WiFi public, une connexion ouverte, ou une connexion protégée par mot de "
+"passe d'un organisme ou d'une personne externe"
 
 #: data/fit4ehealth/questions.json:474
+#, fuzzy
 #| msgid ""
 #| "a private connection or a connection sharing from a private or "
 #| "professional smartphone (tethering/hotspot)"
@@ -2049,6 +1932,8 @@ msgid ""
 "a private connection or connection sharing from a private or professional "
 "smartphone (tethering/hotspot)"
 msgstr ""
+"une connexion privée ou du partage de réseau d'un téléphone personnel ou "
+"professionnel"
 
 #: data/fit4ehealth/questions.json:483
 msgid ""
@@ -2057,6 +1942,7 @@ msgid ""
 msgstr ""
 
 #: data/fit4ehealth/questions.json:492
+#, fuzzy
 #| msgid ""
 #| "a screen filter or adjusts their position to ensure that no unauthorised "
 #| "person could see what is on the screen"
@@ -2065,8 +1951,12 @@ msgid ""
 "person could see what is on the screen of their mobile device (tablet or "
 "laptop)"
 msgstr ""
+"un filtre à écran, ou portent une attention particulière à la vision "
+"possible sur les écrans au travers des fenêtres ou dans les transports "
+"publics"
 
 #: data/fit4ehealth/questions.json:509
+#, fuzzy
 #| msgid ""
 #| "devices that are encrypted (protected by a password at boot) or without "
 #| "any confidential data"
@@ -2074,8 +1964,11 @@ msgid ""
 "mobile devices that are encrypted (protected by a password at startup) or "
 "without any confidential data"
 msgstr ""
+"un matériel avec un stockage de données chiffré ou sans données "
+"confidentielles pour éviter toute perte involontaire de données"
 
 #: data/fit4ehealth/questions.json:517
+#, fuzzy
 #| msgid ""
 #| "Devices that are taken away and that contains confidential data should "
 #| "always have their internal memory encrypted to avoid data loss."
@@ -2083,6 +1976,8 @@ msgid ""
 "Devices that are taken away and that contain confidential data should always "
 "have their internal memory encrypted to avoid data theft."
 msgstr ""
+"Le matériel doit être chiffré s'il contient des données confidentielles pour "
+"éviter toute perte de confidentialité."
 
 #: data/fit4ehealth/questions.json:526
 msgid "devices that are not connected to any IT network while on the trip."
@@ -2097,11 +1992,13 @@ msgid ""
 msgstr ""
 
 #: data/fit4ehealth/questions.json:546
+#, fuzzy
 #| msgid "Contracts (SLA/NDA)"
 msgid "Contracts"
-msgstr ""
+msgstr "Contrats (SLA/NDA)"
 
 #: data/fit4ehealth/questions.json:558
+#, fuzzy
 #| msgid ""
 #| "are not defined, because they only come punctually in case of an incident "
 #| "or needs"
@@ -2109,6 +2006,8 @@ msgid ""
 "are not defined, because they only come in case of an incident or specific "
 "needs"
 msgstr ""
+"ne sont pas définis, et ces derniers n'interviennent uniquement en cas de "
+"besoin de façon ponctuelle"
 
 #: data/fit4ehealth/questions.json:566
 msgid ""
@@ -2143,13 +2042,16 @@ msgid ""
 msgstr ""
 
 #: data/fit4ehealth/questions.json:609
+#, fuzzy
 #| msgid "define the maximum time of intervention after an incident"
 msgid ""
 "define the maximum time until intervention needs to be performed after an "
 "incident"
 msgstr ""
+"définissent le temps maximum pour lequel ces derniers doivent intervenir"
 
 #: data/fit4ehealth/questions.json:617
+#, fuzzy
 #| msgid ""
 #| "If means and needs permit it, a contract should be signed to ensure that "
 #| "the external IT provider will ensure the availability of system to remain "
@@ -2159,8 +2061,12 @@ msgid ""
 "external IT provider will ensure the availability of system to remain "
 "operational. These kinds of contracts named \"Service Level Agreement (SLA)\""
 msgstr ""
+"Si les moyens et le contexte le permettent et le nécessitent, un contrat est "
+"nécessaire pour assurer la disponibilité, tant les informations nécessaires, "
+"que le matériel pour les manipuler."
 
 #: data/fit4ehealth/questions.json:634
+#, fuzzy
 #| msgid ""
 #| "It's necessary to review the contracts to ensuring a certain "
 #| "availability :<ul><li>not having an intervention solution whenever it's "
@@ -2173,6 +2079,12 @@ msgid ""
 "\t- not to pay too much for a service which is not necessary\n"
 "\t- to evaluate if the services paid are satisfying the necessary."
 msgstr ""
+"Il faut régulièrement revoir les contrats assurant une certaine "
+"disponibilité pour s'assurer:<ul><li> de ne pas se retrouver sans "
+"intervention dans un délai où cette dernière serait indispensable;</"
+"li><li>de ne pas surpayer un prestataire pour un temps d'intervention trop "
+"élevé;</li><li>que les services rendus sont d'un niveau de qualité suffisant "
+"à ce qui est nécessaire.</li></ul>"
 
 #: data/fit4ehealth/questions.json:643
 msgid "are defined orally"
@@ -2187,9 +2099,10 @@ msgid ""
 msgstr ""
 
 #: data/fit4ehealth/questions.json:660
+#, fuzzy
 #| msgid "They are not written."
 msgid "are in written form"
-msgstr ""
+msgstr "Elles ne sont pas écrites."
 
 #: data/fit4ehealth/questions.json:668
 msgid ""
@@ -2198,19 +2111,22 @@ msgid ""
 msgstr ""
 
 #: data/fit4ehealth/questions.json:675
+#, fuzzy
 #| msgid "Office Cleaning"
 msgid "Cleaning"
-msgstr ""
+msgstr "Nettoyage des Locaux"
 
 #: data/fit4ehealth/questions.json:677
+#, fuzzy
 #| msgid "The office cleaning is done"
 msgid "The establishment cleaning is done"
-msgstr ""
+msgstr "Le nettoyage des locaux de travail se déroule"
 
 #: data/fit4ehealth/questions.json:687
+#, fuzzy
 #| msgid "internally, by employees, punctually"
 msgid "internally, by our employees"
-msgstr ""
+msgstr "en interne, par les employés, de façon ponctuelle"
 
 #: data/fit4ehealth/questions.json:702
 msgid ""
@@ -2229,11 +2145,13 @@ msgid ""
 msgstr ""
 
 #: data/fit4ehealth/questions.json:728
+#, fuzzy
 #| msgid "during the work time"
 msgid "during the working hours of the establishment"
-msgstr ""
+msgstr "pendant les heures de bureau"
 
 #: data/fit4ehealth/questions.json:736
+#, fuzzy
 #| msgid ""
 #| "The office cleaning should be done, whenever possible, during work time "
 #| "to avoid potential data theft."
@@ -2241,30 +2159,42 @@ msgid ""
 "The office cleaning should be done, whenever possible, during work time to "
 "avoid potential data or material theft."
 msgstr ""
+"Le nettoyage des locaux doit se faire, dans la mesure du possible, pendant "
+"les heures de bureau pour éviter des éventuels vols de données."
 
 #: data/fit4ehealth/questions.json:745
+#, fuzzy
 #| msgid "with rules of what should be done and what should not be done"
 msgid "with clear rules of what should be done and what shouldn't be done"
 msgstr ""
+"sous couvert de règles données concernant ce qu'il faut éviter de faire, ou "
+"éviter de toucher"
 
 #: data/fit4ehealth/questions.json:753
+#, fuzzy
 #| msgid ""
 #| "Rules should be given mainly to specify what should be done or avoided."
 msgid ""
 "Rules should be given mainly to specify what should be done or avoided, as "
 "misunderstandings can happen."
 msgstr ""
+"Des règles doivent être données pour principalement spécifier ce qu'il faut "
+"faire où éviter de toucher."
 
 #: data/fit4ehealth/questions.json:762
+#, fuzzy
 #| msgid "with a contract which specifies confidentiality"
 msgid "with a contract which specifies medical confidentiality"
-msgstr ""
+msgstr "sous couvert d'un contrat spécifiant la confidentialité à respecter"
 
 #: data/fit4ehealth/questions.json:779
+#, fuzzy
 #| msgid "with all confidential documents locked in a room, a desk or a closet"
 msgid ""
 "with all confidential documents locked away in a room, a desk or a closet"
 msgstr ""
+"alors que tous documents confidentiels sont verrouillés à clé, dans des "
+"armoires, des bureaux, ou une salle spécifique"
 
 #: data/fit4ehealth/questions.json:811
 msgid "Remote Maintenance"
@@ -2333,14 +2263,16 @@ msgid ""
 msgstr ""
 
 #: data/fit4ehealth/questions.json:906
+#, fuzzy
 #| msgid "Cybersecurity"
 msgid "Physical Security"
-msgstr ""
+msgstr "Cybersécurité"
 
 #: data/fit4ehealth/questions.json:907
+#, fuzzy
 #| msgid "Logical Access"
 msgid "Physical Access"
-msgstr ""
+msgstr "Accès Logiques"
 
 #: data/fit4ehealth/questions.json:908 data/fit4ehealth/questions.json:1057
 msgid "When a patient enters your premises, he:"
@@ -2434,12 +2366,15 @@ msgid ""
 msgstr ""
 
 #: data/fit4ehealth/questions.json:1067
+#, fuzzy
 #| msgid ""
 #| "not having requirements or guidelines, employees are left on their own"
 msgid ""
 "not having requirements or guidelines, employees can manage them as they "
 "prefer"
 msgstr ""
+"ne sont pas soumis à des consignes ou conseils particuliers, ou sont laissés "
+"à discrétion de chacun"
 
 #: data/fit4ehealth/questions.json:1075
 msgid ""
@@ -2448,6 +2383,7 @@ msgid ""
 msgstr ""
 
 #: data/fit4ehealth/questions.json:1089
+#, fuzzy
 #| msgid ""
 #| "Passwords should be kept secret and personal. Each and everyone should "
 #| "access their data by using their password, even from the computer of "
@@ -2456,8 +2392,13 @@ msgid ""
 "Each and everyone should access their data by using their password, even "
 "from the computer of someone else."
 msgstr ""
+"Il faut éviter d'avoir une machine accessible par un seul et unique accès. "
+"Si c'est inévitable, alors il est nécessaire de définir un responsable de "
+"cette machine, chargé d'en assurer sa bonne utilisation, et de donner les "
+"accès les plus limités possible."
 
 #: data/fit4ehealth/questions.json:1096 data/fit4ehealth/questions.json:1216
+#, fuzzy
 #| msgid ""
 #| "It's mandatory to be careful with the password storage in the internet "
 #| "browser as they are not protected."
@@ -2465,13 +2406,17 @@ msgid ""
 "It's mandatory to be careful with the password storage in the internet "
 "browsers as they are not protected well."
 msgstr ""
+"Les navigateurs internet ne stockent pas les mots de passe de façon "
+"protégés, et cette fonctionnalité est donc à éviter."
 
 #: data/fit4ehealth/questions.json:1156
+#, fuzzy
 #| msgid "not forming any words or dates"
 msgid "not forming any words or dates, or are complete sentences"
-msgstr ""
+msgstr "ne forment pas des mots ou des dates cohérentes"
 
 #: data/fit4ehealth/questions.json:1181
+#, fuzzy
 #| msgid ""
 #| "Passwords should be changed from time to time, to prevent serious "
 #| "consequences in case of a leak."
@@ -2479,11 +2424,14 @@ msgid ""
 "Passwords should be changed from time to time, to prevent serious "
 "consequences in case of a leak or data theft."
 msgstr ""
+"Les mots de passe doivent être changés de temps à autre pour prévenir une "
+"possible fuite de ses dernières."
 
 #: data/fit4ehealth/questions.json:1208
+#, fuzzy
 #| msgid "included in web browsers"
 msgid "saved in web browsers"
-msgstr ""
+msgstr "sont sauvegardés dans les navigateurs Web"
 
 #: data/fit4ehealth/questions.json:1242
 msgid "Authorization for the access to patient data"
@@ -2530,16 +2478,19 @@ msgid ""
 msgstr ""
 
 #: data/fit4ehealth/questions.json:1307
+#, fuzzy
 #| msgid "Wireless networks"
 msgid "Wireless access"
-msgstr ""
+msgstr "Les réseaux sans fil"
 
 #: data/fit4ehealth/questions.json:1319
+#, fuzzy
 #| msgid "are not used in the company"
 msgid "are not used in the establishment at all"
-msgstr ""
+msgstr "ne sont pas activés dans l'organisme"
 
 #: data/fit4ehealth/questions.json:1327
+#, fuzzy
 #| msgid ""
 #| "For now, the personal devices are not connected in the local network. If "
 #| "it's changed, it's important to:"
@@ -2547,18 +2498,25 @@ msgid ""
 "For now, wireless network isn't activated in the company. If it is changed, "
 "it's important to:"
 msgstr ""
+"Pour le moment, la pratique de l'apport de matériel personnel (Bring Your "
+"Own Device) dans l'environnement professionnel n'est pas possible dans "
+"l'organisme. Si cela est néanmoins amené à changer un jour, il est important "
+"de faire attention:"
 
 #: data/fit4ehealth/questions.json:1336
 msgid "are closed and for professional use only"
 msgstr ""
 
 #: data/fit4ehealth/questions.json:1357
+#, fuzzy
 #| msgid ""
 #| "are given to everyone, without any way to get identity of the persons"
 msgid ""
 "are given to everyone, without checking the identity of the user that "
 "connects to it"
 msgstr ""
+"sont donnés sans distinctions à des externes comme des personnes internes à "
+"l'organisme et sans récolte d'identité"
 
 #: data/fit4ehealth/questions.json:1377
 msgid "are divided in guests and internal network"
@@ -2571,28 +2529,35 @@ msgid ""
 msgstr ""
 
 #: data/fit4ehealth/questions.json:1430
+#, fuzzy
 #| msgid "Anti-virus"
 msgid "Antivirus"
-msgstr ""
+msgstr "Antivirus"
 
 #: data/fit4ehealth/questions.json:1493
+#, fuzzy
 #| msgid "is activated and protects computers"
 msgid "is activated and protects computer"
-msgstr ""
+msgstr "est activé et protège les machines de façon proactive"
 
 #: data/fit4ehealth/questions.json:1510
+#, fuzzy
 #| msgid "is installed on all mobile phones that are on networks"
 msgid "is installed on all mobile phones that are on network"
-msgstr ""
+msgstr "est installé sur tous les téléphones mobiles étant sur le réseau"
 
 #: data/fit4ehealth/questions.json:1518
+#, fuzzy
 #| msgid ""
 #| "All devices, like smartphones, tablets should have an anti-virus, even if "
 #| "it's the one by default from the operating system."
 msgid ""
-" All devices, like smartphones, tablets should have an anti-virus, even if "
-"it is the one by default from the operating system."
+"All devices, like smartphones, tablets should have an anti-virus, even if it "
+"is the one by default from the operating system."
 msgstr ""
+"Tout appareil, y compris des appareils plus nomades comme les ordinateurs "
+"portables, les téléphones et les tablettes doivent avoir un antivirus, même "
+"ceux proposés par défaut dans les systèmes d'exploitation."
 
 #: data/fit4ehealth/questions.json:1535
 msgid ""
@@ -2610,13 +2575,15 @@ msgid "Information Systems within the Establishment"
 msgstr ""
 
 #: data/fit4ehealth/questions.json:1571
+#, fuzzy
 #| msgid ""
 #| "left without any rules, and users have to take care of their on "
 #| "workstations"
 msgid "used without any specific rules and users have to take care of them"
-msgstr ""
+msgstr "laissés sans consignes à discrétion des utilisateurs"
 
 #: data/fit4ehealth/questions.json:1579
+#, fuzzy
 #| msgid ""
 #| "Some rules and specific advice should be given concerning users stations "
 #| "or laptop. Some points that are important:"
@@ -2624,14 +2591,20 @@ msgid ""
 "Some rules and specific advice should be given concerning users workstations "
 "or laptops. Some points that are important:"
 msgstr ""
+"Des consignes et un encadrement précis doivent être donnés aux utilisateurs "
+"de station de travail. Voici des points à donner:"
 
 #: data/fit4ehealth/questions.json:1588
+#, fuzzy
 #| msgid "automatically or manually updated; software and operating system"
 msgid ""
 "automatically or manually updated regarding the software and operating system"
 msgstr ""
+"mis à jour de façon automatique ou manuelle (logiciels comme système "
+"d'exploitation)"
 
 #: data/fit4ehealth/questions.json:1596
+#, fuzzy
 #| msgid ""
 #| "A device should always be up to date in order to avoid security problems, "
 #| "and also avoid network intrusion. Many operating system now update "
@@ -2643,8 +2616,13 @@ msgid ""
 "automatically, but installed software needs some permission to be given or "
 "manual maintenance."
 msgstr ""
+"Une machine doit être le plus à jour possible pour éviter le plus de "
+"failles, et ainsi éviter au possible les attaques par intrusion dans le "
+"réseau. Si beaucoup de systèmes d'exploitation se mettent à jour sans aide "
+"particulière, les logiciels doivent recevoir une attention particulière."
 
 #: data/fit4ehealth/questions.json:1605
+#, fuzzy
 #| msgid ""
 #| "controlled by administrators, which won't let users install software "
 #| "because they do not have administrator rights"
@@ -2652,8 +2630,11 @@ msgid ""
 "controlled by one or more administrators, which won't let users install "
 "software because they do not have administrator right"
 msgstr ""
+"soumis aux droits d'administration, qui empêche pour tout utilisateur "
+"d'installer un logiciel"
 
 #: data/fit4ehealth/questions.json:1613
+#, fuzzy
 #| msgid ""
 #| "Administrator rights should be left only to the users who are specialised "
 #| "in IT, or welladvised respecting the rules."
@@ -2661,8 +2642,12 @@ msgid ""
 "Administrator rights should be left only to the users who are specialised in "
 "IT, or well advised respecting the rules."
 msgstr ""
+"Les droits d'administration peuvent être laissés à des utilisateurs avertis "
+"et informés des consignes pour utiliser leur machine, mais nécessitent des "
+"règles précises."
 
 #: data/fit4ehealth/questions.json:1622
+#, fuzzy
 #| msgid ""
 #| "needed to comply with rules or guidelines about installation and "
 #| "downloading software, concerning illegality or the danger to install "
@@ -2672,8 +2657,12 @@ msgid ""
 "software, concerning illegal or dangerous activities  e.g. installing "
 "something without authorization"
 msgstr ""
+"soumis à des règles et des consignes en ce qui concerne l'installation et le "
+"téléchargement de programme, comme sur l'illégalité, ou éviter d'installer "
+"sans faire attention"
 
 #: data/fit4ehealth/questions.json:1630
+#, fuzzy
 #| msgid ""
 #| "Downloads should only be done from the official websites, the original "
 #| "developers of the software, to avoid illegal download or infections."
@@ -2682,6 +2671,9 @@ msgid ""
 "developers of the software, to avoid manipulated download files or "
 "infections."
 msgstr ""
+"Les téléchargements doivent être sur les sites officiels, tant pour éviter "
+"d'éventuels téléchargements illégaux que les différents virus, et ces "
+"consignes doivent être données."
 
 #: data/fit4ehealth/questions.json:1656
 msgid "shut down regularly outside of office hours"
@@ -2727,6 +2719,7 @@ msgid "tested by me sometimes"
 msgstr ""
 
 #: data/fit4ehealth/questions.json:1746
+#, fuzzy
 #| msgid ""
 #| "Backups should be tested from time to time, just to ensure that the data "
 #| "is readable and has integrity."
@@ -2734,6 +2727,8 @@ msgid ""
 "Backups should be tested (restored) from time to time, just to ensure that "
 "the data is readable and has integrity."
 msgstr ""
+"Les sauvegardes doivent être testées, pour s'assurer qu'elles sont bien "
+"faites et fonctionnelles."
 
 #: data/fit4ehealth/questions.json:1755
 msgid "only readable by me, and the persons I gave permission to"
@@ -2747,6 +2742,7 @@ msgid ""
 msgstr ""
 
 #: data/fit4ehealth/questions.json:1810
+#, fuzzy
 #| msgid ""
 #| "Personal devices shouldn't be used in company without any controls, rules "
 #| "and explanations. By knowing all the different existing ways to attack an "
@@ -2756,13 +2752,20 @@ msgid ""
 "and explanations. By knowing all the different existing ways to attack an "
 "organization, it's possible to avoid them."
 msgstr ""
+"Le matériel personnel ne peut pas être utilisé dans un organisme sans "
+"contrôles et explications préalables. Les explications endiguent certaines "
+"attaques, particulièrement dès lors que la distinction des dangers et des "
+"choses qui peuvent arriver est faite."
 
 #: data/fit4ehealth/questions.json:1844
+#, fuzzy
 #| msgid ""
 #| "Defining rules and best practices helps to protect the internal networks."
 msgid ""
 "Defining rules and best practices help to protect the internal networks."
 msgstr ""
+"Cette pratique nécessite des explications pour être comprise au mieux "
+"possible."
 
 #: data/fit4ehealth/questions.json:1853
 msgid ""
@@ -3406,8 +3409,10 @@ msgid "(Some) Principles of Processing"
 msgstr "(Quelques) Principes de traitement"
 
 #: data/fit4privacy/questions.json:430 data/fit4privacy/questions.json:480
+#, fuzzy
+#| msgid "(Some) Principles of Processing"
 msgid "Principles of processing"
-msgstr ""
+msgstr "(Quelques) Principes de traitement"
 
 #: data/fit4privacy/questions.json:446
 msgid ""
@@ -4479,35 +4484,122 @@ msgstr ""
 "la sécurité de l'information et la protection des données sont-elles écrites "
 "et connues par vos employés?"
 
-#: data/survey4operators/context-questions.json:160
+#: data/survey4operators/context-questions.json:11
+msgid "Energy"
+msgstr ""
+
+#: data/survey4operators/context-questions.json:17
+#, fuzzy
+#| msgid "Transparency"
+msgid "Transport"
+msgstr "Transparence"
+
+#: data/survey4operators/context-questions.json:23
+msgid "Banking"
+msgstr ""
+
+#: data/survey4operators/context-questions.json:29
+msgid "Financial market infrastructure"
+msgstr ""
+
+#: data/survey4operators/context-questions.json:41
+msgid "Dringking water"
+msgstr ""
+
+#: data/survey4operators/context-questions.json:47
+msgid "Waste Water"
+msgstr ""
+
+#: data/survey4operators/context-questions.json:53
+msgid "Digital Infrastructure and Service Providers"
+msgstr ""
+
+#: data/survey4operators/context-questions.json:65
+msgid "Space"
+msgstr ""
+
+#: data/survey4operators/context-questions.json:71
+msgid "Postal and Courrier Services"
+msgstr ""
+
+#: data/survey4operators/context-questions.json:77
+#, fuzzy
+#| msgid "Risk Management"
+msgid "Waste Management"
+msgstr "Gestion des risques"
+
+#: data/survey4operators/context-questions.json:83
+msgid "Manufacture, production and distribution of chemicals"
+msgstr ""
+
+#: data/survey4operators/context-questions.json:89
+#, fuzzy
+#| msgid "Trading, sales and mass distribution"
+msgid "Food Production, processing and distribution"
+msgstr "Commerce, vente et grande distribution"
+
+#: data/survey4operators/context-questions.json:95
+msgid "Manufacturing of medical devices"
+msgstr ""
+
+#: data/survey4operators/context-questions.json:101
+msgid "Manufacture of computer, electronics and optical products"
+msgstr ""
+
+#: data/survey4operators/context-questions.json:107
+msgid "Manufacture of electrical equipment"
+msgstr ""
+
+#: data/survey4operators/context-questions.json:113
+msgid "Manufacture of machinery and equipment"
+msgstr ""
+
+#: data/survey4operators/context-questions.json:128
+msgid "Under 10 employees"
+msgstr ""
+
+#: data/survey4operators/context-questions.json:134
+msgid "From 10 to 49 employees"
+msgstr ""
+
+#: data/survey4operators/context-questions.json:140
+msgid "From 50 to 249 employees"
+msgstr ""
+
+#: data/survey4operators/context-questions.json:146
+msgid "Over 250 employees"
+msgstr ""
+
+#: data/survey4operators/context-questions.json:161
 msgid "In the EU"
 msgstr ""
 
-#: data/survey4operators/context-questions.json:166
+#: data/survey4operators/context-questions.json:167
 msgid "Outside of the EU but within EEA"
 msgstr ""
 
-#: data/survey4operators/context-questions.json:172
+#: data/survey4operators/context-questions.json:173
 msgid "Outside of the EEA"
 msgstr ""
 
-#: data/survey4operators/context-questions.json:178
+#: data/survey4operators/context-questions.json:179
+#, fuzzy
 #| msgid "Luxembourg"
 msgid "Just in Luxembourg"
-msgstr ""
+msgstr "Luxembourg"
 
-#: data/survey4operators/context-questions.json:186
+#: data/survey4operators/context-questions.json:187
 msgid ""
 "If your company part of a bigger international company or group with its "
 "headquarters outside of Luxembourg?"
 msgstr ""
 
-#: data/survey4operators/context-questions.json:193
+#: data/survey4operators/context-questions.json:194
 #: templates/survey/leaveSurvey.html:11
 msgid "Yes"
 msgstr "Oui"
 
-#: data/survey4operators/context-questions.json:199
+#: data/survey4operators/context-questions.json:200
 #: templates/survey/leaveSurvey.html:15
 msgid "No"
 msgstr "Non"
@@ -4517,9 +4609,10 @@ msgid "What is the risk management culture in your company?"
 msgstr ""
 
 #: data/survey4operators/questions.json:11
+#, fuzzy
 #| msgid "Never or not really."
 msgid "We do not really have one."
-msgstr ""
+msgstr "Jamais entendu cela au sein de notre société."
 
 #: data/survey4operators/questions.json:18
 msgid ""
@@ -4572,9 +4665,10 @@ msgstr ""
 #: data/survey4operators/questions.json:849
 #: data/survey4operators/questions.json:941
 #: data/survey4operators/questions.json:1059
+#, fuzzy
 #| msgid "not described"
 msgid "Please describe:"
-msgstr ""
+msgstr "non décrites"
 
 #: data/survey4operators/questions.json:95
 msgid ""
@@ -4637,9 +4731,10 @@ msgid "None and not needed nor desired."
 msgstr ""
 
 #: data/survey4operators/questions.json:243
+#, fuzzy
 #| msgid "None, but we have some contracts."
 msgid "None, but we would love some support."
-msgstr ""
+msgstr "Aucun, mais nous avons quelques contrats."
 
 #: data/survey4operators/questions.json:259
 msgid "Some. The list them includes:"
@@ -4704,9 +4799,10 @@ msgstr ""
 
 #: data/survey4operators/questions.json:393
 #: data/survey4operators/questions.json:451
+#, fuzzy
 #| msgid "Recommendations"
 msgid "Telecom regulations."
-msgstr ""
+msgstr "Recommandations"
 
 #: data/survey4operators/questions.json:401
 #: data/survey4operators/questions.json:467
@@ -4901,9 +4997,10 @@ msgstr ""
 
 #: data/survey4operators/questions.json:807
 #: data/survey4operators/questions.json:1025
+#, fuzzy
 #| msgid "None whatsoever."
 msgid "None of the above."
-msgstr ""
+msgstr "Aucune, car nous n'avons pas de données personnelles."
 
 #: data/survey4operators/questions.json:823
 msgid ""
@@ -5065,7 +5162,7 @@ msgstr ""
 
 #: data/survey4operators/questions.json:1127
 msgid "To multiple authorities."
-msgstr ""
+msgstr "À plusieurs autorités."
 
 #: data/survey4operators/questions.json:1135
 msgid "To National CERTs / CSIRTs."
@@ -5079,7 +5176,7 @@ msgstr ""
 #: data/survey4operators/questions.json:1201
 #: data/survey4operators/questions.json:1309
 msgid "Other - please describe:"
-msgstr ""
+msgstr "Autre - veuillez décrire:"
 
 #: data/survey4operators/questions.json:1161
 msgid ""
@@ -5089,7 +5186,7 @@ msgstr ""
 
 #: data/survey4operators/questions.json:1169
 msgid "Nothing."
-msgstr ""
+msgstr "Rien."
 
 #: data/survey4operators/questions.json:1177
 msgid "Connecting to companies with the same issues."
@@ -5181,26 +5278,26 @@ msgid ""
 "A single reporting platform to report incidents to multiple authorities."
 msgstr ""
 
-#: survey/forms.py:61
+#: survey/forms.py:55
 msgid "You need to choose at least one answer"
 msgstr "Vous devez choisir au moins une réponse"
 
-#: survey/forms.py:102 survey/forms.py:177
+#: survey/forms.py:96 survey/forms.py:171
 #: templates/survey/finishedSurvey.html:151
 #: templates/survey/finishedSurvey.html:158 templates/survey/review.html:40
 msgid "Your feedback"
 msgstr "Vos retours"
 
-#: survey/forms.py:104 survey/forms.py:179
+#: survey/forms.py:98 survey/forms.py:173
 msgid "Please let us know if anything is missing"
 msgstr "S'il vous plaît laissez-nous savoir si quelque chose est manquant"
 
-#: survey/forms.py:139
+#: survey/forms.py:133
 msgid "You can't choose multiple answers if the answer {} is choosen."
 msgstr ""
 "Vous ne pouvez pas choisir plusieurs réponses si la réponse {} est choisie."
 
-#: survey/forms.py:154
+#: survey/forms.py:148
 msgid "You can't choose the answers {} if answer '{}' is choosen."
 msgstr ""
 "Vous ne pouvez pas choisir plusieurs réponses {} si la réponse {} est "
@@ -5210,44 +5307,96 @@ msgstr ""
 msgid "Public administration"
 msgstr "Administration publique"
 
-#: survey/report.py:51
-msgid "Final report"
-msgstr "Rapport final"
-
-#: survey/viewLogic.py:57
+#: survey/viewLogic.py:58
 msgid "Let's start"
 msgstr "Commençons"
 
-#: survey/viewLogic.py:250
+#: survey/viewLogic.py:220
 msgid "Question"
 msgstr "Question"
 
-#: survey/views.py:124
+#: survey/views.py:126
 msgid "To generate a report you have to finish the survey."
 msgstr "Pour générer un rapport vous devez finir l'enquête."
 
-#: survey/views.py:192
+#: survey/views.py:194
 msgid "Answers review"
 msgstr "Votre aperçu des réponses"
 
-#: survey/views.py:229
+#: survey/views.py:231
 msgid "Final summary"
 msgstr "Résumé final"
 
-#: survey/views.py:262
+#: survey/views.py:264
 msgid ""
 "We could not find a survey with the requested key, please start a new one."
 msgstr ""
 "Nous n'avons pas pu trouver un sondage avec la clé demandée, veuillez en "
 "commencer un nouveau."
 
-#: survey/views.py:292
+#: survey/views.py:294
 msgid "Feedback sending errors: "
 msgstr "Erreurs d'envoi du retour d'information : "
 
-#: templates/admin/translations.html:5
+#: templates/admin/index.html:4
 msgid "Home"
+msgstr "Accueil"
+
+#: templates/admin/stats.html:10
+#, fuzzy
+#| msgid "Public administration"
+msgid "Django administration"
+msgstr "Administration publique"
+
+#: templates/fit4ehealth/survey/start.html:5
+msgid "Please click the Next button to start the questionnaire."
+msgstr "Veuillez cliquer sur le bouton Suivant pour démarrer le questionnaire."
+
+#: templates/fit4operatorsurvey/report/intro.html:6
+#, fuzzy, python-format
+#| msgid ""
+#| "The objective of the self-assessment tool, %(CUSTOM.tool_name)s is to "
+#| "understand the level of maturity in information security of operators, in "
+#| "preparation for informed governance and anticipation of the NISv2. This "
+#| "document, based on the %(CUSTOM.tool_name)s, is for the exclusive use of "
+#| "the customer. It is in this respect confidential. The tool, "
+#| "%(CUSTOM.tool_name)s can possibly provide recommendations. It is "
+#| "understood by the client that the recommendations are neither exclusive "
+#| "nor exhaustive. It should also be noted that the information you have "
+#| "provided to us will be recorded for statistical informational reasons. "
+#| "Due to the nature of the data, we can not identify you. Unless you later "
+#| "contact us and provide us your results."
+msgid ""
+"The objective of the self-assessment tool, %(custom.tool_name)s is to "
+"understand the level of maturity in information security of operators, in "
+"preparation for informed governance and anticipation of the NISv2.<br /><br /"
+"> This document, based on the %(custom.tool_name)s, is for the exclusive use "
+"of the customer. It is in this respect confidential.<br /><br /> The tool, "
+"%(custom.tool_name)s can possibly provide recommendations. It is understood "
+"by the client that the recommendations are neither exclusive nor exhaustive."
+"<br /><br /> It should also be noted that the information you have provided "
+"to us will be recorded for statistical informational reasons. Due to the "
+"nature of the data, we can not identify you. Unless you later contact us and "
+"provide us your results."
 msgstr ""
+"L'outil d'auto-évaluation, %(CUSTOM.tool_name)s, a pour objectif d’apprécier "
+"la maturité d’une organisation au regard des bonnes pratiques applicables en "
+"matière de la sécurité de l'information.<br /><br />Le présent document, "
+"basé sur le %(CUSTOM.tool_name)s, est destiné à l’usage exclusif du client. "
+"Il est à ce titre confidentiel.<br /><br /> En vu de la méthodologie "
+"employée et du fait qu'il s'agit d'une auto-évaluation, il est entendu que "
+"l’ensemble des résultats ne peut en aucune manière être exhaustif. À ce "
+"titre, l’appréciation du risque réel ou la liste des risques et "
+"vulnérabilités détectés sont basées sur les informations fournies par le "
+"client. L’analyse issue de cette appréciation ne peut engager que le client "
+"pour toute omission ou erreur qui serait due à des tiers ou non.<br /><br /"
+">L'outil, %(CUSTOM.tool_name)s peut éventuellement fournir des "
+"recommandations. Il est entendu par le client que les recommandations ne "
+"sont ni exclusives ni exhaustives.<br /><br />Il faut aussi noter que les "
+"informations que vous nous avez fourni seront enregistrés pour des raisons "
+"de statistiques. De part de la nature des données, nous ne pouvons vous "
+"identifier. Sauf si par la suite vous nous contacter pour faire un "
+"diagnostic CASES."
 
 #: templates/parts/footer_part.html:8 templates/parts/footer_part.html:9
 msgid "A service provided by CASES.LU"
@@ -5277,9 +5426,99 @@ msgstr "Auto-évaluation id"
 msgid "Description"
 msgstr "Description"
 
+#: templates/report/description.html:8
+#, fuzzy, python-format
+#| msgid ""
+#| "This self-assessment tool is named %(CUSTOM.tool_name)s to highlight the "
+#| "introduction to information security. It is also a prerequisite for doing "
+#| "a CASES Diagnostic: a minimum score of %(minimal_acceptable_score)s/100 "
+#| "is required. The purpose for this restriction gives us the opportunity to "
+#| "better tailor the recommendations to your organization during the "
+#| "Diagnostic. During this self-assessment multiple choice questions were "
+#| "asked. After analyzing your answers, recommendations have been provided. "
+#| "Finally, you can download a report, which will help you to communicate "
+#| "the results to your suppliers, if necessary."
+msgid ""
+"This self-assessment tool is named %(custom.tool_name)s to highlight the "
+"introduction to information security. It is also a prerequisite for doing a "
+"CASES Diagnostic: a minimum score of %(custom.minimal_acceptable_score)s/100 "
+"is required. The purpose for this restriction gives us the opportunity to "
+"better tailor the recommendations to your organization during the Diagnostic."
+"<br /><br /> During this self-assessment multiple choice questions were "
+"asked. After analyzing your answers, recommendations have been provided.<br /"
+"><br /> Finally, you can download a report, which will help you to "
+"communicate the results to your suppliers, if necessary."
+msgstr ""
+"Cet outil d'auto-évaluation est nommé %(CUSTOM.tool_name)s pour souligner "
+"l'introduction à la sécurité de l'information. Il est aussi un prérequis "
+"pour faire un Diagnostic CASES: un score minimal de "
+"%(minimal_acceptable_score)s/100 est requis. Le but pour cette restriction "
+"nous donne la possibilité pour mieux adapter les recommandations à votre "
+"organisation lors du Diagnostic. <br /><br /> Durant cette auto-evaluation "
+"questions à choix multiples vous ont été posées. Après avoir analysé vos "
+"réponses, des recommandations vous ont été fournies. <br /><br /> "
+"Finalement, vous pouvez télécharger ce document qui vous aidera pour "
+"communiquer les résultats à vos fournisseurs si besoin."
+
 #: templates/report/intro.html:4
 msgid "Introduction and Warning"
 msgstr "Introduction et avertissement"
+
+#: templates/report/intro.html:8
+#, fuzzy, python-format
+#| msgid ""
+#| "The objective of the self-assessment tool, %(CUSTOM.tool_name)s is to "
+#| "assess the maturity of an organization in terms of applicable good "
+#| "practices in the field of information security. This document, based on "
+#| "the %(CUSTOM.tool_name)s, is for the exclusive use of the customer. It is "
+#| "in this respect confidential. In view of the methodology used and the "
+#| "fact that it is a self-assessment, it is understood that the overall "
+#| "results can not in any way be exhaustive. As such, the actual risk "
+#| "assessment or the list of identified risks and vulnerabilities are based "
+#| "on the information provided by the client. The analysis resulting from "
+#| "this assessment can engage only the customer for any omission or error "
+#| "that would be due to third parties or not. The tool, %(CUSTOM.tool_name)s "
+#| "can possibly provide recommendations. It is understood by the client that "
+#| "the recommendations are neither exclusive nor exhaustive. It should also "
+#| "be noted that the information you have provided to us will be recorded "
+#| "for statistical reasons. Due to the nature of the data, we can not "
+#| "identify you. Unless you later contact us to do a Diagnostic CASES."
+msgid ""
+"The objective of the self-assessment tool, %(custom.tool_name)s is to assess "
+"the maturity of an organization in terms of applicable good practices in the "
+"field of information security.<br /><br /> This document, based on the "
+"%(custom.tool_name)s, is for the exclusive use of the customer. It is in "
+"this respect confidential.<br /><br /> In view of the methodology used and "
+"the fact that it is a self-assessment, it is understood that the overall "
+"results can not in any way be exhaustive. As such, the actual risk "
+"assessment or the list of identified risks and vulnerabilities are based on "
+"the information provided by the client. The analysis resulting from this "
+"assessment can engage only the customer for any omission or error that would "
+"be due to third parties or not.<br /><br /> The tool, %(custom.tool_name)s "
+"can possibly provide recommendations. It is understood by the client that "
+"the recommendations are neither exclusive nor exhaustive.<br /><br /> It "
+"should also be noted that the information you have provided to us will be "
+"recorded for statistical reasons. Due to the nature of the data, we can not "
+"identify you. Unless you later contact us to do a Diagnostic CASES."
+msgstr ""
+"L'outil d'auto-évaluation, %(CUSTOM.tool_name)s, a pour objectif d’apprécier "
+"la maturité d’une organisation au regard des bonnes pratiques applicables en "
+"matière de la sécurité de l'information.<br /><br />Le présent document, "
+"basé sur le %(CUSTOM.tool_name)s, est destiné à l’usage exclusif du client. "
+"Il est à ce titre confidentiel.<br /><br /> En vu de la méthodologie "
+"employée et du fait qu'il s'agit d'une auto-évaluation, il est entendu que "
+"l’ensemble des résultats ne peut en aucune manière être exhaustif. À ce "
+"titre, l’appréciation du risque réel ou la liste des risques et "
+"vulnérabilités détectés sont basées sur les informations fournies par le "
+"client. L’analyse issue de cette appréciation ne peut engager que le client "
+"pour toute omission ou erreur qui serait due à des tiers ou non.<br /><br /"
+">L'outil, %(CUSTOM.tool_name)s peut éventuellement fournir des "
+"recommandations. Il est entendu par le client que les recommandations ne "
+"sont ni exclusives ni exhaustives.<br /><br />Il faut aussi noter que les "
+"informations que vous nous avez fourni seront enregistrés pour des raisons "
+"de statistiques. De part de la nature des données, nous ne pouvons vous "
+"identifier. Sauf si par la suite vous nous contacter pour faire un "
+"diagnostic CASES."
 
 #: templates/report/questions.html:1
 msgid "Questions"
@@ -5301,7 +5540,28 @@ msgstr ""
 msgid "Result"
 msgstr "Résultat"
 
-#: templates/report/results.html:13 templates/survey/finishedSurvey.html:91
+#: templates/report/results.html:8
+#, fuzzy, python-format
+#| msgid ""
+#| "You have achieved %(SCORE)s/100 with your answers. You must reach at "
+#| "least %(minimal_acceptable_score)s/100 to be able to make a CASES "
+#| "Diagnosis.<br /><br />We remind you that this is a self-assessment and it "
+#| "is important to understand that all the results can not in any way be "
+#| "exhaustive."
+msgid ""
+"You have achieved %(SCORE)s/100 with your answers. You must reach at least "
+"%(custom.minimal_acceptable_score)s/100 to be able to make a CASES Diagnosis."
+"<br /><br /> We remind you that this is a self-assessment, and it is "
+"important to understand that all the results can not in any way be "
+"exhaustive."
+msgstr ""
+"Vous avez atteint %(SCORE)s/100 avec vos réponses. Vous devez atteindre au "
+"moins %(minimal_acceptable_score)s/100 pour pouvoir faire un Diagnostic "
+"CASES. <br /><br /> Nous vous rappelons qu'il s'agit d'une auto-évaluation, "
+"il est entendu que l’ensemble des résultats ne peut en aucune manière être "
+"exhaustif."
+
+#: templates/report/results.html:17 templates/survey/finishedSurvey.html:91
 #, python-format
 msgid ""
 "You have scored an additional %(bonus)s %% of bonus points for following "
@@ -5309,6 +5569,10 @@ msgid ""
 msgstr ""
 "Vous avez obtenu %(bonus)s %% de points bonus supplémentaires pour avoir "
 "suivi les meilleures pratiques."
+
+#: templates/report/template.html:9 templates/report/template.html:14
+msgid "Final report"
+msgstr "Rapport final"
 
 #: templates/report/template.html:13
 #, python-format
@@ -5464,7 +5728,7 @@ msgstr "Annuler"
 msgid "Continue later"
 msgstr "Continuer plus tard"
 
-#: templates/survey/questions.html:75 templates/survey/start.html:37
+#: templates/survey/questions.html:75 templates/survey/start.html:39
 msgid "Next"
 msgstr "Suite"
 
@@ -5619,19 +5883,10 @@ msgstr "Envoyer le rapport par e-mail"
 msgid "Your email address won't be stored."
 msgstr "Votre adresse électronique ne sera pas conservée."
 
-#: templates/survey/start.html:21
+#: templates/survey/start.html:22
 msgid ""
-"We need this information to be able to give you useful recommendations, "
-"once the self-assessment is done."
+"We need this information to be able to give you useful recommendations, once "
+"the self-assessment is done."
 msgstr ""
 "Nous avons besoin de quelques informations pour pouvoir vous faire des "
 "recommandations utiles, une fois l’auto-évaluation terminée."
-
-#~ msgid ""
-#~ "If a wireless network is used for external people, strong precautions "
-#~ "should be taken, for example the collection of an identity"
-#~ msgstr ""
-#~ "Si un réseau sans fil pour des personnes externes, des protections "
-#~ "lourdes doivent être mises en place, comme une récolte d'identité pour "
-#~ "désigner le responsable d'une connexion à du contenu qui outrepasserait "
-#~ "le cadre légal."

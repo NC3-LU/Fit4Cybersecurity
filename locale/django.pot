@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-12-13 13:33+0000\n"
+"POT-Creation-Date: 2021-12-17 13:34+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,162 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: csskp/config.py:29
-msgid ""
-"This survey aims to identify the level of maturity of the operators in "
-"Luxembourg with respect to risk management and governance, collaboration on "
-"national and EU level and Incident reporting. We collect the answers to "
-"these 30 questions to understand where guidance and knowledge is already "
-"advanced and where there is room for improvement. As such, it is recommended "
-"that a person is taking this survey that is knowing the company's maturity "
-"on the aforementioned topics well.<br /><br />The survey will be online and "
-"available between December 2021 and March 31st 2022 .After the survey, the "
-"data will be processed and results will be interpreted. However, since the "
-"survey is completely anonymous, we cannot identify you nor your company and "
-"thus deletion of specific records is not possible: we cannot be sure that it "
-"is indeed your survey. The results will be made available through another "
-"channel.<br /><br />If you are not able to do the survey in one go and you "
-"want to later pick up where you have left off, please be sure to save the "
-"link by clicking on the \"continue later\" button. We will not be able to "
-"help you to find your answers again otherwise."
-msgstr ""
-
-#: csskp/config.py:89 csskp/config_dev.py:69
-#, python-format
-msgid ""
-"The objective of the self-assessment tool, %(tool_name)s is to assess the "
-"maturity of an organization in terms of applicable good practices in the "
-"field of information security.<br /><br />This document, based on the "
-"%(tool_name)s, is for the exclusive use of the customer. It is in this "
-"respect confidential.<br /><br />In view of the methodology used and the "
-"fact that it is a self-assessment, it is understood that the overall results "
-"can not in any way be exhaustive. As such, the actual risk assessment or the "
-"list of identified risks and vulnerabilities are based on the information "
-"provided by the client. The analysis resulting from this assessment can "
-"engage only the customer for any omission or error that would be due to "
-"third parties or not.<br /><br />The tool, %(tool_name)s can possibly "
-"provide recommendations. It is understood by the client that the "
-"recommendations are neither exclusive nor exhaustive.<br /><br />It should "
-"also be noted that the information you have provided to us will be recorded "
-"for statistical reasons. Due to the nature of the data, we can not identify "
-"you. Unless you later contact us to do a Diagnostic CASES."
-msgstr ""
-
-#: csskp/config.py:113 csskp/config_dev.py:93
-#, python-format
-msgid ""
-"This self-assessment tool is named %(tool_name)s to highlight the "
-"introduction to information security. It is also a prerequisite for doing a "
-"CASES Diagnostic: a minimum score of %(minimal_acceptable_score)s/100 is "
-"required. The purpose for this restriction gives us the opportunity to "
-"better tailor the recommendations to your organization during the Diagnostic."
-"<br /><br />During this self-assessment multiple choice questions were "
-"asked. After analyzing your answers, recommendations have been provided.<br /"
-"><br />Finally, you can download a report, which will help you to "
-"communicate the results to your suppliers, if necessary."
-msgstr ""
-
-#: csskp/config.py:127 csskp/config_dev.py:107
-#, python-format
-msgid ""
-"You have achieved %(SCORE)s/100 with your answers. You must reach at least "
-"%(minimal_acceptable_score)s/100 to be able to make a CASES Diagnosis.<br /"
-"><br />We remind you that this is a self-assessment and it is important to "
-"understand that all the results can not in any way be exhaustive."
-msgstr ""
-
-#: csskp/config.py:136 data/survey4operators/context-questions.json:10
-msgid "Energy"
-msgstr ""
-
-#: csskp/config.py:137 data/survey4operators/context-questions.json:16
-msgid "Transport"
-msgstr ""
-
-#: csskp/config.py:138 data/survey4operators/context-questions.json:22
-msgid "Banking"
-msgstr ""
-
-#: csskp/config.py:139 data/survey4operators/context-questions.json:28
-msgid "Financial market infrastructure"
-msgstr ""
-
-#: csskp/config.py:140 data/fit4cybersecurity/context-questions.json:58
-#: data/fit4ehealth/context-questions.json:10
-#: data/survey4operators/context-questions.json:34 survey/globals.py:15
-msgid "Health"
-msgstr ""
-
-#: csskp/config.py:141 data/survey4operators/context-questions.json:40
-msgid "Dringking water"
-msgstr ""
-
-#: csskp/config.py:142 data/survey4operators/context-questions.json:46
-msgid "Waste Water"
-msgstr ""
-
-#: csskp/config.py:143 data/survey4operators/context-questions.json:52
-msgid "Digital Infrastructure and Service Providers"
-msgstr ""
-
-#: csskp/config.py:144 data/fit4cybersecurity/context-questions.json:94
-#: data/survey4operators/context-questions.json:58
-msgid "Public Administration"
-msgstr ""
-
-#: csskp/config.py:145 data/survey4operators/context-questions.json:64
-msgid "Space"
-msgstr ""
-
-#: csskp/config.py:146 data/survey4operators/context-questions.json:70
-msgid "Postal and Courrier Services"
-msgstr ""
-
-#: csskp/config.py:147 data/survey4operators/context-questions.json:76
-msgid "Waste Management"
-msgstr ""
-
-#: csskp/config.py:148 data/survey4operators/context-questions.json:82
-msgid "Manufacture, production and distribution of chemicals"
-msgstr ""
-
-#: csskp/config.py:149 data/survey4operators/context-questions.json:88
-msgid "Food Production, processing and distribution"
-msgstr ""
-
-#: csskp/config.py:150 data/survey4operators/context-questions.json:94
-msgid "Manufacturing of medical devices"
-msgstr ""
-
-#: csskp/config.py:151 data/survey4operators/context-questions.json:100
-msgid "Manufacture of computer, electronics and optical products"
-msgstr ""
-
-#: csskp/config.py:152 data/survey4operators/context-questions.json:106
-msgid "Manufacture of electrical equipment"
-msgstr ""
-
-#: csskp/config.py:153 data/survey4operators/context-questions.json:112
-msgid "Manufacture of machinery and equipment"
-msgstr ""
-
-#: csskp/config.py:156 data/survey4operators/context-questions.json:127
-msgid "Under 10 employees"
-msgstr ""
-
-#: csskp/config.py:157 data/survey4operators/context-questions.json:133
-msgid "From 10 to 49 employees"
-msgstr ""
-
-#: csskp/config.py:158 data/survey4operators/context-questions.json:139
-msgid "From 50 to 249 employees"
-msgstr ""
-
-#: csskp/config.py:159 data/survey4operators/context-questions.json:145
-msgid "Over 250 employees"
-msgstr ""
-
-#: csskp/config_dev.py:28
+#: csskp/config.py:30 csskp/config_dev.py:30
 msgid "Description of the tool."
 msgstr ""
 
@@ -183,145 +28,156 @@ msgid "What is your sector?"
 msgstr ""
 
 #: data/fit4cybersecurity/context-questions.json:4
-#: data/fit4cybersecurity/context-questions.json:103
-#: data/fit4cybersecurity/context-questions.json:172
+#: data/fit4cybersecurity/context-questions.json:104
+#: data/fit4cybersecurity/context-questions.json:173
 #: data/fit4ehealth/context-questions.json:4
 #: data/fit4ehealth/context-questions.json:19
 #: data/survey4operators/context-questions.json:4
-#: data/survey4operators/context-questions.json:121
-#: data/survey4operators/context-questions.json:154
-#: data/survey4operators/context-questions.json:187
+#: data/survey4operators/context-questions.json:122
+#: data/survey4operators/context-questions.json:155
+#: data/survey4operators/context-questions.json:188
 msgid "Context"
 msgstr ""
 
 #: data/fit4cybersecurity/context-questions.json:5
-#: data/fit4cybersecurity/context-questions.json:104
-#: data/fit4cybersecurity/context-questions.json:173
+#: data/fit4cybersecurity/context-questions.json:105
+#: data/fit4cybersecurity/context-questions.json:174
 #: data/fit4ehealth/context-questions.json:5
 #: data/fit4ehealth/context-questions.json:20
 #: data/survey4operators/context-questions.json:5
-#: data/survey4operators/context-questions.json:122
-#: data/survey4operators/context-questions.json:155
-#: data/survey4operators/context-questions.json:188
+#: data/survey4operators/context-questions.json:123
+#: data/survey4operators/context-questions.json:156
+#: data/survey4operators/context-questions.json:189
 msgid "__context"
 msgstr ""
 
-#: data/fit4cybersecurity/context-questions.json:10 survey/globals.py:7
+#: data/fit4cybersecurity/context-questions.json:11 survey/globals.py:7
 msgid "Banking, insurance and real estate"
 msgstr ""
 
-#: data/fit4cybersecurity/context-questions.json:16 survey/globals.py:8
+#: data/fit4cybersecurity/context-questions.json:17 survey/globals.py:8
 msgid "Trading, sales and mass distribution"
 msgstr ""
 
-#: data/fit4cybersecurity/context-questions.json:22 survey/globals.py:9
+#: data/fit4cybersecurity/context-questions.json:23 survey/globals.py:9
 msgid "Marketing, media and multimedia"
 msgstr ""
 
-#: data/fit4cybersecurity/context-questions.json:28 survey/globals.py:10
+#: data/fit4cybersecurity/context-questions.json:29 survey/globals.py:10
 msgid "Construction industries and civil engineering"
 msgstr ""
 
-#: data/fit4cybersecurity/context-questions.json:34 survey/globals.py:11
+#: data/fit4cybersecurity/context-questions.json:35 survey/globals.py:11
 msgid "Hotel and restoration, tourism and entertainment"
 msgstr ""
 
-#: data/fit4cybersecurity/context-questions.json:40 survey/globals.py:12
+#: data/fit4cybersecurity/context-questions.json:41 survey/globals.py:12
 msgid "Industry"
 msgstr ""
 
-#: data/fit4cybersecurity/context-questions.json:46 survey/globals.py:13
+#: data/fit4cybersecurity/context-questions.json:47 survey/globals.py:13
 msgid "Installation and maintenance"
 msgstr ""
 
-#: data/fit4cybersecurity/context-questions.json:52 survey/globals.py:14
+#: data/fit4cybersecurity/context-questions.json:53 survey/globals.py:14
 msgid "Creation or placing of objects that are artistic and decorative"
 msgstr ""
 
-#: data/fit4cybersecurity/context-questions.json:64 survey/globals.py:16
+#: data/fit4cybersecurity/context-questions.json:59
+#: data/fit4ehealth/context-questions.json:10
+#: data/survey4operators/context-questions.json:35 survey/globals.py:15
+msgid "Health"
+msgstr ""
+
+#: data/fit4cybersecurity/context-questions.json:65 survey/globals.py:16
 msgid "Home-Care Service or Community Service"
 msgstr ""
 
-#: data/fit4cybersecurity/context-questions.json:70 survey/globals.py:17
+#: data/fit4cybersecurity/context-questions.json:71 survey/globals.py:17
 msgid "Shows"
 msgstr ""
 
-#: data/fit4cybersecurity/context-questions.json:76 survey/globals.py:18
+#: data/fit4cybersecurity/context-questions.json:77 survey/globals.py:18
 msgid "Company Support"
 msgstr ""
 
-#: data/fit4cybersecurity/context-questions.json:82 survey/globals.py:19
+#: data/fit4cybersecurity/context-questions.json:83 survey/globals.py:19
 msgid "Transport and Logistics"
 msgstr ""
 
-#: data/fit4cybersecurity/context-questions.json:88 survey/globals.py:20
+#: data/fit4cybersecurity/context-questions.json:89 survey/globals.py:20
 msgid "Farming and fishing, natural spaces and green spaces, animal care"
 msgstr ""
 
-#: data/fit4cybersecurity/context-questions.json:102
-#: data/survey4operators/context-questions.json:120
+#: data/fit4cybersecurity/context-questions.json:95
+#: data/survey4operators/context-questions.json:59
+msgid "Public Administration"
+msgstr ""
+
+#: data/fit4cybersecurity/context-questions.json:103
+#: data/survey4operators/context-questions.json:121
 msgid "How many employees?"
 msgstr ""
 
-#: data/fit4cybersecurity/context-questions.json:109
+#: data/fit4cybersecurity/context-questions.json:110
 msgid "1-5"
 msgstr ""
 
-#: data/fit4cybersecurity/context-questions.json:115
+#: data/fit4cybersecurity/context-questions.json:116
 msgid "6-10"
 msgstr ""
 
-#: data/fit4cybersecurity/context-questions.json:121
+#: data/fit4cybersecurity/context-questions.json:122
 msgid "10-20"
 msgstr ""
 
-#: data/fit4cybersecurity/context-questions.json:127
+#: data/fit4cybersecurity/context-questions.json:128
 msgid "20-50"
 msgstr ""
 
-#: data/fit4cybersecurity/context-questions.json:133
+#: data/fit4cybersecurity/context-questions.json:134
 msgid "50-100"
 msgstr ""
 
-#: data/fit4cybersecurity/context-questions.json:139
+#: data/fit4cybersecurity/context-questions.json:140
 msgid "100-200"
 msgstr ""
 
-#: data/fit4cybersecurity/context-questions.json:145
+#: data/fit4cybersecurity/context-questions.json:146
 msgid "200-500"
 msgstr ""
 
-#: data/fit4cybersecurity/context-questions.json:151
+#: data/fit4cybersecurity/context-questions.json:152
 msgid "500-1000"
 msgstr ""
 
-#: data/fit4cybersecurity/context-questions.json:157
+#: data/fit4cybersecurity/context-questions.json:158
 msgid "1000-5000"
 msgstr ""
 
-#: data/fit4cybersecurity/context-questions.json:163
+#: data/fit4cybersecurity/context-questions.json:164
 msgid "5000+"
 msgstr ""
 
-#: data/fit4cybersecurity/context-questions.json:171
-#: data/survey4operators/context-questions.json:153
+#: data/fit4cybersecurity/context-questions.json:172
+#: data/survey4operators/context-questions.json:154
 msgid "What is your country?"
 msgstr ""
 
-#: data/fit4cybersecurity/context-questions.json:178
+#: data/fit4cybersecurity/context-questions.json:179
 #: data/fit4ehealth/context-questions.json:25
 msgid "Luxembourg"
 msgstr ""
 
-#: data/fit4cybersecurity/context-questions.json:184
+#: data/fit4cybersecurity/context-questions.json:185
 msgid "Germany"
 msgstr ""
 
-#: data/fit4cybersecurity/context-questions.json:190
+#: data/fit4cybersecurity/context-questions.json:191
 msgid "Belgium"
 msgstr ""
 
-#: data/fit4cybersecurity/context-questions.json:196
+#: data/fit4cybersecurity/context-questions.json:197
 msgid "France"
 msgstr ""
 
@@ -2129,8 +1985,8 @@ msgstr ""
 
 #: data/fit4ehealth/questions.json:1518
 msgid ""
-" All devices, like smartphones, tablets should have an anti-virus, even if "
-"it is the one by default from the operating system."
+"All devices, like smartphones, tablets should have an anti-virus, even if it "
+"is the one by default from the operating system."
 msgstr ""
 
 #: data/fit4ehealth/questions.json:1535
@@ -3457,34 +3313,114 @@ msgid ""
 "known to your employees?"
 msgstr ""
 
-#: data/survey4operators/context-questions.json:160
+#: data/survey4operators/context-questions.json:11
+msgid "Energy"
+msgstr ""
+
+#: data/survey4operators/context-questions.json:17
+msgid "Transport"
+msgstr ""
+
+#: data/survey4operators/context-questions.json:23
+msgid "Banking"
+msgstr ""
+
+#: data/survey4operators/context-questions.json:29
+msgid "Financial market infrastructure"
+msgstr ""
+
+#: data/survey4operators/context-questions.json:41
+msgid "Dringking water"
+msgstr ""
+
+#: data/survey4operators/context-questions.json:47
+msgid "Waste Water"
+msgstr ""
+
+#: data/survey4operators/context-questions.json:53
+msgid "Digital Infrastructure and Service Providers"
+msgstr ""
+
+#: data/survey4operators/context-questions.json:65
+msgid "Space"
+msgstr ""
+
+#: data/survey4operators/context-questions.json:71
+msgid "Postal and Courrier Services"
+msgstr ""
+
+#: data/survey4operators/context-questions.json:77
+msgid "Waste Management"
+msgstr ""
+
+#: data/survey4operators/context-questions.json:83
+msgid "Manufacture, production and distribution of chemicals"
+msgstr ""
+
+#: data/survey4operators/context-questions.json:89
+msgid "Food Production, processing and distribution"
+msgstr ""
+
+#: data/survey4operators/context-questions.json:95
+msgid "Manufacturing of medical devices"
+msgstr ""
+
+#: data/survey4operators/context-questions.json:101
+msgid "Manufacture of computer, electronics and optical products"
+msgstr ""
+
+#: data/survey4operators/context-questions.json:107
+msgid "Manufacture of electrical equipment"
+msgstr ""
+
+#: data/survey4operators/context-questions.json:113
+msgid "Manufacture of machinery and equipment"
+msgstr ""
+
+#: data/survey4operators/context-questions.json:128
+msgid "Under 10 employees"
+msgstr ""
+
+#: data/survey4operators/context-questions.json:134
+msgid "From 10 to 49 employees"
+msgstr ""
+
+#: data/survey4operators/context-questions.json:140
+msgid "From 50 to 249 employees"
+msgstr ""
+
+#: data/survey4operators/context-questions.json:146
+msgid "Over 250 employees"
+msgstr ""
+
+#: data/survey4operators/context-questions.json:161
 msgid "In the EU"
 msgstr ""
 
-#: data/survey4operators/context-questions.json:166
+#: data/survey4operators/context-questions.json:167
 msgid "Outside of the EU but within EEA"
 msgstr ""
 
-#: data/survey4operators/context-questions.json:172
+#: data/survey4operators/context-questions.json:173
 msgid "Outside of the EEA"
 msgstr ""
 
-#: data/survey4operators/context-questions.json:178
+#: data/survey4operators/context-questions.json:179
 msgid "Just in Luxembourg"
 msgstr ""
 
-#: data/survey4operators/context-questions.json:186
+#: data/survey4operators/context-questions.json:187
 msgid ""
 "If your company part of a bigger international company or group with its "
 "headquarters outside of Luxembourg?"
 msgstr ""
 
-#: data/survey4operators/context-questions.json:193
+#: data/survey4operators/context-questions.json:194
 #: templates/survey/leaveSurvey.html:11
 msgid "Yes"
 msgstr ""
 
-#: data/survey4operators/context-questions.json:199
+#: data/survey4operators/context-questions.json:200
 #: templates/survey/leaveSurvey.html:15
 msgid "No"
 msgstr ""
@@ -4153,25 +4089,25 @@ msgid ""
 "A single reporting platform to report incidents to multiple authorities."
 msgstr ""
 
-#: survey/forms.py:61
+#: survey/forms.py:55
 msgid "You need to choose at least one answer"
 msgstr ""
 
-#: survey/forms.py:102 survey/forms.py:177
+#: survey/forms.py:96 survey/forms.py:171
 #: templates/survey/finishedSurvey.html:151
 #: templates/survey/finishedSurvey.html:158 templates/survey/review.html:40
 msgid "Your feedback"
 msgstr ""
 
-#: survey/forms.py:104 survey/forms.py:179
+#: survey/forms.py:98 survey/forms.py:173
 msgid "Please let us know if anything is missing"
 msgstr ""
 
-#: survey/forms.py:139
+#: survey/forms.py:133
 msgid "You can't choose multiple answers if the answer {} is choosen."
 msgstr ""
 
-#: survey/forms.py:154
+#: survey/forms.py:148
 msgid "You can't choose the answers {} if answer '{}' is choosen."
 msgstr ""
 
@@ -4179,41 +4115,61 @@ msgstr ""
 msgid "Public administration"
 msgstr ""
 
-#: survey/report.py:51
-msgid "Final report"
-msgstr ""
-
-#: survey/viewLogic.py:57
+#: survey/viewLogic.py:58
 msgid "Let's start"
 msgstr ""
 
-#: survey/viewLogic.py:250
+#: survey/viewLogic.py:220
 msgid "Question"
 msgstr ""
 
-#: survey/views.py:124
+#: survey/views.py:126
 msgid "To generate a report you have to finish the survey."
 msgstr ""
 
-#: survey/views.py:192
+#: survey/views.py:194
 msgid "Answers review"
 msgstr ""
 
-#: survey/views.py:229
+#: survey/views.py:231
 msgid "Final summary"
 msgstr ""
 
-#: survey/views.py:262
+#: survey/views.py:264
 msgid ""
 "We could not find a survey with the requested key, please start a new one."
 msgstr ""
 
-#: survey/views.py:292
+#: survey/views.py:294
 msgid "Feedback sending errors: "
 msgstr ""
 
-#: templates/admin/translations.html:5
+#: templates/admin/index.html:4
 msgid "Home"
+msgstr ""
+
+#: templates/admin/stats.html:10
+msgid "Django administration"
+msgstr ""
+
+#: templates/fit4ehealth/survey/start.html:5
+msgid "Please click the Next button to start the questionnaire."
+msgstr ""
+
+#: templates/fit4operatorsurvey/report/intro.html:6
+#, python-format
+msgid ""
+"The objective of the self-assessment tool, %(custom.tool_name)s is to "
+"understand the level of maturity in information security of operators, in "
+"preparation for informed governance and anticipation of the NISv2.<br /><br /"
+"> This document, based on the %(custom.tool_name)s, is for the exclusive use "
+"of the customer. It is in this respect confidential.<br /><br /> The tool, "
+"%(custom.tool_name)s can possibly provide recommendations. It is understood "
+"by the client that the recommendations are neither exclusive nor exhaustive."
+"<br /><br /> It should also be noted that the information you have provided "
+"to us will be recorded for statistical informational reasons. Due to the "
+"nature of the data, we can not identify you. Unless you later contact us and "
+"provide us your results."
 msgstr ""
 
 #: templates/parts/footer_part.html:8 templates/parts/footer_part.html:9
@@ -4244,8 +4200,43 @@ msgstr ""
 msgid "Description"
 msgstr ""
 
+#: templates/report/description.html:8
+#, python-format
+msgid ""
+"This self-assessment tool is named %(custom.tool_name)s to highlight the "
+"introduction to information security. It is also a prerequisite for doing a "
+"CASES Diagnostic: a minimum score of %(custom.minimal_acceptable_score)s/100 "
+"is required. The purpose for this restriction gives us the opportunity to "
+"better tailor the recommendations to your organization during the Diagnostic."
+"<br /><br /> During this self-assessment multiple choice questions were "
+"asked. After analyzing your answers, recommendations have been provided.<br /"
+"><br /> Finally, you can download a report, which will help you to "
+"communicate the results to your suppliers, if necessary."
+msgstr ""
+
 #: templates/report/intro.html:4
 msgid "Introduction and Warning"
+msgstr ""
+
+#: templates/report/intro.html:8
+#, python-format
+msgid ""
+"The objective of the self-assessment tool, %(custom.tool_name)s is to assess "
+"the maturity of an organization in terms of applicable good practices in the "
+"field of information security.<br /><br /> This document, based on the "
+"%(custom.tool_name)s, is for the exclusive use of the customer. It is in "
+"this respect confidential.<br /><br /> In view of the methodology used and "
+"the fact that it is a self-assessment, it is understood that the overall "
+"results can not in any way be exhaustive. As such, the actual risk "
+"assessment or the list of identified risks and vulnerabilities are based on "
+"the information provided by the client. The analysis resulting from this "
+"assessment can engage only the customer for any omission or error that would "
+"be due to third parties or not.<br /><br /> The tool, %(custom.tool_name)s "
+"can possibly provide recommendations. It is understood by the client that "
+"the recommendations are neither exclusive nor exhaustive.<br /><br /> It "
+"should also be noted that the information you have provided to us will be "
+"recorded for statistical reasons. Due to the nature of the data, we can not "
+"identify you. Unless you later contact us to do a Diagnostic CASES."
 msgstr ""
 
 #: templates/report/questions.html:1
@@ -4266,11 +4257,25 @@ msgstr ""
 msgid "Result"
 msgstr ""
 
-#: templates/report/results.html:13 templates/survey/finishedSurvey.html:91
+#: templates/report/results.html:8
+#, python-format
+msgid ""
+"You have achieved %(SCORE)s/100 with your answers. You must reach at least "
+"%(custom.minimal_acceptable_score)s/100 to be able to make a CASES Diagnosis."
+"<br /><br /> We remind you that this is a self-assessment, and it is "
+"important to understand that all the results can not in any way be "
+"exhaustive."
+msgstr ""
+
+#: templates/report/results.html:17 templates/survey/finishedSurvey.html:91
 #, python-format
 msgid ""
 "You have scored an additional %(bonus)s %% of bonus points for following "
 "best practices."
+msgstr ""
+
+#: templates/report/template.html:9 templates/report/template.html:14
+msgid "Final report"
 msgstr ""
 
 #: templates/report/template.html:13
@@ -4402,7 +4407,7 @@ msgstr ""
 msgid "Continue later"
 msgstr ""
 
-#: templates/survey/questions.html:75 templates/survey/start.html:37
+#: templates/survey/questions.html:75 templates/survey/start.html:39
 msgid "Next"
 msgstr ""
 
@@ -4511,8 +4516,8 @@ msgstr ""
 msgid "Your email address won't be stored."
 msgstr ""
 
-#: templates/survey/start.html:21
+#: templates/survey/start.html:22
 msgid ""
-"We need this information to be able to give you useful recommendations, "
-"once the self-assessment is done."
+"We need this information to be able to give you useful recommendations, once "
+"the self-assessment is done."
 msgstr ""
