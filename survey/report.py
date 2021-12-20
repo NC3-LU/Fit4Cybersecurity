@@ -60,7 +60,7 @@ def create_html_report(user: SurveyUser, lang: str, request: HttpRequest) -> str
             "recommendations": recommendations_list,
             "questions": question_list,
         },
-        request=request
+        request=request,
     )
 
     return output_from_parsed_template

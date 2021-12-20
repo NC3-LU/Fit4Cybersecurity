@@ -57,7 +57,7 @@ def site_stats(request):
         "nb_surveys": nb_surveys,
         "nb_finished_surveys": nb_finished_surveys,
         "last_surveys": last_surveys,
-        "survey_results": survey_results
+        "survey_results": survey_results,
     }
     return render(request, "admin/site_stats.html", context=context)
 
