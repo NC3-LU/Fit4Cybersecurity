@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
 import os
+import logging
 from datetime import datetime
 from weasyprint import HTML, CSS
 from django.template.loader import render_to_string
@@ -17,6 +18,9 @@ from survey.reporthelper import (
 from survey.viewLogic import get_questions_with_user_answers
 from survey import globals
 
+# Get an instance of a logger
+logger = logging.getLogger(__name__)
+
 cases_logo = os.path.abspath(os.path.join(settings.BASE_DIR, CUSTOM["cases_logo"]))
 secin_logo = os.path.abspath(os.path.join(settings.BASE_DIR, CUSTOM["secin_logo"]))
 
@@ -31,8 +35,11 @@ def create_html_report(user: SurveyUser, lang: str, request: HttpRequest) -> str
     # Generate the chart
     try:
         chart_png_base64 = generate_chart_png(
-            user, details, section_list, lang, "base64"
+            user, details, section_list, "base64"
         )
+    except AssertionError as e:
+        logger.error(e)
+        chart_png_base64 = None
     except Exception as e:
         chart_png_base64 = None
         raise e

@@ -153,13 +153,14 @@ def calculateResult(user: SurveyUser) -> Tuple[int, int, List[int], List[str]]:
 
 
 def generate_chart_png(
-    user: SurveyUser, evaluation, sections_list, lang, output_type="file"
+    user: SurveyUser, evaluation, sections_list, output_type="file"
 ) -> Optional[str]:
     """Generates the chart with Matplotlib and returns the path of the generated
     graph which will be included in the report.
     Returns a graph in base 64 as a string or writes the graph in a file on the disk.
     """
     n = len(sections_list)
+    assert len(evaluation) == n, "'evaluation' and 'sections_list' must have same size."
     theta = radar_factory(n, frame="polygon")
 
     fig = Figure(figsize=(11, 11), dpi=150)
