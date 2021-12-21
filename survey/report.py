@@ -34,9 +34,7 @@ def create_html_report(user: SurveyUser, lang: str, request: HttpRequest) -> str
 
     # Generate the chart
     try:
-        chart_png_base64 = generate_chart_png(
-            user, details, section_list, "base64"
-        )
+        chart_png_base64 = generate_chart_png(user, details, section_list, "base64")
     except AssertionError as e:
         logger.error(e)
         chart_png_base64 = None

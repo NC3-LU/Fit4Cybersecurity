@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-12-17 13:34+0000\n"
+"POT-Creation-Date: 2021-12-21 08:36+0000\n"
 "PO-Revision-Date: 2021-12-17 13:58+0100\n"
 "Last-Translator: Juan Rocha <juan.rocha@cases.lu>\n"
 "Language-Team: German <https://translate.monarc.lu/projects/"
@@ -19,7 +19,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Poedit 3.0.1\n"
 
-#: csskp/config.py:30 csskp/config_dev.py:30
+#: csskp/config.py:29 csskp/config_dev.py:30
 msgid "Description of the tool."
 msgstr ""
 
@@ -1465,7 +1465,6 @@ msgstr ""
 "Das Unternehmen sollte Regeln definieren, um Missverständnisse zu vermeiden:"
 
 #: data/fit4ehealth/questions.json:40
-
 msgid ""
 "Rules (organizational, IT or working ones) should be known and explained to "
 "everyone, at the very least orally."
@@ -4975,16 +4974,16 @@ msgstr "Öffentliche Verwaltungen"
 msgid "Let's start"
 msgstr "Lasst uns beginnen"
 
-#: survey/viewLogic.py:220
+#: survey/viewLogic.py:217
 msgid "Question"
 msgstr "Frage"
 
-#: survey/views.py:126
+#: survey/views.py:125
 msgid "To generate a report you have to finish the survey."
 msgstr ""
 "Um einen Bericht zu erstellen, muss erst die Umfrage beantwortet werden."
 
-#: survey/views.py:194
+#: survey/views.py:196
 msgid "Answers review"
 msgstr ""
 
@@ -5002,16 +5001,6 @@ msgstr ""
 #: survey/views.py:294
 msgid "Feedback sending errors: "
 msgstr "Fehler beim Senden von Rückmeldungen: "
-
-#: templates/admin/index.html:4
-msgid "Home"
-msgstr ""
-
-#: templates/admin/stats.html:10
-#, fuzzy
-#| msgid "Public administration"
-msgid "Django administration"
-msgstr "Öffentliche Verwaltungen"
 
 #: templates/fit4ehealth/survey/start.html:5
 msgid "Please click the Next button to start the questionnaire."
@@ -5513,3 +5502,8 @@ msgid ""
 msgstr ""
 "Benötigen wir einige Informationen, um Ihnen nützliche Empfehlungen geben zu "
 "können, sobald die Selbsteinschätzung abgeschlossen ist."
+
+#, fuzzy
+#~| msgid "Public administration"
+#~ msgid "Django administration"
+#~ msgstr "Öffentliche Verwaltungen"

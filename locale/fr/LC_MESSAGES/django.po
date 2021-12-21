@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-12-17 13:34+0000\n"
+"POT-Creation-Date: 2021-12-21 08:36+0000\n"
 "PO-Revision-Date: 2021-12-16 15:23+0100\n"
 "Last-Translator: Juan Rocha <juan.rocha@cases.lu>\n"
 "Language-Team: French <https://translate.monarc.lu/projects/"
@@ -19,7 +19,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
 "X-Generator: Poedit 3.0.1\n"
 
-#: csskp/config.py:30 csskp/config_dev.py:30
+#: csskp/config.py:29 csskp/config_dev.py:30
 msgid "Description of the tool."
 msgstr "Description de l'outil."
 
@@ -1959,11 +1959,17 @@ msgstr ""
 "que le matériel pour les manipuler."
 
 #: data/fit4ehealth/questions.json:634
+#, fuzzy
+#| msgid ""
+#| "It's necessary to review the contracts to ensure:<ul><li>having an "
+#| "intervention solution whenever it is essential</li><li>not to pay too "
+#| "much for a service which is not necessary</li><li>to evaluate if the "
+#| "services paid are satisfying the necessary.</li></ul>"
 msgid ""
-"It's necessary to review the contracts to ensure:<ul>"
-"<li>having an intervention solution whenever it is essential</li>"
-"<li>not to pay too much for a service which is not necessary</li>"
-"<li>to evaluate if the services paid are satisfying the necessary.</li></ul>"
+"It's necessary to review the contracts to ensure:\n"
+"\t- having an intervention solution whenever it is essential\n"
+"\t- not to pay too much for a service which is not necessary\n"
+"\t- to evaluate if the services paid are satisfying the necessary."
 msgstr ""
 "Il faut régulièrement revoir les contrats assurant une certaine "
 "disponibilité pour s'assurer:<ul><li> de ne pas se retrouver sans "
@@ -5066,15 +5072,15 @@ msgstr "Administration publique"
 msgid "Let's start"
 msgstr "Commençons"
 
-#: survey/viewLogic.py:220
+#: survey/viewLogic.py:217
 msgid "Question"
 msgstr "Question"
 
-#: survey/views.py:126
+#: survey/views.py:125
 msgid "To generate a report you have to finish the survey."
 msgstr "Pour générer un rapport vous devez finir l'enquête."
 
-#: survey/views.py:194
+#: survey/views.py:196
 msgid "Answers review"
 msgstr "Votre aperçu des réponses"
 
@@ -5092,14 +5098,6 @@ msgstr ""
 #: survey/views.py:294
 msgid "Feedback sending errors: "
 msgstr "Erreurs d'envoi du retour d'information : "
-
-#: templates/admin/index.html:4
-msgid "Home"
-msgstr "Accueil"
-
-#: templates/admin/stats.html:10
-msgid "Django administration"
-msgstr "Administration publique"
 
 #: templates/fit4ehealth/survey/start.html:5
 msgid "Please click the Next button to start the questionnaire."
@@ -5598,3 +5596,9 @@ msgid ""
 msgstr ""
 "Nous avons besoin de quelques informations pour pouvoir vous faire des "
 "recommandations utiles, une fois l’auto-évaluation terminée."
+
+#~ msgid "Home"
+#~ msgstr "Accueil"
+
+#~ msgid "Django administration"
+#~ msgstr "Administration publique"
