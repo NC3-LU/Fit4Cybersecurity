@@ -266,8 +266,9 @@ def find_user_by_id(user_id: UUID) -> SurveyUser:
     """Get a user by its UUID."""
     try:
         return SurveyUser.objects.get(user_id=user_id)
-    except SurveyUser.DoesNotExist:
+    except SurveyUser.DoesNotExist as e:
         logger.error("SurveyUser does not exist.")
+        raise e
 
 
 def get_answer_choices(
