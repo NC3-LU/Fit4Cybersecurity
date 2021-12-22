@@ -2,6 +2,7 @@
 
 from typing import Union, List, Dict, Tuple, Any
 from typing_extensions import TypedDict
+import logging
 from uuid import UUID
 from django.http import HttpRequest
 from django.conf import settings
@@ -22,6 +23,9 @@ from survey.forms import AnswerMChoice, GeneralFeedback
 from csskp.settings import CUSTOM, LANGUAGES, LANGUAGE_CODE
 
 LOCAL_DEFAULT_LANG = LANGUAGE_CODE
+
+# Get an instance of a logger
+logger = logging.getLogger(__name__)
 
 
 class QuestionWithUserAnswers(TypedDict):
@@ -65,7 +69,7 @@ def handle_start_survey(request: HttpRequest, lang: str) -> Union[Dict, SurveyUs
         section__label__contains="__context"
     ).all()
 
-    # if no context questions
+    # if no context questions: create the user without the form
     if not questions.count() and request.method == "GET":
         user = create_user(lang)
         request.session["user_id"] = str(user.user_id)
@@ -75,6 +79,7 @@ def handle_start_survey(request: HttpRequest, lang: str) -> Union[Dict, SurveyUs
         try:
             tuple_answers = get_answer_choices(question, lang)
         except Exception as e:
+            logger.error(e)
             raise e
         forms[question.id] = AnswerMChoice(
             tuple_answers,
@@ -127,6 +132,7 @@ def handle_question_answers_request(
         question_answers = current_question.surveyquestionanswer_set.all()
         tuple_answers = get_answer_choices(current_question, user.choosen_lang)
     except Exception as e:
+        logger.error(e)
         raise e
 
     free_text_answer_id = 0
@@ -257,7 +263,11 @@ def save_answers(
 
 
 def find_user_by_id(user_id: UUID) -> SurveyUser:
-    return SurveyUser.objects.filter(user_id=user_id)[0]
+    """Get a user by its UUID."""
+    try:
+        return SurveyUser.objects.get(user_id=user_id)
+    except SurveyUser.DoesNotExist:
+        logger.error("SurveyUser does not exist.")
 
 
 def get_answer_choices(

@@ -39,6 +39,7 @@ def create_html_report(user: SurveyUser, lang: str, request: HttpRequest) -> str
         logger.error(e)
         chart_png_base64 = None
     except Exception as e:
+        logger.error("Error when generating the PNG chart: {}.".format(e))
         chart_png_base64 = None
         raise e
 

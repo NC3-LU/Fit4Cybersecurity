@@ -146,7 +146,8 @@ def show_report(request, lang: str) -> HttpResponseRedirect:
         body_unicode = request.body.decode("utf-8")
         body = json.loads(body_unicode)
         email_address = body.get("email-address", None)
-    except Exception:
+    except Exception as e:
+        logger.error(e)
         email_address = None
 
     if CUSTOM["modules"]["reportEmail"] and email_address:
@@ -250,11 +251,12 @@ def get_companies(request):
 
 
 def resume(request):
+    """Resume a survey based on the the UUID of a SurveyUser."""
     try:
         user_id = UUID(request.GET.get("user_id"))
-
         user = find_user_by_id(user_id)
-    except Exception:
+    except Exception as e:
+        logger.error(e)
         messages.warning(
             request,
             _(
