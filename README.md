@@ -81,7 +81,7 @@ $ python manage.py makemessages -a --keep-pot -e html,txt,py,json  # extract the
 $ python manage.py compilemessages # Compile the translations
 
 # Initialize the database:
-$ sudo -u postgres createdb fit4Ccbersecurity  # Name of the database as in config.py
+$ sudo -u postgres createdb fit4cybersecurity  # Name of the database as in config.py
 $ python manage.py migrate
 
 # Import questions, answers and recommendations:
