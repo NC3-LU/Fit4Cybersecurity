@@ -7,9 +7,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-12-21 08:36+0000\n"
-"PO-Revision-Date: 2021-12-16 15:23+0100\n"
-"Last-Translator: Juan Rocha <juan.rocha@cases.lu>\n"
+"POT-Creation-Date: 2021-12-22 12:49+0000\n"
+"PO-Revision-Date: 2021-12-22 13:56+0100\n"
+"Last-Translator: Cédric Bonhomme <cedric@cedricbonhomme.org>\n"
 "Language-Team: French <https://translate.monarc.lu/projects/"
 "Fit4Cybersecurity/fit4ilr/fr/>\n"
 "Language: fr\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Poedit 3.0.1\n"
+"X-Generator: Poedit 2.4.2\n"
 
 #: csskp/config.py:29 csskp/config_dev.py:30
 msgid "Description of the tool."
@@ -591,8 +591,8 @@ msgid ""
 "VPN (Virtual Private Network) is used to encrypt all data from any external "
 "network to the internal server"
 msgstr ""
-"un VPN (Virtual Private Network) est utilisé pour chiffrer les données lors "
-"de toute connexion sur le serveur interne de l'entreprise"
+"VPN (Virtual Private Network) est utilisé pour crypter toutes les données de "
+"n'importe quel réseau externe vers le serveur interne"
 
 #: data/fit4cybersecurity/questions.json:430
 msgid ""
@@ -1523,7 +1523,8 @@ msgid ""
 "The company should define rules in order to avoid misunderstandings. Here "
 "some tips to do in order to have some:"
 msgstr ""
-"L'entreprise doit définir des règles pour éviter toutes incompréhensions."
+"L'entreprise doit définir des règles afin d'éviter les malentendus. Voici "
+"quelques conseils à faire pour en avoir :"
 
 #: data/fit4ehealth/questions.json:40
 msgid ""
@@ -1753,7 +1754,8 @@ msgstr ""
 
 #: data/fit4ehealth/questions.json:342
 msgid "IT and Information security tasks are:"
-msgstr "Les responsabilités IT et Sécurité de l'Information sont"
+msgstr ""
+"Les tâches liées à l'informatique et à la sécurité de l'information sont :"
 
 #: data/fit4ehealth/questions.json:352
 msgid "internally performed by an IT specialist"
@@ -1824,8 +1826,8 @@ msgid ""
 "VPN (Virtual Private Network) to encrypt all data from any external network "
 "to the internal server of the establishment"
 msgstr ""
-"un VPN (Virtual Private Network) est utilisé pour chiffrer les données lors "
-"de toute connexion sur le serveur interne de l'entreprise"
+"VPN (Virtual Private Network) pour crypter toutes les données de n'importe "
+"quel réseau externe vers le serveur interne de l'établissement"
 
 #: data/fit4ehealth/questions.json:447
 msgid ""
@@ -1842,8 +1844,8 @@ msgid ""
 "Public Internet, Wi-Fi, open networks or connection protected by external "
 "organizations or individuals"
 msgstr ""
-"un WiFi public, une connexion ouverte, ou une connexion protégée par mot de "
-"passe d'un organisme ou d'une personne externe"
+"Internet public, Wi-Fi, réseaux ouverts ou connexion protégée par des "
+"organisations externes ou des individus"
 
 #: data/fit4ehealth/questions.json:474
 msgid ""
@@ -1992,7 +1994,7 @@ msgstr ""
 
 #: data/fit4ehealth/questions.json:660
 msgid "are in written form"
-msgstr "Elles ne sont pas écrites."
+msgstr "sont sous forme écrite"
 
 #: data/fit4ehealth/questions.json:668
 msgid ""
@@ -4435,7 +4437,7 @@ msgstr ""
 #: data/survey4operators/questions.json:941
 #: data/survey4operators/questions.json:1059
 msgid "Please describe:"
-msgstr "non décrites"
+msgstr "Décrivez s'il vous plaît:"
 
 #: data/survey4operators/questions.json:95
 msgid ""
@@ -4565,7 +4567,7 @@ msgstr ""
 #: data/survey4operators/questions.json:393
 #: data/survey4operators/questions.json:451
 msgid "Telecom regulations."
-msgstr "Recommandations"
+msgstr "Recommandations."
 
 #: data/survey4operators/questions.json:401
 #: data/survey4operators/questions.json:467
@@ -5068,11 +5070,11 @@ msgstr ""
 msgid "Public administration"
 msgstr "Administration publique"
 
-#: survey/viewLogic.py:58
+#: survey/viewLogic.py:62
 msgid "Let's start"
 msgstr "Commençons"
 
-#: survey/viewLogic.py:217
+#: survey/viewLogic.py:223
 msgid "Question"
 msgstr "Question"
 
@@ -5080,22 +5082,22 @@ msgstr "Question"
 msgid "To generate a report you have to finish the survey."
 msgstr "Pour générer un rapport vous devez finir l'enquête."
 
-#: survey/views.py:196
+#: survey/views.py:194
 msgid "Answers review"
 msgstr "Votre aperçu des réponses"
 
-#: survey/views.py:231
+#: survey/views.py:229
 msgid "Final summary"
 msgstr "Résumé final"
 
-#: survey/views.py:264
+#: survey/views.py:263
 msgid ""
 "We could not find a survey with the requested key, please start a new one."
 msgstr ""
 "Nous n'avons pas pu trouver un sondage avec la clé demandée, veuillez en "
 "commencer un nouveau."
 
-#: survey/views.py:294
+#: survey/views.py:293
 msgid "Feedback sending errors: "
 msgstr "Erreurs d'envoi du retour d'information : "
 
@@ -5166,7 +5168,6 @@ msgid "Description"
 msgstr "Description"
 
 #: templates/report/description.html:8
-#, python-format
 msgid ""
 "This self-assessment tool is named %(custom.tool_name)s to highlight the "
 "introduction to information security. It is also a prerequisite for doing a "
@@ -5253,7 +5254,6 @@ msgid "Result"
 msgstr "Résultat"
 
 #: templates/report/results.html:8
-#, python-format
 msgid ""
 "You have achieved %(SCORE)s/100 with your answers. You must reach at least "
 "%(custom.minimal_acceptable_score)s/100 to be able to make a CASES Diagnosis."
@@ -5596,9 +5596,3 @@ msgid ""
 msgstr ""
 "Nous avons besoin de quelques informations pour pouvoir vous faire des "
 "recommandations utiles, une fois l’auto-évaluation terminée."
-
-#~ msgid "Home"
-#~ msgstr "Accueil"
-
-#~ msgid "Django administration"
-#~ msgstr "Administration publique"

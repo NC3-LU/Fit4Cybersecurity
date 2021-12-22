@@ -7,9 +7,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-12-21 08:36+0000\n"
-"PO-Revision-Date: 2021-12-17 13:58+0100\n"
-"Last-Translator: Juan Rocha <juan.rocha@cases.lu>\n"
+"POT-Creation-Date: 2021-12-22 12:49+0000\n"
+"PO-Revision-Date: 2021-12-22 13:57+0100\n"
+"Last-Translator: Cédric Bonhomme <cedric@cedricbonhomme.org>\n"
 "Language-Team: German <https://translate.monarc.lu/projects/"
 "Fit4Cybersecurity/fit4ilr/de/>\n"
 "Language: de\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Poedit 3.0.1\n"
+"X-Generator: Poedit 2.4.2\n"
 
 #: csskp/config.py:29 csskp/config_dev.py:30
 msgid "Description of the tool."
@@ -4340,7 +4340,7 @@ msgstr ""
 #: data/survey4operators/questions.json:941
 #: data/survey4operators/questions.json:1059
 msgid "Please describe:"
-msgstr "nicht beschrieben:"
+msgstr "Bitte beschreiben:"
 
 #: data/survey4operators/questions.json:95
 msgid ""
@@ -4970,11 +4970,11 @@ msgstr ""
 msgid "Public administration"
 msgstr "Öffentliche Verwaltungen"
 
-#: survey/viewLogic.py:58
+#: survey/viewLogic.py:62
 msgid "Let's start"
 msgstr "Lasst uns beginnen"
 
-#: survey/viewLogic.py:217
+#: survey/viewLogic.py:223
 msgid "Question"
 msgstr "Frage"
 
@@ -4983,22 +4983,22 @@ msgid "To generate a report you have to finish the survey."
 msgstr ""
 "Um einen Bericht zu erstellen, muss erst die Umfrage beantwortet werden."
 
-#: survey/views.py:196
+#: survey/views.py:194
 msgid "Answers review"
 msgstr ""
 
-#: survey/views.py:231
+#: survey/views.py:229
 msgid "Final summary"
 msgstr "Zusammenfassung"
 
-#: survey/views.py:264
+#: survey/views.py:263
 msgid ""
 "We could not find a survey with the requested key, please start a new one."
 msgstr ""
 "Wir konnten keine Umfrage mit dem angeforderten Schlüssel finden. Bitte "
 "starten Sie eine neue."
 
-#: survey/views.py:294
+#: survey/views.py:293
 msgid "Feedback sending errors: "
 msgstr "Fehler beim Senden von Rückmeldungen: "
 
@@ -5502,8 +5502,3 @@ msgid ""
 msgstr ""
 "Benötigen wir einige Informationen, um Ihnen nützliche Empfehlungen geben zu "
 "können, sobald die Selbsteinschätzung abgeschlossen ist."
-
-#, fuzzy
-#~| msgid "Public administration"
-#~ msgid "Django administration"
-#~ msgstr "Öffentliche Verwaltungen"
