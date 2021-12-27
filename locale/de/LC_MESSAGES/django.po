@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-12-22 12:49+0000\n"
+"POT-Creation-Date: 2021-12-27 17:01+0000\n"
 "PO-Revision-Date: 2021-12-22 13:57+0100\n"
 "Last-Translator: Cédric Bonhomme <cedric@cedricbonhomme.org>\n"
 "Language-Team: German <https://translate.monarc.lu/projects/"
@@ -19,7 +19,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Poedit 2.4.2\n"
 
-#: csskp/config.py:29 csskp/config_dev.py:30
+#: csskp/config.py:30 csskp/config_dev.py:30
 msgid "Description of the tool."
 msgstr ""
 
@@ -969,6 +969,7 @@ msgid "different for each application used, even for a user"
 msgstr "für jede verwendete Anwendung unterschiedlich, auch für den Benutzer"
 
 #: data/fit4cybersecurity/questions.json:831
+#: data/fit4ehealth/questions.json:1057
 msgid "Passwords in the company are"
 msgstr "Passwörter in der Firma sind"
 
@@ -1074,7 +1075,6 @@ msgid "is not installed or used"
 msgstr "ist nicht installiert oder wird nicht verwendet"
 
 #: data/fit4cybersecurity/questions.json:957
-#: data/fit4ehealth/questions.json:1467
 msgid "An anti-virus software must be on all devices."
 msgstr "Auf allen Geräten muss eine Antivirensoftware installiert sein."
 
@@ -1629,7 +1629,7 @@ msgstr ""
 #: data/fit4ehealth/questions.json:263
 msgid ""
 "If data are shared, it should be encrypted so that only the intended "
-"recipient should be able to access the data"
+"recipient should be able to access the data."
 msgstr ""
 
 #: data/fit4ehealth/questions.json:271 data/fit4ehealth/questions.json:341
@@ -1796,7 +1796,7 @@ msgstr ""
 #: data/fit4ehealth/questions.json:483
 msgid ""
 "Having a network environment that you can control or easily check is "
-"important, as you can be sure that you and you alone access this network."
+"important, as you can be sure that only you have an access to this network."
 msgstr ""
 
 #: data/fit4ehealth/questions.json:492
@@ -1851,13 +1851,13 @@ msgstr ""
 
 #: data/fit4ehealth/questions.json:566
 msgid ""
-"Contract should be defined with all external actors. Here some advices :"
+"Contract should be defined with all external actors. Here are some advices:"
 msgstr ""
 
 #: data/fit4ehealth/questions.json:575
 msgid ""
 "contain a confidentiality clause in that the provider should not disclose "
-"any personal data they would access while working for you"
+"any personal data they would be able to access while working for you"
 msgstr ""
 
 #: data/fit4ehealth/questions.json:583
@@ -2067,8 +2067,8 @@ msgstr "Informationssicherheit"
 msgid "Physical Access"
 msgstr "Logischer Zugriff"
 
-#: data/fit4ehealth/questions.json:908 data/fit4ehealth/questions.json:1057
-msgid "When a patient enters your premises, he:"
+#: data/fit4ehealth/questions.json:908
+msgid "When a patient enters your premises, he/she:"
 msgstr ""
 
 #: data/fit4ehealth/questions.json:918
@@ -2144,7 +2144,7 @@ msgstr ""
 msgid ""
 "Printers can contain confidential information, such as the last printed "
 "documents, or some printed documents that someone did not yet have the time "
-"to fetch. "
+"to fetch."
 msgstr ""
 
 #: data/fit4ehealth/questions.json:1040
@@ -2287,6 +2287,10 @@ msgstr ""
 #: data/fit4ehealth/questions.json:1430
 msgid "Antivirus"
 msgstr "Antivirus"
+
+#: data/fit4ehealth/questions.json:1467
+msgid "An anti-virus software must be installed on all devices."
+msgstr "Auf allen Geräten muss eine Antivirensoftware installiert sein."
 
 #: data/fit4ehealth/questions.json:1493
 msgid "is activated and protects computer"
@@ -2490,7 +2494,7 @@ msgstr ""
 
 #: data/fit4ehealth/questions.json:1881
 msgid ""
-"are using the DSP (\"Dossier soin partagé\") to access or share relevant "
+"are using the DSP (\"Dossier de Soins Partagé\") to access or share relevant "
 "medical information of the patient"
 msgstr ""
 
@@ -2547,8 +2551,8 @@ msgstr ""
 
 #: data/fit4ehealth/questions.json:1961
 msgid ""
-"feel well supported in terms of IT and the capability on digitalization of "
-"the by our software provider / IT Integrator"
+"feel well supported in terms of IT and the capability on digitalization by "
+"our software provider / IT Integrator"
 msgstr ""
 
 #: data/fit4ehealth/questions.json:1970
@@ -4974,7 +4978,7 @@ msgstr "Öffentliche Verwaltungen"
 msgid "Let's start"
 msgstr "Lasst uns beginnen"
 
-#: survey/viewLogic.py:223
+#: survey/viewLogic.py:219
 msgid "Question"
 msgstr "Frage"
 
@@ -5353,8 +5357,12 @@ msgstr ""
 "Dieses Textfeld sollte nicht zur Beantwortung der Frage verwendet werden."
 
 #: templates/survey/questions.html:87
+#, fuzzy
+#| msgid ""
+#| "Please do not provide any sensitive or confidential information refering "
+#| "to your identity."
 msgid ""
-"Please do not provide any sensitive or confidential information refering to "
+"Please do not provide any sensitive or confidential information referring to "
 "your identity."
 msgstr ""
 "Bitte geben Sie keine sensiblen oder vertraulichen Datenan, die Ihre "
