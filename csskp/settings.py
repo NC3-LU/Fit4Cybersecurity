@@ -189,8 +189,8 @@ STATICFILES_DIRS = [
     STATIC_DIR,
 ]
 
-SITE_IMAGES_DIR = os.path.join(STATIC_DIR, 'images', SITE_NAME)
-SITE_IMAGES_URL = STATIC_URL + 'images/' + SITE_NAME
+SITE_IMAGES_DIR = os.path.join(STATIC_DIR, "images", SITE_NAME)
+SITE_IMAGES_URL = STATIC_URL + "images/" + SITE_NAME
 
 # Settings for django-bootstrap4
 BOOTSTRAP4 = {

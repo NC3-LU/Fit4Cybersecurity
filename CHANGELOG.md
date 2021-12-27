@@ -7,6 +7,32 @@ Changelog
 
 New
 ~~~
+- [templates] added new maintenance task in admin panel. [Cédric
+  Bonhomme]
+- [templates] added new maintenance task in admin panel. [Cédric
+  Bonhomme]
+- [admin] it is now possible to export the survey via HTTP request.
+  [Cédric Bonhomme]
+- [commands] Added basic command to export a survey. Generates a file
+  compatible with the import_questions command. [Cédric Bonhomme]
+- [vm] added new packer configuration. [Cédric Bonhomme]
+- [logo] Added fit4operatorsurvey logo. [jfrocha]
+- [filter] added new filter to find elem in list of tuples. [Cédric
+  Bonhomme]
+- [core] added new get_obj_attr filter. [Cédric Bonhomme]
+- [API] added new API endpoint in order to manage translations. [Cédric
+  Bonhomme]
+- [translations] added page to list the remaining strings to translalte.
+  [Cédric Bonhomme]
+- [translations] added page to manage the translations. [Cédric
+  Bonhomme]
+- [data] added JSON file for survey4operators. [Cédric Bonhomme]
+- [core] added new translate_db Django filter. [Cédric Bonhomme]
+- [core] added Django command to import translations. [Cédric Bonhomme]
+- [email] added email templates and modal to enter the email address.
+  [Cédric Bonhomme]
+- [utils] added a function to send report per emails. [Cédric Bonhomme]
+- [report] added PDF report generation. [Cédric Bonhomme]
 - [config] added config variable in setttings.py for wtemps. [Cédric
   Bonhomme]
 - [templates] added configuration of the templates parts dir. [Cédric
@@ -16,6 +42,147 @@ New
 
 Changes
 ~~~~~~~
+- [dependencies] Updated fork-awesome. [Cédric Bonhomme]
+- [style] Reformat with black. [Cédric Bonhomme]
+- [dependencies] Updated Numpy. [Cédric Bonhomme]
+- [style] format code with black. [Cédric Bonhomme]
+- [templates] added survey result column in the admin page. [Cédric
+  Bonhomme]
+- [core] calculateResult is not using the lang parameter. [Cédric
+  Bonhomme]
+- [admin] improved management of commands executed in a subprocess.
+  [Cédric Bonhomme]
+- [templates] improved customization in the Django admin area. [Cédric
+  Bonhomme]
+- [style] format code with black. [Cédric Bonhomme]
+- [templates] removed useless messages section in the admin template.
+  [Cédric Bonhomme]
+- [style] format code with black. [Cédric Bonhomme]
+- [templates] added option to generate mo files from the admin page.
+  [Cédric Bonhomme]
+- [templates] updated default index Django admin template in order to
+  add links to different admin tools. [Cédric Bonhomme]
+- [stats] Updated and fixed an issue with django-bootstrap-datepicker-
+  plus. [Cédric Bonhomme]
+- [style] format code with black. [Cédric Bonhomme]
+- [stats] continue on questions with 0 points. [Cédric Bonhomme]
+- [commands] added the possibility to export objects with database ids.
+  [Cédric Bonhomme]
+- [core] django.views.i18n.set_language() no longer set the user
+  language in request.session (key
+  django.utils.translation.LANGUAGE_SESSION_KEY was deprecated, now it
+  has been removed). [Cédric Bonhomme]
+- [core] updated dependencies. [Cédric Bonhomme]
+- [matplotlib] When using Matplotlib in a web server with Apache it is
+  strongly recommended to not use pyplot (pyplot maintains references to
+  the opened figures). [Cédric Bonhomme]
+- [commands] Simplified import_questions command. [Cédric Bonhomme]
+- [translations] updated some french translations. [Cédric Bonhomme]
+- [style] reformated with black. [Cédric Bonhomme]
+- [mypy] mypy.ini is now useless. [Cédric Bonhomme]
+- [utils] added function to check if possible to redirect. [Cédric
+  Bonhomme]
+- [logging] fixed logging mechanism. [Cédric Bonhomme]
+- [dependencies] updated typing-extensions. [Cédric Bonhomme]
+- [dependencies] prevent the installation of 3.0.6 yanked release of
+  django-bootstrap-datepicker-plus https://github.com/python-
+  poetry/poetry/issues/2453. [Cédric Bonhomme]
+
+  (cherry picked from commit cc0c93beb5506e884cf846a00b27883566667e45)
+- [security] URL redirection based on unvalidated user input may cause
+  redirection to malicious web sites. [Cédric Bonhomme]
+
+  (cherry picked from commit e485c18762f290cf511b356b9f36fa58e19bd631)
+- [security] interpret target as a CSS selector not as HTML. [Cédric
+  Bonhomme]
+
+  (cherry picked from commit 65c7258d9b00abcc6eb602f77957373b07fd2af1)
+- [report] improved the generation of the chart for the report. [Cédric
+  Bonhomme]
+- [dependencies] bumped dependencies for better compatibility with
+  Python 3.10.0. [Cédric Bonhomme]
+- [report] the email address of the recipient is now sent in the body of
+  the request with CSRF token. [Cédric Bonhomme]
+- [vm] clean the directoy after VN generation. [Cédric Bonhomme]
+- [vm] computed installer checksums. [Cédric Bonhomme]
+- [vm] get the hostname of the VM for the list of allowed hosts. [Cédric
+  Bonhomme]
+- [vm] added systemd service in postinstall.sh. [Cédric Bonhomme]
+- [vm] fixed an issue with second provisionner. [Cédric Bonhomme]
+- [vm] updated install script with database creation. [Cédric Bonhomme]
+- [packer] added post-processors for the checksums. [Cédric Bonhomme]
+- [logo] Changed type of logo fit4operator. [jfrocha]
+- [dependencies] Bumped version of numpy. [Cédric Bonhomme]
+- Moved mypy in tool.poetry.dependencies. [Cédric Bonhomme]
+- [models] example on how to make class objects JSON serializable (with
+  a right mixin). [Cédric Bonhomme]
+- [documentation] Updated doc related to certbot. [Cédric Bonhomme]
+- [documentation] Typo. [Cédric Bonhomme]
+- [documentation] Typo. [Cédric Bonhomme]
+- [documentation] Imporved documentation in the README. [Cédric
+  Bonhomme]
+- [report] Improved context. [jfrocha]
+- [importer] reformat. [Cédric Bonhomme]
+- [importer] count the number of imported objects. [Cédric Bonhomme]
+- [API] updated endpoint of the Translation API and added OpenAPI
+  Schema. [Cédric Bonhomme]
+- [documentation] Updated readme with information on the configuration
+  file. [Cédric Bonhomme]
+- Updated with changes from branch fitcyber4africa. [Cédric Bonhomme]
+- Custom admin template for translations. [Cédric Bonhomme]
+- [translations] updated translation mechanism. The table Translation
+  now contains only translations and classes directly related to the
+  main business objects are using a 'label' property for the default
+  language. [Cédric Bonhomme]
+- [notifications] make the sending of the emails async. [Cédric
+  Bonhomme]
+- [typy] enriched typing information. [Cédric Bonhomme]
+- Export of translations. [Cédric Bonhomme]
+- [core] Moved deprecated SQL dump in data/fit4ilr. [Cédric Bonhomme]
+- [documentation] Updated README. [Cédric Bonhomme]
+- [commands] Added a command to import data in the database. wip.
+  [Cédric Bonhomme]
+- [utils] updated email sending, new configuration for the SMTP server
+  are now required. [Cédric Bonhomme]
+- [lib] send PDF report as an attachment to the email. [Cédric Bonhomme]
+- [utils] Added function to send emails. [Cédric Bonhomme]
+- [report] decode the base64 string. [Cédric Bonhomme]
+- [template] added form-control CSS class to date picker. [Cédric
+  Bonhomme]
+- [template] removed logo from stats export page. [Cédric Bonhomme]
+- [template] copyright are for humans and establishes how far back the
+  claim is made for a version. [Cédric Bonhomme]
+- [config] Check if conf variables are defined when importing in
+  settings.py. [Cédric Bonhomme]
+- Added missing translation. [Cédric Bonhomme]
+- [ci] exit with error code when flake8 checks failed. [Cédric Bonhomme]
+- [ci] Added Python 3.10.0 to matrix:python-version. [Cédric Bonhomme]
+- [core] Removed now useless/dead code. [Cédric Bonhomme]
+- [templatetags] add ifinlist filter. [Cédric Bonhomme]
+- [report] Moved the definition of the filter format_datetime. [Cédric
+  Bonhomme]
+- [report] Tell Django to render the Web link in the variable. [Cédric
+  Bonhomme]
+- [report] HTML report is now generate with Django own engine. [Cédric
+  Bonhomme]
+- [report] insert survey questions in the report (separate data and HTML
+  format) [Cédric Bonhomme]
+- Updated translations. [Cédric Bonhomme]
+- Minimal_acceptable_score must be present in config.py. Updated some
+  translations. [Cédric Bonhomme]
+- [style] reformat with black. [Cédric Bonhomme]
+- [report] test templute include for footer. [Cédric Bonhomme]
+- Logo are now local. [Cédric Bonhomme]
+- [report] tested inclusion of the generated chart and the list of
+  recommendations. [Cédric Bonhomme]
+- [report] testing internationalization in the Jinja template. [Cédric
+  Bonhomme]
+- [report] testing custom Jinja global variables for the report
+  generation. [Cédric Bonhomme]
+- [report] testing custom Jinja filters for the report generation.
+  [Cédric Bonhomme]
+- Restore check of the language translation key. [Cédric Bonhomme]
+- Django compatibility with Python 3.10. [Cédric Bonhomme]
 - [csskp core] changed admin/statistics to export/statistics in
   urlpattenrs. [Cédric Bonhomme]
 - [templates] moved parts of templates. [Cédric Bonhomme]
@@ -51,6 +218,43 @@ Changes
 
 Fix
 ~~~
+- [report] in generate_chart_png, ensures that x and y have same first
+  dimension. Log the eventual error. Removed useless lang parameter in
+  genera_chart_png. [Cédric Bonhomme]
+- [packer] fixed path to the git4cybersecurity related data. [Cédric
+  Bonhomme]
+- [config] fixed a typo in the default config file in INSTALL.sh.
+  [Cédric Bonhomme]
+- [templates] Fixed type in admin/views.py and removed useless stuff in
+  templates. [Cédric Bonhomme]
+- [typing] exec_cmd_no_wait type is None and not NoReturn. [Cédric
+  Bonhomme]
+- [commands] added missing maxPoints of the question. [Cédric Bonhomme]
+
+  (cherry picked from commit 7df38d5bdcf51265fdc1eedefacab3dd48715892)
+- [templates] CSS for the PDF generation was not found when used with
+  mod_wsgi. [Cédric Bonhomme]
+- [lint] fixed flake8 error. [Cédric Bonhomme]
+- Error: "Sequence[str]" has no attribute "append" [Cédric Bonhomme]
+- [email] fixed error in email templates and added an option to
+  deactivate the sending of report via email. [Cédric Bonhomme]
+- [emails] fix wrong import. [Cédric Bonhomme]
+- Fixed some mypy warnings. removed useless code and fixed chart's
+  legend. [Cédric Bonhomme]
+- [style] fixed a flake warning. [Cédric Bonhomme]
+- [templates] fixed nav-bar menu in the export stats page. [Cédric
+  Bonhomme]
+- [template] fixed nav-bar dropdown menu. [Cédric Bonhomme]
+- [core] Fixed some routing issues. [Cédric Bonhomme]
+- [flake8] 'django.utils.translation.gettext as _' imported but unused.
+  [Cédric Bonhomme]
+- [config] added the missing change for the templates_parts_dir. [Cédric
+  Bonhomme]
+- [templates] fixed a routing issue in csskp/urls.py and improved
+  templates parts. [Cédric Bonhomme]
+- [type] fixed some types definitions. [Cédric Bonhomme]
+- Fixed mypy issue. Rename config_prod.py to config.py on your local
+  instance. [Cédric Bonhomme]
 - [reporthelper] use os.path.join to generate the path. [Cédric
   Bonhomme]
 - [security] External links that open in a new tab or window but do not
@@ -59,324 +263,6 @@ Fix
 - Fix some issues with the translations: logo translations based on the
   user selection, simplify some text and updated README. [Cédric
   Bonhomme]
-
-Other
-~~~~~
-- Merge branch 'fit4ilr' of github.com:CASES-LU/Fit4Cybersecurity into
-  fit4ilr. [Cédric Bonhomme]
-- Added reportDownload custom module. [jfrocha]
-- Added the custom modules options in config file. [jfrocha]
-- Removed lang references. [jfrocha]
-- Added missing filter. [jfrocha]
-- Merge branch 'fit4ilr' of github.com:CASES-LU/Fit4Cybersecurity into
-  fit4ilr. [Cédric Bonhomme]
-- Translated using Weblate (French) [Juan Rocha]
-
-  Currently translated at 100.0% (88 of 88 strings)
-- Translated using Weblate (German) [Juan Rocha]
-
-  Currently translated at 100.0% (88 of 88 strings)
-- Translate with the filter in the loop. [Cédric Bonhomme]
-- Added start button when there is one unique language available.
-  [jfrocha]
-- Removed lang key selector. [jfrocha]
-- Improved translations UI. [jfrocha]
-- Merge branch 'fit4ilr' of github.com:CASES-LU/Fit4Cybersecurity into
-  fit4ilr. [Cédric Bonhomme]
-- Added condition when only one language is available. [jfrocha]
-- Added missing gettext. [jfrocha]
-- Updated translations. [jfrocha]
-- Removed useless code. [Cédric Bonhomme]
-- Merge branch 'fit4ilr' of github.com:CASES-LU/Fit4Cybersecurity into
-  fit4ilr. [Cédric Bonhomme]
-- Added custom languages in changeLang template. [jfrocha]
-- Restructured code. [jfrocha]
-- Added translate custom template. [Cédric Bonhomme]
-- Added custom languages. [jfrocha]
-- Updated gitignore and reforated with black. [Cédric Bonhomme]
-- Improved get the custom configuration. [jfrocha]
-- Changed location of global tool name variable. [jfrocha]
-- Added missing fit4tool name tags. [jfrocha]
-- Add global tag for fit4tool name. [jfrocha]
-- Added missing migration. [jfrocha]
-- Fixed length of country_code. [jfrocha]
-- Removed last migration. [jfrocha]
-- Added missing migrations by makemigration script. [jfrocha]
-- Fixed the migration conflict. [Ruslan Baidan]
-- Updated some question flags. [Gabriela Gheorghe]
-- Added recos for questions 13 and 14. [Gabriela Gheorghe]
-- Merge branch 'fit4ilr' of https://github.com/CASES-
-  LU/Fit4Cybersecurity into fit4ilr. [Gabriela Gheorghe]
-- Fixed the answers ids, commented out the score calculation. [Ruslan
-  Baidan]
-- Merge branch 'fit4ilr' of https://github.com/CASES-
-  LU/Fit4Cybersecurity into fit4ilr. [Gabriela Gheorghe]
-- Translated using Weblate (French) [Juan Rocha]
-
-  Currently translated at 100.0% (18 of 18 strings)
-- Translated using Weblate (German) [Juan Rocha]
-
-  Currently translated at 100.0% (18 of 18 strings)
-- Update initial_data.sql. [pundorra]
-
-  added the questions for the survey
-- Fixed conflict using their versions. [Gabriela Gheorghe]
-- Conflict in readme solved. [Gabriela Gheorghe]
-- Create codeql-analysis.yml. [Cedric]
-- Updated Python dependencies. [Cédric Bonhomme]
-- Fixed the default lang. [Ruslan Baidan]
-- Changed the answers uniqueness. [Ruslan Baidan]
-- Fixed the quetions translations' keys. [Ruslan Baidan]
-- Reordered the migrations execution. [Ruslan Baidan]
-- Added the test initial data. [Ruslan Baidan]
-- Commented out the language change options. [Ruslan Baidan]
-- Fit4Ilr base branch. [Ruslan Baidan]
-- Removed the comment. [Ruslan Baidan]
-- Implemented the functionality of free text answers. [Ruslan Baidan]
-- Added the changes from the forked Fit4Privacy tool. [Ruslan Baidan]
-- Updated the docker image use to the python 3.9. [Ruslan Baidan]
-- Merge pull request #22 from lorisbergeron/apk-fixes. [Cedric]
-
-  Fix missing apk issues due to python:3.8-alpine
-- Fix missing apk issues due to python:3.8-alpine. [Loris Bergeron]
-- Merge branch 'master' of https://github.com/CASES-
-  LU/Fit4Cybersecurity. [jfrocha]
-- Revert version of django-bootstrap-modal-forms to 2.1.0. [Cédric
-  Bonhomme]
-- Updated package.json: bootstrap and jquery. [Cédric Bonhomme]
-- Added country and lang of user to the admin side. [Ruslan Baidan]
-- Added the possibility to request a training. [Ruslan Baidan]
-- Merge branch 'master' of https://github.com/CASES-
-  LU/CybersecurityStarterKit. [Ruslan Baidan]
-
-  * 'master' of https://github.com/CASES-LU/CybersecurityStarterKit:
-    Bumped jquery from 3.4.1 to 3.5.0.
-- Merge branch 'master' of github.com:CASES-LU/Fit4Cybersecurity.
-  [Cédric Bonhomme]
-- Bumped jquery from 3.4.1 to 3.5.0. [Cédric Bonhomme]
-- Fixed the translation, added session existance validation, updated
-  authors list. [Ruslan Baidan]
-- Fixed the validation of the proper user object after its modification.
-  [Ruslan Baidan]
-- Merge branch 'master' of https://github.com/CASES-
-  LU/CybersecurityStarterKit. [Ruslan Baidan]
-
-  * 'master' of https://github.com/CASES-LU/CybersecurityStarterKit:
-    Updated Django and Matplotlib.
-    moved definition of bootstrap4. WIP
-    compile translations before launching the server
-    no need to share node_modules with the host system
-    createsuperuser is not idempotent: dislay a message in case of error.
-    Updated README.
-    Updated README.
-    Updated README.
-    added Docker python:3.8-alpine image. wip
-- Updated Django and Matplotlib. [Cédric Bonhomme]
-- Moved definition of bootstrap4. WIP. [Cédric Bonhomme]
-- Compile translations before launching the server. [Cédric Bonhomme]
-- No need to share node_modules with the host system. [Cédric Bonhomme]
-- Createsuperuser is not idempotent: dislay a message in case of error.
-  [Cédric Bonhomme]
-- Updated README. [Cédric Bonhomme]
-- Updated README. [Cédric Bonhomme]
-- Updated README. [Cédric Bonhomme]
-- Added Docker python:3.8-alpine image. wip. [Cédric Bonhomme]
-- Added the user record lock for update when we submit question answers,
-  fixed static text in the templates. [Ruslan Baidan]
-- Fixed the used variable. [Ruslan Baidan]
-- Changed the sort by translated text. [Ruslan Baidan]
-- Added Public Sector to the organisations list and ordered them
-  alphabetically. [Ruslan Baidan]
-- Improved language flags (changing by svg format) [jfrocha]
-- Add one step to prevent error. [jerolomb]
-
-  prevent error during first installation
-- Fixed minor issues in templates. [Cédric Bonhomme]
-- Updated poetry.lock. [Cédric Bonhomme]
-- Updated CHANGELOG. [Cédric Bonhomme]
-- Reformatted with black. [Cédric Bonhomme]
-- Fixed tha variable name. [Ruslan Baidan]
-- Fixed the template variable. [Ruslan Baidan]
-- Renamed the js folder to stats/js. [Ruslan Baidan]
-- Merge pull request #14 from CASES-LU/stats. [ruslanbaidan]
-
-  Added first files for the stats.
-- Removed the print functions. [Ruslan Baidan]
-- Changed the path to the stiles to use the CDN version. [Ruslan Baidan]
-- Added the surveys stats. [Ruslan Baidan]
-- Improved login button. [Cédric Bonhomme]
-- Renamed path of the statistics page. [Cédric Bonhomme]
-- Added a navbar only visible for authenticated users. [Cédric Bonhomme]
-- Improved management of urls. [Cédric Bonhomme]
-- Updated +LOGIN_REDIRECT_URL. [Cédric Bonhomme]
-- Use the same for in order to log in the default /admin and in the new
-  /admin/stats page. [Cédric Bonhomme]
-- Updated login form. [Cédric Bonhomme]
-- Added django-bootstrap-datepicker-plus. [Cédric Bonhomme]
-- Improved login template. [Cédric Bonhomme]
-- Removed useless index endpoint for stats. [Cédric Bonhomme]
-- Added first files for the stats. [Cédric Bonhomme]
-- Reformatted code with black. [Cédric Bonhomme]
-- Updated README. [Cédric Bonhomme]
-- Updated CHANGELOG. [Cédric Bonhomme]
-- Updated CHANGELOG. [Cédric Bonhomme]
-- This is now on the wiki. [Cédric Bonhomme]
-- Updated link to the source code project. [Cédric Bonhomme]
-- Autodetect current version of the application. [Cédric Bonhomme]
-- Updated dockerfile for poetry. [Cédric Bonhomme]
-- Removed now useless files, since moved to poetry. [Cédric Bonhomme]
-- Updated .gitignore. [Cédric Bonhomme]
-- Updated README. [Cédric Bonhomme]
-
-
-v1.0.1 (2020-02-14)
--------------------
-- Fixed typo in CHANGELOG. [Cédric Bonhomme]
-- Updated base HTML template. [Cédric Bonhomme]
-- Updated CHANGELOG. [Cédric Bonhomme]
-- Fixed issue with Django 3. Fixed security issue with Django. [Cédric
-  Bonhomme]
-- Merge branch 'master' into django3. [Cédric Bonhomme]
-- Changed the minimum acceptable trashehold to request a diagnostic.
-  [Ruslan Baidan]
-- Added opining the links in new tabs. [Ruslan Baidan]
-- Merge branch 'master' of https://github.com/CASES-
-  LU/CybersecurityStarterKit. [Ruslan Baidan]
-
-  * 'master' of https://github.com/CASES-LU/CybersecurityStarterKit:
-    Updated Django to handle CVE-2019-19844.
-- Added Internet Explorer usage restriction on the website. [Ruslan
-  Baidan]
-- Merge branch 'master' into django3. [Cédric Bonhomme]
-- Updated Django to handle CVE-2019-19844. [Cédric Bonhomme]
-- Moved the QR code block to the text part. [Ruslan Baidan]
-- Added the QR code on continue later popups during survey, review and
-  results pages. [Ruslan Baidan]
-- Fixed the js lib name. [Ruslan Baidan]
-- Added the QR code. [Ruslan Baidan]
-- Updated dependencies. [Cédric Bonhomme]
-- Migration to Django 3. [Cédric Bonhomme]
-- Merge pull request #11 from CASES-LU/dependabot/pip/django-2.2.8.
-  [Cédric]
-
-  Bump django from 2.2.7 to 2.2.8
-- Bump django from 2.2.7 to 2.2.8. [dependabot[bot]]
-
-  Bumps [django](https://github.com/django/django) from 2.2.7 to 2.2.8.
-  - [Release notes](https://github.com/django/django/releases)
-  - [Commits](https://github.com/django/django/compare/2.2.7...2.2.8)
-
-
-v1.0.0 (2019-11-25)
--------------------
-- Bumped version number. [Cédric Bonhomme]
-- Merge branch 'master' of https://github.com/CASES-
-  LU/CybersecurityStarterKit. [Ruslan Baidan]
-- Updated CHANGELOG. [Cédric Bonhomme]
-- Merge branch 'master' of github.com:CASES-LU/Fit4Cybersecurity.
-  [Cédric Bonhomme]
-- Updated CHANGELOG. [Cédric Bonhomme]
-- Fixed the translations. [Ruslan Baidan]
-- Fixed the report links. [Ruslan Baidan]
-- Added general feedback forma and moved the question based feedback to
-  the bottom, add tooltips for it. [Ruslan Baidan]
-- Fixed the height of the feedback field. [Ruslan Baidan]
-- Made the feedback filed visible by default. [Ruslan Baidan]
-- Added abillity of changing language on every step, preselected
-  countries in the first place. [Ruslan Baidan]
-- Removed the unnecessary required filed validation translation message.
-  [Ruslan Baidan]
-- Removed the country blank label and set default value as "LU". [Ruslan
-  Baidan]
-- Added countries selection to the survey start form. [Ruslan Baidan]
-- Added feedbacks displaying on the review page. [Ruslan Baidan]
-- Added the translations for the feedback form. [Ruslan Baidan]
-- Renamed the preview action to review, added the questions feedback
-  functionality, improved the admin UI. [Ruslan Baidan]
-- Refactored the survey process to allow user go back and change
-  answers, added a preview page. [Ruslan Baidan]
-- Moved the robots.txt to the static folder. [Ruslan Baidan]
-- Added robots.txt. [Ruslan Baidan]
-- Added the progress bar the questions progress page. [Ruslan Baidan]
-- Merge branch 'master' of https://github.com/CASES-
-  LU/CybersecurityStarterKit. [Ruslan Baidan]
-- Updated translations in po files. [Cédric Bonhomme]
-- Fixed some translations. [Cédric Bonhomme]
-
-
-v0.0.2 (2019-11-13)
--------------------
-- Added the UI to prevent the unexpected answers selection. [Ruslan
-  Baidan]
-- Added redirection to finish survey page when user completed survey.
-  [Ruslan Baidan]
-- Styles fixes for results page, report logo now depends on selected
-  language, improved the report file name. [Ruslan Baidan]
-- Updated the user restore session links. [Ruslan Baidan]
-- Added hashing the user id securelly send it via email. [Ruslan Baidan]
-- Merge branch 'master' of https://github.com/CASES-
-  LU/CybersecurityStarterKit. [Ruslan Baidan]
-- Added multilang templates. [Fabien Mathey]
-- Fixed the surver resume issue, when we could inject braking string.
-  [Ruslan Baidan]
-- Updated the translations for results chart. [Ruslan Baidan]
-- Changed the charts to show in percentage per section, removed max
-  sections figure. [Ruslan Baidan]
-- Grouped displaying of the recommendations by category on results and
-  report page. [Ruslan Baidan]
-- Replaced the sectors with the new ones, changed users' creation only
-  after submitting the start question, fixed migrations. [Ruslan Baidan]
-- Merge branch 'master' of https://github.com/CASES-
-  LU/CybersecurityStarterKit. [Ruslan Baidan]
-- Merge branch 'master' of github.com:CASES-LU/Fit4Cybersecurity.
-  [Cédric Bonhomme]
-- User score must be at least min_acceptable_score. [Cédric Bonhomme]
-- Moved some important variables in congig_dev.py. [Cédric Bonhomme]
-- Fixed the users answers selection in the report. [Ruslan Baidan]
-- Fixed the translation. [Ruslan Baidan]
-- Merge branch 'master' of https://github.com/CASES-
-  LU/CybersecurityStarterKit. [Ruslan Baidan]
-- Completed translations. [Cédric Bonhomme]
-- Removed ueless variable. [Cédric Bonhomme]
-- Completed translations. [Cédric Bonhomme]
-- Typos and translations. [Cédric Bonhomme]
-- Updated translations. [Cédric Bonhomme]
-- Updated headers and rel link for apple-touch-icon. [Cédric Bonhomme]
-- Set version to 0.0.0 when file is not found. [Cédric Bonhomme]
-- Uses BASE_DIR to find the VERSION.json file. [Cédric Bonhomme]
-- Fixed the email sending and translations for the parts. [Ruslan
-  Baidan]
-- Fix. [Cédric Bonhomme]
-- Added a context processor in order to make the app version available
-  to every template. [Cédric Bonhomme]
-- Updated CHANGELOG. [Cédric Bonhomme]
-- Updated translations. [Cédric Bonhomme]
-- Updated translations. [Cédric Bonhomme]
-- User score must be at least min_acceptable_score. [Cédric Bonhomme]
-- Added a temporary solution of the mail sending in case if the score is
-  lover then 80 points. [Ruslan Baidan]
-- Fixed the worng model key. [Ruslan Baidan]
-- Removed the prints. [Ruslan Baidan]
-- Added missed translations logic to the report. [Ruslan Baidan]
-- Added optional usage of apache on docker and removed reversing of the
-  categories of chart. [Ruslan Baidan]
-- Temporary fix. [Cédric Bonhomme]
-- Merge branch 'master' of https://github.com/CASES-
-  LU/CybersecurityStarterKit. [Ruslan Baidan]
-- Updated README (deployment instructions). [Cédric Bonhomme]
-- Updated .gitignore. [Cédric Bonhomme]
-- Updated .gitignore. [Cédric Bonhomme]
-- Add the possibility to custom BOOTSTRAP4 configuration variable via
-  the config module. [Cédric Bonhomme]
-- Fixed favicon link. [Ruslan Baidan]
-- Adde the prompt popup to prevet immidiate redirection to the home
-  page, added button disabling when questions are not chosen. [Ruslan
-  Baidan]
-- Updated template.docx. [Fabien Mathey]
-- Merge branch 'master' of github.com:CASES-LU/CybersecurityStarterKit.
-  [Fabien Mathey]
-- Changed the report to make the whole line bold when answer is
-  selected. [Fabien Mathey]
 
 
 v0.0.1 (2019-10-22)
@@ -391,311 +277,5 @@ Changes
 - [tranlsation] minor fixes for French translations. [Cédric Bonhomme]
 - [tranlsation] minor fixes for French translations. [Cédric Bonhomme]
 - [tranlsation] minor fixes for French translations. [Cédric Bonhomme]
-
-Other
-~~~~~
-- Merge branch 'master' of github.com:CASES-LU/Fit4Cybersecurity.
-  [Cédric Bonhomme]
-- German result text done. [Fabien Mathey]
-- Corrected Typo. [Fabien Mathey]
-- Added german recs text. [Fabien Mathey]
-- Added CHANGELOG. [Cédric Bonhomme]
-- Merge branch 'master' of github.com:CASES-LU/Fit4Cybersecurity.
-  [Cédric Bonhomme]
-- Added german intro. [Fabien Mathey]
-- Updated english intro. [Fabien Mathey]
-- Commented STATIC_ROOT in settings.py. [Cédric Bonhomme]
-- Merge branch 'master' of github.com:CASES-LU/Fit4Cybersecurity.
-  [Cédric Bonhomme]
-- Translation done english description. [Fabien Mathey]
-- Corrected spelling. [Fabien Mathey]
-- Corrected french version. [Fabien Mathey]
-- Translated german description. [Fabien Mathey]
-- Merge branch 'master' of github.com:CASES-LU/CybersecurityStarterKit.
-  [Fabien Mathey]
-- Translations in German verified - SQL file. [Fabien Mathey]
-- Copy static files required by Django Admin. [Cédric Bonhomme]
-- Updated README. [Cédric Bonhomme]
-- Merge branch 'master' of github.com:CASES-LU/CybersecurityStarterKit.
-  [Fabien Mathey]
-- Merge branch 'master' of https://github.com/CASES-
-  LU/CybersecurityStarterKit. [Ruslan Baidan]
-- Reduced the logo size. [Ruslan Baidan]
-- Finished english revision of SQL file. [Fabien Mathey]
-- Merge branch 'master' of github.com:CASES-LU/CybersecurityStarterKit.
-  [Fabien Mathey]
-- Replace the apache usage instead of python server for docker env.
-  [Ruslan Baidan]
-- Improved footer. [Cédric Bonhomme]
-- Improved footer. [Cédric Bonhomme]
-- Improved footer. [Cédric Bonhomme]
-- Hide logo on sceens smaller than md. [Cédric Bonhomme]
-- Improved layout of the logo. [Cédric Bonhomme]
-- Removed useless import. [Cédric Bonhomme]
-- Updated README> [Cédric Bonhomme]
-- Updated .gitignore. [Cédric Bonhomme]
-- Added example dev conf file. [Cédric Bonhomme]
-- Fixed tabulation. [Cédric Bonhomme]
-- Merge branch 'master' of github.com:CASES-LU/Fit4Cybersecurity.
-  [Cédric Bonhomme]
-- Updated ALLOWED_HOSTS. [Cédric Bonhomme]
-- Continued english translations. [Fabien Mathey]
-- Continued translations. [Fabien Mathey]
-- Translations EN and DE revised for Questions and answers. [Fabien
-  Mathey]
-- Improved ToS. [Cédric Bonhomme]
-- Updated README. [Cédric Bonhomme]
-- Updated Python dependencies. [Cédric Bonhomme]
-- Now using pipenv instead of using pip. [Cédric Bonhomme]
-- Removed extrat spaces. [Cédric Bonhomme]
-- Added COPYING file. [Cédric Bonhomme]
-- Merge branch 'master' of github.com:CASES-LU/CybersecurityStarterKit.
-  [Fabien Mathey]
-- Fixed the form elements displaying after the validation. [Ruslan
-  Baidan]
-- Improved footer. [Cédric Bonhomme]
-- Fixed fr translation. [Cédric Bonhomme]
-- Added custom spacers. [Cédric Bonhomme]
-- Removed the bright blue blackground. [Cédric Bonhomme]
-- Take benefit of Django template inheritance. [Cédric Bonhomme]
-- Fixed the buttons styles. [Ruslan Baidan]
-- Corrected translations. [Fabien Mathey]
-- Merge branch 'master' of github.com:CASES-LU/CybersecurityStarterKit.
-  [Fabien Mathey]
-- Fixed an error in the template and added a terms page with a link in
-  the footer. [Cédric Bonhomme]
-- More translations fixes. [Cédric Bonhomme]
-- More translations fixes. [Cédric Bonhomme]
-- Updated french translations. [Cédric Bonhomme]
-- Completed some translations. [Cédric Bonhomme]
-- Updated translations. [Cédric Bonhomme]
-- Fix wrong french translations in the index template. [Cédric Bonhomme]
-- Fix wrong french translations. [Cédric Bonhomme]
-- Merge branch 'master' of github.com:CASES-LU/CybersecurityStarterKit.
-  [Cédric Bonhomme]
-- Added SVG files of Logos and some translations are corrected. [Fabien
-  Mathey]
-- Merge branch 'master' of github.com:CASES-LU/CybersecurityStarterKit.
-  [Fabien Mathey]
-- Updated some english and german translations. [Fabien Mathey]
-- Merge branch 'master' of github.com:CASES-LU/CybersecurityStarterKit.
-  [Fabien Mathey]
-- Merge branch 'master' of github.com:CASES-LU/CybersecurityStarterKit.
-  [Cédric Bonhomme]
-- Replaced french word 'Prochain' by 'Suite'. [Cédric Bonhomme]
-- Merge branch 'master' of github.com:CASES-LU/CybersecurityStarterKit.
-  [Cédric Bonhomme]
-- Not raising here. [Cédric Bonhomme]
-- Replaced Logos with translated ones. [Fabien Mathey]
-- Merged. [Fabien Mathey]
-- Added english translations for those parts. [Ruslan Baidan]
-- Added comments + handle the exception returnd by generate_chart_png.
-  [Cédric Bonhomme]
-- Handles error when matplotlib is not able to write in the folder
-  dedicated to the user's pictures. [Cédric Bonhomme]
-- Fixed bad merge. [Cédric Bonhomme]
-- Some small corrections. [Fabien Mathey]
-- Merged the docker fix. [Fabien Mathey]
-- Finished the translations of recommendations and added the choosen
-  lang for getting the list. [Ruslan Baidan]
-- Merge branch 'scoredev' of https://github.com/CASES-
-  LU/CybersecurityStarterKit into scoredev. [Ruslan Baidan]
-- Merge branch 'scoredev' of github.com:CASES-LU/CybersecurityStarterKit
-  into scoredev. [Cédric Bonhomme]
-- Checks if the psql command is already available. [Cédric Bonhomme]
-- Removed temporary files. [Ruslan Baidan]
-- Fixed the whole docker stuff. [Fabien Mathey]
-- Added missing postgressql client packages and forced the python3
-  usage. [Fabien Mathey]
-- Added new content and value. [Fabien Mathey]
-- Finished french text for the report. [Fabien Mathey]
-- Merge branch 'scoredev' of github.com:CASES-LU/CybersecurityStarterKit
-  into scoredev. [Fabien Mathey]
-- Added wait for postgres container start script. [Ruslan Baidan]
-- Merge branch 'scoredev' of https://github.com/CASES-
-  LU/CybersecurityStarterKit into scoredev. [Ruslan Baidan]
-
-  # Conflicts:
-  #	.gitignore
-- Updated README. [Cédric Bonhomme]
-- Updated README. [Cédric Bonhomme]
-- Merge branch 'scoredev' of github.com:CASES-LU/CybersecurityStarterKit
-  into scoredev. [Cédric Bonhomme]
-- Moved useful resources in a dedicated file. [Cédric Bonhomme]
-- Updated .gitingore. [Cédric Bonhomme]
-- Updated README. [Cédric Bonhomme]
-- Changed the form field type to radiogroup for single question types.
-  [Ruslan Baidan]
-- Recommendations combined and document corrected. [Fabien Mathey]
-- Finished the initial data migration script. [Ruslan Baidan]
-- Fixed the migration script. [Ruslan Baidan]
-- Merge branches 'scoredev' and 'scoredev' of https://github.com/CASES-
-  LU/CybersecurityStarterKit into scoredev. [Ruslan Baidan]
-
-  # Conflicts:
-  #	package.json
-- Merge branch 'scoredev' of github.com:CASES-LU/CybersecurityStarterKit
-  into scoredev. [Cédric Bonhomme]
-- Removed a useless library fron package.json. [Cédric Bonhomme]
-- Ignore sqlite dabase. [Cédric Bonhomme]
-- Removed npm and fixed the migration. [Ruslan Baidan]
-- Added the initial data migration script. [Ruslan Baidan]
-- Cleaned up the package.json and added .lock to the repo. [Ruslan
-  Baidan]
-- Removed Sqllite db. [Ruslan Baidan]
-- Replaced external static with cdn links. [Ruslan Baidan]
-- Merge branch 'scoredev' of github.com:CASES-LU/CybersecurityStarterKit
-  into scoredev. [Cédric Bonhomme]
-- Make document nicer. [Fabien Mathey]
-- Added better template and recommendations to report. [Fabien Mathey]
-- Deleted file. [Cédric Bonhomme]
-- Fix. [Cédric Bonhomme]
-- Changed directory where npm writes JS dependencies wit the option
-  --prefix. [Cédric Bonhomme]
-- Merge branch 'scoredev' of https://github.com/CASES-
-  LU/CybersecurityStarterKit into scoredev. [Ruslan Baidan]
-- Updated README. [Cédric Bonhomme]
-- Updated README. [Cédric Bonhomme]
-- Updated README. [Cédric Bonhomme]
-- Fix. [Cédric Bonhomme]
-- Using psycopg2-binary. [Cédric Bonhomme]
-- Restructurd the app. [Ruslan Baidan]
-- Merge branch 'scoredev' of github.com:CASES-LU/CybersecurityStarterKit
-  into scoredev. [Cédric Bonhomme]
-- Dockerized the app. [Ruslan Baidan]
-- Fixed error in package.json. [Cédric Bonhomme]
-- Updated README. [Cédric Bonhomme]
-- Little 'cosmethic' change. [Cédric Bonhomme]
-- Updatd French translations. [Cédric Bonhomme]
-- Updated translations for the logo. [Cédric Bonhomme]
-- Added logo to translates. [Cédric Bonhomme]
-- Initialization of translations with i18n. [Cédric Bonhomme]
-- Handle some exceptions when a translation is not done yet or a
-  template is not present. [Cédric Bonhomme]
-- Oops. [Cédric Bonhomme]
-- Added missing subcommand. [Cédric Bonhomme]
-- Fix links. [Cédric Bonhomme]
-- Updated README mainly because we now need to locally install
-  JavaScript dependencies with npm. [Cédric Bonhomme]
-- Make JavaScript and CSS dependencies local. [Cédric Bonhomme]
-- Merge branch 'scoredev' of github.com:CASES-LU/CybersecurityStarterKit
-  into scoredev. [Cédric Bonhomme]
-- Translated the start survey form. [Ruslan Baidan]
-- Merge branch 'scoredev' of github.com:CASES-LU/CybersecurityStarterKit
-  into scoredev. [Cédric Bonhomme]
-- Fixed the popups massages and styles, added the proper forms
-  validation and translated messages, left a single document for
-  generation. [Ruslan Baidan]
-- Fixed merged. [Cédric Bonhomme]
-- Added the generated chart image to the report. [Ruslan Baidan]
-- Moved the matplotlib png generation to the report helper, some code
-  fixes. [Ruslan Baidan]
-- Merge branch 'scoredev' of github.com:CASES-LU/CybersecurityStarterKit
-  into scoredev. [Fabien Mathey]
-- Merge remote-tracking branch 'origin/master' into scoredev. [Ruslan
-  Baidan]
-
-  # Conflicts:
-  #	csskp/survey/viewLogic.py
-- Removed docx-mailmerge dependency. [Ruslan Baidan]
-- Added chart.js radar stuff. [Fabien Mathey]
-- Added sections name list to result calculation. [Fabien Mathey]
-- Fixed an error during the last merge. [Cédric Bonhomme]
-- Fixed conflict. [Cédric Bonhomme]
-- Fixed path for the templates of reports. [Cédric Bonhomme]
-- Using container instead of container-fluid. [Cédric Bonhomme]
-- Restored database. [Fabien Mathey]
-- Merge updated. [Fabien Mathey]
-- Merged master branch into this one and resolved some issues. [Ruslan
-  Baidan]
-- Added the Radar chart util and test data to generate the chart.
-  [Ruslan Baidan]
-- Removed pylab requirements. [Cédric Bonhomme]
-- Added pylab requirements. [Cédric Bonhomme]
-- Merge branch 'master' of github.com:CASES-LU/CybersecurityStarterKit.
-  [Cédric Bonhomme]
-- Removed the extra static folder. [Ruslan Baidan]
-- Added baseic Matplotlib example. [Cédric Bonhomme]
-- Removed extra import sections. [Ruslan Baidan]
-- Pushed the renamed template. [Ruslan Baidan]
-- Added the warning messages in case we don't find a key to resume,
-  simplified URLs and removed id param from /question url, fixed the
-  issue with navigation back during survey. [Ruslan Baidan]
-- Finished theory on document creation - now testing. [Fabien Mathey]
-- Added some lines to the report generation. [Fabien Mathey]
-- Score stuff advanced. [Fabien Mathey]
-- Score devs started to evaluate responses. [Fabien Mathey]
-- Some more css adaptations and some translations corrections. [Fabien
-  Mathey]
-- Made the initial screen more beautiful - a long way to go! [Fabien
-  Mathey]
-- Added UI translations and some beauty stuff. [Fabien Mathey]
-- Added some beautifying css stuff. [Fabien Mathey]
-- Added files and updated sources. [Fabien Mathey]
-- Table insertion now works - image still not really. [Fabien Mathey]
-- Updated readme with some links for document docx generation. [Fabien
-  Mathey]
-- Report generation working now by pressing button. [Fabien Mathey]
-- Document generation works now. [Fabien Mathey]
-- Merge branch 'master' of github.com:CASES-LU/CybersecurityStarterKit.
-  [Fabien Mathey]
-- Removed the renamed files. [Ruslan Baidan]
-- Added the popup box to resume the survey process. [Ruslan Baidan]
-- Recommendations getting logic now working - need to make templates
-  now. [Fabien Mathey]
-- Merge branch 'master' of github.com:CASES-LU/CybersecurityStarterKit.
-  [Fabien Mathey]
-- Fixed the redirection to the user's current evaluation progress.
-  [Ruslan Baidan]
-- Added the modal form with possibility to continue later, added process
-  of the continue later request. [Ruslan Baidan]
-- Removed un used declation. [Fabien Mathey]
-- Shit works now: translation, forms and savings of questions. [Fabien
-  Mathey]
-- Forms are invalid when submitted. [Fabien Mathey]
-- Merge branch 'master' of github.com:CASES-LU/CybersecurityStarterKit.
-  [Fabien Mathey]
-- Added pipfile and the bootstrap4 configuration. [Ruslan Baidan]
-- Added good stuff and killed the whole database migration - not quite
-  working yet. [Fabien Mathey]
-- Fixed multi lingual stuff. [Fabien Mathey]
-- JUST A BACKUP - FUNCT. NOT TESTED - converted the whole thing to allow
-  multi lingual stuff. [Fabien Mathey]
-- Fixed the save everys answer n times by correcting the loop. [Fabien
-  Mathey]
-- Removed some spaces. [Fabien Mathey]
-- Saving the question the user is at and set the state when the
-  questions are all done. [Fabien Mathey]
-- Saving the initial question now works. [Fabien Mathey]
-- Added answers fields for the initial questions in user model. [Fabien
-  Mathey]
-- Fixed the displaying in the admin panel. [Fabien Mathey]
-- Fixed the save the answers to the questions in the - not the firest
-  one yet. [Fabien Mathey]
-- Added save function for answers - missing still initial question save.
-  [Fabien Mathey]
-- Updated how the questions are loaded and used. [Fabien Mathey]
-- Added some descriptive comments. [Fabien Mathey]
-- Inserted question type, and ordering indexes for question and answer.
-  [Fabien Mathey]
-- Added how to use and test the python implementation to the README.
-  [Fabien Mathey]
-- Give question type and index to questions and answers. [Fabien Mathey]
-- Added admin panel and getting questions from DB now. [Fabien Mathey]
-- Changed the logic to new file (outside of view) [Fabien Mathey]
-- Changed comment to make more sense. [Fabien Mathey]
-- Added some logic to start the survey and go to first quesiton. [Fabien
-  Mathey]
-- Removed the pass from the def. [Fabien Mathey]
-- Added the current question field. [Fabien Mathey]
-- Added models and url paths. [Fabien Mathey]
-- Added python version. [Fabien Mathey]
-- Initial zend framework skeleton application creation. [Fabien Mathey]
-- Installation documentation continued with the initial setup. [Fabien
-  Mathey]
-- Added composer to the apt get list. [Fabien Mathey]
-- CHange Config to prepare for ZEND. [Fabien Mathey]
-- Initial readme. [Fabien Mathey]
-- Initial commit. [Fabien Mathey]
 
 

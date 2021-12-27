@@ -101,7 +101,7 @@ CUSTOM = {
     # Generic configurations
     "tool_name": "$TOOL_NAME",
     # The generic site/tool name. Used to load specific config, templates, styles, logos.
-    "site_name": "$SITE_NAME",,
+    "site_name": "$SITE_NAME",
     "intro_text": gettext_lazy("$TOOL_DESCRIPTION"),
     "countries_first": [],
     "defaultLanguage": "en",

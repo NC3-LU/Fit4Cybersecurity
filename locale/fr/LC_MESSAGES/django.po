@@ -7,19 +7,19 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-12-17 13:34+0000\n"
-"PO-Revision-Date: 2021-12-16 15:23+0100\n"
-"Last-Translator: Juan Rocha <juan.rocha@cases.lu>\n"
+"POT-Creation-Date: 2021-12-22 12:49+0000\n"
+"PO-Revision-Date: 2021-12-22 14:02+0000\n"
+"Last-Translator: Cédric Bonhomme <cedric@cedricbonhomme.org>\n"
 "Language-Team: French <https://translate.monarc.lu/projects/"
-"Fit4Cybersecurity/fit4ilr/fr/>\n"
+"Fit4Cybersecurity/fit4cybersecurity/fr/>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Poedit 3.0.1\n"
+"X-Generator: Weblate 4.9-dev\n"
 
-#: csskp/config.py:30 csskp/config_dev.py:30
+#: csskp/config.py:29 csskp/config_dev.py:30
 msgid "Description of the tool."
 msgstr "Description de l'outil."
 
@@ -591,8 +591,8 @@ msgid ""
 "VPN (Virtual Private Network) is used to encrypt all data from any external "
 "network to the internal server"
 msgstr ""
-"un VPN (Virtual Private Network) est utilisé pour chiffrer les données lors "
-"de toute connexion sur le serveur interne de l'entreprise"
+"VPN (Virtual Private Network) est utilisé pour crypter toutes les données de "
+"n'importe quel réseau externe vers le serveur interne"
 
 #: data/fit4cybersecurity/questions.json:430
 msgid ""
@@ -1512,7 +1512,7 @@ msgstr "S'il vous plaît sélectionnez votre pays"
 
 #: data/fit4ehealth/questions.json:4 data/fit4ehealth/questions.json:150
 msgid "Organisational Awareness"
-msgstr ""
+msgstr "Sensibilisation organisationnelle"
 
 #: data/fit4ehealth/questions.json:5
 msgid "In the establishment, rules are"
@@ -1523,7 +1523,8 @@ msgid ""
 "The company should define rules in order to avoid misunderstandings. Here "
 "some tips to do in order to have some:"
 msgstr ""
-"L'entreprise doit définir des règles pour éviter toutes incompréhensions."
+"L'entreprise doit définir des règles afin d'éviter les malentendus. Voici "
+"quelques conseils à faire pour en avoir :"
 
 #: data/fit4ehealth/questions.json:40
 msgid ""
@@ -1569,12 +1570,16 @@ msgstr ""
 msgid ""
 "covering topics such as cybersecurity and data management in your profession."
 msgstr ""
+"couvrant des sujets tels que la cybersécurité et la gestion des données dans "
+"votre profession."
 
 #: data/fit4ehealth/questions.json:108
 msgid ""
 "Some explanation about cybersecurity or data protection measures for the "
 "organization should be included as they help keep data safe."
 msgstr ""
+"couvrant des sujets tels que la cybersécurité et la gestion des données dans "
+"votre profession."
 
 #: data/fit4ehealth/questions.json:117
 msgid ""
@@ -1582,12 +1587,18 @@ msgid ""
 "continuity e.g. in case the IT systems of the organization are temporarily "
 "out of order"
 msgstr ""
+"couvrant des sujets tels que les procédures / politiques à prendre en place "
+"pour la continuité des affaires par ex. Au cas où les systèmes informatiques "
+"de l'organisation sont temporairement hors de commande"
 
 #: data/fit4ehealth/questions.json:125
 msgid ""
 "In case of a big incident, you should have some rules or advice in order to "
 "act under panic, and keep the systems / organization operational."
 msgstr ""
+"En cas d'incident important, vous devez avoir des règles ou des conseils "
+"afin d'agir sous panique et de conserver les systèmes / organisation "
+"opérationnels."
 
 #: data/fit4ehealth/questions.json:134
 msgid ""
@@ -1595,6 +1606,9 @@ msgid ""
 "joining of new employees, leave/removal and temporary replacement (during "
 "holidays) of staff members"
 msgstr ""
+"défini pour gérer les étapes nécessaires lorsque le personnel médical "
+"change, par exemple Rejoindre de nouveaux employés, quitter / enlèvement et "
+"remplacement temporaire (pendant les vacances) des membres du personnel"
 
 #: data/fit4ehealth/questions.json:142
 msgid ""
@@ -1603,6 +1617,11 @@ msgid ""
 "fashion, someone that joins the team, should have their accounts, "
 "authorization and computer ready to work."
 msgstr ""
+"Chaque fois qu'il y a un changement d'employés par exemple lors d'un congé, "
+"toutes les données du compte liées à cette personne doivent être "
+"inaccessibles par elles. De la même manière, une personne qui rejoint "
+"l'équipe doit avoir leurs comptes, leur autorisation et leurs ordinateurs "
+"prêts à travailler."
 
 #: data/fit4ehealth/questions.json:149
 msgid "Data Transfer"
@@ -1610,7 +1629,7 @@ msgstr "Violations de données"
 
 #: data/fit4ehealth/questions.json:151
 msgid "Medical data of the establishment is"
-msgstr ""
+msgstr "Les données médicales de l'établissement sont"
 
 #: data/fit4ehealth/questions.json:162
 msgid "still stored, if needed, on paper"
@@ -1753,7 +1772,8 @@ msgstr ""
 
 #: data/fit4ehealth/questions.json:342
 msgid "IT and Information security tasks are:"
-msgstr "Les responsabilités IT et Sécurité de l'Information sont"
+msgstr ""
+"Les tâches liées à l'informatique et à la sécurité de l'information sont :"
 
 #: data/fit4ehealth/questions.json:352
 msgid "internally performed by an IT specialist"
@@ -1824,8 +1844,8 @@ msgid ""
 "VPN (Virtual Private Network) to encrypt all data from any external network "
 "to the internal server of the establishment"
 msgstr ""
-"un VPN (Virtual Private Network) est utilisé pour chiffrer les données lors "
-"de toute connexion sur le serveur interne de l'entreprise"
+"VPN (Virtual Private Network) pour crypter toutes les données de n'importe "
+"quel réseau externe vers le serveur interne de l'établissement"
 
 #: data/fit4ehealth/questions.json:447
 msgid ""
@@ -1842,8 +1862,8 @@ msgid ""
 "Public Internet, Wi-Fi, open networks or connection protected by external "
 "organizations or individuals"
 msgstr ""
-"un WiFi public, une connexion ouverte, ou une connexion protégée par mot de "
-"passe d'un organisme ou d'une personne externe"
+"Internet public, Wi-Fi, réseaux ouverts ou connexion protégée par des "
+"organisations externes ou des individus"
 
 #: data/fit4ehealth/questions.json:474
 msgid ""
@@ -1959,11 +1979,17 @@ msgstr ""
 "que le matériel pour les manipuler."
 
 #: data/fit4ehealth/questions.json:634
+#, fuzzy
+#| msgid ""
+#| "It's necessary to review the contracts to ensure:<ul><li>having an "
+#| "intervention solution whenever it is essential</li><li>not to pay too "
+#| "much for a service which is not necessary</li><li>to evaluate if the "
+#| "services paid are satisfying the necessary.</li></ul>"
 msgid ""
-"It's necessary to review the contracts to ensure:<ul>"
-"<li>having an intervention solution whenever it is essential</li>"
-"<li>not to pay too much for a service which is not necessary</li>"
-"<li>to evaluate if the services paid are satisfying the necessary.</li></ul>"
+"It's necessary to review the contracts to ensure:\n"
+"\t- having an intervention solution whenever it is essential\n"
+"\t- not to pay too much for a service which is not necessary\n"
+"\t- to evaluate if the services paid are satisfying the necessary."
 msgstr ""
 "Il faut régulièrement revoir les contrats assurant une certaine "
 "disponibilité pour s'assurer:<ul><li> de ne pas se retrouver sans "
@@ -1986,7 +2012,7 @@ msgstr ""
 
 #: data/fit4ehealth/questions.json:660
 msgid "are in written form"
-msgstr "Elles ne sont pas écrites."
+msgstr "sont sous forme écrite"
 
 #: data/fit4ehealth/questions.json:668
 msgid ""
@@ -4429,7 +4455,7 @@ msgstr ""
 #: data/survey4operators/questions.json:941
 #: data/survey4operators/questions.json:1059
 msgid "Please describe:"
-msgstr "non décrites"
+msgstr "Décrivez s'il vous plaît:"
 
 #: data/survey4operators/questions.json:95
 msgid ""
@@ -4559,7 +4585,7 @@ msgstr ""
 #: data/survey4operators/questions.json:393
 #: data/survey4operators/questions.json:451
 msgid "Telecom regulations."
-msgstr "Recommandations"
+msgstr "Recommandations."
 
 #: data/survey4operators/questions.json:401
 #: data/survey4operators/questions.json:467
@@ -5062,15 +5088,15 @@ msgstr ""
 msgid "Public administration"
 msgstr "Administration publique"
 
-#: survey/viewLogic.py:58
+#: survey/viewLogic.py:62
 msgid "Let's start"
 msgstr "Commençons"
 
-#: survey/viewLogic.py:220
+#: survey/viewLogic.py:223
 msgid "Question"
 msgstr "Question"
 
-#: survey/views.py:126
+#: survey/views.py:125
 msgid "To generate a report you have to finish the survey."
 msgstr "Pour générer un rapport vous devez finir l'enquête."
 
@@ -5078,28 +5104,20 @@ msgstr "Pour générer un rapport vous devez finir l'enquête."
 msgid "Answers review"
 msgstr "Votre aperçu des réponses"
 
-#: survey/views.py:231
+#: survey/views.py:229
 msgid "Final summary"
 msgstr "Résumé final"
 
-#: survey/views.py:264
+#: survey/views.py:263
 msgid ""
 "We could not find a survey with the requested key, please start a new one."
 msgstr ""
 "Nous n'avons pas pu trouver un sondage avec la clé demandée, veuillez en "
 "commencer un nouveau."
 
-#: survey/views.py:294
+#: survey/views.py:293
 msgid "Feedback sending errors: "
 msgstr "Erreurs d'envoi du retour d'information : "
-
-#: templates/admin/index.html:4
-msgid "Home"
-msgstr "Accueil"
-
-#: templates/admin/stats.html:10
-msgid "Django administration"
-msgstr "Administration publique"
 
 #: templates/fit4ehealth/survey/start.html:5
 msgid "Please click the Next button to start the questionnaire."
@@ -5168,7 +5186,6 @@ msgid "Description"
 msgstr "Description"
 
 #: templates/report/description.html:8
-#, python-format
 msgid ""
 "This self-assessment tool is named %(custom.tool_name)s to highlight the "
 "introduction to information security. It is also a prerequisite for doing a "
@@ -5255,7 +5272,6 @@ msgid "Result"
 msgstr "Résultat"
 
 #: templates/report/results.html:8
-#, python-format
 msgid ""
 "You have achieved %(SCORE)s/100 with your answers. You must reach at least "
 "%(custom.minimal_acceptable_score)s/100 to be able to make a CASES Diagnosis."

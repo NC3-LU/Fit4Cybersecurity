@@ -85,7 +85,7 @@ def calculateResult(user: SurveyUser) -> Tuple[int, int, List[int], List[str]]:
     user_bonus_points_percent = 0
     user_evaluations_per_section: Dict[int, int] = {}
     max_evaluations_per_section: Dict[int, int] = {}
-    sections_list: List[str] = []
+    sections: Dict[int, str] = {}
 
     chart_exclude_sections = ["__context"]
     if "chart_exclude_sections" in CUSTOM.keys():
@@ -100,9 +100,7 @@ def calculateResult(user: SurveyUser) -> Tuple[int, int, List[int], List[str]]:
             max_evaluations_per_section[question.section.id] = 0
         max_evaluations_per_section[question.section.id] += question.maxPoints
 
-        section_title = _(question.section.label)
-        if section_title not in sections_list:
-            sections_list.append(section_title)
+        sections[question.section.id] = _(question.section.label)
 
     # TODO: Comply with the following: Only "__context" questions are excluded.
     # Even if a section is excluded from the chart, the score is used.
@@ -147,17 +145,23 @@ def calculateResult(user: SurveyUser) -> Tuple[int, int, List[int], List[str]]:
         else:
             user_evaluations.append(0)
 
-    return total_user_score, user_bonus_points_percent, user_evaluations, sections_list
+    return (
+        total_user_score,
+        user_bonus_points_percent,
+        user_evaluations,
+        list(sections.values()),
+    )
 
 
 def generate_chart_png(
-    user: SurveyUser, evaluation, sections_list, lang, output_type="file"
+    user: SurveyUser, evaluation, sections_list, output_type="file"
 ) -> Optional[str]:
     """Generates the chart with Matplotlib and returns the path of the generated
     graph which will be included in the report.
     Returns a graph in base 64 as a string or writes the graph in a file on the disk.
     """
     n = len(sections_list)
+    assert len(evaluation) == n, "'evaluation' and 'sections_list' must have same size."
     theta = radar_factory(n, frame="polygon")
 
     fig = Figure(figsize=(11, 11), dpi=150)
