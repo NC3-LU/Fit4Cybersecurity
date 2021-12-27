@@ -292,7 +292,7 @@ def get_answer_choices(
                     mark_safe('<span class="checkmark"></span>'),
                     mark_safe(
                         '<span data-bs-toggle="tooltip" title="'
-                        + tooltip
+                        + tooltip.replace('"', "&quot;")
                         + '">'
                         + answer
                         + "</span>"

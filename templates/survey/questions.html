@@ -29,8 +29,8 @@
     {% endif %}
 
     <div class="m-2 p-3">
-        <div class="card-title" >
-            <span data-bs-toggle="tooltip" title="{{ question_tooltip }}">{{ question | safe }}</span>
+        <div class="card-title">
+            <span data-bs-toggle="tooltip" title="{{ question_tooltip | safe }}">{{ question | safe }}</span>
         </div>
         <form action="{{ action }}" method="post" class="form">
             {% csrf_token %}
@@ -80,11 +80,11 @@
 
             <div class="form-group pt-4">
                 {% bootstrap_field form.feedback label_class="feedback-label" %}
-                <p class="select-multi-info text-muted pl-4 mb-0 small"">
+                <p class="select-multi-info text-muted pl-4 mb-0 small">
                     * {{ _('This text field should not be used to answer the question.') }}
                 </p>
-                <p class="select-multi-info text-muted pl-4 mb-0 small"">
-                    ** {{ _('Please do not provide any sensitive or confidential information refering to your identity.') }}
+                <p class="select-multi-info text-muted pl-4 mb-0 small">
+                    ** {{ _('Please do not provide any sensitive or confidential information referring to your identity.') }}
                 </p>
             </div>
         </form>
