@@ -1,23 +1,50 @@
 {% extends "admin/base_site.html" %}
-{% load i18n apptags static admin_urls %}
-
-{% block breadcrumbs %}<div class="breadcrumbs"><a href="{% url 'admin:index' %}">{% trans 'Home' %}</a> › Translations management</div>{% endblock %}
-
+{% block extrastyle %}
+<link rel="stylesheet" href="/static/npm_components/fork-awesome/css/fork-awesome.min.css">
+{% endblock %}
 {% block content %}
-
 <div id="content-main">
   <div class="row">
     <div class="col">
-      <h1>Data management</h1>
+      <h2>Data management</h2>
       <p>Export the current survey (questions, answers, recommendations and sections): <a href="/admin/export/survey.json" download>survey.json</a></p>
     </div>
   </div>
   <div class="row">
     <div class="col">
-      <h1>Statistics</h1>
-      <p>Go to the <a href="{% url 'stats:index' %}">survey statistics page</a>.</p>
+      <h2>Statistics</h2>
+      <ul class="list-group">
+        <li class="list-group-item"><a href="/admin/site_stats">statistics page</a>;</li>
+        <li class="list-group-item"><a href="{% url 'stats:index' %}">export results of finished surveys</a>.</li>
+      </ul>
     </div>
   </div>
-  <br /><br />
+  <div class="row">
+    <div class="col">
+      <h2>Maintenance</h2>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">Action</th>
+            <th scope="col">Execute</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Regenerate the compiled translation files</td>
+            <td><a href="/admin/compile-translations"><i class="fa fa-cog" aria-hidden="true"></i></a></td>
+          </tr>
+          <tr>
+            <td>Migrate database</td>
+            <td><a href="/admin/migrate-database"><i class="fa fa-cog" aria-hidden="true"></i></a></td>
+          </tr>
+          <tr>
+            <td>Update the software to the latest version (will also migrate the database)</td>
+            <td><a href="/admin/update-software" onclick="return confirm('Are you sure?')"><i class="fa fa-cog" aria-hidden="true"></i></a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
 </div>
 {% endblock %}

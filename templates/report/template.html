@@ -6,12 +6,12 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="title" content="{{ REPORT_TITLE }}" />
-        <meta name="author" content="{{ CUSTOM.tool_name}}" />
+        <meta name="title" content="{{ _('Final report') }}" />
+        <meta name="author" content="{{ custom.tool_name}}" />
         <meta
             name="description"
-            content="{% blocktranslate with tool_name=CUSTOM.tool_name %}Generated with {{ tool_name }}{% endblocktranslate %}" />
-        <title>{{ REPORT_TITLE }}</title>
+            content="{% blocktranslate with tool_name=custom.tool_name %}Generated with {{ tool_name }}{% endblocktranslate %}" />
+        <title>{{ _('Final report') }}</title>
     </head>
     <body>
 
@@ -19,26 +19,25 @@
 
         {% include 'report/toc.html' %}
 
-        {% if CUSTOM.report.introduction %}
+        {% if custom.report.introduction %}
             {% include 'report/intro.html' %}
         {% endif %}
 
-        {% if CUSTOM.report.description %}
+        {% if custom.report.description %}
             {% include 'report/description.html' %}
         {% endif %}
 
-        {% if CUSTOM.report.results %}
+        {% if custom.report.results %}
             {% include 'report/results.html' %}
         {% endif %}
 
-        {% if CUSTOM.report.recommendations %}
+        {% if custom.report.recommendations %}
             {% include 'report/recommendations.html' %}
         {% endif %}
 
-        {% if CUSTOM.report.questions %}
+        {% if custom.report.questions %}
             {% include 'report/questions.html' %}
         {% endif %}
-
 
     </body>
 </html>

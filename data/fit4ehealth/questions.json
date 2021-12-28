@@ -71,7 +71,7 @@
             "max_e_count": "j",
             "sector": null,
             "answerChosen": false,
-            "label": "Written rules can:\n\t- avoid to forget relevant points and can be consulted at any time;\n\t- have a legal proof if the rules have been read."
+            "label": "Written rules can:<ul><li>avoid to forget relevant points and can be consulted at any time</li><li>have a legal proof if the rules have been read.</li></ul>"
           }
         ]
       },
@@ -194,7 +194,7 @@
         "score": 12,
         "atype": "P",
         "label": "sent in encrypted form via email to the patient or to collaborators who request it",
-        "tooltip": "encrypted form via email to the patient or to collaborators who request it tooltip: Emails are sent encrypted or with medical content only in encrypted attachment or by using Regimail.",
+        "tooltip": "Emails are sent encrypted or with medical content only in encrypted attachment or by using Regimail.",
         "recommendations": []
       },
       {
@@ -220,7 +220,7 @@
         "score": 0,
         "atype": "P",
         "label": "sometimes sent by fax to external collaborators",
-        "tooltip": "Data could be sent by fax to any professional, laboratories, hospital or official law representative when you ever need it.",
+        "tooltip": "Data are sent by fax to any professional, laboratory, hospital or other organization.",
         "recommendations": [
           {
             "min_e_count": "a",
@@ -260,7 +260,7 @@
             "max_e_count": "j",
             "sector": null,
             "answerChosen": false,
-            "label": "If data are shared, it should be encrypted so that only the intended recipient should be able to access the data"
+            "label": "If data are shared, it should be encrypted so that only the intended recipient should be able to access the data."
           }
         ]
       }
@@ -297,7 +297,7 @@
         "score": 6,
         "atype": "P",
         "label": "information security, to have the knowledge to protect themselves against attacks or information security issues",
-        "tooltip": "You have received training on the information security basics, or you have personally invested some time to search some ways or practice, either to be more protected or to understand how caber attackers can harm you or your data.",
+        "tooltip": "You have received training on the information security basics, or you have personally invested some time to search some ways or practice, either to be more protected or to understand how cyber attackers can harm you or your data.",
         "recommendations": [
           {
             "min_e_count": "a",
@@ -454,7 +454,7 @@
         "score": 0,
         "atype": "P",
         "label": "Public Internet, Wi-Fi, open networks or connection protected by external organizations or individuals",
-        "tooltip": "You can connect to whatever place that gives you an internet access if you ever need it.",
+        "tooltip": "You can connect from any place that provides you an internet access",
         "dependant_answers": ["devices that are not connected to any IT network while on the trip."],
         "recommendations": [
           {
@@ -472,7 +472,7 @@
         "score": 4,
         "atype": "P",
         "label": "a private connection or connection sharing from a private or professional smartphone (tethering/hotspot)",
-        "tooltip": "You only use a connection where you have some control, such as your own private connection or your phone shared one.",
+        "tooltip": "You only use a connection where you have some control, such as your own private connection or your phone's shared one.",
         "dependant_answers": ["devices that are not connected to any IT network while on the trip."],
         "recommendations": [
           {
@@ -480,7 +480,7 @@
             "max_e_count": "j",
             "sector": null,
             "answerChosen": false,
-            "label": "Having a network environment that you can control or easily check is important, as you can be sure that you and you alone access this network."
+            "label": "Having a network environment that you can control or easily check is important, as you can be sure that only you have an access to this network."
           }
         ]
       },
@@ -507,7 +507,7 @@
         "score": 8,
         "atype": "P",
         "label": "mobile devices that are encrypted (protected by a password at startup) or without any confidential data",
-        "tooltip": "Each time you have to boot your device, you have to type an extra password to boot your computer, or the computer you have does not have any medical data stored in it.",
+        "tooltip": "Each time you boot your device, you have to type an extra password (e.g. for Bitlocker) or your computer does not store any medical data on it.",
         "recommendations": [
           {
             "min_e_count": "a",
@@ -556,14 +556,14 @@
         "score": 0,
         "atype": "P",
         "label": "are not defined, because they only come in case of an incident or specific needs",
-        "tooltip": "You do not have any contract define with your ICT provider which only act whenever they have time, without any guarantees.",
+        "tooltip": "You do not have any contract defined with your ICT provider which only acts when they have time, without any guarantee.",
         "recommendations": [
           {
             "min_e_count": "a",
             "max_e_count": "j",
             "sector": null,
             "answerChosen": true,
-            "label": "Contract should be defined with all external actors. Here some advices :"
+            "label": "Contract should be defined with all external actors. Here are some advices:"
           }
         ]
       },
@@ -572,8 +572,8 @@
         "uniqueAnswer": false,
         "score": 7,
         "atype": "P",
-        "label": "contain a confidentiality clause in that the provider should not disclose any personal data they would access while working for you",
-        "tooltip": "You may have an NDA (Non-Disclosure Agreement) or this is written in the signed contract with the ICT.",
+        "label": "contain a confidentiality clause in that the provider should not disclose any personal data they would be able to access while working for you",
+        "tooltip": "You may have an NDA (Non-Disclosure Agreement) or this is written in the signed contract with the ICT provider.",
         "recommendations": [
           {
             "min_e_count": "a",
@@ -641,7 +641,7 @@
         "score": 0,
         "atype": "P",
         "label": "are defined orally",
-        "tooltip": "There was no written agreement between the third party and the establishment, only a discussion beforehand.",
+        "tooltip": "There is no written agreement between the third party and the establishment, only a discussion beforehand.",
         "recommendations": [
           {
             "min_e_count": "a",
@@ -794,7 +794,7 @@
         "score": 2,
         "atype": "P",
         "label": "while avoiding rooms which have restricted access, like an archive room or a server room",
-        "tooltip": "The cleaning is not done in some places that got some confidential data.",
+        "tooltip": "The cleaning is not done by externals in some places which contain confidential equipment or data.",
         "recommendations": [
           {
             "min_e_count": "a",
@@ -821,7 +821,7 @@
         "score": 0,
         "atype": "P",
         "label": "managed by my ICT provider without being informed",
-        "tooltip": "When a problem shows up, you contact your ICT provider to take care of it, without being notice of anything (such as when it starts, when it is finished …). But the ICT provider could still access the server or computer without restrictions.",
+        "tooltip": "When a problem occurs, you contact your ICT provider to take care of it, without being noticed about their activities (such as when it starts, when it is finished …). But the ICT provider could still access the server or computer without restrictions.",
         "recommendations": [
           {
             "min_e_count": "a",
@@ -838,7 +838,7 @@
         "score": 6,
         "atype": "P",
         "label": "managed by my ICT provider, but only when I ask",
-        "tooltip": "Your ICT provider can only access your server or your computer only when you ask for it.",
+        "tooltip": "Your ICT provider can access your server or your computer when you ask for it.",
         "recommendations": [
           {
             "min_e_count": "a",
@@ -905,7 +905,7 @@
   {
     "service_category": "Physical Security",
     "section": "Physical Access",
-    "label": "When a patient enters your premises, he:",
+    "label": "When a patient enters your premises, he/she:",
     "qtype": "M",
     "qindex": 9,
     "maxPoints": 21,
@@ -951,7 +951,7 @@
         "score": 0,
         "atype": "P",
         "label": "can go away without being noticed",
-        "tooltip": "No one can see or know a patient leave or enter the premises. He can be spotted by physical sight, cameras or a ringing bell at the door.",
+        "tooltip": "No one can see or know that a patient leave or enter the premises. He/she cannot be not spotted by physical sight, cameras or a ringing bell at the door.",
         "dependant_answers": ["is always under surveillance (by someone, physically or remotely)"],
         "recommendations": [
           {
@@ -969,7 +969,7 @@
         "score": 3,
         "atype": "P",
         "label": "is always under surveillance (by someone, physically or remotely)",
-        "tooltip": "Someone should always see or know a patient leave or enter the premises. He can be spotted by physical sight, cameras or a ringing bell at the door.",
+        "tooltip": "Someone should always see or know a patient leave or enter the premises. He/she can be spotted by physical sight, cameras or a ringing bell at the door.",
         "dependant_answers": ["can be left alone occasionally","can go away without being noticed"],
         "recommendations": [
           {
@@ -1021,14 +1021,14 @@
         "score": 4,
         "atype": "P",
         "label": "can't access printers without being seen",
-        "tooltip": "Printed documents couldn't be grabbed by someone who has not printed it, or if it's the case the person has the authorization see it or to read it.",
+        "tooltip": "Printed documents couldn't be grabbed by someone who has not printed it, or if it's the case the person has the authorization to read or take it.",
         "recommendations": [
           {
             "min_e_count": "a",
             "max_e_count": "j",
             "sector": null,
             "answerChosen": false,
-            "label": "Printers can contain confidential information, such as the last printed documents, or some printed documents that someone did not yet have the time to fetch. "
+            "label": "Printers can contain confidential information, such as the last printed documents, or some printed documents that someone did not yet have the time to fetch."
           }
         ]
       },
@@ -1038,7 +1038,7 @@
         "score": 5,
         "atype": "P",
         "label": "can't enter the office when there is no one in the office",
-        "tooltip": "The premises are only open certain time, and otherwise is closed with a key (or other means) and under alarm (if possible).",
+        "tooltip": "The premises are only open at a certain time, and otherwise are closed with a key (or other means) and under alarm (if possible).",
         "recommendations": [
           {
             "min_e_count": "a",
@@ -1054,7 +1054,7 @@
   {
     "service_category": "Passwords",
     "section": "Logical Access",
-    "label": "When a patient enters your premises, he:",
+    "label": "Passwords in the company are",
     "qtype": "M",
     "qindex": 10,
     "maxPoints": 28,
@@ -1171,7 +1171,7 @@
         "score": 6,
         "atype": "P",
         "label": "regularly changed, every year or two",
-        "tooltip": "Passwords are sometime changed, at least once per two years. This might not be strict, and could be more or less sometime.",
+        "tooltip": "Passwords are changed at least once every two years. This might not be strict, but could be done more often.",
         "recommendations": [
           {
             "min_e_count": "a",
@@ -1250,7 +1250,7 @@
         "score": 20,
         "atype": "P",
         "label": "is clearly distinguished by the assignment of different authorization roles",
-        "tooltip": "Within the patient data management application, roles like Doctor, Nurse, Secretary, Administrator are distinguished and personal is assigned to different roles properly.",
+        "tooltip": "Within the patient data management application, roles like Doctor, Nurse, Secretary, Administrator are distinguished and users are assigned to different roles properly.",
         "recommendations": [
           {
             "min_e_count": "a",
@@ -1457,14 +1457,14 @@
         "score": 3,
         "atype": "P",
         "label": "is installed on computers and laptops",
-        "tooltip": "There is an antivirus in every computer and laptop in the establishment.",
+        "tooltip": "There is an antivirus software installed on every computer and laptop in the establishment.",
         "recommendations": [
           {
             "min_e_count": "a",
             "max_e_count": "j",
             "sector": null,
             "answerChosen": false,
-            "label": "An anti-virus software must be on all devices."
+            "label": "An anti-virus software must be installed on all devices."
           }
         ]
       },
@@ -1508,14 +1508,14 @@
         "score": 3,
         "atype": "P",
         "label": "is installed on all mobile phones that are on network",
-        "tooltip": "All phones or tablets that are connected to the network has an antivirus.",
+        "tooltip": "All phones or tablets that are connected to the network have antivirus software installed.",
         "recommendations": [
           {
             "min_e_count": "a",
             "max_e_count": "j",
             "sector": null,
             "answerChosen": false,
-            "label": " All devices, like smartphones, tablets should have an anti-virus, even if it is the one by default from the operating system."
+            "label": "All devices, like smartphones, tablets should have an anti-virus, even if it is the one by default from the operating system."
           }
         ]
       },
@@ -1586,7 +1586,7 @@
         "score": 4,
         "atype": "P",
         "label": "automatically or manually updated regarding the software and operating system",
-        "tooltip": "The laptop and the software in the laptop are updated as soon as it is possible, or the ICT provider update them sometimes.",
+        "tooltip": "The laptop and the software installed on it are updated as soon as possible, or sometimes they are updated by the ICT provider.",
         "recommendations": [
           {
             "min_e_count": "a",
@@ -1682,7 +1682,7 @@
         "bonus_points": 3,
         "atype": "P",
         "label": "on paper that is stored in a place always locked",
-        "tooltip": "Whenever you don't need it, papers are locked in a room or any storage mean. The lock doesn't need to be solid, but is always used whenever no one that has the right access to these documents.",
+        "tooltip": "Whenever you don’t need them, papers are locked in a room or at any storage mean. The lock does not need to be solid, but is always used to prevent unauthorized persons getting access to these documents.",
         "recommendations": []
       },
       {
@@ -1807,7 +1807,7 @@
             "max_e_count": "j",
             "sector": null,
             "answerChosen": false,
-            "label": " Personal devices shouldn't be used in company without any controls, rules and explanations. By knowing all the different existing ways to attack an organization, it's possible to avoid them."
+            "label": "Personal devices shouldn't be used in company without any controls, rules and explanations. By knowing all the different existing ways to attack an organization, it's possible to avoid them."
           }
         ]
       },
@@ -1878,7 +1878,7 @@
         "score": 0,
         "bonus_points": 1,
         "atype": "P",
-        "label": "are using the DSP (\"Dossier soin partagé\") to access or share relevant medical information of the patient",
+        "label": "are using the DSP (\"Dossier de Soins Partagé\") to access or share relevant medical information of the patient",
         "tooltip": "\"Dossier soin partagé\" (DSP) should be used for the exchange of medical data with other professionals and the patient.",
         "recommendations": [
           {
@@ -1958,7 +1958,7 @@
         "uniqueAnswer": false,
         "score": 0,
         "atype": "P",
-        "label": "feel well supported in terms of IT and the capability on digitalization of the by our software provider / IT Integrator",
+        "label": "feel well supported in terms of IT and the capability on digitalization by our software provider / IT Integrator",
         "tooltip": "",
         "recommendations": []
       },

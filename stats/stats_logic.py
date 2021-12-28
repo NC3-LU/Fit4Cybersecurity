@@ -146,5 +146,7 @@ def get_finished_surveys_list(request):
 
     return {
         "dates_limit_form": dates_limit_form,
-        "surveys_users_results": json.dumps(surveys_users_results),
+        "surveys_users_results": json.dumps(
+            surveys_users_results, indent=2, sort_keys=True
+        ),
     }

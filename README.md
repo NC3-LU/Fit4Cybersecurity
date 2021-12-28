@@ -3,7 +3,7 @@
 [![Python application basic tests](https://github.com/CASES-LU/Fit4Cybersecurity/actions/workflows/pythonapp.yml/badge.svg)](https://github.com/CASES-LU/Fit4Cybersecurity/actions/workflows/pythonapp.yml)
 [![Latest release](https://img.shields.io/github/release/CASES-LU/Fit4Cybersecurity.svg?style=flat-square)](https://github.com/CASES-LU/Fit4Cybersecurity/releases/latest)
 [![License](https://img.shields.io/github/license/CASES-LU/Fit4Cybersecurity.svg?style=flat-square)](https://www.gnu.org/licenses/agpl-3.0.html)
-[![Translation status](https://translate.monarc.lu/widgets/Fit4Cybersecurity/-/svg-badge.svg)](https://translate.monarc.lu/engage/Fit4Cybersecurity/)
+[![Translation status](https://translate.monarc.lu/widgets/Fit4Cybersecurity/-/fit4cybersecurity/svg-badge.svg)](https://translate.monarc.lu/engage/Fit4Cybersecurity/)
 
 
 Fit4Cybersecurity is a self-assessment tool by [CASES](https://www.cases.lu)
@@ -81,7 +81,7 @@ $ python manage.py makemessages -a --keep-pot -e html,txt,py,json  # extract the
 $ python manage.py compilemessages # Compile the translations
 
 # Initialize the database:
-$ sudo -u postgres createdb fit4Ccbersecurity  # Name of the database as in config.py
+$ sudo -u postgres createdb fit4cybersecurity  # Name of the database as in config.py
 $ python manage.py migrate
 
 # Import questions, answers and recommendations:
@@ -210,6 +210,14 @@ If you want to re-generate the .pot template file:
 ```bash
 $ python manage.py makemessages -a --keep-pot
 ```
+
+## Templates customization per site.
+
+It is possible to customize specific templates for each available site. 
+This can be done by creating a folder with the `site_name` config parameter value
+and place it under the same directory as it is located under the original templates.   
+The new template will be loaded automatically if exists,can inherit the parent template
+and only override its specific blocks.
 
 
 ## Updating the OpenAPI Schema

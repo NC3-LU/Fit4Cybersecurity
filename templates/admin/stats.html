@@ -1,54 +1,45 @@
-{% extends 'survey/bootstrap.html' %}
-{% load i18n %}
-{% load bootstrap4 %}
+{% extends "admin/base_site.html" %}
 {% load static %}
-{% block bootstrap4_extra_head %}
+{% block extrastyle %}
+{{ block.super }}
+<script type="text/javascript" src="/static/npm_components/jquery/dist/jquery.min.js"></script>
 <script type="text/javascript" src="{% static "stats/js/stats.js" %}"></script>
 {% endblock %}
-{% block bootstrap4_content %}
-<div class="container">
-  {% block breadcrumbs %}<div class="breadcrumbs"><a href="{% url 'admin:index' %}">{% trans 'Django administration' %}</a> › Stats</div>{% endblock %}
-  <div id="content-body">
-    <div class="row">
-      <div class="col">
-        <h1>Survey statistics</h1>
+{% block content %}
+<div class="row">
+  <div class="col">
+    <h1>Survey statistics</h1>
+  </div>
+</div><br />
+<div class="row">
+  <div class="col">
+    <form action="/admin/export/statistics/" method="post" class="dates-limit-form">
+      <div class="form-group">
+        {% csrf_token %}
+        {{ dates_limit_form.media }}
+        {{ dates_limit_form }}
+        <div class="form-group pt-4">
+          <input class="btn btn-primary" type="submit" value="Apply">
+        </div>
       </div>
-    </div><br />
-    <div class="row">
-      <div class="col">
-        <form action="/admin/export/statistics/" method="post" class="dates-limit-form">
-          <div class="form-group">
-          {% csrf_token %}
-
-          {{ dates_limit_form.media }}
-          {{ dates_limit_form }}
-
-          <div class="form-group pt-4">
-            <input class="btn btn-primary" type="submit" value="Apply">
-          </div>
-          </div>
-        </form>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col">
-        <h4>Results json</h4>
-      </div>
-    </div>
-    {% if surveys_users_results != '{}' %}
-    <div class="row">
-      <div class="col">
-        <textarea rows="5" cols="100" id="surveys_users_results">{{ surveys_users_results }}</textarea>
-      </div>
-    </div>
-    <div class="mt-2 row">
-      <div class="col">
-        <button id="save-as-json" class="btn btn-primary">Save as json</button>
-      </div>
-    </div>
-    {% endif %}
-    </div>
+    </form>
+  </div>
 </div>
-
-
+<div class="row">
+  <div class="col">
+    <h4>Results json</h4>
+  </div>
+</div>
+{% if surveys_users_results != '{}' %}
+<div class="row">
+  <div class="col">
+    <textarea rows="15" cols="100" id="surveys_users_results">{{ surveys_users_results }}</textarea>
+  </div>
+</div>
+<div class="mt-2 row">
+  <div class="col">
+    <input id="save-as-json" class="btn btn-primary" type="submit" value="Save as json">
+  </div>
+</div>
+{% endif %}
 {% endblock %}

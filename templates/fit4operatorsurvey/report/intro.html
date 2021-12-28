@@ -1,0 +1,12 @@
+{% extends 'report/intro.html' %}
+{% load i18n %}
+{% load apptags %}
+
+{% block report_intro_description %}
+{% blocktranslate trimmed %}
+The objective of the self-assessment tool, {{ custom.tool_name }} is to understand the level of maturity in information security of operators, in preparation for informed governance and anticipation of the NISv2.<br /><br />
+This document, based on the {{ custom.tool_name }}, is for the exclusive use of the customer. It is in this respect confidential.<br /><br />
+The tool, {{ custom.tool_name }} can possibly provide recommendations. It is understood by the client that the recommendations are neither exclusive nor exhaustive.<br /><br />
+It should also be noted that the information you have provided to us will be recorded for statistical informational reasons. Due to the nature of the data, we can not identify you. Unless you later contact us and provide us your results.
+{% endblocktranslate %}
+{% endblock %}

@@ -2,6 +2,7 @@
 
 from typing import Union, List, Dict, Tuple, Any
 from typing_extensions import TypedDict
+import logging
 from uuid import UUID
 from django.http import HttpRequest
 from django.conf import settings
@@ -22,6 +23,9 @@ from survey.forms import AnswerMChoice, GeneralFeedback
 from csskp.settings import CUSTOM, LANGUAGES, LANGUAGE_CODE
 
 LOCAL_DEFAULT_LANG = LANGUAGE_CODE
+
+# Get an instance of a logger
+logger = logging.getLogger(__name__)
 
 
 class QuestionWithUserAnswers(TypedDict):
@@ -65,7 +69,7 @@ def handle_start_survey(request: HttpRequest, lang: str) -> Union[Dict, SurveyUs
         section__label__contains="__context"
     ).all()
 
-    # if no context questions
+    # if no context questions: create the user without the form
     if not questions.count() and request.method == "GET":
         user = create_user(lang)
         request.session["user_id"] = str(user.user_id)
@@ -73,16 +77,16 @@ def handle_start_survey(request: HttpRequest, lang: str) -> Union[Dict, SurveyUs
 
     for question in questions:
         try:
-            question_answers = SurveyQuestionAnswer.objects.filter(question=question)
-            tuple_answers = get_answer_choices(question, question_answers, lang)
+            tuple_answers = get_answer_choices(question, lang)
         except Exception as e:
+            logger.error(e)
             raise e
         forms[question.id] = AnswerMChoice(
             tuple_answers,
             data=request.POST,
             lang=lang,
             answers_field_type=question.qtype,
-            question_answers=question_answers,
+            question_answers=question.surveyquestionanswer_set.all(),
             prefix="form" + str(question.id),
         )
 
@@ -125,13 +129,10 @@ def handle_question_answers_request(
     ) = get_questions_slice(question_index)
 
     try:
-        question_answers = SurveyQuestionAnswer.objects.filter(
-            question=current_question
-        )
-        tuple_answers = get_answer_choices(
-            current_question, question_answers, user.choosen_lang
-        )
+        question_answers = current_question.surveyquestionanswer_set.all()
+        tuple_answers = get_answer_choices(current_question, user.choosen_lang)
     except Exception as e:
+        logger.error(e)
         raise e
 
     free_text_answer_id = 0
@@ -151,9 +152,7 @@ def handle_question_answers_request(
             question_answers=question_answers,
         )
         if form.is_valid():
-            user = SurveyUser.objects.select_for_update(nowait=True).filter(id=user.id)[
-                0
-            ]
+            user = SurveyUser.objects.select_for_update(nowait=True).filter(id=user.id)[0]
             answers = form.cleaned_data["answers"]
             answer_content = ""
             if "answer_content" in form.cleaned_data:
@@ -217,11 +216,7 @@ def handle_question_answers_request(
     form.set_free_text_answer_id(free_text_answer_id)
 
     return {
-        "title": CUSTOM["tool_name"]
-        + " - "
-        + _("Question")
-        + " "
-        + str(current_question.qindex),
+        "title": CUSTOM["tool_name"] + " - " + _("Question") + " " + str(current_question.qindex),
         "question": _(current_question.label),
         "question_tooltip": _(current_question.tooltip),
         "form": form,
@@ -236,7 +231,7 @@ def handle_question_answers_request(
 def save_answers(
     user: SurveyUser,
     current_question: SurveyQuestion,
-    posted_answers: List[SurveyQuestionAnswer],
+    posted_answers: List[int],
     answer_content: str,
 ) -> None:
     posted_answers_ids = [int(i) for i in posted_answers]
@@ -262,18 +257,23 @@ def save_answers(
 
 
 def find_user_by_id(user_id: UUID) -> SurveyUser:
-    return SurveyUser.objects.filter(user_id=user_id)[0]
+    """Get a user by its UUID."""
+    try:
+        return SurveyUser.objects.get(user_id=user_id)
+    except SurveyUser.DoesNotExist as e:
+        logger.error("SurveyUser does not exist.")
+        raise e
 
 
 def get_answer_choices(
-    question, question_answers: List[SurveyQuestionAnswer], user_lang: str
+    question: SurveyQuestion, user_lang: str
 ) -> List[Tuple[int, str]]:
     tuple_answers = []
     translation.activate(user_lang)
 
     question_answers = list(
         sorted(
-            question_answers,
+            question.surveyquestionanswer_set.all(),
             key=lambda obj: getattr(obj, question.answers_order)
             if isinstance(getattr(obj, question.answers_order), int)
             else _(str(getattr(obj, question.answers_order))),
@@ -292,7 +292,7 @@ def get_answer_choices(
                     mark_safe('<span class="checkmark"></span>'),
                     mark_safe(
                         '<span data-bs-toggle="tooltip" title="'
-                        + tooltip
+                        + tooltip.replace('"', "&quot;")
                         + '">'
                         + answer
                         + "</span>"

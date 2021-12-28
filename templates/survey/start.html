@@ -17,9 +17,11 @@
 
 {% block content %}
     <div class="m-2 p-3">
+        {% block start_description %}
         <div class="card-title">
             {{ _('We need this information to be able to give you useful recommendations, once the self-assessment is done.') }}
         </div>
+        {% endblock %}
 
         <form method="post" id="context_questions">
         {% csrf_token %}
