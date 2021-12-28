@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-12-22 12:49+0000\n"
+"POT-Creation-Date: 2021-12-27 17:01+0000\n"
 "PO-Revision-Date: 2021-12-22 14:02+0000\n"
 "Last-Translator: Cédric Bonhomme <cedric@cedricbonhomme.org>\n"
 "Language-Team: French <https://translate.monarc.lu/projects/"
@@ -19,7 +19,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
 "X-Generator: Weblate 4.9-dev\n"
 
-#: csskp/config.py:29 csskp/config_dev.py:30
+#: csskp/config.py:30 csskp/config_dev.py:30
 msgid "Description of the tool."
 msgstr "Description de l'outil."
 
@@ -1007,6 +1007,7 @@ msgid "different for each application used, even for a user"
 msgstr "sont différents pour chaque application, même pour un utilisateur"
 
 #: data/fit4cybersecurity/questions.json:831
+#: data/fit4ehealth/questions.json:1057
 msgid "Passwords in the company are"
 msgstr "Les mots de passe dans l'entreprise"
 
@@ -1122,7 +1123,6 @@ msgid "is not installed or used"
 msgstr "n'est pas installé ou utilisé"
 
 #: data/fit4cybersecurity/questions.json:957
-#: data/fit4ehealth/questions.json:1467
 msgid "An anti-virus software must be on all devices."
 msgstr ""
 "Un logiciel antivirus doit être installé sur les machines pour empêcher au "
@@ -1710,7 +1710,7 @@ msgstr ""
 #: data/fit4ehealth/questions.json:263
 msgid ""
 "If data are shared, it should be encrypted so that only the intended "
-"recipient should be able to access the data"
+"recipient should be able to access the data."
 msgstr ""
 
 #: data/fit4ehealth/questions.json:271 data/fit4ehealth/questions.json:341
@@ -1876,7 +1876,7 @@ msgstr ""
 #: data/fit4ehealth/questions.json:483
 msgid ""
 "Having a network environment that you can control or easily check is "
-"important, as you can be sure that you and you alone access this network."
+"important, as you can be sure that only you have an access to this network."
 msgstr ""
 
 #: data/fit4ehealth/questions.json:492
@@ -1931,13 +1931,13 @@ msgstr ""
 
 #: data/fit4ehealth/questions.json:566
 msgid ""
-"Contract should be defined with all external actors. Here some advices :"
+"Contract should be defined with all external actors. Here are some advices:"
 msgstr ""
 
 #: data/fit4ehealth/questions.json:575
 msgid ""
 "contain a confidentiality clause in that the provider should not disclose "
-"any personal data they would access while working for you"
+"any personal data they would be able to access while working for you"
 msgstr ""
 
 #: data/fit4ehealth/questions.json:583
@@ -2159,8 +2159,8 @@ msgstr "Cybersécurité"
 msgid "Physical Access"
 msgstr "Accès Logiques"
 
-#: data/fit4ehealth/questions.json:908 data/fit4ehealth/questions.json:1057
-msgid "When a patient enters your premises, he:"
+#: data/fit4ehealth/questions.json:908
+msgid "When a patient enters your premises, he/she:"
 msgstr ""
 
 #: data/fit4ehealth/questions.json:918
@@ -2236,7 +2236,7 @@ msgstr ""
 msgid ""
 "Printers can contain confidential information, such as the last printed "
 "documents, or some printed documents that someone did not yet have the time "
-"to fetch. "
+"to fetch."
 msgstr ""
 
 #: data/fit4ehealth/questions.json:1040
@@ -2385,6 +2385,12 @@ msgstr ""
 #: data/fit4ehealth/questions.json:1430
 msgid "Antivirus"
 msgstr "Antivirus"
+
+#: data/fit4ehealth/questions.json:1467
+msgid "An anti-virus software must be installed on all devices."
+msgstr ""
+"Un logiciel antivirus doit être installé sur les machines pour empêcher au "
+"maximum possible les infections virales."
 
 #: data/fit4ehealth/questions.json:1493
 msgid "is activated and protects computer"
@@ -2594,7 +2600,7 @@ msgstr ""
 
 #: data/fit4ehealth/questions.json:1881
 msgid ""
-"are using the DSP (\"Dossier soin partagé\") to access or share relevant "
+"are using the DSP (\"Dossier de Soins Partagé\") to access or share relevant "
 "medical information of the patient"
 msgstr ""
 
@@ -2651,8 +2657,8 @@ msgstr ""
 
 #: data/fit4ehealth/questions.json:1961
 msgid ""
-"feel well supported in terms of IT and the capability on digitalization of "
-"the by our software provider / IT Integrator"
+"feel well supported in terms of IT and the capability on digitalization by "
+"our software provider / IT Integrator"
 msgstr ""
 
 #: data/fit4ehealth/questions.json:1970
@@ -5092,7 +5098,7 @@ msgstr "Administration publique"
 msgid "Let's start"
 msgstr "Commençons"
 
-#: survey/viewLogic.py:223
+#: survey/viewLogic.py:219
 msgid "Question"
 msgstr "Question"
 
@@ -5186,6 +5192,7 @@ msgid "Description"
 msgstr "Description"
 
 #: templates/report/description.html:8
+#, python-format
 msgid ""
 "This self-assessment tool is named %(custom.tool_name)s to highlight the "
 "introduction to information security. It is also a prerequisite for doing a "
@@ -5200,7 +5207,7 @@ msgstr ""
 "Cet outil d'auto-évaluation est nommé %(custom.tool_name)s pour souligner "
 "l'introduction à la sécurité de l'information. Il est aussi un prérequis "
 "pour faire un Diagnostic CASES: un score minimal de "
-"%(minimal_acceptable_score)s/100 est requis. Le but pour cette restriction "
+"%(custom.minimal_acceptable_score)s/100 est requis. Le but pour cette restriction "
 "nous donne la possibilité pour mieux adapter les recommandations à votre "
 "organisation lors du Diagnostic. <br /><br /> Durant cette auto-evaluation "
 "questions à choix multiples vous ont été posées. Après avoir analysé vos "
@@ -5272,6 +5279,7 @@ msgid "Result"
 msgstr "Résultat"
 
 #: templates/report/results.html:8
+#, python-format
 msgid ""
 "You have achieved %(SCORE)s/100 with your answers. You must reach at least "
 "%(custom.minimal_acceptable_score)s/100 to be able to make a CASES Diagnosis."
@@ -5280,7 +5288,7 @@ msgid ""
 "exhaustive."
 msgstr ""
 "Vous avez atteint %(SCORE)s/100 avec vos réponses. Vous devez atteindre au "
-"moins %(minimal_acceptable_score)s/100 pour pouvoir faire un Diagnostic "
+"moins %(custom.minimal_acceptable_score)s/100 pour pouvoir faire un Diagnostic "
 "CASES. <br /><br /> Nous vous rappelons qu'il s'agit d'une auto-évaluation, "
 "il est entendu que l’ensemble des résultats ne peut en aucune manière être "
 "exhaustif."
@@ -5467,7 +5475,7 @@ msgstr ""
 
 #: templates/survey/questions.html:87
 msgid ""
-"Please do not provide any sensitive or confidential information refering to "
+"Please do not provide any sensitive or confidential information referring to "
 "your identity."
 msgstr ""
 "Veuillez ne fournir aucune donnée sensible ou confidentielle faisant "

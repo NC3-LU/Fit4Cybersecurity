@@ -89,9 +89,7 @@ def calculateResult(user: SurveyUser) -> Tuple[int, int, List[int], List[str]]:
 
     chart_exclude_sections = ["__context"]
     if "chart_exclude_sections" in CUSTOM.keys():
-        chart_exclude_sections = (
-            chart_exclude_sections + CUSTOM["chart_exclude_sections"]
-        )
+        chart_exclude_sections = chart_exclude_sections + CUSTOM["chart_exclude_sections"]
 
     for question in SurveyQuestion.objects.exclude(
         section__label__in=chart_exclude_sections
