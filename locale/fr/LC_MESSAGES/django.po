@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-12-27 17:01+0000\n"
+"POT-Creation-Date: 2021-12-29 19:31+0000\n"
 "PO-Revision-Date: 2021-12-22 14:02+0000\n"
 "Last-Translator: Cédric Bonhomme <cedric@cedricbonhomme.org>\n"
 "Language-Team: French <https://translate.monarc.lu/projects/"
@@ -19,13 +19,169 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
 "X-Generator: Weblate 4.9-dev\n"
 
-#: csskp/config.py:30 csskp/config_dev.py:30
+#: csskp/fit4cybersecurity/config.py:6
+msgid ""
+"This survey will ask a few questions and provide\n"
+"        recommendations. Keep in mind, that it is a self-assessment tool and "
+"that it\n"
+"        only touches the surface of information security by giving a very "
+"basic maturity\n"
+"        level estimate and some basic recommendations."
+msgstr ""
+
+#: csskp/fit4ehealth/config.py:6
 msgid "Description of the tool."
 msgstr "Description de l'outil."
 
+#: csskp/fit4operatorsurvey/config.py:6
+msgid ""
+"This survey aims to identify the level of maturity\n"
+"        of the operators in Luxembourg with respect to risk management and "
+"governance,\n"
+"        collaboration on national and EU level and Incident reporting. We "
+"collect the\n"
+"        answers to these 30 questions to understand where guidance and "
+"knowledge is\n"
+"        already advanced and where there is room for improvement.\n"
+"        As such, it is recommended that a person is taking this survey that "
+"is knowing\n"
+"        the company's maturity on the aforementioned topics well.\n"
+"        <br /><br />\n"
+"        The survey will be online and available between December 2021 and "
+"March 31st 2022.\n"
+"        After the survey, the data will be processed and results will be "
+"interpreted.\n"
+"        However, since the survey is completely anonymous, we cannot "
+"identify you nor\n"
+"        your company and thus deletion of specific records is not possible: "
+"we cannot\n"
+"        be sure that it is indeed your survey. The results will be made "
+"available\n"
+"        through another channel.\n"
+"        <br /><br />\n"
+"        If you are not able to do the survey in one go and you want to "
+"later\n"
+"        pick up where you have left off, please be sure to save the link by "
+"clicking\n"
+"        on the \"continue later\" button.\n"
+"        We will not be able to help you to find your answers again otherwise."
+msgstr ""
+
+#: csskp/fit4operatorsurvey/config.py:63
+#: data/fit4operatorsurvey/context-questions.json:11
+msgid "Energy"
+msgstr ""
+
+#: csskp/fit4operatorsurvey/config.py:64
+#: data/fit4operatorsurvey/context-questions.json:17
+msgid "Transport"
+msgstr "Transparence"
+
+#: csskp/fit4operatorsurvey/config.py:65
+#: data/fit4operatorsurvey/context-questions.json:23
+msgid "Banking"
+msgstr ""
+
+#: csskp/fit4operatorsurvey/config.py:66
+#: data/fit4operatorsurvey/context-questions.json:29
+msgid "Financial market infrastructure"
+msgstr ""
+
+#: csskp/fit4operatorsurvey/config.py:67
+#: data/fit4cybersecurity/context-questions.json:59
+#: data/fit4ehealth/context-questions.json:10
+#: data/fit4operatorsurvey/context-questions.json:35 survey/globals.py:15
+msgid "Health"
+msgstr "Santé"
+
+#: csskp/fit4operatorsurvey/config.py:68
+#: data/fit4operatorsurvey/context-questions.json:41
+msgid "Dringking water"
+msgstr ""
+
+#: csskp/fit4operatorsurvey/config.py:69
+#: data/fit4operatorsurvey/context-questions.json:47
+msgid "Waste Water"
+msgstr ""
+
+#: csskp/fit4operatorsurvey/config.py:70
+#: data/fit4operatorsurvey/context-questions.json:53
+msgid "Digital Infrastructure and Service Providers"
+msgstr ""
+
+#: csskp/fit4operatorsurvey/config.py:71
+#: data/fit4cybersecurity/context-questions.json:95
+#: data/fit4operatorsurvey/context-questions.json:59
+msgid "Public Administration"
+msgstr "Administration publique"
+
+#: csskp/fit4operatorsurvey/config.py:72
+#: data/fit4operatorsurvey/context-questions.json:65
+msgid "Space"
+msgstr ""
+
+#: csskp/fit4operatorsurvey/config.py:73
+msgid "Postal and Courrier Services"
+msgstr ""
+
+#: csskp/fit4operatorsurvey/config.py:74
+#: data/fit4operatorsurvey/context-questions.json:77
+msgid "Waste Management"
+msgstr "Gestion des risques"
+
+#: csskp/fit4operatorsurvey/config.py:75
+#: data/fit4operatorsurvey/context-questions.json:83
+msgid "Manufacture, production and distribution of chemicals"
+msgstr ""
+
+#: csskp/fit4operatorsurvey/config.py:76
+#: data/fit4operatorsurvey/context-questions.json:89
+msgid "Food Production, processing and distribution"
+msgstr "Commerce, vente et grande distribution"
+
+#: csskp/fit4operatorsurvey/config.py:77
+#: data/fit4operatorsurvey/context-questions.json:95
+msgid "Manufacturing of medical devices"
+msgstr ""
+
+#: csskp/fit4operatorsurvey/config.py:78
+#: data/fit4operatorsurvey/context-questions.json:101
+msgid "Manufacture of computer, electronics and optical products"
+msgstr ""
+
+#: csskp/fit4operatorsurvey/config.py:79
+#: data/fit4operatorsurvey/context-questions.json:107
+msgid "Manufacture of electrical equipment"
+msgstr ""
+
+#: csskp/fit4operatorsurvey/config.py:80
+#: data/fit4operatorsurvey/context-questions.json:113
+msgid "Manufacture of machinery and equipment"
+msgstr ""
+
+#: csskp/fit4operatorsurvey/config.py:83
+#: data/fit4operatorsurvey/context-questions.json:128
+msgid "Under 10 employees"
+msgstr ""
+
+#: csskp/fit4operatorsurvey/config.py:84
+#: data/fit4operatorsurvey/context-questions.json:134
+msgid "From 10 to 49 employees"
+msgstr ""
+
+#: csskp/fit4operatorsurvey/config.py:85
+#: data/fit4operatorsurvey/context-questions.json:140
+msgid "From 50 to 249 employees"
+msgstr ""
+
+#: csskp/fit4operatorsurvey/config.py:86
+#: data/fit4operatorsurvey/context-questions.json:146
+msgid "Over 250 employees"
+msgstr ""
+
 #: data/fit4cybersecurity/context-questions.json:3
 #: data/fit4ehealth/context-questions.json:3
-#: data/survey4operators/context-questions.json:3
+#: data/fit4operatorsurvey/context-questions.json:3
 msgid "What is your sector?"
 msgstr "Quel est votre secteur ?"
 
@@ -34,10 +190,10 @@ msgstr "Quel est votre secteur ?"
 #: data/fit4cybersecurity/context-questions.json:173
 #: data/fit4ehealth/context-questions.json:4
 #: data/fit4ehealth/context-questions.json:19
-#: data/survey4operators/context-questions.json:4
-#: data/survey4operators/context-questions.json:122
-#: data/survey4operators/context-questions.json:155
-#: data/survey4operators/context-questions.json:188
+#: data/fit4operatorsurvey/context-questions.json:4
+#: data/fit4operatorsurvey/context-questions.json:122
+#: data/fit4operatorsurvey/context-questions.json:155
+#: data/fit4operatorsurvey/context-questions.json:188
 msgid "Context"
 msgstr "Contexte"
 
@@ -46,10 +202,10 @@ msgstr "Contexte"
 #: data/fit4cybersecurity/context-questions.json:174
 #: data/fit4ehealth/context-questions.json:5
 #: data/fit4ehealth/context-questions.json:20
-#: data/survey4operators/context-questions.json:5
-#: data/survey4operators/context-questions.json:123
-#: data/survey4operators/context-questions.json:156
-#: data/survey4operators/context-questions.json:189
+#: data/fit4operatorsurvey/context-questions.json:5
+#: data/fit4operatorsurvey/context-questions.json:123
+#: data/fit4operatorsurvey/context-questions.json:156
+#: data/fit4operatorsurvey/context-questions.json:189
 msgid "__context"
 msgstr "__context"
 
@@ -85,12 +241,6 @@ msgstr "Installation et maintenance"
 msgid "Creation or placing of objects that are artistic and decorative"
 msgstr "Réalisation ou placement d'objets artistiques et décoratifs"
 
-#: data/fit4cybersecurity/context-questions.json:59
-#: data/fit4ehealth/context-questions.json:10
-#: data/survey4operators/context-questions.json:35 survey/globals.py:15
-msgid "Health"
-msgstr "Santé"
-
 #: data/fit4cybersecurity/context-questions.json:65 survey/globals.py:16
 msgid "Home-Care Service or Community Service"
 msgstr "Services à la personne et à la collectivité"
@@ -112,13 +262,8 @@ msgid "Farming and fishing, natural spaces and green spaces, animal care"
 msgstr ""
 "Agriculture et pêche, espaces naturels et espaces verts, soins aux animaux"
 
-#: data/fit4cybersecurity/context-questions.json:95
-#: data/survey4operators/context-questions.json:59
-msgid "Public Administration"
-msgstr "Administration publique"
-
 #: data/fit4cybersecurity/context-questions.json:103
-#: data/survey4operators/context-questions.json:121
+#: data/fit4operatorsurvey/context-questions.json:121
 msgid "How many employees?"
 msgstr "Combien d'employés ?"
 
@@ -163,7 +308,7 @@ msgid "5000+"
 msgstr "5000+"
 
 #: data/fit4cybersecurity/context-questions.json:172
-#: data/survey4operators/context-questions.json:154
+#: data/fit4operatorsurvey/context-questions.json:154
 msgid "What is your country?"
 msgstr "Quel est votre pays ?"
 
@@ -2668,6 +2813,747 @@ msgid ""
 "webinars"
 msgstr ""
 
+#: data/fit4operatorsurvey/context-questions.json:71
+msgid "Postal and Courier Services"
+msgstr ""
+
+#: data/fit4operatorsurvey/context-questions.json:161
+msgid "In the EU"
+msgstr ""
+
+#: data/fit4operatorsurvey/context-questions.json:167
+msgid "Outside of the EU but within EEA"
+msgstr ""
+
+#: data/fit4operatorsurvey/context-questions.json:173
+msgid "Outside of the EEA"
+msgstr ""
+
+#: data/fit4operatorsurvey/context-questions.json:179
+msgid "Just in Luxembourg"
+msgstr "Luxembourg"
+
+#: data/fit4operatorsurvey/context-questions.json:187
+msgid ""
+"If your company part of a bigger international company or group with its "
+"headquarters outside of Luxembourg?"
+msgstr ""
+
+#: data/fit4operatorsurvey/context-questions.json:194
+#: templates/survey/leaveSurvey.html:11
+msgid "Yes"
+msgstr "Oui"
+
+#: data/fit4operatorsurvey/context-questions.json:200
+#: templates/survey/leaveSurvey.html:15
+msgid "No"
+msgstr "Non"
+
+#: data/fit4operatorsurvey/questions.json:3
+msgid "What is the risk management culture in your company?"
+msgstr ""
+
+#: data/fit4operatorsurvey/questions.json:4
+#: data/fit4operatorsurvey/questions.json:5
+#: data/fit4operatorsurvey/questions.json:78
+#: data/fit4operatorsurvey/questions.json:79
+#: data/fit4operatorsurvey/questions.json:96
+#: data/fit4operatorsurvey/questions.json:97
+#: data/fit4operatorsurvey/questions.json:114
+#: data/fit4operatorsurvey/questions.json:115
+#: data/fit4operatorsurvey/questions.json:132
+#: data/fit4operatorsurvey/questions.json:133
+#: data/fit4operatorsurvey/questions.json:150
+#: data/fit4operatorsurvey/questions.json:151
+#: data/fit4operatorsurvey/questions.json:168
+#: data/fit4operatorsurvey/questions.json:169
+#: data/fit4operatorsurvey/questions.json:186
+#: data/fit4operatorsurvey/questions.json:187
+#: data/fit4operatorsurvey/questions.json:204
+#: data/fit4operatorsurvey/questions.json:205
+#: data/fit4operatorsurvey/questions.json:278
+#: data/fit4operatorsurvey/questions.json:279
+#: data/fit4operatorsurvey/questions.json:336
+#: data/fit4operatorsurvey/questions.json:337
+#: data/fit4operatorsurvey/questions.json:386
+#: data/fit4operatorsurvey/questions.json:387
+#: data/fit4operatorsurvey/questions.json:428
+#: data/fit4operatorsurvey/questions.json:429
+#: data/fit4operatorsurvey/questions.json:518
+#: data/fit4operatorsurvey/questions.json:519
+#: data/fit4operatorsurvey/questions.json:704
+#: data/fit4operatorsurvey/questions.json:705
+#: data/fit4operatorsurvey/questions.json:842
+#: data/fit4operatorsurvey/questions.json:843
+#: data/fit4operatorsurvey/questions.json:860
+#: data/fit4operatorsurvey/questions.json:861
+#: data/fit4operatorsurvey/questions.json:934
+#: data/fit4operatorsurvey/questions.json:935
+#: data/fit4privacy/questions.json:800 data/fit4privacy/questions.json:890
+#: data/fit4privacy/questions.json:948 data/fit4privacy/questions.json:1022
+msgid "Risk Management"
+msgstr "Gestion des risques"
+
+#: data/fit4operatorsurvey/questions.json:11
+msgid "We do not really have one."
+msgstr "Jamais entendu cela au sein de notre société."
+
+#: data/fit4operatorsurvey/questions.json:18
+msgid ""
+"It is always advised to establish and maintain an appropriate governance and "
+"risk management framework, to identify and address risks for the all "
+"networks and services."
+msgstr ""
+
+#: data/fit4operatorsurvey/questions.json:27
+msgid "There are risk management governance responsibilities in place."
+msgstr ""
+
+#: data/fit4operatorsurvey/questions.json:35
+msgid "Our company performs a Risk Analysis at least once every year."
+msgstr ""
+
+#: data/fit4operatorsurvey/questions.json:43
+msgid ""
+"Our company has a documented strategy combining both reacting to incidents "
+"and the prevention of incidents."
+msgstr ""
+
+#: data/fit4operatorsurvey/questions.json:51
+msgid "Our company has third-party risk management in place."
+msgstr ""
+
+#: data/fit4operatorsurvey/questions.json:59
+msgid ""
+"Our company is covering critical risks even outside of service contracts "
+"with providers/third-parties."
+msgstr ""
+
+#: data/fit4operatorsurvey/questions.json:67
+msgid "There are other elements in place, like:"
+msgstr ""
+
+#: data/fit4operatorsurvey/questions.json:77
+msgid ""
+"Which risk management processes are imposed by the Luxembourg entity, and if "
+"applicable, by the company Group?"
+msgstr ""
+
+#: data/fit4operatorsurvey/questions.json:85
+#: data/fit4operatorsurvey/questions.json:103
+#: data/fit4operatorsurvey/questions.json:121
+#: data/fit4operatorsurvey/questions.json:139
+#: data/fit4operatorsurvey/questions.json:157
+#: data/fit4operatorsurvey/questions.json:175
+#: data/fit4operatorsurvey/questions.json:193
+#: data/fit4operatorsurvey/questions.json:849
+#: data/fit4operatorsurvey/questions.json:941
+#: data/fit4operatorsurvey/questions.json:1059
+msgid "Please describe:"
+msgstr "Décrivez s'il vous plaît:"
+
+#: data/fit4operatorsurvey/questions.json:95
+msgid ""
+"What are the challenges related to performing existing Risk Management "
+"processes or practices? "
+msgstr ""
+
+#: data/fit4operatorsurvey/questions.json:113
+msgid ""
+"What can be improved about the existing Risk Management practices, in "
+"general?"
+msgstr ""
+
+#: data/fit4operatorsurvey/questions.json:131
+msgid ""
+"What are the requirements related to Information Security risks, that apply "
+"to your company and your sector?"
+msgstr ""
+
+#: data/fit4operatorsurvey/questions.json:149
+msgid ""
+"What is the complexity of the requirements described previously (if any)?"
+msgstr ""
+
+#: data/fit4operatorsurvey/questions.json:167
+msgid ""
+"What are the contradictions among risk management requirements (if any)?"
+msgstr ""
+
+#: data/fit4operatorsurvey/questions.json:185
+msgid "What are the overlaps among risk management requirements (if any)?"
+msgstr ""
+
+#: data/fit4operatorsurvey/questions.json:203
+msgid ""
+"Which standardized risk management practices are recommended to you by the "
+"group (if any)?"
+msgstr ""
+
+#: data/fit4operatorsurvey/questions.json:211
+#: data/fit4operatorsurvey/questions.json:285
+msgid "None."
+msgstr ""
+
+#: data/fit4operatorsurvey/questions.json:218
+#: data/fit4operatorsurvey/questions.json:234
+#: data/fit4operatorsurvey/questions.json:250
+#: data/fit4operatorsurvey/questions.json:266
+msgid ""
+"Having and maintaining an appropriate information security policy and "
+"charter. It should at least contain the basics as highlighted in the charter "
+"templates that can be found in the <a href=\"https://trustbox.cases.lu\" "
+"target=\"_blank\">CASES Trustbox</a>. But not only creating but correctly "
+"maintaining a more detailed security policy is essential and should be done "
+"as soon as possible."
+msgstr ""
+
+#: data/fit4operatorsurvey/questions.json:227
+msgid "None and not needed nor desired."
+msgstr ""
+
+#: data/fit4operatorsurvey/questions.json:243
+msgid "None, but we would love some support."
+msgstr "Aucun, mais nous avons quelques contrats."
+
+#: data/fit4operatorsurvey/questions.json:259
+msgid "Some. The list them includes:"
+msgstr ""
+
+#: data/fit4operatorsurvey/questions.json:277
+msgid ""
+"What guidance do you have from national and international groups or "
+"authorities?"
+msgstr ""
+
+#: data/fit4operatorsurvey/questions.json:293
+msgid "Help with identification of incidents."
+msgstr ""
+
+#: data/fit4operatorsurvey/questions.json:301
+msgid "New relevant standards in the field."
+msgstr ""
+
+#: data/fit4operatorsurvey/questions.json:309
+msgid "Educational Program(s)."
+msgstr ""
+
+#: data/fit4operatorsurvey/questions.json:317
+msgid "National guidance."
+msgstr ""
+
+#: data/fit4operatorsurvey/questions.json:325
+msgid "Other (please describe):"
+msgstr ""
+
+#: data/fit4operatorsurvey/questions.json:335
+msgid ""
+"To what extent is there a dependency on the supply chain in your company, "
+"that creates security gaps and lack of proper oversight?"
+msgstr ""
+
+#: data/fit4operatorsurvey/questions.json:343
+msgid "A lot."
+msgstr ""
+
+#: data/fit4operatorsurvey/questions.json:350
+#: data/fit4operatorsurvey/questions.json:366
+msgid ""
+"In your industry, it is always important to establish and maintain "
+"mechanisms for monitoring and collecting information about relevant threats "
+"to the security of your networks and services"
+msgstr ""
+
+#: data/fit4operatorsurvey/questions.json:359
+msgid "Little."
+msgstr ""
+
+#: data/fit4operatorsurvey/questions.json:375
+msgid "None at all."
+msgstr ""
+
+#: data/fit4operatorsurvey/questions.json:385
+msgid ""
+"Do you have specific regulations in your sector concerning cybersecurity?"
+msgstr ""
+
+#: data/fit4operatorsurvey/questions.json:393
+#: data/fit4operatorsurvey/questions.json:451
+msgid "Telecom regulations."
+msgstr "Recommandations."
+
+#: data/fit4operatorsurvey/questions.json:401
+#: data/fit4operatorsurvey/questions.json:467
+msgid "The NIS Directive."
+msgstr ""
+
+#: data/fit4operatorsurvey/questions.json:409
+#: data/fit4operatorsurvey/questions.json:483
+msgid "Aviation Regulations."
+msgstr ""
+
+#: data/fit4operatorsurvey/questions.json:417
+msgid "Other - please list:"
+msgstr ""
+
+#: data/fit4operatorsurvey/questions.json:427
+msgid "Are you obliged to comply with any of the following regulations?"
+msgstr ""
+
+#: data/fit4operatorsurvey/questions.json:435
+msgid "No obligation to comply to any regulation."
+msgstr ""
+
+#: data/fit4operatorsurvey/questions.json:442
+#: data/fit4operatorsurvey/questions.json:458
+#: data/fit4operatorsurvey/questions.json:490
+#: data/fit4operatorsurvey/questions.json:506
+msgid ""
+"If you are a simple SME, you can consider the guidance from ENISA: "
+"<ul><li><a href=\"https://www.enisa.europa.eu/publications/cybersecurity-"
+"guide-for-smes\" target=\"_blank\">Cybersecurity guide for SMEs</a></"
+"li><li><a href=\"https://www.enisa.europa.eu/publications/enisa-report-"
+"cybersecurity-for-smes\" target=\"_blank\">Report cybersecurity for SMEs</"
+"a></li></ul>"
+msgstr ""
+
+#: data/fit4operatorsurvey/questions.json:474
+msgid ""
+"If you are obliged to comply with the NIS directive, then you should "
+"consider <a href=\"https://www.enisa.europa.eu/topics/nis-directive/minimum-"
+"security-measures-for-operators-of-essentials-services\" target=\"_blank"
+"\">this mapping table</a> of security measures provided by ENISA. In "
+"addition, depending on your sector you should consider this documents:"
+"<ul><li>Digital service provider<ul><li><a href=\"https://www.enisa.europa."
+"eu/publications/minimum-security-measures-for-digital-service-providers\" "
+"target=\"_blank\">Minimum security measures for digital service providers</"
+"a></li></ul></li><li>Telecom sector<ul><li><a href=\"https://www.enisa."
+"europa.eu/publications/guideline-on-security-measures-under-the-eecc\" "
+"target=\"_blank\">Guideline on security measures under the EECC</a></li></"
+"ul></li><li>Healthcare sector<ul><li><a href=\"https://www.enisa.europa.eu/"
+"publications/cloud-security-for-healthcare-services\" target=\"_blank"
+"\">Cloud security for healthcare services</a></li><li><a href=\"https://www."
+"enisa.europa.eu/publications/good-practices-for-the-security-of-healthcare-"
+"services\" target=\"_blank\">Good practices for the security of healthcare "
+"services</a></li></ul></li><li>Transport sector (railways)<ul><li><a href="
+"\"https://www.enisa.europa.eu/publications/railway-cybersecurity\" target="
+"\"_blank\">Railway cybersecurity</a></li></ul></li><li>Energy "
+"sector<ul><li><a href=\"https://www.enisa.europa.eu/publications/"
+"communication-network-interdependencies-in-smart-grids\" target=\"_blank"
+"\">Communication network interdependencies in smart grids</a></li><li><a "
+"href=\"https://www.enisa.europa.eu/publications/power-sector-dependency\" "
+"target=\"_blank\">Power sector dependency</a></li></ul></li><li>Financial "
+"sector<ul><li><a href=\"https://www.enisa.europa.eu/publications/"
+"EU_Cybersecurity_Initiatives_in_the_Finance_Sector\" target=\"_blank\"> EU "
+"Cybersecurity Initiatives in the Finance Sector</a></li><li><a href="
+"\"https://www.enisa.europa.eu/publications/mobile-payments-security\" target="
+"\"_blank\">Mobile payments security</a></li><li><a href=\"https://www.enisa."
+"europa.eu/publications/blockchain-security\" target=\"_blank\">Blockchain "
+"security</a></li><li><a href=\"https://www.enisa.europa.eu/publications/"
+"network-and-information-security-in-the-finance-sector\" target=\"_blank"
+"\">Network and information security in the finance sector</a></li></ul></"
+"ul></li>"
+msgstr ""
+
+#: data/fit4operatorsurvey/questions.json:499
+#: data/fit4operatorsurvey/questions.json:685
+msgid "Other:"
+msgstr ""
+
+#: data/fit4operatorsurvey/questions.json:517
+msgid ""
+"Is your organization voluntarily compliant with any of the following "
+"standards and guidelines?"
+msgstr ""
+
+#: data/fit4operatorsurvey/questions.json:525
+msgid "We are not compliant with any standards nor guidelines."
+msgstr ""
+
+#: data/fit4operatorsurvey/questions.json:532
+#: data/fit4operatorsurvey/questions.json:548
+#: data/fit4operatorsurvey/questions.json:564
+#: data/fit4operatorsurvey/questions.json:580
+#: data/fit4operatorsurvey/questions.json:596
+#: data/fit4operatorsurvey/questions.json:612
+#: data/fit4operatorsurvey/questions.json:628
+#: data/fit4operatorsurvey/questions.json:644
+#: data/fit4operatorsurvey/questions.json:660
+#: data/fit4operatorsurvey/questions.json:676
+#: data/fit4operatorsurvey/questions.json:692
+msgid ""
+"Irrespective of your obligations in terms of risk management and "
+"cybersecurity, you should consider <a href=\"https://www.enisa.europa.eu/"
+"publications/guideline-on-security-measures-under-the-eecc\" target=\"_blank"
+"\">the 29 Security Objectives</a> listed by ENISA split in 8 areas, and "
+"ordered by level of sophistication. To check if you have implemented "
+"security measures in your company in a meaningful and risk-aware way."
+msgstr ""
+
+#: data/fit4operatorsurvey/questions.json:541
+msgid "Technical guidelines published by ENISA for our sector."
+msgstr ""
+
+#: data/fit4operatorsurvey/questions.json:557
+msgid "Guidelines published by the NIS Cooperation group."
+msgstr ""
+
+#: data/fit4operatorsurvey/questions.json:573
+msgid "NIST risk management or cybersecurity framework and standards."
+msgstr ""
+
+#: data/fit4operatorsurvey/questions.json:589
+msgid "ISO27000 standards."
+msgstr ""
+
+#: data/fit4operatorsurvey/questions.json:605
+msgid "CoBIT."
+msgstr ""
+
+#: data/fit4operatorsurvey/questions.json:621
+msgid "NESAS – Network Equipment Security Assurance Scheme."
+msgstr ""
+
+#: data/fit4operatorsurvey/questions.json:637
+msgid "eBIOS."
+msgstr ""
+
+#: data/fit4operatorsurvey/questions.json:653
+msgid "CEER Guidelines."
+msgstr ""
+
+#: data/fit4operatorsurvey/questions.json:669
+msgid "ACEER Guidelines."
+msgstr ""
+
+#: data/fit4operatorsurvey/questions.json:703
+msgid ""
+"To your knowledge, to what extent has your organization performed the "
+"following?"
+msgstr ""
+
+#: data/fit4operatorsurvey/questions.json:711
+msgid "Inventory of assets (primary and secondary)."
+msgstr ""
+
+#: data/fit4operatorsurvey/questions.json:718
+#: data/fit4operatorsurvey/questions.json:734
+#: data/fit4operatorsurvey/questions.json:750
+#: data/fit4operatorsurvey/questions.json:766
+#: data/fit4operatorsurvey/questions.json:782
+#: data/fit4operatorsurvey/questions.json:798
+#: data/fit4operatorsurvey/questions.json:814
+#: data/fit4operatorsurvey/questions.json:830
+msgid ""
+"In general, every company and operator should have an inventory of assets, "
+"critical assets, outsources services and service providers, a list of "
+"existing security measures depending on security objectives, threat "
+"modelling and, essentially, also a business continuity plan, to ensure "
+"continuity of the services and containment of the incident."
+msgstr ""
+
+#: data/fit4operatorsurvey/questions.json:727
+msgid "Critical assets inventory."
+msgstr ""
+
+#: data/fit4operatorsurvey/questions.json:743
+msgid "Inventory of third-party and outsourcing providers."
+msgstr ""
+
+#: data/fit4operatorsurvey/questions.json:759
+msgid ""
+"Overview of existing security measures, depending on security objectives."
+msgstr ""
+
+#: data/fit4operatorsurvey/questions.json:775
+msgid "Business continuity planning."
+msgstr ""
+
+#: data/fit4operatorsurvey/questions.json:791
+msgid "Threat modelling and threat awareness."
+msgstr ""
+
+#: data/fit4operatorsurvey/questions.json:807
+#: data/fit4operatorsurvey/questions.json:1025
+msgid "None of the above."
+msgstr "Aucune, car nous n'avons pas de données personnelles."
+
+#: data/fit4operatorsurvey/questions.json:823
+msgid ""
+"Any details you would like to share (for example, done/ongoing/not done/no "
+"idea what these actions mean):"
+msgstr ""
+
+#: data/fit4operatorsurvey/questions.json:841
+msgid ""
+"What are the main challenges that you have faced when it comes to performing "
+"and maintaining good risk management practices?"
+msgstr ""
+
+#: data/fit4operatorsurvey/questions.json:859
+msgid ""
+"When is the last time your organization been was audited in an independent "
+"audit that looked at ICT risk management?"
+msgstr ""
+
+#: data/fit4operatorsurvey/questions.json:867
+#: data/fit4operatorsurvey/questions.json:959
+msgid "Never."
+msgstr ""
+
+#: data/fit4operatorsurvey/questions.json:874
+#: data/fit4operatorsurvey/questions.json:890
+#: data/fit4operatorsurvey/questions.json:906
+#: data/fit4operatorsurvey/questions.json:922
+msgid ""
+"It is always a good idea to have and maintain an appropriate policy for "
+"performing security assessments and monitoring the compliance to the "
+"standards and legal requirements."
+msgstr ""
+
+#: data/fit4operatorsurvey/questions.json:883
+msgid "In the last 3 years."
+msgstr ""
+
+#: data/fit4operatorsurvey/questions.json:899
+msgid "In the last 5 years."
+msgstr ""
+
+#: data/fit4operatorsurvey/questions.json:915
+msgid "More than 5 years ago."
+msgstr ""
+
+#: data/fit4operatorsurvey/questions.json:933
+msgid ""
+"What concrete tools are you using, or considering to use, for ICT risk "
+"management in your organisation?"
+msgstr ""
+
+#: data/fit4operatorsurvey/questions.json:951
+msgid ""
+"How often does your organization communicate with the authorities in "
+"Luxembourg (e.g., CSSF, ILR, CNPD or others)?"
+msgstr ""
+
+#: data/fit4operatorsurvey/questions.json:952
+#: data/fit4operatorsurvey/questions.json:953
+#: data/fit4operatorsurvey/questions.json:986
+#: data/fit4operatorsurvey/questions.json:987
+#: data/fit4operatorsurvey/questions.json:1052
+#: data/fit4operatorsurvey/questions.json:1053
+msgid "Collaboration at EU and National Level"
+msgstr ""
+
+#: data/fit4operatorsurvey/questions.json:967
+msgid "Several times a year."
+msgstr ""
+
+#: data/fit4operatorsurvey/questions.json:975
+msgid "Less than or exactly once a year"
+msgstr ""
+
+#: data/fit4operatorsurvey/questions.json:985
+msgid ""
+"When is the last time you collaborated with ISACs, CSIRTs or similar "
+"organisations, or with the MISP community in your sector?"
+msgstr ""
+
+#: data/fit4operatorsurvey/questions.json:993
+msgid "ENISA."
+msgstr ""
+
+#: data/fit4operatorsurvey/questions.json:1001
+msgid "ISACs."
+msgstr ""
+
+#: data/fit4operatorsurvey/questions.json:1009
+msgid "CSIRT or similar."
+msgstr ""
+
+#: data/fit4operatorsurvey/questions.json:1017
+msgid "MISP community."
+msgstr ""
+
+#: data/fit4operatorsurvey/questions.json:1032
+msgid ""
+"It is always advised to stay in contact with the CSIRT and MISP community to "
+"stay informed and be up to date on threats and incidents in relation to your "
+"services and networks."
+msgstr ""
+
+#: data/fit4operatorsurvey/questions.json:1041
+msgid "Please indicate the frequency or if it is another organisation:"
+msgstr ""
+
+#: data/fit4operatorsurvey/questions.json:1051
+msgid ""
+"In case of a security incident, does your organization interact with other "
+"service operators to solve the issue, or is it more in competition with them?"
+msgstr ""
+
+#: data/fit4operatorsurvey/questions.json:1066
+msgid ""
+"It is always a good approach to work with operators in the same sector as it "
+"collectively helps to mitigate attacks and provides better protection "
+"against complete blackouts. Additionally contracts between operators can be "
+"made to sub-rent some of their service platform to the attached operator so "
+"the clients do not have too much of a service interruption. One such way of "
+"collaboration could be through the MISP community and/or the ILR."
+msgstr ""
+
+#: data/fit4operatorsurvey/questions.json:1077
+msgid ""
+"What do you consider is the utility to you when your organisation has to "
+"report incidents to authorities?"
+msgstr ""
+
+#: data/fit4operatorsurvey/questions.json:1078
+#: data/fit4operatorsurvey/questions.json:1079
+#: data/fit4operatorsurvey/questions.json:1112
+#: data/fit4operatorsurvey/questions.json:1113
+#: data/fit4operatorsurvey/questions.json:1162
+#: data/fit4operatorsurvey/questions.json:1163
+msgid "Incident Reporting"
+msgstr ""
+
+#: data/fit4operatorsurvey/questions.json:1085
+msgid "It is a burden for us."
+msgstr ""
+
+#: data/fit4operatorsurvey/questions.json:1093
+msgid "It is useful for us."
+msgstr ""
+
+#: data/fit4operatorsurvey/questions.json:1101
+msgid "Reporting neither helps nor hinders us."
+msgstr ""
+
+#: data/fit4operatorsurvey/questions.json:1111
+msgid "To whom to you report the same incident, when it appears?"
+msgstr ""
+
+#: data/fit4operatorsurvey/questions.json:1119
+msgid "Only to one authority."
+msgstr ""
+
+#: data/fit4operatorsurvey/questions.json:1127
+msgid "To multiple authorities."
+msgstr "À plusieurs autorités."
+
+#: data/fit4operatorsurvey/questions.json:1135
+msgid "To National CERTs / CSIRTs."
+msgstr ""
+
+#: data/fit4operatorsurvey/questions.json:1143
+msgid "To sector-specific CERTs / CSIRTs."
+msgstr ""
+
+#: data/fit4operatorsurvey/questions.json:1151
+#: data/fit4operatorsurvey/questions.json:1201
+#: data/fit4operatorsurvey/questions.json:1309
+msgid "Other - please describe:"
+msgstr "Autre - veuillez décrire:"
+
+#: data/fit4operatorsurvey/questions.json:1161
+msgid ""
+"What kind of feedback would you consider as helpful to receive from an "
+"authority following the mandatory incident reporting?"
+msgstr ""
+
+#: data/fit4operatorsurvey/questions.json:1169
+msgid "Nothing."
+msgstr "Rien."
+
+#: data/fit4operatorsurvey/questions.json:1177
+msgid "Connecting to companies with the same issues."
+msgstr ""
+
+#: data/fit4operatorsurvey/questions.json:1185
+msgid "Guidance on solving the issue based on previous experience."
+msgstr ""
+
+#: data/fit4operatorsurvey/questions.json:1193
+msgid "Guidance on preventing those kinds of issues in the future."
+msgstr ""
+
+#: data/fit4operatorsurvey/questions.json:1211
+msgid ""
+"Do you consider you have a skill shortage in terms of cybersecurity and risk "
+"management?"
+msgstr ""
+
+#: data/fit4operatorsurvey/questions.json:1212
+#: data/fit4operatorsurvey/questions.json:1213
+#: data/fit4operatorsurvey/questions.json:1262
+#: data/fit4operatorsurvey/questions.json:1263
+msgid "Priorities and Steps Forward"
+msgstr ""
+
+#: data/fit4operatorsurvey/questions.json:1219
+msgid "Yes indeed, we don't have enough skills in these areas."
+msgstr ""
+
+#: data/fit4operatorsurvey/questions.json:1226
+msgid ""
+"During the employment for an employee or the contract of external "
+"collaborators, Interns and other employment, it is advised to ensure that "
+"personnel have sufficient security knowledge and that they are provided with "
+"regular security and awareness trainings. Additionally, it is important to "
+"have and correctly maintain an appropriate process for managing changes in "
+"personnel or changes in their roles and responsibilities, while verifying "
+"access to internal information an personnel accounts."
+msgstr ""
+
+#: data/fit4operatorsurvey/questions.json:1235
+msgid "No, we have the skills but the problems are elsewhere."
+msgstr ""
+
+#: data/fit4operatorsurvey/questions.json:1242
+msgid ""
+"Operational procedures for correctly operating and to ensure correct "
+"operation of your services, information systems and networks. Additionally, "
+"it is essential to have and maintain contingency plans and strategy for "
+"ensuring continuity of your services provided, information systems and "
+"networks."
+msgstr ""
+
+#: data/fit4operatorsurvey/questions.json:1251
+msgid "Any other details:"
+msgstr ""
+
+#: data/fit4operatorsurvey/questions.json:1261
+msgid "Which of the measures below would be of help to your organisation?"
+msgstr ""
+
+#: data/fit4operatorsurvey/questions.json:1269
+msgid ""
+"To be put in contact with other operators in Luxembourg and abroad, related "
+"to risk management and information security."
+msgstr ""
+
+#: data/fit4operatorsurvey/questions.json:1277
+msgid ""
+"To receive more guidance on both operational and technical areas, local or "
+"EU level."
+msgstr ""
+
+#: data/fit4operatorsurvey/questions.json:1285
+msgid ""
+"To have a central platform to help security experts from different "
+"operators, communicate and discuss issues."
+msgstr ""
+
+#: data/fit4operatorsurvey/questions.json:1293
+msgid ""
+"To have more transparency from the authorities in Luxembourg (what they want "
+"to see, what approach they will take to do any audits, etc)."
+msgstr ""
+
+#: data/fit4operatorsurvey/questions.json:1301
+msgid ""
+"A single reporting platform to report incidents to multiple authorities."
+msgstr ""
+
 #: data/fit4privacy/questions.json:3 data/fit4privacy/questions.json:125
 msgid "Personal Data Processing"
 msgstr "Les traitements des données"
@@ -3714,47 +4600,6 @@ msgstr ""
 msgid "Management of the Risks of the Organisation"
 msgstr "Gestion des risques pour la société"
 
-#: data/fit4privacy/questions.json:800 data/fit4privacy/questions.json:890
-#: data/fit4privacy/questions.json:948 data/fit4privacy/questions.json:1022
-#: data/survey4operators/questions.json:4
-#: data/survey4operators/questions.json:5
-#: data/survey4operators/questions.json:78
-#: data/survey4operators/questions.json:79
-#: data/survey4operators/questions.json:96
-#: data/survey4operators/questions.json:97
-#: data/survey4operators/questions.json:114
-#: data/survey4operators/questions.json:115
-#: data/survey4operators/questions.json:132
-#: data/survey4operators/questions.json:133
-#: data/survey4operators/questions.json:150
-#: data/survey4operators/questions.json:151
-#: data/survey4operators/questions.json:168
-#: data/survey4operators/questions.json:169
-#: data/survey4operators/questions.json:186
-#: data/survey4operators/questions.json:187
-#: data/survey4operators/questions.json:204
-#: data/survey4operators/questions.json:205
-#: data/survey4operators/questions.json:278
-#: data/survey4operators/questions.json:279
-#: data/survey4operators/questions.json:336
-#: data/survey4operators/questions.json:337
-#: data/survey4operators/questions.json:386
-#: data/survey4operators/questions.json:387
-#: data/survey4operators/questions.json:428
-#: data/survey4operators/questions.json:429
-#: data/survey4operators/questions.json:518
-#: data/survey4operators/questions.json:519
-#: data/survey4operators/questions.json:704
-#: data/survey4operators/questions.json:705
-#: data/survey4operators/questions.json:842
-#: data/survey4operators/questions.json:843
-#: data/survey4operators/questions.json:860
-#: data/survey4operators/questions.json:861
-#: data/survey4operators/questions.json:934
-#: data/survey4operators/questions.json:935
-msgid "Risk Management"
-msgstr "Gestion des risques"
-
 #: data/fit4privacy/questions.json:816
 msgid ""
 "It is highly unlikely that you have no personal data. If your company has "
@@ -4289,782 +5134,6 @@ msgstr ""
 "la sécurité de l'information et la protection des données sont-elles écrites "
 "et connues par vos employés?"
 
-#: data/survey4operators/context-questions.json:11
-msgid "Energy"
-msgstr ""
-
-#: data/survey4operators/context-questions.json:17
-msgid "Transport"
-msgstr "Transparence"
-
-#: data/survey4operators/context-questions.json:23
-msgid "Banking"
-msgstr ""
-
-#: data/survey4operators/context-questions.json:29
-msgid "Financial market infrastructure"
-msgstr ""
-
-#: data/survey4operators/context-questions.json:41
-msgid "Dringking water"
-msgstr ""
-
-#: data/survey4operators/context-questions.json:47
-msgid "Waste Water"
-msgstr ""
-
-#: data/survey4operators/context-questions.json:53
-msgid "Digital Infrastructure and Service Providers"
-msgstr ""
-
-#: data/survey4operators/context-questions.json:65
-msgid "Space"
-msgstr ""
-
-#: data/survey4operators/context-questions.json:71
-msgid "Postal and Courrier Services"
-msgstr ""
-
-#: data/survey4operators/context-questions.json:77
-msgid "Waste Management"
-msgstr "Gestion des risques"
-
-#: data/survey4operators/context-questions.json:83
-msgid "Manufacture, production and distribution of chemicals"
-msgstr ""
-
-#: data/survey4operators/context-questions.json:89
-msgid "Food Production, processing and distribution"
-msgstr "Commerce, vente et grande distribution"
-
-#: data/survey4operators/context-questions.json:95
-msgid "Manufacturing of medical devices"
-msgstr ""
-
-#: data/survey4operators/context-questions.json:101
-msgid "Manufacture of computer, electronics and optical products"
-msgstr ""
-
-#: data/survey4operators/context-questions.json:107
-msgid "Manufacture of electrical equipment"
-msgstr ""
-
-#: data/survey4operators/context-questions.json:113
-msgid "Manufacture of machinery and equipment"
-msgstr ""
-
-#: data/survey4operators/context-questions.json:128
-msgid "Under 10 employees"
-msgstr ""
-
-#: data/survey4operators/context-questions.json:134
-msgid "From 10 to 49 employees"
-msgstr ""
-
-#: data/survey4operators/context-questions.json:140
-msgid "From 50 to 249 employees"
-msgstr ""
-
-#: data/survey4operators/context-questions.json:146
-msgid "Over 250 employees"
-msgstr ""
-
-#: data/survey4operators/context-questions.json:161
-msgid "In the EU"
-msgstr ""
-
-#: data/survey4operators/context-questions.json:167
-msgid "Outside of the EU but within EEA"
-msgstr ""
-
-#: data/survey4operators/context-questions.json:173
-msgid "Outside of the EEA"
-msgstr ""
-
-#: data/survey4operators/context-questions.json:179
-msgid "Just in Luxembourg"
-msgstr "Luxembourg"
-
-#: data/survey4operators/context-questions.json:187
-msgid ""
-"If your company part of a bigger international company or group with its "
-"headquarters outside of Luxembourg?"
-msgstr ""
-
-#: data/survey4operators/context-questions.json:194
-#: templates/survey/leaveSurvey.html:11
-msgid "Yes"
-msgstr "Oui"
-
-#: data/survey4operators/context-questions.json:200
-#: templates/survey/leaveSurvey.html:15
-msgid "No"
-msgstr "Non"
-
-#: data/survey4operators/questions.json:3
-msgid "What is the risk management culture in your company?"
-msgstr ""
-
-#: data/survey4operators/questions.json:11
-msgid "We do not really have one."
-msgstr "Jamais entendu cela au sein de notre société."
-
-#: data/survey4operators/questions.json:18
-msgid ""
-"It is always advised to establish and maintain an appropriate governance and "
-"risk management framework, to identify and address risks for the all "
-"networks and services."
-msgstr ""
-
-#: data/survey4operators/questions.json:27
-msgid "There are risk management governance responsibilities in place."
-msgstr ""
-
-#: data/survey4operators/questions.json:35
-msgid "Our company performs a Risk Analysis at least once every year."
-msgstr ""
-
-#: data/survey4operators/questions.json:43
-msgid ""
-"Our company has a documented strategy combining both reacting to incidents "
-"and the prevention of incidents."
-msgstr ""
-
-#: data/survey4operators/questions.json:51
-msgid "Our company has third-party risk management in place."
-msgstr ""
-
-#: data/survey4operators/questions.json:59
-msgid ""
-"Our company is covering critical risks even outside of service contracts "
-"with providers/third-parties."
-msgstr ""
-
-#: data/survey4operators/questions.json:67
-msgid "There are other elements in place, like:"
-msgstr ""
-
-#: data/survey4operators/questions.json:77
-msgid ""
-"Which risk management processes are imposed by the Luxembourg entity, and if "
-"applicable, by the company Group?"
-msgstr ""
-
-#: data/survey4operators/questions.json:85
-#: data/survey4operators/questions.json:103
-#: data/survey4operators/questions.json:121
-#: data/survey4operators/questions.json:139
-#: data/survey4operators/questions.json:157
-#: data/survey4operators/questions.json:175
-#: data/survey4operators/questions.json:193
-#: data/survey4operators/questions.json:849
-#: data/survey4operators/questions.json:941
-#: data/survey4operators/questions.json:1059
-msgid "Please describe:"
-msgstr "Décrivez s'il vous plaît:"
-
-#: data/survey4operators/questions.json:95
-msgid ""
-"What are the challenges related to performing existing Risk Management "
-"processes or practices? "
-msgstr ""
-
-#: data/survey4operators/questions.json:113
-msgid ""
-"What can be improved about the existing Risk Management practices, in "
-"general?"
-msgstr ""
-
-#: data/survey4operators/questions.json:131
-msgid ""
-"What are the requirements related to Information Security risks, that apply "
-"to your company and your sector?"
-msgstr ""
-
-#: data/survey4operators/questions.json:149
-msgid ""
-"What is the complexity of the requirements described previously (if any)?"
-msgstr ""
-
-#: data/survey4operators/questions.json:167
-msgid ""
-"What are the contradictions among risk management requirements (if any)?"
-msgstr ""
-
-#: data/survey4operators/questions.json:185
-msgid "What are the overlaps among risk management requirements (if any)?"
-msgstr ""
-
-#: data/survey4operators/questions.json:203
-msgid ""
-"Which standardized risk management practices are recommended to you by the "
-"group (if any)?"
-msgstr ""
-
-#: data/survey4operators/questions.json:211
-#: data/survey4operators/questions.json:285
-msgid "None."
-msgstr ""
-
-#: data/survey4operators/questions.json:218
-#: data/survey4operators/questions.json:234
-#: data/survey4operators/questions.json:250
-#: data/survey4operators/questions.json:266
-msgid ""
-"Having and maintaining an appropriate information security policy and "
-"charter. It should at least contain the basics as highlighted in the charter "
-"templates that can be found in the <a href=\"https://trustbox.cases.lu\" "
-"target=\"_blank\">CASES Trustbox</a>. But not only creating but correctly "
-"maintaining a more detailed security policy is essential and should be done "
-"as soon as possible."
-msgstr ""
-
-#: data/survey4operators/questions.json:227
-msgid "None and not needed nor desired."
-msgstr ""
-
-#: data/survey4operators/questions.json:243
-msgid "None, but we would love some support."
-msgstr "Aucun, mais nous avons quelques contrats."
-
-#: data/survey4operators/questions.json:259
-msgid "Some. The list them includes:"
-msgstr ""
-
-#: data/survey4operators/questions.json:277
-msgid ""
-"What guidance do you have from national and international groups or "
-"authorities?"
-msgstr ""
-
-#: data/survey4operators/questions.json:293
-msgid "Help with identification of incidents."
-msgstr ""
-
-#: data/survey4operators/questions.json:301
-msgid "New relevant standards in the field."
-msgstr ""
-
-#: data/survey4operators/questions.json:309
-msgid "Educational Program(s)."
-msgstr ""
-
-#: data/survey4operators/questions.json:317
-msgid "National guidance."
-msgstr ""
-
-#: data/survey4operators/questions.json:325
-msgid "Other (please describe):"
-msgstr ""
-
-#: data/survey4operators/questions.json:335
-msgid ""
-"To what extent is there a dependency on the supply chain in your company, "
-"that creates security gaps and lack of proper oversight?"
-msgstr ""
-
-#: data/survey4operators/questions.json:343
-msgid "A lot."
-msgstr ""
-
-#: data/survey4operators/questions.json:350
-#: data/survey4operators/questions.json:366
-msgid ""
-"In your industry, it is always important to establish and maintain "
-"mechanisms for monitoring and collecting information about relevant threats "
-"to the security of your networks and services"
-msgstr ""
-
-#: data/survey4operators/questions.json:359
-msgid "Little."
-msgstr ""
-
-#: data/survey4operators/questions.json:375
-msgid "None at all."
-msgstr ""
-
-#: data/survey4operators/questions.json:385
-msgid ""
-"Do you have specific regulations in your sector concerning cybersecurity?"
-msgstr ""
-
-#: data/survey4operators/questions.json:393
-#: data/survey4operators/questions.json:451
-msgid "Telecom regulations."
-msgstr "Recommandations."
-
-#: data/survey4operators/questions.json:401
-#: data/survey4operators/questions.json:467
-msgid "The NIS Directive."
-msgstr ""
-
-#: data/survey4operators/questions.json:409
-#: data/survey4operators/questions.json:483
-msgid "Aviation Regulations."
-msgstr ""
-
-#: data/survey4operators/questions.json:417
-msgid "Other - please list:"
-msgstr ""
-
-#: data/survey4operators/questions.json:427
-msgid "Are you obliged to comply with any of the following regulations?"
-msgstr ""
-
-#: data/survey4operators/questions.json:435
-msgid "No obligation to comply to any regulation."
-msgstr ""
-
-#: data/survey4operators/questions.json:442
-#: data/survey4operators/questions.json:458
-#: data/survey4operators/questions.json:490
-#: data/survey4operators/questions.json:506
-msgid ""
-"If you are a simple SME, you can consider the guidance from ENISA: "
-"<ul><li><a href=\"https://www.enisa.europa.eu/publications/cybersecurity-"
-"guide-for-smes\" target=\"_blank\">Cybersecurity guide for SMEs</a></"
-"li><li><a href=\"https://www.enisa.europa.eu/publications/enisa-report-"
-"cybersecurity-for-smes\" target=\"_blank\">Report cybersecurity for SMEs</"
-"a></li></ul>"
-msgstr ""
-
-#: data/survey4operators/questions.json:474
-msgid ""
-"If you are obliged to comply with the NIS directive, then you should "
-"consider <a href=\"https://www.enisa.europa.eu/topics/nis-directive/minimum-"
-"security-measures-for-operators-of-essentials-services\" target=\"_blank"
-"\">this mapping table</a> of security measures provided by ENISA. In "
-"addition, depending on your sector you should consider this documents:"
-"<ul><li>Digital service provider<ul><li><a href=\"https://www.enisa.europa."
-"eu/publications/minimum-security-measures-for-digital-service-providers\" "
-"target=\"_blank\">Minimum security measures for digital service providers</"
-"a></li></ul></li><li>Telecom sector<ul><li><a href=\"https://www.enisa."
-"europa.eu/publications/guideline-on-security-measures-under-the-eecc\" "
-"target=\"_blank\">Guideline on security measures under the EECC</a></li></"
-"ul></li><li>Healthcare sector<ul><li><a href=\"https://www.enisa.europa.eu/"
-"publications/cloud-security-for-healthcare-services\" target=\"_blank"
-"\">Cloud security for healthcare services</a></li><li><a href=\"https://www."
-"enisa.europa.eu/publications/good-practices-for-the-security-of-healthcare-"
-"services\" target=\"_blank\">Good practices for the security of healthcare "
-"services</a></li></ul></li><li>Transport sector (railways)<ul><li><a href="
-"\"https://www.enisa.europa.eu/publications/railway-cybersecurity\" target="
-"\"_blank\">Railway cybersecurity</a></li></ul></li><li>Energy "
-"sector<ul><li><a href=\"https://www.enisa.europa.eu/publications/"
-"communication-network-interdependencies-in-smart-grids\" target=\"_blank"
-"\">Communication network interdependencies in smart grids</a></li><li><a "
-"href=\"https://www.enisa.europa.eu/publications/power-sector-dependency\" "
-"target=\"_blank\">Power sector dependency</a></li></ul></li><li>Financial "
-"sector<ul><li><a href=\"https://www.enisa.europa.eu/publications/"
-"EU_Cybersecurity_Initiatives_in_the_Finance_Sector\" target=\"_blank\"> EU "
-"Cybersecurity Initiatives in the Finance Sector</a></li><li><a href="
-"\"https://www.enisa.europa.eu/publications/mobile-payments-security\" target="
-"\"_blank\">Mobile payments security</a></li><li><a href=\"https://www.enisa."
-"europa.eu/publications/blockchain-security\" target=\"_blank\">Blockchain "
-"security</a></li><li><a href=\"https://www.enisa.europa.eu/publications/"
-"network-and-information-security-in-the-finance-sector\" target=\"_blank"
-"\">Network and information security in the finance sector</a></li></ul></"
-"ul></li>"
-msgstr ""
-
-#: data/survey4operators/questions.json:499
-#: data/survey4operators/questions.json:685
-msgid "Other:"
-msgstr ""
-
-#: data/survey4operators/questions.json:517
-msgid ""
-"Is your organization voluntarily compliant with any of the following "
-"standards and guidelines?"
-msgstr ""
-
-#: data/survey4operators/questions.json:525
-msgid "We are not compliant with any standards nor guidelines."
-msgstr ""
-
-#: data/survey4operators/questions.json:532
-#: data/survey4operators/questions.json:548
-#: data/survey4operators/questions.json:564
-#: data/survey4operators/questions.json:580
-#: data/survey4operators/questions.json:596
-#: data/survey4operators/questions.json:612
-#: data/survey4operators/questions.json:628
-#: data/survey4operators/questions.json:644
-#: data/survey4operators/questions.json:660
-#: data/survey4operators/questions.json:676
-#: data/survey4operators/questions.json:692
-msgid ""
-"Irrespective of your obligations in terms of risk management and "
-"cybersecurity, you should consider <a href=\"https://www.enisa.europa.eu/"
-"publications/guideline-on-security-measures-under-the-eecc\" target=\"_blank"
-"\">the 29 Security Objectives</a> listed by ENISA split in 8 areas, and "
-"ordered by level of sophistication. To check if you have implemented "
-"security measures in your company in a meaningful and risk-aware way."
-msgstr ""
-
-#: data/survey4operators/questions.json:541
-msgid "Technical guidelines published by ENISA for our sector."
-msgstr ""
-
-#: data/survey4operators/questions.json:557
-msgid "Guidelines published by the NIS Cooperation group."
-msgstr ""
-
-#: data/survey4operators/questions.json:573
-msgid "NIST risk management or cybersecurity framework and standards."
-msgstr ""
-
-#: data/survey4operators/questions.json:589
-msgid "ISO27000 standards."
-msgstr ""
-
-#: data/survey4operators/questions.json:605
-msgid "CoBIT."
-msgstr ""
-
-#: data/survey4operators/questions.json:621
-msgid "NESAS – Network Equipment Security Assurance Scheme."
-msgstr ""
-
-#: data/survey4operators/questions.json:637
-msgid "eBIOS."
-msgstr ""
-
-#: data/survey4operators/questions.json:653
-msgid "CEER Guidelines."
-msgstr ""
-
-#: data/survey4operators/questions.json:669
-msgid "ACEER Guidelines."
-msgstr ""
-
-#: data/survey4operators/questions.json:703
-msgid ""
-"To your knowledge, to what extent has your organization performed the "
-"following?"
-msgstr ""
-
-#: data/survey4operators/questions.json:711
-msgid "Inventory of assets (primary and secondary)."
-msgstr ""
-
-#: data/survey4operators/questions.json:718
-#: data/survey4operators/questions.json:734
-#: data/survey4operators/questions.json:750
-#: data/survey4operators/questions.json:766
-#: data/survey4operators/questions.json:782
-#: data/survey4operators/questions.json:798
-#: data/survey4operators/questions.json:814
-#: data/survey4operators/questions.json:830
-msgid ""
-"In general, every company and operator should have an inventory of assets, "
-"critical assets, outsources services and service providers, a list of "
-"existing security measures depending on security objectives, threat "
-"modelling and, essentially, also a business continuity plan, to ensure "
-"continuity of the services and containment of the incident."
-msgstr ""
-
-#: data/survey4operators/questions.json:727
-msgid "Critical assets inventory."
-msgstr ""
-
-#: data/survey4operators/questions.json:743
-msgid "Inventory of third-party and outsourcing providers."
-msgstr ""
-
-#: data/survey4operators/questions.json:759
-msgid ""
-"Overview of existing security measures, depending on security objectives."
-msgstr ""
-
-#: data/survey4operators/questions.json:775
-msgid "Business continuity planning."
-msgstr ""
-
-#: data/survey4operators/questions.json:791
-msgid "Threat modelling and threat awareness."
-msgstr ""
-
-#: data/survey4operators/questions.json:807
-#: data/survey4operators/questions.json:1025
-msgid "None of the above."
-msgstr "Aucune, car nous n'avons pas de données personnelles."
-
-#: data/survey4operators/questions.json:823
-msgid ""
-"Any details you would like to share (for example, done/ongoing/not done/no "
-"idea what these actions mean):"
-msgstr ""
-
-#: data/survey4operators/questions.json:841
-msgid ""
-"What are the main challenges that you have faced when it comes to performing "
-"and maintaining good risk management practices?"
-msgstr ""
-
-#: data/survey4operators/questions.json:859
-msgid ""
-"When is the last time your organization been was audited in an independent "
-"audit that looked at ICT risk management?"
-msgstr ""
-
-#: data/survey4operators/questions.json:867
-#: data/survey4operators/questions.json:959
-msgid "Never."
-msgstr ""
-
-#: data/survey4operators/questions.json:874
-#: data/survey4operators/questions.json:890
-#: data/survey4operators/questions.json:906
-#: data/survey4operators/questions.json:922
-msgid ""
-"It is always a good idea to have and maintain an appropriate policy for "
-"performing security assessments and monitoring the compliance to the "
-"standards and legal requirements."
-msgstr ""
-
-#: data/survey4operators/questions.json:883
-msgid "In the last 3 years."
-msgstr ""
-
-#: data/survey4operators/questions.json:899
-msgid "In the last 5 years."
-msgstr ""
-
-#: data/survey4operators/questions.json:915
-msgid "More than 5 years ago."
-msgstr ""
-
-#: data/survey4operators/questions.json:933
-msgid ""
-"What concrete tools are you using, or considering to use, for ICT risk "
-"management in your organisation?"
-msgstr ""
-
-#: data/survey4operators/questions.json:951
-msgid ""
-"How often does your organization communicate with the authorities in "
-"Luxembourg (e.g., CSSF, ILR, CNPD or others)?"
-msgstr ""
-
-#: data/survey4operators/questions.json:952
-#: data/survey4operators/questions.json:953
-#: data/survey4operators/questions.json:986
-#: data/survey4operators/questions.json:987
-#: data/survey4operators/questions.json:1052
-#: data/survey4operators/questions.json:1053
-msgid "Collaboration at EU and National Level"
-msgstr ""
-
-#: data/survey4operators/questions.json:967
-msgid "Several times a year."
-msgstr ""
-
-#: data/survey4operators/questions.json:975
-msgid "Less than or exactly once a year"
-msgstr ""
-
-#: data/survey4operators/questions.json:985
-msgid ""
-"When is the last time you collaborated with ISACs, CSIRTs or similar "
-"organisations, or with the MISP community in your sector?"
-msgstr ""
-
-#: data/survey4operators/questions.json:993
-msgid "ENISA."
-msgstr ""
-
-#: data/survey4operators/questions.json:1001
-msgid "ISACs."
-msgstr ""
-
-#: data/survey4operators/questions.json:1009
-msgid "CSIRT or similar."
-msgstr ""
-
-#: data/survey4operators/questions.json:1017
-msgid "MISP community."
-msgstr ""
-
-#: data/survey4operators/questions.json:1032
-msgid ""
-"It is always advised to stay in contact with the CSIRT and MISP community to "
-"stay informed and be up to date on threats and incidents in relation to your "
-"services and networks."
-msgstr ""
-
-#: data/survey4operators/questions.json:1041
-msgid "Please indicate the frequency or if it is another organisation:"
-msgstr ""
-
-#: data/survey4operators/questions.json:1051
-msgid ""
-"In case of a security incident, does your organization interact with other "
-"service operators to solve the issue, or is it more in competition with them?"
-msgstr ""
-
-#: data/survey4operators/questions.json:1066
-msgid ""
-"It is always a good approach to work with operators in the same sector as it "
-"collectively helps to mitigate attacks and provides better protection "
-"against complete blackouts. Additionally contracts between operators can be "
-"made to sub-rent some of their service platform to the attached operator so "
-"the clients do not have too much of a service interruption. One such way of "
-"collaboration could be through the MISP community and/or the ILR."
-msgstr ""
-
-#: data/survey4operators/questions.json:1077
-msgid ""
-"What do you consider is the utility to you when your organisation has to "
-"report incidents to authorities?"
-msgstr ""
-
-#: data/survey4operators/questions.json:1078
-#: data/survey4operators/questions.json:1079
-#: data/survey4operators/questions.json:1112
-#: data/survey4operators/questions.json:1113
-#: data/survey4operators/questions.json:1162
-#: data/survey4operators/questions.json:1163
-msgid "Incident Reporting"
-msgstr ""
-
-#: data/survey4operators/questions.json:1085
-msgid "It is a burden for us."
-msgstr ""
-
-#: data/survey4operators/questions.json:1093
-msgid "It is useful for us."
-msgstr ""
-
-#: data/survey4operators/questions.json:1101
-msgid "Reporting neither helps nor hinders us."
-msgstr ""
-
-#: data/survey4operators/questions.json:1111
-msgid "To whom to you report the same incident, when it appears?"
-msgstr ""
-
-#: data/survey4operators/questions.json:1119
-msgid "Only to one authority."
-msgstr ""
-
-#: data/survey4operators/questions.json:1127
-msgid "To multiple authorities."
-msgstr "À plusieurs autorités."
-
-#: data/survey4operators/questions.json:1135
-msgid "To National CERTs / CSIRTs."
-msgstr ""
-
-#: data/survey4operators/questions.json:1143
-msgid "To sector-specific CERTs / CSIRTs."
-msgstr ""
-
-#: data/survey4operators/questions.json:1151
-#: data/survey4operators/questions.json:1201
-#: data/survey4operators/questions.json:1309
-msgid "Other - please describe:"
-msgstr "Autre - veuillez décrire:"
-
-#: data/survey4operators/questions.json:1161
-msgid ""
-"What kind of feedback would you consider as helpful to receive from an "
-"authority following the mandatory incident reporting?"
-msgstr ""
-
-#: data/survey4operators/questions.json:1169
-msgid "Nothing."
-msgstr "Rien."
-
-#: data/survey4operators/questions.json:1177
-msgid "Connecting to companies with the same issues."
-msgstr ""
-
-#: data/survey4operators/questions.json:1185
-msgid "Guidance on solving the issue based on previous experience."
-msgstr ""
-
-#: data/survey4operators/questions.json:1193
-msgid "Guidance on preventing those kinds of issues in the future."
-msgstr ""
-
-#: data/survey4operators/questions.json:1211
-msgid ""
-"Do you consider you have a skill shortage in terms of cybersecurity and risk "
-"management?"
-msgstr ""
-
-#: data/survey4operators/questions.json:1212
-#: data/survey4operators/questions.json:1213
-#: data/survey4operators/questions.json:1262
-#: data/survey4operators/questions.json:1263
-msgid "Priorities and Steps Forward"
-msgstr ""
-
-#: data/survey4operators/questions.json:1219
-msgid "Yes indeed, we don't have enough skills in these areas."
-msgstr ""
-
-#: data/survey4operators/questions.json:1226
-msgid ""
-"During the employment for an employee or the contract of external "
-"collaborators, Interns and other employment, it is advised to ensure that "
-"personnel have sufficient security knowledge and that they are provided with "
-"regular security and awareness trainings. Additionally, it is important to "
-"have and correctly maintain an appropriate process for managing changes in "
-"personnel or changes in their roles and responsibilities, while verifying "
-"access to internal information an personnel accounts."
-msgstr ""
-
-#: data/survey4operators/questions.json:1235
-msgid "No, we have the skills but the problems are elsewhere."
-msgstr ""
-
-#: data/survey4operators/questions.json:1242
-msgid ""
-"Operational procedures for correctly operating and to ensure correct "
-"operation of your services, information systems and networks. Additionally, "
-"it is essential to have and maintain contingency plans and strategy for "
-"ensuring continuity of your services provided, information systems and "
-"networks."
-msgstr ""
-
-#: data/survey4operators/questions.json:1251
-msgid "Any other details:"
-msgstr ""
-
-#: data/survey4operators/questions.json:1261
-msgid "Which of the measures below would be of help to your organisation?"
-msgstr ""
-
-#: data/survey4operators/questions.json:1269
-msgid ""
-"To be put in contact with other operators in Luxembourg and abroad, related "
-"to risk management and information security."
-msgstr ""
-
-#: data/survey4operators/questions.json:1277
-msgid ""
-"To receive more guidance on both operational and technical areas, local or "
-"EU level."
-msgstr ""
-
-#: data/survey4operators/questions.json:1285
-msgid ""
-"To have a central platform to help security experts from different "
-"operators, communicate and discuss issues."
-msgstr ""
-
-#: data/survey4operators/questions.json:1293
-msgid ""
-"To have more transparency from the authorities in Luxembourg (what they want "
-"to see, what approach they will take to do any audits, etc)."
-msgstr ""
-
-#: data/survey4operators/questions.json:1301
-msgid ""
-"A single reporting platform to report incidents to multiple authorities."
-msgstr ""
-
 #: survey/forms.py:55
 msgid "You need to choose at least one answer"
 msgstr "Vous devez choisir au moins une réponse"
@@ -5207,12 +5276,12 @@ msgstr ""
 "Cet outil d'auto-évaluation est nommé %(custom.tool_name)s pour souligner "
 "l'introduction à la sécurité de l'information. Il est aussi un prérequis "
 "pour faire un Diagnostic CASES: un score minimal de "
-"%(custom.minimal_acceptable_score)s/100 est requis. Le but pour cette restriction "
-"nous donne la possibilité pour mieux adapter les recommandations à votre "
-"organisation lors du Diagnostic. <br /><br /> Durant cette auto-evaluation "
-"questions à choix multiples vous ont été posées. Après avoir analysé vos "
-"réponses, des recommandations vous ont été fournies. <br /><br /> "
-"Finalement, vous pouvez télécharger ce document qui vous aidera pour "
+"%(custom.minimal_acceptable_score)s/100 est requis. Le but pour cette "
+"restriction nous donne la possibilité pour mieux adapter les recommandations "
+"à votre organisation lors du Diagnostic. <br /><br /> Durant cette auto-"
+"evaluation questions à choix multiples vous ont été posées. Après avoir "
+"analysé vos réponses, des recommandations vous ont été fournies. <br /><br /"
+"> Finalement, vous pouvez télécharger ce document qui vous aidera pour "
 "communiquer les résultats à vos fournisseurs si besoin."
 
 #: templates/report/intro.html:4
@@ -5288,10 +5357,10 @@ msgid ""
 "exhaustive."
 msgstr ""
 "Vous avez atteint %(SCORE)s/100 avec vos réponses. Vous devez atteindre au "
-"moins %(custom.minimal_acceptable_score)s/100 pour pouvoir faire un Diagnostic "
-"CASES. <br /><br /> Nous vous rappelons qu'il s'agit d'une auto-évaluation, "
-"il est entendu que l’ensemble des résultats ne peut en aucune manière être "
-"exhaustif."
+"moins %(custom.minimal_acceptable_score)s/100 pour pouvoir faire un "
+"Diagnostic CASES. <br /><br /> Nous vous rappelons qu'il s'agit d'une auto-"
+"évaluation, il est entendu que l’ensemble des résultats ne peut en aucune "
+"manière être exhaustif."
 
 #: templates/report/results.html:17 templates/survey/finishedSurvey.html:91
 #, python-format

@@ -1,9 +1,11 @@
 import os
-from django.utils.translation import gettext_lazy
 
 PUBLIC_URL = ""
 ALLOWED_HOSTS = ["127.0.0.1", locals().get("PUBLIC_URL", "")]
 OPERATOR_EMAIL = "info@example.org"
+
+# The generic site/tool name. Used to load specific config, templates, styles, logo.
+SITE_NAME = "fit4cybersecurity"
 
 SECRET_KEY = "u__*z&=urjtc0t)b)@5qbt_a#3-354=k9x(j)@eu#h7sb=-66s"
 
@@ -22,59 +24,10 @@ DATABASES = {
     }
 }
 
-CUSTOM = {
-    # Generic configurations
-    "tool_name": "<TOOL_NAME>",
-    # The generic site/tool name. Used to load specific config, templates, styles, logos.
-    "site_name": "fit4cybersecurity",
-    "intro_text": gettext_lazy("Description of the tool."),
-    "countries_first": [],
-    "defaultLanguage": "en",
-    "languages": [
-        ("en", "English"),
-        ("fr", "French"),
-        ("de", "German"),
-    ],
-    # Logos paths
-    "cases_logo": "templates/report/images/cases_logo.svg",
-    "secin_logo": "templates/report/images/secin_logo.svg",
-    # Minimal score
-    "minimal_acceptable_score": 65,
-    # Custom parts of templates
-    #   main dir for PARTS_TEMPLATE_DIR:
-    "templates_parts_dir": "templates/parts",
-    "templates_parts": {
-        # path of the templates parts
-        "terms": "terms_part.html",
-        "footer": "footer_part.html",
-        "main_logo": "logo_part.html",
-    },
-    # Available modules
-    "modules": {
-        "reportDownload": True,
-        "reportEmail": False,
-        "requestDiagnostic": True,
-        "requestTraining": True,
-        "displayResults": True,
-    },
-    # Available report parts
-    "report": {
-        "introduction": True,
-        "description": True,
-        "results": True,
-        "recommendations": True,
-        "questions": True,
-    },
-    "sectors": [],
-    "company_size": [],
-    "countries": [],
-    "chart_exclude_sections": ["eSanté"],
-}
-
-REPORT_TEMPLATE_DIR = "./templates/report/"
-
 EMAIL_HOST = "localhost"
 EMAIL_PORT = 25
+
+REPORT_TEMPLATE_DIR = "./templates/report/"
 
 # Logging mechanism
 LOG_DIRECTORY = "./logs"
