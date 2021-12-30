@@ -11,7 +11,7 @@ from django.contrib.messages import constants as messages
 
 try:
     from csskp import config  # type: ignore
-    site_config = importlib.import_module("csskp." + config.SITE_NAME + ".config")
+    site_config = importlib.import_module("csskp." + config.SITE_NAME + ".site_config")
 except ImportError:  # pragma: no cover
     from csskp import config_dev as config
 
