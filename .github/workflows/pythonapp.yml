@@ -32,4 +32,4 @@ jobs:
 
     - name: Type check
       run: |
-        poetry run mypy . --exclude=csskp/fit4*/* --exclude=survey/migrations/*
+        poetry run mypy --exclude "csskp/*|survey/migrations/*" .
