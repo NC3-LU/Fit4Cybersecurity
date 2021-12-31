@@ -21,9 +21,9 @@ DEFAULT_SECTOR_CHOICES = [
     ("PUBL", _("Public administration")),
 ]
 
-SECTOR_CHOICES = (
-    CUSTOM["sectors"] if len(CUSTOM["sectors"]) > 0 else DEFAULT_SECTOR_CHOICES
-)
+SECTOR_CHOICES = DEFAULT_SECTOR_CHOICES
+if "sectors" in CUSTOM.keys() and len(CUSTOM["sectors"]) > 0:
+    SECTOR_CHOICES = CUSTOM["sectors"]
 
 DEFAULT_COUNTRIES = [
     ("LU", "Luxembourg"),
@@ -32,7 +32,9 @@ DEFAULT_COUNTRIES = [
     ("FR", "France"),
 ]
 
-COUNTRIES = CUSTOM["countries"] if len(CUSTOM["countries"]) > 0 else DEFAULT_COUNTRIES
+COUNTRIES = DEFAULT_COUNTRIES
+if "countries" in CUSTOM.keys() and len(CUSTOM["countries"]) > 0:
+    COUNTRIES = CUSTOM["countries"]
 
 SERVICE_TARGETS = [
     ("SME", "Small to Medium Size Entreprises"),
@@ -55,10 +57,9 @@ DEFAULT_COMPANY_SIZE = [
     ("j", "5000+"),
 ]
 
-COMPANY_SIZE = (
-    CUSTOM["company_size"] if len(CUSTOM["company_size"]) > 0 else DEFAULT_COMPANY_SIZE
-)
-
+COMPANY_SIZE = DEFAULT_COMPANY_SIZE
+if "company_size" in CUSTOM.keys() and len(CUSTOM["company_size"]) > 0:
+    COMPANY_SIZE = CUSTOM["company_size"]
 
 QUESTION_TYPES = [
     ("M", "Multiple Choice"),

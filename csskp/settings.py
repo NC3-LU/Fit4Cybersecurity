@@ -10,10 +10,14 @@ import importlib
 from django.contrib.messages import constants as messages
 
 try:
-    from csskp import config  # type: ignore
-    site_config = importlib.import_module("csskp." + config.SITE_NAME + ".site_config")
+    from csskp import config
 except ImportError:  # pragma: no cover
     from csskp import config_dev as config
+
+try:
+    site_config = importlib.import_module("csskp." + config.SITE_NAME + ".site_config")
+except ImportError:  # pragma: no cover
+    site_config = []
 
 # Initialization of the custom variables (strings, templates, icons, active modules)
 CUSTOM = {key: value for key, value in getattr(site_config, "CUSTOM", {}).items()}

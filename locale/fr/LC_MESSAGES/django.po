@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-12-30 16:41+0000\n"
+"POT-Creation-Date: 2021-12-31 11:42+0000\n"
 "PO-Revision-Date: 2021-12-22 14:02+0000\n"
 "Last-Translator: Cédric Bonhomme <cedric@cedricbonhomme.org>\n"
 "Language-Team: French <https://translate.monarc.lu/projects/"
@@ -74,7 +74,8 @@ msgstr ""
 #: csskp/fit4operatorsurvey/site_config.py:68
 #: data/fit4cybersecurity/context-questions.json:59
 #: data/fit4ehealth/context-questions.json:10
-#: data/fit4operatorsurvey/context-questions.json:35 survey/globals.py:15
+#: data/fit4operatorsurvey/context-questions.json:35
+#: data/fit4privacy/context-questions.json:59 survey/globals.py:15
 msgid "Health"
 msgstr "Santé"
 
@@ -96,6 +97,7 @@ msgstr ""
 #: csskp/fit4operatorsurvey/site_config.py:72
 #: data/fit4cybersecurity/context-questions.json:95
 #: data/fit4operatorsurvey/context-questions.json:59
+#: data/fit4privacy/context-questions.json:95
 msgid "Public Administration"
 msgstr "Administration publique"
 
@@ -163,9 +165,26 @@ msgstr ""
 msgid "Over 250 employees"
 msgstr ""
 
+#: csskp/fit4privacy/site_config.py:7
+msgid ""
+"This questionnaire, created in consultation with <a href=\"https://cnpd."
+"public.lu/en.html\" target=\"_blank\">CNPD</a>, aims to help organisations "
+"assess to what extent they are in control of their personal data risks. "
+"First, Fit4Privacy asks questions to understand the amount of personal data "
+"processing already in place, then its questions examine the response of the "
+"organisation towards GDPR obligations. Based on the identified scope, the "
+"tool offers a set of recommendations that could be consolidated into the "
+"first steps towards implementing privacy and data protection. Note that this "
+"is a self-assessment tool and as such cannot provide definitive guidelines. "
+"Yet, Fit4Privacy is raising awareness around key topics such as personal "
+"data processing, data lifecycle management, and basic data protection "
+"obligations for which organisations should already be prepared as of 2021."
+msgstr ""
+
 #: data/fit4cybersecurity/context-questions.json:3
 #: data/fit4ehealth/context-questions.json:3
 #: data/fit4operatorsurvey/context-questions.json:3
+#: data/fit4privacy/context-questions.json:3
 msgid "What is your sector?"
 msgstr "Quel est votre secteur ?"
 
@@ -178,6 +197,9 @@ msgstr "Quel est votre secteur ?"
 #: data/fit4operatorsurvey/context-questions.json:122
 #: data/fit4operatorsurvey/context-questions.json:155
 #: data/fit4operatorsurvey/context-questions.json:188
+#: data/fit4privacy/context-questions.json:4
+#: data/fit4privacy/context-questions.json:104
+#: data/fit4privacy/context-questions.json:173
 msgid "Context"
 msgstr "Contexte"
 
@@ -190,126 +212,158 @@ msgstr "Contexte"
 #: data/fit4operatorsurvey/context-questions.json:123
 #: data/fit4operatorsurvey/context-questions.json:156
 #: data/fit4operatorsurvey/context-questions.json:189
+#: data/fit4privacy/context-questions.json:5
+#: data/fit4privacy/context-questions.json:105
+#: data/fit4privacy/context-questions.json:174
 msgid "__context"
 msgstr "__context"
 
-#: data/fit4cybersecurity/context-questions.json:11 survey/globals.py:7
+#: data/fit4cybersecurity/context-questions.json:11
+#: data/fit4privacy/context-questions.json:11 survey/globals.py:7
 msgid "Banking, insurance and real estate"
 msgstr "Banque, assurances et immobilier"
 
-#: data/fit4cybersecurity/context-questions.json:17 survey/globals.py:8
+#: data/fit4cybersecurity/context-questions.json:17
+#: data/fit4privacy/context-questions.json:17 survey/globals.py:8
 msgid "Trading, sales and mass distribution"
 msgstr "Commerce, vente et grande distribution"
 
-#: data/fit4cybersecurity/context-questions.json:23 survey/globals.py:9
+#: data/fit4cybersecurity/context-questions.json:23
+#: data/fit4privacy/context-questions.json:23 survey/globals.py:9
 msgid "Marketing, media and multimedia"
 msgstr "Communication, média et multimédia"
 
-#: data/fit4cybersecurity/context-questions.json:29 survey/globals.py:10
+#: data/fit4cybersecurity/context-questions.json:29
+#: data/fit4privacy/context-questions.json:29 survey/globals.py:10
 msgid "Construction industries and civil engineering"
 msgstr "Construction, bâtiment et travaux publics"
 
-#: data/fit4cybersecurity/context-questions.json:35 survey/globals.py:11
+#: data/fit4cybersecurity/context-questions.json:35
+#: data/fit4privacy/context-questions.json:35 survey/globals.py:11
 msgid "Hotel and restoration, tourism and entertainment"
 msgstr "Hôtellerie - restauration, tourisme, loisirs et animation"
 
-#: data/fit4cybersecurity/context-questions.json:41 survey/globals.py:12
+#: data/fit4cybersecurity/context-questions.json:41
+#: data/fit4privacy/context-questions.json:41 survey/globals.py:12
 msgid "Industry"
 msgstr "Industrie"
 
-#: data/fit4cybersecurity/context-questions.json:47 survey/globals.py:13
+#: data/fit4cybersecurity/context-questions.json:47
+#: data/fit4privacy/context-questions.json:47 survey/globals.py:13
 msgid "Installation and maintenance"
 msgstr "Installation et maintenance"
 
-#: data/fit4cybersecurity/context-questions.json:53 survey/globals.py:14
+#: data/fit4cybersecurity/context-questions.json:53
+#: data/fit4privacy/context-questions.json:53 survey/globals.py:14
 msgid "Creation or placing of objects that are artistic and decorative"
 msgstr "Réalisation ou placement d'objets artistiques et décoratifs"
 
-#: data/fit4cybersecurity/context-questions.json:65 survey/globals.py:16
+#: data/fit4cybersecurity/context-questions.json:65
+#: data/fit4privacy/context-questions.json:65 survey/globals.py:16
 msgid "Home-Care Service or Community Service"
 msgstr "Services à la personne et à la collectivité"
 
-#: data/fit4cybersecurity/context-questions.json:71 survey/globals.py:17
+#: data/fit4cybersecurity/context-questions.json:71
+#: data/fit4privacy/context-questions.json:71 survey/globals.py:17
 msgid "Shows"
 msgstr "Spectacle"
 
-#: data/fit4cybersecurity/context-questions.json:77 survey/globals.py:18
+#: data/fit4cybersecurity/context-questions.json:77
+#: data/fit4privacy/context-questions.json:77 survey/globals.py:18
 msgid "Company Support"
 msgstr "Support à l'entreprise"
 
-#: data/fit4cybersecurity/context-questions.json:83 survey/globals.py:19
+#: data/fit4cybersecurity/context-questions.json:83
+#: data/fit4privacy/context-questions.json:83 survey/globals.py:19
 msgid "Transport and Logistics"
 msgstr "Transport et logistique"
 
-#: data/fit4cybersecurity/context-questions.json:89 survey/globals.py:20
+#: data/fit4cybersecurity/context-questions.json:89
+#: data/fit4privacy/context-questions.json:89 survey/globals.py:20
 msgid "Farming and fishing, natural spaces and green spaces, animal care"
 msgstr ""
 "Agriculture et pêche, espaces naturels et espaces verts, soins aux animaux"
 
 #: data/fit4cybersecurity/context-questions.json:103
 #: data/fit4operatorsurvey/context-questions.json:121
+#: data/fit4privacy/context-questions.json:103
 msgid "How many employees?"
 msgstr "Combien d'employés ?"
 
 #: data/fit4cybersecurity/context-questions.json:110
+#: data/fit4privacy/context-questions.json:110
 msgid "1-5"
 msgstr "1-5"
 
 #: data/fit4cybersecurity/context-questions.json:116
+#: data/fit4privacy/context-questions.json:116
 msgid "6-10"
 msgstr "6-10"
 
 #: data/fit4cybersecurity/context-questions.json:122
+#: data/fit4privacy/context-questions.json:122
 msgid "10-20"
 msgstr "10-20"
 
 #: data/fit4cybersecurity/context-questions.json:128
+#: data/fit4privacy/context-questions.json:128
 msgid "20-50"
 msgstr "20-50"
 
 #: data/fit4cybersecurity/context-questions.json:134
+#: data/fit4privacy/context-questions.json:134
 msgid "50-100"
 msgstr "50-100"
 
 #: data/fit4cybersecurity/context-questions.json:140
+#: data/fit4privacy/context-questions.json:140
 msgid "100-200"
 msgstr "100-200"
 
 #: data/fit4cybersecurity/context-questions.json:146
+#: data/fit4privacy/context-questions.json:146
 msgid "200-500"
 msgstr "200-500"
 
 #: data/fit4cybersecurity/context-questions.json:152
+#: data/fit4privacy/context-questions.json:152
 msgid "500-1000"
 msgstr "500-1000"
 
 #: data/fit4cybersecurity/context-questions.json:158
+#: data/fit4privacy/context-questions.json:158
 msgid "1000-5000"
 msgstr "1000-5000"
 
 #: data/fit4cybersecurity/context-questions.json:164
+#: data/fit4privacy/context-questions.json:164
 msgid "5000+"
 msgstr "5000+"
 
 #: data/fit4cybersecurity/context-questions.json:172
 #: data/fit4operatorsurvey/context-questions.json:154
+#: data/fit4privacy/context-questions.json:172
 msgid "What is your country?"
 msgstr "Quel est votre pays ?"
 
 #: data/fit4cybersecurity/context-questions.json:179
 #: data/fit4ehealth/context-questions.json:25
+#: data/fit4privacy/context-questions.json:179
 msgid "Luxembourg"
 msgstr "Luxembourg"
 
 #: data/fit4cybersecurity/context-questions.json:185
+#: data/fit4privacy/context-questions.json:185
 msgid "Germany"
 msgstr "Allemagne"
 
 #: data/fit4cybersecurity/context-questions.json:191
+#: data/fit4privacy/context-questions.json:191
 msgid "Belgium"
 msgstr "Belgique"
 
 #: data/fit4cybersecurity/context-questions.json:197
+#: data/fit4privacy/context-questions.json:197
 msgid "France"
 msgstr "France"
 
