@@ -28,12 +28,11 @@ def getRecommendations(user: SurveyUser, lang: str) -> Dict[str, List[str]]:
         "question__qindex", "aindex"
     )
     user_ecount_label = user.get_context("How many employees?")
+    user_ecount = ''
     if user_ecount_label:
         user_ecount = [
             item[0] for item in COMPANY_SIZE if item[1] == user_ecount_label
         ][0]
-    else:
-        user_ecount = None
 
     finalReportRecs: Dict[str, List[str]] = {}
     for a in allAnswers:
