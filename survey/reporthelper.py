@@ -28,12 +28,11 @@ def getRecommendations(user: SurveyUser, lang: str) -> Dict[str, List[str]]:
         "question__qindex", "aindex"
     )
     user_ecount_label = user.get_context("How many employees?")
+    user_ecount = ''
     if user_ecount_label:
         user_ecount = [
             item[0] for item in COMPANY_SIZE if item[1] == user_ecount_label
         ][0]
-    else:
-        user_ecount = None
 
     finalReportRecs: Dict[str, List[str]] = {}
     for a in allAnswers:
@@ -102,27 +101,28 @@ def calculateResult(user: SurveyUser) -> Tuple[int, int, List[int], List[str]]:
 
         sections[question.section.id] = _(question.section.label)
 
-    # TODO: Comply with the following: Only "__context" questions are excluded.
-    # Even if a section is excluded from the chart, the score is used.
-    # Note: currently if we do it an error occurred on sections iteration.
+    # There are no exclude sections, because score or bonus points can be set to some answers.
     user_answers = (
         SurveyUserAnswer.objects.filter(user=user)
-        .exclude(answer__question__section__label__in=chart_exclude_sections)
         .order_by("answer__question__qindex", "answer__aindex")
     )
     for user_answer in user_answers:
         total_bonus_points += user_answer.answer.bonus_points
 
         if user_answer.uvalue > 0:
-            section_id = user_answer.answer.question.section.id
+            section = user_answer.answer.question.section
 
             total_user_score += user_answer.answer.score
 
             user_given_bonus_points += user_answer.answer.bonus_points
 
-            if section_id not in user_evaluations_per_section:
-                user_evaluations_per_section[section_id] = 0
-            user_evaluations_per_section[section_id] += user_answer.answer.score
+            # Validate if the section score should not be presented in the chart.
+            if section.label in chart_exclude_sections:
+                continue
+
+            if section.id not in user_evaluations_per_section:
+                user_evaluations_per_section[section.id] = 0
+            user_evaluations_per_section[section.id] += user_answer.answer.score
 
     # get the score in percent, with then 100 being total_questions_score
     if total_user_score > 0:

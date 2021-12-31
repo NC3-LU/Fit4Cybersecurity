@@ -26,7 +26,7 @@ New
   [Cédric Bonhomme]
 - [translations] added page to manage the translations. [Cédric
   Bonhomme]
-- [data] added JSON file for survey4operators. [Cédric Bonhomme]
+- [data] added JSON file for fit4operatorsurvey. [Cédric Bonhomme]
 - [core] added new translate_db Django filter. [Cédric Bonhomme]
 - [core] added Django command to import translations. [Cédric Bonhomme]
 - [email] added email templates and modal to enter the email address.
