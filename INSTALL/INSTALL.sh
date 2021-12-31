@@ -80,6 +80,9 @@ PUBLIC_URL = ""
 ALLOWED_HOSTS = [gethostname(), gethostbyname(gethostname())]
 OPERATOR_EMAIL = "info@example.org"
 
+# The generic site/tool name. Used to load specific config, templates, styles, logo.
+SITE_NAME = "fit4cybersecurity"
+
 SECRET_KEY = "u__*z&=urjtc0t)b)@5qbt_a#3-354=k9x(j)@eu#h7sb=-66s"
 
 HASH_KEY = b"hDs3HftLkd9OsxI9smHP-TmGv-4z7h-1xaQp0RYuY20="
@@ -95,54 +98,6 @@ DATABASES = {
         "HOST": "localhost",
         "PORT": 5432,
     }
-}
-
-CUSTOM = {
-    # Generic configurations
-    "tool_name": "$TOOL_NAME",
-    # The generic site/tool name. Used to load specific config, templates, styles, logos.
-    "site_name": "$SITE_NAME",
-    "intro_text": gettext_lazy("$TOOL_DESCRIPTION"),
-    "countries_first": [],
-    "defaultLanguage": "en",
-    "languages": [
-        ("en", "English"),
-        ("fr", "French"),
-        ("de", "German"),
-    ],
-    # Logos paths
-    "cases_logo": "templates/report/images/cases_logo.svg",
-    "secin_logo": "templates/report/images/secin_logo.svg",
-    # Minimal score
-    "minimal_acceptable_score": 65,
-    # Custom parts of templates
-    #   main dir for PARTS_TEMPLATE_DIR:
-    "templates_parts_dir": "templates/parts",
-    "templates_parts": {
-        # path of the templates parts
-        "terms": "terms_part.html",
-        "footer": "footer_part.html",
-        "main_logo": "logo_part.html",
-    },
-    # Available modules
-    "modules": {
-        "reportDownload": True,
-        "reportEmail": False,
-        "requestDiagnostic": True,
-        "requestTraining": True,
-        "displayResults": True,
-    },
-    # Available report parts
-    "report": {
-        "introduction": True,
-        "description": True,
-        "results": True,
-        "recommendations": True,
-        "questions": True,
-    },
-    "sectors": [],
-    "company_size": [],
-    "countries": [],
 }
 
 REPORT_TEMPLATE_DIR = "./templates/report/"
