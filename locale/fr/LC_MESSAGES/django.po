@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-01-03 10:33+0000\n"
-"PO-Revision-Date: 2022-01-03 11:34+0100\n"
-"Last-Translator: Cédric Bonhomme <cedric@cedricbonhomme.org>\n"
+"PO-Revision-Date: 2022-01-03 12:49+0000\n"
+"Last-Translator: Juan Rocha <juan.rocha@cases.lu>\n"
 "Language-Team: French <https://translate.monarc.lu/projects/"
 "Fit4Cybersecurity/fit4cybersecurity/fr/>\n"
 "Language: fr\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Poedit 3.0.1\n"
+"X-Generator: Weblate 4.9-dev\n"
 
 #: csskp/fit4cybersecurity/site_config.py:7
 msgid ""
@@ -26,6 +26,10 @@ msgid ""
 "of information security by giving a very basic maturity level estimate and "
 "some basic recommendations."
 msgstr ""
+"Ce sondage posera des questions et présentera des recommandations en "
+"fonction de vos réponses. Rappelez-vous qu’il s’agit d’un outil d’auto-"
+"évaluation et qu’il ne fait que toucher à la surface de la sécurité de  l’"
+"information en fournissant une estimation et des recommandations de base."
 
 #: csskp/fit4ehealth/site_config.py:6
 msgid "Description of the tool."
@@ -180,6 +184,21 @@ msgid ""
 "data processing, data lifecycle management, and basic data protection "
 "obligations for which organisations should already be prepared as of 2021."
 msgstr ""
+"Ce questionnaire, créé en consultation avec la <a href=\"https://cnpd.public."
+"lu/en.html\" target=\"_blank\">CNPD</a>, vise à aider les organisations à "
+"évaluer dans quelle mesure elles maîtrisent leurs risques liés aux données à "
+"caractère personnel. Tout d'abord, Fit4Privacy pose des questions pour "
+"comprendre la quantité des traitements de données à caractère personnel déjà "
+"en place, puis ses questions examinent la réponse de l'organisation aux "
+"obligations du RGPD. Sur la base du périmètre identifié, l'outil propose un "
+"ensemble de recommandations qui pourraient être consolidées dans les "
+"premières étapes de mise en œuvre de la protection de la vie privée. "
+"Veuillez noter qu'il s'agit d'un outil d'auto-évaluation et qu'en tant que "
+"tel, il ne peut pas fournir de lignes directrices définitives. Pourtant, "
+"Fit4Privacy sensibilise à des sujets clés tels que le traitement des données "
+"à caractère personnel, la gestion du cycle de vie des données et les "
+"obligations de base en matière de protection des données pour lesquelles les "
+"organisations devraient déjà être préparées en 2021."
 
 #: data/fit4cybersecurity/context-questions.json:3
 #: data/fit4ehealth/context-questions.json:3
@@ -503,7 +522,7 @@ msgid ""
 msgstr ""
 "Pour le moment l'entreprise ne dispose que peu de données personnelles. "
 "Cependant, particulièrement si le nombre de traitements auguemente, ou si "
-"rien de particulier n'a été fait, il faut penser:"
+"rien de particulier n'a été fait, il faut penser :"
 
 #: data/fit4cybersecurity/questions.json:168
 msgid ""
@@ -855,7 +874,7 @@ msgid ""
 "important to:"
 msgstr ""
 "Pour le moment, aucun contrat avec les prestataires n'est signé. Si cela est "
-"néanmoins amené a changer à jour, il est important de faire attention:"
+"néanmoins amené a changer à jour, il est important de faire attention :"
 
 #: data/fit4cybersecurity/questions.json:504
 msgid ""
@@ -936,7 +955,7 @@ msgid ""
 msgstr ""
 "Pour le moment, aucun prestataire ne réalise le nettoyage des locaux. Si "
 "cela est néanmoins amené a changer à jour, il est important de faire "
-"attention:"
+"attention :"
 
 #: data/fit4cybersecurity/questions.json:578
 msgid "internally, by employees, punctually"
@@ -1298,7 +1317,7 @@ msgstr "Antivirus"
 #: data/fit4cybersecurity/questions.json:941
 #: data/fit4ehealth/questions.json:1450
 msgid "The company should have an anti-virus and be careful to:"
-msgstr "L'entreprise doit se munir d'antivirus, et faire attention:"
+msgstr "L'entreprise doit se munir d'antivirus, et faire attention :"
 
 #: data/fit4cybersecurity/questions.json:944
 #: data/fit4ehealth/questions.json:1442
@@ -1401,7 +1420,7 @@ msgid ""
 "laptop. Some points that are important:"
 msgstr ""
 "Des consignes et un encadrement précis doivent être donnés aux utilisateurs "
-"de station de travail. Voici des points à donner:"
+"de station de travail. Voici des points à donner :"
 
 #: data/fit4cybersecurity/questions.json:1066
 msgid ""
@@ -1491,17 +1510,17 @@ msgid ""
 msgstr ""
 "Il est important d'avoir des sauvegardes pour de nombreuses raisons, comme "
 "s'assurer d'avoir une redondance des données. Il est important d'avoir et de "
-"respecter:"
+"respecter :"
 
 #: data/fit4cybersecurity/questions.json:1156
 msgid "non existent: they are not done or not working"
-msgstr "inexistantes: elles ne sont pas faites ou non fonctionnelles"
+msgstr "inexistantes : elles ne sont pas faites ou non fonctionnelles"
 
 #: data/fit4cybersecurity/questions.json:1164
 msgid "shared: a third party has the responsibility of the backup"
 msgstr ""
-"transférées: le prestataire informatique en a la responsabilité à travers le "
-"Cloud"
+"transférées : le prestataire informatique en a la responsabilité à travers "
+"le Cloud"
 
 #: data/fit4cybersecurity/questions.json:1177
 msgid ""
@@ -1518,7 +1537,7 @@ msgid ""
 "exhaustive: all data is on backups, and all users know that and avoid "
 "storing information locally"
 msgstr ""
-"exhaustives: toutes les données qui doivent être incluses dans les "
+"exhaustives : toutes les données qui doivent être incluses dans les "
 "sauvegardes, et tous les utilisateurs en sont conscients et ne stockent pas "
 "de données en local"
 
@@ -1530,7 +1549,7 @@ msgstr ""
 
 #: data/fit4cybersecurity/questions.json:1196
 msgid "done daily: backups are made at least once daily"
-msgstr "journalières: les sauvegardes sont faites tous les jours ou plus"
+msgstr "journalières : les sauvegardes sont faites tous les jours ou plus"
 
 #: data/fit4cybersecurity/questions.json:1209
 msgid ""
@@ -1543,8 +1562,8 @@ msgstr ""
 #: data/fit4cybersecurity/questions.json:1212
 msgid "retained: it is possible to get back a month or more"
 msgstr ""
-"retenues: il est possible de remonter dans le temps dans les sauvegardes à 1 "
-"mois ou plus"
+"retenues : il est possible de remonter dans le temps dans les sauvegardes à "
+"1 mois ou plus"
 
 #: data/fit4cybersecurity/questions.json:1225
 msgid ""
@@ -1559,7 +1578,7 @@ msgid ""
 "decentralized: the server, and at least one full backup system is separated "
 "by at leaset 3 kilometres"
 msgstr ""
-"délocalisées: le serveur et les sauvegardes ne sont pas au même endroit, à "
+"délocalisées : le serveur et les sauvegardes ne sont pas au même endroit, à "
 "plus de 3 kilomètres de distance"
 
 #: data/fit4cybersecurity/questions.json:1241
@@ -1573,7 +1592,7 @@ msgstr ""
 #: data/fit4cybersecurity/questions.json:1244
 msgid "disconnected: they are disconnected from the server once they are done"
 msgstr ""
-"déconnectées: au moins en partie débranchées du serveur une fois qu'elles "
+"déconnectées : au moins en partie débranchées du serveur une fois qu'elles "
 "ont été faites"
 
 #: data/fit4cybersecurity/questions.json:1257
@@ -1588,7 +1607,7 @@ msgstr ""
 msgid ""
 "tested: one or all the files are restored from a backup from occasionally"
 msgstr ""
-"testées: un ou plusieurs fichiers sont restaurés à partir d'une sauvegarde "
+"testées : un ou plusieurs fichiers sont restaurés à partir d'une sauvegarde "
 "de temps en temps"
 
 #: data/fit4cybersecurity/questions.json:1273
@@ -1603,7 +1622,7 @@ msgstr ""
 msgid ""
 "encrypted: so when they are taken outside the company, they can't be read"
 msgstr ""
-"chiffrées: si elles sont amenées en dehors de l'entreprise, elles doivent "
+"chiffrées : si elles sont amenées en dehors de l'entreprise, elles doivent "
 "être illisibles"
 
 #: data/fit4cybersecurity/questions.json:1279
@@ -1624,7 +1643,7 @@ msgstr ""
 "Pour le moment, la pratique de l'apport de matériel personnel (Bring Your "
 "Own Device) dans l'environnement professionnel n'est pas possible dans "
 "l'organisme. Si cela est néanmoins amené à changer un jour, il est important "
-"de faire attention:"
+"de faire attention :"
 
 #: data/fit4cybersecurity/questions.json:1302
 #: data/fit4ehealth/questions.json:1785
@@ -2008,7 +2027,7 @@ msgid ""
 "care that:"
 msgstr ""
 "Pour le moment, aucun contrat avec les prestataires n'est signé. Si cela est "
-"néanmoins amené a changer à jour, il est important de faire attention:"
+"néanmoins amené a changer à jour, il est important de faire attention :"
 
 #: data/fit4ehealth/questions.json:429 data/fit4ehealth/questions.json:465
 msgid ""
@@ -2537,7 +2556,7 @@ msgstr ""
 "Pour le moment, la pratique de l'apport de matériel personnel (Bring Your "
 "Own Device) dans l'environnement professionnel n'est pas possible dans "
 "l'organisme. Si cela est néanmoins amené à changer un jour, il est important "
-"de faire attention:"
+"de faire attention :"
 
 #: data/fit4ehealth/questions.json:1336
 msgid "are closed and for professional use only"
@@ -2613,7 +2632,7 @@ msgid ""
 "or laptops. Some points that are important:"
 msgstr ""
 "Des consignes et un encadrement précis doivent être donnés aux utilisateurs "
-"de station de travail. Voici des points à donner:"
+"de station de travail. Voici des points à donner :"
 
 #: data/fit4ehealth/questions.json:1588
 msgid ""
@@ -2988,7 +3007,7 @@ msgstr ""
 #: data/fit4operatorsurvey/questions.json:941
 #: data/fit4operatorsurvey/questions.json:1059
 msgid "Please describe:"
-msgstr "Décrivez s'il vous plaît:"
+msgstr "Décrivez s'il vous plaît :"
 
 #: data/fit4operatorsurvey/questions.json:95
 msgid ""
@@ -3490,7 +3509,7 @@ msgstr ""
 #: data/fit4operatorsurvey/questions.json:1201
 #: data/fit4operatorsurvey/questions.json:1309
 msgid "Other - please describe:"
-msgstr "Autre - veuillez décrire:"
+msgstr "Autre - veuillez décrire :"
 
 #: data/fit4operatorsurvey/questions.json:1161
 msgid ""
@@ -3618,7 +3637,7 @@ msgstr ""
 "cookies, une signature, une photo). Pour plus de détails sur les "
 "définitions, vous pouvez consulter l'Article 4 du RGPD. Donc, si votre "
 "société a des employés, des clients ou usagers, elle traite très "
-"probablement des données à caractère personnel.  Par conséquence, elle doit "
+"probablement des données à caractère personnel. Par conséquence, elle doit "
 "respecter le obligations du RGPD."
 
 #: data/fit4privacy/questions.json:23
@@ -3643,14 +3662,14 @@ msgstr ""
 "concernées (qu'il s'agisse d'employés, clients, ou d'usagers), même si un "
 "DPD officiel n'est pas obligatoire, il sera utile de nommer au moins un "
 "responsable de la protection des données et de faire les premiers pas vers "
-"le RGPD: comprendre les données en cours de traitement et les risques, ainsi "
-"que documenter ces risques. Pour plus de détails sur les définitions des "
-"données à caractère personnel, vous pouvez consulter l'Article 4 du RGPD. "
-"Pour plus de détails sur les tâches d'un responsable de la protection des "
-"données à caractère personnel, vous pouvez consulter l'Article 39 du RGPD "
-"ainsi que les <a href=\"https://edpb.europa.eu/our-work-tools/our-documents/"
-"guidelines/data-protection-officer_fr\" target=\"_blank\">lignes "
-"directrices</a> de l'EDPB sur ce sujet."
+"le RGPD : comprendre les données en cours de traitement et les risques, "
+"ainsi que documenter ces risques. Pour plus de détails sur les définitions "
+"des données à caractère personnel, vous pouvez consulter l'Article 4 du "
+"RGPD. Pour plus de détails sur les tâches d'un responsable de la protection "
+"des données à caractère personnel, vous pouvez consulter l'Article 39 du "
+"RGPD ainsi que les <a href=\"https ://edpb.europa.eu/our-work-tools/"
+"our-documents/guidelines/data-protection-officer_fr\" target=\"_blank\""
+">lignes directrices</a> de l'EDPB sur ce sujet."
 
 #: data/fit4privacy/questions.json:39
 msgid "We process some personal data (but very limited) of employees."
@@ -3726,7 +3745,7 @@ msgid ""
 msgstr ""
 "Si votre société traite des données à caractère personnel, combien de "
 "données (i.e. combien des personnes, quelle quantité moyenne de données par "
-"individu) traite-t'elle:"
+"individu) traite-t'elle :"
 
 #: data/fit4privacy/questions.json:137
 msgid "No, we do not process any sensitive personal data at all."
@@ -3846,7 +3865,7 @@ msgid ""
 "Article 30 of GDPR gives you the minimal mandatory content of the register "
 "of processing activities."
 msgstr ""
-"Nous vous suggérons de diviser la tâche en plusieurs sous-tâches: vous "
+"Nous vous suggérons de diviser la tâche en plusieurs sous-tâches : vous "
 "pouvez avoir différents services responsables de leur propre enregistrement "
 "des activités de traitement, en fonction des données qu'ils traitent et des "
 "processus qu'ils gèrent. Dans un deuxième temps, les différentes activités "
@@ -3903,7 +3922,7 @@ msgstr ""
 "C'est bien que votre entreprise ait commencé à inventorier ses données à "
 "caractère personnel, mais il vaudra mieux les avoir inventoriés dès que "
 "possible, pour se préparer à toute inspection ou visite de la CNPD. Si vous "
-"avez une image  complète des traitements des données personnelles selon la "
+"avez une image complète des traitements des données personnelles selon la "
 "structure suggere par l'article 30 du RGPD, au sein de votre entreprise, "
 "vous allez avoir une meilleure vue sur les risques RGPD, et les plans "
 "d'action qui en découlent."
@@ -3948,7 +3967,7 @@ msgid ""
 "processing that happens within your company?"
 msgstr ""
 "Avez-vous besoin et avez-vous déja préparé le registre des traitements des "
-"données à caractère personnel au sein de votre société?"
+"données à caractère personnel au sein de votre société ?"
 
 #: data/fit4privacy/questions.json:281 data/fit4privacy/questions.json:282
 #: data/fit4privacy/questions.json:323 data/fit4privacy/questions.json:324
@@ -3982,10 +4001,10 @@ msgstr ""
 "entreprise. Les personnes concernées peuvent être les employés, les "
 "fournisseurs, des clients, des tiers. Si votre société utilise un site Web "
 "pour présenter ses service vers les potentiels clients, et l'usage de ce "
-"site Web entraine des traitements des données personnelles des visiteurs "
-"(par exemple, si les visiteurs peuvent se connecter pour une expérience "
+"site Web entraine des traitements des données personnelles des visiteurs ("
+"par exemple, si les visiteurs peuvent se connecter pour une expérience "
 "personnalisée, ou si le site utilise des moteurs de statistiques comme "
-"Google Analytics qui traitent certains données personnelles comme les IPs),  "
+"Google Analytics qui traitent certains données personnelles comme les IPs), "
 "il est recommandé de mettre à jour la déclaration de confidentialité sur le "
 "site Web, pour refléter les conditions RGPD (existence d'un traitement de "
 "données à caractère personnel par l'entreprise, existence du DPD ou non, "
@@ -4013,8 +4032,8 @@ msgid ""
 "etc)"
 msgstr ""
 "Avez-vous déjà mis à jour votre site internet par rapport à la protection "
-"des données à caractère personnel, après le 25 mai 2018? (e.g., soit sous la "
-"forme d'une notice sur la vie privée, un disclaimer RGPD, etc)"
+"des données à caractère personnel, après le 25 mai 2018 ? (e.g., soit sous "
+"la forme d'une notice sur la vie privée, un disclaimer RGPD, etc)"
 
 #: data/fit4privacy/questions.json:340
 msgid ""
@@ -4131,17 +4150,15 @@ msgid ""
 "data performed by your company? "
 msgstr ""
 "Comment avez-vous informé les individus par rapport aux traitements de leur "
-"données à caractère personnel effectués par votre société? "
+"données à caractère personnel effectués par votre société ? "
 
 #: data/fit4privacy/questions.json:429 data/fit4privacy/questions.json:479
 msgid "(Some) Principles of Processing"
 msgstr "(Quelques) Principes de traitement"
 
 #: data/fit4privacy/questions.json:430 data/fit4privacy/questions.json:480
-#, fuzzy
-#| msgid "(Some) Principles of Processing"
 msgid "Principles of processing"
-msgstr "(Quelques) Principes de traitement"
+msgstr "Principes de traitement"
 
 #: data/fit4privacy/questions.json:446
 msgid ""
@@ -4156,7 +4173,7 @@ msgstr ""
 "Afin d'être conforme au RGPD, tout traitement de données personnelles doit "
 "avoir une base légale et une/plusieurs finalités spécifiques de traitement. "
 "Les données personnelles doivent être traitées d'une manière licite et "
-"loyale.  Vous pouvez documenter les bases légales de chaque traitement dans "
+"loyale. Vous pouvez documenter les bases légales de chaque traitement dans "
 "votre registre de traitements. Veuillez vous référer à l'article 6 du RGPD "
 "pour plus d'information sur les bases légales."
 
@@ -4212,9 +4229,9 @@ msgid ""
 "interest, legitimate interest, consent)?"
 msgstr ""
 "Savez-vous si votre entreprise traite des données à caractère personnel avec "
-"une base légale (une des suivants: l'exécution d'un contrat, un requis légal "
-"ou règlementaire, l'intérêt vital ou publique, l'intérêt légitime, le "
-"consentement de l'individu)?"
+"une base légale (une des suivants : l'exécution d'un contrat, un requis "
+"légal ou règlementaire, l'intérêt vital ou publique, l'intérêt légitime, le "
+"consentement de l'individu) ?"
 
 #: data/fit4privacy/questions.json:496
 msgid ""
@@ -4271,7 +4288,7 @@ msgstr ""
 
 #: data/fit4privacy/questions.json:515
 msgid "We don't know for sure how to deal with it."
-msgstr "Nous ne sommes pas sûrs comment  procéder."
+msgstr "Nous ne sommes pas sûrs comment procéder."
 
 #: data/fit4privacy/questions.json:528
 msgid ""
@@ -4311,7 +4328,7 @@ msgid ""
 "processing?"
 msgstr ""
 "Quelle est votre approche par rapport à la durée de conservation des données "
-"à caractère personnel au sein de votre société?"
+"à caractère personnel au sein de votre société ?"
 
 #: data/fit4privacy/questions.json:545
 msgid "Data Breaches"
@@ -4342,7 +4359,7 @@ msgstr ""
 "un risque pour les personnes concernées, une notification doit être faite "
 "aux autorités de protection des données dans les 72h à partir du moment "
 "quand l'entreprise prend connaissance de l'incident. Si les risques vers les "
-"personnes concernées sont élevés,  l'entreprise doit aussi supporter les "
+"personnes concernées sont élevés, l'entreprise doit aussi supporter les "
 "personnes concernées pour faire face aux potentielles conséquences de la "
 "violation. Pour la CNPD, il existe un formulaire à remplir répondant à "
 "plusieurs questions sur l'incident et la manière dont il a été traité <a "
@@ -4386,7 +4403,7 @@ msgstr ""
 "un risque pour les personnes concernées, une notification doit être faite "
 "aux autorités de protection des données dans les 72h à partir du moment "
 "quand l'entreprise prend connaissance de l'incident. Si les risques vers les "
-"personnes concernées sont élevés,  l'entreprise doit aussi supporter les "
+"personnes concernées sont élevés, l'entreprise doit aussi supporter les "
 "personnes concernées pour faire face aux potentielles conséquences de la "
 "violation. Pour la CNPD, il existe un formulaire à remplir répondant à "
 "plusieurs questions sur l'incident et la manière dont il a été traité <a "
@@ -4444,7 +4461,7 @@ msgid ""
 msgstr ""
 "Comment votre entreprise traiterait-elle un incident qui pourrait être "
 "considéré comme une violation de données à caractère personnel (e.g., une "
-"perte, destruction, changement illicite ou un vol des données)?"
+"perte, destruction, changement illicite ou un vol des données) ?"
 
 #: data/fit4privacy/questions.json:635 data/fit4privacy/questions.json:733
 msgid "Data Protection Responsible and Data Subject Rights"
@@ -4560,7 +4577,7 @@ msgstr ""
 "des droits (en particulier le droit d'accès aux données personnelles) ne "
 "sont pas payantes. Cependant, dans certains cas, il est possible de demander "
 "à la personne concernée de payer des frais qui peuvent être justifiés par "
-"certaines raisons comme par exemple: dans le cas où la personne demande des "
+"certaines raisons comme par exemple : dans le cas où la personne demande des "
 "copies supplémentaires, elle fait trop de demandes du même type ou la "
 "réponse nécessite un effort disproportionné pour produire le résultat. "
 
@@ -4574,7 +4591,7 @@ msgid ""
 "right, if that would appear now in your mailbox?"
 msgstr ""
 "Comment réagirait votre société vis-a-vis d'une requête d'exercise de droits "
-"d'une persone concernée, reçue par courriel ou courrier?"
+"d'une persone concernée, reçue par courriel ou courrier ?"
 
 #: data/fit4privacy/questions.json:750 data/fit4privacy/questions.json:766
 #: data/fit4privacy/questions.json:790
@@ -4631,7 +4648,7 @@ msgid ""
 "Officer (DPO)?"
 msgstr ""
 "Est-ce que votre société a désigné un responsable privacy (vie privée) ou un "
-"Délégué de la Protection des Données (DPD)?"
+"Délégué de la Protection des Données (DPD) ?"
 
 #: data/fit4privacy/questions.json:799 data/fit4privacy/questions.json:889
 #: data/fit4privacy/questions.json:947 data/fit4privacy/questions.json:1021
@@ -4717,7 +4734,7 @@ msgstr ""
 "mesures d'atténuation des risques sur les personnes concernées, et 2) revoir "
 "toute analyse l'année suivante et y apporter des modifications si "
 "nécessaire. De plus, les AIPD ne sont pas les seules analyses de risques "
-"requises par le RGPD; votre entreprise est censée avoir une vue d'ensemble "
+"requises par le RGPD ; votre entreprise est censée avoir une vue d'ensemble "
 "de la façon dont elle protège les données personnelles qu'elle traite, vous "
 "pouvez donc réaliser une analyse globale des risques. "
 
@@ -4780,7 +4797,7 @@ msgid ""
 "information security risks?"
 msgstr ""
 "Quels types d'analyse de risque avez-vous éffectué par rapport à la "
-"protection des données / les risques RGPD?"
+"protection des données / les risques RGPD ?"
 
 #: data/fit4privacy/questions.json:901
 msgid "None, we don't have any such contracts."
@@ -4838,7 +4855,7 @@ msgid ""
 "2018, with respect to GDPR clauses and personal data being processed?"
 msgstr ""
 "Combien de vos contrats avec des sous-traitans / partenaires avez-vous revu "
-"après le 25 mai 2018, par rapport au RGPD?"
+"après le 25 mai 2018, par rapport au RGPD ?"
 
 #: data/fit4privacy/questions.json:964 data/fit4privacy/questions.json:980
 msgid ""
@@ -4953,9 +4970,9 @@ msgid ""
 "How do you enable privacy by default and by design in your new projects or "
 "products?"
 msgstr ""
-"Comment avez-vous mis en place la protection des données dès la conception "
-"('privacy by design') et la protection des données par defaut ('privacy by "
-"default') dans le cadre des nouveaux projets ou produits?"
+"Comment avez-vous mis en place la protection des données dès la conception ("
+"'privacy by design') et la protection des données par defaut ('privacy by "
+"default') dans le cadre des nouveaux projets ou produits ?"
 
 #: data/fit4privacy/questions.json:1033
 msgid "We have no data transfers outside of EEA."
@@ -4989,7 +5006,7 @@ msgid ""
 msgstr ""
 "Est-ce que votre société effectue des transferts des données à caractère "
 "personnel hors de l'Espace Economique Européen (EU plus l'Islande, "
-"Lichtenstein, Norvège), et si oui, avec quelles mesures de protection?"
+"Lichtenstein, Norvège), et si oui, avec quelles mesures de protection ?"
 
 #: data/fit4privacy/questions.json:1063 data/fit4privacy/questions.json:1129
 #: data/fit4privacy/questions.json:1179
@@ -5082,7 +5099,7 @@ msgstr ""
 
 #: data/fit4privacy/questions.json:1126
 msgid "How do you handle information security risks?"
-msgstr "Comment gérez-vous les risques par rapport à la sécurité informatique?"
+msgstr "Comment gérez-vous les risques par rapport à la sécurité informatique ?"
 
 #: data/fit4privacy/questions.json:1146 data/fit4privacy/questions.json:1162
 msgid ""
@@ -5113,7 +5130,7 @@ msgstr "Nous formons les employés réguliérement sur ce sujet."
 #: data/fit4privacy/questions.json:1176
 msgid "How often do you train your employees on information security?"
 msgstr ""
-"Votre société forme-t'elle ses employés dans la sécurité de l'information?"
+"Votre société forme-t'elle ses employés dans la sécurité de l'information ?"
 
 #: data/fit4privacy/questions.json:1196
 msgid ""
@@ -5170,7 +5187,7 @@ msgid ""
 msgstr ""
 "Dans quelle mesures les regles (procédures / guides / bonnes pratiques) sur "
 "la sécurité de l'information et la protection des données sont-elles écrites "
-"et connues par vos employés?"
+"et connues par vos employés ?"
 
 #: survey/forms.py:55
 msgid "You need to choose at least one answer"
