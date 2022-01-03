@@ -3,19 +3,18 @@
 [![Python application basic tests](https://github.com/CASES-LU/Fit4Cybersecurity/actions/workflows/pythonapp.yml/badge.svg)](https://github.com/CASES-LU/Fit4Cybersecurity/actions/workflows/pythonapp.yml)
 [![Latest release](https://img.shields.io/github/release/CASES-LU/Fit4Cybersecurity.svg?style=flat-square)](https://github.com/CASES-LU/Fit4Cybersecurity/releases/latest)
 [![License](https://img.shields.io/github/license/CASES-LU/Fit4Cybersecurity.svg?style=flat-square)](https://www.gnu.org/licenses/agpl-3.0.html)
-[![Translation status](https://translate.monarc.lu/widgets/Fit4Cybersecurity/-/svg-badge.svg)](https://translate.monarc.lu/engage/Fit4Cybersecurity/)
+[![Translation status](https://translate.monarc.lu/widgets/Fit4Cybersecurity/-/fit4cybersecurity/svg-badge.svg)](https://translate.monarc.lu/engage/Fit4Cybersecurity/)
 
 
 Fit4Cybersecurity is a self-assessment tool by [CASES](https://www.cases.lu)
 to help business owners implement a better cybersecurity strategy.
 
-This tool allows to instantiate new self-assessment products such as:
+This tool allows instantiation of the following self-assessment websites:
 
 - [Fit4Cybersecurity](https://fit4cybersecurity.cases.lu),
 - [Fit4Privacy](https://fit4privacy.cases.lu),
-- [Fit4Contract](https://contract.cases.lu),
-- [Fit4OperatorSurvey](https://survey4operators.cases.lu),
-- [Cyber4Africa](https://start.cyber4africa.org) and the like.
+- [Fit4OperatorSurvey](https://fit4operatorsurvey.cases.lu),
+- [Cyber4Africa](https://start.cyber4africa.org).
 
 
 ## Deployment
