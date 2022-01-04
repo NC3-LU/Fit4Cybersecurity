@@ -28,7 +28,7 @@ class AnswerMChoice(forms.Form):
                 ),
                 label="",
             )
-        elif answers_field_type == "SS":
+        elif answers_field_type == "SO":
             self.fields["answers"] = forms.ChoiceField(
                 required=False,
                 choices=question_answers,

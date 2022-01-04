@@ -49,9 +49,9 @@ def create_user(lang: str) -> SurveyUser:
     # Ensures the submitted languages is accepted
     langs, _ = zip(*LANGUAGES)
     if lang in langs:
-        user.choosen_lang = lang
+        user.chosen_lang = lang
     else:
-        user.choosen_lang = LOCAL_DEFAULT_LANG
+        user.chosen_lang = LOCAL_DEFAULT_LANG
     user.save()
     return user
 
@@ -113,7 +113,7 @@ def handle_start_survey(request: HttpRequest, lang: str) -> Union[Dict, SurveyUs
         "forms": forms,
         "questions_per_id": {question.id: _(question.label) for question in questions},
         "action": action,
-        "choosen_lang": lang,
+        "chosen_lang": lang,
     }
 
 
@@ -130,7 +130,7 @@ def handle_question_answers_request(
 
     try:
         question_answers = current_question.surveyquestionanswer_set.all()
-        tuple_answers = get_answer_choices(current_question, user.choosen_lang)
+        tuple_answers = get_answer_choices(current_question, user.chosen_lang)
     except Exception as e:
         logger.error(e)
         raise e
@@ -140,14 +140,14 @@ def handle_question_answers_request(
         if question_answer.atype == "T":
             free_text_answer_id = question_answer.id
 
-    translation.activate(user.choosen_lang)
-    request.session[settings.LANGUAGE_COOKIE_NAME] = user.choosen_lang
+    translation.activate(user.chosen_lang)
+    request.session[settings.LANGUAGE_COOKIE_NAME] = user.chosen_lang
 
     if request.method == "POST":
         form = AnswerMChoice(
             tuple_answers,
             data=request.POST,
-            lang=user.choosen_lang,
+            lang=user.chosen_lang,
             answers_field_type=current_question.qtype,
             question_answers=question_answers,
         )
@@ -184,7 +184,7 @@ def handle_question_answers_request(
     else:
         form = AnswerMChoice(
             tuple_answers,
-            lang=user.choosen_lang,
+            lang=user.chosen_lang,
             answers_field_type=current_question.qtype,
             question_answers=question_answers,
         )
@@ -248,6 +248,11 @@ def save_answers(
 
         if question_answer.atype == "T":
             user_answer.content = answer_content
+
+        # TODO: for answer type SO we save the value, but there is a problem with countries.
+        # T he countries can be taken from the django module. We need to pass values instead of posted_answers_ids...
+        # if question_answer.atype == "SO":
+        #    user_answer.uvalue = question_answer.value
 
         user_answer.uvalue = 0
         if question_answer.id in posted_answers_ids:
@@ -373,7 +378,7 @@ def handle_general_feedback(user: SurveyUser, request: HttpRequest) -> GeneralFe
     ]
     if request.method == "POST":
         general_feedback_form = GeneralFeedback(
-            data=request.POST, lang=user.choosen_lang
+            data=request.POST, lang=user.chosen_lang
         )
 
         if general_feedback_form.is_valid():
@@ -390,7 +395,7 @@ def handle_general_feedback(user: SurveyUser, request: HttpRequest) -> GeneralFe
 
             return general_feedback_form
     else:
-        general_feedback_form = GeneralFeedback(lang=user.choosen_lang)
+        general_feedback_form = GeneralFeedback(lang=user.chosen_lang)
 
     if user_feedback:
         general_feedback_form.set_general_feedback(user_feedback[0].feedback)

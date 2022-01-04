@@ -76,6 +76,7 @@ class Command(BaseCommand):
                 answer_obj, created = SurveyQuestionAnswer.objects.get_or_create(
                     question=question_obj,
                     label=answer["label"],
+                    value=answer.get("value", "")
                     aindex=answer["aindex"],
                     uniqueAnswer=answer["uniqueAnswer"],
                     score=answer.get("score", 0),

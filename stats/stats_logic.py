@@ -58,14 +58,10 @@ def get_finished_surveys_list(request):
         user_id = str(completed_survey_user.user_id)
         surveys_users_results["survey_users"][user_id] = {
             "details": {
-                "sector": completed_survey_user.get_context("What is your sector?"),
-                "employees_number": completed_survey_user.get_context(
-                    "How many employees?"
-                ),
-                "country_code": completed_survey_user.get_context(
-                    "Please select your country"
-                ),
-                "language": completed_survey_user.choosen_lang,
+                "sector": completed_survey_user.get_sector_code(),
+                "employees_number": completed_survey_user.get_employees_number_answer_label(),
+                "country_code": completed_survey_user.get_country_code(),
+                "language": completed_survey_user.chosen_lang,
                 "survey_finish_date": completed_survey_user.updated_at.strftime(
                     DEFAULT_DATE_FORMAT
                 ),

@@ -54,8 +54,5 @@ CUSTOM = {
         "recommendations": True,
         "questions": True,
     },
-    "sectors": [],
-    "company_size": [],
-    "countries": [],
     "chart_exclude_sections": [],
 }

@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 
+from __future__ import annotations
 from typing import Optional, Union, Dict, Any
 import uuid
 from django.db import models
@@ -7,10 +8,8 @@ from csskp.settings import LANGUAGES, LANGUAGE_CODE
 
 # import global constants
 from survey.globals import (
-    SECTOR_CHOICES,
     QUESTION_TYPES,
     ANSWER_TYPES,
-    COMPANY_SIZE,
     SERVICE_TARGETS,
 )
 
@@ -134,6 +133,7 @@ class SurveyQuestionAnswer(models.Model, RightMixin):
 
     question = models.ForeignKey(SurveyQuestion, on_delete=models.CASCADE)
     label = models.TextField()
+    value = models.CharField(max_length=50, null=False, blank=True, default="")
     tooltip = models.TextField(null=False, blank=True, default="")
     aindex = models.IntegerField()
     uniqueAnswer = models.BooleanField(default=False)
@@ -171,7 +171,7 @@ class SurveyUser(models.Model):
     # number of employees
 
     user_id = models.UUIDField(default=uuid.uuid4)
-    choosen_lang = models.CharField(
+    chosen_lang = models.CharField(
         max_length=2, choices=LANGUAGES, default=LOCAL_DEFAULT_LANG
     )
     current_qindex = models.IntegerField(default=0)
@@ -191,21 +191,72 @@ class SurveyUser(models.Model):
     def is_survey_finished(self):
         return self.status == SURVEY_STATUS_FINISHED
 
-    def get_context(self, question: Optional[str] = "") -> Union[Dict[str, Any], str]:
-        """Returns in a dictionary the questions related to the context of the user.
-        If the label of a specific context question is given in parameter, the label
-        of the related answer is directly returned as a string (the empty string
-        is returned if the label is not found)."""
+    def get_all_context_answers(self) -> Dict[str, Any]:
         result = {}
-        user_answers = SurveyUserAnswer.objects.filter(user=self).filter(
-            answer__question__section__label="__context", uvalue=1
+        user_answers = self.surveyuseranswer_set.filter(
+            answer__question__section__label="__context",
+            uvalue=1
         )
-        if question:
-            user_answers = user_answers.filter(answer__question__label=question)
-            return user_answers.first().answer.label if user_answers.count() else ""
         for user_answer in user_answers:
             result[user_answer.answer.question.label] = user_answer
+
         return result
+
+    def __get_context_answer_by_question_label(self, question_label: str) -> Optional[SurveyUserAnswer]:
+        try:
+            return self.surveyuseranswer_set.get(
+                answer__question__section__label="__context",
+                answer__question__label=question_label
+            )
+        except SurveyUserAnswer.DoesNotExist as e:
+            return None
+
+    #staticmethod
+    def __get_number_employees_question_label(self) -> str:
+        try:
+            return SurveyQuestion.objects.get(
+                label="How many employees?", section__label="__context"
+            ).label
+        except SurveyQuestion.DoesNotExist as e:
+            return ""
+
+    def get_employees_number_code(self) -> str:
+        number_employees_question_label = self.__get_number_employees_question_label()
+
+        user_answer = self.__get_context_answer_by_question_label(number_employees_question_label)
+
+        return "" if user_answer is None else user_answer.answer.value
+
+    def get_employees_number_answer_label(self) -> str:
+        number_employees_question_label = self.__get_number_employees_question_label()
+
+        user_answer = self.__get_context_answer_by_question_label(number_employees_question_label)
+
+        return "" if user_answer is None else user_answer.answer.label
+
+    def get_country_code(self) -> str:
+        try:
+            country_question_label = SurveyQuestion.objects.get(
+                label__contains="your country", section__label="__context"
+            ).label
+        except SurveyUser.DoesNotExist as e:
+            return ""
+
+        user_answer = self.__get_context_answer_by_question_label(country_question_label)
+
+        return "" if user_answer is None else user_answer.answer.value
+
+    def get_sector_code(self) -> str:
+        try:
+            sector_question_label = SurveyQuestion.objects.get(
+                label="What is your sector?", section__label="__context"
+            ).label
+        except SurveyUser.DoesNotExist as e:
+            return ""
+
+        user_answer = self.__get_context_answer_by_question_label(sector_question_label)
+
+        return "" if user_answer is None else user_answer.answer.value
 
 
 class SurveyUserAnswer(models.Model):
@@ -232,15 +283,9 @@ class SurveyUserFeedback(models.Model):
 
 class Recommendations(models.Model, RightMixin):
     label = models.TextField()
-    min_e_count = models.CharField(
-        max_length=2, choices=COMPANY_SIZE, default=COMPANY_SIZE[0][0]
-    )
-    max_e_count = models.CharField(
-        max_length=2, choices=COMPANY_SIZE, default=COMPANY_SIZE[-1][0]
-    )
-    sector = models.CharField(
-        max_length=4, choices=SECTOR_CHOICES, null=True, blank=True, default=None
-    )
+    min_e_count = models.CharField(max_length=2, default="a")
+    max_e_count = models.CharField(max_length=2, default="z")
+    sector = models.CharField(max_length=4, null=True, blank=True, default=None)
     forAnswer = models.ForeignKey(SurveyQuestionAnswer, on_delete=models.CASCADE)
     answerChosen = models.BooleanField(default=False)
 
@@ -263,7 +308,7 @@ class Company(models.Model):
     contact_tel = models.TextField(max_length=32)
     contact_address_street = models.CharField(max_length=128)
     contact_address_city = models.CharField(max_length=64)
-    contact_address_country = models.CharField(max_length=4)
+    contact_address_country = models.CharField(max_length=64)
     contact_address_number = models.IntegerField()
     contact_address_postcode = models.CharField(max_length=10)
     notes = models.TextField()

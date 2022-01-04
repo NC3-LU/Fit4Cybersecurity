@@ -7,7 +7,6 @@ import base64
 import logging
 
 from csskp.settings import PICTURE_DIR, CUSTOM
-from survey.globals import COMPANY_SIZE
 from survey.models import (
     SurveyQuestion,
     SurveyQuestionAnswer,
@@ -27,12 +26,7 @@ def getRecommendations(user: SurveyUser, lang: str) -> Dict[str, List[str]]:
     allAnswers = SurveyQuestionAnswer.objects.all().order_by(
         "question__qindex", "aindex"
     )
-    user_ecount_label = user.get_context("How many employees?")
-    user_ecount = ''
-    if user_ecount_label:
-        user_ecount = [
-            item[0] for item in COMPANY_SIZE if item[1] == user_ecount_label
-        ][0]
+    employees_number_code = user.get_employees_number_code()
 
     finalReportRecs: Dict[str, List[str]] = {}
     for a in allAnswers:
@@ -46,8 +40,8 @@ def getRecommendations(user: SurveyUser, lang: str) -> Dict[str, List[str]]:
             continue
 
         for rec in recommendations:
-            if user_ecount and (
-                rec.min_e_count > user_ecount or rec.max_e_count < user_ecount
+            if employees_number_code and (
+                rec.min_e_count > employees_number_code or rec.max_e_count < employees_number_code
             ):
                 continue
 
