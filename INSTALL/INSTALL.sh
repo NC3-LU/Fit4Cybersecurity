@@ -69,6 +69,8 @@ cd $PROJECT_PATH
 npm ci
 poetry install --no-dev
 
+sudo -u ubuntu mkdir logs
+sudo chmod -R 777 logs
 
 echo "--- Generation of the $TOOL_NAME configuration file… ---"
 sudo -u ubuntu cat > csskp/config.py <<EOF
