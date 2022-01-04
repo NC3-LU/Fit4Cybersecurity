@@ -64,7 +64,6 @@ msgstr ""
 #: csskp/fit4operatorsurvey/site_config.py:65
 #: data/fit4operatorsurvey/context-questions.json:17
 #, fuzzy
-#| msgid "Transparency"
 msgid "Transport"
 msgstr "Transparenz"
 
@@ -484,9 +483,6 @@ msgstr "ziemlich schwer, aber sehr genau"
 
 #: data/fit4cybersecurity/questions.json:123
 #, fuzzy
-#| msgid ""
-#| "Each time when it's possible, some advice or some best practices should "
-#| "be given and explained."
 msgid ""
 "Each time when it's possible, some advice or some best practices should be "
 "given, and explained."
@@ -910,7 +906,8 @@ msgid ""
 msgstr ""
 "Wenn Mittel und Bedürfnisse dies zulassen, sollte ein Vertrag unterzeichnet "
 "werden, um sicherzustellen, dass der externe IT-Anbieter die Verfügbarkeit "
-"des Systems sicherstellt, um betriebsbereit zu bleiben."
+"des Systems sicherstellt, um betriebsbereit zu bleiben. Diese Art von "
+"Verträgen wird \"Service Level Agreement (SLA)\" genannt."
 
 #: data/fit4cybersecurity/questions.json:536
 #: data/fit4ehealth/questions.json:609
@@ -1696,7 +1693,6 @@ msgstr ""
 
 #: data/fit4ehealth/questions.json:5
 #, fuzzy
-#| msgid "In the company, rules are"
 msgid "In the establishment, rules are"
 msgstr "In der Firma werden Regeln"
 
@@ -3834,7 +3830,6 @@ msgstr "Einige Prinzipien der Verarbeitung"
 
 #: data/fit4privacy/questions.json:430 data/fit4privacy/questions.json:480
 #, fuzzy
-#| msgid "(Some) Principles of Processing"
 msgid "Principles of processing"
 msgstr "Einige Prinzipien der Verarbeitung"
 
@@ -5281,9 +5276,6 @@ msgstr ""
 
 #: templates/survey/questions.html:87
 #, fuzzy
-#| msgid ""
-#| "Please do not provide any sensitive or confidential information refering "
-#| "to your identity."
 msgid ""
 "Please do not provide any sensitive or confidential information referring to "
 "your identity."
@@ -5433,3 +5425,431 @@ msgid ""
 msgstr ""
 "Benötigen wir einige Informationen, um Ihnen nützliche Empfehlungen geben zu "
 "können, sobald die Selbsteinschätzung abgeschlossen ist."
+
+#: csskp/fit4operatorsurvey/site_config.py:74
+msgid "Postal and Courrier Services"
+msgstr ""
+
+#: data/fit4cybersecurity/questions.json:36
+msgid ""
+"Rules (organisational, IT or working ones) should be known and explained to "
+"everyone, at the very least orally."
+msgstr ""
+"Regeln (organisatorische, IT- oder Arbeitsregeln) sollten zumindest mündlich "
+"bekannt sein und jedem erklärt werden."
+
+#: data/fit4cybersecurity/questions.json:123
+msgid ""
+"Each time when it's possible, some advice or some best practices should be "
+"given, and sometime explained."
+msgstr ""
+"Jedes Mal, wenn es möglich ist, sollten einige Ratschläge oder Best "
+"Practices gegeben und gegebenenfalls erklärt werden."
+
+#: data/fit4cybersecurity/questions.json:287
+msgid ""
+"By informing about attacks that are current, common or well-known, employees "
+"could more easily identify them and avoid falling for them."
+msgstr ""
+"Durch das Informieren über aktuelle, häufige oder bekannte Angriffe können "
+"Mitarbeiter diese leichter identifizieren und vermeiden, auf sie "
+"hereinzufallen."
+
+#: data/fit4cybersecurity/questions.json:290
+msgid ""
+"information security, to have the knowledge to protect themselves against "
+"attacks"
+msgstr ""
+"geschult in Informationssicherheit, um sich vor Angriffen schützen zu können"
+
+#: data/fit4cybersecurity/questions.json:319
+msgid ""
+"Train users on the sensitivity of the manipulated information, in order to "
+"put their attention on how to protect them."
+msgstr ""
+"Schulung der Benutzer in Bezug auf die Sensibilität der manipulierten "
+"Informationen, um ihre Aufmerksamkeit darauf zu lenken, wie sie geschützt "
+"werden sollen."
+
+#: data/fit4cybersecurity/questions.json:377
+msgid ""
+"It's important to define responsibilities, either externally or internally, "
+"with one person or more, or a company, but specialised into their own "
+"domain, with possibly a training."
+msgstr ""
+"Es ist wichtig, die Verantwortlichkeiten entweder extern oder intern mit "
+"einer oder mehreren Personen oder einem Unternehmen zu definieren, das "
+"jedoch auf seine eigene Domäne spezialisiert ist, möglicherweise mit einer "
+"Schulung."
+
+#: data/fit4cybersecurity/questions.json:430
+msgid ""
+"public Wi-Fi, open networks or connection protected by external organisation "
+"or person"
+msgstr ""
+"öffentliches WLAN, offene Netzwerke oder Verbindungen, die durch eine "
+"externe Organisation oder Person geschützt sind"
+
+#: data/fit4cybersecurity/questions.json:443
+msgid ""
+"External connection which is not controlled and monitored should be avoided "
+"to avoid data loss."
+msgstr ""
+"Externe Verbindungen, die nicht kontrolliert und überwacht werden, sollten "
+"vermieden werden, um Datenverlust zu vermeiden."
+
+#: data/fit4cybersecurity/questions.json:446
+msgid ""
+"a private connection or a connection sharing from a private or professional "
+"smartphone (tethering/hotspot)"
+msgstr ""
+"eine private Verbindung oder eine gemeinsame Nutzung von Verbindungen von "
+"einem privaten oder professionellen Smartphone"
+
+#: data/fit4cybersecurity/questions.json:462
+msgid ""
+"a screen filter or adjusts their position to ensure that no unauthorised "
+"person could see what is on the screen"
+msgstr ""
+"einen Bildschirmfilter oder deren Aufmerksamkeit, um sicherzustellen, dass "
+"keine nicht autorisierte Person sehen kann, was sich auf dem Bildschirm "
+"befindet"
+
+#: data/fit4cybersecurity/questions.json:475
+msgid ""
+"Devices that are taken away and that contains confidential data should "
+"always have their internal memory encrypted to avoid data loss."
+msgstr ""
+"Bei Geräten, die entfernt wurden und vertrauliche Daten enthalten, sollte "
+"der interne Speicher immer verschlüsselt sein, um Datenverlust zu vermeiden."
+
+#: data/fit4cybersecurity/questions.json:533
+msgid ""
+"If means and needs permit it, a contract should be signed to ensure that the "
+"external IT provider will ensure the availability of system to remain "
+"operational."
+msgstr ""
+"Wenn Mittel und Bedürfnisse dies zulassen, sollte ein Vertrag unterzeichnet "
+"werden, um sicherzustellen, dass der externe IT-Anbieter die Verfügbarkeit "
+"des Systems sicherstellt, um betriebsbereit zu bleiben."
+
+#: data/fit4cybersecurity/questions.json:536
+msgid "define the maximum time of intervention after an incident"
+msgstr "definieren die maximale Eingriffszeit nach einem Vorfall"
+
+#: data/fit4cybersecurity/questions.json:549
+msgid ""
+"It's necessary to review the contracts to ensuring a certain availability :"
+"<ul><li>not having an intervention solution whenever it's essential</"
+"li><li>to not pay too much for a service which is not necessary</li><li>to "
+"evaluate if the services paid are satisfying the necessary</li></ul>"
+msgstr ""
+
+#: data/fit4cybersecurity/questions.json:591
+msgid ""
+"The office cleaning should be done, whenever possible, during work time to "
+"avoid potential data theft."
+msgstr ""
+"Die Büroreinigung sollte nach Möglichkeit während der Arbeitszeit "
+"durchgeführt werden, um möglichen Datendiebstahl zu vermeiden."
+
+#: data/fit4cybersecurity/questions.json:607
+msgid "Rules should be given mainly to specify what should be done or avoided."
+msgstr ""
+"Regeln sollten hauptsächlich angegeben werden, um zu spezifizieren, was "
+"getan oder vermieden werden soll."
+
+#: data/fit4cybersecurity/questions.json:610
+msgid "with rules of what should be done and what should not be done"
+msgstr ""
+"nach defininierten Anweisungen erledigt (was getan werden soll und was nicht)"
+
+#: data/fit4cybersecurity/questions.json:642
+msgid "with all confidential documents locked in a room, a desk or a closet"
+msgstr ""
+"durchgeführt, während alle vertraulichen Dokumente in einem Raum, einem "
+"Schreibtisch oder einem Schrank eingeschlossen"
+
+#: data/fit4cybersecurity/questions.json:777
+msgid ""
+"Passwords should be changed from time to time, to prevent serious "
+"consequences in case of a leak."
+msgstr ""
+"Passwörter sollten von Zeit zu Zeit geändert werden, um schwerwiegende "
+"Folgen im Falle eines Lecks zu vermeiden."
+
+#: data/fit4cybersecurity/questions.json:809
+msgid ""
+"It's mandatory to be careful with the password storage in the internet "
+"browser as they are not protected."
+msgstr ""
+"Beim Speichern von Passwörtern im Internetbrowser ist Vorsicht geboten, da "
+"diese nicht geschützt sind."
+
+#: data/fit4cybersecurity/questions.json:924
+msgid "Anti-virus"
+msgstr "Antivirus"
+
+#: data/fit4cybersecurity/questions.json:941
+#: data/fit4ehealth/questions.json:1450
+msgid "The company should have an anti-virus and be careful to:"
+msgstr ""
+"Das Unternehmen sollte über ein Virenschutzprogramm verfügen und Folgendes "
+"beachten:"
+
+#: data/fit4cybersecurity/questions.json:957
+msgid "An anti-virus software must be on all devices."
+msgstr "Auf allen Geräten muss eine Antivirensoftware installiert sein."
+
+#: data/fit4cybersecurity/questions.json:992
+msgid "is activated and protects computers"
+msgstr "ist aktiviert und schützt den Computer"
+
+#: data/fit4cybersecurity/questions.json:1005
+msgid ""
+"All devices, like smartphones, tablets should have an anti-virus, even if "
+"it's the one by default from the operating system."
+msgstr ""
+"Alle Geräte, wie Smartphones und Tablets, sollten mit einem "
+"Antivirenprogramm ausgestattet sein, auch wenn dieses standardmäßig vom "
+"Betriebssystem stammt."
+
+#: data/fit4cybersecurity/questions.json:1008
+msgid "is installed on all mobile phones that are on networks"
+msgstr "ist auf allen Mobiltelefonen in Netzwerken installiert"
+
+#: data/fit4cybersecurity/questions.json:1079
+msgid ""
+"A device should always be up to date in order to avoid security problems, "
+"and also avoid network intrusion. Many operating system now update "
+"automatically, but installed software needs some permission to be given or "
+"manual maintenance."
+msgstr ""
+"Ein Gerät sollte immer auf dem neuesten Stand sein, um Sicherheitsprobleme "
+"und auch das Eindringen in das Netzwerk zu vermeiden. Viele Betriebssysteme "
+"werden jetzt automatisch aktualisiert, aber die installierte Software "
+"benötigt eine Erlaubnis oder manuelle Wartung."
+
+#: data/fit4cybersecurity/questions.json:1082
+msgid "automatically or manually updated; software and operating system"
+msgstr ""
+"werden automatisch oder manuell aktualisiert, Software als Betriebssystem"
+
+#: data/fit4cybersecurity/questions.json:1095
+msgid ""
+"Administrator rights should be left only to the users who are specialised in "
+"IT, or welladvised respecting the rules."
+msgstr ""
+"Administratorrechte sollten nur Benutzern überlassen werden, die auf IT "
+"spezialisiert sind oder die die Regeln gut einhalten."
+
+#: data/fit4cybersecurity/questions.json:1111
+msgid ""
+"Downloads should only be done from the official websites, the original "
+"developers of the software, to avoid illegal download or infections."
+msgstr ""
+"Downloads sollten nur von den offiziellen Websites, von den "
+"Originalentwicklern der Software, gemacht werden, um illegale Downloads oder "
+"Infektionen zu vermeiden."
+
+#: data/fit4cybersecurity/questions.json:1257
+msgid ""
+"Backups should be tested from time to time, just to ensure that the data is "
+"readable and has integrity."
+msgstr ""
+"Backups sollten von Zeit zu Zeit getestet werden, um sicherzustellen, dass "
+"die Daten lesbar und integer sind."
+
+#: data/fit4cybersecurity/questions.json:1315
+msgid ""
+"Personal devices shouldn't be used in company without any controls, rules "
+"and explanations. By knowing all the different existing ways to attack an "
+"organism, it's possible to avoid them."
+msgstr ""
+
+#: data/fit4cybersecurity/questions.json:1334
+#: data/fit4ehealth/questions.json:1819
+msgid "is under a strict anti-virus control"
+msgstr "unterliegen strenger kontrollen"
+
+#: data/fit4cybersecurity/questions.json:1347
+msgid ""
+"Defining rules and best practices helps to protect the internal networks."
+msgstr ""
+
+#: data/fit4ehealth/questions.json:205
+msgid ""
+"sometimes sent via a messaging system (like Whatsapp, Skype, …)  or stored "
+"in the Cloud (like WeTransfer, Google Drive, …)"
+msgstr ""
+
+#: data/fit4ehealth/questions.json:634
+msgid ""
+"It's necessary to review the contracts to ensure:\n"
+"\t- having an intervention solution whenever it is essential\n"
+"\t- not to pay too much for a service which is not necessary\n"
+"\t- to evaluate if the services paid are satisfying the necessary."
+msgstr ""
+
+#: data/fit4ehealth/questions.json:899
+msgid ""
+"The best is to have the technician that you can recognize in front of you, "
+"while doing the maintenance, but there is no obligation as long as they "
+"respect the fact that :\n"
+"\t-You decide when the maintenance is done.\n"
+"\t-You watch that no personal data are accessed.\n"
+"\t-You keep contact during the process."
+msgstr ""
+
+#: data/fit4ehealth/questions.json:926
+msgid ""
+"Someone you do not know must  not be able to walk everywhere in the "
+"practice, because it is always possible to grab data without being seen. "
+msgstr ""
+
+#: data/fit4ehealth/questions.json:1467
+msgid "An anti-virus software must be installed on all devices."
+msgstr "Auf allen Geräten muss eine Antivirensoftware installiert sein."
+
+#: data/fit4ehealth/questions.json:1518
+msgid ""
+"All devices, like smartphones, tablets should have an anti-virus, even if it "
+"is the one by default from the operating system."
+msgstr ""
+"Alle Geräte, wie Smartphones und Tablets, sollten mit einem "
+"Antivirenprogramm ausgestattet sein, auch wenn dieses standardmäßig vom "
+"Betriebssystem stammt."
+
+#: data/fit4operatorsurvey/questions.json:95
+msgid ""
+"What are the challenges related to performing existing Risk Management "
+"processes or practices? "
+msgstr ""
+
+#: data/fit4operatorsurvey/questions.json:325
+msgid "Other (please describe):"
+msgstr ""
+
+#: data/fit4privacy/questions.json:306
+msgid ""
+"You have an obligation to be transparent to all those concerned about the "
+"processing of personal data carried out by your company. The persons "
+"concerned can be employees, suppliers, customers, third parties. If your "
+"company uses a website to present its services to potential customers, and "
+"the use of this website involves processing of visitors' personal data (for "
+"example, if visitors can log in for a personalized experience, or if the "
+"site uses statistics engines such as Google Analytics which process certain "
+"personal data such as IPs), it is recommended to update the privacy notice "
+"on the website, to reflect GDPR conditions (the existence of personal data "
+"processing by the company, the existence of the DPO or not, the possibility "
+"to exercise rights, etc). This is independent from the requirement of asking "
+"for the consent of the user when the website uses non-essential cookies, "
+"which is required by the ePrivacy directive. Art. 13 or 14 of GDPR should be "
+"followed to update the privacy notice, as they list 12 elements that need to "
+"be shown to data subjects with the purpose of GDPR transparency. "
+msgstr ""
+"Sie sind verpflichtet, gegenüber allen Betroffenen über die Verarbeitung "
+"personenbezogener Daten durch Ihr Unternehmen transparent zu sein. "
+"Betroffene Personen können Mitarbeiter, Lieferanten, Kunden, Dritte sein. "
+"Wenn Ihr Unternehmen eine Website nutzt, um potenziellen Kunden seine "
+"Dienstleistungen zu präsentieren, und die Nutzung dieser Website die "
+"Verarbeitung personenbezogener Daten der Besucher beinhaltet (z Google "
+"Analytics, das bestimmte personenbezogene Daten wie IPs verarbeitet), "
+"empfiehlt es sich, die Datenschutzerklärung auf der Website zu aktualisieren "
+"und auf die Bedingungen der DSGVO (die Tatsache der Verarbeitung "
+"personenbezogener Daten durch das Unternehmen, das Vorhandensein eines/einer "
+"DSB, die Möglichkeit zur Ausübung von Rechten usw.) Bezug zu nehmen. Sind in "
+"diesem Fall Art. 13 oder 14 der DSGVO zu befolgen, weil sie 12 Elemente "
+"auflisten, die den betroffenen Personen im Sinne der DSGVO-Transparenz zur "
+"Verfügung gestellt werden sollen. Die Zustimmung des Benutzers für die "
+"Hinterlegung / den Zugriff auf nicht erforderliche Cookies wird von der "
+"ePrivacy-Richtlinie angefordert. "
+
+#: data/fit4privacy/questions.json:426
+msgid ""
+"How did you inform the data subjects about the processing of their personal "
+"data performed by your company? "
+msgstr ""
+"Wie haben Sie betroffene Personen über die Verarbeitung ihrer "
+"personenbezogenen Daten durch Ihr Unternehmen informiert? "
+
+#: data/fit4privacy/questions.json:848
+msgid ""
+"As your company processes some personal data, it is critical to understand "
+"the risks to data subjects in your context and how to improve protection "
+"with regards to those risks. Your company should consider performing a high-"
+"level analysis of what general risks there are with regards to protecting "
+"personal data. Should it be the case in the future, your company should "
+"perform more in-depth risks regarding the impact of certain activities (also "
+"known as Data Protection Impact Analyses, or DPIAs). "
+msgstr ""
+"Da Ihr Unternehmen einige personenbezogene Daten (möglicherweise sogar "
+"sensible Daten) verarbeitet, ist es wichtig, die Risiken für betroffene "
+"Personen in Ihrem Kontext zu verstehen und den Schutz in Bezug auf diese "
+"Risiken zu verbessern. Ihr Unternehmen sollte eine Analyse auf hoher Ebene "
+"der allgemeinen Risiken bezüglich des Schutzes personenbezogener Daten "
+"durchführen. Falls erforderlich, sollte Ihr Unternehmen in Zukunft eine "
+"detailliertere Analyse der tiefergehenden Risiken im Hinblick auf die "
+"Auswirkungen bestimmter Aktivitäten (die sog. Datenschutz-"
+"Folgenabschätzungen) durchführen. "
+
+#: data/fit4privacy/questions.json:880
+msgid ""
+"Even if the CNPD has given its green light in the past for an impact "
+"analysis, it does not mean that the situation is the same now. They would "
+"expect that any changes in the processing from then to now, are accounted to "
+"in the (renewed) analysis. Also, do not forget that the CNPD published a "
+"black list of processing activities, that are likely to require an impact "
+"assessment. "
+msgstr ""
+"Wenn die CNPD in der Vergangenheit grünes Licht für eine Folgenabschätzung "
+"gegeben hat, bedeutet das nicht, dass die Situation seitdem unverändert "
+"geblieben ist. Es wird von Ihnen erwartet, dass alle Änderungen in der "
+"Verarbeitung, die vom damaligen Zeitpunkt bis heute vorgenommen wurden, in "
+"einer (neuerlichen) Abschätzung berücksichtigt werden. Beachten Sie auch "
+"zudem, dass die CNPD eine Blacklist der Verarbeitungstätigkeiten "
+"veröffentlicht hat, bei denen wahrscheinlich eine Folgenabschätzung "
+"erforderlich ist. "
+
+#: data/fit4privacy/questions.json:1012
+msgid ""
+"GDPR applies to personal data of Europeans, worldwide. There have been "
+"discussions on the importance of protecting personal data outside of the "
+"EEA, and the data protection board (EPDB) insisted on the importance to have "
+"legal mechanisms (but also technical) to ensure that data is used for the "
+"same purpose and in the same way when transferred overseas. Using cloud "
+"services located outside of Europe are a typical example. A number of legal "
+"options are possible, and it is expected from the data controller to choose "
+"such mechanisms to ensure data protection towards data subjects, when data "
+"travels outside the borders of the EEA. "
+msgstr ""
+"Die DSGVO gilt weltweit für personenbezogene Daten von europäischen Bürgern. "
+"Die Bedeutung des Schutzes personenbezogener Daten außerhalb des EWR ist ein "
+"heiß diskutiertes Thema. Der Europäische Datenschutzausschuss (EDSA) hat die "
+"Wichtigkeit rechtlicher (und technischer) Mechanismen betont, um "
+"sicherzustellen, dass Daten für den gleichen Zweck und auf die gleiche Weise "
+"verwendet werden, wenn sie ins Ausland übertragen werden. Ein typisches "
+"Beispiel hierfür ist die Nutzung von Clouddiensten außerhalb Europas. Es "
+"gibt verschiedene rechtliche Optionen, und von Datenverantwortlichen wird "
+"erwartet, dass sie geeignete Mechanismen wählen, um den Datenschutz der "
+"betroffenen Personen zu gewährleisten, wenn Daten an Orte außerhalb der "
+"Grenzen des EWR übertragen werden. "
+
+#: data/fit4privacy/questions.json:1146 data/fit4privacy/questions.json:1162
+msgid ""
+"Information security is a domain that evolves, and it is critical that "
+"employees are up to date with how to protect themselves. Repeating notions "
+"about good password management, new attacks, social engineering, are all "
+"good practices to train your employees periodically, not just once when "
+"hired. "
+msgstr ""
+"Der Bereich der Informationssicherheit entwickelt sich ständig weiter, und "
+"es ist wichtig, dass Mitarbeiter jederzeit wissen, wie sie sich schützen "
+"können. Regelmäßige Wiederholungen über Empfehlungen zur Passwortverwaltung, "
+"neue Angriffsmethoden und Social Engineering sind bewährte Praktiken, um "
+"Mitarbeiter regelmäßig zu schulen (und nicht nur einmal zu Beginn des "
+"Beschäftigungsverhältnisses). "
+
+#: survey/globals.py:21
+msgid "Public administration"
+msgstr "Öffentliche Verwaltungen"
