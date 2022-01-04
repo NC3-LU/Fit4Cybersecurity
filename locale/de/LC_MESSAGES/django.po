@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-01-04 12:07+0000\n"
+"POT-Creation-Date: 2022-01-04 12:36+0000\n"
 "PO-Revision-Date: 2022-01-03 12:49+0000\n"
 "Last-Translator: Juan Rocha <juan.rocha@cases.lu>\n"
 "Language-Team: German <https://translate.monarc.lu/projects/"
@@ -104,7 +104,7 @@ msgstr ""
 #: csskp/fit4operatorsurvey/site_config.py:72
 #: data/fit4cybersecurity/context-questions.json:95
 #: data/fit4operatorsurvey/context-questions.json:59
-#: data/fit4privacy/context-questions.json:95
+#: data/fit4privacy/context-questions.json:95 survey/globals.py:21
 msgid "Public Administration"
 msgstr "Öffentliche Verwaltungen"
 
@@ -114,7 +114,8 @@ msgid "Space"
 msgstr ""
 
 #: csskp/fit4operatorsurvey/site_config.py:74
-msgid "Postal and Courrier Services"
+#: data/fit4operatorsurvey/context-questions.json:71
+msgid "Postal and Courier Services"
 msgstr ""
 
 #: csskp/fit4operatorsurvey/site_config.py:75
@@ -405,9 +406,9 @@ msgstr ""
 msgid "not described"
 msgstr "nicht beschrieben"
 
-#: data/fit4cybersecurity/questions.json:36
+#: data/fit4cybersecurity/questions.json:36 data/fit4ehealth/questions.json:40
 msgid ""
-"Rules (organisational, IT or working ones) should be known and explained to "
+"Rules (organizational, IT or working ones) should be known and explained to "
 "everyone, at the very least orally."
 msgstr ""
 "Regeln (organisatorische, IT- oder Arbeitsregeln) sollten zumindest mündlich "
@@ -678,9 +679,10 @@ msgid "by specialists, that could be internal or external"
 msgstr "von internen oder externen Spezialisten geschult"
 
 #: data/fit4cybersecurity/questions.json:319
+#: data/fit4ehealth/questions.json:324
 msgid ""
-"Train users on the sensitivity of the manipulated information, in order to "
-"put their attention on how to protect them."
+"Train users on the sensitivity of the processed information, in order to put "
+"their attention on how to protect these data."
 msgstr ""
 "Schulung der Benutzer in Bezug auf die Sensibilität der manipulierten "
 "Informationen, um ihre Aufmerksamkeit darauf zu lenken, wie sie geschützt "
@@ -790,11 +792,12 @@ msgstr ""
 "beliebigen Netzwerk zum internen Server zu verschlüsseln"
 
 #: data/fit4cybersecurity/questions.json:430
+#: data/fit4ehealth/questions.json:456
 msgid ""
-"public Wi-Fi, open networks or connection protected by external organisation "
-"or person"
+"Public Internet, Wi-Fi, open networks or connection protected by external "
+"organizations or individuals"
 msgstr ""
-"öffentliches WLAN, offene Netzwerke oder Verbindungen, die durch eine "
+"Öffentliches WLAN, offene Netzwerke oder Verbindungen, die durch eine "
 "externe Organisation oder Person geschützt sind"
 
 #: data/fit4cybersecurity/questions.json:443
@@ -955,9 +958,10 @@ msgid "internally, by employees, punctually"
 msgstr "intern, von Mitarbeitern, pünktlich erledigt"
 
 #: data/fit4cybersecurity/questions.json:591
+#: data/fit4ehealth/questions.json:736
 msgid ""
 "The office cleaning should be done, whenever possible, during work time to "
-"avoid potential data theft."
+"avoid potential data or material theft."
 msgstr ""
 "Die Büroreinigung sollte nach Möglichkeit während der Arbeitszeit "
 "durchgeführt werden, um möglichen Datendiebstahl zu vermeiden."
@@ -967,13 +971,17 @@ msgid "during the work time"
 msgstr "während der Arbeitszeit erledigt"
 
 #: data/fit4cybersecurity/questions.json:607
-msgid "Rules should be given mainly to specify what should be done or avoided."
+#: data/fit4ehealth/questions.json:753
+msgid ""
+"Rules should be given mainly to specify what should be done or avoided, as "
+"misunderstandings can happen."
 msgstr ""
 "Regeln sollten hauptsächlich angegeben werden, um zu spezifizieren, was "
 "getan oder vermieden werden soll."
 
 #: data/fit4cybersecurity/questions.json:610
-msgid "with rules of what should be done and what should not be done"
+#: data/fit4ehealth/questions.json:745
+msgid "with clear rules of what should be done and what shouldn't be done"
 msgstr ""
 "nach defininierten Anweisungen erledigt (was getan werden soll und was nicht)"
 
@@ -1004,7 +1012,9 @@ msgstr ""
 "vertrauliche Dokumente angezeigt werden."
 
 #: data/fit4cybersecurity/questions.json:642
-msgid "with all confidential documents locked in a room, a desk or a closet"
+#: data/fit4ehealth/questions.json:779
+msgid ""
+"with all confidential documents locked away in a room, a desk or a closet"
 msgstr ""
 "durchgeführt, während alle vertraulichen Dokumente in einem Raum, einem "
 "Schreibtisch oder einem Schrank eingeschlossen"
@@ -1138,9 +1148,10 @@ msgid "complete sentences"
 msgstr "vollständige Sätze"
 
 #: data/fit4cybersecurity/questions.json:777
+#: data/fit4ehealth/questions.json:1181
 msgid ""
 "Passwords should be changed from time to time, to prevent serious "
-"consequences in case of a leak."
+"consequences in case of a leak or data theft."
 msgstr ""
 "Passwörter sollten von Zeit zu Zeit geändert werden, um schwerwiegende "
 "Folgen im Falle eines Lecks zu vermeiden."
@@ -1624,10 +1635,11 @@ msgid "is forbidden or impossible in the company"
 msgstr "ist in der Firma verboten oder unmöglich"
 
 #: data/fit4cybersecurity/questions.json:1315
+#: data/fit4ehealth/questions.json:1810
 msgid ""
 "Personal devices shouldn't be used in company without any controls, rules "
 "and explanations. By knowing all the different existing ways to attack an "
-"organism, it's possible to avoid them."
+"organization, it's possible to avoid them."
 msgstr ""
 
 #: data/fit4cybersecurity/questions.json:1318
@@ -1694,14 +1706,6 @@ msgid ""
 "some tips to do in order to have some:"
 msgstr ""
 "Das Unternehmen sollte Regeln definieren, um Missverständnisse zu vermeiden:"
-
-#: data/fit4ehealth/questions.json:40
-msgid ""
-"Rules (organizational, IT or working ones) should be known and explained to "
-"everyone, at the very least orally."
-msgstr ""
-"Regeln (organisatorische, IT- oder Arbeitsregeln) sollten zumindest mündlich "
-"bekannt sein und jedem erklärt werden."
 
 #: data/fit4ehealth/questions.json:57
 msgid ""
@@ -1813,8 +1817,8 @@ msgstr ""
 
 #: data/fit4ehealth/questions.json:205
 msgid ""
-"sometimes sent via a messaging system (like Whatsapp, Skype, …)  or stored "
-"in the Cloud (like WeTransfer, Google Drive, …)"
+"sometimes sent via a messaging system (like Whatsapp, Skype, …) or stored in "
+"the Cloud (like WeTransfer, Google Drive, …)"
 msgstr ""
 
 #: data/fit4ehealth/questions.json:213
@@ -1886,15 +1890,6 @@ msgstr ""
 #: data/fit4ehealth/questions.json:316
 msgid "the importance of correctly managing and protecting personal data"
 msgstr ""
-
-#: data/fit4ehealth/questions.json:324
-msgid ""
-"Train users on the sensitivity of the processed information, in order to put "
-"their attention on how to protect these data."
-msgstr ""
-"Schulung der Benutzer in Bezug auf die Sensibilität der manipulierten "
-"Informationen, um ihre Aufmerksamkeit darauf zu lenken, wie sie geschützt "
-"werden sollen."
 
 #: data/fit4ehealth/questions.json:333
 msgid "neither of those cases"
@@ -1972,14 +1967,6 @@ msgstr ""
 "Immer wenn Benutzer im Freien arbeiten müssen, vom Heimbüro bis zu Aufgaben "
 "außerhalb des Unternehmens, müssen sie über eine VPN-Verbindung verfügen, um "
 "eine Verbindung zum Server herstellen zu können."
-
-#: data/fit4ehealth/questions.json:456
-msgid ""
-"Public Internet, Wi-Fi, open networks or connection protected by external "
-"organizations or individuals"
-msgstr ""
-"Öffentliches WLAN, offene Netzwerke oder Verbindungen, die durch eine "
-"externe Organisation oder Person geschützt sind"
 
 #: data/fit4ehealth/questions.json:483
 msgid ""
@@ -2105,39 +2092,11 @@ msgstr ""
 msgid "during the working hours of the establishment"
 msgstr "während der Arbeitszeit erledigt"
 
-#: data/fit4ehealth/questions.json:736
-msgid ""
-"The office cleaning should be done, whenever possible, during work time to "
-"avoid potential data or material theft."
-msgstr ""
-"Die Büroreinigung sollte nach Möglichkeit während der Arbeitszeit "
-"durchgeführt werden, um möglichen Datendiebstahl zu vermeiden."
-
-#: data/fit4ehealth/questions.json:745
-msgid "with clear rules of what should be done and what shouldn't be done"
-msgstr ""
-"nach defininierten Anweisungen erledigt (was getan werden soll und was nicht)"
-
-#: data/fit4ehealth/questions.json:753
-msgid ""
-"Rules should be given mainly to specify what should be done or avoided, as "
-"misunderstandings can happen."
-msgstr ""
-"Regeln sollten hauptsächlich angegeben werden, um zu spezifizieren, was "
-"getan oder vermieden werden soll."
-
 #: data/fit4ehealth/questions.json:762
 msgid "with a contract which specifies medical confidentiality"
 msgstr ""
 "gemäß einem Vertrag erledigt, der auch zu Vertraulichkeit/Geheimhaltung "
 "zwingt"
-
-#: data/fit4ehealth/questions.json:779
-msgid ""
-"with all confidential documents locked away in a room, a desk or a closet"
-msgstr ""
-"durchgeführt, während alle vertraulichen Dokumente in einem Raum, einem "
-"Schreibtisch oder einem Schrank eingeschlossen"
 
 #: data/fit4ehealth/questions.json:811
 msgid "Remote Maintenance"
@@ -2199,10 +2158,9 @@ msgstr ""
 msgid ""
 "The best is to have the technician that you can recognize in front of you, "
 "while doing the maintenance, but there is no obligation as long as they "
-"respect the fact that :\n"
-"\t-You decide when the maintenance is done.\n"
-"\t-You watch that no personal data are accessed.\n"
-"\t-You keep contact during the process."
+"respect the fact that :<ul><li>You decide when the maintenance is done.</"
+"li><li>You watch that no personal data are accessed.</il><il>You keep "
+"contact during the process.</il></ul>"
 msgstr ""
 
 #: data/fit4ehealth/questions.json:906
@@ -2223,8 +2181,8 @@ msgstr ""
 
 #: data/fit4ehealth/questions.json:926
 msgid ""
-"Someone you do not know must  not be able to walk everywhere in the "
-"practice, because it is always possible to grab data without being seen. "
+"Someone you do not know must not be able to walk everywhere in the practice, "
+"because it is always possible to grab data without being seen."
 msgstr ""
 
 #: data/fit4ehealth/questions.json:935
@@ -2329,14 +2287,6 @@ msgstr ""
 #: data/fit4ehealth/questions.json:1156
 msgid "not forming any words or dates, or are complete sentences"
 msgstr "keine Wörter oder Daten (wie Geburtsdatum etc.)"
-
-#: data/fit4ehealth/questions.json:1181
-msgid ""
-"Passwords should be changed from time to time, to prevent serious "
-"consequences in case of a leak or data theft."
-msgstr ""
-"Passwörter sollten von Zeit zu Zeit geändert werden, um schwerwiegende "
-"Folgen im Falle eines Lecks zu vermeiden."
 
 #: data/fit4ehealth/questions.json:1208
 msgid "saved in web browsers"
@@ -2523,13 +2473,6 @@ msgid ""
 "medical data."
 msgstr ""
 
-#: data/fit4ehealth/questions.json:1810
-msgid ""
-"Personal devices shouldn't be used in company without any controls, rules "
-"and explanations. By knowing all the different existing ways to attack an "
-"organization, it's possible to avoid them."
-msgstr ""
-
 #: data/fit4ehealth/questions.json:1853
 msgid ""
 "is possible and if problems arise, the IT service provider or a staff member "
@@ -2624,10 +2567,6 @@ msgid ""
 "feel not being well informed about eHealth related digital services provided "
 "on national level in Luxembourg and we are interested in participating to "
 "webinars"
-msgstr ""
-
-#: data/fit4operatorsurvey/context-questions.json:71
-msgid "Postal and Courier Services"
 msgstr ""
 
 #: data/fit4operatorsurvey/context-questions.json:154
@@ -2772,7 +2711,7 @@ msgstr "Bitte beschreiben:"
 #: data/fit4operatorsurvey/questions.json:95
 msgid ""
 "What are the challenges related to performing existing Risk Management "
-"processes or practices? "
+"processes or practices?"
 msgstr ""
 
 #: data/fit4operatorsurvey/questions.json:113
@@ -4957,10 +4896,6 @@ msgstr ""
 #: survey/forms.py:148
 msgid "You can't choose the answers {} if answer '{}' is choosen."
 msgstr ""
-
-#: survey/globals.py:21
-msgid "Public administration"
-msgstr "Öffentliche Verwaltungen"
 
 #: survey/viewLogic.py:62
 msgid "Let's start"
