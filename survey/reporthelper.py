@@ -28,7 +28,7 @@ def getRecommendations(user: SurveyUser, lang: str) -> Dict[str, List[str]]:
         "question__qindex", "aindex"
     )
     user_ecount_label = user.get_context("How many employees?")
-    user_ecount = ''
+    user_ecount = ""
     if user_ecount_label:
         user_ecount = [
             item[0] for item in COMPANY_SIZE if item[1] == user_ecount_label
@@ -88,7 +88,9 @@ def calculateResult(user: SurveyUser) -> Tuple[int, int, List[int], List[str]]:
 
     chart_exclude_sections = ["__context"]
     if "chart_exclude_sections" in CUSTOM.keys():
-        chart_exclude_sections = chart_exclude_sections + CUSTOM["chart_exclude_sections"]
+        chart_exclude_sections = (
+            chart_exclude_sections + CUSTOM["chart_exclude_sections"]
+        )
 
     for question in SurveyQuestion.objects.exclude(
         section__label__in=chart_exclude_sections
@@ -102,9 +104,8 @@ def calculateResult(user: SurveyUser) -> Tuple[int, int, List[int], List[str]]:
         sections[question.section.id] = _(question.section.label)
 
     # There are no exclude sections, because score or bonus points can be set to some answers.
-    user_answers = (
-        SurveyUserAnswer.objects.filter(user=user)
-        .order_by("answer__question__qindex", "answer__aindex")
+    user_answers = SurveyUserAnswer.objects.filter(user=user).order_by(
+        "answer__question__qindex", "answer__aindex"
     )
     for user_answer in user_answers:
         total_bonus_points += user_answer.answer.bonus_points
