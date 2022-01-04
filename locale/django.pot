@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-01-03 10:33+0000\n"
+"POT-Creation-Date: 2022-01-04 12:07+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -444,7 +444,7 @@ msgstr ""
 #: data/fit4cybersecurity/questions.json:123
 msgid ""
 "Each time when it's possible, some advice or some best practices should be "
-"given, and sometime explained."
+"given, and explained."
 msgstr ""
 
 #: data/fit4cybersecurity/questions.json:126 data/fit4ehealth/questions.json:83
@@ -572,15 +572,17 @@ msgid "the software they daily use"
 msgstr ""
 
 #: data/fit4cybersecurity/questions.json:287
+#: data/fit4ehealth/questions.json:307
 msgid ""
-"By informing about attacks that are current, common or well-known, employees "
-"could more easily identify them and avoid falling for them."
+"By informing about attacks that are current, common or well known, employees "
+"could more easily identify them and avoid being affected by them."
 msgstr ""
 
 #: data/fit4cybersecurity/questions.json:290
+#: data/fit4ehealth/questions.json:299
 msgid ""
 "information security, to have the knowledge to protect themselves against "
-"attacks"
+"attacks or information security issues"
 msgstr ""
 
 #: data/fit4cybersecurity/questions.json:303
@@ -633,10 +635,11 @@ msgid ""
 msgstr ""
 
 #: data/fit4cybersecurity/questions.json:377
+#: data/fit4ehealth/questions.json:369 data/fit4ehealth/questions.json:386
 msgid ""
 "It's important to define responsibilities, either externally or internally, "
-"with one person or more, or a company, but specialised into their own "
-"domain, with possibly a training."
+"with one or more persons, or a company, but specialized into their own "
+"domain, at best supported by relevant training."
 msgstr ""
 
 #: data/fit4cybersecurity/questions.json:380
@@ -687,14 +690,16 @@ msgid ""
 msgstr ""
 
 #: data/fit4cybersecurity/questions.json:443
+#: data/fit4ehealth/questions.json:429 data/fit4ehealth/questions.json:465
 msgid ""
 "External connection which is not controlled and monitored should be avoided "
-"to avoid data loss."
+"to avoid data theft."
 msgstr ""
 
 #: data/fit4cybersecurity/questions.json:446
+#: data/fit4ehealth/questions.json:474
 msgid ""
-"a private connection or a connection sharing from a private or professional "
+"a private connection or connection sharing from a private or professional "
 "smartphone (tethering/hotspot)"
 msgstr ""
 
@@ -705,15 +710,18 @@ msgid ""
 msgstr ""
 
 #: data/fit4cybersecurity/questions.json:462
+#: data/fit4ehealth/questions.json:492
 msgid ""
-"a screen filter or adjusts their position to ensure that no unauthorised "
-"person could see what is on the screen"
+"a screen filter or adjusts their position to ensure that no unauthorized "
+"person could see what is on the screen of their mobile device (tablet or "
+"laptop)"
 msgstr ""
 
 #: data/fit4cybersecurity/questions.json:475
+#: data/fit4ehealth/questions.json:517
 msgid ""
-"Devices that are taken away and that contains confidential data should "
-"always have their internal memory encrypted to avoid data loss."
+"Devices that are taken away and that contain confidential data should always "
+"have their internal memory encrypted to avoid data theft."
 msgstr ""
 
 #: data/fit4cybersecurity/questions.json:478
@@ -761,22 +769,27 @@ msgid "define confidentiality of data, and their protection"
 msgstr ""
 
 #: data/fit4cybersecurity/questions.json:533
+#: data/fit4ehealth/questions.json:617
 msgid ""
 "If means and needs permit it, a contract should be signed to ensure that the "
 "external IT provider will ensure the availability of system to remain "
-"operational."
+"operational. These kinds of contracts named \"Service Level Agreement (SLA)\""
 msgstr ""
 
 #: data/fit4cybersecurity/questions.json:536
-msgid "define the maximum time of intervention after an incident"
+#: data/fit4ehealth/questions.json:609
+msgid ""
+"define the maximum time until intervention needs to be performed after an "
+"incident"
 msgstr ""
 
 #: data/fit4cybersecurity/questions.json:549
+#: data/fit4ehealth/questions.json:634
 msgid ""
-"It's necessary to review the contracts to ensuring a certain availability :"
-"<ul><li>not having an intervention solution whenever it's essential</"
-"li><li>to not pay too much for a service which is not necessary</li><li>to "
-"evaluate if the services paid are satisfying the necessary</li></ul>"
+"It's necessary to review the contracts to ensure :<ul><li>having an "
+"intervention solution whenever it is essential</li><li>to not pay too much "
+"for a service which is not necessary</li><li>to evaluate if the services "
+"paid are satisfying the necessary</li></ul>"
 msgstr ""
 
 #: data/fit4cybersecurity/questions.json:552
@@ -972,9 +985,10 @@ msgid "included in a password manager"
 msgstr ""
 
 #: data/fit4cybersecurity/questions.json:809
+#: data/fit4ehealth/questions.json:1096 data/fit4ehealth/questions.json:1216
 msgid ""
 "It's mandatory to be careful with the password storage in the internet "
-"browser as they are not protected."
+"browsers as they are not protected well."
 msgstr ""
 
 #: data/fit4cybersecurity/questions.json:812
@@ -1073,12 +1087,13 @@ msgid "Wireless networks"
 msgstr ""
 
 #: data/fit4cybersecurity/questions.json:924
-msgid "Anti-virus"
+#: data/fit4ehealth/questions.json:1430
+msgid "Antivirus"
 msgstr ""
 
 #: data/fit4cybersecurity/questions.json:941
 #: data/fit4ehealth/questions.json:1450
-msgid "The company should have an anti-virus and be careful to:"
+msgid "The company should have an antivirus and be careful to:"
 msgstr ""
 
 #: data/fit4cybersecurity/questions.json:944
@@ -1087,7 +1102,8 @@ msgid "is not installed or used"
 msgstr ""
 
 #: data/fit4cybersecurity/questions.json:957
-msgid "An anti-virus software must be on all devices."
+#: data/fit4ehealth/questions.json:1467
+msgid "An antivirus software must be installed on all devices."
 msgstr ""
 
 #: data/fit4cybersecurity/questions.json:960
@@ -1113,17 +1129,20 @@ msgid "It should be activated in any case to protect the device continuously."
 msgstr ""
 
 #: data/fit4cybersecurity/questions.json:992
-msgid "is activated and protects computers"
+#: data/fit4ehealth/questions.json:1493
+msgid "is activated and protects computer"
 msgstr ""
 
 #: data/fit4cybersecurity/questions.json:1005
+#: data/fit4ehealth/questions.json:1518
 msgid ""
-"All devices, like smartphones, tablets should have an anti-virus, even if "
-"it's the one by default from the operating system."
+"All devices, like smartphones, tablets should have an antivirus, even if it "
+"is the one by default from the operating system."
 msgstr ""
 
 #: data/fit4cybersecurity/questions.json:1008
-msgid "is installed on all mobile phones that are on networks"
+#: data/fit4ehealth/questions.json:1510
+msgid "is installed on all mobile phones that are on network"
 msgstr ""
 
 #: data/fit4cybersecurity/questions.json:1021
@@ -1174,21 +1193,25 @@ msgid ""
 msgstr ""
 
 #: data/fit4cybersecurity/questions.json:1079
+#: data/fit4ehealth/questions.json:1596
 msgid ""
 "A device should always be up to date in order to avoid security problems, "
-"and also avoid network intrusion. Many operating system now update "
+"and also avoid network intrusion. Many operating systems now update "
 "automatically, but installed software needs some permission to be given or "
 "manual maintenance."
 msgstr ""
 
 #: data/fit4cybersecurity/questions.json:1082
-msgid "automatically or manually updated; software and operating system"
+#: data/fit4ehealth/questions.json:1588
+msgid ""
+"automatically or manually updated regarding the software and operating system"
 msgstr ""
 
 #: data/fit4cybersecurity/questions.json:1095
+#: data/fit4ehealth/questions.json:1613
 msgid ""
 "Administrator rights should be left only to the users who are specialised in "
-"IT, or welladvised respecting the rules."
+"IT, or well advised respecting the rules."
 msgstr ""
 
 #: data/fit4cybersecurity/questions.json:1098
@@ -1198,9 +1221,11 @@ msgid ""
 msgstr ""
 
 #: data/fit4cybersecurity/questions.json:1111
+#: data/fit4ehealth/questions.json:1630
 msgid ""
 "Downloads should only be done from the official websites, the original "
-"developers of the software, to avoid illegal download or infections."
+"developers of the software, to avoid manipulated download files or "
+"infections."
 msgstr ""
 
 #: data/fit4cybersecurity/questions.json:1114
@@ -1298,9 +1323,10 @@ msgid "disconnected: they are disconnected from the server once they are done"
 msgstr ""
 
 #: data/fit4cybersecurity/questions.json:1257
+#: data/fit4ehealth/questions.json:1746
 msgid ""
-"Backups should be tested from time to time, just to ensure that the data is "
-"readable and has integrity."
+"Backups should be tested (restored) from time to time, just to ensure that "
+"the data is readable and has integrity."
 msgstr ""
 
 #: data/fit4cybersecurity/questions.json:1260
@@ -1363,12 +1389,13 @@ msgstr ""
 
 #: data/fit4cybersecurity/questions.json:1334
 #: data/fit4ehealth/questions.json:1819
-msgid "is under a strict anti-virus control"
+msgid "is under a strict antivirus control"
 msgstr ""
 
 #: data/fit4cybersecurity/questions.json:1347
+#: data/fit4ehealth/questions.json:1844
 msgid ""
-"Defining rules and best practices helps to protect the internal networks."
+"Defining rules and best practices help to protect the internal networks."
 msgstr ""
 
 #: data/fit4cybersecurity/questions.json:1350
@@ -1577,18 +1604,6 @@ msgid ""
 "security of the data processed."
 msgstr ""
 
-#: data/fit4ehealth/questions.json:299
-msgid ""
-"information security, to have the knowledge to protect themselves against "
-"attacks or information security issues"
-msgstr ""
-
-#: data/fit4ehealth/questions.json:307
-msgid ""
-"By informing about attacks that are current, common or well known, employees "
-"could more easily identify them and avoid being affected by them."
-msgstr ""
-
 #: data/fit4ehealth/questions.json:316
 msgid "the importance of correctly managing and protecting personal data"
 msgstr ""
@@ -1617,13 +1632,6 @@ msgstr ""
 
 #: data/fit4ehealth/questions.json:361
 msgid "internally performed by someone at ease with computers"
-msgstr ""
-
-#: data/fit4ehealth/questions.json:369 data/fit4ehealth/questions.json:386
-msgid ""
-"It's important to define responsibilities, either externally or internally, "
-"with one or more persons, or a company, but specialized into their own "
-"domain, at best supported by relevant training."
 msgstr ""
 
 #: data/fit4ehealth/questions.json:378
@@ -1659,12 +1667,6 @@ msgid ""
 "care that:"
 msgstr ""
 
-#: data/fit4ehealth/questions.json:429 data/fit4ehealth/questions.json:465
-msgid ""
-"External connection which is not controlled and monitored should be avoided "
-"to avoid data theft."
-msgstr ""
-
 #: data/fit4ehealth/questions.json:438
 msgid ""
 "VPN (Virtual Private Network) to encrypt all data from any external network "
@@ -1684,35 +1686,16 @@ msgid ""
 "organizations or individuals"
 msgstr ""
 
-#: data/fit4ehealth/questions.json:474
-msgid ""
-"a private connection or connection sharing from a private or professional "
-"smartphone (tethering/hotspot)"
-msgstr ""
-
 #: data/fit4ehealth/questions.json:483
 msgid ""
 "Having a network environment that you can control or easily check is "
 "important, as you can be sure that only you have an access to this network."
 msgstr ""
 
-#: data/fit4ehealth/questions.json:492
-msgid ""
-"a screen filter or adjusts their position to ensure that no unauthorized "
-"person could see what is on the screen of their mobile device (tablet or "
-"laptop)"
-msgstr ""
-
 #: data/fit4ehealth/questions.json:509
 msgid ""
 "mobile devices that are encrypted (protected by a password at startup) or "
 "without any confidential data"
-msgstr ""
-
-#: data/fit4ehealth/questions.json:517
-msgid ""
-"Devices that are taken away and that contain confidential data should always "
-"have their internal memory encrypted to avoid data theft."
 msgstr ""
 
 #: data/fit4ehealth/questions.json:526
@@ -1767,27 +1750,6 @@ msgstr ""
 msgid ""
 "Some terms are defined by the law (such as “Data Processor” and “Data "
 "Controller” by the GDPR) and should be clearly indicated in the contract."
-msgstr ""
-
-#: data/fit4ehealth/questions.json:609
-msgid ""
-"define the maximum time until intervention needs to be performed after an "
-"incident"
-msgstr ""
-
-#: data/fit4ehealth/questions.json:617
-msgid ""
-"If means and needs permit it, a contract should be signed to ensure that the "
-"external IT provider will ensure the availability of system to remain "
-"operational. These kinds of contracts named \"Service Level Agreement (SLA)\""
-msgstr ""
-
-#: data/fit4ehealth/questions.json:634
-msgid ""
-"It's necessary to review the contracts to ensure:\n"
-"\t- having an intervention solution whenever it is essential\n"
-"\t- not to pay too much for a service which is not necessary\n"
-"\t- to evaluate if the services paid are satisfying the necessary."
 msgstr ""
 
 #: data/fit4ehealth/questions.json:643
@@ -2052,12 +2014,6 @@ msgid ""
 "from the computer of someone else."
 msgstr ""
 
-#: data/fit4ehealth/questions.json:1096 data/fit4ehealth/questions.json:1216
-msgid ""
-"It's mandatory to be careful with the password storage in the internet "
-"browsers as they are not protected well."
-msgstr ""
-
 #: data/fit4ehealth/questions.json:1156
 msgid "not forming any words or dates, or are complete sentences"
 msgstr ""
@@ -2150,28 +2106,6 @@ msgid ""
 "and possibly limiting access to internal network to known devices."
 msgstr ""
 
-#: data/fit4ehealth/questions.json:1430
-msgid "Antivirus"
-msgstr ""
-
-#: data/fit4ehealth/questions.json:1467
-msgid "An anti-virus software must be installed on all devices."
-msgstr ""
-
-#: data/fit4ehealth/questions.json:1493
-msgid "is activated and protects computer"
-msgstr ""
-
-#: data/fit4ehealth/questions.json:1510
-msgid "is installed on all mobile phones that are on network"
-msgstr ""
-
-#: data/fit4ehealth/questions.json:1518
-msgid ""
-"All devices, like smartphones, tablets should have an anti-virus, even if it "
-"is the one by default from the operating system."
-msgstr ""
-
 #: data/fit4ehealth/questions.json:1535
 msgid ""
 "Configure and take advantage that most of the antivirus applications allow "
@@ -2197,29 +2131,10 @@ msgid ""
 "or laptops. Some points that are important:"
 msgstr ""
 
-#: data/fit4ehealth/questions.json:1588
-msgid ""
-"automatically or manually updated regarding the software and operating system"
-msgstr ""
-
-#: data/fit4ehealth/questions.json:1596
-msgid ""
-"A device should always be up to date in order to avoid security problems, "
-"and also avoid network intrusion. Many operating systems now update "
-"automatically, but installed software needs some permission to be given or "
-"manual maintenance."
-msgstr ""
-
 #: data/fit4ehealth/questions.json:1605
 msgid ""
 "controlled by one or more administrators, which won't let users install "
 "software because they do not have administrator right"
-msgstr ""
-
-#: data/fit4ehealth/questions.json:1613
-msgid ""
-"Administrator rights should be left only to the users who are specialised in "
-"IT, or well advised respecting the rules."
 msgstr ""
 
 #: data/fit4ehealth/questions.json:1622
@@ -2227,13 +2142,6 @@ msgid ""
 "needed to comply with rules or guidelines about installation and downloading "
 "software, concerning illegal or dangerous activities  e.g. installing "
 "something without authorization"
-msgstr ""
-
-#: data/fit4ehealth/questions.json:1630
-msgid ""
-"Downloads should only be done from the official websites, the original "
-"developers of the software, to avoid manipulated download files or "
-"infections."
 msgstr ""
 
 #: data/fit4ehealth/questions.json:1656
@@ -2279,12 +2187,6 @@ msgstr ""
 msgid "tested by me sometimes"
 msgstr ""
 
-#: data/fit4ehealth/questions.json:1746
-msgid ""
-"Backups should be tested (restored) from time to time, just to ensure that "
-"the data is readable and has integrity."
-msgstr ""
-
 #: data/fit4ehealth/questions.json:1755
 msgid "only readable by me, and the persons I gave permission to"
 msgstr ""
@@ -2301,11 +2203,6 @@ msgid ""
 "Personal devices shouldn't be used in company without any controls, rules "
 "and explanations. By knowing all the different existing ways to attack an "
 "organization, it's possible to avoid them."
-msgstr ""
-
-#: data/fit4ehealth/questions.json:1844
-msgid ""
-"Defining rules and best practices help to protect the internal networks."
 msgstr ""
 
 #: data/fit4ehealth/questions.json:1853
@@ -2638,7 +2535,10 @@ msgid "National guidance."
 msgstr ""
 
 #: data/fit4operatorsurvey/questions.json:325
-msgid "Other (please describe):"
+#: data/fit4operatorsurvey/questions.json:1151
+#: data/fit4operatorsurvey/questions.json:1201
+#: data/fit4operatorsurvey/questions.json:1309
+msgid "Other - please describe:"
 msgstr ""
 
 #: data/fit4operatorsurvey/questions.json:335
@@ -3041,12 +2941,6 @@ msgstr ""
 
 #: data/fit4operatorsurvey/questions.json:1143
 msgid "To sector-specific CERTs / CSIRTs."
-msgstr ""
-
-#: data/fit4operatorsurvey/questions.json:1151
-#: data/fit4operatorsurvey/questions.json:1201
-#: data/fit4operatorsurvey/questions.json:1309
-msgid "Other - please describe:"
 msgstr ""
 
 #: data/fit4operatorsurvey/questions.json:1161
@@ -3499,7 +3393,7 @@ msgstr ""
 #: data/fit4privacy/questions.json:426
 msgid ""
 "How did you inform the data subjects about the processing of their personal "
-"data performed by your company? "
+"data performed by your company?"
 msgstr ""
 
 #: data/fit4privacy/questions.json:429 data/fit4privacy/questions.json:479
@@ -3884,7 +3778,7 @@ msgid ""
 "level analysis of what general risks there are with regards to protecting "
 "personal data. Should it be the case in the future, your company should "
 "perform more in-depth risks regarding the impact of certain activities (also "
-"known as Data Protection Impact Analyses, or DPIAs). "
+"known as Data Protection Impact Analyses, or DPIAs)."
 msgstr ""
 
 #: data/fit4privacy/questions.json:851
@@ -3917,7 +3811,7 @@ msgid ""
 "expect that any changes in the processing from then to now, are accounted to "
 "in the (renewed) analysis. Also, do not forget that the CNPD published a "
 "black list of processing activities, that are likely to require an impact "
-"assessment. "
+"assessment."
 msgstr ""
 
 #: data/fit4privacy/questions.json:883
@@ -4024,7 +3918,7 @@ msgid ""
 "services located outside of Europe are a typical example. A number of legal "
 "options are possible, and it is expected from the data controller to choose "
 "such mechanisms to ensure data protection towards data subjects, when data "
-"travels outside the borders of the EEA. "
+"travels outside the borders of the EEA."
 msgstr ""
 
 #: data/fit4privacy/questions.json:1015
@@ -4141,7 +4035,7 @@ msgid ""
 "employees are up to date with how to protect themselves. Repeating notions "
 "about good password management, new attacks, social engineering, are all "
 "good practices to train your employees periodically, not just once when "
-"hired. "
+"hired."
 msgstr ""
 
 #: data/fit4privacy/questions.json:1149

@@ -71,7 +71,7 @@ CUSTOM = {
         ("DIGI", gettext_lazy("Digital Infrastructure and Service Providers")),
         ("PUBL", gettext_lazy("Public Administration")),
         ("SPAC", gettext_lazy("Space")),
-        ("POST", gettext_lazy("Postal and Courrier Services")),
+        ("POST", gettext_lazy("Postal and Courier Services")),
         ("WMAN", gettext_lazy("Waste Management")),
         ("CHEM", gettext_lazy("Manufacture, production and distribution of chemicals")),
         ("FOOD", gettext_lazy("Food Production, processing and distribution")),

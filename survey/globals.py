@@ -18,7 +18,7 @@ DEFAULT_SECTOR_CHOICES = [
     ("SUPP", _("Company Support")),
     ("LOGI", _("Transport and Logistics")),
     ("FARM", _("Farming and fishing, natural spaces and green spaces, animal care")),
-    ("PUBL", _("Public administration")),
+    ("PUBL", _("Public Administration")),
 ]
 
 SECTOR_CHOICES = DEFAULT_SECTOR_CHOICES
