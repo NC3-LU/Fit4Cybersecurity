@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-01-04 13:23+0000\n"
-"PO-Revision-Date: 2022-01-04 14:38+0000\n"
+"PO-Revision-Date: 2022-01-05 10:59+0000\n"
 "Last-Translator: Juan Rocha <juan.rocha@cases.lu>\n"
 "Language-Team: German <https://translate.monarc.lu/projects/"
 "Fit4Cybersecurity/fit4cybersecurity/de/>\n"
@@ -34,7 +34,7 @@ msgstr ""
 
 #: csskp/fit4ehealth/site_config.py:6
 msgid "Description of the tool."
-msgstr ""
+msgstr "Beschreibung des Tools."
 
 #: csskp/fit4operatorsurvey/site_config.py:7
 msgid ""
@@ -222,7 +222,7 @@ msgstr "Was ist Ihre Branche?"
 #: data/fit4privacy/context-questions.json:104
 #: data/fit4privacy/context-questions.json:173
 msgid "Context"
-msgstr ""
+msgstr "Kontext"
 
 #: data/fit4cybersecurity/context-questions.json:5
 #: data/fit4cybersecurity/context-questions.json:105
@@ -237,7 +237,7 @@ msgstr ""
 #: data/fit4privacy/context-questions.json:105
 #: data/fit4privacy/context-questions.json:174
 msgid "__context"
-msgstr ""
+msgstr "_context"
 
 #: data/fit4cybersecurity/context-questions.json:11
 #: data/fit4privacy/context-questions.json:11 survey/globals.py:7
@@ -370,17 +370,17 @@ msgstr "Bitte wählen Sie Ihr Land"
 #: data/fit4ehealth/context-questions.json:25
 #: data/fit4privacy/context-questions.json:179
 msgid "Luxembourg"
-msgstr ""
+msgstr "Luxemburg"
 
 #: data/fit4cybersecurity/context-questions.json:185
 #: data/fit4privacy/context-questions.json:185
 msgid "Germany"
-msgstr ""
+msgstr "Deutschland"
 
 #: data/fit4cybersecurity/context-questions.json:191
 #: data/fit4privacy/context-questions.json:191
 msgid "Belgium"
-msgstr ""
+msgstr "Belgien"
 
 #: data/fit4cybersecurity/context-questions.json:197
 #: data/fit4privacy/context-questions.json:197
@@ -447,6 +447,9 @@ msgid ""
 "Besides, written rules can :<ul><li>avoid to forget some points</li><li>have "
 "a legal proof if the rules have been read.</li></ul>"
 msgstr ""
+"Außerdem können schriftliche Regeln:<ul><li>dem Vergessen einiger Punkte "
+"vorbeugen</li><li>einen gesetzlichen Nachweis sein, wenn die Regeln gelesen "
+"und unterzeichnet wurden.</li></ul>"
 
 #: data/fit4cybersecurity/questions.json:78
 msgid "read and signed by everyone, in a user charter"
@@ -555,6 +558,14 @@ msgid ""
 "described somewhere and accessible by anyone (sell contracts, websites, "
 "files that could be shown …)."
 msgstr ""
+"Der Datenlebenszyklus sollte für alle zugänglich sein:<ul><li>Wie sie "
+"erhalten werden</li><li>Wie sie verwendet werden</li><li>Wie sind sie "
+"zugänglich, von wem und sind diese vertraglich geregelt</li><li>Wie sie "
+"veränderbar sind\\n"
+"\\t- Wie lange sind oder werden sie gespeichert</li><li>Wie sie zerstört "
+"werden</li></ul>Dieser Zyklus sollte irgendwo beschrieben und für jeden "
+"zugänglich sein (Verkaufsverträge, Websites, Dateien, die angezeigt werden "
+"könnten ...)."
 
 #: data/fit4cybersecurity/questions.json:200
 msgid ""
@@ -1061,6 +1072,16 @@ msgid ""
 "mandatory to be careful with the password storage in the internet browser as "
 "they are not protected.</li></ul>"
 msgstr ""
+"Es sollten Hinweise gegeben werden, um schwache Passwörter zu vermeiden. "
+"Angestellte können Tipps oder Techniken erhalten, um sich ihre Passwörter zu "
+"merken. Hier einige Beispiele:<ul><li>Passwörter sollten geheim und "
+"persönlich gehalten werden. Jeder sollte mit seinem Passwort auf seine Daten "
+"zugreifen, auch von einem Computer eines anderen.</li><li>Es sollte keinen "
+"Computer geben, auf dem ein einziges und eindeutiges Kennwort festgelegt "
+"ist. Wenn es unvermeidlich ist, sollte eine wahrheitsgemäße Person als "
+"verantwortlich definiert werden und der Zugang sollte wirklich eingeschränkt "
+"sein.</li><li>Beim Speichern von Passwörtern im Internetbrowser ist Vorsicht "
+"geboten, da diese nicht geschützt sind.</li></ul>"
 
 #: data/fit4cybersecurity/questions.json:684
 msgid "not having requirements or guidelines, employees are left on their own"
@@ -1221,6 +1242,12 @@ msgid ""
 "is used for external people, strong precautions should be taken, for example "
 "the collection of an identity.</li></ul>"
 msgstr ""
+"Derzeit ist das drahtlose Netzwerk in der Firma nicht aktiviert. Wenn es "
+"geändert wird, ist es wichtig:<ul><li>Das drahtlose Netzwerk sollte zwischen "
+"internen und externen Benutzern aufgeteilt werden, um Zugriffsprobleme zu "
+"vermeiden.</li><li>Wenn ein drahtloses Netzwerk für externe Personen "
+"verwendet wird, sollten strenge Vorsichtsmaßnahmen getroffen werden, z. B. "
+"das Sammeln einer Identität.</li></ul>"
 
 #: data/fit4cybersecurity/questions.json:854
 msgid "are not used in the company"
@@ -3560,6 +3587,16 @@ msgid ""
 "Article 30 of GDPR gives you the minimal mandatory content of the register "
 "of processing activities."
 msgstr ""
+"Wir empfehlen Ihnen, die Aufgabe in mehrere Teilaufgaben aufzuteilen. Die "
+"einzelnen Abteilungen können in Bezug auf die Daten, die Sie verarbeiten, "
+"und die Prozesse, für die Sie zuständig sind, jeweils selbst für die "
+"Aufzeichnung von Verarbeitungstätigkeiten verantwortlich sein. In einer "
+"zweiten Phase können die verschiedenen Verzeichnisse nach einer "
+"Konsistenzprüfung zu einem einzigen zusammengefasst werden. In einer dritten "
+"Phase muss das Register (bzw. Verzeichnis) von Jahr zu Jahr überprüft und "
+"gepflegt werden oder wenn es wesentliche Änderungen in Bezug auf bestehende "
+"Verzeichnisse gibt. Denken Sie daran, dass Artikel 30 der DSGVO den "
+"Ausgangspunkt für die obligatorische Mindeststruktur dieses Registers angibt."
 
 #: data/fit4privacy/questions.json:227
 msgid "It is needed but we have no clear idea what exactly to list there."
@@ -3834,9 +3871,8 @@ msgid "(Some) Principles of Processing"
 msgstr "Einige Prinzipien der Verarbeitung"
 
 #: data/fit4privacy/questions.json:430 data/fit4privacy/questions.json:480
-#, fuzzy
 msgid "Principles of processing"
-msgstr "Einige Prinzipien der Verarbeitung"
+msgstr "Prinzipien der Verarbeitung"
 
 #: data/fit4privacy/questions.json:446
 msgid ""
@@ -3952,6 +3988,18 @@ msgid ""
 "actions to put that limitation in practice for both paper and electronic "
 "support of such data."
 msgstr ""
+"Um das in Art. 30 DSGVO beschriebene Verzeichnis der "
+"Verarbeitungstätigkeiten zu füllen, muss die Dauer der Speicherung der im "
+"Unternehmen verarbeiteten personenbezogenen Daten festgelegt und erzwungen "
+"werden. Wenn Sie feststellen, dass noch keine maximale Speicherdauer "
+"festgelegt wurde, sollten Sie alle wichtigen Arten personenbezogener Daten "
+"einschließen, für die es laut Gesetz Beschränkungen gibt (z. B. Finanzdaten, "
+"Daten über Vorstrafen, Daten zur Bekämpfung von Geldwäsche usw.). Bei "
+"anderen Arten von personenbezogenen Daten, für die es keine Regelung zur "
+"ausdrücklichen Festlegung der Speicherdauer gibt, kann das Unternehmen eine "
+"sinnvolle Dauer beschließen und Maßnahmen ergreifen, um diese Beschränkung "
+"für die papierbasierte und elektronische Aufbewahrung der entsprechenden "
+"Daten in die Praxis umzusetzen."
 
 #: data/fit4privacy/questions.json:515
 msgid "We don't know for sure how to deal with it."
@@ -4892,10 +4940,13 @@ msgstr "Bitte lassen Sie uns wissen, wenn etwas fehlt"
 #: survey/forms.py:133
 msgid "You can't choose multiple answers if the answer {} is choosen."
 msgstr ""
+"Sie können nicht mehrere Antworten wählen, wenn die Antwort {} gewählt wurde."
 
 #: survey/forms.py:148
 msgid "You can't choose the answers {} if answer '{}' is choosen."
 msgstr ""
+"Sie können die Antworten {} nicht wählen, wenn die Antwort '{}' gewählt "
+"wurde."
 
 #: survey/viewLogic.py:62
 msgid "Let's start"
@@ -4912,7 +4963,7 @@ msgstr ""
 
 #: survey/views.py:194
 msgid "Answers review"
-msgstr ""
+msgstr "Überprüfung der Antworten"
 
 #: survey/views.py:229
 msgid "Final summary"
@@ -5079,6 +5130,8 @@ msgid ""
 "The recommendations list was based in your company context and on your "
 "answers."
 msgstr ""
+"Die Empfehlungsliste basiert auf dem Kontext Ihres Unternehmens und auf "
+"Ihren Antworten."
 
 #: templates/report/results.html:4
 msgid "Result"
@@ -5280,7 +5333,6 @@ msgstr ""
 "Dieses Textfeld sollte nicht zur Beantwortung der Frage verwendet werden."
 
 #: templates/survey/questions.html:87
-#, fuzzy
 msgid ""
 "Please do not provide any sensitive or confidential information referring to "
 "your identity."
