@@ -211,28 +211,17 @@ class SurveyUser(models.Model):
         except SurveyUserAnswer.DoesNotExist as e:
             return None
 
-    #staticmethod
-    def __get_number_employees_question_label(self) -> str:
+    def get_employees_number_code(self) -> str:
         try:
-            return SurveyQuestion.objects.get(
+            number_employees_question_label = SurveyQuestion.objects.get(
                 label="How many employees?", section__label="__context"
             ).label
         except SurveyQuestion.DoesNotExist as e:
             return ""
 
-    def get_employees_number_code(self) -> str:
-        number_employees_question_label = self.__get_number_employees_question_label()
-
         user_answer = self.__get_context_answer_by_question_label(number_employees_question_label)
 
         return "" if user_answer is None else user_answer.answer.value
-
-    def get_employees_number_answer_label(self) -> str:
-        number_employees_question_label = self.__get_number_employees_question_label()
-
-        user_answer = self.__get_context_answer_by_question_label(number_employees_question_label)
-
-        return "" if user_answer is None else user_answer.answer.label
 
     def get_country_code(self) -> str:
         try:
@@ -243,18 +232,6 @@ class SurveyUser(models.Model):
             return ""
 
         user_answer = self.__get_context_answer_by_question_label(country_question_label)
-
-        return "" if user_answer is None else user_answer.answer.value
-
-    def get_sector_code(self) -> str:
-        try:
-            sector_question_label = SurveyQuestion.objects.get(
-                label="What is your sector?", section__label="__context"
-            ).label
-        except SurveyUser.DoesNotExist as e:
-            return ""
-
-        user_answer = self.__get_context_answer_by_question_label(sector_question_label)
 
         return "" if user_answer is None else user_answer.answer.value
 

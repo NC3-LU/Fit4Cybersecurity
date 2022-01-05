@@ -96,9 +96,8 @@ def calculateResult(user: SurveyUser) -> Tuple[int, int, List[int], List[str]]:
         sections[question.section.id] = _(question.section.label)
 
     # There are no exclude sections, because score or bonus points can be set to some answers.
-    user_answers = (
-        SurveyUserAnswer.objects.filter(user=user)
-        .order_by("answer__question__qindex", "answer__aindex")
+    user_answers = SurveyUserAnswer.objects.filter(user=user).order_by(
+        "answer__question__qindex", "answer__aindex"
     )
     for user_answer in user_answers:
         total_bonus_points += user_answer.answer.bonus_points
