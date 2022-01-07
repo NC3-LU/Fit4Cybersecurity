@@ -9,7 +9,14 @@ CUSTOM = {
         + "only touches the surface of information security by giving a very basic maturity "
         + "level estimate and some basic recommendations."
     ),
-    "countries_first": [],
+    "countries_first": [
+        "LU",
+        "BE",
+        "FR",
+        "DE",
+        "NL",
+        "GB",
+    ],
     "defaultLanguage": "en",
     "languages": [
         ("en", "English"),

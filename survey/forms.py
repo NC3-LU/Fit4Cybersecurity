@@ -3,6 +3,7 @@
 from django import forms
 from django.utils.translation import gettext_lazy as _
 from survey.models import SurveyQuestionAnswer
+from django_countries.fields import CountryField
 import json
 
 
@@ -49,6 +50,13 @@ class AnswerMChoice(forms.Form):
                 widget=forms.RadioSelect(attrs={"class": "radio-buttons"}),
                 label="",
                 initial=tanswers[0][0],
+            )
+        elif answers_field_type == "CL":
+            self.fields["answers"] = CountryField().formfield(
+                label="",
+                required=True,
+                initial="LU",
+                error_messages={"required": _("Please select your country")},
             )
 
         self.fields["answers"].error_messages = {

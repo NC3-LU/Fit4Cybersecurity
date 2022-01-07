@@ -17,7 +17,6 @@ except ImportError:  # pragma: no cover
 try:
     site_config = importlib.import_module("csskp." + config.SITE_NAME)
 except ImportError as e:  # pragma: no cover
-    # site_config = importlib.import_module("csskp")
     print("Site configuration not found:")
     print(e)
     exit(1)

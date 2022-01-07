@@ -53,6 +53,7 @@ def create_user(lang: str) -> SurveyUser:
     else:
         user.chosen_lang = LOCAL_DEFAULT_LANG
     user.save()
+
     return user
 
 
@@ -67,12 +68,13 @@ def handle_start_survey(request: HttpRequest, lang: str) -> Union[Dict, SurveyUs
     forms = {}
     questions = SurveyQuestion.objects.filter(
         section__label__contains="__context"
-    ).all()
+    ).order_by("-qindex").all()
 
     # if no context questions: create the user without the form
     if not questions.count() and request.method == "GET":
         user = create_user(lang)
         request.session["user_id"] = str(user.user_id)
+
         return user
 
     for question in questions:
@@ -81,6 +83,7 @@ def handle_start_survey(request: HttpRequest, lang: str) -> Union[Dict, SurveyUs
         except Exception as e:
             logger.error(e)
             raise e
+
         forms[question.id] = AnswerMChoice(
             tuple_answers,
             data=request.POST,
@@ -182,6 +185,7 @@ def handle_question_answers_request(
                 user.status = SURVEY_STATUS_UNDER_REVIEW
 
             user.save()
+
             return user
     else:
         form = AnswerMChoice(
@@ -196,7 +200,7 @@ def handle_question_answers_request(
         )
         selected_answers = []
         for user_answer in user_answers:
-            if user_answer.uvalue > 0:
+            if user_answer.uvalue == "1":
                 selected_answers.append(user_answer.answer.id)
             if user_answer.content:
                 form.set_answer_content(user_answer.content)
@@ -218,11 +222,7 @@ def handle_question_answers_request(
     form.set_free_text_answer_id(free_text_answer_id)
 
     return {
-        "title": CUSTOM["tool_name"]
-        + " - "
-        + _("Question")
-        + " "
-        + str(current_question.qindex),
+        "title": CUSTOM["tool_name"] + " - " + _("Question") + " " + str(current_question.qindex),
         "question": _(current_question.label),
         "question_tooltip": _(current_question.tooltip),
         "form": form,
@@ -237,11 +237,19 @@ def handle_question_answers_request(
 def save_answers(
     user: SurveyUser,
     current_question: SurveyQuestion,
-    posted_answers: List[int],
+    posted_answers: List[Union[int, str]],
     answer_content: str,
 ) -> None:
-    posted_answers_ids = [int(i) for i in posted_answers]
-    for question_answer in current_question.surveyquestionanswer_set.all():
+    # For those questions' types we store single selected string value.
+    if current_question.qtype in ["SO", "CL"]:
+        selected_value = posted_answers[0]
+        question_answers = [
+            current_question.surveyquestionanswer_set.get(value=selected_value)
+        ]
+    else:
+        question_answers = current_question.surveyquestionanswer_set.all()
+
+    for question_answer in question_answers:
         user_answers = SurveyUserAnswer.objects.filter(
             user=user, answer=question_answer
         )[:1]
@@ -255,14 +263,12 @@ def save_answers(
         if question_answer.atype == "T":
             user_answer.content = answer_content
 
-        # TODO: for answer type SO we save the value, but there is a problem with countries.
-        # T he countries can be taken from the django module. We need to pass values instead of posted_answers_ids...
-        # if question_answer.atype == "SO":
-        #    user_answer.uvalue = question_answer.value
-
-        user_answer.uvalue = 0
-        if question_answer.id in posted_answers_ids:
-            user_answer.uvalue = 1
+        if current_question.qtype in ["SO", "CL"]:
+            user_answer.uvalue = posted_answers[0]
+        else:
+            user_answer.uvalue = "0"
+            if str(question_answer.id) in posted_answers:
+                user_answer.uvalue = "1"
 
         user_answer.save()
 
@@ -297,7 +303,7 @@ def get_answer_choices(
 
         tuple_answers.append(
             (
-                question_answer.id,
+                question_answer.value if question.qtype == "SO" else question_answer.id,
                 format_html(
                     "{}{}",
                     mark_safe('<span class="checkmark"></span>'),
@@ -364,7 +370,7 @@ def get_questions_with_user_answers(user: SurveyUser):
             }
 
         user_answer_content = ""
-        if survey_user_answer.answer.atype == "T" and survey_user_answer.uvalue == 1:
+        if survey_user_answer.answer.atype == "T" and survey_user_answer.uvalue == "1":
             user_answer_content = survey_user_answer.content
 
         questions_with_user_answers[question_index]["user_answers"].append(

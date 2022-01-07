@@ -23,9 +23,9 @@ logger = logging.getLogger(__name__)
 
 
 def getRecommendations(user: SurveyUser, lang: str) -> Dict[str, List[str]]:
-    allAnswers = SurveyQuestionAnswer.objects.all().order_by(
-        "question__qindex", "aindex"
-    )
+    allAnswers = SurveyQuestionAnswer.objects.exclude(
+        question__section__label__contains="__context"
+    ).order_by("question__qindex", "aindex")
     employees_number_code = user.get_employees_number_code()
 
     finalReportRecs: Dict[str, List[str]] = {}
@@ -45,8 +45,8 @@ def getRecommendations(user: SurveyUser, lang: str) -> Dict[str, List[str]]:
             ):
                 continue
 
-            if (userAnswer.uvalue > 0 and rec.answerChosen) or (
-                userAnswer.uvalue <= 0 and not rec.answerChosen
+            if (userAnswer.uvalue == "1" and rec.answerChosen) or (
+                userAnswer.uvalue == "0" and not rec.answerChosen
             ):
                 category_name = _(rec.forAnswer.question.service_category.label)
 
@@ -59,6 +59,7 @@ def getRecommendations(user: SurveyUser, lang: str) -> Dict[str, List[str]]:
                 if category_name not in finalReportRecs:
                     finalReportRecs[category_name] = []
                 finalReportRecs[category_name].append(translated_recommendation)
+
     return finalReportRecs
 
 
@@ -102,7 +103,7 @@ def calculateResult(user: SurveyUser) -> Tuple[int, int, List[int], List[str]]:
     for user_answer in user_answers:
         total_bonus_points += user_answer.answer.bonus_points
 
-        if user_answer.uvalue > 0:
+        if user_answer.uvalue == "1":
             section = user_answer.answer.question.section
 
             total_user_score += user_answer.answer.score

@@ -72,6 +72,11 @@ class RightMixin:
         return dict
 
 
+class ActiveModelManager(models.Manager):
+    def get_queryset(self):
+        return super().get_queryset().filter(is_active=True)
+
+
 class SurveyQuestionServiceCategory(models.Model):
     # QuestionCatID
 
@@ -98,6 +103,8 @@ class SurveyQuestion(models.Model, RightMixin):
     # Question id --> translation in other table
     # QuestionCatID
     # Section ID
+    all_objects = models.Manager()
+    objects = ActiveModelManager()
 
     service_category = models.ForeignKey(
         SurveyQuestionServiceCategory, on_delete=models.CASCADE
@@ -111,6 +118,7 @@ class SurveyQuestion(models.Model, RightMixin):
     qindex = models.IntegerField(unique=True)
     maxPoints = models.IntegerField(default=10)
     answers_order = models.CharField(max_length=100, default="aindex")
+    is_active = models.BooleanField(default=True)
 
     @staticmethod
     def _fields_base_read():
@@ -133,7 +141,7 @@ class SurveyQuestionAnswer(models.Model, RightMixin):
 
     question = models.ForeignKey(SurveyQuestion, on_delete=models.CASCADE)
     label = models.TextField()
-    value = models.CharField(max_length=50, null=False, blank=True, default="")
+    value = models.CharField(max_length=50, null=True, blank=True, default=None)
     tooltip = models.TextField(null=False, blank=True, default="")
     aindex = models.IntegerField()
     uniqueAnswer = models.BooleanField(default=False)
@@ -143,6 +151,7 @@ class SurveyQuestionAnswer(models.Model, RightMixin):
         max_length=2, choices=ANSWER_TYPES, default=ANSWER_TYPES[0][0]
     )
     dependant_answers = models.ManyToManyField("self", blank=True)
+    is_active = models.BooleanField(default=True)
 
     @staticmethod
     def _fields_base_read():
@@ -194,8 +203,7 @@ class SurveyUser(models.Model):
     def get_all_context_answers(self) -> Dict[str, Any]:
         result = {}
         user_answers = self.surveyuseranswer_set.filter(
-            answer__question__section__label="__context",
-            uvalue=1
+            answer__question__section__label="__context"
         )
         for user_answer in user_answers:
             result[user_answer.answer.question.label] = user_answer
@@ -233,7 +241,7 @@ class SurveyUser(models.Model):
 
         user_answer = self.__get_context_answer_by_question_label(country_question_label)
 
-        return "" if user_answer is None else user_answer.answer.value
+        return "" if user_answer is None else user_answer.uvalue
 
 
 class SurveyUserAnswer(models.Model):
@@ -241,8 +249,9 @@ class SurveyUserAnswer(models.Model):
     # AnswerListID
     user = models.ForeignKey(SurveyUser, on_delete=models.CASCADE)
     answer = models.ForeignKey(SurveyQuestionAnswer, on_delete=models.CASCADE)
-    # 0, 1 for true, false selections
-    uvalue = models.IntegerField(default=0)
+    # 0, 1 for true, false selections,
+    # and real value (SurveyQuestionAnswer.value or country code) for qtype = SO|CL
+    uvalue = models.CharField(default="0", max_length=100, null=False)
     content = models.TextField(null=False, blank=True, default="")
 
     def __str__(self):

@@ -17,7 +17,14 @@ CUSTOM = {
         + "management, and basic data protection obligations for which organisations should "
         + "already be prepared as of 2021."
     ),
-    "countries_first": [],
+    "countries_first": [
+        "LU",
+        "BE",
+        "FR",
+        "DE",
+        "NL",
+        "GB",
+    ],
     "defaultLanguage": "en",
     "languages": [
         ("en", "English"),

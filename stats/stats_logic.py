@@ -128,7 +128,7 @@ def get_finished_surveys_list(request):
                 }
             )
 
-            if user_answer.uvalue > 0:
+            if user_answer.uvalue == "1":
                 answer_score = user_answer.answer.score
                 total_points_number += answer_score
                 surveys_users_results["survey_users"][user_id]["sections"][section_id][

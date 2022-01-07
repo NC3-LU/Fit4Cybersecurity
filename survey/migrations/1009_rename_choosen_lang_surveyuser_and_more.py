@@ -26,7 +26,7 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='surveyquestionanswer',
             name='value',
-            field=models.CharField(blank=True, default='', max_length=50),
+            field=models.CharField(blank=True, null=True, default=None, max_length=50),
         ),
         migrations.AlterField(
             model_name='company',
@@ -44,7 +44,23 @@ class Migration(migrations.Migration):
                 ('SO', 'Single Option Choice'),
                 ('T', 'Free text'),
                 ('MT', 'Multiple Choice + Free Text'),
-                ('ST', 'Single Choice + Free Text')
+                ('ST', 'Single Choice + Free Text'),
+                ('CL', 'Countries list')
             ], default='M', max_length=2),
+        ),
+        migrations.AlterField(
+            model_name='surveyuseranswer',
+            name='uvalue',
+            field=models.CharField(default='0', max_length=100),
+        ),
+        migrations.AddField(
+            model_name='surveyquestion',
+            name='is_active',
+            field=models.BooleanField(default=True),
+        ),
+        migrations.AddField(
+            model_name='surveyquestionanswer',
+            name='is_active',
+            field=models.BooleanField(default=True),
         ),
     ]

@@ -4,6 +4,7 @@
     "service_category": "Context",
     "section": "__context",
     "qtype": "SO",
+    "qindex": 1,
     "maxPoints": 0,
     "answers_order": "label",
     "answers": [
@@ -119,6 +120,7 @@
     "service_category": "Context",
     "section": "__context",
     "qtype": "SO",
+    "qindex": 2,
     "maxPoints": 0,
     "answers": [
       {
@@ -197,37 +199,9 @@
     "label": "Please select your country",
     "service_category": "Context",
     "section": "__context",
-    "qtype": "SO",
+    "qtype": "CL",
+    "qindex": 3,
     "maxPoints": 0,
-    "answers": [
-      {
-        "label": "Luxembourg",
-        "value": "LU",
-        "uniqueAnswer": true,
-        "atype": "P",
-        "aindex": 1
-      },
-      {
-        "label": "Germany",
-        "value": "DE",
-        "uniqueAnswer": true,
-        "atype": "P",
-        "aindex": 2
-      },
-      {
-        "label": "Belgium",
-        "value": "BE",
-        "uniqueAnswer": true,
-        "atype": "P",
-        "aindex": 3
-      },
-      {
-        "label": "France",
-        "value": "FR",
-        "uniqueAnswer": true,
-        "atype": "P",
-        "aindex": 4
-      }
-    ]
+    "answers": []
   }
 ]
