@@ -152,7 +152,9 @@ def handle_question_answers_request(
             question_answers=question_answers,
         )
         if form.is_valid():
-            user = SurveyUser.objects.select_for_update(nowait=True).filter(id=user.id)[0]
+            user = SurveyUser.objects.select_for_update(nowait=True).filter(id=user.id)[
+                0
+            ]
             answers = form.cleaned_data["answers"]
             answer_content = ""
             if "answer_content" in form.cleaned_data:
@@ -216,7 +218,11 @@ def handle_question_answers_request(
     form.set_free_text_answer_id(free_text_answer_id)
 
     return {
-        "title": CUSTOM["tool_name"] + " - " + _("Question") + " " + str(current_question.qindex),
+        "title": CUSTOM["tool_name"]
+        + " - "
+        + _("Question")
+        + " "
+        + str(current_question.qindex),
         "question": _(current_question.label),
         "question_tooltip": _(current_question.tooltip),
         "form": form,
