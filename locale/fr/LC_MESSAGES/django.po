@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-01-05 11:02+0000\n"
-"PO-Revision-Date: 2022-01-05 15:23+0000\n"
+"POT-Creation-Date: 2022-01-10 12:14+0000\n"
+"PO-Revision-Date: 2022-01-10 13:17+0100\n"
 "Last-Translator: Juan Rocha <juan.rocha@cases.lu>\n"
 "Language-Team: French <https://translate.monarc.lu/projects/"
 "Fit4Cybersecurity/fit4cybersecurity/fr/>\n"
@@ -17,9 +17,9 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 4.9-dev\n"
+"X-Generator: Poedit 3.0.1\n"
 
-#: csskp/fit4cybersecurity/site_config.py:7
+#: csskp/fit4cybersecurity/__init__.py:7
 msgid ""
 "This survey will ask a few questions and provide recommendations. Keep in "
 "mind, that it is a self-assessment tool and that it only touches the surface "
@@ -31,11 +31,11 @@ msgstr ""
 "évaluation et qu’il ne fait que toucher à la surface de la sécurité de  "
 "l’information en fournissant une estimation et des recommandations de base."
 
-#: csskp/fit4ehealth/site_config.py:6
+#: csskp/fit4ehealth/__init__.py:6
 msgid "Description of the tool."
 msgstr "Description de l'outil."
 
-#: csskp/fit4operatorsurvey/site_config.py:7
+#: csskp/fit4operatorsurvey/__init__.py:7
 msgid ""
 "This survey aims to identify the level of maturity of the operators in "
 "Luxembourg with respect to risk management and governance, collaboration on "
@@ -55,27 +55,27 @@ msgid ""
 "help you to find your answers again otherwise."
 msgstr ""
 
-#: csskp/fit4operatorsurvey/site_config.py:64
+#: csskp/fit4operatorsurvey/__init__.py:64
 #: data/fit4operatorsurvey/context-questions.json:11
 msgid "Energy"
 msgstr ""
 
-#: csskp/fit4operatorsurvey/site_config.py:65
+#: csskp/fit4operatorsurvey/__init__.py:65
 #: data/fit4operatorsurvey/context-questions.json:17
 msgid "Transport"
 msgstr "Transparence"
 
-#: csskp/fit4operatorsurvey/site_config.py:66
+#: csskp/fit4operatorsurvey/__init__.py:66
 #: data/fit4operatorsurvey/context-questions.json:23
 msgid "Banking"
 msgstr ""
 
-#: csskp/fit4operatorsurvey/site_config.py:67
+#: csskp/fit4operatorsurvey/__init__.py:67
 #: data/fit4operatorsurvey/context-questions.json:29
 msgid "Financial market infrastructure"
 msgstr ""
 
-#: csskp/fit4operatorsurvey/site_config.py:68
+#: csskp/fit4operatorsurvey/__init__.py:68
 #: data/fit4cybersecurity/context-questions.json:59
 #: data/fit4ehealth/context-questions.json:10
 #: data/fit4operatorsurvey/context-questions.json:35
@@ -83,94 +83,94 @@ msgstr ""
 msgid "Health"
 msgstr "Santé"
 
-#: csskp/fit4operatorsurvey/site_config.py:69
+#: csskp/fit4operatorsurvey/__init__.py:69
 #: data/fit4operatorsurvey/context-questions.json:41
 msgid "Dringking water"
 msgstr ""
 
-#: csskp/fit4operatorsurvey/site_config.py:70
+#: csskp/fit4operatorsurvey/__init__.py:70
 #: data/fit4operatorsurvey/context-questions.json:47
 msgid "Waste Water"
 msgstr ""
 
-#: csskp/fit4operatorsurvey/site_config.py:71
+#: csskp/fit4operatorsurvey/__init__.py:71
 #: data/fit4operatorsurvey/context-questions.json:53
 msgid "Digital Infrastructure and Service Providers"
 msgstr ""
 
-#: csskp/fit4operatorsurvey/site_config.py:72
+#: csskp/fit4operatorsurvey/__init__.py:72
 #: data/fit4cybersecurity/context-questions.json:95
 #: data/fit4operatorsurvey/context-questions.json:59
 #: data/fit4privacy/context-questions.json:95 survey/globals.py:21
 msgid "Public Administration"
 msgstr "Administration publique"
 
-#: csskp/fit4operatorsurvey/site_config.py:73
+#: csskp/fit4operatorsurvey/__init__.py:73
 #: data/fit4operatorsurvey/context-questions.json:65
 msgid "Space"
 msgstr ""
 
-#: csskp/fit4operatorsurvey/site_config.py:74
+#: csskp/fit4operatorsurvey/__init__.py:74
 #: data/fit4operatorsurvey/context-questions.json:71
 msgid "Postal and Courier Services"
 msgstr ""
 
-#: csskp/fit4operatorsurvey/site_config.py:75
+#: csskp/fit4operatorsurvey/__init__.py:75
 #: data/fit4operatorsurvey/context-questions.json:77
 msgid "Waste Management"
 msgstr "Gestion des risques"
 
-#: csskp/fit4operatorsurvey/site_config.py:76
+#: csskp/fit4operatorsurvey/__init__.py:76
 #: data/fit4operatorsurvey/context-questions.json:83
 msgid "Manufacture, production and distribution of chemicals"
 msgstr ""
 
-#: csskp/fit4operatorsurvey/site_config.py:77
+#: csskp/fit4operatorsurvey/__init__.py:77
 #: data/fit4operatorsurvey/context-questions.json:89
 msgid "Food Production, processing and distribution"
 msgstr "Commerce, vente et grande distribution"
 
-#: csskp/fit4operatorsurvey/site_config.py:78
+#: csskp/fit4operatorsurvey/__init__.py:78
 #: data/fit4operatorsurvey/context-questions.json:95
 msgid "Manufacturing of medical devices"
 msgstr ""
 
-#: csskp/fit4operatorsurvey/site_config.py:79
+#: csskp/fit4operatorsurvey/__init__.py:79
 #: data/fit4operatorsurvey/context-questions.json:101
 msgid "Manufacture of computer, electronics and optical products"
 msgstr ""
 
-#: csskp/fit4operatorsurvey/site_config.py:80
+#: csskp/fit4operatorsurvey/__init__.py:80
 #: data/fit4operatorsurvey/context-questions.json:107
 msgid "Manufacture of electrical equipment"
 msgstr ""
 
-#: csskp/fit4operatorsurvey/site_config.py:81
+#: csskp/fit4operatorsurvey/__init__.py:81
 #: data/fit4operatorsurvey/context-questions.json:113
 msgid "Manufacture of machinery and equipment"
 msgstr ""
 
-#: csskp/fit4operatorsurvey/site_config.py:84
+#: csskp/fit4operatorsurvey/__init__.py:84
 #: data/fit4operatorsurvey/context-questions.json:128
 msgid "Under 10 employees"
 msgstr ""
 
-#: csskp/fit4operatorsurvey/site_config.py:85
+#: csskp/fit4operatorsurvey/__init__.py:85
 #: data/fit4operatorsurvey/context-questions.json:134
 msgid "From 10 to 49 employees"
 msgstr ""
 
-#: csskp/fit4operatorsurvey/site_config.py:86
+#: csskp/fit4operatorsurvey/__init__.py:86
 #: data/fit4operatorsurvey/context-questions.json:140
 msgid "From 50 to 249 employees"
 msgstr ""
 
-#: csskp/fit4operatorsurvey/site_config.py:87
+#: csskp/fit4operatorsurvey/__init__.py:87
 #: data/fit4operatorsurvey/context-questions.json:146
 msgid "Over 250 employees"
 msgstr ""
 
-#: csskp/fit4privacy/site_config.py:7
+#: csskp/fit4privacy/__init__.py:7
 msgid ""
 "This questionnaire, created in consultation with <a href=\"https://cnpd."
 "public.lu/en.html\" target=\"_blank\">CNPD</a>, aims to help organisations "
@@ -1808,8 +1808,6 @@ msgid ""
 "Some explanation about cybersecurity or data protection measures for the "
 "organization should be included as they help keep data safe."
 msgstr ""
-"couvrant des sujets tels que la cybersécurité et la gestion des données dans "
-"votre profession."
 
 #: data/fit4ehealth/questions.json:117
 msgid ""
@@ -4507,7 +4505,7 @@ msgstr ""
 "nécessaire. De plus, les AIPD ne sont pas les seules analyses de risques "
 "requises par le RGPD ; votre entreprise est censée avoir une vue d'ensemble "
 "de la façon dont elle protège les données personnelles qu'elle traite, vous "
-"pouvez donc réaliser une analyse globale des risques. "
+"pouvez donc réaliser une analyse globale des risques."
 
 #: data/fit4privacy/questions.json:851
 msgid ""
@@ -4556,7 +4554,7 @@ msgstr ""
 "d'une analyse des risques de plus haut niveau, assurez-vous qu'elle examine "
 "les problèmes de protection des données (et pas seulement, par exemple, la "
 "cybersécurité), et assurez-vous également que vous avez effectué des "
-"analyses d'impact (DPIA) si nécessaire. "
+"analyses d'impact (DPIA) si nécessaire."
 
 #: data/fit4privacy/questions.json:883
 msgid "We have a risk analysis related to information security."
@@ -4885,7 +4883,7 @@ msgstr ""
 "que les employés sachent comment se protéger. Répéter les notions de bonne "
 "gestion des mots de passe, de nouvelles attaques, d'ingénierie sociale, sont "
 "autant de bonnes pratiques pour former périodiquement vos employés, pas une "
-"seule fois lors de leur embauche. "
+"seule fois lors de leur embauche."
 
 #: data/fit4privacy/questions.json:1149
 msgid "Never or not really."
@@ -4990,7 +4988,7 @@ msgstr ""
 msgid "Let's start"
 msgstr "Commençons"
 
-#: survey/viewLogic.py:219
+#: survey/viewLogic.py:223
 msgid "Question"
 msgstr "Question"
 
