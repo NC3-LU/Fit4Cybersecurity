@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 from __future__ import annotations
-from typing import Optional, Union, Dict, Any
+from typing import Optional, Dict, Any
 import uuid
 from django.db import models
 from csskp.settings import LANGUAGES, LANGUAGE_CODE
@@ -138,6 +138,8 @@ class SurveyQuestion(models.Model, RightMixin):
 class SurveyQuestionAnswer(models.Model, RightMixin):
     # Answer id --> translation in other table
     # Question id --> can be 1-question to multi-answers
+    all_objects = models.Manager()
+    objects = ActiveModelManager()
 
     question = models.ForeignKey(SurveyQuestion, on_delete=models.CASCADE)
     label = models.TextField()
@@ -210,13 +212,15 @@ class SurveyUser(models.Model):
 
         return result
 
-    def __get_context_answer_by_question_label(self, question_label: str) -> Optional[SurveyUserAnswer]:
+    def __get_context_answer_by_question_label(
+        self, question_label: str
+    ) -> Optional[SurveyUserAnswer]:
         try:
             return self.surveyuseranswer_set.get(
                 answer__question__section__label="__context",
                 answer__question__label=question_label
             )
-        except SurveyUserAnswer.DoesNotExist as e:
+        except SurveyUserAnswer.DoesNotExist:
             return None
 
     def get_employees_number_code(self) -> str:
@@ -224,24 +228,25 @@ class SurveyUser(models.Model):
             number_employees_question_label = SurveyQuestion.objects.get(
                 label="How many employees?", section__label="__context"
             ).label
-        except SurveyQuestion.DoesNotExist as e:
+        except SurveyQuestion.DoesNotExist:
             return ""
 
         user_answer = self.__get_context_answer_by_question_label(number_employees_question_label)
 
-        return "" if user_answer is None else user_answer.answer.value
+        if user_answer is not None:
+            return user_answer.uvalue if user_answer is not None else ""
 
     def get_country_code(self) -> str:
         try:
             country_question_label = SurveyQuestion.objects.get(
                 label__contains="your country", section__label="__context"
             ).label
-        except SurveyUser.DoesNotExist as e:
+        except SurveyUser.DoesNotExist:
             return ""
 
         user_answer = self.__get_context_answer_by_question_label(country_question_label)
 
-        return "" if user_answer is None else user_answer.uvalue
+        return user_answer.uvalue if user_answer is not None else ""
 
 
 class SurveyUserAnswer(models.Model):

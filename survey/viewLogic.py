@@ -89,7 +89,7 @@ def handle_start_survey(request: HttpRequest, lang: str) -> Union[Dict, SurveyUs
             data=request.POST,
             lang=lang,
             answers_field_type=question.qtype,
-            question_answers=question.surveyquestionanswer_set.all(),
+            question_answers=question.surveyquestionanswer_set.filter(is_active=True),
             prefix="form" + str(question.id),
         )
 
@@ -132,7 +132,7 @@ def handle_question_answers_request(
     ) = get_questions_slice(question_index)
 
     try:
-        question_answers = current_question.surveyquestionanswer_set.all()
+        question_answers = current_question.surveyquestionanswer_set.filter(is_active=True)
         tuple_answers = get_answer_choices(current_question, user.chosen_lang)
     except Exception as e:
         logger.error(e)
@@ -247,7 +247,7 @@ def save_answers(
             current_question.surveyquestionanswer_set.get(value=selected_value)
         ]
     else:
-        question_answers = current_question.surveyquestionanswer_set.all()
+        question_answers = current_question.surveyquestionanswer_set.filter(is_active=True)
 
     for question_answer in question_answers:
         user_answers = SurveyUserAnswer.objects.filter(
@@ -290,7 +290,7 @@ def get_answer_choices(
 
     question_answers = list(
         sorted(
-            question.surveyquestionanswer_set.all(),
+            question.surveyquestionanswer_set.filter(is_active=True),
             key=lambda obj: getattr(obj, question.answers_order)
             if isinstance(getattr(obj, question.answers_order), int)
             else _(str(getattr(obj, question.answers_order))),

@@ -1,9 +1,8 @@
 # -*- coding: utf-8 -*-
 
 import json
-from typing import Dict, List
+from typing import Dict
 from django.core.management.base import BaseCommand
-from django.db.models import Max
 from survey.models import (
     SurveySection,
     SurveyQuestion,
@@ -19,7 +18,7 @@ class Command(BaseCommand):
     def add_arguments(self, parser):
         parser.add_argument("json_file", type=str, help="The path of the JSON file.")
 
-    def handle(self, *args, **options):
+    def handle(self, *args, **options):  # noqa: C901
         with open(options["json_file"]) as f:
             json_file = f.read()
         json_data = json.loads(json_file)
@@ -55,7 +54,7 @@ class Command(BaseCommand):
 
             # Create or update the question
             try:
-                question_obj = SurveyQuestion.objects.get(qindex=qindex)
+                question_obj = SurveyQuestion.all_objects.get(qindex=qindex)
                 question_obj.label = question["label"]
                 question_obj.qtype = question["qtype"]
                 question_obj.section = section
@@ -66,7 +65,7 @@ class Command(BaseCommand):
 
                 question_obj.save()
                 nb_updated_questions += 1
-            except SurveyQuestion.DoesNotExist as e:
+            except SurveyQuestion.DoesNotExist:
                 question_obj = SurveyQuestion.objects.create(
                     label=question["label"],
                     qtype=question["qtype"],
@@ -88,12 +87,12 @@ class Command(BaseCommand):
             answers_dependencies = {}
             for answer in question["answers"]:
                 try:
-                    answer_obj = SurveyQuestionAnswer.objects.get(
+                    answer_obj = SurveyQuestionAnswer.all_objects.get(
                         question=question_obj,
                         aindex=answer["aindex"]
                     )
                     answer_obj.label = answer["label"]
-                    answer_obj.value = answer.get("value", ""),
+                    answer_obj.value = answer.get("value", None)
                     answer_obj.uniqueAnswer = answer["uniqueAnswer"]
                     answer_obj.score = answer.get("score", 0)
                     answer_obj.atype = answer["atype"]
@@ -104,7 +103,7 @@ class Command(BaseCommand):
                     answer_obj.save()
                     is_answer_created = True
                     nb_updated_answers += 1
-                except SurveyQuestionAnswer.DoesNotExist as e:
+                except SurveyQuestionAnswer.DoesNotExist:
                     answer_obj = SurveyQuestionAnswer.objects.create(
                         question=question_obj,
                         label=answer["label"],
@@ -150,7 +149,7 @@ class Command(BaseCommand):
             # Deactivate all the answers with index higher then max importing.
             max_answer_index = max(question["answers"], key=lambda x: x["aindex"])
             if max_answer_index:
-                SurveyQuestionAnswer.objects.filter(
+                SurveyQuestionAnswer.all_objects.filter(
                     question=question_obj,
                     aindex__gt=max_answer_index["aindex"]
                 ).update(is_active=False)
@@ -160,7 +159,7 @@ class Command(BaseCommand):
 
         # Deactivate all the questions with index higher then max importing.
         if max_question_index:
-            SurveyQuestion.objects.filter(
+            SurveyQuestion.all_objects.filter(
                 qindex__gt=max_question_index
             ).update(is_active=False)
 
@@ -188,10 +187,6 @@ class Command(BaseCommand):
                 "  Number of recommendations: {}".format(nb_imported_recommendations)
             )
         )
-
-    @staticmethod
-    def does_question_exists(label: str, questions: List[SurveyQuestion]):
-        return label in [question.label for question in questions]
 
     @staticmethod
     def process_answers_dependencies(answers_dependencies: Dict):

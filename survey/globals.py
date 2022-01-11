@@ -1,9 +1,5 @@
 # -*- coding: utf-8 -*-
 
-from django.utils.translation import gettext_lazy as _
-from csskp.settings import CUSTOM
-
-
 SERVICE_TARGETS = [
     ("SME", "Small to Medium Size Entreprises"),
     ("BC", "Big Company"),
