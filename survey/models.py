@@ -233,8 +233,7 @@ class SurveyUser(models.Model):
 
         user_answer = self.__get_context_answer_by_question_label(number_employees_question_label)
 
-        if user_answer is not None:
-            return user_answer.uvalue if user_answer is not None else ""
+        return user_answer.uvalue if user_answer is not None else ""
 
     def get_country_code(self) -> str:
         try:
