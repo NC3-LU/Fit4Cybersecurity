@@ -252,7 +252,7 @@ class SurveyUserAnswer(models.Model):
     # AnswerID
     # AnswerListID
     user = models.ForeignKey(SurveyUser, on_delete=models.CASCADE)
-    answer = models.ForeignKey(SurveyQuestionAnswer, on_delete=models.CASCADE)
+    answer = models.ForeignKey(SurveyQuestionAnswer, on_delete=models.CASCADE, null=True)
     # 0, 1 for true, false selections,
     # and real value (SurveyQuestionAnswer.value or country code) for qtype = SO|CL
     uvalue = models.CharField(default="0", max_length=100, null=False)
