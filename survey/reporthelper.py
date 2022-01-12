@@ -7,7 +7,6 @@ import base64
 import logging
 
 from csskp.settings import PICTURE_DIR, CUSTOM
-from survey.globals import COMPANY_SIZE
 from survey.models import (
     SurveyQuestion,
     SurveyQuestionAnswer,
@@ -24,15 +23,10 @@ logger = logging.getLogger(__name__)
 
 
 def getRecommendations(user: SurveyUser, lang: str) -> Dict[str, List[str]]:
-    allAnswers = SurveyQuestionAnswer.objects.all().order_by(
-        "question__qindex", "aindex"
-    )
-    user_ecount_label = user.get_context("How many employees?")
-    user_ecount = ""
-    if user_ecount_label:
-        user_ecount = [
-            item[0] for item in COMPANY_SIZE if item[1] == user_ecount_label
-        ][0]
+    allAnswers = SurveyQuestionAnswer.objects.exclude(
+        question__section__label__contains="__context"
+    ).order_by("question__qindex", "aindex")
+    employees_number_code = user.get_employees_number_code()
 
     finalReportRecs: Dict[str, List[str]] = {}
     for a in allAnswers:
@@ -46,13 +40,13 @@ def getRecommendations(user: SurveyUser, lang: str) -> Dict[str, List[str]]:
             continue
 
         for rec in recommendations:
-            if user_ecount and (
-                rec.min_e_count > user_ecount or rec.max_e_count < user_ecount
+            if employees_number_code and (
+                rec.min_e_count > employees_number_code or rec.max_e_count < employees_number_code
             ):
                 continue
 
-            if (userAnswer.uvalue > 0 and rec.answerChosen) or (
-                userAnswer.uvalue <= 0 and not rec.answerChosen
+            if (userAnswer.uvalue == "1" and rec.answerChosen) or (
+                userAnswer.uvalue == "0" and not rec.answerChosen
             ):
                 category_name = _(rec.forAnswer.question.service_category.label)
 
@@ -65,6 +59,7 @@ def getRecommendations(user: SurveyUser, lang: str) -> Dict[str, List[str]]:
                 if category_name not in finalReportRecs:
                     finalReportRecs[category_name] = []
                 finalReportRecs[category_name].append(translated_recommendation)
+
     return finalReportRecs
 
 
@@ -88,9 +83,7 @@ def calculateResult(user: SurveyUser) -> Tuple[int, int, List[int], List[str]]:
 
     chart_exclude_sections = ["__context"]
     if "chart_exclude_sections" in CUSTOM.keys():
-        chart_exclude_sections = (
-            chart_exclude_sections + CUSTOM["chart_exclude_sections"]
-        )
+        chart_exclude_sections = chart_exclude_sections + CUSTOM["chart_exclude_sections"]
 
     for question in SurveyQuestion.objects.exclude(
         section__label__in=chart_exclude_sections
@@ -110,7 +103,7 @@ def calculateResult(user: SurveyUser) -> Tuple[int, int, List[int], List[str]]:
     for user_answer in user_answers:
         total_bonus_points += user_answer.answer.bonus_points
 
-        if user_answer.uvalue > 0:
+        if user_answer.uvalue == "1":
             section = user_answer.answer.question.section
 
             total_user_score += user_answer.answer.score

@@ -3,114 +3,133 @@
     "label": "What is your sector?",
     "service_category": "Context",
     "section": "__context",
-    "qtype": "SS",
+    "qtype": "SO",
+    "qindex": 1,
     "maxPoints": 0,
     "answers_order": "label",
     "answers": [
       {
         "label": "Energy",
+        "value": "ENER",
         "uniqueAnswer": true,
         "atype": "P",
         "aindex": 1
       },
       {
         "label": "Transport",
+        "value": "TRAN",
         "uniqueAnswer": true,
         "atype": "P",
         "aindex": 2
       },
       {
         "label": "Banking",
+        "value": "BANK",
         "uniqueAnswer": true,
         "atype": "P",
         "aindex": 3
       },
       {
         "label": "Financial market infrastructure",
+        "value": "FINA",
         "uniqueAnswer": true,
         "atype": "P",
         "aindex": 4
       },
       {
         "label": "Health",
+        "value": "HEAL",
         "uniqueAnswer": true,
         "atype": "P",
         "aindex": 5
       },
       {
         "label": "Dringking water",
+        "value": "DRIN",
         "uniqueAnswer": true,
         "atype": "P",
         "aindex": 6
       },
       {
         "label": "Waste Water",
+        "value": "WWAT",
         "uniqueAnswer": true,
         "atype": "P",
         "aindex": 7
       },
       {
         "label": "Digital Infrastructure and Service Providers",
+        "value": "DIGI",
         "uniqueAnswer": true,
         "atype": "P",
         "aindex": 8
       },
       {
         "label": "Public Administration",
+        "value": "PUBL",
         "uniqueAnswer": true,
         "atype": "P",
         "aindex": 9
       },
       {
         "label": "Space",
+        "value": "SPAC",
         "uniqueAnswer": true,
         "atype": "P",
         "aindex": 10
       },
       {
         "label": "Postal and Courier Services",
+        "value": "POST",
         "uniqueAnswer": true,
         "atype": "P",
         "aindex": 11
       },
       {
         "label": "Waste Management",
+        "value": "WMAN",
         "uniqueAnswer": true,
         "atype": "P",
         "aindex": 12
       },
       {
         "label": "Manufacture, production and distribution of chemicals",
+        "value": "CHEM",
         "uniqueAnswer": true,
         "atype": "P",
         "aindex": 13
       },
       {
         "label": "Food Production, processing and distribution",
+        "value": "FOOD",
         "uniqueAnswer": true,
         "atype": "P",
         "aindex": 14
       },
       {
         "label": "Manufacturing of medical devices",
+        "value": "MEDI",
         "uniqueAnswer": true,
         "atype": "P",
         "aindex": 15
       },
       {
         "label": "Manufacture of computer, electronics and optical products",
+        "value": "COMP",
         "uniqueAnswer": true,
         "atype": "P",
         "aindex": 16
       },
       {
         "label": "Manufacture of electrical equipment",
+        "value": "ELEC",
         "uniqueAnswer": true,
         "atype": "P",
         "aindex": 17
       },
       {
         "label": "Manufacture of machinery and equipment",
+        "value": "MACH",
         "uniqueAnswer": true,
         "atype": "P",
         "aindex": 18
@@ -121,29 +140,34 @@
     "label": "How many employees?",
     "service_category": "Context",
     "section": "__context",
-    "qtype": "SS",
+    "qtype": "SO",
+    "qindex": 2,
     "maxPoints": 0,
     "answers": [
       {
         "label": "Under 10 employees",
+        "value": "a",
         "uniqueAnswer": true,
         "atype": "P",
         "aindex": 1
       },
       {
         "label": "From 10 to 49 employees",
+        "value": "b",
         "uniqueAnswer": true,
         "atype": "P",
         "aindex": 2
       },
       {
         "label": "From 50 to 249 employees",
+        "value": "c",
         "uniqueAnswer": true,
         "atype": "P",
         "aindex": 3
       },
       {
         "label": "Over 250 employees",
+        "value": "d",
         "uniqueAnswer": true,
         "atype": "P",
         "aindex": 4
@@ -154,29 +178,34 @@
     "label": "What is your country?",
     "service_category": "Context",
     "section": "__context",
-    "qtype": "SS",
+    "qtype": "SO",
+    "qindex": 3,
     "maxPoints": 0,
     "answers": [
       {
         "label": "In the EU",
+        "value": "EEA",
         "uniqueAnswer": true,
         "atype": "P",
         "aindex": 1
       },
       {
         "label": "Outside of the EU but within EEA",
+        "value": "EU",
         "uniqueAnswer": true,
         "atype": "P",
         "aindex": 2
       },
       {
         "label": "Outside of the EEA",
+        "value": "NEEA",
         "uniqueAnswer": true,
         "atype": "P",
         "aindex": 3
       },
       {
         "label": "Just in Luxembourg",
+        "value": "LU",
         "uniqueAnswer": true,
         "atype": "P",
         "aindex": 4
@@ -187,7 +216,8 @@
     "label": "If your company part of a bigger international company or group with its headquarters outside of Luxembourg?",
     "service_category": "Context",
     "section": "__context",
-    "qtype": "SS",
+    "qtype": "SO",
+    "qindex": 4,
     "maxPoints": 0,
     "answers": [
       {

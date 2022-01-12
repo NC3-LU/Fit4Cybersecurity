@@ -22,8 +22,8 @@
                 <li class="h5"><h5 id="question-{{ question_index }}">{{ question_answers.question_title | safe }}</h5>
                     <ul class="h6">
                         {% for user_answer in question_answers.user_answers %}
-                            <li class="{% if user_answer.value > 0 %}text-nowrap font-weight-bold{% else %}disabled text-muted font-weight-light{% endif %}"
-                                style="{% if user_answer.value > 0 %}list-style-type:disc{% endif %}">
+                            <li class="{% if user_answer.value == '1' %}text-nowrap font-weight-bold{% else %}disabled text-muted font-weight-light{% endif %}"
+                                style="{% if user_answer.value == '1' %}list-style-type:disc{% endif %}">
                                 {{ user_answer.title | safe }}
                             </li>
                             {% if user_answer.content != '' %}

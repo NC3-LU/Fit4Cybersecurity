@@ -34,7 +34,7 @@
       /100
     </h3>
     {% endif %}
-    {% if user.country_code == 'LU' and custom.modules.requestTraining %}
+    {% if custom.modules.requestTraining and user.get_country_code == 'LU' %}
     {% if txtscore >= custom.minimal_acceptable_score and custom.modules.requestDiagnostic %}
     <h5>{% include 'survey/requestDiagnosticLink.html' with type='button' %}</h5>
     {% endif %}
@@ -73,7 +73,7 @@
     and thus, we are not liable for the results of this survey.
     {% endblocktranslate %}
   </p>
-  {% if user.country_code == 'LU' and custom.modules.requestTraining and txtscore < custom.minimal_acceptable_score %}
+  {% if custom.modules.requestTraining and user.get_country_code == 'LU' and txtscore < custom.minimal_acceptable_score %}
   <p>
     {% blocktranslate with score=string_score|add:'/100' trimmed %}
     Based on your score {{ score }}, the CASES Diagnostic
@@ -101,7 +101,7 @@
   </div>
 </div>
 
-{% if user.country_code == 'LU' and custom.modules.requestDiagnostic and txtscore >= custom.minimal_acceptable_score %}
+{% if  custom.modules.requestDiagnostic and user.get_country_code == 'LU' and txtscore >= custom.minimal_acceptable_score %}
 <div class="py-2 px-4">
   <h2>{{ _('About the CASES Diagnostic') }}:</h2>
   {% blocktranslate trimmed %}

@@ -58,7 +58,7 @@ def get_finished_surveys_list(request):
         user_id = str(completed_survey_user.user_id)
         surveys_users_results["survey_users"][user_id] = {
             "details": {
-                "language": completed_survey_user.choosen_lang,
+                "language": completed_survey_user.chosen_lang,
                 "survey_finish_date": completed_survey_user.updated_at.strftime(
                     DEFAULT_DATE_FORMAT
                 ),
@@ -71,7 +71,7 @@ def get_finished_surveys_list(request):
         surveys_users_results["survey_users"][user_id]["details"].update(
             {
                 key: str(value)
-                for key, value in completed_survey_user.get_context().items()
+                for key, value in completed_survey_user.get_all_context_answers().items()
             }
         )
 
@@ -128,7 +128,7 @@ def get_finished_surveys_list(request):
                 }
             )
 
-            if user_answer.uvalue > 0:
+            if user_answer.uvalue == "1":
                 answer_score = user_answer.answer.score
                 total_points_number += answer_score
                 surveys_users_results["survey_users"][user_id]["sections"][section_id][

@@ -5,11 +5,7 @@ import django.db.models.deletion
 from csskp.settings import LANGUAGES, LANGUAGE_CODE
 import uuid
 from survey.globals import (
-    COMPANY_SIZE,
-    SECTOR_CHOICES,
     QUESTION_TYPES,
-    COUNTRIES,
-    TRANSLATION_TYPES,
     SERVICE_TARGETS,
 )
 from survey.models import SURVEY_STATUS_IN_PROGRESS
@@ -123,8 +119,8 @@ class Migration(migrations.Migration):
                     ),
                 ),
                 ("user_id", models.UUIDField(default=uuid.uuid4)),
-                ("sector", models.CharField(choices=SECTOR_CHOICES, max_length=4)),
-                ("e_count", models.CharField(choices=COMPANY_SIZE, max_length=2)),
+                ("sector", models.CharField(max_length=4)),
+                ("e_count", models.CharField(max_length=2)),
                 (
                     "chosenLang",
                     models.CharField(
@@ -157,12 +153,7 @@ class Migration(migrations.Migration):
                         choices=LANGUAGES, default=LOCAL_DEFAULT_LANG, max_length=2
                     ),
                 ),
-                (
-                    "ttype",
-                    models.CharField(
-                        choices=TRANSLATION_TYPES, default="Q", max_length=1
-                    ),
-                ),
+                ("ttype", models.CharField(default="Q", max_length=1)),
             ],
             options={
                 "unique_together": {("lang", "id")},
@@ -230,23 +221,12 @@ class Migration(migrations.Migration):
                     ),
                 ),
                 ("textKey", models.CharField(max_length=32)),
-                (
-                    "min_e_count",
-                    models.CharField(
-                        choices=COMPANY_SIZE, default=COMPANY_SIZE[0][0], max_length=2
-                    ),
-                ),
-                (
-                    "max_e_count",
-                    models.CharField(
-                        choices=COMPANY_SIZE, default=COMPANY_SIZE[-1][0], max_length=2
-                    ),
-                ),
+                ("min_e_count", models.CharField(default='a', max_length=2)),
+                ("max_e_count", models.CharField(default='z', max_length=2)),
                 (
                     "sector",
                     models.CharField(
                         blank=True,
-                        choices=SECTOR_CHOICES,
                         default=None,
                         max_length=4,
                         null=True,
@@ -279,10 +259,7 @@ class Migration(migrations.Migration):
                 ("contact_tel", models.TextField(max_length=32)),
                 ("contact_address_street", models.CharField(max_length=128)),
                 ("contact_address_city", models.CharField(max_length=64)),
-                (
-                    "contact_address_country",
-                    models.CharField(choices=COUNTRIES, max_length=4),
-                ),
+                ("contact_address_country", models.CharField(max_length=64)),
                 ("contact_address_number", models.IntegerField()),
                 ("contact_address_postcode", models.CharField(max_length=10)),
                 ("notes", models.TextField()),

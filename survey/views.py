@@ -94,11 +94,11 @@ def change_lang(request, lang: str):
         return HttpResponseRedirect("/" + lang)
 
     user = find_user_by_id(user_id)
-    user.choosen_lang = lang
+    user.chosen_lang = lang
     user.save()
 
     user = find_user_by_id(user_id)
-    user.choosen_lang = lang
+    user.chosen_lang = lang
     user.save()
 
     if user.is_survey_in_progress() and previous_path.__contains__("/survey/question/"):
@@ -186,7 +186,7 @@ def review(request):
 
     questions_with_user_answers = get_questions_with_user_answers(user)
 
-    lang = user.choosen_lang
+    lang = user.chosen_lang
     translation.activate(lang)
     request.session[settings.LANGUAGE_COOKIE_NAME] = lang
 
@@ -210,7 +210,7 @@ def finish(request):
     if not user.is_survey_finished():
         return HttpResponseRedirect("/")
 
-    user_lang = user.choosen_lang
+    user_lang = user.chosen_lang
     translation.activate(user_lang)
     request.session[settings.LANGUAGE_COOKIE_NAME] = user_lang
 

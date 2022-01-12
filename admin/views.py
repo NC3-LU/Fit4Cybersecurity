@@ -32,13 +32,13 @@ def survey_status_count(request):
 
 @login_required
 def survey_language_count(request):
-    """Returns the count for the SurveyUser choosen_lang property."""
-    result = SurveyUser.objects.values("choosen_lang").annotate(
-        count=Count("choosen_lang")
+    """Returns the count for the SurveyUser chosen_lang property."""
+    result = SurveyUser.objects.values("chosen_lang").annotate(
+        count=Count("chosen_lang")
     )
     return JsonResponse(
         {
-            [lang for lang in LANGUAGES if lang[0] == item["choosen_lang"]][0][1]: item[
+            [lang for lang in LANGUAGES if lang[0] == item["chosen_lang"]][0][1]: item[
                 "count"
             ]
             for item in result.all()
