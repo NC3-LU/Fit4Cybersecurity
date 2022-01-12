@@ -28,7 +28,9 @@ class Command(BaseCommand):
         nb_imported_answers = 0
         nb_updated_answers = 0
         nb_imported_recommendations = 0
+
         max_question_index = 0
+        min_question_index = 0
 
         for question in json_data:
             # Get or create the section
@@ -51,6 +53,8 @@ class Command(BaseCommand):
 
             if qindex > max_question_index:
                 max_question_index = qindex
+            if qindex < min_question_index:
+                min_question_index = qindex
 
             # Create or update the question
             try:
@@ -164,6 +168,11 @@ class Command(BaseCommand):
         if max_question_index:
             SurveyQuestion.all_objects.filter(
                 qindex__gt=max_question_index
+            ).update(is_active=False)
+        # Deactivate all the questions with lower index (for context questions).
+        if min_question_index:
+            SurveyQuestion.all_objects.filter(
+                qindex__lt=min_question_index
             ).update(is_active=False)
 
         self.stdout.write(self.style.SUCCESS("Data imported."))
