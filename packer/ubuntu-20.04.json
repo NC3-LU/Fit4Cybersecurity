@@ -61,10 +61,7 @@
         "PACKER=1",
         "DEBIAN_FRONTEND=noninteractive",
         "TOOL_NAME={{user `tool_name`}}",
-        "SITE_NAME={{user `site_name`}}",
-        "QUESTIONS_SET={{user `questions_set`}}",
-        "CONTEXT_QUESTIONS_SET={{user `context_questions_set`}}",
-        "TRANSLATIONS_SET={{user `translations_set`}}"
+        "SITE_NAME={{user `site_name`}}"
       ],
       "execute_command": "echo '{{user `ssh_password`}}' | {{ .Vars }} sudo -E -S sh '{{ .Path }}'",
       "inline": [
@@ -108,9 +105,6 @@
     "service_port": "5000",
     "service_host": "0.0.0.0",
     "project_path": "/home/ubuntu/Fit4Cybersecurity",
-    "questions_set": "data/fit4cybersecurity/questions.json",
-    "context_questions_set": "data/fit4cybersecurity/context-questions.json",
-    "translations_set": "data/fit4Cybersecurity/translations.json",
     "latest_commit": "{{env `LATEST_COMMIT`}}",
     "vm_name": "Fit4Cybersecurity",
     "vm_version": "{{env `VERSION`}}",
