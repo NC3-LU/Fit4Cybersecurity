@@ -83,13 +83,6 @@ class Command(BaseCommand):
 
                 nb_imported_questions += 1
 
-            # Countries list (CL) is a special django_countries.CountryField filed type.
-            if question_obj.qtype == "CL":
-                SurveyQuestionAnswer.all_objects.filter(
-                    question=question_obj,
-                ).delete()
-                continue
-
             # Create the answers
             answers_dependencies = {}
             for answer in question["answers"]:
