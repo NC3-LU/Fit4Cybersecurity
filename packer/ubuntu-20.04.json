@@ -61,6 +61,7 @@
         "PACKER=1",
         "DEBIAN_FRONTEND=noninteractive",
         "TOOL_NAME={{user `tool_name`}}",
+        "SITE_NAME={{user `site_name`}}",
         "QUESTIONS_SET={{user `questions_set`}}",
         "CONTEXT_QUESTIONS_SET={{user `context_questions_set`}}",
         "TRANSLATIONS_SET={{user `translations_set`}}"
