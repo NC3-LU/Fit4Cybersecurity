@@ -75,6 +75,7 @@
     },
     {
       "environment_vars": [
+        "SITE_NAME={{user `site_name`}}",
         "TOOL_NAME={{user `tool_name`}}",
         "SERVICE_PORT={{user `service_port`}}",
         "SERVICE_HOST={{user `service_host`}}",
@@ -100,10 +101,11 @@
 
   "variables": {
     "tool_name": "Fit4Cybersecurity",
-    "vm_description": "Fit4Cybersecurity",
+    "site_name": "fit4ehealth",
+    "hostname": "fit4Cybersecurity",
+    "vm_description": "Fit4Cybersecurity by CASES",
     "service_port": "5000",
     "service_host": "0.0.0.0",
-    "hostname": "fit4Cybersecurity",
     "project_path": "/home/ubuntu/Fit4Cybersecurity",
     "questions_set": "data/fit4cybersecurity/questions.json",
     "context_questions_set": "data/fit4cybersecurity/context-questions.json",
