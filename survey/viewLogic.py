@@ -256,8 +256,7 @@ def save_answers(
         case "CL":
             selected_value = posted_answers[0]
             try:
-                object = SurveyQuestionAnswer.objects.get(value=selected_value)
-                question_answers = [object]
+                question_answers = [SurveyQuestionAnswer.objects.get(value=selected_value)]
             except SurveyQuestionAnswer.DoesNotExist:
                 answers = SurveyQuestionAnswer.objects.filter(
                     question=current_question
