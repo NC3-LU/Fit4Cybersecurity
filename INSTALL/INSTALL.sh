@@ -72,6 +72,9 @@ poetry install --no-dev
 sudo -u ubuntu mkdir logs
 sudo chmod -R 777 logs
 
+SECRET_KEY=$(python -c "from django.utils.crypto import get_random_string;print(get_random_string(length=64))")
+HASH_KEY=$(python -c "from cryptography.fernet import Fernet;print(Fernet.generate_key().decode())")
+
 echo "--- Generation of the $TOOL_NAME configuration file… ---"
 sudo -u ubuntu cat > csskp/config.py <<EOF
 import os
@@ -85,9 +88,8 @@ OPERATOR_EMAIL = "info@example.org"
 # The generic site/tool name. Used to load specific config, templates, styles, logo.
 SITE_NAME = "fit4cybersecurity"
 
-SECRET_KEY = "u__*z&=urjtc0t)b)@5qbt_a#3-354=k9x(j)@eu#h7sb=-66s"
-
-HASH_KEY = b"hDs3HftLkd9OsxI9smHP-TmGv-4z7h-1xaQp0RYuY20="
+SECRET_KEY = "$SECRET_KEY"
+HASH_KEY = b"$HASH_KEY"
 
 DEBUG = True
 
