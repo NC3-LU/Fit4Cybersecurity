@@ -32,9 +32,6 @@ class Command(BaseCommand):
         max_question_index = 0
         min_question_index = 0
 
-        max_question_index = 0
-        min_question_index = 0
-
         for question in json_data:
             # Get or create the section
             section, created = SurveySection.objects.get_or_create(
