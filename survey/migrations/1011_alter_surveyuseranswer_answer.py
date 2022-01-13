@@ -7,16 +7,16 @@ import django.db.models.deletion
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('survey', '1010_alter_surveyquestion_managers_and_more'),
+        ("survey", "1010_alter_surveyquestion_managers_and_more"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='surveyuseranswer',
-            name='answer',
+            model_name="surveyuseranswer",
+            name="answer",
             field=models.ForeignKey(
                 on_delete=django.db.models.deletion.CASCADE,
-                to='survey.surveyquestionanswer'
+                to="survey.surveyquestionanswer",
             ),
         ),
     ]
