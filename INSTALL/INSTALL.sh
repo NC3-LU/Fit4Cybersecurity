@@ -84,7 +84,7 @@ from django.utils.translation import gettext_lazy
 from socket import gethostname, gethostbyname
 
 PUBLIC_URL = ""
-ALLOWED_HOSTS = [gethostname(), gethostbyname(gethostname()), $HOSTNAME]
+ALLOWED_HOSTS = [gethostname(), gethostbyname(gethostname())]
 OPERATOR_EMAIL = "info@example.org"
 
 # The generic site/tool name. Used to load specific config, templates, styles, logo.
