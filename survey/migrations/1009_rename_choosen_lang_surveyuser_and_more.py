@@ -71,21 +71,12 @@ class Migration(migrations.Migration):
             field=models.BooleanField(default=True),
         ),
         migrations.AlterField(
-<<<<<<< HEAD
             model_name="surveyuseranswer",
             name="answer",
             field=models.ForeignKey(
                 null=True,
                 on_delete=django.db.models.deletion.CASCADE,
                 to="survey.surveyquestionanswer",
-=======
-            model_name='surveyuseranswer',
-            name='answer',
-            field=models.ForeignKey(
-                null=True,
-                on_delete=django.db.models.deletion.CASCADE,
-                to='survey.surveyquestionanswer'
->>>>>>> 0c70cc2262719838d52409d5a9c0a18e7d874262
             ),
         ),
     ]
