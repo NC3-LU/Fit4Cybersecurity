@@ -21,7 +21,7 @@ CUSTOM = {
         + "<br /><br />"
         + "If you are not able to do the survey in one go and you want to later "
         + "pick up where you have left off, please be sure to save the link by clicking "
-        + "on the \"continue later\" button. "
+        + 'on the "continue later" button. '
         + "We will not be able to help you to find your answers again otherwise."
     ),
     "countries_first": [],

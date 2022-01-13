@@ -218,7 +218,7 @@ class SurveyUser(models.Model):
         try:
             return self.surveyuseranswer_set.get(
                 answer__question__section__label="__context",
-                answer__question__label=question_label
+                answer__question__label=question_label,
             )
         except SurveyUserAnswer.DoesNotExist:
             return None
@@ -231,7 +231,9 @@ class SurveyUser(models.Model):
         except SurveyQuestion.DoesNotExist:
             return ""
 
-        user_answer = self.__get_context_answer_by_question_label(number_employees_question_label)
+        user_answer = self.__get_context_answer_by_question_label(
+            number_employees_question_label
+        )
 
         return user_answer.uvalue if user_answer is not None else ""
 
@@ -243,7 +245,9 @@ class SurveyUser(models.Model):
         except SurveyUser.DoesNotExist:
             return ""
 
-        user_answer = self.__get_context_answer_by_question_label(country_question_label)
+        user_answer = self.__get_context_answer_by_question_label(
+            country_question_label
+        )
 
         return user_answer.uvalue if user_answer is not None else ""
 
@@ -252,7 +256,9 @@ class SurveyUserAnswer(models.Model):
     # AnswerID
     # AnswerListID
     user = models.ForeignKey(SurveyUser, on_delete=models.CASCADE)
-    answer = models.ForeignKey(SurveyQuestionAnswer, on_delete=models.CASCADE)
+    answer = models.ForeignKey(
+        SurveyQuestionAnswer, on_delete=models.CASCADE, null=True
+    )
     # 0, 1 for true, false selections,
     # and real value (SurveyQuestionAnswer.value or country code) for qtype = SO|CL
     uvalue = models.CharField(default="0", max_length=100, null=False)

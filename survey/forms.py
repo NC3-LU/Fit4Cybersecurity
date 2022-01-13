@@ -52,6 +52,7 @@ class AnswerMChoice(forms.Form):
                 initial=tanswers[0][0],
             )
         elif answers_field_type == "CL":
+            tanswers = None
             self.fields["answers"] = CountryField().formfield(
                 label="",
                 required=True,
