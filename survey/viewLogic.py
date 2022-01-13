@@ -252,9 +252,15 @@ def save_answers(
     if current_question.qtype in ["SO", "CL"]:
         selected_value = posted_answers[0]
         question_answers = [
+<<<<<<< HEAD
             current_question.surveyquestionanswer_set.get(value=selected_value)
             if current_question.qtype != "CL"
             else None
+=======
+            current_question.surveyquestionanswer_set.get(
+                value=selected_value
+            ) if current_question.qtype != "CL" else None
+>>>>>>> 0c70cc2262719838d52409d5a9c0a18e7d874262
         ]
     else:
         question_answers = current_question.surveyquestionanswer_set.filter(
