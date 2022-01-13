@@ -263,14 +263,14 @@ def save_answers(
 
     for question_answer in question_answers:
         user_answers = None
-        if question_answer != None:
+        if question_answer is not None:
             user_answers = SurveyUserAnswer.objects.filter(
                 user=user, answer=question_answer
             )[:1]
         if not user_answers:
             user_answer = SurveyUserAnswer()
             user_answer.user = user
-            if question_answer != None:
+            if question_answer is not None:
                 user_answer.answer = question_answer
         else:
             user_answer = user_answers[0]
