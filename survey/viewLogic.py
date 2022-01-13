@@ -255,7 +255,24 @@ def save_answers(
             ]
         case "CL":
             selected_value = posted_answers[0]
-            question_answers = [None]
+            try:
+                object = SurveyQuestionAnswer.objects.get(value=selected_value)
+                question_answers = [object]
+            except SurveyQuestionAnswer.DoesNotExist:
+                answers = SurveyQuestionAnswer.objects.filter(
+                    question=current_question
+                ).values_list('aindex', flat=True)
+                max_answer_index = max(answers, default=1)
+                question_answers = [
+                    SurveyQuestionAnswer.objects.create(
+                        value=selected_value,
+                        label=selected_value,
+                        uniqueAnswer=True,
+                        atype="P",
+                        question_id=current_question.id,
+                        aindex=max_answer_index + 1
+                    )
+                ]
         case _:
             question_answers = current_question.surveyquestionanswer_set.filter(
                 is_active=True
@@ -263,14 +280,14 @@ def save_answers(
 
     for question_answer in question_answers:
         user_answers = None
-        if question_answer is not None:
+        if question_answer != None:
             user_answers = SurveyUserAnswer.objects.filter(
                 user=user, answer=question_answer
             )[:1]
         if not user_answers:
             user_answer = SurveyUserAnswer()
             user_answer.user = user
-            if question_answer is not None:
+            if question_answer != None:
                 user_answer.answer = question_answer
         else:
             user_answer = user_answers[0]
