@@ -244,19 +244,39 @@ def save_answers(
     posted_answers: List[Union[int, str]],
     answer_content: str,
 ) -> None:
-    # For those questions' types we store single selected string value.
-    if current_question.qtype in ["SO", "CL"]:
-        selected_value = posted_answers[0]
-        question_answers = [
-            current_question.surveyquestionanswer_set.get(
-                is_active=True,
-                value=selected_value
-            ) if current_question.qtype != "CL" else None
-        ]
-    else:
-        question_answers = current_question.surveyquestionanswer_set.filter(
-            is_active=True
-        )
+    match current_question.qtype:
+        case "SO":
+            selected_value = posted_answers[0]
+            question_answers = [
+                current_question.surveyquestionanswer_set.get(
+                    is_active=True,
+                    value=selected_value
+                )
+            ]
+        case "CL":
+            selected_value = posted_answers[0]
+            try:
+                object = SurveyQuestionAnswer.objects.get(value=selected_value)
+                question_answers = [object]
+            except SurveyQuestionAnswer.DoesNotExist:
+                answers = SurveyQuestionAnswer.objects.filter(
+                    question=current_question
+                ).values_list('aindex', flat=True)
+                max_answer_index = max(answers, default=1)
+                question_answers = [
+                    SurveyQuestionAnswer.objects.create(
+                        value=selected_value,
+                        label=selected_value,
+                        uniqueAnswer=True,
+                        atype="P",
+                        question_id=current_question.id,
+                        aindex=max_answer_index + 1
+                    )
+                ]
+        case _:
+            question_answers = current_question.surveyquestionanswer_set.filter(
+                is_active=True
+            )
 
     for question_answer in question_answers:
         user_answers = None
