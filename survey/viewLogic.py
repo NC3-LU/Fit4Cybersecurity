@@ -226,11 +226,7 @@ def handle_question_answers_request(
     form.set_free_text_answer_id(free_text_answer_id)
 
     return {
-        "title": CUSTOM["tool_name"]
-        + " - "
-        + _("Question")
-        + " "
-        + str(current_question.qindex),
+        "title": CUSTOM["tool_name"] + " - " + _("Question") + " " + str(current_question.qindex),
         "question": _(current_question.label),
         "question_tooltip": _(current_question.tooltip),
         "form": form,
@@ -252,9 +248,10 @@ def save_answers(
     if current_question.qtype in ["SO", "CL"]:
         selected_value = posted_answers[0]
         question_answers = [
-            current_question.surveyquestionanswer_set.get(value=selected_value)
-            if current_question.qtype != "CL"
-            else None
+            current_question.surveyquestionanswer_set.get(
+                is_active=True,
+                value=selected_value
+            ) if current_question.qtype != "CL" else None
         ]
     else:
         question_answers = current_question.surveyquestionanswer_set.filter(
