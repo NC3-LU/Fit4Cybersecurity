@@ -9,9 +9,9 @@ PROJECT_PATH='/home/ubuntu/Fit4Cybersecurity'
 DB_NAME='csskp'
 DB_USER='csskp'
 DB_PASSWORD="csskp"
-TOOL_NAME=$TOOL_NAME
-SITE_NAME=$SITE_NAME
-HOSTNAME=$HOST_NAME
+# TOOL_NAME=$TOOL_NAME
+# SITE_NAME=$SITE_NAME
+# HOSTNAME=$HOSTNAME
 
 
 echo "--- Updating packages list… ---"
