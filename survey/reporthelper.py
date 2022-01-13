@@ -41,7 +41,8 @@ def getRecommendations(user: SurveyUser, lang: str) -> Dict[str, List[str]]:
 
         for rec in recommendations:
             if employees_number_code and (
-                rec.min_e_count > employees_number_code or rec.max_e_count < employees_number_code
+                rec.min_e_count > employees_number_code
+                or rec.max_e_count < employees_number_code
             ):
                 continue
 
@@ -83,7 +84,9 @@ def calculateResult(user: SurveyUser) -> Tuple[int, int, List[int], List[str]]:
 
     chart_exclude_sections = ["__context"]
     if "chart_exclude_sections" in CUSTOM.keys():
-        chart_exclude_sections = chart_exclude_sections + CUSTOM["chart_exclude_sections"]
+        chart_exclude_sections = (
+            chart_exclude_sections + CUSTOM["chart_exclude_sections"]
+        )
 
     for question in SurveyQuestion.objects.exclude(
         section__label__in=chart_exclude_sections

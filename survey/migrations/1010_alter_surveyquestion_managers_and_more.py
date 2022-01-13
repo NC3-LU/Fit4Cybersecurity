@@ -7,20 +7,20 @@ import django.db.models.manager
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('survey', '1009_rename_choosen_lang_surveyuser_and_more'),
+        ("survey", "1009_rename_choosen_lang_surveyuser_and_more"),
     ]
 
     operations = [
         migrations.AlterModelManagers(
-            name='surveyquestion',
+            name="surveyquestion",
             managers=[
-                ('all_objects', django.db.models.manager.Manager()),
+                ("all_objects", django.db.models.manager.Manager()),
             ],
         ),
         migrations.AlterModelManagers(
-            name='surveyquestionanswer',
+            name="surveyquestionanswer",
             managers=[
-                ('all_objects', django.db.models.manager.Manager()),
+                ("all_objects", django.db.models.manager.Manager()),
             ],
         ),
     ]

@@ -221,8 +221,8 @@ class Migration(migrations.Migration):
                     ),
                 ),
                 ("textKey", models.CharField(max_length=32)),
-                ("min_e_count", models.CharField(default='a', max_length=2)),
-                ("max_e_count", models.CharField(default='z', max_length=2)),
+                ("min_e_count", models.CharField(default="a", max_length=2)),
+                ("max_e_count", models.CharField(default="z", max_length=2)),
                 (
                     "sector",
                     models.CharField(

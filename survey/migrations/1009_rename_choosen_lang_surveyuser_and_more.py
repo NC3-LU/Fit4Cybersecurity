@@ -6,7 +6,9 @@ import os
 
 
 def load_data_from_sql(apps, schema_editor):
-    file_path = os.path.join(os.path.dirname(__file__), "update_question_type_ss_to_so.sql")
+    file_path = os.path.join(
+        os.path.dirname(__file__), "update_question_type_ss_to_so.sql"
+    )
     sql_statement = open(file_path).read()
     with connection.cursor() as c:
         c.execute(sql_statement)
@@ -15,62 +17,66 @@ def load_data_from_sql(apps, schema_editor):
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('survey', '1008_surveyquestion_answers_order_and_more'),
+        ("survey", "1008_surveyquestion_answers_order_and_more"),
     ]
 
     operations = [
         migrations.RenameField(
-            model_name='surveyuser',
-            old_name='choosen_lang',
-            new_name='chosen_lang',
+            model_name="surveyuser",
+            old_name="choosen_lang",
+            new_name="chosen_lang",
         ),
         migrations.AddField(
-            model_name='surveyquestionanswer',
-            name='value',
+            model_name="surveyquestionanswer",
+            name="value",
             field=models.CharField(blank=True, null=True, default=None, max_length=50),
         ),
         migrations.AlterField(
-            model_name='company',
-            name='contact_address_country',
+            model_name="company",
+            name="contact_address_country",
             field=models.CharField(max_length=64),
         ),
         # Update the data in the db.
         migrations.RunPython(load_data_from_sql),
         migrations.AlterField(
-            model_name='surveyquestion',
-            name='qtype',
-            field=models.CharField(choices=[
-                ('M', 'Multiple Choice'),
-                ('S', 'Single Choice'),
-                ('SO', 'Single Option Choice'),
-                ('T', 'Free text'),
-                ('MT', 'Multiple Choice + Free Text'),
-                ('ST', 'Single Choice + Free Text'),
-                ('CL', 'Countries list')
-            ], default='M', max_length=2),
+            model_name="surveyquestion",
+            name="qtype",
+            field=models.CharField(
+                choices=[
+                    ("M", "Multiple Choice"),
+                    ("S", "Single Choice"),
+                    ("SO", "Single Option Choice"),
+                    ("T", "Free text"),
+                    ("MT", "Multiple Choice + Free Text"),
+                    ("ST", "Single Choice + Free Text"),
+                    ("CL", "Countries list"),
+                ],
+                default="M",
+                max_length=2,
+            ),
         ),
         migrations.AlterField(
-            model_name='surveyuseranswer',
-            name='uvalue',
-            field=models.CharField(default='0', max_length=100),
+            model_name="surveyuseranswer",
+            name="uvalue",
+            field=models.CharField(default="0", max_length=100),
         ),
         migrations.AddField(
-            model_name='surveyquestion',
-            name='is_active',
+            model_name="surveyquestion",
+            name="is_active",
             field=models.BooleanField(default=True),
         ),
         migrations.AddField(
-            model_name='surveyquestionanswer',
-            name='is_active',
+            model_name="surveyquestionanswer",
+            name="is_active",
             field=models.BooleanField(default=True),
         ),
         migrations.AlterField(
-            model_name='surveyuseranswer',
-            name='answer',
+            model_name="surveyuseranswer",
+            name="answer",
             field=models.ForeignKey(
                 null=True,
                 on_delete=django.db.models.deletion.CASCADE,
-                to='survey.surveyquestionanswer'
+                to="survey.surveyquestionanswer",
             ),
         ),
     ]

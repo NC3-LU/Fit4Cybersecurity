@@ -66,9 +66,11 @@ def handle_start_survey(request: HttpRequest, lang: str) -> Union[Dict, SurveyUs
     request.session[settings.LANGUAGE_COOKIE_NAME] = lang
 
     forms = {}
-    questions = SurveyQuestion.objects.filter(
-        section__label__contains="__context"
-    ).order_by("-qindex").all()
+    questions = (
+        SurveyQuestion.objects.filter(section__label__contains="__context")
+        .order_by("-qindex")
+        .all()
+    )
 
     # if no context questions: create the user without the form
     if not questions.count() and request.method == "GET":
@@ -132,7 +134,9 @@ def handle_question_answers_request(
     ) = get_questions_slice(question_index)
 
     try:
-        question_answers = current_question.surveyquestionanswer_set.filter(is_active=True)
+        question_answers = current_question.surveyquestionanswer_set.filter(
+            is_active=True
+        )
         tuple_answers = get_answer_choices(current_question, user.chosen_lang)
     except Exception as e:
         logger.error(e)
@@ -222,7 +226,11 @@ def handle_question_answers_request(
     form.set_free_text_answer_id(free_text_answer_id)
 
     return {
-        "title": CUSTOM["tool_name"] + " - " + _("Question") + " " + str(current_question.qindex),
+        "title": CUSTOM["tool_name"]
+        + " - "
+        + _("Question")
+        + " "
+        + str(current_question.qindex),
         "question": _(current_question.label),
         "question_tooltip": _(current_question.tooltip),
         "form": form,
@@ -244,12 +252,14 @@ def save_answers(
     if current_question.qtype in ["SO", "CL"]:
         selected_value = posted_answers[0]
         question_answers = [
-            current_question.surveyquestionanswer_set.get(
-                value=selected_value
-            ) if current_question.qtype != "CL" else None
+            current_question.surveyquestionanswer_set.get(value=selected_value)
+            if current_question.qtype != "CL"
+            else None
         ]
     else:
-        question_answers = current_question.surveyquestionanswer_set.filter(is_active=True)
+        question_answers = current_question.surveyquestionanswer_set.filter(
+            is_active=True
+        )
 
     for question_answer in question_answers:
         user_answers = None

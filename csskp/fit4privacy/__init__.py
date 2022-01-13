@@ -5,7 +5,7 @@ CUSTOM = {
     "tool_name": "Fit4Privacy",
     "intro_text": gettext_lazy(
         "This questionnaire, created in consultation with "
-        + "<a href=\"https://cnpd.public.lu/en.html\" target=\"_blank\">CNPD</a>, "
+        + '<a href="https://cnpd.public.lu/en.html" target="_blank">CNPD</a>, '
         + "aims to help organisations assess to what extent they are in control of their personal "
         + "data risks. First, Fit4Privacy asks questions to understand the amount of personal "
         + "data processing already in place, then its questions examine the response of the "

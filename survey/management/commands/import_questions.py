@@ -84,7 +84,7 @@ class Command(BaseCommand):
                 nb_imported_questions += 1
 
             # Countries list (CL) is a special django_countries.CountryField filed type.
-            if question_obj.qtype == 'CL':
+            if question_obj.qtype == "CL":
                 SurveyQuestionAnswer.all_objects.filter(
                     question=question_obj,
                 ).delete()
@@ -95,8 +95,7 @@ class Command(BaseCommand):
             for answer in question["answers"]:
                 try:
                     answer_obj = SurveyQuestionAnswer.all_objects.get(
-                        question=question_obj,
-                        aindex=answer["aindex"]
+                        question=question_obj, aindex=answer["aindex"]
                     )
                     answer_obj.label = answer["label"]
                     answer_obj.value = answer.get("value", None)
@@ -129,9 +128,7 @@ class Command(BaseCommand):
                 # Clean all the dependant answers and recommendations to recreate later.
                 if not is_answer_created:
                     answer_obj.dependant_answers.clear()
-                    Recommendations.objects.filter(
-                        forAnswer=answer_obj
-                    ).delete()
+                    Recommendations.objects.filter(forAnswer=answer_obj).delete()
 
                 # Prepare the dependencies between answers.
                 if "dependant_answers" in answer.keys():
@@ -157,8 +154,7 @@ class Command(BaseCommand):
             max_answer_index = max(question["answers"], key=lambda x: x["aindex"])
             if max_answer_index:
                 SurveyQuestionAnswer.all_objects.filter(
-                    question=question_obj,
-                    aindex__gt=max_answer_index["aindex"]
+                    question=question_obj, aindex__gt=max_answer_index["aindex"]
                 ).update(is_active=False)
 
             # Process the answers' dependencies.
@@ -166,14 +162,14 @@ class Command(BaseCommand):
 
         # Deactivate all the questions with index higher then max importing.
         if max_question_index:
-            SurveyQuestion.all_objects.filter(
-                qindex__gt=max_question_index
-            ).update(is_active=False)
+            SurveyQuestion.all_objects.filter(qindex__gt=max_question_index).update(
+                is_active=False
+            )
         # Deactivate all the questions with lower index (for context questions).
         if min_question_index:
-            SurveyQuestion.all_objects.filter(
-                qindex__lt=min_question_index
-            ).update(is_active=False)
+            SurveyQuestion.all_objects.filter(qindex__lt=min_question_index).update(
+                is_active=False
+            )
 
         self.stdout.write(self.style.SUCCESS("Data imported."))
         self.stdout.write(
@@ -187,7 +183,9 @@ class Command(BaseCommand):
             )
         )
         self.stdout.write(
-            self.style.SUCCESS("  Number of created answers: {}".format(nb_imported_answers))
+            self.style.SUCCESS(
+                "  Number of created answers: {}".format(nb_imported_answers)
+            )
         )
         self.stdout.write(
             self.style.SUCCESS(
