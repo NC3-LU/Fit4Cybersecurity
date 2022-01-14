@@ -7,31 +7,36 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-12-31 13:47+0000\n"
-"PO-Revision-Date: 2021-12-22 13:57+0100\n"
-"Last-Translator: Cédric Bonhomme <cedric@cedricbonhomme.org>\n"
+"POT-Creation-Date: 2022-01-10 12:14+0000\n"
+"PO-Revision-Date: 2022-01-11 10:52+0000\n"
+"Last-Translator: Juan Rocha <juan.rocha@cases.lu>\n"
 "Language-Team: German <https://translate.monarc.lu/projects/"
-"Fit4Cybersecurity/fit4ilr/de/>\n"
+"Fit4Cybersecurity/fit4cybersecurity/de/>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Poedit 2.4.2\n"
+"X-Generator: Weblate 4.9-dev\n"
 
-#: csskp/fit4cybersecurity/site_config.py:7
+#: csskp/fit4cybersecurity/__init__.py:7
 msgid ""
 "This survey will ask a few questions and provide recommendations. Keep in "
 "mind, that it is a self-assessment tool and that it only touches the surface "
 "of information security by giving a very basic maturity level estimate and "
 "some basic recommendations."
 msgstr ""
+"Diese Umfrage stellt ein paar Fragen ein und bietet Empfehlungen an. Denken "
+"Sie daran, dass es sich um ein Instrument zur Selbstbewertung handelt, das "
+"nur die Oberfläche der Informationssicherheit betrifft, indem er eine sehr "
+"grundlegende Fälligkeitsspezialisierung und einige rundlegende Empfehlungen "
+"ergibt."
 
-#: csskp/fit4ehealth/site_config.py:6
+#: csskp/fit4ehealth/__init__.py:6
 msgid "Description of the tool."
-msgstr ""
+msgstr "Beschreibung des Tools."
 
-#: csskp/fit4operatorsurvey/site_config.py:7
+#: csskp/fit4operatorsurvey/__init__.py:7
 msgid ""
 "This survey aims to identify the level of maturity of the operators in "
 "Luxembourg with respect to risk management and governance, collaboration on "
@@ -51,29 +56,27 @@ msgid ""
 "help you to find your answers again otherwise."
 msgstr ""
 
-#: csskp/fit4operatorsurvey/site_config.py:64
+#: csskp/fit4operatorsurvey/__init__.py:64
 #: data/fit4operatorsurvey/context-questions.json:11
 msgid "Energy"
 msgstr ""
 
-#: csskp/fit4operatorsurvey/site_config.py:65
+#: csskp/fit4operatorsurvey/__init__.py:65
 #: data/fit4operatorsurvey/context-questions.json:17
-#, fuzzy
-#| msgid "Transparency"
 msgid "Transport"
-msgstr "Transparenz"
+msgstr ""
 
-#: csskp/fit4operatorsurvey/site_config.py:66
+#: csskp/fit4operatorsurvey/__init__.py:66
 #: data/fit4operatorsurvey/context-questions.json:23
 msgid "Banking"
 msgstr ""
 
-#: csskp/fit4operatorsurvey/site_config.py:67
+#: csskp/fit4operatorsurvey/__init__.py:67
 #: data/fit4operatorsurvey/context-questions.json:29
 msgid "Financial market infrastructure"
 msgstr ""
 
-#: csskp/fit4operatorsurvey/site_config.py:68
+#: csskp/fit4operatorsurvey/__init__.py:68
 #: data/fit4cybersecurity/context-questions.json:59
 #: data/fit4ehealth/context-questions.json:10
 #: data/fit4operatorsurvey/context-questions.json:35
@@ -81,93 +84,94 @@ msgstr ""
 msgid "Health"
 msgstr "Gesundheit"
 
-#: csskp/fit4operatorsurvey/site_config.py:69
+#: csskp/fit4operatorsurvey/__init__.py:69
 #: data/fit4operatorsurvey/context-questions.json:41
 msgid "Dringking water"
 msgstr ""
 
-#: csskp/fit4operatorsurvey/site_config.py:70
+#: csskp/fit4operatorsurvey/__init__.py:70
 #: data/fit4operatorsurvey/context-questions.json:47
 msgid "Waste Water"
 msgstr ""
 
-#: csskp/fit4operatorsurvey/site_config.py:71
+#: csskp/fit4operatorsurvey/__init__.py:71
 #: data/fit4operatorsurvey/context-questions.json:53
 msgid "Digital Infrastructure and Service Providers"
 msgstr ""
 
-#: csskp/fit4operatorsurvey/site_config.py:72
+#: csskp/fit4operatorsurvey/__init__.py:72
 #: data/fit4cybersecurity/context-questions.json:95
 #: data/fit4operatorsurvey/context-questions.json:59
-#: data/fit4privacy/context-questions.json:95
+#: data/fit4privacy/context-questions.json:95 survey/globals.py:21
 msgid "Public Administration"
 msgstr "Öffentliche Verwaltungen"
 
-#: csskp/fit4operatorsurvey/site_config.py:73
+#: csskp/fit4operatorsurvey/__init__.py:73
 #: data/fit4operatorsurvey/context-questions.json:65
 msgid "Space"
 msgstr ""
 
-#: csskp/fit4operatorsurvey/site_config.py:74
-msgid "Postal and Courrier Services"
+#: csskp/fit4operatorsurvey/__init__.py:74
+#: data/fit4operatorsurvey/context-questions.json:71
+msgid "Postal and Courier Services"
 msgstr ""
 
-#: csskp/fit4operatorsurvey/site_config.py:75
+#: csskp/fit4operatorsurvey/__init__.py:75
 #: data/fit4operatorsurvey/context-questions.json:77
 msgid "Waste Management"
-msgstr "Risikomanagement"
+msgstr ""
 
-#: csskp/fit4operatorsurvey/site_config.py:76
+#: csskp/fit4operatorsurvey/__init__.py:76
 #: data/fit4operatorsurvey/context-questions.json:83
 msgid "Manufacture, production and distribution of chemicals"
 msgstr ""
 
-#: csskp/fit4operatorsurvey/site_config.py:77
+#: csskp/fit4operatorsurvey/__init__.py:77
 #: data/fit4operatorsurvey/context-questions.json:89
 msgid "Food Production, processing and distribution"
-msgstr "Handel, Verkauf und Massenverteilung"
+msgstr ""
 
-#: csskp/fit4operatorsurvey/site_config.py:78
+#: csskp/fit4operatorsurvey/__init__.py:78
 #: data/fit4operatorsurvey/context-questions.json:95
 msgid "Manufacturing of medical devices"
 msgstr ""
 
-#: csskp/fit4operatorsurvey/site_config.py:79
+#: csskp/fit4operatorsurvey/__init__.py:79
 #: data/fit4operatorsurvey/context-questions.json:101
 msgid "Manufacture of computer, electronics and optical products"
 msgstr ""
 
-#: csskp/fit4operatorsurvey/site_config.py:80
+#: csskp/fit4operatorsurvey/__init__.py:80
 #: data/fit4operatorsurvey/context-questions.json:107
 msgid "Manufacture of electrical equipment"
 msgstr ""
 
-#: csskp/fit4operatorsurvey/site_config.py:81
+#: csskp/fit4operatorsurvey/__init__.py:81
 #: data/fit4operatorsurvey/context-questions.json:113
 msgid "Manufacture of machinery and equipment"
 msgstr ""
 
-#: csskp/fit4operatorsurvey/site_config.py:84
+#: csskp/fit4operatorsurvey/__init__.py:84
 #: data/fit4operatorsurvey/context-questions.json:128
 msgid "Under 10 employees"
 msgstr ""
 
-#: csskp/fit4operatorsurvey/site_config.py:85
+#: csskp/fit4operatorsurvey/__init__.py:85
 #: data/fit4operatorsurvey/context-questions.json:134
 msgid "From 10 to 49 employees"
 msgstr ""
 
-#: csskp/fit4operatorsurvey/site_config.py:86
+#: csskp/fit4operatorsurvey/__init__.py:86
 #: data/fit4operatorsurvey/context-questions.json:140
 msgid "From 50 to 249 employees"
 msgstr ""
 
-#: csskp/fit4operatorsurvey/site_config.py:87
+#: csskp/fit4operatorsurvey/__init__.py:87
 #: data/fit4operatorsurvey/context-questions.json:146
 msgid "Over 250 employees"
 msgstr ""
 
-#: csskp/fit4privacy/site_config.py:7
+#: csskp/fit4privacy/__init__.py:7
 msgid ""
 "This questionnaire, created in consultation with <a href=\"https://cnpd."
 "public.lu/en.html\" target=\"_blank\">CNPD</a>, aims to help organisations "
@@ -182,6 +186,20 @@ msgid ""
 "data processing, data lifecycle management, and basic data protection "
 "obligations for which organisations should already be prepared as of 2021."
 msgstr ""
+"Dieser Fragebogen, erstellt in Beratung mit der <a href=\"https://cnpd."
+"public.lu/de.html\" target=\"_blank\">CNPD</a>, zielt darauf ab, "
+"Organisationen mit der Beurteilung zu helfen, inwieweit sie die Kontrolle "
+"über ihre persönlichen Datenrisiken kennen. Zuerst stellt Fit4Privacy "
+"Fragen, um den Umfang der bereits erfolgten Verarbeitung personenbezogener "
+"Daten zu verstehen, dann die Reaktion der Organisation auf die DSGVO "
+"Verpflichtungen. Basierend auf dem identifizierten Umfang bietet das Tool "
+"eine Reihe von Empfehlungen, die die ersten Schritte in Richtung Umsetzung "
+"von Privatsphäre und Datenschutz einleiten können. Bitte beachten Sie, dass "
+"dies ein Selbst-Bewertungsinstrument ist und dass es als solches keine "
+"endgültigen Richtlinien liefern kann. Fit4Privacy sensibilisiert in "
+"wichtigen Themen wie der Verarbeitung personenbezogene Daten, Data Lifecycle "
+"Management und Datenschutz-Verpflichtungenauf die Organisationen bereits im "
+"Jahr 2021 vorbereitet sein sollten."
 
 #: data/fit4cybersecurity/context-questions.json:3
 #: data/fit4ehealth/context-questions.json:3
@@ -203,7 +221,7 @@ msgstr "Was ist Ihre Branche?"
 #: data/fit4privacy/context-questions.json:104
 #: data/fit4privacy/context-questions.json:173
 msgid "Context"
-msgstr ""
+msgstr "Kontext"
 
 #: data/fit4cybersecurity/context-questions.json:5
 #: data/fit4cybersecurity/context-questions.json:105
@@ -218,7 +236,7 @@ msgstr ""
 #: data/fit4privacy/context-questions.json:105
 #: data/fit4privacy/context-questions.json:174
 msgid "__context"
-msgstr ""
+msgstr "__context"
 
 #: data/fit4cybersecurity/context-questions.json:11
 #: data/fit4privacy/context-questions.json:11 survey/globals.py:7
@@ -351,22 +369,22 @@ msgstr "Bitte wählen Sie Ihr Land"
 #: data/fit4ehealth/context-questions.json:25
 #: data/fit4privacy/context-questions.json:179
 msgid "Luxembourg"
-msgstr ""
+msgstr "Luxemburg"
 
 #: data/fit4cybersecurity/context-questions.json:185
 #: data/fit4privacy/context-questions.json:185
 msgid "Germany"
-msgstr ""
+msgstr "Deutschland"
 
 #: data/fit4cybersecurity/context-questions.json:191
 #: data/fit4privacy/context-questions.json:191
 msgid "Belgium"
-msgstr ""
+msgstr "Belgien"
 
 #: data/fit4cybersecurity/context-questions.json:197
 #: data/fit4privacy/context-questions.json:197
 msgid "France"
-msgstr "Stornieren"
+msgstr "Frankreich"
 
 #: data/fit4cybersecurity/questions.json:3 data/fit4ehealth/questions.json:3
 msgid "Rules/Charter"
@@ -386,9 +404,9 @@ msgstr ""
 msgid "not described"
 msgstr "nicht beschrieben"
 
-#: data/fit4cybersecurity/questions.json:36
+#: data/fit4cybersecurity/questions.json:36 data/fit4ehealth/questions.json:40
 msgid ""
-"Rules (organisational, IT or working ones) should be known and explained to "
+"Rules (organizational, IT or working ones) should be known and explained to "
 "everyone, at the very least orally."
 msgstr ""
 "Regeln (organisatorische, IT- oder Arbeitsregeln) sollten zumindest mündlich "
@@ -428,6 +446,9 @@ msgid ""
 "Besides, written rules can :<ul><li>avoid to forget some points</li><li>have "
 "a legal proof if the rules have been read.</li></ul>"
 msgstr ""
+"Außerdem können schriftliche Regeln:<ul><li>dem Vergessen einiger Punkte "
+"vorbeugen</li><li>einen gesetzlichen Nachweis sein, wenn die Regeln gelesen "
+"und unterzeichnet wurden.</li></ul>"
 
 #: data/fit4cybersecurity/questions.json:78
 msgid "read and signed by everyone, in a user charter"
@@ -465,7 +486,7 @@ msgstr "ziemlich schwer, aber sehr genau"
 #: data/fit4cybersecurity/questions.json:123
 msgid ""
 "Each time when it's possible, some advice or some best practices should be "
-"given, and sometime explained."
+"given, and explained."
 msgstr ""
 "Jedes Mal, wenn es möglich ist, sollten einige Ratschläge oder Best "
 "Practices gegeben und gegebenenfalls erklärt werden."
@@ -533,8 +554,15 @@ msgid ""
 "and the contract linked</li><li>How they are alterable</li><li>How much time "
 "they are stored</li><li>How they are destroyed</li></ul>This cycle should be "
 "described somewhere and accessible by anyone (sell contracts, websites, "
-"files that could be shown ...)."
+"files that could be shown …)."
 msgstr ""
+"Der Datenlebenszyklus sollte für alle zugänglich sein:<ul><li>Wie sie "
+"erhalten werden</li><li>Wie sie verwendet werden</li><li>Wie sind sie "
+"zugänglich, von wem und sind diese vertraglich geregelt</li><li>Wie sie "
+"veränderbar sind\\n\\t- Wie lange sind oder werden sie gespeichert</"
+"li><li>Wie sie zerstört werden</li></ul>Dieser Zyklus sollte irgendwo "
+"beschrieben und für jeden zugänglich sein (Verkaufsverträge, Websites, "
+"Dateien, die angezeigt werden könnten ...)."
 
 #: data/fit4cybersecurity/questions.json:200
 msgid ""
@@ -623,18 +651,20 @@ msgid "the software they daily use"
 msgstr "geschult um die Software, die sie täglich brauchen benutzen zu können"
 
 #: data/fit4cybersecurity/questions.json:287
+#: data/fit4ehealth/questions.json:307
 msgid ""
-"By informing about attacks that are current, common or well-known, employees "
-"could more easily identify them and avoid falling for them."
+"By informing about attacks that are current, common or well known, employees "
+"could more easily identify them and avoid being affected by them."
 msgstr ""
 "Durch das Informieren über aktuelle, häufige oder bekannte Angriffe können "
 "Mitarbeiter diese leichter identifizieren und vermeiden, auf sie "
 "hereinzufallen."
 
 #: data/fit4cybersecurity/questions.json:290
+#: data/fit4ehealth/questions.json:299
 msgid ""
 "information security, to have the knowledge to protect themselves against "
-"attacks"
+"attacks or information security issues"
 msgstr ""
 "geschult in Informationssicherheit, um sich vor Angriffen schützen zu können"
 
@@ -653,9 +683,10 @@ msgid "by specialists, that could be internal or external"
 msgstr "von internen oder externen Spezialisten geschult"
 
 #: data/fit4cybersecurity/questions.json:319
+#: data/fit4ehealth/questions.json:324
 msgid ""
-"Train users on the sensitivity of the manipulated information, in order to "
-"put their attention on how to protect them."
+"Train users on the sensitivity of the processed information, in order to put "
+"their attention on how to protect these data."
 msgstr ""
 "Schulung der Benutzer in Bezug auf die Sensibilität der manipulierten "
 "Informationen, um ihre Aufmerksamkeit darauf zu lenken, wie sie geschützt "
@@ -698,10 +729,11 @@ msgid ""
 msgstr "extern definiert, je nach Bedarf, ohne Angabe eines Vertrages"
 
 #: data/fit4cybersecurity/questions.json:377
+#: data/fit4ehealth/questions.json:369 data/fit4ehealth/questions.json:386
 msgid ""
 "It's important to define responsibilities, either externally or internally, "
-"with one person or more, or a company, but specialised into their own "
-"domain, with possibly a training."
+"with one or more persons, or a company, but specialized into their own "
+"domain, at best supported by relevant training."
 msgstr ""
 "Es ist wichtig, die Verantwortlichkeiten entweder extern oder intern mit "
 "einer oder mehreren Personen oder einem Unternehmen zu definieren, das "
@@ -764,24 +796,27 @@ msgstr ""
 "beliebigen Netzwerk zum internen Server zu verschlüsseln"
 
 #: data/fit4cybersecurity/questions.json:430
+#: data/fit4ehealth/questions.json:456
 msgid ""
-"public Wi-Fi, open networks or connection protected by external organisation "
-"or person"
+"Public Internet, Wi-Fi, open networks or connection protected by external "
+"organizations or individuals"
 msgstr ""
-"öffentliches WLAN, offene Netzwerke oder Verbindungen, die durch eine "
+"Öffentliches WLAN, offene Netzwerke oder Verbindungen, die durch eine "
 "externe Organisation oder Person geschützt sind"
 
 #: data/fit4cybersecurity/questions.json:443
+#: data/fit4ehealth/questions.json:429 data/fit4ehealth/questions.json:465
 msgid ""
 "External connection which is not controlled and monitored should be avoided "
-"to avoid data loss."
+"to avoid data theft."
 msgstr ""
 "Externe Verbindungen, die nicht kontrolliert und überwacht werden, sollten "
 "vermieden werden, um Datenverlust zu vermeiden."
 
 #: data/fit4cybersecurity/questions.json:446
+#: data/fit4ehealth/questions.json:474
 msgid ""
-"a private connection or a connection sharing from a private or professional "
+"a private connection or connection sharing from a private or professional "
 "smartphone (tethering/hotspot)"
 msgstr ""
 "eine private Verbindung oder eine gemeinsame Nutzung von Verbindungen von "
@@ -796,18 +831,21 @@ msgstr ""
 "vermeiden."
 
 #: data/fit4cybersecurity/questions.json:462
+#: data/fit4ehealth/questions.json:492
 msgid ""
-"a screen filter or adjusts their position to ensure that no unauthorised "
-"person could see what is on the screen"
+"a screen filter or adjusts their position to ensure that no unauthorized "
+"person could see what is on the screen of their mobile device (tablet or "
+"laptop)"
 msgstr ""
 "einen Bildschirmfilter oder deren Aufmerksamkeit, um sicherzustellen, dass "
 "keine nicht autorisierte Person sehen kann, was sich auf dem Bildschirm "
 "befindet"
 
 #: data/fit4cybersecurity/questions.json:475
+#: data/fit4ehealth/questions.json:517
 msgid ""
-"Devices that are taken away and that contains confidential data should "
-"always have their internal memory encrypted to avoid data loss."
+"Devices that are taken away and that contain confidential data should always "
+"have their internal memory encrypted to avoid data theft."
 msgstr ""
 "Bei Geräten, die entfernt wurden und vertrauliche Daten enthalten, sollte "
 "der interne Speicher immer verschlüsselt sein, um Datenverlust zu vermeiden."
@@ -868,25 +906,31 @@ msgid "define confidentiality of data, and their protection"
 msgstr "definieren Vertraulichkeit von Daten und deren Schutz"
 
 #: data/fit4cybersecurity/questions.json:533
+#: data/fit4ehealth/questions.json:617
 msgid ""
 "If means and needs permit it, a contract should be signed to ensure that the "
 "external IT provider will ensure the availability of system to remain "
-"operational."
+"operational. These kinds of contracts named \"Service Level Agreement (SLA)\""
 msgstr ""
 "Wenn Mittel und Bedürfnisse dies zulassen, sollte ein Vertrag unterzeichnet "
 "werden, um sicherzustellen, dass der externe IT-Anbieter die Verfügbarkeit "
-"des Systems sicherstellt, um betriebsbereit zu bleiben."
+"des Systems sicherstellt, um betriebsbereit zu bleiben. Diese Art von "
+"Verträgen wird \"Service Level Agreement (SLA)\" genannt."
 
 #: data/fit4cybersecurity/questions.json:536
-msgid "define the maximum time of intervention after an incident"
+#: data/fit4ehealth/questions.json:609
+msgid ""
+"define the maximum time until intervention needs to be performed after an "
+"incident"
 msgstr "definieren die maximale Eingriffszeit nach einem Vorfall"
 
 #: data/fit4cybersecurity/questions.json:549
+#: data/fit4ehealth/questions.json:634
 msgid ""
-"It's necessary to review the contracts to ensuring a certain availability :"
-"<ul><li>not having an intervention solution whenever it's essential</"
-"li><li>to not pay too much for a service which is not necessary</li><li>to "
-"evaluate if the services paid are satisfying the necessary</li></ul>"
+"It's necessary to review the contracts to ensure :<ul><li>having an "
+"intervention solution whenever it is essential</li><li>to not pay too much "
+"for a service which is not necessary</li><li>to evaluate if the services "
+"paid are satisfying the necessary</li></ul>"
 msgstr ""
 
 #: data/fit4cybersecurity/questions.json:552
@@ -916,12 +960,13 @@ msgstr ""
 
 #: data/fit4cybersecurity/questions.json:578
 msgid "internally, by employees, punctually"
-msgstr "intern, von Mitarbeitern, pünktlich  erledigt"
+msgstr "intern, von Mitarbeitern, pünktlich erledigt"
 
 #: data/fit4cybersecurity/questions.json:591
+#: data/fit4ehealth/questions.json:736
 msgid ""
 "The office cleaning should be done, whenever possible, during work time to "
-"avoid potential data theft."
+"avoid potential data or material theft."
 msgstr ""
 "Die Büroreinigung sollte nach Möglichkeit während der Arbeitszeit "
 "durchgeführt werden, um möglichen Datendiebstahl zu vermeiden."
@@ -931,13 +976,17 @@ msgid "during the work time"
 msgstr "während der Arbeitszeit erledigt"
 
 #: data/fit4cybersecurity/questions.json:607
-msgid "Rules should be given mainly to specify what should be done or avoided."
+#: data/fit4ehealth/questions.json:753
+msgid ""
+"Rules should be given mainly to specify what should be done or avoided, as "
+"misunderstandings can happen."
 msgstr ""
 "Regeln sollten hauptsächlich angegeben werden, um zu spezifizieren, was "
 "getan oder vermieden werden soll."
 
 #: data/fit4cybersecurity/questions.json:610
-msgid "with rules of what should be done and what should not be done"
+#: data/fit4ehealth/questions.json:745
+msgid "with clear rules of what should be done and what shouldn't be done"
 msgstr ""
 "nach defininierten Anweisungen erledigt (was getan werden soll und was nicht)"
 
@@ -968,7 +1017,9 @@ msgstr ""
 "vertrauliche Dokumente angezeigt werden."
 
 #: data/fit4cybersecurity/questions.json:642
-msgid "with all confidential documents locked in a room, a desk or a closet"
+#: data/fit4ehealth/questions.json:779
+msgid ""
+"with all confidential documents locked away in a room, a desk or a closet"
 msgstr ""
 "durchgeführt, während alle vertraulichen Dokumente in einem Raum, einem "
 "Schreibtisch oder einem Schrank eingeschlossen"
@@ -1010,7 +1061,7 @@ msgstr "Logischer Zugriff"
 msgid ""
 "Advice should be given to avoid weak passwords. Some tips or techniques "
 "could be given to employees to remember their passwords. Here some examples:"
-"<ul></li><li>Passwords should be kept secret and personal. Each and everyone "
+"<ul><li>Passwords should be kept secret and personal. Each and everyone "
 "should access their data by using their password, even from a computer of "
 "someone else.</li><li>There shouldn't be a computer which is shared with one "
 "and unique password. If it's inevitable, then a trsutworthy person should be "
@@ -1018,6 +1069,16 @@ msgid ""
 "mandatory to be careful with the password storage in the internet browser as "
 "they are not protected.</li></ul>"
 msgstr ""
+"Es sollten Hinweise gegeben werden, um schwache Passwörter zu vermeiden. "
+"Angestellte können Tipps oder Techniken erhalten, um sich ihre Passwörter zu "
+"merken. Hier einige Beispiele:<ul><li>Passwörter sollten geheim und "
+"persönlich gehalten werden. Jeder sollte mit seinem Passwort auf seine Daten "
+"zugreifen, auch von einem Computer eines anderen.</li><li>Es sollte keinen "
+"Computer geben, auf dem ein einziges und eindeutiges Kennwort festgelegt "
+"ist. Wenn es unvermeidlich ist, sollte eine wahrheitsgemäße Person als "
+"verantwortlich definiert werden und der Zugang sollte wirklich eingeschränkt "
+"sein.</li><li>Beim Speichern von Passwörtern im Internetbrowser ist Vorsicht "
+"geboten, da diese nicht geschützt sind.</li></ul>"
 
 #: data/fit4cybersecurity/questions.json:684
 msgid "not having requirements or guidelines, employees are left on their own"
@@ -1102,9 +1163,10 @@ msgid "complete sentences"
 msgstr "vollständige Sätze"
 
 #: data/fit4cybersecurity/questions.json:777
+#: data/fit4ehealth/questions.json:1181
 msgid ""
 "Passwords should be changed from time to time, to prevent serious "
-"consequences in case of a leak."
+"consequences in case of a leak or data theft."
 msgstr ""
 "Passwörter sollten von Zeit zu Zeit geändert werden, um schwerwiegende "
 "Folgen im Falle eines Lecks zu vermeiden."
@@ -1127,9 +1189,10 @@ msgid "included in a password manager"
 msgstr "in einem Passwort-Manager abgelegt"
 
 #: data/fit4cybersecurity/questions.json:809
+#: data/fit4ehealth/questions.json:1096 data/fit4ehealth/questions.json:1216
 msgid ""
 "It's mandatory to be careful with the password storage in the internet "
-"browser as they are not protected."
+"browsers as they are not protected well."
 msgstr ""
 "Beim Speichern von Passwörtern im Internetbrowser ist Vorsicht geboten, da "
 "diese nicht geschützt sind."
@@ -1176,6 +1239,12 @@ msgid ""
 "is used for external people, strong precautions should be taken, for example "
 "the collection of an identity.</li></ul>"
 msgstr ""
+"Derzeit ist das drahtlose Netzwerk in der Firma nicht aktiviert. Wenn es "
+"geändert wird, ist es wichtig:<ul><li>Das drahtlose Netzwerk sollte zwischen "
+"internen und externen Benutzern aufgeteilt werden, um Zugriffsprobleme zu "
+"vermeiden.</li><li>Wenn ein drahtloses Netzwerk für externe Personen "
+"verwendet wird, sollten strenge Vorsichtsmaßnahmen getroffen werden, z. B. "
+"das Sammeln einer Identität.</li></ul>"
 
 #: data/fit4cybersecurity/questions.json:854
 msgid "are not used in the company"
@@ -1244,12 +1313,13 @@ msgid "Wireless networks"
 msgstr "Drahtlose Netzwerke"
 
 #: data/fit4cybersecurity/questions.json:924
-msgid "Anti-virus"
+#: data/fit4ehealth/questions.json:1430
+msgid "Antivirus"
 msgstr "Antivirus"
 
 #: data/fit4cybersecurity/questions.json:941
 #: data/fit4ehealth/questions.json:1450
-msgid "The company should have an anti-virus and be careful to:"
+msgid "The company should have an antivirus and be careful to:"
 msgstr ""
 "Das Unternehmen sollte über ein Virenschutzprogramm verfügen und Folgendes "
 "beachten:"
@@ -1260,7 +1330,8 @@ msgid "is not installed or used"
 msgstr "ist nicht installiert oder wird nicht verwendet"
 
 #: data/fit4cybersecurity/questions.json:957
-msgid "An anti-virus software must be on all devices."
+#: data/fit4ehealth/questions.json:1467
+msgid "An antivirus software must be installed on all devices."
 msgstr "Auf allen Geräten muss eine Antivirensoftware installiert sein."
 
 #: data/fit4cybersecurity/questions.json:960
@@ -1290,20 +1361,23 @@ msgstr ""
 "schützen."
 
 #: data/fit4cybersecurity/questions.json:992
-msgid "is activated and protects computers"
+#: data/fit4ehealth/questions.json:1493
+msgid "is activated and protects computer"
 msgstr "ist aktiviert und schützt den Computer"
 
 #: data/fit4cybersecurity/questions.json:1005
+#: data/fit4ehealth/questions.json:1518
 msgid ""
-"All devices, like smartphones, tablets should have an anti-virus, even if "
-"it's the one by default from the operating system."
+"All devices, like smartphones, tablets should have an antivirus, even if it "
+"is the one by default from the operating system."
 msgstr ""
 "Alle Geräte, wie Smartphones und Tablets, sollten mit einem "
 "Antivirenprogramm ausgestattet sein, auch wenn dieses standardmäßig vom "
 "Betriebssystem stammt."
 
 #: data/fit4cybersecurity/questions.json:1008
-msgid "is installed on all mobile phones that are on networks"
+#: data/fit4ehealth/questions.json:1510
+msgid "is installed on all mobile phones that are on network"
 msgstr "ist auf allen Mobiltelefonen in Netzwerken installiert"
 
 #: data/fit4cybersecurity/questions.json:1021
@@ -1363,9 +1437,10 @@ msgstr ""
 "ihren Computer kümmern"
 
 #: data/fit4cybersecurity/questions.json:1079
+#: data/fit4ehealth/questions.json:1596
 msgid ""
 "A device should always be up to date in order to avoid security problems, "
-"and also avoid network intrusion. Many operating system now update "
+"and also avoid network intrusion. Many operating systems now update "
 "automatically, but installed software needs some permission to be given or "
 "manual maintenance."
 msgstr ""
@@ -1375,14 +1450,17 @@ msgstr ""
 "benötigt eine Erlaubnis oder manuelle Wartung."
 
 #: data/fit4cybersecurity/questions.json:1082
-msgid "automatically or manually updated; software and operating system"
+#: data/fit4ehealth/questions.json:1588
+msgid ""
+"automatically or manually updated regarding the software and operating system"
 msgstr ""
 "werden automatisch oder manuell aktualisiert, Software als Betriebssystem"
 
 #: data/fit4cybersecurity/questions.json:1095
+#: data/fit4ehealth/questions.json:1613
 msgid ""
 "Administrator rights should be left only to the users who are specialised in "
-"IT, or welladvised respecting the rules."
+"IT, or well advised respecting the rules."
 msgstr ""
 "Administratorrechte sollten nur Benutzern überlassen werden, die auf IT "
 "spezialisiert sind oder die die Regeln gut einhalten."
@@ -1396,9 +1474,11 @@ msgstr ""
 "installieren"
 
 #: data/fit4cybersecurity/questions.json:1111
+#: data/fit4ehealth/questions.json:1630
 msgid ""
 "Downloads should only be done from the official websites, the original "
-"developers of the software, to avoid illegal download or infections."
+"developers of the software, to avoid manipulated download files or "
+"infections."
 msgstr ""
 "Downloads sollten nur von den offiziellen Websites, von den "
 "Originalentwicklern der Software, gemacht werden, um illegale Downloads oder "
@@ -1434,7 +1514,7 @@ msgstr "Die Computer der Benutzer"
 #: data/fit4cybersecurity/questions.json:1136
 #: data/fit4ehealth/questions.json:1671
 msgid "Backups"
-msgstr "Backups (Datensicherunged) sind"
+msgstr "Backup"
 
 #: data/fit4cybersecurity/questions.json:1153
 msgid ""
@@ -1522,12 +1602,13 @@ msgid "disconnected: they are disconnected from the server once they are done"
 msgstr "entstöpselt: Sie werden vom Server getrennt, sobald sie fertig sind"
 
 #: data/fit4cybersecurity/questions.json:1257
+#: data/fit4ehealth/questions.json:1746
 msgid ""
-"Backups should be tested from time to time, just to ensure that the data is "
-"readable and has integrity."
+"Backups should be tested (restored) from time to time, just to ensure that "
+"the data is readable and has integrity."
 msgstr ""
-"Backups sollten von Zeit zu Zeit getestet werden, um sicherzustellen, dass "
-"die Daten lesbar und integer sind."
+"Backups sollten von Zeit zu Zeit getestet (wiederhergestellt) werden, um "
+"sicherzustellen, dass die Daten lesbar und integer sind."
 
 #: data/fit4cybersecurity/questions.json:1260
 msgid ""
@@ -1575,10 +1656,11 @@ msgid "is forbidden or impossible in the company"
 msgstr "ist in der Firma verboten oder unmöglich"
 
 #: data/fit4cybersecurity/questions.json:1315
+#: data/fit4ehealth/questions.json:1810
 msgid ""
 "Personal devices shouldn't be used in company without any controls, rules "
 "and explanations. By knowing all the different existing ways to attack an "
-"organism, it's possible to avoid them."
+"organization, it's possible to avoid them."
 msgstr ""
 
 #: data/fit4cybersecurity/questions.json:1318
@@ -1602,13 +1684,16 @@ msgstr ""
 
 #: data/fit4cybersecurity/questions.json:1334
 #: data/fit4ehealth/questions.json:1819
-msgid "is under a strict anti-virus control"
+msgid "is under a strict antivirus control"
 msgstr "unterliegen strenger kontrollen"
 
 #: data/fit4cybersecurity/questions.json:1347
+#: data/fit4ehealth/questions.json:1844
 msgid ""
-"Defining rules and best practices helps to protect the internal networks."
+"Defining rules and best practices help to protect the internal networks."
 msgstr ""
+"Das Definieren von Regeln und Best Practices trägt zum Schutz der internen "
+"Netzwerke bei."
 
 #: data/fit4cybersecurity/questions.json:1350
 #: data/fit4ehealth/questions.json:1836
@@ -1619,13 +1704,18 @@ msgstr ""
 
 #: data/fit4cybersecurity/questions.json:1353
 #: data/fit4ehealth/questions.json:1775
+#, fuzzy
+#| msgid ""
+#| "Having some personal IT devices (USB Key, Hard Drive, Smartphone, Tablet, "
+#| "Laptop …) in the professional environment (network that is connected to "
+#| "the server)"
 msgid ""
 "Having some personal IT devices (USB Key, Hard Drive, Smartphone, Tablet, "
-"Laptop ...) in the professional environment (network that is connected to "
-"the server)"
+"Laptop …) in the professional environment (network that is connected to the "
+"server)"
 msgstr ""
 "Das Mitbringen persönliche IT-Geräte (USB-Stick, Festplatte, Smartphone, "
-"Tablet, Laptop ...) im professionellen Umfeld (Netzwerk, das mit dem Server "
+"Tablet, Laptop …) im professionellen Umfeld (Netzwerk, das mit dem Server "
 "verbunden ist)"
 
 #: data/fit4ehealth/questions.json:4 data/fit4ehealth/questions.json:150
@@ -1633,25 +1723,14 @@ msgid "Organisational Awareness"
 msgstr ""
 
 #: data/fit4ehealth/questions.json:5
-#, fuzzy
-#| msgid "In the company, rules are"
 msgid "In the establishment, rules are"
-msgstr "In der Firma werden Regeln"
+msgstr ""
 
 #: data/fit4ehealth/questions.json:23
 msgid ""
 "The company should define rules in order to avoid misunderstandings. Here "
 "some tips to do in order to have some:"
 msgstr ""
-"Das Unternehmen sollte Regeln definieren, um Missverständnisse zu vermeiden:"
-
-#: data/fit4ehealth/questions.json:40
-msgid ""
-"Rules (organizational, IT or working ones) should be known and explained to "
-"everyone, at the very least orally."
-msgstr ""
-"Regeln (organisatorische, IT- oder Arbeitsregeln) sollten zumindest mündlich "
-"bekannt sein und jedem erklärt werden."
 
 #: data/fit4ehealth/questions.json:57
 msgid ""
@@ -1659,15 +1738,10 @@ msgid ""
 "rules should still be written in a charter, read and signed by everyone, "
 "which is very important for larger companies or if the company grows."
 msgstr ""
-"Wenn eine mündliche Übermittlung für ein kleines Unternehmen ausreichen "
-"könnte, sollten die Regeln dennoch in einer Charta festgehalten, von allen "
-"gelesen und unterzeichnet werden, was noch wichtiger wird, wenn das "
-"Unternehmen wächst."
 
 #: data/fit4ehealth/questions.json:66
 msgid "read and signed by everyone, in a cabinet/practice charter or similar"
 msgstr ""
-"von allen gelesen und unterschrieben und in einer Benutzercharta festgehalten"
 
 #: data/fit4ehealth/questions.json:74
 msgid ""
@@ -1681,8 +1755,6 @@ msgid ""
 "Each time when it's possible, some advice or some best practices should be "
 "given and explained."
 msgstr ""
-"Jedes Mal, wenn es möglich ist, sollten einige Ratschläge oder Best "
-"Practices gegeben und gegebenenfalls erklärt werden."
 
 #: data/fit4ehealth/questions.json:100
 msgid ""
@@ -1725,7 +1797,7 @@ msgstr ""
 
 #: data/fit4ehealth/questions.json:149
 msgid "Data Transfer"
-msgstr "Datenschutzverstöße"
+msgstr ""
 
 #: data/fit4ehealth/questions.json:151
 msgid "Medical data of the establishment is"
@@ -1763,8 +1835,8 @@ msgstr ""
 
 #: data/fit4ehealth/questions.json:205
 msgid ""
-"sometimes sent via a messaging system (like Whatsapp, Skype, …)  or stored "
-"in the Cloud (like WeTransfer, Google Drive, …)"
+"sometimes sent via a messaging system (like Whatsapp, Skype, …) or stored in "
+"the Cloud (like WeTransfer, Google Drive, …)"
 msgstr ""
 
 #: data/fit4ehealth/questions.json:213
@@ -1820,11 +1892,11 @@ msgstr ""
 
 #: data/fit4ehealth/questions.json:272
 msgid "All working professionals are trained for/in"
-msgstr "Die Mitarbeiter sind"
+msgstr ""
 
 #: data/fit4ehealth/questions.json:282
 msgid "the software they use on a regular basis"
-msgstr "geschult um die Software, die sie täglich brauchen benutzen zu können"
+msgstr ""
 
 #: data/fit4ehealth/questions.json:290
 msgid ""
@@ -1833,34 +1905,9 @@ msgid ""
 "security of the data processed."
 msgstr ""
 
-#: data/fit4ehealth/questions.json:299
-msgid ""
-"information security, to have the knowledge to protect themselves against "
-"attacks or information security issues"
-msgstr ""
-"geschult in Informationssicherheit, um sich vor Angriffen schützen zu können"
-
-#: data/fit4ehealth/questions.json:307
-msgid ""
-"By informing about attacks that are current, common or well known, employees "
-"could more easily identify them and avoid being affected by them."
-msgstr ""
-"Durch das Informieren über aktuelle, häufige oder bekannte Angriffe können "
-"Mitarbeiter diese leichter identifizieren und vermeiden, auf sie "
-"hereinzufallen."
-
 #: data/fit4ehealth/questions.json:316
 msgid "the importance of correctly managing and protecting personal data"
 msgstr ""
-
-#: data/fit4ehealth/questions.json:324
-msgid ""
-"Train users on the sensitivity of the processed information, in order to put "
-"their attention on how to protect these data."
-msgstr ""
-"Schulung der Benutzer in Bezug auf die Sensibilität der manipulierten "
-"Informationen, um ihre Aufmerksamkeit darauf zu lenken, wie sie geschützt "
-"werden sollen."
 
 #: data/fit4ehealth/questions.json:333
 msgid "neither of those cases"
@@ -1872,7 +1919,7 @@ msgstr ""
 
 #: data/fit4ehealth/questions.json:342
 msgid "IT and Information security tasks are:"
-msgstr "Verantwortlichkeiten für Anti-VirusIT und Informationssicherheit:"
+msgstr ""
 
 #: data/fit4ehealth/questions.json:352
 msgid "internally performed by an IT specialist"
@@ -1882,17 +1929,6 @@ msgstr ""
 msgid "internally performed by someone at ease with computers"
 msgstr ""
 
-#: data/fit4ehealth/questions.json:369 data/fit4ehealth/questions.json:386
-msgid ""
-"It's important to define responsibilities, either externally or internally, "
-"with one or more persons, or a company, but specialized into their own "
-"domain, at best supported by relevant training."
-msgstr ""
-"Es ist wichtig, die Verantwortlichkeiten entweder extern oder intern mit "
-"einer oder mehreren Personen oder einem Unternehmen zu definieren, das "
-"jedoch auf seine eigene Domäne spezialisiert ist, möglicherweise mit einer "
-"Schulung."
-
 #: data/fit4ehealth/questions.json:378
 msgid ""
 "internally performed by the one finding or encountering the problem, or "
@@ -1901,7 +1937,7 @@ msgstr ""
 
 #: data/fit4ehealth/questions.json:395
 msgid "externally by a third party with a contract"
-msgstr "extern definiert, mit einem Vertrag"
+msgstr ""
 
 #: data/fit4ehealth/questions.json:402
 msgid "Mobility"
@@ -1912,7 +1948,6 @@ msgid ""
 "During any work/visit outside the establishment, the medical professional "
 "uses"
 msgstr ""
-"Während einer Mission außerhalb des Unternehmens verwendet der Mitarbeiter"
 
 #: data/fit4ehealth/questions.json:414
 msgid ""
@@ -1920,33 +1955,18 @@ msgid ""
 "or necessary, or the only connection to the internal network is on the "
 "company premises"
 msgstr ""
-"keine professionellen Werkzeuge, da Home Office oder Reisen nicht zulässig "
-"oder erforderlich sind oder die einzige Verbindung zum internen Netzwerk auf "
-"dem Firmengelände besteht"
 
 #: data/fit4ehealth/questions.json:422
 msgid ""
 "For now, no outside work is done. If it's changed, it's important to take "
 "care that:"
 msgstr ""
-"Derzeit werden keine Verträge mit Dritten abgeschlossen. Wenn es sich "
-"geändert hat, ist es wichtig:"
-
-#: data/fit4ehealth/questions.json:429 data/fit4ehealth/questions.json:465
-msgid ""
-"External connection which is not controlled and monitored should be avoided "
-"to avoid data theft."
-msgstr ""
-"Externe Verbindungen, die nicht kontrolliert und überwacht werden, sollten "
-"vermieden werden, um Datenverlust zu vermeiden."
 
 #: data/fit4ehealth/questions.json:438
 msgid ""
 "VPN (Virtual Private Network) to encrypt all data from any external network "
 "to the internal server of the establishment"
 msgstr ""
-"VPN (Virtuelles privates Netzwerk) wird verwendet, um alle Daten von einem "
-"beliebigen Netzwerk zum internen Server zu verschlüsseln"
 
 #: data/fit4ehealth/questions.json:447
 msgid ""
@@ -1954,25 +1974,6 @@ msgid ""
 "missions outside the premises, they must have a VPN connection to connect to "
 "the server/network of the organization."
 msgstr ""
-"Immer wenn Benutzer im Freien arbeiten müssen, vom Heimbüro bis zu Aufgaben "
-"außerhalb des Unternehmens, müssen sie über eine VPN-Verbindung verfügen, um "
-"eine Verbindung zum Server herstellen zu können."
-
-#: data/fit4ehealth/questions.json:456
-msgid ""
-"Public Internet, Wi-Fi, open networks or connection protected by external "
-"organizations or individuals"
-msgstr ""
-"Öffentliches WLAN, offene Netzwerke oder Verbindungen, die durch eine "
-"externe Organisation oder Person geschützt sind"
-
-#: data/fit4ehealth/questions.json:474
-msgid ""
-"a private connection or connection sharing from a private or professional "
-"smartphone (tethering/hotspot)"
-msgstr ""
-"eine private Verbindung oder eine gemeinsame Nutzung von Verbindungen von "
-"einem privaten oder professionellen Smartphone"
 
 #: data/fit4ehealth/questions.json:483
 msgid ""
@@ -1980,31 +1981,11 @@ msgid ""
 "important, as you can be sure that only you have an access to this network."
 msgstr ""
 
-#: data/fit4ehealth/questions.json:492
-msgid ""
-"a screen filter or adjusts their position to ensure that no unauthorized "
-"person could see what is on the screen of their mobile device (tablet or "
-"laptop)"
-msgstr ""
-"einen Bildschirmfilter oder deren Aufmerksamkeit, um sicherzustellen, dass "
-"keine nicht autorisierte Person sehen kann, was sich auf dem Bildschirm "
-"befindet"
-
 #: data/fit4ehealth/questions.json:509
 msgid ""
 "mobile devices that are encrypted (protected by a password at startup) or "
 "without any confidential data"
 msgstr ""
-"Geräte, die verschlüsselt (durch ein Passwort beim Booten geschützt) oder "
-"ohne vertrauliche Daten sind"
-
-#: data/fit4ehealth/questions.json:517
-msgid ""
-"Devices that are taken away and that contain confidential data should always "
-"have their internal memory encrypted to avoid data theft."
-msgstr ""
-"Bei Geräten, die entfernt wurden und vertrauliche Daten enthalten, sollte "
-"der interne Speicher immer verschlüsselt sein, um Datenverlust zu vermeiden."
 
 #: data/fit4ehealth/questions.json:526
 msgid "devices that are not connected to any IT network while on the trip."
@@ -2020,15 +2001,13 @@ msgstr ""
 
 #: data/fit4ehealth/questions.json:546
 msgid "Contracts"
-msgstr "Verträge (SLA/NDA)"
+msgstr ""
 
 #: data/fit4ehealth/questions.json:558
 msgid ""
 "are not defined, because they only come in case of an incident or specific "
 "needs"
 msgstr ""
-"sind nicht definiert, weil Dritte nur im Falle eines Ereignisses oder "
-"Bedarfs gerufen werden"
 
 #: data/fit4ehealth/questions.json:566
 msgid ""
@@ -2062,30 +2041,6 @@ msgid ""
 "Controller” by the GDPR) and should be clearly indicated in the contract."
 msgstr ""
 
-#: data/fit4ehealth/questions.json:609
-msgid ""
-"define the maximum time until intervention needs to be performed after an "
-"incident"
-msgstr "definieren die maximale Eingriffszeit nach einem Vorfall"
-
-#: data/fit4ehealth/questions.json:617
-msgid ""
-"If means and needs permit it, a contract should be signed to ensure that the "
-"external IT provider will ensure the availability of system to remain "
-"operational. These kinds of contracts named \"Service Level Agreement (SLA)\""
-msgstr ""
-"Wenn Mittel und Bedürfnisse dies zulassen, sollte ein Vertrag unterzeichnet "
-"werden, um sicherzustellen, dass der externe IT-Anbieter die Verfügbarkeit "
-"des Systems sicherstellt, um betriebsbereit zu bleiben."
-
-#: data/fit4ehealth/questions.json:634
-msgid ""
-"It's necessary to review the contracts to ensure:\n"
-"\t- having an intervention solution whenever it is essential\n"
-"\t- not to pay too much for a service which is not necessary\n"
-"\t- to evaluate if the services paid are satisfying the necessary."
-msgstr ""
-
 #: data/fit4ehealth/questions.json:643
 msgid "are defined orally"
 msgstr ""
@@ -2100,7 +2055,7 @@ msgstr ""
 
 #: data/fit4ehealth/questions.json:660
 msgid "are in written form"
-msgstr "Sie sind nicht schriftlich fixiert"
+msgstr ""
 
 #: data/fit4ehealth/questions.json:668
 msgid ""
@@ -2114,11 +2069,11 @@ msgstr "Büroreinigung"
 
 #: data/fit4ehealth/questions.json:677
 msgid "The establishment cleaning is done"
-msgstr "Die Büroreinigung wird"
+msgstr ""
 
 #: data/fit4ehealth/questions.json:687
 msgid "internally, by our employees"
-msgstr "intern, von Mitarbeitern, pünktlich  erledigt"
+msgstr ""
 
 #: data/fit4ehealth/questions.json:702
 msgid ""
@@ -2138,41 +2093,11 @@ msgstr ""
 
 #: data/fit4ehealth/questions.json:728
 msgid "during the working hours of the establishment"
-msgstr "während der Arbeitszeit erledigt"
-
-#: data/fit4ehealth/questions.json:736
-msgid ""
-"The office cleaning should be done, whenever possible, during work time to "
-"avoid potential data or material theft."
 msgstr ""
-"Die Büroreinigung sollte nach Möglichkeit während der Arbeitszeit "
-"durchgeführt werden, um möglichen Datendiebstahl zu vermeiden."
-
-#: data/fit4ehealth/questions.json:745
-msgid "with clear rules of what should be done and what shouldn't be done"
-msgstr ""
-"nach defininierten Anweisungen erledigt (was getan werden soll und was nicht)"
-
-#: data/fit4ehealth/questions.json:753
-msgid ""
-"Rules should be given mainly to specify what should be done or avoided, as "
-"misunderstandings can happen."
-msgstr ""
-"Regeln sollten hauptsächlich angegeben werden, um zu spezifizieren, was "
-"getan oder vermieden werden soll."
 
 #: data/fit4ehealth/questions.json:762
 msgid "with a contract which specifies medical confidentiality"
 msgstr ""
-"gemäß einem Vertrag erledigt, der auch zu Vertraulichkeit/Geheimhaltung "
-"zwingt"
-
-#: data/fit4ehealth/questions.json:779
-msgid ""
-"with all confidential documents locked away in a room, a desk or a closet"
-msgstr ""
-"durchgeführt, während alle vertraulichen Dokumente in einem Raum, einem "
-"Schreibtisch oder einem Schrank eingeschlossen"
 
 #: data/fit4ehealth/questions.json:811
 msgid "Remote Maintenance"
@@ -2234,19 +2159,18 @@ msgstr ""
 msgid ""
 "The best is to have the technician that you can recognize in front of you, "
 "while doing the maintenance, but there is no obligation as long as they "
-"respect the fact that :\n"
-"\t-You decide when the maintenance is done.\n"
-"\t-You watch that no personal data are accessed.\n"
-"\t-You keep contact during the process."
+"respect the fact that :<ul><li>You decide when the maintenance is done.</"
+"li><li>You watch that no personal data are accessed.</il><il>You keep "
+"contact during the process.</il></ul>"
 msgstr ""
 
 #: data/fit4ehealth/questions.json:906
 msgid "Physical Security"
-msgstr "Informationssicherheit"
+msgstr ""
 
 #: data/fit4ehealth/questions.json:907
 msgid "Physical Access"
-msgstr "Logischer Zugriff"
+msgstr ""
 
 #: data/fit4ehealth/questions.json:908
 msgid "When a patient enters your premises, he/she:"
@@ -2258,8 +2182,8 @@ msgstr ""
 
 #: data/fit4ehealth/questions.json:926
 msgid ""
-"Someone you do not know must  not be able to walk everywhere in the "
-"practice, because it is always possible to grab data without being seen. "
+"Someone you do not know must not be able to walk everywhere in the practice, "
+"because it is always possible to grab data without being seen."
 msgstr ""
 
 #: data/fit4ehealth/questions.json:935
@@ -2344,7 +2268,6 @@ msgid ""
 "not having requirements or guidelines, employees can manage them as they "
 "prefer"
 msgstr ""
-"keine Ratschlägen oder Richtlinien gegeben, oder muss selber entscheiden"
 
 #: data/fit4ehealth/questions.json:1075
 msgid ""
@@ -2357,33 +2280,14 @@ msgid ""
 "Each and everyone should access their data by using their password, even "
 "from the computer of someone else."
 msgstr ""
-"Passwörter sollten geheim und persönlich gehalten werden. Jeder sollte mit "
-"seinem Passwort auf seine Daten zugreifen, auch vom Computer einer anderen "
-"Person aus."
-
-#: data/fit4ehealth/questions.json:1096 data/fit4ehealth/questions.json:1216
-msgid ""
-"It's mandatory to be careful with the password storage in the internet "
-"browsers as they are not protected well."
-msgstr ""
-"Beim Speichern von Passwörtern im Internetbrowser ist Vorsicht geboten, da "
-"diese nicht geschützt sind."
 
 #: data/fit4ehealth/questions.json:1156
 msgid "not forming any words or dates, or are complete sentences"
-msgstr "keine Wörter oder Daten (wie Geburtsdatum etc.)"
-
-#: data/fit4ehealth/questions.json:1181
-msgid ""
-"Passwords should be changed from time to time, to prevent serious "
-"consequences in case of a leak or data theft."
 msgstr ""
-"Passwörter sollten von Zeit zu Zeit geändert werden, um schwerwiegende "
-"Folgen im Falle eines Lecks zu vermeiden."
 
 #: data/fit4ehealth/questions.json:1208
 msgid "saved in web browsers"
-msgstr "in Webbrowsern abgelegt"
+msgstr ""
 
 #: data/fit4ehealth/questions.json:1242
 msgid "Authorization for the access to patient data"
@@ -2431,19 +2335,17 @@ msgstr ""
 
 #: data/fit4ehealth/questions.json:1307
 msgid "Wireless access"
-msgstr "Drahtlose Netzwerke"
+msgstr ""
 
 #: data/fit4ehealth/questions.json:1319
 msgid "are not used in the establishment at all"
-msgstr "werden im Unternehmen nicht verwendet"
+msgstr ""
 
 #: data/fit4ehealth/questions.json:1327
 msgid ""
 "For now, wireless network isn't activated in the company. If it is changed, "
 "it's important to:"
 msgstr ""
-"Derzeit sind die persönlichen Geräte nicht mit dem lokalen Netzwerk "
-"verbunden. Wenn es geändert wird, ist es wichtig:"
 
 #: data/fit4ehealth/questions.json:1336
 msgid "are closed and for professional use only"
@@ -2453,7 +2355,7 @@ msgstr ""
 msgid ""
 "are given to everyone, without checking the identity of the user that "
 "connects to it"
-msgstr "werden jedem gegeben, ohne die Identität der Personen zu bekommen"
+msgstr ""
 
 #: data/fit4ehealth/questions.json:1377
 msgid "are divided in guests and internal network"
@@ -2464,31 +2366,6 @@ msgid ""
 "Ensure strong separation of the two Wireless networks by strong passwords "
 "and possibly limiting access to internal network to known devices."
 msgstr ""
-
-#: data/fit4ehealth/questions.json:1430
-msgid "Antivirus"
-msgstr "Antivirus"
-
-#: data/fit4ehealth/questions.json:1467
-msgid "An anti-virus software must be installed on all devices."
-msgstr "Auf allen Geräten muss eine Antivirensoftware installiert sein."
-
-#: data/fit4ehealth/questions.json:1493
-msgid "is activated and protects computer"
-msgstr "ist aktiviert und schützt den Computer"
-
-#: data/fit4ehealth/questions.json:1510
-msgid "is installed on all mobile phones that are on network"
-msgstr "ist auf allen Mobiltelefonen in Netzwerken installiert"
-
-#: data/fit4ehealth/questions.json:1518
-msgid ""
-"All devices, like smartphones, tablets should have an anti-virus, even if it "
-"is the one by default from the operating system."
-msgstr ""
-"Alle Geräte, wie Smartphones und Tablets, sollten mit einem "
-"Antivirenprogramm ausgestattet sein, auch wenn dieses standardmäßig vom "
-"Betriebssystem stammt."
 
 #: data/fit4ehealth/questions.json:1535
 msgid ""
@@ -2508,50 +2385,18 @@ msgstr ""
 #: data/fit4ehealth/questions.json:1571
 msgid "used without any specific rules and users have to take care of them"
 msgstr ""
-"haben keine Regeln für die Benutzung, und Benutzer müssen sich selbst um "
-"ihren Computer kümmern"
 
 #: data/fit4ehealth/questions.json:1579
 msgid ""
 "Some rules and specific advice should be given concerning users workstations "
 "or laptops. Some points that are important:"
 msgstr ""
-"Einige Regeln und spezielle Ratschläge sollten in Bezug auf "
-"Benutzerstationen oder Laptops gegeben werden. Einige wichtige Punkte:"
-
-#: data/fit4ehealth/questions.json:1588
-msgid ""
-"automatically or manually updated regarding the software and operating system"
-msgstr ""
-"werden automatisch oder manuell aktualisiert, Software als Betriebssystem"
-
-#: data/fit4ehealth/questions.json:1596
-msgid ""
-"A device should always be up to date in order to avoid security problems, "
-"and also avoid network intrusion. Many operating systems now update "
-"automatically, but installed software needs some permission to be given or "
-"manual maintenance."
-msgstr ""
-"Ein Gerät sollte immer auf dem neuesten Stand sein, um Sicherheitsprobleme "
-"und auch das Eindringen in das Netzwerk zu vermeiden. Viele Betriebssysteme "
-"werden jetzt automatisch aktualisiert, aber die installierte Software "
-"benötigt eine Erlaubnis oder manuelle Wartung."
 
 #: data/fit4ehealth/questions.json:1605
 msgid ""
 "controlled by one or more administrators, which won't let users install "
 "software because they do not have administrator right"
 msgstr ""
-"werden von Administratoren gewarted, somit können Benutzer keine Software "
-"installieren"
-
-#: data/fit4ehealth/questions.json:1613
-msgid ""
-"Administrator rights should be left only to the users who are specialised in "
-"IT, or well advised respecting the rules."
-msgstr ""
-"Administratorrechte sollten nur Benutzern überlassen werden, die auf IT "
-"spezialisiert sind oder die die Regeln gut einhalten."
 
 #: data/fit4ehealth/questions.json:1622
 msgid ""
@@ -2559,19 +2404,6 @@ msgid ""
 "software, concerning illegal or dangerous activities  e.g. installing "
 "something without authorization"
 msgstr ""
-"werden nur mit einhalten der Regeln genutzt, die über die Installation und "
-"das Herunterladen von Software, die Rechtswidrigkeit oder die Gefahr der "
-"unbefugten Installation informieren"
-
-#: data/fit4ehealth/questions.json:1630
-msgid ""
-"Downloads should only be done from the official websites, the original "
-"developers of the software, to avoid manipulated download files or "
-"infections."
-msgstr ""
-"Downloads sollten nur von den offiziellen Websites, von den "
-"Originalentwicklern der Software, gemacht werden, um illegale Downloads oder "
-"Infektionen zu vermeiden."
 
 #: data/fit4ehealth/questions.json:1656
 msgid "shut down regularly outside of office hours"
@@ -2616,14 +2448,6 @@ msgstr ""
 msgid "tested by me sometimes"
 msgstr ""
 
-#: data/fit4ehealth/questions.json:1746
-msgid ""
-"Backups should be tested (restored) from time to time, just to ensure that "
-"the data is readable and has integrity."
-msgstr ""
-"Backups sollten von Zeit zu Zeit getestet werden, um sicherzustellen, dass "
-"die Daten lesbar und integer sind."
-
 #: data/fit4ehealth/questions.json:1755
 msgid "only readable by me, and the persons I gave permission to"
 msgstr ""
@@ -2633,18 +2457,6 @@ msgid ""
 "Even with backups, you must know who can access it, and you should give "
 "permission only to someone who needs it, as they are also considered as "
 "medical data."
-msgstr ""
-
-#: data/fit4ehealth/questions.json:1810
-msgid ""
-"Personal devices shouldn't be used in company without any controls, rules "
-"and explanations. By knowing all the different existing ways to attack an "
-"organization, it's possible to avoid them."
-msgstr ""
-
-#: data/fit4ehealth/questions.json:1844
-msgid ""
-"Defining rules and best practices help to protect the internal networks."
 msgstr ""
 
 #: data/fit4ehealth/questions.json:1853
@@ -2743,10 +2555,6 @@ msgid ""
 "webinars"
 msgstr ""
 
-#: data/fit4operatorsurvey/context-questions.json:71
-msgid "Postal and Courier Services"
-msgstr ""
-
 #: data/fit4operatorsurvey/context-questions.json:154
 msgid "What is your country?"
 msgstr "Was ist Ihre Branche?"
@@ -2830,7 +2638,7 @@ msgstr "Risikomanagement"
 
 #: data/fit4operatorsurvey/questions.json:11
 msgid "We do not really have one."
-msgstr "Niemals bzw. nicht wirklich."
+msgstr ""
 
 #: data/fit4operatorsurvey/questions.json:18
 msgid ""
@@ -2884,12 +2692,12 @@ msgstr ""
 #: data/fit4operatorsurvey/questions.json:941
 #: data/fit4operatorsurvey/questions.json:1059
 msgid "Please describe:"
-msgstr "Bitte beschreiben:"
+msgstr ""
 
 #: data/fit4operatorsurvey/questions.json:95
 msgid ""
 "What are the challenges related to performing existing Risk Management "
-"processes or practices? "
+"processes or practices?"
 msgstr ""
 
 #: data/fit4operatorsurvey/questions.json:113
@@ -2948,7 +2756,7 @@ msgstr ""
 
 #: data/fit4operatorsurvey/questions.json:243
 msgid "None, but we would love some support."
-msgstr "Keine, wir haben aber einige Verträge dieser Art."
+msgstr ""
 
 #: data/fit4operatorsurvey/questions.json:259
 msgid "Some. The list them includes:"
@@ -2977,7 +2785,10 @@ msgid "National guidance."
 msgstr ""
 
 #: data/fit4operatorsurvey/questions.json:325
-msgid "Other (please describe):"
+#: data/fit4operatorsurvey/questions.json:1151
+#: data/fit4operatorsurvey/questions.json:1201
+#: data/fit4operatorsurvey/questions.json:1309
+msgid "Other - please describe:"
 msgstr ""
 
 #: data/fit4operatorsurvey/questions.json:335
@@ -3014,7 +2825,7 @@ msgstr ""
 #: data/fit4operatorsurvey/questions.json:393
 #: data/fit4operatorsurvey/questions.json:451
 msgid "Telecom regulations."
-msgstr "Empfehlungen."
+msgstr ""
 
 #: data/fit4operatorsurvey/questions.json:401
 #: data/fit4operatorsurvey/questions.json:467
@@ -3210,7 +3021,7 @@ msgstr ""
 #: data/fit4operatorsurvey/questions.json:807
 #: data/fit4operatorsurvey/questions.json:1025
 msgid "None of the above."
-msgstr "Keine, da wir keine personenbezogenen Daten haben."
+msgstr ""
 
 #: data/fit4operatorsurvey/questions.json:823
 msgid ""
@@ -3382,12 +3193,6 @@ msgstr ""
 msgid "To sector-specific CERTs / CSIRTs."
 msgstr ""
 
-#: data/fit4operatorsurvey/questions.json:1151
-#: data/fit4operatorsurvey/questions.json:1201
-#: data/fit4operatorsurvey/questions.json:1309
-msgid "Other - please describe:"
-msgstr ""
-
 #: data/fit4operatorsurvey/questions.json:1161
 msgid ""
 "What kind of feedback would you consider as helpful to receive from an "
@@ -3495,7 +3300,7 @@ msgstr "Geschäftsbetrieb und Verarbeitung personenbezogener Daten"
 #: data/fit4privacy/questions.json:4 data/fit4privacy/questions.json:126
 #: data/fit4privacy/questions.json:192
 msgid "Personal Data Management"
-msgstr "Personal Data Management"
+msgstr "Persönliche Daten verwalten"
 
 #: data/fit4privacy/questions.json:20
 msgid ""
@@ -3697,13 +3502,24 @@ msgstr ""
 "könnten (zum Beispiel Daten, die sich aus dem Zusammenhang extrapolieren "
 "lassen, um Rückschlüsse auf ethnische Herkunft, politische Meinungen, "
 "genetische Details, Gewerkschaftszugehörigkeit, sexuelle Orientierung, "
-"Gesundheitszustand zu ziehen)? (Siehe Art. 9 DSGVO)"
+"Gesundheitszustand zu ziehen)? (Siehe <a href=\"https://www.privacy-"
+"regulation.eu/de/9.htm\" target=\"_blank\">Art. 9 DSGVO</a>)"
 
 #: data/fit4privacy/questions.json:191
 msgid "Register of Processing activities"
 msgstr "Datenverzeichnis"
 
 #: data/fit4privacy/questions.json:208
+#, fuzzy
+#| msgid ""
+#| "The main idea of GDPR is to have a risk-based approach to personal data "
+#| "processing, so without knowledge about what personal data is there and "
+#| "how it is processed, it will be impossible to know what the risks are. "
+#| "Therefore, you should consider, in your business, to acquire some "
+#| "understanding both on the quantity and risks of personal data that your "
+#| "company processes. In this case, Article 30 of GDPR should be the "
+#| "starting point in terms of minimal mandatory content of the register of "
+#| "processing activities. "
 msgid ""
 "The main idea of GDPR is to have a risk-based approach to personal data "
 "processing, so without knowledge about what personal data is there and how "
@@ -3712,7 +3528,7 @@ msgid ""
 "understanding both on the quantity and risks of personal data that your "
 "company processes. In this case, Article 30 of GDPR should be the starting "
 "point in terms of minimal mandatory content of the register of processing "
-"activities. "
+"activities."
 msgstr ""
 "Die Grundidee der DSGVO besteht in einem risikobasierten Ansatz für die "
 "Verarbeitung personenbezogener Daten. Ohne das Wissen darüber, welche "
@@ -3739,6 +3555,16 @@ msgid ""
 "Article 30 of GDPR gives you the minimal mandatory content of the register "
 "of processing activities."
 msgstr ""
+"Wir empfehlen Ihnen, die Aufgabe in mehrere Teilaufgaben aufzuteilen. Die "
+"einzelnen Abteilungen können in Bezug auf die Daten, die Sie verarbeiten, "
+"und die Prozesse, für die Sie zuständig sind, jeweils selbst für die "
+"Aufzeichnung von Verarbeitungstätigkeiten verantwortlich sein. In einer "
+"zweiten Phase können die verschiedenen Verzeichnisse nach einer "
+"Konsistenzprüfung zu einem einzigen zusammengefasst werden. In einer dritten "
+"Phase muss das Register (bzw. Verzeichnis) von Jahr zu Jahr überprüft und "
+"gepflegt werden oder wenn es wesentliche Änderungen in Bezug auf bestehende "
+"Verzeichnisse gibt. Denken Sie daran, dass Artikel 30 der DSGVO den "
+"Ausgangspunkt für die obligatorische Mindeststruktur dieses Registers angibt."
 
 #: data/fit4privacy/questions.json:227
 msgid "It is needed but we have no clear idea what exactly to list there."
@@ -3861,7 +3687,7 @@ msgid ""
 "for the consent of the user when the website uses non-essential cookies, "
 "which is required by the ePrivacy directive. Art. 13 or 14 of GDPR should be "
 "followed to update the privacy notice, as they list 12 elements that need to "
-"be shown to data subjects with the purpose of GDPR transparency. "
+"be shown to data subjects with the purpose of GDPR transparency."
 msgstr ""
 "Sie sind verpflichtet, gegenüber allen Betroffenen über die Verarbeitung "
 "personenbezogener Daten durch Ihr Unternehmen transparent zu sein. "
@@ -3878,7 +3704,7 @@ msgstr ""
 "auflisten, die den betroffenen Personen im Sinne der DSGVO-Transparenz zur "
 "Verfügung gestellt werden sollen. Die Zustimmung des Benutzers für die "
 "Hinterlegung / den Zugriff auf nicht erforderliche Cookies wird von der "
-"ePrivacy-Richtlinie angefordert. "
+"ePrivacy-Richtlinie angefordert."
 
 #: data/fit4privacy/questions.json:309
 msgid "No, we have had no change on the website yet related to GDPR."
@@ -3922,8 +3748,8 @@ msgstr ""
 "die von Ihnen zum Schutz der Daten ergriffenen Maßnahmen und die Rechte der "
 "Benutzer an ihren Daten zu informieren. In Bezug auf Ihre Mitarbeiter oder "
 "Auszubildenden sollten Sie über die bei der Einstellung verarbeiteten "
-"personenbezogenen Daten transparent sein (z. B. durch Aktualisierung\n"
-"  Arbeits- oder Praktikumsverträge), sondern auch für die Dauer ihres "
+"personenbezogenen Daten transparent sein (z. B. durch Aktualisierung "
+"Arbeits- oder Praktikumsverträge), sondern auch für die Dauer ihres "
 "Vertrages (z.B. im Intranet oder bei einer Änderung des Arbeitsvertrages). "
 "Wenn Sie über eine Website verfügen, deren Nutzung die Verarbeitung "
 "personenbezogener Daten von Besuchern beinhaltet, sollte diese Website auch "
@@ -4003,20 +3829,18 @@ msgstr ""
 #: data/fit4privacy/questions.json:426
 msgid ""
 "How did you inform the data subjects about the processing of their personal "
-"data performed by your company? "
+"data performed by your company?"
 msgstr ""
 "Wie haben Sie betroffene Personen über die Verarbeitung ihrer "
-"personenbezogenen Daten durch Ihr Unternehmen informiert? "
+"personenbezogenen Daten durch Ihr Unternehmen informiert?"
 
 #: data/fit4privacy/questions.json:429 data/fit4privacy/questions.json:479
 msgid "(Some) Principles of Processing"
 msgstr "Einige Prinzipien der Verarbeitung"
 
 #: data/fit4privacy/questions.json:430 data/fit4privacy/questions.json:480
-#, fuzzy
-#| msgid "(Some) Principles of Processing"
 msgid "Principles of processing"
-msgstr "Einige Prinzipien der Verarbeitung"
+msgstr "Prinzipien der Verarbeitung"
 
 #: data/fit4privacy/questions.json:446
 msgid ""
@@ -4053,7 +3877,7 @@ msgid ""
 "(e.g., contract execution, public/vital interest, legitimate interest, "
 "consent). If there is no business purpose, and no legal basis, then there "
 "should be no reason why that personal data should be processed. So, either "
-"you give up the processing, or you instate a legal basis for it. "
+"you give up the processing, or you instate a legal basis for it."
 msgstr ""
 "Um die Konformität mit der DSGVO zu gewährleisten, muss für jede "
 "Verarbeitung personenbezogener Daten ein rechtmäßiger Grund vorliegen (Art. "
@@ -4064,7 +3888,7 @@ msgstr ""
 "Einwilligung). Ohne geschäftlichen Zweck und rechtliche Grundlage liegt kein "
 "Grund für eine bestimmte Verarbeitung personenbezogener Daten vor. Somit "
 "mussen Sie auf die betreffende Verarbeitung verzichten, oder eine "
-"Rechtsgrundlage dafür schaffen. "
+"Rechtsgrundlage dafür schaffen."
 
 #: data/fit4privacy/questions.json:465
 msgid ""
@@ -4132,6 +3956,18 @@ msgid ""
 "actions to put that limitation in practice for both paper and electronic "
 "support of such data."
 msgstr ""
+"Um das in Art. 30 DSGVO beschriebene Verzeichnis der "
+"Verarbeitungstätigkeiten zu füllen, muss die Dauer der Speicherung der im "
+"Unternehmen verarbeiteten personenbezogenen Daten festgelegt und erzwungen "
+"werden. Wenn Sie feststellen, dass noch keine maximale Speicherdauer "
+"festgelegt wurde, sollten Sie alle wichtigen Arten personenbezogener Daten "
+"einschließen, für die es laut Gesetz Beschränkungen gibt (z. B. Finanzdaten, "
+"Daten über Vorstrafen, Daten zur Bekämpfung von Geldwäsche usw.). Bei "
+"anderen Arten von personenbezogenen Daten, für die es keine Regelung zur "
+"ausdrücklichen Festlegung der Speicherdauer gibt, kann das Unternehmen eine "
+"sinnvolle Dauer beschließen und Maßnahmen ergreifen, um diese Beschränkung "
+"für die papierbasierte und elektronische Aufbewahrung der entsprechenden "
+"Daten in die Praxis umzusetzen."
 
 #: data/fit4privacy/questions.json:515
 msgid "We don't know for sure how to deal with it."
@@ -4339,14 +4175,14 @@ msgid ""
 "The replies to data subjects should be performed by the DPO, if there is "
 "one. If the DPO does not exist, an equivalent data protection responsible "
 "should reply to the request, within the expected timeframe. It is therefore "
-"not mandatory that the legal department perform this task. "
+"not mandatory that the legal department perform this task."
 msgstr ""
 "Wenn es eine(n) DSB gibt, muss diese(r) die Anträge der betroffenen Personen "
 "beantworten. Wenn es keine(n) DSB gibt, sollte ein(e) vergleichbare(r) "
 "Datenschutzverantwortliche(r) die Anträge innerhalb der erwarteten Frist "
 "beantworten. Diese Aufgabe muss nicht unbedingt durch die Rechtsabteilung "
 "ausgeführt werden, es sei denn, der/die Datenschutzverantwortliche/DSB "
-"gehört dieser Abteilung an. "
+"gehört dieser Abteilung an."
 
 #: data/fit4privacy/questions.json:671
 msgid ""
@@ -4417,14 +4253,14 @@ msgid ""
 "some cases it is possible to ask the data subject for a fee (that can be "
 "justified by reasons) in case the person asks for extra copies, they make "
 "too many requests of the same type, or the answer requires a "
-"disproportionate effort to produce. "
+"disproportionate effort to produce."
 msgstr ""
 "Gemäß Art. 15 der DSGVO dürfen für die Bearbeitung von Anträgen auf Ausübung "
 "von Rechten (insbesondere des Rechts auf Zugriff auf personenbezogene Daten) "
 "keine Kosten anfallen. In einigen Fällen kann die betroffene Person "
 "allerdings zur Zahlung einer (gerechtfertigten) Gebühr aufgefordert werden, "
 "wenn die Person zusätzliche Kopien verlangt, zu viele Anträge derselben Art "
-"stellt oder die Antwort einen unverhältnismäßigen Aufwand erfordert. "
+"stellt oder die Antwort einen unverhältnismäßigen Aufwand erfordert."
 
 #: data/fit4privacy/questions.json:727
 msgid "We would ask the person to pay a fee."
@@ -4468,7 +4304,7 @@ msgstr ""
 "dem Management unterstellt). Der/die DSB kann auch intern oder extern sein "
 "und kann entweder Vollzeit oder Teilzeit arbeiten, wenn es der Kontext der "
 "Verarbeitung rechtfertigt (z. B. wenig oder keine personenbezogenen Daten, "
-"keine speziellen Daten verarbeitet, risikofreie Verarbeitung usw.)"
+"keine speziellen Daten verarbeitet, risikofreie Verarbeitung usw.)."
 
 #: data/fit4privacy/questions.json:753
 msgid "We don't need either of the two."
@@ -4579,7 +4415,7 @@ msgid ""
 "level analysis of what general risks there are with regards to protecting "
 "personal data. Should it be the case in the future, your company should "
 "perform more in-depth risks regarding the impact of certain activities (also "
-"known as Data Protection Impact Analyses, or DPIAs). "
+"known as Data Protection Impact Analyses, or DPIAs)."
 msgstr ""
 "Da Ihr Unternehmen einige personenbezogene Daten (möglicherweise sogar "
 "sensible Daten) verarbeitet, ist es wichtig, die Risiken für betroffene "
@@ -4589,7 +4425,7 @@ msgstr ""
 "durchführen. Falls erforderlich, sollte Ihr Unternehmen in Zukunft eine "
 "detailliertere Analyse der tiefergehenden Risiken im Hinblick auf die "
 "Auswirkungen bestimmter Aktivitäten (die sog. Datenschutz-"
-"Folgenabschätzungen) durchführen. "
+"Folgenabschätzungen) durchführen."
 
 #: data/fit4privacy/questions.json:851
 msgid ""
@@ -4635,7 +4471,7 @@ msgid ""
 "expect that any changes in the processing from then to now, are accounted to "
 "in the (renewed) analysis. Also, do not forget that the CNPD published a "
 "black list of processing activities, that are likely to require an impact "
-"assessment. "
+"assessment."
 msgstr ""
 "Wenn die CNPD in der Vergangenheit grünes Licht für eine Folgenabschätzung "
 "gegeben hat, bedeutet das nicht, dass die Situation seitdem unverändert "
@@ -4644,7 +4480,7 @@ msgstr ""
 "einer (neuerlichen) Abschätzung berücksichtigt werden. Beachten Sie auch "
 "zudem, dass die CNPD eine Blacklist der Verarbeitungstätigkeiten "
 "veröffentlicht hat, bei denen wahrscheinlich eine Folgenabschätzung "
-"erforderlich ist. "
+"erforderlich ist."
 
 #: data/fit4privacy/questions.json:883
 msgid "We have a risk analysis related to information security."
@@ -4685,7 +4521,7 @@ msgstr ""
 "und dass Sie personenbezogene Daten als solche schützen. Es wird erwartet, "
 "dass die Verantwortlichkeiten der anderen Unternehmen, die Ihnen "
 "personenbezogene Daten bzw. denen Sie personenbezogene Daten zur Verfügung "
-"stellen, klar sind und im Einklang mit den Anforderungen der DSGVO stehen.  "
+"stellen, klar sind und im Einklang mit den Anforderungen der DSGVO stehen. "
 "Daher sollten Sie alle Ihre Verträge mit Datenverarbeitern überprüfen und "
 "aktualisieren, wenn Ihr Unternehmen der Datenverantwortliche ist (weil das "
 "in Ihrer Verantwortung als Verantwortlicher liegt). Beachten Sie für diese "
@@ -4771,7 +4607,7 @@ msgid ""
 "have a standard but simple update that ensures that, when a project starts, "
 "there is a discussion about what kind of personal data would be processed "
 "and if something specific might have to be put in place to protect such data "
-"from loss or disclosure. "
+"from loss or disclosure."
 msgstr ""
 "Es ist gut, einige Verfahrensdokumente zu haben, in denen Datenschutz durch "
 "datenschutzfreundliche Voreinstellungen und Datenschutz durch "
@@ -4781,7 +4617,7 @@ msgstr ""
 "gewährleisten, dass bei Projektbeginn darüber gesprochen wird, welche Art "
 "von personenbezogenen Daten verarbeitet werden und ob zum Schutz dieser "
 "Daten vor Verlust oder Offenlegung konkrete Maßnahmen ergriffen werden "
-"müssen. "
+"müssen."
 
 #: data/fit4privacy/questions.json:999
 msgid ""
@@ -4802,7 +4638,7 @@ msgid ""
 "services located outside of Europe are a typical example. A number of legal "
 "options are possible, and it is expected from the data controller to choose "
 "such mechanisms to ensure data protection towards data subjects, when data "
-"travels outside the borders of the EEA. "
+"travels outside the borders of the EEA."
 msgstr ""
 "Die DSGVO gilt weltweit für personenbezogene Daten von europäischen Bürgern. "
 "Die Bedeutung des Schutzes personenbezogener Daten außerhalb des EWR ist ein "
@@ -4814,7 +4650,7 @@ msgstr ""
 "gibt verschiedene rechtliche Optionen, und von Datenverantwortlichen wird "
 "erwartet, dass sie geeignete Mechanismen wählen, um den Datenschutz der "
 "betroffenen Personen zu gewährleisten, wenn Daten an Orte außerhalb der "
-"Grenzen des EWR übertragen werden. "
+"Grenzen des EWR übertragen werden."
 
 #: data/fit4privacy/questions.json:1015
 msgid ""
@@ -4971,14 +4807,14 @@ msgid ""
 "employees are up to date with how to protect themselves. Repeating notions "
 "about good password management, new attacks, social engineering, are all "
 "good practices to train your employees periodically, not just once when "
-"hired. "
+"hired."
 msgstr ""
 "Der Bereich der Informationssicherheit entwickelt sich ständig weiter, und "
 "es ist wichtig, dass Mitarbeiter jederzeit wissen, wie sie sich schützen "
 "können. Regelmäßige Wiederholungen über Empfehlungen zur Passwortverwaltung, "
 "neue Angriffsmethoden und Social Engineering sind bewährte Praktiken, um "
 "Mitarbeiter regelmäßig zu schulen (und nicht nur einmal zu Beginn des "
-"Beschäftigungsverhältnisses). "
+"Beschäftigungsverhältnisses)."
 
 #: data/fit4privacy/questions.json:1149
 msgid "Never or not really."
@@ -5072,20 +4908,19 @@ msgstr "Bitte lassen Sie uns wissen, wenn etwas fehlt"
 #: survey/forms.py:133
 msgid "You can't choose multiple answers if the answer {} is choosen."
 msgstr ""
+"Sie können nicht mehrere Antworten wählen, wenn die Antwort {} gewählt wurde."
 
 #: survey/forms.py:148
 msgid "You can't choose the answers {} if answer '{}' is choosen."
 msgstr ""
-
-#: survey/globals.py:21
-msgid "Public administration"
-msgstr "Öffentliche Verwaltungen"
+"Sie können die Antworten {} nicht wählen, wenn die Antwort '{}' gewählt "
+"wurde."
 
 #: survey/viewLogic.py:62
 msgid "Let's start"
 msgstr "Lasst uns beginnen"
 
-#: survey/viewLogic.py:219
+#: survey/viewLogic.py:223
 msgid "Question"
 msgstr "Frage"
 
@@ -5096,7 +4931,7 @@ msgstr ""
 
 #: survey/views.py:194
 msgid "Answers review"
-msgstr ""
+msgstr "Überprüfung der Antworten"
 
 #: survey/views.py:229
 msgid "Final summary"
@@ -5263,6 +5098,8 @@ msgid ""
 "The recommendations list was based in your company context and on your "
 "answers."
 msgstr ""
+"Die Empfehlungsliste basiert auf dem Kontext Ihres Unternehmens und auf "
+"Ihren Antworten."
 
 #: templates/report/results.html:4
 msgid "Result"
@@ -5464,10 +5301,6 @@ msgstr ""
 "Dieses Textfeld sollte nicht zur Beantwortung der Frage verwendet werden."
 
 #: templates/survey/questions.html:87
-#, fuzzy
-#| msgid ""
-#| "Please do not provide any sensitive or confidential information refering "
-#| "to your identity."
 msgid ""
 "Please do not provide any sensitive or confidential information referring to "
 "your identity."
@@ -5547,34 +5380,34 @@ msgid ""
 "* For a number of people greater than 25, the training will be done in "
 "several installments, involving a higher cost.\n"
 msgstr ""
-"Sehr geehrtes CASES-Team, \n"
+"Sehr geehrtes CASES-Team,\n"
 "\n"
 "Wir möchten ein Angebot für eine Einführung/Sensibilisierung zum Thema "
-"Informationssicherheit. \n"
+"Informationssicherheit.\n"
 "\n"
-"Hier ist die Kennung unserer Bewertung: %(userId)s \n"
+"Hier ist die Kennung unserer Bewertung: %(userId)s\n"
 "\n"
 "Hier finden Sie auch die Informationen, die zur Erstellung des Angebots "
-"erforderlich sind: \n"
+"erforderlich sind:\n"
 "\n"
-"Anlaufstelle: \n"
-"- Name der Kontaktstelle: \n"
-"- E-Mail-Adresse der Kontaktstelle: \n"
+"Anlaufstelle:\n"
+"- Name der Kontaktstelle:\n"
+"- E-Mail-Adresse der Kontaktstelle:\n"
 "\n"
-"Unternehmen: \n"
-"- Name der Firma: \n"
-"- Firmenanschrift: \n"
-"- Postleitzahl: \n"
-"- Stadt: \n"
-"- Umsatzsteuer-Identifikationsnummer (falls zutreffend): \n"
+"Unternehmen:\n"
+"- Name der Firma:\n"
+"- Firmenanschrift:\n"
+"- Postleitzahl:\n"
+"- Stadt:\n"
+"- Umsatzsteuer-Identifikationsnummer (falls zutreffend):\n"
 "\n"
-"Ausbildung: \n"
-"- Anzahl der Teilnehmer *: \n"
-"- Gewünschte Sprache(n) für die Ausbildung(en): \n"
-"- gewünschte Themenschwerpunkte: \n"
+"Ausbildung:\n"
+"- Anzahl der Teilnehmer *:\n"
+"- Gewünschte Sprache(n) für die Ausbildung(en):\n"
+"- gewünschte Themenschwerpunkte:\n"
 "\n"
 "* Wenn die Teilnehmerzahl die 25 überschreitet, wird die Schulung in "
-"mehreren Sitzungen durchgeführt, was mit höheren Kosten verbunden ist. \n"
+"mehreren Sitzungen durchgeführt, was mit höheren Kosten verbunden ist.\n"
 
 #: templates/survey/requestTrainingLink.html:37
 msgid "let us know."

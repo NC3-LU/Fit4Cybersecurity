@@ -49,10 +49,11 @@ def create_user(lang: str) -> SurveyUser:
     # Ensures the submitted languages is accepted
     langs, _ = zip(*LANGUAGES)
     if lang in langs:
-        user.choosen_lang = lang
+        user.chosen_lang = lang
     else:
-        user.choosen_lang = LOCAL_DEFAULT_LANG
+        user.chosen_lang = LOCAL_DEFAULT_LANG
     user.save()
+
     return user
 
 
@@ -65,14 +66,17 @@ def handle_start_survey(request: HttpRequest, lang: str) -> Union[Dict, SurveyUs
     request.session[settings.LANGUAGE_COOKIE_NAME] = lang
 
     forms = {}
-    questions = SurveyQuestion.objects.filter(
-        section__label__contains="__context"
-    ).all()
+    questions = (
+        SurveyQuestion.objects.filter(section__label__contains="__context")
+        .order_by("-qindex")
+        .all()
+    )
 
     # if no context questions: create the user without the form
     if not questions.count() and request.method == "GET":
         user = create_user(lang)
         request.session["user_id"] = str(user.user_id)
+
         return user
 
     for question in questions:
@@ -81,12 +85,13 @@ def handle_start_survey(request: HttpRequest, lang: str) -> Union[Dict, SurveyUs
         except Exception as e:
             logger.error(e)
             raise e
+
         forms[question.id] = AnswerMChoice(
             tuple_answers,
-            data=request.POST,
             lang=lang,
+            data=request.POST if request.method == "POST" else None,
             answers_field_type=question.qtype,
-            question_answers=question.surveyquestionanswer_set.all(),
+            question_answers=question.surveyquestionanswer_set.filter(is_active=True),
             prefix="form" + str(question.id),
         )
 
@@ -113,7 +118,7 @@ def handle_start_survey(request: HttpRequest, lang: str) -> Union[Dict, SurveyUs
         "forms": forms,
         "questions_per_id": {question.id: _(question.label) for question in questions},
         "action": action,
-        "choosen_lang": lang,
+        "chosen_lang": lang,
     }
 
 
@@ -129,8 +134,10 @@ def handle_question_answers_request(
     ) = get_questions_slice(question_index)
 
     try:
-        question_answers = current_question.surveyquestionanswer_set.all()
-        tuple_answers = get_answer_choices(current_question, user.choosen_lang)
+        question_answers = current_question.surveyquestionanswer_set.filter(
+            is_active=True
+        )
+        tuple_answers = get_answer_choices(current_question, user.chosen_lang)
     except Exception as e:
         logger.error(e)
         raise e
@@ -140,19 +147,21 @@ def handle_question_answers_request(
         if question_answer.atype == "T":
             free_text_answer_id = question_answer.id
 
-    translation.activate(user.choosen_lang)
-    request.session[settings.LANGUAGE_COOKIE_NAME] = user.choosen_lang
+    translation.activate(user.chosen_lang)
+    request.session[settings.LANGUAGE_COOKIE_NAME] = user.chosen_lang
 
     if request.method == "POST":
         form = AnswerMChoice(
             tuple_answers,
             data=request.POST,
-            lang=user.choosen_lang,
+            lang=user.chosen_lang,
             answers_field_type=current_question.qtype,
             question_answers=question_answers,
         )
         if form.is_valid():
-            user = SurveyUser.objects.select_for_update(nowait=True).filter(id=user.id)[0]
+            user = SurveyUser.objects.select_for_update(nowait=True).filter(id=user.id)[
+                0
+            ]
             answers = form.cleaned_data["answers"]
             answer_content = ""
             if "answer_content" in form.cleaned_data:
@@ -180,11 +189,12 @@ def handle_question_answers_request(
                 user.status = SURVEY_STATUS_UNDER_REVIEW
 
             user.save()
+
             return user
     else:
         form = AnswerMChoice(
             tuple_answers,
-            lang=user.choosen_lang,
+            lang=user.chosen_lang,
             answers_field_type=current_question.qtype,
             question_answers=question_answers,
         )
@@ -194,7 +204,7 @@ def handle_question_answers_request(
         )
         selected_answers = []
         for user_answer in user_answers:
-            if user_answer.uvalue > 0:
+            if user_answer.uvalue == "1":
                 selected_answers.append(user_answer.answer.id)
             if user_answer.content:
                 form.set_answer_content(user_answer.content)
@@ -231,11 +241,29 @@ def handle_question_answers_request(
 def save_answers(
     user: SurveyUser,
     current_question: SurveyQuestion,
-    posted_answers: List[int],
+    posted_answers: List[Union[int, str]],
     answer_content: str,
 ) -> None:
-    posted_answers_ids = [int(i) for i in posted_answers]
-    for question_answer in current_question.surveyquestionanswer_set.all():
+    match current_question.qtype:
+        case "SO":
+            selected_value = posted_answers[0]
+            question_answers = [
+                current_question.surveyquestionanswer_set.get(
+                    is_active=True,
+                    value=selected_value
+                )
+            ]
+        case "CL":
+            selected_value = posted_answers[0]
+            question_answers = [
+                current_question.surveyquestionanswer_set.all()[0]
+            ]
+        case _:
+            question_answers = current_question.surveyquestionanswer_set.filter(
+                is_active=True
+            )
+
+    for question_answer in question_answers:
         user_answers = SurveyUserAnswer.objects.filter(
             user=user, answer=question_answer
         )[:1]
@@ -246,12 +274,14 @@ def save_answers(
         else:
             user_answer = user_answers[0]
 
-        if question_answer.atype == "T":
-            user_answer.content = answer_content
-
-        user_answer.uvalue = 0
-        if question_answer.id in posted_answers_ids:
-            user_answer.uvalue = 1
+        if current_question.qtype in ["SO", "CL"]:
+            user_answer.uvalue = posted_answers[0]
+        else:
+            if question_answer.atype == "T":
+                user_answer.content = answer_content
+            user_answer.uvalue = "0"
+            if str(question_answer.id) in posted_answers:
+                user_answer.uvalue = "1"
 
         user_answer.save()
 
@@ -273,7 +303,7 @@ def get_answer_choices(
 
     question_answers = list(
         sorted(
-            question.surveyquestionanswer_set.all(),
+            question.surveyquestionanswer_set.filter(is_active=True),
             key=lambda obj: getattr(obj, question.answers_order)
             if isinstance(getattr(obj, question.answers_order), int)
             else _(str(getattr(obj, question.answers_order))),
@@ -286,7 +316,7 @@ def get_answer_choices(
 
         tuple_answers.append(
             (
-                question_answer.id,
+                question_answer.value if question.qtype == "SO" else question_answer.id,
                 format_html(
                     "{}{}",
                     mark_safe('<span class="checkmark"></span>'),
@@ -353,7 +383,7 @@ def get_questions_with_user_answers(user: SurveyUser):
             }
 
         user_answer_content = ""
-        if survey_user_answer.answer.atype == "T" and survey_user_answer.uvalue == 1:
+        if survey_user_answer.answer.atype == "T" and survey_user_answer.uvalue == "1":
             user_answer_content = survey_user_answer.content
 
         questions_with_user_answers[question_index]["user_answers"].append(
@@ -373,7 +403,7 @@ def handle_general_feedback(user: SurveyUser, request: HttpRequest) -> GeneralFe
     ]
     if request.method == "POST":
         general_feedback_form = GeneralFeedback(
-            data=request.POST, lang=user.choosen_lang
+            data=request.POST, lang=user.chosen_lang
         )
 
         if general_feedback_form.is_valid():
@@ -390,7 +420,7 @@ def handle_general_feedback(user: SurveyUser, request: HttpRequest) -> GeneralFe
 
             return general_feedback_form
     else:
-        general_feedback_form = GeneralFeedback(lang=user.choosen_lang)
+        general_feedback_form = GeneralFeedback(lang=user.chosen_lang)
 
     if user_feedback:
         general_feedback_form.set_general_feedback(user_feedback[0].feedback)

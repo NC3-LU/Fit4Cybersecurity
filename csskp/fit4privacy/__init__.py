@@ -5,7 +5,7 @@ CUSTOM = {
     "tool_name": "Fit4Privacy",
     "intro_text": gettext_lazy(
         "This questionnaire, created in consultation with "
-        + "<a href=\"https://cnpd.public.lu/en.html\" target=\"_blank\">CNPD</a>, "
+        + '<a href="https://cnpd.public.lu/en.html" target="_blank">CNPD</a>, '
         + "aims to help organisations assess to what extent they are in control of their personal "
         + "data risks. First, Fit4Privacy asks questions to understand the amount of personal "
         + "data processing already in place, then its questions examine the response of the "
@@ -17,7 +17,14 @@ CUSTOM = {
         + "management, and basic data protection obligations for which organisations should "
         + "already be prepared as of 2021."
     ),
-    "countries_first": [],
+    "countries_first": [
+        "LU",
+        "BE",
+        "FR",
+        "DE",
+        "NL",
+        "GB",
+    ],
     "defaultLanguage": "en",
     "languages": [
         ("en", "English"),
@@ -54,8 +61,5 @@ CUSTOM = {
         "recommendations": True,
         "questions": True,
     },
-    "sectors": [],
-    "company_size": [],
-    "countries": [],
     "chart_exclude_sections": [],
 }

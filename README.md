@@ -118,8 +118,9 @@ at your convenience.
 $ python manage.py runserver # not for production
 ```
 
-For production you can use [Gunicorn](https://gunicorn.org) or mod_wsgi and
-**turn off** the debug mode in the configuration file.
+For production you can use [Gunicorn](https://gunicorn.org) (an example file for use
+with Nginx is provided in the contrib folder) or mod_wsgi and **turn off** the debug
+mode in the configuration file.
 
 
 ### Configuration with Apache and mod_wsgi

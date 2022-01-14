@@ -2,9 +2,21 @@ from django.utils.translation import gettext_lazy
 
 CUSTOM = {
     # Generic configurations
-    "tool_name": "Fit4eHealth",
-    "intro_text": gettext_lazy("Description of the tool."),
-    "countries_first": [],
+    "tool_name": "Fit4Cybersecurity",
+    "intro_text": gettext_lazy(
+        "This survey will ask a few questions and provide "
+        + "recommendations. Keep in mind, that it is a self-assessment tool and that it "
+        + "only touches the surface of information security by giving a very basic maturity "
+        + "level estimate and some basic recommendations."
+    ),
+    "countries_first": [
+        "LU",
+        "BE",
+        "FR",
+        "DE",
+        "NL",
+        "GB",
+    ],
     "defaultLanguage": "en",
     "languages": [
         ("en", "English"),
@@ -29,8 +41,8 @@ CUSTOM = {
     "modules": {
         "reportDownload": True,
         "reportEmail": False,
-        "requestDiagnostic": False,
-        "requestTraining": False,
+        "requestDiagnostic": True,
+        "requestTraining": True,
         "displayResults": True,
     },
     # Available report parts
@@ -41,8 +53,5 @@ CUSTOM = {
         "recommendations": True,
         "questions": True,
     },
-    "sectors": [],
-    "company_size": [],
-    "countries": [],
-    "chart_exclude_sections": ["eSanté"],
+    "chart_exclude_sections": [],
 }

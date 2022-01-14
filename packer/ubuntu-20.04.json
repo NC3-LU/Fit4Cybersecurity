@@ -61,9 +61,9 @@
         "PACKER=1",
         "DEBIAN_FRONTEND=noninteractive",
         "TOOL_NAME={{user `tool_name`}}",
+        "SITE_NAME={{user `site_name`}}",
         "QUESTIONS_SET={{user `questions_set`}}",
-        "CONTEXT_QUESTIONS_SET={{user `context_questions_set`}}",
-        "TRANSLATIONS_SET={{user `translations_set`}}"
+        "CONTEXT_QUESTIONS_SET={{user `context_questions_set`}}"
       ],
       "execute_command": "echo '{{user `ssh_password`}}' | {{ .Vars }} sudo -E -S sh '{{ .Path }}'",
       "inline": [
@@ -75,6 +75,7 @@
     },
     {
       "environment_vars": [
+        "SITE_NAME={{user `site_name`}}",
         "TOOL_NAME={{user `tool_name`}}",
         "SERVICE_PORT={{user `service_port`}}",
         "SERVICE_HOST={{user `service_host`}}",
@@ -100,14 +101,14 @@
 
   "variables": {
     "tool_name": "Fit4Cybersecurity",
-    "vm_description": "Fit4Cybersecurity",
+    "site_name": "fit4ehealth",
+    "hostname": "fit4Cybersecurity",
+    "vm_description": "Fit4Cybersecurity by CASES",
     "service_port": "5000",
     "service_host": "0.0.0.0",
-    "hostname": "fit4Cybersecurity",
     "project_path": "/home/ubuntu/Fit4Cybersecurity",
     "questions_set": "data/fit4cybersecurity/questions.json",
     "context_questions_set": "data/fit4cybersecurity/context-questions.json",
-    "translations_set": "data/fit4Cybersecurity/translations.json",
     "latest_commit": "{{env `LATEST_COMMIT`}}",
     "vm_name": "Fit4Cybersecurity",
     "vm_version": "{{env `VERSION`}}",

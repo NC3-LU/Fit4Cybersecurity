@@ -48,7 +48,7 @@ Some statistics about the current surveys.
         <td><a href="/admin/survey/surveyuser/{{ survey.id }}/change/">{{ survey.user_id }}</a></td>
         <td>{{ survey.created_at }}</td>
         <td>{{ survey.updated_at }}</td>
-        <td>{{ survey.choosen_lang }}</td>
+        <td>{{ survey.chosen_lang }}</td>
         <td>{{ survey_results|get_item:survey.id }}</td>
       </tr>
       {% endfor %}

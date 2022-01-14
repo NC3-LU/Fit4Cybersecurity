@@ -3,11 +3,13 @@
     "label": "What is your sector?",
     "service_category": "Context",
     "section": "__context",
-    "qtype": "SS",
+    "qtype": "SO",
+    "qindex": 1,
     "maxPoints": 0,
     "answers": [
       {
         "label": "Health",
+        "value": "HEAL",
         "uniqueAnswer": true,
         "atype": "P",
         "aindex": 1
@@ -18,11 +20,13 @@
     "label": "Please select your country",
     "service_category": "Context",
     "section": "__context",
-    "qtype": "SS",
+    "qtype": "SO",
+    "qindex": 2,
     "maxPoints": 0,
     "answers": [
       {
         "label": "Luxembourg",
+        "value": "LU",
         "uniqueAnswer": true,
         "atype": "P",
         "aindex": 1
