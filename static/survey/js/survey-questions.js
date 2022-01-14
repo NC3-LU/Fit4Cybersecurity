@@ -30,8 +30,10 @@ $(document).ready(function() {
     });
 
     $('.logo-link').click(function(e) {
-        e.preventDefault();
-        $("#modal-leave-survey").modal();
+        if (!window.location.href.includes('survey/start')) {
+            e.preventDefault();
+            $("#modal-leave-survey").modal();
+        }
     });
 
     $('#redirect-home').click(function() {
