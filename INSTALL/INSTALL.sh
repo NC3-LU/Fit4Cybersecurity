@@ -3,14 +3,15 @@
 
 PYTHON_VERSION='3.10.1'
 
-TOOL_NAME=$TOOL_NAME
-TOOL_NAME=$SITE_NAME
-TOOL_DESCRIPTION='Description of the tool.'
+TOOL_DESCRIPTION="Fit4Cybersecurity ($SITE_NAME)"
 
 PROJECT_PATH='/home/ubuntu/Fit4Cybersecurity'
 DB_NAME='csskp'
 DB_USER='csskp'
 DB_PASSWORD="csskp"
+# TOOL_NAME=$TOOL_NAME
+# SITE_NAME=$SITE_NAME
+# HOSTNAME=$HOSTNAME
 
 
 echo "--- Updating packages list… ---"
@@ -70,9 +71,13 @@ npm ci
 poetry install --no-dev
 
 sudo -u ubuntu mkdir logs
-sudo chmod -R 777 logs
+sudo -u ubuntu touch logs/django.log
+sudo chmod -R 777 logs/
 
-echo "--- Generation of the $TOOL_NAME configuration file… ---"
+SECRET_KEY=$(poetry run python -c "from django.utils.crypto import get_random_string;print(get_random_string(length=64))")
+HASH_KEY=$(poetry run python -c "from cryptography.fernet import Fernet;print(Fernet.generate_key().decode())")
+
+echo "--- Generation of the $TOOL_NAME ($SITE_NAME) configuration file… ---"
 sudo -u ubuntu cat > csskp/config.py <<EOF
 import os
 from django.utils.translation import gettext_lazy
@@ -83,11 +88,10 @@ ALLOWED_HOSTS = [gethostname(), gethostbyname(gethostname())]
 OPERATOR_EMAIL = "info@example.org"
 
 # The generic site/tool name. Used to load specific config, templates, styles, logo.
-SITE_NAME = "fit4cybersecurity"
+SITE_NAME = "$SITE_NAME"
 
-SECRET_KEY = "u__*z&=urjtc0t)b)@5qbt_a#3-354=k9x(j)@eu#h7sb=-66s"
-
-HASH_KEY = b"hDs3HftLkd9OsxI9smHP-TmGv-4z7h-1xaQp0RYuY20="
+SECRET_KEY = "$SECRET_KEY"
+HASH_KEY = b"$HASH_KEY"
 
 DEBUG = True
 

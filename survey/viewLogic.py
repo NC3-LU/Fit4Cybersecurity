@@ -244,26 +244,29 @@ def save_answers(
     posted_answers: List[Union[int, str]],
     answer_content: str,
 ) -> None:
-    # For those questions' types we store single selected string value.
-    if current_question.qtype in ["SO", "CL"]:
-        selected_value = posted_answers[0]
-        question_answers = [
-            current_question.surveyquestionanswer_set.get(
-                is_active=True,
-                value=selected_value
-            ) if current_question.qtype != "CL" else None
-        ]
-    else:
-        question_answers = current_question.surveyquestionanswer_set.filter(
-            is_active=True
-        )
+    match current_question.qtype:
+        case "SO":
+            selected_value = posted_answers[0]
+            question_answers = [
+                current_question.surveyquestionanswer_set.get(
+                    is_active=True,
+                    value=selected_value
+                )
+            ]
+        case "CL":
+            selected_value = posted_answers[0]
+            question_answers = [
+                current_question.surveyquestionanswer_set.all()[0]
+            ]
+        case _:
+            question_answers = current_question.surveyquestionanswer_set.filter(
+                is_active=True
+            )
 
     for question_answer in question_answers:
-        user_answers = None
-        if current_question.qtype != "CL":
-            user_answers = SurveyUserAnswer.objects.filter(
-                user=user, answer=question_answer
-            )[:1]
+        user_answers = SurveyUserAnswer.objects.filter(
+            user=user, answer=question_answer
+        )[:1]
         if not user_answers:
             user_answer = SurveyUserAnswer()
             user_answer.user = user

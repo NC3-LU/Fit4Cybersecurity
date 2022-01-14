@@ -17,7 +17,7 @@ repository = "https://github.com/CASES-LU/Fit4Cybersecurity"
 
 [tool.poetry.dependencies]
 python = ">=3.8,<4.0"
-mypy = "^0.910"
+mypy = "^0.931"
 django = "^4.0.0"
 psycopg2-binary = "^2.8.4"
 cryptography = "^3.4.7"
@@ -61,4 +61,4 @@ warn_unreachable = true
 show_error_context = true
 pretty = true
 
-exclude = "csskp/config_*|survey/migrations|static"
+exclude = "csskp/config_*|survey/migrations|static|survey/*"

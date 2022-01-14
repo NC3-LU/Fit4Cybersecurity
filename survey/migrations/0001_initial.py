@@ -34,10 +34,6 @@ class Migration(migrations.Migration):
                 ),
                 ("titleKey", models.CharField(max_length=32)),
                 (
-                    "tooltip",
-                    models.TextField(null=False, blank=True, default=""),
-                ),
-                (
                     "qtype",
                     models.CharField(choices=QUESTION_TYPES, default="M", max_length=1),
                 ),
@@ -57,10 +53,6 @@ class Migration(migrations.Migration):
                     ),
                 ),
                 ("answerKey", models.CharField(max_length=32)),
-                (
-                    "tooltip",
-                    models.TextField(null=False, blank=True, default=""),
-                ),
                 ("aindex", models.IntegerField()),
                 (
                     "question",

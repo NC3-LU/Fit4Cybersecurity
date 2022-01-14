@@ -208,7 +208,9 @@ class SurveyUser(models.Model):
             answer__question__section__label="__context"
         )
         for user_answer in user_answers:
-            result[user_answer.answer.question.label] = user_answer
+            result[
+                user_answer.answer.question.label
+            ] = user_answer.uvalue if user_answer.answer.question.qtype == 'CL' else user_answer
 
         return result
 
@@ -256,9 +258,7 @@ class SurveyUserAnswer(models.Model):
     # AnswerID
     # AnswerListID
     user = models.ForeignKey(SurveyUser, on_delete=models.CASCADE)
-    answer = models.ForeignKey(
-        SurveyQuestionAnswer, on_delete=models.CASCADE, null=True
-    )
+    answer = models.ForeignKey(SurveyQuestionAnswer, on_delete=models.CASCADE)
     # 0, 1 for true, false selections,
     # and real value (SurveyQuestionAnswer.value or country code) for qtype = SO|CL
     uvalue = models.CharField(default="0", max_length=100, null=False)
