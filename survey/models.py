@@ -208,7 +208,9 @@ class SurveyUser(models.Model):
             answer__question__section__label="__context"
         )
         for user_answer in user_answers:
-            result[user_answer.answer.question.label] = user_answer
+            result[
+                user_answer.answer.question.label
+            ] = user_answer.uvalue if user_answer.answer.question.qtype == 'CL' else user_answer
 
         return result
 
