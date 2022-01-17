@@ -212,7 +212,7 @@ class SurveyUser(models.Model):
             if user_answer.answer.question.qtype == 'CL':
                 value = user_answer.uvalue
             else:
-                value = _(user_answer.label)
+                value = _(user_answer.answer.label)
             result[_(user_answer.answer.question.label)] = value
 
         return result
