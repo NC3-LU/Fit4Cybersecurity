@@ -37,7 +37,7 @@ $(document).ready(function() {
     });
 
     $('#redirect-home').click(function() {
-        window.location.replace('/');
+        window.location.replace($('.logo-link').attr('href'));
     });
 
     let processCheckboxSelection = function(checkbox) {

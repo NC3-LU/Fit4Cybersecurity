@@ -3,7 +3,7 @@
 {% get_current_language as LANGUAGE_CODE %}
 
 <h1>
-    <a href="/" class="logo-link">
+    <a href="/{{ LANGUAGE_CODE }}" class="logo-link">
         <img
             src="{% settings_value 'SITE_IMAGES_URL' %}/logo-{{ LANGUAGE_CODE }}.png"
             width="50%"
