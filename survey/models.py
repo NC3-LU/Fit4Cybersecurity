@@ -209,9 +209,11 @@ class SurveyUser(models.Model):
             answer__question__section__label="__context"
         )
         for user_answer in user_answers:
-            result[
-                _(user_answer.answer.question.label)
-            ] = user_answer.uvalue if user_answer.answer.question.qtype == 'CL' else _(user_answer)
+            if user_answer.answer.question.qtype == 'CL':
+                value = user_answer.uvalue
+            else:
+                value = _(user_answer.label)
+            result[_(user_answer.answer.question.label)] = value
 
         return result
 
