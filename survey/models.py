@@ -5,6 +5,7 @@ from typing import Optional, Dict, Any
 import uuid
 from django.db import models
 from csskp.settings import LANGUAGES, LANGUAGE_CODE
+from django.utils.translation import gettext_lazy as _
 
 # import global constants
 from survey.globals import (
@@ -209,8 +210,8 @@ class SurveyUser(models.Model):
         )
         for user_answer in user_answers:
             result[
-                user_answer.answer.question.label
-            ] = user_answer.uvalue if user_answer.answer.question.qtype == 'CL' else user_answer
+                _(user_answer.answer.question.label)
+            ] = user_answer.uvalue if user_answer.answer.question.qtype == 'CL' else _(user_answer)
 
         return result
 
