@@ -100,7 +100,7 @@ class Command(BaseCommand):
                     answer_obj.is_active = True
 
                     answer_obj.save()
-                    is_answer_created = True
+                    is_answer_created = False
                     nb_updated_answers += 1
                 except SurveyQuestionAnswer.DoesNotExist:
                     answer_obj = SurveyQuestionAnswer.objects.create(
@@ -116,7 +116,7 @@ class Command(BaseCommand):
                         is_active=True,
                     )
                     nb_imported_answers += 1
-                    is_answer_created = False
+                    is_answer_created = True
 
                 # Clean all the dependant answers and recommendations to recreate later.
                 if not is_answer_created:
