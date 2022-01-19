@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 import json
-from stats.forms import DatesLimitForm, DEFAULT_DATE_FORMAT
+from stats.forms import DEFAULT_DATE_FORMAT
 from survey.models import (
     SurveyQuestion,
     SurveyUserFeedback,
@@ -11,18 +11,7 @@ from survey.models import (
 )
 
 
-def get_finished_surveys_list(request):
-    if request.method == "POST":
-        dates_limit_form = DatesLimitForm(data=request.POST)
-        if not dates_limit_form.is_valid():
-            return None
-        start_date = dates_limit_form.cleaned_data["start_date"]
-        end_date = dates_limit_form.cleaned_data["end_date"]
-    else:
-        dates_limit_form = DatesLimitForm()
-        start_date = dates_limit_form.fields["start_date"].initial
-        end_date = dates_limit_form.fields["end_date"].initial
-
+def get_finished_surveys_list(start_date, end_date):
     completed_surveys_users = SurveyUser.objects.filter(
         status=SURVEY_STATUS_FINISHED,
         updated_at__gte=start_date.strftime(DEFAULT_DATE_FORMAT),
@@ -70,7 +59,7 @@ def get_finished_surveys_list(request):
         # Add information about the context
         surveys_users_results["survey_users"][user_id]["details"].update(
             {
-                key: str(value)
+                str(key): str(value)
                 for key, value in completed_survey_user.get_all_context_answers().items()
             }
         )
@@ -145,8 +134,7 @@ def get_finished_surveys_list(request):
         ] = round(total_points_number * 100 / total_questions_score)
 
     return {
-        "dates_limit_form": dates_limit_form,
-        "surveys_users_results": json.dumps(
-            surveys_users_results, indent=2, sort_keys=True
-        ),
+        "start_date": str(start_date),
+        "end_date": str(end_date),
+        "surveys_users_results": surveys_users_results,
     }

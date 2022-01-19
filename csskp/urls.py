@@ -26,7 +26,6 @@ urlpatterns = [
     path("<slug:lang>", views.index),
     # Stats
     path("stats/", include("stats.urls")),
-    path("admin/export/statistics/", include("stats.urls")),
     # Admin
     path("admin/", include("admin.urls")),
     path("admin/", include("django.contrib.auth.urls")),
