@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
 
-import json
 from stats.forms import DEFAULT_DATE_FORMAT
 from survey.models import (
     SurveyQuestion,
