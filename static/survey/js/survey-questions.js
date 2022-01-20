@@ -1,7 +1,4 @@
 $(document).ready(function() {
-
-    $('.flag-icon-lb').addClass('flag-icon-lu').removeClass('flag-icon-lb');
-
     const download = function(filename, text) {
         const pom = document.createElement('a');
         pom.setAttribute('href', 'data:application/plain;charset=utf-8,' + encodeURIComponent(text));

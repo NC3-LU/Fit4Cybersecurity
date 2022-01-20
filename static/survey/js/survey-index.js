@@ -1,7 +1,4 @@
 $(document).ready(function() {
-
-    $('.flag-icon-lb').addClass('flag-icon-lu').removeClass('flag-icon-lb');
-
     const updateButtonState = function(button) {
         if (button.val() === '') {
             $('#resume-code-submit').prop('disabled', true);

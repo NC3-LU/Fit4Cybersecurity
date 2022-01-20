@@ -62,13 +62,13 @@
   {% if languages|length > 1 %}
   <div class="dropdown d-flex flex-row-reverse" id="language-selector" >
     <a class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      <span class="flag-icon flag-icon-{% if LANGUAGE_CODE == "en" %}gb{% else %}{{LANGUAGE_CODE}}{% endif %}"></span>
+      <span class="flag-icon flag-icon-{{LANGUAGE_CODE}}"></span>
       {{ LANGUAGE_CODE|language_name_translated }}
     </a>
     <div class="dropdown-menu">
       {% for lang in languages %}
       <a class="dropdown-item" href="/survey/language/{{ lang.code }}" value={% if lang.code == "en" %}'gb'{% else %}{{lang.code}}{% endif %}>
-        <span class="flag-icon flag-icon-{% if lang.code == "en" %}gb{% else %}{{lang.code}}{% endif %}"></span>
+        <span class="flag-icon flag-icon-{{lang.code}}"></span>
         {{ lang.name_translated }}
       </a>
       {% endfor %}
