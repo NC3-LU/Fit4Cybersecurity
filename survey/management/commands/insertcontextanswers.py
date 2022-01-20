@@ -1,9 +1,14 @@
 # -*- coding: utf-8 -*-
 
-"""insertcontextanswers.py - Generate JSON files with the output of the command:
-
-$ python manage.py dumpdata --indent 2 survey.surveyuser > contrib/out.json
-$ python manage.py insertcontextanswers
+"""insertcontextanswers.py - Parses JSON file with the old user data content:
+[
+    {
+        "user_id": "99fd7b40-86d1-402d-bf3e-542e2fd16d88",
+        "sector": "SALE",
+        "e_count": "c",
+        "country_code": "DE"
+    }
+]
 """
 
 import json
@@ -14,9 +19,11 @@ from survey.models import SurveyUser, SurveyQuestion, SurveyUserAnswer, SurveyQu
 class Command(BaseCommand):
     help = """Creates context questions answers based on the old data structure."""
 
+    def add_arguments(self, parser):
+        parser.add_argument("--site_name", type=str)
+
     def handle(self, *args, **options):
-        # Added the site-name as param:
-        site_name = 'fit4privacy'
+        site_name = options["site_name"]
         with open("./contrib/" + site_name + "_users_data.json") as f:
             data = json.loads(f.read())
 
@@ -30,8 +37,13 @@ class Command(BaseCommand):
             label="What is your sector?", section__label="__context"
         )
 
+        nb_created_answers = 0
         for user in data:
-            user = SurveyUser.objects.get(user_id=user["user_id"])
+            try:
+                user = SurveyUser.objects.get(user_id=user["user_id"])
+            except SurveyUser.DoesNotExist:
+                continue
+
             employees_answer = SurveyQuestionAnswer.objects.get(
                 question=question_employees, value=user["e_count"]
             )
@@ -59,3 +71,12 @@ class Command(BaseCommand):
                 answer=sector_answer,
                 uvalue=user["sector"],
             )
+            nb_created_answers += 3
+
+        self.stdout.write(
+            self.style.SUCCESS(
+                "  Number of created questions: {}".format(nb_created_answers)
+            )
+        )
+
+
