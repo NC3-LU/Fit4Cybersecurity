@@ -13,6 +13,7 @@
 <link rel="stylesheet" type="text/css" href="{% static 'survey/css/custom.css' %}" />
 <link rel="stylesheet" href="/static/npm_components/fork-awesome/css/fork-awesome.min.css">
 <link rel="stylesheet" href="/static/npm_components/flag-icon-css/css/flag-icons.min.css">
+<link rel="stylesheet" href="/static/npm_components/bootstrap-icons/font/bootstrap-icons.css">
 <script type="text/javascript" src="{% static "survey/js/language-selector.js" %}"></script>
 {% endblock %}
 
@@ -62,14 +63,13 @@
   {% if languages|length > 1 %}
   <div class="dropdown d-flex flex-row-reverse" id="language-selector" >
     <a class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      <span class="flag-icon flag-icon-{{LANGUAGE_CODE}}"></span>
-      {{ LANGUAGE_CODE|language_name_translated }}
+        <i class="bi bi-globe"></i>
+        {{ LANGUAGE_CODE|language_name_local }}
     </a>
     <div class="dropdown-menu">
       {% for lang in languages %}
-      <a class="dropdown-item" href="/survey/language/{{ lang.code }}" value={% if lang.code == "en" %}'gb'{% else %}{{lang.code}}{% endif %}>
-        <span class="flag-icon flag-icon-{{lang.code}}"></span>
-        {{ lang.name_translated }}
+      <a class="dropdown-item" href="/survey/language/{{ lang.code }}">
+        {{ lang.name_local }}
       </a>
       {% endfor %}
     </div>
