@@ -7,7 +7,6 @@ $ python manage.py insertcontextanswers
 """
 
 import json
-import argparse
 from django.core.management.base import BaseCommand
 from survey.models import SurveyUserAnswer, SurveyQuestionAnswer
 
@@ -22,9 +21,9 @@ class Command(BaseCommand):
 
         users = [elem for elem in data if elem["model"] == "survey.surveyuser"]
 
-        questions_json = []
         for user in users:
 
             print(user)
 
             SurveyQuestionAnswer()
+            SurveyUserAnswer()
