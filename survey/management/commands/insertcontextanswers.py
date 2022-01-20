@@ -38,38 +38,38 @@ class Command(BaseCommand):
         )
 
         nb_created_answers = 0
-        for user in data:
+        for user_data in data:
             try:
-                user = SurveyUser.objects.get(user_id=user["user_id"])
+                user = SurveyUser.objects.get(user_id=user_data["user_id"])
             except SurveyUser.DoesNotExist:
                 continue
 
             employees_answer = SurveyQuestionAnswer.objects.get(
-                question=question_employees, value=user["e_count"]
+                question=question_employees, value=user_data["e_count"]
             )
             country_answer = SurveyQuestionAnswer.objects.get(
                 question=question_country, aindex=1
             )
             sector_answer = SurveyQuestionAnswer.objects.get(
-                question=question_sector, value=user["sector"]
+                question=question_sector, value=user_data["sector"]
             )
 
             SurveyUserAnswer.objects.create(
                 user=user,
                 answer=employees_answer,
-                uvalue=user["e_count"],
+                uvalue=user_data["e_count"],
             )
 
             SurveyUserAnswer.objects.create(
                 user=user,
                 answer=country_answer,
-                uvalue=user["country_code"],
+                uvalue=user_data["country_code"],
             )
 
             SurveyUserAnswer.objects.create(
                 user=user,
                 answer=sector_answer,
-                uvalue=user["sector"],
+                uvalue=user_data["sector"],
             )
             nb_created_answers += 3
 
