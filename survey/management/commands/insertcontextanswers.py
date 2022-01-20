@@ -78,5 +78,3 @@ class Command(BaseCommand):
                 "  Number of created questions: {}".format(nb_created_answers)
             )
         )
-
-
