@@ -13,7 +13,12 @@
 
 import json
 from django.core.management.base import BaseCommand
-from survey.models import SurveyUser, SurveyQuestion, SurveyUserAnswer, SurveyQuestionAnswer
+from survey.models import (
+    SurveyUser,
+    SurveyQuestion,
+    SurveyUserAnswer,
+    SurveyQuestionAnswer,
+)
 
 
 class Command(BaseCommand):
