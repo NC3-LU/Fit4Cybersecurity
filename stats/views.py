@@ -71,9 +71,7 @@ def answers_per_section(request):
         )
 
     user_evaluations_per_section = tree()
-    user_answers = SurveyUserAnswer.objects.order_by(
-        "answer__question__qindex", "answer__aindex"
-    )
+    user_answers = SurveyUserAnswer.objects.filter(user__status=3)
     for user_answer in user_answers:
         if user_answer.uvalue == "1":
             section = user_answer.answer.question.section
