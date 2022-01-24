@@ -1,6 +1,8 @@
 # -*- coding: utf-8 -*-
 
 import sys
+from datetime import datetime
+from dateutil.relativedelta import relativedelta
 from django.conf.global_settings import LANGUAGES
 from django.db.models import Count
 from django.db.models.functions import TruncDay
@@ -64,7 +66,8 @@ def survey_language_count(request):
 
 
 def answers_per_section(request):
-    """Return a dict with the mean of the user's answers per section."""
+    """Return a dict with the mean of the user's answers per section, with the
+    surveys completed during the last year."""
     chart_exclude_sections = ["__context"]
     if "chart_exclude_sections" in CUSTOM.keys():
         chart_exclude_sections = (
@@ -72,9 +75,10 @@ def answers_per_section(request):
         )
 
     user_evaluations_per_section = tree()
-    user_answers = SurveyUserAnswer.objects.filter(user__status=3, uvalue="1").exclude(
-        answer__question__section__label__in=chart_exclude_sections
-    )
+    one_year_ago = datetime.now() - relativedelta(years=1)
+    user_answers = SurveyUserAnswer.objects.filter(
+        user__status=3, uvalue="1", user__created_at__gt=one_year_ago
+    ).exclude(answer__question__section__label__in=chart_exclude_sections)
     for user_answer in user_answers:
         section_label = user_answer.answer.question.section.label
         if user_answer.user.id not in user_evaluations_per_section[section_label]:
@@ -99,6 +103,7 @@ def answers_per_section(request):
 
 
 def activity_chart(request):
+    """Aggregate and count completed surveys."""
     count = (
         SurveyUser.objects.filter(status=3)
         .annotate(month=TruncDay("created_at"))
