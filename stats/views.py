@@ -71,28 +71,24 @@ def answers_per_section(request):
         )
 
     user_evaluations_per_section = tree()
-    user_answers = SurveyUserAnswer.objects.filter(user__status=3)
+    user_answers = SurveyUserAnswer.objects.filter(user__status=3, uvalue="1").exclude(
+        answer__question__section__label__in=chart_exclude_sections
+    )
     for user_answer in user_answers:
-        if user_answer.uvalue == "1":
-            section = user_answer.answer.question.section
-
-            # Validate if the section score should not be presented in the chart.
-            if section.label in chart_exclude_sections:
-                continue
-
-            if user_answer.user.id not in user_evaluations_per_section[section.label]:
-                user_evaluations_per_section[section.label][user_answer.user.id] = 0
-            user_evaluations_per_section[section.label][
-                user_answer.user.id
-            ] += user_answer.answer.score
+        section_label = user_answer.answer.question.section.label
+        if user_answer.user.id not in user_evaluations_per_section[section_label]:
+            user_evaluations_per_section[section_label][user_answer.user.id] = 0
+        user_evaluations_per_section[section_label][
+            user_answer.user.id
+        ] += user_answer.answer.score
 
     result = tree()
     generators = {}
     for section_label in user_evaluations_per_section:
-        generators[section.label] = mean_gen()
-        generators[section.label].send(None)
+        generators[section_label] = mean_gen()
+        generators[section_label].send(None)
         for value in user_evaluations_per_section[section_label].values():
-            result[section_label] = generators[section.label].send(value)
+            result[section_label] = generators[section_label].send(value)
 
         # result[section_label] = mean_list(
         #     user_evaluations_per_section[section_label].values()
