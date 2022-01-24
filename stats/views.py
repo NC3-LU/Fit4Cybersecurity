@@ -99,7 +99,13 @@ def answers_per_section(request):
 
 
 def activity_chart(request):
-    count = SurveyUser.objects.filter(status=3).annotate(month=TruncDay('created_at')).values('created_at').annotate(c=Count('id')).order_by('created_at')
+    count = (
+        SurveyUser.objects.filter(status=3)
+        .annotate(month=TruncDay("created_at"))
+        .values("created_at")
+        .annotate(c=Count("id"))
+        .order_by("created_at")
+    )
     result = []
     for elem in count:
         result.append({"timestamp": str(elem["created_at"]), "count": elem["c"]})
