@@ -2,7 +2,7 @@ from django.utils.translation import gettext_lazy
 
 CUSTOM = {
     # Generic configurations
-    "tool_name": "Fit4OperatorSurvey",
+    "tool_name": "OperatorSurvey",
     "intro_text": gettext_lazy(
         "This survey aims to identify the level of maturity "
         + "of the operators in Luxembourg with respect to risk management and governance, "
