@@ -56,7 +56,7 @@ Some statistics about the current surveys.
 <br />
 <div class="row">
   <div class="col chart-container">
-    <h3>Answers by section</h3>
+    <h3>Answers by section and company size</h3>
     <canvas id="answers-per-section"></canvas>
     <p>With data for the last month.</p>
   </div>
@@ -144,22 +144,31 @@ Some statistics about the current surveys.
       .then(response => response.json())
       .then(result => {
 
+        var data_sets = [];
+        var labels = [];
+        var i = 0;
+        for (const [key, value] of Object.entries(result)) {
+          labels = Object.values(key);
+          data_sets.push({
+            label: key,
+            data: Object.values(value),
+            fill: false,
+            backgroundColor: colors[i],
+            borderColor: colors[i],
+            pointBackgroundColor: colors[i],
+            pointBorderColor: '#fff',
+            pointHoverBackgroundColor: '#fff',
+            pointHoverBorderColor: 'rgb(255, 99, 132)'
+          })
+          i++;
+        }
+
         var ctx = document.getElementById("answers-per-section");
         var myChart = new Chart(ctx, {
           type: 'radar',
           data: {
-            labels: Object.keys(result),
-            datasets: [{
-              label: 'Answers by section (all business types)',
-              data: Object.values(result),
-              fill: true,
-              backgroundColor: 'rgba(255, 99, 132, 0.2)',
-              borderColor: 'rgb(255, 99, 132)',
-              pointBackgroundColor: 'rgb(255, 99, 132)',
-              pointBorderColor: '#fff',
-              pointHoverBackgroundColor: '#fff',
-              pointHoverBorderColor: 'rgb(255, 99, 132)'
-            }]
+            labels: labels,
+            datasets: data_sets
           },
           options: {
                 scale: {
