@@ -67,7 +67,7 @@ def survey_language_count(request):
 
 def answers_per_section(request):
     """Return a dict with the mean of the user's answers per section, with the
-    surveys completed during the last year."""
+    surveys completed during the last month."""
     chart_exclude_sections = ["__context"]
     if "chart_exclude_sections" in CUSTOM.keys():
         chart_exclude_sections = (
@@ -75,7 +75,7 @@ def answers_per_section(request):
         )
 
     user_evaluations_per_section = tree()
-    three_month_ago = datetime.now() - relativedelta(months=3)
+    three_month_ago = datetime.now() - relativedelta(months=1)
     user_answers = SurveyUserAnswer.objects.filter(
         user__status=3, uvalue="1", user__created_at__gt=three_month_ago
     ).exclude(answer__question__section__label__in=chart_exclude_sections)
