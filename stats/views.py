@@ -6,7 +6,7 @@ from django.db.models import Count
 from django.shortcuts import render
 from django.http import JsonResponse
 from csskp.settings import CUSTOM
-from survey.lib.utils import tree, mean_list
+from survey.lib.utils import tree, mean_gen
 from survey.models import SurveyUser, SurveyUserAnswer
 from survey.reporthelper import calculateResult
 
@@ -89,9 +89,15 @@ def answers_per_section(request):
             ] += user_answer.answer.score
 
     result = tree()
+    generators = {}
     for section_label in user_evaluations_per_section:
-        result[section_label] = mean_list(
-            user_evaluations_per_section[section_label].values()
-        )
+        generators[section.label] = mean_gen()
+        generators[section.label].send(None)
+        for value in user_evaluations_per_section[section_label].values():
+            result[section_label] = generators[section.label].send(value)
+
+        # result[section_label] = mean_list(
+        #     user_evaluations_per_section[section_label].values()
+        # )
 
     return JsonResponse(result)
