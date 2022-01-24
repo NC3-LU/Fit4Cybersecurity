@@ -148,7 +148,7 @@ Some statistics about the current surveys.
         var labels = [];
         var i = 0;
         for (const [key, value] of Object.entries(result)) {
-          labels = Object.values(key);
+          labels = Object.keys(value);
           data_sets.push({
             label: key,
             data: Object.values(value),
