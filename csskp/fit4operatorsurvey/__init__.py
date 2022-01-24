@@ -2,7 +2,7 @@ from django.utils.translation import gettext_lazy
 
 CUSTOM = {
     # Generic configurations
-    "tool_name": "Fit4OperatorSurvey",
+    "tool_name": "OperatorSurvey",
     "intro_text": gettext_lazy(
         "This survey aims to identify the level of maturity "
         + "of the operators in Luxembourg with respect to risk management and governance, "
@@ -12,7 +12,7 @@ CUSTOM = {
         + "As such, it is recommended that a person is taking this survey that is knowing "
         + "the company's maturity on the aforementioned topics well. "
         + "<br /><br />"
-        + "The survey will be online and available between December 2021 and March 31st 2022. "
+        + "The survey will be online and available between December 2021 and April 30th 2022. "
         + "After the survey, the data will be processed and results will be interpreted. "
         + "However, since the survey is completely anonymous, we cannot identify you nor "
         + "your company and thus deletion of specific records is not possible: we cannot "

@@ -13,7 +13,7 @@ This tool allows instantiation of the following self-assessment websites:
 
 - [Fit4Cybersecurity](https://fit4cybersecurity.cases.lu),
 - [Fit4Privacy](https://fit4privacy.cases.lu),
-- [Fit4OperatorSurvey](https://fit4operatorsurvey.cases.lu),
+- [OperatorSurvey](https://operatorsurvey.cases.lu),
 - [Cyber4Africa](https://start.cyber4africa.org).
 
 

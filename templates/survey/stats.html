@@ -1,7 +1,7 @@
-{% extends "admin/base_site.html" %}
+{% extends 'survey/base.html' %}
+{% load bootstrap4 %}
 {% load apptags %}
-{% block title %}Admin site | Stats{% endblock %}
-{% block extrastyle %}
+{% block bootstrap4_extra_head %}
 {{ block.super }}
 <script type="text/javascript" src="/static/npm_components/chart.js/dist/chart.min.js"></script>
 <style>
@@ -23,47 +23,37 @@ Some statistics about the current surveys.
 {% endblock %}
 {% block content %}
 <div class="row">
-  <div class="col-3">
-    <h2>Main figures</h2>
-    <p>Number of surveys: {{ nb_surveys }}</p>
-    <p>Number of finished surveys: {{ nb_finished_surveys }}</p>
+  <div class="col">
+    <h3>Main figures</h3>
+    <ul class="list-group">
+      <li class="list-group-item">Number of surveys: {{ nb_surveys }}</li>
+      <li class="list-group-item">Number of finished surveys: {{ nb_finished_surveys }}</li>
+    </ul>
   </div>
 </div>
 <div class="row">
-  <div class="col-3">
-    <h2>Last 10 finished surveys</h2>
-    <table class="table table-striped">
-      <thead>
-        <tr>
-          <th scope="col">Survey ID</th>
-          <th scope="col">Creation date</th>
-          <th scope="col">Update date</th>
-          <th scope="col">Choosen language</th>
-          <th scope="col">Result</th>
-        </tr>
-      </thead>
-      <tbody>
-      {% for survey in last_surveys %}
-      <tr>
-        <td><a href="/admin/survey/surveyuser/{{ survey.id }}/change/">{{ survey.user_id }}</a></td>
-        <td>{{ survey.created_at }}</td>
-        <td>{{ survey.updated_at }}</td>
-        <td>{{ survey.chosen_lang }}</td>
-        <td>{{ survey_results|get_item:survey.id }}</td>
-      </tr>
-      {% endfor %}
-      </tbody>
-    </table>
-  </div>
-</div>
-<div class="row">
-  <div class="col-3 chart-container">
-    <h2>Surveys status</h2>
+  <div class="col chart-container">
+    <h3>Surveys status</h3>
     <canvas id="stats-count"></canvas>
   </div>
-  <div class="col-3 chart-container">
-    <h2>Surveys languages</h2>
+  <div class="col chart-container">
+    <h3>Surveys languages</h3>
     <canvas id="stats-language"></canvas>
+  </div>
+</div>
+<div class="row">
+  <div class="col chart-container">
+    <h3>Answers per section</h3>
+    <canvas id="answers-per-section"></canvas>
+  </div>
+</div>
+<div class="row">
+  <div class="col">
+    <ul class="list-group">
+    <h3>Server information</h3>
+      <li class="list-group-item">Python version: {{ python_version }}</li>
+      <li class="list-group-item">Software version: <a href="{{ version_url }}" title="{{ _('Version of') }} {{ custom.tool_name }}" alt="{{ _('Version of') }} {{ custom.tool_name }}" target="_blank" rel="noopener noreferrer">{{ app_version }}</a></li>
+    </ul>
   </div>
 </div>
 
@@ -120,6 +110,43 @@ Some statistics about the current surveys.
               maintainAspectRatio: false,
             }
           }});
+        }).catch((error) => {
+          console.error('Error:', error);
+        });
+
+      fetch("/stats/answers-per-section.json")
+      .then(response => response.json())
+      .then(result => {
+
+        var ctx = document.getElementById("answers-per-section");
+        var myChart = new Chart(ctx, {
+          type: 'radar',
+          data: {
+            labels: Object.keys(result),
+            datasets: [{
+              label: 'Answers by section (all business types)',
+              data: Object.values(result),
+              fill: true,
+              backgroundColor: 'rgba(255, 99, 132, 0.2)',
+              borderColor: 'rgb(255, 99, 132)',
+              pointBackgroundColor: 'rgb(255, 99, 132)',
+              pointBorderColor: '#fff',
+              pointHoverBackgroundColor: '#fff',
+              pointHoverBorderColor: 'rgb(255, 99, 132)'
+            }]
+          },
+          options: {
+                scale: {
+                min: 0,
+                max: 100,
+            },
+            elements: {
+              line: {
+                borderWidth: 3
+              }
+            }
+          }
+        });
         }).catch((error) => {
           console.error('Error:', error);
         });

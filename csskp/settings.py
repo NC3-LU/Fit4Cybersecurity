@@ -196,6 +196,11 @@ STATICFILES_DIRS = [
     STATIC_DIR,
 ]
 
+# Used to get an access to the header on JS side.
+CORS_EXPOSE_HEADERS = [
+    'content-disposition',
+]
+
 SITE_IMAGES_DIR = os.path.join(STATIC_DIR, "images", config.SITE_NAME)
 SITE_IMAGES_URL = STATIC_URL + "images/" + config.SITE_NAME
 
