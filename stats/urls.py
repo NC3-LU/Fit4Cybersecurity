@@ -18,4 +18,9 @@ urlpatterns = [
         views.survey_language_count,
         name="survey_language_count",
     ),
+    path(
+        "answers-per-section.json",
+        views.answers_per_section,
+        name="answers_per_section",
+    ),
 ]

@@ -42,6 +42,12 @@ Some statistics about the current surveys.
   </div>
 </div>
 <div class="row">
+  <div class="col chart-container">
+    <h3>Answers per section</h3>
+    <canvas id="answers-per-section"></canvas>
+  </div>
+</div>
+<div class="row">
   <div class="col">
     <ul class="list-group">
     <h3>Server information</h3>
@@ -104,6 +110,43 @@ Some statistics about the current surveys.
               maintainAspectRatio: false,
             }
           }});
+        }).catch((error) => {
+          console.error('Error:', error);
+        });
+
+      fetch("/stats/answers-per-section.json")
+      .then(response => response.json())
+      .then(result => {
+
+        var ctx = document.getElementById("answers-per-section");
+        var myChart = new Chart(ctx, {
+          type: 'radar',
+          data: {
+            labels: Object.keys(result),
+            datasets: [{
+              label: 'Answers by section (all business types)',
+              data: Object.values(result),
+              fill: true,
+              backgroundColor: 'rgba(255, 99, 132, 0.2)',
+              borderColor: 'rgb(255, 99, 132)',
+              pointBackgroundColor: 'rgb(255, 99, 132)',
+              pointBorderColor: '#fff',
+              pointHoverBackgroundColor: '#fff',
+              pointHoverBorderColor: 'rgb(255, 99, 132)'
+            }]
+          },
+          options: {
+                scale: {
+                min: 0,
+                max: 100,
+            },
+            elements: {
+              line: {
+                borderWidth: 3
+              }
+            }
+          }
+        });
         }).catch((error) => {
           console.error('Error:', error);
         });
