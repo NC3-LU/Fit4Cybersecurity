@@ -75,9 +75,9 @@ def answers_per_section(request):
         )
 
     user_evaluations_per_section = tree()
-    one_year_ago = datetime.now() - relativedelta(years=1)
+    three_month_ago = datetime.now() - relativedelta(months=3)
     user_answers = SurveyUserAnswer.objects.filter(
-        user__status=3, uvalue="1", user__created_at__gt=one_year_ago
+        user__status=3, uvalue="1", user__created_at__gt=three_month_ago
     ).exclude(answer__question__section__label__in=chart_exclude_sections)
     for user_answer in user_answers:
         section_label = user_answer.answer.question.section.label
