@@ -4,6 +4,8 @@
 {% block bootstrap4_extra_head %}
 {{ block.super }}
 <script type="text/javascript" src="/static/npm_components/chart.js/dist/chart.min.js"></script>
+<script type="text/javascript" src="/static/stats/js/github_contribution.js"></script>
+<link href="/static/stats/css/github_contribution_graph.css" media="all" rel="stylesheet" />
 <style>
 .chart-container {
   display: block;
@@ -39,6 +41,14 @@ Some statistics about the current surveys.
   <div class="col chart-container">
     <h3>Surveys languages</h3>
     <canvas id="stats-language"></canvas>
+  </div>
+</div>
+<div class="row">
+  <div class="col mx-auto">
+    <h3>Activity</h3>
+    <div class="text-center">
+      <div id="surveys-activity"></div>
+    </div>
   </div>
 </div>
 <div class="row">
@@ -110,6 +120,17 @@ Some statistics about the current surveys.
               maintainAspectRatio: false,
             }
           }});
+        }).catch((error) => {
+          console.error('Error:', error);
+        });
+
+      fetch("/stats/activity-chart.json")
+      .then(response => response.json())
+      .then(result => {
+          $('#surveys-activity').github_graph( {
+            data: result ,
+            texts: ['completed survey','completed surveys']
+          });
         }).catch((error) => {
           console.error('Error:', error);
         });

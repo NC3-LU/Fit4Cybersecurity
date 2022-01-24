@@ -23,4 +23,9 @@ urlpatterns = [
         views.answers_per_section,
         name="answers_per_section",
     ),
+    path(
+        "activity-chart.json",
+        views.activity_chart,
+        name="activity_chart",
+    ),
 ]
