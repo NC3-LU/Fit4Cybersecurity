@@ -507,6 +507,14 @@ optional = false
 python-versions = ">=3.7"
 
 [[package]]
+name = "types-python-dateutil"
+version = "2.8.8"
+description = "Typing stubs for python-dateutil"
+category = "main"
+optional = false
+python-versions = "*"
+
+[[package]]
 name = "typing-extensions"
 version = "4.0.1"
 description = "Backported and Experimental Type Hints for Python 3.6+"
@@ -571,7 +579,7 @@ python-versions = "*"
 [metadata]
 lock-version = "1.1"
 python-versions = ">=3.8,<4.0"
-content-hash = "2572e816ba570e5c54ba851237c14945545660bd90511a5a09876260ddb8c071"
+content-hash = "088998e06c5b62bb33de9ec42bab117e6d60d471fa63ed646482b8662bb422ee"
 
 [metadata.files]
 asgiref = [
@@ -1127,6 +1135,10 @@ tinycss2 = [
 tomli = [
     {file = "tomli-2.0.0-py3-none-any.whl", hash = "sha256:b5bde28da1fed24b9bd1d4d2b8cba62300bfb4ec9a6187a957e8ddb9434c5224"},
     {file = "tomli-2.0.0.tar.gz", hash = "sha256:c292c34f58502a1eb2bbb9f5bbc9a5ebc37bee10ffb8c2d6bbdfa8eb13cc14e1"},
+]
+types-python-dateutil = [
+    {file = "types-python-dateutil-2.8.8.tar.gz", hash = "sha256:efe0207836d3b09e3a2986064a5c7f36e79ea423ab9b6676a62bf5dd51fb261b"},
+    {file = "types_python_dateutil-2.8.8-py3-none-any.whl", hash = "sha256:f704c2b7981e140eac7d626424e6232c1594d392c57c252d81a90fe53c2be896"},
 ]
 typing-extensions = [
     {file = "typing_extensions-4.0.1-py3-none-any.whl", hash = "sha256:7f001e5ac290a0c0401508864c7ec868be4e701886d5b573a9528ed3973d9d3b"},
