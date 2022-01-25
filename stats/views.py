@@ -16,9 +16,14 @@ from survey.reporthelper import calculateResult
 
 def index(request):
     nb_finished_surveys = SurveyUser.objects.filter(status=3).count()
+    try:
+        first_survey = SurveyUser.objects.filter(status=3).order_by("created_at")[0]
+    except Exception:
+        first_survey = ""
     nb_surveys = SurveyUser.objects.count()
     context = {
         "nb_surveys": nb_surveys,
+        "first_survey_date": first_survey.created_at,
         "nb_finished_surveys": nb_finished_surveys,
         "python_version": "{}.{}.{}".format(*sys.version_info[:3]),
     }

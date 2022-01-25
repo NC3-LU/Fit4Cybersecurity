@@ -20,34 +20,35 @@
 {% endblock %}
 {% block content_title %}
 <p class="lead" style="font-size: larger">
-Some statistics about the current surveys.
+{{ _('Some statistics about the current surveys.') }}
 </p>
 {% endblock %}
 {% block content %}
 <div class="row">
   <div class="col">
-    <h3>Main figures</h3>
+    <h3>{{ _('Main figures') }}</h3>
     <ul class="list-group">
-      <li class="list-group-item">Number of surveys: {{ nb_surveys }}</li>
-      <li class="list-group-item">Number of finished surveys: {{ nb_finished_surveys }}</li>
+      <li class="list-group-item">{{ _('Number of surveys:') }} {{ nb_surveys }}</li>
+      <li class="list-group-item">{{ _('Number of finished surveys:') }} {{ nb_finished_surveys }}</li>
+      <li class="list-group-item">{{ _('First completed survey on:') }} {{ first_survey_date }}</li>
     </ul>
   </div>
 </div>
 <br />
 <div class="row">
   <div class="col chart-container">
-    <h3>Surveys status</h3>
+    <h3>{{ _('Surveys status') }}</h3>
     <canvas id="stats-count"></canvas>
   </div>
   <div class="col chart-container">
-    <h3>Surveys languages</h3>
+    <h3>{{ _('Surveys languages') }}</h3>
     <canvas id="stats-language"></canvas>
   </div>
 </div>
 <br />
 <div class="row">
   <div class="col mx-auto">
-    <h3>Activity over the past year</h3>
+    <h3>{{ _('Activity over the past year') }}</h3>
     <div class="text-center">
       <div id="surveys-activity"></div>
     </div>
@@ -56,22 +57,22 @@ Some statistics about the current surveys.
 <br />
 <div class="row">
   <div class="col chart-container">
-    <h3>Answers by section and company size</h3>
+    <h3>{{ _('Answers by section and company size') }}</h3>
     <canvas id="answers-per-section"></canvas>
-    <p>With data for the last month.</p>
+    <p>{{ _('With data for the last month.') }}</p>
   </div>
 </div>
 <br />
 <div class="row">
   <div class="col">
     <ul class="list-group">
-    <h3>Server information</h3>
-      <li class="list-group-item">Python version: {{ python_version }}</li>
-      <li class="list-group-item">Software version: <a href="{{ version_url }}" title="{{ _('Version of') }} {{ custom.tool_name }}" alt="{{ _('Version of') }} {{ custom.tool_name }}" target="_blank" rel="noopener noreferrer">{{ app_version }}</a></li>
+    <h3>{{ _('Server information') }}</h3>
+      <li class="list-group-item">{{ _('Python version:') }} {{ python_version }}</li>
+      <li class="list-group-item">{{ _('Software version:') }} <a href="{{ version_url }}" title="{{ _('Version of') }} {{ custom.tool_name }}" alt="{{ _('Version of') }} {{ custom.tool_name }}" target="_blank" rel="noopener noreferrer">{{ app_version }}</a></li>
     </ul>
   </div>
 </div>
-
+<br />
 <script>
   document.addEventListener("DOMContentLoaded", function() {
     var colors = ['rgba(230, 25, 75, 0.4)', 'rgba(60, 180, 75, 0.4)',
