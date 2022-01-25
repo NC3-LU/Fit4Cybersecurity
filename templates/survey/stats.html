@@ -20,53 +20,59 @@
 {% endblock %}
 {% block content_title %}
 <p class="lead" style="font-size: larger">
-Some statistics about the current surveys.
+{{ _('Some statistics about the current surveys.') }}
 </p>
 {% endblock %}
 {% block content %}
 <div class="row">
   <div class="col">
-    <h3>Main figures</h3>
+    <h3>{{ _('Main figures') }}</h3>
     <ul class="list-group">
-      <li class="list-group-item">Number of surveys: {{ nb_surveys }}</li>
-      <li class="list-group-item">Number of finished surveys: {{ nb_finished_surveys }}</li>
+      <li class="list-group-item">{{ _('Number of surveys:') }} {{ nb_surveys }}</li>
+      <li class="list-group-item">{{ _('Number of finished surveys:') }} {{ nb_finished_surveys }}</li>
+      <li class="list-group-item">{{ _('First completed survey on:') }} {{ first_survey_date }}</li>
     </ul>
   </div>
 </div>
+<br />
 <div class="row">
   <div class="col chart-container">
-    <h3>Surveys status</h3>
+    <h3>{{ _('Surveys status') }}</h3>
     <canvas id="stats-count"></canvas>
   </div>
   <div class="col chart-container">
-    <h3>Surveys languages</h3>
+    <h3>{{ _('Surveys languages') }}</h3>
     <canvas id="stats-language"></canvas>
   </div>
 </div>
+<br />
 <div class="row">
   <div class="col mx-auto">
-    <h3>Activity</h3>
+    <h3>{{ _('Activity over the past year') }}</h3>
     <div class="text-center">
       <div id="surveys-activity"></div>
     </div>
   </div>
 </div>
+<br />
 <div class="row">
   <div class="col chart-container">
-    <h3>Answers per section</h3>
+    <h3>{{ _('Answers by section and company size') }}</h3>
     <canvas id="answers-per-section"></canvas>
+    <p>{{ _('With data for the last month.') }}</p>
   </div>
 </div>
+<br />
 <div class="row">
   <div class="col">
     <ul class="list-group">
-    <h3>Server information</h3>
-      <li class="list-group-item">Python version: {{ python_version }}</li>
-      <li class="list-group-item">Software version: <a href="{{ version_url }}" title="{{ _('Version of') }} {{ custom.tool_name }}" alt="{{ _('Version of') }} {{ custom.tool_name }}" target="_blank" rel="noopener noreferrer">{{ app_version }}</a></li>
+    <h3>{{ _('Server information') }}</h3>
+      <li class="list-group-item">{{ _('Python version:') }} {{ python_version }}</li>
+      <li class="list-group-item">{{ _('Software version:') }} <a href="{{ version_url }}" title="{{ _('Version of') }} {{ custom.tool_name }}" alt="{{ _('Version of') }} {{ custom.tool_name }}" target="_blank" rel="noopener noreferrer">{{ app_version }}</a></li>
     </ul>
   </div>
 </div>
-
+<br />
 <script>
   document.addEventListener("DOMContentLoaded", function() {
     var colors = ['rgba(230, 25, 75, 0.4)', 'rgba(60, 180, 75, 0.4)',
@@ -139,22 +145,31 @@ Some statistics about the current surveys.
       .then(response => response.json())
       .then(result => {
 
+        var data_sets = [];
+        var labels = [];
+        var i = 0;
+        for (const [key, value] of Object.entries(result)) {
+          labels = Object.keys(value);
+          data_sets.push({
+            label: key,
+            data: Object.values(value),
+            fill: false,
+            backgroundColor: colors[i],
+            borderColor: colors[i],
+            pointBackgroundColor: colors[i],
+            pointBorderColor: '#fff',
+            pointHoverBackgroundColor: '#fff',
+            pointHoverBorderColor: 'rgb(255, 99, 132)'
+          })
+          i++;
+        }
+
         var ctx = document.getElementById("answers-per-section");
         var myChart = new Chart(ctx, {
           type: 'radar',
           data: {
-            labels: Object.keys(result),
-            datasets: [{
-              label: 'Answers by section (all business types)',
-              data: Object.values(result),
-              fill: true,
-              backgroundColor: 'rgba(255, 99, 132, 0.2)',
-              borderColor: 'rgb(255, 99, 132)',
-              pointBackgroundColor: 'rgb(255, 99, 132)',
-              pointBorderColor: '#fff',
-              pointHoverBackgroundColor: '#fff',
-              pointHoverBorderColor: 'rgb(255, 99, 132)'
-            }]
+            labels: labels,
+            datasets: data_sets
           },
           options: {
                 scale: {

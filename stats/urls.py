@@ -6,7 +6,7 @@ from stats import views
 
 
 urlpatterns = [
-    path("", views.index, name="index"),
+    path("", views.index, name="stats"),
     path("overall.json", views.overall, name="overall"),
     path(
         "survey-status-count.json",

@@ -242,6 +242,20 @@ class SurveyUser(models.Model):
 
         return user_answer.uvalue if user_answer is not None else ""
 
+    def get_employees_number_label(self) -> str:
+        try:
+            number_employees_question_label = SurveyQuestion.objects.get(
+                label="How many employees?", section__label="__context"
+            ).label
+        except SurveyQuestion.DoesNotExist:
+            return ""
+
+        user_answer = self.__get_context_answer_by_question_label(
+            number_employees_question_label
+        )
+
+        return user_answer.answer.label if user_answer is not None else ""
+
     def get_country_code(self) -> str:
         try:
             country_question_label = SurveyQuestion.objects.get(
