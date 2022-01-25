@@ -69,6 +69,8 @@ try:
 
     EMAIL_HOST = config.EMAIL_HOST
     EMAIL_PORT = config.EMAIL_PORT
+
+    CY_DB_URL = config.CY_DB_URL
 except AttributeError as e:
     print("Please check you configuration file for the missing configuration variable:")
     print("  {}".format(e))

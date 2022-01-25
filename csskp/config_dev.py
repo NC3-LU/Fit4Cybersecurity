@@ -29,6 +29,9 @@ EMAIL_PORT = 25
 
 REPORT_TEMPLATE_DIR = "./templates/report/"
 
+# Cybersecurity Ecosystem
+CY_DB_URL = "https://api.db.cy.lu/"
+
 # Logging mechanism
 LOG_DIRECTORY = "./logs"
 LOG_FILE = "django.log"

@@ -5,12 +5,11 @@ import sys
 import requests
 from urllib.parse import urljoin
 from django.core.management.base import BaseCommand
+from csskp.settings import CY_DB_URL
 from survey.models import (
     Recommendations,
     # SurveyCompany
 )
-
-CY_DB_URL = "https://api.db.cy.lu/"
 
 
 class Command(BaseCommand):
