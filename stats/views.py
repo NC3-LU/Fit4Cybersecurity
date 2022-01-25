@@ -74,34 +74,22 @@ def answers_per_section(request):
             chart_exclude_sections + CUSTOM["chart_exclude_sections"]
         )
 
-    user_evaluations_per_section = tree()
-    three_month_ago = datetime.now() - relativedelta(months=1)
-    user_answers = SurveyUserAnswer.objects.filter(
-        user__status=3, uvalue="1", user__created_at__gt=three_month_ago
-    ).exclude(answer__question__section__label__in=chart_exclude_sections)
-    for user_answer in user_answers:
-        employees_number_code = user_answer.user.get_employees_number_label()
-        section_label = user_answer.answer.question.section.label
-        if user_answer.user.id not in user_evaluations_per_section[section_label]:
-            user_evaluations_per_section[employees_number_code][section_label][
-                user_answer.user.id
-            ] = 0
-        user_evaluations_per_section[employees_number_code][section_label][
-            user_answer.user.id
-        ] += user_answer.answer.score
+    one_month_ago = datetime.now() - relativedelta(months=1)
+    users = SurveyUser.objects.filter(status=3, created_at__gt=one_month_ago)
 
     result = tree()
     generators = tree()
-    for employees_number_code in user_evaluations_per_section:
-        for section_label in user_evaluations_per_section[employees_number_code]:
-            generators[employees_number_code][section_label] = mean_gen()
-            generators[employees_number_code][section_label].send(None)
-            for value in user_evaluations_per_section[employees_number_code][
-                section_label
-            ].values():
-                result[employees_number_code][section_label] = generators[
-                    employees_number_code
-                ][section_label].send(value)
+    for user in users:
+        _, _, user_evaluations, sections = calculateResult(user)
+        employees_number_code = user.get_employees_number_label()
+        for index, section in enumerate(sections):
+            section_label = str(section)
+            if section not in generators.get(employees_number_code, {}):
+                generators[employees_number_code][section_label] = mean_gen()
+                generators[employees_number_code][section_label].send(None)
+            result[employees_number_code][section_label] = generators[
+                employees_number_code
+            ][section_label].send(user_evaluations[index])
 
     return JsonResponse(result)
 
