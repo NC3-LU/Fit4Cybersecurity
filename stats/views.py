@@ -10,7 +10,7 @@ from django.shortcuts import render
 from django.http import JsonResponse
 from csskp.settings import CUSTOM
 from survey.lib.utils import tree, mean_gen
-from survey.models import SurveyUser, SurveyUserAnswer
+from survey.models import SurveyUser
 from survey.reporthelper import calculateResult
 
 
