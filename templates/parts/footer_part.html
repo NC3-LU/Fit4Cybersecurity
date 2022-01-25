@@ -17,12 +17,15 @@
       </a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="{{ version_url }}" title="{{ _('Version of') }} {{ custom.tool_name }}" alt="{{ _('Version of') }} {{ custom.tool_name }}"  target="_blank" rel="noopener noreferrer">
+      <a class="nav-link" href="{{ version_url }}" title="{{ _('Version of') }} {{ custom.tool_name }}" alt="{{ _('Version of') }} {{ custom.tool_name }}" target="_blank" rel="noopener noreferrer">
         {{ app_version }}
       </a>
     </li>
   </ul>
   <ul class="nav flex-column flex-sm-row">
+    <li class="nav-item">
+      <a class="nav-link" href="{% url 'stats' %}" title="{{ _('Stats') }}" alt="{{ _('Stats') }}">Stats</a>
+    </li>
     <li class="nav-item">
       <a class="nav-link" href="/terms" title="{{ _('Terms of Service') }}" alt="{{ _('Terms of Service') }}">Terms</a>
     </li>

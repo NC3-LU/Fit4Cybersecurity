@@ -37,7 +37,7 @@ def index(request, lang=LANGUAGE_CODE):
     return render(request, "survey/index.html")
 
 
-def start(request, lang="EN"):
+def start(request, lang=LANGUAGE_CODE):
     try:
         form_data = handle_start_survey(request, lang)
 

@@ -1,6 +1,37 @@
 # -*- coding: utf-8 -*-
 
+from collections import defaultdict
 from survey.models import SurveyQuestion, SurveyQuestionAnswer, Recommendations
+
+
+def tree():
+    """Autovivification."""
+    return defaultdict(tree)
+
+
+def mean_list(list):
+    return sum(list) / len(list)
+
+
+def mean_gen():
+    """Yields the accumulated mean of sent values.
+    >>> g = mean_gen()
+    >>> g.send(None) # Initialize the generator
+    >>> g.send(4)
+    4.0
+    >>> g.send(10)
+    7.0
+    >>> g.send(-2)
+    4.0
+    """
+    sum = yield (None)
+    count = 1
+    while True:
+        try:
+            sum += yield (sum / float(count))
+            count += 1
+        except Exception:
+            yield sum
 
 
 def export_survey(with_ids=False):

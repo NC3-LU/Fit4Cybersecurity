@@ -1,5 +1,4 @@
 $(document).ready(function() {
-
     const download = function(filename, text) {
         const pom = document.createElement('a');
         pom.setAttribute('href', 'data:application/plain;charset=utf-8,' + encodeURIComponent(text));
@@ -37,7 +36,37 @@ $(document).ready(function() {
     });
 
     $('#redirect-home').click(function() {
-        window.location.replace('/');
+        window.location.replace($('.logo-link').attr('href'));
+    });
+
+    $('#download-report').click(function(e) {
+        $('#cover-spin').show(0);
+        e.stopImmediatePropagation();
+        e.preventDefault();
+        let filename = '';
+        fetch($('#download-report').attr('href'))
+            .then(resp => {
+                const header = resp.headers.get('Content-Disposition');
+                const parts = header.split(';');
+                filename = parts[1].split('=')[1];
+
+                return resp.blob()
+            })
+            .then(blob => {
+                const url = window.URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.style.display = 'none';
+                a.href = url;
+                a.download = filename;
+                document.body.appendChild(a);
+                a.click();
+                window.URL.revokeObjectURL(url);
+                $('#cover-spin').hide();
+            })
+            .catch(() => {
+                $('#cover-spin').hide();
+                alert('An error occurred.')
+            });
     });
 
     let processCheckboxSelection = function(checkbox) {

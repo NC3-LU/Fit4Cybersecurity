@@ -25,7 +25,6 @@ migrate:
 
 populate:
 	python manage.py import_questions $(path)/questions.json
-	python manage.py import_translations $(path)/translations.json
 
 droptestdb:
 	dropdb fit4cybersecurity1 ; createdb fit4cybersecurity1
@@ -58,3 +57,7 @@ deploy:
 
 down:
 	docker-compose down
+
+clean:
+	find . -type f -name "*.py[co]" -delete
+	find . -type d -name "__pycache__" -delete
