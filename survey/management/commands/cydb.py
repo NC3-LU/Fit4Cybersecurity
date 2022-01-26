@@ -27,17 +27,17 @@ class Command(BaseCommand):
     def add_arguments(self, parser):
         subparsers = parser.add_subparsers(metavar="subcommand", dest="subcommand")
 
-        subparser_signin = subparsers.add_parser("signin")
-        subparser_login = subparsers.add_parser("login")
-        # subparser_refresh = subparsers.add_parser("refresh")
-        subparser_sync = subparsers.add_parser("sync")
+        subparser_signin = subparsers.add_parser("signin", help="Create an account to the service.")
+        subparser_login = subparsers.add_parser("login", help="Authenticate to the service.")
+        # subparser_refresh = subparsers.add_parser("refresh", help="Refresh a token.")
+        subparser_sync = subparsers.add_parser("sync", help="Synchronize local data with the service.")
 
-        subparser_signin.add_argument("company", type=str, help="Company name.")
-        subparser_signin.add_argument("department", type=str, help="Deparrtment name.")
-        subparser_signin.add_argument("email", type=str, help="Email.")
+        subparser_signin.add_argument("--company", type=str, help="Company name.")
+        subparser_signin.add_argument("--department", type=str, help="Deparrtment name.")
+        subparser_signin.add_argument("--email", type=str, help="Email.")
 
-        subparser_login.add_argument("email", type=str, help="Email.")
-        subparser_login.add_argument("password", type=str, help="Password.")
+        subparser_login.add_argument("--email", type=str, help="Email.")
+        subparser_login.add_argument("--password", type=str, help="Password.")
 
         subparser_sync.add_argument("object", type=str, help="Objects to sync.")
 
@@ -56,7 +56,11 @@ class Command(BaseCommand):
                     json=data,
                     headers=self.headers
                 )
-                self.stdout.write(r.status_code)
+                print(url)
+                print(r.status_code)
+                print(r.text)
+                if r.status_code == 422:
+                    self.stdout.write("Error: An account already exists with this email address")
             case "login":
                 self.stdout.write("Login")
                 data = {
