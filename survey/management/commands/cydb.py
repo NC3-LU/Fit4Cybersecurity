@@ -42,9 +42,6 @@ class Command(BaseCommand):
         subparser_sync.add_argument("object", type=str, help="Objects to sync.")
 
     def handle(self, *args, **options):
-        # self.stdout.write(','.join(options))
-        # headers = {"Content-Type": "application/json", "accept": "application/json"}
-
         match options["subcommand"]:
             case "signin":
                 self.stdout.write("Signin")
@@ -59,7 +56,7 @@ class Command(BaseCommand):
                     json=data,
                     headers=self.headers
                 )
-                print(r.status_code)
+                self.stdout.write(r.status_code)
             case "login":
                 self.stdout.write("Login")
                 data = {
@@ -93,5 +90,4 @@ class Command(BaseCommand):
 
         data = r.json()
         for elem in data["objects"]:
-            print(elem)
             Recommendations.objects.get_or_create(name=elem["name"])
