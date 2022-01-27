@@ -23,7 +23,7 @@ from utils.notifications import send_report
 from django.contrib import messages
 from django.utils import translation
 from uuid import UUID
-from csskp.settings import HASH_KEY, CUSTOM, LANGUAGE_CODE
+from csskp.settings import HASH_KEY, CUSTOM
 from utils.utils import can_redirect
 from cryptography.fernet import Fernet
 
