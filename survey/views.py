@@ -113,12 +113,12 @@ def change_lang(request, lang: str):
 
 
 def show_report(request) -> HttpResponseRedirect:
-    lang = request.session[settings.LANGUAGE_COOKIE_NAME]
     user_id = request.session.get("user_id", None)
     if user_id is None:
         return HttpResponseRedirect("/")
 
     user = find_user_by_id(user_id)
+    lang = user.chosen_lang
 
     if not user.is_survey_finished():
         messages.error(
@@ -188,7 +188,6 @@ def review(request):
 
     lang = user.chosen_lang
     translation.activate(lang)
-    request.session[settings.LANGUAGE_COOKIE_NAME] = lang
 
     textLayout = {
         "title": CUSTOM["tool_name"] + " - " + _("Answers review"),
@@ -210,9 +209,8 @@ def finish(request):
     if not user.is_survey_finished():
         return HttpResponseRedirect("/")
 
-    user_lang = user.chosen_lang
-    translation.activate(user_lang)
-    request.session[settings.LANGUAGE_COOKIE_NAME] = user_lang
+    lang = user.chosen_lang
+    translation.activate(lang)
 
     # make survey readonly and show results.
     # also needs saving here!
@@ -220,7 +218,7 @@ def finish(request):
 
     txt_score, bonus_score, radar_current, sections_list = calculateResult(user)
 
-    recommendations = getRecommendations(user, user_lang)
+    recommendations = getRecommendations(user, lang)
     # To properly display breaking lines \n on html page.
     for rx in recommendations:
         recommendations[rx] = [x.replace("\n", "<br>") for x in recommendations[rx]]

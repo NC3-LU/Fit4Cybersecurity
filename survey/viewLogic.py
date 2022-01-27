@@ -145,7 +145,6 @@ def handle_question_answers_request(
             free_text_answer_id = question_answer.id
 
     translation.activate(user.chosen_lang)
-    request.session[settings.LANGUAGE_COOKIE_NAME] = user.chosen_lang
 
     if request.method == "POST":
         form = AnswerMChoice(
