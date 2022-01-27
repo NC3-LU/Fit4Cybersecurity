@@ -22,8 +22,7 @@ from survey import views
 urlpatterns = [
     # Root
     path("", views.index, name="index"),
-    path("terms", views.get_terms),
-    path("<slug:lang>", views.index),
+    path("terms/", views.get_terms, name="terms"),
     # Stats
     path("stats/", include("stats.urls")),
     # Admin
