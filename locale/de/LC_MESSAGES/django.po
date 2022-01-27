@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-01-21 10:49+0000\n"
+"POT-Creation-Date: 2022-01-27 15:40+0000\n"
 "PO-Revision-Date: 2022-01-11 10:52+0000\n"
 "Last-Translator: Juan Rocha <juan.rocha@cases.lu>\n"
 "Language-Team: German <https://translate.monarc.lu/projects/"
@@ -4882,11 +4882,11 @@ msgstr ""
 "Sie können die Antworten {} nicht wählen, wenn die Antwort '{}' gewählt "
 "wurde."
 
-#: survey/viewLogic.py:63
+#: survey/viewLogic.py:62
 msgid "Let's start"
 msgstr "Lasst uns beginnen"
 
-#: survey/viewLogic.py:229
+#: survey/viewLogic.py:224
 msgid "Question"
 msgstr "Frage"
 
@@ -4895,22 +4895,22 @@ msgid "To generate a report you have to finish the survey."
 msgstr ""
 "Um einen Bericht zu erstellen, muss erst die Umfrage beantwortet werden."
 
-#: survey/views.py:194
+#: survey/views.py:193
 msgid "Answers review"
 msgstr "Überprüfung der Antworten"
 
-#: survey/views.py:229
+#: survey/views.py:227
 msgid "Final summary"
 msgstr "Zusammenfassung"
 
-#: survey/views.py:263
+#: survey/views.py:261
 msgid ""
 "We could not find a survey with the requested key, please start a new one."
 msgstr ""
 "Wir konnten keine Umfrage mit dem angeforderten Schlüssel finden. Bitte "
 "starten Sie eine neue."
 
-#: survey/views.py:293
+#: survey/views.py:291
 msgid "Feedback sending errors: "
 msgstr "Fehler beim Senden von Rückmeldungen: "
 
@@ -4962,11 +4962,15 @@ msgstr "Ein Service von CASES.LU"
 msgid "Source code on GitHub"
 msgstr "Quellcode auf GitHub"
 
-#: templates/parts/footer_part.html:20 templates/survey/stats.html:49
+#: templates/parts/footer_part.html:20 templates/survey/stats.html:71
 msgid "Version of"
 msgstr "Version von"
 
 #: templates/parts/footer_part.html:27
+msgid "Stats"
+msgstr ""
+
+#: templates/parts/footer_part.html:30
 msgid "Terms of Service"
 msgstr "Nutzungsbedingungen"
 
@@ -5416,6 +5420,58 @@ msgid ""
 msgstr ""
 "Benötigen wir einige Informationen, um Ihnen nützliche Empfehlungen geben zu "
 "können, sobald die Selbsteinschätzung abgeschlossen ist."
+
+#: templates/survey/stats.html:23
+msgid "Some statistics about the current surveys."
+msgstr ""
+
+#: templates/survey/stats.html:29
+msgid "Main figures"
+msgstr ""
+
+#: templates/survey/stats.html:31
+msgid "Number of surveys:"
+msgstr ""
+
+#: templates/survey/stats.html:32
+msgid "Number of finished surveys:"
+msgstr ""
+
+#: templates/survey/stats.html:33
+msgid "First completed survey on:"
+msgstr ""
+
+#: templates/survey/stats.html:40
+msgid "Surveys status"
+msgstr ""
+
+#: templates/survey/stats.html:44
+msgid "Surveys languages"
+msgstr ""
+
+#: templates/survey/stats.html:51
+msgid "Activity over the past year"
+msgstr ""
+
+#: templates/survey/stats.html:60
+msgid "Answers by section and company size"
+msgstr ""
+
+#: templates/survey/stats.html:62
+msgid "With data for the last month."
+msgstr ""
+
+#: templates/survey/stats.html:69
+msgid "Server information"
+msgstr ""
+
+#: templates/survey/stats.html:70
+msgid "Python version:"
+msgstr ""
+
+#: templates/survey/stats.html:71
+msgid "Software version:"
+msgstr ""
 
 #~ msgid "Germany"
 #~ msgstr "Deutschland"
