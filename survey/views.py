@@ -32,13 +32,13 @@ logger = logging.getLogger(__name__)
 
 
 def index(request):
-    lang = request.session.get(settings.LANGUAGE_COOKIE_NAME, "en")
+    lang = request.session.get(settings.LANGUAGE_COOKIE_NAME, LANGUAGE_CODE)
     translation.activate(lang)
     return render(request, "survey/index.html")
 
 
 def start(request):
-    lang = request.session.get(settings.LANGUAGE_COOKIE_NAME, "en")
+    lang = request.session.get(settings.LANGUAGE_COOKIE_NAME, LANGUAGE_CODE)
 
     try:
         form_data = handle_start_survey(request, lang)
@@ -82,7 +82,7 @@ def handle_question_form(request, question_index: int):
 
 def change_lang(request, lang: str):
     translation.activate(lang)
-    lang = request.session.get(settings.LANGUAGE_COOKIE_NAME, "en")
+    request.session[settings.LANGUAGE_COOKIE_NAME] = lang
     user_id = request.session.get("user_id", None)
     previous_path = request.META.get("HTTP_REFERER", "/")
 
