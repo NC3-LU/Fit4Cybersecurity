@@ -23,7 +23,7 @@ from utils.notifications import send_report
 from django.contrib import messages
 from django.utils import translation
 from uuid import UUID
-from csskp.settings import HASH_KEY, CUSTOM
+from csskp.settings import HASH_KEY, CUSTOM, LANGUAGE_CODE
 from utils.utils import can_redirect
 from cryptography.fernet import Fernet
 
@@ -32,7 +32,14 @@ logger = logging.getLogger(__name__)
 
 
 def index(request):
-    lang = request.session[settings.LANGUAGE_COOKIE_NAME]
+
+    try:
+        request.session[settings.LANGUAGE_COOKIE_NAME]
+    except NameError:
+        lang = LANGUAGE_CODE
+    else:
+        lang = request.session[settings.LANGUAGE_COOKIE_NAME]
+
     translation.activate(lang)
     return render(request, "survey/index.html")
 
