@@ -291,10 +291,10 @@ def find_user_by_id(user_id: UUID) -> SurveyUser:
 
 
 def get_answer_choices(
-    question: SurveyQuestion, user_lang: str
+    question: SurveyQuestion, lang: str
 ) -> List[Tuple[int, str]]:
     tuple_answers = []
-    translation.activate(user_lang)
+    translation.activate(lang)
 
     question_answers = list(
         sorted(
