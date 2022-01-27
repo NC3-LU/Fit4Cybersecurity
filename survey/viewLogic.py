@@ -59,11 +59,8 @@ def create_user(lang: str) -> SurveyUser:
 
 def handle_start_survey(request: HttpRequest, lang: str) -> Union[Dict, SurveyUser]:
     """Handles the start of the survey."""
-    action = "/survey/start/" + lang
+    action = "/survey/start"
     title = CUSTOM["tool_name"] + " - " + _("Let's start")
-
-    translation.activate(lang)
-    request.session[settings.LANGUAGE_COOKIE_NAME] = lang
 
     forms = {}
     questions = (

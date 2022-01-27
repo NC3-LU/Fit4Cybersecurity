@@ -31,18 +31,17 @@ from cryptography.fernet import Fernet
 logger = logging.getLogger(__name__)
 
 
-def index(request, lang=LANGUAGE_CODE):
+def index(request):
+    lang = request.session[settings.LANGUAGE_COOKIE_NAME]
     translation.activate(lang)
-    request.session[settings.LANGUAGE_COOKIE_NAME] = lang
     return render(request, "survey/index.html")
 
 
-def start(request, lang=LANGUAGE_CODE):
+def start(request):
+    lang = request.session[settings.LANGUAGE_COOKIE_NAME]
+
     try:
         form_data = handle_start_survey(request, lang)
-
-        translation.activate(lang)
-        request.session[settings.LANGUAGE_COOKIE_NAME] = lang
 
         if isinstance(form_data, SurveyUser):
             return HttpResponseRedirect(
@@ -87,11 +86,11 @@ def change_lang(request, lang: str):
     user_id = request.session.get("user_id", None)
     previous_path = request.META.get("HTTP_REFERER", "/")
 
-    if previous_path.__contains__("/survey/start/"):
-        return HttpResponseRedirect("/survey/start/" + lang)
+    if previous_path.__contains__("/survey/start"):
+        return HttpResponseRedirect("/survey/start")
 
     if user_id is None:
-        return HttpResponseRedirect("/" + lang)
+        return HttpResponseRedirect("/")
 
     user = find_user_by_id(user_id)
     user.chosen_lang = lang
@@ -110,10 +109,11 @@ def change_lang(request, lang: str):
     if user.is_survey_finished() and previous_path.__contains__("/survey/finish"):
         return HttpResponseRedirect("/survey/finish")
 
-    return HttpResponseRedirect("/" + lang)
+    return HttpResponseRedirect("/")
 
 
-def show_report(request, lang: str) -> HttpResponseRedirect:
+def show_report(request) -> HttpResponseRedirect:
+    lang = request.session[settings.LANGUAGE_COOKIE_NAME]
     user_id = request.session.get("user_id", None)
     if user_id is None:
         return HttpResponseRedirect("/")
