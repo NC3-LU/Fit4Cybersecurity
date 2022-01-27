@@ -5,7 +5,6 @@ from typing_extensions import TypedDict
 import logging
 from uuid import UUID
 from django.http import HttpRequest
-from django.conf import settings
 from django.utils.translation import gettext_lazy as _
 from django.utils.html import format_html, mark_safe
 from django.db import transaction
