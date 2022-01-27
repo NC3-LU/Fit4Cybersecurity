@@ -31,18 +31,17 @@ from cryptography.fernet import Fernet
 logger = logging.getLogger(__name__)
 
 
-def index(request, lang=LANGUAGE_CODE):
+def index(request):
+    lang = request.session.get(settings.LANGUAGE_COOKIE_NAME, LANGUAGE_CODE)
     translation.activate(lang)
-    request.session[settings.LANGUAGE_COOKIE_NAME] = lang
     return render(request, "survey/index.html")
 
 
-def start(request, lang="EN"):
+def start(request):
+    lang = request.session.get(settings.LANGUAGE_COOKIE_NAME, LANGUAGE_CODE)
+
     try:
         form_data = handle_start_survey(request, lang)
-
-        translation.activate(lang)
-        request.session[settings.LANGUAGE_COOKIE_NAME] = lang
 
         if isinstance(form_data, SurveyUser):
             return HttpResponseRedirect(
@@ -87,11 +86,11 @@ def change_lang(request, lang: str):
     user_id = request.session.get("user_id", None)
     previous_path = request.META.get("HTTP_REFERER", "/")
 
-    if previous_path.__contains__("/survey/start/"):
-        return HttpResponseRedirect("/survey/start/" + lang)
+    if previous_path.__contains__("/survey/start"):
+        return HttpResponseRedirect("/survey/start")
 
     if user_id is None:
-        return HttpResponseRedirect("/" + lang)
+        return HttpResponseRedirect("/")
 
     user = find_user_by_id(user_id)
     user.chosen_lang = lang
@@ -110,15 +109,16 @@ def change_lang(request, lang: str):
     if user.is_survey_finished() and previous_path.__contains__("/survey/finish"):
         return HttpResponseRedirect("/survey/finish")
 
-    return HttpResponseRedirect("/" + lang)
+    return HttpResponseRedirect("/")
 
 
-def show_report(request, lang: str) -> HttpResponseRedirect:
+def show_report(request) -> HttpResponseRedirect:
     user_id = request.session.get("user_id", None)
     if user_id is None:
         return HttpResponseRedirect("/")
 
     user = find_user_by_id(user_id)
+    lang = user.chosen_lang
 
     if not user.is_survey_finished():
         messages.error(
@@ -188,7 +188,6 @@ def review(request):
 
     lang = user.chosen_lang
     translation.activate(lang)
-    request.session[settings.LANGUAGE_COOKIE_NAME] = lang
 
     textLayout = {
         "title": CUSTOM["tool_name"] + " - " + _("Answers review"),
@@ -210,9 +209,8 @@ def finish(request):
     if not user.is_survey_finished():
         return HttpResponseRedirect("/")
 
-    user_lang = user.chosen_lang
-    translation.activate(user_lang)
-    request.session[settings.LANGUAGE_COOKIE_NAME] = user_lang
+    lang = user.chosen_lang
+    translation.activate(lang)
 
     # make survey readonly and show results.
     # also needs saving here!
@@ -220,7 +218,7 @@ def finish(request):
 
     txt_score, bonus_score, radar_current, sections_list = calculateResult(user)
 
-    recommendations = getRecommendations(user, user_lang)
+    recommendations = getRecommendations(user, lang)
     # To properly display breaking lines \n on html page.
     for rx in recommendations:
         recommendations[rx] = [x.replace("\n", "<br>") for x in recommendations[rx]]

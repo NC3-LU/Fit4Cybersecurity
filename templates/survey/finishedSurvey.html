@@ -46,7 +46,7 @@
     <img src="{% static 'images/reportLogo.png' %}" alt="DOC ICON">
   </div>
   <div class="text-center py-2">
-    <a href="{{ reportlink }}/{{ LANGUAGE_CODE }}">
+    <a href="{{ reportlink }}" id="download-report">
       <button class="btn border border-rounded btn-primary" type="button">
         {{ _('Download') }}
       </button>
@@ -171,6 +171,8 @@
     </div>
   </div>
 </div>
+
+<div id="cover-spin"></div>
 
 {% include 'survey/continue.html' %}
 {% include 'survey/leaveSurvey.html' %}

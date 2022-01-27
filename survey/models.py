@@ -5,6 +5,7 @@ from typing import Optional, Dict, Any
 import uuid
 from django.db import models
 from csskp.settings import LANGUAGES, LANGUAGE_CODE
+from django.utils.translation import gettext_lazy as _
 
 # import global constants
 from survey.globals import (
@@ -208,9 +209,11 @@ class SurveyUser(models.Model):
             answer__question__section__label="__context"
         )
         for user_answer in user_answers:
-            result[
-                user_answer.answer.question.label
-            ] = user_answer.uvalue if user_answer.answer.question.qtype == 'CL' else user_answer
+            if user_answer.answer.question.qtype == "CL":
+                value = user_answer.uvalue
+            else:
+                value = _(user_answer.answer.label)
+            result[_(user_answer.answer.question.label)] = value
 
         return result
 
@@ -238,6 +241,20 @@ class SurveyUser(models.Model):
         )
 
         return user_answer.uvalue if user_answer is not None else ""
+
+    def get_employees_number_label(self) -> str:
+        try:
+            number_employees_question_label = SurveyQuestion.objects.get(
+                label="How many employees?", section__label="__context"
+            ).label
+        except SurveyQuestion.DoesNotExist:
+            return ""
+
+        user_answer = self.__get_context_answer_by_question_label(
+            number_employees_question_label
+        )
+
+        return user_answer.answer.label if user_answer is not None else ""
 
     def get_country_code(self) -> str:
         try:
