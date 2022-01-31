@@ -23,7 +23,7 @@ from utils.notifications import send_report
 from django.contrib import messages
 from django.utils import translation
 from uuid import UUID
-from csskp.settings import HASH_KEY, CUSTOM
+from csskp.settings import HASH_KEY, CUSTOM, LANGUAGE_CODE
 from utils.utils import can_redirect
 from cryptography.fernet import Fernet
 
@@ -32,13 +32,13 @@ logger = logging.getLogger(__name__)
 
 
 def index(request):
-    lang = request.session[settings.LANGUAGE_COOKIE_NAME]
+    lang = request.session.get(settings.LANGUAGE_COOKIE_NAME, LANGUAGE_CODE)
     translation.activate(lang)
     return render(request, "survey/index.html")
 
 
 def start(request):
-    lang = request.session[settings.LANGUAGE_COOKIE_NAME]
+    lang = request.session.get(settings.LANGUAGE_COOKIE_NAME, LANGUAGE_CODE)
 
     try:
         form_data = handle_start_survey(request, lang)
@@ -88,6 +88,9 @@ def change_lang(request, lang: str):
 
     if previous_path.__contains__("/survey/start"):
         return HttpResponseRedirect("/survey/start")
+
+    if previous_path.__contains__("/stats/"):
+        return HttpResponseRedirect("/stats/")
 
     if user_id is None:
         return HttpResponseRedirect("/")

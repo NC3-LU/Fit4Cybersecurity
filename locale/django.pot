@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-01-21 10:49+0000\n"
+"POT-Creation-Date: 2022-01-27 15:58+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -4036,11 +4036,11 @@ msgstr ""
 msgid "You can't choose the answers {} if answer '{}' is choosen."
 msgstr ""
 
-#: survey/viewLogic.py:63
+#: survey/viewLogic.py:62
 msgid "Let's start"
 msgstr ""
 
-#: survey/viewLogic.py:229
+#: survey/viewLogic.py:224
 msgid "Question"
 msgstr ""
 
@@ -4048,20 +4048,20 @@ msgstr ""
 msgid "To generate a report you have to finish the survey."
 msgstr ""
 
-#: survey/views.py:194
+#: survey/views.py:193
 msgid "Answers review"
 msgstr ""
 
-#: survey/views.py:229
+#: survey/views.py:227
 msgid "Final summary"
 msgstr ""
 
-#: survey/views.py:263
+#: survey/views.py:261
 msgid ""
 "We could not find a survey with the requested key, please start a new one."
 msgstr ""
 
-#: survey/views.py:293
+#: survey/views.py:291
 msgid "Feedback sending errors: "
 msgstr ""
 
@@ -4093,11 +4093,15 @@ msgstr ""
 msgid "Source code on GitHub"
 msgstr ""
 
-#: templates/parts/footer_part.html:20 templates/survey/stats.html:49
+#: templates/parts/footer_part.html:20 templates/survey/stats.html:71
 msgid "Version of"
 msgstr ""
 
 #: templates/parts/footer_part.html:27
+msgid "Stats"
+msgstr ""
+
+#: templates/parts/footer_part.html:30
 msgid "Terms of Service"
 msgstr ""
 
@@ -4433,4 +4437,56 @@ msgstr ""
 msgid ""
 "We need this information to be able to give you useful recommendations, once "
 "the self-assessment is done."
+msgstr ""
+
+#: templates/survey/stats.html:23
+msgid "Some statistics about the current surveys."
+msgstr ""
+
+#: templates/survey/stats.html:29
+msgid "Main figures"
+msgstr ""
+
+#: templates/survey/stats.html:31
+msgid "Number of surveys:"
+msgstr ""
+
+#: templates/survey/stats.html:32
+msgid "Number of finished surveys:"
+msgstr ""
+
+#: templates/survey/stats.html:33
+msgid "First completed survey on:"
+msgstr ""
+
+#: templates/survey/stats.html:40
+msgid "Surveys status"
+msgstr ""
+
+#: templates/survey/stats.html:44
+msgid "Surveys languages"
+msgstr ""
+
+#: templates/survey/stats.html:51
+msgid "Activity over the past year"
+msgstr ""
+
+#: templates/survey/stats.html:60
+msgid "Answers by section and company size"
+msgstr ""
+
+#: templates/survey/stats.html:62
+msgid "With data for the last month."
+msgstr ""
+
+#: templates/survey/stats.html:69
+msgid "Server information"
+msgstr ""
+
+#: templates/survey/stats.html:70
+msgid "Python version:"
+msgstr ""
+
+#: templates/survey/stats.html:71
+msgid "Software version:"
 msgstr ""
