@@ -8,13 +8,17 @@ from django.db.models import Count
 from django.db.models.functions import TruncDay
 from django.shortcuts import render
 from django.http import JsonResponse
-from csskp.settings import CUSTOM
+from django.conf import settings
+from django.utils import translation
+from csskp.settings import CUSTOM, LANGUAGE_CODE
 from survey.lib.utils import tree, mean_gen
 from survey.models import SurveyUser
 from survey.reporthelper import calculateResult
 
 
 def index(request):
+    lang = request.session.get(settings.LANGUAGE_COOKIE_NAME, LANGUAGE_CODE)
+    translation.activate(lang)
     nb_finished_surveys = SurveyUser.objects.filter(status=3).count()
     try:
         first_survey = SurveyUser.objects.filter(status=3).order_by("created_at")[0]
