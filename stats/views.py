@@ -28,7 +28,7 @@ def index(request):
     nb_surveys = SurveyUser.objects.count()
     context = {
         "nb_surveys": nb_surveys,
-        "first_survey_date": getattr(first_survey,"created_at", ""),
+        "first_survey_date": getattr(first_survey, "created_at", ""),
         "nb_finished_surveys": nb_finished_surveys,
         "python_version": "{}.{}.{}".format(*sys.version_info[:3]),
     }
