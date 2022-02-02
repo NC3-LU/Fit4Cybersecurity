@@ -92,6 +92,9 @@ def change_lang(request, lang: str):
     if previous_path.__contains__("/stats/"):
         return HttpResponseRedirect("/stats/")
 
+    if previous_path.__contains__("/terms/"):
+        return HttpResponseRedirect("/terms/")
+
     if user_id is None:
         return HttpResponseRedirect("/")
 
@@ -306,4 +309,6 @@ def save_general_feedback(request):
 
 
 def get_terms(request):
+    lang = request.session.get(settings.LANGUAGE_COOKIE_NAME, LANGUAGE_CODE)
+    translation.activate(lang)
     return render(request, "survey/terms.html")
