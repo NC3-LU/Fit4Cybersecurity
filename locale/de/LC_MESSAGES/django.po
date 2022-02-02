@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-01-21 10:49+0000\n"
+"POT-Creation-Date: 2022-01-27 15:58+0000\n"
 "PO-Revision-Date: 2022-01-11 10:52+0000\n"
 "Last-Translator: Juan Rocha <juan.rocha@cases.lu>\n"
 "Language-Team: German <https://translate.monarc.lu/projects/"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.9-dev\n"
+"X-Generator: Weblate 4.11-dev\n"
 
 #: csskp/fit4cybersecurity/__init__.py:7
 msgid ""
@@ -1775,7 +1775,7 @@ msgstr ""
 
 #: data/fit4ehealth/questions.json:272
 msgid "All working professionals are trained for/in"
-msgstr ""
+msgstr "Alle berufstätige Professionelle sind ausgebildet für/in"
 
 #: data/fit4ehealth/questions.json:282
 msgid "the software they use on a regular basis"
@@ -1926,7 +1926,7 @@ msgstr ""
 
 #: data/fit4ehealth/questions.json:643
 msgid "are defined orally"
-msgstr ""
+msgstr "sind mündlich definiert"
 
 #: data/fit4ehealth/questions.json:651
 msgid ""
@@ -1945,6 +1945,8 @@ msgid ""
 "A contract in written form should be made, and if it’s possible personalized "
 "for you."
 msgstr ""
+"Schriftliche Verträge sollten vereinbart werden und falls möglich an Ihre "
+"Situation angepasst sein."
 
 #: data/fit4ehealth/questions.json:675
 msgid "Cleaning"
@@ -2157,6 +2159,9 @@ msgid ""
 "Advice should be given to avoid weak passwords. Some tips or techniques "
 "could be given to employees to remember their passwords. Here some examples:"
 msgstr ""
+"Ratschläge für die Erstellung von sicheren Passwörtern sollte gegeben "
+"werden, ebenso wie Tipps zum Merken und sicheren Verwahren der Passwörter. "
+"Hier einige Beispiele:"
 
 #: data/fit4ehealth/questions.json:1089
 msgid ""
@@ -2232,7 +2237,7 @@ msgstr ""
 
 #: data/fit4ehealth/questions.json:1336
 msgid "are closed and for professional use only"
-msgstr ""
+msgstr "sind geschlossen und nur für den professionellen Gebrauch"
 
 #: data/fit4ehealth/questions.json:1357
 msgid ""
@@ -2242,7 +2247,7 @@ msgstr ""
 
 #: data/fit4ehealth/questions.json:1377
 msgid "are divided in guests and internal network"
-msgstr ""
+msgstr "sind getrennt in ein internes Netzwerk und ein Netzwerk für Gäste"
 
 #: data/fit4ehealth/questions.json:1388
 msgid ""
@@ -2762,7 +2767,7 @@ msgstr ""
 
 #: data/fit4operatorsurvey/questions.json:343
 msgid "A lot."
-msgstr ""
+msgstr "Viele"
 
 #: data/fit4operatorsurvey/questions.json:350
 #: data/fit4operatorsurvey/questions.json:366
@@ -2991,6 +2996,9 @@ msgid ""
 "Any details you would like to share (for example, done/ongoing/not done/no "
 "idea what these actions mean):"
 msgstr ""
+"Alle Details oder weitere Informationen, die Sie teilen möchten (z. B. "
+"erledigt/fortlaufend/nicht erledigt/mir ist nicht klar was diese Aktionen "
+"bedeuten):"
 
 #: data/fit4operatorsurvey/questions.json:841
 msgid ""
@@ -3221,7 +3229,7 @@ msgstr ""
 
 #: data/fit4operatorsurvey/questions.json:1251
 msgid "Any other details:"
-msgstr ""
+msgstr "Weitere Details:"
 
 #: data/fit4operatorsurvey/questions.json:1261
 msgid "Which of the measures below would be of help to your organisation?"
@@ -4874,11 +4882,11 @@ msgstr ""
 "Sie können die Antworten {} nicht wählen, wenn die Antwort '{}' gewählt "
 "wurde."
 
-#: survey/viewLogic.py:63
+#: survey/viewLogic.py:62
 msgid "Let's start"
 msgstr "Lasst uns beginnen"
 
-#: survey/viewLogic.py:229
+#: survey/viewLogic.py:224
 msgid "Question"
 msgstr "Frage"
 
@@ -4887,22 +4895,22 @@ msgid "To generate a report you have to finish the survey."
 msgstr ""
 "Um einen Bericht zu erstellen, muss erst die Umfrage beantwortet werden."
 
-#: survey/views.py:194
+#: survey/views.py:193
 msgid "Answers review"
 msgstr "Überprüfung der Antworten"
 
-#: survey/views.py:229
+#: survey/views.py:227
 msgid "Final summary"
 msgstr "Zusammenfassung"
 
-#: survey/views.py:263
+#: survey/views.py:261
 msgid ""
 "We could not find a survey with the requested key, please start a new one."
 msgstr ""
 "Wir konnten keine Umfrage mit dem angeforderten Schlüssel finden. Bitte "
 "starten Sie eine neue."
 
-#: survey/views.py:293
+#: survey/views.py:291
 msgid "Feedback sending errors: "
 msgstr "Fehler beim Senden von Rückmeldungen: "
 
@@ -4954,11 +4962,15 @@ msgstr "Ein Service von CASES.LU"
 msgid "Source code on GitHub"
 msgstr "Quellcode auf GitHub"
 
-#: templates/parts/footer_part.html:20 templates/survey/stats.html:49
+#: templates/parts/footer_part.html:20 templates/survey/stats.html:71
 msgid "Version of"
 msgstr "Version von"
 
 #: templates/parts/footer_part.html:27
+msgid "Stats"
+msgstr ""
+
+#: templates/parts/footer_part.html:30
 msgid "Terms of Service"
 msgstr "Nutzungsbedingungen"
 
@@ -5409,11 +5421,54 @@ msgstr ""
 "Benötigen wir einige Informationen, um Ihnen nützliche Empfehlungen geben zu "
 "können, sobald die Selbsteinschätzung abgeschlossen ist."
 
-#~ msgid "Germany"
-#~ msgstr "Deutschland"
+#: templates/survey/stats.html:23
+msgid "Some statistics about the current surveys."
+msgstr ""
 
-#~ msgid "Belgium"
-#~ msgstr "Belgien"
+#: templates/survey/stats.html:29
+msgid "Main figures"
+msgstr ""
 
-#~ msgid "France"
-#~ msgstr "Frankreich"
+#: templates/survey/stats.html:31
+msgid "Number of surveys:"
+msgstr ""
+
+#: templates/survey/stats.html:32
+msgid "Number of finished surveys:"
+msgstr ""
+
+#: templates/survey/stats.html:33
+msgid "First completed survey on:"
+msgstr ""
+
+#: templates/survey/stats.html:40
+msgid "Surveys status"
+msgstr ""
+
+#: templates/survey/stats.html:44
+msgid "Surveys languages"
+msgstr ""
+
+#: templates/survey/stats.html:51
+msgid "Activity over the past year"
+msgstr ""
+
+#: templates/survey/stats.html:60
+msgid "Answers by section and company size"
+msgstr ""
+
+#: templates/survey/stats.html:62
+msgid "With data for the last month."
+msgstr ""
+
+#: templates/survey/stats.html:69
+msgid "Server information"
+msgstr ""
+
+#: templates/survey/stats.html:70
+msgid "Python version:"
+msgstr ""
+
+#: templates/survey/stats.html:71
+msgid "Software version:"
+msgstr ""
