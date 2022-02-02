@@ -8,13 +8,18 @@ from django.db.models import Count
 from django.db.models.functions import TruncDay
 from django.shortcuts import render
 from django.http import JsonResponse
-from csskp.settings import CUSTOM
+from django.conf import settings
+from django.utils import translation
+from django.utils.translation import gettext as _
+from csskp.settings import CUSTOM, LANGUAGE_CODE
 from survey.lib.utils import tree, mean_gen
 from survey.models import SurveyUser
 from survey.reporthelper import calculateResult
 
 
 def index(request):
+    lang = request.session.get(settings.LANGUAGE_COOKIE_NAME, LANGUAGE_CODE)
+    translation.activate(lang)
     nb_finished_surveys = SurveyUser.objects.filter(status=3).count()
     try:
         first_survey = SurveyUser.objects.filter(status=3).order_by("created_at")[0]
@@ -23,7 +28,7 @@ def index(request):
     nb_surveys = SurveyUser.objects.count()
     context = {
         "nb_surveys": nb_surveys,
-        "first_survey_date": first_survey.created_at,
+        "first_survey_date": getattr(first_survey, "created_at", False),
         "nb_finished_surveys": nb_finished_surveys,
         "python_version": "{}.{}.{}".format(*sys.version_info[:3]),
     }
@@ -48,8 +53,10 @@ def overall(request):
 
 def survey_status_count(request):
     """Returns the count for the SurveyUser status property."""
+    lang = request.session.get(settings.LANGUAGE_COOKIE_NAME, LANGUAGE_CODE)
+    translation.activate(lang)
     result = SurveyUser.objects.values("status").annotate(count=Count("status"))
-    status = {1: "In progress", 2: "Under reviews", 3: "Finished"}
+    status = {1: _("In progress"), 2: _("Under review"), 3: _("Finished")}
     return JsonResponse(
         {status[item["status"]]: item["count"] for item in result.all()}
     )
@@ -57,14 +64,16 @@ def survey_status_count(request):
 
 def survey_language_count(request):
     """Returns the count for the SurveyUser chosen_lang property."""
+    lang = request.session.get(settings.LANGUAGE_COOKIE_NAME, LANGUAGE_CODE)
+    translation.activate(lang)
     result = SurveyUser.objects.values("chosen_lang").annotate(
         count=Count("chosen_lang")
     )
     return JsonResponse(
         {
-            [lang for lang in LANGUAGES if lang[0] == item["chosen_lang"]][0][1]: item[
-                "count"
-            ]
+            str(
+                _([lang for lang in LANGUAGES if lang[0] == item["chosen_lang"]][0][1])
+            ): item["count"]
             for item in result.all()
         }
     )
@@ -73,6 +82,8 @@ def survey_language_count(request):
 def answers_per_section(request):
     """Return a dict with the mean of the user's answers per section, with the
     surveys completed during the last month."""
+    lang = request.session.get(settings.LANGUAGE_COOKIE_NAME, LANGUAGE_CODE)
+    translation.activate(lang)
     chart_exclude_sections = ["__context"]
     if "chart_exclude_sections" in CUSTOM.keys():
         chart_exclude_sections = (
