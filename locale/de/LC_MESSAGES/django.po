@@ -10,8 +10,8 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-01-27 15:58+0000\n"
-"PO-Revision-Date: 2022-01-11 10:52+0000\n"
-"Last-Translator: Juan Rocha <juan.rocha@cases.lu>\n"
+"PO-Revision-Date: 2022-02-04 16:22+0000\n"
+"Last-Translator: Heiko Zimmermann <heiko.zimmermann@agence-esante.lu>\n"
 "Language-Team: German <https://translate.monarc.lu/projects/"
 "Fit4Cybersecurity/fit4cybersecurity/de/>\n"
 "Language: de\n"
@@ -201,7 +201,7 @@ msgstr "Landwirtschaft und Fischerei, Natur- und Grünflächen, Tierpflege"
 #: data/fit4operatorsurvey/context-questions.json:68
 #: data/fit4privacy/context-questions.json:110
 msgid "Public Administration"
-msgstr "Öffentliche Verwaltungen"
+msgstr "Öffentliche Verwaltung"
 
 #: data/fit4cybersecurity/context-questions.json:119
 #: data/fit4operatorsurvey/context-questions.json:140
@@ -1603,7 +1603,7 @@ msgstr ""
 
 #: data/fit4ehealth/questions.json:5
 msgid "In the establishment, rules are"
-msgstr ""
+msgstr "In der Einrichtung sind Regeln"
 
 #: data/fit4ehealth/questions.json:23
 msgid ""
@@ -1621,6 +1621,8 @@ msgstr ""
 #: data/fit4ehealth/questions.json:66
 msgid "read and signed by everyone, in a cabinet/practice charter or similar"
 msgstr ""
+"von allen gelesen und unterschrieben, in einer Organisations-/Praxisordnung "
+"oder ähnlichem"
 
 #: data/fit4ehealth/questions.json:74
 msgid ""
@@ -1718,6 +1720,8 @@ msgid ""
 "sent in encrypted form via email to the patient or to collaborators who "
 "request it"
 msgstr ""
+"in verschlüsselter Form per E-Mail an den Patienten oder an Mitarbeiter, die "
+"dies benötigen, gesendet werden"
 
 #: data/fit4ehealth/questions.json:205
 msgid ""
@@ -1734,6 +1738,13 @@ msgid ""
 "of these providers, implicitly allow them to access / analyze your stored "
 "data."
 msgstr ""
+"Vermeiden Sie es, medizinische Daten über kommerzielle öffentliche Messenger "
+"oder Cloud-Plattformen zu teilen, da die Daten welche sie so übermitteln/"
+"speichern, wahrscheinlich ins Ausland (ausserhalb Europas) gesendet werden "
+"und daher anderen Gesetzen und Datenschutzrichtlinien unterliegen. Je nach "
+"verwendeter Plattform gestatten Sie durch die Akzeptanz der "
+"Geschäftsbedingungen diesen Anbietern implizit den Zugriff / die Analyse "
+"Ihrer gespeicherten Daten."
 
 #: data/fit4ehealth/questions.json:222
 msgid "sometimes sent by fax to external collaborators"
@@ -1801,25 +1812,28 @@ msgstr ""
 
 #: data/fit4ehealth/questions.json:340
 msgid "Responsibilities"
-msgstr ""
+msgstr "Verantwortlichkeiten"
 
 #: data/fit4ehealth/questions.json:342
 msgid "IT and Information security tasks are:"
-msgstr ""
+msgstr "Aufgaben der IT und Informationssicherheit sind:"
 
 #: data/fit4ehealth/questions.json:352
 msgid "internally performed by an IT specialist"
-msgstr ""
+msgstr "intern durchgeführt durch einen IT Spezialisten"
 
 #: data/fit4ehealth/questions.json:361
 msgid "internally performed by someone at ease with computers"
 msgstr ""
+"intern ausgeführt durch einen Mitarbeiter die sich mit Computern auskennt"
 
 #: data/fit4ehealth/questions.json:378
 msgid ""
 "internally performed by the one finding or encountering the problem, or "
 "externally without contract"
 msgstr ""
+"intern durchgeführt durch die Person welche das Problem gefunden hat oder "
+"durch eine externe Person (ohne Vertrag)"
 
 #: data/fit4ehealth/questions.json:395
 msgid "externally by a third party with a contract"
@@ -1834,6 +1848,7 @@ msgid ""
 "During any work/visit outside the establishment, the medical professional "
 "uses"
 msgstr ""
+"Bei allen Arbeiten/Visiten ausserhalb der Einrichtung verwendet der Arzt"
 
 #: data/fit4ehealth/questions.json:414
 msgid ""
@@ -1876,6 +1891,8 @@ msgstr ""
 #: data/fit4ehealth/questions.json:526
 msgid "devices that are not connected to any IT network while on the trip."
 msgstr ""
+"Geräte die während der externen Tätigkeiten mit keinem IT-Netz verbunden "
+"sind."
 
 #: data/fit4ehealth/questions.json:539
 msgid ""
@@ -1937,6 +1954,8 @@ msgid ""
 "refer to clear data protection responsibilities – namely of data controller "
 "and data processor"
 msgstr ""
+"beziehen sich auf klare Datenschutzverantwortlichkeiten – nämlich des "
+"Datenverantwortlichen und des Datenverarbeiters"
 
 #: data/fit4ehealth/questions.json:600
 msgid ""
@@ -1978,7 +1997,7 @@ msgstr ""
 
 #: data/fit4ehealth/questions.json:687
 msgid "internally, by our employees"
-msgstr ""
+msgstr "intern, durch unsere Mitarbeiter"
 
 #: data/fit4ehealth/questions.json:702
 msgid ""
@@ -2000,7 +2019,7 @@ msgstr ""
 
 #: data/fit4ehealth/questions.json:728
 msgid "during the working hours of the establishment"
-msgstr ""
+msgstr "während der Arbeitszeiten der Einrichtung/Organisation"
 
 #: data/fit4ehealth/questions.json:762
 msgid "with a contract which specifies medical confidentiality"
@@ -2008,11 +2027,11 @@ msgstr ""
 
 #: data/fit4ehealth/questions.json:811
 msgid "Remote Maintenance"
-msgstr ""
+msgstr "Fernwartung"
 
 #: data/fit4ehealth/questions.json:813
 msgid "Remote maintenance for IT hardware and software is"
-msgstr ""
+msgstr "Fernwartung für IT Hard- und Software wird"
 
 #: data/fit4ehealth/questions.json:823
 msgid "managed by my ICT provider without being informed"
@@ -2118,10 +2137,13 @@ msgid ""
 "who enters or who leaves the practice is important. It could be physical or "
 "other means as long as they are protected."
 msgstr ""
+"Um Diebstahl vorzubeugen und den Zugriff auf schützenswerte Informationen zu "
+"vermeiden, ist es wichtig zu wissen wer die Praxis betritt oder verlässt. "
+"Dies sollte durch physische oder andere Mittel sichergestellt werden."
 
 #: data/fit4ehealth/questions.json:971
 msgid "is always under surveillance (by someone, physically or remotely)"
-msgstr ""
+msgstr "ist immer unter Beobachtung (von jemandem, physisch oder aus der Ferne)"
 
 #: data/fit4ehealth/questions.json:980
 msgid ""
@@ -2162,6 +2184,9 @@ msgid ""
 "documents, or some printed documents that someone did not yet have the time "
 "to fetch."
 msgstr ""
+"Drucker können vertrauliche Informationen enthalten, z. B. die zuletzt "
+"gedruckten Dokumente oder ältere gedruckte Dokumente die noch nicht abgeholt "
+"wurden."
 
 #: data/fit4ehealth/questions.json:1040
 msgid "can't enter the office when there is no one in the office"
@@ -2201,7 +2226,7 @@ msgstr ""
 
 #: data/fit4ehealth/questions.json:1208
 msgid "saved in web browsers"
-msgstr ""
+msgstr "gespeichert im Web-Browser"
 
 #: data/fit4ehealth/questions.json:1242
 msgid "Authorization for the access to patient data"
@@ -2211,6 +2236,8 @@ msgstr "Berechtigung für den Zugriff auf Patientendaten"
 msgid ""
 "is clearly distinguished by the assignment of different authorization roles"
 msgstr ""
+"wird durch die Zuordnung unterschiedlicher Berechtigungsrollen klar "
+"abgegrenzt"
 
 #: data/fit4ehealth/questions.json:1260
 msgid ""
@@ -2220,11 +2247,18 @@ msgid ""
 "give access to some people who shouldn’t have, according to the sensitivity "
 "of medical data."
 msgstr ""
+"Die Definition und Zuweisung von unterschiedlichen Zugriffsrollen ist "
+"obligatorisch, da somit der Zugriff auf Patientendaten entsprechend der "
+"Funktion der Person innerhalb der Organisation begrenzt werden kann. Wenn "
+"Sie einfach alle Berechtigungen zuweisen erhalten einige Personen ggf. "
+"Zugriff auf medizinische Daten für die sie, aufgrund der Sensibilität der "
+"Daten, keinen Zugriff haben sollten."
 
 #: data/fit4ehealth/questions.json:1269
 msgid ""
 "is managed within the application by own personal with specific access rights"
 msgstr ""
+"wird durch interne Mitarbeiter mit entsprechenden Zugriffsrechten gepflegt"
 
 #: data/fit4ehealth/questions.json:1280
 msgid ""
@@ -2239,6 +2273,8 @@ msgid ""
 "is managed within the application by external people like e.g. IT-Service "
 "provider"
 msgstr ""
+"wird innerhalb der Anwendung von externen Personen wie z.B. IT-"
+"Dienstleistern gepflegt"
 
 #: data/fit4ehealth/questions.json:1300
 msgid ""
@@ -2337,6 +2373,9 @@ msgid ""
 "having someone external to try to connect to it, but also to perform updates "
 "for the operating system."
 msgstr ""
+"Geräte sollten ausserhalb der Servicezeiten heruntergefahren werden, um zu "
+"vermeiden dass jemand von aussen versucht eine Verbindung herzustellen, aber "
+"auch um Updates für das Betriebssystem durchzuführen."
 
 #: data/fit4ehealth/questions.json:1673
 msgid "Medical data backups are"
@@ -2386,6 +2425,8 @@ msgid ""
 "is possible and if problems arise, the IT service provider or a staff member "
 "will help deal with them."
 msgstr ""
+"ist möglich und bei auftretenden Problemen hilft der IT-Dienstleister oder "
+"ein Mitarbeiter bei deren Behebung."
 
 #: data/fit4ehealth/questions.json:1861
 msgid ""
@@ -2405,7 +2446,7 @@ msgstr ""
 
 #: data/fit4ehealth/questions.json:1870
 msgid "In our daily practice, we"
-msgstr ""
+msgstr "Während unserer täglichen Arbeit, wir"
 
 #: data/fit4ehealth/questions.json:1881
 msgid ""
@@ -2435,6 +2476,8 @@ msgid ""
 "\"Reimbursement acceleré\" is enforcing the digitalisation and speeds up the "
 "billing process."
 msgstr ""
+"„Reimbursement acceleré“, zur beschleunigten Erstattung der Arztkosten, "
+"forciert die Digitalisierung und beschleunigt den Abrechnungsprozess."
 
 #: data/fit4ehealth/questions.json:1917
 msgid ""
@@ -2470,6 +2513,9 @@ msgid ""
 "Regimail can be used free of charge by all authorized health professionals "
 "in Luxembourg and ensures the secure and encrypted mail exchange"
 msgstr ""
+"Regimail kann von allen autorisierten Gesundheitsfachkräften in Luxemburg "
+"kostenlos genutzt werden und gewährleistet den sicheren und verschlüsselten "
+"Mail versandt"
 
 #: data/fit4ehealth/questions.json:1952
 msgid ""
@@ -2516,7 +2562,7 @@ msgstr ""
 
 #: data/fit4operatorsurvey/context-questions.json:61
 msgid "Digital Infrastructure and Service Providers"
-msgstr ""
+msgstr "Anbieter digitaler Infrastruktur und Dienste"
 
 #: data/fit4operatorsurvey/context-questions.json:75
 msgid "Space"
@@ -2576,7 +2622,7 @@ msgstr "Was ist Ihre Branche?"
 
 #: data/fit4operatorsurvey/context-questions.json:186
 msgid "In the EU"
-msgstr ""
+msgstr "In der Europäischen Union"
 
 #: data/fit4operatorsurvey/context-questions.json:193
 msgid "Outside of the EU but within EEA"
@@ -2707,7 +2753,7 @@ msgstr ""
 #: data/fit4operatorsurvey/questions.json:941
 #: data/fit4operatorsurvey/questions.json:1059
 msgid "Please describe:"
-msgstr ""
+msgstr "Bitte beschreiben sie:"
 
 #: data/fit4operatorsurvey/questions.json:95
 msgid ""
@@ -2823,6 +2869,9 @@ msgid ""
 "mechanisms for monitoring and collecting information about relevant threats "
 "to the security of your networks and services"
 msgstr ""
+"In Ihrer Branche ist es immer wichtig, Mechanismen zum Überwachen und "
+"Sammeln von Informationen über relevante Bedrohungen für die Sicherheit "
+"Ihrer Netzwerke und Dienste einzurichten und zu pflegen."
 
 #: data/fit4operatorsurvey/questions.json:359
 msgid "Little."
@@ -2835,7 +2884,7 @@ msgstr ""
 #: data/fit4operatorsurvey/questions.json:385
 msgid ""
 "Do you have specific regulations in your sector concerning cybersecurity?"
-msgstr ""
+msgstr "Gibt es in Ihrer Branche spezifische Vorschriften zur Cybersicherheit?"
 
 #: data/fit4operatorsurvey/questions.json:393
 #: data/fit4operatorsurvey/questions.json:451
@@ -2925,6 +2974,8 @@ msgid ""
 "Is your organization voluntarily compliant with any of the following "
 "standards and guidelines?"
 msgstr ""
+"Hält Ihre Organisation bereits einen der folgenden Standards und Richtlinien "
+"ein?"
 
 #: data/fit4operatorsurvey/questions.json:525
 msgid "We are not compliant with any standards nor guidelines."
@@ -2949,6 +3000,13 @@ msgid ""
 "ordered by level of sophistication. To check if you have implemented "
 "security measures in your company in a meaningful and risk-aware way."
 msgstr ""
+"Unabhängig von Ihren Verpflichtungen in Bezug auf Risikomanagement und "
+"Cybersicherheit sollten Sie <a href=\"https://www.enisa.europa.eu/"
+"publications/guideline-on-security-measures-under-the-eecc\" target= "
+"berücksichtigen \"_blank\"> die 29 von ENISA aufgelisteten Sicherheitsziele</"
+"a> sind in 8 Bereiche unterteilt und nach Entwicklungsstufen geordnet. Zur "
+"Überprüfung ob sie Sicherheitsmaßnahmen in Ihrem Unternehmen sinnvoll und "
+"risikobewusst umgesetzt haben."
 
 #: data/fit4operatorsurvey/questions.json:541
 msgid "Technical guidelines published by ENISA for our sector."
@@ -2964,7 +3022,7 @@ msgstr ""
 
 #: data/fit4operatorsurvey/questions.json:589
 msgid "ISO27000 standards."
-msgstr ""
+msgstr "ISO 27000 Standard."
 
 #: data/fit4operatorsurvey/questions.json:605
 msgid "CoBIT."
@@ -2994,7 +3052,7 @@ msgstr ""
 
 #: data/fit4operatorsurvey/questions.json:711
 msgid "Inventory of assets (primary and secondary)."
-msgstr ""
+msgstr "Inventar der Vermögenswerte/Ausstattung (primär und sekundär)."
 
 #: data/fit4operatorsurvey/questions.json:718
 #: data/fit4operatorsurvey/questions.json:734
@@ -3018,7 +3076,7 @@ msgstr "Inventar kritischer Vermögenswerte."
 
 #: data/fit4operatorsurvey/questions.json:743
 msgid "Inventory of third-party and outsourcing providers."
-msgstr ""
+msgstr "Inventar der externen Service- und Supportdienstleister."
 
 #: data/fit4operatorsurvey/questions.json:759
 msgid ""
@@ -3076,11 +3134,11 @@ msgstr ""
 
 #: data/fit4operatorsurvey/questions.json:883
 msgid "In the last 3 years."
-msgstr ""
+msgstr "Während der letzten 3 Jahre."
 
 #: data/fit4operatorsurvey/questions.json:899
 msgid "In the last 5 years."
-msgstr ""
+msgstr "Während der letzten 5 Jahre."
 
 #: data/fit4operatorsurvey/questions.json:915
 msgid "More than 5 years ago."
@@ -3127,7 +3185,7 @@ msgstr ""
 
 #: data/fit4operatorsurvey/questions.json:1001
 msgid "ISACs."
-msgstr ""
+msgstr "ISACs"
 
 #: data/fit4operatorsurvey/questions.json:1009
 msgid "CSIRT or similar."
@@ -3181,7 +3239,7 @@ msgstr ""
 
 #: data/fit4operatorsurvey/questions.json:1085
 msgid "It is a burden for us."
-msgstr ""
+msgstr "Sind eine Belastung für uns."
 
 #: data/fit4operatorsurvey/questions.json:1093
 msgid "It is useful for us."
@@ -3238,6 +3296,8 @@ msgid ""
 "Do you consider you have a skill shortage in terms of cybersecurity and risk "
 "management?"
 msgstr ""
+"Glauben Sie, dass Sie einen Bedarf an Weiterbildung in Bezug auf "
+"Cybersicherheit und Risikomanagement haben?"
 
 #: data/fit4operatorsurvey/questions.json:1212
 #: data/fit4operatorsurvey/questions.json:1213
@@ -3260,6 +3320,14 @@ msgid ""
 "personnel or changes in their roles and responsibilities, while verifying "
 "access to internal information an personnel accounts."
 msgstr ""
+"Während dem Beschäftigungsverhältnisses von Mitarbeitern (interne und "
+"externe Mitarbeiter), Praktikanten und anderer Beschäftigter wird empfohlen "
+"sicherzustellen, dass das Personal über ausreichende Sicherheitskenntnisse "
+"verfügt und regelmässige Sicherheits- und Sensibilisierungsschulungen "
+"erhält. Darüber hinaus ist es wichtig einen geeigneten Prozess für die "
+"Verwaltung von Personaländerungen oder Änderungen in ihren Rollen und "
+"Verantwortlichkeiten zu definieren und korrekt anzuwenden. Der Zugriff auf "
+"interne Informationen und Personalkonten sollte dahingehend überprüft werden."
 
 #: data/fit4operatorsurvey/questions.json:1235
 msgid "No, we have the skills but the problems are elsewhere."
@@ -5324,8 +5392,8 @@ msgid ""
 "Please do not provide any sensitive or confidential information referring to "
 "your identity."
 msgstr ""
-"Bitte geben Sie keine sensiblen oder vertraulichen Datenan, die Ihre "
-"Identität veraten könnte."
+"Bitte geben Sie keine sensiblen oder vertraulichen Daten an, die Ihre "
+"Identität verraten könnte."
 
 #: templates/survey/requestDiagnosticLink.html:5
 #: templates/survey/requestDiagnosticLink.html:21
