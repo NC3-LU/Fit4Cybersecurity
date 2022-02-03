@@ -32,24 +32,34 @@ document.addEventListener("DOMContentLoaded", function() {
       'rgb(157, 196, 241, 0.4)', 'rgb(253, 141, 211, 0.4)', 'rgb(180, 128, 253, 0.4)',
       'rgb(255, 195, 129, 0.4)', 'rgb(204, 228, 230, 0.4)'];
 
+  function pieChart(data,ctx){
+        new Chart(ctx, {
+            type: 'pie',
+            data: {
+                labels: Object.keys(data),
+                datasets: [{
+                    data: Object.values(data),
+                    borderWidth: 1,
+                    backgroundColor: colors
+                }],
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'bottom',
+                    },
+                },
+            },
+        });
+        return Chart
+  };
+
   fetch("/stats/survey-status-count.json")
   .then(response => response.json())
   .then(result => {
     var ctx = document.getElementById("stats-count").getContext('2d');
-    var myChart = new Chart(ctx, {
-      type: 'pie',
-      data: {
-        labels: Object.keys(result),
-        datasets: [{
-          data: Object.values(result),
-          borderWidth: 1,
-          backgroundColor: colors
-        }],
-        options: {
-          responsive: true,
-          maintainAspectRatio: false,
-        }
-      }});
+    var myChart = pieChart(result,ctx);
     }).catch((error) => {
       console.error('Error:', error);
     });
@@ -58,23 +68,36 @@ document.addEventListener("DOMContentLoaded", function() {
     .then(response => response.json())
     .then(result => {
       var ctx = document.getElementById("stats-language").getContext('2d');
-      var myChart = new Chart(ctx, {
-        type: 'pie',
-        data: {
-          labels: Object.keys(result),
-          datasets: [{
-            data: Object.values(result),
-            borderWidth: 1,
-            backgroundColor: colors
-          }],
-          options: {
-            responsive: true,
-            maintainAspectRatio: false,
-          }
-        }});
+      var myChart = pieChart(result,ctx);
       }).catch((error) => {
         console.error('Error:', error);
       });
+
+    fetch("/stats/survey_per_country.json")
+    .then(response => response.json())
+    .then(result => {
+      var ctx = document.getElementById("stats-countries").getContext('2d');
+      var myChart = pieChart(result,ctx);
+      }).catch((error) => {
+        console.error('Error:', error);
+      });
+
+    fetch("/stats/survey_per_company_size.json")
+    .then(response => response.json())
+    .then(result => {
+        var ctx = document.getElementById("stats-company").getContext('2d');
+        var myChart = pieChart(result,ctx);
+    }).catch((error) => {
+      console.error('Error:', error);
+    });
+    fetch("/stats/survey_per_company_sector.json")
+    .then(response => response.json())
+    .then(result => {
+        var ctx = document.getElementById("stats-sector").getContext('2d');
+        var myChart = pieChart(result,ctx);
+    }).catch((error) => {
+      console.error('Error:', error);
+    });
 
     fetch("/stats/activity-chart.json")
     .then(response => response.json())
