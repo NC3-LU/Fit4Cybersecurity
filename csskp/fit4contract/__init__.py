@@ -36,6 +36,8 @@ CUSTOM = {
     "secin_logo": "templates/report/images/secin_logo.svg",
     # Minimal score
     "minimal_acceptable_score": 65,
+    # Show or not the questions number left to complete the survey.
+    "show_progress_questions_numbers": False,
     # Custom parts of templates
     #   main dir for PARTS_TEMPLATE_DIR:
     "templates_parts_dir": "templates/parts",
@@ -49,15 +51,15 @@ CUSTOM = {
     "modules": {
         "reportDownload": True,
         "reportEmail": False,
-        "requestDiagnostic": True,
-        "requestTraining": True,
-        "displayResults": True,
+        "requestDiagnostic": False,
+        "requestTraining": False,
+        "displayResults": False,
     },
     # Available report parts
     "report": {
         "introduction": True,
         "description": True,
-        "results": True,
+        "results": False,
         "recommendations": True,
         "questions": True,
     },

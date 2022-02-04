@@ -1,0 +1,1090 @@
+[
+  {
+    "service_category": "General",
+    "section": "Service description",
+    "qtype": "M",
+    "qindex": 1,
+    "maxPoints": 45,
+    "label": "Please describe the project that will be subcontracted among the following categories:",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": false,
+        "score": 0,
+        "atype": "P",
+        "label": "Purchasing or leasing of equipment, without provision of the service (e.g. server, network equipment, computer, mobile etc.). In case of purchase of equipment and provision of the service, also check the box \"Service provision\".",
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": true,
+            "label": "The Provider complies with the security practices of the Customer’s organization. Any situations where such compliance is not possible are reported to help prevent security gaps or conflicts that could adversely affect security performance. Security practices are formalized in a charter of good conduct for information security systems.",
+            "categories": [
+              "General"
+            ]
+          },
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": true,
+            "label": "The technical and financial capabilities of the Service Provider are verified to ensure proper performance of the contract.",
+            "categories": [
+              "General"
+            ]
+          },
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": true,
+            "label": "The Service Provider guarantees, within its own supply chain or in the case of cascading subcontracting, compliance with the security requirements requested by the Customer.",
+            "categories": [
+              "General"
+            ]
+          },
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": true,
+            "label": "The Service Provider guarantees the minimum service levels defined in the contract. The Provider shall inform the Customer’s organization of its plans to ensure service levels under normal conditions and during disruptive events, whether such events occur on the premises or infrastructure of the Customer’s organization or that of the Service Provider.",
+            "categories": [
+              "General"
+            ]
+          },
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": true,
+            "label": "The Service Provider and any subcontractors or cascading suppliers shall respect the confidentiality of the information which comes to their knowledge during the execution of the contract. To this end, a confidentiality and non-disclosure agreement shall be drawn up between the contractual parties. This agreement is binding on the companies and suppliers providing the service as well as their respective employees individually. The commitment may exceed the duration of the execution of the contract if required by the level of confidentiality.",
+            "categories": [
+              "General"
+            ]
+          },
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": true,
+            "label": "All assets required for the execution of the contract and the associated property rights are managed during the various stages of contract execution.",
+            "categories": [
+              "General"
+            ]
+          },
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": true,
+            "label": "The terms and frequency of maintenance, intervention and troubleshooting of the infrastructure are managed by established procedures.",
+            "categories": [
+              "Specific"
+            ]
+          },
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": true,
+            "label": "When hardware is reused or discarded, customer data and licensed software are erased or its storage medium is irreversibly destroyed by an established procedure.",
+            "categories": [
+              "Specific"
+            ]
+          },
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": true,
+            "label": "The Provider provides timely and appropriate handling of known vulnerabilities that may impact the Client’s activities.",
+            "categories": [
+              "Specific"
+            ]
+          }
+        ],
+        "questions_map": [
+          {
+            "label": "Is the project subject to any legal or contractual requirements (like DAC, AML, GDPR etc.) ?",
+            "branch": 1,
+            "level": 1,
+            "order": 1
+          }
+        ]
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": false,
+        "score": 15,
+        "atype": "P",
+        "label": "Purchase, lease or development of software. All types of software services (e.g. maintenance, development etc.). For software with SaaS access, please check the box \"Service provision\".",
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": true,
+            "label": "The Provider complies with the security practices of the Customer’s organization. Any situations where such compliance is not possible are reported to help prevent security gaps or conflicts that could adversely affect security performance. Security practices are formalized in a charter of good conduct for information security systems.",
+            "categories": [
+              "General"
+            ]
+          },
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": true,
+            "label": "The technical and financial capabilities of the Service Provider are verified to ensure proper performance of the contract.",
+            "categories": [
+              "General"
+            ]
+          },
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": true,
+            "label": "The Service Provider guarantees, within its own supply chain or in the case of cascading subcontracting, compliance with the security requirements requested by the Customer.",
+            "categories": [
+              "General"
+            ]
+          },
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": true,
+            "label": "The Service Provider guarantees the minimum service levels defined in the contract. The Provider shall inform the Customer’s organization of its plans to ensure service levels under normal conditions and during disruptive events, whether such events occur on the premises or infrastructure of the Customer’s organization or that of the Service Provider.",
+            "categories": [
+              "General"
+            ]
+          },
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": true,
+            "label": "The Service Provider and any subcontractors or cascading suppliers shall respect the confidentiality of the information which comes to their knowledge during the execution of the contract. To this end, a confidentiality and non-disclosure agreement shall be drawn up between the contractual parties. This agreement is binding on the companies and suppliers providing the service as well as their respective employees individually. The commitment may exceed the duration of the execution of the contract if required by the level of confidentiality.",
+            "categories": [
+              "General"
+            ]
+          },
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": true,
+            "label": "All assets required for the execution of the contract and the associated property rights are managed during the various stages of contract execution.",
+            "categories": [
+              "General"
+            ]
+          },
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": true,
+            "label": "The Provider provides timely and appropriate handling of known vulnerabilities that may impact the Client’s activities.",
+            "categories": [
+              "Specific"
+            ]
+          },
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": true,
+            "label": "At the end of the contract, the Customer’s data is irreversibly deleted according to an established procedure. Legal obligations regarding the protection of personal data shall be particularly considered in this context.",
+            "categories": [
+              "Specific"
+            ]
+          }
+        ],
+        "questions_map": [
+          {
+            "label": "Will remote maintenance be required?",
+            "branch": 2,
+            "level": 1,
+            "order": 1
+          },
+          {
+            "label": "Is it a tailor-made development?",
+            "branch": 2,
+            "level": 1,
+            "order": 2
+          }
+        ]
+      },
+      {
+        "aindex": 3,
+        "uniqueAnswer": false,
+        "score": 5,
+        "atype": "P",
+        "label": "Human resources. Hiring of one or more people in the project (e.g. consultant, cleaning service, technician etc.).",
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": true,
+            "label": "The Provider complies with the security practices of the Customer’s organization. Any situations where such compliance is not possible are reported to help prevent security gaps or conflicts that could adversely affect security performance. Security practices are formalized in a charter of good conduct for information security systems.",
+            "categories": [
+              "General"
+            ]
+          },
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": true,
+            "label": "The technical and financial capabilities of the Service Provider are verified to ensure proper performance of the contract.",
+            "categories": [
+              "General"
+            ]
+          },
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": true,
+            "label": "The Service Provider guarantees, within its own supply chain or in the case of cascading subcontracting, compliance with the security requirements requested by the Customer.",
+            "categories": [
+              "General"
+            ]
+          },
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": true,
+            "label": "The Service Provider guarantees the minimum service levels defined in the contract. The Provider shall inform the Customer’s organization of its plans to ensure service levels under normal conditions and during disruptive events, whether such events occur on the premises or infrastructure of the Customer’s organization or that of the Service Provider.",
+            "categories": [
+              "General"
+            ]
+          },
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": true,
+            "label": "The Service Provider and any subcontractors or cascading suppliers shall respect the confidentiality of the information which comes to their knowledge during the execution of the contract. To this end, a confidentiality and non-disclosure agreement shall be drawn up between the contractual parties. This agreement is binding on the companies and suppliers providing the service as well as their respective employees individually. The commitment may exceed the duration of the execution of the contract if required by the level of confidentiality.",
+            "categories": [
+              "General"
+            ]
+          },
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": true,
+            "label": "All assets required for the execution of the contract and the associated property rights are managed during the various stages of contract execution.",
+            "categories": [
+              "General"
+            ]
+          },
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": true,
+            "label": "External Collaborator should be carefully selected during the hiring process. When the External Collaborator leaves, a procedure ensures that the Collaborator returns all the goods received from the Client’s organization (equipment, laptop, keys, badges, smartphone, etc.)",
+            "categories": [
+              "Specific"
+            ]
+          }
+        ],
+        "questions_map": [
+          {
+            "label": "Could you describe the interaction of the person(s) with your organization?",
+            "branch": 3,
+            "level": 1,
+            "order": 1
+          }
+        ]
+      },
+      {
+        "aindex": 4,
+        "uniqueAnswer": false,
+        "score": 10,
+        "atype": "P",
+        "label": "Service provision. Delegation of an entire service, especially on an infrastructure that can be managed by a third party (e.g. backup service, cloud, SaaS etc.).",
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": true,
+            "label": "The Provider complies with the security practices of the Customer’s organization. Any situations where such compliance is not possible are reported to help prevent security gaps or conflicts that could adversely affect security performance. Security practices are formalized in a charter of good conduct for information security systems.",
+            "categories": [
+              "General"
+            ]
+          },
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": true,
+            "label": "The technical and financial capabilities of the Service Provider are verified to ensure proper performance of the contract.",
+            "categories": [
+              "General"
+            ]
+          },
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": true,
+            "label": "The Service Provider guarantees, within its own supply chain or in the case of cascading subcontracting, compliance with the security requirements requested by the Customer.",
+            "categories": [
+              "General"
+            ]
+          },
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": true,
+            "label": "The Service Provider guarantees the minimum service levels defined in the contract. The Provider shall inform the Customer’s organization of its plans to ensure service levels under normal conditions and during disruptive events, whether such events occur on the premises or infrastructure of the Customer’s organization or that of the Service Provider.",
+            "categories": [
+              "General"
+            ]
+          },
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": true,
+            "label": "The Service Provider and any subcontractors or cascading suppliers shall respect the confidentiality of the information which comes to their knowledge during the execution of the contract. To this end, a confidentiality and non-disclosure agreement shall be drawn up between the contractual parties. This agreement is binding on the companies and suppliers providing the service as well as their respective employees individually. The commitment may exceed the duration of the execution of the contract if required by the level of confidentiality.",
+            "categories": [
+              "General"
+            ]
+          },
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": true,
+            "label": "All assets required for the execution of the contract and the associated property rights are managed during the various stages of contract execution.",
+            "categories": [
+              "General"
+            ]
+          },
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": true,
+            "label": "If the service includes the implementation of system or application software managed by the Provider, the latter shall be protected against malicious code by appropriate means and a procedure for regularly updating this protection shall be established.",
+            "categories": [
+              "Specific"
+            ]
+          },
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": true,
+            "label": "The Provider provides timely and appropriate handling of known vulnerabilities that may impact the Client’s activities.",
+            "categories": [
+              "Specific"
+            ]
+          },
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": true,
+            "label": "At the end of the contract, the Customer’s data is irreversibly deleted according to an established procedure. Legal obligations regarding the protection of personal data shall be particularly considered in this context.",
+            "categories": [
+              "Specific"
+            ]
+          }
+        ],
+        "questions_map": [
+          {
+            "label": "Will the project use third-party human resources?",
+            "branch": 4,
+            "level": 1,
+            "order": 1
+          }
+        ]
+      },
+      {
+        "aindex": 5,
+        "uniqueAnswer": false,
+        "score": 5,
+        "atype": "P",
+        "label": "Building. Any element physically related to a building (e.g. air conditioning etc.). If the project concerns the physical access perimeter and is related to software, the \"Purchase, lease or software development\" box must also be checked.",
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": true,
+            "label": "The Provider complies with the security practices of the Customer’s organization. Any situations where such compliance is not possible are reported to help prevent security gaps or conflicts that could adversely affect security performance. Security practices are formalized in a charter of good conduct for information security systems.",
+            "categories": [
+              "General"
+            ]
+          },
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": true,
+            "label": "The technical and financial capabilities of the Service Provider are verified to ensure proper performance of the contract.",
+            "categories": [
+              "General"
+            ]
+          },
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": true,
+            "label": "The Service Provider guarantees, within its own supply chain or in the case of cascading subcontracting, compliance with the security requirements requested by the Customer.",
+            "categories": [
+              "General"
+            ]
+          },
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": true,
+            "label": "The Service Provider guarantees the minimum service levels defined in the contract. The Provider shall inform the Customer’s organization of its plans to ensure service levels under normal conditions and during disruptive events, whether such events occur on the premises or infrastructure of the Customer’s organization or that of the Service Provider.",
+            "categories": [
+              "General"
+            ]
+          },
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": true,
+            "label": "The Service Provider and any subcontractors or cascading suppliers shall respect the confidentiality of the information which comes to their knowledge during the execution of the contract. To this end, a confidentiality and non-disclosure agreement shall be drawn up between the contractual parties. This agreement is binding on the companies and suppliers providing the service as well as their respective employees individually. The commitment may exceed the duration of the execution of the contract if required by the level of confidentiality.",
+            "categories": [
+              "General"
+            ]
+          },
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": true,
+            "label": "All assets required for the execution of the contract and the associated property rights are managed during the various stages of contract execution.",
+            "categories": [
+              "General"
+            ]
+          }
+        ],
+        "questions_map": [
+          {
+            "label": "Will the project use third-party human resources?",
+            "branch": 5,
+            "level": 5,
+            "order": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "service_category": "Software maintenance",
+    "section": "Software",
+    "qtype": "S",
+    "qindex": 2,
+    "maxPoints": 30,
+    "label": "Will remote maintenance be required?",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": false,
+        "score": 0,
+        "atype": "P",
+        "label": "Yes",
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": true,
+            "label": "The terms and conditions of remotely controlled operations and/or maintenance are formalized. Technical and organizational security measures implemented by the Service Provider are validated by the Customer.",
+            "categories": [
+              "Specific"
+            ]
+          },
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": true,
+            "label": "The terms and frequency of maintenance or update of the software or operating system are managed according to an established procedure.",
+            "categories": [
+              "Specific"
+            ]
+          }
+        ],
+        "questions_map": [
+          {
+            "label": "Will the project use third-party human resources?",
+            "branch": 2,
+            "level": 3,
+            "order": 4
+          }
+        ]
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": false,
+        "score": 10,
+        "atype": "P",
+        "label": "No",
+        "recommendations": [],
+        "questions_map": [
+          {
+            "label": "Will the project use third-party human resources?",
+            "branch": 2,
+            "level": 3,
+            "order": 5
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "service_category": "Software development",
+    "section": "Software",
+    "qtype": "S",
+    "qindex": 3,
+    "maxPoints": 35,
+    "label": "Is it a tailor-made development?",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": true,
+        "score": 15,
+        "atype": "P",
+        "label": "Yes",
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": true,
+            "label": "The contract takes into account the specificities related to software developments such as licenses. The contract also defines the best practice repository (e.g. OWASP) to be followed during development.",
+            "categories": [
+              "Specific"
+            ]
+          }
+        ],
+        "questions_map": [
+          {
+            "label": "Will the project use third-party human resources?",
+            "branch": 2,
+            "level": 2,
+            "order": 3
+          }
+        ]
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": true,
+        "score": 5,
+        "atype": "P",
+        "label": "No",
+        "recommendations": [],
+        "questions_map": [
+          {
+            "label": "Will the project use third-party human resources?",
+            "branch": 2,
+            "level": 3,
+            "order": 6
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "service_category": "HR presence",
+    "section": "Human resources",
+    "qtype": "S",
+    "qindex": 4,
+    "maxPoints": 15,
+    "label": "Will the project use third-party human resources?",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": true,
+        "score": 15,
+        "atype": "P",
+        "label": "Yes",
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": true,
+            "label": "External Collaborator should be carefully selected during the hiring process. When the External Collaborator leaves, a procedure ensures that the Collaborator returns all the goods received from the Client’s organization (equipment, laptop, keys, badges, smartphone, etc.)",
+            "categories": [
+              "Specific"
+            ]
+          }
+        ],
+        "questions_map": [
+          {
+            "label": "Could you describe the interaction of the person(s) with your organization?",
+            "branch": 0,
+            "level": 2,
+            "order": 8
+          },
+          {
+            "label": "Will the project use third-party human resources?",
+            "branch": 4,
+            "level": 2,
+            "order": 2
+          }
+        ]
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": true,
+        "score": 15,
+        "atype": "P",
+        "label": "No",
+        "recommendations": []
+      }
+    ]
+  },
+  {
+    "service_category": "HR interactions",
+    "section": "Human resources",
+    "qtype": "M",
+    "qindex": 5,
+    "maxPoints": 35,
+    "label": "Could you describe the interaction of the person(s) with your organization?",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": false,
+        "score": 35,
+        "atype": "P",
+        "label": "They will work remotely",
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": true,
+            "label": "The terms and conditions of remotely controlled operations and/or maintenance are formalized. Technical and organizational security measures implemented by the Service Provider are validated by the Customer.",
+            "categories": [
+              "Specific"
+            ]
+          }
+        ],
+        "questions_map": [
+          {
+            "label": "Is the project subject to any legal or contractual requirements (like DAC, AML, GDPR etc.) ?",
+            "branch": 3,
+            "level": 2,
+            "order": 2
+          }
+        ]
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": false,
+        "score": 15,
+        "atype": "P",
+        "label": "They will have access to the building",
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": true,
+            "label": "The physical access of the Provider to a building, premises or infrastructure is managed according to an established procedure. The means of access given to the Providers are inventoried and recovered upon completion of the contract.",
+            "categories": [
+              "Specific"
+            ]
+          }
+        ],
+        "questions_map": [
+          {
+            "label": "Is the project subject to any legal or contractual requirements (like DAC, AML, GDPR etc.) ?",
+            "branch": 3,
+            "level": 2,
+            "order": 3
+          }
+        ]
+      },
+      {
+        "aindex": 3,
+        "uniqueAnswer": false,
+        "score": 0,
+        "atype": "P",
+        "label": "They will have a logical access to the information system",
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": true,
+            "label": "Authentication and authorization of users or processes accessing outsourced information systems or software are managed according to an established procedure.",
+            "categories": [
+              "Specific"
+            ]
+          },
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": true,
+            "label": "Users or processes accessing outsourced information systems or software are identified.",
+            "categories": [
+              "Specific"
+            ]
+          },
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": true,
+            "label": "Logical access to a function or transaction of a subcontracted information system or software is limited and managed according to an established procedure.",
+            "categories": [
+              "Specific"
+            ]
+          }
+        ],
+        "questions_map": [
+          {
+            "label": "Is the project subject to any legal or contractual requirements (like DAC, AML, GDPR etc.) ?",
+            "branch": 3,
+            "level": 2,
+            "order": 4
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "service_category": "Audit",
+    "section": "Audit",
+    "qtype": "S",
+    "qindex": 6,
+    "maxPoints": 15,
+    "label": "Will the service be audited?",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": true,
+        "score": 0,
+        "atype": "P",
+        "label": "Yes",
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": true,
+            "label": "The contract provides for the right to audit security controls periodically, or upon significant changes in the subcontracting relationship.",
+            "categories": [
+              "Specific"
+            ]
+          }
+        ],
+        "questions_map": [
+          {
+            "label": "Is the project subject to any legal or contractual requirements (like DAC, AML, GDPR etc.) ?",
+            "branch": 0,
+            "level": 5,
+            "order": 9
+          }
+        ]
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": true,
+        "score": 5,
+        "atype": "P",
+        "label": "No",
+        "recommendations": [],
+        "questions_map": [
+          {
+            "label": "Is the project subject to any legal or contractual requirements (like DAC, AML, GDPR etc.) ?",
+            "branch": 0,
+            "level": 5,
+            "order": 10
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "service_category": "Regulatory constraints",
+    "section": "Regulatory constraints",
+    "qtype": "S",
+    "qindex": 7,
+    "maxPoints": 30,
+    "label": "Is the project subject to any legal or contractual requirements (like DAC, AML, GDPR etc.) ?",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": true,
+        "score": 30,
+        "atype": "P",
+        "label": "Yes",
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": true,
+            "label": "The Provider provides evidence from independent audit institutions or organizations that its operations and controls comply with legal and contractual requirements.",
+            "categories": [
+              "Specific"
+            ]
+          }
+        ],
+        "questions_map": [
+          {
+            "label": "Will any of the following be subcontracted:",
+            "branch": 4,
+            "level": 3,
+            "order": 3
+          }
+        ]
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": true,
+        "score": 10,
+        "atype": "P",
+        "label": "No",
+        "recommendations": [],
+        "questions_map": [
+          {
+            "label": "Will any of the following be subcontracted:",
+            "branch": 4,
+            "level": 3,
+            "order": 4
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "service_category": "Service",
+    "section": "Service",
+    "qtype": "M",
+    "qindex": 8,
+    "maxPoints": 45,
+    "label": "Will any of the following be subcontracted:",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": false,
+        "score": 0,
+        "atype": "P",
+        "label": "Backup",
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": true,
+            "label": "When outsourcing a backup service, the following elements are managed:<ul><li>mechanisms for redundancy and recovery of backups;</li><li>outsourcing of backup infrastructures;</li><li>backup encryption and encryption key management;</li><li>The backup and recovery procedures are tested periodically.</li></ul>",
+            "categories": [
+              "Specific"
+            ]
+          }
+        ],
+        "questions_map": [
+          {
+            "label": "Could you describe the backup service.",
+            "branch": 4,
+            "level": 4,
+            "order": 5
+          }
+        ]
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": false,
+        "score": 0,
+        "atype": "P",
+        "label": "Communication services",
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": true,
+            "label": "The terms and frequency of maintenance, intervention and troubleshooting of the infrastructure are managed by established procedures.",
+            "categories": [
+              "Specific"
+            ]
+          },
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": true,
+            "label": "When hardware is reused or discarded, customer data and licensed software are erased or its storage medium is irreversibly destroyed by an established procedure.",
+            "categories": [
+              "Specific"
+            ]
+          },
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": true,
+            "label": "Good network design practices, such as network partitioning, are followed.",
+            "categories": [
+              "Specific"
+            ]
+          },
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": true,
+            "label": "The Provider informs the Customer’s organization in a timely manner about any technical incidents or security breaches that may have an impact on the organization’s activities. The legal obligations related to the notification of breaches of personal data protection must be considered in this context. It is recommended to establish a single point of contact for communication between contractual parties.",
+            "categories": [
+              "Specific"
+            ]
+          },
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": true,
+            "label": "The Provider informs the Client’s organization in a timely manner of changes in its environment that may impact the Client organization’s activities. Depending on the impact, the Provider plans these changes in consultation with the Client.",
+            "categories": [
+              "Specific"
+            ]
+          }
+        ]
+      },
+      {
+        "aindex": 3,
+        "uniqueAnswer": false,
+        "score": 0,
+        "atype": "P",
+        "label": "Cloud",
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": true,
+            "label": "The Provider informs the Customer’s organization in a timely manner about any technical incidents or security breaches that may have an impact on the organization’s activities. The legal obligations related to the notification of breaches of personal data protection must be considered in this context. It is recommended to establish a single point of contact for communication between contractual parties.",
+            "categories": [
+              "Specific"
+            ]
+          },
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": true,
+            "label": "The contract defines the terms and conditions for data recovery. In particular, data can be retrieved in a common format (e.g. text, json, XML, etc.), or a format to be defined in advance to allow the data to be re-imported into another system.",
+            "categories": [
+              "Specific"
+            ]
+          },
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": true,
+            "label": "The Provider informs the Client’s organization in a timely manner of changes in its environment that may impact the Client organization’s activities. Depending on the impact, the Provider plans these changes in consultation with the Client.",
+            "categories": [
+              "Specific"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "service_category": "Backup",
+    "section": "Backup",
+    "qtype": "M",
+    "qindex": 9,
+    "maxPoints": 25,
+    "label": "Could you describe the backup service.",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": false,
+        "score": 25,
+        "atype": "P",
+        "label": "The service includes the management of an own physical backup infrastructure.",
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": true,
+            "label": "The terms and frequency of maintenance, intervention and troubleshooting of the infrastructure are managed by established procedures.",
+            "categories": [
+              "Specific"
+            ]
+          },
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": true,
+            "label": "When hardware is reused or discarded, customer data and licensed software are erased or its storage medium is irreversibly destroyed by an established procedure.",
+            "categories": [
+              "Specific"
+            ]
+          }
+        ]
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": false,
+        "score": 0,
+        "atype": "P",
+        "label": "All or part of the data is stored in a cloud infrastructure.",
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": true,
+            "label": "The Provider informs the Customer’s organization in a timely manner about any technical incidents or security breaches that may have an impact on the organization’s activities. The legal obligations related to the notification of breaches of personal data protection must be considered in this context. It is recommended to establish a single point of contact for communication between contractual parties.",
+            "categories": [
+              "Specific"
+            ]
+          },
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": true,
+            "label": "The contract defines the terms and conditions for data recovery. In particular, data can be retrieved in a common format (e.g. text, json, XML, etc.), or a format to be defined in advance to allow the data to be re-imported into another system.",
+            "categories": [
+              "Specific"
+            ]
+          },
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": true,
+            "label": "The Provider informs the Client’s organization in a timely manner of changes in its environment that may impact the Client organization’s activities. Depending on the impact, the Provider plans these changes in consultation with the Client.",
+            "categories": [
+              "Specific"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

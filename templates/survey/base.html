@@ -10,10 +10,9 @@
 <link rel="icon" type="image/x-icon" href="{% static 'images/favicon.png' %}" />
 <link rel="apple-touch-icon" sizes="152x152" href="{% static 'images/apple-touch-icon.png' %}" />
 <link rel="apple-touch-icon" sizes="180x180" href="{% static 'images/apple-touch-icon.png' %}" />
-<link rel="stylesheet" type="text/css" href="{% static 'survey/css/custom.css' %}" />
 <link rel="stylesheet" href="/static/npm_components/fork-awesome/css/fork-awesome.min.css">
 <link rel="stylesheet" href="/static/npm_components/bootstrap-icons/font/bootstrap-icons.css">
-<script type="text/javascript" src="{% static "survey/js/language-selector.js" %}"></script>
+<script type="text/javascript" src="{% static 'survey/js/language-selector.js' %}"></script>
 {% endblock %}
 
 {% block title %}
@@ -75,7 +74,7 @@
   </div>
   {% endif %}
 
-  {% autoescape off %}{% bootstrap_messages %}{% endautoescape %}
+  {% autoescape off %}{% bootstrap_messages %}{# {% bootstrap_alert content %} #}{% endautoescape %}
 
   <div id="content-body">
     {% block content %}{% endblock %}

@@ -13,6 +13,8 @@ from survey.models import (
     SurveyUser,
     SurveyUserAnswer,
     Recommendations,
+    SurveyUserQuestionSequence,
+    CONTEXT_SECTION_LABEL,
 )
 from utils.radarFactory import radar_factory
 from django.utils.translation import gettext_lazy as _
@@ -23,19 +25,13 @@ logger = logging.getLogger(__name__)
 
 
 def getRecommendations(user: SurveyUser, lang: str) -> Dict[str, List[str]]:
-    allAnswers = SurveyQuestionAnswer.objects.exclude(
-        question__section__label__contains="__context"
-    ).order_by("question__qindex", "aindex")
     employees_number_code = user.get_employees_number_code()
 
-    finalReportRecs: Dict[str, List[str]] = {}
-    for a in allAnswers:
-        try:
-            userAnswer = SurveyUserAnswer.objects.filter(user=user).filter(answer=a)[0]
-        except IndexError:
-            continue
-        recommendations = Recommendations.objects.filter(forAnswer=a)
+    user_answers = SurveyUserAnswer.objects.filter(user=user)
 
+    final_report_recs: Dict[str, List[str]] = {}
+    for user_answer in user_answers:
+        recommendations = Recommendations.objects.filter(forAnswer=user_answer.answer)
         if not recommendations.exists():
             continue
 
@@ -46,22 +42,31 @@ def getRecommendations(user: SurveyUser, lang: str) -> Dict[str, List[str]]:
             ):
                 continue
 
-            if (userAnswer.uvalue == "1" and rec.answerChosen) or (
-                userAnswer.uvalue == "0" and not rec.answerChosen
+            if (user_answer.uvalue == "1" and rec.answerChosen) or (
+                user_answer.uvalue == "0" and not rec.answerChosen
             ):
-                category_name = _(rec.forAnswer.question.service_category.label)
+                # If categories are set, we use them otherwise question service category.
+                category_name = ""
+                if rec.categories:
+                    rec_categories = rec.categories.all()
+                    for index, rec_category in enumerate(rec_categories):
+                        category_name += _(rec_category.label)
+                        if len(rec_categories) > (index + 1):
+                            category_name += ' & '
+                if category_name == "":
+                    category_name = _(rec.forAnswer.question.service_category.label)
 
                 translated_recommendation = _(rec.label)
                 if is_recommendation_already_added(
-                    translated_recommendation, finalReportRecs
+                    translated_recommendation, final_report_recs
                 ):
                     continue
 
-                if category_name not in finalReportRecs:
-                    finalReportRecs[category_name] = []
-                finalReportRecs[category_name].append(translated_recommendation)
+                if category_name not in final_report_recs:
+                    final_report_recs[category_name] = []
+                final_report_recs[category_name].append(translated_recommendation)
 
-    return finalReportRecs
+    return final_report_recs
 
 
 def is_recommendation_already_added(recommendation: str, recommendations: dict) -> bool:
@@ -82,12 +87,13 @@ def calculateResult(user: SurveyUser) -> Tuple[int, int, List[int], List[str]]:
     max_evaluations_per_section: Dict[int, int] = {}
     sections: Dict[int, str] = {}
 
-    chart_exclude_sections = ["__context"]
+    chart_exclude_sections = [CONTEXT_SECTION_LABEL]
     if "chart_exclude_sections" in CUSTOM.keys():
         chart_exclude_sections = (
             chart_exclude_sections + CUSTOM["chart_exclude_sections"]
         )
 
+    # TODO: go through the sequence instead.
     for question in SurveyQuestion.objects.exclude(
         section__label__in=chart_exclude_sections
     ).all():
@@ -190,3 +196,13 @@ def generate_chart_png(
         except Exception as e:
             raise Exception("{}".format(e))
         return file_name
+
+
+def get_answered_questions_list(user: SurveyUser):
+    return [i.question for i in get_answered_questions_sequences(user)]
+
+
+def get_answered_questions_sequences(user: SurveyUser):
+    return SurveyUserQuestionSequence.objects.filter(
+        user=user, has_been_answered=True
+    ).order_by("branch", "level", "index")

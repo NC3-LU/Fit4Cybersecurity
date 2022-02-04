@@ -12,7 +12,7 @@ from django.conf import settings
 from django.utils import translation
 from csskp.settings import CUSTOM, LANGUAGE_CODE
 from survey.lib.utils import tree, mean_gen
-from survey.models import SurveyUser
+from survey.models import SurveyUser, CONTEXT_SECTION_LABEL
 from survey.reporthelper import calculateResult
 
 
@@ -77,7 +77,7 @@ def survey_language_count(request):
 def answers_per_section(request):
     """Return a dict with the mean of the user's answers per section, with the
     surveys completed during the last month."""
-    chart_exclude_sections = ["__context"]
+    chart_exclude_sections = [CONTEXT_SECTION_LABEL]
     if "chart_exclude_sections" in CUSTOM.keys():
         chart_exclude_sections = (
             chart_exclude_sections + CUSTOM["chart_exclude_sections"]

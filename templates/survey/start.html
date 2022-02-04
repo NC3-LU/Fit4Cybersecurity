@@ -27,7 +27,7 @@
         {% csrf_token %}
         {% for key, form in forms.items %}
         <div class="card-title" >
-            <span data-bs-toggle="tooltip" title="{{ question_tooltip }}">{{ questions_per_id|get_item:key }}</span>
+            <span data-bs-toggle="tooltip" title="{{ question_tooltip | safe }}">{{ questions_per_id|get_item:key }}</span>
         </div>
           {% language chosen_lang %}
             {% bootstrap_form form exclude="feedback" %}
