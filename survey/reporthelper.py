@@ -9,7 +9,6 @@ import logging
 from csskp.settings import PICTURE_DIR, CUSTOM
 from survey.models import (
     SurveyQuestion,
-    SurveyQuestionAnswer,
     SurveyUser,
     SurveyUserAnswer,
     Recommendations,
