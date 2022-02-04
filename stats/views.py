@@ -106,7 +106,7 @@ def survey_per_country(request):
     translation.activate(lang)
     users = SurveyUser.objects.all()
 
-    result = {}
+    result: dict[str, int] = dict()
     for user in users:
         country = _(dict(countries)[user.get_country_code()])
         result[country] = result.get(country, 0) + 1
@@ -119,7 +119,7 @@ def survey_per_company_size(request):
     translation.activate(lang)
     users = SurveyUser.objects.all()
 
-    result = {}
+    result: dict[str, int] = dict()
     for user in users:
         company_size = _(user.get_employees_number_label())
         result[company_size] = result.get(company_size, 0) + 1
@@ -132,7 +132,7 @@ def survey_per_company_sector(request):
     translation.activate(lang)
     users = SurveyUser.objects.all()
 
-    result = {}
+    result: dict[str, int] = dict()
     for user in users:
         company_sector = _(user.get_sector_label())
         result[company_sector] = result.get(company_sector, 0) + 1
