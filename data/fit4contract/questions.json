@@ -481,7 +481,7 @@
         ],
         "questions_map": [
           {
-            "label": "Will the project use third-party human resources?",
+            "label": "Will the service be audited?",
             "branch": 5,
             "level": 5,
             "order": 1
@@ -528,7 +528,7 @@
         ],
         "questions_map": [
           {
-            "label": "Will the project use third-party human resources?",
+            "label": "Will the service be audited?",
             "branch": 2,
             "level": 3,
             "order": 4
@@ -544,7 +544,7 @@
         "recommendations": [],
         "questions_map": [
           {
-            "label": "Will the project use third-party human resources?",
+            "label": "Will the service be audited?",
             "branch": 2,
             "level": 3,
             "order": 5
@@ -597,7 +597,7 @@
         "recommendations": [],
         "questions_map": [
           {
-            "label": "Will the project use third-party human resources?",
+            "label": "Will the service be audited?",
             "branch": 2,
             "level": 3,
             "order": 6
@@ -640,7 +640,7 @@
             "order": 8
           },
           {
-            "label": "Will the project use third-party human resources?",
+            "label": "Will the service be audited?",
             "branch": 4,
             "level": 2,
             "order": 2
@@ -653,7 +653,15 @@
         "score": 15,
         "atype": "P",
         "label": "No",
-        "recommendations": []
+        "recommendations": [],
+        "questions_map": [
+          {
+            "label": "Will the service be audited?",
+            "branch": 0,
+            "level": 3,
+            "order": 7
+          }
+        ]
       }
     ]
   },
