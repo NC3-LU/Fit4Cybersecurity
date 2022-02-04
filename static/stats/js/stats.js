@@ -73,28 +73,15 @@ document.addEventListener("DOMContentLoaded", function() {
         console.error('Error:', error);
       });
 
-    fetch("/stats/survey_per_country.json")
-    .then(response => response.json())
-    .then(result => {
-      var ctx = document.getElementById("stats-countries").getContext('2d');
-      var myChart = pieChart(result,ctx);
-      }).catch((error) => {
-        console.error('Error:', error);
-      });
-
-    fetch("/stats/survey_per_company_size.json")
+    fetch("/stats/survey_context.json")
     .then(response => response.json())
     .then(result => {
         var ctx = document.getElementById("stats-company").getContext('2d');
-        var myChart = pieChart(result,ctx);
-    }).catch((error) => {
-      console.error('Error:', error);
-    });
-    fetch("/stats/survey_per_company_sector.json")
-    .then(response => response.json())
-    .then(result => {
-        var ctx = document.getElementById("stats-sector").getContext('2d');
-        var myChart = pieChart(result,ctx);
+        pieChart(result["company_sizes"],ctx);
+        ctx = document.getElementById("stats-countries").getContext('2d');
+        pieChart(result["countries"],ctx);
+        ctx = document.getElementById("stats-sector").getContext('2d');
+        pieChart(result["sectors"],ctx);
     }).catch((error) => {
       console.error('Error:', error);
     });
