@@ -79,6 +79,7 @@ def survey_language_count(request):
         }
     )
 
+
 def survey_per_country(request):
     """Return the count the surveys per country"""
     lang = request.session.get(settings.LANGUAGE_COOKIE_NAME, LANGUAGE_CODE)
@@ -102,8 +103,8 @@ def survey_per_company_size(request):
     for user in users:
         company_size = _(user.get_employees_number_label())
         result[company_size] = result.get(company_size, 0) + 1
-    return JsonResponse(result
-    )
+    return JsonResponse(result)
+
 
 def survey_per_company_sector(request):
     """Return the count the surveys per company sector"""
@@ -147,6 +148,7 @@ def answers_per_section(request):
             ][section_label].send(user_evaluations[index])
 
     return JsonResponse(result)
+
 
 def activity_chart(request):
     """Aggregate and count completed surveys."""
