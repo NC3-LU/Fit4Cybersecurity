@@ -2,6 +2,7 @@
 
 import sys
 from datetime import datetime
+from operator import itemgetter
 from dateutil.relativedelta import relativedelta
 from django.conf.global_settings import LANGUAGES
 from django.db.models import Count
@@ -13,7 +14,7 @@ from django.utils import translation
 from django.utils.translation import gettext as _
 from csskp.settings import CUSTOM, LANGUAGE_CODE
 from survey.lib.utils import tree, mean_gen
-from survey.models import SurveyUser
+from survey.models import SurveyUser, SurveyUserAnswer
 from survey.reporthelper import calculateResult
 from django_countries import countries
 
@@ -84,18 +85,51 @@ def survey_context(request):
     """Return the surveys context (country, size, sector)"""
     lang = request.session.get(settings.LANGUAGE_COOKIE_NAME, LANGUAGE_CODE)
     translation.activate(lang)
-    users = SurveyUser.objects.all()
-
     result = tree()
-    for user in users:
-        country = _(dict(countries)[user.get_country_code()])
-        result["countries"][country] = result["countries"].get(country, 0) + 1
-        company_size = _(user.get_employees_number_label())
-        result["company_sizes"][company_size] = (
-            result["company_sizes"].get(company_size, 0) + 1
+
+    sector_query = (
+        SurveyUserAnswer.objects.filter(
+            answer__question__section__label="__context",
+            answer__question__label="What is your sector?",
         )
-        company_sector = _(user.get_sector_label())
-        result["sectors"][company_sector] = result["sectors"].get(company_sector, 0) + 1
+        .values("answer__label")
+        .annotate(count=Count("answer"))
+        .order_by("count")
+        .reverse()
+    )
+    sector_keys = list(map(itemgetter("answer__label"), sector_query))
+    sector_values = list(map(itemgetter("count"), sector_query))
+    result["sectors"] = {_(k): v for k, v in zip(sector_keys, sector_values)}
+
+    size_query = (
+        SurveyUserAnswer.objects.filter(
+            answer__question__section__label="__context",
+            answer__question__label="How many employees?",
+        )
+        .values("answer__label")
+        .annotate(count=Count("answer"))
+        .order_by("count")
+        .reverse()
+    )
+    size_keys = list(map(itemgetter("answer__label"), size_query))
+    size_values = list(map(itemgetter("count"), size_query))
+    result["company_sizes"] = {_(k): v for k, v in zip(size_keys, size_values)}
+
+    country_query = (
+        SurveyUserAnswer.objects.filter(
+            answer__question__section__label="__context",
+            answer__question__label="Please select your country",
+        )
+        .values("uvalue")
+        .annotate(count=Count("answer"))
+        .order_by("count")
+        .reverse()
+    )
+    country_keys = list(map(itemgetter("uvalue"), country_query))
+    country_values = list(map(itemgetter("count"), country_query))
+    result["countries"] = {
+        _(dict(countries)[k]): v for k, v in zip(country_keys, country_values)
+    }
 
     return JsonResponse(result)
 
