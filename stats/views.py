@@ -10,10 +10,12 @@ from django.shortcuts import render
 from django.http import JsonResponse
 from django.conf import settings
 from django.utils import translation
+from django.utils.translation import gettext as _
 from csskp.settings import CUSTOM, LANGUAGE_CODE
 from survey.lib.utils import tree, mean_gen
 from survey.models import SurveyUser, CONTEXT_SECTION_LABEL
 from survey.reporthelper import calculateResult
+from django_countries import countries
 
 
 def index(request):
@@ -27,7 +29,7 @@ def index(request):
     nb_surveys = SurveyUser.objects.count()
     context = {
         "nb_surveys": nb_surveys,
-        "first_survey_date": first_survey.created_at,
+        "first_survey_date": getattr(first_survey, "created_at", False),
         "nb_finished_surveys": nb_finished_surveys,
         "python_version": "{}.{}.{}".format(*sys.version_info[:3]),
     }
@@ -52,8 +54,10 @@ def overall(request):
 
 def survey_status_count(request):
     """Returns the count for the SurveyUser status property."""
+    lang = request.session.get(settings.LANGUAGE_COOKIE_NAME, LANGUAGE_CODE)
+    translation.activate(lang)
     result = SurveyUser.objects.values("status").annotate(count=Count("status"))
-    status = {1: "In progress", 2: "Under reviews", 3: "Finished"}
+    status = {1: _("In progress"), 2: _("Under review"), 3: _("Finished")}
     return JsonResponse(
         {status[item["status"]]: item["count"] for item in result.all()}
     )
@@ -61,22 +65,85 @@ def survey_status_count(request):
 
 def survey_language_count(request):
     """Returns the count for the SurveyUser chosen_lang property."""
+    lang = request.session.get(settings.LANGUAGE_COOKIE_NAME, LANGUAGE_CODE)
+    translation.activate(lang)
     result = SurveyUser.objects.values("chosen_lang").annotate(
         count=Count("chosen_lang")
     )
     return JsonResponse(
         {
-            [lang for lang in LANGUAGES if lang[0] == item["chosen_lang"]][0][1]: item[
-                "count"
-            ]
+            str(
+                _([lang for lang in LANGUAGES if lang[0] == item["chosen_lang"]][0][1])
+            ): item["count"]
             for item in result.all()
         }
     )
 
 
+def survey_context(request):
+    """Return the surveys context (country, size, sector)"""
+    lang = request.session.get(settings.LANGUAGE_COOKIE_NAME, LANGUAGE_CODE)
+    translation.activate(lang)
+    users = SurveyUser.objects.all()
+
+    result = tree()
+    for user in users:
+        country = _(dict(countries)[user.get_country_code()])
+        result["countries"][country] = result["countries"].get(country, 0) + 1
+        company_size = _(user.get_employees_number_label())
+        result["company_sizes"][company_size] = (
+            result["company_sizes"].get(company_size, 0) + 1
+        )
+        company_sector = _(user.get_sector_label())
+        result["sectors"][company_sector] = result["sectors"].get(company_sector, 0) + 1
+
+    return JsonResponse(result)
+
+
+def survey_per_country(request):
+    """Return the count the surveys per country"""
+    lang = request.session.get(settings.LANGUAGE_COOKIE_NAME, LANGUAGE_CODE)
+    translation.activate(lang)
+    users = SurveyUser.objects.all()
+
+    result: dict[str, int] = dict()
+    for user in users:
+        country = _(dict(countries)[user.get_country_code()])
+        result[country] = result.get(country, 0) + 1
+    return JsonResponse(result)
+
+
+def survey_per_company_size(request):
+    """Return the count the surveys per company size"""
+    lang = request.session.get(settings.LANGUAGE_COOKIE_NAME, LANGUAGE_CODE)
+    translation.activate(lang)
+    users = SurveyUser.objects.all()
+
+    result: dict[str, int] = dict()
+    for user in users:
+        company_size = _(user.get_employees_number_label())
+        result[company_size] = result.get(company_size, 0) + 1
+    return JsonResponse(result)
+
+
+def survey_per_company_sector(request):
+    """Return the count the surveys per company sector"""
+    lang = request.session.get(settings.LANGUAGE_COOKIE_NAME, LANGUAGE_CODE)
+    translation.activate(lang)
+    users = SurveyUser.objects.all()
+
+    result: dict[str, int] = dict()
+    for user in users:
+        company_sector = _(user.get_sector_label())
+        result[company_sector] = result.get(company_sector, 0) + 1
+    return JsonResponse(result)
+
+
 def answers_per_section(request):
     """Return a dict with the mean of the user's answers per section, with the
     surveys completed during the last month."""
+    lang = request.session.get(settings.LANGUAGE_COOKIE_NAME, LANGUAGE_CODE)
+    translation.activate(lang)
     chart_exclude_sections = [CONTEXT_SECTION_LABEL]
     if "chart_exclude_sections" in CUSTOM.keys():
         chart_exclude_sections = (

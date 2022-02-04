@@ -24,6 +24,26 @@ urlpatterns = [
         name="answers_per_section",
     ),
     path(
+        "survey_per_country.json",
+        views.survey_per_country,
+        name="survey_per_country",
+    ),
+    path(
+        "survey_per_company_size.json",
+        views.survey_per_company_size,
+        name="survey_per_company_size",
+    ),
+    path(
+        "survey_per_company_sector.json",
+        views.survey_per_company_sector,
+        name="survey_per_company_sector",
+    ),
+    path(
+        "survey_context.json",
+        views.survey_context,
+        name="survey_context",
+    ),
+    path(
         "activity-chart.json",
         views.activity_chart,
         name="activity_chart",

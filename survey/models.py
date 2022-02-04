@@ -285,6 +285,20 @@ class SurveyUser(models.Model):
 
         return user_answer.answer.label if user_answer is not None else ""
 
+    def get_sector_label(self) -> str:
+        try:
+            sector_question_label = SurveyQuestion.objects.get(
+                label="What is your sector?", section__label="__context"
+            ).label
+        except SurveyQuestion.DoesNotExist:
+            return ""
+
+        user_answer = self.__get_context_answer_by_question_label(
+            sector_question_label
+        )
+
+        return user_answer.answer.label if user_answer is not None else ""
+
     def get_country_code(self) -> str:
         try:
             country_question_label = SurveyQuestion.objects.get(
