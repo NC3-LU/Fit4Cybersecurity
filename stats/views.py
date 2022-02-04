@@ -79,6 +79,7 @@ def survey_language_count(request):
         }
     )
 
+
 def survey_context(request):
     """Return the surveys context (country, size, sector)"""
     lang = request.session.get(settings.LANGUAGE_COOKIE_NAME, LANGUAGE_CODE)
@@ -90,7 +91,9 @@ def survey_context(request):
         country = _(dict(countries)[user.get_country_code()])
         result["countries"][country] = result["countries"].get(country, 0) + 1
         company_size = _(user.get_employees_number_label())
-        result["company_sizes"][company_size] = result["company_sizes"].get(company_size, 0) + 1
+        result["company_sizes"][company_size] = (
+            result["company_sizes"].get(company_size, 0) + 1
+        )
         company_sector = _(user.get_sector_label())
         result["sectors"][company_sector] = result["sectors"].get(company_sector, 0) + 1
 
