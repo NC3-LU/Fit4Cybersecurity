@@ -22,8 +22,17 @@ $(document).ready(function() {
 
     const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);
-    const date_from = urlParams.get('from')
-    const date_to = urlParams.get('to')
+    if (urlParams.has('from')) {
+      const date_from = urlParams.get('from');
+    } else {
+      date_from = '';
+    }
+
+    if (urlParams.has('toptoic')) {
+      const date_to = urlParams.get('to');
+    } else {
+      date_to = '';
+    }
 
     var colors = ['rgba(230, 25, 75, 0.4)', 'rgba(60, 180, 75, 0.4)',
       'rgba(255, 225, 25, 0.4)', 'rgba(0, 130, 200, 0.4)', 'rgba(245, 130, 48, 0.4)',
