@@ -93,9 +93,17 @@ def survey_per_country(request):
     """Return the count the surveys per country"""
     lang = request.session.get(settings.LANGUAGE_COOKIE_NAME, LANGUAGE_CODE)
     translation.activate(lang)
+
+    date_from = request.GET.get('from', None)
+    # date_to = request.GET.get('to', None)
+    if not date_from:
+        # 36 months ago
+        date_from = datetime.now() - relativedelta(months=36)
+
     query = (
         SurveyUserAnswer.objects.filter(
             user__status=3,
+            user__created_at__gt=date_from,
             answer__question__section__label="__context",
             answer__question__label__contains="country",
         )
@@ -171,7 +179,7 @@ def answers_per_section(request):
     date_from = request.GET.get('from', None)
     # date_to = request.GET.get('to', None)
     if not date_from:
-        # one month ago
+        # three month ago
         date_from = datetime.now() - relativedelta(months=1)
         # date_to = datetime.now()
 

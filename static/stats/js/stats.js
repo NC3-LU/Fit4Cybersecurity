@@ -23,15 +23,15 @@ $(document).ready(function() {
     const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);
     if (urlParams.has('from')) {
-      const date_from = urlParams.get('from');
+      var date_from = urlParams.get('from');
     } else {
-      date_from = '';
+      var date_from = '';
     }
 
-    if (urlParams.has('toptoic')) {
-      const date_to = urlParams.get('to');
+    if (urlParams.has('to')) {
+      var date_to = urlParams.get('to');
     } else {
-      date_to = '';
+      var date_to = '';
     }
 
     var colors = ['rgba(230, 25, 75, 0.4)', 'rgba(60, 180, 75, 0.4)',
@@ -115,7 +115,7 @@ $(document).ready(function() {
         console.error('Error:', error);
     });
 
-    fetch("/stats/survey_per_country.json")
+    fetch("/stats/survey_per_country.json?from="+date_from+"&to="+date_to)
     .then(response => response.json())
     .then(result => {
         var ctx = document.getElementById("stats-countries").getContext('2d');
