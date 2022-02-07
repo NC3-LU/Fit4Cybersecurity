@@ -2,6 +2,7 @@
 
 import sys
 from datetime import datetime
+from operator import itemgetter
 from dateutil.relativedelta import relativedelta
 from django.conf.global_settings import LANGUAGES
 from django.db.models import Count
@@ -13,8 +14,9 @@ from django.utils import translation
 from django.utils.translation import gettext as _
 from csskp.settings import CUSTOM, LANGUAGE_CODE
 from survey.lib.utils import tree, mean_gen
-from survey.models import SurveyUser
+from survey.models import SurveyUser, SurveyUserAnswer
 from survey.reporthelper import calculateResult
+from django_countries import countries
 
 
 def index(request):
@@ -77,6 +79,71 @@ def survey_language_count(request):
             for item in result.all()
         }
     )
+
+
+def survey_per_country(request):
+    """Return the count the surveys per country"""
+    lang = request.session.get(settings.LANGUAGE_COOKIE_NAME, LANGUAGE_CODE)
+    translation.activate(lang)
+    query = (
+        SurveyUserAnswer.objects.filter(
+            answer__question__section__label="__context",
+            answer__question__label__contains="country",
+        )
+        .values("uvalue")
+        .annotate(count=Count("answer"))
+        .order_by("count")
+        .reverse()
+    )
+    keys = list(map(itemgetter("uvalue"), query))
+    values = list(map(itemgetter("count"), query))
+    result = {_(dict(countries)[k]): v for k, v in zip(keys, values)}
+
+    return JsonResponse(result)
+
+
+def survey_per_company_size(request):
+    """Return the count the surveys per company size"""
+    lang = request.session.get(settings.LANGUAGE_COOKIE_NAME, LANGUAGE_CODE)
+    translation.activate(lang)
+    result: dict[str, int] = dict()
+    query = (
+        SurveyUserAnswer.objects.filter(
+            answer__question__section__label="__context",
+            answer__question__label__contains="employees",
+        )
+        .values("answer__label")
+        .annotate(count=Count("answer"))
+        .order_by("count")
+        .reverse()
+    )
+    keys = list(map(itemgetter("answer__label"), query))
+    values = list(map(itemgetter("count"), query))
+    result = {_(k): v for k, v in zip(keys, values)}
+
+    return JsonResponse(result)
+
+
+def survey_per_company_sector(request):
+    """Return the count the surveys per company sector"""
+    lang = request.session.get(settings.LANGUAGE_COOKIE_NAME, LANGUAGE_CODE)
+    translation.activate(lang)
+    result: dict[str, int] = dict()
+    query = (
+        SurveyUserAnswer.objects.filter(
+            answer__question__section__label="__context",
+            answer__question__label__contains="sector",
+        )
+        .values("answer__label")
+        .annotate(count=Count("answer"))
+        .order_by("count")
+        .reverse()
+    )
+    keys = list(map(itemgetter("answer__label"), query))
+    values = list(map(itemgetter("count"), query))
+    result = {_(k): v for k, v in zip(keys, values)}
+
+    return JsonResponse(result)
 
 
 def answers_per_section(request):

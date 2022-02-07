@@ -35,34 +35,47 @@
         </div>
         <br />
 
-        <div class="row">
-          <div class="col chart-container">
-            <h3>{{ _('Surveys status') }}</h3>
+        <div class="row justify-content-center">
+          <div class="col-4 chart-container">
+            <h4 class="text-center">{{ _('Surveys status') }}</h3>
             <canvas id="stats-count"></canvas>
           </div>
-          <div class="col chart-container">
-            <h3>{{ _('Surveys languages') }}</h3>
+          <div class="col-4 chart-container">
+            <h3 class="text-center">{{ _('Surveys languages') }}</h3>
             <canvas id="stats-language"></canvas>
           </div>
+          <div class="w-100"></div>
+          <div class="col-4 chart-container">
+            <h3 class="text-center">{{ _('Surveys countries') }}</h3>
+            <canvas id="stats-countries"></canvas>
+          </div>
+          <div class="col-4 chart-container">
+            <h3 class="text-center">{{ _('Surveys company size') }}</h3>
+            <canvas id="stats-company"></canvas>
+          </div>
+          <div class="col-4 chart-container">
+            <h3 class="text-center">{{ _('Surveys company sector') }}</h3>
+            <canvas id="stats-sector"></canvas>
+          </div>
         </div>
-        <br />
-        <div class="row">
-          <div class="col mx-auto">
-            <h3>{{ _('Activity over the past year') }}</h3>
+        <div class="w-100"></div>
+        <div class="row justify-content-center">
+          <div class="col-10 mx-auto">
+            <h3 class="text-center">{{ _('Activity over the past year') }}</h3>
             <div class="text-center">
               <div id="surveys-activity"></div>
             </div>
           </div>
         </div>
-        <br />
-        <div class="row">
-          <div class="col chart-container">
+        <div class="w-100"></div>
+        <div class="row justify-content-center">
+          <div class="col-6 mx-auto chart-container">
             <h3>{{ _('Answers by section and company size') }}</h3>
             <canvas id="answers-per-section"></canvas>
             <p>{{ _('With data for the last month.') }}</p>
           </div>
         </div>
-        <br />
+        <div class="w-100"></div>
         <div class="row">
           <div class="col">
             <ul class="list-group">
