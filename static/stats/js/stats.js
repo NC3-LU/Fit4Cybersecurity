@@ -96,7 +96,7 @@ $(document).ready(function() {
         return Chart
     }
 
-    fetch("/stats/survey-status-count.json")
+    fetch("/stats/survey-status-count.json?from="+date_from+"&to="+date_to)
     .then(response => response.json())
     .then(result => {
         var ctx = document.getElementById("stats-count").getContext('2d');
@@ -106,7 +106,7 @@ $(document).ready(function() {
         console.error('Error:', error);
     });
 
-    fetch("/stats/survey-language-count.json")
+    fetch("/stats/survey-language-count.json?from="+date_from+"&to="+date_to)
     .then(response => response.json())
     .then(result => {
         var ctx = document.getElementById("stats-language").getContext('2d');
@@ -125,7 +125,7 @@ $(document).ready(function() {
         console.error('Error:', error);
     });
 
-    fetch("/stats/survey_per_company_size.json")
+    fetch("/stats/survey_per_company_size.json?from="+date_from+"&to="+date_to)
     .then(response => response.json())
     .then(result => {
         var ctx = document.getElementById("stats-company").getContext('2d');
@@ -135,7 +135,7 @@ $(document).ready(function() {
         console.error('Error:', error);
     });
 
-    fetch("/stats/survey_per_company_sector.json")
+    fetch("/stats/survey_per_company_sector.json?from="+date_from+"&to="+date_to)
     .then(response => response.json())
     .then(result => {
         var ctx = document.getElementById("stats-sector").getContext('2d');
@@ -152,7 +152,7 @@ $(document).ready(function() {
           data: result ,
           texts: ['completed survey','completed surveys'],
           click: function(date, count) {
-            window.location = "/stats/?from=" + date + "&to=" + date;
+            window.location = "/stats/?from=" + date;
           }
         });
     })
