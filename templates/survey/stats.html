@@ -9,7 +9,7 @@
 {% endblock %}
 {% block content_title %}
     <p class="lead" style="font-size: larger">
-    {{ _('Some statistics about the current surveys.') }}
+        {{ _('Some statistics about the current surveys.') }}
     </p>
 {% endblock %}
 {% block content %}
@@ -24,67 +24,96 @@
         <link href="/static/stats/css/stats.css" media="all" rel="stylesheet">
 
         <div class="row">
-          <div class="col">
-            <h3>{{ _('Main figures') }}</h3>
-            <ul class="list-group">
-              <li class="list-group-item">{{ _('Number of surveys:') }} {{ nb_surveys }}</li>
-              <li class="list-group-item">{{ _('Number of finished surveys:') }} {{ nb_finished_surveys }}</li>
-              <li class="list-group-item">{{ _('First completed survey on:') }} {{ first_survey_date }}</li>
-            </ul>
-          </div>
-        </div>
-        <br />
-
-        <div class="row justify-content-center">
-          <div class="col-4 chart-container">
-            <h4 class="text-center">{{ _('Surveys status') }}</h3>
-            <canvas id="stats-count"></canvas>
-          </div>
-          <div class="col-4 chart-container">
-            <h3 class="text-center">{{ _('Surveys languages') }}</h3>
-            <canvas id="stats-language"></canvas>
-          </div>
-          <div class="w-100"></div>
-          <div class="col-4 chart-container">
-            <h3 class="text-center">{{ _('Surveys countries') }}</h3>
-            <canvas id="stats-countries"></canvas>
-          </div>
-          <div class="col-4 chart-container">
-            <h3 class="text-center">{{ _('Surveys company size') }}</h3>
-            <canvas id="stats-company"></canvas>
-          </div>
-          <div class="col-4 chart-container">
-            <h3 class="text-center">{{ _('Surveys company sector') }}</h3>
-            <canvas id="stats-sector"></canvas>
-          </div>
-        </div>
-        <div class="w-100"></div>
-        <div class="row justify-content-center">
-          <div class="col-10 mx-auto">
-            <h3 class="text-center">{{ _('Activity over the past year') }}</h3>
-            <div class="text-center">
-              <div id="surveys-activity"></div>
+            <div class="col">
+                <h4>{{ _('Main figures') }}</h4>
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        {{ _('Number of surveys:') }} {{ nb_surveys }}
+                    </li>
+                    <li class="list-group-item">
+                        {{ _('Number of finished surveys:') }} {{ nb_finished_surveys }}
+                    </li>
+                    <li class="list-group-item">
+                        {{ _('First completed survey on:') }} {{ first_survey_date }}
+                    </li>
+                </ul>
             </div>
-          </div>
         </div>
-        <div class="w-100"></div>
+        <div class="w-100 p-4"></div>
         <div class="row justify-content-center">
-          <div class="col-6 mx-auto chart-container">
-            <h3>{{ _('Answers by section and company size') }}</h3>
-            <canvas id="answers-per-section"></canvas>
-            <p>{{ _('With data for the last month.') }}</p>
-          </div>
+            <div class="col-4">
+                <h4 class="text-center">
+                    {{ _('Surveys company sector') }}
+                </h4>
+                <canvas id="stats-sector"></canvas>
+            </div>
+            <div class="col-4">
+                <h4 class="text-center">
+                    {{ _('Surveys company size') }}
+                </h4>
+                <canvas id="stats-company"></canvas>
+            </div>
+            <div class="col-4">
+                <h4 class="text-center">
+                    {{ _('Surveys countries') }}
+                </h4>
+                <canvas id="stats-countries"></canvas>
+            </div>
+            <div class="w-100 p-4"></div>
+            <div class="col-4">
+                <h4 class="text-center">
+                    {{ _('Surveys status') }}
+                </h4>
+                <canvas id="stats-count"></canvas>
+            </div>
+            <div class="col-4">
+                <h4 class="text-center">
+                    {{ _('Surveys languages') }}
+                </h4>
+                <canvas id="stats-language"></canvas>
+            </div>
+
         </div>
-        <div class="w-100"></div>
+        <div class="w-100 p-4"></div>
+        <div class="row justify-content-center">
+            <div class="col-10 mx-auto text-center">
+                <h4>
+                    {{ _('Activity over the past year') }}
+                </h4>
+                <div id="surveys-activity"></div>
+            </div>
+        </div>
+        <div class="w-100 p-4"></div>
+        <div class="row justify-content-center">
+            <div class="col-6 mx-auto text-center">
+                <h4>
+                    {{ _('Answers by section and company size') }}
+                </h4>
+                <p>{{ _('With data for the last month.') }}</p>
+                <canvas id="answers-per-section"></canvas>
+            </div>
+        </div>
+        <div class="w-100 p-4"></div>
         <div class="row">
-          <div class="col">
-            <ul class="list-group">
-            <h3>{{ _('Server information') }}</h3>
-              <li class="list-group-item">{{ _('Python version:') }} {{ python_version }}</li>
-              <li class="list-group-item">{{ _('Software version:') }} <a href="{{ version_url }}" title="{{ _('Version of') }} {{ custom.tool_name }}" alt="{{ _('Version of') }} {{ custom.tool_name }}" target="_blank" rel="noopener noreferrer">{{ app_version }}</a></li>
-            </ul>
-          </div>
+            <div class="col">
+                <ul class="list-group">
+                    <h4>{{ _('Server information') }}</h4>
+                    <li class="list-group-item">
+                        {{ _('Python version:') }} {{ python_version }}
+                    </li>
+                    <li class="list-group-item">
+                        {{ _('Software version:') }}
+                        <a href="{{ version_url }}"
+                            title="{{ _('Version of') }} {{ custom.tool_name }}"
+                            alt="{{ _('Version of') }} {{ custom.tool_name }}"
+                            target="_blank"
+                            rel="noopener noreferrer">
+                            {{ app_version }}
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </div>
-        <br />
+        <div class="w-100 p-4"></div>
     {% endif %}
 {% endblock %}
