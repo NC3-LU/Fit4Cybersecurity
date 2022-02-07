@@ -57,7 +57,12 @@ def survey_status_count(request):
     """Returns the count for the SurveyUser status property."""
     lang = request.session.get(settings.LANGUAGE_COOKIE_NAME, LANGUAGE_CODE)
     translation.activate(lang)
-    result = SurveyUser.objects.values("status").annotate(count=Count("status"))
+    result = (
+        SurveyUser.objects.values("status")
+        .annotate(count=Count("status"))
+        .order_by("count")
+        .reverse()
+    )
     status = {1: _("In progress"), 2: _("Under review"), 3: _("Finished")}
     return JsonResponse(
         {status[item["status"]]: item["count"] for item in result.all()}
@@ -68,8 +73,11 @@ def survey_language_count(request):
     """Returns the count for the SurveyUser chosen_lang property."""
     lang = request.session.get(settings.LANGUAGE_COOKIE_NAME, LANGUAGE_CODE)
     translation.activate(lang)
-    result = SurveyUser.objects.values("chosen_lang").annotate(
-        count=Count("chosen_lang")
+    result = (
+        SurveyUser.objects.values("chosen_lang")
+        .annotate(count=Count("chosen_lang"))
+        .order_by("count")
+        .reverse()
     )
     return JsonResponse(
         {
@@ -87,6 +95,7 @@ def survey_per_country(request):
     translation.activate(lang)
     query = (
         SurveyUserAnswer.objects.filter(
+            user__status=3,
             answer__question__section__label="__context",
             answer__question__label__contains="country",
         )
@@ -109,6 +118,7 @@ def survey_per_company_size(request):
     result: dict[str, int] = dict()
     query = (
         SurveyUserAnswer.objects.filter(
+            user__status=3,
             answer__question__section__label="__context",
             answer__question__label__contains="employees",
         )
@@ -131,6 +141,7 @@ def survey_per_company_sector(request):
     result: dict[str, int] = dict()
     query = (
         SurveyUserAnswer.objects.filter(
+            user__status=3,
             answer__question__section__label="__context",
             answer__question__label__contains="sector",
         )
