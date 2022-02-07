@@ -79,6 +79,7 @@ $(document).ready(function() {
                 },
             }
         });
+        return Chart
     }
 
     fetch("/stats/survey-status-count.json")
