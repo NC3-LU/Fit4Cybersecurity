@@ -95,6 +95,7 @@ def survey_per_country(request):
     translation.activate(lang)
     query = (
         SurveyUserAnswer.objects.filter(
+            user__status=3,
             answer__question__section__label="__context",
             answer__question__label__contains="country",
         )
@@ -117,6 +118,7 @@ def survey_per_company_size(request):
     result: dict[str, int] = dict()
     query = (
         SurveyUserAnswer.objects.filter(
+            user__status=3,
             answer__question__section__label="__context",
             answer__question__label__contains="employees",
         )
@@ -139,6 +141,7 @@ def survey_per_company_sector(request):
     result: dict[str, int] = dict()
     query = (
         SurveyUserAnswer.objects.filter(
+            user__status=3,
             answer__question__section__label="__context",
             answer__question__label__contains="sector",
         )
