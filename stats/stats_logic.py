@@ -20,12 +20,6 @@ def get_finished_surveys_list(start_date, end_date):
 
     total_questions_score = 0
     max_evaluations_per_section = {}
-    # TODO: For the stats -use sequence for the data aggregation,
-    # as not all the questions can be asked.
-    # TODO: logic of the map seems doesn't work that same way.
-    # TODO: generate translations and populate from the insert sql.
-    # TODO: bottom page logos are different - missing ANSSI.
-    # TODO: make FLake happy and other linters ...
     for question in SurveyQuestion.objects.exclude(
         section__label__contains=CONTEXT_SECTION_LABEL
     ).all():
