@@ -20,6 +20,11 @@ $(document).ready(function() {
         $("#surveys_users_results").val('');
     });
 
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    const date_from = urlParams.get('from')
+    const date_to = urlParams.get('to')
+
     var colors = ['rgba(230, 25, 75, 0.4)', 'rgba(60, 180, 75, 0.4)',
       'rgba(255, 225, 25, 0.4)', 'rgba(0, 130, 200, 0.4)', 'rgba(245, 130, 48, 0.4)',
       'rgba(145, 30, 180, 0.4)', 'rgba(70, 240, 240, 0.4)', 'rgba(240, 50, 230, 0.4)',
@@ -135,14 +140,17 @@ $(document).ready(function() {
     .then(result => {
         $('#surveys-activity').github_graph({
           data: result ,
-          texts: ['completed survey','completed surveys']
+          texts: ['completed survey','completed surveys'],
+          click: function(date, count) {
+            window.location = "/stats/?from=" + date + "&to=" + date;
+          }
         });
     })
     .catch((error) => {
         console.error('Error:', error);
     });
 
-    fetch("/stats/answers-per-section.json")
+    fetch("/stats/answers-per-section.json?from="+date_from+"&to="+date_to)
     .then(response => response.json())
     .then(result => {
         let data_sets = [];

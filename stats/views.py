@@ -168,8 +168,14 @@ def answers_per_section(request):
             chart_exclude_sections + CUSTOM["chart_exclude_sections"]
         )
 
-    one_month_ago = datetime.now() - relativedelta(months=1)
-    users = SurveyUser.objects.filter(status=3, created_at__gt=one_month_ago)
+    date_from = request.GET.get('from', None)
+    # date_to = request.GET.get('to', None)
+    if not date_from:
+        # one month ago
+        date_from = datetime.now() - relativedelta(months=1)
+        # date_to = datetime.now()
+
+    users = SurveyUser.objects.filter(status=3, created_at__gt=date_from)
 
     result = tree()
     generators = tree()
