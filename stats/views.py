@@ -142,19 +142,39 @@ def survey_per_country(request):
         # 36 months ago
         date_from = datetime.now() - relativedelta(months=36)
 
-    query = (
-        SurveyUserAnswer.objects.filter(
+    nb_surveys = SurveyUser.objects.count()
+    threshold = 0.05
+
+    query_gt = (
+        SurveyUserAnswer.objects.alias(entries=Count("answer"))
+        .filter(
             user__status=3,
             user__created_at__gte=date_from,
             answer__question__section__label="__context",
             answer__question__label__contains="country",
+            entries__gt=nb_surveys * threshold,
         )
         .values("uvalue")
         .annotate(count=Count("answer"))
         .order_by("count")
         .reverse()
     )
-    result = {_(dict(countries)[q["uvalue"]]): q["count"] for q in query}
+
+    query_lte = (
+        SurveyUserAnswer.objects.alias(entries=Count("answer"))
+        .filter(
+            user__status=3,
+            user__created_at__gte=date_from,
+            answer__question__section__label="__context",
+            answer__question__label__contains="country",
+            entries__lte=nb_surveys * threshold,
+        )
+        .count()
+    )
+
+    result = {_(dict(countries)[q["uvalue"]]): q["count"] for q in query_gt}
+    if query_lte > 0:
+        result[_("Others")] = query_lte
 
     return JsonResponse(result)
 
