@@ -25,8 +25,8 @@ def index(request):
     date_from = request.GET.get("from", None)
     # date_to = request.GET.get('to', None)
     if not date_from:
-        # 36 months ago
-        date_from = datetime.now() - relativedelta(months=36)
+        # 6 months ago
+        date_from = datetime.now() - relativedelta(months=1)
     nb_finished_surveys = SurveyUser.objects.filter(status=3).count()
     survey_countries = (
         SurveyUserAnswer.objects.filter(
