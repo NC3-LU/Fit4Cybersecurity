@@ -20,6 +20,20 @@ $(document).ready(function() {
         $("#surveys_users_results").val('');
     });
 
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    if (urlParams.has('from')) {
+      var date_from = urlParams.get('from');
+    } else {
+      var date_from = '';
+    }
+
+    if (urlParams.has('to')) {
+      var date_to = urlParams.get('to');
+    } else {
+      var date_to = '';
+    }
+
     var colors = ['rgba(230, 25, 75, 0.4)', 'rgba(60, 180, 75, 0.4)',
         'rgba(255, 225, 25, 0.4)', 'rgba(0, 130, 200, 0.4)', 'rgba(245, 130, 48, 0.4)',
         'rgba(145, 30, 180, 0.4)', 'rgba(70, 240, 240, 0.4)', 'rgba(240, 50, 230, 0.4)',
@@ -107,7 +121,7 @@ $(document).ready(function() {
         });
     }
 
-    fetch("/stats/survey-status-count.json")
+    fetch("/stats/survey-status-count.json?from="+date_from+"&to="+date_to)
     .then(response => response.json())
     .then(result => {
         var ctx = document.getElementById("stats-count").getContext('2d');
@@ -117,7 +131,7 @@ $(document).ready(function() {
         console.error('Error:', error);
     });
 
-    fetch("/stats/survey-language-count.json")
+    fetch("/stats/survey-language-count.json?from="+date_from+"&to="+date_to)
     .then(response => response.json())
     .then(result => {
         var ctx = document.getElementById("stats-language").getContext('2d');
@@ -126,7 +140,7 @@ $(document).ready(function() {
         console.error('Error:', error);
     });
 
-    fetch("/stats/survey_per_country.json")
+    fetch("/stats/survey_per_country.json?from="+date_from+"&to="+date_to)
     .then(response => response.json())
     .then(result => {
         var ctx = document.getElementById("stats-countries").getContext('2d');
@@ -136,7 +150,7 @@ $(document).ready(function() {
         console.error('Error:', error);
     });
 
-    fetch("/stats/survey_per_company_size.json")
+    fetch("/stats/survey_per_company_size.json?from="+date_from+"&to="+date_to)
     .then(response => response.json())
     .then(result => {
         var ctx = document.getElementById("stats-company").getContext('2d');
@@ -146,7 +160,7 @@ $(document).ready(function() {
         console.error('Error:', error);
     });
 
-    fetch("/stats/survey_per_company_sector.json")
+    fetch("/stats/survey_per_company_sector.json?from="+date_from+"&to="+date_to)
     .then(response => response.json())
     .then(result => {
         var ctx = document.getElementById("stats-sector").getContext('2d');
@@ -161,14 +175,17 @@ $(document).ready(function() {
     .then(result => {
         $('#surveys-activity').github_graph({
           data: result ,
-          texts: ['completed survey','completed surveys']
+          texts: ['completed survey','completed surveys'],
+          click: function(date, count) {
+            window.location = "/stats/?from=" + date;
+          }
         });
     })
     .catch((error) => {
         console.error('Error:', error);
     });
 
-    fetch("/stats/answers-per-section.json")
+    fetch("/stats/answers-per-section.json?from="+date_from+"&to="+date_to)
     .then(response => response.json())
     .then(result => {
         let data_sets = [];

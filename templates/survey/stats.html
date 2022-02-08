@@ -42,6 +42,35 @@
         </div>
         <div class="w-100 p-4"></div>
         <div class="row justify-content-center">
+            <div class="mx-auto text-center">
+                <h4>
+                    {{ _('Activity over the past year') }}
+                </h4>
+                <div id="surveys-activity"></div>
+                <br />
+                <div class="d-flex justify-content-end align-items-center">
+                  Less&nbsp;
+                  <svg width="10" height="10" class="d-inline-block">
+                    <rect width="10" height="10" class="ContributionCalendar-day" rx="2" ry="2" data-level="1" style="fill:#eeeeee;stroke-width:3;stroke:#eeeeee"></rect>
+                  </svg>&nbsp;
+                  <svg width="10" height="10" class="d-inline-block">
+                    <rect width="10" height="10" class="ContributionCalendar-day" rx="2" ry="2" data-level="0" style="fill:#d6e685;stroke-width:3;stroke:#d6e685"></rect>
+                  </svg>&nbsp;
+                  <svg width="10" height="10" class="d-inline-block">
+                    <rect width="10" height="10" class="ContributionCalendar-day" rx="2" ry="2" data-level="2" style="fill:#8cc665;stroke-width:3;stroke:#8cc665"></rect>
+                  </svg>&nbsp;
+                  <svg width="10" height="10" class="d-inline-block">
+                    <rect width="10" height="10" class="ContributionCalendar-day" rx="2" ry="2" data-level="3" style="fill:#44a340;stroke-width:3;stroke:#44a340"></rect>
+                  </svg>&nbsp;
+                  <svg width="10" height="10" class="d-inline-block">
+                    <rect width="10" height="10" class="ContributionCalendar-day" rx="2" ry="2" data-level="4" style="fill:#44a340;stroke-width:3;stroke:#44a340"></rect>
+                  </svg>&nbsp;
+                  More
+                </div>
+            </div>
+        </div>
+        <div class="w-100 p-4"></div>
+        <div class="row justify-content-center">
             <div class="col-4">
                 <h4 class="text-center">
                     {{ _('Surveys company sector') }}
@@ -77,20 +106,11 @@
         </div>
         <div class="w-100 p-4"></div>
         <div class="row justify-content-center">
-            <div class="col-10 mx-auto text-center">
-                <h4>
-                    {{ _('Activity over the past year') }}
-                </h4>
-                <div id="surveys-activity"></div>
-            </div>
-        </div>
-        <div class="w-100 p-4"></div>
-        <div class="row justify-content-center">
             <div class="col-8 mx-auto text-center">
                 <h4>
                     {{ _('Answers by section and company size') }}
                 </h4>
-                <p><em>{{ _('data from last month.') }}</em></p>
+                <p><em>{{ _('data from') }} {{ date_from }}</em></p>
                 <div class="col-md-auto">
                     <label for="displayByCountry">{{ _('Country')}}</label>
                     <select id="displayByCountry">

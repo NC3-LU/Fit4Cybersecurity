@@ -22,10 +22,16 @@ from django_countries import countries
 def index(request):
     lang = request.session.get(settings.LANGUAGE_COOKIE_NAME, LANGUAGE_CODE)
     translation.activate(lang)
+    date_from = request.GET.get('from', None)
+    # date_to = request.GET.get('to', None)
+    if not date_from:
+        # 36 months ago
+        date_from = datetime.now() - relativedelta(months=36)
     nb_finished_surveys = SurveyUser.objects.filter(status=3).count()
     survey_countries = (
         SurveyUserAnswer.objects.filter(
             user__status=3,
+            user__created_at__gte=date_from,
             answer__question__section__label="__context",
             answer__question__label__contains="country",
         )
@@ -38,6 +44,7 @@ def index(request):
         first_survey = ""
     nb_surveys = SurveyUser.objects.count()
     context = {
+        "date_from": date_from,
         "nb_surveys": nb_surveys,
         "first_survey_date": getattr(first_survey, "created_at", False),
         "nb_finished_surveys": nb_finished_surveys,
@@ -67,8 +74,18 @@ def survey_status_count(request):
     """Returns the count for the SurveyUser status property."""
     lang = request.session.get(settings.LANGUAGE_COOKIE_NAME, LANGUAGE_CODE)
     translation.activate(lang)
+
+    date_from = request.GET.get('from', None)
+    # date_to = request.GET.get('to', None)
+    if not date_from:
+        # 36 months ago
+        date_from = datetime.now() - relativedelta(months=36)
+
     result = (
-        SurveyUser.objects.values("status")
+        SurveyUser.objects.filter(
+            created_at__gte=date_from,
+        )
+        .values("status")
         .annotate(count=Count("status"))
         .order_by("count")
         .reverse()
@@ -83,8 +100,18 @@ def survey_language_count(request):
     """Returns the count for the SurveyUser chosen_lang property."""
     lang = request.session.get(settings.LANGUAGE_COOKIE_NAME, LANGUAGE_CODE)
     translation.activate(lang)
+
+    date_from = request.GET.get('from', None)
+    # date_to = request.GET.get('to', None)
+    if not date_from:
+        # 36 months ago
+        date_from = datetime.now() - relativedelta(months=36)
+
     result = (
-        SurveyUser.objects.values("chosen_lang")
+        SurveyUser.objects.filter(
+            created_at__gte=date_from,
+        )
+        .values("chosen_lang")
         .annotate(count=Count("chosen_lang"))
         .order_by("count")
         .reverse()
@@ -103,9 +130,23 @@ def survey_per_country(request):
     """Return the count the surveys per country"""
     lang = request.session.get(settings.LANGUAGE_COOKIE_NAME, LANGUAGE_CODE)
     translation.activate(lang)
+
+    date_from = request.GET.get('from', None)
+    # date_to = request.GET.get('to', None)
+    if not date_from:
+        # 36 months ago
+        date_from = datetime.now() - relativedelta(months=36)
+
+    date_from = request.GET.get('from', None)
+    # date_to = request.GET.get('to', None)
+    if not date_from:
+        # 36 months ago
+        date_from = datetime.now() - relativedelta(months=36)
+
     query = (
         SurveyUserAnswer.objects.filter(
             user__status=3,
+            user__created_at__gte=date_from,
             answer__question__section__label="__context",
             answer__question__label__contains="country",
         )
@@ -125,10 +166,18 @@ def survey_per_company_size(request):
     """Return the count the surveys per company size"""
     lang = request.session.get(settings.LANGUAGE_COOKIE_NAME, LANGUAGE_CODE)
     translation.activate(lang)
+
+    date_from = request.GET.get('from', None)
+    # date_to = request.GET.get('to', None)
+    if not date_from:
+        # 36 months ago
+        date_from = datetime.now() - relativedelta(months=36)
+
     result: dict[str, int] = dict()
     query = (
         SurveyUserAnswer.objects.filter(
             user__status=3,
+            user__created_at__gte=date_from,
             answer__question__section__label="__context",
             answer__question__label__contains="employees",
         )
@@ -148,10 +197,18 @@ def survey_per_company_sector(request):
     """Return the count the surveys per company sector"""
     lang = request.session.get(settings.LANGUAGE_COOKIE_NAME, LANGUAGE_CODE)
     translation.activate(lang)
+
+    date_from = request.GET.get('from', None)
+    # date_to = request.GET.get('to', None)
+    if not date_from:
+        # 36 months ago
+        date_from = datetime.now() - relativedelta(months=36)
+
     result: dict[str, int] = dict()
     query = (
         SurveyUserAnswer.objects.filter(
             user__status=3,
+            user__created_at__gte=date_from,
             answer__question__section__label="__context",
             answer__question__label__contains="sector",
         )
@@ -178,8 +235,14 @@ def answers_per_section(request):
             chart_exclude_sections + CUSTOM["chart_exclude_sections"]
         )
 
-    one_month_ago = datetime.now() - relativedelta(months=1)
-    users = SurveyUser.objects.filter(status=3, created_at__gt=one_month_ago)
+    date_from = request.GET.get('from', None)
+    # date_to = request.GET.get('to', None)
+    if not date_from:
+        # three month ago
+        date_from = datetime.now() - relativedelta(months=1)
+        # date_to = datetime.now()
+
+    users = SurveyUser.objects.filter(status=3, created_at__gte=date_from)
 
     result = tree()
     generators = tree()
