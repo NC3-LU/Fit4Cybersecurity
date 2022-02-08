@@ -21,18 +21,45 @@ $(document).ready(function() {
     });
 
     var colors = ['rgba(230, 25, 75, 0.4)', 'rgba(60, 180, 75, 0.4)',
-      'rgba(255, 225, 25, 0.4)', 'rgba(0, 130, 200, 0.4)', 'rgba(245, 130, 48, 0.4)',
-      'rgba(145, 30, 180, 0.4)', 'rgba(70, 240, 240, 0.4)', 'rgba(240, 50, 230, 0.4)',
-      'rgba(210, 245, 60, 0.4)', 'rgba(250, 190, 190, 0.4)', 'rgba(0, 128, 128, 0.4)',
-      'rgb(148, 163, 209, 0.4)', 'rgba(170, 110, 40, 0.4)', 'rgb(141, 140, 255, 0.4)',
-      'rgba(128, 0, 0, 0.4)', 'rgba(170, 255, 195, 0.4)', 'rgba(128, 128, 0, 0.4)',
-      'rgba(255, 215, 180, 0.4)', 'rgba(0, 0, 128, 0.4)', 'rgb(241, 147, 241, 0.4)',
-      'rgba(255, 255, 255, 0.4)', 'rgb(129, 181, 255, 0.4)', 'rgb(229, 236, 202, 0.4)',
-      'rgb(157, 196, 241, 0.4)', 'rgb(253, 141, 211, 0.4)', 'rgb(180, 128, 253, 0.4)',
-      'rgb(255, 195, 129, 0.4)', 'rgb(204, 228, 230, 0.4)'];
+        'rgba(255, 225, 25, 0.4)', 'rgba(0, 130, 200, 0.4)', 'rgba(245, 130, 48, 0.4)',
+        'rgba(145, 30, 180, 0.4)', 'rgba(70, 240, 240, 0.4)', 'rgba(240, 50, 230, 0.4)',
+        'rgba(210, 245, 60, 0.4)', 'rgba(250, 190, 190, 0.4)', 'rgba(0, 128, 128, 0.4)',
+        'rgb(148, 163, 209, 0.4)', 'rgba(170, 110, 40, 0.4)', 'rgb(141, 140, 255, 0.4)',
+        'rgba(128, 0, 0, 0.4)', 'rgba(170, 255, 195, 0.4)', 'rgba(128, 128, 0, 0.4)',
+        'rgba(255, 215, 180, 0.4)', 'rgba(0, 0, 128, 0.4)', 'rgb(241, 147, 241, 0.4)',
+        'rgba(255, 255, 255, 0.4)', 'rgb(129, 181, 255, 0.4)', 'rgb(229, 236, 202, 0.4)',
+        'rgb(157, 196, 241, 0.4)', 'rgb(253, 141, 211, 0.4)', 'rgb(180, 128, 253, 0.4)',
+        'rgb(255, 195, 129, 0.4)', 'rgb(204, 228, 230, 0.4)'];
+
+    var sectionChart = {
+        canvas: undefined,
+        data: [],
+    };
+
+    let displayByCountry = document.getElementById("displayByCountry");
+    displayByCountry.onchange = function() {
+        let data_sets = [];
+        let i = 0;
+        for (const [key, value] of Object.entries(sectionChart.data[displayByCountry.value])) {
+            data_sets.push({
+                label: key,
+                data: Object.values(value),
+                fill: false,
+                backgroundColor: colors[i],
+                borderColor: colors[i],
+                pointBackgroundColor: colors[i],
+                pointBorderColor: '#fff',
+                pointHoverBackgroundColor: '#fff',
+                pointHoverBorderColor: colors[i]
+            })
+            i++;
+        }
+        sectionChart.canvas.config.data.datasets = data_sets;
+        sectionChart.canvas.update()
+    }
 
     function pieChart(data,ctx){
-        new Chart(ctx, {
+        return new Chart(ctx, {
             type: 'pie',
             data: {
                 labels: Object.keys(data),
@@ -52,11 +79,10 @@ $(document).ready(function() {
                 },
             },
         });
-        return Chart
     };
 
     function radarChart(labels,data_sets,ctx){
-        new Chart(ctx, {
+        return new Chart(ctx, {
             type: 'radar',
             data: {
                 labels: labels,
@@ -79,14 +105,13 @@ $(document).ready(function() {
                 },
             }
         });
-        return Chart
     }
 
     fetch("/stats/survey-status-count.json")
     .then(response => response.json())
     .then(result => {
         var ctx = document.getElementById("stats-count").getContext('2d');
-        pieChart(result,ctx);
+        var statusChart = pieChart(result,ctx);
     })
     .catch((error) => {
         console.error('Error:', error);
@@ -105,7 +130,7 @@ $(document).ready(function() {
     .then(response => response.json())
     .then(result => {
         var ctx = document.getElementById("stats-countries").getContext('2d');
-        pieChart(result,ctx);
+        var countryChart = pieChart(result,ctx);
     })
     .catch((error) => {
         console.error('Error:', error);
@@ -115,7 +140,7 @@ $(document).ready(function() {
     .then(response => response.json())
     .then(result => {
         var ctx = document.getElementById("stats-company").getContext('2d');
-        pieChart(result,ctx);
+        var sizeChart = pieChart(result,ctx);
     })
     .catch((error) => {
         console.error('Error:', error);
@@ -125,7 +150,7 @@ $(document).ready(function() {
     .then(response => response.json())
     .then(result => {
         var ctx = document.getElementById("stats-sector").getContext('2d');
-        pieChart(result,ctx);
+        var sectorChart = pieChart(result,ctx);
     })
     .catch((error) => {
         console.error('Error:', error);
@@ -149,7 +174,7 @@ $(document).ready(function() {
         let data_sets = [];
         let labels = [];
         let i = 0;
-        for (const [key, value] of Object.entries(result)) {
+        for (const [key, value] of Object.entries(result.all)) {
         labels = Object.keys(value);
         data_sets.push({
             label: key,
@@ -164,9 +189,9 @@ $(document).ready(function() {
         })
         i++;
         }
-
+        sectionChart.data = result;
         var ctx = document.getElementById("answers-per-section");
-        radarChart(labels,data_sets,ctx);
+        sectionChart.canvas = radarChart(labels,data_sets,ctx);
     })
     .catch((error) => {
         console.error('Error:', error);

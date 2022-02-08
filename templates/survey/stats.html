@@ -2,6 +2,7 @@
 {% load bootstrap4 %}
 {% load apptags %}
 {% load static %}
+{% load countries %}
 {% block bootstrap4_extra_head %}
 {{ block.super }}
     <script type="text/javascript" src="/static/stats/js/github_contribution.js"></script>
@@ -85,11 +86,21 @@
         </div>
         <div class="w-100 p-4"></div>
         <div class="row justify-content-center">
-            <div class="col-6 mx-auto text-center">
+            <div class="col-8 mx-auto text-center">
                 <h4>
                     {{ _('Answers by section and company size') }}
                 </h4>
                 <p><em>{{ _('data from last month.') }}</em></p>
+                <div class="col-md-auto">
+                    <label for="displayByCountry">{{ _('Country')}}</label>
+                    <select id="displayByCountry">
+                        <option value="all" selected>{{ _('All')}}</option>
+                        {% for survey_country in survey_countries %}
+                            {% get_country survey_country as country %}
+                            <option value="{{ country.code }}">{{ country.name }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
                 <canvas id="answers-per-section"></canvas>
             </div>
         </div>

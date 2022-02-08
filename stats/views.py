@@ -23,6 +23,15 @@ def index(request):
     lang = request.session.get(settings.LANGUAGE_COOKIE_NAME, LANGUAGE_CODE)
     translation.activate(lang)
     nb_finished_surveys = SurveyUser.objects.filter(status=3).count()
+    survey_countries = (
+        SurveyUserAnswer.objects.filter(
+            user__status=3,
+            answer__question__section__label="__context",
+            answer__question__label__contains="country",
+        )
+        .values_list("uvalue", flat=True)
+        .distinct()
+    )
     try:
         first_survey = SurveyUser.objects.filter(status=3).order_by("created_at")[0]
     except Exception:
@@ -32,6 +41,7 @@ def index(request):
         "nb_surveys": nb_surveys,
         "first_survey_date": getattr(first_survey, "created_at", False),
         "nb_finished_surveys": nb_finished_surveys,
+        "survey_countries": survey_countries,
         "python_version": "{}.{}.{}".format(*sys.version_info[:3]),
     }
 
@@ -181,7 +191,10 @@ def answers_per_section(request):
             if section not in generators.get(employees_number_code, {}):
                 generators[employees_number_code][section_label] = mean_gen()
                 generators[employees_number_code][section_label].send(None)
-            result[employees_number_code][section_label] = generators[
+            result["all"][employees_number_code][section_label] = generators[
+                employees_number_code
+            ][section_label].send(user_evaluations[index])
+            result[user.get_country_code()][employees_number_code][section_label] = generators[
                 employees_number_code
             ][section_label].send(user_evaluations[index])
 
