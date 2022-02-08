@@ -142,9 +142,10 @@ def survey_per_country(request):
         # 36 months ago
         date_from = datetime.now() - relativedelta(months=36)
 
-    nb_surveys = SurveyUser.objects.count()
+    nb_finished_surveys = SurveyUser.objects.filter(status=3).count()
     threshold = 0.01
-
+    
+    result: dict[str, int] = dict()
     query_gt = (
         SurveyUserAnswer.objects.alias(entries=Count("answer"))
         .filter(
@@ -152,7 +153,7 @@ def survey_per_country(request):
             user__created_at__gte=date_from,
             answer__question__section__label="__context",
             answer__question__label__contains="country",
-            entries__gt=nb_surveys * threshold,
+            entries__gt=nb_finished_surveys * threshold,
         )
         .values("uvalue")
         .annotate(count=Count("answer"))
@@ -167,7 +168,7 @@ def survey_per_country(request):
             user__created_at__gte=date_from,
             answer__question__section__label="__context",
             answer__question__label__contains="country",
-            entries__lte=nb_surveys * threshold,
+            entries__lte=nb_finished_surveys * threshold,
         )
         .count()
     )
