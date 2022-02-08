@@ -22,7 +22,7 @@ from django_countries import countries
 def index(request):
     lang = request.session.get(settings.LANGUAGE_COOKIE_NAME, LANGUAGE_CODE)
     translation.activate(lang)
-    date_from = request.GET.get('from', None)
+    date_from = request.GET.get("from", None)
     # date_to = request.GET.get('to', None)
     if not date_from:
         # 36 months ago
@@ -75,7 +75,7 @@ def survey_status_count(request):
     lang = request.session.get(settings.LANGUAGE_COOKIE_NAME, LANGUAGE_CODE)
     translation.activate(lang)
 
-    date_from = request.GET.get('from', None)
+    date_from = request.GET.get("from", None)
     # date_to = request.GET.get('to', None)
     if not date_from:
         # 36 months ago
@@ -101,7 +101,7 @@ def survey_language_count(request):
     lang = request.session.get(settings.LANGUAGE_COOKIE_NAME, LANGUAGE_CODE)
     translation.activate(lang)
 
-    date_from = request.GET.get('from', None)
+    date_from = request.GET.get("from", None)
     # date_to = request.GET.get('to', None)
     if not date_from:
         # 36 months ago
@@ -131,13 +131,13 @@ def survey_per_country(request):
     lang = request.session.get(settings.LANGUAGE_COOKIE_NAME, LANGUAGE_CODE)
     translation.activate(lang)
 
-    date_from = request.GET.get('from', None)
+    date_from = request.GET.get("from", None)
     # date_to = request.GET.get('to', None)
     if not date_from:
         # 36 months ago
         date_from = datetime.now() - relativedelta(months=36)
 
-    date_from = request.GET.get('from', None)
+    date_from = request.GET.get("from", None)
     # date_to = request.GET.get('to', None)
     if not date_from:
         # 36 months ago
@@ -167,7 +167,7 @@ def survey_per_company_size(request):
     lang = request.session.get(settings.LANGUAGE_COOKIE_NAME, LANGUAGE_CODE)
     translation.activate(lang)
 
-    date_from = request.GET.get('from', None)
+    date_from = request.GET.get("from", None)
     # date_to = request.GET.get('to', None)
     if not date_from:
         # 36 months ago
@@ -198,7 +198,7 @@ def survey_per_company_sector(request):
     lang = request.session.get(settings.LANGUAGE_COOKIE_NAME, LANGUAGE_CODE)
     translation.activate(lang)
 
-    date_from = request.GET.get('from', None)
+    date_from = request.GET.get("from", None)
     # date_to = request.GET.get('to', None)
     if not date_from:
         # 36 months ago
@@ -235,7 +235,7 @@ def answers_per_section(request):
             chart_exclude_sections + CUSTOM["chart_exclude_sections"]
         )
 
-    date_from = request.GET.get('from', None)
+    date_from = request.GET.get("from", None)
     # date_to = request.GET.get('to', None)
     if not date_from:
         # three month ago
@@ -257,9 +257,11 @@ def answers_per_section(request):
             result["all"][employees_number_code][section_label] = generators[
                 employees_number_code
             ][section_label].send(user_evaluations[index])
-            result[user.get_country_code()][employees_number_code][section_label] = generators[
-                employees_number_code
-            ][section_label].send(user_evaluations[index])
+            result[user.get_country_code()][employees_number_code][
+                section_label
+            ] = generators[employees_number_code][section_label].send(
+                user_evaluations[index]
+            )
 
     return JsonResponse(result)
 
