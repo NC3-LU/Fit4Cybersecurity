@@ -2,7 +2,6 @@
 
 import sys
 from datetime import datetime
-from operator import itemgetter
 from dateutil.relativedelta import relativedelta
 from django.conf.global_settings import LANGUAGES
 from django.db.models import Count
@@ -155,9 +154,7 @@ def survey_per_country(request):
         .order_by("count")
         .reverse()
     )
-    keys = list(map(itemgetter("uvalue"), query))
-    values = list(map(itemgetter("count"), query))
-    result = {_(dict(countries)[k]): v for k, v in zip(keys, values)}
+    result = {_(dict(countries)[q["uvalue"]]): q["count"] for q in query}
 
     return JsonResponse(result)
 
@@ -186,9 +183,7 @@ def survey_per_company_size(request):
         .order_by("count")
         .reverse()
     )
-    keys = list(map(itemgetter("answer__label"), query))
-    values = list(map(itemgetter("count"), query))
-    result = {_(k): v for k, v in zip(keys, values)}
+    result = {_(q["answer__label"]): q["count"] for q in query}
 
     return JsonResponse(result)
 
@@ -217,9 +212,7 @@ def survey_per_company_sector(request):
         .order_by("count")
         .reverse()
     )
-    keys = list(map(itemgetter("answer__label"), query))
-    values = list(map(itemgetter("count"), query))
-    result = {_(k): v for k, v in zip(keys, values)}
+    result = {_(q["answer__label"]): q["count"] for q in query}
 
     return JsonResponse(result)
 
