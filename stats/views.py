@@ -143,7 +143,7 @@ def survey_per_country(request):
         date_from = datetime.now() - relativedelta(months=36)
 
     nb_surveys = SurveyUser.objects.count()
-    threshold = 0.05
+    threshold = 0.01
 
     query_gt = (
         SurveyUserAnswer.objects.alias(entries=Count("answer"))
