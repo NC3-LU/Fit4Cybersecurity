@@ -27,7 +27,12 @@ def index(request):
     if not date_from:
         # 6 months ago
         date_from = datetime.now() - relativedelta(months=1)
+        date_from = date_from.strftime('%Y-%m-%d')
+
     nb_finished_surveys = SurveyUser.objects.filter(status=3).count()
+    nb_finished_surveys_for_period = SurveyUser.objects.filter(
+        status=3, created_at__gte=date_from
+    ).count()
     survey_countries = (
         SurveyUserAnswer.objects.filter(
             user__status=3,
@@ -48,6 +53,7 @@ def index(request):
         "nb_surveys": nb_surveys,
         "first_survey_date": getattr(first_survey, "created_at", False),
         "nb_finished_surveys": nb_finished_surveys,
+        "nb_finished_surveys_for_period" : nb_finished_surveys_for_period,
         "survey_countries": survey_countries,
         "python_version": "{}.{}.{}".format(*sys.version_info[:3]),
         "others_translation": str(_("Others")),

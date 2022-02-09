@@ -71,6 +71,9 @@
             </div>
         </div>
         <div class="w-100 p-4"></div>
+        <h4 class="text-center">{{ _('Statistics since') }} {{ date_from }}</h4>
+        <h5 class="text-center">{{ _('Total of completed surveys:') }} {{ nb_finished_surveys_for_period }}</h5>
+        <div class="w-100 p-4"></div>
         <div class="row justify-content-center">
             <div class="col-4">
                 <h4 class="text-center">
@@ -129,7 +132,6 @@
                 <h4>
                     {{ _('Answers by section and company size') }}
                 </h4>
-                <p><em>{{ _('data from') }} {{ date_from }}</em></p>
                 <div class="col-md-auto">
                     <label for="displayByCountry">{{ _('Country')}}</label>
                     <select id="displayByCountry">
