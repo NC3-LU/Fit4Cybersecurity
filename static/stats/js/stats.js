@@ -104,11 +104,15 @@ $(document).ready(function() {
                                 sum += data;
                             });
                             let percentage = (value*100 / sum).toFixed(0)+"%";
-                            if (value*100 / sum <= 1) {
-                                return null;
-                            }
+                            // if (value*100 / sum <= 1) {
+                            //     return null;
+                            // }
                             return percentage;
                         },
+                        anchor: 'end',
+                        align: 'start',
+                        offset: 5,
+                        display: 'auto',
                         color: '#000',
                     }
                 },
