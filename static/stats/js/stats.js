@@ -104,6 +104,9 @@ $(document).ready(function() {
                                 sum += data;
                             });
                             let percentage = (value*100 / sum).toFixed(0)+"%";
+                            if (value*100 / sum < 1) {
+                                return;
+                            }
                             return percentage;
                         },
                         color: '#000',
