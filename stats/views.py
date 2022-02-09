@@ -2,6 +2,7 @@
 
 import sys
 from datetime import datetime
+from typing import Any
 from dateutil.relativedelta import relativedelta
 from django.conf.global_settings import LANGUAGES
 from django.db.models import Count
@@ -142,7 +143,7 @@ def survey_per_country(request):
     ).count()
     threshold = 0.01
 
-    result: dict[str, any] = dict()
+    result: dict[str, Any] = dict()
     query_gt = (
         SurveyUserAnswer.objects.alias(entries=Count("answer"))
         .filter(
