@@ -25,8 +25,8 @@ def index(request):
     date_from = request.GET.get("from", None)
     # date_to = request.GET.get('to', None)
     if not date_from:
-        # 6 months ago
-        date_from = datetime.now() - relativedelta(months=1)
+        # 36 months ago
+        date_from = datetime.now() - relativedelta(months=36)
         date_from = date_from.strftime('%Y-%m-%d')
 
     nb_finished_surveys = SurveyUser.objects.filter(status=3).count()
@@ -261,8 +261,8 @@ def answers_per_section(request):
     date_from = request.GET.get("from", None)
     # date_to = request.GET.get('to', None)
     if not date_from:
-        # three month ago
-        date_from = datetime.now() - relativedelta(months=1)
+        # 36 month ago
+        date_from = datetime.now() - relativedelta(months=36)
         # date_to = datetime.now()
 
     users = SurveyUser.objects.filter(status=3, created_at__gte=date_from)
