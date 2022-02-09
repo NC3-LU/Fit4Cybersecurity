@@ -50,6 +50,11 @@ $(document).ready(function() {
         data: [],
     };
 
+    var countryChart = {
+        canvas: undefined,
+        data: [],
+    };
+
     let displayByCountry = document.getElementById("displayByCountry");
     displayByCountry.onchange = function() {
         let data_sets = [];
@@ -94,6 +99,25 @@ $(document).ready(function() {
             },
         });
     };
+
+    $("#stats-countries").click(
+        function(evt){
+            evt.preventDefault();
+            let $popup = $("#popup");
+            let activePoints = countryChart.canvas.getElementsAtEventForMode(evt, 'point', countryChart.canvas.options);
+            let label = countryChart.canvas.data.labels[activePoints[0].index];
+            if (label == others_translation) {
+                if (Chart.getChart("stats-countries-detail") == undefined) {
+                    let ctx = document.getElementById("stats-countries-detail").getContext('2d');
+                    let result = countryChart.data[others_translation]
+                    pieChart(result,ctx);
+                }else {
+                    Chart.getChart("stats-countries-detail").update();
+                }
+                $popup.modal("show");
+            }
+        }
+    );
 
     function radarChart(labels,data_sets,ctx){
         return new Chart(ctx, {
@@ -143,8 +167,12 @@ $(document).ready(function() {
     fetch("/stats/survey_per_country.json?from="+date_from+"&to="+date_to)
     .then(response => response.json())
     .then(result => {
+        countryChart.data = {...result};
+        if (result[others_translation]) {
+            result[others_translation] = Object.values(result[others_translation]).reduce((a, b) => a + b);
+        }
         var ctx = document.getElementById("stats-countries").getContext('2d');
-        var countryChart = pieChart(result,ctx);
+        countryChart.canvas = pieChart(result,ctx);
     })
     .catch((error) => {
         console.error('Error:', error);

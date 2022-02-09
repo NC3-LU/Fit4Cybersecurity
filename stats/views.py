@@ -49,6 +49,7 @@ def index(request):
         "nb_finished_surveys": nb_finished_surveys,
         "survey_countries": survey_countries,
         "python_version": "{}.{}.{}".format(*sys.version_info[:3]),
+        "others_translation": str(_("Others")),
     }
 
     return render(request, "survey/stats.html", context=context)
@@ -136,15 +137,11 @@ def survey_per_country(request):
         # 36 months ago
         date_from = datetime.now() - relativedelta(months=36)
 
-    date_from = request.GET.get("from", None)
-    # date_to = request.GET.get('to', None)
-    if not date_from:
-        # 36 months ago
-        date_from = datetime.now() - relativedelta(months=36)
-
-    nb_finished_surveys = SurveyUser.objects.filter(status=3).count()
+    nb_finished_surveys = SurveyUser.objects.filter(
+        status=3, created_at__gte=date_from
+    ).count()
     threshold = 0.01
-    
+
     result: dict[str, int] = dict()
     query_gt = (
         SurveyUserAnswer.objects.alias(entries=Count("answer"))
@@ -170,12 +167,17 @@ def survey_per_country(request):
             answer__question__label__contains="country",
             entries__lte=nb_finished_surveys * threshold,
         )
-        .count()
+        .values("uvalue")
+        .annotate(count=Count("answer"))
+        .order_by("count")
+        .reverse()
     )
 
     result = {_(dict(countries)[q["uvalue"]]): q["count"] for q in query_gt}
-    if query_lte > 0:
-        result[_("Others")] = query_lte
+    if query_lte:
+        result[_("Others")] = {
+            _(dict(countries)[q["uvalue"]]): q["count"] for q in query_lte
+        }
 
     return JsonResponse(result)
 
