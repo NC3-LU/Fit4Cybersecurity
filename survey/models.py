@@ -327,7 +327,9 @@ class SurveyUserQuestionSequence(models.Model):
     is_active = models.BooleanField(default=True)
 
     def __str__(self):
-        return str(self.user)
+        return str(self.question) + "_" + str(self.branch) + "_" + str(
+            self.level
+        ) + "_" + str(self.index)
 
     class Meta:
         unique_together = ("user", "question", "branch")

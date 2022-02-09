@@ -149,7 +149,7 @@ class Command(BaseCommand):
                     if "categories" in reco:
                         for reco_category in reco["categories"]:
                             reco_cat, created = SurveyQuestionServiceCategory.objects.get_or_create(
-                                label=reco_category
+                                label=reco_category["label"]
                             )
                             if created:
                                 reco_cat.save()
