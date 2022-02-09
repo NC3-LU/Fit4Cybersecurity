@@ -53,7 +53,7 @@ def index(request):
         "nb_surveys": nb_surveys,
         "first_survey_date": getattr(first_survey, "created_at", False),
         "nb_finished_surveys": nb_finished_surveys,
-        "nb_finished_surveys_for_period" : nb_finished_surveys_for_period,
+        "nb_finished_surveys_for_period": nb_finished_surveys_for_period,
         "survey_countries": survey_countries,
         "python_version": "{}.{}.{}".format(*sys.version_info[:3]),
         "others_translation": str(_("Others")),
