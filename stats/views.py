@@ -142,7 +142,7 @@ def survey_per_country(request):
     ).count()
     threshold = 0.01
 
-    result: dict[str, int] = dict()
+    result: dict[str, any] = dict()
     query_gt = (
         SurveyUserAnswer.objects.alias(entries=Count("answer"))
         .filter(
