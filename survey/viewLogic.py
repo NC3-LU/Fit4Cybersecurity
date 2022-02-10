@@ -7,7 +7,7 @@ from uuid import UUID
 from django.http import HttpRequest
 from django.utils.translation import gettext_lazy as _
 from django.utils.html import format_html, mark_safe
-from django.db import transaction, IntegrityError
+from django.db import transaction
 from django.db.models import Max, QuerySet
 from django.utils import translation
 from survey.models import (

@@ -288,7 +288,7 @@ class SurveyUser(models.Model):
     def get_sector_label(self) -> str:
         try:
             sector_question_label = SurveyQuestion.objects.get(
-                label="What is your sector?", section__label="__context"
+                label="What is your sector?", section__label=CONTEXT_SECTION_LABEL
             ).label
         except SurveyQuestion.DoesNotExist:
             return ""
