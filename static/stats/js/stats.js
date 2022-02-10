@@ -106,7 +106,11 @@ $(document).ready(function() {
                             let percentage = (value*100 / sum).toFixed(0)+"%";
                             return percentage;
                         },
-                        color: '#000',
+                        anchor: 'end',
+                        align: 'start',
+                        offset: 5,
+                        display: 'auto',
+                        color: 'rgba(0,0,0,.7)',
                     }
                 },
             },

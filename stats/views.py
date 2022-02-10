@@ -2,6 +2,7 @@
 
 import sys
 from datetime import datetime
+from typing import Any
 from dateutil.relativedelta import relativedelta
 from django.conf.global_settings import LANGUAGES
 from django.db.models import Count
@@ -24,9 +25,14 @@ def index(request):
     date_from = request.GET.get("from", None)
     # date_to = request.GET.get('to', None)
     if not date_from:
-        # 6 months ago
-        date_from = datetime.now() - relativedelta(months=1)
+        # 36 months ago
+        date_from = datetime.now() - relativedelta(months=36)
+        date_from = date_from.strftime('%Y-%m-%d')
+
     nb_finished_surveys = SurveyUser.objects.filter(status=3).count()
+    nb_finished_surveys_for_period = SurveyUser.objects.filter(
+        status=3, created_at__gte=date_from
+    ).count()
     survey_countries = (
         SurveyUserAnswer.objects.filter(
             user__status=3,
@@ -47,6 +53,7 @@ def index(request):
         "nb_surveys": nb_surveys,
         "first_survey_date": getattr(first_survey, "created_at", False),
         "nb_finished_surveys": nb_finished_surveys,
+        "nb_finished_surveys_for_period": nb_finished_surveys_for_period,
         "survey_countries": survey_countries,
         "python_version": "{}.{}.{}".format(*sys.version_info[:3]),
         "others_translation": str(_("Others")),
@@ -142,7 +149,7 @@ def survey_per_country(request):
     ).count()
     threshold = 0.01
 
-    result: dict[str, any] = dict()
+    result: dict[str, Any] = dict()
     query_gt = (
         SurveyUserAnswer.objects.alias(entries=Count("answer"))
         .filter(
@@ -254,8 +261,8 @@ def answers_per_section(request):
     date_from = request.GET.get("from", None)
     # date_to = request.GET.get('to', None)
     if not date_from:
-        # three month ago
-        date_from = datetime.now() - relativedelta(months=1)
+        # 36 month ago
+        date_from = datetime.now() - relativedelta(months=36)
         # date_to = datetime.now()
 
     users = SurveyUser.objects.filter(status=3, created_at__gte=date_from)
