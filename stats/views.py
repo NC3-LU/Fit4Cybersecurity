@@ -25,9 +25,9 @@ def index(request):
     date_from = request.GET.get("from", None)
     # date_to = request.GET.get('to', None)
     if not date_from:
-        # 36 months ago
-        date_from = datetime.now() - relativedelta(months=36)
-        date_from = date_from.strftime('%Y-%m-%d')
+        # 12 months ago
+        date_from = datetime.now() - relativedelta(months=12)
+        date_from = date_from.strftime("%Y-%m-%d")
 
     nb_finished_surveys = SurveyUser.objects.filter(status=3).count()
     nb_finished_surveys_for_period = SurveyUser.objects.filter(
@@ -85,8 +85,8 @@ def survey_status_count(request):
     date_from = request.GET.get("from", None)
     # date_to = request.GET.get('to', None)
     if not date_from:
-        # 36 months ago
-        date_from = datetime.now() - relativedelta(months=36)
+        # 12 months ago
+        date_from = datetime.now() - relativedelta(months=12)
 
     result = (
         SurveyUser.objects.filter(
@@ -111,8 +111,8 @@ def survey_language_count(request):
     date_from = request.GET.get("from", None)
     # date_to = request.GET.get('to', None)
     if not date_from:
-        # 36 months ago
-        date_from = datetime.now() - relativedelta(months=36)
+        # 12 months ago
+        date_from = datetime.now() - relativedelta(months=12)
 
     result = (
         SurveyUser.objects.filter(
@@ -141,8 +141,8 @@ def survey_per_country(request):
     date_from = request.GET.get("from", None)
     # date_to = request.GET.get('to', None)
     if not date_from:
-        # 36 months ago
-        date_from = datetime.now() - relativedelta(months=36)
+        # 12 months ago
+        date_from = datetime.now() - relativedelta(months=12)
 
     nb_finished_surveys = SurveyUser.objects.filter(
         status=3, created_at__gte=date_from
@@ -197,8 +197,8 @@ def survey_per_company_size(request):
     date_from = request.GET.get("from", None)
     # date_to = request.GET.get('to', None)
     if not date_from:
-        # 36 months ago
-        date_from = datetime.now() - relativedelta(months=36)
+        # 12 months ago
+        date_from = datetime.now() - relativedelta(months=12)
 
     result: dict[str, int] = dict()
     query = (
@@ -226,8 +226,8 @@ def survey_per_company_sector(request):
     date_from = request.GET.get("from", None)
     # date_to = request.GET.get('to', None)
     if not date_from:
-        # 36 months ago
-        date_from = datetime.now() - relativedelta(months=36)
+        # 12 months ago
+        date_from = datetime.now() - relativedelta(months=12)
 
     result: dict[str, int] = dict()
     query = (
@@ -261,8 +261,8 @@ def answers_per_section(request):
     date_from = request.GET.get("from", None)
     # date_to = request.GET.get('to', None)
     if not date_from:
-        # 36 month ago
-        date_from = datetime.now() - relativedelta(months=36)
+        # 12 month ago
+        date_from = datetime.now() - relativedelta(months=12)
         # date_to = datetime.now()
 
     users = SurveyUser.objects.filter(status=3, created_at__gte=date_from)
