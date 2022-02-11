@@ -79,7 +79,6 @@ def calculateResult(user: SurveyUser) -> Tuple[int, int, List[int], List[str]]:
     total_bonus_points = 0
     user_given_bonus_points = 0
     user_bonus_points_percent = 0
-    user_evaluations_per_section: Dict[int, int] = {}
     max_evaluations_per_section: Dict[int, int] = {}
     sections: Dict[int, str] = {}
     user_evaluations: List[int] = []
