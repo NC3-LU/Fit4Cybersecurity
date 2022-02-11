@@ -5,7 +5,7 @@ from datetime import datetime
 from typing import Any
 from dateutil.relativedelta import relativedelta
 from django.conf.global_settings import LANGUAGES
-from django.db.models import Count
+from django.db.models import Count, Sum
 from django.db.models.functions import TruncDay
 from django.shortcuts import render
 from django.http import JsonResponse
@@ -14,7 +14,7 @@ from django.utils import translation
 from django.utils.translation import gettext as _
 from csskp.settings import CUSTOM, LANGUAGE_CODE
 from survey.lib.utils import tree, mean_gen
-from survey.models import SurveyUser, SurveyUserAnswer
+from survey.models import SurveyUser, SurveyUserAnswer, SurveyQuestion
 from survey.reporthelper import calculateResult
 from django_countries import countries
 
@@ -269,8 +269,43 @@ def answers_per_section(request):
 
     result = tree()
     generators = tree()
+    max_evaluations_per_section: Dict[int, int] = {}
+
+    questions = (
+        SurveyQuestion.objects.exclude(section__label__in=chart_exclude_sections)
+        .values_list("section_id")
+        .order_by("section_id")
+        .annotate(total=Sum("maxPoints"))
+    )
+    sections = list(questions.values_list("section__label", flat=True).distinct())
+    max_evaluations_per_section = {q[0]: q[1] for q in questions}
+
     for user in users:
-        _, _, user_evaluations, sections = calculateResult(user)
+        user_evaluations: List[int] = []
+        user_answers = (
+            SurveyUserAnswer.objects.exclude(
+                answer__question__section__label__in=chart_exclude_sections
+            )
+            .filter(user=user, uvalue=1)
+            .values("answer__question__section_id")
+            .order_by("answer__question__section_id")
+            .annotate(score=Sum("answer__score"))
+        )
+
+        for answer in user_answers:
+            if max_evaluations_per_section[answer["answer__question__section_id"]] > 0:
+                user_evaluations.append(
+                    round(
+                        answer["score"]
+                        * 100
+                        / max_evaluations_per_section[
+                            answer["answer__question__section_id"]
+                        ]
+                    )
+                )
+            else:
+                user_evaluations.append(0)
+
         employees_number_code = user.get_employees_number_label()
         for index, section in enumerate(sections):
             section_label = str(section)
