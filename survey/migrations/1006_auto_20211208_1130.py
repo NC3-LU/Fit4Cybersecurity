@@ -10,16 +10,16 @@ class Migration(migrations.Migration):
     ]
     # TODO: !!! IMPORTANT !!! before the migration we must execute insertcontextanswers.
     operations = [
-        # migrations.RemoveField(
-        #     model_name="surveyuser",
-        #     name="country_code",
-        # ),
-        # migrations.RemoveField(
-        #     model_name="surveyuser",
-        #     name="e_count",
-        # ),
-        # migrations.RemoveField(
-        #     model_name="surveyuser",
-        #     name="sector",
-        # ),
+        migrations.RemoveField(
+            model_name="surveyuser",
+            name="country_code",
+        ),
+        migrations.RemoveField(
+            model_name="surveyuser",
+            name="e_count",
+        ),
+        migrations.RemoveField(
+            model_name="surveyuser",
+            name="sector",
+        ),
     ]

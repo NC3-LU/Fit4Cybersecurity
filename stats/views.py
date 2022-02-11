@@ -203,7 +203,6 @@ def survey_per_company_size(request):
     result: dict[str, int] = dict()
     query = (
         SurveyUserAnswer.objects.filter(
-            answer__question__section__label=CONTEXT_SECTION_LABEL,
             user__status=3,
             user__created_at__gte=date_from,
             answer__question__section__label=CONTEXT_SECTION_LABEL,

@@ -227,10 +227,6 @@ def finish(request):
     lang = user.chosen_lang
     translation.activate(lang)
 
-    # make survey readonly and show results.
-    # also needs saving here!
-    # show a "Thank you" and a "get your report" button
-
     txt_score, bonus_score, radar_current, sections_list = calculateResult(user)
 
     recommendations = getRecommendations(user, lang)
@@ -238,7 +234,7 @@ def finish(request):
     for rx in recommendations:
         recommendations[rx] = [x.replace("\n", "<br>") for x in recommendations[rx]]
 
-    textLayout = {
+    text_layout = {
         "title": CUSTOM["tool_name"] + " - " + _("Final summary"),
         "recommendations": recommendations,
         "user": user,
@@ -248,11 +244,11 @@ def finish(request):
         "string_score": str(txt_score),
         "bonus_score": bonus_score,
         "chartTitles": str(sections_list),
-        "chartdataYou": str(radar_current),
+        "chartData": str(radar_current),
         "general_feedback_form": handle_general_feedback(user, request),
     }
 
-    return render(request, "survey/finishedSurvey.html", context=textLayout)
+    return render(request, "survey/finishedSurvey.html", context=text_layout)
 
 
 def get_companies(request):

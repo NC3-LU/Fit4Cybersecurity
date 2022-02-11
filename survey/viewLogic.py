@@ -20,7 +20,7 @@ from survey.models import (
     SurveyUserQuestionSequence,
     SURVEY_STATUS_UNDER_REVIEW,
     SURVEY_STATUS_IN_PROGRESS,
-    CONTEXT_SECTION_LABEL
+    CONTEXT_SECTION_LABEL,
 )
 from survey.forms import AnswerMChoice, GeneralFeedback
 from csskp.settings import CUSTOM, LANGUAGES, LANGUAGE_CODE
