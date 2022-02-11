@@ -6,6 +6,7 @@ import uuid
 from django.db import models
 from csskp.settings import LANGUAGES, LANGUAGE_CODE
 from django.utils.translation import gettext_lazy as _
+from django_countries import countries
 
 # import global constants
 from survey.globals import (
@@ -210,7 +211,7 @@ class SurveyUser(models.Model):
         )
         for user_answer in user_answers:
             if user_answer.answer.question.qtype == "CL":
-                value = user_answer.uvalue
+                value = _(dict(countries)[user_answer.uvalue])
             else:
                 value = _(user_answer.answer.label)
             result[_(user_answer.answer.question.label)] = value
