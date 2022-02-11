@@ -2,7 +2,7 @@
 
 import sys
 from datetime import datetime
-from typing import Any
+from typing import Any, Dict, List
 from dateutil.relativedelta import relativedelta
 from django.conf.global_settings import LANGUAGES
 from django.db.models import Count, Sum
@@ -149,7 +149,7 @@ def survey_per_country(request):
     ).count()
     threshold = 0.01
 
-    result: dict[str, Any] = dict()
+    result: Dict[str, Any] = dict()
     query_gt = (
         SurveyUserAnswer.objects.alias(entries=Count("answer"))
         .filter(
@@ -200,7 +200,7 @@ def survey_per_company_size(request):
         # 12 months ago
         date_from = datetime.now() - relativedelta(months=12)
 
-    result: dict[str, int] = dict()
+    result: Dict[str, int] = dict()
     query = (
         SurveyUserAnswer.objects.filter(
             user__status=3,
@@ -229,7 +229,7 @@ def survey_per_company_sector(request):
         # 12 months ago
         date_from = datetime.now() - relativedelta(months=12)
 
-    result: dict[str, int] = dict()
+    result: Dict[str, int] = dict()
     query = (
         SurveyUserAnswer.objects.filter(
             user__status=3,
