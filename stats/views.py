@@ -2,10 +2,10 @@
 
 import sys
 from datetime import datetime
-from typing import Any
+from typing import Any, Dict, List
 from dateutil.relativedelta import relativedelta
 from django.conf.global_settings import LANGUAGES
-from django.db.models import Count
+from django.db.models import Count, Sum
 from django.db.models.functions import TruncDay
 from django.shortcuts import render
 from django.http import JsonResponse
@@ -14,7 +14,7 @@ from django.utils import translation
 from django.utils.translation import gettext as _
 from csskp.settings import CUSTOM, LANGUAGE_CODE
 from survey.lib.utils import tree, mean_gen
-from survey.models import SurveyUser, SurveyUserAnswer, CONTEXT_SECTION_LABEL
+from survey.models import SurveyUser, SurveyUserAnswer, SurveyQuestion, CONTEXT_SECTION_LABEL
 from survey.reporthelper import calculateResult
 from django_countries import countries
 
@@ -25,9 +25,9 @@ def index(request):
     date_from = request.GET.get("from", None)
     # date_to = request.GET.get('to', None)
     if not date_from:
-        # 36 months ago
-        date_from = datetime.now() - relativedelta(months=36)
-        date_from = date_from.strftime('%Y-%m-%d')
+        # 12 months ago
+        date_from = datetime.now() - relativedelta(months=12)
+        date_from = date_from.strftime("%Y-%m-%d")
 
     nb_finished_surveys = SurveyUser.objects.filter(status=3).count()
     nb_finished_surveys_for_period = SurveyUser.objects.filter(
@@ -85,8 +85,8 @@ def survey_status_count(request):
     date_from = request.GET.get("from", None)
     # date_to = request.GET.get('to', None)
     if not date_from:
-        # 36 months ago
-        date_from = datetime.now() - relativedelta(months=36)
+        # 12 months ago
+        date_from = datetime.now() - relativedelta(months=12)
 
     result = (
         SurveyUser.objects.filter(
@@ -111,8 +111,8 @@ def survey_language_count(request):
     date_from = request.GET.get("from", None)
     # date_to = request.GET.get('to', None)
     if not date_from:
-        # 36 months ago
-        date_from = datetime.now() - relativedelta(months=36)
+        # 12 months ago
+        date_from = datetime.now() - relativedelta(months=12)
 
     result = (
         SurveyUser.objects.filter(
@@ -141,15 +141,15 @@ def survey_per_country(request):
     date_from = request.GET.get("from", None)
     # date_to = request.GET.get('to', None)
     if not date_from:
-        # 36 months ago
-        date_from = datetime.now() - relativedelta(months=36)
+        # 12 months ago
+        date_from = datetime.now() - relativedelta(months=12)
 
     nb_finished_surveys = SurveyUser.objects.filter(
         status=3, created_at__gte=date_from
     ).count()
     threshold = 0.01
 
-    result: dict[str, Any] = dict()
+    result: Dict[str, Any] = dict()
     query_gt = (
         SurveyUserAnswer.objects.alias(entries=Count("answer"))
         .filter(
@@ -197,10 +197,10 @@ def survey_per_company_size(request):
     date_from = request.GET.get("from", None)
     # date_to = request.GET.get('to', None)
     if not date_from:
-        # 36 months ago
-        date_from = datetime.now() - relativedelta(months=36)
+        # 12 months ago
+        date_from = datetime.now() - relativedelta(months=12)
 
-    result: dict[str, int] = dict()
+    result: Dict[str, int] = dict()
     query = (
         SurveyUserAnswer.objects.filter(
             user__status=3,
@@ -226,10 +226,10 @@ def survey_per_company_sector(request):
     date_from = request.GET.get("from", None)
     # date_to = request.GET.get('to', None)
     if not date_from:
-        # 36 months ago
-        date_from = datetime.now() - relativedelta(months=36)
+        # 12 months ago
+        date_from = datetime.now() - relativedelta(months=12)
 
-    result: dict[str, int] = dict()
+    result: Dict[str, int] = dict()
     query = (
         SurveyUserAnswer.objects.filter(
             user__status=3,
@@ -261,16 +261,51 @@ def answers_per_section(request):
     date_from = request.GET.get("from", None)
     # date_to = request.GET.get('to', None)
     if not date_from:
-        # 36 month ago
-        date_from = datetime.now() - relativedelta(months=36)
+        # 12 month ago
+        date_from = datetime.now() - relativedelta(months=12)
         # date_to = datetime.now()
 
     users = SurveyUser.objects.filter(status=3, created_at__gte=date_from)
 
     result = tree()
     generators = tree()
+    max_evaluations_per_section: Dict[int, int] = {}
+
+    questions = (
+        SurveyQuestion.objects.exclude(section__label__in=chart_exclude_sections)
+        .values_list("section_id")
+        .order_by("section_id")
+        .annotate(total=Sum("maxPoints"))
+    )
+    sections = list(questions.values_list("section__label", flat=True).distinct())
+    max_evaluations_per_section = {q[0]: q[1] for q in questions}
+
     for user in users:
-        _, _, user_evaluations, sections = calculateResult(user)
+        user_evaluations: List[int] = []
+        user_answers = (
+            SurveyUserAnswer.objects.exclude(
+                answer__question__section__label__in=chart_exclude_sections
+            )
+            .filter(user=user, uvalue=1)
+            .values("answer__question__section_id")
+            .order_by("answer__question__section_id")
+            .annotate(score=Sum("answer__score"))
+        )
+
+        for answer in user_answers:
+            if max_evaluations_per_section[answer["answer__question__section_id"]] > 0:
+                user_evaluations.append(
+                    round(
+                        answer["score"]
+                        * 100
+                        / max_evaluations_per_section[
+                            answer["answer__question__section_id"]
+                        ]
+                    )
+                )
+            else:
+                user_evaluations.append(0)
+
         employees_number_code = user.get_employees_number_label()
         for index, section in enumerate(sections):
             section_label = str(section)
