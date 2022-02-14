@@ -165,6 +165,7 @@ $(document).ready(function() {
     fetch("/stats/survey-status-count.json?from="+date_from+"&to="+date_to)
     .then(response => response.json())
     .then(result => {
+        document.getElementById("spinner-stats-count").innerHTML = "";
         var ctx = document.getElementById("stats-count").getContext('2d');
         var statusChart = pieChart(result,ctx);
     })
@@ -175,6 +176,7 @@ $(document).ready(function() {
     fetch("/stats/survey-language-count.json?from="+date_from+"&to="+date_to)
     .then(response => response.json())
     .then(result => {
+        document.getElementById("spinner-stats-language").innerHTML = "";
         var ctx = document.getElementById("stats-language").getContext('2d');
         pieChart(result,ctx);
     }).catch((error) => {
@@ -188,6 +190,7 @@ $(document).ready(function() {
         if (result[others_translation]) {
             result[others_translation] = Object.values(result[others_translation]).reduce((a, b) => a + b);
         }
+        document.getElementById("spinner-stats-countries").innerHTML = "";
         var ctx = document.getElementById("stats-countries").getContext('2d');
         countryChart.canvas = pieChart(result,ctx);
     })
@@ -198,6 +201,7 @@ $(document).ready(function() {
     fetch("/stats/survey_per_company_size.json?from="+date_from+"&to="+date_to)
     .then(response => response.json())
     .then(result => {
+        document.getElementById("spinner-stats-company").innerHTML = "";
         var ctx = document.getElementById("stats-company").getContext('2d');
         var sizeChart = pieChart(result,ctx);
     })
@@ -208,6 +212,7 @@ $(document).ready(function() {
     fetch("/stats/survey_per_company_sector.json?from="+date_from+"&to="+date_to)
     .then(response => response.json())
     .then(result => {
+        document.getElementById("spinner-stats-sector").innerHTML = "";
         var ctx = document.getElementById("stats-sector").getContext('2d');
         var sectorChart = pieChart(result,ctx);
     })
@@ -218,6 +223,7 @@ $(document).ready(function() {
     fetch("/stats/activity-chart.json")
     .then(response => response.json())
     .then(result => {
+        document.getElementById("spinner-surveys-activity").innerHTML = "";
         $('#surveys-activity').github_graph({
           data: result ,
           texts: ['completed survey','completed surveys'],
@@ -237,21 +243,23 @@ $(document).ready(function() {
         let labels = [];
         let i = 0;
         for (const [key, value] of Object.entries(result.all)) {
-        labels = Object.keys(value);
-        data_sets.push({
-            label: key,
-            data: Object.values(value),
-            fill: false,
-            backgroundColor: colors[i],
-            borderColor: colors[i],
-            pointBackgroundColor: colors[i],
-            pointBorderColor: '#fff',
-            pointHoverBackgroundColor: '#fff',
-            pointHoverBorderColor: colors[i]
-        })
-        i++;
+            labels = Object.keys(value);
+            data_sets.push({
+                label: key,
+                data: Object.values(value),
+                fill: false,
+                backgroundColor: colors[i],
+                borderColor: colors[i],
+                pointBackgroundColor: colors[i],
+                pointBorderColor: '#fff',
+                pointHoverBackgroundColor: '#fff',
+                pointHoverBorderColor: colors[i]
+            })
+            i++;
         }
         sectionChart.data = result;
+        document.getElementById("spinner-answers-per-section").innerHTML = "";
+        document.getElementById("select-displayByCountry").style.display = "block";
         var ctx = document.getElementById("answers-per-section");
         sectionChart.canvas = radarChart(labels,data_sets,ctx);
     })

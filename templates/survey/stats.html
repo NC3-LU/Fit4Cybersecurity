@@ -24,7 +24,6 @@
         <script type="text/javascript" src="/static/npm_components/chartjs-plugin-datalabels/dist/chartjs-plugin-datalabels.min.js"></script>
         <script type="text/javascript" src="{% static "stats/js/stats.js" %}"></script>
         <link href="/static/stats/css/stats.css" media="all" rel="stylesheet">
-
         <div class="row">
             <div class="col">
                 <h4>{{ _('Main figures') }}</h4>
@@ -47,6 +46,11 @@
                 <h4>
                     {{ _('Activity over the past year') }}
                 </h4>
+                <div id="spinner-surveys-activity" class="row justify-content-center align-items-center">
+                    <div class="text-primary spinner-border custom-spinner m-5" role="status">
+                        <span class="sr-only">{{ _('Loading...') }}</span>
+                    </div>
+                </div>
                 <div id="surveys-activity"></div>
                 <br />
                 <div class="d-flex justify-content-end align-items-center">
@@ -79,18 +83,33 @@
                 <h4 class="text-center">
                     {{ _('Surveys company sector') }}
                 </h4>
+                <div id="spinner-stats-sector" class="row justify-content-center align-items-center">
+                    <div class="text-primary spinner-border custom-spinner m-5" role="status">
+                        <span class="sr-only">{{ _('Loading...') }}</span>
+                    </div>
+                </div>
                 <canvas id="stats-sector"></canvas>
             </div>
             <div class="col-4">
                 <h4 class="text-center">
                     {{ _('Surveys company size') }}
                 </h4>
+                <div id="spinner-stats-company" class="row justify-content-center align-items-center">
+                    <div class="text-primary spinner-border custom-spinner m-5" role="status">
+                        <span class="sr-only">{{ _('Loading...') }}</span>
+                    </div>
+                </div>
                 <canvas id="stats-company"></canvas>
             </div>
             <div class="col-4">
                 <h4 class="text-center">
                     {{ _('Surveys countries') }}
                 </h4>
+                <div id="spinner-stats-countries" class="row justify-content-center align-items-center">
+                    <div class="text-primary spinner-border custom-spinner m-5" role="status">
+                        <span class="sr-only">{{ _('Loading...') }}</span>
+                    </div>
+                </div>
                 <canvas id="stats-countries"></canvas>
                 <script>
                     var others_translation = "{{ others_translation }}"
@@ -116,12 +135,22 @@
                 <h4 class="text-center">
                     {{ _('Surveys status') }}
                 </h4>
+                <div id="spinner-stats-count" class="row justify-content-center align-items-center">
+                    <div class="text-primary spinner-border custom-spinner m-5" role="status">
+                        <span class="sr-only">{{ _('Loading...') }}</span>
+                    </div>
+                </div>
                 <canvas id="stats-count"></canvas>
             </div>
             <div class="col-4">
                 <h4 class="text-center">
                     {{ _('Surveys languages') }}
                 </h4>
+                <div id="spinner-stats-language" class="row justify-content-center align-items-center">
+                    <div class="text-primary spinner-border custom-spinner m-5" role="status">
+                        <span class="sr-only">{{ _('Loading...') }}</span>
+                    </div>
+                </div>
                 <canvas id="stats-language"></canvas>
             </div>
 
@@ -132,7 +161,12 @@
                 <h4>
                     {{ _('Answers by section and company size') }}
                 </h4>
-                <div class="col-md-auto">
+                <div id="spinner-answers-per-section" class="row justify-content-center align-items-center">
+                    <div class="text-primary spinner-border custom-spinner m-5" role="status">
+                        <span class="sr-only">{{ _('Loading...') }}</span>
+                    </div>
+                </div>
+                <div class="col-md-auto" id="select-displayByCountry" style="display:none">
                     <label for="displayByCountry">{{ _('Country')}}</label>
                     <select id="displayByCountry">
                         <option value="all" selected>{{ _('All')}}</option>
