@@ -237,7 +237,7 @@ COUNTRIES_FIRST_BREAK = "---------------------"
 
 
 # Default settings
-BOOTSTRAP4 = BOOTSTRAP4 = {
+BOOTSTRAP4 = {
     # The complete URL to the Bootstrap CSS file
     # Note that a URL can be either a string,
     # e.g. "https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css",

@@ -65,7 +65,7 @@ def getRecommendations(user: SurveyUser, lang: str) -> Dict[str, List[str]]:
                     final_report_recs[category_name] = []
                 final_report_recs[category_name].append(translated_recommendation)
 
-    return final_report_recs
+    return {key: value for key, value in sorted(final_report_recs.items())}
 
 
 def is_recommendation_already_added(recommendation: str, recommendations: dict) -> bool:

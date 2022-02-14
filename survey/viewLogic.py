@@ -281,7 +281,6 @@ def save_answers(
                 )
             ]
         case "CL":
-            selected_value = posted_answers[0]
             question_answers = [
                 current_question.surveyquestionanswer_set.all()[0]
             ]
@@ -304,6 +303,7 @@ def save_answers(
         if current_question.qtype in ["SO", "CL"]:
             user_answer.uvalue = posted_answers[0]
         else:
+            posted_answers = [int(i) for i in posted_answers]
             # for the first question we take branch from the question number.
             if (
                 does_map_exist
@@ -313,7 +313,7 @@ def save_answers(
                 # The first question defines branch(es) number(s) to proceed with.
                 current_branch = index + 1
 
-            is_answer_selected = str(question_answer.id) in posted_answers
+            is_answer_selected = question_answer.id in posted_answers
             is_answer_changed = (
                 user_answer.uvalue == "0" and is_answer_selected
             ) or (
@@ -324,11 +324,12 @@ def save_answers(
                 does_map_exist
                 and current_sequence is not None
                 and current_sequence.has_been_answered
+                and not is_answer_selected
                 and is_answer_changed
             ):
                 remove_questions_sequences(
                     user, user_answer.answer, question_index,
-                    current_branch, current_sequence, posted_answers
+                    current_sequence, posted_answers
                 )
 
             if question_answer.atype == "T":
@@ -360,7 +361,7 @@ def save_feedback(user: SurveyUser, question: SurveyQuestion, feedback: str) -> 
 
 def create_questions_sequence(
     user: SurveyUser, question_answer: SurveyQuestionAnswer,
-    current_branch: int, question_index: int, posted_answers: List[Union[int, str]]
+    current_branch: int, question_index: int, posted_answers: List[int]
 ):
     answer_questions_map = SurveyAnswerQuestionMap.objects.filter(
         answer=question_answer
@@ -429,9 +430,9 @@ def create_questions_sequence(
 
 
 def remove_questions_sequences(
-    user: SurveyUser, question_answer: SurveyQuestionAnswer, question_index: int,
-    current_branch: int, current_sequence: SurveyUserQuestionSequence,
-    posted_answers: List[Union[int, str]]
+    user: SurveyUser, question_answer: SurveyQuestionAnswer,
+    question_index: int, current_sequence: SurveyUserQuestionSequence,
+    posted_answers: List[int]
 ) -> None:
     sequences_to_remove = []
     """Validates all the sequences starting from the first index,
@@ -440,7 +441,8 @@ def remove_questions_sequences(
         user=user, index__gt=1, is_active=True
     )
     for sequence_to_validate in sequences_to_validate:
-        """Fetch the other answers to validate if they are referenced to the sequence."""
+        """Fetch the other answers to validate if they are referenced to the sequence,
+        or currently selected answers as they are not saved yet."""
         other_user_answers = SurveyUserAnswer.objects.filter(
             user=user, uvalue="1"
         ).exclude(
@@ -452,11 +454,9 @@ def remove_questions_sequences(
         ):
             sequences_to_remove.append(sequence_to_validate)
 
-    index_to_adjust_from = None
-    for sequence_to_remove in sequences_to_remove:
-        """The index is shifted, so we always use from the first removed one."""
-        if index_to_adjust_from is None:
-            index_to_adjust_from = sequence_to_remove.index
+    for num, sequence_to_remove in enumerate(sequences_to_remove):
+        """The index is shifted, so we need to subtract the iteration number."""
+        index_to_adjust_from = sequence_to_remove.index - num
         SurveyUserAnswer.objects.filter(
             user=user, answer__question=sequence_to_remove.question
         ).delete()
@@ -474,13 +474,17 @@ def remove_questions_sequences(
 
 def is_question_referenced_to_user_answers(
     user: SurveyUser, user_answers: QuerySet, current_question: SurveyQuestion,
-    question: SurveyQuestion, posted_answers: List[Union[int, str]], question_index: int
+    question: SurveyQuestion, posted_answers: List[int], question_index: int
 ) -> bool:
     list_of_available_branches = get_list_of_available_branches(
         user, posted_answers, question_index, question
     )
-    for user_answer in user_answers:
-        answer = user_answer.answer
+    """We need to take into account the currently modifying question's answers."""
+    answers = (
+        [user_answer.answer for user_answer in user_answers]
+        + list(SurveyQuestionAnswer.objects.filter(id__in=posted_answers))
+    )
+    for answer in answers:
         answer_questions_map = SurveyAnswerQuestionMap.objects.filter(
             answer=answer, question=question
         )
@@ -489,7 +493,7 @@ def is_question_referenced_to_user_answers(
             if (
                 current_question.id == answer.question.id
                 and answer_question_map.answer.question.id == answer.question.id
-                and str(answer.id) not in posted_answers
+                and answer.id not in posted_answers
             ):
                 continue
 
@@ -772,35 +776,35 @@ def get_related_inactive_instances(
 
 def get_list_of_available_branches(
     user: SurveyUser,
-    posted_answers: List[Union[int, str]],
+    posted_answers: List[int],
     question_index: int,
     exclude_question: Optional[SurveyQuestion] = None
 ) -> List[SurveyUserQuestionSequence]:
+    query = SurveyUserQuestionSequence.objects.filter(
+        user=user, is_active=True
+    ).exclude(branch=0)
     if exclude_question:
-        query = SurveyUserQuestionSequence.objects.filter(
-            user=user, is_active=True
-        ).exclude(question=exclude_question).exclude(branch=0)
-    else:
-        query = SurveyUserQuestionSequence.objects.filter(
-            user=user, is_active=True
-        ).exclude(branch=0)
+        query = query.exclude(question=exclude_question)
 
     available_branches = list(query.values('branch').distinct().values_list('branch', flat=True))
+
     """The 1st question's answers are the branches definitions."""
     first_question = SurveyQuestion.objects.get(qindex=1)
+    """if we modify the 1st question the posted answers has to be used as they are not saved yet."""
+    if question_index == 1:
+        first_question_selected_answers = posted_answers
+    else:
+        survey_user_answers = SurveyUserAnswer.objects.filter(
+            user=user, answer__question=first_question, uvalue="1"
+        )
+        first_question_selected_answers = [ua.answer.id for ua in survey_user_answers]
     for index, answer in enumerate(SurveyQuestionAnswer.objects.filter(
         question=first_question
     ).order_by(first_question.answers_order)):
-        """If the branch is already presented in the list or
-        if we modify the 1st question and the answer is not in the posted_answers,
-        then it will not be added."""
         branch = index + 1
-        if branch in available_branches or (
-            question_index == 1 and str(answer.id) not in posted_answers
-        ):
-            continue
-
-        available_branches.append(branch)
+        """Compare first questions answers and add the branch respectful their order."""
+        if branch not in available_branches and answer.id in first_question_selected_answers:
+            available_branches.append(branch)
 
     return available_branches
 
