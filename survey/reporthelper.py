@@ -87,9 +87,14 @@ def calculateResult(user: SurveyUser) -> Tuple[int, int, List[int], List[str]]:
             chart_exclude_sections + CUSTOM["chart_exclude_sections"]
         )
 
-    # TODO: go through the sequence instead.
+    """Only answered questions are used for the results calculation."""
+    answered_questions_ids = [
+        q.question.id for q in SurveyUserQuestionSequence.objects.filter(user=user, is_active=True)
+    ]
     questions = (
-        SurveyQuestion.objects.exclude(section__label__in=chart_exclude_sections)
+        SurveyQuestion.objects
+        .filter(id__in=answered_questions_ids)
+        .exclude(section__label__in=chart_exclude_sections)
         .values_list("section_id")
         .order_by("section_id")
         .annotate(total=Sum("maxPoints"))
