@@ -50,16 +50,22 @@ $(document).ready(function() {
         data: [],
     };
 
+    var categoryChart = {
+        canvas: undefined,
+        data: [],
+    };
+
     var countryChart = {
         canvas: undefined,
         data: [],
     };
 
-    let displayByCountry = document.getElementById("displayByCountry");
-    displayByCountry.onchange = function() {
+    let section_displayByCountry = document.getElementById("section_displayByCountry");
+    let category_displayByCountry = document.getElementById("category_displayByCountry");
+    section_displayByCountry.onchange = function() {
         let data_sets = [];
         let i = 0;
-        for (const [key, value] of Object.entries(sectionChart.data[displayByCountry.value])) {
+        for (const [key, value] of Object.entries(sectionChart.data[section_displayByCountry.value])) {
             data_sets.push({
                 label: key,
                 data: Object.values(value),
@@ -76,6 +82,28 @@ $(document).ready(function() {
         sectionChart.canvas.config.data.datasets = data_sets;
         sectionChart.canvas.update()
     }
+
+    category_displayByCountry.onchange = function() {
+        let data_sets = [];
+        let i = 0;
+        for (const [key, value] of Object.entries(categoryChart.data[category_displayByCountry.value])) {
+            data_sets.push({
+                label: key,
+                data: Object.values(value),
+                fill: false,
+                backgroundColor: colors[i],
+                borderColor: colors[i],
+                pointBackgroundColor: colors[i],
+                pointBorderColor: '#fff',
+                pointHoverBackgroundColor: '#fff',
+                pointHoverBorderColor: colors[i]
+            })
+            i++;
+        }
+        categoryChart.canvas.config.data.datasets = data_sets;
+        categoryChart.canvas.update()
+    }
+
 
     function pieChart(data,ctx){
         return new Chart(ctx, {
@@ -259,9 +287,40 @@ $(document).ready(function() {
         }
         sectionChart.data = result;
         document.getElementById("spinner-answers-per-section").innerHTML = "";
-        document.getElementById("select-displayByCountry").style.display = "block";
+        document.getElementById("select-section-displayByCountry").style.display = "block";
         var ctx = document.getElementById("answers-per-section");
         sectionChart.canvas = radarChart(labels,data_sets,ctx);
+    })
+    .catch((error) => {
+        console.error('Error:', error);
+    });
+
+    fetch("/stats/answers-per-category.json?from="+date_from+"&to="+date_to)
+    .then(response => response.json())
+    .then(result => {
+        let data_sets = [];
+        let labels = [];
+        let i = 0;
+        for (const [key, value] of Object.entries(result.all)) {
+            labels = Object.keys(value);
+            data_sets.push({
+                label: key,
+                data: Object.values(value),
+                fill: false,
+                backgroundColor: colors[i],
+                borderColor: colors[i],
+                pointBackgroundColor: colors[i],
+                pointBorderColor: '#fff',
+                pointHoverBackgroundColor: '#fff',
+                pointHoverBorderColor: colors[i]
+            })
+            i++;
+        }
+        categoryChart.data = result;
+        document.getElementById("spinner-answers-per-category").innerHTML = "";
+        document.getElementById("select-category-displayByCountry").style.display = "block";
+        var ctx = document.getElementById("answers-per-category");
+        categoryChart.canvas = radarChart(labels,data_sets,ctx);
     })
     .catch((error) => {
         console.error('Error:', error);

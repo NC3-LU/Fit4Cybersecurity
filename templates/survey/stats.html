@@ -166,9 +166,9 @@
                         <span class="sr-only">{{ _('Loading...') }}</span>
                     </div>
                 </div>
-                <div class="col-md-auto" id="select-displayByCountry" style="display:none">
-                    <label for="displayByCountry">{{ _('Country')}}</label>
-                    <select id="displayByCountry">
+                <div class="col-md-auto" id="select-section-displayByCountry" style="display:none">
+                    <label for="section_displayByCountry">{{ _('Country')}}</label>
+                    <select id="section_displayByCountry">
                         <option value="all" selected>{{ _('All')}}</option>
                         {% for survey_country in survey_countries %}
                             {% get_country survey_country as country %}
@@ -177,6 +177,30 @@
                     </select>
                 </div>
                 <canvas id="answers-per-section"></canvas>
+            </div>
+        </div>
+        <div class="w-100 p-4"></div>
+        <div class="row justify-content-center">
+            <div class="col-8 mx-auto text-center">
+                <h4>
+                    {{ _('Answers by category and company size') }}
+                </h4>
+                <div id="spinner-answers-per-category" class="row justify-content-center align-items-center">
+                    <div class="text-primary spinner-border custom-spinner m-5" role="status">
+                        <span class="sr-only">{{ _('Loading...') }}</span>
+                    </div>
+                </div>
+                <div class="col-md-auto" id="select-category-displayByCountry" style="display:none">
+                    <label for="category_displayByCountry">{{ _('Country')}}</label>
+                    <select id="category_displayByCountry">
+                        <option value="all" selected>{{ _('All')}}</option>
+                        {% for survey_country in survey_countries %}
+                            {% get_country survey_country as country %}
+                            <option value="{{ country.code }}">{{ country.name }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <canvas id="answers-per-category"></canvas>
             </div>
         </div>
         <div class="w-100 p-4"></div>
