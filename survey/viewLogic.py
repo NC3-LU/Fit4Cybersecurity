@@ -221,7 +221,11 @@ def handle_question_answers_request(
     form.set_free_text_answer_id(free_text_answer_id)
 
     return {
-        "title": CUSTOM["tool_name"] + " - " + _("Question") + " " + str(current_question.qindex),
+        "title": CUSTOM["tool_name"]
+        + " - "
+        + _("Question")
+        + " "
+        + str(current_question.qindex),
         "question": _(current_question.label),
         "question_tooltip": _(current_question.tooltip),
         "form": form,
@@ -244,15 +248,12 @@ def save_answers(
             selected_value = posted_answers[0]
             question_answers = [
                 current_question.surveyquestionanswer_set.get(
-                    is_active=True,
-                    value=selected_value
+                    is_active=True, value=selected_value
                 )
             ]
         case "CL":
             selected_value = posted_answers[0]
-            question_answers = [
-                current_question.surveyquestionanswer_set.all()[0]
-            ]
+            question_answers = [current_question.surveyquestionanswer_set.all()[0]]
         case _:
             question_answers = current_question.surveyquestionanswer_set.filter(
                 is_active=True
@@ -290,9 +291,7 @@ def find_user_by_id(user_id: UUID) -> SurveyUser:
         raise e
 
 
-def get_answer_choices(
-    question: SurveyQuestion, lang: str
-) -> List[Tuple[int, str]]:
+def get_answer_choices(question: SurveyQuestion, lang: str) -> List[Tuple[int, str]]:
     tuple_answers = []
     translation.activate(lang)
 
