@@ -60,7 +60,7 @@ def index(request):
         ),
         (
             _("Last quarter"),
-            (datetime.now() - relativedelta(months=3)).strftime("%Y-%m-%d"),
+            (datetime.now() - relativedelta(months=4)).strftime("%Y-%m-%d"),
         ),
         (
             _("Last year"),
