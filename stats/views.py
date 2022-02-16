@@ -24,10 +24,10 @@ def index(request):
     translation.activate(lang)
     date_from = request.GET.get("from", None)
     # date_to = request.GET.get('to', None)
+    now = datetime.now()
     if not date_from:
         # 12 months ago
-        date_from = datetime.now() - relativedelta(months=12)
-        date_from = date_from.strftime("%Y-%m-%d")
+        date_from = (now - relativedelta(months=12)).strftime("%Y-%m-%d")
 
     nb_finished_surveys = SurveyUser.objects.filter(status=3).count()
     nb_finished_surveys_for_period = SurveyUser.objects.filter(
@@ -52,19 +52,19 @@ def index(request):
     time_frames = (
         (
             _("Last week"),
-            (datetime.now() - relativedelta(weeks=1)).strftime("%Y-%m-%d"),
+            (now - relativedelta(weeks=1)).strftime("%Y-%m-%d"),
         ),
         (
             _("Last month"),
-            (datetime.now() - relativedelta(months=1)).strftime("%Y-%m-%d"),
+            (now - relativedelta(months=1)).strftime("%Y-%m-%d"),
         ),
         (
             _("Last quarter"),
-            (datetime.now() - relativedelta(months=4)).strftime("%Y-%m-%d"),
+            (now - relativedelta(months=4)).strftime("%Y-%m-%d"),
         ),
         (
             _("Last year"),
-            (datetime.now() - relativedelta(months=12)).strftime("%Y-%m-%d"),
+            (now - relativedelta(months=12)).strftime("%Y-%m-%d"),
         ),
     )
 
