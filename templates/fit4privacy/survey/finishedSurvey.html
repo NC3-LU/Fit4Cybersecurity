@@ -1,0 +1,16 @@
+{% extends 'survey/finishedSurvey.html' %}
+{% load i18n %}
+
+{% block finished_survey_description %}
+<p>
+{% blocktranslate trimmed %}
+    This is the list of recommendations to improve the maturity of your company
+    in the field of privacy and data protection, provided that your answers correctly
+    reflected the state of practice in your company. Also keep in mind that it is a
+    self-assessment and only scratches the surface of the privacy and data protection
+    maturity level and thus, we are not liable for the results of this survey. Also
+    remember that GDPR is about accountability: your company is expected to put measures
+    in place to be able to demonstrate it is respecting GDPR, and that these measures are effective.
+{% endblocktranslate %}
+</p>
+{% endblock %}

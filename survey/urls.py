@@ -16,4 +16,5 @@ urlpatterns = [
     path("feedback", views.save_general_feedback),
     path("companies", views.get_companies),
     path("api/", include("survey.api.urls")),
+    path('__debug__/', include('debug_toolbar.urls')),
 ]

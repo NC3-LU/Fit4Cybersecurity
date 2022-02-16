@@ -38,6 +38,7 @@ LOCAL_DEFAULT_LANG = LANGUAGE_CODE
 SURVEY_STATUS_IN_PROGRESS = 1
 SURVEY_STATUS_UNDER_REVIEW = 2
 SURVEY_STATUS_FINISHED = 3
+CONTEXT_SECTION_LABEL = '__context'
 
 
 class RightMixin:
@@ -137,6 +138,9 @@ class SurveyQuestion(models.Model, RightMixin):
     def __str__(self):
         return self.label
 
+    def is_context(self) -> bool:
+        return self.section.label == CONTEXT_SECTION_LABEL
+
 
 class SurveyQuestionAnswer(models.Model, RightMixin):
     # Answer id --> translation in other table
@@ -178,17 +182,42 @@ class SurveyQuestionAnswer(models.Model, RightMixin):
         unique_together = ("aindex", "question")
 
 
+class SurveyAnswerQuestionMap(models.Model):
+    # Used to define answers -> questions sequences.
+    # For ex. answer ID 1 can be linked with multiple questions (IDs: 2, 3, 4)
+    #  with specific order (1, 2, 3). That means, if user selected answer ID 1
+    # it leads him/her to the sequence of linked questions (IDs 2, 3, 4)
+    # In case if sub answers has defined sequence (e.g. question ID 3 has an answer 10,
+    # which is linked to question ID 7), then sub question (ID 7) will be displayed before
+    #  the rest of the questions in that sequence (before ID 4).
+
+    answer = models.ForeignKey(SurveyQuestionAnswer, on_delete=models.CASCADE)
+    question = models.ForeignKey(
+        SurveyQuestion,
+        on_delete=models.CASCADE,
+    )
+    branch = models.SmallIntegerField(null=False, default=0)
+    level = models.SmallIntegerField(null=False, default=1)
+    order = models.IntegerField()
+
+    class Meta:
+        unique_together = ("answer", "question", "branch")
+
+    def __str__(self):
+        return str(self.answer) + '_' + str(self.question)
+
+
 class SurveyUser(models.Model):
     # user ID - Hash or UUID
     # Sector
     # OtherSector Description
     # number of employees
 
-    user_id = models.UUIDField(default=uuid.uuid4)
+    user_id = models.UUIDField(default=uuid.uuid4, unique=True)
     chosen_lang = models.CharField(
         max_length=2, choices=LANGUAGES, default=LOCAL_DEFAULT_LANG
     )
-    current_qindex = models.IntegerField(default=0)
+    current_question = models.ForeignKey(SurveyQuestion, on_delete=models.CASCADE)
     status = models.SmallIntegerField(default=SURVEY_STATUS_IN_PROGRESS)
     created_at = models.DateField(auto_now_add=True, blank=True)
     updated_at = models.DateField(auto_now=True, blank=True)
@@ -196,19 +225,19 @@ class SurveyUser(models.Model):
     def __str__(self):
         return str(self.user_id)
 
-    def is_survey_in_progress(self):
+    def is_survey_in_progress(self) -> bool:
         return self.status == SURVEY_STATUS_IN_PROGRESS
 
-    def is_survey_under_review(self):
+    def is_survey_under_review(self) -> bool:
         return self.status == SURVEY_STATUS_UNDER_REVIEW
 
-    def is_survey_finished(self):
+    def is_survey_finished(self) -> bool:
         return self.status == SURVEY_STATUS_FINISHED
 
     def get_all_context_answers(self) -> Dict[str, Any]:
         result = {}
         user_answers = self.surveyuseranswer_set.filter(
-            answer__question__section__label="__context"
+            answer__question__section__label=CONTEXT_SECTION_LABEL
         )
         for user_answer in user_answers:
             if user_answer.answer.question.qtype == "CL":
@@ -224,7 +253,7 @@ class SurveyUser(models.Model):
     ) -> Optional[SurveyUserAnswer]:
         try:
             return self.surveyuseranswer_set.get(
-                answer__question__section__label="__context",
+                answer__question__section__label=CONTEXT_SECTION_LABEL,
                 answer__question__label=question_label,
             )
         except SurveyUserAnswer.DoesNotExist:
@@ -233,7 +262,7 @@ class SurveyUser(models.Model):
     def get_employees_number_code(self) -> str:
         try:
             number_employees_question_label = SurveyQuestion.objects.get(
-                label="How many employees?", section__label="__context"
+                label="How many employees?", section__label=CONTEXT_SECTION_LABEL
             ).label
         except SurveyQuestion.DoesNotExist:
             return ""
@@ -247,7 +276,7 @@ class SurveyUser(models.Model):
     def get_employees_number_label(self) -> str:
         try:
             number_employees_question_label = SurveyQuestion.objects.get(
-                label="How many employees?", section__label="__context"
+                label="How many employees?", section__label=CONTEXT_SECTION_LABEL
             ).label
         except SurveyQuestion.DoesNotExist:
             return ""
@@ -261,7 +290,7 @@ class SurveyUser(models.Model):
     def get_sector_label(self) -> str:
         try:
             sector_question_label = SurveyQuestion.objects.get(
-                label="What is your sector?", section__label="__context"
+                label="What is your sector?", section__label=CONTEXT_SECTION_LABEL
             ).label
         except SurveyQuestion.DoesNotExist:
             return ""
@@ -273,7 +302,7 @@ class SurveyUser(models.Model):
     def get_country_code(self) -> str:
         try:
             country_question_label = SurveyQuestion.objects.get(
-                label__contains="your country", section__label="__context"
+                label__contains="your country", section__label=CONTEXT_SECTION_LABEL
             ).label
         except SurveyUser.DoesNotExist:
             return ""
@@ -360,6 +389,27 @@ class SurveyUser(models.Model):
         return user_evaluations
 
 
+class SurveyUserQuestionSequence(models.Model):
+    user = models.ForeignKey(SurveyUser, on_delete=models.CASCADE)
+    question = models.ForeignKey(
+        SurveyQuestion,
+        on_delete=models.CASCADE,
+    )
+    branch = models.SmallIntegerField(null=False, default=0)
+    level = models.SmallIntegerField(null=False, default=1)
+    index = models.IntegerField(default=1)
+    has_been_answered = models.BooleanField(default=False)
+    is_active = models.BooleanField(default=True)
+
+    def __str__(self):
+        return str(self.question) + "_" + str(self.branch) + "_" + str(
+            self.level
+        ) + "_" + str(self.index)
+
+    class Meta:
+        unique_together = ("user", "question", "branch")
+
+
 class SurveyUserAnswer(models.Model):
     # AnswerID
     # AnswerListID
@@ -390,6 +440,7 @@ class Recommendations(models.Model, RightMixin):
     sector = models.CharField(max_length=4, null=True, blank=True, default=None)
     forAnswer = models.ForeignKey(SurveyQuestionAnswer, on_delete=models.CASCADE)
     answerChosen = models.BooleanField(default=False)
+    categories = models.ManyToManyField(SurveyQuestionServiceCategory, blank=True)
 
     @staticmethod
     def _fields_base_read():

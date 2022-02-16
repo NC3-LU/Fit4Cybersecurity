@@ -1,0 +1,16 @@
+{% load i18n %}
+
+<div class="modal fade" tabindex="-1" role="dialog" id="modal-answer-changing-warning" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog answer-changing-warning" role="document">
+        <div class="modal-header">
+            <h6>{% blocktranslate %}Change of previously selected answer(s) can lead to additional questions or loosing of your answer(s). Would you like to proceed?{% endblocktranslate %}</h6>
+        </div>
+        <div class="modal-content">
+            <div class="content">
+                <button class="btn btn-primary btn-lg" id="submit-form">{{ _('Yes') }}</button>
+                <span class="p-3"></span>
+                <button class="btn btn-primary btn-lg" data-dismiss="modal">{{ _('No') }}</button>
+            </div>
+        </div>
+    </div>
+</div>
