@@ -48,6 +48,26 @@ def index(request):
     except Exception:
         first_survey = ""
     nb_surveys = SurveyUser.objects.count()
+
+    time_frames = (
+        (
+            _("Last week"),
+            (datetime.now() - relativedelta(weeks=1)).strftime("%Y-%m-%d"),
+        ),
+        (
+            _("Last month"),
+            (datetime.now() - relativedelta(months=1)).strftime("%Y-%m-%d"),
+        ),
+        (
+            _("Last quarter"),
+            (datetime.now() - relativedelta(months=3)).strftime("%Y-%m-%d"),
+        ),
+        (
+            _("Last year"),
+            (datetime.now() - relativedelta(months=12)).strftime("%Y-%m-%d"),
+        ),
+    )
+
     context = {
         "date_from": date_from,
         "nb_surveys": nb_surveys,
@@ -57,6 +77,7 @@ def index(request):
         "survey_countries": survey_countries,
         "python_version": "{}.{}.{}".format(*sys.version_info[:3]),
         "others_translation": str(_("Others")),
+        "time_frames": time_frames,
     }
 
     return render(request, "survey/stats.html", context=context)
@@ -331,11 +352,15 @@ def answers_per_category(request):
         .order_by("service_category_id")
         .annotate(total=Sum("maxPoints"))
     )
-    categories = list(questions.values_list("service_category__label", flat=True).distinct())
+    categories = list(
+        questions.values_list("service_category__label", flat=True).distinct()
+    )
     max_evaluations_per_category = {q[0]: q[1] for q in questions}
 
     for user in users:
-        user_evaluations = user.get_evaluations_by_category(max_evaluations_per_category)
+        user_evaluations = user.get_evaluations_by_category(
+            max_evaluations_per_category
+        )
         employees_number_code = user.get_employees_number_label()
         for index, category in enumerate(categories):
             category_label = str(_(category))
