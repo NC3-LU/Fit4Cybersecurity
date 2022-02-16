@@ -266,9 +266,7 @@ class SurveyUser(models.Model):
         except SurveyQuestion.DoesNotExist:
             return ""
 
-        user_answer = self.__get_context_answer_by_question_label(
-            sector_question_label
-        )
+        user_answer = self.__get_context_answer_by_question_label(sector_question_label)
 
         return user_answer.answer.label if user_answer is not None else ""
 
@@ -341,7 +339,12 @@ class SurveyUser(models.Model):
         )
 
         for answer in user_answers:
-            if max_evaluations_per_category[answer["answer__question__service_category_id"]] > 0:
+            if (
+                max_evaluations_per_category[
+                    answer["answer__question__service_category_id"]
+                ]
+                > 0
+            ):
                 user_evaluations.append(
                     round(
                         answer["score"]
