@@ -24,6 +24,11 @@ urlpatterns = [
         name="answers_per_section",
     ),
     path(
+        "answers-per-category.json",
+        views.answers_per_category,
+        name="answers_per_category",
+    ),
+    path(
         "survey_per_country.json",
         views.survey_per_country,
         name="survey_per_country",

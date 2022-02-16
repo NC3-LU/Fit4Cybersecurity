@@ -42,7 +42,7 @@
         </div>
         <div class="w-100 p-4"></div>
         <div class="row justify-content-center">
-            <div class="mx-auto text-center">
+            <div class="col mx-auto text-center">
                 <h4>
                     {{ _('Activity over the past year') }}
                 </h4>
@@ -52,25 +52,47 @@
                     </div>
                 </div>
                 <div id="surveys-activity"></div>
-                <br />
-                <div class="d-flex justify-content-end align-items-center">
-                  Less&nbsp;
-                  <svg width="10" height="10" class="d-inline-block">
-                    <rect width="10" height="10" class="ContributionCalendar-day" rx="2" ry="2" data-level="1" style="fill:#eeeeee;stroke-width:3;stroke:#eeeeee"></rect>
-                  </svg>&nbsp;
-                  <svg width="10" height="10" class="d-inline-block">
-                    <rect width="10" height="10" class="ContributionCalendar-day" rx="2" ry="2" data-level="0" style="fill:#d6e685;stroke-width:3;stroke:#d6e685"></rect>
-                  </svg>&nbsp;
-                  <svg width="10" height="10" class="d-inline-block">
-                    <rect width="10" height="10" class="ContributionCalendar-day" rx="2" ry="2" data-level="2" style="fill:#8cc665;stroke-width:3;stroke:#8cc665"></rect>
-                  </svg>&nbsp;
-                  <svg width="10" height="10" class="d-inline-block">
-                    <rect width="10" height="10" class="ContributionCalendar-day" rx="2" ry="2" data-level="3" style="fill:#44a340;stroke-width:3;stroke:#44a340"></rect>
-                  </svg>&nbsp;
-                  <svg width="10" height="10" class="d-inline-block">
-                    <rect width="10" height="10" class="ContributionCalendar-day" rx="2" ry="2" data-level="4" style="fill:#44a340;stroke-width:3;stroke:#44a340"></rect>
-                  </svg>&nbsp;
-                  More
+              </div>
+        </div>
+        <div class="w-100 p-2"></div>
+        <div class="row">
+          <div class="col mx-auto text-center">
+            <p>{{ _('Click on a date to load stats since this day or use the list below.') }}</p>
+          </div>
+        </div>
+        <div class="row justify-content-center align-items-center">
+                <div class="col-2">
+                    Less&nbsp;
+                    <svg width="10" height="10" class="d-inline-block">
+                      <rect width="10" height="10" class="ContributionCalendar-day" rx="2" ry="2" data-level="1" style="fill:#eeeeee;stroke-width:3;stroke:#eeeeee"></rect>
+                    </svg>
+                    <svg width="10" height="10" class="d-inline-block">
+                      <rect width="10" height="10" class="ContributionCalendar-day" rx="2" ry="2" data-level="0" style="fill:#d6e685;stroke-width:3;stroke:#d6e685"></rect>
+                    </svg>
+                    <svg width="10" height="10" class="d-inline-block">
+                      <rect width="10" height="10" class="ContributionCalendar-day" rx="2" ry="2" data-level="2" style="fill:#8cc665;stroke-width:3;stroke:#8cc665"></rect>
+                    </svg>
+                    <svg width="10" height="10" class="d-inline-block">
+                      <rect width="10" height="10" class="ContributionCalendar-day" rx="2" ry="2" data-level="3" style="fill:#44a340;stroke-width:3;stroke:#44a340"></rect>
+                    </svg>
+                    <svg width="10" height="10" class="d-inline-block">
+                      <rect width="10" height="10" class="ContributionCalendar-day" rx="2" ry="2" data-level="4" style="fill:#598759;stroke-width:3;stroke:#598759"></rect>
+                    </svg>
+                    More
+                </div>
+                <div class="col-3">
+                  <label for="section_displayTimeFrame">{{ _('Time frame')}}</label>
+                  <select id="section_displayTimeFrame">
+                    <option value=""></option>
+                    {% for time_frame in time_frames %}
+                      <option value="{{ time_frame.1 }}">{{ time_frame.0 }}</option>
+                    {% endfor %}
+                  </select>
+                </div>
+                <div class="col-2">
+                <a class="btn border border-rounded" type="button"  href="{% url 'stats' %}">
+                  {{ _('Reset filters') }}
+                </a>
                 </div>
             </div>
         </div>
@@ -166,9 +188,9 @@
                         <span class="sr-only">{{ _('Loading...') }}</span>
                     </div>
                 </div>
-                <div class="col-md-auto" id="select-displayByCountry" style="display:none">
-                    <label for="displayByCountry">{{ _('Country')}}</label>
-                    <select id="displayByCountry">
+                <div class="col-md-auto" id="select-section-displayByCountry" style="display:none">
+                    <label for="section_displayByCountry">{{ _('Country')}}</label>
+                    <select id="section_displayByCountry">
                         <option value="all" selected>{{ _('All')}}</option>
                         {% for survey_country in survey_countries %}
                             {% get_country survey_country as country %}
@@ -177,6 +199,30 @@
                     </select>
                 </div>
                 <canvas id="answers-per-section"></canvas>
+            </div>
+        </div>
+        <div class="w-100 p-4"></div>
+        <div class="row justify-content-center">
+            <div class="col-8 mx-auto text-center">
+                <h4>
+                    {{ _('Answers by category and company size') }}
+                </h4>
+                <div id="spinner-answers-per-category" class="row justify-content-center align-items-center">
+                    <div class="text-primary spinner-border custom-spinner m-5" role="status">
+                        <span class="sr-only">{{ _('Loading...') }}</span>
+                    </div>
+                </div>
+                <div class="col-md-auto" id="select-category-displayByCountry" style="display:none">
+                    <label for="category_displayByCountry">{{ _('Country')}}</label>
+                    <select id="category_displayByCountry">
+                        <option value="all" selected>{{ _('All')}}</option>
+                        {% for survey_country in survey_countries %}
+                            {% get_country survey_country as country %}
+                            <option value="{{ country.code }}">{{ country.name }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <canvas id="answers-per-category"></canvas>
             </div>
         </div>
         <div class="w-100 p-4"></div>

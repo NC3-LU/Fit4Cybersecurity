@@ -119,28 +119,7 @@ def calculateResult(user: SurveyUser) -> Tuple[int, int, List[int], List[str]]:
         total=Sum("answer__score")
     )["total"]
 
-    user_answers_excluded = user_answers.exclude(
-        answer__question__section__label__in=chart_exclude_sections
-    ).filter(uvalue=1)
-
-    user_answers_by_section = (
-        user_answers_excluded.values("answer__question__section_id")
-        .order_by("answer__question__section_id")
-        .annotate(score=Sum("answer__score"))
-    )
-    for answer in user_answers_by_section:
-        if max_evaluations_per_section[answer["answer__question__section_id"]] > 0:
-            user_evaluations.append(
-                round(
-                    answer["score"]
-                    * 100
-                    / max_evaluations_per_section[
-                        answer["answer__question__section_id"]
-                    ]
-                )
-            )
-        else:
-            user_evaluations.append(0)
+    user_evaluations = user.get_evaluations_by_section(max_evaluations_per_section)
 
     # Get the score in percent, with then 100 being total_questions_score.
     if total_user_score > 0:

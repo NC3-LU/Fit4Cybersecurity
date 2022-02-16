@@ -1,10 +1,11 @@
 # -*- coding: utf-8 -*-
 
 from __future__ import annotations
-from typing import Optional, Dict, Any
+from typing import Optional, Dict, List, Any
 import uuid
 from django.db import models
-from csskp.settings import LANGUAGES, LANGUAGE_CODE
+from django.db.models import Sum
+from csskp.settings import LANGUAGES, LANGUAGE_CODE, CUSTOM
 from django.utils.translation import gettext_lazy as _
 from django_countries import countries
 
@@ -294,9 +295,7 @@ class SurveyUser(models.Model):
         except SurveyQuestion.DoesNotExist:
             return ""
 
-        user_answer = self.__get_context_answer_by_question_label(
-            sector_question_label
-        )
+        user_answer = self.__get_context_answer_by_question_label(sector_question_label)
 
         return user_answer.answer.label if user_answer is not None else ""
 
@@ -313,6 +312,81 @@ class SurveyUser(models.Model):
         )
 
         return user_answer.uvalue if user_answer is not None else ""
+
+    def get_evaluations_by_section(self, max_evaluations_per_section) -> List[int]:
+        user_evaluations: List[int] = []
+        chart_exclude_sections = ["__context"]
+
+        if "chart_exclude_sections" in CUSTOM.keys():
+            chart_exclude_sections = (
+                chart_exclude_sections + CUSTOM["chart_exclude_sections"]
+            )
+
+        user_answers = (
+            SurveyUserAnswer.objects.exclude(
+                answer__question__section__label__in=chart_exclude_sections
+            )
+            .filter(user=self, uvalue=1)
+            .values("answer__question__section_id")
+            .order_by("answer__question__section_id")
+            .annotate(score=Sum("answer__score"))
+        )
+
+        for answer in user_answers:
+            if max_evaluations_per_section[answer["answer__question__section_id"]] > 0:
+                user_evaluations.append(
+                    round(
+                        answer["score"]
+                        * 100
+                        / max_evaluations_per_section[
+                            answer["answer__question__section_id"]
+                        ]
+                    )
+                )
+            else:
+                user_evaluations.append(0)
+
+        return user_evaluations
+
+    def get_evaluations_by_category(self, max_evaluations_per_category) -> List[int]:
+        user_evaluations: List[int] = []
+        chart_exclude_sections = ["__context"]
+
+        if "chart_exclude_sections" in CUSTOM.keys():
+            chart_exclude_sections = (
+                chart_exclude_sections + CUSTOM["chart_exclude_sections"]
+            )
+
+        user_answers = (
+            SurveyUserAnswer.objects.exclude(
+                answer__question__section__label__in=chart_exclude_sections
+            )
+            .filter(user=self, uvalue=1)
+            .values("answer__question__service_category_id")
+            .order_by("answer__question__service_category_id")
+            .annotate(score=Sum("answer__score"))
+        )
+
+        for answer in user_answers:
+            if (
+                max_evaluations_per_category[
+                    answer["answer__question__service_category_id"]
+                ]
+                > 0
+            ):
+                user_evaluations.append(
+                    round(
+                        answer["score"]
+                        * 100
+                        / max_evaluations_per_category[
+                            answer["answer__question__service_category_id"]
+                        ]
+                    )
+                )
+            else:
+                user_evaluations.append(0)
+
+        return user_evaluations
 
 
 class SurveyUserQuestionSequence(models.Model):

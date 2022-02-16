@@ -11,7 +11,7 @@
 if (!String.prototype.formatString) {
   String.prototype.formatString = function() {
     var args = arguments;
-    return this.replace(/{(\d+)}/g, function(match, number) { 
+    return this.replace(/{(\d+)}/g, function(match, number) {
       return typeof args[number] != 'undefined'
         ? args[number]
         : match
@@ -23,14 +23,14 @@ if (!String.prototype.formatString) {
 (function ( $ ) {
 
 
- 
+
     $.fn.github_graph = function( options ) {
 
         //If the number less than 10, add Zero before it
         var prettyNumber = function( number ){
           return  number < 10 ? '0' + number.toString() : number = number.toString();
         };
- 
+
         /*
         Count the number on each day and store the object
         */
@@ -39,9 +39,9 @@ if (!String.prototype.formatString) {
           //The result will store into this varriable
           obj_timestamp = {};
           for (var i=0; i < list_timestamp.length; i++){
-            var _type = typeof(list_timestamp[i]);            
+            var _type = typeof(list_timestamp[i]);
             var _d = _type == "number" ? new Date( list_timestamp[i] ) : new Date( list_timestamp[i].timestamp )
-            
+
             var display_date = getDisplayDate( _d );
             var increase = _type == "number" ? 1 : list_timestamp[i].count ;
             if ( !obj_timestamp[ display_date ] ){
@@ -84,7 +84,7 @@ if (!String.prototype.formatString) {
           var radius = settings.border.radius;
           var hoverColor = settings.border.hover_color;
           var clickCallback = settings.click;
-         
+
 
 
           var start_date;
@@ -115,7 +115,7 @@ if (!String.prototype.formatString) {
           var week = 0;
           var g_x = week * step;
           var item_html = '<g transform="translate(' + g_x.toString() + ', 0)">';
-          
+
           for(; start_date.getTime() <= end_date.getTime(); start_date.setDate(start_date.getDate() + 1)) {
 
               if(start_date.getDay() == 0) {
@@ -133,17 +133,17 @@ if (!String.prototype.formatString) {
               var color = getColor( count );
 
               var y = start_date.getDay() * step;
-              item_html += '<rect class="day" width="11" height="11" y="'+ y +'" fill="'+ color + '" data-count="'+ count +'" data-date="'+ data_date +'" rx="'+radius+'" ry="'+radius+'"/>';  
+              item_html += '<rect class="day" width="11" height="11" y="'+ y +'" fill="'+ color + '" data-count="'+ count +'" data-date="'+ data_date +'" rx="'+radius+'" ry="'+radius+'"/>';
 
               if(start_date.getDay() == 6) {
                   item_html += "</g>";
                   loop_html += item_html;
 
                   item_html = null;
-                  
+
                   week ++;
                   g_x = week * step;
-              }            
+              }
           }
 
           if(item_html != null) {
@@ -151,11 +151,11 @@ if (!String.prototype.formatString) {
               loop_html += item_html;
           }
 
-          
+
           //trick
           if ( month_position[1].x - month_position[0].x < 40 ){
             //Fix ugly graph by remove first item
-            month_position.shift(0);  
+            month_position.shift(0);
           }
 
           for (  var i =0; i < month_position.length; i++){
@@ -168,23 +168,23 @@ if (!String.prototype.formatString) {
           loop_html +=  '<text text-anchor="middle" class="wday" dx="-10" dy="22">{0}</text>'.formatString( settings.h_days[0] )+
                         '<text text-anchor="middle" class="wday" dx="-10" dy="48">{0}</text>'.formatString( settings.h_days[1] )+
                         '<text text-anchor="middle" class="wday" dx="-10" dy="74">{0}</text>'.formatString( settings.h_days[2] );
-          
+
           //Fixed size for now with width= 721 and height = 110
-          var wire_html = 
+          var wire_html =
             '<svg width="721" height="110" viewBox="0 0 721 110"  class="js-calendar-graph-svg">'+
               '<g transform="translate(20, 20)">'+
                 loop_html +
               '</g>'+
             '</svg>';
 
-          wrap_chart.html(wire_html); 
+          wrap_chart.html(wire_html);
 
           $(_this).find(".day").on('click',function () {
-          
+
             if (clickCallback){
               clickCallback($(this).attr("data-date"), parseInt($(this).attr("data-count")));
             }
-            
+
           });
 
           $(_this).find(".day").hover(function () {
@@ -196,20 +196,20 @@ if (!String.prototype.formatString) {
           _this.find('rect').on("mouseenter", mouseEnter );
           _this.find('rect').on("mouseleave",mouseLeave );
           appendTooltip();
-          
+
         }
 
         var mouseLeave =function(evt){
           $('.svg-tip').hide();
         }
-        
+
         //handle event mouseenter when enter into rect element
         var mouseEnter = function(evt){
 
           var target_offset = $(evt.target).offset();
           var count = $(evt.target).attr('data-count');
           var date = $(evt.target).attr('data-date');
-          
+
           var count_text = ( count > 1 ) ? settings.texts[1]: settings.texts[0];
           var text = "{0} {1} on {2}".formatString( count, count_text , date );
 
@@ -226,11 +226,11 @@ if (!String.prototype.formatString) {
         var appendTooltip = function(){
           if ( $('.svg-tip').length == 0 ){
             $('body').append('<div class="svg-tip svg-tip-one-line" style="display:none" ></div>');
-          }          
+          }
         }
 
         var settings = $.extend({
-          colors: ['#eeeeee','#d6e685','#8cc665','#44a340','#44a340'],
+          colors: ['#eeeeee','#d6e685','#8cc665','#44a340','#598759'],
           border:{
             radius: 2,
             hover_color: "#999"
@@ -245,9 +245,9 @@ if (!String.prototype.formatString) {
         }, options );
 
         var _this = $(this);
-        
+
         start();
- 
+
     };
- 
+
 }( jQuery ));

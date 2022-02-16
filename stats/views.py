@@ -2,7 +2,7 @@
 
 import sys
 from datetime import datetime
-from typing import Any, Dict, List
+from typing import Any, Dict
 from dateutil.relativedelta import relativedelta
 from django.conf.global_settings import LANGUAGES
 from django.db.models import Count, Sum
@@ -24,10 +24,10 @@ def index(request):
     translation.activate(lang)
     date_from = request.GET.get("from", None)
     # date_to = request.GET.get('to', None)
+    now = datetime.now()
     if not date_from:
         # 12 months ago
-        date_from = datetime.now() - relativedelta(months=12)
-        date_from = date_from.strftime("%Y-%m-%d")
+        date_from = (now - relativedelta(months=12)).strftime("%Y-%m-%d")
 
     nb_finished_surveys = SurveyUser.objects.filter(status=3).count()
     nb_finished_surveys_for_period = SurveyUser.objects.filter(
@@ -48,8 +48,29 @@ def index(request):
     except Exception:
         first_survey = ""
     nb_surveys = SurveyUser.objects.count()
+
+    time_frames = (
+        (
+            _("Last week"),
+            (now - relativedelta(weeks=1)).strftime("%Y-%m-%d"),
+        ),
+        (
+            _("Last month"),
+            (now - relativedelta(months=1)).strftime("%Y-%m-%d"),
+        ),
+        (
+            _("Last quarter"),
+            (now - relativedelta(months=4)).strftime("%Y-%m-%d"),
+        ),
+        (
+            _("Last year"),
+            (now - relativedelta(months=12)).strftime("%Y-%m-%d"),
+        ),
+    )
+
     context = {
         "date_from": date_from,
+        "time_frames": time_frames,
         "nb_surveys": nb_surveys,
         "first_survey_date": getattr(first_survey, "created_at", False),
         "nb_finished_surveys": nb_finished_surveys,
@@ -281,34 +302,11 @@ def answers_per_section(request):
     max_evaluations_per_section = {q[0]: q[1] for q in questions}
 
     for user in users:
-        user_evaluations: List[int] = []
-        user_answers = (
-            SurveyUserAnswer.objects.exclude(
-                answer__question__section__label__in=chart_exclude_sections
-            )
-            .filter(user=user, uvalue=1)
-            .values("answer__question__section_id")
-            .order_by("answer__question__section_id")
-            .annotate(score=Sum("answer__score"))
-        )
-
-        for answer in user_answers:
-            if max_evaluations_per_section[answer["answer__question__section_id"]] > 0:
-                user_evaluations.append(
-                    round(
-                        answer["score"]
-                        * 100
-                        / max_evaluations_per_section[
-                            answer["answer__question__section_id"]
-                        ]
-                    )
-                )
-            else:
-                user_evaluations.append(0)
-
+        user_evaluations = user.get_evaluations_by_section(max_evaluations_per_section)
         employees_number_code = user.get_employees_number_label()
+
         for index, section in enumerate(sections):
-            section_label = str(section)
+            section_label = str(_(section))
             if section not in generators.get(employees_number_code, {}):
                 generators[employees_number_code][section_label] = mean_gen()
                 generators[employees_number_code][section_label].send(None)
@@ -318,6 +316,63 @@ def answers_per_section(request):
             result[user.get_country_code()][employees_number_code][
                 section_label
             ] = generators[employees_number_code][section_label].send(
+                user_evaluations[index]
+            )
+
+    return JsonResponse(result)
+
+
+def answers_per_category(request):
+    """Return a dict with the mean of the user's answers per category, with the
+    surveys completed during the last year."""
+    lang = request.session.get(settings.LANGUAGE_COOKIE_NAME, LANGUAGE_CODE)
+    translation.activate(lang)
+    chart_exclude_sections = ["__context"]
+    if "chart_exclude_sections" in CUSTOM.keys():
+        chart_exclude_sections = (
+            chart_exclude_sections + CUSTOM["chart_exclude_sections"]
+        )
+
+    date_from = request.GET.get("from", None)
+    # date_to = request.GET.get('to', None)
+    if not date_from:
+        # 12 month ago
+        date_from = datetime.now() - relativedelta(months=12)
+        # date_to = datetime.now()
+
+    users = SurveyUser.objects.filter(status=3, created_at__gte=date_from)
+
+    result = tree()
+    generators = tree()
+    max_evaluations_per_category: Dict[int, int] = {}
+
+    questions = (
+        SurveyQuestion.objects.exclude(section__label__in=chart_exclude_sections)
+        .values_list("service_category_id")
+        .order_by("service_category_id")
+        .annotate(total=Sum("maxPoints"))
+    )
+    categories = list(
+        questions.values_list("service_category__label", flat=True).distinct()
+    )
+    max_evaluations_per_category = {q[0]: q[1] for q in questions}
+
+    for user in users:
+        user_evaluations = user.get_evaluations_by_category(
+            max_evaluations_per_category
+        )
+        employees_number_code = user.get_employees_number_label()
+        for index, category in enumerate(categories):
+            category_label = str(_(category))
+            if category not in generators.get(employees_number_code, {}):
+                generators[employees_number_code][category_label] = mean_gen()
+                generators[employees_number_code][category_label].send(None)
+            result["all"][employees_number_code][category_label] = generators[
+                employees_number_code
+            ][category_label].send(user_evaluations[index])
+            result[user.get_country_code()][employees_number_code][
+                category_label
+            ] = generators[employees_number_code][category_label].send(
                 user_evaluations[index]
             )
 

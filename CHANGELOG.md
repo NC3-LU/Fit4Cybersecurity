@@ -7,6 +7,63 @@ Changelog
 
 New
 ~~~
+- [stats] added activity_chart endpoint. [Cédric Bonhomme]
+
+Changes
+~~~~~~~
+- [stats] do not always evaluate datetime.now(). [Cédric Bonhomme]
+- [stats] changed number of past months for the time frame. [Cédric
+  Bonhomme]
+- [dependencies] Updated typing_extensions. [Cédric Bonhomme]
+- [stats] improved activity chart and fixed color redundancy issue.
+  [Cédric Bonhomme]
+- [style] format with black. [Cédric Bonhomme]
+- [stats] improved activity chart and fixed color redundancy issue.
+  [Cédric Bonhomme]
+- [stats] added small legend for the activity chart. [Cédric Bonhomme]
+- [stats] from date_to from url and uses gte for the db comparison of
+  the dates. [Cédric Bonhomme]
+- [stats] moved the activity chart at the top. [Cédric Bonhomme]
+- [stats] test to filter countries chart with the activity chart.
+  [Cédric Bonhomme]
+- [stats] test to filter charts with the activity chart. [Cédric
+  Bonhomme]
+- [language] return en if settings.LANGUAGE_COOKIE_NAME not yet in the
+  session. [Cédric Bonhomme]
+- [routing] get the url of the terms page with the URL resolver. [Cédric
+  Bonhomme]
+- [routing] make stats and terms pages available with or without a
+  trailing slash. [Cédric Bonhomme]
+- [stats] improved stats page layout and added i18 tags around strings.
+  [Cédric Bonhomme]
+- [stats] improved answers_per_section function in views.py. [Cédric
+  Bonhomme]
+- [stats] answers_per_section now process average per company size.
+  [Cédric Bonhomme]
+- [templates] improved stats page layout. [Cédric Bonhomme]
+- [stats] only fetch the last month. [Cédric Bonhomme]
+- [templates] improved stats page layout. [Cédric Bonhomme]
+- [mypy] added types-python-dateutil stub package. [Cédric Bonhomme]
+- [stats] added some comments in activity_chart endtpoint and select the
+  surveys of the last year for the answers per section. [Cédric
+  Bonhomme]
+- [style] format with black. [Cédric Bonhomme]
+
+Fix
+~~~
+- [security] CVE-2022-23833 , CVE-2022-22818. [Cédric Bonhomme]
+- [stats] check if date_from and date_to are defined. [Cédric Bonhomme]
+- [stats] fixed wrong labels. [Cédric Bonhomme]
+
+
+v2.0.0 (2022-01-24)
+-------------------
+
+New
+~~~
+- [stats] Added charts and corresponding endpoint to represent the mean
+  of the user's answers per section in radar chart. [Cédric Bonhomme]
+- [deployment] added nginx conf for Gunicorn. [Cédric Bonhomme]
 - [templates] added new maintenance task in admin panel. [Cédric
   Bonhomme]
 - [templates] added new maintenance task in admin panel. [Cédric
@@ -26,7 +83,7 @@ New
   [Cédric Bonhomme]
 - [translations] added page to manage the translations. [Cédric
   Bonhomme]
-- [data] added JSON file for fit4operatorsurvey. [Cédric Bonhomme]
+- [data] added JSON file for survey4operators. [Cédric Bonhomme]
 - [core] added new translate_db Django filter. [Cédric Bonhomme]
 - [core] added Django command to import translations. [Cédric Bonhomme]
 - [email] added email templates and modal to enter the email address.
@@ -42,6 +99,29 @@ New
 
 Changes
 ~~~~~~~
+- [stats] filter out not finished surveys. [Cédric Bonhomme]
+- [stats] use mean_gen instead of mean_list. [Cédric Bonhomme]
+- [style] reformat with black. [Cédric Bonhomme]
+- Added clean rule in Makefile. [Cédric Bonhomme]
+- [packer] set the questions_set and context_questions_set. [Cédric
+  Bonhomme]
+- [documentation] updated information about packer configuration
+  possibilities. [Cédric Bonhomme]
+- [documentation] precise in the README that a configuration file for
+  Nginx is available (for a use with Gunicorm). [Cédric Bonhomme]
+- Let the user define the hostname. [Cédric Bonhomme]
+- [packer] updated install script and added env variable for SITE_NAME.
+  [Cédric Bonhomme]
+- [GitHub workflow] keep only Python 3.10.0 for the matrix. [Cédric
+  Bonhomme]
+- Updated secret key, hash key and checksums. [Cédric Bonhomme]
+- [commands] removed load_data_from_sql command. [Cédric Bonhomme]
+- [stats] update surveys_users_results dict with information about the
+  users's context. [Cédric Bonhomme]
+- Added minimim file for a Python sub-module in the csskp module.
+  [Cédric Bonhomme]
+- [core] Improved log of errors. viewLogic.find_user_by_id now catch
+  SurveyUser.DoesNotExist exceptions. [Cédric Bonhomme]
 - [dependencies] Updated fork-awesome. [Cédric Bonhomme]
 - [style] Reformat with black. [Cédric Bonhomme]
 - [dependencies] Updated Numpy. [Cédric Bonhomme]
@@ -218,6 +298,26 @@ Changes
 
 Fix
 ~~~
+- [stats] wrong variable in a loop in answers_per_section() function.
+  Improved the function. [Cédric Bonhomme]
+- [templates] fixed layout of stats page. [Cédric Bonhomme]
+- [packer] forgot to provide the new env variable. [Cédric Bonhomme]
+- [packer] fixed empty config variable. [Cédric Bonhomme]
+- [viewLogic] fixed "'NoneType' object has no attribute 'question'"
+  AttributeError which appeared at the end of the survey (when the
+  answer value of a language is stored as None with qtype=="CL")
+  (viewLogic.py, line 370, in get_questions_with_user_answers) [Cédric
+  Bonhomme]
+- [VM] fixed an issue with the generation of the Django secret key and
+  hash key. [Cédric Bonhomme]
+- [security] CVE-2021-45115, CVE-2021-45116, CVE-2021-45452. [Cédric
+  Bonhomme]
+- [packer] fixed a permission issue on the Django log file. [Cédric
+  Bonhomme]
+- [translations] PO file incorrectly marked two strings as being python-
+  format. [Cédric Bonhomme]
+- [core] propagate the SurveyUser.DoesNotExist exception. [Cédric
+  Bonhomme]
 - [report] in generate_chart_png, ensures that x and y have same first
   dimension. Log the eventual error. Removed useless lang parameter in
   genera_chart_png. [Cédric Bonhomme]
