@@ -70,6 +70,7 @@ def index(request):
 
     context = {
         "date_from": date_from,
+        "time_frames": time_frames,
         "nb_surveys": nb_surveys,
         "first_survey_date": getattr(first_survey, "created_at", False),
         "nb_finished_surveys": nb_finished_surveys,
@@ -77,7 +78,6 @@ def index(request):
         "survey_countries": survey_countries,
         "python_version": "{}.{}.{}".format(*sys.version_info[:3]),
         "others_translation": str(_("Others")),
-        "time_frames": time_frames,
     }
 
     return render(request, "survey/stats.html", context=context)
