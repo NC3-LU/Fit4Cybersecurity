@@ -350,10 +350,8 @@ msgid "General"
 msgstr "Allgemein"
 
 #: data/fit4contract/questions.json:4
-#, fuzzy
-#| msgid "Description"
 msgid "Service description"
-msgstr "Beschreibung"
+msgstr "Beschreibung des Services"
 
 #: data/fit4contract/questions.json:8
 msgid ""
@@ -571,7 +569,7 @@ msgid ""
 "External Collaborator should be carefully selected during the hiring "
 "process. When the External Collaborator leaves, a procedure ensures that the "
 "Collaborator returns all the goods received from the Client’s organization "
-"(equipment, laptop, keys, badges, smartphone, etc.)"
+"(equipment, laptop, keys, badges, smartphone, etc.)."
 msgstr ""
 "Der externe Kollaborator sollte sorgfältig ausgewählt werden. Bei Beendigung "
 "des Arbeitsverhältnisses, wird durch ein Verfahren sichergestellt, dass der "
@@ -815,7 +813,7 @@ msgstr ""
 
 #: data/fit4contract/questions.json:1015 data/fit4contract/questions.json:1144
 msgid "Could you describe the backup service."
-msgstr "Können Sie den Backup-Dienst beschreiben"
+msgstr "Können Sie den Backup-Dienst beschreiben."
 
 #: data/fit4contract/questions.json:1027
 msgid "Communication services"
@@ -5521,17 +5519,15 @@ msgstr ""
 
 #: stats/views.py:61
 msgid "In progress"
-msgstr ""
+msgstr "In Bearbeitung"
 
 #: stats/views.py:61
-#, fuzzy
-#| msgid "Answers review"
 msgid "Under review"
-msgstr "Überprüfung der Antworten"
+msgstr "Wird überprüft"
 
 #: stats/views.py:61
 msgid "Finished"
-msgstr ""
+msgstr "Beendet"
 
 #: survey/forms.py:64
 msgid "You need to choose at least one answer"
@@ -5591,13 +5587,6 @@ msgid "Feedback sending errors: "
 msgstr "Fehler beim Senden von Rückmeldungen: "
 
 #: templates/fit4contract/survey/finishedSurvey.html:6
-#, fuzzy
-#| msgid ""
-#| "This is the list of recommendations to improve the information security "
-#| "maturity in your company, provided that your answers did correctly "
-#| "reflect the state in your company. Also keep in mind that it is a self-"
-#| "assessment and only scratches the surface of the information security "
-#| "maturity level and thus, we are not liable for the results of this survey."
 msgid ""
 "This is the list of recommendations to help you to write a subcontract, "
 "provided that your answers did correctly reflect the context. Also keep in "
@@ -5605,12 +5594,11 @@ msgid ""
 "information security maturity level and thus, we are not liable for the "
 "results of this survey."
 msgstr ""
-"Dies ist die Liste der Empfehlungen zur Verbesserung der "
-"Informationssicherheitsreife in Ihrem Unternehmen, sofern Ihre Antworten den "
-"Status in Ihrem Unternehmen korrekt widerspiegeln. Denken Sie auch daran, "
-"dass es sich um eine Selbsteinschätzung handelt, die nur die Oberfläche des "
-"Reifegrads der Informationssicherheit abbilden kann, und wir daher nicht für "
-"die Ergebnisse dieser Umfrage haften."
+"Dies ist die Liste der Empfehlungen, die Ihnen helfen sollen, einen "
+"Untervertrag zu verfassen, vorausgesetzt, dass Ihre Antworten den Kontext "
+"richtig wiedergeben. Denken Sie auch daran, dass es sich um eine Selbsteinschätzung "
+"handelt, die nur die Oberfläche des Reifegrads der Informationssicherheit abbilden "
+"kann, und wir daher nicht für die Ergebnisse dieser Umfrage haften."
 
 #: templates/fit4ehealth/survey/start.html:5
 msgid "Please click the Next button to start the questionnaire."
@@ -5653,13 +5641,6 @@ msgstr ""
 "Verbindung, um eine Diagnostic CASES durchzuführen."
 
 #: templates/fit4privacy/survey/finishedSurvey.html:6
-#, fuzzy
-#| msgid ""
-#| "This is the list of recommendations to improve the information security "
-#| "maturity in your company, provided that your answers did correctly "
-#| "reflect the state in your company. Also keep in mind that it is a self-"
-#| "assessment and only scratches the surface of the information security "
-#| "maturity level and thus, we are not liable for the results of this survey."
 msgid ""
 "This is the list of recommendations to improve the maturity of your company "
 "in the field of privacy and data protection, provided that your answers "
@@ -5670,19 +5651,19 @@ msgid ""
 "your company is expected to put measures in place to be able to demonstrate "
 "it is respecting GDPR, and that these measures are effective."
 msgstr ""
-"Dies ist die Liste der Empfehlungen zur Verbesserung der "
-"Informationssicherheitsreife in Ihrem Unternehmen, sofern Ihre Antworten den "
-"Status in Ihrem Unternehmen korrekt widerspiegeln. Denken Sie auch daran, "
-"dass es sich um eine Selbsteinschätzung handelt, die nur die Oberfläche des "
-"Reifegrads der Informationssicherheit abbilden kann, und wir daher nicht für "
-"die Ergebnisse dieser Umfrage haften."
+"Dies ist die Liste der Empfehlungen zur Verbesserung der Datenschutz in Ihrem "
+"Unternehmen, sofern Ihre Antworten den Status in Ihrem Unternehmen korrekt "
+"widerspiegeln. Denken Sie auch daran, dass es sich um eine Selbsteinschätzung "
+"handelt, die nur die Oberfläche des Reifegrads der Datenschutz abbilden kann, "
+"und wir daher nicht für die Ergebnisse dieser Umfrage haften. Denken Sie daran, "
+"dass es bei der DSGVO um Rechenschaftspflicht geht: Von Ihrem Unternehmen wird "
+"erwartet, dass es Maßnahmen ergreift, um nachweisen zu können, dass es die DSGVO "
+"einhält und dass diese Maßnahmen wirksam sind."
 
 #: templates/parts/fit4contract/footer_part.html:7
 #: templates/parts/fit4contract/footer_part.html:8
-#, fuzzy
-#| msgid "A service provided by CASES.LU"
 msgid "A service provided by ANSSI.LU"
-msgstr "Ein Service von CASES.LU"
+msgstr "Ein Service von ANSSI.LU"
 
 #: templates/parts/fit4contract/footer_part.html:14
 #: templates/parts/fit4contract/footer_part.html:15
@@ -5706,7 +5687,7 @@ msgstr "Version von"
 
 #: templates/parts/footer_part.html:28
 msgid "Stats"
-msgstr ""
+msgstr "Statistiken"
 
 #: templates/report/cover.html:12
 msgid "Date"
@@ -5851,6 +5832,8 @@ msgid ""
 "Change of previously selected answer(s) can lead to additional questions or "
 "loosing of your answer(s). Would you like to proceed?"
 msgstr ""
+"Eine Änderung der zuvor ausgewählten Antwort(en) kann zu zusätzlichen Fragen "
+"oder zum Verlust Ihrer Antwort(en) führen. Möchten Sie fortfahren?"
 
 #: templates/survey/base.html:19
 msgid "a CASES self-assessment tool!"
@@ -6163,19 +6146,19 @@ msgstr ""
 
 #: templates/survey/stats.html:12
 msgid "Some statistics about the current surveys."
-msgstr ""
+msgstr "Einige Statistiken zu den aktuellen Umfragen."
 
 #: templates/survey/stats.html:19
 msgid "No statistics available"
-msgstr ""
+msgstr "Keine Statistiken verfügbar"
 
 #: templates/survey/stats.html:28
 msgid "Main figures"
-msgstr ""
+msgstr "Hauptfiguren"
 
 #: templates/survey/stats.html:30
 msgid "Number of surveys:"
-msgstr ""
+msgstr "Anzahl Umfragen:"
 
 #: templates/survey/stats.html:31
 msgid "Number of finished surveys:"
@@ -6183,27 +6166,27 @@ msgstr ""
 
 #: templates/survey/stats.html:32
 msgid "First completed survey on:"
-msgstr ""
+msgstr "Anzahl abgeschlossener Umfragen:"
 
 #: templates/survey/stats.html:40
 msgid "Surveys status"
-msgstr ""
+msgstr "Status der Umfragen"
 
 #: templates/survey/stats.html:44
 msgid "Surveys languages"
-msgstr ""
+msgstr "Umfragen Sprachen"
 
 #: templates/survey/stats.html:49
 msgid "Surveys countries"
-msgstr ""
+msgstr "Umfragen Länder"
 
 #: templates/survey/stats.html:53
 msgid "Surveys company size"
-msgstr ""
+msgstr "Umfragen zur Unternehmensgröße"
 
 #: templates/survey/stats.html:57
 msgid "Surveys company sector"
-msgstr ""
+msgstr "Umfragen Unternehmenssektor"
 
 #: templates/survey/stats.html:64
 msgid "Activity over the past year"
@@ -6211,20 +6194,20 @@ msgstr "Aktivitäten im letzten Jahr"
 
 #: templates/survey/stats.html:73
 msgid "Answers by section and company size"
-msgstr ""
+msgstr "Antworten nach Bereich und Unternehmensgröße"
 
 #: templates/survey/stats.html:75
 msgid "With data for the last month."
-msgstr ""
+msgstr "Mit Daten für den letzten Monat."
 
 #: templates/survey/stats.html:82
 msgid "Server information"
-msgstr ""
+msgstr "Serverinformation"
 
 #: templates/survey/stats.html:83
 msgid "Python version:"
-msgstr ""
+msgstr "Python-Version:"
 
 #: templates/survey/stats.html:84
 msgid "Software version:"
-msgstr ""
+msgstr "Softwareversion:"

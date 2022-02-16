@@ -351,10 +351,8 @@ msgid "General"
 msgstr "Général"
 
 #: data/fit4contract/questions.json:4
-#, fuzzy
-#| msgid "Description"
 msgid "Service description"
-msgstr "Description"
+msgstr "Description du service"
 
 #: data/fit4contract/questions.json:8
 msgid ""
@@ -362,7 +360,7 @@ msgid ""
 "categories:"
 msgstr ""
 "Veuillez décrire au mieux le projet qui sera sous-traité parmi les "
-"catégories suivantes:"
+"catégories suivantes :"
 
 #: data/fit4contract/questions.json:15
 msgid ""
@@ -533,7 +531,7 @@ msgid ""
 msgstr ""
 "Achat, location ou développement de logiciel. Tout type de prestations sur "
 "les logiciels (ex.: Maintenance, développement, etc.). Pour les logiciels en "
-"accès SaaS, veuillez cocher la case \"Prestation de service\""
+"accès SaaS, veuillez cocher la case \"Prestation de service\"."
 
 #: data/fit4contract/questions.json:231 data/fit4contract/questions.json:463
 msgid ""
@@ -567,7 +565,7 @@ msgid ""
 "External Collaborator should be carefully selected during the hiring "
 "process. When the External Collaborator leaves, a procedure ensures that the "
 "Collaborator returns all the goods received from the Client’s organization "
-"(equipment, laptop, keys, badges, smartphone, etc.)"
+"(equipment, laptop, keys, badges, smartphone, etc.)."
 msgstr ""
 "Le collaborateur externe est soigneusement séléctionné lors du processus d’"
 "embauche. Lors du départ du collaborateur externe, une procédure assure que "
@@ -590,7 +588,7 @@ msgid ""
 msgstr ""
 "Prestation de service. Délégation d’un service entier, notamment sur une "
 "infrastructure pouvant être gérée par un tiers (ex.: service de backup, "
-"cloud, SaaS, etc.)"
+"cloud, SaaS, etc.)."
 
 #: data/fit4contract/questions.json:439
 msgid ""
@@ -807,7 +805,7 @@ msgstr ""
 
 #: data/fit4contract/questions.json:1015 data/fit4contract/questions.json:1144
 msgid "Could you describe the backup service."
-msgstr "Pouvez-vous décrire le service de backup"
+msgstr "Pouvez-vous décrire le service de backup."
 
 #: data/fit4contract/questions.json:1027
 msgid "Communication services"
@@ -872,13 +870,13 @@ msgid ""
 "The service includes the management of an own physical backup infrastructure."
 msgstr ""
 "Le service comprend la gestion d’une infrastructure de sauvegarde physique "
-"propre"
+"propre."
 
 #: data/fit4contract/questions.json:1184
 msgid "All or part of the data is stored in a cloud infrastructure."
 msgstr ""
 "Les données sont stockées en partie ou en totalité sur une infrastructure "
-"cloud"
+"cloud."
 
 #: data/fit4cybersecurity/questions.json:3 data/fit4ehealth/questions.json:3
 msgid "Rules/Charter"
@@ -5565,17 +5563,15 @@ msgstr ""
 
 #: stats/views.py:61
 msgid "In progress"
-msgstr ""
+msgstr "En cours"
 
 #: stats/views.py:61
-#, fuzzy
-#| msgid "Answers review"
 msgid "Under review"
-msgstr "Votre aperçu des réponses"
+msgstr "Examen des réponses"
 
 #: stats/views.py:61
 msgid "Finished"
-msgstr ""
+msgstr "Accompli"
 
 #: survey/forms.py:64
 msgid "You need to choose at least one answer"
@@ -5634,13 +5630,6 @@ msgid "Feedback sending errors: "
 msgstr "Erreurs d'envoi du retour d'information : "
 
 #: templates/fit4contract/survey/finishedSurvey.html:6
-#, fuzzy
-#| msgid ""
-#| "This is the list of recommendations to improve the information security "
-#| "maturity in your company, provided that your answers did correctly "
-#| "reflect the state in your company. Also keep in mind that it is a self-"
-#| "assessment and only scratches the surface of the information security "
-#| "maturity level and thus, we are not liable for the results of this survey."
 msgid ""
 "This is the list of recommendations to help you to write a subcontract, "
 "provided that your answers did correctly reflect the context. Also keep in "
@@ -5648,12 +5637,11 @@ msgid ""
 "information security maturity level and thus, we are not liable for the "
 "results of this survey."
 msgstr ""
-"Voici la liste des recommandations visant à améliorer la maturité de la "
-"sécurité de l'information dans votre entreprise, à condition que vos "
-"réponses reflètent correctement l'état de votre entreprise. N'oubliez pas "
-"non plus qu'il s'agit d'une auto-évaluation et qu'elle ne fait qu'effleurer "
-"le niveau de maturité de la sécurité de l'information. Par conséquent, nous "
-"ne sommes pas responsables des résultats de cette enquête."
+"Voici la liste des recommandations visant à vous aider à rédiger un contrat "
+"de sous-traitance, à condition que vos réponses reflètent correctement le contexte. "
+"N'oubliez pas non plus qu'il s'agit d'une auto-évaluation et qu'elle ne fait "
+"qu'effleurer le niveau de maturité de la sécurité de l'information. Par conséquent, "
+"nous ne sommes pas responsables des résultats de cette enquête."
 
 #: templates/fit4ehealth/survey/start.html:5
 msgid "Please click the Next button to start the questionnaire."
@@ -5694,13 +5682,6 @@ msgstr ""
 "diagnostic CASES."
 
 #: templates/fit4privacy/survey/finishedSurvey.html:6
-#, fuzzy
-#| msgid ""
-#| "This is the list of recommendations to improve the information security "
-#| "maturity in your company, provided that your answers did correctly "
-#| "reflect the state in your company. Also keep in mind that it is a self-"
-#| "assessment and only scratches the surface of the information security "
-#| "maturity level and thus, we are not liable for the results of this survey."
 msgid ""
 "This is the list of recommendations to improve the maturity of your company "
 "in the field of privacy and data protection, provided that your answers "
@@ -5711,19 +5692,19 @@ msgid ""
 "your company is expected to put measures in place to be able to demonstrate "
 "it is respecting GDPR, and that these measures are effective."
 msgstr ""
-"Voici la liste des recommandations visant à améliorer la maturité de la "
-"sécurité de l'information dans votre entreprise, à condition que vos "
-"réponses reflètent correctement l'état de votre entreprise. N'oubliez pas "
-"non plus qu'il s'agit d'une auto-évaluation et qu'elle ne fait qu'effleurer "
-"le niveau de maturité de la sécurité de l'information. Par conséquent, nous "
-"ne sommes pas responsables des résultats de cette enquête."
+"Voici la liste des recommandations visant à améliorer la maturité de la protection "
+"des données à caractère personnel dans votre entreprise, à condition que vos réponses "
+"reflètent correctement l'état de votre entreprise. N'oubliez pas non plus qu'il s'agit "
+"d'une auto-évaluation et qu'elle ne fait qu'effleurer le niveau de maturité "
+"de la protection de la vie privée et protection des données. Par conséquent, "
+"nous ne sommes pas responsables des résultats de cette enquête. Aussi, n'oubliez pas "
+"que le RGPD concerne la responsabilité : votre entreprise doit mettre en place des "
+"mesures pour pouvoir démontrer qu'elle respecte le RGPD et que ces mesures sont efficaces."
 
 #: templates/parts/fit4contract/footer_part.html:7
 #: templates/parts/fit4contract/footer_part.html:8
-#, fuzzy
-#| msgid "A service provided by CASES.LU"
 msgid "A service provided by ANSSI.LU"
-msgstr "Un service fourni par CASES.LU"
+msgstr "Un service fourni par ANSSI.LU"
 
 #: templates/parts/fit4contract/footer_part.html:14
 #: templates/parts/fit4contract/footer_part.html:15
@@ -5747,7 +5728,7 @@ msgstr "Version de"
 
 #: templates/parts/footer_part.html:28
 msgid "Stats"
-msgstr ""
+msgstr "Statistiques"
 
 #: templates/report/cover.html:12
 msgid "Date"
@@ -5890,6 +5871,8 @@ msgid ""
 "Change of previously selected answer(s) can lead to additional questions or "
 "loosing of your answer(s). Would you like to proceed?"
 msgstr ""
+"Le changement de réponse(s) précédemment sélectionnée(s) peut conduire à des questions "
+"supplémentaires ou à la perte de vos réponses. Voulez vous procéder ?"
 
 #: templates/survey/base.html:19
 msgid "a CASES self-assessment tool!"
@@ -6200,11 +6183,11 @@ msgstr ""
 
 #: templates/survey/stats.html:12
 msgid "Some statistics about the current surveys."
-msgstr ""
+msgstr "Quelques statistiques sur les enquêtes en cours."
 
 #: templates/survey/stats.html:19
 msgid "No statistics available"
-msgstr ""
+msgstr "Aucune statistique disponible"
 
 #: templates/survey/stats.html:28
 msgid "Main figures"
@@ -6231,18 +6214,16 @@ msgid "Surveys languages"
 msgstr "Langues des sondages"
 
 #: templates/survey/stats.html:49
-#, fuzzy
-#| msgid "Surveys languages"
 msgid "Surveys countries"
-msgstr "Langues des sondages"
+msgstr "Pays d'enquête"
 
 #: templates/survey/stats.html:53
 msgid "Surveys company size"
-msgstr ""
+msgstr "Taille de l'entreprise"
 
 #: templates/survey/stats.html:57
 msgid "Surveys company sector"
-msgstr ""
+msgstr "Enquêtes secteur entreprise"
 
 #: templates/survey/stats.html:64
 msgid "Activity over the past year"
@@ -6267,15 +6248,6 @@ msgstr "Version de Python :"
 #: templates/survey/stats.html:84
 msgid "Software version:"
 msgstr "Version du logiciel :"
-
-#~ msgid "Germany"
-#~ msgstr "Allemagne"
-
-#~ msgid "Belgium"
-#~ msgstr "Belgique"
-
-#~ msgid "France"
-#~ msgstr "France"
 
 #~ msgid ""
 #~ "Your company should consider informing all types of data subjects whose "
