@@ -92,7 +92,7 @@ def calculateResult(user: SurveyUser) -> Tuple[int, int, List[int], List[str]]:
     answered_questions_ids = [
         q.question.id for q in SurveyUserQuestionSequence.objects.filter(user=user, is_active=True)
     ]
-    questions = (
+    questions_by_section = (
         SurveyQuestion.objects
         .filter(id__in=answered_questions_ids)
         .exclude(section__label__in=chart_exclude_sections)
