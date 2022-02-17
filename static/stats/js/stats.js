@@ -62,133 +62,6 @@ $(document).ready(function() {
 
     let section_displayByCountry = document.getElementById("section_displayByCountry");
     let category_displayByCountry = document.getElementById("category_displayByCountry");
-    section_displayByCountry.onchange = function() {
-        let data_sets = [];
-        let i = 0;
-        for (const [key, value] of Object.entries(sectionChart.data[section_displayByCountry.value])) {
-            data_sets.push({
-                label: key,
-                data: Object.values(value),
-                fill: false,
-                backgroundColor: colors[i],
-                borderColor: colors[i],
-                pointBackgroundColor: colors[i],
-                pointBorderColor: '#fff',
-                pointHoverBackgroundColor: '#fff',
-                pointHoverBorderColor: colors[i]
-            })
-            i++;
-        }
-        sectionChart.canvas.config.data.datasets = data_sets;
-        sectionChart.canvas.update()
-    }
-
-    category_displayByCountry.onchange = function() {
-        let data_sets = [];
-        let i = 0;
-        for (const [key, value] of Object.entries(categoryChart.data[category_displayByCountry.value])) {
-            data_sets.push({
-                label: key,
-                data: Object.values(value),
-                fill: false,
-                backgroundColor: colors[i],
-                borderColor: colors[i],
-                pointBackgroundColor: colors[i],
-                pointBorderColor: '#fff',
-                pointHoverBackgroundColor: '#fff',
-                pointHoverBorderColor: colors[i]
-            })
-            i++;
-        }
-        categoryChart.canvas.config.data.datasets = data_sets;
-        categoryChart.canvas.update()
-    }
-
-
-    function pieChart(data,ctx){
-        return new Chart(ctx, {
-            plugins: [ChartDataLabels],
-            type: 'pie',
-            data: {
-                labels: Object.keys(data),
-                datasets: [{
-                    data: Object.values(data),
-                    borderWidth: 1,
-                    backgroundColor: colors
-                }],
-            },
-            options: {
-                responsive: true,
-                aspectRatio: 0.7,
-                plugins: {
-                    legend: {
-                        position: 'bottom',
-                    },
-                    datalabels: {
-                        formatter: (value, ctx) => {
-                            let sum = 0;
-                            let dataArr = ctx.chart.data.datasets[0].data;
-                            dataArr.map(data => {
-                                sum += data;
-                            });
-                            let percentage = (value*100 / sum).toFixed(0)+"%";
-                            return percentage;
-                        },
-                        anchor: 'end',
-                        align: 'start',
-                        offset: 5,
-                        display: 'auto',
-                        color: 'rgba(0,0,0,.7)',
-                    }
-                },
-            },
-        });
-    };
-
-    $("#stats-countries").click(
-        function(evt){
-            evt.preventDefault();
-            let $popup = $("#popup");
-            let activePoints = countryChart.canvas.getElementsAtEventForMode(evt, 'point', countryChart.canvas.options);
-            let label = countryChart.canvas.data.labels[activePoints[0].index];
-            if (label == others_translation) {
-                if (Chart.getChart("stats-countries-detail") == undefined) {
-                    let ctx = document.getElementById("stats-countries-detail").getContext('2d');
-                    let result = countryChart.data[others_translation]
-                    pieChart(result,ctx);
-                }else {
-                    Chart.getChart("stats-countries-detail").update();
-                }
-                $popup.modal("show");
-            }
-        }
-    );
-
-    function radarChart(labels,data_sets,ctx){
-        return new Chart(ctx, {
-            type: 'radar',
-            data: {
-                labels: labels,
-                datasets: data_sets
-            },
-            options: {
-                scale: {
-                    min: 0,
-                    max: 100,
-                },
-                elements: {
-                    line: {
-                        borderWidth: 3
-                    }
-                },
-                plugins: {
-                    legend: {
-                        position: 'bottom',
-                    },
-                },
-            }
-        });
-    }
 
     fetch("/stats/survey-status-count.json?from="+date_from+"&to="+date_to)
     .then(response => response.json())
@@ -325,4 +198,180 @@ $(document).ready(function() {
     .catch((error) => {
         console.error('Error:', error);
     });
+
+
+    section_displayByCountry.onchange = function() {
+        let data_sets = [];
+        let i = 0;
+        for (const [key, value] of Object.entries(sectionChart.data[section_displayByCountry.value])) {
+            data_sets.push({
+                label: key,
+                data: Object.values(value),
+                fill: false,
+                backgroundColor: colors[i],
+                borderColor: colors[i],
+                pointBackgroundColor: colors[i],
+                pointBorderColor: '#fff',
+                pointHoverBackgroundColor: '#fff',
+                pointHoverBorderColor: colors[i]
+            })
+            i++;
+        }
+        sectionChart.canvas.config.data.datasets = data_sets;
+        sectionChart.canvas.update()
+    }
+
+    category_displayByCountry.onchange = function() {
+        let data_sets = [];
+        let i = 0;
+        for (const [key, value] of Object.entries(categoryChart.data[category_displayByCountry.value])) {
+            data_sets.push({
+                label: key,
+                data: Object.values(value),
+                fill: false,
+                backgroundColor: colors[i],
+                borderColor: colors[i],
+                pointBackgroundColor: colors[i],
+                pointBorderColor: '#fff',
+                pointHoverBackgroundColor: '#fff',
+                pointHoverBorderColor: colors[i]
+            })
+            i++;
+        }
+        categoryChart.canvas.config.data.datasets = data_sets;
+        categoryChart.canvas.update()
+    }
+
+    $("#stats-countries").click(
+        function(evt){
+            evt.preventDefault();
+            let $popup = $("#popup");
+            let activePoints = countryChart.canvas.getElementsAtEventForMode(evt, 'point', countryChart.canvas.options);
+            let label = countryChart.canvas.data.labels[activePoints[0].index];
+            if (label == others_translation) {
+                if (Chart.getChart("stats-countries-detail") == undefined) {
+                    let ctx = document.getElementById("stats-countries-detail").getContext('2d');
+                    let result = countryChart.data[others_translation]
+                    pieChart(result,ctx);
+                }else {
+                    Chart.getChart("stats-countries-detail").update();
+                }
+                $popup.modal("show");
+            }
+        }
+    );
+
+
+    function pieChart(data,ctx){
+        return new Chart(ctx, {
+            plugins: [ChartDataLabels],
+            type: 'pie',
+            data: {
+                labels: Object.keys(data),
+                datasets: [{
+                    data: Object.values(data),
+                    borderWidth: 1,
+                    backgroundColor: colors
+                }],
+            },
+            options: {
+                responsive: true,
+                aspectRatio: 0.7,
+                plugins: {
+                    legend: {
+                        position: 'bottom',
+                    },
+                    datalabels: {
+                        formatter: (value, ctx) => {
+                            let sum = 0;
+                            let dataArr = ctx.chart.data.datasets[0].data;
+                            dataArr.map(data => {
+                                sum += data;
+                            });
+                            let percentage = (value*100 / sum).toFixed(0)+"%";
+                            return percentage;
+                        },
+                        anchor: 'end',
+                        align: 'start',
+                        offset: 5,
+                        display: 'auto',
+                        color: 'rgba(0,0,0,.7)',
+                    }
+                },
+            },
+        });
+    };
+
+    function radarChart(labels,data_sets,ctx){
+        let wrapedLabels = [];
+        labels.forEach( label => {wrapedLabels.push(wrapLabel(label))});
+        return new Chart(ctx, {
+            type: 'radar',
+            data: {
+                labels: wrapedLabels,
+                datasets: data_sets
+            },
+            options: {
+                scale: {
+                    min: 0,
+                    max: 100,
+                },
+                elements: {
+                    line: {
+                        borderWidth: 3
+                    }
+                },
+                plugins: {
+                    legend: {
+                        position: 'bottom',
+                    },
+                },
+            }
+        });
+    }
+
+    function wrapLabel(label, maxwidth = 15){
+        let sections = [];
+        let words = label.split(" ");
+        let temp = "";
+
+        words.forEach(function(item, index){
+            if(temp.length > 0)
+            {
+                var concat = temp + ' ' + item;
+
+                if(concat.length > maxwidth){
+                    sections.push(temp);
+                    temp = "";
+                }
+                else{
+                    if(index == (words.length-1))
+                    {
+                        sections.push(concat);
+                        return;
+                    }
+                    else{
+                        temp = concat;
+                        return;
+                    }
+                }
+            }
+
+            if(index == (words.length-1))
+            {
+                sections.push(item);
+                return;
+            }
+
+            if(item.length < maxwidth) {
+                temp = item;
+            }
+            else {
+                sections.push(item);
+            }
+        });
+
+        return sections;
+    }
+
 });
