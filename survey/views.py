@@ -222,7 +222,14 @@ def finish(request):
     # also needs saving here!
     # show a "Thank you" and a "get your report" button
 
-    txt_score, bonus_score, radar_current, sections_list = calculateResult(user)
+    (
+        txt_score,
+        bonus_score,
+        sections_data,
+        sections_labels,
+        categories_data,
+        categories_labels,
+    ) = calculateResult(user)
 
     recommendations = getRecommendations(user, lang)
     # To properly display breaking lines \n on html page.
@@ -238,8 +245,10 @@ def finish(request):
         "txtscore": txt_score,
         "string_score": str(txt_score),
         "bonus_score": bonus_score,
-        "chartTitles": str(sections_list),
-        "chartdataYou": str(radar_current),
+        "sectionsLabels": str(sections_labels),
+        "sectionsData": str(sections_data),
+        "categoriesLabels": str(categories_labels),
+        "categoriesData": str(categories_data),
         "general_feedback_form": handle_general_feedback(user, request),
     }
 

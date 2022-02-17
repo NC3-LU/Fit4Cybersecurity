@@ -14,165 +14,202 @@
     <script type="text/javascript" src="{% static "survey/js/chart.js" %}"></script>
     <script type="text/javascript" src="{% static "survey/js/survey-questions.js" %}"></script>
     <script type="text/javascript" src="{% static "survey/js/send-email.js" %}"></script>
+    <script type="text/javascript" src="/static/npm_components/chartjs-plugin-datalabels/dist/chartjs-plugin-datalabels.min.js"></script>
 {% endblock %}
 
 {% block title %}{{ title }}{% endblock %}
 
 {% block content %}
-{% if custom.modules.reportDownload %}
-<div class="float-right mx-4 my-2 p-2 border rounded border-primary bg-bright-blue" styles="width: 200px">
-  <div class="text-center">
-    {% if custom.modules.displayResults %}
-    <h3>
-      {% if txtscore < 50 %}
-      <span class="font-weight-bold text-danger">{{ txtscore }}</span>
-      {% elif txtscore < custom.minimal_acceptable_score %}
-      <span class="font-weight-bold text-warning">{{ txtscore }}</span>
-      {% else %}
-      <span class="font-weight-bold text-success">{{ txtscore }}</span>
-      {% endif %}
-      /100
-    </h3>
-    {% endif %}
-    {% if custom.modules.requestTraining and user.get_country_code == 'LU' %}
-    {% if txtscore >= custom.minimal_acceptable_score and custom.modules.requestDiagnostic %}
-    <h5>{% include 'survey/requestDiagnosticLink.html' with type='button' %}</h5>
-    {% endif %}
-    <h5>{% include 'survey/requestTrainingLink.html' with type='button' %}</h5>
-    {% endif %}
-  </div>
-  <h4>{{ _('Report') }}:</h4>
-  <div class="text-center py-2">
-    <img src="{% static 'images/reportLogo.png' %}" alt="DOC ICON">
-  </div>
-  <div class="text-center py-2">
-    <a href="{{ reportlink }}" id="download-report">
-      <button class="btn border border-rounded btn-primary" type="button">
-        {{ _('Download') }}
-      </button>
-    </a>
-    {% if custom.modules.reportEmail %}
-    <button class="btn border border-rounded btn-primary" type="button" name="modal-send-report" data-toggle="modal" data-target="#modal-send-report">
-      {{ _('Email') }}
-    </button>
-    {% endif %}
-  </div>
-</div>
-{% endif %}
-
-<div class="py-2 px-4">
-  <h2>{{ _('Summary') }}:</h2>
-  <div class="qrcode"></div>
-  <p>
-    {% blocktranslate trimmed %}
-    This is the list of recommendations to improve the information
-    security maturity in your company, provided that your answers
-    did correctly reflect the state in your company.
-    Also keep in mind that it is a self-assessment and only
-    scratches the surface of the information security maturity level
-    and thus, we are not liable for the results of this survey.
-    {% endblocktranslate %}
-  </p>
-  {% if custom.modules.requestTraining and user.get_country_code == 'LU' and txtscore < custom.minimal_acceptable_score %}
-  <p>
-    {% blocktranslate with score=string_score|add:'/100' trimmed %}
-    Based on your score {{ score }}, the CASES Diagnostic
-    is not available for your organization at this moment.
-    We recommend you improve the information security maturity
-    level by implementing the recommendations listed below.
-    If you need any information security training to
-    raise awareness in your company, do not hesitate to
-    {% endblocktranslate %}
-    {% include 'survey/requestTrainingLink.html' with type='link' %}
-  </p>
-  {% endif %}
-  {% if bonus_score > 0 %}
-  <p>
-      {% blocktranslate trimmed with bonus=bonus_score %}You have scored an additional {{ bonus }} % of bonus points for following best practices.{% endblocktranslate %}
-  </p>
-  {% endif %}
-
-  <div class="py-2">
-    <p class="continue-later-link">
-      <button class="pl-0 btn btn-link" type="button" name="continue-later" data-toggle="modal" data-target="#modal">
-        {{ _('Your results link') }}
-      </button>
-    </p>
-  </div>
-</div>
-
-{% if  custom.modules.requestDiagnostic and user.get_country_code == 'LU' and txtscore >= custom.minimal_acceptable_score %}
-<div class="py-2 px-4">
-  <h2>{{ _('About the CASES Diagnostic') }}:</h2>
-  {% blocktranslate trimmed %}
-  The CASES Diagnostic is a service which analyses the company maturity
-  in the information security depending on company's requirements.
-  The analyse duration can take approxymately 2 hours.
-  A consultant from CASES will come to your companie's premises,
-  and ask around 30 questions concerning your information security,
-  mostly organizational questions and possibly some technical questions.
-  You will receive a detailed report which will contain a maturity estimation
-  as well as recommendations to enhance the information security maturity.
-  {% endblocktranslate %}
-  <br />
-  {% blocktranslate trimmed %}
-  The CASES Diagnostic is available for all the companies
-  located in Luxembourg and free of charge.
-  {% endblocktranslate %}
-  {% include 'survey/requestDiagnosticLink.html' with type='link' %}
-</div>
-{% endif %}
-
-{% if custom.modules.displayResults %}
-<div class="py-2 px-4 text-center">
-  <div class="chart-container">
-    <canvas id="result-chart"></canvas>
-  </div>
-  <script>
-    var chartLabels = {{ chartTitles | safe }}
-    var chartData = {{ chartdataYou | safe }}
-  </script>
-</div>
-{% endif %}
-
-<div class="py-2 px-4">
-  {% for category, items in recommendations.items %}
-  <h4>{{ category | safe }}</h4>
-  <ol>
-    {% for recommendation in items %}
-    <li>{{ recommendation | safe }}</li>
-    {% endfor %}
-  </ol>
-  {% endfor %}
-</div>
-
-<div class="pb-4" style="text-align: center">
-  <button class="btn btn-light border border-rounded" type="button" name="general-feedback" data-toggle="modal" data-target="#modal-feedback">
-    {{ _('Your feedback') }}
-  </button>
-</div>
-
-<div class="modal fade" tabindex="-2" role="dialog" id="modal-feedback" aria-labelledby="{{ custom.tool_name }} Feedback" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-header">
-      <h4>{{ _('Your feedback') }}</h4>
+<div class="row px-4">
+    <div class="col-10">
+        <h2>{{ _('Summary') }}:</h2>
+        <div class="qrcode"></div>
+        <p class="text-justify">
+            {% blocktranslate trimmed %}
+            This is the list of recommendations to improve the information
+            security maturity in your company, provided that your answers
+            did correctly reflect the state in your company.
+            Also keep in mind that it is a self-assessment and only
+            scratches the surface of the information security maturity level
+            and thus, we are not liable for the results of this survey.
+            {% endblocktranslate %}
+        </p>
+        {% if custom.modules.requestTraining and user.get_country_code == 'LU' and txtscore < custom.minimal_acceptable_score %}
+            <p class="text-justify">
+                {% blocktranslate with score=string_score|add:'/100' trimmed %}
+                Based on your score {{ score }}, the CASES Diagnostic
+                is not available for your organization at this moment.
+                We recommend you improve the information security maturity
+                level by implementing the recommendations listed below.
+                If you need any information security training to
+                raise awareness in your company, do not hesitate to
+                {% endblocktranslate %}
+                {% include 'survey/requestTrainingLink.html' with type='link' %}
+            </p>
+        {% endif %}
+        {% if bonus_score > 0 %}
+            <p class="text-justify">
+                {% blocktranslate trimmed with bonus=bonus_score %}
+                You have scored an additional {{ bonus }} % of bonus points
+                for following best practices.
+                {% endblocktranslate %}
+            </p>
+        {% endif %}
+        <p class="continue-later-link">
+            <button
+                class="pl-0 btn btn-link"
+                type="button"
+                name="continue-later"
+                data-toggle="modal"
+                data-target="#modal">
+                {{ _('Your results link') }}
+            </button>
+        </p>
     </div>
-    <div class="modal-content">
-      <form action="/survey/feedback" method="POST">
-        {% csrf_token %}
-        {% bootstrap_form general_feedback_form label_class="d-none" %}
-        <div class="content">
-          <button class="close-popup btn btn-link float-left" type="button" data-dismiss="modal">
-            {{ _('Close') }}
-          </button>
-          <input type="submit" class="btn btn-primary float-right" value="{{ _('Send') }}" />
+    {% if custom.modules.reportDownload %}
+        <div class="col-2 py-4">
+            <div class="border rounded border-primary bg-bright-blue">
+                <div class="text-center">
+                    {% if custom.modules.displayResults %}
+                        <h3>
+                            {% if txtscore < 50 %}
+                                <span class="font-weight-bold text-danger">{{ string_score }}</span>
+                            {% elif txtscore < custom.minimal_acceptable_score %}
+                                <span class="font-weight-bold text-warning">{{ string_score }}</span>
+                            {% else %}
+                                <span class="font-weight-bold text-success">{{ string_score }}</span>
+                            {% endif %}
+                            <span>/100</span>
+                        </h3>
+                    {% endif %}
+                    {% if custom.modules.requestTraining and user.get_country_code == 'LU' %}
+                        {% if txtscore >= custom.minimal_acceptable_score and custom.modules.requestDiagnostic %}
+                            <h5>{% include 'survey/requestDiagnosticLink.html' with type='button' %}</h5>
+                        {% endif %}
+                        <h5>{% include 'survey/requestTrainingLink.html' with type='button' %}</h5>
+                    {% endif %}
+                </div>
+                <h4 class="px-2">{{ _('Report') }}:</h4>
+                <div class="w-50 mx-auto">
+                    <img class="img-fluid" src="{% static 'images/reportLogo.png' %}" alt="DOC ICON">
+                </div>
+                <div class="text-center py-2">
+                    <a href="{{ reportlink }}" id="download-report">
+                        <button class="btn border border-rounded btn-primary" type="button">
+                            {{ _('Download') }}
+                        </button>
+                    </a>
+                    {% if custom.modules.reportEmail %}
+                        <button
+                            class="btn border border-rounded btn-primary"
+                            type="button"
+                            name="modal-send-report"
+                            data-toggle="modal"
+                            data-target="#modal-send-report">
+                            {{ _('Email') }}
+                        </button>
+                    {% endif %}
+                </div>
+            </div>
         </div>
-      </form>
+
+    {% endif %}
+    {% if  custom.modules.requestDiagnostic and user.get_country_code == 'LU' and txtscore >= custom.minimal_acceptable_score %}
+        <div class="col-12">
+            <h2>{{ _('About the CASES Diagnostic') }}:</h2>
+            <p class="text-justify">
+                {% blocktranslate trimmed %}
+                The CASES Diagnostic is a service which analyses the company maturity
+                in the information security depending on company's requirements.
+                The analyse duration can take approxymately 2 hours.
+                A consultant from CASES will come to your companie's premises,
+                and ask around 30 questions concerning your information security,
+                mostly organizational questions and possibly some technical questions.
+                You will receive a detailed report which will contain a maturity estimation
+                as well as recommendations to enhance the information security maturity.
+                {% endblocktranslate %}
+            <p>
+            <p class="text-justify">
+                {% blocktranslate trimmed %}
+                The CASES Diagnostic is available for all the companies
+                located in Luxembourg and free of charge.
+                {% endblocktranslate %}
+            </p>
+            {% include 'survey/requestDiagnosticLink.html' with type='link' %}
+        </div>
+    {% endif %}
+    {% if custom.modules.displayResults %}
+        <div class="col-6 py-4">
+            <h4 class="text-center">
+                {{ _('Score by section') }}
+            </h4>
+            <canvas id="chartBySections"></canvas>
+        </div>
+        <div class="col-6 py-4">
+            <h4 class="text-center">
+                {{ _('Score by category') }}
+            </h4>
+            <canvas id="chartByCategory"></canvas>
+        </div>
+        <script>
+          var sectionsLabels = {{ sectionsLabels | safe }}
+          var sectionsData = {{ sectionsData | safe }}
+          var categoriesLabels = {{ categoriesLabels | safe }}
+          var categoriesData = {{ categoriesData | safe }}
+        </script>
+    {% endif %}
+    <div class="col-12 py-4">
+      {% for category, items in recommendations.items %}
+      <h4>{{ category | safe }}</h4>
+      <ol>
+        {% for recommendation in items %}
+        <li class="text-justify">{{ recommendation | safe }}</li>
+        {% endfor %}
+      </ol>
+      {% endfor %}
     </div>
-  </div>
+    <div class="col-12 py-2 mx-auto text-center">
+        <button
+            class="btn btn-light border border-rounded"
+            type="button"
+            name="general-feedback"
+            data-toggle="modal"
+            data-target="#modal-feedback">
+            {{ _('Your feedback') }}
+        </button>
+    </div>
 </div>
 
 <div id="cover-spin"></div>
+<div class="modal fade"
+    tabindex="-2"
+    role="dialog"
+    id="modal-feedback"
+    aria-labelledby="{{ custom.tool_name }} Feedback"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-header">
+            <h4>{{ _('Your feedback') }}</h4>
+        </div>
+        <div class="modal-content">
+            <form action="/survey/feedback" method="POST">
+                {% csrf_token %}
+                {% bootstrap_form general_feedback_form label_class="d-none" %}
+                <div class="content">
+                    <button class="close-popup btn btn-link float-left"
+                        type="button"
+                        data-dismiss="modal">
+                        {{ _('Close') }}
+                    </button>
+                    <input
+                        type="submit"
+                        class="btn btn-primary float-right"
+                        value="{{ _('Send') }}">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
 
 {% include 'survey/continue.html' %}
 {% include 'survey/leaveSurvey.html' %}
