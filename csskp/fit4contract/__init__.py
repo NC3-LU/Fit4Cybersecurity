@@ -2,20 +2,20 @@ from django.utils.translation import gettext_lazy
 
 CUSTOM = {
     # Generic configurations
-    "tool_name": "Fit4Privacy",
+    "tool_name": "Fit4Contract",
     "intro_text": gettext_lazy(
-        "This questionnaire, created in consultation with "
-        + '<a href="https://cnpd.public.lu/en.html" target="_blank">CNPD</a>, '
-        + "aims to help organisations assess to what extent they are in control of their personal "
-        + "data risks. First, Fit4Privacy asks questions to understand the amount of personal "
-        + "data processing already in place, then its questions examine the response of the "
-        + "organisation towards GDPR obligations. Based on the identified scope, the tool offers "
-        + "a set of recommendations that could be consolidated into the first steps towards "
-        + "implementing privacy and data protection. Note that this is a self-assessment tool "
-        + "and as such cannot provide definitive guidelines. Yet, Fit4Privacy is raising "
-        + "awareness around key topics such as personal data processing, data lifecycle "
-        + "management, and basic data protection obligations for which organisations should "
-        + "already be prepared as of 2021."
+        "This questionnaire aims to identify the general scope of the contractual "
+        + "relationship considered, in order to set up an acquisition, a lease, "
+        + "a development or any other service in the field of information and communication "
+        + "technologies. Based on this scope, Fit4Contract provides a list of basic "
+        + "information security requirements that are recommended to be considered in "
+        + "establishing the contractual relationship. This is a self assessment tool and "
+        + "as such cannot provide definitive guidelines. This tool is simply raising "
+        + "awareness for Information Security in ICT product and service contracts. "
+        + "Additionally, many countries have their own legal requirements for contracts "
+        + "and thus, we do not take any responsibilities concerning the answers and we "
+        + "clarify that the user of this survey needs to verify, and adapt their "
+        + "contracts accordingly, to comply with all national and international laws."
     ),
     "countries_first": [
         "LU",
@@ -37,14 +37,14 @@ CUSTOM = {
     # Minimal score
     "minimal_acceptable_score": 65,
     # Show or not the questions number left to complete the survey.
-    "show_progress_questions_numbers": True,
+    "show_progress_questions_numbers": False,
     # Custom parts of templates
     #   main dir for PARTS_TEMPLATE_DIR:
     "templates_parts_dir": "templates/parts",
     "templates_parts": {
         # path of the templates parts
         "terms": "terms_part.html",
-        "footer": "footer_part.html",
+        "footer": "fit4contract/footer_part.html",
         "main_logo": "logo_part.html",
     },
     # Available modules
@@ -53,13 +53,13 @@ CUSTOM = {
         "reportEmail": False,
         "requestDiagnostic": False,
         "requestTraining": False,
-        "displayResults": True,
+        "displayResults": False,
     },
     # Available report parts
     "report": {
         "introduction": True,
         "description": True,
-        "results": True,
+        "results": False,
         "recommendations": True,
         "questions": True,
     },

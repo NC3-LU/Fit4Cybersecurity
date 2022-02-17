@@ -2,16 +2,11 @@
 
 from django.db import migrations, models, connection
 import django.db.models.deletion
-import os
 
 
 def load_data_from_sql(apps, schema_editor):
-    file_path = os.path.join(
-        os.path.dirname(__file__), "update_question_type_ss_to_so.sql"
-    )
-    sql_statement = open(file_path).read()
     with connection.cursor() as c:
-        c.execute(sql_statement)
+        c.execute("update survey_surveyquestion set qtype = 'SO' where qtype = 'SS';")
 
 
 class Migration(migrations.Migration):

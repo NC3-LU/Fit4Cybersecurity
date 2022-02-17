@@ -7,6 +7,7 @@ from survey.models import (
     SurveyUser,
     SurveyUserAnswer,
     SURVEY_STATUS_FINISHED,
+    CONTEXT_SECTION_LABEL,
 )
 
 
@@ -20,7 +21,7 @@ def get_finished_surveys_list(start_date, end_date):
     total_questions_score = 0
     max_evaluations_per_section = {}
     for question in SurveyQuestion.objects.exclude(
-        section__label__contains="__context"
+        section__label__contains=CONTEXT_SECTION_LABEL
     ).all():
         total_questions_score += question.maxPoints
         if question.section.id not in max_evaluations_per_section:
@@ -67,7 +68,7 @@ def get_finished_surveys_list(start_date, end_date):
 
         user_answers = (
             SurveyUserAnswer.objects.filter(user=completed_survey_user)
-            .exclude(answer__question__section__label="__context")
+            .exclude(answer__question__section__label=CONTEXT_SECTION_LABEL)
             .order_by("answer__question__qindex", "answer__aindex")
         )
         for user_answer in user_answers:

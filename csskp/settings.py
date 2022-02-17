@@ -101,9 +101,11 @@ INSTALLED_APPS = [
     "django_countries",
     "bootstrap_datepicker_plus",
     "rest_framework",
+    "debug_toolbar",
 ]
 
 MIDDLEWARE = [
+    "debug_toolbar.middleware.DebugToolbarMiddleware",
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
@@ -137,6 +139,14 @@ TEMPLATES = [
         },
     },
 ]
+
+INTERNAL_IPS = [
+    "127.0.0.1",
+]
+if DEBUG:
+    import socket
+    hostname, _, ips = socket.gethostbyname_ex(socket.gethostname())
+    INTERNAL_IPS = [ip[:-1] + '1' for ip in ips] + ['127.0.0.1', '10.0.2.2']
 
 WSGI_APPLICATION = "csskp.wsgi.application"
 
@@ -200,7 +210,7 @@ STATICFILES_DIRS = [
 
 # Used to get an access to the header on JS side.
 CORS_EXPOSE_HEADERS = [
-    'content-disposition',
+    "content-disposition",
 ]
 
 SITE_IMAGES_DIR = os.path.join(STATIC_DIR, "images", config.SITE_NAME)
@@ -229,7 +239,7 @@ COUNTRIES_FIRST_BREAK = "---------------------"
 
 
 # Default settings
-BOOTSTRAP4 = BOOTSTRAP4 = {
+BOOTSTRAP4 = {
     # The complete URL to the Bootstrap CSS file
     # Note that a URL can be either a string,
     # e.g. "https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css",

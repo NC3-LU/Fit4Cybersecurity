@@ -15,6 +15,7 @@ from survey.viewLogic import (
     find_user_by_id,
     get_questions_with_user_answers,
     handle_general_feedback,
+    get_current_user_question_index_from_sequence,
 )
 from survey.reporthelper import calculateResult, getRecommendations
 from survey.report import create_html_report, makepdf
@@ -45,7 +46,7 @@ def start(request):
 
         if isinstance(form_data, SurveyUser):
             return HttpResponseRedirect(
-                "/survey/question/" + str(form_data.current_qindex)
+                "/survey/question/" + str(form_data.current_question.qindex)
             )
     except Exception as e:
         messages.error(request, e)
@@ -62,8 +63,10 @@ def handle_question_form(request, question_index: int):
 
     if user.is_survey_finished():
         return HttpResponseRedirect("/survey/finish")
-    elif user.current_qindex < question_index or question_index <= 0:
-        return HttpResponseRedirect("/survey/question/" + str(user.current_qindex))
+
+    user_current_question_index = get_current_user_question_index_from_sequence(user)
+    if user_current_question_index < question_index or question_index <= 0:
+        return HttpResponseRedirect("/survey/question/" + str(user_current_question_index))
 
     review_ancher = ""
     if user.is_survey_under_review():
@@ -75,7 +78,9 @@ def handle_question_form(request, question_index: int):
         if result.is_survey_under_review():
             return HttpResponseRedirect("/survey/review" + review_ancher)
 
-        return HttpResponseRedirect("/survey/question/" + str(result.current_qindex))
+        return HttpResponseRedirect("/survey/question/" + str(
+            get_current_user_question_index_from_sequence(result))
+        )
 
     return render(request, "survey/questions.html", context=result)
 
@@ -107,7 +112,9 @@ def change_lang(request, lang: str):
     user.save()
 
     if user.is_survey_in_progress() and previous_path.__contains__("/survey/question/"):
-        return HttpResponseRedirect("/survey/question/" + str(user.current_qindex))
+        return HttpResponseRedirect("/survey/question/" + str(
+            get_current_user_question_index_from_sequence(user))
+        )
 
     if user.is_survey_under_review() and previous_path.__contains__("/survey/review"):
         return HttpResponseRedirect("/survey/review")
@@ -182,7 +189,9 @@ def review(request):
     if user.is_survey_finished():
         return HttpResponseRedirect("/survey/finish")
     elif user.is_survey_in_progress():
-        return HttpResponseRedirect("/survey/question/" + str(user.current_qindex))
+        return HttpResponseRedirect("/survey/question/" + str(
+            get_current_user_question_index_from_sequence(user))
+        )
 
     if request.method == "POST" and forms.Form(data=request.POST).is_valid():
         user.status = SURVEY_STATUS_FINISHED
@@ -218,10 +227,6 @@ def finish(request):
     lang = user.chosen_lang
     translation.activate(lang)
 
-    # make survey readonly and show results.
-    # also needs saving here!
-    # show a "Thank you" and a "get your report" button
-
     txt_score, bonus_score, radar_current, sections_list = calculateResult(user)
 
     recommendations = getRecommendations(user, lang)
@@ -229,7 +234,7 @@ def finish(request):
     for rx in recommendations:
         recommendations[rx] = [x.replace("\n", "<br>") for x in recommendations[rx]]
 
-    textLayout = {
+    text_layout = {
         "title": CUSTOM["tool_name"] + " - " + _("Final summary"),
         "recommendations": recommendations,
         "user": user,
@@ -239,11 +244,11 @@ def finish(request):
         "string_score": str(txt_score),
         "bonus_score": bonus_score,
         "chartTitles": str(sections_list),
-        "chartdataYou": str(radar_current),
+        "chartData": str(radar_current),
         "general_feedback_form": handle_general_feedback(user, request),
     }
 
-    return render(request, "survey/finishedSurvey.html", context=textLayout)
+    return render(request, "survey/finishedSurvey.html", context=text_layout)
 
 
 def get_companies(request):
@@ -272,7 +277,9 @@ def resume(request):
     request.session["user_id"] = str(user_id)
 
     if user.is_survey_in_progress():
-        return HttpResponseRedirect("/survey/question/" + str(user.current_qindex))
+        return HttpResponseRedirect("/survey/question/" + str(
+            get_current_user_question_index_from_sequence(user))
+        )
 
     if user.is_survey_under_review():
         return HttpResponseRedirect("/survey/review")
@@ -300,7 +307,9 @@ def save_general_feedback(request):
         return HttpResponseRedirect("/survey/finish")
 
     if user.is_survey_in_progress():
-        return HttpResponseRedirect("/survey/question/" + str(user.current_qindex))
+        return HttpResponseRedirect("/survey/question/" + str(
+            get_current_user_question_index_from_sequence(user))
+        )
 
     if user.is_survey_under_review():
         return HttpResponseRedirect("/survey/review")

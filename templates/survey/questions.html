@@ -6,9 +6,9 @@
 
 {% block bootstrap4_extra_head %}
     {{ block.super }}
-    <link rel="stylesheet" type="text/css" href="{% static "survey/css/survey-questions.css" %}" />
-    <script type="text/javascript" src="{% static "survey/js/qrcode.min.js" %}"></script>
-    <script type="text/javascript" src="{% static "survey/js/survey-questions.js" %}"></script>
+    <link rel="stylesheet" type="text/css" href="{% static 'survey/css/survey-questions.css' %}" />
+    <script type="text/javascript" src="{% static 'survey/js/qrcode.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'survey/js/survey-questions.js' %}"></script>
 {% endblock %}
 
 {% block title %}{{ title }}{% endblock %}
@@ -23,7 +23,9 @@
                 aria-valuenow="{% widthratio current_question_index total_questions_num 100 %}"
                 aria-valuemin="0"
                 aria-valuemax="100">
+                {% if custom.show_progress_questions_numbers %}
                 {{ current_question_index }} of {{ total_questions_num }}
+                {% endif %}
             </div>
         </div>
     {% endif %}
@@ -32,7 +34,7 @@
         <div class="card-title">
             <span data-bs-toggle="tooltip" title="{{ question_tooltip | safe }}">{{ question | safe }}</span>
         </div>
-        <form action="{{ action }}" method="post" class="form">
+        <form action="{{ action }}" method="post" class="form" id="survey-question-form">
             {% csrf_token %}
 
             {% bootstrap_form form exclude="feedback" %}
@@ -70,9 +72,9 @@
                             {{ _('Continue later') }}
                         </button>
                         <input
-                            class="btn btn-primary"
+                            class="btn btn-primary{% if show_warning_dialog %} modify-question{% endif %}"
                             type="submit"
-                            value="{% if user.is_survey_in_progress %}{{ _('Next') }}{% else %}{{ _('Modify') }}{% endif %}"
+                            value="{% if user.is_survey_under_review or show_warning_dialog %}{{ _('Modify') }}{% else %}{{ _('Next') }}{% endif %}"
                             data-question-index="{{ current_question_index }}">
                     </div>
                 </div>
@@ -92,4 +94,7 @@
 
     {% include 'survey/continue.html' %}
     {% include 'survey/leaveSurvey.html' %}
+    {% if show_warning_dialog %}
+        {% include 'survey/answerChangingWarning.html' %}
+    {% endif %}
 {% endblock %}
