@@ -14,7 +14,7 @@ from django.utils import translation
 from django.utils.translation import gettext as _
 from csskp.settings import CUSTOM, LANGUAGE_CODE
 from survey.lib.utils import tree, mean_gen
-from survey.models import SurveyUser, SurveyUserAnswer, SurveyQuestion
+from survey.models import SurveyUser, SurveyUserAnswer, SurveyQuestion, CONTEXT_SECTION_LABEL
 from survey.reporthelper import calculateResult
 from django_countries import countries
 
@@ -24,10 +24,10 @@ def index(request):
     translation.activate(lang)
     date_from = request.GET.get("from", None)
     # date_to = request.GET.get('to', None)
+    now = datetime.now()
     if not date_from:
         # 12 months ago
-        date_from = datetime.now() - relativedelta(months=12)
-        date_from = date_from.strftime("%Y-%m-%d")
+        date_from = (now - relativedelta(months=12)).strftime("%Y-%m-%d")
 
     nb_finished_surveys = SurveyUser.objects.filter(status=3).count()
     nb_finished_surveys_for_period = SurveyUser.objects.filter(
@@ -37,7 +37,7 @@ def index(request):
         SurveyUserAnswer.objects.filter(
             user__status=3,
             user__created_at__gte=date_from,
-            answer__question__section__label="__context",
+            answer__question__section__label=CONTEXT_SECTION_LABEL,
             answer__question__label__contains="country",
         )
         .values_list("uvalue", flat=True)
@@ -48,8 +48,29 @@ def index(request):
     except Exception:
         first_survey = ""
     nb_surveys = SurveyUser.objects.count()
+
+    time_frames = (
+        (
+            _("Last week"),
+            (now - relativedelta(weeks=1)).strftime("%Y-%m-%d"),
+        ),
+        (
+            _("Last month"),
+            (now - relativedelta(months=1)).strftime("%Y-%m-%d"),
+        ),
+        (
+            _("Last quarter"),
+            (now - relativedelta(months=4)).strftime("%Y-%m-%d"),
+        ),
+        (
+            _("Last year"),
+            (now - relativedelta(months=12)).strftime("%Y-%m-%d"),
+        ),
+    )
+
     context = {
         "date_from": date_from,
+        "time_frames": time_frames,
         "nb_surveys": nb_surveys,
         "first_survey_date": getattr(first_survey, "created_at", False),
         "nb_finished_surveys": nb_finished_surveys,
@@ -155,7 +176,7 @@ def survey_per_country(request):
         .filter(
             user__status=3,
             user__created_at__gte=date_from,
-            answer__question__section__label="__context",
+            answer__question__section__label=CONTEXT_SECTION_LABEL,
             answer__question__label__contains="country",
             entries__gt=nb_finished_surveys * threshold,
         )
@@ -170,7 +191,7 @@ def survey_per_country(request):
         .filter(
             user__status=3,
             user__created_at__gte=date_from,
-            answer__question__section__label="__context",
+            answer__question__section__label=CONTEXT_SECTION_LABEL,
             answer__question__label__contains="country",
             entries__lte=nb_finished_surveys * threshold,
         )
@@ -205,7 +226,7 @@ def survey_per_company_size(request):
         SurveyUserAnswer.objects.filter(
             user__status=3,
             user__created_at__gte=date_from,
-            answer__question__section__label="__context",
+            answer__question__section__label=CONTEXT_SECTION_LABEL,
             answer__question__label__contains="employees",
         )
         .values("answer__label")
@@ -234,7 +255,7 @@ def survey_per_company_sector(request):
         SurveyUserAnswer.objects.filter(
             user__status=3,
             user__created_at__gte=date_from,
-            answer__question__section__label="__context",
+            answer__question__section__label=CONTEXT_SECTION_LABEL,
             answer__question__label__contains="sector",
         )
         .values("answer__label")
@@ -252,7 +273,7 @@ def answers_per_section(request):
     surveys completed during the last month."""
     lang = request.session.get(settings.LANGUAGE_COOKIE_NAME, LANGUAGE_CODE)
     translation.activate(lang)
-    chart_exclude_sections = ["__context"]
+    chart_exclude_sections = [CONTEXT_SECTION_LABEL]
     if "chart_exclude_sections" in CUSTOM.keys():
         chart_exclude_sections = (
             chart_exclude_sections + CUSTOM["chart_exclude_sections"]

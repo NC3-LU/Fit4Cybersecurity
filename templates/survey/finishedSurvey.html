@@ -6,15 +6,14 @@
 
 {% block bootstrap4_extra_head %}
 {{ block.super }}
-    <link rel="stylesheet" type="text/css" href="{% static "survey/css/survey-questions.css" %}" />
-    <link rel="stylesheet" type="text/css" href="{% static "survey/css/chart.css" %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'survey/css/survey-questions.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'survey/css/chart.css' %}" />
 
-    <script type="text/javascript" src="{% static "survey/js/qrcode.min.js" %}"></script>
-    <script type="text/javascript" src="/static/npm_components/chart.js/dist/chart.min.js"></script>
-    <script type="text/javascript" src="{% static "survey/js/chart.js" %}"></script>
-    <script type="text/javascript" src="{% static "survey/js/survey-questions.js" %}"></script>
-    <script type="text/javascript" src="{% static "survey/js/send-email.js" %}"></script>
-    <script type="text/javascript" src="/static/npm_components/chartjs-plugin-datalabels/dist/chartjs-plugin-datalabels.min.js"></script>
+    <script type="text/javascript" src="{% static 'survey/js/qrcode.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'npm_components/chart.js/dist/chart.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'survey/js/chart.js' %}"></script>
+    <script type="text/javascript" src="{% static 'survey/js/survey-questions.js' %}"></script>
+    <script type="text/javascript" src="{% static 'survey/js/send-email.js' %}"></script>
 {% endblock %}
 
 {% block title %}{{ title }}{% endblock %}

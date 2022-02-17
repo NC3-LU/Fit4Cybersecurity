@@ -60,6 +60,11 @@ $(document).ready(function() {
         data: [],
     };
 
+    let section_displayTimeFrame = document.getElementById("section_displayTimeFrame");
+    section_displayTimeFrame.onchange = function(event) {
+      window.location = "/stats/?from=" + section_displayTimeFrame.value;
+    }
+
     let section_displayByCountry = document.getElementById("section_displayByCountry");
     let category_displayByCountry = document.getElementById("category_displayByCountry");
 

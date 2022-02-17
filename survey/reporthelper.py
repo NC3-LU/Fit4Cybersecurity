@@ -10,10 +10,11 @@ import logging
 from csskp.settings import PICTURE_DIR, CUSTOM
 from survey.models import (
     SurveyQuestion,
-    SurveyQuestionAnswer,
     SurveyUser,
     SurveyUserAnswer,
     Recommendations,
+    SurveyUserQuestionSequence,
+    CONTEXT_SECTION_LABEL,
 )
 from utils.radarFactory import radar_factory
 from django.db.models import Sum
@@ -25,19 +26,13 @@ logger = logging.getLogger(__name__)
 
 
 def getRecommendations(user: SurveyUser, lang: str) -> Dict[str, List[str]]:
-    allAnswers = SurveyQuestionAnswer.objects.exclude(
-        question__section__label__contains="__context"
-    ).order_by("question__qindex", "aindex")
     employees_number_code = user.get_employees_number_code()
 
-    finalReportRecs: Dict[str, List[str]] = {}
-    for a in allAnswers:
-        try:
-            userAnswer = SurveyUserAnswer.objects.filter(user=user).filter(answer=a)[0]
-        except IndexError:
-            continue
-        recommendations = Recommendations.objects.filter(forAnswer=a)
+    user_answers = SurveyUserAnswer.objects.filter(user=user)
 
+    final_report_recs: Dict[str, List[str]] = {}
+    for user_answer in user_answers:
+        recommendations = Recommendations.objects.filter(forAnswer=user_answer.answer)
         if not recommendations.exists():
             continue
 
@@ -48,22 +43,31 @@ def getRecommendations(user: SurveyUser, lang: str) -> Dict[str, List[str]]:
             ):
                 continue
 
-            if (userAnswer.uvalue == "1" and rec.answerChosen) or (
-                userAnswer.uvalue == "0" and not rec.answerChosen
+            if (user_answer.uvalue == "1" and rec.answerChosen) or (
+                user_answer.uvalue == "0" and not rec.answerChosen
             ):
-                category_name = _(rec.forAnswer.question.service_category.label)
+                # If categories are set, we use them otherwise question service category.
+                category_name = ""
+                if rec.categories:
+                    rec_categories = rec.categories.all()
+                    for index, rec_category in enumerate(rec_categories):
+                        category_name += _(rec_category.label)
+                        if len(rec_categories) > (index + 1):
+                            category_name += ' & '
+                if category_name == "":
+                    category_name = _(rec.forAnswer.question.service_category.label)
 
                 translated_recommendation = _(rec.label)
                 if is_recommendation_already_added(
-                    translated_recommendation, finalReportRecs
+                    translated_recommendation, final_report_recs
                 ):
                     continue
 
-                if category_name not in finalReportRecs:
-                    finalReportRecs[category_name] = []
-                finalReportRecs[category_name].append(translated_recommendation)
+                if category_name not in final_report_recs:
+                    final_report_recs[category_name] = []
+                final_report_recs[category_name].append(translated_recommendation)
 
-    return finalReportRecs
+    return {key: value for key, value in sorted(final_report_recs.items())}
 
 
 def is_recommendation_already_added(recommendation: str, recommendations: dict) -> bool:
@@ -74,27 +78,24 @@ def is_recommendation_already_added(recommendation: str, recommendations: dict) 
     return False
 
 
-def calculateResult(
-    user: SurveyUser,
-) -> Tuple[int, int, List[int], List[str], List[int], List[str]]:
-    total_questions_score = 0
-    total_user_score = 0
-    total_bonus_points = 0
-    user_given_bonus_points = 0
+def calculateResult(user: SurveyUser) -> Tuple[int, int, List[int], List[str]]:
     user_bonus_points_percent = 0
-    max_evaluations_per_section: Dict[int, int] = {}
-    sections: Dict[int, str] = {}
-    user_evaluations_by_section: List[int] = []
-    user_evaluations_by_category: List[int] = []
+    user_evaluations: List[int] = []
 
-    chart_exclude_sections = ["__context"]
+    chart_exclude_sections = [CONTEXT_SECTION_LABEL]
     if "chart_exclude_sections" in CUSTOM.keys():
         chart_exclude_sections = (
             chart_exclude_sections + CUSTOM["chart_exclude_sections"]
         )
 
-    questions_by_section = (
-        SurveyQuestion.objects.exclude(section__label__in=chart_exclude_sections)
+    """Only answered questions are used for the results calculation."""
+    answered_questions_ids = [
+        q.question.id for q in SurveyUserQuestionSequence.objects.filter(user=user, is_active=True)
+    ]
+    questions = (
+        SurveyQuestion.objects
+        .filter(id__in=answered_questions_ids)
+        .exclude(section__label__in=chart_exclude_sections)
         .values_list("section_id")
         .order_by("section_id")
         .annotate(total=Sum("maxPoints"))
@@ -146,7 +147,7 @@ def calculateResult(
         max_evaluations_per_category
     )
 
-    # get the score in percent, with then 100 being total_questions_score
+    # Get the score in percent, with then 100 being total_questions_score.
     if total_user_score > 0:
         total_user_score = round(total_user_score * 100 / total_questions_score)
     if total_bonus_points > 0:
@@ -212,3 +213,13 @@ def generate_chart_png(
         except Exception as e:
             raise Exception("{}".format(e))
         return file_name
+
+
+def get_answered_questions_list(user: SurveyUser):
+    return [i.question for i in get_answered_questions_sequences(user)]
+
+
+def get_answered_questions_sequences(user: SurveyUser):
+    return SurveyUserQuestionSequence.objects.filter(
+        user=user, has_been_answered=True
+    ).order_by("branch", "level", "index")
