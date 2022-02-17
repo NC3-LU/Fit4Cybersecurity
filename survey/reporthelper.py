@@ -80,7 +80,6 @@ def is_recommendation_already_added(recommendation: str, recommendations: dict) 
 
 def calculateResult(user: SurveyUser) -> Tuple[int, int, List[int], List[str]]:
     user_bonus_points_percent = 0
-    user_evaluations: List[int] = []
 
     chart_exclude_sections = [CONTEXT_SECTION_LABEL]
     if "chart_exclude_sections" in CUSTOM.keys():
@@ -139,6 +138,7 @@ def calculateResult(user: SurveyUser) -> Tuple[int, int, List[int], List[str]]:
     total_user_score = user_answers.filter(uvalue=1).aggregate(
         total=Sum("answer__score")
     )["total"]
+
 
     user_evaluations_by_section = user.get_evaluations_by_section(
         max_evaluations_per_section
