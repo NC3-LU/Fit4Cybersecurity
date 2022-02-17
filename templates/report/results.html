@@ -20,6 +20,18 @@ You have scored an additional {{ bonus }} % of bonus points for following best p
 </p>
 {% endif %}
 
-<img class="chart center" src="data:image/png;base64,{{ CHART }}" />
+<div id="bySection">
+    <h4>
+        {{ _('By section') }}
+    </h4>
+    <img class="chart center" src="data:image/png;base64,{{ SECTION_CHART }}">
+</div>
+<div id="byCategory">
+    <h4>
+        {{ _('By category') }}
+    </h4>
+    <img class="chart center" src="data:image/png;base64,{{ CATEGORY_CHART }}">
+</div>
+
 
 <p class="page-break" ></p>

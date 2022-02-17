@@ -4,6 +4,7 @@ from typing import Optional, Dict, List, Tuple
 import io
 import os
 import base64
+import numpy as np
 import logging
 
 from csskp.settings import PICTURE_DIR, CUSTOM
@@ -73,7 +74,9 @@ def is_recommendation_already_added(recommendation: str, recommendations: dict) 
     return False
 
 
-def calculateResult(user: SurveyUser) -> Tuple[int, int, List[int], List[str]]:
+def calculateResult(
+    user: SurveyUser,
+) -> Tuple[int, int, List[int], List[str], List[int], List[str]]:
     total_questions_score = 0
     total_user_score = 0
     total_bonus_points = 0
@@ -81,7 +84,8 @@ def calculateResult(user: SurveyUser) -> Tuple[int, int, List[int], List[str]]:
     user_bonus_points_percent = 0
     max_evaluations_per_section: Dict[int, int] = {}
     sections: Dict[int, str] = {}
-    user_evaluations: List[int] = []
+    user_evaluations_by_section: List[int] = []
+    user_evaluations_by_category: List[int] = []
 
     chart_exclude_sections = ["__context"]
     if "chart_exclude_sections" in CUSTOM.keys():
@@ -89,16 +93,36 @@ def calculateResult(user: SurveyUser) -> Tuple[int, int, List[int], List[str]]:
             chart_exclude_sections + CUSTOM["chart_exclude_sections"]
         )
 
-    questions = (
+    questions_by_section = (
         SurveyQuestion.objects.exclude(section__label__in=chart_exclude_sections)
         .values_list("section_id")
         .order_by("section_id")
         .annotate(total=Sum("maxPoints"))
     )
 
-    max_evaluations_per_section = {q[0]: q[1] for q in questions}
-    total_questions_score = questions.aggregate(total=Sum("maxPoints"))["total"]
-    sections = list(questions.values_list("section__label", flat=True).distinct())
+    questions_by_category = (
+        questions_by_section.values_list("service_category_id")
+        .order_by("service_category_id")
+        .annotate(total=Sum("maxPoints"))
+    )
+
+    max_evaluations_per_section = {q[0]: q[1] for q in questions_by_section}
+    max_evaluations_per_category = {q[0]: q[1] for q in questions_by_category}
+    total_questions_score = questions_by_section.aggregate(total=Sum("maxPoints"))[
+        "total"
+    ]
+    sections = [
+        _(section)
+        for section in questions_by_section.values_list(
+            "section__label", flat=True
+        ).distinct()
+    ]
+    categories = [
+        _(category)
+        for category in questions_by_category.values_list(
+            "service_category__label", flat=True
+        ).distinct()
+    ]
 
     # There are no exclude sections, because score or bonus points can be set to some answers.
     user_answers = SurveyUserAnswer.objects.filter(user=user).order_by(
@@ -115,7 +139,12 @@ def calculateResult(user: SurveyUser) -> Tuple[int, int, List[int], List[str]]:
         total=Sum("answer__score")
     )["total"]
 
-    user_evaluations = user.get_evaluations_by_section(max_evaluations_per_section)
+    user_evaluations_by_section = user.get_evaluations_by_section(
+        max_evaluations_per_section
+    )
+    user_evaluations_by_category = user.get_evaluations_by_category(
+        max_evaluations_per_category
+    )
 
     # get the score in percent, with then 100 being total_questions_score
     if total_user_score > 0:
@@ -128,8 +157,10 @@ def calculateResult(user: SurveyUser) -> Tuple[int, int, List[int], List[str]]:
     return (
         total_user_score,
         user_bonus_points_percent,
-        user_evaluations,
+        user_evaluations_by_section,
         sections,
+        user_evaluations_by_category,
+        categories,
     )
 
 
@@ -144,17 +175,25 @@ def generate_chart_png(
     assert len(evaluation) == n, "'evaluation' and 'sections_list' must have same size."
     theta = radar_factory(n, frame="polygon")
 
-    fig = Figure(figsize=(11, 11), dpi=150)
+    fig = Figure(figsize=(15, 15), dpi=150)
     ax = fig.subplots(nrows=1, ncols=1, subplot_kw=dict(projection="radar"))
-    fig.subplots_adjust(wspace=0.25, hspace=0.20, top=0.85, bottom=0.05)
+    fig.subplots_adjust(left=0.15, right=0.85)
 
     ax.set_rgrids([0, 20, 40, 60, 80, 100], angle=0)
     ax.set_ylim(0, 100)
 
     ax.plot(theta, evaluation, color="r")
     ax.fill(theta, evaluation, facecolor="r", alpha=0.25)
-
     ax.set_varlabels(sections_list)
+    ax.set_xticklabels(sections_list, wrap=True, multialignment="center")
+
+    for label, angle in zip(ax.get_xticklabels(), theta):
+        if angle in (0, np.pi):
+            label.set_horizontalalignment("center")
+        elif 0 < angle < np.pi:
+            label.set_horizontalalignment("left")
+        else:
+            label.set_horizontalalignment("right")
 
     if output_type == "base64":
         stringIObytes = io.BytesIO()
