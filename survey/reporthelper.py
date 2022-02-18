@@ -91,7 +91,6 @@ def calculateResult(user: SurveyUser) -> Tuple[int, int, List[int], List[str]]:
         SurveyQuestion.objects.exclude(section__label__in=chart_exclude_sections)
         .values_list("section_id")
         .order_by("section_id")
-        .annotate(total=Sum("maxPoints"))
     )
 
     """Only answered questions are used for the results calculation."""
@@ -107,17 +106,20 @@ def calculateResult(user: SurveyUser) -> Tuple[int, int, List[int], List[str]]:
             id__in=answered_questions_ids
         )
 
-    questions_by_category = (
-        questions_by_section.values_list("service_category_id")
-        .order_by("service_category_id")
-        .annotate(total=Sum("maxPoints"))
-    )
+    questions_by_category = questions_by_section.values_list(
+        "service_category_id"
+    ).order_by("service_category_id")
 
-    max_evaluations_per_section = {q[0]: q[1] for q in questions_by_section}
-    max_evaluations_per_category = {q[0]: q[1] for q in questions_by_category}
+    max_evaluations_per_section = {
+        q[0]: q[1] for q in questions_by_section.annotate(total=Sum("maxPoints"))
+    }
+    max_evaluations_per_category = {
+        q[0]: q[1] for q in questions_by_category.annotate(total=Sum("maxPoints"))
+    }
     total_questions_score = questions_by_section.aggregate(total=Sum("maxPoints"))[
         "total"
     ]
+
     sections = [
         _(section)
         for section in questions_by_section.values_list(
