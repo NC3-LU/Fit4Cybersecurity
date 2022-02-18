@@ -53,7 +53,7 @@ def getRecommendations(user: SurveyUser, lang: str) -> Dict[str, List[str]]:
                     for index, rec_category in enumerate(rec_categories):
                         category_name += _(rec_category.label)
                         if len(rec_categories) > (index + 1):
-                            category_name += ' & '
+                            category_name += " & "
                 if category_name == "":
                     category_name = _(rec.forAnswer.question.service_category.label)
 

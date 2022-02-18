@@ -14,7 +14,12 @@ from django.utils import translation
 from django.utils.translation import gettext as _
 from csskp.settings import CUSTOM, LANGUAGE_CODE
 from survey.lib.utils import tree, mean_gen
-from survey.models import SurveyUser, SurveyUserAnswer, SurveyQuestion, CONTEXT_SECTION_LABEL
+from survey.models import (
+    SurveyUser,
+    SurveyUserAnswer,
+    SurveyQuestion,
+    CONTEXT_SECTION_LABEL,
+)
 from survey.reporthelper import calculateResult
 from django_countries import countries
 

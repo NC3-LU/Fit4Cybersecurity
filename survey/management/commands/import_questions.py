@@ -10,7 +10,7 @@ from survey.models import (
     SurveyQuestionAnswer,
     Recommendations,
     SurveyAnswerQuestionMap,
-    CONTEXT_SECTION_LABEL
+    CONTEXT_SECTION_LABEL,
 )
 
 
@@ -54,7 +54,11 @@ class Command(BaseCommand):
 
             # The context questions have negative indexes.
             qindex = int(question.get("qindex", 1))
-            qindex = abs(qindex) if question["section"] != CONTEXT_SECTION_LABEL else -abs(qindex)
+            qindex = (
+                abs(qindex)
+                if question["section"] != CONTEXT_SECTION_LABEL
+                else -abs(qindex)
+            )
 
             if qindex > max_question_index:
                 max_question_index = qindex
@@ -148,7 +152,10 @@ class Command(BaseCommand):
                     categories = []
                     if "categories" in reco:
                         for reco_category in reco["categories"]:
-                            reco_cat, created = SurveyQuestionServiceCategory.objects.get_or_create(
+                            (
+                                reco_cat,
+                                created,
+                            ) = SurveyQuestionServiceCategory.objects.get_or_create(
                                 label=reco_category["label"]
                             )
                             if created:
@@ -240,17 +247,21 @@ class Command(BaseCommand):
     def process_answers_questions_map(
         answers_questions_map: Dict, answers_to_remove_map: List[SurveyQuestionAnswer]
     ) -> None:
-        SurveyAnswerQuestionMap.objects.filter(answer__in=answers_to_remove_map).delete()
+        SurveyAnswerQuestionMap.objects.filter(
+            answer__in=answers_to_remove_map
+        ).delete()
         for answer_id in answers_questions_map:
             answer = answers_questions_map[answer_id]["object"]
             SurveyAnswerQuestionMap.objects.filter(answer=answer).delete()
             answer_questions_map = answers_questions_map[answer_id]["questions_map"]
             for answer_question_map in answer_questions_map:
-                question = SurveyQuestion.objects.get(label=answer_question_map["label"])
+                question = SurveyQuestion.objects.get(
+                    label=answer_question_map["label"]
+                )
                 SurveyAnswerQuestionMap.objects.create(
                     answer=answer,
                     question=question,
                     branch=answer_question_map["branch"],
                     level=answer_question_map["level"],
-                    order=answer_question_map["order"]
+                    order=answer_question_map["order"],
                 )
