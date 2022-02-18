@@ -139,7 +139,6 @@ def calculateResult(user: SurveyUser) -> Tuple[int, int, List[int], List[str]]:
         total=Sum("answer__score")
     )["total"]
 
-
     user_evaluations_by_section = user.get_evaluations_by_section(
         max_evaluations_per_section
     )
