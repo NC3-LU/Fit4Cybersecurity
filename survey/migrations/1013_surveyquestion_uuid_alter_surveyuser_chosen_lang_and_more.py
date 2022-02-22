@@ -2,6 +2,14 @@
 
 from django.db import migrations, models, connection
 import django.db.models.deletion
+from django.db.models import Max
+from survey.models import (
+    SurveyUser,
+    SurveyQuestion,
+    SurveyUserQuestionSequence,
+    SurveyAnswerQuestionMap,
+    SURVEY_STATUS_IN_PROGRESS
+)
 
 
 def migrate_to_current_question(apps, schema_editor):
@@ -11,6 +19,30 @@ def migrate_to_current_question(apps, schema_editor):
     )
     with connection.cursor() as c:
         c.execute(sql)
+
+
+def create_existing_users_sequences(apps, schema_editor):
+    if not SurveyAnswerQuestionMap.objects.exists():
+        max_qindex = SurveyQuestion.objects.aggregate(Max("qindex"))["qindex__max"]
+        questions = SurveyQuestion.objects.filter(qindex__gt=0).order_by("qindex")
+        cursor = connection.cursor()
+        cursor.execute("SELECT id, current_qindex, status FROM survey_surveyuser")
+        for user in cursor.fetchall():
+            user_obj = SurveyUser.objects.get(id=user[0])
+            for x in range(0, max_qindex):
+                has_been_answered = True
+                if user[1] < x+1 or (
+                    user[2] == SURVEY_STATUS_IN_PROGRESS
+                    and user[1] == x+1
+                ):
+                    has_been_answered = False
+
+                SurveyUserQuestionSequence.objects.create(
+                    user=user_obj,
+                    question=questions[x],
+                    index=x+1,
+                    has_been_answered=has_been_answered,
+                )
 
 
 class Migration(migrations.Migration):
@@ -103,6 +135,8 @@ class Migration(migrations.Migration):
             ),
         ),
         migrations.RunPython(migrate_to_current_question),
+        # Recreate all the sequences for existing users.
+        migrations.RunPython(create_existing_users_sequences),
         migrations.AlterField(
             model_name="surveyuser",
             name="current_question",

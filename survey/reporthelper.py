@@ -87,24 +87,22 @@ def calculateResult(user: SurveyUser) -> Tuple[int, int, List[int], List[str]]:
             chart_exclude_sections + CUSTOM["chart_exclude_sections"]
         )
 
+    """Only answered questions are used for the results calculation."""
+    answered_questions_ids = [
+        q.question.id
+        for q in SurveyUserQuestionSequence.objects.filter(
+            user=user, is_active=True
+        )
+    ]
+
     questions_by_section = (
-        SurveyQuestion.objects.exclude(section__label__in=chart_exclude_sections)
+        SurveyQuestion.objects.exclude(
+            id__in=answered_questions_ids,
+            section__label__in=chart_exclude_sections,
+        )
         .values_list("section_id")
         .order_by("section_id")
     )
-
-    """Only answered questions are used for the results calculation."""
-    # Check if QuestionSequence exists, avoiding error for old users
-    if SurveyUserQuestionSequence.objects.filter(user=user, is_active=True).exists():
-        answered_questions_ids = [
-            q.question.id
-            for q in SurveyUserQuestionSequence.objects.filter(
-                user=user, is_active=True
-            )
-        ]
-        questions_by_section = questions_by_section.filter(
-            id__in=answered_questions_ids
-        )
 
     questions_by_category = questions_by_section.values_list(
         "service_category_id"
