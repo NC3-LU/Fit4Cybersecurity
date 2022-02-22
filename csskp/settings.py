@@ -109,18 +109,7 @@ context_processors = [
     "survey.context_processors.instance_configurations",
 ]
 
-INTERNAL_IPS = [
-    "127.0.0.1",
-]
-if DEBUG:
-    INSTALLED_APPS.append("debug_toolbar")
-    context_processors.append("django.template.context_processors.debug")
-    import socket
-    hostname, _, ips = socket.gethostbyname_ex(socket.gethostname())
-    INTERNAL_IPS = [ip[:-1] + "1" for ip in ips] + ["127.0.0.1", "10.0.2.2"]
-
 MIDDLEWARE = [
-    "debug_toolbar.middleware.DebugToolbarMiddleware",
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
@@ -130,6 +119,17 @@ MIDDLEWARE = [
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
     "django.middleware.locale.LocaleMiddleware",
 ]
+
+INTERNAL_IPS = [
+    "127.0.0.1",
+]
+if DEBUG:
+    INSTALLED_APPS.append("debug_toolbar")
+    MIDDLEWARE.append("debug_toolbar.middleware.DebugToolbarMiddleware")
+    context_processors.append("django.template.context_processors.debug")
+    import socket
+    hostname, _, ips = socket.gethostbyname_ex(socket.gethostname())
+    INTERNAL_IPS = [ip[:-1] + "1" for ip in ips] + ["127.0.0.1", "10.0.2.2"]
 
 ROOT_URLCONF = "csskp.urls"
 
