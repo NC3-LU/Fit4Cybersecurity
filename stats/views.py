@@ -219,6 +219,7 @@ def survey_per_country(request):
 
     if query_lte:
         for q in query_lte:
+            result[_("Others")]: Dict[str, int] = dict()
             try:
                 country = _(dict(countries).get(q["uvalue"]))
             except AttributeError:
