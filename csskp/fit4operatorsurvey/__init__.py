@@ -69,7 +69,7 @@ CUSTOM = {
         "size": True,
         "country": True,
         "status": True,
-        "language": True,
+        "language": False,
         "section": False,
         "category": False,
     },

@@ -18,6 +18,7 @@ from survey.models import (
     SurveyUser,
     SurveyUserAnswer,
     SurveyQuestion,
+    SurveyQuestionAnswer,
     CONTEXT_SECTION_LABEL,
 )
 from survey.reporthelper import calculateResult
@@ -84,7 +85,7 @@ def index(request):
         "python_version": "{}.{}.{}".format(*sys.version_info[:3]),
         "others_translation": str(_("Others")),
         "range": range(5),
-        "stats_options": CUSTOM.get('stats'),
+        "stats_options": CUSTOM.get("stats"),
     }
 
     return render(request, "survey/stats.html", context=context)
@@ -207,11 +208,23 @@ def survey_per_country(request):
         .order_by("count")
         .reverse()
     )
-
-    result = {_(dict(countries)[q["uvalue"]]): q["count"] for q in query_gt}
+    result = {
+        _(
+            dict(countries).get(
+                q["uvalue"], SurveyQuestionAnswer.objects.get(value=q["uvalue"]).label
+            )
+        ): q["count"]
+        for q in query_gt
+    }
     if query_lte:
         result[_("Others")] = {
-            _(dict(countries)[q["uvalue"]]): q["count"] for q in query_lte
+            _(
+                dict(countries).get(
+                    q["uvalue"],
+                    SurveyQuestionAnswer.objects.get(value=q["uvalue"]).label,
+                )
+            ): q["count"]
+            for q in query_lte
         }
 
     return JsonResponse(result)
