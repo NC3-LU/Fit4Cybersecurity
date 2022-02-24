@@ -352,6 +352,7 @@ $(document).ready(function() {
                 plugins: {
                     legend: {
                         position: 'bottom',
+                        display: stats_options.size,
                     },
                 },
             }
