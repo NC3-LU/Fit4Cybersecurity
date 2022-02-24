@@ -218,7 +218,7 @@ def survey_per_country(request):
         result[country] = q["count"]
 
     if query_lte:
-        result[_("Others")]: Dict[str, int] = dict()
+        result[_("Others")] = {}
         for q in query_lte:
             try:
                 country = _(dict(countries).get(q["uvalue"]))
