@@ -208,24 +208,23 @@ def survey_per_country(request):
         .order_by("count")
         .reverse()
     )
-    result = {
-        _(
-            dict(countries).get(
-                q["uvalue"], SurveyQuestionAnswer.objects.get(value=q["uvalue"]).label
-            )
-        ): q["count"]
-        for q in query_gt
-    }
+
+    for q in query_gt:
+        try:
+            country = _(dict(countries).get(q["uvalue"]))
+        except AttributeError:
+            country = SurveyQuestionAnswer.objects.get(value=q["uvalue"]).label
+
+        result[country] = q["count"]
+
     if query_lte:
-        result[_("Others")] = {
-            _(
-                dict(countries).get(
-                    q["uvalue"],
-                    SurveyQuestionAnswer.objects.get(value=q["uvalue"]).label,
-                )
-            ): q["count"]
-            for q in query_lte
-        }
+        for q in query_gt:
+            try:
+                country = _(dict(countries).get(q["uvalue"]))
+            except AttributeError:
+                country = SurveyQuestionAnswer.objects.get(value=q["uvalue"]).label
+
+            result[_("Others")][country] = q["count"]
 
     return JsonResponse(result)
 
