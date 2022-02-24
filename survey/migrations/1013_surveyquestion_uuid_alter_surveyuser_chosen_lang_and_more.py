@@ -8,7 +8,7 @@ from survey.models import (
     SurveyQuestion,
     SurveyUserQuestionSequence,
     SurveyAnswerQuestionMap,
-    SURVEY_STATUS_IN_PROGRESS
+    SURVEY_STATUS_IN_PROGRESS,
 )
 
 
@@ -31,16 +31,15 @@ def create_existing_users_sequences(apps, schema_editor):
             user_obj = SurveyUser.objects.get(id=user[0])
             for x in range(0, max_qindex):
                 has_been_answered = True
-                if user[1] < x+1 or (
-                    user[2] == SURVEY_STATUS_IN_PROGRESS
-                    and user[1] == x+1
+                if user[1] < x + 1 or (
+                    user[2] == SURVEY_STATUS_IN_PROGRESS and user[1] == x + 1
                 ):
                     has_been_answered = False
 
                 SurveyUserQuestionSequence.objects.create(
                     user=user_obj,
                     question=questions[x],
-                    index=x+1,
+                    index=x + 1,
                     has_been_answered=has_been_answered,
                 )
 
