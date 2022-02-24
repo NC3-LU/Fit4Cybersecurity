@@ -48,7 +48,7 @@ CUSTOM = {
     "stats": {
         "activity": True,
         "sector": True,
-        "size": True,
+        "size": False,
         "country": True,
         "status": True,
         "language": True,
