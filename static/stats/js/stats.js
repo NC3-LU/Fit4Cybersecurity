@@ -60,212 +60,235 @@ $(document).ready(function() {
         data: [],
     };
 
-    let section_displayTimeFrame = document.getElementById("section_displayTimeFrame");
-    section_displayTimeFrame.onchange = function(event) {
-      window.location = "/stats/?from=" + section_displayTimeFrame.value;
-    }
+    stats_options = JSON.parse(
+        stats_options
+            .toLowerCase()
+            .replaceAll("'", '"')
+        );
 
-    let section_displayByCountry = document.getElementById("section_displayByCountry");
-    let category_displayByCountry = document.getElementById("category_displayByCountry");
+    if (stats_options.activity) {
+        let section_displayTimeFrame = document.getElementById("section_displayTimeFrame");
 
-    fetch("/stats/survey-status-count.json?from="+date_from+"&to="+date_to)
-    .then(response => response.json())
-    .then(result => {
-        document.getElementById("spinner-stats-count").innerHTML = "";
-        var ctx = document.getElementById("stats-count").getContext('2d');
-        var statusChart = pieChart(result,ctx);
-    })
-    .catch((error) => {
-        console.error('Error:', error);
-    });
-
-    fetch("/stats/survey-language-count.json?from="+date_from+"&to="+date_to)
-    .then(response => response.json())
-    .then(result => {
-        document.getElementById("spinner-stats-language").innerHTML = "";
-        var ctx = document.getElementById("stats-language").getContext('2d');
-        pieChart(result,ctx);
-    }).catch((error) => {
-        console.error('Error:', error);
-    });
-
-    fetch("/stats/survey_per_country.json?from="+date_from+"&to="+date_to)
-    .then(response => response.json())
-    .then(result => {
-        countryChart.data = {...result};
-        if (result[others_translation]) {
-            result[others_translation] = Object.values(result[others_translation]).reduce((a, b) => a + b);
-        }
-        document.getElementById("spinner-stats-countries").innerHTML = "";
-        var ctx = document.getElementById("stats-countries").getContext('2d');
-        countryChart.canvas = pieChart(result,ctx);
-    })
-    .catch((error) => {
-        console.error('Error:', error);
-    });
-
-    fetch("/stats/survey_per_company_size.json?from="+date_from+"&to="+date_to)
-    .then(response => response.json())
-    .then(result => {
-        document.getElementById("spinner-stats-company").innerHTML = "";
-        var ctx = document.getElementById("stats-company").getContext('2d');
-        var sizeChart = pieChart(result,ctx);
-    })
-    .catch((error) => {
-        console.error('Error:', error);
-    });
-
-    fetch("/stats/survey_per_company_sector.json?from="+date_from+"&to="+date_to)
-    .then(response => response.json())
-    .then(result => {
-        document.getElementById("spinner-stats-sector").innerHTML = "";
-        var ctx = document.getElementById("stats-sector").getContext('2d');
-        var sectorChart = pieChart(result,ctx);
-    })
-    .catch((error) => {
-        console.error('Error:', error);
-    });
-
-    fetch("/stats/activity-chart.json")
-    .then(response => response.json())
-    .then(result => {
-        document.getElementById("spinner-surveys-activity").innerHTML = "";
-        $('#surveys-activity').github_graph({
-          data: result ,
-          texts: ['completed survey','completed surveys'],
-          click: function(date, count) {
-            window.location = "/stats/?from=" + date;
-          }
+        fetch("/stats/activity-chart.json")
+        .then(response => response.json())
+        .then(result => {
+            document.getElementById("spinner-surveys-activity").innerHTML = "";
+            $('#surveys-activity').github_graph({
+              data: result ,
+              texts: ['completed survey','completed surveys'],
+              click: function(date, count) {
+                window.location = "/stats/?from=" + date;
+              }
+            });
+        })
+        .catch((error) => {
+            console.error('Error:', error);
         });
-    })
-    .catch((error) => {
-        console.error('Error:', error);
-    });
 
-    fetch("/stats/answers-per-section.json?from="+date_from+"&to="+date_to)
-    .then(response => response.json())
-    .then(result => {
-        let data_sets = [];
-        let labels = [];
-        let i = 0;
-        for (const [key, value] of Object.entries(result.all)) {
-            labels = Object.keys(value);
-            data_sets.push({
-                label: key,
-                data: Object.values(value),
-                fill: false,
-                backgroundColor: colors[i],
-                borderColor: colors[i],
-                pointBackgroundColor: colors[i],
-                pointBorderColor: '#fff',
-                pointHoverBackgroundColor: '#fff',
-                pointHoverBorderColor: colors[i]
-            })
-            i++;
+        section_displayTimeFrame.onchange = function() {
+          window.location = "/stats/?from=" + section_displayTimeFrame.value;
         }
-        sectionChart.data = result;
-        document.getElementById("spinner-answers-per-section").innerHTML = "";
-        document.getElementById("select-section-displayByCountry").style.display = "block";
-        var ctx = document.getElementById("answers-per-section");
-        sectionChart.canvas = radarChart(labels,data_sets,ctx);
-    })
-    .catch((error) => {
-        console.error('Error:', error);
-    });
-
-    fetch("/stats/answers-per-category.json?from="+date_from+"&to="+date_to)
-    .then(response => response.json())
-    .then(result => {
-        let data_sets = [];
-        let labels = [];
-        let i = 0;
-        for (const [key, value] of Object.entries(result.all)) {
-            labels = Object.keys(value);
-            data_sets.push({
-                label: key,
-                data: Object.values(value),
-                fill: false,
-                backgroundColor: colors[i],
-                borderColor: colors[i],
-                pointBackgroundColor: colors[i],
-                pointBorderColor: '#fff',
-                pointHoverBackgroundColor: '#fff',
-                pointHoverBorderColor: colors[i]
-            })
-            i++;
-        }
-        categoryChart.data = result;
-        document.getElementById("spinner-answers-per-category").innerHTML = "";
-        document.getElementById("select-category-displayByCountry").style.display = "block";
-        var ctx = document.getElementById("answers-per-category");
-        categoryChart.canvas = radarChart(labels,data_sets,ctx);
-    })
-    .catch((error) => {
-        console.error('Error:', error);
-    });
-
-
-    section_displayByCountry.onchange = function() {
-        let data_sets = [];
-        let i = 0;
-        for (const [key, value] of Object.entries(sectionChart.data[section_displayByCountry.value])) {
-            data_sets.push({
-                label: key,
-                data: Object.values(value),
-                fill: false,
-                backgroundColor: colors[i],
-                borderColor: colors[i],
-                pointBackgroundColor: colors[i],
-                pointBorderColor: '#fff',
-                pointHoverBackgroundColor: '#fff',
-                pointHoverBorderColor: colors[i]
-            })
-            i++;
-        }
-        sectionChart.canvas.config.data.datasets = data_sets;
-        sectionChart.canvas.update()
     }
 
-    category_displayByCountry.onchange = function() {
-        let data_sets = [];
-        let i = 0;
-        for (const [key, value] of Object.entries(categoryChart.data[category_displayByCountry.value])) {
-            data_sets.push({
-                label: key,
-                data: Object.values(value),
-                fill: false,
-                backgroundColor: colors[i],
-                borderColor: colors[i],
-                pointBackgroundColor: colors[i],
-                pointBorderColor: '#fff',
-                pointHoverBackgroundColor: '#fff',
-                pointHoverBorderColor: colors[i]
-            })
-            i++;
-        }
-        categoryChart.canvas.config.data.datasets = data_sets;
-        categoryChart.canvas.update()
+    if (stats_options.sector) {
+        fetch("/stats/survey_per_company_sector.json?from="+date_from+"&to="+date_to)
+        .then(response => response.json())
+        .then(result => {
+            document.getElementById("spinner-stats-sector").innerHTML = "";
+            var ctx = document.getElementById("stats-sector").getContext('2d');
+            var sectorChart = pieChart(result,ctx);
+        })
+        .catch((error) => {
+            console.error('Error:', error);
+        });
     }
 
-    $("#stats-countries").click(
-        function(evt){
-            evt.preventDefault();
-            let $popup = $("#popup");
-            let activePoints = countryChart.canvas.getElementsAtEventForMode(evt, 'point', countryChart.canvas.options);
-            let label = countryChart.canvas.data.labels[activePoints[0].index];
-            if (label == others_translation) {
-                if (Chart.getChart("stats-countries-detail") == undefined) {
-                    let ctx = document.getElementById("stats-countries-detail").getContext('2d');
-                    let result = countryChart.data[others_translation]
-                    pieChart(result,ctx);
-                }else {
-                    Chart.getChart("stats-countries-detail").update();
-                }
-                $popup.modal("show");
+    if (stats_options.size) {
+        fetch("/stats/survey_per_company_size.json?from="+date_from+"&to="+date_to)
+        .then(response => response.json())
+        .then(result => {
+            document.getElementById("spinner-stats-company").innerHTML = "";
+            var ctx = document.getElementById("stats-company").getContext('2d');
+            var sizeChart = pieChart(result,ctx);
+        })
+        .catch((error) => {
+            console.error('Error:', error);
+        });
+    }
+
+    if (stats_options.country) {
+        fetch("/stats/survey_per_country.json?from="+date_from+"&to="+date_to)
+        .then(response => response.json())
+        .then(result => {
+            countryChart.data = {...result};
+            if (result[others_translation]) {
+                result[others_translation] = Object.values(result[others_translation]).reduce((a, b) => a + b);
             }
-        }
-    );
+            document.getElementById("spinner-stats-countries").innerHTML = "";
+            var ctx = document.getElementById("stats-countries").getContext('2d');
+            countryChart.canvas = pieChart(result,ctx);
+        })
+        .catch((error) => {
+            console.error('Error:', error);
+        });
 
+        $("#stats-countries").click(
+            function(evt){
+                evt.preventDefault();
+                let $popup = $("#popup");
+                let activePoints = countryChart.canvas.getElementsAtEventForMode(evt, 'point', countryChart.canvas.options);
+                let label = countryChart.canvas.data.labels[activePoints[0].index];
+                if (label == others_translation) {
+                    if (Chart.getChart("stats-countries-detail") == undefined) {
+                        let ctx = document.getElementById("stats-countries-detail").getContext('2d');
+                        let result = countryChart.data[others_translation]
+                        pieChart(result,ctx);
+                    }else {
+                        Chart.getChart("stats-countries-detail").update();
+                    }
+                    $popup.modal("show");
+                }
+            }
+        );
+    }
+
+    if (stats_options.status) {
+        fetch("/stats/survey-status-count.json?from="+date_from+"&to="+date_to)
+        .then(response => response.json())
+        .then(result => {
+            document.getElementById("spinner-stats-count").innerHTML = "";
+            var ctx = document.getElementById("stats-count").getContext('2d');
+            var statusChart = pieChart(result,ctx);
+        })
+        .catch((error) => {
+            console.error('Error:', error);
+        });
+    }
+
+    if (stats_options.language) {
+        fetch("/stats/survey-language-count.json?from="+date_from+"&to="+date_to)
+        .then(response => response.json())
+        .then(result => {
+            document.getElementById("spinner-stats-language").innerHTML = "";
+            var ctx = document.getElementById("stats-language").getContext('2d');
+            pieChart(result,ctx);
+        }).catch((error) => {
+            console.error('Error:', error);
+        });
+    }
+
+    if (stats_options.section) {
+
+        let section_displayByCountry = document.getElementById("section_displayByCountry");
+
+        fetch("/stats/answers-per-section.json?from="+date_from+"&to="+date_to)
+        .then(response => response.json())
+        .then(result => {
+            let data_sets = [];
+            let labels = [];
+            let i = 0;
+            for (const [key, value] of Object.entries(result.all)) {
+                labels = Object.keys(value);
+                data_sets.push({
+                    label: key,
+                    data: Object.values(value),
+                    fill: false,
+                    backgroundColor: colors[i],
+                    borderColor: colors[i],
+                    pointBackgroundColor: colors[i],
+                    pointBorderColor: '#fff',
+                    pointHoverBackgroundColor: '#fff',
+                    pointHoverBorderColor: colors[i]
+                })
+                i++;
+            }
+            sectionChart.data = result;
+            document.getElementById("spinner-answers-per-section").innerHTML = "";
+            document.getElementById("select-section-displayByCountry").style.display = "block";
+            var ctx = document.getElementById("answers-per-section");
+            sectionChart.canvas = radarChart(labels,data_sets,ctx);
+        })
+        .catch((error) => {
+            console.error('Error:', error);
+        });
+
+        section_displayByCountry.onchange = function() {
+            let data_sets = [];
+            let i = 0;
+            for (const [key, value] of Object.entries(sectionChart.data[section_displayByCountry.value])) {
+                data_sets.push({
+                    label: key,
+                    data: Object.values(value),
+                    fill: false,
+                    backgroundColor: colors[i],
+                    borderColor: colors[i],
+                    pointBackgroundColor: colors[i],
+                    pointBorderColor: '#fff',
+                    pointHoverBackgroundColor: '#fff',
+                    pointHoverBorderColor: colors[i]
+                })
+                i++;
+            }
+            sectionChart.canvas.config.data.datasets = data_sets;
+            sectionChart.canvas.update()
+        }
+    }
+
+    if (stats_options.category) {
+        let category_displayByCountry = document.getElementById("category_displayByCountry");
+
+        fetch("/stats/answers-per-category.json?from="+date_from+"&to="+date_to)
+        .then(response => response.json())
+        .then(result => {
+            let data_sets = [];
+            let labels = [];
+            let i = 0;
+            for (const [key, value] of Object.entries(result.all)) {
+                labels = Object.keys(value);
+                data_sets.push({
+                    label: key,
+                    data: Object.values(value),
+                    fill: false,
+                    backgroundColor: colors[i],
+                    borderColor: colors[i],
+                    pointBackgroundColor: colors[i],
+                    pointBorderColor: '#fff',
+                    pointHoverBackgroundColor: '#fff',
+                    pointHoverBorderColor: colors[i]
+                })
+                i++;
+            }
+            categoryChart.data = result;
+            document.getElementById("spinner-answers-per-category").innerHTML = "";
+            document.getElementById("select-category-displayByCountry").style.display = "block";
+            var ctx = document.getElementById("answers-per-category");
+            categoryChart.canvas = radarChart(labels,data_sets,ctx);
+        })
+        .catch((error) => {
+            console.error('Error:', error);
+        });
+
+        category_displayByCountry.onchange = function() {
+            let data_sets = [];
+            let i = 0;
+            for (const [key, value] of Object.entries(categoryChart.data[category_displayByCountry.value])) {
+                data_sets.push({
+                    label: key,
+                    data: Object.values(value),
+                    fill: false,
+                    backgroundColor: colors[i],
+                    borderColor: colors[i],
+                    pointBackgroundColor: colors[i],
+                    pointBorderColor: '#fff',
+                    pointHoverBackgroundColor: '#fff',
+                    pointHoverBorderColor: colors[i]
+                })
+                i++;
+            }
+            categoryChart.canvas.config.data.datasets = data_sets;
+            categoryChart.canvas.update()
+        }
+    }
 
     function pieChart(data,ctx){
         return new Chart(ctx, {

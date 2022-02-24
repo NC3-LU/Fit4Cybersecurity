@@ -83,6 +83,8 @@ def index(request):
         "survey_countries": survey_countries,
         "python_version": "{}.{}.{}".format(*sys.version_info[:3]),
         "others_translation": str(_("Others")),
+        "range": range(5),
+        "stats_options": CUSTOM.get('stats'),
     }
 
     return render(request, "survey/stats.html", context=context)

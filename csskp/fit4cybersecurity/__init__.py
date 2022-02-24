@@ -55,5 +55,16 @@ CUSTOM = {
         "recommendations": True,
         "questions": True,
     },
+    # Available stats charts
+    "stats": {
+        "activity": True,
+        "sector": True,
+        "size": True,
+        "country": True,
+        "status": True,
+        "language": True,
+        "section": True,
+        "category": True,
+    },
     "chart_exclude_sections": [],
 }
