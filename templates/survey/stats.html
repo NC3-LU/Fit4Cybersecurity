@@ -43,51 +43,53 @@
                 </ul>
             </div>
         </div>
-        <div class="w-100 p-4"></div>
-        <div class="row justify-content-center">
-            <div class="col mx-auto text-center">
-                <h4>
-                    {{ _('Activity over the past year') }}
-                </h4>
-                <div id="spinner-surveys-activity" class="row justify-content-center align-items-center">
-                    <div class="text-primary spinner-border custom-spinner m-5" role="status">
-                        <span class="sr-only">{{ _('Loading...') }}</span>
+        {% if custom.stats.activity %}
+            <div class="w-100 p-4"></div>
+            <div class="row justify-content-center">
+                <div class="col mx-auto text-center">
+                    <h4>
+                        {{ _('Activity over the past year') }}
+                    </h4>
+                    <div id="spinner-surveys-activity" class="row justify-content-center align-items-center">
+                        <div class="text-primary spinner-border custom-spinner m-5" role="status">
+                            <span class="sr-only">{{ _('Loading...') }}</span>
+                        </div>
                     </div>
-                </div>
-                <div id="surveys-activity"></div>
+                    <div id="surveys-activity"></div>
+                  </div>
+            </div>
+            <div class="w-100 p-2"></div>
+            <div class="row">
+              <div class="col mx-auto text-center">
+                <p>{{ _('Click on a date to load stats since this day or use the list below.') }}</p>
               </div>
-        </div>
-        <div class="w-100 p-2"></div>
-        <div class="row">
-          <div class="col mx-auto text-center">
-            <p>{{ _('Click on a date to load stats since this day or use the list below.') }}</p>
-          </div>
-        </div>
-        <div class="row justify-content-center align-items-center">
-            <div class="col-2">
-                {{ _('Less') }}&nbsp;
-                {% for i in range %}
-                    <svg width="10" height="10" class="d-inline-block activity-chart-legend">
-                        <rect width="10" height="10" class="activity-chart-legend_{{i}}"></rect>
-                    </svg>
-                {% endfor %}
-                {{ _('More') }}
             </div>
-            <div class="col-3">
-                <label for="section_displayTimeFrame">{{ _('Time frame')}}</label>
-                <select id="section_displayTimeFrame">
-                    <option value=""></option>
-                    {% for time_frame in time_frames %}
-                        <option value="{{ time_frame.1 }}">{{ time_frame.0 }}</option>
+            <div class="row justify-content-center align-items-center">
+                <div class="col-2">
+                    {{ _('Less') }}&nbsp;
+                    {% for i in range %}
+                        <svg width="10" height="10" class="d-inline-block activity-chart-legend">
+                            <rect width="10" height="10" class="activity-chart-legend_{{i}}"></rect>
+                        </svg>
                     {% endfor %}
-                </select>
+                    {{ _('More') }}
+                </div>
+                <div class="col-3">
+                    <label for="section_displayTimeFrame">{{ _('Time frame')}}</label>
+                    <select id="section_displayTimeFrame">
+                        <option value=""></option>
+                        {% for time_frame in time_frames %}
+                            <option value="{{ time_frame.1 }}">{{ time_frame.0 }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="col-2">
+                    <a class="btn border border-rounded" type="button"  href="{% url 'stats' %}">
+                        {{ _('Reset filters') }}
+                    </a>
+                </div>
             </div>
-            <div class="col-2">
-                <a class="btn border border-rounded" type="button"  href="{% url 'stats' %}">
-                    {{ _('Reset filters') }}
-                </a>
-            </div>
-        </div>
+        {% endif %}
         <div class="w-100 p-4"></div>
         <h4 class="text-center">{{ _('Statistics since') }} {{ date_from }}</h4>
         <h5 class="text-center">{{ _('Total of completed surveys:') }} {{ nb_finished_surveys_for_period }}</h5>
