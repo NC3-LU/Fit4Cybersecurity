@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-02-07 10:01+0000\n"
+"POT-Creation-Date: 2022-03-07 12:45+0000\n"
 "PO-Revision-Date: 2022-02-15 14:49+0000\n"
 "Last-Translator: Ruslan Baidan <ruslan.baidan@cases.lu>\n"
 "Language-Team: French <https://translate.monarc.lu/projects/"
@@ -40,17 +40,19 @@ msgid ""
 msgstr ""
 "Ce questionnaire vise à identifier le périmètre général de la relation "
 "contractuelle envisagée, pour mettre en place une acquisition, une location, "
-"un développement ou toute autre prestation de service en matière de technologies "
-"de l’information et de la communication. En fonction de ce périmètre, Fit4Contract "
-"fournit une liste d’exigences de base en matière de sécurité de l’information qui "
-"sont recommandées à être considérées dans l’établissement de la relation contractuelle. "
-"Il s'agit d'un outil d'auto-évaluation et, en tant que tel, il ne peut pas fournir de "
-"lignes directrices définitives. Cet outil vise simplement à sensibiliser à la sécurité "
-"de l'information dans les contrats de produits et services TIC. En outre, de nombreux "
-"pays ont leurs propres exigences légales en matière de contrats et, par conséquent, "
-"nous ne prenons aucune responsabilité concernant les réponses et nous précisons que "
-"l'utilisateur de cette enquête doit vérifier et adapter ses contrats en conséquence, "
-"afin de se conformer à toutes les lois nationales et internationales."
+"un développement ou toute autre prestation de service en matière de "
+"technologies de l’information et de la communication. En fonction de ce "
+"périmètre, Fit4Contract fournit une liste d’exigences de base en matière de "
+"sécurité de l’information qui sont recommandées à être considérées dans "
+"l’établissement de la relation contractuelle. Il s'agit d'un outil d'auto-"
+"évaluation et, en tant que tel, il ne peut pas fournir de lignes directrices "
+"définitives. Cet outil vise simplement à sensibiliser à la sécurité de "
+"l'information dans les contrats de produits et services TIC. En outre, de "
+"nombreux pays ont leurs propres exigences légales en matière de contrats et, "
+"par conséquent, nous ne prenons aucune responsabilité concernant les "
+"réponses et nous précisons que l'utilisateur de cette enquête doit vérifier "
+"et adapter ses contrats en conséquence, afin de se conformer à toutes les "
+"lois nationales et internationales."
 
 #: csskp/fit4cybersecurity/__init__.py:7
 msgid ""
@@ -424,8 +426,8 @@ msgid ""
 msgstr ""
 "Le prestataire garantit les niveaux de service minimal définis dans le "
 "contrat. Le prestataire informe l’organisation du client de ses plans pour "
-"assurer les niveaux de service dans des conditions normales et lors d’"
-"événements perturbateurs, que ces événements surgissent dans les locaux ou "
+"assurer les niveaux de service dans des conditions normales et lors "
+"d’événements perturbateurs, que ces événements surgissent dans les locaux ou "
 "sur les infrastructures de l’organisation du client ou du prestataire de "
 "service."
 
@@ -520,8 +522,8 @@ msgid ""
 "Is the project subject to any legal or contractual requirements (like DAC, "
 "AML, GDPR etc.) ?"
 msgstr ""
-"Est-ce que le projet est soumis à des exigences légales ou contractuelles ("
-"p.ex. DAC, AML, RGPD, etc.) ?"
+"Est-ce que le projet est soumis à des exigences légales ou contractuelles (p."
+"ex. DAC, AML, RGPD, etc.) ?"
 
 #: data/fit4contract/questions.json:140
 msgid ""
@@ -557,8 +559,8 @@ msgid ""
 "Human resources. Hiring of one or more people in the project (e.g. "
 "consultant, cleaning service, technician etc.)."
 msgstr ""
-"Ressources humaines. Embauche d’une ou plusieurs personnes dans le projet ("
-"ex. : consultant, service de ménage, technicien, etc.)."
+"Ressources humaines. Embauche d’une ou plusieurs personnes dans le projet "
+"(ex. : consultant, service de ménage, technicien, etc.)."
 
 #: data/fit4contract/questions.json:338 data/fit4contract/questions.json:713
 msgid ""
@@ -567,10 +569,10 @@ msgid ""
 "Collaborator returns all the goods received from the Client’s organization "
 "(equipment, laptop, keys, badges, smartphone, etc.)."
 msgstr ""
-"Le collaborateur externe est soigneusement séléctionné lors du processus d’"
-"embauche. Lors du départ du collaborateur externe, une procédure assure que "
-"ce dernier rend tous les biens prêtés par l’organisation du client ("
-"matériel, laptop, clés, badges, smartphone, etc.)."
+"Le collaborateur externe est soigneusement séléctionné lors du processus "
+"d’embauche. Lors du départ du collaborateur externe, une procédure assure "
+"que ce dernier rend tous les biens prêtés par l’organisation du client "
+"(matériel, laptop, clés, badges, smartphone, etc.)."
 
 #: data/fit4contract/questions.json:348 data/fit4contract/questions.json:723
 #: data/fit4contract/questions.json:760
@@ -5561,15 +5563,35 @@ msgstr ""
 "la sécurité de l'information et la protection des données sont-elles écrites "
 "et connues par vos employés ?"
 
-#: stats/views.py:61
+#: stats/views.py:60
+msgid "Last week"
+msgstr ""
+
+#: stats/views.py:64
+msgid "Last month"
+msgstr ""
+
+#: stats/views.py:68
+msgid "Last quarter"
+msgstr ""
+
+#: stats/views.py:72
+msgid "Last year"
+msgstr ""
+
+#: stats/views.py:86 stats/views.py:221 stats/views.py:228
+msgid "Others"
+msgstr ""
+
+#: stats/views.py:129
 msgid "In progress"
 msgstr "En cours"
 
-#: stats/views.py:61
+#: stats/views.py:129
 msgid "Under review"
 msgstr "Examen des réponses"
 
-#: stats/views.py:61
+#: stats/views.py:129
 msgid "Finished"
 msgstr "Accompli"
 
@@ -5578,8 +5600,8 @@ msgid "You need to choose at least one answer"
 msgstr "Vous devez choisir au moins une réponse"
 
 #: survey/forms.py:105 survey/forms.py:180
-#: templates/survey/finishedSurvey.html:167
-#: templates/survey/finishedSurvey.html:175 templates/survey/review.html:40
+#: templates/survey/finishedSurvey.html:178
+#: templates/survey/finishedSurvey.html:192 templates/survey/review.html:50
 msgid "Your feedback"
 msgstr "Vos retours"
 
@@ -5598,34 +5620,34 @@ msgstr ""
 "Vous ne pouvez pas choisir plusieurs réponses {} si la réponse {} est "
 "choisie."
 
-#: survey/viewLogic.py:90
+#: survey/viewLogic.py:88
 msgid "Let's start"
 msgstr "Commençons"
 
-#: survey/viewLogic.py:246
+#: survey/viewLogic.py:259
 msgid "Question"
 msgstr "Question"
 
-#: survey/views.py:138
+#: survey/views.py:142
 msgid "To generate a report you have to finish the survey."
 msgstr "Pour générer un rapport vous devez finir l'enquête."
 
-#: survey/views.py:208
+#: survey/views.py:213
 msgid "Answers review"
 msgstr "Votre aperçu des réponses"
 
-#: survey/views.py:242
+#: survey/views.py:254
 msgid "Final summary"
 msgstr "Résumé final"
 
-#: survey/views.py:276
+#: survey/views.py:290
 msgid ""
 "We could not find a survey with the requested key, please start a new one."
 msgstr ""
 "Nous n'avons pas pu trouver un sondage avec la clé demandée, veuillez en "
 "commencer un nouveau."
 
-#: survey/views.py:308
+#: survey/views.py:323
 msgid "Feedback sending errors: "
 msgstr "Erreurs d'envoi du retour d'information : "
 
@@ -5638,10 +5660,11 @@ msgid ""
 "results of this survey."
 msgstr ""
 "Voici la liste des recommandations visant à vous aider à rédiger un contrat "
-"de sous-traitance, à condition que vos réponses reflètent correctement le contexte. "
-"N'oubliez pas non plus qu'il s'agit d'une auto-évaluation et qu'elle ne fait "
-"qu'effleurer le niveau de maturité de la sécurité de l'information. Par conséquent, "
-"nous ne sommes pas responsables des résultats de cette enquête."
+"de sous-traitance, à condition que vos réponses reflètent correctement le "
+"contexte. N'oubliez pas non plus qu'il s'agit d'une auto-évaluation et "
+"qu'elle ne fait qu'effleurer le niveau de maturité de la sécurité de "
+"l'information. Par conséquent, nous ne sommes pas responsables des résultats "
+"de cette enquête."
 
 #: templates/fit4ehealth/survey/start.html:5
 msgid "Please click the Next button to start the questionnaire."
@@ -5692,14 +5715,16 @@ msgid ""
 "your company is expected to put measures in place to be able to demonstrate "
 "it is respecting GDPR, and that these measures are effective."
 msgstr ""
-"Voici la liste des recommandations visant à améliorer la maturité de la protection "
-"des données à caractère personnel dans votre entreprise, à condition que vos réponses "
-"reflètent correctement l'état de votre entreprise. N'oubliez pas non plus qu'il s'agit "
-"d'une auto-évaluation et qu'elle ne fait qu'effleurer le niveau de maturité "
-"de la protection de la vie privée et protection des données. Par conséquent, "
-"nous ne sommes pas responsables des résultats de cette enquête. Aussi, n'oubliez pas "
-"que le RGPD concerne la responsabilité : votre entreprise doit mettre en place des "
-"mesures pour pouvoir démontrer qu'elle respecte le RGPD et que ces mesures sont efficaces."
+"Voici la liste des recommandations visant à améliorer la maturité de la "
+"protection des données à caractère personnel dans votre entreprise, à "
+"condition que vos réponses reflètent correctement l'état de votre "
+"entreprise. N'oubliez pas non plus qu'il s'agit d'une auto-évaluation et "
+"qu'elle ne fait qu'effleurer le niveau de maturité de la protection de la "
+"vie privée et protection des données. Par conséquent, nous ne sommes pas "
+"responsables des résultats de cette enquête. Aussi, n'oubliez pas que le "
+"RGPD concerne la responsabilité : votre entreprise doit mettre en place des "
+"mesures pour pouvoir démontrer qu'elle respecte le RGPD et que ces mesures "
+"sont efficaces."
 
 #: templates/parts/fit4contract/footer_part.html:7
 #: templates/parts/fit4contract/footer_part.html:8
@@ -5713,6 +5738,11 @@ msgid "A service provided by CASES.LU"
 msgstr "Un service fourni par CASES.LU"
 
 #: templates/parts/fit4contract/footer_part.html:21
+#: templates/parts/footer_part.html:28
+msgid "Stats"
+msgstr "Statistiques"
+
+#: templates/parts/fit4contract/footer_part.html:24
 #: templates/parts/footer_part.html:31 templates/parts/footer_part.html:32
 msgid "Terms of Service"
 msgstr "Conditions d'utilisation"
@@ -5722,13 +5752,9 @@ msgid "Source code on GitHub"
 msgstr "Code source sur GitHub"
 
 #: templates/parts/footer_part.html:20 templates/parts/footer_part.html:21
-#: templates/survey/stats.html:84
+#: templates/survey/stats.html:246 templates/survey/stats.html:247
 msgid "Version of"
 msgstr "Version de"
-
-#: templates/parts/footer_part.html:28
-msgid "Stats"
-msgstr "Statistiques"
 
 #: templates/report/cover.html:12
 msgid "Date"
@@ -5738,17 +5764,32 @@ msgstr "Date"
 msgid "Self-assessment id"
 msgstr "Auto-évaluation id"
 
+#: templates/report/cover.html:25
+msgid "Score"
+msgstr ""
+
 #: templates/report/description.html:4
 msgid "Description"
 msgstr "Description"
 
 #: templates/report/description.html:8
-#, python-format
+#, fuzzy, python-format
+#| msgid ""
+#| "This self-assessment tool is named %(custom.tool_name)s to highlight the "
+#| "introduction to information security. It is also a prerequisite for doing "
+#| "a CASES Diagnostic: a minimum score of "
+#| "%(custom.minimal_acceptable_score)s/100 is required. The purpose for this "
+#| "restriction gives us the opportunity to better tailor the recommendations "
+#| "to your organization during the Diagnostic.<br /><br /> During this self-"
+#| "assessment multiple choice questions were asked. After analyzing your "
+#| "answers, recommendations have been provided.<br /><br /> Finally, you can "
+#| "download a report, which will help you to communicate the results to your "
+#| "suppliers, if necessary."
 msgid ""
-"This self-assessment tool is named %(custom.tool_name)s to highlight the "
+"This self-assessment tool is named %(tool_name)s to highlight the "
 "introduction to information security. It is also a prerequisite for doing a "
-"CASES Diagnostic: a minimum score of %(custom.minimal_acceptable_score)s/100 "
-"is required. The purpose for this restriction gives us the opportunity to "
+"CASES Diagnostic: a minimum score of %(minimal_acceptable_score)s/100 is "
+"required. The purpose for this restriction gives us the opportunity to "
 "better tailor the recommendations to your organization during the Diagnostic."
 "<br /><br /> During this self-assessment multiple choice questions were "
 "asked. After analyzing your answers, recommendations have been provided.<br /"
@@ -5771,24 +5812,42 @@ msgid "Introduction and Warning"
 msgstr "Introduction et avertissement"
 
 #: templates/report/intro.html:8
-#, python-format
+#, fuzzy, python-format
+#| msgid ""
+#| "The objective of the self-assessment tool, %(custom.tool_name)s is to "
+#| "assess the maturity of an organization in terms of applicable good "
+#| "practices in the field of information security.<br /><br /> This "
+#| "document, based on the %(custom.tool_name)s, is for the exclusive use of "
+#| "the customer. It is in this respect confidential.<br /><br /> In view of "
+#| "the methodology used and the fact that it is a self-assessment, it is "
+#| "understood that the overall results can not in any way be exhaustive. As "
+#| "such, the actual risk assessment or the list of identified risks and "
+#| "vulnerabilities are based on the information provided by the client. The "
+#| "analysis resulting from this assessment can engage only the customer for "
+#| "any omission or error that would be due to third parties or not.<br /"
+#| "><br /> The tool, %(custom.tool_name)s can possibly provide "
+#| "recommendations. It is understood by the client that the recommendations "
+#| "are neither exclusive nor exhaustive.<br /><br /> It should also be noted "
+#| "that the information you have provided to us will be recorded for "
+#| "statistical reasons. Due to the nature of the data, we can not identify "
+#| "you. Unless you later contact us to do a Diagnostic CASES."
 msgid ""
-"The objective of the self-assessment tool, %(custom.tool_name)s is to assess "
-"the maturity of an organization in terms of applicable good practices in the "
+"The objective of the self-assessment tool, %(tool_name)s is to assess the "
+"maturity of an organization in terms of applicable good practices in the "
 "field of information security.<br /><br /> This document, based on the "
-"%(custom.tool_name)s, is for the exclusive use of the customer. It is in "
-"this respect confidential.<br /><br /> In view of the methodology used and "
-"the fact that it is a self-assessment, it is understood that the overall "
-"results can not in any way be exhaustive. As such, the actual risk "
-"assessment or the list of identified risks and vulnerabilities are based on "
-"the information provided by the client. The analysis resulting from this "
-"assessment can engage only the customer for any omission or error that would "
-"be due to third parties or not.<br /><br /> The tool, %(custom.tool_name)s "
-"can possibly provide recommendations. It is understood by the client that "
-"the recommendations are neither exclusive nor exhaustive.<br /><br /> It "
-"should also be noted that the information you have provided to us will be "
-"recorded for statistical reasons. Due to the nature of the data, we can not "
-"identify you. Unless you later contact us to do a Diagnostic CASES."
+"%(tool_name)s, is for the exclusive use of the customer. It is in this "
+"respect confidential.<br /><br /> In view of the methodology used and the "
+"fact that it is a self-assessment, it is understood that the overall results "
+"can not in any way be exhaustive. As such, the actual risk assessment or the "
+"list of identified risks and vulnerabilities are based on the information "
+"provided by the client. The analysis resulting from this assessment can "
+"engage only the customer for any omission or error that would be due to "
+"third parties or not.<br /><br /> The tool, %(tool_name)s can possibly "
+"provide recommendations. It is understood by the client that the "
+"recommendations are neither exclusive nor exhaustive.<br /><br /> It should "
+"also be noted that the information you have provided to us will be recorded "
+"for statistical reasons. Due to the nature of the data, we can not identify "
+"you. Unless you later contact us to do a Diagnostic CASES."
 msgstr ""
 "L'outil d'auto-évaluation, %(custom.tool_name)s, a pour objectif d’apprécier "
 "la maturité d’une organisation au regard des bonnes pratiques applicables en "
@@ -5830,13 +5889,18 @@ msgid "Result"
 msgstr "Résultat"
 
 #: templates/report/results.html:8
-#, python-format
+#, fuzzy, python-format
+#| msgid ""
+#| "You have achieved %(SCORE)s/100 with your answers. You must reach at "
+#| "least %(custom.minimal_acceptable_score)s/100 to be able to make a CASES "
+#| "Diagnosis.<br /><br /> We remind you that this is a self-assessment, and "
+#| "it is important to understand that all the results can not in any way be "
+#| "exhaustive."
 msgid ""
 "You have achieved %(SCORE)s/100 with your answers. You must reach at least "
-"%(custom.minimal_acceptable_score)s/100 to be able to make a CASES Diagnosis."
-"<br /><br /> We remind you that this is a self-assessment, and it is "
-"important to understand that all the results can not in any way be "
-"exhaustive."
+"%(minimal_acceptable_score)s/100 to be able to make a CASES Diagnosis.<br /"
+"><br /> We remind you that this is a self-assessment, and it is important to "
+"understand that all the results can not in any way be exhaustive."
 msgstr ""
 "Vous avez atteint %(SCORE)s/100 avec vos réponses. Vous devez atteindre au "
 "moins %(custom.minimal_acceptable_score)s/100 pour pouvoir faire un "
@@ -5844,7 +5908,7 @@ msgstr ""
 "évaluation, il est entendu que l’ensemble des résultats ne peut en aucune "
 "manière être exhaustif."
 
-#: templates/report/results.html:17 templates/survey/finishedSurvey.html:96
+#: templates/report/results.html:17 templates/survey/finishedSurvey.html:51
 #, python-format
 msgid ""
 "You have scored an additional %(bonus)s %% of bonus points for following "
@@ -5852,6 +5916,14 @@ msgid ""
 msgstr ""
 "Vous avez obtenu %(bonus)s %% de points bonus supplémentaires pour avoir "
 "suivi les meilleures pratiques."
+
+#: templates/report/results.html:25
+msgid "By section"
+msgstr ""
+
+#: templates/report/results.html:31
+msgid "By category"
+msgstr ""
 
 #: templates/report/template.html:9 templates/report/template.html:14
 msgid "Final report"
@@ -5871,8 +5943,9 @@ msgid ""
 "Change of previously selected answer(s) can lead to additional questions or "
 "loosing of your answer(s). Would you like to proceed?"
 msgstr ""
-"Le changement de réponse(s) précédemment sélectionnée(s) peut conduire à des questions "
-"supplémentaires ou à la perte de vos réponses. Voulez vous procéder ?"
+"Le changement de réponse(s) précédemment sélectionnée(s) peut conduire à des "
+"questions supplémentaires ou à la perte de vos réponses. Voulez vous "
+"procéder ?"
 
 #: templates/survey/base.html:19
 msgid "a CASES self-assessment tool!"
@@ -5895,27 +5968,15 @@ msgstr ""
 msgid "Download direct link"
 msgstr "Télécharger le lien direct"
 
-#: templates/survey/continue.html:26 templates/survey/finishedSurvey.html:183
+#: templates/survey/continue.html:26 templates/survey/finishedSurvey.html:202
 msgid "Close"
 msgstr "Fermer"
 
-#: templates/survey/finishedSurvey.html:44
-msgid "Report"
-msgstr "Rapport"
-
-#: templates/survey/finishedSurvey.html:51
-msgid "Download"
-msgstr "Téléchargement"
-
-#: templates/survey/finishedSurvey.html:57
-msgid "Email"
-msgstr "Courriel"
-
-#: templates/survey/finishedSurvey.html:65
+#: templates/survey/finishedSurvey.html:24
 msgid "Summary"
 msgstr "Résumé"
 
-#: templates/survey/finishedSurvey.html:70
+#: templates/survey/finishedSurvey.html:27
 msgid ""
 "This is the list of recommendations to improve the information security "
 "maturity in your company, provided that your answers did correctly reflect "
@@ -5930,7 +5991,7 @@ msgstr ""
 "le niveau de maturité de la sécurité de l'information. Par conséquent, nous "
 "ne sommes pas responsables des résultats de cette enquête."
 
-#: templates/survey/finishedSurvey.html:83
+#: templates/survey/finishedSurvey.html:38
 #, python-format
 msgid ""
 "Based on your score %(score)s, the CASES Diagnostic is not available for "
@@ -5946,15 +6007,15 @@ msgstr ""
 "à la sécurité de l'information pour sensibiliser votre entreprise, n'hésitez "
 "pas à"
 
-#: templates/survey/finishedSurvey.html:105
+#: templates/survey/finishedSurvey.html:64
 msgid "Your results link"
 msgstr "Votre lien de résultats"
 
-#: templates/survey/finishedSurvey.html:113
+#: templates/survey/finishedSurvey.html:68
 msgid "About the CASES Diagnostic"
 msgstr "À propos du Diagnostic CASES"
 
-#: templates/survey/finishedSurvey.html:114
+#: templates/survey/finishedSurvey.html:70
 msgid ""
 "The CASES Diagnostic is a service which analyses the company maturity in the "
 "information security depending on company's requirements. The analyse "
@@ -5974,7 +6035,7 @@ msgstr ""
 "maturité ainsi que des recommandations pour améliorer la maturité en la "
 "sécurité de l'information."
 
-#: templates/survey/finishedSurvey.html:125
+#: templates/survey/finishedSurvey.html:82
 msgid ""
 "The CASES Diagnostic is available for all the companies located in "
 "Luxembourg and free of charge."
@@ -5982,7 +6043,27 @@ msgstr ""
 "Le Diagnostic est gratuit et possible pour toute entreprise ayant des locaux "
 "au Luxembourg."
 
-#: templates/survey/finishedSurvey.html:185
+#: templates/survey/finishedSurvey.html:116
+msgid "Report"
+msgstr "Rapport"
+
+#: templates/survey/finishedSurvey.html:123
+msgid "Download"
+msgstr "Téléchargement"
+
+#: templates/survey/finishedSurvey.html:133
+msgid "Email"
+msgstr "Courriel"
+
+#: templates/survey/finishedSurvey.html:144
+msgid "Score by section"
+msgstr ""
+
+#: templates/survey/finishedSurvey.html:150
+msgid "Score by category"
+msgstr ""
+
+#: templates/survey/finishedSurvey.html:207
 #: templates/survey/sendReportEmail.html:14
 msgid "Send"
 msgstr "Envoyer"
@@ -6015,7 +6096,7 @@ msgstr "Précédent"
 msgid "Cancel"
 msgstr "Annuler"
 
-#: templates/survey/questions.html:72 templates/survey/review.html:56
+#: templates/survey/questions.html:72 templates/survey/review.html:67
 msgid "Continue later"
 msgstr "Continuer plus tard"
 
@@ -6041,11 +6122,11 @@ msgstr ""
 "référence à votre identité."
 
 #: templates/survey/requestDiagnosticLink.html:5
-#: templates/survey/requestDiagnosticLink.html:21
+#: templates/survey/requestDiagnosticLink.html:22
 msgid "Request diagnostic"
 msgstr "Demander un diagnostic"
 
-#: templates/survey/requestDiagnosticLink.html:6
+#: templates/survey/requestDiagnosticLink.html:7
 #, python-format
 msgid ""
 "Dear Cases Team,\n"
@@ -6077,11 +6158,11 @@ msgstr ""
 "Langue souhaitée du Diagnostic :\n"
 
 #: templates/survey/requestTrainingLink.html:5
-#: templates/survey/requestTrainingLink.html:35
+#: templates/survey/requestTrainingLink.html:36
 msgid "Request training offer"
 msgstr "Demander une offre de formation"
 
-#: templates/survey/requestTrainingLink.html:6
+#: templates/survey/requestTrainingLink.html:7
 #, python-format
 msgid ""
 "Dear Cases Team,\n"
@@ -6139,7 +6220,7 @@ msgstr ""
 "*Pour un nombre de personnes supérieur à 25, la formation sera alors faite "
 "en plusieurs fois, impliquant un cout plus élevé.\n"
 
-#: templates/survey/requestTrainingLink.html:37
+#: templates/survey/requestTrainingLink.html:38
 msgid "let us know."
 msgstr "nous le faire savoir."
 
@@ -6157,13 +6238,19 @@ msgstr "Confirmer"
 msgid "Your answers review"
 msgstr "Votre aperçu des réponses"
 
-#: templates/survey/review.html:47
-msgid "Modify answers"
-msgstr "Modifier les réponses"
+#: templates/survey/review.html:22
+msgid ""
+"You can modify the answers to each question before you get the result of the "
+"survey."
+msgstr ""
 
-#: templates/survey/review.html:60
+#: templates/survey/review.html:26 templates/survey/review.html:73
 msgid "Validate answers"
 msgstr "Valider les réponses"
+
+#: templates/survey/review.html:57
+msgid "Modify answers"
+msgstr "Modifier les réponses"
 
 #: templates/survey/sendReportEmail.html:5
 msgid "Send the report via email"
@@ -6181,135 +6268,125 @@ msgstr ""
 "Nous avons besoin de quelques informations pour pouvoir vous faire des "
 "recommandations utiles, une fois l’auto-évaluation terminée."
 
-#: templates/survey/stats.html:12
+#: templates/survey/stats.html:16
 msgid "Some statistics about the current surveys."
 msgstr "Quelques statistiques sur les enquêtes en cours."
 
-#: templates/survey/stats.html:19
+#: templates/survey/stats.html:23
 msgid "No statistics available"
 msgstr "Aucune statistique disponible"
 
-#: templates/survey/stats.html:28
+#: templates/survey/stats.html:32
 msgid "Main figures"
 msgstr "Principaux chiffres"
 
-#: templates/survey/stats.html:30
+#: templates/survey/stats.html:35
 msgid "Number of surveys:"
 msgstr "Nombre d'enquêtes :"
 
-#: templates/survey/stats.html:31
+#: templates/survey/stats.html:38
 msgid "Number of finished surveys:"
 msgstr "Nombre d'enquêtes terminées :"
 
-#: templates/survey/stats.html:32
+#: templates/survey/stats.html:41
 msgid "First completed survey on:"
 msgstr "Première enquête complétée le :"
 
-#: templates/survey/stats.html:40
-msgid "Surveys status"
-msgstr "État des sondages"
-
-#: templates/survey/stats.html:44
-msgid "Surveys languages"
-msgstr "Langues des sondages"
-
-#: templates/survey/stats.html:49
-msgid "Surveys countries"
-msgstr "Pays d'enquête"
-
-#: templates/survey/stats.html:53
-msgid "Surveys company size"
-msgstr "Taille de l'entreprise"
-
-#: templates/survey/stats.html:57
-msgid "Surveys company sector"
-msgstr "Enquêtes secteur entreprise"
-
-#: templates/survey/stats.html:64
+#: templates/survey/stats.html:51
 msgid "Activity over the past year"
 msgstr "Activité au cours de l'année écoulée"
 
-#: templates/survey/stats.html:73
+#: templates/survey/stats.html:55 templates/survey/stats.html:105
+#: templates/survey/stats.html:118 templates/survey/stats.html:131
+#: templates/survey/stats.html:163 templates/survey/stats.html:176
+#: templates/survey/stats.html:192 templates/survey/stats.html:218
+msgid "Loading..."
+msgstr ""
+
+#: templates/survey/stats.html:64
+msgid "Click on a date to load stats since this day or use the list below."
+msgstr ""
+
+#: templates/survey/stats.html:69
+msgid "Less"
+msgstr ""
+
+#: templates/survey/stats.html:75
+msgid "More"
+msgstr ""
+
+#: templates/survey/stats.html:78
+msgid "Time frame"
+msgstr ""
+
+#: templates/survey/stats.html:88
+msgid "Reset filters"
+msgstr ""
+
+#: templates/survey/stats.html:94
+#, fuzzy
+#| msgid "No statistics available"
+msgid "Statistics since"
+msgstr "Aucune statistique disponible"
+
+#: templates/survey/stats.html:95
+#, fuzzy
+#| msgid "First completed survey on:"
+msgid "Total of completed surveys:"
+msgstr "Première enquête complétée le :"
+
+#: templates/survey/stats.html:101
+msgid "Surveys company sector"
+msgstr "Enquêtes secteur entreprise"
+
+#: templates/survey/stats.html:114
+msgid "Surveys company size"
+msgstr "Taille de l'entreprise"
+
+#: templates/survey/stats.html:127
+msgid "Surveys countries"
+msgstr "Pays d'enquête"
+
+#: templates/survey/stats.html:143
+#, fuzzy
+#| msgid "Surveys countries"
+msgid "Surveys countries details"
+msgstr "Pays d'enquête"
+
+#: templates/survey/stats.html:159
+msgid "Surveys status"
+msgstr "État des sondages"
+
+#: templates/survey/stats.html:172
+msgid "Surveys languages"
+msgstr "Langues des sondages"
+
+#: templates/survey/stats.html:188
 msgid "Answers by section and company size"
 msgstr "Réponses par section et taille d'entreprise"
 
-#: templates/survey/stats.html:75
-msgid "With data for the last month."
-msgstr "Avec les données du mois dernier."
+#: templates/survey/stats.html:196 templates/survey/stats.html:222
+msgid "Country"
+msgstr ""
 
-#: templates/survey/stats.html:82
+#: templates/survey/stats.html:198 templates/survey/stats.html:224
+msgid "All"
+msgstr ""
+
+#: templates/survey/stats.html:214
+#, fuzzy
+#| msgid "Answers by section and company size"
+msgid "Answers by category and company size"
+msgstr "Réponses par section et taille d'entreprise"
+
+#: templates/survey/stats.html:239
 msgid "Server information"
 msgstr "Informations sur le serveur"
 
-#: templates/survey/stats.html:83
+#: templates/survey/stats.html:241
 msgid "Python version:"
 msgstr "Version de Python :"
 
-#: templates/survey/stats.html:84
+#: templates/survey/stats.html:244
 msgid "Software version:"
 msgstr "Version du logiciel :"
-
-#~ msgid ""
-#~ "Your company should consider informing all types of data subjects whose "
-#~ "data it processes, of the existence of the processing, the conditions you "
-#~ "put in place to protect their data, and their rights over their data. In "
-#~ "relation to your employees or trainees, you should be transparent about "
-#~ "the personal data processed at the time of hiring (for example, by "
-#~ "updating\n"
-#~ " work or internship contracts), but also for the duration of their "
-#~ "contract (for example, in the intranet, or with an amendment to the "
-#~ "employment contract). If you have a website whose use involves processing "
-#~ "of visitors' personal data, that site should also explain the data "
-#~ "processed and the measures your organization has put in place to protect "
-#~ "that data. To your customers, as well as to suppliers and third parties, "
-#~ "you have a similar obligation to be transparent (for example, by updating "
-#~ "contracts or terms and conditions). In terms of what to communicate to "
-#~ "them, you should consider following Art. 13 and 14 of GDPR when it comes "
-#~ "to this information."
-#~ msgstr ""
-#~ "Votre entreprise devrait informer tous les types de personnes concernées "
-#~ "dont elle traite les données à caractère personnel, de l'existence de ces "
-#~ "traitements, des conditions que vous mettez en place pour protéger leurs "
-#~ "données et de leurs droits sur leurs données. En relation avec vos "
-#~ "employés ou stagiaires, vous devriez être transparent sur les données "
-#~ "personnelles traitées au moment de l'embauche (par exemple, en mettant à\n"
-#~ " jour les contrats de travail ou de stage), mais aussi pendant la durée "
-#~ "de leur contrat (par exemple, dans l'intranet, ou avec un avenant au "
-#~ "contrat de travail). Si vous avez un site Web dont l'usage entraine des "
-#~ "traitements des données personnelles des visiteurs, ce site devrait aussi "
-#~ "expliquer les données traitées et les mesures mises en place par votre "
-#~ "organisation pour protéger ces données. Envers vos clients, ainsi qu'en "
-#~ "relation avec les fournisseurs et les parties tierces, vous avez "
-#~ "l'obligation similaire d'être transparent (par exemple, en mettant à jour "
-#~ "les contrats ou les conditions générales). Par rapport au contenu de "
-#~ "cette communication vers eux, vous devriez suivre <a href=\"https://www."
-#~ "privacy-regulation.eu/en/article-13-information-to-be-provided-where-"
-#~ "personal-data-are-collected-from-the-data-subject-GDPR.htm\" target="
-#~ "\"_blank\"> Article 13 du RGPD </a> et 14 du RGPD en ce qui concerne les "
-#~ "informations à fournir."
-
-#~ msgid ""
-#~ "The controller must demonstrate that personal data is processed in a "
-#~ "transparent manner with regard to the data subject. In order to avoid "
-#~ "overwhelming data subjects with information, your company is therefore "
-#~ "responsible for the quality, accessibility and intelligibility of the "
-#~ "information provided to data subjects in terms of transparency.\n"
-#~ "You should therefore present the information / communications in an "
-#~ "efficient and succinct manner, and differentiate them from other non-"
-#~ "privacy related information such as contractual clauses or general terms "
-#~ "of use. For more inspiration on this topic, there is an EDPB guidance on "
-#~ "transparency <a href=\"https://ec.europa.eu/newsroom/article29/"
-#~ "items/622227/en\" target=\"_blank\"> here </a>."
-#~ msgstr ""
-#~ "Le responsable du traitement doit démontrer que les données personnelles "
-#~ "sont traitées de manière transparente au regard de la personne concernée. "
-#~ "Afin d'éviter de noyer d'informations les personnes concernées, votre "
-#~ "société est responsable de la qualité, l'accessibilité et "
-#~ "l'intelligibilité des informations fournies aux personnes concernées en "
-#~ "matière de transparence.\n"
-#~ "Vous devriez donc présenter les informations/communications de façon "
-#~ "efficace et succincte, et les différencier des autres informations non "
-#~ "liées à la vie privée telles que des clauses contractuelles ou des "
-#~ "modalités d'utilisation générale. Pour plus d'inspiration sur ce sujet, "
-#~ "il y a une guidance EDPB au sujet de la transparence <a href=\"https://ec."
-#~ "europa.eu/newsroom/article29/items/622227/fr\" target=\"_blank\">ici</a>."
