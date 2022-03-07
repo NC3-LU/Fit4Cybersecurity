@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 from django.urls import path, include
-
+from csskp.settings import DEBUG
 from survey import views
 
 urlpatterns = [
@@ -17,3 +17,5 @@ urlpatterns = [
     path("companies", views.get_companies),
     path("api/", include("survey.api.urls")),
 ]
+if DEBUG:
+    urlpatterns.append(path("__debug__/", include("debug_toolbar.urls")))

@@ -18,6 +18,7 @@ from survey.models import (
     SurveyQuestion,
     SurveyUserAnswer,
     SurveyQuestionAnswer,
+    CONTEXT_SECTION_LABEL,
 )
 
 
@@ -33,13 +34,13 @@ class Command(BaseCommand):
             data = json.loads(f.read())
 
         question_employees = SurveyQuestion.objects.get(
-            label="How many employees?", section__label="__context"
+            label="How many employees?", section__label=CONTEXT_SECTION_LABEL
         )
         question_country = SurveyQuestion.objects.get(
-            label__contains="your country", section__label="__context"
+            label__contains="your country", section__label=CONTEXT_SECTION_LABEL
         )
         question_sector = SurveyQuestion.objects.get(
-            label="What is your sector?", section__label="__context"
+            label="What is your sector?", section__label=CONTEXT_SECTION_LABEL
         )
 
         nb_created_answers = 0

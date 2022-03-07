@@ -17,6 +17,8 @@ CUSTOM = {
     "secin_logo": "templates/report/images/secin_logo.svg",
     # Minimal score
     "minimal_acceptable_score": 65,
+    # Show or not the questions number left to complete the survey.
+    "show_progress_questions_numbers": True,
     # Custom parts of templates
     #   main dir for PARTS_TEMPLATE_DIR:
     "templates_parts_dir": "templates/parts",
@@ -41,6 +43,17 @@ CUSTOM = {
         "results": True,
         "recommendations": True,
         "questions": True,
+    },
+    # Available stats charts
+    "stats": {
+        "activity": True,
+        "sector": True,
+        "size": False,
+        "country": True,
+        "status": True,
+        "language": True,
+        "section": True,
+        "category": True,
     },
     "chart_exclude_sections": ["eSanté"],
 }

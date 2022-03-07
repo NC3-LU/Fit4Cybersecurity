@@ -1,8 +1,9 @@
 {% load i18n %}
 
 <a
-class="{% if type == 'button' %}btn btn-success{% else %}text-success{% endif %} send-email-to-cases"
+class="{% if type == 'button' %}btn btn-sm btn-block btn-success{% else %}text-success{% endif %} send-email-to-cases"
 data-subject="{{ _('Request training offer') }}"
+style="white-space: normal;"
 data-body="{% blocktranslate with userId=userId %}Dear Cases Team,
 
 We would like an information about security awareness training offer.
@@ -28,7 +29,7 @@ Training:
     - Personalized topics to discuss:
 
 * For a number of people greater than 25, the training will be done in several installments, involving a higher cost.
-{% endblocktranslate  %}"
+{% endblocktranslate %}"
 href="#"
 >
 {% if type == 'button' %}

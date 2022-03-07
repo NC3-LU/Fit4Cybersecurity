@@ -53,7 +53,7 @@ def results_stats(request):
     result = get_finished_surveys_list(start_date, end_date)
     context = {
         "dates_limit_form": dates_limit_form,
-        "surveys_users_results": json.dumps(result, indent=2, sort_keys=True)
+        "surveys_users_results": json.dumps(result, indent=2, sort_keys=True),
     }
 
     return render(request, "admin/results_stats.html", context=context)

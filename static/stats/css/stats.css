@@ -1,34 +1,57 @@
 .svg-tip {
-  padding: 10px;
-  background: rgba(0,0,0,0.8);
-  color: #bbb;
-  font-size: 12px;
-  position: absolute;
-  z-index: 99999;
-  text-align: center;
-  border-radius: 3px;
+    padding: 10px;
+    background: rgba(0,0,0,0.8);
+    color: #bbb;
+    font-size: 12px;
+    position: absolute;
+    z-index: 99999;
+    text-align: center;
+    border-radius: 3px;
 }
 
 .svg-tip:after {
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  position: absolute;
-  left: 50%;
-  height: 5px;
-  width: 5px;
-  bottom: -10px;
-  margin: 0 0 0 -5px;
-  content: " ";
-  border: 5px solid transparent;
-  border-top-color: rgba(0,0,0,0.8);
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    position: absolute;
+    left: 50%;
+    height: 5px;
+    width: 5px;
+    bottom: -10px;
+    margin: 0 0 0 -5px;
+    content: " ";
+    border: 5px solid transparent;
+    border-top-color: rgba(0,0,0,0.8);
 }
 
-.chart-container {
-  display: block;
-  float: none;
-  width: 20%;
-  margin-top: 0px;
-  margin-right:0px;
-  margin-left:0px;
-  height: auto;
+.custom-spinner {
+    width: 5em;
+    height: 5em;
+}
+
+.activity-chart-legend {
+    stroke-width:3;
+}
+.activity-chart-legend_0 {
+    fill:#eeeeee;
+    stroke:#eeeeee
+}
+
+.activity-chart-legend_1 {
+    fill:#d6e685;
+    stroke:#d6e685
+}
+
+.activity-chart-legend_2 {
+    fill:#8cc665;
+    stroke:#8cc665
+}
+
+.activity-chart-legend_3 {
+    fill:#44a340;
+    stroke:#44a340
+}
+
+.activity-chart-legend_4 {
+    fill:#598759;
+    stroke:#598759
 }
