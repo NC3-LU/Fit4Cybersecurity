@@ -69,6 +69,9 @@ try:
 
     EMAIL_HOST = config.EMAIL_HOST
     EMAIL_PORT = config.EMAIL_PORT
+
+    CORS_ALLOWED_ORIGINS = config.CORS_ALLOWED_ORIGINS
+    CORS_ALLOW_METHODS = config.CORS_ALLOW_METHODS
 except AttributeError as e:
     print("Please check you configuration file for the missing configuration variable:")
     print("  {}".format(e))
@@ -99,6 +102,7 @@ INSTALLED_APPS = [
     "django_countries",
     "bootstrap_datepicker_plus",
     "rest_framework",
+    "corsheaders",
 ]
 
 context_processors = [
@@ -110,6 +114,7 @@ context_processors = [
 ]
 
 MIDDLEWARE = [
+    "corsheaders.middleware.CorsMiddleware",
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
