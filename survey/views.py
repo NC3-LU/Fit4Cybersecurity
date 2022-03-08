@@ -66,7 +66,9 @@ def handle_question_form(request, question_index: int):
 
     user_current_question_index = get_current_user_question_index_from_sequence(user)
     if user_current_question_index < question_index or question_index <= 0:
-        return HttpResponseRedirect("/survey/question/" + str(user_current_question_index))
+        return HttpResponseRedirect(
+            "/survey/question/" + str(user_current_question_index)
+        )
 
     review_ancher = ""
     if user.is_survey_under_review():
@@ -78,8 +80,9 @@ def handle_question_form(request, question_index: int):
         if result.is_survey_under_review():
             return HttpResponseRedirect("/survey/review" + review_ancher)
 
-        return HttpResponseRedirect("/survey/question/" + str(
-            get_current_user_question_index_from_sequence(result))
+        return HttpResponseRedirect(
+            "/survey/question/"
+            + str(get_current_user_question_index_from_sequence(result))
         )
 
     return render(request, "survey/questions.html", context=result)
@@ -112,8 +115,9 @@ def change_lang(request, lang: str):
     user.save()
 
     if user.is_survey_in_progress() and previous_path.__contains__("/survey/question/"):
-        return HttpResponseRedirect("/survey/question/" + str(
-            get_current_user_question_index_from_sequence(user))
+        return HttpResponseRedirect(
+            "/survey/question/"
+            + str(get_current_user_question_index_from_sequence(user))
         )
 
     if user.is_survey_under_review() and previous_path.__contains__("/survey/review"):
@@ -189,8 +193,9 @@ def review(request):
     if user.is_survey_finished():
         return HttpResponseRedirect("/survey/finish")
     elif user.is_survey_in_progress():
-        return HttpResponseRedirect("/survey/question/" + str(
-            get_current_user_question_index_from_sequence(user))
+        return HttpResponseRedirect(
+            "/survey/question/"
+            + str(get_current_user_question_index_from_sequence(user))
         )
 
     if request.method == "POST" and forms.Form(data=request.POST).is_valid():
@@ -227,7 +232,18 @@ def finish(request):
     lang = user.chosen_lang
     translation.activate(lang)
 
-    txt_score, bonus_score, radar_current, sections_list = calculateResult(user)
+    # make survey readonly and show results.
+    # also needs saving here!
+    # show a "Thank you" and a "get your report" button
+
+    (
+        txt_score,
+        bonus_score,
+        sections_data,
+        sections_labels,
+        categories_data,
+        categories_labels,
+    ) = calculateResult(user)
 
     recommendations = getRecommendations(user, lang)
     # To properly display breaking lines \n on html page.
@@ -243,8 +259,10 @@ def finish(request):
         "txtscore": txt_score,
         "string_score": str(txt_score),
         "bonus_score": bonus_score,
-        "chartTitles": str(sections_list),
-        "chartData": str(radar_current),
+        "sectionsLabels": str(sections_labels),
+        "sectionsData": str(sections_data),
+        "categoriesLabels": str(categories_labels),
+        "categoriesData": str(categories_data),
         "general_feedback_form": handle_general_feedback(user, request),
     }
 
@@ -277,8 +295,9 @@ def resume(request):
     request.session["user_id"] = str(user_id)
 
     if user.is_survey_in_progress():
-        return HttpResponseRedirect("/survey/question/" + str(
-            get_current_user_question_index_from_sequence(user))
+        return HttpResponseRedirect(
+            "/survey/question/"
+            + str(get_current_user_question_index_from_sequence(user))
         )
 
     if user.is_survey_under_review():
@@ -307,8 +326,9 @@ def save_general_feedback(request):
         return HttpResponseRedirect("/survey/finish")
 
     if user.is_survey_in_progress():
-        return HttpResponseRedirect("/survey/question/" + str(
-            get_current_user_question_index_from_sequence(user))
+        return HttpResponseRedirect(
+            "/survey/question/"
+            + str(get_current_user_question_index_from_sequence(user))
         )
 
     if user.is_survey_under_review():

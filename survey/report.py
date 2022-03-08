@@ -30,14 +30,27 @@ def create_html_report(user: SurveyUser, lang: str, request: HttpRequest) -> str
     translation.activate(lang)
 
     # Calculate the result
-    score, bonus_score, details, section_list = calculateResult(user)
+    (
+        score,
+        bonus_score,
+        sections_data,
+        sections_labels,
+        categories_data,
+        categories_labels,
+    ) = calculateResult(user)
 
     # Generate the chart
     try:
-        chart_png_base64 = generate_chart_png(user, details, section_list, "base64")
+        section_chart_png_base64 = generate_chart_png(
+            user, sections_data, sections_labels, "base64"
+        )
+        category_chart_png_base64 = generate_chart_png(
+            user, categories_data, categories_labels, "base64"
+        )
     except AssertionError as e:
         logger.error(e)
-        chart_png_base64 = None
+        section_chart_png_base64 = None
+        category_chart_png_base64 = None
     except Exception as e:
         logger.error("Error when generating the PNG chart: {}.".format(e))
         raise e
@@ -59,7 +72,8 @@ def create_html_report(user: SurveyUser, lang: str, request: HttpRequest) -> str
             "DATE": datetime.today(),
             "SURVEY_USER": user,
             "CONTEXT": user.get_all_context_answers(),
-            "CHART": chart_png_base64,
+            "SECTION_CHART": section_chart_png_base64,
+            "CATEGORY_CHART": category_chart_png_base64,
             "SCORE": str(score),
             "BONUS_SCORE": bonus_score,
             "recommendations": recommendations_list,

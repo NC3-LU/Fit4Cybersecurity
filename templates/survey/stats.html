@@ -7,6 +7,9 @@
 {{ block.super }}
     <script type="text/javascript" src="/static/stats/js/github_contribution.js"></script>
     <link href="/static/stats/css/github_contribution_graph.css" media="all" rel="stylesheet">
+    <script>
+        var stats_options = "{{ stats_options | safe }}"
+    </script>
 {% endblock %}
 {% block content_title %}
     <p class="lead" style="font-size: larger">
@@ -40,191 +43,195 @@
                 </ul>
             </div>
         </div>
-        <div class="w-100 p-4"></div>
-        <div class="row justify-content-center">
-            <div class="col mx-auto text-center">
-                <h4>
-                    {{ _('Activity over the past year') }}
-                </h4>
-                <div id="spinner-surveys-activity" class="row justify-content-center align-items-center">
-                    <div class="text-primary spinner-border custom-spinner m-5" role="status">
-                        <span class="sr-only">{{ _('Loading...') }}</span>
+        {% if custom.stats.activity %}
+            <div class="w-100 p-4"></div>
+            <div class="row justify-content-center">
+                <div class="col mx-auto text-center">
+                    <h4>
+                        {{ _('Activity over the past year') }}
+                    </h4>
+                    <div id="spinner-surveys-activity" class="row justify-content-center align-items-center">
+                        <div class="text-primary spinner-border custom-spinner m-5" role="status">
+                            <span class="sr-only">{{ _('Loading...') }}</span>
+                        </div>
                     </div>
-                </div>
-                <div id="surveys-activity"></div>
+                    <div id="surveys-activity"></div>
+                  </div>
+            </div>
+            <div class="w-100 p-2"></div>
+            <div class="row">
+              <div class="col mx-auto text-center">
+                <p>{{ _('Click on a date to load stats since this day or use the list below.') }}</p>
               </div>
-        </div>
-        <div class="w-100 p-2"></div>
-        <div class="row">
-          <div class="col mx-auto text-center">
-            <p>{{ _('Click on a date to load stats since this day or use the list below.') }}</p>
-          </div>
-        </div>
-        <div class="row justify-content-center align-items-center">
+            </div>
+            <div class="row justify-content-center align-items-center">
                 <div class="col-2">
-                    Less&nbsp;
-                    <svg width="10" height="10" class="d-inline-block">
-                      <rect width="10" height="10" class="ContributionCalendar-day" rx="2" ry="2" data-level="1" style="fill:#eeeeee;stroke-width:3;stroke:#eeeeee"></rect>
-                    </svg>
-                    <svg width="10" height="10" class="d-inline-block">
-                      <rect width="10" height="10" class="ContributionCalendar-day" rx="2" ry="2" data-level="0" style="fill:#d6e685;stroke-width:3;stroke:#d6e685"></rect>
-                    </svg>
-                    <svg width="10" height="10" class="d-inline-block">
-                      <rect width="10" height="10" class="ContributionCalendar-day" rx="2" ry="2" data-level="2" style="fill:#8cc665;stroke-width:3;stroke:#8cc665"></rect>
-                    </svg>
-                    <svg width="10" height="10" class="d-inline-block">
-                      <rect width="10" height="10" class="ContributionCalendar-day" rx="2" ry="2" data-level="3" style="fill:#44a340;stroke-width:3;stroke:#44a340"></rect>
-                    </svg>
-                    <svg width="10" height="10" class="d-inline-block">
-                      <rect width="10" height="10" class="ContributionCalendar-day" rx="2" ry="2" data-level="4" style="fill:#598759;stroke-width:3;stroke:#598759"></rect>
-                    </svg>
-                    More
+                    {{ _('Less') }}&nbsp;
+                    {% for i in range %}
+                        <svg width="10" height="10" class="d-inline-block activity-chart-legend">
+                            <rect width="10" height="10" class="activity-chart-legend_{{i}}"></rect>
+                        </svg>
+                    {% endfor %}
+                    {{ _('More') }}
                 </div>
                 <div class="col-3">
-                  <label for="section_displayTimeFrame">{{ _('Time frame')}}</label>
-                  <select id="section_displayTimeFrame">
-                    <option value=""></option>
-                    {% for time_frame in time_frames %}
-                      <option value="{{ time_frame.1 }}">{{ time_frame.0 }}</option>
-                    {% endfor %}
-                  </select>
+                    <label for="section_displayTimeFrame">{{ _('Time frame')}}</label>
+                    <select id="section_displayTimeFrame">
+                        <option value=""></option>
+                        {% for time_frame in time_frames %}
+                            <option value="{{ time_frame.1 }}">{{ time_frame.0 }}</option>
+                        {% endfor %}
+                    </select>
                 </div>
                 <div class="col-2">
-                <a class="btn border border-rounded" type="button"  href="{% url 'stats' %}">
-                  {{ _('Reset filters') }}
-                </a>
+                    <a class="btn border border-rounded" type="button"  href="{% url 'stats' %}">
+                        {{ _('Reset filters') }}
+                    </a>
                 </div>
             </div>
-        </div>
+        {% endif %}
         <div class="w-100 p-4"></div>
         <h4 class="text-center">{{ _('Statistics since') }} {{ date_from }}</h4>
         <h5 class="text-center">{{ _('Total of completed surveys:') }} {{ nb_finished_surveys_for_period }}</h5>
         <div class="w-100 p-4"></div>
         <div class="row justify-content-center">
-            <div class="col-4">
-                <h4 class="text-center">
-                    {{ _('Surveys company sector') }}
-                </h4>
-                <div id="spinner-stats-sector" class="row justify-content-center align-items-center">
-                    <div class="text-primary spinner-border custom-spinner m-5" role="status">
-                        <span class="sr-only">{{ _('Loading...') }}</span>
+            {% if custom.stats.sector %}
+                <div class="col-4">
+                    <h4 class="text-center">
+                        {{ _('Surveys company sector') }}
+                    </h4>
+                    <div id="spinner-stats-sector" class="row justify-content-center align-items-center">
+                        <div class="text-primary spinner-border custom-spinner m-5" role="status">
+                            <span class="sr-only">{{ _('Loading...') }}</span>
+                        </div>
                     </div>
+                    <canvas id="stats-sector"></canvas>
                 </div>
-                <canvas id="stats-sector"></canvas>
-            </div>
-            <div class="col-4">
-                <h4 class="text-center">
-                    {{ _('Surveys company size') }}
-                </h4>
-                <div id="spinner-stats-company" class="row justify-content-center align-items-center">
-                    <div class="text-primary spinner-border custom-spinner m-5" role="status">
-                        <span class="sr-only">{{ _('Loading...') }}</span>
+            {% endif %}
+            {% if custom.stats.size %}
+                <div class="col-4">
+                    <h4 class="text-center">
+                        {{ _('Surveys company size') }}
+                    </h4>
+                    <div id="spinner-stats-company" class="row justify-content-center align-items-center">
+                        <div class="text-primary spinner-border custom-spinner m-5" role="status">
+                            <span class="sr-only">{{ _('Loading...') }}</span>
+                        </div>
                     </div>
+                    <canvas id="stats-company"></canvas>
                 </div>
-                <canvas id="stats-company"></canvas>
-            </div>
-            <div class="col-4">
-                <h4 class="text-center">
-                    {{ _('Surveys countries') }}
-                </h4>
-                <div id="spinner-stats-countries" class="row justify-content-center align-items-center">
-                    <div class="text-primary spinner-border custom-spinner m-5" role="status">
-                        <span class="sr-only">{{ _('Loading...') }}</span>
+            {% endif %}
+            {% if custom.stats.country %}
+                <div class="col-4">
+                    <h4 class="text-center">
+                        {{ _('Surveys countries') }}
+                    </h4>
+                    <div id="spinner-stats-countries" class="row justify-content-center align-items-center">
+                        <div class="text-primary spinner-border custom-spinner m-5" role="status">
+                            <span class="sr-only">{{ _('Loading...') }}</span>
+                        </div>
                     </div>
+                    <canvas id="stats-countries"></canvas>
+                    <script>
+                        var others_translation = "{{ others_translation }}"
+                    </script>
                 </div>
-                <canvas id="stats-countries"></canvas>
-                <script>
-                    var others_translation = "{{ others_translation }}"
-                </script>
-            </div>
-            <div id="popup" class="modal fade" role="dialog">
-              <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h4 class="text-center">{{ _('Surveys countries details') }}</h4>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                          <span aria-hidden="true">&times;</span>
-                        </button>
+                <div id="popup" class="modal fade" role="dialog">
+                  <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="text-center">{{ _('Surveys countries details') }}</h4>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                      </div>
+                      <div class="modal-body col-10 mx-auto">
+                          <canvas id="stats-countries-detail"></canvas>
+                      </div>
+                    </div>
                   </div>
-                  <div class="modal-body col-10 mx-auto">
-                      <canvas id="stats-countries-detail"></canvas>
-                  </div>
                 </div>
-              </div>
-            </div>
+            {% endif %}
             <div class="w-100 p-4"></div>
-            <div class="col-4">
-                <h4 class="text-center">
-                    {{ _('Surveys status') }}
-                </h4>
-                <div id="spinner-stats-count" class="row justify-content-center align-items-center">
-                    <div class="text-primary spinner-border custom-spinner m-5" role="status">
-                        <span class="sr-only">{{ _('Loading...') }}</span>
+            {% if custom.stats.status %}
+                <div class="col-4">
+                    <h4 class="text-center">
+                        {{ _('Surveys status') }}
+                    </h4>
+                    <div id="spinner-stats-count" class="row justify-content-center align-items-center">
+                        <div class="text-primary spinner-border custom-spinner m-5" role="status">
+                            <span class="sr-only">{{ _('Loading...') }}</span>
+                        </div>
                     </div>
+                    <canvas id="stats-count"></canvas>
                 </div>
-                <canvas id="stats-count"></canvas>
-            </div>
-            <div class="col-4">
-                <h4 class="text-center">
-                    {{ _('Surveys languages') }}
-                </h4>
-                <div id="spinner-stats-language" class="row justify-content-center align-items-center">
-                    <div class="text-primary spinner-border custom-spinner m-5" role="status">
-                        <span class="sr-only">{{ _('Loading...') }}</span>
+            {% endif %}
+            {% if custom.stats.language %}
+                <div class="col-4">
+                    <h4 class="text-center">
+                        {{ _('Surveys languages') }}
+                    </h4>
+                    <div id="spinner-stats-language" class="row justify-content-center align-items-center">
+                        <div class="text-primary spinner-border custom-spinner m-5" role="status">
+                            <span class="sr-only">{{ _('Loading...') }}</span>
+                        </div>
                     </div>
+                    <canvas id="stats-language"></canvas>
                 </div>
-                <canvas id="stats-language"></canvas>
-            </div>
-
+            {% endif %}
         </div>
-        <div class="w-100 p-4"></div>
-        <div class="row justify-content-center">
-            <div class="col-8 mx-auto text-center">
-                <h4>
-                    {{ _('Answers by section and company size') }}
-                </h4>
-                <div id="spinner-answers-per-section" class="row justify-content-center align-items-center">
-                    <div class="text-primary spinner-border custom-spinner m-5" role="status">
-                        <span class="sr-only">{{ _('Loading...') }}</span>
+        {% if custom.stats.section %}
+            <div class="w-100 p-4"></div>
+            <div class="row justify-content-center">
+                <div class="col-8 mx-auto text-center">
+                    <h4>
+                        {{ _('Answers by section and company size') }}
+                    </h4>
+                    <div id="spinner-answers-per-section" class="row justify-content-center align-items-center">
+                        <div class="text-primary spinner-border custom-spinner m-5" role="status">
+                            <span class="sr-only">{{ _('Loading...') }}</span>
+                        </div>
                     </div>
-                </div>
-                <div class="col-md-auto" id="select-section-displayByCountry" style="display:none">
-                    <label for="section_displayByCountry">{{ _('Country')}}</label>
-                    <select id="section_displayByCountry">
-                        <option value="all" selected>{{ _('All')}}</option>
-                        {% for survey_country in survey_countries %}
-                            {% get_country survey_country as country %}
-                            <option value="{{ country.code }}">{{ country.name }}</option>
-                        {% endfor %}
-                    </select>
-                </div>
-                <canvas id="answers-per-section"></canvas>
-            </div>
-        </div>
-        <div class="w-100 p-4"></div>
-        <div class="row justify-content-center">
-            <div class="col-8 mx-auto text-center">
-                <h4>
-                    {{ _('Answers by category and company size') }}
-                </h4>
-                <div id="spinner-answers-per-category" class="row justify-content-center align-items-center">
-                    <div class="text-primary spinner-border custom-spinner m-5" role="status">
-                        <span class="sr-only">{{ _('Loading...') }}</span>
+                    <div class="col-md-auto" id="select-section-displayByCountry" style="display:none">
+                        <label for="section_displayByCountry">{{ _('Country')}}</label>
+                        <select id="section_displayByCountry">
+                            <option value="all" selected>{{ _('All')}}</option>
+                            {% for survey_country in survey_countries %}
+                                {% get_country survey_country as country %}
+                                <option value="{{ country.code }}">{{ country.name }}</option>
+                            {% endfor %}
+                        </select>
                     </div>
+                    <canvas id="answers-per-section"></canvas>
                 </div>
-                <div class="col-md-auto" id="select-category-displayByCountry" style="display:none">
-                    <label for="category_displayByCountry">{{ _('Country')}}</label>
-                    <select id="category_displayByCountry">
-                        <option value="all" selected>{{ _('All')}}</option>
-                        {% for survey_country in survey_countries %}
-                            {% get_country survey_country as country %}
-                            <option value="{{ country.code }}">{{ country.name }}</option>
-                        {% endfor %}
-                    </select>
-                </div>
-                <canvas id="answers-per-category"></canvas>
             </div>
-        </div>
+        {% endif %}
+        {% if custom.stats.category %}
+            <div class="w-100 p-4"></div>
+            <div class="row justify-content-center">
+                <div class="col-8 mx-auto text-center">
+                    <h4>
+                        {{ _('Answers by category and company size') }}
+                    </h4>
+                    <div id="spinner-answers-per-category" class="row justify-content-center align-items-center">
+                        <div class="text-primary spinner-border custom-spinner m-5" role="status">
+                            <span class="sr-only">{{ _('Loading...') }}</span>
+                        </div>
+                    </div>
+                    <div class="col-md-auto" id="select-category-displayByCountry" style="display:none">
+                        <label for="category_displayByCountry">{{ _('Country')}}</label>
+                        <select id="category_displayByCountry">
+                            <option value="all" selected>{{ _('All')}}</option>
+                            {% for survey_country in survey_countries %}
+                                {% get_country survey_country as country %}
+                                <option value="{{ country.code }}">{{ country.name }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <canvas id="answers-per-category"></canvas>
+                </div>
+            </div>
+        {% endif %}
         <div class="w-100 p-4"></div>
         <div class="row">
             <div class="col">

@@ -14,7 +14,13 @@ from django.utils import translation
 from django.utils.translation import gettext as _
 from csskp.settings import CUSTOM, LANGUAGE_CODE
 from survey.lib.utils import tree, mean_gen
-from survey.models import SurveyUser, SurveyUserAnswer, SurveyQuestion, CONTEXT_SECTION_LABEL
+from survey.models import (
+    SurveyUser,
+    SurveyUserAnswer,
+    SurveyQuestion,
+    SurveyQuestionAnswer,
+    CONTEXT_SECTION_LABEL,
+)
 from survey.reporthelper import calculateResult
 from django_countries import countries
 
@@ -78,6 +84,8 @@ def index(request):
         "survey_countries": survey_countries,
         "python_version": "{}.{}.{}".format(*sys.version_info[:3]),
         "others_translation": str(_("Others")),
+        "range": range(5),
+        "stats_options": CUSTOM.get("stats"),
     }
 
     return render(request, "survey/stats.html", context=context)
@@ -201,11 +209,23 @@ def survey_per_country(request):
         .reverse()
     )
 
-    result = {_(dict(countries)[q["uvalue"]]): q["count"] for q in query_gt}
+    for q in query_gt:
+        try:
+            country = _(dict(countries).get(q["uvalue"]))
+        except AttributeError:
+            country = SurveyQuestionAnswer.objects.get(value=q["uvalue"]).label
+
+        result[country] = q["count"]
+
     if query_lte:
-        result[_("Others")] = {
-            _(dict(countries)[q["uvalue"]]): q["count"] for q in query_lte
-        }
+        result[_("Others")] = {}
+        for q in query_lte:
+            try:
+                country = _(dict(countries).get(q["uvalue"]))
+            except AttributeError:
+                country = SurveyQuestionAnswer.objects.get(value=q["uvalue"]).label
+
+            result[_("Others")][country] = q["count"]
 
     return JsonResponse(result)
 

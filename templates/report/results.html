@@ -5,8 +5,8 @@
 
 <p>
 {% block report_results %}
-{% blocktranslate trimmed %}
-You have achieved {{ SCORE }}/100 with your answers. You must reach at least {{ custom.minimal_acceptable_score }}/100 to be able to make a CASES Diagnosis.<br /><br />
+{% blocktranslate trimmed with minimal_acceptable_score=custom.minimal_acceptable_score %}
+You have achieved {{ SCORE }}/100 with your answers. You must reach at least {{ minimal_acceptable_score }}/100 to be able to make a CASES Diagnosis.<br /><br />
 We remind you that this is a self-assessment, and it is important to understand that all the results can not in any way be exhaustive.
 {% endblocktranslate %}
 {% endblock %}
@@ -20,6 +20,18 @@ You have scored an additional {{ bonus }} % of bonus points for following best p
 </p>
 {% endif %}
 
-<img class="chart center" src="data:image/png;base64,{{ CHART }}" />
+<div id="bySection">
+    <h4>
+        {{ _('By section') }}
+    </h4>
+    <img class="chart center" src="data:image/png;base64,{{ SECTION_CHART }}">
+</div>
+<div id="byCategory">
+    <h4>
+        {{ _('By category') }}
+    </h4>
+    <img class="chart center" src="data:image/png;base64,{{ CATEGORY_CHART }}">
+</div>
+
 
 <p class="page-break" ></p>

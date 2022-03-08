@@ -101,11 +101,17 @@ INSTALLED_APPS = [
     "django_countries",
     "bootstrap_datepicker_plus",
     "rest_framework",
-    "debug_toolbar",
+]
+
+context_processors = [
+    "django.template.context_processors.request",
+    "django.contrib.auth.context_processors.auth",
+    "django.contrib.messages.context_processors.messages",
+    "survey.context_processors.get_version",
+    "survey.context_processors.instance_configurations",
 ]
 
 MIDDLEWARE = [
-    "debug_toolbar.middleware.DebugToolbarMiddleware",
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
@@ -115,6 +121,18 @@ MIDDLEWARE = [
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
     "django.middleware.locale.LocaleMiddleware",
 ]
+
+INTERNAL_IPS = [
+    "127.0.0.1",
+]
+if DEBUG:
+    INSTALLED_APPS.append("debug_toolbar")
+    MIDDLEWARE.append("debug_toolbar.middleware.DebugToolbarMiddleware")
+    context_processors.append("django.template.context_processors.debug")
+    import socket
+
+    hostname, _, ips = socket.gethostbyname_ex(socket.gethostname())
+    INTERNAL_IPS = [ip[:-1] + "1" for ip in ips] + ["127.0.0.1", "10.0.2.2"]
 
 ROOT_URLCONF = "csskp.urls"
 
@@ -128,25 +146,10 @@ TEMPLATES = [
         ],
         "APP_DIRS": True,
         "OPTIONS": {
-            "context_processors": [
-                "django.template.context_processors.debug",
-                "django.template.context_processors.request",
-                "django.contrib.auth.context_processors.auth",
-                "django.contrib.messages.context_processors.messages",
-                "survey.context_processors.get_version",
-                "survey.context_processors.instance_configurations",
-            ],
+            "context_processors": context_processors,
         },
     },
 ]
-
-INTERNAL_IPS = [
-    "127.0.0.1",
-]
-if DEBUG:
-    import socket
-    hostname, _, ips = socket.gethostbyname_ex(socket.gethostname())
-    INTERNAL_IPS = [ip[:-1] + '1' for ip in ips] + ['127.0.0.1', '10.0.2.2']
 
 WSGI_APPLICATION = "csskp.wsgi.application"
 

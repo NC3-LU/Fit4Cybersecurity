@@ -18,7 +18,7 @@ from survey.models import (
     SurveyQuestion,
     SurveyUserAnswer,
     SurveyQuestionAnswer,
-    CONTEXT_SECTION_LABEL
+    CONTEXT_SECTION_LABEL,
 )
 
 

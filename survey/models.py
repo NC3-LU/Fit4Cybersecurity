@@ -38,7 +38,7 @@ LOCAL_DEFAULT_LANG = LANGUAGE_CODE
 SURVEY_STATUS_IN_PROGRESS = 1
 SURVEY_STATUS_UNDER_REVIEW = 2
 SURVEY_STATUS_FINISHED = 3
-CONTEXT_SECTION_LABEL = '__context'
+CONTEXT_SECTION_LABEL = "__context"
 
 
 class RightMixin:
@@ -204,7 +204,7 @@ class SurveyAnswerQuestionMap(models.Model):
         unique_together = ("answer", "question", "branch")
 
     def __str__(self):
-        return str(self.answer) + '_' + str(self.question)
+        return str(self.answer) + "_" + str(self.question)
 
 
 class SurveyUser(models.Model):
@@ -402,9 +402,15 @@ class SurveyUserQuestionSequence(models.Model):
     is_active = models.BooleanField(default=True)
 
     def __str__(self):
-        return str(self.question) + "_" + str(self.branch) + "_" + str(
-            self.level
-        ) + "_" + str(self.index)
+        return (
+            str(self.question)
+            + "_"
+            + str(self.branch)
+            + "_"
+            + str(self.level)
+            + "_"
+            + str(self.index)
+        )
 
     class Meta:
         unique_together = ("user", "question", "branch")
