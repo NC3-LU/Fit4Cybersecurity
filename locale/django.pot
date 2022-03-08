@@ -3,12 +3,15 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
+#: data/fit4contract/context-questions.json:207
+#: data/fit4cybersecurity/context-questions.json:207
+#: data/fit4privacy/context-questions.json:207
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-01-10 12:14+0000\n"
+"POT-Creation-Date: 2022-02-07 10:01+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,6 +19,23 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+
+#: csskp/fit4contract/__init__.py:7
+msgid ""
+"This questionnaire aims to identify the general scope of the contractual "
+"relationship considered, in order to set up an acquisition, a lease, a "
+"development or any other service in the field of information and "
+"communication technologies. Based on this scope, Fit4Contract provides a "
+"list of basic information security requirements that are recommended to be "
+"considered in establishing the contractual relationship. This is a self "
+"assessment tool and as such cannot provide definitive guidelines. This tool "
+"is simply raising awareness for Information Security in ICT product and "
+"service contracts. Additionally, many countries have their own legal "
+"requirements for contracts and thus, we do not take any responsibilities "
+"concerning the answers and we clarify that the user of this survey needs to "
+"verify, and adapt their contracts accordingly, to comply with all national "
+"and international laws."
+msgstr ""
 
 #: csskp/fit4cybersecurity/__init__.py:7
 msgid ""
@@ -38,7 +58,7 @@ msgid ""
 "advanced and where there is room for improvement. As such, it is recommended "
 "that a person is taking this survey that is knowing the company's maturity "
 "on the aforementioned topics well. <br /><br />The survey will be online and "
-"available between December 2021 and March 31st 2022. After the survey, the "
+"available between December 2021 and April 30th 2022. After the survey, the "
 "data will be processed and results will be interpreted. However, since the "
 "survey is completely anonymous, we cannot identify you nor your company and "
 "thus deletion of specific records is not possible: we cannot be sure that it "
@@ -47,121 +67,6 @@ msgid ""
 "want to later pick up where you have left off, please be sure to save the "
 "link by clicking on the \"continue later\" button. We will not be able to "
 "help you to find your answers again otherwise."
-msgstr ""
-
-#: csskp/fit4operatorsurvey/__init__.py:64
-#: data/fit4operatorsurvey/context-questions.json:11
-msgid "Energy"
-msgstr ""
-
-#: csskp/fit4operatorsurvey/__init__.py:65
-#: data/fit4operatorsurvey/context-questions.json:17
-msgid "Transport"
-msgstr ""
-
-#: csskp/fit4operatorsurvey/__init__.py:66
-#: data/fit4operatorsurvey/context-questions.json:23
-msgid "Banking"
-msgstr ""
-
-#: csskp/fit4operatorsurvey/__init__.py:67
-#: data/fit4operatorsurvey/context-questions.json:29
-msgid "Financial market infrastructure"
-msgstr ""
-
-#: csskp/fit4operatorsurvey/__init__.py:68
-#: data/fit4cybersecurity/context-questions.json:59
-#: data/fit4ehealth/context-questions.json:10
-#: data/fit4operatorsurvey/context-questions.json:35
-#: data/fit4privacy/context-questions.json:59 survey/globals.py:15
-msgid "Health"
-msgstr ""
-
-#: csskp/fit4operatorsurvey/__init__.py:69
-#: data/fit4operatorsurvey/context-questions.json:41
-msgid "Dringking water"
-msgstr ""
-
-#: csskp/fit4operatorsurvey/__init__.py:70
-#: data/fit4operatorsurvey/context-questions.json:47
-msgid "Waste Water"
-msgstr ""
-
-#: csskp/fit4operatorsurvey/__init__.py:71
-#: data/fit4operatorsurvey/context-questions.json:53
-msgid "Digital Infrastructure and Service Providers"
-msgstr ""
-
-#: csskp/fit4operatorsurvey/__init__.py:72
-#: data/fit4cybersecurity/context-questions.json:95
-#: data/fit4operatorsurvey/context-questions.json:59
-#: data/fit4privacy/context-questions.json:95 survey/globals.py:21
-msgid "Public Administration"
-msgstr ""
-
-#: csskp/fit4operatorsurvey/__init__.py:73
-#: data/fit4operatorsurvey/context-questions.json:65
-msgid "Space"
-msgstr ""
-
-#: csskp/fit4operatorsurvey/__init__.py:74
-#: data/fit4operatorsurvey/context-questions.json:71
-msgid "Postal and Courier Services"
-msgstr ""
-
-#: csskp/fit4operatorsurvey/__init__.py:75
-#: data/fit4operatorsurvey/context-questions.json:77
-msgid "Waste Management"
-msgstr ""
-
-#: csskp/fit4operatorsurvey/__init__.py:76
-#: data/fit4operatorsurvey/context-questions.json:83
-msgid "Manufacture, production and distribution of chemicals"
-msgstr ""
-
-#: csskp/fit4operatorsurvey/__init__.py:77
-#: data/fit4operatorsurvey/context-questions.json:89
-msgid "Food Production, processing and distribution"
-msgstr ""
-
-#: csskp/fit4operatorsurvey/__init__.py:78
-#: data/fit4operatorsurvey/context-questions.json:95
-msgid "Manufacturing of medical devices"
-msgstr ""
-
-#: csskp/fit4operatorsurvey/__init__.py:79
-#: data/fit4operatorsurvey/context-questions.json:101
-msgid "Manufacture of computer, electronics and optical products"
-msgstr ""
-
-#: csskp/fit4operatorsurvey/__init__.py:80
-#: data/fit4operatorsurvey/context-questions.json:107
-msgid "Manufacture of electrical equipment"
-msgstr ""
-
-#: csskp/fit4operatorsurvey/__init__.py:81
-#: data/fit4operatorsurvey/context-questions.json:113
-msgid "Manufacture of machinery and equipment"
-msgstr ""
-
-#: csskp/fit4operatorsurvey/__init__.py:84
-#: data/fit4operatorsurvey/context-questions.json:128
-msgid "Under 10 employees"
-msgstr ""
-
-#: csskp/fit4operatorsurvey/__init__.py:85
-#: data/fit4operatorsurvey/context-questions.json:134
-msgid "From 10 to 49 employees"
-msgstr ""
-
-#: csskp/fit4operatorsurvey/__init__.py:86
-#: data/fit4operatorsurvey/context-questions.json:140
-msgid "From 50 to 249 employees"
-msgstr ""
-
-#: csskp/fit4operatorsurvey/__init__.py:87
-#: data/fit4operatorsurvey/context-questions.json:146
-msgid "Over 250 employees"
 msgstr ""
 
 #: csskp/fit4privacy/__init__.py:7
@@ -180,6 +85,7 @@ msgid ""
 "obligations for which organisations should already be prepared as of 2021."
 msgstr ""
 
+#: data/fit4contract/context-questions.json:3
 #: data/fit4cybersecurity/context-questions.json:3
 #: data/fit4ehealth/context-questions.json:3
 #: data/fit4operatorsurvey/context-questions.json:3
@@ -187,182 +93,633 @@ msgstr ""
 msgid "What is your sector?"
 msgstr ""
 
+#: data/fit4contract/context-questions.json:4
+#: data/fit4contract/context-questions.json:120
+#: data/fit4contract/context-questions.json:200
 #: data/fit4cybersecurity/context-questions.json:4
-#: data/fit4cybersecurity/context-questions.json:104
-#: data/fit4cybersecurity/context-questions.json:173
+#: data/fit4cybersecurity/context-questions.json:120
+#: data/fit4cybersecurity/context-questions.json:200
 #: data/fit4ehealth/context-questions.json:4
-#: data/fit4ehealth/context-questions.json:19
+#: data/fit4ehealth/context-questions.json:21
 #: data/fit4operatorsurvey/context-questions.json:4
-#: data/fit4operatorsurvey/context-questions.json:122
-#: data/fit4operatorsurvey/context-questions.json:155
-#: data/fit4operatorsurvey/context-questions.json:188
+#: data/fit4operatorsurvey/context-questions.json:141
+#: data/fit4operatorsurvey/context-questions.json:179
+#: data/fit4operatorsurvey/context-questions.json:217
 #: data/fit4privacy/context-questions.json:4
-#: data/fit4privacy/context-questions.json:104
-#: data/fit4privacy/context-questions.json:173
+#: data/fit4privacy/context-questions.json:120
+#: data/fit4privacy/context-questions.json:200
 msgid "Context"
 msgstr ""
 
+#: data/fit4contract/context-questions.json:5
+#: data/fit4contract/context-questions.json:121
+#: data/fit4contract/context-questions.json:201
 #: data/fit4cybersecurity/context-questions.json:5
-#: data/fit4cybersecurity/context-questions.json:105
-#: data/fit4cybersecurity/context-questions.json:174
+#: data/fit4cybersecurity/context-questions.json:121
+#: data/fit4cybersecurity/context-questions.json:201
 #: data/fit4ehealth/context-questions.json:5
-#: data/fit4ehealth/context-questions.json:20
+#: data/fit4ehealth/context-questions.json:22
 #: data/fit4operatorsurvey/context-questions.json:5
-#: data/fit4operatorsurvey/context-questions.json:123
-#: data/fit4operatorsurvey/context-questions.json:156
-#: data/fit4operatorsurvey/context-questions.json:189
+#: data/fit4operatorsurvey/context-questions.json:142
+#: data/fit4operatorsurvey/context-questions.json:180
+#: data/fit4operatorsurvey/context-questions.json:218
 #: data/fit4privacy/context-questions.json:5
-#: data/fit4privacy/context-questions.json:105
-#: data/fit4privacy/context-questions.json:174
+#: data/fit4privacy/context-questions.json:121
+#: data/fit4privacy/context-questions.json:201
 msgid "__context"
 msgstr ""
 
-#: data/fit4cybersecurity/context-questions.json:11
-#: data/fit4privacy/context-questions.json:11 survey/globals.py:7
+#: data/fit4contract/context-questions.json:12
+#: data/fit4cybersecurity/context-questions.json:12
+#: data/fit4privacy/context-questions.json:12
 msgid "Banking, insurance and real estate"
 msgstr ""
 
-#: data/fit4cybersecurity/context-questions.json:17
-#: data/fit4privacy/context-questions.json:17 survey/globals.py:8
+#: data/fit4contract/context-questions.json:19
+#: data/fit4cybersecurity/context-questions.json:19
+#: data/fit4privacy/context-questions.json:19
 msgid "Trading, sales and mass distribution"
 msgstr ""
 
-#: data/fit4cybersecurity/context-questions.json:23
-#: data/fit4privacy/context-questions.json:23 survey/globals.py:9
+#: data/fit4contract/context-questions.json:26
+#: data/fit4cybersecurity/context-questions.json:26
+#: data/fit4privacy/context-questions.json:26
 msgid "Marketing, media and multimedia"
 msgstr ""
 
-#: data/fit4cybersecurity/context-questions.json:29
-#: data/fit4privacy/context-questions.json:29 survey/globals.py:10
+#: data/fit4contract/context-questions.json:33
+#: data/fit4cybersecurity/context-questions.json:33
+#: data/fit4privacy/context-questions.json:33
 msgid "Construction industries and civil engineering"
 msgstr ""
 
-#: data/fit4cybersecurity/context-questions.json:35
-#: data/fit4privacy/context-questions.json:35 survey/globals.py:11
+#: data/fit4contract/context-questions.json:40
+#: data/fit4cybersecurity/context-questions.json:40
+#: data/fit4privacy/context-questions.json:40
 msgid "Hotel and restoration, tourism and entertainment"
 msgstr ""
 
-#: data/fit4cybersecurity/context-questions.json:41
-#: data/fit4privacy/context-questions.json:41 survey/globals.py:12
+#: data/fit4contract/context-questions.json:47
+#: data/fit4cybersecurity/context-questions.json:47
+#: data/fit4privacy/context-questions.json:47
 msgid "Industry"
 msgstr ""
 
-#: data/fit4cybersecurity/context-questions.json:47
-#: data/fit4privacy/context-questions.json:47 survey/globals.py:13
+#: data/fit4contract/context-questions.json:54
+#: data/fit4cybersecurity/context-questions.json:54
+#: data/fit4privacy/context-questions.json:54
 msgid "Installation and maintenance"
 msgstr ""
 
-#: data/fit4cybersecurity/context-questions.json:53
-#: data/fit4privacy/context-questions.json:53 survey/globals.py:14
+#: data/fit4contract/context-questions.json:61
+#: data/fit4cybersecurity/context-questions.json:61
+#: data/fit4privacy/context-questions.json:61
 msgid "Creation or placing of objects that are artistic and decorative"
 msgstr ""
 
-#: data/fit4cybersecurity/context-questions.json:65
-#: data/fit4privacy/context-questions.json:65 survey/globals.py:16
+#: data/fit4contract/context-questions.json:68
+#: data/fit4cybersecurity/context-questions.json:68
+#: data/fit4ehealth/context-questions.json:11
+#: data/fit4operatorsurvey/context-questions.json:40
+#: data/fit4privacy/context-questions.json:68
+msgid "Health"
+msgstr ""
+
+#: data/fit4contract/context-questions.json:75
+#: data/fit4cybersecurity/context-questions.json:75
+#: data/fit4privacy/context-questions.json:75
 msgid "Home-Care Service or Community Service"
 msgstr ""
 
-#: data/fit4cybersecurity/context-questions.json:71
-#: data/fit4privacy/context-questions.json:71 survey/globals.py:17
+#: data/fit4contract/context-questions.json:82
+#: data/fit4cybersecurity/context-questions.json:82
+#: data/fit4privacy/context-questions.json:82
 msgid "Shows"
 msgstr ""
 
-#: data/fit4cybersecurity/context-questions.json:77
-#: data/fit4privacy/context-questions.json:77 survey/globals.py:18
+#: data/fit4contract/context-questions.json:89
+#: data/fit4cybersecurity/context-questions.json:89
+#: data/fit4privacy/context-questions.json:89
 msgid "Company Support"
 msgstr ""
 
-#: data/fit4cybersecurity/context-questions.json:83
-#: data/fit4privacy/context-questions.json:83 survey/globals.py:19
+#: data/fit4contract/context-questions.json:96
+#: data/fit4cybersecurity/context-questions.json:96
+#: data/fit4privacy/context-questions.json:96
 msgid "Transport and Logistics"
 msgstr ""
 
-#: data/fit4cybersecurity/context-questions.json:89
-#: data/fit4privacy/context-questions.json:89 survey/globals.py:20
+#: data/fit4contract/context-questions.json:103
+#: data/fit4cybersecurity/context-questions.json:103
+#: data/fit4privacy/context-questions.json:103
 msgid "Farming and fishing, natural spaces and green spaces, animal care"
 msgstr ""
 
-#: data/fit4cybersecurity/context-questions.json:103
-#: data/fit4operatorsurvey/context-questions.json:121
-#: data/fit4privacy/context-questions.json:103
+#: data/fit4contract/context-questions.json:110
+#: data/fit4cybersecurity/context-questions.json:110
+#: data/fit4operatorsurvey/context-questions.json:68
+#: data/fit4privacy/context-questions.json:110
+msgid "Public Administration"
+msgstr ""
+
+#: data/fit4contract/context-questions.json:119
+#: data/fit4cybersecurity/context-questions.json:119
+#: data/fit4operatorsurvey/context-questions.json:140
+#: data/fit4privacy/context-questions.json:119
 msgid "How many employees?"
 msgstr ""
 
-#: data/fit4cybersecurity/context-questions.json:110
-#: data/fit4privacy/context-questions.json:110
+#: data/fit4contract/context-questions.json:127
+#: data/fit4cybersecurity/context-questions.json:127
+#: data/fit4privacy/context-questions.json:127
 msgid "1-5"
 msgstr ""
 
-#: data/fit4cybersecurity/context-questions.json:116
-#: data/fit4privacy/context-questions.json:116
+#: data/fit4contract/context-questions.json:134
+#: data/fit4cybersecurity/context-questions.json:134
+#: data/fit4privacy/context-questions.json:134
 msgid "6-10"
 msgstr ""
 
-#: data/fit4cybersecurity/context-questions.json:122
-#: data/fit4privacy/context-questions.json:122
+#: data/fit4contract/context-questions.json:141
+#: data/fit4cybersecurity/context-questions.json:141
+#: data/fit4privacy/context-questions.json:141
 msgid "10-20"
 msgstr ""
 
-#: data/fit4cybersecurity/context-questions.json:128
-#: data/fit4privacy/context-questions.json:128
+#: data/fit4contract/context-questions.json:148
+#: data/fit4cybersecurity/context-questions.json:148
+#: data/fit4privacy/context-questions.json:148
 msgid "20-50"
 msgstr ""
 
-#: data/fit4cybersecurity/context-questions.json:134
-#: data/fit4privacy/context-questions.json:134
+#: data/fit4contract/context-questions.json:155
+#: data/fit4cybersecurity/context-questions.json:155
+#: data/fit4privacy/context-questions.json:155
 msgid "50-100"
 msgstr ""
 
-#: data/fit4cybersecurity/context-questions.json:140
-#: data/fit4privacy/context-questions.json:140
+#: data/fit4contract/context-questions.json:162
+#: data/fit4cybersecurity/context-questions.json:162
+#: data/fit4privacy/context-questions.json:162
 msgid "100-200"
 msgstr ""
 
-#: data/fit4cybersecurity/context-questions.json:146
-#: data/fit4privacy/context-questions.json:146
+#: data/fit4contract/context-questions.json:169
+#: data/fit4cybersecurity/context-questions.json:169
+#: data/fit4privacy/context-questions.json:169
 msgid "200-500"
 msgstr ""
 
-#: data/fit4cybersecurity/context-questions.json:152
-#: data/fit4privacy/context-questions.json:152
+#: data/fit4contract/context-questions.json:176
+#: data/fit4cybersecurity/context-questions.json:176
+#: data/fit4privacy/context-questions.json:176
 msgid "500-1000"
 msgstr ""
 
-#: data/fit4cybersecurity/context-questions.json:158
-#: data/fit4privacy/context-questions.json:158
+#: data/fit4contract/context-questions.json:183
+#: data/fit4cybersecurity/context-questions.json:183
+#: data/fit4privacy/context-questions.json:183
 msgid "1000-5000"
 msgstr ""
 
-#: data/fit4cybersecurity/context-questions.json:164
-#: data/fit4privacy/context-questions.json:164
+#: data/fit4contract/context-questions.json:190
+#: data/fit4cybersecurity/context-questions.json:190
+#: data/fit4privacy/context-questions.json:190
 msgid "5000+"
 msgstr ""
 
-#: data/fit4cybersecurity/context-questions.json:172
-#: data/fit4ehealth/context-questions.json:18
-#: data/fit4privacy/context-questions.json:172
+#: data/fit4contract/context-questions.json:199
+#: data/fit4cybersecurity/context-questions.json:199
+#: data/fit4ehealth/context-questions.json:20
+#: data/fit4privacy/context-questions.json:199 survey/forms.py:60
 msgid "Please select your country"
 msgstr ""
 
-#: data/fit4cybersecurity/context-questions.json:179
-#: data/fit4ehealth/context-questions.json:25
-#: data/fit4privacy/context-questions.json:179
-msgid "Luxembourg"
+#: data/fit4contract/questions.json:3 data/fit4contract/questions.json:25
+#: data/fit4contract/questions.json:37 data/fit4contract/questions.json:49
+#: data/fit4contract/questions.json:61 data/fit4contract/questions.json:73
+#: data/fit4contract/questions.json:85 data/fit4contract/questions.json:150
+#: data/fit4contract/questions.json:162 data/fit4contract/questions.json:174
+#: data/fit4contract/questions.json:186 data/fit4contract/questions.json:198
+#: data/fit4contract/questions.json:210 data/fit4contract/questions.json:269
+#: data/fit4contract/questions.json:281 data/fit4contract/questions.json:293
+#: data/fit4contract/questions.json:305 data/fit4contract/questions.json:317
+#: data/fit4contract/questions.json:329 data/fit4contract/questions.json:370
+#: data/fit4contract/questions.json:382 data/fit4contract/questions.json:394
+#: data/fit4contract/questions.json:406 data/fit4contract/questions.json:418
+#: data/fit4contract/questions.json:430 data/fit4contract/questions.json:495
+#: data/fit4contract/questions.json:507 data/fit4contract/questions.json:519
+#: data/fit4contract/questions.json:531 data/fit4contract/questions.json:543
+#: data/fit4contract/questions.json:555
+msgid "General"
 msgstr ""
 
-#: data/fit4cybersecurity/context-questions.json:185
-#: data/fit4privacy/context-questions.json:185
-msgid "Germany"
+#: data/fit4contract/questions.json:4
+msgid "Service description"
 msgstr ""
 
-#: data/fit4cybersecurity/context-questions.json:191
-#: data/fit4privacy/context-questions.json:191
-msgid "Belgium"
+#: data/fit4contract/questions.json:8
+msgid ""
+"Please describe the project that will be subcontracted among the following "
+"categories:"
 msgstr ""
 
-#: data/fit4cybersecurity/context-questions.json:197
-#: data/fit4privacy/context-questions.json:197
-msgid "France"
+#: data/fit4contract/questions.json:15
+msgid ""
+"Purchasing or leasing of equipment, without provision of the service (e.g. "
+"server, network equipment, computer, mobile etc.). In case of purchase of "
+"equipment and provision of the service, also check the box \"Service "
+"provision\"."
+msgstr ""
+
+#: data/fit4contract/questions.json:22 data/fit4contract/questions.json:147
+#: data/fit4contract/questions.json:266 data/fit4contract/questions.json:367
+#: data/fit4contract/questions.json:492
+msgid ""
+"The Provider complies with the security practices of the Customer’s "
+"organization. Any situations where such compliance is not possible are "
+"reported to help prevent security gaps or conflicts that could adversely "
+"affect security performance. Security practices are formalized in a charter "
+"of good conduct for information security systems."
+msgstr ""
+
+#: data/fit4contract/questions.json:34 data/fit4contract/questions.json:159
+#: data/fit4contract/questions.json:278 data/fit4contract/questions.json:379
+#: data/fit4contract/questions.json:504
+msgid ""
+"The technical and financial capabilities of the Service Provider are "
+"verified to ensure proper performance of the contract."
+msgstr ""
+
+#: data/fit4contract/questions.json:46 data/fit4contract/questions.json:171
+#: data/fit4contract/questions.json:290 data/fit4contract/questions.json:391
+#: data/fit4contract/questions.json:516
+msgid ""
+"The Service Provider guarantees, within its own supply chain or in the case "
+"of cascading subcontracting, compliance with the security requirements "
+"requested by the Customer."
+msgstr ""
+
+#: data/fit4contract/questions.json:58 data/fit4contract/questions.json:183
+#: data/fit4contract/questions.json:302 data/fit4contract/questions.json:403
+#: data/fit4contract/questions.json:528
+msgid ""
+"The Service Provider guarantees the minimum service levels defined in the "
+"contract. The Provider shall inform the Customer’s organization of its plans "
+"to ensure service levels under normal conditions and during disruptive "
+"events, whether such events occur on the premises or infrastructure of the "
+"Customer’s organization or that of the Service Provider."
+msgstr ""
+
+#: data/fit4contract/questions.json:70 data/fit4contract/questions.json:195
+#: data/fit4contract/questions.json:314 data/fit4contract/questions.json:415
+#: data/fit4contract/questions.json:540
+msgid ""
+"The Service Provider and any subcontractors or cascading suppliers shall "
+"respect the confidentiality of the information which comes to their "
+"knowledge during the execution of the contract. To this end, a "
+"confidentiality and non-disclosure agreement shall be drawn up between the "
+"contractual parties. This agreement is binding on the companies and "
+"suppliers providing the service as well as their respective employees "
+"individually. The commitment may exceed the duration of the execution of the "
+"contract if required by the level of confidentiality."
+msgstr ""
+
+#: data/fit4contract/questions.json:82 data/fit4contract/questions.json:207
+#: data/fit4contract/questions.json:326 data/fit4contract/questions.json:427
+#: data/fit4contract/questions.json:552
+msgid ""
+"All assets required for the execution of the contract and the associated "
+"property rights are managed during the various stages of contract execution."
+msgstr ""
+
+#: data/fit4contract/questions.json:94 data/fit4contract/questions.json:1034
+#: data/fit4contract/questions.json:1158
+msgid ""
+"The terms and frequency of maintenance, intervention and troubleshooting of "
+"the infrastructure are managed by established procedures."
+msgstr ""
+
+#: data/fit4contract/questions.json:97 data/fit4contract/questions.json:109
+#: data/fit4contract/questions.json:121 data/fit4contract/questions.json:222
+#: data/fit4contract/questions.json:234 data/fit4contract/questions.json:341
+#: data/fit4contract/questions.json:442 data/fit4contract/questions.json:454
+#: data/fit4contract/questions.json:466 data/fit4contract/questions.json:594
+#: data/fit4contract/questions.json:606 data/fit4contract/questions.json:661
+#: data/fit4contract/questions.json:716 data/fit4contract/questions.json:777
+#: data/fit4contract/questions.json:806 data/fit4contract/questions.json:835
+#: data/fit4contract/questions.json:847 data/fit4contract/questions.json:859
+#: data/fit4contract/questions.json:898 data/fit4contract/questions.json:953
+#: data/fit4contract/questions.json:1008 data/fit4contract/questions.json:1037
+#: data/fit4contract/questions.json:1049 data/fit4contract/questions.json:1061
+#: data/fit4contract/questions.json:1073 data/fit4contract/questions.json:1085
+#: data/fit4contract/questions.json:1106 data/fit4contract/questions.json:1118
+#: data/fit4contract/questions.json:1130 data/fit4contract/questions.json:1161
+#: data/fit4contract/questions.json:1173 data/fit4contract/questions.json:1194
+#: data/fit4contract/questions.json:1206 data/fit4contract/questions.json:1218
+msgid "Specific"
+msgstr ""
+
+#: data/fit4contract/questions.json:106 data/fit4contract/questions.json:1046
+#: data/fit4contract/questions.json:1170
+msgid ""
+"When hardware is reused or discarded, customer data and licensed software "
+"are erased or its storage medium is irreversibly destroyed by an established "
+"procedure."
+msgstr ""
+
+#: data/fit4contract/questions.json:118 data/fit4contract/questions.json:219
+#: data/fit4contract/questions.json:451
+msgid ""
+"The Provider provides timely and appropriate handling of known "
+"vulnerabilities that may impact the Client’s activities."
+msgstr ""
+
+#: data/fit4contract/questions.json:128 data/fit4contract/questions.json:784
+#: data/fit4contract/questions.json:813 data/fit4contract/questions.json:866
+#: data/fit4contract/questions.json:905 data/fit4contract/questions.json:921
+#: data/fit4contract/questions.json:936
+msgid ""
+"Is the project subject to any legal or contractual requirements (like DAC, "
+"AML, GDPR etc.) ?"
+msgstr ""
+
+#: data/fit4contract/questions.json:140
+msgid ""
+"Purchase, lease or development of software. All types of software services "
+"(e.g. maintenance, development etc.). For software with SaaS access, please "
+"check the box \"Service provision\"."
+msgstr ""
+
+#: data/fit4contract/questions.json:231 data/fit4contract/questions.json:463
+msgid ""
+"At the end of the contract, the Customer’s data is irreversibly deleted "
+"according to an established procedure. Legal obligations regarding the "
+"protection of personal data shall be particularly considered in this context."
+msgstr ""
+
+#: data/fit4contract/questions.json:241 data/fit4contract/questions.json:577
+msgid "Will remote maintenance be required?"
+msgstr ""
+
+#: data/fit4contract/questions.json:247 data/fit4contract/questions.json:644
+msgid "Is it a tailor-made development?"
+msgstr ""
+
+#: data/fit4contract/questions.json:259
+msgid ""
+"Human resources. Hiring of one or more people in the project (e.g. "
+"consultant, cleaning service, technician etc.)."
+msgstr ""
+
+#: data/fit4contract/questions.json:338 data/fit4contract/questions.json:713
+msgid ""
+"External Collaborator should be carefully selected during the hiring "
+"process. When the External Collaborator leaves, a procedure ensures that the "
+"Collaborator returns all the goods received from the Client’s organization "
+"(equipment, laptop, keys, badges, smartphone, etc.)"
+msgstr ""
+
+#: data/fit4contract/questions.json:348 data/fit4contract/questions.json:723
+#: data/fit4contract/questions.json:760
+msgid ""
+"Could you describe the interaction of the person(s) with your organization?"
+msgstr ""
+
+#: data/fit4contract/questions.json:360
+msgid ""
+"Service provision. Delegation of an entire service, especially on an "
+"infrastructure that can be managed by a third party (e.g. backup service, "
+"cloud, SaaS etc.)."
+msgstr ""
+
+#: data/fit4contract/questions.json:439
+msgid ""
+"If the service includes the implementation of system or application software "
+"managed by the Provider, the latter shall be protected against malicious "
+"code by appropriate means and a procedure for regularly updating this "
+"protection shall be established."
+msgstr ""
+
+#: data/fit4contract/questions.json:473 data/fit4contract/questions.json:668
+#: data/fit4contract/questions.json:699
+msgid "Will the project use third-party human resources?"
+msgstr ""
+
+#: data/fit4contract/questions.json:485
+msgid ""
+"Building. Any element physically related to a building (e.g. air "
+"conditioning etc.). If the project concerns the physical access perimeter "
+"and is related to software, the \"Purchase, lease or software development\" "
+"box must also be checked."
+msgstr ""
+
+#: data/fit4contract/questions.json:562 data/fit4contract/questions.json:613
+#: data/fit4contract/questions.json:629 data/fit4contract/questions.json:684
+#: data/fit4contract/questions.json:729 data/fit4contract/questions.json:745
+#: data/fit4contract/questions.json:881
+msgid "Will the service be audited?"
+msgstr ""
+
+#: data/fit4contract/questions.json:572
+msgid "Software maintenance"
+msgstr ""
+
+#: data/fit4contract/questions.json:573 data/fit4contract/questions.json:640
+msgid "Software"
+msgstr ""
+
+#: data/fit4contract/questions.json:584 data/fit4contract/questions.json:651
+#: data/fit4contract/questions.json:706 data/fit4contract/questions.json:888
+#: data/fit4contract/questions.json:943
+#: data/fit4operatorsurvey/context-questions.json:224
+#: templates/survey/answerChangingWarning.html:10
+#: templates/survey/leaveSurvey.html:11
+msgid "Yes"
+msgstr ""
+
+#: data/fit4contract/questions.json:591 data/fit4contract/questions.json:774
+msgid ""
+"The terms and conditions of remotely controlled operations and/or "
+"maintenance are formalized. Technical and organizational security measures "
+"implemented by the Service Provider are validated by the Customer."
+msgstr ""
+
+#: data/fit4contract/questions.json:603
+msgid ""
+"The terms and frequency of maintenance or update of the software or "
+"operating system are managed according to an established procedure."
+msgstr ""
+
+#: data/fit4contract/questions.json:625 data/fit4contract/questions.json:680
+#: data/fit4contract/questions.json:741 data/fit4contract/questions.json:917
+#: data/fit4contract/questions.json:972
+#: data/fit4operatorsurvey/context-questions.json:231
+#: templates/survey/answerChangingWarning.html:12
+#: templates/survey/leaveSurvey.html:15
+msgid "No"
+msgstr ""
+
+#: data/fit4contract/questions.json:639
+msgid "Software development"
+msgstr ""
+
+#: data/fit4contract/questions.json:658
+msgid ""
+"The contract takes into account the specificities related to software "
+"developments such as licenses. The contract also defines the best practice "
+"repository (e.g. OWASP) to be followed during development."
+msgstr ""
+
+#: data/fit4contract/questions.json:694
+msgid "HR presence"
+msgstr ""
+
+#: data/fit4contract/questions.json:695 data/fit4contract/questions.json:756
+msgid "Human resources"
+msgstr ""
+
+#: data/fit4contract/questions.json:755
+msgid "HR interactions"
+msgstr ""
+
+#: data/fit4contract/questions.json:767
+msgid "They will work remotely"
+msgstr ""
+
+#: data/fit4contract/questions.json:796
+msgid "They will have access to the building"
+msgstr ""
+
+#: data/fit4contract/questions.json:803
+msgid ""
+"The physical access of the Provider to a building, premises or "
+"infrastructure is managed according to an established procedure. The means "
+"of access given to the Providers are inventoried and recovered upon "
+"completion of the contract."
+msgstr ""
+
+#: data/fit4contract/questions.json:825
+msgid "They will have a logical access to the information system"
+msgstr ""
+
+#: data/fit4contract/questions.json:832
+msgid ""
+"Authentication and authorization of users or processes accessing outsourced "
+"information systems or software are managed according to an established "
+"procedure."
+msgstr ""
+
+#: data/fit4contract/questions.json:844
+msgid ""
+"Users or processes accessing outsourced information systems or software are "
+"identified."
+msgstr ""
+
+#: data/fit4contract/questions.json:856
+msgid ""
+"Logical access to a function or transaction of a subcontracted information "
+"system or software is limited and managed according to an established "
+"procedure."
+msgstr ""
+
+#: data/fit4contract/questions.json:876 data/fit4contract/questions.json:877
+msgid "Audit"
+msgstr ""
+
+#: data/fit4contract/questions.json:895
+msgid ""
+"The contract provides for the right to audit security controls periodically, "
+"or upon significant changes in the subcontracting relationship."
+msgstr ""
+
+#: data/fit4contract/questions.json:931 data/fit4contract/questions.json:932
+msgid "Regulatory constraints"
+msgstr ""
+
+#: data/fit4contract/questions.json:950
+msgid ""
+"The Provider provides evidence from independent audit institutions or "
+"organizations that its operations and controls comply with legal and "
+"contractual requirements."
+msgstr ""
+
+#: data/fit4contract/questions.json:960 data/fit4contract/questions.json:976
+#: data/fit4contract/questions.json:991
+msgid "Will any of the following be subcontracted:"
+msgstr ""
+
+#: data/fit4contract/questions.json:986 data/fit4contract/questions.json:987
+msgid "Service"
+msgstr ""
+
+#: data/fit4contract/questions.json:998 data/fit4contract/questions.json:1139
+#: data/fit4contract/questions.json:1140
+msgid "Backup"
+msgstr ""
+
+#: data/fit4contract/questions.json:1005
+msgid ""
+"When outsourcing a backup service, the following elements are managed:"
+"<ul><li>mechanisms for redundancy and recovery of backups;</"
+"li><li>outsourcing of backup infrastructures;</li><li>backup encryption and "
+"encryption key management;</li><li>The backup and recovery procedures are "
+"tested periodically.</li></ul>"
+msgstr ""
+
+#: data/fit4contract/questions.json:1015 data/fit4contract/questions.json:1144
+msgid "Could you describe the backup service."
+msgstr ""
+
+#: data/fit4contract/questions.json:1027
+msgid "Communication services"
+msgstr ""
+
+#: data/fit4contract/questions.json:1058
+msgid ""
+"Good network design practices, such as network partitioning, are followed."
+msgstr ""
+
+#: data/fit4contract/questions.json:1070 data/fit4contract/questions.json:1103
+#: data/fit4contract/questions.json:1191
+msgid ""
+"The Provider informs the Customer’s organization in a timely manner about "
+"any technical incidents or security breaches that may have an impact on the "
+"organization’s activities. The legal obligations related to the notification "
+"of breaches of personal data protection must be considered in this context. "
+"It is recommended to establish a single point of contact for communication "
+"between contractual parties."
+msgstr ""
+
+#: data/fit4contract/questions.json:1082 data/fit4contract/questions.json:1127
+#: data/fit4contract/questions.json:1215
+msgid ""
+"The Provider informs the Client’s organization in a timely manner of changes "
+"in its environment that may impact the Client organization’s activities. "
+"Depending on the impact, the Provider plans these changes in consultation "
+"with the Client."
+msgstr ""
+
+#: data/fit4contract/questions.json:1096
+msgid "Cloud"
+msgstr ""
+
+#: data/fit4contract/questions.json:1115 data/fit4contract/questions.json:1203
+msgid ""
+"The contract defines the terms and conditions for data recovery. In "
+"particular, data can be retrieved in a common format (e.g. text, json, XML, "
+"etc.), or a format to be defined in advance to allow the data to be re-"
+"imported into another system."
+msgstr ""
+
+#: data/fit4contract/questions.json:1151
+msgid ""
+"The service includes the management of an own physical backup infrastructure."
+msgstr ""
+
+#: data/fit4contract/questions.json:1184
+msgid "All or part of the data is stored in a cloud infrastructure."
 msgstr ""
 
 #: data/fit4cybersecurity/questions.json:3 data/fit4ehealth/questions.json:3
@@ -1423,6 +1780,10 @@ msgid ""
 "server)"
 msgstr ""
 
+#: data/fit4ehealth/context-questions.json:28
+msgid "Luxembourg"
+msgstr ""
+
 #: data/fit4ehealth/questions.json:4 data/fit4ehealth/questions.json:150
 msgid "Organisational Awareness"
 msgstr ""
@@ -2260,40 +2621,110 @@ msgid ""
 "webinars"
 msgstr ""
 
-#: data/fit4operatorsurvey/context-questions.json:154
+#: data/fit4operatorsurvey/context-questions.json:12
+msgid "Energy"
+msgstr ""
+
+#: data/fit4operatorsurvey/context-questions.json:19
+msgid "Transport"
+msgstr ""
+
+#: data/fit4operatorsurvey/context-questions.json:26
+msgid "Banking"
+msgstr ""
+
+#: data/fit4operatorsurvey/context-questions.json:33
+msgid "Financial market infrastructure"
+msgstr ""
+
+#: data/fit4operatorsurvey/context-questions.json:47
+msgid "Dringking water"
+msgstr ""
+
+#: data/fit4operatorsurvey/context-questions.json:54
+msgid "Waste Water"
+msgstr ""
+
+#: data/fit4operatorsurvey/context-questions.json:61
+msgid "Digital Infrastructure and Service Providers"
+msgstr ""
+
+#: data/fit4operatorsurvey/context-questions.json:75
+msgid "Space"
+msgstr ""
+
+#: data/fit4operatorsurvey/context-questions.json:82
+msgid "Postal and Courier Services"
+msgstr ""
+
+#: data/fit4operatorsurvey/context-questions.json:89
+msgid "Waste Management"
+msgstr ""
+
+#: data/fit4operatorsurvey/context-questions.json:96
+msgid "Manufacture, production and distribution of chemicals"
+msgstr ""
+
+#: data/fit4operatorsurvey/context-questions.json:103
+msgid "Food Production, processing and distribution"
+msgstr ""
+
+#: data/fit4operatorsurvey/context-questions.json:110
+msgid "Manufacturing of medical devices"
+msgstr ""
+
+#: data/fit4operatorsurvey/context-questions.json:117
+msgid "Manufacture of computer, electronics and optical products"
+msgstr ""
+
+#: data/fit4operatorsurvey/context-questions.json:124
+msgid "Manufacture of electrical equipment"
+msgstr ""
+
+#: data/fit4operatorsurvey/context-questions.json:131
+msgid "Manufacture of machinery and equipment"
+msgstr ""
+
+#: data/fit4operatorsurvey/context-questions.json:148
+msgid "Under 10 employees"
+msgstr ""
+
+#: data/fit4operatorsurvey/context-questions.json:155
+msgid "From 10 to 49 employees"
+msgstr ""
+
+#: data/fit4operatorsurvey/context-questions.json:162
+msgid "From 50 to 249 employees"
+msgstr ""
+
+#: data/fit4operatorsurvey/context-questions.json:169
+msgid "Over 250 employees"
+msgstr ""
+
+#: data/fit4operatorsurvey/context-questions.json:178
 msgid "What is your country?"
 msgstr ""
 
-#: data/fit4operatorsurvey/context-questions.json:161
+#: data/fit4operatorsurvey/context-questions.json:186
 msgid "In the EU"
 msgstr ""
 
-#: data/fit4operatorsurvey/context-questions.json:167
+#: data/fit4operatorsurvey/context-questions.json:193
 msgid "Outside of the EU but within EEA"
 msgstr ""
 
-#: data/fit4operatorsurvey/context-questions.json:173
+#: data/fit4operatorsurvey/context-questions.json:200
 msgid "Outside of the EEA"
 msgstr ""
 
-#: data/fit4operatorsurvey/context-questions.json:179
+#: data/fit4operatorsurvey/context-questions.json:207
 msgid "Just in Luxembourg"
 msgstr ""
 
-#: data/fit4operatorsurvey/context-questions.json:187
+#: data/fit4operatorsurvey/context-questions.json:216
 msgid ""
 "If your company part of a bigger international company or group with its "
 "headquarters outside of Luxembourg?"
-msgstr ""
-
-#: data/fit4operatorsurvey/context-questions.json:194
-#: templates/survey/leaveSurvey.html:11
-msgid "Yes"
-msgstr ""
-
-#: data/fit4operatorsurvey/context-questions.json:200
-#: templates/survey/leaveSurvey.html:15
-msgid "No"
 msgstr ""
 
 #: data/fit4operatorsurvey/questions.json:3
@@ -3285,16 +3716,18 @@ msgid ""
 "it processes, of the existence of the processing, the conditions you put in "
 "place to protect their data, and their rights over their data. In relation "
 "to your employees or trainees, you should be transparent about the personal "
-"data processed at the time of hiring (for example, by updating\n"
-" work or internship contracts), but also for the duration of their contract "
-"(for example, in the intranet, or with an amendment to the employment "
-"contract). If you have a website whose use involves processing of visitors' "
-"personal data, that site should also explain the data processed and the "
-"measures your organization has put in place to protect that data. To your "
-"customers, as well as to suppliers and third parties, you have a similar "
-"obligation to be transparent (for example, by updating contracts or terms "
-"and conditions). In terms of what to communicate to them, you should "
-"consider following Art. 13 and 14 of GDPR when it comes to this information."
+"data processed at the time of hiring (for example, by updating work or "
+"internship contracts), but also for the duration of their contract (for "
+"example, in the intranet, or with an amendment to the employment contract). "
+"If you have a website whose use involves processing of visitors' personal "
+"data, that site should also explain the data processed and the measures your "
+"organization has put in place to protect that data. To your customers, as "
+"well as to suppliers and third parties, you have a similar obligation to be "
+"transparent (for example, by updating contracts or terms and conditions). In "
+"terms of what to communicate to them, you should consider following <a href="
+"\"https://www.privacy-regulation.eu/en/article-13-information-to-be-provided-"
+"where-personal-data-are-collected-from-the-data-subject-GDPR.htm\" target="
+"\"_blank\">Art. 13 and 14 of GDPR</a> when it comes to this information."
 msgstr ""
 
 #: data/fit4privacy/questions.json:343
@@ -3314,7 +3747,7 @@ msgid ""
 "related information such as contractual clauses or general terms of use. For "
 "more inspiration on this topic, there is an EDPB guidance on transparency <a "
 "href=\"https://ec.europa.eu/newsroom/article29/items/622227/en\" target="
-"\"_blank\"> here </a>."
+"\"_blank\">here</a>."
 msgstr ""
 
 #: data/fit4privacy/questions.json:359
@@ -4049,55 +4482,76 @@ msgid ""
 "known to your employees?"
 msgstr ""
 
-#: survey/forms.py:55
+#: stats/views.py:61
+msgid "In progress"
+msgstr ""
+
+#: stats/views.py:61
+msgid "Under review"
+msgstr ""
+
+#: stats/views.py:61
+msgid "Finished"
+msgstr ""
+
+#: survey/forms.py:64
 msgid "You need to choose at least one answer"
 msgstr ""
 
-#: survey/forms.py:96 survey/forms.py:171
-#: templates/survey/finishedSurvey.html:151
-#: templates/survey/finishedSurvey.html:158 templates/survey/review.html:40
+#: survey/forms.py:105 survey/forms.py:180
+#: templates/survey/finishedSurvey.html:167
+#: templates/survey/finishedSurvey.html:175 templates/survey/review.html:40
 msgid "Your feedback"
 msgstr ""
 
-#: survey/forms.py:98 survey/forms.py:173
+#: survey/forms.py:107 survey/forms.py:182
 msgid "Please let us know if anything is missing"
 msgstr ""
 
-#: survey/forms.py:133
+#: survey/forms.py:142
 msgid "You can't choose multiple answers if the answer {} is choosen."
 msgstr ""
 
-#: survey/forms.py:148
+#: survey/forms.py:157
 msgid "You can't choose the answers {} if answer '{}' is choosen."
 msgstr ""
 
-#: survey/viewLogic.py:62
+#: survey/viewLogic.py:90
 msgid "Let's start"
 msgstr ""
 
-#: survey/viewLogic.py:223
+#: survey/viewLogic.py:246
 msgid "Question"
 msgstr ""
 
-#: survey/views.py:125
+#: survey/views.py:138
 msgid "To generate a report you have to finish the survey."
 msgstr ""
 
-#: survey/views.py:194
+#: survey/views.py:208
 msgid "Answers review"
 msgstr ""
 
-#: survey/views.py:229
+#: survey/views.py:242
 msgid "Final summary"
 msgstr ""
 
-#: survey/views.py:263
+#: survey/views.py:276
 msgid ""
 "We could not find a survey with the requested key, please start a new one."
 msgstr ""
 
-#: survey/views.py:293
+#: survey/views.py:308
 msgid "Feedback sending errors: "
+msgstr ""
+
+#: templates/fit4contract/survey/finishedSurvey.html:6
+msgid ""
+"This is the list of recommendations to help you to write a subcontract, "
+"provided that your answers did correctly reflect the context. Also keep in "
+"mind that it is a self-assessment and only scratches the surface of the "
+"information security maturity level and thus, we are not liable for the "
+"results of this survey."
 msgstr ""
 
 #: templates/fit4ehealth/survey/start.html:5
@@ -4120,20 +4574,45 @@ msgid ""
 "provide us your results."
 msgstr ""
 
-#: templates/parts/footer_part.html:8 templates/parts/footer_part.html:9
+#: templates/fit4privacy/survey/finishedSurvey.html:6
+msgid ""
+"This is the list of recommendations to improve the maturity of your company "
+"in the field of privacy and data protection, provided that your answers "
+"correctly reflected the state of practice in your company. Also keep in mind "
+"that it is a self-assessment and only scratches the surface of the privacy "
+"and data protection maturity level and thus, we are not liable for the "
+"results of this survey. Also remember that GDPR is about accountability: "
+"your company is expected to put measures in place to be able to demonstrate "
+"it is respecting GDPR, and that these measures are effective."
+msgstr ""
+
+#: templates/parts/fit4contract/footer_part.html:7
+#: templates/parts/fit4contract/footer_part.html:8
+msgid "A service provided by ANSSI.LU"
+msgstr ""
+
+#: templates/parts/fit4contract/footer_part.html:14
+#: templates/parts/fit4contract/footer_part.html:15
+#: templates/parts/footer_part.html:7 templates/parts/footer_part.html:8
 msgid "A service provided by CASES.LU"
+msgstr ""
+
+#: templates/parts/fit4contract/footer_part.html:21
+#: templates/parts/footer_part.html:31 templates/parts/footer_part.html:32
+msgid "Terms of Service"
 msgstr ""
 
 #: templates/parts/footer_part.html:15 templates/parts/footer_part.html:16
 msgid "Source code on GitHub"
 msgstr ""
 
-#: templates/parts/footer_part.html:20
+#: templates/parts/footer_part.html:20 templates/parts/footer_part.html:21
+#: templates/survey/stats.html:84
 msgid "Version of"
 msgstr ""
 
-#: templates/parts/footer_part.html:27
-msgid "Terms of Service"
+#: templates/parts/footer_part.html:28
+msgid "Stats"
 msgstr ""
 
 #: templates/report/cover.html:12
@@ -4215,7 +4694,7 @@ msgid ""
 "exhaustive."
 msgstr ""
 
-#: templates/report/results.html:17 templates/survey/finishedSurvey.html:91
+#: templates/report/results.html:17 templates/survey/finishedSurvey.html:96
 #, python-format
 msgid ""
 "You have scored an additional %(bonus)s %% of bonus points for following "
@@ -4235,7 +4714,13 @@ msgstr ""
 msgid "Table of contents"
 msgstr ""
 
-#: templates/survey/base.html:20
+#: templates/survey/answerChangingWarning.html:6
+msgid ""
+"Change of previously selected answer(s) can lead to additional questions or "
+"loosing of your answer(s). Would you like to proceed?"
+msgstr ""
+
+#: templates/survey/base.html:19
 msgid "a CASES self-assessment tool!"
 msgstr ""
 
@@ -4253,7 +4738,7 @@ msgstr ""
 msgid "Download direct link"
 msgstr ""
 
-#: templates/survey/continue.html:26 templates/survey/finishedSurvey.html:166
+#: templates/survey/continue.html:26 templates/survey/finishedSurvey.html:183
 msgid "Close"
 msgstr ""
 
@@ -4265,15 +4750,15 @@ msgstr ""
 msgid "Download"
 msgstr ""
 
-#: templates/survey/finishedSurvey.html:56
+#: templates/survey/finishedSurvey.html:57
 msgid "Email"
 msgstr ""
 
-#: templates/survey/finishedSurvey.html:64
+#: templates/survey/finishedSurvey.html:65
 msgid "Summary"
 msgstr ""
 
-#: templates/survey/finishedSurvey.html:67
+#: templates/survey/finishedSurvey.html:70
 msgid ""
 "This is the list of recommendations to improve the information security "
 "maturity in your company, provided that your answers did correctly reflect "
@@ -4282,7 +4767,7 @@ msgid ""
 "and thus, we are not liable for the results of this survey."
 msgstr ""
 
-#: templates/survey/finishedSurvey.html:78
+#: templates/survey/finishedSurvey.html:83
 #, python-format
 msgid ""
 "Based on your score %(score)s, the CASES Diagnostic is not available for "
@@ -4292,15 +4777,15 @@ msgid ""
 "company, do not hesitate to"
 msgstr ""
 
-#: templates/survey/finishedSurvey.html:98
+#: templates/survey/finishedSurvey.html:105
 msgid "Your results link"
 msgstr ""
 
-#: templates/survey/finishedSurvey.html:106
+#: templates/survey/finishedSurvey.html:113
 msgid "About the CASES Diagnostic"
 msgstr ""
 
-#: templates/survey/finishedSurvey.html:107
+#: templates/survey/finishedSurvey.html:114
 msgid ""
 "The CASES Diagnostic is a service which analyses the company maturity in the "
 "information security depending on company's requirements. The analyse "
@@ -4312,13 +4797,13 @@ msgid ""
 "security maturity."
 msgstr ""
 
-#: templates/survey/finishedSurvey.html:118
+#: templates/survey/finishedSurvey.html:125
 msgid ""
 "The CASES Diagnostic is available for all the companies located in "
 "Luxembourg and free of charge."
 msgstr ""
 
-#: templates/survey/finishedSurvey.html:168
+#: templates/survey/finishedSurvey.html:185
 #: templates/survey/sendReportEmail.html:14
 msgid "Send"
 msgstr ""
@@ -4339,35 +4824,35 @@ msgstr ""
 msgid "Would like to leave survey?"
 msgstr ""
 
-#: templates/survey/questions.html:41
+#: templates/survey/questions.html:43
 msgid "Multiple answers are possible."
 msgstr ""
 
-#: templates/survey/questions.html:53
+#: templates/survey/questions.html:55
 msgid "Back"
 msgstr ""
 
-#: templates/survey/questions.html:61
+#: templates/survey/questions.html:63
 msgid "Cancel"
 msgstr ""
 
-#: templates/survey/questions.html:70 templates/survey/review.html:56
+#: templates/survey/questions.html:72 templates/survey/review.html:56
 msgid "Continue later"
 msgstr ""
 
-#: templates/survey/questions.html:75 templates/survey/start.html:39
-msgid "Next"
-msgstr ""
-
-#: templates/survey/questions.html:75
+#: templates/survey/questions.html:77
 msgid "Modify"
 msgstr ""
 
-#: templates/survey/questions.html:84
+#: templates/survey/questions.html:77 templates/survey/start.html:39
+msgid "Next"
+msgstr ""
+
+#: templates/survey/questions.html:86
 msgid "This text field should not be used to answer the question."
 msgstr ""
 
-#: templates/survey/questions.html:87
+#: templates/survey/questions.html:89
 msgid ""
 "Please do not provide any sensitive or confidential information referring to "
 "your identity."
@@ -4468,4 +4953,72 @@ msgstr ""
 msgid ""
 "We need this information to be able to give you useful recommendations, once "
 "the self-assessment is done."
+msgstr ""
+
+#: templates/survey/stats.html:12
+msgid "Some statistics about the current surveys."
+msgstr ""
+
+#: templates/survey/stats.html:19
+msgid "No statistics available"
+msgstr ""
+
+#: templates/survey/stats.html:28
+msgid "Main figures"
+msgstr ""
+
+#: templates/survey/stats.html:30
+msgid "Number of surveys:"
+msgstr ""
+
+#: templates/survey/stats.html:31
+msgid "Number of finished surveys:"
+msgstr ""
+
+#: templates/survey/stats.html:32
+msgid "First completed survey on:"
+msgstr ""
+
+#: templates/survey/stats.html:40
+msgid "Surveys status"
+msgstr ""
+
+#: templates/survey/stats.html:44
+msgid "Surveys languages"
+msgstr ""
+
+#: templates/survey/stats.html:49
+msgid "Surveys countries"
+msgstr ""
+
+#: templates/survey/stats.html:53
+msgid "Surveys company size"
+msgstr ""
+
+#: templates/survey/stats.html:57
+msgid "Surveys company sector"
+msgstr ""
+
+#: templates/survey/stats.html:64
+msgid "Activity over the past year"
+msgstr ""
+
+#: templates/survey/stats.html:73
+msgid "Answers by section and company size"
+msgstr ""
+
+#: templates/survey/stats.html:75
+msgid "With data for the last month."
+msgstr ""
+
+#: templates/survey/stats.html:82
+msgid "Server information"
+msgstr ""
+
+#: templates/survey/stats.html:83
+msgid "Python version:"
+msgstr ""
+
+#: templates/survey/stats.html:84
+msgid "Software version:"
 msgstr ""

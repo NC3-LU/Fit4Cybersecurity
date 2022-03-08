@@ -15,6 +15,7 @@ from survey.viewLogic import (
     find_user_by_id,
     get_questions_with_user_answers,
     handle_general_feedback,
+    get_current_user_question_index_from_sequence,
 )
 from survey.reporthelper import calculateResult, getRecommendations
 from survey.report import create_html_report, makepdf
@@ -31,22 +32,21 @@ from cryptography.fernet import Fernet
 logger = logging.getLogger(__name__)
 
 
-def index(request, lang=LANGUAGE_CODE):
+def index(request):
+    lang = request.session.get(settings.LANGUAGE_COOKIE_NAME, LANGUAGE_CODE)
     translation.activate(lang)
-    request.session[settings.LANGUAGE_COOKIE_NAME] = lang
     return render(request, "survey/index.html")
 
 
-def start(request, lang="EN"):
+def start(request):
+    lang = request.session.get(settings.LANGUAGE_COOKIE_NAME, LANGUAGE_CODE)
+
     try:
         form_data = handle_start_survey(request, lang)
 
-        translation.activate(lang)
-        request.session[settings.LANGUAGE_COOKIE_NAME] = lang
-
         if isinstance(form_data, SurveyUser):
             return HttpResponseRedirect(
-                "/survey/question/" + str(form_data.current_qindex)
+                "/survey/question/" + str(form_data.current_question.qindex)
             )
     except Exception as e:
         messages.error(request, e)
@@ -63,8 +63,12 @@ def handle_question_form(request, question_index: int):
 
     if user.is_survey_finished():
         return HttpResponseRedirect("/survey/finish")
-    elif user.current_qindex < question_index or question_index <= 0:
-        return HttpResponseRedirect("/survey/question/" + str(user.current_qindex))
+
+    user_current_question_index = get_current_user_question_index_from_sequence(user)
+    if user_current_question_index < question_index or question_index <= 0:
+        return HttpResponseRedirect(
+            "/survey/question/" + str(user_current_question_index)
+        )
 
     review_ancher = ""
     if user.is_survey_under_review():
@@ -76,7 +80,10 @@ def handle_question_form(request, question_index: int):
         if result.is_survey_under_review():
             return HttpResponseRedirect("/survey/review" + review_ancher)
 
-        return HttpResponseRedirect("/survey/question/" + str(result.current_qindex))
+        return HttpResponseRedirect(
+            "/survey/question/"
+            + str(get_current_user_question_index_from_sequence(result))
+        )
 
     return render(request, "survey/questions.html", context=result)
 
@@ -87,11 +94,17 @@ def change_lang(request, lang: str):
     user_id = request.session.get("user_id", None)
     previous_path = request.META.get("HTTP_REFERER", "/")
 
-    if previous_path.__contains__("/survey/start/"):
-        return HttpResponseRedirect("/survey/start/" + lang)
+    if previous_path.__contains__("/survey/start"):
+        return HttpResponseRedirect("/survey/start")
+
+    if previous_path.__contains__("/stats/"):
+        return HttpResponseRedirect("/stats/")
+
+    if previous_path.__contains__("/terms/"):
+        return HttpResponseRedirect("/terms/")
 
     if user_id is None:
-        return HttpResponseRedirect("/" + lang)
+        return HttpResponseRedirect("/")
 
     user = find_user_by_id(user_id)
     user.chosen_lang = lang
@@ -102,7 +115,10 @@ def change_lang(request, lang: str):
     user.save()
 
     if user.is_survey_in_progress() and previous_path.__contains__("/survey/question/"):
-        return HttpResponseRedirect("/survey/question/" + str(user.current_qindex))
+        return HttpResponseRedirect(
+            "/survey/question/"
+            + str(get_current_user_question_index_from_sequence(user))
+        )
 
     if user.is_survey_under_review() and previous_path.__contains__("/survey/review"):
         return HttpResponseRedirect("/survey/review")
@@ -110,15 +126,16 @@ def change_lang(request, lang: str):
     if user.is_survey_finished() and previous_path.__contains__("/survey/finish"):
         return HttpResponseRedirect("/survey/finish")
 
-    return HttpResponseRedirect("/" + lang)
+    return HttpResponseRedirect("/")
 
 
-def show_report(request, lang: str) -> HttpResponseRedirect:
+def show_report(request) -> HttpResponseRedirect:
     user_id = request.session.get("user_id", None)
     if user_id is None:
         return HttpResponseRedirect("/")
 
     user = find_user_by_id(user_id)
+    lang = user.chosen_lang
 
     if not user.is_survey_finished():
         messages.error(
@@ -176,7 +193,10 @@ def review(request):
     if user.is_survey_finished():
         return HttpResponseRedirect("/survey/finish")
     elif user.is_survey_in_progress():
-        return HttpResponseRedirect("/survey/question/" + str(user.current_qindex))
+        return HttpResponseRedirect(
+            "/survey/question/"
+            + str(get_current_user_question_index_from_sequence(user))
+        )
 
     if request.method == "POST" and forms.Form(data=request.POST).is_valid():
         user.status = SURVEY_STATUS_FINISHED
@@ -188,7 +208,6 @@ def review(request):
 
     lang = user.chosen_lang
     translation.activate(lang)
-    request.session[settings.LANGUAGE_COOKIE_NAME] = lang
 
     textLayout = {
         "title": CUSTOM["tool_name"] + " - " + _("Answers review"),
@@ -210,22 +229,28 @@ def finish(request):
     if not user.is_survey_finished():
         return HttpResponseRedirect("/")
 
-    user_lang = user.chosen_lang
-    translation.activate(user_lang)
-    request.session[settings.LANGUAGE_COOKIE_NAME] = user_lang
+    lang = user.chosen_lang
+    translation.activate(lang)
 
     # make survey readonly and show results.
     # also needs saving here!
     # show a "Thank you" and a "get your report" button
 
-    txt_score, bonus_score, radar_current, sections_list = calculateResult(user)
+    (
+        txt_score,
+        bonus_score,
+        sections_data,
+        sections_labels,
+        categories_data,
+        categories_labels,
+    ) = calculateResult(user)
 
-    recommendations = getRecommendations(user, user_lang)
+    recommendations = getRecommendations(user, lang)
     # To properly display breaking lines \n on html page.
     for rx in recommendations:
         recommendations[rx] = [x.replace("\n", "<br>") for x in recommendations[rx]]
 
-    textLayout = {
+    text_layout = {
         "title": CUSTOM["tool_name"] + " - " + _("Final summary"),
         "recommendations": recommendations,
         "user": user,
@@ -234,12 +259,14 @@ def finish(request):
         "txtscore": txt_score,
         "string_score": str(txt_score),
         "bonus_score": bonus_score,
-        "chartTitles": str(sections_list),
-        "chartdataYou": str(radar_current),
+        "sectionsLabels": str(sections_labels),
+        "sectionsData": str(sections_data),
+        "categoriesLabels": str(categories_labels),
+        "categoriesData": str(categories_data),
         "general_feedback_form": handle_general_feedback(user, request),
     }
 
-    return render(request, "survey/finishedSurvey.html", context=textLayout)
+    return render(request, "survey/finishedSurvey.html", context=text_layout)
 
 
 def get_companies(request):
@@ -268,7 +295,10 @@ def resume(request):
     request.session["user_id"] = str(user_id)
 
     if user.is_survey_in_progress():
-        return HttpResponseRedirect("/survey/question/" + str(user.current_qindex))
+        return HttpResponseRedirect(
+            "/survey/question/"
+            + str(get_current_user_question_index_from_sequence(user))
+        )
 
     if user.is_survey_under_review():
         return HttpResponseRedirect("/survey/review")
@@ -296,7 +326,10 @@ def save_general_feedback(request):
         return HttpResponseRedirect("/survey/finish")
 
     if user.is_survey_in_progress():
-        return HttpResponseRedirect("/survey/question/" + str(user.current_qindex))
+        return HttpResponseRedirect(
+            "/survey/question/"
+            + str(get_current_user_question_index_from_sequence(user))
+        )
 
     if user.is_survey_under_review():
         return HttpResponseRedirect("/survey/review")
@@ -305,4 +338,6 @@ def save_general_feedback(request):
 
 
 def get_terms(request):
+    lang = request.session.get(settings.LANGUAGE_COOKIE_NAME, LANGUAGE_CODE)
+    translation.activate(lang)
     return render(request, "survey/terms.html")

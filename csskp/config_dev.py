@@ -24,6 +24,14 @@ DATABASES = {
     }
 }
 
+CORS_ALLOWED_ORIGINS = [
+]
+
+CORS_ALLOW_METHODS = [
+    "GET",
+]
+
+
 EMAIL_HOST = "localhost"
 EMAIL_PORT = 25
 
@@ -50,8 +58,7 @@ LOGGING = {
     "formatters": {
         "app": {
             "format": (
-                u"%(asctime)s [%(levelname)-8s] "
-                "(%(module)s.%(funcName)s) %(message)s"
+                "%(asctime)s [%(levelname)-8s] " "(%(module)s.%(funcName)s) %(message)s"
             ),
             "datefmt": "%Y-%m-%d %H:%M:%S",
         },

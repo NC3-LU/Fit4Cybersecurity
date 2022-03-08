@@ -80,7 +80,7 @@ Some statistics about the current surveys.
         'rgb(157, 196, 241, 0.4)', 'rgb(253, 141, 211, 0.4)', 'rgb(180, 128, 253, 0.4)',
         'rgb(255, 195, 129, 0.4)', 'rgb(204, 228, 230, 0.4)'];
 
-    fetch("/admin/stats/survey-status-count.json")
+    fetch("/stats/survey-status-count.json")
     .then(response => response.json())
     .then(result => {
       var ctx = document.getElementById("stats-count").getContext('2d');
@@ -102,7 +102,7 @@ Some statistics about the current surveys.
         console.error('Error:', error);
       });
 
-      fetch("/admin/stats/survey-language-count.json")
+      fetch("/stats/survey-language-count.json")
       .then(response => response.json())
       .then(result => {
         var ctx = document.getElementById("stats-language").getContext('2d');

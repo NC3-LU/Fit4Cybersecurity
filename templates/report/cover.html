@@ -19,6 +19,15 @@
             </span>
             : {{ SURVEY_USER.user_id }}
         </li>
+        {% if custom.report.results %}
+            <li>
+                <span class="bold">
+                    {{ _('Score') }}
+                </span>
+                : {{ SCORE }}/100
+            </li>
+        {% endif %}
+
     </ul>
 </div>
 

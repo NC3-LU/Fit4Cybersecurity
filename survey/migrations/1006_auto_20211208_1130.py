@@ -8,7 +8,7 @@ class Migration(migrations.Migration):
     dependencies = [
         ("survey", "1005_auto_20211201_1142"),
     ]
-
+    # TODO: !!! IMPORTANT !!! before the migration we must execute insertcontextanswers.
     operations = [
         migrations.RemoveField(
             model_name="surveyuser",

@@ -69,6 +69,9 @@ try:
 
     EMAIL_HOST = config.EMAIL_HOST
     EMAIL_PORT = config.EMAIL_PORT
+
+    CORS_ALLOWED_ORIGINS = config.CORS_ALLOWED_ORIGINS
+    CORS_ALLOW_METHODS = config.CORS_ALLOW_METHODS
 except AttributeError as e:
     print("Please check you configuration file for the missing configuration variable:")
     print("  {}".format(e))
@@ -99,9 +102,19 @@ INSTALLED_APPS = [
     "django_countries",
     "bootstrap_datepicker_plus",
     "rest_framework",
+    "corsheaders",
+]
+
+context_processors = [
+    "django.template.context_processors.request",
+    "django.contrib.auth.context_processors.auth",
+    "django.contrib.messages.context_processors.messages",
+    "survey.context_processors.get_version",
+    "survey.context_processors.instance_configurations",
 ]
 
 MIDDLEWARE = [
+    "corsheaders.middleware.CorsMiddleware",
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
@@ -111,6 +124,18 @@ MIDDLEWARE = [
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
     "django.middleware.locale.LocaleMiddleware",
 ]
+
+INTERNAL_IPS = [
+    "127.0.0.1",
+]
+if DEBUG:
+    INSTALLED_APPS.append("debug_toolbar")
+    MIDDLEWARE.append("debug_toolbar.middleware.DebugToolbarMiddleware")
+    context_processors.append("django.template.context_processors.debug")
+    import socket
+
+    hostname, _, ips = socket.gethostbyname_ex(socket.gethostname())
+    INTERNAL_IPS = [ip[:-1] + "1" for ip in ips] + ["127.0.0.1", "10.0.2.2"]
 
 ROOT_URLCONF = "csskp.urls"
 
@@ -124,14 +149,7 @@ TEMPLATES = [
         ],
         "APP_DIRS": True,
         "OPTIONS": {
-            "context_processors": [
-                "django.template.context_processors.debug",
-                "django.template.context_processors.request",
-                "django.contrib.auth.context_processors.auth",
-                "django.contrib.messages.context_processors.messages",
-                "survey.context_processors.get_version",
-                "survey.context_processors.instance_configurations",
-            ],
+            "context_processors": context_processors,
         },
     },
 ]
@@ -196,6 +214,11 @@ STATICFILES_DIRS = [
     STATIC_DIR,
 ]
 
+# Used to get an access to the header on JS side.
+CORS_EXPOSE_HEADERS = [
+    "content-disposition",
+]
+
 SITE_IMAGES_DIR = os.path.join(STATIC_DIR, "images", config.SITE_NAME)
 SITE_IMAGES_URL = STATIC_URL + "images/" + config.SITE_NAME
 
@@ -222,7 +245,7 @@ COUNTRIES_FIRST_BREAK = "---------------------"
 
 
 # Default settings
-BOOTSTRAP4 = BOOTSTRAP4 = {
+BOOTSTRAP4 = {
     # The complete URL to the Bootstrap CSS file
     # Note that a URL can be either a string,
     # e.g. "https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css",

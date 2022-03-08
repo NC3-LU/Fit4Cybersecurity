@@ -1,5 +1,4 @@
 $(document).ready(function() {
-
     const download = function(filename, text) {
         const pom = document.createElement('a');
         pom.setAttribute('href', 'data:application/plain;charset=utf-8,' + encodeURIComponent(text));
@@ -30,12 +29,44 @@ $(document).ready(function() {
     });
 
     $('.logo-link').click(function(e) {
-        e.preventDefault();
-        $("#modal-leave-survey").modal();
+        if (!window.location.href.includes('survey/start')) {
+            e.preventDefault();
+            $("#modal-leave-survey").modal();
+        }
     });
 
     $('#redirect-home').click(function() {
-        window.location.replace('/');
+        window.location.replace($('.logo-link').attr('href'));
+    });
+
+    $('#download-report').click(function(e) {
+        $('#cover-spin').show(0);
+        e.stopImmediatePropagation();
+        e.preventDefault();
+        let filename = '';
+        fetch($('#download-report').attr('href'))
+            .then(resp => {
+                const header = resp.headers.get('Content-Disposition');
+                const parts = header.split(';');
+                filename = parts[1].split('=')[1];
+
+                return resp.blob()
+            })
+            .then(blob => {
+                const url = window.URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.style.display = 'none';
+                a.href = url;
+                a.download = filename;
+                document.body.appendChild(a);
+                a.click();
+                window.URL.revokeObjectURL(url);
+                $('#cover-spin').hide();
+            })
+            .catch(() => {
+                $('#cover-spin').hide();
+                alert('An error occurred.')
+            });
     });
 
     let processCheckboxSelection = function(checkbox) {
@@ -106,9 +137,9 @@ $(document).ready(function() {
         }
     }
 
-    var checkboxesAndRadios = $("input[type='checkbox'], input[type='radio']"),
-        checkboxes = $("input[type='checkbox']"),
-        submitButton = $("input[type='submit']");
+    var checkboxesAndRadios = $(".form-group input[type='checkbox'], input[type='radio']"),
+        checkboxes = $(".form-group input[type='checkbox']"),
+        submitButton = $(".form-group input[type='submit']");
     if (checkboxesAndRadios.length > 0) {
         processCheckboxSelection(checkboxesAndRadios.filter(':checked').first());
     }
@@ -176,4 +207,42 @@ $(document).ready(function() {
             qrcode.makeCode($('#direct-link').data('link'));
         });
     }
+
+    let isAnswerChanged = false;
+    if ($('.radio-buttons.form-check-input').length > 0) {
+        let initial_radio_val = $('.radio-buttons.form-check-input:checked').val();
+        $('.radio-buttons.form-check-input').change(function() {
+            if ($('.radio-buttons.form-check-input:checked').val() != initial_radio_val) {
+                isAnswerChanged = true;
+            } else {
+                isAnswerChanged = false;
+            }
+        });
+    }
+    if ($('.multiple-selection.form-check-input').length > 0) {
+        let initiallySelectedValues = [];
+        $.each($(".multiple-selection.form-check-input:checked"), function() {
+            initiallySelectedValues.push($(this).val());
+        });
+        $('.multiple-selection.form-check-input').change(function() {
+            let currentlySelectedValues = [];
+            $.each($(".multiple-selection.form-check-input:checked"), function() {
+                currentlySelectedValues.push($(this).val());
+            });
+            isAnswerChanged = currentlySelectedValues.length !== initiallySelectedValues.length ||
+                !currentlySelectedValues.every((v, i) => v === initiallySelectedValues[i])
+        });
+    }
+
+    $('.modify-question').click(function(event) {
+        event.preventDefault();
+        if (isAnswerChanged) {
+            $("#modal-answer-changing-warning").modal();
+            $('#submit-form').click(function() {
+                $('#survey-question-form').submit();
+            })
+        } else {
+            $('#survey-question-form').submit();
+        }
+    })
 });

@@ -1,0 +1,13 @@
+{% extends 'survey/finishedSurvey.html' %}
+{% load i18n %}
+
+{% block finished_survey_description %}
+<p>
+{% blocktranslate trimmed %}
+    This is the list of recommendations to help you to write a subcontract,
+    provided that your answers did correctly reflect the context. Also keep
+    in mind that it is a self-assessment and only scratches the surface of the information
+    security maturity level and thus, we are not liable for the results of this survey.
+{% endblocktranslate %}
+</p>
+{% endblock %}

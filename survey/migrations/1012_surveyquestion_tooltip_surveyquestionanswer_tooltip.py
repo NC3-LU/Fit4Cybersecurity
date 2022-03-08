@@ -6,18 +6,18 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('survey', '1011_alter_surveyuseranswer_answer'),
+        ("survey", "1011_alter_surveyuseranswer_answer"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='surveyquestion',
-            name='tooltip',
-            field=models.TextField(blank=True, default=''),
+            model_name="surveyquestion",
+            name="tooltip",
+            field=models.TextField(blank=True, default=""),
         ),
         migrations.AddField(
-            model_name='surveyquestionanswer',
-            name='tooltip',
-            field=models.TextField(blank=True, default=''),
+            model_name="surveyquestionanswer",
+            name="tooltip",
+            field=models.TextField(blank=True, default=""),
         ),
     ]

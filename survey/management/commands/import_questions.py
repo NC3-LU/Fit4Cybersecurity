@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 import json
-from typing import Dict
+from typing import Dict, List
 from django.core.management.base import BaseCommand
 from survey.models import (
     SurveySection,
@@ -9,6 +9,8 @@ from survey.models import (
     SurveyQuestionServiceCategory,
     SurveyQuestionAnswer,
     Recommendations,
+    SurveyAnswerQuestionMap,
+    CONTEXT_SECTION_LABEL,
 )
 
 
@@ -32,6 +34,9 @@ class Command(BaseCommand):
         max_question_index = 0
         min_question_index = 0
 
+        answers_questions_map = {}
+        answers_to_remove_map = []
+
         for question in json_data:
             # Get or create the section
             section, created = SurveySection.objects.get_or_create(
@@ -49,7 +54,11 @@ class Command(BaseCommand):
 
             # The context questions have negative indexes.
             qindex = int(question.get("qindex", 1))
-            qindex = abs(qindex) if question["section"] != "__context" else -abs(qindex)
+            qindex = (
+                abs(qindex)
+                if question["section"] != CONTEXT_SECTION_LABEL
+                else -abs(qindex)
+            )
 
             if qindex > max_question_index:
                 max_question_index = qindex
@@ -100,7 +109,7 @@ class Command(BaseCommand):
                     answer_obj.is_active = True
 
                     answer_obj.save()
-                    is_answer_created = True
+                    is_answer_created = False
                     nb_updated_answers += 1
                 except SurveyQuestionAnswer.DoesNotExist:
                     answer_obj = SurveyQuestionAnswer.objects.create(
@@ -116,7 +125,7 @@ class Command(BaseCommand):
                         is_active=True,
                     )
                     nb_imported_answers += 1
-                    is_answer_created = False
+                    is_answer_created = True
 
                 # Clean all the dependant answers and recommendations to recreate later.
                 if not is_answer_created:
@@ -130,7 +139,28 @@ class Command(BaseCommand):
                         "dependant_answers": answer["dependant_answers"],
                     }
 
+                # Prepare the answer -> questions map
+                if "questions_map" in answer.keys():
+                    answers_questions_map[answer_obj.id] = {
+                        "object": answer_obj,
+                        "questions_map": answer["questions_map"],
+                    }
+                else:
+                    answers_to_remove_map.append(answer_obj)
+
                 for reco in answer.get("recommendations", []):
+                    categories = []
+                    if "categories" in reco:
+                        for reco_category in reco["categories"]:
+                            (
+                                reco_cat,
+                                created,
+                            ) = SurveyQuestionServiceCategory.objects.get_or_create(
+                                label=reco_category["label"]
+                            )
+                            if created:
+                                reco_cat.save()
+                            categories.append(reco_cat)
                     reco_obj, created = Recommendations.objects.get_or_create(
                         label=reco["label"],
                         min_e_count=reco["min_e_count"],
@@ -139,6 +169,8 @@ class Command(BaseCommand):
                         forAnswer=answer_obj,
                         answerChosen=reco["answerChosen"],
                     )
+                    for category in categories:
+                        reco_obj.categories.add(category)
                     if created:
                         nb_imported_recommendations += 1
                         reco_obj.save()
@@ -152,6 +184,9 @@ class Command(BaseCommand):
 
             # Process the answers' dependencies.
             self.process_answers_dependencies(answers_dependencies)
+
+        # Process the answers -> questions map populated before.
+        self.process_answers_questions_map(answers_questions_map, answers_to_remove_map)
 
         # Deactivate all the questions with index higher then max importing.
         if max_question_index:
@@ -192,7 +227,7 @@ class Command(BaseCommand):
         )
 
     @staticmethod
-    def process_answers_dependencies(answers_dependencies: Dict):
+    def process_answers_dependencies(answers_dependencies: Dict) -> None:
         for answer_label in answers_dependencies:
             question_answer = answers_dependencies[answer_label]["object"]
             dependant_answers_labels = answers_dependencies[answer_label][
@@ -207,3 +242,26 @@ class Command(BaseCommand):
                     "object"
                 ].dependant_answers.add(question_answer)
                 answers_dependencies[dependant_answer_label]["object"].save()
+
+    @staticmethod
+    def process_answers_questions_map(
+        answers_questions_map: Dict, answers_to_remove_map: List[SurveyQuestionAnswer]
+    ) -> None:
+        SurveyAnswerQuestionMap.objects.filter(
+            answer__in=answers_to_remove_map
+        ).delete()
+        for answer_id in answers_questions_map:
+            answer = answers_questions_map[answer_id]["object"]
+            SurveyAnswerQuestionMap.objects.filter(answer=answer).delete()
+            answer_questions_map = answers_questions_map[answer_id]["questions_map"]
+            for answer_question_map in answer_questions_map:
+                question = SurveyQuestion.objects.get(
+                    label=answer_question_map["label"]
+                )
+                SurveyAnswerQuestionMap.objects.create(
+                    answer=answer,
+                    question=question,
+                    branch=answer_question_map["branch"],
+                    level=answer_question_map["level"],
+                    order=answer_question_map["order"],
+                )

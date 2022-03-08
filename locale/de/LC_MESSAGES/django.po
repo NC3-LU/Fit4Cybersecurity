@@ -3,21 +3,54 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
+#: data/fit4contract/context-questions.json:207
+#: data/fit4cybersecurity/context-questions.json:207
+#: data/fit4privacy/context-questions.json:207
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-01-10 12:14+0000\n"
-"PO-Revision-Date: 2022-01-11 10:52+0000\n"
-"Last-Translator: Juan Rocha <juan.rocha@cases.lu>\n"
+"POT-Creation-Date: 2022-02-07 10:01+0000\n"
+"PO-Revision-Date: 2022-02-15 14:49+0000\n"
+"Last-Translator: Ruslan Baidan <ruslan.baidan@cases.lu>\n"
 "Language-Team: German <https://translate.monarc.lu/projects/"
-"Fit4Cybersecurity/fit4cybersecurity/de/>\n"
+"Fit4Cybersecurity/fit4contract/de/>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.9-dev\n"
+"X-Generator: Weblate 4.11-dev\n"
+
+#: csskp/fit4contract/__init__.py:7
+msgid ""
+"This questionnaire aims to identify the general scope of the contractual "
+"relationship considered, in order to set up an acquisition, a lease, a "
+"development or any other service in the field of information and "
+"communication technologies. Based on this scope, Fit4Contract provides a "
+"list of basic information security requirements that are recommended to be "
+"considered in establishing the contractual relationship. This is a self "
+"assessment tool and as such cannot provide definitive guidelines. This tool "
+"is simply raising awareness for Information Security in ICT product and "
+"service contracts. Additionally, many countries have their own legal "
+"requirements for contracts and thus, we do not take any responsibilities "
+"concerning the answers and we clarify that the user of this survey needs to "
+"verify, and adapt their contracts accordingly, to comply with all national "
+"and international laws."
+msgstr ""
+"Dieser Fragebogen zielt darauf ab, den allgemeinen Umfang des geplanten "
+"Vertragsverhältnisses zu ermitteln, um eine Anschaffung, eine Anmietung, "
+"eine Entwicklung oder eine andere Dienstleistung im Bereich der Informations- "
+"und Kommunikationstechnologien auszuführen. Ausgehend von diesem Umfang, erstellt "
+"Fit4Contract eine Liste mit grundlegenden Anforderungen an die Informationssicherheit, "
+"die bei der Ausarbeitung der Vertragsbeziehung berücksichtigt werden sollten. Diese "
+"Grundanforderungen benötigen einer spezifischen Anpassung an den Kontext der untervergebenen "
+"Dienstleistungen und sollten dementsprechend im Dienstleistungsvertrag ausführlich "
+"beschrieben werden. Es soll jedoch beachtet werden, dass viele Länder eigene gesetzliche "
+"Anforderungen für Verträge haben und wir daher keine Verantwortung hinsichtlich der Antworten "
+"übernehmen. Desweiteren stellen wir klar, dass der Benutzer dieser Umfrage die eigenen Verträge "
+"überprüfen und entsprechend anpassen muss, um alle nationalen und internationalen Gesetze "
+"einzuhalten."
 
 #: csskp/fit4cybersecurity/__init__.py:7
 msgid ""
@@ -45,7 +78,7 @@ msgid ""
 "advanced and where there is room for improvement. As such, it is recommended "
 "that a person is taking this survey that is knowing the company's maturity "
 "on the aforementioned topics well. <br /><br />The survey will be online and "
-"available between December 2021 and March 31st 2022. After the survey, the "
+"available between December 2021 and April 30th 2022. After the survey, the "
 "data will be processed and results will be interpreted. However, since the "
 "survey is completely anonymous, we cannot identify you nor your company and "
 "thus deletion of specific records is not possible: we cannot be sure that it "
@@ -54,121 +87,6 @@ msgid ""
 "want to later pick up where you have left off, please be sure to save the "
 "link by clicking on the \"continue later\" button. We will not be able to "
 "help you to find your answers again otherwise."
-msgstr ""
-
-#: csskp/fit4operatorsurvey/__init__.py:64
-#: data/fit4operatorsurvey/context-questions.json:11
-msgid "Energy"
-msgstr ""
-
-#: csskp/fit4operatorsurvey/__init__.py:65
-#: data/fit4operatorsurvey/context-questions.json:17
-msgid "Transport"
-msgstr ""
-
-#: csskp/fit4operatorsurvey/__init__.py:66
-#: data/fit4operatorsurvey/context-questions.json:23
-msgid "Banking"
-msgstr ""
-
-#: csskp/fit4operatorsurvey/__init__.py:67
-#: data/fit4operatorsurvey/context-questions.json:29
-msgid "Financial market infrastructure"
-msgstr ""
-
-#: csskp/fit4operatorsurvey/__init__.py:68
-#: data/fit4cybersecurity/context-questions.json:59
-#: data/fit4ehealth/context-questions.json:10
-#: data/fit4operatorsurvey/context-questions.json:35
-#: data/fit4privacy/context-questions.json:59 survey/globals.py:15
-msgid "Health"
-msgstr "Gesundheit"
-
-#: csskp/fit4operatorsurvey/__init__.py:69
-#: data/fit4operatorsurvey/context-questions.json:41
-msgid "Dringking water"
-msgstr ""
-
-#: csskp/fit4operatorsurvey/__init__.py:70
-#: data/fit4operatorsurvey/context-questions.json:47
-msgid "Waste Water"
-msgstr ""
-
-#: csskp/fit4operatorsurvey/__init__.py:71
-#: data/fit4operatorsurvey/context-questions.json:53
-msgid "Digital Infrastructure and Service Providers"
-msgstr ""
-
-#: csskp/fit4operatorsurvey/__init__.py:72
-#: data/fit4cybersecurity/context-questions.json:95
-#: data/fit4operatorsurvey/context-questions.json:59
-#: data/fit4privacy/context-questions.json:95 survey/globals.py:21
-msgid "Public Administration"
-msgstr "Öffentliche Verwaltungen"
-
-#: csskp/fit4operatorsurvey/__init__.py:73
-#: data/fit4operatorsurvey/context-questions.json:65
-msgid "Space"
-msgstr ""
-
-#: csskp/fit4operatorsurvey/__init__.py:74
-#: data/fit4operatorsurvey/context-questions.json:71
-msgid "Postal and Courier Services"
-msgstr ""
-
-#: csskp/fit4operatorsurvey/__init__.py:75
-#: data/fit4operatorsurvey/context-questions.json:77
-msgid "Waste Management"
-msgstr ""
-
-#: csskp/fit4operatorsurvey/__init__.py:76
-#: data/fit4operatorsurvey/context-questions.json:83
-msgid "Manufacture, production and distribution of chemicals"
-msgstr ""
-
-#: csskp/fit4operatorsurvey/__init__.py:77
-#: data/fit4operatorsurvey/context-questions.json:89
-msgid "Food Production, processing and distribution"
-msgstr ""
-
-#: csskp/fit4operatorsurvey/__init__.py:78
-#: data/fit4operatorsurvey/context-questions.json:95
-msgid "Manufacturing of medical devices"
-msgstr ""
-
-#: csskp/fit4operatorsurvey/__init__.py:79
-#: data/fit4operatorsurvey/context-questions.json:101
-msgid "Manufacture of computer, electronics and optical products"
-msgstr ""
-
-#: csskp/fit4operatorsurvey/__init__.py:80
-#: data/fit4operatorsurvey/context-questions.json:107
-msgid "Manufacture of electrical equipment"
-msgstr ""
-
-#: csskp/fit4operatorsurvey/__init__.py:81
-#: data/fit4operatorsurvey/context-questions.json:113
-msgid "Manufacture of machinery and equipment"
-msgstr ""
-
-#: csskp/fit4operatorsurvey/__init__.py:84
-#: data/fit4operatorsurvey/context-questions.json:128
-msgid "Under 10 employees"
-msgstr ""
-
-#: csskp/fit4operatorsurvey/__init__.py:85
-#: data/fit4operatorsurvey/context-questions.json:134
-msgid "From 10 to 49 employees"
-msgstr ""
-
-#: csskp/fit4operatorsurvey/__init__.py:86
-#: data/fit4operatorsurvey/context-questions.json:140
-msgid "From 50 to 249 employees"
-msgstr ""
-
-#: csskp/fit4operatorsurvey/__init__.py:87
-#: data/fit4operatorsurvey/context-questions.json:146
-msgid "Over 250 employees"
 msgstr ""
 
 #: csskp/fit4privacy/__init__.py:7
@@ -201,6 +119,7 @@ msgstr ""
 "Management und Datenschutz-Verpflichtungenauf die Organisationen bereits im "
 "Jahr 2021 vorbereitet sein sollten."
 
+#: data/fit4contract/context-questions.json:3
 #: data/fit4cybersecurity/context-questions.json:3
 #: data/fit4ehealth/context-questions.json:3
 #: data/fit4operatorsurvey/context-questions.json:3
@@ -208,183 +127,764 @@ msgstr ""
 msgid "What is your sector?"
 msgstr "Was ist Ihre Branche?"
 
+#: data/fit4contract/context-questions.json:4
+#: data/fit4contract/context-questions.json:120
+#: data/fit4contract/context-questions.json:200
 #: data/fit4cybersecurity/context-questions.json:4
-#: data/fit4cybersecurity/context-questions.json:104
-#: data/fit4cybersecurity/context-questions.json:173
+#: data/fit4cybersecurity/context-questions.json:120
+#: data/fit4cybersecurity/context-questions.json:200
 #: data/fit4ehealth/context-questions.json:4
-#: data/fit4ehealth/context-questions.json:19
+#: data/fit4ehealth/context-questions.json:21
 #: data/fit4operatorsurvey/context-questions.json:4
-#: data/fit4operatorsurvey/context-questions.json:122
-#: data/fit4operatorsurvey/context-questions.json:155
-#: data/fit4operatorsurvey/context-questions.json:188
+#: data/fit4operatorsurvey/context-questions.json:141
+#: data/fit4operatorsurvey/context-questions.json:179
+#: data/fit4operatorsurvey/context-questions.json:217
 #: data/fit4privacy/context-questions.json:4
-#: data/fit4privacy/context-questions.json:104
-#: data/fit4privacy/context-questions.json:173
+#: data/fit4privacy/context-questions.json:120
+#: data/fit4privacy/context-questions.json:200
 msgid "Context"
 msgstr "Kontext"
 
+#: data/fit4contract/context-questions.json:5
+#: data/fit4contract/context-questions.json:121
+#: data/fit4contract/context-questions.json:201
 #: data/fit4cybersecurity/context-questions.json:5
-#: data/fit4cybersecurity/context-questions.json:105
-#: data/fit4cybersecurity/context-questions.json:174
+#: data/fit4cybersecurity/context-questions.json:121
+#: data/fit4cybersecurity/context-questions.json:201
 #: data/fit4ehealth/context-questions.json:5
-#: data/fit4ehealth/context-questions.json:20
+#: data/fit4ehealth/context-questions.json:22
 #: data/fit4operatorsurvey/context-questions.json:5
-#: data/fit4operatorsurvey/context-questions.json:123
-#: data/fit4operatorsurvey/context-questions.json:156
-#: data/fit4operatorsurvey/context-questions.json:189
+#: data/fit4operatorsurvey/context-questions.json:142
+#: data/fit4operatorsurvey/context-questions.json:180
+#: data/fit4operatorsurvey/context-questions.json:218
 #: data/fit4privacy/context-questions.json:5
-#: data/fit4privacy/context-questions.json:105
-#: data/fit4privacy/context-questions.json:174
+#: data/fit4privacy/context-questions.json:121
+#: data/fit4privacy/context-questions.json:201
 msgid "__context"
 msgstr "__context"
 
-#: data/fit4cybersecurity/context-questions.json:11
-#: data/fit4privacy/context-questions.json:11 survey/globals.py:7
+#: data/fit4contract/context-questions.json:12
+#: data/fit4cybersecurity/context-questions.json:12
+#: data/fit4privacy/context-questions.json:12
 msgid "Banking, insurance and real estate"
 msgstr "Banken, Versicherungen und Immobilien"
 
-#: data/fit4cybersecurity/context-questions.json:17
-#: data/fit4privacy/context-questions.json:17 survey/globals.py:8
+#: data/fit4contract/context-questions.json:19
+#: data/fit4cybersecurity/context-questions.json:19
+#: data/fit4privacy/context-questions.json:19
 msgid "Trading, sales and mass distribution"
 msgstr "Handel, Verkauf und Massenverteilung"
 
-#: data/fit4cybersecurity/context-questions.json:23
-#: data/fit4privacy/context-questions.json:23 survey/globals.py:9
+#: data/fit4contract/context-questions.json:26
+#: data/fit4cybersecurity/context-questions.json:26
+#: data/fit4privacy/context-questions.json:26
 msgid "Marketing, media and multimedia"
 msgstr "Marketing, Medien und Multimedia"
 
-#: data/fit4cybersecurity/context-questions.json:29
-#: data/fit4privacy/context-questions.json:29 survey/globals.py:10
+#: data/fit4contract/context-questions.json:33
+#: data/fit4cybersecurity/context-questions.json:33
+#: data/fit4privacy/context-questions.json:33
 msgid "Construction industries and civil engineering"
 msgstr "Baugewerbe und Tiefbau"
 
-#: data/fit4cybersecurity/context-questions.json:35
-#: data/fit4privacy/context-questions.json:35 survey/globals.py:11
+#: data/fit4contract/context-questions.json:40
+#: data/fit4cybersecurity/context-questions.json:40
+#: data/fit4privacy/context-questions.json:40
 msgid "Hotel and restoration, tourism and entertainment"
 msgstr "Hotel und Gastronomie, Tourismus und Unterhaltung"
 
-#: data/fit4cybersecurity/context-questions.json:41
-#: data/fit4privacy/context-questions.json:41 survey/globals.py:12
+#: data/fit4contract/context-questions.json:47
+#: data/fit4cybersecurity/context-questions.json:47
+#: data/fit4privacy/context-questions.json:47
 msgid "Industry"
 msgstr "Industrie"
 
-#: data/fit4cybersecurity/context-questions.json:47
-#: data/fit4privacy/context-questions.json:47 survey/globals.py:13
+#: data/fit4contract/context-questions.json:54
+#: data/fit4cybersecurity/context-questions.json:54
+#: data/fit4privacy/context-questions.json:54
 msgid "Installation and maintenance"
 msgstr "Installation und Wartung"
 
-#: data/fit4cybersecurity/context-questions.json:53
-#: data/fit4privacy/context-questions.json:53 survey/globals.py:14
+#: data/fit4contract/context-questions.json:61
+#: data/fit4cybersecurity/context-questions.json:61
+#: data/fit4privacy/context-questions.json:61
 msgid "Creation or placing of objects that are artistic and decorative"
 msgstr "Kreation oder Platzierung von künstlerischen und dekorativen Objekten"
 
-#: data/fit4cybersecurity/context-questions.json:65
-#: data/fit4privacy/context-questions.json:65 survey/globals.py:16
+#: data/fit4contract/context-questions.json:68
+#: data/fit4cybersecurity/context-questions.json:68
+#: data/fit4ehealth/context-questions.json:11
+#: data/fit4operatorsurvey/context-questions.json:40
+#: data/fit4privacy/context-questions.json:68
+msgid "Health"
+msgstr "Gesundheit"
+
+#: data/fit4contract/context-questions.json:75
+#: data/fit4cybersecurity/context-questions.json:75
+#: data/fit4privacy/context-questions.json:75
 msgid "Home-Care Service or Community Service"
 msgstr "Hauspflege oder Zivildienst"
 
-#: data/fit4cybersecurity/context-questions.json:71
-#: data/fit4privacy/context-questions.json:71 survey/globals.py:17
+#: data/fit4contract/context-questions.json:82
+#: data/fit4cybersecurity/context-questions.json:82
+#: data/fit4privacy/context-questions.json:82
 msgid "Shows"
 msgstr "Veranstaltungen"
 
-#: data/fit4cybersecurity/context-questions.json:77
-#: data/fit4privacy/context-questions.json:77 survey/globals.py:18
+#: data/fit4contract/context-questions.json:89
+#: data/fit4cybersecurity/context-questions.json:89
+#: data/fit4privacy/context-questions.json:89
 msgid "Company Support"
 msgstr "Firmenunterstützung"
 
-#: data/fit4cybersecurity/context-questions.json:83
-#: data/fit4privacy/context-questions.json:83 survey/globals.py:19
+#: data/fit4contract/context-questions.json:96
+#: data/fit4cybersecurity/context-questions.json:96
+#: data/fit4privacy/context-questions.json:96
 msgid "Transport and Logistics"
 msgstr "Transport und Logistik"
 
-#: data/fit4cybersecurity/context-questions.json:89
-#: data/fit4privacy/context-questions.json:89 survey/globals.py:20
+#: data/fit4contract/context-questions.json:103
+#: data/fit4cybersecurity/context-questions.json:103
+#: data/fit4privacy/context-questions.json:103
 msgid "Farming and fishing, natural spaces and green spaces, animal care"
 msgstr "Landwirtschaft und Fischerei, Natur- und Grünflächen, Tierpflege"
 
-#: data/fit4cybersecurity/context-questions.json:103
-#: data/fit4operatorsurvey/context-questions.json:121
-#: data/fit4privacy/context-questions.json:103
+#: data/fit4contract/context-questions.json:110
+#: data/fit4cybersecurity/context-questions.json:110
+#: data/fit4operatorsurvey/context-questions.json:68
+#: data/fit4privacy/context-questions.json:110
+msgid "Public Administration"
+msgstr "Öffentliche Verwaltungen"
+
+#: data/fit4contract/context-questions.json:119
+#: data/fit4cybersecurity/context-questions.json:119
+#: data/fit4operatorsurvey/context-questions.json:140
+#: data/fit4privacy/context-questions.json:119
 msgid "How many employees?"
 msgstr "Wie viele mitarbeiter?"
 
-#: data/fit4cybersecurity/context-questions.json:110
-#: data/fit4privacy/context-questions.json:110
+#: data/fit4contract/context-questions.json:127
+#: data/fit4cybersecurity/context-questions.json:127
+#: data/fit4privacy/context-questions.json:127
 msgid "1-5"
 msgstr "1-5"
 
-#: data/fit4cybersecurity/context-questions.json:116
-#: data/fit4privacy/context-questions.json:116
+#: data/fit4contract/context-questions.json:134
+#: data/fit4cybersecurity/context-questions.json:134
+#: data/fit4privacy/context-questions.json:134
 msgid "6-10"
 msgstr "6-10"
 
-#: data/fit4cybersecurity/context-questions.json:122
-#: data/fit4privacy/context-questions.json:122
+#: data/fit4contract/context-questions.json:141
+#: data/fit4cybersecurity/context-questions.json:141
+#: data/fit4privacy/context-questions.json:141
 msgid "10-20"
 msgstr "10-20"
 
-#: data/fit4cybersecurity/context-questions.json:128
-#: data/fit4privacy/context-questions.json:128
+#: data/fit4contract/context-questions.json:148
+#: data/fit4cybersecurity/context-questions.json:148
+#: data/fit4privacy/context-questions.json:148
 msgid "20-50"
 msgstr "20-50"
 
-#: data/fit4cybersecurity/context-questions.json:134
-#: data/fit4privacy/context-questions.json:134
+#: data/fit4contract/context-questions.json:155
+#: data/fit4cybersecurity/context-questions.json:155
+#: data/fit4privacy/context-questions.json:155
 msgid "50-100"
 msgstr "50-100"
 
-#: data/fit4cybersecurity/context-questions.json:140
-#: data/fit4privacy/context-questions.json:140
+#: data/fit4contract/context-questions.json:162
+#: data/fit4cybersecurity/context-questions.json:162
+#: data/fit4privacy/context-questions.json:162
 msgid "100-200"
 msgstr "100-200"
 
-#: data/fit4cybersecurity/context-questions.json:146
-#: data/fit4privacy/context-questions.json:146
+#: data/fit4contract/context-questions.json:169
+#: data/fit4cybersecurity/context-questions.json:169
+#: data/fit4privacy/context-questions.json:169
 msgid "200-500"
 msgstr "200-500"
 
-#: data/fit4cybersecurity/context-questions.json:152
-#: data/fit4privacy/context-questions.json:152
+#: data/fit4contract/context-questions.json:176
+#: data/fit4cybersecurity/context-questions.json:176
+#: data/fit4privacy/context-questions.json:176
 msgid "500-1000"
 msgstr "500-1000"
 
-#: data/fit4cybersecurity/context-questions.json:158
-#: data/fit4privacy/context-questions.json:158
+#: data/fit4contract/context-questions.json:183
+#: data/fit4cybersecurity/context-questions.json:183
+#: data/fit4privacy/context-questions.json:183
 msgid "1000-5000"
 msgstr "1000-5000"
 
-#: data/fit4cybersecurity/context-questions.json:164
-#: data/fit4privacy/context-questions.json:164
+#: data/fit4contract/context-questions.json:190
+#: data/fit4cybersecurity/context-questions.json:190
+#: data/fit4privacy/context-questions.json:190
 msgid "5000+"
 msgstr "5000+"
 
-#: data/fit4cybersecurity/context-questions.json:172
-#: data/fit4ehealth/context-questions.json:18
-#: data/fit4privacy/context-questions.json:172
+#: data/fit4contract/context-questions.json:199
+#: data/fit4cybersecurity/context-questions.json:199
+#: data/fit4ehealth/context-questions.json:20
+#: data/fit4privacy/context-questions.json:199 survey/forms.py:60
 msgid "Please select your country"
 msgstr "Bitte wählen Sie Ihr Land"
 
-#: data/fit4cybersecurity/context-questions.json:179
-#: data/fit4ehealth/context-questions.json:25
-#: data/fit4privacy/context-questions.json:179
-msgid "Luxembourg"
-msgstr "Luxemburg"
+#: data/fit4contract/questions.json:3 data/fit4contract/questions.json:25
+#: data/fit4contract/questions.json:37 data/fit4contract/questions.json:49
+#: data/fit4contract/questions.json:61 data/fit4contract/questions.json:73
+#: data/fit4contract/questions.json:85 data/fit4contract/questions.json:150
+#: data/fit4contract/questions.json:162 data/fit4contract/questions.json:174
+#: data/fit4contract/questions.json:186 data/fit4contract/questions.json:198
+#: data/fit4contract/questions.json:210 data/fit4contract/questions.json:269
+#: data/fit4contract/questions.json:281 data/fit4contract/questions.json:293
+#: data/fit4contract/questions.json:305 data/fit4contract/questions.json:317
+#: data/fit4contract/questions.json:329 data/fit4contract/questions.json:370
+#: data/fit4contract/questions.json:382 data/fit4contract/questions.json:394
+#: data/fit4contract/questions.json:406 data/fit4contract/questions.json:418
+#: data/fit4contract/questions.json:430 data/fit4contract/questions.json:495
+#: data/fit4contract/questions.json:507 data/fit4contract/questions.json:519
+#: data/fit4contract/questions.json:531 data/fit4contract/questions.json:543
+#: data/fit4contract/questions.json:555
+msgid "General"
+msgstr "Allgemein"
 
-#: data/fit4cybersecurity/context-questions.json:185
-#: data/fit4privacy/context-questions.json:185
-msgid "Germany"
-msgstr "Deutschland"
+#: data/fit4contract/questions.json:4
+msgid "Service description"
+msgstr "Beschreibung des Services"
 
-#: data/fit4cybersecurity/context-questions.json:191
-#: data/fit4privacy/context-questions.json:191
-msgid "Belgium"
-msgstr "Belgien"
+#: data/fit4contract/questions.json:8
+msgid ""
+"Please describe the project that will be subcontracted among the following "
+"categories:"
+msgstr ""
+"Bitte beschreiben Sie so gut wie möglich das Projekt, für das ein "
+"Unterauftrag aus den folgenden Kategorien vergeben wird:"
 
-#: data/fit4cybersecurity/context-questions.json:197
-#: data/fit4privacy/context-questions.json:197
-msgid "France"
-msgstr "Frankreich"
+#: data/fit4contract/questions.json:15
+msgid ""
+"Purchasing or leasing of equipment, without provision of the service (e.g. "
+"server, network equipment, computer, mobile etc.). In case of purchase of "
+"equipment and provision of the service, also check the box \"Service "
+"provision\"."
+msgstr ""
+"Kauf oder Miete von Ausrüstung, ohne Erbringung von Dienstleistungen. (z.B.: "
+"Server, Netzwerkausrüstung, Computer, Handy usw.) Beim Kauf von Ausrüstung "
+"und bei der Erbringung von Dienstleistungen kreuzen Sie bitte auch das "
+"Kästchen \"Servicebereitstellung\" an."
+
+#: data/fit4contract/questions.json:22 data/fit4contract/questions.json:147
+#: data/fit4contract/questions.json:266 data/fit4contract/questions.json:367
+#: data/fit4contract/questions.json:492
+msgid ""
+"The Provider complies with the security practices of the Customer’s "
+"organization. Any situations where such compliance is not possible are "
+"reported to help prevent security gaps or conflicts that could adversely "
+"affect security performance. Security practices are formalized in a charter "
+"of good conduct for information security systems."
+msgstr ""
+"Der Dienstleistungsanbieter befolgt die Sicherheitspraktiken der "
+"Kundenorganisation und teilt alle Umstände mit, unter welchen dies nicht "
+"möglich ist. Der Anbieter trägt so dazu bei, Sicherheitslücken oder -"
+"konflikte zu vermeiden, die sich negativ auf die Sicherheitsleistung "
+"auswirken können. Die Sicherheitspraktiken sollten in einer Charta für die "
+"Sicherheit von Informationssystemen beschrieben sein."
+
+#: data/fit4contract/questions.json:34 data/fit4contract/questions.json:159
+#: data/fit4contract/questions.json:278 data/fit4contract/questions.json:379
+#: data/fit4contract/questions.json:504
+msgid ""
+"The technical and financial capabilities of the Service Provider are "
+"verified to ensure proper performance of the contract."
+msgstr ""
+"Die technischen und finanziellen Kapazitäten des Dienstleistungsanbieters "
+"werden im Hinblick auf eine ordnungsgemässe Ausführung des Vertrags geprüft."
+
+#: data/fit4contract/questions.json:46 data/fit4contract/questions.json:171
+#: data/fit4contract/questions.json:290 data/fit4contract/questions.json:391
+#: data/fit4contract/questions.json:516
+msgid ""
+"The Service Provider guarantees, within its own supply chain or in the case "
+"of cascading subcontracting, compliance with the security requirements "
+"requested by the Customer."
+msgstr ""
+"Der Dienstleistungsanbieter garantiert innerhalb seiner eigenen Liefer- und "
+"Dienstleistungsketten oder im Falle einer Untervergabe die Einhaltung der "
+"vom Kunden geforderten Sicherheitsanforderungen."
+
+#: data/fit4contract/questions.json:58 data/fit4contract/questions.json:183
+#: data/fit4contract/questions.json:302 data/fit4contract/questions.json:403
+#: data/fit4contract/questions.json:528
+msgid ""
+"The Service Provider guarantees the minimum service levels defined in the "
+"contract. The Provider shall inform the Customer’s organization of its plans "
+"to ensure service levels under normal conditions and during disruptive "
+"events, whether such events occur on the premises or infrastructure of the "
+"Customer’s organization or that of the Service Provider."
+msgstr ""
+"Der Dienstleistungsanbieter gewährleistet die im Vertrag festgelegten "
+"Mindestdienstleistungsniveaus. Er informiert die Kundenorganisation über "
+"seine Vorkehrungen zur Gewährleistung dieser Mindestleistungen sowohl unter "
+"normalen Betriebsbedingungen als auch bei Störungen. Dies gilt unabhängig "
+"davon, ob diese Störung in den Geschäftsräumen oder in der Infrastruktur der "
+"Kundenorganisation oder in denen des Dienstleistungsanbieters aufgetreten "
+"ist."
+
+#: data/fit4contract/questions.json:70 data/fit4contract/questions.json:195
+#: data/fit4contract/questions.json:314 data/fit4contract/questions.json:415
+#: data/fit4contract/questions.json:540
+msgid ""
+"The Service Provider and any subcontractors or cascading suppliers shall "
+"respect the confidentiality of the information which comes to their "
+"knowledge during the execution of the contract. To this end, a "
+"confidentiality and non-disclosure agreement shall be drawn up between the "
+"contractual parties. This agreement is binding on the companies and "
+"suppliers providing the service as well as their respective employees "
+"individually. The commitment may exceed the duration of the execution of the "
+"contract if required by the level of confidentiality."
+msgstr ""
+"Der Dienstleistungsanbieter und alle nachgeordneten Auftragnehmer oder "
+"Zulieferer haben die Vertraulichkeit der Informationen zu wahren, von denen "
+"sie während der Ausführung des Vertrags Kenntnis erhalten. Zu diesem Zweck "
+"wird zwischen den Vertragsparteien eine Vertraulichkeits- und "
+"Geheimhaltungsvereinbarung ausgearbeitet. Diese Vereinbarung ist sowohl für "
+"die Dienstleistungsfirmen und Lieferanten, als auch für deren jeweiligen "
+"Mitarbeiter individuell bindend. Die Verpflichtung kann über den Zeitraum "
+"der Vertragserfüllung hinausgehen, wenn der Grad der Vertraulichkeit dies "
+"erfordert."
+
+#: data/fit4contract/questions.json:82 data/fit4contract/questions.json:207
+#: data/fit4contract/questions.json:326 data/fit4contract/questions.json:427
+#: data/fit4contract/questions.json:552
+msgid ""
+"All assets required for the execution of the contract and the associated "
+"property rights are managed during the various stages of contract execution."
+msgstr ""
+"Die für die Vertragserfüllung notwendigen Aktiva und die verbundenen "
+"Eigentumsrechte werden in den verschiedenen Phasen der Vertragserfüllung "
+"verwaltet."
+
+#: data/fit4contract/questions.json:94 data/fit4contract/questions.json:1034
+#: data/fit4contract/questions.json:1158
+msgid ""
+"The terms and frequency of maintenance, intervention and troubleshooting of "
+"the infrastructure are managed by established procedures."
+msgstr ""
+"Die Modalitäten und die Häufigkeit der Wartung der Infrastruktur sowie die "
+"Interventionsmodalitäten für Wartung und Fehlerbehebung werden nach "
+"festgelegten Verfahren verwaltet."
+
+#: data/fit4contract/questions.json:97 data/fit4contract/questions.json:109
+#: data/fit4contract/questions.json:121 data/fit4contract/questions.json:222
+#: data/fit4contract/questions.json:234 data/fit4contract/questions.json:341
+#: data/fit4contract/questions.json:442 data/fit4contract/questions.json:454
+#: data/fit4contract/questions.json:466 data/fit4contract/questions.json:594
+#: data/fit4contract/questions.json:606 data/fit4contract/questions.json:661
+#: data/fit4contract/questions.json:716 data/fit4contract/questions.json:777
+#: data/fit4contract/questions.json:806 data/fit4contract/questions.json:835
+#: data/fit4contract/questions.json:847 data/fit4contract/questions.json:859
+#: data/fit4contract/questions.json:898 data/fit4contract/questions.json:953
+#: data/fit4contract/questions.json:1008 data/fit4contract/questions.json:1037
+#: data/fit4contract/questions.json:1049 data/fit4contract/questions.json:1061
+#: data/fit4contract/questions.json:1073 data/fit4contract/questions.json:1085
+#: data/fit4contract/questions.json:1106 data/fit4contract/questions.json:1118
+#: data/fit4contract/questions.json:1130 data/fit4contract/questions.json:1161
+#: data/fit4contract/questions.json:1173 data/fit4contract/questions.json:1194
+#: data/fit4contract/questions.json:1206 data/fit4contract/questions.json:1218
+msgid "Specific"
+msgstr "Spezifisch"
+
+#: data/fit4contract/questions.json:106 data/fit4contract/questions.json:1046
+#: data/fit4contract/questions.json:1170
+msgid ""
+"When hardware is reused or discarded, customer data and licensed software "
+"are erased or its storage medium is irreversibly destroyed by an established "
+"procedure."
+msgstr ""
+"Im Falle einer Wiederverwendung oder Entsorgung von Hardware sind "
+"Kundendaten und lizenzierte Software zu löschen oder deren Speichermedium "
+"irreversibel zu zerstören. Der entsprechende Vorgang wird entsprechend "
+"dokumentiert."
+
+#: data/fit4contract/questions.json:118 data/fit4contract/questions.json:219
+#: data/fit4contract/questions.json:451
+msgid ""
+"The Provider provides timely and appropriate handling of known "
+"vulnerabilities that may impact the Client’s activities."
+msgstr ""
+"Der Dienstleistungsanbieter reagiert rechtzeitig und angemessen auf bekannt "
+"gewordene Schwachstellen, die sich auf den Geschäftsbetrieb des Kunden "
+"auswirken können."
+
+#: data/fit4contract/questions.json:128 data/fit4contract/questions.json:784
+#: data/fit4contract/questions.json:813 data/fit4contract/questions.json:866
+#: data/fit4contract/questions.json:905 data/fit4contract/questions.json:921
+#: data/fit4contract/questions.json:936
+msgid ""
+"Is the project subject to any legal or contractual requirements (like DAC, "
+"AML, GDPR etc.) ?"
+msgstr ""
+"Unterliegt das Projekt gesetzlichen oder vertraglichen Anforderungen (z.b. "
+"DAC, AML, DSGVO, etc.) ?"
+
+#: data/fit4contract/questions.json:140
+msgid ""
+"Purchase, lease or development of software. All types of software services "
+"(e.g. maintenance, development etc.). For software with SaaS access, please "
+"check the box \"Service provision\"."
+msgstr ""
+"Kauf, Leasing oder Entwicklung von Software. Alle Arten von Software-"
+"Dienstleistungen (z.B. Wartung, Entwicklung usw.). Für Software mit SaaS-"
+"Zugang kreuzen Sie bitte das Kästchen \"Servicebereitstellung\" an."
+
+#: data/fit4contract/questions.json:231 data/fit4contract/questions.json:463
+msgid ""
+"At the end of the contract, the Customer’s data is irreversibly deleted "
+"according to an established procedure. Legal obligations regarding the "
+"protection of personal data shall be particularly considered in this context."
+msgstr ""
+"Bei Vertragsende werden die Daten des Kunden nach einem festgelegten "
+"Verfahren unwiderruflich gelöscht. Die Durchführung wird entsprechend "
+"dokumentiert. Insbesonders sind in diesem Zusammenhang die gesetzlichen "
+"Bestimmungen zum Schutz personenbezogener Daten zu berücksichtigen."
+
+#: data/fit4contract/questions.json:241 data/fit4contract/questions.json:577
+msgid "Will remote maintenance be required?"
+msgstr "Wird die Fernwartung einbezogen werden?"
+
+#: data/fit4contract/questions.json:247 data/fit4contract/questions.json:644
+msgid "Is it a tailor-made development?"
+msgstr "Handelt es sich um eine maßgeschneiderte Entwicklung?"
+
+#: data/fit4contract/questions.json:259
+msgid ""
+"Human resources. Hiring of one or more people in the project (e.g. "
+"consultant, cleaning service, technician etc.)."
+msgstr ""
+"Personal. Einstellung einer oder mehrerer Personen für das Projekt (z.B. "
+"Berater, Reinigungsdienst, Techniker usw.)."
+
+#: data/fit4contract/questions.json:338 data/fit4contract/questions.json:713
+msgid ""
+"External Collaborator should be carefully selected during the hiring "
+"process. When the External Collaborator leaves, a procedure ensures that the "
+"Collaborator returns all the goods received from the Client’s organization "
+"(equipment, laptop, keys, badges, smartphone, etc.)."
+msgstr ""
+"Der externe Kollaborator sollte sorgfältig ausgewählt werden. Bei Beendigung "
+"des Arbeitsverhältnisses, wird durch ein Verfahren sichergestellt, dass der "
+"externe Kollaborator das von der Organisation des Kunden erhaltene Material ("
+"Geräte, Laptops, Schlüssel, Ausweise, Smartphones usw.) zurücksgibt."
+
+#: data/fit4contract/questions.json:348 data/fit4contract/questions.json:723
+#: data/fit4contract/questions.json:760
+msgid ""
+"Could you describe the interaction of the person(s) with your organization?"
+msgstr ""
+"Können Sie die Interaktion dieser Person(en) mit Ihrer Organisation "
+"beschreiben?"
+
+#: data/fit4contract/questions.json:360
+msgid ""
+"Service provision. Delegation of an entire service, especially on an "
+"infrastructure that can be managed by a third party (e.g. backup service, "
+"cloud, SaaS etc.)."
+msgstr ""
+"Servicebereitstellung. Übertragung einer gesamten Dienstleistung, "
+"insbesondere über eine Infrastruktur, die von einem Dritten verwaltet werden "
+"kann (z.B.: Backup-Service, Cloud, SaaS, usw.)."
+
+#: data/fit4contract/questions.json:439
+msgid ""
+"If the service includes the implementation of system or application software "
+"managed by the Provider, the latter shall be protected against malicious "
+"code by appropriate means and a procedure for regularly updating this "
+"protection shall be established."
+msgstr ""
+"Umfasst die Erbringung der Dienstleistung die Implementierung von "
+"Systemsoftware oder Anwendungen, die vom Dienstleistungsanbieter verwaltet "
+"werden, so ist diese Software durch geeignete Mittel vor bösartigem Code zu "
+"schützen. Es ist ein Verfahren zur regelmässigen Aktualisierung dieses "
+"Schutzes festzulegen."
+
+#: data/fit4contract/questions.json:473 data/fit4contract/questions.json:668
+#: data/fit4contract/questions.json:699
+msgid "Will the project use third-party human resources?"
+msgstr "Wird das Projekt Personal von Dritten einsetzen?"
+
+#: data/fit4contract/questions.json:485
+msgid ""
+"Building. Any element physically related to a building (e.g. air "
+"conditioning etc.). If the project concerns the physical access perimeter "
+"and is related to software, the \"Purchase, lease or software development\" "
+"box must also be checked."
+msgstr ""
+"Gebäude. Jedes Element, das physisch mit einem Gebäude verbunden ist (z.B. "
+"Klimaanlage usw.). Wenn sich das Projekt auf den physischen Zugangsbereich "
+"bezieht und softwarebezogen ist, muss auch das Kästchen \"Kauf, Leasing oder "
+"Entwicklung von Software\" angekreuzt werden."
+
+#: data/fit4contract/questions.json:562 data/fit4contract/questions.json:613
+#: data/fit4contract/questions.json:629 data/fit4contract/questions.json:684
+#: data/fit4contract/questions.json:729 data/fit4contract/questions.json:745
+#: data/fit4contract/questions.json:881
+msgid "Will the service be audited?"
+msgstr "Muss die Dienstleistung geprüft werden?"
+
+#: data/fit4contract/questions.json:572
+msgid "Software maintenance"
+msgstr "Software-Wartung"
+
+#: data/fit4contract/questions.json:573 data/fit4contract/questions.json:640
+msgid "Software"
+msgstr "Software"
+
+#: data/fit4contract/questions.json:584 data/fit4contract/questions.json:651
+#: data/fit4contract/questions.json:706 data/fit4contract/questions.json:888
+#: data/fit4contract/questions.json:943
+#: data/fit4operatorsurvey/context-questions.json:224
+#: templates/survey/answerChangingWarning.html:10
+#: templates/survey/leaveSurvey.html:11
+msgid "Yes"
+msgstr "Ja"
+
+#: data/fit4contract/questions.json:591 data/fit4contract/questions.json:774
+msgid ""
+"The terms and conditions of remotely controlled operations and/or "
+"maintenance are formalized. Technical and organizational security measures "
+"implemented by the Service Provider are validated by the Customer."
+msgstr ""
+"Die Modalitäten einer Fernarbeit oder Fernwartung sind formalisiert. Die "
+"technischen und organisatorischen Sicherheitsmaßnahmen und -verfahren, die "
+"vom Dienstanbieter eingeführt wurden, werden vom Kunden validiert."
+
+#: data/fit4contract/questions.json:603
+msgid ""
+"The terms and frequency of maintenance or update of the software or "
+"operating system are managed according to an established procedure."
+msgstr ""
+"Die Methoden und die Häufigkeit der Wartung oder Aktualisierung der Software "
+"oder des Betriebssystems werden nach einem festgelegten Verfahren verwaltet."
+
+#: data/fit4contract/questions.json:625 data/fit4contract/questions.json:680
+#: data/fit4contract/questions.json:741 data/fit4contract/questions.json:917
+#: data/fit4contract/questions.json:972
+#: data/fit4operatorsurvey/context-questions.json:231
+#: templates/survey/answerChangingWarning.html:12
+#: templates/survey/leaveSurvey.html:15
+msgid "No"
+msgstr "Nein"
+
+#: data/fit4contract/questions.json:639
+msgid "Software development"
+msgstr "Software-Entwicklung"
+
+#: data/fit4contract/questions.json:658
+msgid ""
+"The contract takes into account the specificities related to software "
+"developments such as licenses. The contract also defines the best practice "
+"repository (e.g. OWASP) to be followed during development."
+msgstr ""
+"Der Vertrag berücksichtigt Besonderheiten, die im Zusammenhang mit Software-"
+"Entwicklungen stehen, wie z.B. die Lizenzen.  Der Vertrag definiert "
+"weiterhin ein Verzeichnis bewährter Praktiken (z.B. OWASP), welche bei der "
+"Entwicklung zu befolgen ist."
+
+#: data/fit4contract/questions.json:694
+msgid "HR presence"
+msgstr "HR-Präsenz"
+
+#: data/fit4contract/questions.json:695 data/fit4contract/questions.json:756
+msgid "Human resources"
+msgstr "Humanressourcen"
+
+#: data/fit4contract/questions.json:755
+msgid "HR interactions"
+msgstr "HR-Interaktionen"
+
+#: data/fit4contract/questions.json:767
+msgid "They will work remotely"
+msgstr "Sie werden remote arbeiten"
+
+#: data/fit4contract/questions.json:796
+msgid "They will have access to the building"
+msgstr "Sie werden Zugang zum Gebäude haben"
+
+#: data/fit4contract/questions.json:803
+msgid ""
+"The physical access of the Provider to a building, premises or "
+"infrastructure is managed according to an established procedure. The means "
+"of access given to the Providers are inventoried and recovered upon "
+"completion of the contract."
+msgstr ""
+"Der physische Zugang des Dienstleistungsanbieters zu einem Gebäude, einer "
+"Räumlichkeit oder einer Infrastruktur wird nach einem festgelegten Verfahren "
+"geregelt. Die dem Dienstleistungsanbieter gewährten Zugangsmittel werden "
+"inventarisiert und bei Vertragsende wieder eingezogen."
+
+#: data/fit4contract/questions.json:825
+msgid "They will have a logical access to the information system"
+msgstr "Sie werden logischen Zugang zum Informationssystem haben"
+
+#: data/fit4contract/questions.json:832
+msgid ""
+"Authentication and authorization of users or processes accessing outsourced "
+"information systems or software are managed according to an established "
+"procedure."
+msgstr ""
+"Authentifizierung und Autorisierung des Benutzer- oder Prozesszugriffs auf "
+"das ausgelagerte Informationssystem oder die ausgelagerte Software werden "
+"nach einem festgelegten Verfahren verwaltet."
+
+#: data/fit4contract/questions.json:844
+msgid ""
+"Users or processes accessing outsourced information systems or software are "
+"identified."
+msgstr ""
+"Benutzer oder Prozesse, die auf ein ausgelagertes Informationssystem oder "
+"eine ausgelagerte Software zugreifen, werden identifiziert."
+
+#: data/fit4contract/questions.json:856
+msgid ""
+"Logical access to a function or transaction of a subcontracted information "
+"system or software is limited and managed according to an established "
+"procedure."
+msgstr ""
+"Der logische Zugriff auf eine Funktion oder Transaktion eines(einer) "
+"ausgelagerten Informationssystems oder Software ist eingeschränkt und wird "
+"nach einem festgelegten Verfahren verwaltet."
+
+#: data/fit4contract/questions.json:876 data/fit4contract/questions.json:877
+msgid "Audit"
+msgstr "Audit"
+
+#: data/fit4contract/questions.json:895
+msgid ""
+"The contract provides for the right to audit security controls periodically, "
+"or upon significant changes in the subcontracting relationship."
+msgstr ""
+"Der Vertrag sieht das Recht vor, die Sicherheitskontrollen in regelmässigen "
+"Abständen oder bei wesentlichen Änderungen im Untervergabevertrag zu prüfen."
+
+#: data/fit4contract/questions.json:931 data/fit4contract/questions.json:932
+msgid "Regulatory constraints"
+msgstr "Rechtsvorschriften"
+
+#: data/fit4contract/questions.json:950
+msgid ""
+"The Provider provides evidence from independent audit institutions or "
+"organizations that its operations and controls comply with legal and "
+"contractual requirements."
+msgstr ""
+"Der Dienstleistungsanbieter liefert Nachweise von unabhängigen "
+"Prüfungseinrichtungen oder -organisationen, dass sein Betrieb und seine "
+"Sicherheitskontrollen den gesetzlichen und vertraglichen Anforderungen "
+"entsprechen."
+
+#: data/fit4contract/questions.json:960 data/fit4contract/questions.json:976
+#: data/fit4contract/questions.json:991
+msgid "Will any of the following be subcontracted:"
+msgstr "Wird einer der folgenden Bereiche ausgelagert:"
+
+#: data/fit4contract/questions.json:986 data/fit4contract/questions.json:987
+msgid "Service"
+msgstr "Service"
+
+#: data/fit4contract/questions.json:998 data/fit4contract/questions.json:1139
+#: data/fit4contract/questions.json:1140
+#, fuzzy
+#| msgid "Backups"
+msgid "Backup"
+msgstr "Backup"
+
+#: data/fit4contract/questions.json:1005
+msgid ""
+"When outsourcing a backup service, the following elements are managed:"
+"<ul><li>mechanisms for redundancy and recovery of backups;</"
+"li><li>outsourcing of backup infrastructures;</li><li>backup encryption and "
+"encryption key management;</li><li>The backup and recovery procedures are "
+"tested periodically.</li></ul>"
+msgstr ""
+"Wenn ein Sicherungsdienst (Backup) ausgelagert wird, werden die folgenden "
+"Elemente verwaltet:<ul><li>Redundanz- und Wiederherstellungsmechanismen für "
+"Backups;</li><li>Auslagerung von Backup-Infrastrukturen;</li><li>Backup-"
+"Verschlüsselung und Verschlüsselungsmanagement;</li><li>Sicherungs- und "
+"Wiederherstellungsverfahren werden regelmäßig getestet.</li></ul>"
+
+#: data/fit4contract/questions.json:1015 data/fit4contract/questions.json:1144
+msgid "Could you describe the backup service."
+msgstr "Können Sie den Backup-Dienst beschreiben."
+
+#: data/fit4contract/questions.json:1027
+msgid "Communication services"
+msgstr "Kommunikationsservice"
+
+#: data/fit4contract/questions.json:1058
+msgid ""
+"Good network design practices, such as network partitioning, are followed."
+msgstr ""
+"Es sind bewährte Praktiken in der Netzwerkentwicklung  anzuwenden, wie z.B. "
+"die Partitionierung von Subnetzwerken."
+
+#: data/fit4contract/questions.json:1070 data/fit4contract/questions.json:1103
+#: data/fit4contract/questions.json:1191
+msgid ""
+"The Provider informs the Customer’s organization in a timely manner about "
+"any technical incidents or security breaches that may have an impact on the "
+"organization’s activities. The legal obligations related to the notification "
+"of breaches of personal data protection must be considered in this context. "
+"It is recommended to establish a single point of contact for communication "
+"between contractual parties."
+msgstr ""
+"Der Dienstleistungsanbieter informiert die Kundenorganisation rechtzeitig "
+"über alle technischen Vorfälle oder Sicherheitsverletzungen, die sich auf "
+"den Geschäftsbetrieb der Organisation auswirken können. Die rechtlichen "
+"Bestimmungen für die Meldung von Verletzungen des Schutzes personenbezogener "
+"Daten sind in diesem Zusammenhang zu beachten. Es wird empfohlen, eine "
+"zentrale Kontaktstelle für die Kommunikation zwischen den Vertragsparteien "
+"einzurichten."
+
+#: data/fit4contract/questions.json:1082 data/fit4contract/questions.json:1127
+#: data/fit4contract/questions.json:1215
+msgid ""
+"The Provider informs the Client’s organization in a timely manner of changes "
+"in its environment that may impact the Client organization’s activities. "
+"Depending on the impact, the Provider plans these changes in consultation "
+"with the Client."
+msgstr ""
+"Der Dienstleistungsanbieter informiert die Kundenorganisation rechtzeitig "
+"über Änderungen in deren Umgebung, die sich auf den Geschäftsbetrieb der "
+"Kundenorganisation auswirken können. Entsprechend ihren Auswirkungen plant "
+"der Dienstleistungsanbieter diese Änderungen in Absprache mit dem Kunden."
+
+#: data/fit4contract/questions.json:1096
+msgid "Cloud"
+msgstr "Cloud"
+
+#: data/fit4contract/questions.json:1115 data/fit4contract/questions.json:1203
+msgid ""
+"The contract defines the terms and conditions for data recovery. In "
+"particular, data can be retrieved in a common format (e.g. text, json, XML, "
+"etc.), or a format to be defined in advance to allow the data to be re-"
+"imported into another system."
+msgstr ""
+"Der Vertrag beschreibt die Bedingungen und Ausführung einer "
+"Datenwiederherstellung. Insbesondere können die Daten in einem "
+"gebräuchlichen Format (z. B. Text, Json, XML usw.) abgerufen werden oder sie "
+"werden in einem im Voraus beschriebenen spezifischen Format zur Verfügung "
+"gestellt, das für den Rückimport in ein anderes System nötig ist."
+
+#: data/fit4contract/questions.json:1151
+msgid ""
+"The service includes the management of an own physical backup infrastructure."
+msgstr ""
+"Der Service umfasst die Verwaltung einer eigenen physischen Backup-"
+"Infrastruktur."
+
+#: data/fit4contract/questions.json:1184
+msgid "All or part of the data is stored in a cloud infrastructure."
+msgstr ""
+"Alle oder ein Teil der Daten werden in einer Cloud-Infrastruktur gespeichert."
 
 #: data/fit4cybersecurity/questions.json:3 data/fit4ehealth/questions.json:3
 msgid "Rules/Charter"
@@ -1705,10 +2205,6 @@ msgstr ""
 #: data/fit4cybersecurity/questions.json:1353
 #: data/fit4ehealth/questions.json:1775
 #, fuzzy
-#| msgid ""
-#| "Having some personal IT devices (USB Key, Hard Drive, Smartphone, Tablet, "
-#| "Laptop …) in the professional environment (network that is connected to "
-#| "the server)"
 msgid ""
 "Having some personal IT devices (USB Key, Hard Drive, Smartphone, Tablet, "
 "Laptop …) in the professional environment (network that is connected to the "
@@ -1717,6 +2213,10 @@ msgstr ""
 "Das Mitbringen persönliche IT-Geräte (USB-Stick, Festplatte, Smartphone, "
 "Tablet, Laptop …) im professionellen Umfeld (Netzwerk, das mit dem Server "
 "verbunden ist)"
+
+#: data/fit4ehealth/context-questions.json:28
+msgid "Luxembourg"
+msgstr "Luxemburg"
 
 #: data/fit4ehealth/questions.json:4 data/fit4ehealth/questions.json:150
 msgid "Organisational Awareness"
@@ -1759,7 +2259,7 @@ msgstr ""
 #: data/fit4ehealth/questions.json:100
 msgid ""
 "covering topics such as cybersecurity and data management in your profession."
-msgstr ""
+msgstr "zu Themen wie Cybersicherheit und Datenmanagement in Ihrem Beruf."
 
 #: data/fit4ehealth/questions.json:108
 msgid ""
@@ -1773,6 +2273,9 @@ msgid ""
 "continuity e.g. in case the IT systems of the organization are temporarily "
 "out of order"
 msgstr ""
+"behandelt Themen wie die Verfahren und Richtlinien für die Fortführung der "
+"Geschäftstätigkeiten, falls zum Beispiel die IT-Systeme der Organisation "
+"vorübergehend ausser Betrieb sind"
 
 #: data/fit4ehealth/questions.json:125
 msgid ""
@@ -1786,6 +2289,10 @@ msgid ""
 "joining of new employees, leave/removal and temporary replacement (during "
 "holidays) of staff members"
 msgstr ""
+"definiert um die notwendigen Schritte durchzuführen wenn das medizinische "
+"Personal wechselt, z.B. nach der Einstellung neuer Mitarbeiter, einer "
+"Beurlaubung/Entlassung oder für eine vorübergehende Vertretung (während der "
+"Ferien) von Mitarbeitern"
 
 #: data/fit4ehealth/questions.json:142
 msgid ""
@@ -1797,7 +2304,7 @@ msgstr ""
 
 #: data/fit4ehealth/questions.json:149
 msgid "Data Transfer"
-msgstr ""
+msgstr "Datenübertragung"
 
 #: data/fit4ehealth/questions.json:151
 msgid "Medical data of the establishment is"
@@ -1892,7 +2399,7 @@ msgstr ""
 
 #: data/fit4ehealth/questions.json:272
 msgid "All working professionals are trained for/in"
-msgstr ""
+msgstr "Alle berufstätige Professionelle sind ausgebildet für/in"
 
 #: data/fit4ehealth/questions.json:282
 msgid "the software they use on a regular basis"
@@ -1998,27 +2505,38 @@ msgid ""
 "medical data in it, you ensure that the device is always near you in any "
 "case."
 msgstr ""
+"Eine mögliche Lösung könnte jedoch darin bestehen, einen Laptop oder ein "
+"mobiles Gerät mitzunehmen, das sie nicht mit einem Netzwerk verbinden "
+"sollten. Wenn dieses Gerät medizinische Daten enthält, stellen Sie sicher, "
+"dass das Gerät auf jeden Fall immer in Ihrer Nähe ist."
 
 #: data/fit4ehealth/questions.json:546
 msgid "Contracts"
-msgstr ""
+msgstr "Verträge"
 
 #: data/fit4ehealth/questions.json:558
 msgid ""
 "are not defined, because they only come in case of an incident or specific "
 "needs"
 msgstr ""
+"sind nicht definiert, da sie nur im Falle eines Vorfalls oder bei besonderen "
+"Anforderungen kommen"
 
 #: data/fit4ehealth/questions.json:566
 msgid ""
 "Contract should be defined with all external actors. Here are some advices:"
 msgstr ""
+"Verträge sollten mit allen externen Akteuren definiert werden. Hier sind "
+"einige Ratschläge:"
 
 #: data/fit4ehealth/questions.json:575
 msgid ""
 "contain a confidentiality clause in that the provider should not disclose "
 "any personal data they would be able to access while working for you"
 msgstr ""
+"enthalten eine Vertraulichkeitsklausel, wonach der Anbieter keine "
+"personenbezogenen Daten offenlegen darf auf die er, während seiner Tätigkeit "
+"für sie, zugreifen könnte"
 
 #: data/fit4ehealth/questions.json:583
 msgid ""
@@ -2028,6 +2546,12 @@ msgid ""
 "that do the maintenance of the software or hardware, or even the cleaning "
 "company."
 msgstr ""
+"Da sie medizinische Daten von Ihren Patienten verwalten, sollten Sie auf "
+"jeden Fall eine Geheimhaltungsvereinbarung (non-disclosure Agreement) mit "
+"allen Stellen haben, die auf die Daten zugreifen können, auch wenn dies "
+"zufällig der Fall ist. Das können die Mitarbeiter aus der Praxis sein, die "
+"Firma welche die Software oder Hardware wartet, oder auch die "
+"Reinigungsfirma."
 
 #: data/fit4ehealth/questions.json:592
 msgid ""
@@ -2043,7 +2567,7 @@ msgstr ""
 
 #: data/fit4ehealth/questions.json:643
 msgid "are defined orally"
-msgstr ""
+msgstr "sind mündlich definiert"
 
 #: data/fit4ehealth/questions.json:651
 msgid ""
@@ -2055,13 +2579,15 @@ msgstr ""
 
 #: data/fit4ehealth/questions.json:660
 msgid "are in written form"
-msgstr ""
+msgstr "sind in schriftlicher Form"
 
 #: data/fit4ehealth/questions.json:668
 msgid ""
 "A contract in written form should be made, and if it’s possible personalized "
 "for you."
 msgstr ""
+"Schriftliche Verträge sollten vereinbart werden und falls möglich an Ihre "
+"Situation angepasst sein."
 
 #: data/fit4ehealth/questions.json:675
 msgid "Cleaning"
@@ -2084,6 +2610,8 @@ msgstr ""
 #: data/fit4ehealth/questions.json:711
 msgid "by an external person/company who has all the necessary keys"
 msgstr ""
+"durch eine externe Person oder Firma, die über alle notwendigen Schlüssel "
+"verfügt"
 
 #: data/fit4ehealth/questions.json:719
 msgid ""
@@ -2178,7 +2706,7 @@ msgstr ""
 
 #: data/fit4ehealth/questions.json:918
 msgid "can be able to walk freely in the premises"
-msgstr ""
+msgstr "kann sich frei in den Räumlichkeiten bewegen"
 
 #: data/fit4ehealth/questions.json:926
 msgid ""
@@ -2188,7 +2716,7 @@ msgstr ""
 
 #: data/fit4ehealth/questions.json:935
 msgid "can be left alone occasionally"
-msgstr ""
+msgstr "kann gelegentlich unbeaufsichtigt gelassen werden"
 
 #: data/fit4ehealth/questions.json:944
 msgid ""
@@ -2196,10 +2724,14 @@ msgid ""
 "surveillance external people as they can steal something. An internal "
 "presence should be near the waiting room, or near the exit for instance."
 msgstr ""
+"Da sie das ggf. die Personen und deren Ziel nicht kennen, sollten Sie "
+"externe Personen nicht unbeaufsichtigt lassen, da diese etwas stehlen "
+"könnten. Diese Personen sollten sich beispielsweise im/in der Nähe des "
+"Wartezimmers oder in der Nähe des Ausgangs aufhalten."
 
 #: data/fit4ehealth/questions.json:953
 msgid "can go away without being noticed"
-msgstr ""
+msgstr "kann unbemerkt verschwinden"
 
 #: data/fit4ehealth/questions.json:962
 msgid ""
@@ -2221,7 +2753,7 @@ msgstr ""
 
 #: data/fit4ehealth/questions.json:989
 msgid "can't access to any documents because they are locked away"
-msgstr ""
+msgstr "kann auf keine Dokumente zugreifen, da sie weg gesperrt sind"
 
 #: data/fit4ehealth/questions.json:997
 msgid ""
@@ -2232,7 +2764,7 @@ msgstr ""
 
 #: data/fit4ehealth/questions.json:1006
 msgid "can't access to any computer because they are locked"
-msgstr ""
+msgstr "kann auf keinen Computer zugreifen, weil sie gesperrt sind"
 
 #: data/fit4ehealth/questions.json:1014
 msgid ""
@@ -2243,7 +2775,7 @@ msgstr ""
 
 #: data/fit4ehealth/questions.json:1023
 msgid "can't access printers without being seen"
-msgstr ""
+msgstr "kann nicht auf Drucker zugreifen, ohne gesehen zu werden"
 
 #: data/fit4ehealth/questions.json:1031
 msgid ""
@@ -2254,7 +2786,7 @@ msgstr ""
 
 #: data/fit4ehealth/questions.json:1040
 msgid "can't enter the office when there is no one in the office"
-msgstr ""
+msgstr "kann das Büro nicht betreten, wenn niemand im Büro ist"
 
 #: data/fit4ehealth/questions.json:1048
 msgid ""
@@ -2274,6 +2806,9 @@ msgid ""
 "Advice should be given to avoid weak passwords. Some tips or techniques "
 "could be given to employees to remember their passwords. Here some examples:"
 msgstr ""
+"Ratschläge für die Erstellung von sicheren Passwörtern sollte gegeben "
+"werden, ebenso wie Tipps zum Merken und sicheren Verwahren der Passwörter. "
+"Hier einige Beispiele:"
 
 #: data/fit4ehealth/questions.json:1089
 msgid ""
@@ -2291,7 +2826,7 @@ msgstr ""
 
 #: data/fit4ehealth/questions.json:1242
 msgid "Authorization for the access to patient data"
-msgstr ""
+msgstr "Berechtigung für den Zugriff auf Patientendaten"
 
 #: data/fit4ehealth/questions.json:1252
 msgid ""
@@ -2339,7 +2874,7 @@ msgstr ""
 
 #: data/fit4ehealth/questions.json:1319
 msgid "are not used in the establishment at all"
-msgstr ""
+msgstr "werden im Unternehmen nicht verwendet"
 
 #: data/fit4ehealth/questions.json:1327
 msgid ""
@@ -2349,17 +2884,19 @@ msgstr ""
 
 #: data/fit4ehealth/questions.json:1336
 msgid "are closed and for professional use only"
-msgstr ""
+msgstr "sind geschlossen und nur für den professionellen Gebrauch"
 
 #: data/fit4ehealth/questions.json:1357
 msgid ""
 "are given to everyone, without checking the identity of the user that "
 "connects to it"
 msgstr ""
+"werden beliebigen Personen zur Verfügung gestellt ohne Identitätsprüfung des "
+"Anwenders welcher sich verbindet"
 
 #: data/fit4ehealth/questions.json:1377
 msgid "are divided in guests and internal network"
-msgstr ""
+msgstr "sind getrennt in ein internes Netzwerk und ein Netzwerk für Gäste"
 
 #: data/fit4ehealth/questions.json:1388
 msgid ""
@@ -2372,6 +2909,9 @@ msgid ""
 "Configure and take advantage that most of the antivirus applications allow "
 "the configuration of regular schedules for full scans."
 msgstr ""
+"Konfigurieren und profitieren Sie davon, dass die meisten Antivirus-"
+"Anwendungen die Konfiguration regelmäßiger Zeitpläne für vollständige Scans "
+"zulassen."
 
 #: data/fit4ehealth/questions.json:1559
 msgid "Workstations"
@@ -2397,6 +2937,9 @@ msgid ""
 "controlled by one or more administrators, which won't let users install "
 "software because they do not have administrator right"
 msgstr ""
+"von einem oder mehreren Administratoren kontrolliert werden, wodurch "
+"Benutzer keine Software installieren können, da sie keine "
+"Administratorrechte haben"
 
 #: data/fit4ehealth/questions.json:1622
 msgid ""
@@ -2490,6 +3033,8 @@ msgid ""
 "are using the DSP (\"Dossier de Soins Partagé\") to access or share relevant "
 "medical information of the patient"
 msgstr ""
+"verwenden den DSP (die elektronische Patientenakte) für den Zugriff und den "
+"Austausch medizinisch relevanter Patientendaten"
 
 #: data/fit4ehealth/questions.json:1889
 msgid ""
@@ -2503,6 +3048,8 @@ msgid ""
 "are using the electronic transmission of the bills (\"Mémoire "
 "d’honoraire(s)\") within the project of the \"Remboursement accélèré\""
 msgstr ""
+"verwenden den digitalen Austausch der Arztrechnungen im Rahmen der "
+"beschleunigten Kostenerstattung mit der Krankenkasse (Remboursement accélèré)"
 
 #: data/fit4ehealth/questions.json:1907
 msgid ""
@@ -2515,6 +3062,8 @@ msgid ""
 "are using the EU cross-border eHealth services to support treatment of "
 "foreign patients"
 msgstr ""
+"verwenden die grenzüberschreitenden eHealth Dienste der EU zur Unterstützung "
+"der Behandlung ausländischer Patienten"
 
 #: data/fit4ehealth/questions.json:1925
 msgid ""
@@ -2523,12 +3072,19 @@ msgid ""
 "Agence eSanté and visit the Website <a href=\"https://www.esante.lu\" target="
 "\"_blank\">https://www.esante.lu</a> to gain more information."
 msgstr ""
+"Grenzüberschreitende eHealth-Dienste können Ihre Behandlung von Patienten "
+"aus anderen europäischen Ländern zusätzlich unterstützen. Nehmen sie Kontakt "
+"mit der Agence eSanté auf und besuchen Sie die Website <a href=\"https://www."
+"esante.lu\" target=\"_blank\">https://www.esante.lu</a>, um weitere "
+"Informationen zu erhalten."
 
 #: data/fit4ehealth/questions.json:1935
 msgid ""
 "are using Regimail for the secure email exchange with hospitals and other "
 "professionals"
 msgstr ""
+"verwenden Regimail für den sicheren Austausch von Emails zwischen "
+"Krankenhäusern und anderen Gesundheitsdienstleistern"
 
 #: data/fit4ehealth/questions.json:1943
 msgid ""
@@ -2555,41 +3111,111 @@ msgid ""
 "webinars"
 msgstr ""
 
-#: data/fit4operatorsurvey/context-questions.json:154
+#: data/fit4operatorsurvey/context-questions.json:12
+msgid "Energy"
+msgstr ""
+
+#: data/fit4operatorsurvey/context-questions.json:19
+msgid "Transport"
+msgstr ""
+
+#: data/fit4operatorsurvey/context-questions.json:26
+msgid "Banking"
+msgstr "Bankwesen"
+
+#: data/fit4operatorsurvey/context-questions.json:33
+msgid "Financial market infrastructure"
+msgstr ""
+
+#: data/fit4operatorsurvey/context-questions.json:47
+msgid "Dringking water"
+msgstr ""
+
+#: data/fit4operatorsurvey/context-questions.json:54
+msgid "Waste Water"
+msgstr ""
+
+#: data/fit4operatorsurvey/context-questions.json:61
+msgid "Digital Infrastructure and Service Providers"
+msgstr ""
+
+#: data/fit4operatorsurvey/context-questions.json:75
+msgid "Space"
+msgstr ""
+
+#: data/fit4operatorsurvey/context-questions.json:82
+msgid "Postal and Courier Services"
+msgstr ""
+
+#: data/fit4operatorsurvey/context-questions.json:89
+msgid "Waste Management"
+msgstr ""
+
+#: data/fit4operatorsurvey/context-questions.json:96
+msgid "Manufacture, production and distribution of chemicals"
+msgstr ""
+
+#: data/fit4operatorsurvey/context-questions.json:103
+msgid "Food Production, processing and distribution"
+msgstr ""
+
+#: data/fit4operatorsurvey/context-questions.json:110
+msgid "Manufacturing of medical devices"
+msgstr ""
+
+#: data/fit4operatorsurvey/context-questions.json:117
+msgid "Manufacture of computer, electronics and optical products"
+msgstr ""
+
+#: data/fit4operatorsurvey/context-questions.json:124
+msgid "Manufacture of electrical equipment"
+msgstr ""
+
+#: data/fit4operatorsurvey/context-questions.json:131
+msgid "Manufacture of machinery and equipment"
+msgstr ""
+
+#: data/fit4operatorsurvey/context-questions.json:148
+msgid "Under 10 employees"
+msgstr ""
+
+#: data/fit4operatorsurvey/context-questions.json:155
+msgid "From 10 to 49 employees"
+msgstr ""
+
+#: data/fit4operatorsurvey/context-questions.json:162
+msgid "From 50 to 249 employees"
+msgstr ""
+
+#: data/fit4operatorsurvey/context-questions.json:169
+msgid "Over 250 employees"
+msgstr ""
+
+#: data/fit4operatorsurvey/context-questions.json:178
 msgid "What is your country?"
 msgstr "Was ist Ihre Branche?"
 
-#: data/fit4operatorsurvey/context-questions.json:161
+#: data/fit4operatorsurvey/context-questions.json:186
 msgid "In the EU"
 msgstr ""
 
-#: data/fit4operatorsurvey/context-questions.json:167
+#: data/fit4operatorsurvey/context-questions.json:193
 msgid "Outside of the EU but within EEA"
 msgstr ""
 
-#: data/fit4operatorsurvey/context-questions.json:173
+#: data/fit4operatorsurvey/context-questions.json:200
 msgid "Outside of the EEA"
 msgstr ""
 
-#: data/fit4operatorsurvey/context-questions.json:179
+#: data/fit4operatorsurvey/context-questions.json:207
 msgid "Just in Luxembourg"
 msgstr ""
 
-#: data/fit4operatorsurvey/context-questions.json:187
+#: data/fit4operatorsurvey/context-questions.json:216
 msgid ""
 "If your company part of a bigger international company or group with its "
 "headquarters outside of Luxembourg?"
 msgstr ""
-
-#: data/fit4operatorsurvey/context-questions.json:194
-#: templates/survey/leaveSurvey.html:11
-msgid "Yes"
-msgstr "Ja"
-
-#: data/fit4operatorsurvey/context-questions.json:200
-#: templates/survey/leaveSurvey.html:15
-msgid "No"
-msgstr "Nein"
 
 #: data/fit4operatorsurvey/questions.json:3
 msgid "What is the risk management culture in your company?"
@@ -2799,7 +3425,7 @@ msgstr ""
 
 #: data/fit4operatorsurvey/questions.json:343
 msgid "A lot."
-msgstr ""
+msgstr "Viele"
 
 #: data/fit4operatorsurvey/questions.json:350
 #: data/fit4operatorsurvey/questions.json:366
@@ -2835,7 +3461,7 @@ msgstr ""
 #: data/fit4operatorsurvey/questions.json:409
 #: data/fit4operatorsurvey/questions.json:483
 msgid "Aviation Regulations."
-msgstr ""
+msgstr "Luftfahrtvorschriften."
 
 #: data/fit4operatorsurvey/questions.json:417
 msgid "Other - please list:"
@@ -2843,7 +3469,7 @@ msgstr ""
 
 #: data/fit4operatorsurvey/questions.json:427
 msgid "Are you obliged to comply with any of the following regulations?"
-msgstr ""
+msgstr "Sind Sie verpflichtet, eine der folgenden Vorschriften einzuhalten?"
 
 #: data/fit4operatorsurvey/questions.json:435
 msgid "No obligation to comply to any regulation."
@@ -2953,7 +3579,7 @@ msgstr ""
 
 #: data/fit4operatorsurvey/questions.json:605
 msgid "CoBIT."
-msgstr ""
+msgstr "CoBIT."
 
 #: data/fit4operatorsurvey/questions.json:621
 msgid "NESAS – Network Equipment Security Assurance Scheme."
@@ -2965,7 +3591,7 @@ msgstr ""
 
 #: data/fit4operatorsurvey/questions.json:653
 msgid "CEER Guidelines."
-msgstr ""
+msgstr "CEER - Richtlinien"
 
 #: data/fit4operatorsurvey/questions.json:669
 msgid "ACEER Guidelines."
@@ -2999,7 +3625,7 @@ msgstr ""
 
 #: data/fit4operatorsurvey/questions.json:727
 msgid "Critical assets inventory."
-msgstr ""
+msgstr "Inventar kritischer Vermögenswerte."
 
 #: data/fit4operatorsurvey/questions.json:743
 msgid "Inventory of third-party and outsourcing providers."
@@ -3012,7 +3638,7 @@ msgstr ""
 
 #: data/fit4operatorsurvey/questions.json:775
 msgid "Business continuity planning."
-msgstr ""
+msgstr "Business-Continuity-Planung."
 
 #: data/fit4operatorsurvey/questions.json:791
 msgid "Threat modelling and threat awareness."
@@ -3028,6 +3654,9 @@ msgid ""
 "Any details you would like to share (for example, done/ongoing/not done/no "
 "idea what these actions mean):"
 msgstr ""
+"Alle Details oder weitere Informationen, die Sie teilen möchten (z. B. "
+"erledigt/fortlaufend/nicht erledigt/mir ist nicht klar was diese Aktionen "
+"bedeuten):"
 
 #: data/fit4operatorsurvey/questions.json:841
 msgid ""
@@ -3087,7 +3716,7 @@ msgstr ""
 #: data/fit4operatorsurvey/questions.json:1052
 #: data/fit4operatorsurvey/questions.json:1053
 msgid "Collaboration at EU and National Level"
-msgstr ""
+msgstr "Zusammenarbeit auf europäischer und nationaler Ebene"
 
 #: data/fit4operatorsurvey/questions.json:967
 msgid "Several times a year."
@@ -3113,7 +3742,7 @@ msgstr ""
 
 #: data/fit4operatorsurvey/questions.json:1009
 msgid "CSIRT or similar."
-msgstr ""
+msgstr "CSIRT oder vergleichbare Organisationen."
 
 #: data/fit4operatorsurvey/questions.json:1017
 msgid "MISP community."
@@ -3205,7 +3834,7 @@ msgstr ""
 
 #: data/fit4operatorsurvey/questions.json:1177
 msgid "Connecting to companies with the same issues."
-msgstr ""
+msgstr "Verbindung zu Unternehmen mit den gleichen Problemen."
 
 #: data/fit4operatorsurvey/questions.json:1185
 msgid "Guidance on solving the issue based on previous experience."
@@ -3258,7 +3887,7 @@ msgstr ""
 
 #: data/fit4operatorsurvey/questions.json:1251
 msgid "Any other details:"
-msgstr ""
+msgstr "Weitere Details:"
 
 #: data/fit4operatorsurvey/questions.json:1261
 msgid "Which of the measures below would be of help to your organisation?"
@@ -3292,6 +3921,8 @@ msgstr ""
 msgid ""
 "A single reporting platform to report incidents to multiple authorities."
 msgstr ""
+"Eine einzige Meldeplattform, um sicherheitsrelevante Vorfälle an mehrere "
+"Behörden zu melden."
 
 #: data/fit4privacy/questions.json:3 data/fit4privacy/questions.json:125
 msgid "Personal Data Processing"
@@ -3510,16 +4141,6 @@ msgid "Register of Processing activities"
 msgstr "Datenverzeichnis"
 
 #: data/fit4privacy/questions.json:208
-#, fuzzy
-#| msgid ""
-#| "The main idea of GDPR is to have a risk-based approach to personal data "
-#| "processing, so without knowledge about what personal data is there and "
-#| "how it is processed, it will be impossible to know what the risks are. "
-#| "Therefore, you should consider, in your business, to acquire some "
-#| "understanding both on the quantity and risks of personal data that your "
-#| "company processes. In this case, Article 30 of GDPR should be the "
-#| "starting point in terms of minimal mandatory content of the register of "
-#| "processing activities. "
 msgid ""
 "The main idea of GDPR is to have a risk-based approach to personal data "
 "processing, so without knowledge about what personal data is there and how "
@@ -3537,7 +4158,7 @@ msgstr ""
 "ein gewisses Verständnis der Menge der von Ihrem Unternehmen verarbeiteten "
 "personenbezogenen Daten und der damit verknüpften Risiken erlangen. In "
 "diesem Fall sollte Art. 30 DSGVO der Ausgangspunkt sein. Es gibt den "
-"Ausgangspunkt in Bezug auf die Mindestpflichtstruktur dieses Registers. "
+"Ausgangspunkt in Bezug auf die Mindestpflichtstruktur dieses Registers."
 
 #: data/fit4privacy/questions.json:211
 msgid "Such a registry is not needed in our business."
@@ -3732,16 +4353,18 @@ msgid ""
 "it processes, of the existence of the processing, the conditions you put in "
 "place to protect their data, and their rights over their data. In relation "
 "to your employees or trainees, you should be transparent about the personal "
-"data processed at the time of hiring (for example, by updating\n"
-" work or internship contracts), but also for the duration of their contract "
-"(for example, in the intranet, or with an amendment to the employment "
-"contract). If you have a website whose use involves processing of visitors' "
-"personal data, that site should also explain the data processed and the "
-"measures your organization has put in place to protect that data. To your "
-"customers, as well as to suppliers and third parties, you have a similar "
-"obligation to be transparent (for example, by updating contracts or terms "
-"and conditions). In terms of what to communicate to them, you should "
-"consider following Art. 13 and 14 of GDPR when it comes to this information."
+"data processed at the time of hiring (for example, by updating work or "
+"internship contracts), but also for the duration of their contract (for "
+"example, in the intranet, or with an amendment to the employment contract). "
+"If you have a website whose use involves processing of visitors' personal "
+"data, that site should also explain the data processed and the measures your "
+"organization has put in place to protect that data. To your customers, as "
+"well as to suppliers and third parties, you have a similar obligation to be "
+"transparent (for example, by updating contracts or terms and conditions). In "
+"terms of what to communicate to them, you should consider following <a href="
+"\"https://www.privacy-regulation.eu/en/article-13-information-to-be-provided-"
+"where-personal-data-are-collected-from-the-data-subject-GDPR.htm\" target="
+"\"_blank\">Art. 13 and 14 of GDPR</a> when it comes to this information."
 msgstr ""
 "Ihr Unternehmen sollte in Betracht ziehen, alle Gruppen von betroffenen "
 "Personen, deren Daten es verarbeitet, über die Tatsache der Verarbeitung, "
@@ -3757,7 +4380,10 @@ msgstr ""
 "zum Schutz dieser Daten ergriffen hat. Gegenüber Ihren Kunden sowie "
 "Lieferanten und Dritten haben Sie eine ähnliche Verpflichtung zur "
 "Transparenz (z. B. durch Aktualisierung von Verträgen oder AGB). In Bezug "
-"auf diese Informationen sind Art. 13 und 14 der DSGVO zu befolgen."
+"auf diese Informationen sind <a href=\"https://www.privacy-regulation.eu/en/"
+"article-13-information-to-be-provided-where-personal-data-are-collected-from-"
+"the-data-subject-GDPR.htm\" target=\"_blank\">Art. 13 und 14</a> der DSGVO "
+"zu befolgen."
 
 #: data/fit4privacy/questions.json:343
 msgid "We have given no information whatsoever."
@@ -3776,7 +4402,7 @@ msgid ""
 "related information such as contractual clauses or general terms of use. For "
 "more inspiration on this topic, there is an EDPB guidance on transparency <a "
 "href=\"https://ec.europa.eu/newsroom/article29/items/622227/en\" target="
-"\"_blank\"> here </a>."
+"\"_blank\">here</a>."
 msgstr ""
 "Der Verantwortliche muss nachweisen, dass die personenbezogenen Daten "
 "gegenüber der betroffenen Person transparent verarbeitet werden. Um eine "
@@ -4891,62 +5517,88 @@ msgstr ""
 "zu Informationssicherheit und Datenschutz in Ihrem Unternehmen schriftlich "
 "fixiert und Ihren Mitarbeitern bekannt?"
 
-#: survey/forms.py:55
+#: stats/views.py:61
+msgid "In progress"
+msgstr "In Bearbeitung"
+
+#: stats/views.py:61
+msgid "Under review"
+msgstr "Wird überprüft"
+
+#: stats/views.py:61
+msgid "Finished"
+msgstr "Beendet"
+
+#: survey/forms.py:64
 msgid "You need to choose at least one answer"
 msgstr "Sie müssen mindestens eine Antwort auswählen"
 
-#: survey/forms.py:96 survey/forms.py:171
-#: templates/survey/finishedSurvey.html:151
-#: templates/survey/finishedSurvey.html:158 templates/survey/review.html:40
+#: survey/forms.py:105 survey/forms.py:180
+#: templates/survey/finishedSurvey.html:167
+#: templates/survey/finishedSurvey.html:175 templates/survey/review.html:40
 msgid "Your feedback"
 msgstr "Ihre Rückmeldung"
 
-#: survey/forms.py:98 survey/forms.py:173
+#: survey/forms.py:107 survey/forms.py:182
 msgid "Please let us know if anything is missing"
 msgstr "Bitte lassen Sie uns wissen, wenn etwas fehlt"
 
-#: survey/forms.py:133
+#: survey/forms.py:142
 msgid "You can't choose multiple answers if the answer {} is choosen."
 msgstr ""
 "Sie können nicht mehrere Antworten wählen, wenn die Antwort {} gewählt wurde."
 
-#: survey/forms.py:148
+#: survey/forms.py:157
 msgid "You can't choose the answers {} if answer '{}' is choosen."
 msgstr ""
 "Sie können die Antworten {} nicht wählen, wenn die Antwort '{}' gewählt "
 "wurde."
 
-#: survey/viewLogic.py:62
+#: survey/viewLogic.py:90
 msgid "Let's start"
 msgstr "Lasst uns beginnen"
 
-#: survey/viewLogic.py:223
+#: survey/viewLogic.py:246
 msgid "Question"
 msgstr "Frage"
 
-#: survey/views.py:125
+#: survey/views.py:138
 msgid "To generate a report you have to finish the survey."
 msgstr ""
 "Um einen Bericht zu erstellen, muss erst die Umfrage beantwortet werden."
 
-#: survey/views.py:194
+#: survey/views.py:208
 msgid "Answers review"
 msgstr "Überprüfung der Antworten"
 
-#: survey/views.py:229
+#: survey/views.py:242
 msgid "Final summary"
 msgstr "Zusammenfassung"
 
-#: survey/views.py:263
+#: survey/views.py:276
 msgid ""
 "We could not find a survey with the requested key, please start a new one."
 msgstr ""
 "Wir konnten keine Umfrage mit dem angeforderten Schlüssel finden. Bitte "
 "starten Sie eine neue."
 
-#: survey/views.py:293
+#: survey/views.py:308
 msgid "Feedback sending errors: "
 msgstr "Fehler beim Senden von Rückmeldungen: "
+
+#: templates/fit4contract/survey/finishedSurvey.html:6
+msgid ""
+"This is the list of recommendations to help you to write a subcontract, "
+"provided that your answers did correctly reflect the context. Also keep in "
+"mind that it is a self-assessment and only scratches the surface of the "
+"information security maturity level and thus, we are not liable for the "
+"results of this survey."
+msgstr ""
+"Dies ist die Liste der Empfehlungen, die Ihnen helfen sollen, einen "
+"Untervertrag zu verfassen, vorausgesetzt, dass Ihre Antworten den Kontext "
+"richtig wiedergeben. Denken Sie auch daran, dass es sich um eine Selbsteinschätzung "
+"handelt, die nur die Oberfläche des Reifegrads der Informationssicherheit abbilden "
+"kann, und wir daher nicht für die Ergebnisse dieser Umfrage haften."
 
 #: templates/fit4ehealth/survey/start.html:5
 msgid "Please click the Next button to start the questionnaire."
@@ -4988,21 +5640,54 @@ msgstr ""
 "nicht identifizieren. Es sei denn, Sie setzen sich später mit uns in "
 "Verbindung, um eine Diagnostic CASES durchzuführen."
 
-#: templates/parts/footer_part.html:8 templates/parts/footer_part.html:9
+#: templates/fit4privacy/survey/finishedSurvey.html:6
+msgid ""
+"This is the list of recommendations to improve the maturity of your company "
+"in the field of privacy and data protection, provided that your answers "
+"correctly reflected the state of practice in your company. Also keep in mind "
+"that it is a self-assessment and only scratches the surface of the privacy "
+"and data protection maturity level and thus, we are not liable for the "
+"results of this survey. Also remember that GDPR is about accountability: "
+"your company is expected to put measures in place to be able to demonstrate "
+"it is respecting GDPR, and that these measures are effective."
+msgstr ""
+"Dies ist die Liste der Empfehlungen zur Verbesserung der Datenschutz in Ihrem "
+"Unternehmen, sofern Ihre Antworten den Status in Ihrem Unternehmen korrekt "
+"widerspiegeln. Denken Sie auch daran, dass es sich um eine Selbsteinschätzung "
+"handelt, die nur die Oberfläche des Reifegrads der Datenschutz abbilden kann, "
+"und wir daher nicht für die Ergebnisse dieser Umfrage haften. Denken Sie daran, "
+"dass es bei der DSGVO um Rechenschaftspflicht geht: Von Ihrem Unternehmen wird "
+"erwartet, dass es Maßnahmen ergreift, um nachweisen zu können, dass es die DSGVO "
+"einhält und dass diese Maßnahmen wirksam sind."
+
+#: templates/parts/fit4contract/footer_part.html:7
+#: templates/parts/fit4contract/footer_part.html:8
+msgid "A service provided by ANSSI.LU"
+msgstr "Ein Service von ANSSI.LU"
+
+#: templates/parts/fit4contract/footer_part.html:14
+#: templates/parts/fit4contract/footer_part.html:15
+#: templates/parts/footer_part.html:7 templates/parts/footer_part.html:8
 msgid "A service provided by CASES.LU"
 msgstr "Ein Service von CASES.LU"
+
+#: templates/parts/fit4contract/footer_part.html:21
+#: templates/parts/footer_part.html:31 templates/parts/footer_part.html:32
+msgid "Terms of Service"
+msgstr "Nutzungsbedingungen"
 
 #: templates/parts/footer_part.html:15 templates/parts/footer_part.html:16
 msgid "Source code on GitHub"
 msgstr "Quellcode auf GitHub"
 
-#: templates/parts/footer_part.html:20
+#: templates/parts/footer_part.html:20 templates/parts/footer_part.html:21
+#: templates/survey/stats.html:84
 msgid "Version of"
 msgstr "Version von"
 
-#: templates/parts/footer_part.html:27
-msgid "Terms of Service"
-msgstr "Nutzungsbedingungen"
+#: templates/parts/footer_part.html:28
+msgid "Stats"
+msgstr "Statistiken"
 
 #: templates/report/cover.html:12
 msgid "Date"
@@ -5120,7 +5805,7 @@ msgstr ""
 "Selbsteinschätzung ist. Es versteht sich, dass alle Ergebnisse in keiner "
 "Weise erschöpfend sein können."
 
-#: templates/report/results.html:17 templates/survey/finishedSurvey.html:91
+#: templates/report/results.html:17 templates/survey/finishedSurvey.html:96
 #, python-format
 msgid ""
 "You have scored an additional %(bonus)s %% of bonus points for following "
@@ -5142,7 +5827,15 @@ msgstr "Erzeugt mit %(tool_name)s"
 msgid "Table of contents"
 msgstr "Inhaltsübersicht"
 
-#: templates/survey/base.html:20
+#: templates/survey/answerChangingWarning.html:6
+msgid ""
+"Change of previously selected answer(s) can lead to additional questions or "
+"loosing of your answer(s). Would you like to proceed?"
+msgstr ""
+"Eine Änderung der zuvor ausgewählten Antwort(en) kann zu zusätzlichen Fragen "
+"oder zum Verlust Ihrer Antwort(en) führen. Möchten Sie fortfahren?"
+
+#: templates/survey/base.html:19
 msgid "a CASES self-assessment tool!"
 msgstr "ein CASES-Selbstbewertungstool!"
 
@@ -5163,7 +5856,7 @@ msgstr ""
 msgid "Download direct link"
 msgstr "Direkten Link herunterladen"
 
-#: templates/survey/continue.html:26 templates/survey/finishedSurvey.html:166
+#: templates/survey/continue.html:26 templates/survey/finishedSurvey.html:183
 msgid "Close"
 msgstr "Schließen"
 
@@ -5175,15 +5868,15 @@ msgstr "Bericht"
 msgid "Download"
 msgstr "Herunterladen"
 
-#: templates/survey/finishedSurvey.html:56
+#: templates/survey/finishedSurvey.html:57
 msgid "Email"
 msgstr "Email"
 
-#: templates/survey/finishedSurvey.html:64
+#: templates/survey/finishedSurvey.html:65
 msgid "Summary"
 msgstr "Zusammenfassung"
 
-#: templates/survey/finishedSurvey.html:67
+#: templates/survey/finishedSurvey.html:70
 msgid ""
 "This is the list of recommendations to improve the information security "
 "maturity in your company, provided that your answers did correctly reflect "
@@ -5198,7 +5891,7 @@ msgstr ""
 "Reifegrads der Informationssicherheit abbilden kann, und wir daher nicht für "
 "die Ergebnisse dieser Umfrage haften."
 
-#: templates/survey/finishedSurvey.html:78
+#: templates/survey/finishedSurvey.html:83
 #, python-format
 msgid ""
 "Based on your score %(score)s, the CASES Diagnostic is not available for "
@@ -5214,15 +5907,15 @@ msgstr ""
 "Kenntnisse in Ihrem Unternehmen durch eine Schulung verbessern möchten, "
 "zögern Sie nicht"
 
-#: templates/survey/finishedSurvey.html:98
+#: templates/survey/finishedSurvey.html:105
 msgid "Your results link"
 msgstr "Ihr Ergebnislink"
 
-#: templates/survey/finishedSurvey.html:106
+#: templates/survey/finishedSurvey.html:113
 msgid "About the CASES Diagnostic"
 msgstr "Über die CASES-Diagnose"
 
-#: templates/survey/finishedSurvey.html:107
+#: templates/survey/finishedSurvey.html:114
 msgid ""
 "The CASES Diagnostic is a service which analyses the company maturity in the "
 "information security depending on company's requirements. The analyse "
@@ -5242,7 +5935,7 @@ msgstr ""
 "übermittelt: er enthält eine Schätzung der Laufzeit sowie Empfehlungen zur "
 "Verbesserung der Laufzeit der Informationssicherheit."
 
-#: templates/survey/finishedSurvey.html:118
+#: templates/survey/finishedSurvey.html:125
 msgid ""
 "The CASES Diagnostic is available for all the companies located in "
 "Luxembourg and free of charge."
@@ -5250,7 +5943,7 @@ msgstr ""
 "Der Diagnostic ist für jedes Unternehmen mit Sitz in Luxemburg möglich und "
 "kostenlos."
 
-#: templates/survey/finishedSurvey.html:168
+#: templates/survey/finishedSurvey.html:185
 #: templates/survey/sendReportEmail.html:14
 msgid "Send"
 msgstr "Senden"
@@ -5271,36 +5964,36 @@ msgstr "Setzen Sie eine vorherige Umfrage fort"
 msgid "Would like to leave survey?"
 msgstr "Möchten Sie die Umfrage verlassen?"
 
-#: templates/survey/questions.html:41
+#: templates/survey/questions.html:43
 msgid "Multiple answers are possible."
 msgstr "Mehrfachnennungen sind möglich."
 
-#: templates/survey/questions.html:53
+#: templates/survey/questions.html:55
 msgid "Back"
 msgstr "Bisherige"
 
-#: templates/survey/questions.html:61
+#: templates/survey/questions.html:63
 msgid "Cancel"
 msgstr "Stornieren"
 
-#: templates/survey/questions.html:70 templates/survey/review.html:56
+#: templates/survey/questions.html:72 templates/survey/review.html:56
 msgid "Continue later"
 msgstr "Später weitermachen"
 
-#: templates/survey/questions.html:75 templates/survey/start.html:39
-msgid "Next"
-msgstr "Nächster"
-
-#: templates/survey/questions.html:75
+#: templates/survey/questions.html:77
 msgid "Modify"
 msgstr "Ändern"
 
-#: templates/survey/questions.html:84
+#: templates/survey/questions.html:77 templates/survey/start.html:39
+msgid "Next"
+msgstr "Nächster"
+
+#: templates/survey/questions.html:86
 msgid "This text field should not be used to answer the question."
 msgstr ""
 "Dieses Textfeld sollte nicht zur Beantwortung der Frage verwendet werden."
 
-#: templates/survey/questions.html:87
+#: templates/survey/questions.html:89
 msgid ""
 "Please do not provide any sensitive or confidential information referring to "
 "your identity."
@@ -5450,3 +6143,71 @@ msgid ""
 msgstr ""
 "Benötigen wir einige Informationen, um Ihnen nützliche Empfehlungen geben zu "
 "können, sobald die Selbsteinschätzung abgeschlossen ist."
+
+#: templates/survey/stats.html:12
+msgid "Some statistics about the current surveys."
+msgstr "Einige Statistiken zu den aktuellen Umfragen."
+
+#: templates/survey/stats.html:19
+msgid "No statistics available"
+msgstr "Keine Statistiken verfügbar"
+
+#: templates/survey/stats.html:28
+msgid "Main figures"
+msgstr "Hauptfiguren"
+
+#: templates/survey/stats.html:30
+msgid "Number of surveys:"
+msgstr "Anzahl Umfragen:"
+
+#: templates/survey/stats.html:31
+msgid "Number of finished surveys:"
+msgstr ""
+
+#: templates/survey/stats.html:32
+msgid "First completed survey on:"
+msgstr "Anzahl abgeschlossener Umfragen:"
+
+#: templates/survey/stats.html:40
+msgid "Surveys status"
+msgstr "Status der Umfragen"
+
+#: templates/survey/stats.html:44
+msgid "Surveys languages"
+msgstr "Umfragen Sprachen"
+
+#: templates/survey/stats.html:49
+msgid "Surveys countries"
+msgstr "Umfragen Länder"
+
+#: templates/survey/stats.html:53
+msgid "Surveys company size"
+msgstr "Umfragen zur Unternehmensgröße"
+
+#: templates/survey/stats.html:57
+msgid "Surveys company sector"
+msgstr "Umfragen Unternehmenssektor"
+
+#: templates/survey/stats.html:64
+msgid "Activity over the past year"
+msgstr "Aktivitäten im letzten Jahr"
+
+#: templates/survey/stats.html:73
+msgid "Answers by section and company size"
+msgstr "Antworten nach Bereich und Unternehmensgröße"
+
+#: templates/survey/stats.html:75
+msgid "With data for the last month."
+msgstr "Mit Daten für den letzten Monat."
+
+#: templates/survey/stats.html:82
+msgid "Server information"
+msgstr "Serverinformation"
+
+#: templates/survey/stats.html:83
+msgid "Python version:"
+msgstr "Python-Version:"
+
+#: templates/survey/stats.html:84
+msgid "Software version:"
+msgstr "Softwareversion:"
