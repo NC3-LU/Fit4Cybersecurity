@@ -39,6 +39,7 @@ def index(request):
     nb_finished_surveys_for_period = SurveyUser.objects.filter(
         status=3, created_at__gte=date_from
     ).count()
+    nb_surveys_for_period = SurveyUser.objects.filter(created_at__gte=date_from).count()
     survey_countries = (
         SurveyUserAnswer.objects.filter(
             user__status=3,
@@ -80,6 +81,7 @@ def index(request):
         "nb_surveys": nb_surveys,
         "first_survey_date": getattr(first_survey, "created_at", False),
         "nb_finished_surveys": nb_finished_surveys,
+        "nb_surveys_for_period": nb_surveys_for_period,
         "nb_finished_surveys_for_period": nb_finished_surveys_for_period,
         "survey_countries": survey_countries,
         "python_version": "{}.{}.{}".format(*sys.version_info[:3]),
