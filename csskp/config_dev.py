@@ -24,6 +24,14 @@ DATABASES = {
     }
 }
 
+CORS_ALLOWED_ORIGINS = []
+CORS_ALLOWED_ORIGIN_REGEXES = []
+CORS_ALLOW_METHODS = [
+    "GET",
+    "OPTIONS",
+]
+
+
 EMAIL_HOST = "localhost"
 EMAIL_PORT = 25
 

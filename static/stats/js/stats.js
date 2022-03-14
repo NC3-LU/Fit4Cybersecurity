@@ -95,8 +95,10 @@ $(document).ready(function() {
         .then(response => response.json())
         .then(result => {
             document.getElementById("spinner-stats-sector").innerHTML = "";
-            var ctx = document.getElementById("stats-sector").getContext('2d');
-            var sectorChart = pieChart(result,ctx);
+            if (Object.entries(result).length > 0) {
+                var ctx = document.getElementById("stats-sector").getContext('2d');
+                var sectorChart = pieChart(result,ctx);
+            }
         })
         .catch((error) => {
             console.error('Error:', error);
@@ -108,8 +110,10 @@ $(document).ready(function() {
         .then(response => response.json())
         .then(result => {
             document.getElementById("spinner-stats-company").innerHTML = "";
-            var ctx = document.getElementById("stats-company").getContext('2d');
-            var sizeChart = pieChart(result,ctx);
+            if (Object.entries(result).length > 0) {
+                var ctx = document.getElementById("stats-company").getContext('2d');
+                var sizeChart = pieChart(result,ctx);
+            }
         })
         .catch((error) => {
             console.error('Error:', error);
@@ -120,13 +124,15 @@ $(document).ready(function() {
         fetch("/stats/survey_per_country.json?from="+date_from+"&to="+date_to)
         .then(response => response.json())
         .then(result => {
-            countryChart.data = {...result};
-            if (result[others_translation]) {
-                result[others_translation] = Object.values(result[others_translation]).reduce((a, b) => a + b);
-            }
             document.getElementById("spinner-stats-countries").innerHTML = "";
-            var ctx = document.getElementById("stats-countries").getContext('2d');
-            countryChart.canvas = pieChart(result,ctx);
+            if (Object.entries(result).length > 0) {
+                countryChart.data = {...result};
+                if (result[others_translation]) {
+                    result[others_translation] = Object.values(result[others_translation]).reduce((a, b) => a + b);
+                }
+                var ctx = document.getElementById("stats-countries").getContext('2d');
+                countryChart.canvas = pieChart(result,ctx);
+            }
         })
         .catch((error) => {
             console.error('Error:', error);
@@ -157,8 +163,10 @@ $(document).ready(function() {
         .then(response => response.json())
         .then(result => {
             document.getElementById("spinner-stats-count").innerHTML = "";
-            var ctx = document.getElementById("stats-count").getContext('2d');
-            var statusChart = pieChart(result,ctx);
+            if (Object.entries(result).length > 0) {
+                var ctx = document.getElementById("stats-count").getContext('2d');
+                var statusChart = pieChart(result,ctx);
+            }
         })
         .catch((error) => {
             console.error('Error:', error);
@@ -170,8 +178,10 @@ $(document).ready(function() {
         .then(response => response.json())
         .then(result => {
             document.getElementById("spinner-stats-language").innerHTML = "";
-            var ctx = document.getElementById("stats-language").getContext('2d');
-            pieChart(result,ctx);
+            if (Object.entries(result).length > 0) {
+                var ctx = document.getElementById("stats-language").getContext('2d');
+                pieChart(result,ctx);
+            }
         }).catch((error) => {
             console.error('Error:', error);
         });
@@ -184,29 +194,31 @@ $(document).ready(function() {
         fetch("/stats/answers-per-section.json?from="+date_from+"&to="+date_to)
         .then(response => response.json())
         .then(result => {
-            let data_sets = [];
-            let labels = [];
-            let i = 0;
-            for (const [key, value] of Object.entries(result.all)) {
-                labels = Object.keys(value);
-                data_sets.push({
-                    label: key,
-                    data: Object.values(value),
-                    fill: false,
-                    backgroundColor: colors[i],
-                    borderColor: colors[i],
-                    pointBackgroundColor: colors[i],
-                    pointBorderColor: '#fff',
-                    pointHoverBackgroundColor: '#fff',
-                    pointHoverBorderColor: colors[i]
-                })
-                i++;
-            }
-            sectionChart.data = result;
             document.getElementById("spinner-answers-per-section").innerHTML = "";
-            document.getElementById("select-section-displayByCountry").style.display = "block";
-            var ctx = document.getElementById("answers-per-section");
-            sectionChart.canvas = radarChart(labels,data_sets,ctx);
+            if (Object.entries(result).length > 0) {
+                let data_sets = [];
+                let labels = [];
+                let i = 0;
+                for (const [key, value] of Object.entries(result.all)) {
+                    labels = Object.keys(value);
+                    data_sets.push({
+                        label: key,
+                        data: Object.values(value),
+                        fill: false,
+                        backgroundColor: colors[i],
+                        borderColor: colors[i],
+                        pointBackgroundColor: colors[i],
+                        pointBorderColor: '#fff',
+                        pointHoverBackgroundColor: '#fff',
+                        pointHoverBorderColor: colors[i]
+                    })
+                    i++;
+                }
+                sectionChart.data = result;
+                document.getElementById("select-section-displayByCountry").style.display = "block";
+                var ctx = document.getElementById("answers-per-section");
+                sectionChart.canvas = radarChart(labels,data_sets,ctx);
+            }
         })
         .catch((error) => {
             console.error('Error:', error);
@@ -240,29 +252,31 @@ $(document).ready(function() {
         fetch("/stats/answers-per-category.json?from="+date_from+"&to="+date_to)
         .then(response => response.json())
         .then(result => {
-            let data_sets = [];
-            let labels = [];
-            let i = 0;
-            for (const [key, value] of Object.entries(result.all)) {
-                labels = Object.keys(value);
-                data_sets.push({
-                    label: key,
-                    data: Object.values(value),
-                    fill: false,
-                    backgroundColor: colors[i],
-                    borderColor: colors[i],
-                    pointBackgroundColor: colors[i],
-                    pointBorderColor: '#fff',
-                    pointHoverBackgroundColor: '#fff',
-                    pointHoverBorderColor: colors[i]
-                })
-                i++;
-            }
-            categoryChart.data = result;
             document.getElementById("spinner-answers-per-category").innerHTML = "";
-            document.getElementById("select-category-displayByCountry").style.display = "block";
-            var ctx = document.getElementById("answers-per-category");
-            categoryChart.canvas = radarChart(labels,data_sets,ctx);
+            if (Object.entries(result).length > 0) {
+                let data_sets = [];
+                let labels = [];
+                let i = 0;
+                for (const [key, value] of Object.entries(result.all)) {
+                    labels = Object.keys(value);
+                    data_sets.push({
+                        label: key,
+                        data: Object.values(value),
+                        fill: false,
+                        backgroundColor: colors[i],
+                        borderColor: colors[i],
+                        pointBackgroundColor: colors[i],
+                        pointBorderColor: '#fff',
+                        pointHoverBackgroundColor: '#fff',
+                        pointHoverBorderColor: colors[i]
+                    })
+                    i++;
+                }
+                categoryChart.data = result;
+                document.getElementById("select-category-displayByCountry").style.display = "block";
+                var ctx = document.getElementById("answers-per-category");
+                categoryChart.canvas = radarChart(labels,data_sets,ctx);
+            }
         })
         .catch((error) => {
             console.error('Error:', error);

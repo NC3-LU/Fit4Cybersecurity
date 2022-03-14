@@ -77,6 +77,15 @@ except AttributeError as e:
     exit(1)
 
 try:
+    CORS_ALLOWED_ORIGINS = config.CORS_ALLOWED_ORIGINS
+    CORS_ALLOWED_ORIGIN_REGEXES = config.CORS_ALLOWED_ORIGIN_REGEXES
+    CORS_ALLOW_METHODS = config.CORS_ALLOW_METHODS
+except AttributeError:
+    CORS_ALLOWED_ORIGINS = []
+    CORS_ALLOWED_ORIGIN_REGEXES = []
+    CORS_ALLOW_METHODS = []
+
+try:
     if LOG_DIRECTORY:
         # if not logging in stdout
         os.makedirs(LOG_DIRECTORY, exist_ok=True)
@@ -101,6 +110,7 @@ INSTALLED_APPS = [
     "django_countries",
     "bootstrap_datepicker_plus",
     "rest_framework",
+    "corsheaders",
 ]
 
 context_processors = [
@@ -112,6 +122,7 @@ context_processors = [
 ]
 
 MIDDLEWARE = [
+    "corsheaders.middleware.CorsMiddleware",
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
@@ -133,6 +144,7 @@ if DEBUG:
 
     hostname, _, ips = socket.gethostbyname_ex(socket.gethostname())
     INTERNAL_IPS = [ip[:-1] + "1" for ip in ips] + ["127.0.0.1", "10.0.2.2"]
+
 
 ROOT_URLCONF = "csskp.urls"
 
