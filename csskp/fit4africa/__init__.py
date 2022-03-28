@@ -11,8 +11,11 @@ CUSTOM = {
     ),
     "countries_first": [],
     "defaultLanguage": "en",
+    "defaultCountryCode": "SN",
     "languages": [
         ("en", "English"),
+        ("fr", "French"),
+        ("de", "German"),
     ],
     # Logos paths
     "tool_logo": "static/images/logo-fit4operatorsurvey.png",

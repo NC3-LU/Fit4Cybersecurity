@@ -4,6 +4,7 @@ from django import forms
 from django.utils.translation import gettext_lazy as _
 from survey.models import SurveyQuestionAnswer
 from django_countries.fields import CountryField
+from csskp.settings import CUSTOM
 import json
 
 
@@ -56,7 +57,7 @@ class AnswerMChoice(forms.Form):
             self.fields["answers"] = CountryField().formfield(
                 label="",
                 required=True,
-                initial="LU",
+                initial=CUSTOM.get("defaultCountryCode", "LU"),
                 error_messages={"required": _("Please select your country")},
             )
 
