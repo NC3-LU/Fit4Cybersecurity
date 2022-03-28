@@ -1,0 +1,1355 @@
+[
+  {
+    "service_category": "Rules/Charter",
+    "section": "Awareness and Compliance",
+    "qtype": "M",
+    "qindex": 1,
+    "maxPoints": 45,
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": true,
+        "score": 0,
+        "atype": "P",
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": true,
+            "label": "The company should define rules in order to avoid misunderstandings."
+          }
+        ],
+        "label": "not described"
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": false,
+        "score": 15,
+        "atype": "P",
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": false,
+            "label": "Rules (organizational, IT or working ones) should be known and explained to everyone, at the very least orally."
+          }
+        ],
+        "label": "orally given"
+      },
+      {
+        "aindex": 3,
+        "uniqueAnswer": false,
+        "score": 5,
+        "atype": "P",
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "b",
+            "sector": null,
+            "answerChosen": false,
+            "label": "If an oral transmission could be enough for a small company, rules should still be written in a charter, read and signed by everyone, very important if the company grows."
+          },
+          {
+            "min_e_count": "c",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": false,
+            "label": "An oral transmission could be a lot more complicated when there are lots of employees, and is really impossible when lots of people are hired and leaving."
+          }
+        ],
+        "label": "written and given by mail"
+      },
+      {
+        "aindex": 4,
+        "uniqueAnswer": false,
+        "score": 10,
+        "atype": "P",
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": false,
+            "label": "Besides, written rules can :<ul><li>avoid to forget some points</li><li>have a legal proof if the rules have been read.</li></ul>"
+          }
+        ],
+        "label": "read and signed by everyone, in a user charter"
+      },
+      {
+        "aindex": 5,
+        "uniqueAnswer": false,
+        "score": 5,
+        "atype": "P",
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": false,
+            "label": "If it's possible, rules should be as short and as easy as possible to be attractive and readable."
+          }
+        ],
+        "label": "written and explained with simple words, which are non-specific to a type of work"
+      },
+      {
+        "aindex": 6,
+        "uniqueAnswer": false,
+        "score": 0,
+        "atype": "P",
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": true,
+            "label": "Rules that are too long or too heavy with technical vocabulary could become confusing."
+          }
+        ],
+        "label": "quite heavy, but really accurate"
+      },
+      {
+        "aindex": 7,
+        "uniqueAnswer": false,
+        "score": 5,
+        "atype": "P",
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": false,
+            "label": "Each time when it's possible, some advice or some best practices should be given, and explained."
+          }
+        ],
+        "label": "given with advice and the best practices"
+      },
+      {
+        "aindex": 8,
+        "uniqueAnswer": false,
+        "score": 5,
+        "atype": "P",
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": false,
+            "label": "Some differences might be appropriate depending on the role, or if it's a temporary contract for instance."
+          }
+        ],
+        "label": "adapted depending on the role of the reader"
+      }
+    ],
+    "label": "In the company, rules are"
+  },
+  {
+    "service_category": "GDPR",
+    "section": "Awareness and Compliance",
+    "qtype": "M",
+    "qindex": 2,
+    "maxPoints": 30,
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": true,
+        "score": 0,
+        "atype": "P",
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": true,
+            "label": "For the moment, the company does not have a lot of personal data, or haven't done anything to it. If there is more personal data, or if nothing were done, the company should think:"
+          }
+        ],
+        "label": "no personal data other than the employee data, or nothing related to the personal data"
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": false,
+        "score": 10,
+        "atype": "P",
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": false,
+            "label": "Define, whenever possible, someone responsible for the personal data in order to avoid the lack of response when there is an incident."
+          }
+        ],
+        "label": "someone who does every action bound to personal data"
+      },
+      {
+        "aindex": 3,
+        "uniqueAnswer": false,
+        "score": 10,
+        "atype": "P",
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": false,
+            "label": "Data Lifecycle should be accessible by everyone :<ul><li>How they are obtained</li><li>How they are used</li><li>How they are accessible, by whom and the contract linked</li><li>How they are alterable</li><li>How much time they are stored</li><li>How they are destroyed</li></ul>This cycle should be described somewhere and accessible by anyone (sell contracts, websites, files that could be shown …)."
+          }
+        ],
+        "label": "a written explanation about the personal data lifecycle (how there are get, stored, and when and how they are destroyed)"
+      },
+      {
+        "aindex": 4,
+        "uniqueAnswer": false,
+        "score": 5,
+        "atype": "P",
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": false,
+            "label": "People should know who is the responsible person for the data in order to ask all the necessary questions, requests and about data manipulation or data sensitivity."
+          }
+        ],
+        "label": "an oral or a written explanation of what should be done when there is a problem with personal data"
+      },
+      {
+        "aindex": 5,
+        "uniqueAnswer": false,
+        "score": 5,
+        "atype": "P",
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": false,
+            "label": "Concerning the image rights, some authorisations are required (to take an image and to diffuse it), and people need to know when a place is under video surveillance."
+          }
+        ],
+        "label": "some video surveillance, or some pictures taken, that contains face or people and possibly location data"
+      }
+    ],
+    "label": "In the company, there is/are"
+  },
+  {
+    "service_category": "Trainings",
+    "section": "Employee Management",
+    "qtype": "M",
+    "qindex": 3,
+    "maxPoints": 35,
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": false,
+        "score": 15,
+        "atype": "P",
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": false,
+            "label": "Updating the best practices for daily tasks is important to avoid all the basic mistakes and loss of time."
+          }
+        ],
+        "label": "their work, their daily tasks by their studies, but also receive trainings to update their knowledge"
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": false,
+        "score": 5,
+        "atype": "P",
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": false,
+            "label": "Learning to use software is important to avoid time loss, data loss and manipulation mistakes."
+          }
+        ],
+        "label": "the software they daily use"
+      },
+      {
+        "aindex": 3,
+        "uniqueAnswer": false,
+        "score": 5,
+        "atype": "P",
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": false,
+            "label": "By informing about attacks that are current, common or well known, employees could more easily identify them and avoid being affected by them."
+          }
+        ],
+        "label": "information security, to have the knowledge to protect themselves against attacks or information security issues"
+      },
+      {
+        "aindex": 4,
+        "uniqueAnswer": false,
+        "score": 5,
+        "atype": "P",
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": false,
+            "label": "Trainings that are done internally do not have the same impact as external ones, but could be more appropriate by the mastery of the subject within the company environment."
+          }
+        ],
+        "label": "by specialists, that could be internal or external"
+      },
+      {
+        "aindex": 5,
+        "uniqueAnswer": false,
+        "score": 5,
+        "atype": "P",
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": false,
+            "label": "Train users on the sensitivity of the processed information, in order to put their attention on how to protect these data."
+          }
+        ],
+        "label": "the importance to keep confidential data confidential, and more importantly if they are personal"
+      }
+    ],
+    "label": "Employees are trained for/in"
+  },
+  {
+    "service_category": "IT and Information Security Responsibilities",
+    "section": "Employee Management",
+    "qtype": "S",
+    "qindex": 4,
+    "maxPoints": 15,
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": true,
+        "score": 15,
+        "atype": "P",
+        "recommendations": [],
+        "label": "internally defined, with someone who is specialised in IT field"
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": true,
+        "score": 15,
+        "atype": "P",
+        "recommendations": [],
+        "label": "internally defined, with at least two people that were trained in the field"
+      },
+      {
+        "aindex": 3,
+        "uniqueAnswer": true,
+        "score": 15,
+        "atype": "P",
+        "recommendations": [],
+        "label": "externally defined, with a contract"
+      },
+      {
+        "aindex": 4,
+        "uniqueAnswer": true,
+        "score": 15,
+        "atype": "P",
+        "recommendations": [],
+        "label": "externally defined, depending on the needs, without any contract specified"
+      },
+      {
+        "aindex": 5,
+        "uniqueAnswer": true,
+        "score": 0,
+        "atype": "P",
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": true,
+            "label": "It's important to define responsibilities, either externally or internally, with one or more persons, or a company, but specialized into their own domain, at best supported by relevant training."
+          }
+        ],
+        "label": "aren't defined; anyone tries to resolve their problems, asking someone else if they can"
+      }
+    ],
+    "label": "IT and Information Security responsibilities are"
+  },
+  {
+    "service_category": "Home Office/Mobility",
+    "section": "Employee Management",
+    "qtype": "M",
+    "qindex": 5,
+    "maxPoints": 35,
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": true,
+        "score": 35,
+        "atype": "P",
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": true,
+            "label": "For now, no outside work is done. If it's changed, it's important to take care that:<ul><li>External connections which are not controlled and monitored should be avoided to avoid data loss.</li></ul>"
+          }
+        ],
+        "label": "no professional tools because home office or travel is not allowed or necessary, or the only connection to the internal network is on the company premises"
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": false,
+        "score": 15,
+        "atype": "P",
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": false,
+            "label": "Whenever users have the need to work outside, from home office to missions outside the premises, they must have a VPN connection to connect to the server."
+          }
+        ],
+        "label": "VPN (Virtual Private Network) is used to encrypt all data from any external network to the internal server"
+      },
+      {
+        "aindex": 3,
+        "uniqueAnswer": false,
+        "score": 0,
+        "atype": "P",
+        "recommendations": [],
+        "label": "Public Internet, Wi-Fi, open networks or connection protected by external organizations or individuals"
+      },
+      {
+        "aindex": 4,
+        "uniqueAnswer": false,
+        "score": 10,
+        "atype": "P",
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": true,
+            "label": "External connection which is not controlled and monitored should be avoided to avoid data theft."
+          }
+        ],
+        "label": "a private connection or connection sharing from a private or professional smartphone (tethering/hotspot)"
+      },
+      {
+        "aindex": 5,
+        "uniqueAnswer": false,
+        "score": 5,
+        "atype": "P",
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": false,
+            "label": "The visual environment is really important, to avoid curiosity or spying."
+          }
+        ],
+        "label": "a screen filter or adjusts their position to ensure that no unauthorized person could see what is on the screen of their mobile device (tablet or laptop)"
+      },
+      {
+        "aindex": 6,
+        "uniqueAnswer": false,
+        "score": 5,
+        "atype": "P",
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": false,
+            "label": "Devices that are taken away and that contain confidential data should always have their internal memory encrypted to avoid data theft."
+          }
+        ],
+        "label": "devices that are encrypted (protected by a password at boot) or without any confidential data"
+      }
+    ],
+    "label": "During any trip outside the company, the employee uses"
+  },
+  {
+    "service_category": "Contracts (SLA/NDA)",
+    "section": "Third Party Management",
+    "qtype": "M",
+    "qindex": 6,
+    "maxPoints": 15,
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": true,
+        "score": 0,
+        "atype": "P",
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": true,
+            "label": "For now, no contracts with third parties are signed. If it's changed, it's important to:"
+          }
+        ],
+        "label": "are not defined, because they only come punctually in case of an incident or needs"
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": false,
+        "score": 5,
+        "atype": "P",
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": false,
+            "label": "If confidential data is accessible by different third parties, like external maintenace companies, or financial data by a fiduciary, a Non-Disclosure Agreement (NDA) should be signed with them."
+          }
+        ],
+        "label": "define confidentiality of data, and their protection"
+      },
+      {
+        "aindex": 3,
+        "uniqueAnswer": false,
+        "score": 5,
+        "atype": "P",
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": false,
+            "label": "If means and needs permit it, a contract should be signed to ensure that the external IT provider will ensure the availability of system to remain operational. These kinds of contracts named \"Service Level Agreement (SLA)\""
+          }
+        ],
+        "label": "define the maximum time until intervention needs to be performed after an incident"
+      },
+      {
+        "aindex": 4,
+        "uniqueAnswer": false,
+        "score": 5,
+        "atype": "P",
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": false,
+            "label": "It's necessary to review the contracts to ensure :<ul><li>having an intervention solution whenever it is essential</li><li>to not pay too much for a service which is not necessary</li><li>to evaluate if the services paid are satisfying the necessary</li></ul>"
+          }
+        ],
+        "label": "are regularly reviewed to ensure that they correspond to the needs"
+      }
+    ],
+    "label": "Contracts with third parties"
+  },
+  {
+    "service_category": "Office Cleaning",
+    "section": "Third Party Management",
+    "qtype": "M",
+    "qindex": 7,
+    "maxPoints": 30,
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": true,
+        "score": 30,
+        "atype": "P",
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": true,
+            "label": "For now, no third parties clean the premises. If it changes, it's important to:"
+          }
+        ],
+        "label": "internally, by employees, punctually"
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": false,
+        "score": 10,
+        "atype": "P",
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": false,
+            "label": "The office cleaning should be done, whenever possible, during work time to avoid potential data or material theft."
+          }
+        ],
+        "label": "during the work time"
+      },
+      {
+        "aindex": 3,
+        "uniqueAnswer": false,
+        "score": 5,
+        "atype": "P",
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": false,
+            "label": "Rules should be given mainly to specify what should be done or avoided, as misunderstandings can happen."
+          }
+        ],
+        "label": "with clear rules of what should be done and what shouldn't be done"
+      },
+      {
+        "aindex": 4,
+        "uniqueAnswer": false,
+        "score": 5,
+        "atype": "P",
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": false,
+            "label": "It's important to define a confidentiality clause in all the contracts to ensure the confidentiality of information heard or seen."
+          }
+        ],
+        "label": "with a contract which specifies confidentiality"
+      },
+      {
+        "aindex": 5,
+        "uniqueAnswer": false,
+        "score": 5,
+        "atype": "P",
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": false,
+            "label": "To avoid problems due to the human curiosity, it is important to have a clean desk policy to avoid confidential documents being seen."
+          }
+        ],
+        "label": "with all confidential documents locked away in a room, a desk or a closet"
+      },
+      {
+        "aindex": 6,
+        "uniqueAnswer": false,
+        "score": 5,
+        "atype": "P",
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": false,
+            "label": "The staff shouldn't clean restricted access areas, such as archive room or IT room."
+          }
+        ],
+        "label": "while avoiding rooms which have restricted access, like an archive room or a server room"
+      }
+    ],
+    "label": "The office cleaning is done"
+  },
+  {
+    "service_category": "Passwords",
+    "section": "Logical Access",
+    "qtype": "M",
+    "qindex": 8,
+    "maxPoints": 45,
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": true,
+        "score": 0,
+        "atype": "P",
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": true,
+            "label": "Advice should be given to avoid weak passwords. Some tips or techniques could be given to employees to remember their passwords. Here some examples:<ul><li>Passwords should be kept secret and personal. Each and everyone should access their data by using their password, even from a computer of someone else.</li><li>There shouldn't be a computer which is shared with one and unique password. If it's inevitable, then a trsutworthy person should be defined responsible, and access should be really limited.</li><li>It's mandatory to be careful with the password storage in the internet browser as they are not protected.</li></ul>"
+          }
+        ],
+        "label": "not having requirements or guidelines, employees are left on their own"
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": false,
+        "score": 0,
+        "atype": "P",
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": true,
+            "label": "Passwords should be kept secret and personal. If it's impossible, then there should be a trustworthy person named responsible for the computer to ensure its use, and give minimum access."
+          }
+        ],
+        "label": "centralised in a file, or are all known by one or more people"
+      },
+      {
+        "aindex": 3,
+        "uniqueAnswer": false,
+        "score": 0,
+        "atype": "P",
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": true,
+            "label": "Passwords should be kept secret and personal. Each and everyone should access their data by using their password, even from the computer of someone else."
+          }
+        ],
+        "label": "shared whenever there is a need to access a protected device"
+      },
+      {
+        "aindex": 4,
+        "uniqueAnswer": false,
+        "score": 15,
+        "atype": "P",
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": false,
+            "label": "It's necessary to have passwords which have at least one uppercase, lowercase, digit and special character, and a minimum of 12 characters."
+          }
+        ],
+        "label": "made up of 12 or more characters which are uppercase, lowercase, digits and special character"
+      },
+      {
+        "aindex": 5,
+        "uniqueAnswer": false,
+        "score": 5,
+        "atype": "P",
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": false,
+            "label": "Passwords shouldn't be a coherent word or date, except if they are in a complete sentence."
+          }
+        ],
+        "label": "not forming any words or dates"
+      },
+      {
+        "aindex": 6,
+        "uniqueAnswer": false,
+        "score": 5,
+        "atype": "P",
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": false,
+            "label": "Complete sentences could be used, even if they represent complete words."
+          }
+        ],
+        "label": "complete sentences"
+      },
+      {
+        "aindex": 7,
+        "uniqueAnswer": false,
+        "score": 5,
+        "atype": "P",
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": false,
+            "label": "Passwords should be changed from time to time, to prevent serious consequences in case of a leak or data theft."
+          }
+        ],
+        "label": "regularly changed, every year or two"
+      },
+      {
+        "aindex": 8,
+        "uniqueAnswer": false,
+        "score": 5,
+        "atype": "P",
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": false,
+            "label": "To make the storage easier, a password manager could be used."
+          }
+        ],
+        "label": "included in a password manager"
+      },
+      {
+        "aindex": 9,
+        "uniqueAnswer": false,
+        "score": 0,
+        "atype": "P",
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": true,
+            "label": "It's mandatory to be careful with the password storage in the internet browsers as they are not protected well."
+          }
+        ],
+        "label": "included in web browsers"
+      },
+      {
+        "aindex": 10,
+        "uniqueAnswer": false,
+        "score": 10,
+        "atype": "P",
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": false,
+            "label": "Same passwords used on different website makes a leak easier. Besides, only one leak is enough to compromise all the access using the same password."
+          }
+        ],
+        "label": "different for each application used, even for a user"
+      }
+    ],
+    "label": "Passwords in the company are"
+  },
+  {
+    "service_category": "WiFi",
+    "section": "Local Area Network",
+    "qtype": "M",
+    "qindex": 9,
+    "maxPoints": 25,
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": true,
+        "score": 25,
+        "atype": "P",
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": true,
+            "label": "For now, wireless network isn't activated in the company. If it is changed, it's important to:<ul><li>Wireless Network should be split between internal and external users to avoid access problems.</li><li>If a wireless network is used for external people, strong precautions should be taken, for example the collection of an identity.</li></ul>"
+          }
+        ],
+        "label": "are not used in the company"
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": false,
+        "score": 0,
+        "atype": "P",
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": true,
+            "label": "Wireless Network should be split between internal and external users to avoid access problems."
+          }
+        ],
+        "label": "are used by everyone and access is granted to the company server"
+      },
+      {
+        "aindex": 3,
+        "uniqueAnswer": false,
+        "score": 0,
+        "atype": "P",
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": true,
+            "label": "If a wireless network is used for external people, strong precautions should be taken, for example the collection of an identity."
+          }
+        ],
+        "label": "are given to everyone, without any way to get identity of the persons"
+      },
+      {
+        "aindex": 4,
+        "uniqueAnswer": false,
+        "score": 15,
+        "atype": "P",
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": false,
+            "label": "The password shouldn't be easily guessable, to avoid connections which are not wanted."
+          }
+        ],
+        "label": "are protected by long passwords of 20 characters or more"
+      },
+      {
+        "aindex": 5,
+        "uniqueAnswer": false,
+        "score": 10,
+        "atype": "P",
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": false,
+            "label": "Also, wireless networks of printers should be protected to avoid the leak of all printed documents."
+          }
+        ],
+        "label": "of the printers are protected by a strong password"
+      }
+    ],
+    "label": "Wireless networks"
+  },
+  {
+    "service_category": "Antivirus",
+    "section": "Local Area Network",
+    "qtype": "M",
+    "qindex": 10,
+    "maxPoints": 35,
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": true,
+        "score": 0,
+        "atype": "P",
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": true,
+            "label": "The company should have an antivirus and be careful to:"
+          }
+        ],
+        "label": "is not installed or used"
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": false,
+        "score": 10,
+        "atype": "P",
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": false,
+            "label": "An antivirus software must be installed on all devices."
+          }
+        ],
+        "label": "is installed on computers and laptops"
+      },
+      {
+        "aindex": 3,
+        "uniqueAnswer": false,
+        "score": 5,
+        "atype": "P",
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": false,
+            "label": "It should be up to date, preferably automatically to cover as many threats as possible."
+          }
+        ],
+        "label": "is updated on all computers, automatically or manually"
+      },
+      {
+        "aindex": 4,
+        "uniqueAnswer": false,
+        "score": 5,
+        "atype": "P",
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": false,
+            "label": "It should be activated in any case to protect the device continuously."
+          }
+        ],
+        "label": "is activated and protects computer"
+      },
+      {
+        "aindex": 5,
+        "uniqueAnswer": false,
+        "score": 5,
+        "atype": "P",
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": false,
+            "label": "All devices, like smartphones, tablets should have an antivirus, even if it is the one by default from the operating system."
+          }
+        ],
+        "label": "is installed on all mobile phones that are on network"
+      },
+      {
+        "aindex": 6,
+        "uniqueAnswer": false,
+        "score": 5,
+        "atype": "P",
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": false,
+            "label": "Some tests should be done from time to time."
+          }
+        ],
+        "label": "is used from time to time in order to analyse the computer, even without external events"
+      },
+      {
+        "aindex": 7,
+        "uniqueAnswer": false,
+        "score": 5,
+        "atype": "P",
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": false,
+            "label": "Some tests should be done in case of suspicion of infection."
+          }
+        ],
+        "label": "is used to analyse the network whenever a suspicious event occurs"
+      }
+    ],
+    "label": "Antivirus software"
+  },
+  {
+    "service_category": "User Work Stations/Updates",
+    "section": "Information System",
+    "qtype": "M",
+    "qindex": 11,
+    "maxPoints": 35,
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": true,
+        "score": 0,
+        "atype": "P",
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": true,
+            "label": "Some rules and specific advice should be given concerning users stations or laptop. Some points that are important:"
+          }
+        ],
+        "label": "left without any rules, and users have to take care of their on workstations"
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": false,
+        "score": 15,
+        "atype": "P",
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": false,
+            "label": "A device should always be up to date in order to avoid security problems, and also avoid network intrusion. Many operating systems now update automatically, but installed software needs some permission to be given or manual maintenance."
+          }
+        ],
+        "label": "automatically or manually updated regarding the software and operating system"
+      },
+      {
+        "aindex": 3,
+        "uniqueAnswer": false,
+        "score": 5,
+        "atype": "P",
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": false,
+            "label": "Administrator rights should be left only to the users who are specialised in IT, or well advised respecting the rules."
+          }
+        ],
+        "label": "controlled by administrators, which won't let users install software because they do not have administrator rights"
+      },
+      {
+        "aindex": 4,
+        "uniqueAnswer": false,
+        "score": 5,
+        "atype": "P",
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": false,
+            "label": "Downloads should only be done from the official websites, the original developers of the software, to avoid manipulated download files or infections."
+          }
+        ],
+        "label": "needed to comply with rules or guidelines about installation and downloading software, concerning illegality or the danger to install something without authorisation"
+      },
+      {
+        "aindex": 5,
+        "uniqueAnswer": false,
+        "score": 10,
+        "atype": "P",
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": false,
+            "label": "Devices should be locked to avoid identity theft."
+          }
+        ],
+        "label": "locked whenever the user is not at his desk, even for a short time"
+      }
+    ],
+    "label": "The user workstations are"
+  },
+  {
+    "service_category": "Backups",
+    "section": "Information System",
+    "qtype": "M",
+    "qindex": 12,
+    "maxPoints": 65,
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": true,
+        "score": 0,
+        "atype": "P",
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": true,
+            "label": "It's important to have backups for various reason, to have redundancy of data if they disappeared. It's important to have:"
+          }
+        ],
+        "label": "non existent: they are not done or not working"
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": false,
+        "score": 5,
+        "atype": "P",
+        "recommendations": [],
+        "label": "shared: a third party has the responsibility of the backup"
+      },
+      {
+        "aindex": 3,
+        "uniqueAnswer": false,
+        "score": 10,
+        "atype": "P",
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": false,
+            "label": "Backups should concern the whole company, and everyone should be aware to put all data on the systems that are backed up, to ensure to have a copy of them."
+          }
+        ],
+        "label": "exhaustive: all data is on backups, and all users know that and avoid storing information locally"
+      },
+      {
+        "aindex": 4,
+        "uniqueAnswer": false,
+        "score": 10,
+        "atype": "P",
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": false,
+            "label": "Backups should be done daily to avoid major data loss."
+          }
+        ],
+        "label": "done daily: backups are made at least once daily"
+      },
+      {
+        "aindex": 5,
+        "uniqueAnswer": false,
+        "score": 10,
+        "atype": "P",
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": false,
+            "label": "Backups should be retained at least a month to avoid problems caused by ransomware."
+          }
+        ],
+        "label": "retained: it is possible to get back a month or more"
+      },
+      {
+        "aindex": 6,
+        "uniqueAnswer": false,
+        "score": 5,
+        "atype": "P",
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": false,
+            "label": "Backups should be outside the premises, decentralized, with more than 3 kilometres between them."
+          }
+        ],
+        "label": "decentralized: the server, and at least one full backup system is separated by at leaset 3 kilometres"
+      },
+      {
+        "aindex": 7,
+        "uniqueAnswer": false,
+        "score": 10,
+        "atype": "P",
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": false,
+            "label": "Backups should be disconnected, outside the local network, to be invisible by crypto-ransomwares."
+          }
+        ],
+        "label": "disconnected: they are disconnected from the server once they are done"
+      },
+      {
+        "aindex": 8,
+        "uniqueAnswer": false,
+        "score": 10,
+        "atype": "P",
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": false,
+            "label": "Backups should be tested (restored) from time to time, just to ensure that the data is readable and has integrity."
+          }
+        ],
+        "label": "tested: one or all the files are restored from a backup from occasionally"
+      },
+      {
+        "aindex": 9,
+        "uniqueAnswer": false,
+        "score": 5,
+        "atype": "P",
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": false,
+            "label": "Backups should be encrypted to avoid problems concerning the data theft, mainly if they are moved."
+          }
+        ],
+        "label": "encrypted: so when they are taken outside the company, they can't be read"
+      }
+    ],
+    "label": "Backups are"
+  },
+  {
+    "service_category": "BYOD",
+    "section": "Information System",
+    "qtype": "M",
+    "qindex": 13,
+    "maxPoints": 20,
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": true,
+        "score": 20,
+        "atype": "P",
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": true,
+            "label": "For now, the personal devices are not connected in the local network. If it's changed, it's important to:"
+          }
+        ],
+        "label": "is forbidden or impossible in the company"
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": false,
+        "score": 10,
+        "atype": "P",
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": false,
+            "label": "Personal devices shouldn't be used in company without any controls, rules and explanations. By knowing all the different existing ways to attack an organization, it's possible to avoid them."
+          }
+        ],
+        "label": "is subject to precise rules, particularly before connecting to the company network"
+      },
+      {
+        "aindex": 3,
+        "uniqueAnswer": false,
+        "score": 5,
+        "atype": "P",
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": false,
+            "label": "Personal devices should have an antivirus installed, updated and active to avoid as many threats as possible."
+          }
+        ],
+        "label": "is under a strict antivirus control"
+      },
+      {
+        "aindex": 4,
+        "uniqueAnswer": false,
+        "score": 5,
+        "atype": "P",
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": false,
+            "label": "Defining rules and best practices help to protect the internal networks."
+          }
+        ],
+        "label": "has been explained to employees through training or explanations"
+      }
+    ],
+    "label": "Having some personal IT devices (USB Key, Hard Drive, Smartphone, Tablet, Laptop …) in the professional environment (network that is connected to the server)"
+  }
+]
