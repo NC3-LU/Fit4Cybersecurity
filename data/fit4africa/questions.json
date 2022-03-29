@@ -2,6 +2,7 @@
   {
     "service_category": "Rules/Charter",
     "section": "Awareness and Compliance",
+    "label": "In the company, rules are",
     "qtype": "M",
     "qindex": 1,
     "maxPoints": 45,
@@ -141,12 +142,12 @@
         ],
         "label": "adapted depending on the role of the reader"
       }
-    ],
-    "label": "In the company, rules are"
+    ]
   },
   {
     "service_category": "GDPR",
     "section": "Awareness and Compliance",
+    "label": "In the company, there is/are",
     "qtype": "M",
     "qindex": 2,
     "maxPoints": 30,
@@ -231,12 +232,12 @@
         ],
         "label": "some video surveillance, or some pictures taken, that contains face or people and possibly location data"
       }
-    ],
-    "label": "In the company, there is/are"
+    ]
   },
   {
     "service_category": "Trainings",
     "section": "Employee Management",
+    "label": "Employees are trained for/in",
     "qtype": "M",
     "qindex": 3,
     "maxPoints": 35,
@@ -321,12 +322,12 @@
         ],
         "label": "the importance to keep confidential data confidential, and more importantly if they are personal"
       }
-    ],
-    "label": "Employees are trained for/in"
+    ]
   },
   {
     "service_category": "IT and Information Security Responsibilities",
     "section": "Employee Management",
+    "label": "IT and Information Security responsibilities are",
     "qtype": "S",
     "qindex": 4,
     "maxPoints": 15,
@@ -379,12 +380,12 @@
         ],
         "label": "aren't defined; anyone tries to resolve their problems, asking someone else if they can"
       }
-    ],
-    "label": "IT and Information Security responsibilities are"
+    ]
   },
   {
     "service_category": "Home Office/Mobility",
     "section": "Employee Management",
+    "label": "During any trip outside the company, the employee uses",
     "qtype": "M",
     "qindex": 5,
     "maxPoints": 35,
@@ -477,12 +478,12 @@
         ],
         "label": "devices that are encrypted (protected by a password at boot) or without any confidential data"
       }
-    ],
-    "label": "During any trip outside the company, the employee uses"
+    ]
   },
   {
     "service_category": "Contracts (SLA/NDA)",
     "section": "Third Party Management",
+    "label": "Contracts with third parties",
     "qtype": "M",
     "qindex": 6,
     "maxPoints": 15,
@@ -551,12 +552,12 @@
         ],
         "label": "are regularly reviewed to ensure that they correspond to the needs"
       }
-    ],
-    "label": "Contracts with third parties"
+    ]
   },
   {
     "service_category": "Office Cleaning",
     "section": "Third Party Management",
+    "label": "The office cleaning is done",
     "qtype": "M",
     "qindex": 7,
     "maxPoints": 30,
@@ -657,12 +658,12 @@
         ],
         "label": "while avoiding rooms which have restricted access, like an archive room or a server room"
       }
-    ],
-    "label": "The office cleaning is done"
+    ]
   },
   {
     "service_category": "Passwords",
     "section": "Logical Access",
+    "label": "Passwords in the company are",
     "qtype": "M",
     "qindex": 8,
     "maxPoints": 45,
@@ -827,12 +828,12 @@
         ],
         "label": "different for each application used, even for a user"
       }
-    ],
-    "label": "Passwords in the company are"
+    ]
   },
   {
     "service_category": "WiFi",
     "section": "Local Area Network",
+    "label": "Wireless networks",
     "qtype": "M",
     "qindex": 9,
     "maxPoints": 25,
@@ -917,12 +918,12 @@
         ],
         "label": "of the printers are protected by a strong password"
       }
-    ],
-    "label": "Wireless networks"
+    ]
   },
   {
     "service_category": "Antivirus",
     "section": "Local Area Network",
+    "label": "Antivirus software",
     "qtype": "M",
     "qindex": 10,
     "maxPoints": 35,
@@ -1039,12 +1040,12 @@
         ],
         "label": "is used to analyse the network whenever a suspicious event occurs"
       }
-    ],
-    "label": "Antivirus software"
+    ]
   },
   {
     "service_category": "User Work Stations/Updates",
     "section": "Information System",
+    "label": "The user workstations are",
     "qtype": "M",
     "qindex": 11,
     "maxPoints": 35,
@@ -1129,12 +1130,12 @@
         ],
         "label": "locked whenever the user is not at his desk, even for a short time"
       }
-    ],
-    "label": "The user workstations are"
+    ]
   },
   {
     "service_category": "Backups",
     "section": "Information System",
+    "label": "Backups are",
     "qtype": "M",
     "qindex": 12,
     "maxPoints": 65,
@@ -1275,12 +1276,12 @@
         ],
         "label": "encrypted: so when they are taken outside the company, they can't be read"
       }
-    ],
-    "label": "Backups are"
+    ]
   },
   {
     "service_category": "BYOD",
     "section": "Information System",
+    "label": "Having some personal IT devices (USB Key, Hard Drive, Smartphone, Tablet, Laptop …) in the professional environment (network that is connected to the server)",
     "qtype": "M",
     "qindex": 13,
     "maxPoints": 20,
@@ -1349,7 +1350,138 @@
         ],
         "label": "has been explained to employees through training or explanations"
       }
-    ],
-    "label": "Having some personal IT devices (USB Key, Hard Drive, Smartphone, Tablet, Laptop …) in the professional environment (network that is connected to the server)"
+    ]
+  },
+  {
+    "service_category": "Physical Security",
+    "section": "Information System",
+    "label": "During a power outage",
+    "qtype": "M",
+    "qindex": 14,
+    "maxPoints": 60,
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": false,
+        "score": 0,
+        "atype": "P",
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": false,
+            "label": "Having a backup power supply to switch to in case of an outage is imperative to insure business continuity."
+          }
+        ],
+        "label": "backup power supply does not exist to ensure business continuity"
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": false,
+        "score": 20,
+        "atype": "P",
+        "recommendations": [],
+        "label": "the company dispose of a generator that is used as backup power supply"
+      },
+      {
+        "aindex": 3,
+        "uniqueAnswer": false,
+        "score": 20,
+        "atype": "P",
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": false,
+            "label": "Backup power supply can be a generator or any form of renewable energy such as solar energy."
+          }
+        ],
+        "label": "the company dispose of renewable energy system as a backup power supply"
+      },
+      {
+        "aindex": 4,
+        "uniqueAnswer": false,
+        "score": 20,
+        "atype": "P",
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": false,
+            "label": "The usage of UPS for critical infrastructure systems is also important to maintain continuity of power to the respective load while the system is transitioning to backup power, hence preventing potential data loss."
+          }
+        ],
+        "label": "critical systems and servers are connected to an UPS"
+      }
+    ]
+  },
+  {
+    "service_category": "Backup Power Supply",
+    "section": "Information System",
+    "label": "The access to the building and office of the company is ensured",
+    "qtype": "M",
+    "qindex": 15,
+    "maxPoints": 65,
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": false,
+        "score": 25,
+        "atype": "P",
+        "recommendations": [],
+        "label": "by an electronic access system, based on the person's profile"
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": false,
+        "score": 20,
+        "atype": "P",
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": false,
+            "label": "The company's premises should be equipped with the minimum fire detection and/or prevention systems."
+          }
+        ],
+        "label": "by a security guard who controls the exits and entrances to the building"
+      },
+      {
+        "aindex": 3,
+        "uniqueAnswer": false,
+        "score": 20,
+        "atype": "P",
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": false,
+            "label": "The installation of video surveillance system is very effective in deterring any intention of theft."
+          }
+        ],
+        "label": "is under a strict antivirus control"
+      },
+      {
+        "aindex": 4,
+        "uniqueAnswer": false,
+        "score": 0,
+        "atype": "P",
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": false,
+            "label": "Physical security is as much important as information and systems security, hence access to the offices and server rooms must be granted based on the profile of each person."
+          }
+        ],
+        "label": "no physical security measures exist"
+      }
+    ]
   }
 ]
