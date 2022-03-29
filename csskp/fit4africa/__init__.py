@@ -27,7 +27,7 @@ CUSTOM = {
     "show_progress_questions_numbers": True,
     # Custom parts of templates
     #   main dir for PARTS_TEMPLATE_DIR:
-    "templates_parts_dir": "templates/parts",
+    "templates_parts_dir": "templates/parts/fit4africa",
     "templates_parts": {
         # path of the templates parts
         "terms": "terms_part.html",
