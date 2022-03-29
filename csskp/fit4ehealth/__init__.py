@@ -15,6 +15,8 @@ CUSTOM = {
     # Logos paths
     "cases_logo": "templates/report/images/cases_logo.svg",
     "secin_logo": "templates/report/images/secin_logo.svg",
+    # Custom CSS:
+    "survey_css": "survey/css/style.css",
     # Minimal score
     "minimal_acceptable_score": 65,
     # Show or not the questions number left to complete the survey.
