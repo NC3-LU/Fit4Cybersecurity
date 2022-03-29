@@ -39,16 +39,16 @@ CUSTOM = {
     # Available modules
     "modules": {
         "reportDownload": True,
-        "reportEmail": False,
+        "reportEmail": True,
         "requestDiagnostic": False,
         "requestTraining": False,
-        "displayResults": False,
+        "displayResults": True,
     },
     # Available report parts
     "report": {
         "introduction": True,
-        "description": False,
-        "results": False,
+        "description": True,
+        "results": True,
         "recommendations": True,
         "questions": True,
     },
