@@ -1,8 +1,8 @@
-# -*- coding: utf-8 -*-
+from datetime import datetime
+from datetime import timedelta
 
 from bootstrap_datepicker_plus.widgets import DatePickerInput
 from django import forms
-from datetime import datetime, timedelta
 
 DEFAULT_DATE_FORMAT = "%Y-%m-%d"
 

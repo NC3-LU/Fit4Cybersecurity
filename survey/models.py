@@ -1,20 +1,21 @@
-# -*- coding: utf-8 -*-
-
 from __future__ import annotations
-from typing import Optional, Dict, List, Any
+
 import uuid
+from typing import Any
+
 from django.db import models
 from django.db.models import Sum
-from csskp.settings import LANGUAGES, LANGUAGE_CODE, CUSTOM
 from django.utils.translation import gettext_lazy as _
 from django_countries import countries
 
+from csskp.settings import CUSTOM
+from csskp.settings import LANGUAGE_CODE
+from csskp.settings import LANGUAGES
+from survey.globals import ANSWER_TYPES
+from survey.globals import QUESTION_TYPES
+from survey.globals import SERVICE_TARGETS
+
 # import global constants
-from survey.globals import (
-    QUESTION_TYPES,
-    ANSWER_TYPES,
-    SERVICE_TARGETS,
-)
 
 # Create your models here.
 
@@ -48,7 +49,7 @@ class RightMixin:
 
     @staticmethod
     def _fields_base_read():
-        return set(["id"])
+        return {"id"}
 
     @classmethod
     def fields_base_write(cls):
@@ -234,7 +235,7 @@ class SurveyUser(models.Model):
     def is_survey_finished(self) -> bool:
         return self.status == SURVEY_STATUS_FINISHED
 
-    def get_all_context_answers(self) -> Dict[str, Any]:
+    def get_all_context_answers(self) -> dict[str, Any]:
         result = {}
         user_answers = self.surveyuseranswer_set.filter(
             answer__question__section__label=CONTEXT_SECTION_LABEL
@@ -250,7 +251,7 @@ class SurveyUser(models.Model):
 
     def __get_context_answer_by_question_label(
         self, question_label: str
-    ) -> Optional[SurveyUserAnswer]:
+    ) -> SurveyUserAnswer | None:
         try:
             return self.surveyuseranswer_set.get(
                 answer__question__section__label=CONTEXT_SECTION_LABEL,
@@ -313,8 +314,8 @@ class SurveyUser(models.Model):
 
         return user_answer.uvalue if user_answer is not None else ""
 
-    def get_evaluations_by_section(self, max_evaluations_per_section) -> List[int]:
-        user_evaluations: List[int] = []
+    def get_evaluations_by_section(self, max_evaluations_per_section) -> list[int]:
+        user_evaluations: list[int] = []
         chart_exclude_sections = ["__context"]
 
         if "chart_exclude_sections" in CUSTOM.keys():
@@ -348,8 +349,8 @@ class SurveyUser(models.Model):
 
         return user_evaluations
 
-    def get_evaluations_by_category(self, max_evaluations_per_category) -> List[int]:
-        user_evaluations: List[int] = []
+    def get_evaluations_by_category(self, max_evaluations_per_category) -> list[int]:
+        user_evaluations: list[int] = []
         chart_exclude_sections = ["__context"]
 
         if "chart_exclude_sections" in CUSTOM.keys():

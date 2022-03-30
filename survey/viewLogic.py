@@ -1,30 +1,38 @@
-# -*- coding: utf-8 -*-
-
-from typing import Optional, Union, List, Dict, Tuple, Any
-from typing_extensions import TypedDict
 import logging
-from uuid import UUID
-from django.http import HttpRequest
-from django.utils.translation import gettext_lazy as _
-from django.utils.html import format_html, mark_safe
-from django.db import transaction
-from django.db.models import Max, QuerySet
-from django.utils import translation
-from survey.models import (
-    SurveyUser,
-    SurveyQuestion,
-    SurveyQuestionAnswer,
-    SurveyUserAnswer,
-    SurveyUserFeedback,
-    SurveyAnswerQuestionMap,
-    SurveyUserQuestionSequence,
-    SURVEY_STATUS_UNDER_REVIEW,
-    SURVEY_STATUS_IN_PROGRESS,
-    CONTEXT_SECTION_LABEL,
-)
-from survey.forms import AnswerMChoice, GeneralFeedback
-from csskp.settings import CUSTOM, LANGUAGES, LANGUAGE_CODE
 import math
+from typing import Any
+from typing import Dict
+from typing import List
+from typing import Optional
+from typing import Tuple
+from typing import Union
+from uuid import UUID
+
+from django.db import transaction
+from django.db.models import Max
+from django.db.models import QuerySet
+from django.http import HttpRequest
+from django.utils import translation
+from django.utils.html import format_html
+from django.utils.html import mark_safe
+from django.utils.translation import gettext_lazy as _
+from typing_extensions import TypedDict
+
+from csskp.settings import CUSTOM
+from csskp.settings import LANGUAGE_CODE
+from csskp.settings import LANGUAGES
+from survey.forms import AnswerMChoice
+from survey.forms import GeneralFeedback
+from survey.models import CONTEXT_SECTION_LABEL
+from survey.models import SURVEY_STATUS_IN_PROGRESS
+from survey.models import SURVEY_STATUS_UNDER_REVIEW
+from survey.models import SurveyAnswerQuestionMap
+from survey.models import SurveyQuestion
+from survey.models import SurveyQuestionAnswer
+from survey.models import SurveyUser
+from survey.models import SurveyUserAnswer
+from survey.models import SurveyUserFeedback
+from survey.models import SurveyUserQuestionSequence
 
 LOCAL_DEFAULT_LANG = LANGUAGE_CODE
 

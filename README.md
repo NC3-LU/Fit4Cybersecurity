@@ -17,6 +17,11 @@ This tool allows instantiation of the following self-assessment websites:
 - [Cyber4Africa](https://start.cyber4africa.org).
 
 
+## Contributing
+
+Please read the [CONTRIBUTING](CONTRIBUTING.md) instructions.
+
+
 ## Deployment
 
 The following instructions are detailed in the
@@ -213,9 +218,9 @@ $ python manage.py makemessages -a --keep-pot
 
 ## Templates customization per site.
 
-It is possible to customize specific templates for each available site. 
+It is possible to customize specific templates for each available site.
 This can be done by creating a folder with the `site_name` config parameter value
-and place it under the same directory as it is located under the original templates.   
+and place it under the same directory as it is located under the original templates.
 The new template will be loaded automatically if exists,can inherit the parent template
 and only override its specific blocks.
 

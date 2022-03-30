@@ -1,22 +1,22 @@
-# -*- coding: utf-8 -*-
-
-import os
 import logging
+import os
 from datetime import datetime
-from weasyprint import HTML, CSS
-from django.template.loader import render_to_string
+
 from django.conf import settings
-from django.utils import translation
 from django.http import HttpRequest
-from survey.models import SurveyUser
-from csskp.settings import CUSTOM, SITE_IMAGES_DIR
-from survey.reporthelper import (
-    generate_chart_png,
-    calculateResult,
-    getRecommendations,
-)  # temporary imports
-from survey.viewLogic import get_questions_with_user_answers
+from django.template.loader import render_to_string
+from django.utils import translation
+from weasyprint import CSS
+from weasyprint import HTML
+
+from csskp.settings import CUSTOM
+from csskp.settings import SITE_IMAGES_DIR
 from survey import globals
+from survey.models import SurveyUser
+from survey.reporthelper import calculateResult
+from survey.reporthelper import generate_chart_png
+from survey.reporthelper import getRecommendations
+from survey.viewLogic import get_questions_with_user_answers
 
 # Get an instance of a logger
 logger = logging.getLogger(__name__)
@@ -52,7 +52,7 @@ def create_html_report(user: SurveyUser, lang: str, request: HttpRequest) -> str
         section_chart_png_base64 = None
         category_chart_png_base64 = None
     except Exception as e:
-        logger.error("Error when generating the PNG chart: {}.".format(e))
+        logger.error(f"Error when generating the PNG chart: {e}.")
         raise e
 
     # Get the list of recommendations

@@ -377,5 +377,3 @@ Changes
 - [tranlsation] minor fixes for French translations. [Cédric Bonhomme]
 - [tranlsation] minor fixes for French translations. [Cédric Bonhomme]
 - [tranlsation] minor fixes for French translations. [Cédric Bonhomme]
-
-

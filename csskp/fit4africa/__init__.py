@@ -5,9 +5,9 @@ CUSTOM = {
     "tool_name": "Cyber4Africa",
     "intro_text": gettext_lazy(
         "This survey will ask a few questions and provide "
-        + "recommendations. Keep in mind, that it is a self-assessment tool and that it "
-        + "only touches the surface of information security by giving a very basic maturity "
-        + "level estimate and some basic recommendations."
+        "recommendations. Keep in mind, that it is a self-assessment tool and that it "
+        "only touches the surface of information security by giving a very basic maturity "
+        "level estimate and some basic recommendations."
     ),
     "countries_first": [],
     "defaultLanguage": "en",

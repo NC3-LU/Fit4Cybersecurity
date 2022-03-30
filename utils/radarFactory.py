@@ -1,8 +1,9 @@
 import numpy as np
-from matplotlib.patches import Circle, RegularPolygon
+from matplotlib.patches import Circle
+from matplotlib.patches import RegularPolygon
 from matplotlib.path import Path
-from matplotlib.projections.polar import PolarAxes
 from matplotlib.projections import register_projection
+from matplotlib.projections.polar import PolarAxes
 from matplotlib.spines import Spine
 from matplotlib.transforms import Affine2D
 

@@ -1,17 +1,16 @@
-# -*- coding: utf-8 -*-
-
 import json
-from typing import Dict, List
+from typing import Dict
+from typing import List
+
 from django.core.management.base import BaseCommand
-from survey.models import (
-    SurveySection,
-    SurveyQuestion,
-    SurveyQuestionServiceCategory,
-    SurveyQuestionAnswer,
-    Recommendations,
-    SurveyAnswerQuestionMap,
-    CONTEXT_SECTION_LABEL,
-)
+
+from survey.models import CONTEXT_SECTION_LABEL
+from survey.models import Recommendations
+from survey.models import SurveyAnswerQuestionMap
+from survey.models import SurveyQuestion
+from survey.models import SurveyQuestionAnswer
+from survey.models import SurveyQuestionServiceCategory
+from survey.models import SurveySection
 
 
 class Command(BaseCommand):
@@ -202,27 +201,21 @@ class Command(BaseCommand):
         self.stdout.write(self.style.SUCCESS("Data imported."))
         self.stdout.write(
             self.style.SUCCESS(
-                "  Number of created questions: {}".format(nb_imported_questions)
+                f"  Number of created questions: {nb_imported_questions}"
             )
         )
         self.stdout.write(
-            self.style.SUCCESS(
-                "  Number of updated questions: {}".format(nb_updated_questions)
-            )
+            self.style.SUCCESS(f"  Number of updated questions: {nb_updated_questions}")
+        )
+        self.stdout.write(
+            self.style.SUCCESS(f"  Number of created answers: {nb_imported_answers}")
+        )
+        self.stdout.write(
+            self.style.SUCCESS(f"  Number of updated answers: {nb_updated_answers}")
         )
         self.stdout.write(
             self.style.SUCCESS(
-                "  Number of created answers: {}".format(nb_imported_answers)
-            )
-        )
-        self.stdout.write(
-            self.style.SUCCESS(
-                "  Number of updated answers: {}".format(nb_updated_answers)
-            )
-        )
-        self.stdout.write(
-            self.style.SUCCESS(
-                "  Number of recommendations: {}".format(nb_imported_recommendations)
+                f"  Number of recommendations: {nb_imported_recommendations}"
             )
         )
 

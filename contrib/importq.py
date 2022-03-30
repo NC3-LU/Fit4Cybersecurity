@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 """importq.py - Generate JSON files with the output of the command:
 
 $ python manage.py dumpdata --indent 2 survey > ./contrib/out.json
@@ -13,7 +11,6 @@ Those can be imported in your instance:
 $ python manage.py import_questions contrib/questions.json
 $ python manage.py import_translations contrib/translations.json
 """
-
 import json
 
 with open("out.json") as f:

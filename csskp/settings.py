@@ -1,12 +1,10 @@
-# -*- coding: utf-8 -*-
-
 """
 Django settings for csskp project.
 """
-
+import importlib
 import os
 import sys
-import importlib
+
 from django.contrib.messages import constants as messages
 
 try:
@@ -71,7 +69,7 @@ try:
     EMAIL_PORT = config.EMAIL_PORT
 except AttributeError as e:
     print("Please check you configuration file for the missing configuration variable:")
-    print("  {}".format(e))
+    print(f"  {e}")
     exit(1)
 
 try:
@@ -89,7 +87,7 @@ try:
         os.makedirs(LOG_DIRECTORY, exist_ok=True)
 except Exception as e:
     print("Impossible to create the log directory:")
-    print("  {}".format(e))
+    print(f"  {e}")
     exit(1)
 
 

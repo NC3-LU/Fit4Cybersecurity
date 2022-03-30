@@ -1,11 +1,11 @@
-# -*- coding: utf-8 -*-
+import json
 
 from django import forms
 from django.utils.translation import gettext_lazy as _
-from survey.models import SurveyQuestionAnswer
 from django_countries.fields import CountryField
+
 from csskp.settings import CUSTOM
-import json
+from survey.models import SurveyQuestionAnswer
 
 
 class AnswerMChoice(forms.Form):

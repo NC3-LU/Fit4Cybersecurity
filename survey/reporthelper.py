@@ -1,25 +1,26 @@
-# -*- coding: utf-8 -*-
-
-from typing import Optional, Dict, List, Tuple
-import io
-import os
 import base64
-import numpy as np
+import io
 import logging
+import os
+from typing import Dict
+from typing import List
+from typing import Optional
+from typing import Tuple
 
-from csskp.settings import PICTURE_DIR, CUSTOM
-from survey.models import (
-    SurveyQuestion,
-    SurveyUser,
-    SurveyUserAnswer,
-    Recommendations,
-    SurveyUserQuestionSequence,
-    CONTEXT_SECTION_LABEL,
-)
-from utils.radarFactory import radar_factory
+import numpy as np
 from django.db.models import Sum
 from django.utils.translation import gettext_lazy as _
 from matplotlib.figure import Figure
+
+from csskp.settings import CUSTOM
+from csskp.settings import PICTURE_DIR
+from survey.models import CONTEXT_SECTION_LABEL
+from survey.models import Recommendations
+from survey.models import SurveyQuestion
+from survey.models import SurveyUser
+from survey.models import SurveyUserAnswer
+from survey.models import SurveyUserQuestionSequence
+from utils.radarFactory import radar_factory
 
 # Get an instance of a logger
 logger = logging.getLogger(__name__)
@@ -72,7 +73,7 @@ def getRecommendations(user: SurveyUser, lang: str) -> Dict[str, List[str]]:
 
 def is_recommendation_already_added(recommendation: str, recommendations: dict) -> bool:
     if recommendations:
-        for category, recommendations_per_category in recommendations.items():
+        for _category, recommendations_per_category in recommendations.items():
             if recommendation in recommendations_per_category:
                 return True
     return False
@@ -203,17 +204,17 @@ def generate_chart_png(
         try:
             fig.savefig(stringIObytes, format="svg")
         except Exception as e:
-            raise Exception("{}".format(e))
+            raise Exception(f"{e}")
         stringIObytes.seek(0)
         return base64.b64encode(stringIObytes.read()).decode()
     else:
         if not os.path.isdir(PICTURE_DIR):
             os.makedirs(PICTURE_DIR)
-        file_name = os.path.join(PICTURE_DIR, "survey-{}.svg".format(user.user_id))
+        file_name = os.path.join(PICTURE_DIR, f"survey-{user.user_id}.svg")
         try:
             fig.savefig(file_name)
         except Exception as e:
-            raise Exception("{}".format(e))
+            raise Exception(f"{e}")
         return file_name
 
 
