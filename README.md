@@ -4,6 +4,7 @@
 [![Latest release](https://img.shields.io/github/release/CASES-LU/Fit4Cybersecurity.svg?style=flat-square)](https://github.com/CASES-LU/Fit4Cybersecurity/releases/latest)
 [![License](https://img.shields.io/github/license/CASES-LU/Fit4Cybersecurity.svg?style=flat-square)](https://www.gnu.org/licenses/agpl-3.0.html)
 [![Translation status](https://translate.monarc.lu/widgets/Fit4Cybersecurity/-/fit4cybersecurity/svg-badge.svg)](https://translate.monarc.lu/engage/Fit4Cybersecurity/)
+[![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit)
 
 
 Fit4Cybersecurity is a self-assessment tool by [CASES](https://www.cases.lu)
@@ -14,7 +15,8 @@ This tool allows instantiation of the following self-assessment websites:
 - [Fit4Cybersecurity](https://fit4cybersecurity.cases.lu),
 - [Fit4Privacy](https://fit4privacy.cases.lu),
 - [OperatorSurvey](https://operatorsurvey.cases.lu),
-- [Cyber4Africa](https://start.cyber4africa.org).
+- [Cyber4Africa](https://start.cyber4africa.org);
+- [Fit4Contract](https://contract.cases.lu).
 
 
 ## Contributing
@@ -227,7 +229,7 @@ and only override its specific blocks.
 
 ## Updating the OpenAPI Schema
 
-If you have update the API, you can generate a new OpenAPI Schema:
+If you have updated the API, you can generate a new OpenAPI Schema:
 
 ```bash
 $ python manage.py generateschema --file static/survey/api/openapi-schema.yml
@@ -239,4 +241,4 @@ $ python manage.py generateschema --file static/survey/api/openapi-schema.yml
 This software is licensed under
 [GNU Affero General Public License version 3](https://www.gnu.org/licenses/agpl-3.0.html)
 
-Copyright (C) 2019-2021 SECURITYMADEIN.LU
+Copyright (C) 2019-2022 SECURITYMADEIN.LU
