@@ -1,14 +1,10 @@
-# -*- coding: utf-8 -*-
-
 from stats.forms import DEFAULT_DATE_FORMAT
-from survey.models import (
-    SurveyQuestion,
-    SurveyUserFeedback,
-    SurveyUser,
-    SurveyUserAnswer,
-    SURVEY_STATUS_FINISHED,
-    CONTEXT_SECTION_LABEL,
-)
+from survey.models import CONTEXT_SECTION_LABEL
+from survey.models import SURVEY_STATUS_FINISHED
+from survey.models import SurveyQuestion
+from survey.models import SurveyUser
+from survey.models import SurveyUserAnswer
+from survey.models import SurveyUserFeedback
 
 
 def get_finished_surveys_list(start_date, end_date):

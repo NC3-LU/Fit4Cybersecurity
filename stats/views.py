@@ -1,28 +1,30 @@
-# -*- coding: utf-8 -*-
-
 import sys
 from datetime import datetime
-from typing import Any, Dict
+from typing import Any
+from typing import Dict
+
 from dateutil.relativedelta import relativedelta
-from django.conf.global_settings import LANGUAGES
-from django.db.models import Count, Sum
-from django.db.models.functions import TruncDay
-from django.shortcuts import render
-from django.http import JsonResponse
 from django.conf import settings
+from django.conf.global_settings import LANGUAGES
+from django.db.models import Count
+from django.db.models import Sum
+from django.db.models.functions import TruncDay
+from django.http import JsonResponse
+from django.shortcuts import render
 from django.utils import translation
 from django.utils.translation import gettext as _
-from csskp.settings import CUSTOM, LANGUAGE_CODE
-from survey.lib.utils import tree, mean_gen
-from survey.models import (
-    SurveyUser,
-    SurveyUserAnswer,
-    SurveyQuestion,
-    SurveyQuestionAnswer,
-    CONTEXT_SECTION_LABEL,
-)
-from survey.reporthelper import calculateResult
 from django_countries import countries
+
+from csskp.settings import CUSTOM
+from csskp.settings import LANGUAGE_CODE
+from survey.lib.utils import mean_gen
+from survey.lib.utils import tree
+from survey.models import CONTEXT_SECTION_LABEL
+from survey.models import SurveyQuestion
+from survey.models import SurveyQuestionAnswer
+from survey.models import SurveyUser
+from survey.models import SurveyUserAnswer
+from survey.reporthelper import calculateResult
 
 
 def index(request):
@@ -39,6 +41,7 @@ def index(request):
     nb_finished_surveys_for_period = SurveyUser.objects.filter(
         status=3, created_at__gte=date_from
     ).count()
+    nb_surveys_for_period = SurveyUser.objects.filter(created_at__gte=date_from).count()
     survey_countries = (
         SurveyUserAnswer.objects.filter(
             user__status=3,
@@ -80,6 +83,7 @@ def index(request):
         "nb_surveys": nb_surveys,
         "first_survey_date": getattr(first_survey, "created_at", False),
         "nb_finished_surveys": nb_finished_surveys,
+        "nb_surveys_for_period": nb_surveys_for_period,
         "nb_finished_surveys_for_period": nb_finished_surveys_for_period,
         "survey_countries": survey_countries,
         "python_version": "{}.{}.{}".format(*sys.version_info[:3]),

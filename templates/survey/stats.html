@@ -105,7 +105,14 @@
                             <span class="sr-only">{{ _('Loading...') }}</span>
                         </div>
                     </div>
-                    <canvas id="stats-sector"></canvas>
+                    {% if nb_finished_surveys_for_period == 0 %}
+                        <div class="text-center">
+                            <i class="bi bi-x-circle text-warning display-1"></i>
+                            <p class="font-italic">{{ _('No statistics available') }}</p>
+                        </div>
+                    {% else %}
+                        <canvas id="stats-sector"></canvas>
+                    {% endif %}
                 </div>
             {% endif %}
             {% if custom.stats.size %}
@@ -118,7 +125,14 @@
                             <span class="sr-only">{{ _('Loading...') }}</span>
                         </div>
                     </div>
-                    <canvas id="stats-company"></canvas>
+                    {% if nb_finished_surveys_for_period == 0 %}
+                        <div class="text-center">
+                            <i class="bi bi-x-circle text-warning display-1"></i>
+                            <p class="font-italic">{{ _('No statistics available') }}</p>
+                        </div>
+                    {% else %}
+                        <canvas id="stats-company"></canvas>
+                    {% endif %}
                 </div>
             {% endif %}
             {% if custom.stats.country %}
@@ -131,10 +145,17 @@
                             <span class="sr-only">{{ _('Loading...') }}</span>
                         </div>
                     </div>
-                    <canvas id="stats-countries"></canvas>
-                    <script>
-                        var others_translation = "{{ others_translation }}"
-                    </script>
+                    {% if nb_finished_surveys_for_period == 0 %}
+                        <div class="text-center">
+                            <i class="bi bi-x-circle text-warning display-1"></i>
+                            <p class="font-italic">{{ _('No statistics available') }}</p>
+                        </div>
+                    {% else %}
+                        <canvas id="stats-countries"></canvas>
+                        <script>
+                            var others_translation = "{{ others_translation }}"
+                        </script>
+                    {% endif %}
                 </div>
                 <div id="popup" class="modal fade" role="dialog">
                   <div class="modal-dialog modal-dialog-centered">
@@ -163,7 +184,14 @@
                             <span class="sr-only">{{ _('Loading...') }}</span>
                         </div>
                     </div>
-                    <canvas id="stats-count"></canvas>
+                    {% if nb_surveys_for_period == 0 %}
+                        <div class="text-center">
+                            <i class="bi bi-x-circle text-warning display-1"></i>
+                            <p class="font-italic">{{ _('No statistics available') }}</p>
+                        </div>
+                    {% else %}
+                        <canvas id="stats-count"></canvas>
+                    {% endif %}
                 </div>
             {% endif %}
             {% if custom.stats.language %}
@@ -176,7 +204,14 @@
                             <span class="sr-only">{{ _('Loading...') }}</span>
                         </div>
                     </div>
-                    <canvas id="stats-language"></canvas>
+                    {% if nb_surveys_for_period == 0 %}
+                        <div class="text-center">
+                            <i class="bi bi-x-circle text-warning display-1"></i>
+                            <p class="font-italic">{{ _('No statistics available') }}</p>
+                        </div>
+                    {% else %}
+                        <canvas id="stats-language"></canvas>
+                    {% endif %}
                 </div>
             {% endif %}
         </div>
@@ -202,7 +237,14 @@
                             {% endfor %}
                         </select>
                     </div>
-                    <canvas id="answers-per-section"></canvas>
+                    {% if nb_finished_surveys_for_period == 0 %}
+                        <div class="text-center">
+                            <i class="bi bi-x-circle text-warning display-1"></i>
+                            <p class="font-italic">{{ _('No statistics available') }}</p>
+                        </div>
+                    {% else %}
+                        <canvas id="answers-per-section"></canvas>
+                    {% endif %}
                 </div>
             </div>
         {% endif %}
@@ -228,7 +270,14 @@
                             {% endfor %}
                         </select>
                     </div>
-                    <canvas id="answers-per-category"></canvas>
+                    {% if nb_finished_surveys_for_period == 0 %}
+                        <div class="text-center">
+                            <i class="bi bi-x-circle text-warning display-1"></i>
+                            <p class="font-italic">{{ _('No statistics available') }}</p>
+                        </div>
+                    {% else %}
+                        <canvas id="answers-per-category"></canvas>
+                    {% endif %}
                 </div>
             </div>
         {% endif %}

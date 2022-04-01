@@ -1,17 +1,19 @@
-# -*- coding: utf-8 -*-
-
-import sys
 import json
-from django.shortcuts import render
-from django.http import JsonResponse, HttpResponseRedirect
-from django.contrib.auth.decorators import login_required
+import sys
+
 from django.contrib import messages
-from utils.utils import exec_cmd, exec_cmd_no_wait
+from django.contrib.auth.decorators import login_required
+from django.http import HttpResponseRedirect
+from django.http import JsonResponse
+from django.shortcuts import render
+
+from stats.forms import DatesLimitForm
 from stats.stats_logic import get_finished_surveys_list
-from survey.reporthelper import calculateResult
 from survey.lib.utils import export_survey
 from survey.models import SurveyUser
-from stats.forms import DatesLimitForm
+from survey.reporthelper import calculateResult
+from utils.utils import exec_cmd
+from utils.utils import exec_cmd_no_wait
 
 
 @login_required

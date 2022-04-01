@@ -9,7 +9,7 @@ SITE_NAME = "fit4cybersecurity"
 
 SECRET_KEY = "u__*z&=urjtc0t)b)@5qbt_a#3-354=k9x(j)@eu#h7sb=-66s"
 
-HASH_KEY = b"hDs3HftLkd9OsxI9smHP-TmGv-4z7h-1xaQp0RYuY20="
+HASH_KEY = b"#StandWithtUkraineHP-TmGv-4z7h-1xaQp0RYuY20="
 
 DEBUG = True
 
@@ -24,11 +24,11 @@ DATABASES = {
     }
 }
 
-CORS_ALLOWED_ORIGINS = [
-]
-
+CORS_ALLOWED_ORIGINS = []
+CORS_ALLOWED_ORIGIN_REGEXES = []
 CORS_ALLOW_METHODS = [
     "GET",
+    "OPTIONS",
 ]
 
 
@@ -58,7 +58,7 @@ LOGGING = {
     "formatters": {
         "app": {
             "format": (
-                "%(asctime)s [%(levelname)-8s] " "(%(module)s.%(funcName)s) %(message)s"
+                "%(asctime)s [%(levelname)-8s] (%(module)s.%(funcName)s) %(message)s"
             ),
             "datefmt": "%Y-%m-%d %H:%M:%S",
         },

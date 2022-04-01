@@ -1,12 +1,10 @@
-# -*- coding: utf-8 -*-
-
 """
 Django settings for csskp project.
 """
-
+import importlib
 import os
 import sys
-import importlib
+
 from django.contrib.messages import constants as messages
 
 try:
@@ -69,13 +67,19 @@ try:
 
     EMAIL_HOST = config.EMAIL_HOST
     EMAIL_PORT = config.EMAIL_PORT
-
-    CORS_ALLOWED_ORIGINS = config.CORS_ALLOWED_ORIGINS
-    CORS_ALLOW_METHODS = config.CORS_ALLOW_METHODS
 except AttributeError as e:
     print("Please check you configuration file for the missing configuration variable:")
-    print("  {}".format(e))
+    print(f"  {e}")
     exit(1)
+
+try:
+    CORS_ALLOWED_ORIGINS = config.CORS_ALLOWED_ORIGINS
+    CORS_ALLOWED_ORIGIN_REGEXES = config.CORS_ALLOWED_ORIGIN_REGEXES
+    CORS_ALLOW_METHODS = config.CORS_ALLOW_METHODS
+except AttributeError:
+    CORS_ALLOWED_ORIGINS = []
+    CORS_ALLOWED_ORIGIN_REGEXES = []
+    CORS_ALLOW_METHODS = []
 
 try:
     if LOG_DIRECTORY:
@@ -83,7 +87,7 @@ try:
         os.makedirs(LOG_DIRECTORY, exist_ok=True)
 except Exception as e:
     print("Impossible to create the log directory:")
-    print("  {}".format(e))
+    print(f"  {e}")
     exit(1)
 
 
@@ -136,6 +140,7 @@ if DEBUG:
 
     hostname, _, ips = socket.gethostbyname_ex(socket.gethostname())
     INTERNAL_IPS = [ip[:-1] + "1" for ip in ips] + ["127.0.0.1", "10.0.2.2"]
+
 
 ROOT_URLCONF = "csskp.urls"
 

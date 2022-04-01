@@ -1,8 +1,8 @@
-# -*- coding: utf-8 -*-
-
 import os
 import subprocess
-from csskp.settings import BASE_DIR, CUSTOM
+
+from csskp.settings import BASE_DIR
+from csskp.settings import CUSTOM
 
 
 def get_version(request):
@@ -23,7 +23,7 @@ def get_version(request):
             )
         )
     else:
-        app_version = "{} - {}".format(version[0], version[2][1:])
+        app_version = f"{version[0]} - {version[2][1:]}"
         version_url = "https://github.com/CASES-LU/Fit4Cybersecurity/commits/{}".format(
             version[2][1:]
         )

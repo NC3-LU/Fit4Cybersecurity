@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 """insertcontextanswers.py - Parses JSON file with the old user data content:
 [
     {
@@ -10,16 +8,15 @@
     }
 ]
 """
-
 import json
+
 from django.core.management.base import BaseCommand
-from survey.models import (
-    SurveyUser,
-    SurveyQuestion,
-    SurveyUserAnswer,
-    SurveyQuestionAnswer,
-    CONTEXT_SECTION_LABEL,
-)
+
+from survey.models import CONTEXT_SECTION_LABEL
+from survey.models import SurveyQuestion
+from survey.models import SurveyQuestionAnswer
+from survey.models import SurveyUser
+from survey.models import SurveyUserAnswer
 
 
 class Command(BaseCommand):
@@ -80,7 +77,5 @@ class Command(BaseCommand):
             nb_created_answers += 3
 
         self.stdout.write(
-            self.style.SUCCESS(
-                "  Number of created questions: {}".format(nb_created_answers)
-            )
+            self.style.SUCCESS(f"  Number of created questions: {nb_created_answers}")
         )

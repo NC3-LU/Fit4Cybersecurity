@@ -1,7 +1,8 @@
-# -*- coding: utf-8 -*-
-
 from collections import defaultdict
-from survey.models import SurveyQuestion, SurveyQuestionAnswer, Recommendations
+
+from survey.models import Recommendations
+from survey.models import SurveyQuestion
+from survey.models import SurveyQuestionAnswer
 
 
 def tree():
