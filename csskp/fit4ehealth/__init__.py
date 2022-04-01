@@ -9,7 +9,6 @@ CUSTOM = {
     "languages": [
         ("en", "English"),
         ("fr", "French"),
-        ("lb", "Luxembourgish"),
         ("de", "German"),
     ],
     # Logos paths
