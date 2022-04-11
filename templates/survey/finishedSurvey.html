@@ -111,7 +111,7 @@
                                 {% include 'survey/requestDiagnosticLink.html' with type='button' %}
                             </div>
                         {% endif %}
-                        {% custom.modules.requestTraining %}
+                        {% if custom.modules.requestTraining %}
                             <div class="px-2">
                                 {% include 'survey/requestTrainingLink.html' with type='button' %}
                             </div>
