@@ -6,13 +6,15 @@
 #: data/fit4africa/context-questions.json:249
 #: data/fit4contract/context-questions.json:207
 #: data/fit4cybersecurity/context-questions.json:207
+#: data/fit4ehealth/questions.json:266 data/fit4ehealth/questions.json:1950
+#: data/fit4ehealth/questions.json:1976 data/fit4ehealth/questions.json:1985
 #: data/fit4privacy/context-questions.json:207
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-04-01 14:04+0000\n"
+"POT-Creation-Date: 2022-04-11 07:30+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1936,6 +1938,12 @@ msgstr ""
 msgid "In the establishment, rules are"
 msgstr ""
 
+#: data/fit4ehealth/questions.json:16
+msgid ""
+"Rules are not especially specified, because they should be obvious for "
+"everyone"
+msgstr ""
+
 #: data/fit4ehealth/questions.json:23
 msgid ""
 "The company should define rules in order to avoid misunderstandings. Here "
@@ -1946,6 +1954,10 @@ msgstr ""
 msgid "given verbally"
 msgstr ""
 
+#: data/fit4ehealth/questions.json:33
+msgid "Rules are discussed, told to everyone whenever they are decided"
+msgstr ""
+
 #: data/fit4ehealth/questions.json:40
 msgid ""
 "Rules (organizational, IT or work rules) should be known and explained to "
@@ -1954,6 +1966,12 @@ msgstr ""
 
 #: data/fit4ehealth/questions.json:49
 msgid "written and distributed by mail"
+msgstr ""
+
+#: data/fit4ehealth/questions.json:50
+msgid ""
+"Rules are written by someone when they are decided, then send by any means "
+"(could be paper, email, internal chat app ...)"
 msgstr ""
 
 #: data/fit4ehealth/questions.json:57
@@ -1968,11 +1986,21 @@ msgstr ""
 msgid "read and signed by all, in a cabinet/practice charter or similar"
 msgstr ""
 
+#: data/fit4ehealth/questions.json:67
+msgid "Rules are written and should be signed by all employees"
+msgstr ""
+
 #: data/fit4ehealth/questions.json:74
 msgid ""
 "Written rules can:<ul><li>avoid for relevant points being forgotten and can "
 "be consulted at any time</li><li>have a legal proof that the rules have been "
 "read</li></ul>"
+msgstr ""
+
+#: data/fit4ehealth/questions.json:84
+msgid ""
+"Whenever it is possible, rules are given with some tips to help people to "
+"understand them and accept them more easily."
 msgstr ""
 
 #: data/fit4ehealth/questions.json:91
@@ -1984,6 +2012,12 @@ msgstr ""
 #: data/fit4ehealth/questions.json:100
 msgid ""
 "covering topics such as cybersecurity and data management in your profession."
+msgstr ""
+
+#: data/fit4ehealth/questions.json:101
+msgid ""
+"Do you have some rules that talk about how password should be, or that you "
+"shouldn’t download any untrustworthy software?"
 msgstr ""
 
 #: data/fit4ehealth/questions.json:108
@@ -1999,6 +2033,12 @@ msgid ""
 "temporarily out of order"
 msgstr ""
 
+#: data/fit4ehealth/questions.json:118
+msgid ""
+"You have some advice or rules on what you should be done in case of a major "
+"disaster or incident that stops your activity happens."
+msgstr ""
+
 #: data/fit4ehealth/questions.json:125
 msgid ""
 "In case of a major incident, you should have some rules or advice in order "
@@ -2011,6 +2051,12 @@ msgid ""
 "defined to manage the necessary steps which need to be taken when there is a "
 "change in medical staff, e.g. hiring of new employees, leave/dismissal or "
 "temporary replacement (during leave) of staff members"
+msgstr ""
+
+#: data/fit4ehealth/questions.json:135
+msgid ""
+"For example a checklist containing the relevant steps like blocking/removing "
+"account, keys, change of assignments, etc."
 msgstr ""
 
 #: data/fit4ehealth/questions.json:142
@@ -2033,6 +2079,12 @@ msgstr ""
 msgid "still stored on paper, if needed"
 msgstr ""
 
+#: data/fit4ehealth/questions.json:163
+msgid ""
+"Some documents concerning patients are still received, printed and stored "
+"somewhere."
+msgstr ""
+
 #: data/fit4ehealth/questions.json:170
 msgid ""
 "Hard copy documents must be kept where only authorized persons have access. "
@@ -2044,6 +2096,10 @@ msgstr ""
 msgid ""
 "sent in unencrypted form by email to the patient or to collaborators who "
 "request it"
+msgstr ""
+
+#: data/fit4ehealth/questions.json:180
+msgid "Emails are sent without protecting the content"
 msgstr ""
 
 #: data/fit4ehealth/questions.json:187
@@ -2060,10 +2116,24 @@ msgid ""
 "request it"
 msgstr ""
 
+#: data/fit4ehealth/questions.json:197
+msgid ""
+"Emails are sent encrypted or with medical content only in encrypted "
+"attachment or by using Regimail."
+msgstr ""
+
 #: data/fit4ehealth/questions.json:205
 msgid ""
 "sometimes sent via a messaging system (like Whatsapp, Skype, …) or stored in "
 "the Cloud (like WeTransfer, Google Drive, …)"
+msgstr ""
+
+#: data/fit4ehealth/questions.json:206
+msgid ""
+"Data could be sent either to someone by a non-specialized storage public "
+"solution (RegiBox or internal solutions excluded) such as WeTransfer, "
+"Dropbox, Google Drive, … or by public chat solution such as Whatsapp, Signal "
+"…"
 msgstr ""
 
 #: data/fit4ehealth/questions.json:213
@@ -2080,6 +2150,12 @@ msgid ""
 "sometimes sent by fax to external healthcare professionals / institutions"
 msgstr ""
 
+#: data/fit4ehealth/questions.json:223
+msgid ""
+"Data are sent by fax to any professional, laboratory, hospital or other "
+"organization."
+msgstr ""
+
 #: data/fit4ehealth/questions.json:230
 msgid ""
 "Fax is not a secure way to exchange sensitive data. It is also important to "
@@ -2089,6 +2165,10 @@ msgstr ""
 
 #: data/fit4ehealth/questions.json:239
 msgid "kept indefinitely, even after patients have left the country or died"
+msgstr ""
+
+#: data/fit4ehealth/questions.json:240
+msgid "You never dispose the data when the patient is inaccessible."
 msgstr ""
 
 #: data/fit4ehealth/questions.json:247
@@ -2124,6 +2204,12 @@ msgstr ""
 msgid "software they use on a regular basis"
 msgstr ""
 
+#: data/fit4ehealth/questions.json:284
+msgid ""
+"You have received training on software or devices that you use, and you are "
+"able to face or understand some particular situation to avoid any data loss."
+msgstr ""
+
 #: data/fit4ehealth/questions.json:291
 msgid ""
 "To avoid loss of time and data, it is important to learn to use your "
@@ -2137,6 +2223,14 @@ msgid ""
 "information security issues"
 msgstr ""
 
+#: data/fit4ehealth/questions.json:301
+msgid ""
+"You have received training on the information security basics, or you have "
+"personally invested some time to search some ways or practice, either to be "
+"more protected or to understand how cyber attackers can harm you or your "
+"data."
+msgstr ""
+
 #: data/fit4ehealth/questions.json:308
 msgid ""
 "By sharing information about current, common or well known attacks, "
@@ -2148,6 +2242,12 @@ msgstr ""
 msgid "the importance of managing and protecting personal data correctly"
 msgstr ""
 
+#: data/fit4ehealth/questions.json:318
+msgid ""
+"You have received training on the personal data protection, or asked a "
+"professional how you should proceed to protect them."
+msgstr ""
+
 #: data/fit4ehealth/questions.json:325
 msgid ""
 "Train users on the sensitivity of the information processed, in order to "
@@ -2156,6 +2256,12 @@ msgstr ""
 
 #: data/fit4ehealth/questions.json:334
 msgid "none of those cases"
+msgstr ""
+
+#: data/fit4ehealth/questions.json:335
+msgid ""
+"You have never received any training for the software you use, on "
+"information security or on personal data."
 msgstr ""
 
 #: data/fit4ehealth/questions.json:341
@@ -2170,8 +2276,21 @@ msgstr ""
 msgid "performed internally by an IT specialist"
 msgstr ""
 
+#: data/fit4ehealth/questions.json:354
+msgid ""
+"Someone in the establishment specifically has to take care of all issues "
+"that concerns computers or servers, or any issues in that field."
+msgstr ""
+
 #: data/fit4ehealth/questions.json:362
 msgid "performed internally by a person who is computer literate"
+msgstr ""
+
+#: data/fit4ehealth/questions.json:363
+msgid ""
+"Someone in the establishment take care of computers or even servers if there "
+"is a problem, but the person is not dedicated to this and do other tasks in "
+"the establishment."
 msgstr ""
 
 #: data/fit4ehealth/questions.json:370 data/fit4ehealth/questions.json:387
@@ -2187,8 +2306,21 @@ msgid ""
 "externally without contract"
 msgstr ""
 
+#: data/fit4ehealth/questions.json:380
+msgid ""
+"The one who encounters the problem has to solve it, or eventually ask to "
+"someone who could be external but don’t have any contract with the "
+"establishment."
+msgstr ""
+
 #: data/fit4ehealth/questions.json:396
 msgid "externally by a third party with a contract"
+msgstr ""
+
+#: data/fit4ehealth/questions.json:397
+msgid ""
+"Whenever a problem is encountered, another company will try to solve it. "
+"This company is under contract."
 msgstr ""
 
 #: data/fit4ehealth/questions.json:403
@@ -2206,6 +2338,11 @@ msgid ""
 "no professional tools/devices because home office or visits are not allowed "
 "or necessary, or the only connection is the internal network on company "
 "premises"
+msgstr ""
+
+#: data/fit4ehealth/questions.json:416
+msgid ""
+"Accessing to the internal data is impossible from outside the establishment."
 msgstr ""
 
 #: data/fit4ehealth/questions.json:423 data/fit4ehealth/questions.json:470
@@ -2226,6 +2363,13 @@ msgid ""
 "to the establishment’s internal server"
 msgstr ""
 
+#: data/fit4ehealth/questions.json:440
+msgid ""
+"Before accessing your data from outside, you need to connect (or "
+"automatically connect) to a software that permits to access the data you "
+"have inside the establishment."
+msgstr ""
+
 #: data/fit4ehealth/questions.json:450
 msgid ""
 "Whenever users need to work offsite, from home office or other offsite "
@@ -2233,10 +2377,20 @@ msgid ""
 "server/network."
 msgstr ""
 
+#: data/fit4ehealth/questions.json:460
+msgid "You can connect from any place that provides you an internet access"
+msgstr ""
+
 #: data/fit4ehealth/questions.json:479
 msgid ""
 "a private connection or connection sharing from a private or professional/"
 "work smartphone tethering/hotspot)"
+msgstr ""
+
+#: data/fit4ehealth/questions.json:480
+msgid ""
+"You only use a connection where you have some control, such as your own "
+"private connection or your phone's shared one."
 msgstr ""
 
 #: data/fit4ehealth/questions.json:490
@@ -2249,6 +2403,12 @@ msgstr ""
 msgid ""
 "a screen filter or setting that ensures that no unauthorized person can see "
 "what is displayed on the screen of their mobile device (tablet or laptop)"
+msgstr ""
+
+#: data/fit4ehealth/questions.json:500
+msgid ""
+"Whenever you are outside, you always try to pay attention to who could see "
+"your screen, or you have a screen filter to avoid any curious look."
 msgstr ""
 
 #: data/fit4ehealth/questions.json:507
@@ -2264,6 +2424,12 @@ msgid ""
 "contain confidential data"
 msgstr ""
 
+#: data/fit4ehealth/questions.json:517
+msgid ""
+"Each time you boot your device, you have to type an extra password (e.g. for "
+"Bitlocker) or your computer does not store any medical data on it."
+msgstr ""
+
 #: data/fit4ehealth/questions.json:524
 msgid ""
 "For devices that are taken away and that contain confidential data, the "
@@ -2272,6 +2438,12 @@ msgstr ""
 
 #: data/fit4ehealth/questions.json:533
 msgid "devices that are not connected to an IT network during the visit."
+msgstr ""
+
+#: data/fit4ehealth/questions.json:534
+msgid ""
+"The device you use cannot connect to any network from outside, or you take "
+"care it never do it."
 msgstr ""
 
 #: data/fit4ehealth/questions.json:546
@@ -2291,6 +2463,12 @@ msgid ""
 "special needs"
 msgstr ""
 
+#: data/fit4ehealth/questions.json:566
+msgid ""
+"You do not have any contract defined with your ICT provider which only acts "
+"when they have time, without any guarantee."
+msgstr ""
+
 #: data/fit4ehealth/questions.json:573
 msgid ""
 "Contracts should be defined with all external actors. Here are some advices:"
@@ -2300,6 +2478,12 @@ msgstr ""
 msgid ""
 "contain a confidentiality clause stating that the provider must  not "
 "disclose any personal data he might access in the course of his work"
+msgstr ""
+
+#: data/fit4ehealth/questions.json:583
+msgid ""
+"You may have an NDA (Non-Disclosure Agreement) or this is written in the "
+"signed contract with the ICT provider."
 msgstr ""
 
 #: data/fit4ehealth/questions.json:590
@@ -2316,6 +2500,12 @@ msgid ""
 "controller and data processor"
 msgstr ""
 
+#: data/fit4ehealth/questions.json:600
+msgid ""
+"Terms such as “data controller” and “data processor” are clearly stated in a "
+"contract defining the personal data protection."
+msgstr ""
+
 #: data/fit4ehealth/questions.json:607
 msgid ""
 "Some terms are legally defined by the GDPR (e.g. “Data Processor” and “Data "
@@ -2326,6 +2516,12 @@ msgstr ""
 msgid ""
 "define the maximum time until an intervention must be performed following an "
 "incident"
+msgstr ""
+
+#: data/fit4ehealth/questions.json:617
+msgid ""
+"Whenever an incident is happening, the ICT provider needs to react under a "
+"certain time which is defined in the contract."
 msgstr ""
 
 #: data/fit4ehealth/questions.json:624
@@ -2342,8 +2538,20 @@ msgid ""
 "requirements"
 msgstr ""
 
+#: data/fit4ehealth/questions.json:634
+msgid ""
+"Contracts are reviewed, once every year or two years, to see if the needs of "
+"the establishment fit the contract."
+msgstr ""
+
 #: data/fit4ehealth/questions.json:650
 msgid "are specified verbally"
+msgstr ""
+
+#: data/fit4ehealth/questions.json:651
+msgid ""
+"There is no written agreement between the third party and the establishment, "
+"only a discussion beforehand."
 msgstr ""
 
 #: data/fit4ehealth/questions.json:658
@@ -2355,6 +2563,10 @@ msgstr ""
 
 #: data/fit4ehealth/questions.json:667
 msgid "are in written form"
+msgstr ""
+
+#: data/fit4ehealth/questions.json:668
+msgid "The contracts are written, dated and signed by both parties."
 msgstr ""
 
 #: data/fit4ehealth/questions.json:675
@@ -2374,6 +2586,11 @@ msgstr ""
 msgid "internally, by our employees"
 msgstr ""
 
+#: data/fit4ehealth/questions.json:695
+msgid ""
+"The cleaning of the place is done by someone intern to the establishment."
+msgstr ""
+
 #: data/fit4ehealth/questions.json:709
 msgid ""
 "Not to provide keys, as there is the risk that keys can be lost or copied "
@@ -2382,6 +2599,12 @@ msgstr ""
 
 #: data/fit4ehealth/questions.json:718
 msgid "by an external person/company who has all the necessary keys"
+msgstr ""
+
+#: data/fit4ehealth/questions.json:719
+msgid ""
+"The cleaning is managed either by a person who is specialized, or by a "
+"company which is specialized in it."
 msgstr ""
 
 #: data/fit4ehealth/questions.json:726
@@ -2394,6 +2617,12 @@ msgstr ""
 msgid "during the working hours of the establishment/facility"
 msgstr ""
 
+#: data/fit4ehealth/questions.json:736
+msgid ""
+"The cleaning is done only while there is still someone who works on the "
+"establishment."
+msgstr ""
+
 #: data/fit4ehealth/questions.json:743
 msgid ""
 "Whenever possible, the office cleaning should be done during office hours to "
@@ -2404,6 +2633,12 @@ msgstr ""
 msgid "with clear rules what may and may not be done"
 msgstr ""
 
+#: data/fit4ehealth/questions.json:753
+msgid ""
+"The cleaning has to be done respecting some rules, such precision on what "
+"should be accessed or what shouldn’t be, or what mustn’t be unplugged."
+msgstr ""
+
 #: data/fit4ehealth/questions.json:760
 msgid ""
 "Rules should be set on what to do and what to avoid, as misunderstandings "
@@ -2412,6 +2647,12 @@ msgstr ""
 
 #: data/fit4ehealth/questions.json:769
 msgid "with a contract that stipulates medical confidentiality"
+msgstr ""
+
+#: data/fit4ehealth/questions.json:770
+msgid ""
+"The contract you have signed with the person or the company has some part "
+"concerning the confidentiality of medical data."
 msgstr ""
 
 #: data/fit4ehealth/questions.json:777
@@ -2426,6 +2667,12 @@ msgid ""
 "cabinet"
 msgstr ""
 
+#: data/fit4ehealth/questions.json:787
+msgid ""
+"The cleaning always happen when all documents are locked somewhere, or are "
+"inaccessible without breaking something"
+msgstr ""
+
 #: data/fit4ehealth/questions.json:794
 msgid ""
 "To prevent confidential documents from being seen by unauthorized persons / "
@@ -2435,6 +2682,12 @@ msgstr ""
 #: data/fit4ehealth/questions.json:803
 msgid ""
 "avoiding rooms with restricted access, like an archive room or a server room"
+msgstr ""
+
+#: data/fit4ehealth/questions.json:804
+msgid ""
+"The cleaning is not done by externals in some places which contain "
+"confidential equipment or data."
 msgstr ""
 
 #: data/fit4ehealth/questions.json:811
@@ -2455,11 +2708,25 @@ msgstr ""
 msgid "managed by my ICT provide, but only on request"
 msgstr ""
 
+#: data/fit4ehealth/questions.json:831
+msgid ""
+"When a problem occurs, you contact your ICT provider to take care of it, "
+"without being noticed about their activities (such as when it starts, when "
+"it is finished …). But the ICT provider could still access the server or "
+"computer without restrictions."
+msgstr ""
+
 #: data/fit4ehealth/questions.json:838
 msgid ""
 "Whenever someone is accessing your computer remotely, you need to be aware "
 "who is accessing, what is being accessed and for what reason. Here is some "
 "advice on how to deal with it:"
+msgstr ""
+
+#: data/fit4ehealth/questions.json:848
+msgid ""
+"Your ICT provider can access your server or your computer when you ask for "
+"it."
 msgstr ""
 
 #: data/fit4ehealth/questions.json:855
@@ -2472,6 +2739,12 @@ msgstr ""
 msgid "monitored as soon as this happens"
 msgstr ""
 
+#: data/fit4ehealth/questions.json:865
+msgid ""
+"When your ICT provider can look at your screen (by software to make remote "
+"access such as Teamviewer), you always check that nothing weird happens."
+msgstr ""
+
 #: data/fit4ehealth/questions.json:872
 msgid ""
 "If someone is performing remote maintenance on your computer, you should "
@@ -2480,6 +2753,13 @@ msgstr ""
 
 #: data/fit4ehealth/questions.json:881
 msgid "verified by continuous contact with the ICT provider"
+msgstr ""
+
+#: data/fit4ehealth/questions.json:882
+msgid ""
+"When your ICT provider can look at your screen (by software to make remote "
+"access such as Teamviewer), you are always in contact with him, by phone or "
+"any other mean."
 msgstr ""
 
 #: data/fit4ehealth/questions.json:889
@@ -2493,6 +2773,12 @@ msgstr ""
 
 #: data/fit4ehealth/questions.json:898
 msgid "never carried out, a technician must be on site of the facility"
+msgstr ""
+
+#: data/fit4ehealth/questions.json:899
+msgid ""
+"An ICT provider cannot do maintenance  without being physically present in "
+"your establishment."
 msgstr ""
 
 #: data/fit4ehealth/questions.json:906
@@ -2515,6 +2801,13 @@ msgstr ""
 msgid "can circulate freely in the premises"
 msgstr ""
 
+#: data/fit4ehealth/questions.json:926
+msgid ""
+"The patient can visit the premises as he wishes. Some doors could be left "
+"open (by accident). Also the patient could come in the premises without "
+"announcing himself (by ringing, knocking ...)."
+msgstr ""
+
 #: data/fit4ehealth/questions.json:933
 msgid ""
 "Ensure that external persons cannot freely circulate within your premises, "
@@ -2523,6 +2816,13 @@ msgstr ""
 
 #: data/fit4ehealth/questions.json:942
 msgid "can occasionally be left alone"
+msgstr ""
+
+#: data/fit4ehealth/questions.json:943
+msgid ""
+"The patient could be alone, occasionally (when the person who welcomes the "
+"patient need to do something quickly) or frequently (they just need to come "
+"to the waiting room without being announced)."
 msgstr ""
 
 #: data/fit4ehealth/questions.json:953
@@ -2536,6 +2836,12 @@ msgstr ""
 msgid "can leave unnoticed"
 msgstr ""
 
+#: data/fit4ehealth/questions.json:963
+msgid ""
+"No one can see or know that a patient leaves or enters the premises. He/she "
+"cannot be spotted by physical sight, cameras or a ringing bell at the door"
+msgstr ""
+
 #: data/fit4ehealth/questions.json:973
 msgid ""
 "To prevent theft and avoid snooping, it is important to know who enters and "
@@ -2545,6 +2851,12 @@ msgstr ""
 
 #: data/fit4ehealth/questions.json:982
 msgid "is always under surveillance (by someone, physically or remotely)"
+msgstr ""
+
+#: data/fit4ehealth/questions.json:983
+msgid ""
+"Someone should always see or know a patient leave or enter the premises. He/"
+"she can be spotted by physical sight, cameras or a ringing bell at the door."
 msgstr ""
 
 #: data/fit4ehealth/questions.json:994
@@ -2558,6 +2870,14 @@ msgstr ""
 msgid "has no access to any documents, as these are locked up"
 msgstr ""
 
+#: data/fit4ehealth/questions.json:1004
+msgid ""
+"Important documents are always locked, and the only person that access them "
+"is a person that got the right to access them. If someone who doesn't have "
+"the initial right to access them, he has to ask to the person who got the "
+"key."
+msgstr ""
+
 #: data/fit4ehealth/questions.json:1011
 msgid ""
 "You must lock every sensitive physical document to avoid data theft or "
@@ -2567,6 +2887,13 @@ msgstr ""
 
 #: data/fit4ehealth/questions.json:1020
 msgid "has no access to any computers because they are locked"
+msgstr ""
+
+#: data/fit4ehealth/questions.json:1021
+msgid ""
+"Whenever someone has to leave a computer alone (could be his/her or a "
+"computer linked to the medical device, or the one with the software), the "
+"computer is locked and no one can access it without typing a password."
 msgstr ""
 
 #: data/fit4ehealth/questions.json:1028
@@ -2579,6 +2906,12 @@ msgstr ""
 msgid "cannot access printers without being seen"
 msgstr ""
 
+#: data/fit4ehealth/questions.json:1038
+msgid ""
+"Printed documents couldn't be grabbed by someone who has not printed it, or "
+"if it's the case the person has the authorization to read or take it."
+msgstr ""
+
 #: data/fit4ehealth/questions.json:1045
 msgid ""
 "Printers can contain confidential information, such as the last documents "
@@ -2587,6 +2920,12 @@ msgstr ""
 
 #: data/fit4ehealth/questions.json:1054
 msgid "cannot enter the office when no one is in the office"
+msgstr ""
+
+#: data/fit4ehealth/questions.json:1055
+msgid ""
+"The premises are only open at a certain time, and otherwise are closed with "
+"a key (or other means) and under alarm (if possible)."
 msgstr ""
 
 #: data/fit4ehealth/questions.json:1062
@@ -2604,6 +2943,12 @@ msgstr ""
 msgid ""
 "have no specifications or guidelines, employees can manage them at their own "
 "discretion"
+msgstr ""
+
+#: data/fit4ehealth/questions.json:1082
+msgid ""
+"There is no indication for people on what they should do, so password could "
+"be anything."
 msgstr ""
 
 #: data/fit4ehealth/questions.json:1089
@@ -2635,8 +2980,20 @@ msgstr ""
 msgid "are centralized in a file, or are all known by one or more people"
 msgstr ""
 
+#: data/fit4ehealth/questions.json:1120
+msgid ""
+"Passwords are all listed on a file so everyone can access to all computers "
+"if they need it."
+msgstr ""
+
 #: data/fit4ehealth/questions.json:1136
 msgid "are shared when a protected device needs to be accessed"
+msgstr ""
+
+#: data/fit4ehealth/questions.json:1137
+msgid ""
+"Passwords are shared by multiple people to access a medical device, or even "
+"to access some patient folders."
 msgstr ""
 
 #: data/fit4ehealth/questions.json:1144
@@ -2651,6 +3008,12 @@ msgid ""
 "lower case letters, digits and special characters"
 msgstr ""
 
+#: data/fit4ehealth/questions.json:1154
+msgid ""
+"Passwords such as \"MyPassword123!\", \"IL0veS@ndwichs\" or "
+"\"Jp7njQs#FpdCF5oF\" can be considered here."
+msgstr ""
+
 #: data/fit4ehealth/questions.json:1161
 msgid ""
 "Passwords must at least consist of one uppercase letter, one lowercase "
@@ -2660,6 +3023,13 @@ msgstr ""
 
 #: data/fit4ehealth/questions.json:1170
 msgid "do not form any words or dates, or complete sentences"
+msgstr ""
+
+#: data/fit4ehealth/questions.json:1171
+msgid ""
+"Passwords such as \"Jp7njQs#FpdCF5oF\", \"kjahebf\", \"OuattwSWat7D\" or "
+"\"Once upon a time, there was Snow White and the 7 Dwarfs.\" can be "
+"considered here."
 msgstr ""
 
 #: data/fit4ehealth/questions.json:1178
@@ -2672,6 +3042,12 @@ msgstr ""
 msgid "are changed regularly, every one or two years"
 msgstr ""
 
+#: data/fit4ehealth/questions.json:1188
+msgid ""
+"Passwords are changed at least once every two years. This might not be "
+"strict, but could be done more often."
+msgstr ""
+
 #: data/fit4ehealth/questions.json:1195
 msgid ""
 "Passwords should be changed from time to time, to prevent serious "
@@ -2680,6 +3056,12 @@ msgstr ""
 
 #: data/fit4ehealth/questions.json:1205
 msgid "are included in a password manager"
+msgstr ""
+
+#: data/fit4ehealth/questions.json:1206
+msgid ""
+"Passwords are stored in a password manager which is dedicated to this "
+"activity. Example: Lastpass, 1Password, KeePass, Dashlane …"
 msgstr ""
 
 #: data/fit4ehealth/questions.json:1213
@@ -2691,8 +3073,20 @@ msgstr ""
 msgid "are saved in web browsers"
 msgstr ""
 
+#: data/fit4ehealth/questions.json:1223
+msgid ""
+"Passwords are stored in a web browser, a VPN or another service such as the "
+"OS. Example : Mozilla Firefox, Google Chrome, Windows, Apple, NordVPN."
+msgstr ""
+
 #: data/fit4ehealth/questions.json:1239
 msgid "are different for each application used, even for one user"
+msgstr ""
+
+#: data/fit4ehealth/questions.json:1240
+msgid ""
+"Passwords are never used twice, or this should be an exception. Each "
+"password you have to type is different."
 msgstr ""
 
 #: data/fit4ehealth/questions.json:1247
@@ -2710,6 +3104,13 @@ msgid ""
 "is clearly distinguished by the assignment of different authorization roles"
 msgstr ""
 
+#: data/fit4ehealth/questions.json:1267
+msgid ""
+"Within the patient data management application, roles like Doctor, Nurse, "
+"Secretary, Administrator are distinguished and users are assigned to "
+"different roles properly."
+msgstr ""
+
 #: data/fit4ehealth/questions.json:1274
 msgid ""
 "Defining and assigning different access roles is imperative, as this will "
@@ -2724,6 +3125,13 @@ msgid ""
 "is managed within the application by own personal with specific access rights"
 msgstr ""
 
+#: data/fit4ehealth/questions.json:1284
+msgid ""
+"A member of your organization, with specific access rights (like e.g. "
+"Administrator) is able to manage the authorization roles/assignments within "
+"the patient data management application."
+msgstr ""
+
 #: data/fit4ehealth/questions.json:1294
 msgid ""
 "It is possible to delegate the decision to someone working within your "
@@ -2736,6 +3144,12 @@ msgstr ""
 msgid ""
 "is managed within the application by external people such as IT-Service "
 "provider"
+msgstr ""
+
+#: data/fit4ehealth/questions.json:1304
+msgid ""
+"Your software vendor or IT-Service provider is managing the authorization "
+"roles/assignments within the patient data management application."
 msgstr ""
 
 #: data/fit4ehealth/questions.json:1314
@@ -2754,6 +3168,12 @@ msgstr ""
 msgid "are not used in the establishment/facility at all"
 msgstr ""
 
+#: data/fit4ehealth/questions.json:1334
+msgid ""
+"There is no WiFi accessible in the establishment that come from any router "
+"(such as FritzBox! or equivalent)."
+msgstr ""
+
 #: data/fit4ehealth/questions.json:1341
 msgid ""
 "For now, the wireless network is not yet installed in the company. If this "
@@ -2762,6 +3182,11 @@ msgstr ""
 
 #: data/fit4ehealth/questions.json:1350
 msgid "are locked and intended for professional use only"
+msgstr ""
+
+#: data/fit4ehealth/questions.json:1351
+msgid ""
+"Only the staff can access to the WiFi, and no personal devices are connected."
 msgstr ""
 
 #: data/fit4ehealth/questions.json:1362
@@ -2776,6 +3201,12 @@ msgid ""
 "connecting to the network"
 msgstr ""
 
+#: data/fit4ehealth/questions.json:1372
+msgid ""
+"WiFi is given to anyone without any distinction, without asking who they "
+"are. It could be a separate network or the same network that you use."
+msgstr ""
+
 #: data/fit4ehealth/questions.json:1382
 msgid ""
 "If a WIFI network is used for external people, strict precautions should be "
@@ -2784,6 +3215,12 @@ msgstr ""
 
 #: data/fit4ehealth/questions.json:1391
 msgid "are divided into guests and internal network"
+msgstr ""
+
+#: data/fit4ehealth/questions.json:1392
+msgid ""
+"WiFi for patients/guests are separated from the WiFi used for the services "
+"by the employees and professionals in the establishment."
 msgstr ""
 
 #: data/fit4ehealth/questions.json:1402
@@ -2797,8 +3234,19 @@ msgstr ""
 msgid "are protected by long passwords of 20 or more characters"
 msgstr ""
 
+#: data/fit4ehealth/questions.json:1412
+msgid ""
+"The password needed to access the WiFi is at least 20 characters, or more."
+msgstr ""
+
 #: data/fit4ehealth/questions.json:1419
 msgid "The password cannot be easily guessed, to avoid unwanted connections."
+msgstr ""
+
+#: data/fit4ehealth/questions.json:1430
+msgid ""
+"If the printer can be accessed by WiFi, then this network is protected with "
+"a long password (more than 20 characters)."
 msgstr ""
 
 #: data/fit4ehealth/questions.json:1437
@@ -2807,12 +3255,30 @@ msgid ""
 "printed documents."
 msgstr ""
 
+#: data/fit4ehealth/questions.json:1457
+msgid ""
+"There is no antivirus software in the establishment, or you have no idea if "
+"it’s the case."
+msgstr ""
+
 #: data/fit4ehealth/questions.json:1464
 msgid "The company should have an antivirus and ensure that:"
 msgstr ""
 
+#: data/fit4ehealth/questions.json:1474
+msgid ""
+"There is an antivirus software installed on every computer and laptop in the "
+"establishment."
+msgstr ""
+
 #: data/fit4ehealth/questions.json:1481
 msgid "An antivirus software is installed on all devices."
+msgstr ""
+
+#: data/fit4ehealth/questions.json:1491
+msgid ""
+"The antivirus is updated automatically, or your ICT provider update it "
+"sometimes."
 msgstr ""
 
 #: data/fit4ehealth/questions.json:1498
@@ -2825,8 +3291,20 @@ msgstr ""
 msgid "is activated and protects the computer"
 msgstr ""
 
+#: data/fit4ehealth/questions.json:1508
+msgid ""
+"All downloaded files are analysed by the antivirus, and same for every media "
+"storage plugged in the computer."
+msgstr ""
+
 #: data/fit4ehealth/questions.json:1515
 msgid "It is activated to continuously protect the device."
+msgstr ""
+
+#: data/fit4ehealth/questions.json:1525
+msgid ""
+"All phones or tablets that are connected to the network have antivirus "
+"software installed."
 msgstr ""
 
 #: data/fit4ehealth/questions.json:1532
@@ -2841,10 +3319,22 @@ msgid ""
 "external events"
 msgstr ""
 
+#: data/fit4ehealth/questions.json:1542
+msgid ""
+"Sometime you (or your ICT provider) do a full scan of the computer to check "
+"there is no virus in it."
+msgstr ""
+
 #: data/fit4ehealth/questions.json:1549
 msgid ""
 "It is configured in order to benefit of the fact that most of the antivirus "
 "applications allow the configuration of regular schedules for full scans."
+msgstr ""
+
+#: data/fit4ehealth/questions.json:1559
+msgid ""
+"Whenever there is a suspicion of an infection by a virus, a full scan is "
+"done on the computer."
 msgstr ""
 
 #: data/fit4ehealth/questions.json:1566
@@ -2864,6 +3354,13 @@ msgstr ""
 msgid "used without any specific rules and maintained by the users themselves"
 msgstr ""
 
+#: data/fit4ehealth/questions.json:1586
+msgid ""
+"There are no rules (orally given, written …) or advice on how to keep the "
+"workstations safe and everyone can do what ever they want on their computer "
+"(such as downloading and installing software, or updating the computer…)."
+msgstr ""
+
 #: data/fit4ehealth/questions.json:1593
 msgid ""
 "Some rules and specific advice should be given for the usage of workstations "
@@ -2874,6 +3371,12 @@ msgstr ""
 msgid ""
 "updated automatically or manually with regard to the software and the "
 "operating system"
+msgstr ""
+
+#: data/fit4ehealth/questions.json:1603
+msgid ""
+"The laptop and the software installed on it are updated as soon as possible, "
+"or sometimes they are updated by the ICT provider."
 msgstr ""
 
 #: data/fit4ehealth/questions.json:1610
@@ -2891,6 +3394,12 @@ msgid ""
 "software because they do not have administrator rights"
 msgstr ""
 
+#: data/fit4ehealth/questions.json:1620
+msgid ""
+"You do not own the administrator rights on your computer and you can’t "
+"install any software."
+msgstr ""
+
 #: data/fit4ehealth/questions.json:1627
 msgid ""
 "Administrator rights should only be given to users who are specialised in IT."
@@ -2901,6 +3410,12 @@ msgid ""
 "needed to comply with rules or guidelines for installing and downloading "
 "software, that relate to illegal or dangerous activities e.g. installing "
 "something without permission"
+msgstr ""
+
+#: data/fit4ehealth/questions.json:1637
+msgid ""
+"You have some advice or rule to respect whenever you try to download "
+"software, and do it only when you are allowed to do it."
 msgstr ""
 
 #: data/fit4ehealth/questions.json:1644
@@ -2917,8 +3432,20 @@ msgid ""
 "short time"
 msgstr ""
 
+#: data/fit4ehealth/questions.json:1654
+msgid ""
+"As soon as you leave the computer, even if it is for one or two minutes, you "
+"lock your computer and need to type the password as soon as you come back."
+msgstr ""
+
 #: data/fit4ehealth/questions.json:1670
 msgid "regularly shut down outside office hours"
+msgstr ""
+
+#: data/fit4ehealth/questions.json:1671
+msgid ""
+"Whenever you leave the establishment, the computer is shut down, and "
+"sometimes an update screen appears."
 msgstr ""
 
 #: data/fit4ehealth/questions.json:1678
@@ -2936,8 +3463,22 @@ msgstr ""
 msgid "on paper, are stored in a locked place at all times"
 msgstr ""
 
+#: data/fit4ehealth/questions.json:1699
+msgid ""
+"Whenever you don’t need them, papers are locked in a room or at any storage "
+"mean. The lock does not need to be solid, but is always used to prevent "
+"unauthorized persons getting access to these documents."
+msgstr ""
+
 #: data/fit4ehealth/questions.json:1707
 msgid "not my responsablilty and should be handled by my ICT provider"
+msgstr ""
+
+#: data/fit4ehealth/questions.json:1708
+msgid ""
+"A contract is signed (or you consider this is the job of the ICT provider), "
+"but you couldn't look where the data are, or check if your backups are safe "
+"and done."
 msgstr ""
 
 #: data/fit4ehealth/questions.json:1720
@@ -2951,6 +3492,14 @@ msgstr ""
 msgid "on an external storage device"
 msgstr ""
 
+#: data/fit4ehealth/questions.json:1730
+msgid ""
+"All information is saved on an additional hard drive managed by someone "
+"internal to the medical infrastructure. It’s possible to have more than one "
+"hard drive. The hard drive can stay at the office or can be changed of "
+"location."
+msgstr ""
+
 #: data/fit4ehealth/questions.json:1740
 msgid ""
 "External storage can be a device or external storage location. Remember the "
@@ -2961,6 +3510,12 @@ msgstr ""
 msgid "checked by me from time to time"
 msgstr ""
 
+#: data/fit4ehealth/questions.json:1750
+msgid ""
+"All information is saved at a place where you do have access, or you ask "
+"someone to verify it for you, or this is something written in a contract."
+msgstr ""
+
 #: data/fit4ehealth/questions.json:1760
 msgid ""
 "Backups should be tested (restored) from time to time, just to ensure that "
@@ -2969,6 +3524,14 @@ msgstr ""
 
 #: data/fit4ehealth/questions.json:1769
 msgid "only readable by me and the persons to whom I gave permissionn"
+msgstr ""
+
+#: data/fit4ehealth/questions.json:1770
+msgid ""
+"All information (on paper, on the server, in the backup, in any hard drive) "
+"are only accessible by me and the person who have signed a contract with me. "
+"Any maintenance or service provider must not have access unless it is "
+"specified in a contract."
 msgstr ""
 
 #: data/fit4ehealth/questions.json:1780
@@ -2983,10 +3546,21 @@ msgid ""
 "…) in the professional environment (network that is connected to the server)"
 msgstr ""
 
+#: data/fit4ehealth/questions.json:1800
+msgid ""
+"You cannot connect your personal device in the network of the establishment, "
+"or this is something forbidden."
+msgstr ""
+
 #: data/fit4ehealth/questions.json:1807
 msgid ""
 "For now, the personal devices are not connected in the local network. If "
 "this is changed, it is important to:"
+msgstr ""
+
+#: data/fit4ehealth/questions.json:1817
+msgid ""
+"If you connect any personal device, you have to respect some precise rules."
 msgstr ""
 
 #: data/fit4ehealth/questions.json:1824
@@ -3000,10 +3574,22 @@ msgstr ""
 msgid "is subject to a strict antivirus control"
 msgstr ""
 
+#: data/fit4ehealth/questions.json:1834
+msgid ""
+"Any personal device you connect to the network has to get through an "
+"antivirus scan."
+msgstr ""
+
 #: data/fit4ehealth/questions.json:1841
 msgid ""
 "Personal devices should have an antivirus installed, updated and active to "
 "avoid information security threats."
+msgstr ""
+
+#: data/fit4ehealth/questions.json:1851
+msgid ""
+"The danger to connect personal devices or the rules about them has been "
+"explained to everyone."
 msgstr ""
 
 #: data/fit4ehealth/questions.json:1858
@@ -3014,6 +3600,12 @@ msgstr ""
 msgid ""
 "is possible and if problems occur, the IT service provider or a staff member "
 "helps to solve them"
+msgstr ""
+
+#: data/fit4ehealth/questions.json:1868
+msgid ""
+"The ICT provider, or the person responsible to any IT or security problem "
+"can help to resolve the problem and has a good procedure to take care of it."
 msgstr ""
 
 #: data/fit4ehealth/questions.json:1875
@@ -3041,6 +3633,12 @@ msgid ""
 "medical information of the patient"
 msgstr ""
 
+#: data/fit4ehealth/questions.json:1896
+msgid ""
+"\"Dossier soin partagé\" (DSP) should be used for the exchange of medical "
+"data with other professionals and the patient."
+msgstr ""
+
 #: data/fit4ehealth/questions.json:1903
 msgid ""
 "Sharing medical data via the DSP has the advantage of providing relevant "
@@ -3054,6 +3652,12 @@ msgid ""
 "as part of the project of the \"Remboursement accélèré\""
 msgstr ""
 
+#: data/fit4ehealth/questions.json:1914
+msgid ""
+"You are providing electronically the bills of your patients, for the "
+"accelerated reimbursement by CNS, electronically to the CNS."
+msgstr ""
+
 #: data/fit4ehealth/questions.json:1921
 msgid ""
 "\"Reimbursement acceleré\" promotes the digitalisation and speeds up the "
@@ -3064,6 +3668,13 @@ msgstr ""
 msgid ""
 "use the EU cross-border eHealth services to support the treatment of foreign "
 "patients"
+msgstr ""
+
+#: data/fit4ehealth/questions.json:1932
+msgid ""
+"As part of the MyHealth@EU Initiative, Agence eSanté provides cross-border "
+"eHealth services to access for consultation the Patient Summary of patients "
+"from other EU countries."
 msgstr ""
 
 #: data/fit4ehealth/questions.json:1939
@@ -3089,6 +3700,13 @@ msgstr ""
 msgid ""
 "want use a secure direct messaging system in eHealth, to support direct "
 "secure communication with healthcare professionals"
+msgstr ""
+
+#: data/fit4ehealth/questions.json:1967
+msgid ""
+"On governmental level a secure messaging solution is planned to be taken in "
+"place, which would allow secure messaging between professionals replacing "
+"tools like WhatsApp, Signal, …"
 msgstr ""
 
 #: data/fit4ehealth/questions.json:1975
