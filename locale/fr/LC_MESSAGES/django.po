@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-04-11 08:42+0000\n"
+"POT-Creation-Date: 2022-04-11 14:31+0000\n"
 "PO-Revision-Date: 2022-04-09 15:26+0000\n"
 "Last-Translator: Benjamin Joly <benjamin.joly@cases.lu>\n"
 "Language-Team: French <https://translate.monarc.lu/projects/"
@@ -69,9 +69,36 @@ msgstr ""
 "et adapter ses contrats en conséquence, afin de se conformer à toutes les "
 "lois nationales et internationales."
 
-#: csskp/fit4ehealth/__init__.py:6
-msgid "Description of the tool."
-msgstr "Description de l'outil."
+#: csskp/fit4ehealth/__init__.py:7 templates/fit4ehealth/report/intro.html:6
+msgid ""
+"The objective of the self-assessment tool, is to measure the maturity of an "
+"organization in terms of applicable good practices in the field of "
+"information security.<br /> This document, as the outcome of the self-"
+"assessment, is for the exclusive use of the user. It is in this respect "
+"confidential.<br /> Given the methodology used and the fact that it is a "
+"self-assessment, the overall results cannot be exhaustive in any way.<br /> "
+"As such, the actual risk assessment or the list of identified risks and "
+"vulnerabilities is therefore based on the information provided by the user."
+"<br /><br /> The tool may provide recommendations, but the user must be "
+"aware that these are neither exclusive nor exhaustive.<br /> It should also "
+"be noted that the information you have provided to us is recorded for "
+"statistical reasons.<br /> Due to the nature of the data, we cannot identify "
+"you, the self-assessment is performed anonymously."
+msgstr ""
+"L'objectif de l'outil d'auto-évaluation est d’évaluer le niveau de maturité "
+"d'une organisation en termes de bonnes pratiques applicables dans le domaine "
+"de la sécurité de l'information.<br /> Ce document, en tant que résultat de "
+"l'auto-évaluation, est destiné à l'usage exclusif de l’utilisateur. Il est à "
+"ce titre confidentiel.<br /> Compte tenu de la méthodologie utilisée et du "
+"fait qu'il s'agit d'une auto-évaluation, les résultats globaux ne peuvent en "
+"aucun cas être exhaustifs.<br /><br /> Ainsi, l'évaluation réelle des "
+"risques ou la liste des risques et vulnérabilités identifiés se fondent sur "
+"les informations fournies par l’utilisateur.<br />L'outil peut fournir des "
+"recommandations, mais l’utilisateur doit être conscient que celles-ci ne "
+"sont ni exclusives ni totalement exhaustives.<br /> Il convient également de "
+"noter que les informations que vous nous avez fournissez, sont enregistrées "
+"à des fins statistiques. En raison de la nature des données, nous ne pouvons "
+"pas vous identifier, l'auto-évaluation est réalisée de manière anonyme."
 
 #: csskp/fit4operatorsurvey/__init__.py:7
 msgid ""
@@ -7282,8 +7309,8 @@ msgid "You need to choose at least one answer"
 msgstr "Vous devez choisir au moins une réponse"
 
 #: survey/forms.py:106 survey/forms.py:181
-#: templates/survey/finishedSurvey.html:178
-#: templates/survey/finishedSurvey.html:192 templates/survey/review.html:50
+#: templates/survey/finishedSurvey.html:181
+#: templates/survey/finishedSurvey.html:195 templates/survey/review.html:50
 msgid "Your feedback"
 msgstr "Vos retours"
 
@@ -7347,6 +7374,62 @@ msgstr ""
 "qu'elle ne fait qu'effleurer le niveau de maturité de la sécurité de "
 "l'information. Par conséquent, nous ne sommes pas responsables des résultats "
 "de cette enquête."
+
+#: templates/fit4ehealth/report/description.html:6
+#, python-format
+msgid ""
+"This self-assessment tool is intended to record the current state of the "
+"information security within your organisation. It is also a prerequisite for "
+"performing further diagnostics: a minimum score of "
+"%(minimal_acceptable_score)s/100 s required for this. The purpose of this "
+"restriction gives us the opportunity to better tailor recommendations to "
+"your organisation during further diagnostics. As the data has been collected "
+"anonymously, you will need to contact us explicitly for further diagnostics "
+"and provide us this report.<br /><br /> During this self-assessment multiple "
+"choice questions will be asked and afterwards recommendations will be "
+"provided.<br /> Finally, you can download a report to help you to analyse "
+"the results and share it with your IT service provider, if necessary."
+msgstr ""
+"Cet outil d'auto-évaluation a pour but de mettre en évidence l'état actuel "
+"de votre sécurité informatique. Il constitue également une condition "
+"préalable à la réalisation de diagnostics plus poussés pour cela un score "
+"minimum de %(minimal_acceptable_score)s/100 est requis. L’objectif de cette "
+"restriction nous donne la possibilité de mieux adapter les recommandations à "
+"votre organisation lors d’un diagnostic plus approfondi. Comme les données "
+"ont été saisies de manière anonyme, vous devez nous contacter explicitement "
+"pour un diagnostic plus détaillé et nous faire parvenir ce rapport.<br /"
+"><br /> Au cours de cette auto-évaluation, des questions à choix multiples "
+"vous seront posées et après cela vous recevrez des recommandations.<br /"
+"><br />Enfin, vous pouvez télécharger un rapport, pour vous aidera à "
+"analyser les résultats et que vous pourrez transmettre, si nécessaire, à "
+"votre prestataire de services informatiques."
+
+#: templates/fit4ehealth/report/recommendations.html:6
+msgid ""
+"The list of recommendations is based on your business context and your "
+"answers."
+msgstr ""
+"La liste des recommandations est basée sur le contexte de votre activité et "
+"de vos réponses."
+
+#: templates/fit4ehealth/report/results.html:6
+#, python-format
+msgid ""
+"You have achieved a score of %(SCORE)s/100 with your answers. You must reach "
+"a score of at least %(minimal_acceptable_score)s/100 to be able to request "
+"for further diagnosis.<br /> We remind you that this is a self-assessment, "
+"and therefore it is important to understand that all the results cannot be "
+"exhaustive in any way."
+msgstr ""
+"Vous avez obtenu %(SCORE)s/100 points avec vos réponses. Vous devez obtenir "
+"au moins %(minimal_acceptable_score)s/100 oints pour pouvoir demander un "
+"diagnostic complémentaire.<br /><br />Nous vous rappelons qu'il s'agit d'une "
+"auto-évaluation, et qu'il est important de comprendre que tous les résultats "
+"ne peuvent en aucun cas être exhaustifs."
+
+#: templates/fit4ehealth/survey/index.html:4
+msgid "Welcome to the self-assessment tool:"
+msgstr "Bienvenue dans l'outil d'auto-évaluation :"
 
 #: templates/fit4ehealth/survey/start.html:5
 msgid "Please click the Next button to start the questionnaire."
@@ -7489,7 +7572,7 @@ msgstr ""
 msgid "Introduction and Warning"
 msgstr "Introduction et avertissement"
 
-#: templates/report/intro.html:8
+#: templates/report/intro.html:7
 #, python-format
 msgid ""
 "The objective of the self-assessment tool, %(tool_name)s is to assess the "
@@ -7535,7 +7618,7 @@ msgstr "Questions"
 msgid "Recommendations"
 msgstr "Recommandations"
 
-#: templates/report/recommendations.html:6
+#: templates/report/recommendations.html:7
 msgid ""
 "The recommendations list was based in your company context and on your "
 "answers."
@@ -7561,14 +7644,14 @@ msgstr ""
 "il est entendu que l'ensemble des résultats ne peut en aucune manière être "
 "exhaustif."
 
-#: templates/report/results.html:17 templates/survey/finishedSurvey.html:51
+#: templates/report/results.html:17 templates/survey/finishedSurvey.html:53
 #, python-format
 msgid ""
-"You have scored an additional %(bonus)s %% of bonus points for following "
+"You have scored an additional %(bonus)s %% of bonus points for adherence to "
 "best practices."
 msgstr ""
-"Vous avez obtenu %(bonus)s %% de points bonus supplémentaires pour avoir "
-"suivi les meilleures pratiques."
+"Vous avez obtenu un bonus de %(bonus)s de points supplémentaires pour le "
+"respect des bonnes pratiques."
 
 #: templates/report/results.html:25
 msgid "By section"
@@ -7621,7 +7704,7 @@ msgstr ""
 msgid "Download direct link"
 msgstr "Télécharger le lien direct"
 
-#: templates/survey/continue.html:26 templates/survey/finishedSurvey.html:202
+#: templates/survey/continue.html:26 templates/survey/finishedSurvey.html:205
 msgid "Close"
 msgstr "Fermer"
 
@@ -7629,7 +7712,7 @@ msgstr "Fermer"
 msgid "Summary"
 msgstr "Résumé"
 
-#: templates/survey/finishedSurvey.html:27
+#: templates/survey/finishedSurvey.html:28
 msgid ""
 "This is the list of recommendations to improve the information security "
 "maturity in your company, provided that your answers did correctly reflect "
@@ -7644,7 +7727,7 @@ msgstr ""
 "le niveau de maturité de la sécurité de l'information. Par conséquent, nous "
 "ne sommes pas responsables des résultats de cette enquête."
 
-#: templates/survey/finishedSurvey.html:38
+#: templates/survey/finishedSurvey.html:40
 #, python-format
 msgid ""
 "Based on your score %(score)s, the CASES Diagnostic is not available for "
@@ -7660,20 +7743,20 @@ msgstr ""
 "à la sécurité de l'information pour sensibiliser votre entreprise, n'hésitez "
 "pas à"
 
-#: templates/survey/finishedSurvey.html:64
+#: templates/survey/finishedSurvey.html:65
 msgid "Your results link"
 msgstr "Votre lien de résultats"
 
-#: templates/survey/finishedSurvey.html:68
+#: templates/survey/finishedSurvey.html:70
 msgid "About the CASES Diagnostic"
 msgstr "À propos du Diagnostic CASES"
 
-#: templates/survey/finishedSurvey.html:70
+#: templates/survey/finishedSurvey.html:72
 msgid ""
 "The CASES Diagnostic is a service which analyses the company maturity in the "
-"information security depending on company's requirements. The analyse "
-"duration can take approxymately 2 hours. A consultant from CASES will come "
-"to your companie's premises, and ask around 30 questions concerning your "
+"information security depending on company's requirements. The analysis "
+"duration can take approximately 2 hours. A consultant from CASES will come "
+"to your company's premises, and ask around 30 questions concerning your "
 "information security, mostly organizational questions and possibly some "
 "technical questions. You will receive a detailed report which will contain a "
 "maturity estimation as well as recommendations to enhance the information "
@@ -7688,7 +7771,7 @@ msgstr ""
 "maturité ainsi que des recommandations pour améliorer la maturité en la "
 "sécurité de l'information."
 
-#: templates/survey/finishedSurvey.html:82
+#: templates/survey/finishedSurvey.html:84
 msgid ""
 "The CASES Diagnostic is available for all the companies located in "
 "Luxembourg and free of charge."
@@ -7696,40 +7779,40 @@ msgstr ""
 "Le Diagnostic est gratuit et possible pour toute entreprise ayant des locaux "
 "au Luxembourg."
 
-#: templates/survey/finishedSurvey.html:116
+#: templates/survey/finishedSurvey.html:119
 msgid "Report"
 msgstr "Rapport"
 
-#: templates/survey/finishedSurvey.html:123
+#: templates/survey/finishedSurvey.html:126
 msgid "Download"
 msgstr "Téléchargement"
 
-#: templates/survey/finishedSurvey.html:133
+#: templates/survey/finishedSurvey.html:136
 msgid "Email"
 msgstr "Courriel"
 
-#: templates/survey/finishedSurvey.html:144
+#: templates/survey/finishedSurvey.html:147
 msgid "Score by section"
 msgstr "Score par section"
 
-#: templates/survey/finishedSurvey.html:150
+#: templates/survey/finishedSurvey.html:153
 msgid "Score by category"
 msgstr "Score par catégorie"
 
-#: templates/survey/finishedSurvey.html:207
+#: templates/survey/finishedSurvey.html:210
 #: templates/survey/sendReportEmail.html:14
 msgid "Send"
 msgstr "Envoyer"
 
-#: templates/survey/index.html:17
+#: templates/survey/index.html:18
 msgid "Welcome to the CASES self-assessment tool:"
 msgstr "Bienvenue dans l'outil d'auto-évaluation CASES :"
 
-#: templates/survey/index.html:26
+#: templates/survey/index.html:28
 msgid "Start"
 msgstr "Démarrer"
 
-#: templates/survey/index.html:34
+#: templates/survey/index.html:36
 msgid "Continue a previous survey"
 msgstr "Continuer une enquête précédente"
 
@@ -8042,340 +8125,3 @@ msgstr "Version de Python :"
 #: templates/survey/stats.html:293
 msgid "Software version:"
 msgstr "Version du logiciel :"
-
-#: data/fit4contract/questions.json:22 data/fit4contract/questions.json:147
-#: data/fit4contract/questions.json:266 data/fit4contract/questions.json:367
-#: data/fit4contract/questions.json:492
-msgid ""
-"The Provider complies with the security practices of the Customer’s "
-"organization. Any situations where such compliance is not possible are "
-"reported to help prevent security gaps or conflicts that could adversely "
-"affect security performance. Security practices are formalized in a charter "
-"of good conduct for information security systems."
-msgstr ""
-"Le prestataire adhère aux pratiques de sécurité de l’organisation du client "
-"et communique toute situation où cette adhésion n’est pas possible, pour "
-"contribuer à prévenir des lacunes ou des conflits en matière de sécurité qui "
-"pourraient nuire aux performances de sécurité. Il convient de formaliser les "
-"pratiques de sécurité dans une charte de bonne conduite en matière de "
-"sécurité des systèmes d’informations."
-
-#: data/fit4contract/questions.json:58 data/fit4contract/questions.json:183
-#: data/fit4contract/questions.json:302 data/fit4contract/questions.json:403
-#: data/fit4contract/questions.json:528
-msgid ""
-"The Service Provider guarantees the minimum service levels defined in the "
-"contract. The Provider shall inform the Customer’s organization of its plans "
-"to ensure service levels under normal conditions and during disruptive "
-"events, whether such events occur on the premises or infrastructure of the "
-"Customer’s organization or that of the Service Provider."
-msgstr ""
-"Le prestataire garantit les niveaux de service minimal définis dans le "
-"contrat. Le prestataire informe l’organisation du client de ses plans pour "
-"assurer les niveaux de service dans des conditions normales et lors "
-"d’événements perturbateurs, que ces événements surgissent dans les locaux ou "
-"sur les infrastructures de l’organisation du client ou du prestataire de "
-"service."
-
-#: data/fit4contract/questions.json:118 data/fit4contract/questions.json:219
-#: data/fit4contract/questions.json:451
-msgid ""
-"The Provider provides timely and appropriate handling of known "
-"vulnerabilities that may impact the Client’s activities."
-msgstr ""
-"Le prestataire fournit en temps utile un traitement approprié pour les "
-"vulnérabilités connues qui peuvent avoir un impact sur les activités du "
-"client."
-
-#: data/fit4contract/questions.json:231 data/fit4contract/questions.json:463
-msgid ""
-"At the end of the contract, the Customer’s data is irreversibly deleted "
-"according to an established procedure. Legal obligations regarding the "
-"protection of personal data shall be particularly considered in this context."
-msgstr ""
-"À la fin du contrat, les données du client sont effacées de façon "
-"irréversible et documentée. Les obligations légales liées à la protection "
-"des données à caractère personnel sont tout particulièrement considérées "
-"dans ce contexte."
-
-#: data/fit4contract/questions.json:338 data/fit4contract/questions.json:713
-msgid ""
-"External Collaborator should be carefully selected during the hiring "
-"process. When the External Collaborator leaves, a procedure ensures that the "
-"Collaborator returns all the goods received from the Client’s organization "
-"(equipment, laptop, keys, badges, smartphone, etc.)."
-msgstr ""
-"Le collaborateur externe est soigneusement séléctionné lors du processus "
-"d’embauche. Lors du départ du collaborateur externe, une procédure assure "
-"que ce dernier rend tous les biens prêtés par l’organisation du client "
-"(matériel, laptop, clés, badges, smartphone, etc.)."
-
-#: data/fit4contract/questions.json:1070 data/fit4contract/questions.json:1103
-#: data/fit4contract/questions.json:1191
-msgid ""
-"The Provider informs the Customer’s organization in a timely manner about "
-"any technical incidents or security breaches that may have an impact on the "
-"organization’s activities. The legal obligations related to the notification "
-"of breaches of personal data protection must be considered in this context. "
-"It is recommended to establish a single point of contact for communication "
-"between contractual parties."
-msgstr ""
-"Le prestataire informe l’organisation du client en temps utile de tout "
-"incident technique ou violation de la sécurité susceptible d’avoir un impact "
-"sur les activités de l’organisation. Les obligation légales liées à  la "
-"notification de violations de la protection des données à caractère "
-"personnel doivent être considérées dans ce contexte. Il est recommandé de "
-"définir un point de contact unique pour la communication entre parties "
-"contractuelles."
-
-#: data/fit4contract/questions.json:1082 data/fit4contract/questions.json:1127
-#: data/fit4contract/questions.json:1215
-msgid ""
-"The Provider informs the Client’s organization in a timely manner of changes "
-"in its environment that may impact the Client organization’s activities. "
-"Depending on the impact, the Provider plans these changes in consultation "
-"with the Client."
-msgstr ""
-"Le prestataire informe l’organisation du client en temps utile des "
-"changements dans son environnement qui peuvent avoir un impact sur les "
-"activités de l’organisation du client. En fonction de leur impact, le "
-"prestataire planifie ces changements de manière concertée avec le client."
-
-#: data/fit4ehealth/questions.json:101
-msgid ""
-"Do you have some rules that talk about how password should be, or that you "
-"shouldn’t download any untrustworthy software?"
-msgstr ""
-"Avez-vous des règles sur la façon dont les mots de passe doivent être "
-"utilisés, ou sur le fait qu'il ne faut pas télécharger de logiciels non "
-"fiables ?"
-
-#: data/fit4ehealth/questions.json:170
-msgid ""
-"Hard copy documents must be kept where only authorized persons have access. "
-"These data can’t be kept indefinitely, and should be deleted as soon as they "
-"become unusable (usually by law after 10 years for medical documents)."
-msgstr ""
-"Les documents papier doivent être conservés là où seules les personnes "
-"autorisées ont accès. Ces données ne peuvent pas être conservées "
-"indéfiniment, et doivent être supprimées dès qu'elles deviennent "
-"inutilisables (généralement par la loi après 10 ans pour les documents "
-"médicaux)."
-
-#: data/fit4ehealth/questions.json:187
-msgid ""
-"You should always try to provide all documents directly to the targeted "
-"person. If you can’t, you should ensure and double check that the person is "
-"well identified and encrypt the medical information with a password to avoid "
-"any disclosure or interception."
-msgstr ""
-"Vous devez toujours essayer de fournir tous les documents directement à la "
-"personne visée. Si vous ne pouvez pas le faire, vous devez vous assurer et "
-"revérifier que la personne est bien identifiée et chiffrer les informations "
-"médicales avec un mot de passe pour éviter toute divulgation ou interception."
-
-#: data/fit4ehealth/questions.json:247
-msgid ""
-"Of course, data should be discarded as soon as you don’t need them anymore, "
-"when your patient explicitly requests for or when the law (e.g. after 10 "
-"years for medical data) permits you to. This will concern data gathered with "
-"IT systems electronically, but also all papers and mail."
-msgstr ""
-"Bien entendu, les données doivent être éliminées dès que vous n'en avez plus "
-"besoin, lorsque votre patient le demande explicitement ou lorsque la loi "
-"(par exemple après 10 ans pour les données médicales) vous y autorise. Cela "
-"concerne les données collectées avec les systèmes informatiques par voie "
-"électronique, mais aussi tous les papiers et le courrier."
-
-#: data/fit4ehealth/questions.json:380
-msgid ""
-"The one who encounters the problem has to solve it, or eventually ask to "
-"someone who could be external but don’t have any contract with the "
-"establishment."
-msgstr ""
-"Celui qui rencontre le problème doit le résoudre, ou éventuellement demander "
-"à quelqu'un qui pourrait être externe mais qui n'a pas de contrat avec "
-"l'établissement."
-
-#: data/fit4ehealth/questions.json:439
-msgid ""
-"VPN (Virtual Private Network) to encrypt all data from any external network "
-"to the establishment’s internal server"
-msgstr ""
-"VPN (Virtual Private Network) pour chiffrer toutes les données de tout "
-"réseau externe vers le serveur interne de l'établissement"
-
-#: data/fit4ehealth/questions.json:450
-msgid ""
-"Whenever users need to work offsite, from home office or other offsite "
-"assignments, they need a VPN connection to connect to the organization’s "
-"server/network."
-msgstr ""
-"Lorsque les utilisateurs doivent travailler hors site, depuis leur bureau à "
-"domicile ou d'autres missions hors site, ils ont besoin d'une connexion VPN "
-"pour se connecter au serveur/réseau de l'organisation."
-
-#: data/fit4ehealth/questions.json:753
-msgid ""
-"The cleaning has to be done respecting some rules, such precision on what "
-"should be accessed or what shouldn’t be, or what mustn’t be unplugged."
-msgstr ""
-
-#: data/fit4ehealth/questions.json:872
-msgid ""
-"If someone is performing remote maintenance on your computer, you should "
-"check that no one can access data to which they shouldn’t have access to."
-msgstr ""
-"Si quelqu'un effectue une maintenance à distance sur votre ordinateur, vous "
-"devez vérifier que personne ne peut accéder à des données auxquelles il ne "
-"devrait pas avoir accès."
-
-#: data/fit4ehealth/questions.json:953
-msgid ""
-"You shouldn’t let external people without surveillance, as they can steal "
-"something. An internal presence should be for instance near the waiting room "
-"or near the exit."
-msgstr ""
-"Vous ne devriez pas laisser les personnes externes sans surveillance, car "
-"elles peuvent voler quelque chose. Une présence interne devrait être par "
-"exemple près de la salle d'attente ou près de la sortie."
-
-#: data/fit4ehealth/questions.json:1011
-msgid ""
-"You must lock every sensitive physical document to avoid data theft or "
-"disclosure. It’s the same for hardware or storage device that contains "
-"confidential data."
-msgstr ""
-"Vous devez verrouiller chaque document physique sensible pour éviter le vol "
-"ou la divulgation de données. Il en va de même pour le matériel ou le "
-"dispositif de stockage qui contient des données confidentielles."
-
-#: data/fit4ehealth/questions.json:1274
-msgid ""
-"Defining and assigning different access roles is imperative, as this will "
-"limit the different data that each role can read and modify, depending on "
-"the persons’ function within the organization. By simply assigning all "
-"permissions, this will give access to some people who should not have "
-"access, depending on the sensitivity of the medical data."
-msgstr ""
-"Définir et attribuer différents rôles d'accès est impératif, car cela "
-"limitera les différentes données que chaque rôle peut lire et modifier, en "
-"fonction de la fonction des personnes au sein de l'organisation. En "
-"attribuant simplement toutes les permissions, cela donnera accès à certaines "
-"personnes qui ne devraient pas avoir accès, en fonction de la sensibilité "
-"des données médicales."
-
-#: data/fit4ehealth/questions.json:1294
-msgid ""
-"It is possible to delegate the decision to someone working within your "
-"organization, and thus adjust the permissions you need to give people who "
-"should have access to the data. In any case you shouldn’t give your own "
-"access to anyone else."
-msgstr ""
-"Il est possible de déléguer la décision à une personne travaillant au sein "
-"de votre organisation, et ainsi d'ajuster les permissions à donner aux "
-"personnes qui devraient avoir accès aux données. Dans tous les cas, vous ne "
-"devriez pas donner votre propre accès à quelqu'un d'autre."
-
-#: data/fit4ehealth/questions.json:1314
-msgid ""
-"You shouldn’t allow others to define all permissions, as they can have "
-"access to any confidential data. Besides that, role assignment can then be "
-"poorly decided by externals, who do not know exactly about your needs and "
-"change of staff."
-msgstr ""
-"Vous ne devriez pas permettre aux autres de définir toutes les "
-"autorisations, car ils peuvent avoir accès à n'importe quelle donnée "
-"confidentielle. En outre, l'attribution des rôles peut ensuite être mal "
-"décidée par des personnes extérieures, qui ne connaissent pas exactement vos "
-"besoins et les changements de personnel."
-
-#: data/fit4ehealth/questions.json:1457
-msgid ""
-"There is no antivirus software in the establishment, or you have no idea if "
-"it’s the case."
-msgstr ""
-
-#: data/fit4ehealth/questions.json:1532
-msgid ""
-"All devices, including smartphones and tablets, have an antivirus software "
-"installed, even if it is the operating system’s default one."
-msgstr ""
-"Tous les appareils, y compris les smartphones et les tablettes, ont un "
-"logiciel antivirus installé, même s'il s'agit de celui par défaut du système "
-"d'exploitation."
-
-#: data/fit4ehealth/questions.json:1620
-msgid ""
-"You do not own the administrator rights on your computer and you can’t "
-"install any software."
-msgstr ""
-
-#: data/fit4ehealth/questions.json:1699
-msgid ""
-"Whenever you don’t need them, papers are locked in a room or at any storage "
-"mean. The lock does not need to be solid, but is always used to prevent "
-"unauthorized persons getting access to these documents."
-msgstr ""
-
-#: data/fit4ehealth/questions.json:1707
-msgid "not my responsablilty and should be handled by my ICT provider"
-msgstr ""
-"ce n'est pas ma responsabilité et cela devrait être géré par mon prestataire "
-"de services informatiques"
-
-#: data/fit4ehealth/questions.json:1730
-msgid ""
-"All information is saved on an additional hard drive managed by someone "
-"internal to the medical infrastructure. It’s possible to have more than one "
-"hard drive. The hard drive can stay at the office or can be changed of "
-"location."
-msgstr ""
-
-#: data/fit4ehealth/questions.json:1769
-msgid "only readable by me and the persons to whom I gave permissionn"
-msgstr ""
-"ne peut être lu que par moi, et les personnes à qui j'ai donné l'autorisation"
-
-#: data/fit4ehealth/questions.json:1875
-msgid ""
-"If you ever have an information security problem, and you don’t know what to "
-"do or have no one in the practice who can deal with such a problem, you can "
-"contact CIRCL (info@circl.lu) for help in handling the situation."
-msgstr ""
-"Si jamais vous avez un problème de sécurité de l'information, et que vous ne "
-"savez pas quoi faire ou que personne dans le cabinet ne peut gérer un tel "
-"problème, vous pouvez contacter CIRCL (info@circl.lu) pour obtenir de l'aide "
-"pour gérer la situation."
-
-#: data/fit4ehealth/questions.json:1913
-msgid ""
-"use the electronic transmission of the invoices (\"Mémoire d’honoraire(s)\") "
-"as part of the project of the \"Remboursement accélèré\""
-msgstr ""
-"utiliser la transmission électronique des factures (\"Mémoire "
-"d'honoraire(s)\") dans le cadre du projet de \"Remboursement accéléré\""
-
-#~ msgid ""
-#~ "To not giving a key, even to someone we trust, as it is a risk as the key "
-#~ "can be lost or copied, and used by someone else. "
-#~ msgstr ""
-#~ "Ne pas fournir les clés, car il y a un risque que les clés soient perdues "
-#~ "ou copiées et ensuite utilisées à mauvais escient par quelqu'un d'autre. "
-
-#~ msgid ""
-#~ "A contract in written form should be made, and if it's possible "
-#~ "personalized for you."
-#~ msgstr ""
-#~ "A contract in written form should be made, and if it's possible "
-#~ "personalized for you."
-
-#~ msgid "can be left alone occasionally"
-#~ msgstr "peut être laissé seul de temps en temps"
-
-#~ msgid ""
-#~ "A contract in written form should be made, and if it’s possible "
-#~ "personalized for you."
-#~ msgstr ""
-#~ "A contract in written form should be made, and if it’s possible "
-#~ "personalized for you."

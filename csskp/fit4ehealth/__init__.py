@@ -5,15 +5,15 @@ CUSTOM = {
     "tool_name": "Fit4eHealth",
     "intro_text": gettext_lazy(
         "The objective of the self-assessment tool, is to measure the maturity of an organization "
-        "in terms of applicable good practices in the field of information security.<br />"
+        "in terms of applicable good practices in the field of information security.<br /> "
         "This document, as the outcome of the self-assessment, is for the exclusive use of "
-        "the user. It is in this respect confidential.<br />Given the methodology used and "
+        "the user. It is in this respect confidential.<br /> Given the methodology used and "
         "the fact that it is a self-assessment, the overall results cannot be exhaustive in any "
-        "way.<br />As such, the actual risk assessment or the list of identified risks and "
-        "vulnerabilities is therefore based on the information provided by the user.<br /><br />"
+        "way.<br /> As such, the actual risk assessment or the list of identified risks and "
+        "vulnerabilities is therefore based on the information provided by the user.<br /><br /> "
         "The tool may provide recommendations, but the user must be aware that these are neither "
-        "exclusive nor exhaustive.<br />It should also be noted that the information you have "
-        "provided to us is recorded for statistical reasons.<br />Due to the nature of the data, "
+        "exclusive nor exhaustive.<br /> It should also be noted that the information you have "
+        "provided to us is recorded for statistical reasons.<br /> Due to the nature of the data, "
         "we cannot identify you, the self-assessment is performed anonymously."
     ),
     "countries_first": [],
