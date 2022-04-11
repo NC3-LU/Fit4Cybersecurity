@@ -3,7 +3,9 @@
 <h2 id="recommendations">{{ _('Recommendations') }}</h2>
 
 <p>
+    {% block report_recommendations_title %}
     {{ _('The recommendations list was based in your company context and on your answers.') }}
+    {% endblock %}
 </p>
 <ol>
 {% for question, answer in CONTEXT.items %}
