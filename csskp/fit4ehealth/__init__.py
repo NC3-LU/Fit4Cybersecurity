@@ -46,7 +46,7 @@ CUSTOM = {
         "reportDownload": True,
         "reportEmail": False,
         "requestDiagnostic": True,
-        "requestTraining": True,
+        "requestTraining": False,
         "displayResults": True,
     },
     # Available report parts

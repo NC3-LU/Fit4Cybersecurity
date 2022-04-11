@@ -105,15 +105,17 @@
                             <span>/100</span>
                         </h3>
                     {% endif %}
-                    {% if custom.modules.requestTraining and user.get_country_code == 'LU' %}
+                    {% if user.get_country_code == 'LU' %}
                         {% if txtscore >= custom.minimal_acceptable_score and custom.modules.requestDiagnostic %}
                             <div class="px-2 pb-2">
                                 {% include 'survey/requestDiagnosticLink.html' with type='button' %}
                             </div>
                         {% endif %}
+                        {% custom.modules.requestTraining %}
                             <div class="px-2">
                                 {% include 'survey/requestTrainingLink.html' with type='button' %}
                             </div>
+                        {% endif %}
                     {% endif %}
                 </div>
                 <h4 class="px-2">{{ _('Report') }}:</h4>
