@@ -10,7 +10,7 @@ CUSTOM = {
         "the user. It is in this respect confidential.<br /> Given the methodology used and "
         "the fact that it is a self-assessment, the overall results cannot be exhaustive in any "
         "way.<br /> As such, the actual risk assessment or the list of identified risks and "
-        "vulnerabilities is therefore based on the information provided by the user.<br /><br /> "
+        "vulnerabilities is therefore based on the information provided by the user.<br /> "
         "The tool may provide recommendations, but the user must be aware that these are neither "
         "exclusive nor exhaustive.<br /> It should also be noted that the information you have "
         "provided to us is recorded for statistical reasons.<br /> Due to the nature of the data, "
