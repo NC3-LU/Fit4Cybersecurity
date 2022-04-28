@@ -68,3 +68,9 @@ def str_replace(text: str, changes: str) -> str:
     for from_, to in zip(changes_list, changes_list):
         text = text.replace(from_, str(to), -1)
     return text
+
+
+@register.simple_tag
+def update_variable(value):
+    """Allows update existing variable in template"""
+    return value
