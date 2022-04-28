@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-04-11 15:11+0000\n"
+"POT-Creation-Date: 2022-04-28 11:58+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -2717,8 +2717,8 @@ msgstr ""
 msgid "Remote maintenance for IT hardware and software is"
 msgstr ""
 
-#: data/fit4ehealth/questions.json:830 data/fit4ehealth/questions.json:847
-msgid "managed by my ICT provide, but only on request"
+#: data/fit4ehealth/questions.json:830
+msgid "managed by my ICT provide without being informed"
 msgstr ""
 
 #: data/fit4ehealth/questions.json:831
@@ -2734,6 +2734,10 @@ msgid ""
 "Whenever someone is accessing your computer remotely, you need to be aware "
 "who is accessing, what is being accessed and for what reason. Here is some "
 "advice on how to deal with it:"
+msgstr ""
+
+#: data/fit4ehealth/questions.json:847
+msgid "managed by my ICT provide, but only when I ask for"
 msgstr ""
 
 #: data/fit4ehealth/questions.json:848
@@ -5628,8 +5632,8 @@ msgid "You need to choose at least one answer"
 msgstr ""
 
 #: survey/forms.py:106 survey/forms.py:181
-#: templates/survey/finishedSurvey.html:181
-#: templates/survey/finishedSurvey.html:195 templates/survey/review.html:50
+#: templates/survey/finishedSurvey.html:183
+#: templates/survey/finishedSurvey.html:197 templates/survey/review.html:50
 msgid "Your feedback"
 msgstr ""
 
@@ -5689,7 +5693,7 @@ msgid ""
 "This self-assessment tool is intended to record the current state of the "
 "information security within your organisation. It is also a prerequisite for "
 "performing further diagnostics: a minimum score of "
-"%(minimal_acceptable_score)s/100 s required for this. The purpose of this "
+"%(minimal_acceptable_score)s/100 is required for this. The purpose of this "
 "restriction gives us the opportunity to better tailor recommendations to "
 "your organisation during further diagnostics. As the data has been collected "
 "anonymously, you will need to contact us explicitly for further diagnostics "
@@ -5922,7 +5926,7 @@ msgstr ""
 msgid "Download direct link"
 msgstr ""
 
-#: templates/survey/continue.html:26 templates/survey/finishedSurvey.html:205
+#: templates/survey/continue.html:26 templates/survey/finishedSurvey.html:207
 msgid "Close"
 msgstr ""
 
@@ -5975,27 +5979,27 @@ msgid ""
 "Luxembourg and free of charge."
 msgstr ""
 
-#: templates/survey/finishedSurvey.html:119
+#: templates/survey/finishedSurvey.html:121
 msgid "Report"
 msgstr ""
 
-#: templates/survey/finishedSurvey.html:126
+#: templates/survey/finishedSurvey.html:128
 msgid "Download"
 msgstr ""
 
-#: templates/survey/finishedSurvey.html:136
+#: templates/survey/finishedSurvey.html:138
 msgid "Email"
 msgstr ""
 
-#: templates/survey/finishedSurvey.html:147
+#: templates/survey/finishedSurvey.html:149
 msgid "Score by section"
 msgstr ""
 
-#: templates/survey/finishedSurvey.html:153
+#: templates/survey/finishedSurvey.html:155
 msgid "Score by category"
 msgstr ""
 
-#: templates/survey/finishedSurvey.html:210
+#: templates/survey/finishedSurvey.html:212
 #: templates/survey/sendReportEmail.html:14
 msgid "Send"
 msgstr ""

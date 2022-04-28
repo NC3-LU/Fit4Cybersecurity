@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-04-11 15:11+0000\n"
+"POT-Creation-Date: 2022-04-28 11:58+0000\n"
 "PO-Revision-Date: 2022-04-09 15:26+0000\n"
 "Last-Translator: Benjamin Joly <benjamin.joly@cases.lu>\n"
 "Language-Team: French <https://translate.monarc.lu/projects/"
@@ -91,9 +91,9 @@ msgstr ""
 "l'auto-évaluation, est destiné à l'usage exclusif de l’utilisateur. Il est à "
 "ce titre confidentiel.<br /> Compte tenu de la méthodologie utilisée et du "
 "fait qu'il s'agit d'une auto-évaluation, les résultats globaux ne peuvent en "
-"aucun cas être exhaustifs.<br />Ainsi, l'évaluation réelle des "
-"risques ou la liste des risques et vulnérabilités identifiés se fondent sur "
-"les informations fournies par l’utilisateur.<br />L'outil peut fournir des "
+"aucun cas être exhaustifs.<br />Ainsi, l'évaluation réelle des risques ou la "
+"liste des risques et vulnérabilités identifiés se fondent sur les "
+"informations fournies par l’utilisateur.<br />L'outil peut fournir des "
 "recommandations, mais l’utilisateur doit être conscient que celles-ci ne "
 "sont ni exclusives ni totalement exhaustives.<br /> Il convient également de "
 "noter que les informations que vous nous avez fournissez, sont enregistrées "
@@ -3503,11 +3503,10 @@ msgstr "Télémaintenance"
 msgid "Remote maintenance for IT hardware and software is"
 msgstr "La télémaintenance des matériels et logiciels informatiques est"
 
-#: data/fit4ehealth/questions.json:830 data/fit4ehealth/questions.json:847
-msgid "managed by my ICT provide, but only on request"
+#: data/fit4ehealth/questions.json:830
+msgid "managed by my ICT provide without being informed"
 msgstr ""
-"géré par mon prestataire de services informatiques mais uniquement sur "
-"demande"
+"géré par mon prestataire de services informatiques sans être informé"
 
 #: data/fit4ehealth/questions.json:831
 msgid ""
@@ -3517,8 +3516,8 @@ msgid ""
 "computer without restrictions."
 msgstr ""
 "Lorsqu'un problème survient, vous contactez votre prestataire de services "
-"informatiques pour qu'il s'en occupe, sans être informé de ses activités ("
-"par exemple, quand il commence, quand il termine...). Mais le prestataire "
+"informatiques pour qu'il s'en occupe, sans être informé de ses activités "
+"(par exemple, quand il commence, quand il termine...). Mais le prestataire "
 "peut toujours accéder au serveur ou à l'ordinateur sans restrictions."
 
 #: data/fit4ehealth/questions.json:838
@@ -3530,6 +3529,12 @@ msgstr ""
 "Lorsque quelqu'un accède à votre ordinateur à distance, vous devez savoir "
 "qui y accède, ce à quoi il accède et pour quelle raison. Voici quelques "
 "conseils sur la manière d'y faire face :"
+
+#: data/fit4ehealth/questions.json:847
+msgid "managed by my ICT provide, but only when I ask for"
+msgstr ""
+"géré par mon prestataire de services informatiques mais seulement si je le "
+"demande"
 
 #: data/fit4ehealth/questions.json:848
 msgid ""
@@ -3579,8 +3584,8 @@ msgid ""
 "access such as Teamviewer), you are always in contact with him, by phone or "
 "any other mean."
 msgstr ""
-"Quand votre prestataire de services informatiques peut regarder votre écran ("
-"par un logiciel d'accès à distance tel que Teamviewer), vous êtes toujours "
+"Quand votre prestataire de services informatiques peut regarder votre écran "
+"(par un logiciel d'accès à distance tel que Teamviewer), vous êtes toujours "
 "en contact avec lui, par téléphone ou par tout autre moyen."
 
 #: data/fit4ehealth/questions.json:889
@@ -3945,8 +3950,8 @@ msgid ""
 "\"Once upon a time, there was Snow White and the 7 Dwarfs.\" can be "
 "considered here."
 msgstr ""
-"Des mots de passe tels que \"Jp7njQs#FpdCF5oF\", \"kjahebf\", \"IéufBN&l7n.\""
-" ou \"Il était une fois Blanche-Neige et les 7 nains.\" peuvent être "
+"Des mots de passe tels que \"Jp7njQs#FpdCF5oF\", \"kjahebf\", \"IéufBN&l7n."
+"\" ou \"Il était une fois Blanche-Neige et les 7 nains.\" peuvent être "
 "considérés ici."
 
 #: data/fit4ehealth/questions.json:1178
@@ -7486,8 +7491,8 @@ msgid "You need to choose at least one answer"
 msgstr "Vous devez choisir au moins une réponse"
 
 #: survey/forms.py:106 survey/forms.py:181
-#: templates/survey/finishedSurvey.html:181
-#: templates/survey/finishedSurvey.html:195 templates/survey/review.html:50
+#: templates/survey/finishedSurvey.html:183
+#: templates/survey/finishedSurvey.html:197 templates/survey/review.html:50
 msgid "Your feedback"
 msgstr "Vos retours"
 
@@ -7558,7 +7563,7 @@ msgid ""
 "This self-assessment tool is intended to record the current state of the "
 "information security within your organisation. It is also a prerequisite for "
 "performing further diagnostics: a minimum score of "
-"%(minimal_acceptable_score)s/100 s required for this. The purpose of this "
+"%(minimal_acceptable_score)s/100 is required for this. The purpose of this "
 "restriction gives us the opportunity to better tailor recommendations to "
 "your organisation during further diagnostics. As the data has been collected "
 "anonymously, you will need to contact us explicitly for further diagnostics "
@@ -7599,7 +7604,7 @@ msgid ""
 "exhaustive in any way."
 msgstr ""
 "Vous avez obtenu %(SCORE)s/100 points avec vos réponses. Vous devez obtenir "
-"au moins %(minimal_acceptable_score)s/100 oints pour pouvoir demander un "
+"au moins %(minimal_acceptable_score)s/100 points pour pouvoir demander un "
 "diagnostic complémentaire.<br /><br />Nous vous rappelons qu'il s'agit d'une "
 "auto-évaluation, et qu'il est important de comprendre que tous les résultats "
 "ne peuvent en aucun cas être exhaustifs."
@@ -7836,7 +7841,7 @@ msgstr "Par section"
 
 #: templates/report/results.html:31
 msgid "By category"
-msgstr "Par catÃ©gorie"
+msgstr "Par catégorie"
 
 #: templates/report/template.html:9 templates/report/template.html:14
 msgid "Final report"
@@ -7881,7 +7886,7 @@ msgstr ""
 msgid "Download direct link"
 msgstr "Télécharger le lien direct"
 
-#: templates/survey/continue.html:26 templates/survey/finishedSurvey.html:205
+#: templates/survey/continue.html:26 templates/survey/finishedSurvey.html:207
 msgid "Close"
 msgstr "Fermer"
 
@@ -7956,27 +7961,27 @@ msgstr ""
 "Le Diagnostic est gratuit et possible pour toute entreprise ayant des locaux "
 "au Luxembourg."
 
-#: templates/survey/finishedSurvey.html:119
+#: templates/survey/finishedSurvey.html:121
 msgid "Report"
 msgstr "Rapport"
 
-#: templates/survey/finishedSurvey.html:126
+#: templates/survey/finishedSurvey.html:128
 msgid "Download"
 msgstr "Téléchargement"
 
-#: templates/survey/finishedSurvey.html:136
+#: templates/survey/finishedSurvey.html:138
 msgid "Email"
 msgstr "Courriel"
 
-#: templates/survey/finishedSurvey.html:147
+#: templates/survey/finishedSurvey.html:149
 msgid "Score by section"
 msgstr "Score par section"
 
-#: templates/survey/finishedSurvey.html:153
+#: templates/survey/finishedSurvey.html:155
 msgid "Score by category"
 msgstr "Score par catégorie"
 
-#: templates/survey/finishedSurvey.html:210
+#: templates/survey/finishedSurvey.html:212
 #: templates/survey/sendReportEmail.html:14
 msgid "Send"
 msgstr "Envoyer"

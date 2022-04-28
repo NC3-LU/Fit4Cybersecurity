@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-04-11 15:11+0000\n"
+"POT-Creation-Date: 2022-04-28 11:58+0000\n"
 "PO-Revision-Date: 2022-04-09 15:26+0000\n"
 "Last-Translator: Benjamin Joly <benjamin.joly@cases.lu>\n"
 "Language-Team: German <https://translate.monarc.lu/projects/"
@@ -95,10 +95,10 @@ msgstr ""
 "handelt, können die Gesamtergebnisse in keiner Weise erschöpfend sein.<br /"
 ">Die tatsächliche Risikobewertung bzw. die Liste der ermittelten Risiken und "
 "Schwachstellen basiert daher auf den vom Anwender bereitgestellten "
-"Informationen.<br />Die Software kann Empfehlungen geben, aber der "
-"Anwender muss sich darüber im Klaren sein, dass diese weder exklusiv noch "
-"vollends erschöpfend sind.<br /> Es sollte auch beachtet werden, dass die "
-"von Ihnen zur Verfügung gestellten Informationen zu statistischen Zwecken "
+"Informationen.<br />Die Software kann Empfehlungen geben, aber der Anwender "
+"muss sich darüber im Klaren sein, dass diese weder exklusiv noch vollends "
+"erschöpfend sind.<br /> Es sollte auch beachtet werden, dass die von Ihnen "
+"zur Verfügung gestellten Informationen zu statistischen Zwecken "
 "aufgezeichnet werden. Aufgrund der Art der Daten können wir Sie nicht "
 "identifizieren, die Selbsteinschätzung wird anonym durchgeführt."
 
@@ -2493,8 +2493,8 @@ msgid ""
 "(could be paper, email, internal chat app ...)"
 msgstr ""
 "Regeln werden von jemandem aufgeschrieben, wenn sie beschlossen werden und "
-"dann auf beliebige Weise verschickt (z. B. Papier, E-Mail, interne Chat-App "
-"...)"
+"dann auf beliebige Weise verschickt (z. B. Papier, E-Mail, interne Chat-"
+"App ...)"
 
 #: data/fit4ehealth/questions.json:57
 msgid ""
@@ -3486,9 +3486,10 @@ msgstr "Fernwartung"
 msgid "Remote maintenance for IT hardware and software is"
 msgstr "Fernwartung für IT Hard- und Software wird"
 
-#: data/fit4ehealth/questions.json:830 data/fit4ehealth/questions.json:847
-msgid "managed by my ICT provide, but only on request"
-msgstr "von meinem IT-Dienstleister verwaltet, aber nur auf Anfrage"
+#: data/fit4ehealth/questions.json:830
+msgid "managed by my ICT provide without being informed"
+msgstr "von meinem IT-Dienstleister verwaltet, ohne dass ich über den "
+"Zugriff informiert werde"
 
 #: data/fit4ehealth/questions.json:831
 msgid ""
@@ -3512,6 +3513,10 @@ msgstr ""
 "Wenn jemand aus der Ferne auf Ihren Computer/Server zugreift, müssen Sie "
 "sich darüber im Klaren sein, wer zugreift, worauf zugegriffen wird und aus "
 "welchem Grund. Hier sind einige Ratschläge, wie Sie damit umgehen können:"
+
+#: data/fit4ehealth/questions.json:847
+msgid "managed by my ICT provide, but only when I ask for"
+msgstr "von meinem IT-Dienstleister verwaltet, aber nur auf Anfrage"
 
 #: data/fit4ehealth/questions.json:848
 msgid ""
@@ -3625,8 +3630,8 @@ msgid ""
 msgstr ""
 "Der Patient kann die Räumlichkeiten besuchen, wie er möchte. Einige Türen "
 "könnten (versehentlich) offen gelassen werden. Auch könnte der Patient die "
-"Räumlichkeiten betreten, ohne sich anzukündigen (durch Klingeln, Klopfen "
-"...)."
+"Räumlichkeiten betreten, ohne sich anzukündigen (durch Klingeln, "
+"Klopfen ...)."
 
 #: data/fit4ehealth/questions.json:933
 msgid ""
@@ -3911,8 +3916,8 @@ msgid ""
 "Passwords such as \"MyPassword123!\", \"IL0veS@ndwichs\" or "
 "\"Jp7njQs#FpdCF5oF\" can be considered here."
 msgstr ""
-"Passwörter wie \"MyPassword123!\", \"IL0veS@ndwichs\" oder \"Jp7njQs#"
-"FpdCF5oF\" können hier in Betracht kommen."
+"Passwörter wie \"MyPassword123!\", \"IL0veS@ndwichs\" oder \"Jp7njQs#FpdCF5oF"
+"\" können hier in Betracht kommen."
 
 #: data/fit4ehealth/questions.json:1161
 msgid ""
@@ -4099,8 +4104,9 @@ msgid ""
 "Your software vendor or IT-Service provider is managing the authorization "
 "roles/assignments within the patient data management application."
 msgstr ""
-"Ihr Softwareanbieter oder IT-Dienstleister verwaltet die Berechtigungsrollen/"
-"-zuweisungen innerhalb der Anwendung für die Verwaltung von Patientendaten."
+"Ihr Softwareanbieter oder IT-Dienstleister verwaltet die "
+"Berechtigungsrollen/-zuweisungen innerhalb der Anwendung für die Verwaltung "
+"von Patientendaten."
 
 #: data/fit4ehealth/questions.json:1314
 msgid ""
@@ -7483,8 +7489,8 @@ msgid "You need to choose at least one answer"
 msgstr "Sie müssen mindestens eine Antwort auswählen"
 
 #: survey/forms.py:106 survey/forms.py:181
-#: templates/survey/finishedSurvey.html:181
-#: templates/survey/finishedSurvey.html:195 templates/survey/review.html:50
+#: templates/survey/finishedSurvey.html:183
+#: templates/survey/finishedSurvey.html:197 templates/survey/review.html:50
 msgid "Your feedback"
 msgstr "Ihre Rückmeldung"
 
@@ -7556,7 +7562,7 @@ msgid ""
 "This self-assessment tool is intended to record the current state of the "
 "information security within your organisation. It is also a prerequisite for "
 "performing further diagnostics: a minimum score of "
-"%(minimal_acceptable_score)s/100 s required for this. The purpose of this "
+"%(minimal_acceptable_score)s/100 is required for this. The purpose of this "
 "restriction gives us the opportunity to better tailor recommendations to "
 "your organisation during further diagnostics. As the data has been collected "
 "anonymously, you will need to contact us explicitly for further diagnostics "
@@ -7881,7 +7887,7 @@ msgstr ""
 msgid "Download direct link"
 msgstr "Direkten Link herunterladen"
 
-#: templates/survey/continue.html:26 templates/survey/finishedSurvey.html:205
+#: templates/survey/continue.html:26 templates/survey/finishedSurvey.html:207
 msgid "Close"
 msgstr "Schließen"
 
@@ -7956,27 +7962,27 @@ msgstr ""
 "Der Diagnostic ist für jedes Unternehmen mit Sitz in Luxemburg möglich und "
 "kostenlos."
 
-#: templates/survey/finishedSurvey.html:119
+#: templates/survey/finishedSurvey.html:121
 msgid "Report"
 msgstr "Bericht"
 
-#: templates/survey/finishedSurvey.html:126
+#: templates/survey/finishedSurvey.html:128
 msgid "Download"
 msgstr "Herunterladen"
 
-#: templates/survey/finishedSurvey.html:136
+#: templates/survey/finishedSurvey.html:138
 msgid "Email"
 msgstr "Email"
 
-#: templates/survey/finishedSurvey.html:147
+#: templates/survey/finishedSurvey.html:149
 msgid "Score by section"
 msgstr "Punktzahl nach Abschnitt"
 
-#: templates/survey/finishedSurvey.html:153
+#: templates/survey/finishedSurvey.html:155
 msgid "Score by category"
 msgstr "Punktzahl nach Kategorie"
 
-#: templates/survey/finishedSurvey.html:210
+#: templates/survey/finishedSurvey.html:212
 #: templates/survey/sendReportEmail.html:14
 msgid "Send"
 msgstr "Senden"
