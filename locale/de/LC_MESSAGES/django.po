@@ -349,7 +349,6 @@ msgstr "Ölbenzin"
 
 #: data/fit4africa/context-questions.json:152
 #, fuzzy
-#| msgid "Others"
 msgid "Other Mines"
 msgstr "Andere"
 
@@ -2703,7 +2702,7 @@ msgid ""
 "sometimes sent via a messaging system (like Whatsapp, Skype, …) or stored in "
 "the Cloud (like WeTransfer, Google Drive, …)"
 msgstr ""
-"manchmal über einen Messanger (wie Whatsapp, Skype, ...) gesendet oder in "
+"manchmal über einen Messenger (wie Whatsapp, Skype, ...) gesendet oder in "
 "der Cloud gespeichert (wie WeTransfer, Google Drive, ...)"
 
 #: data/fit4ehealth/questions.json:206
@@ -2902,7 +2901,7 @@ msgstr "Verantwortlichkeiten"
 
 #: data/fit4ehealth/questions.json:343
 msgid "IT and Information security tasks are:"
-msgstr "Aufgaben der IT und Informationssicherheit sind:"
+msgstr "IT- und Informationssicherheitsaufgaben werden:"
 
 #: data/fit4ehealth/questions.json:353
 msgid "performed internally by an IT specialist"
@@ -2968,7 +2967,7 @@ msgid ""
 "This company is under contract."
 msgstr ""
 "Falls IT - Probleme auftreten wird stets ein externes Unternehmen mit der "
-"Lösung beauftragt. Dieses Unternehmen steht mit Ihnen in Vertrag."
+"Lösung beauftragt. Dieses Unternehmen steht mit Ihnen unter Vertrag."
 
 #: data/fit4ehealth/questions.json:403
 msgid "Mobility"
@@ -3488,8 +3487,9 @@ msgstr "Fernwartung für IT Hard- und Software wird"
 
 #: data/fit4ehealth/questions.json:830
 msgid "managed by my ICT provide without being informed"
-msgstr "von meinem IT-Dienstleister verwaltet, ohne dass ich über den "
-"Zugriff informiert werde"
+msgstr ""
+"von meinem IT-Dienstleister verwaltet, ohne dass ich über den Zugriff "
+"informiert werde"
 
 #: data/fit4ehealth/questions.json:831
 msgid ""
@@ -4609,7 +4609,6 @@ msgstr ""
 
 #: data/fit4ehealth/questions.json:1769
 #, fuzzy
-#| msgid "only readable by me and the persons to whom I gave permissionn"
 msgid "only readable by me and the persons to whom I gave permission"
 msgstr ""
 "nur von mir und den Personen lesbar, denen ich die Erlaubnis erteilt habe"
@@ -7491,6 +7490,8 @@ msgstr "Sie müssen mindestens eine Antwort auswählen"
 #: survey/forms.py:106 survey/forms.py:181
 #: templates/survey/finishedSurvey.html:183
 #: templates/survey/finishedSurvey.html:197 templates/survey/review.html:50
+#: templates/survey/finishedSurvey.html:178
+#: templates/survey/finishedSurvey.html:192
 msgid "Your feedback"
 msgstr "Ihre Rückmeldung"
 
@@ -7755,7 +7756,7 @@ msgstr ""
 msgid "Introduction and Warning"
 msgstr "Einführung und Warnung"
 
-#: templates/report/intro.html:7
+#: templates/report/intro.html:7 templates/report/intro.html:8
 #, python-format
 msgid ""
 "The objective of the self-assessment tool, %(tool_name)s is to assess the "
@@ -7803,6 +7804,7 @@ msgid "Recommendations"
 msgstr "Empfehlungen"
 
 #: templates/report/recommendations.html:7
+#: templates/report/recommendations.html:6
 msgid ""
 "The recommendations list was based in your company context and on your "
 "answers."
@@ -7888,6 +7890,7 @@ msgid "Download direct link"
 msgstr "Direkten Link herunterladen"
 
 #: templates/survey/continue.html:26 templates/survey/finishedSurvey.html:207
+#: templates/survey/finishedSurvey.html:202
 msgid "Close"
 msgstr "Schließen"
 
@@ -7896,6 +7899,7 @@ msgid "Summary"
 msgstr "Zusammenfassung"
 
 #: templates/survey/finishedSurvey.html:28
+#: templates/survey/finishedSurvey.html:27
 msgid ""
 "This is the list of recommendations to improve the information security "
 "maturity in your company, provided that your answers did correctly reflect "
@@ -7911,6 +7915,7 @@ msgstr ""
 "die Ergebnisse dieser Umfrage haften."
 
 #: templates/survey/finishedSurvey.html:40
+#: templates/survey/finishedSurvey.html:38
 #, python-format
 msgid ""
 "Based on your score %(score)s, the CASES Diagnostic is not available for "
@@ -7927,10 +7932,12 @@ msgstr ""
 "zögern Sie nicht"
 
 #: templates/survey/finishedSurvey.html:65
+#: templates/survey/finishedSurvey.html:64
 msgid "Your results link"
 msgstr "Ihr Ergebnislink"
 
 #: templates/survey/finishedSurvey.html:70
+#: templates/survey/finishedSurvey.html:68
 msgid "About the CASES Diagnostic"
 msgstr "Über die CASES-Diagnose"
 
@@ -7955,6 +7962,7 @@ msgstr ""
 "Verbesserung der Laufzeit der Informationssicherheit."
 
 #: templates/survey/finishedSurvey.html:84
+#: templates/survey/finishedSurvey.html:82
 msgid ""
 "The CASES Diagnostic is available for all the companies located in "
 "Luxembourg and free of charge."
@@ -7963,39 +7971,45 @@ msgstr ""
 "kostenlos."
 
 #: templates/survey/finishedSurvey.html:121
+#: templates/survey/finishedSurvey.html:116
 msgid "Report"
 msgstr "Bericht"
 
 #: templates/survey/finishedSurvey.html:128
+#: templates/survey/finishedSurvey.html:123
 msgid "Download"
 msgstr "Herunterladen"
 
 #: templates/survey/finishedSurvey.html:138
+#: templates/survey/finishedSurvey.html:133
 msgid "Email"
 msgstr "Email"
 
 #: templates/survey/finishedSurvey.html:149
+#: templates/survey/finishedSurvey.html:144
 msgid "Score by section"
 msgstr "Punktzahl nach Abschnitt"
 
 #: templates/survey/finishedSurvey.html:155
+#: templates/survey/finishedSurvey.html:150
 msgid "Score by category"
 msgstr "Punktzahl nach Kategorie"
 
 #: templates/survey/finishedSurvey.html:212
 #: templates/survey/sendReportEmail.html:14
+#: templates/survey/finishedSurvey.html:207
 msgid "Send"
 msgstr "Senden"
 
-#: templates/survey/index.html:18
+#: templates/survey/index.html:18 templates/survey/index.html:17
 msgid "Welcome to the CASES self-assessment tool:"
 msgstr "Willkommen beim CASES-Tool zur Selbstbewertung:"
 
-#: templates/survey/index.html:28
+#: templates/survey/index.html:28 templates/survey/index.html:26
 msgid "Start"
 msgstr "Starten"
 
-#: templates/survey/index.html:36
+#: templates/survey/index.html:36 templates/survey/index.html:34
 msgid "Continue a previous survey"
 msgstr "Setzen Sie eine vorherige Umfrage fort"
 
@@ -8310,3 +8324,57 @@ msgstr "Python-Version:"
 #: templates/survey/stats.html:293
 msgid "Software version:"
 msgstr "Softwareversion:"
+
+#: csskp/fit4ehealth/__init__.py:6
+msgid "Description of the tool."
+msgstr "Beschreibung des Tools."
+
+#: data/fit4ehealth/questions.json:830 data/fit4ehealth/questions.json:847
+msgid "managed by my ICT provide, but only on request"
+msgstr "von meinem IT-Dienstleister verwaltet, aber nur auf Anfrage"
+
+#: templates/report/results.html:17 templates/survey/finishedSurvey.html:51
+#, python-format
+msgid ""
+"You have scored an additional %(bonus)s %% of bonus points for following "
+"best practices."
+msgstr ""
+"Sie haben zusätzliche %(bonus)s %% Bonuspunkte für das Befolgen von Best "
+"Practices gesammelt."
+
+#: templates/survey/finishedSurvey.html:70
+msgid ""
+"The CASES Diagnostic is a service which analyses the company maturity in the "
+"information security depending on company's requirements. The analyse "
+"duration can take approxymately 2 hours. A consultant from CASES will come "
+"to your companie's premises, and ask around 30 questions concerning your "
+"information security, mostly organizational questions and possibly some "
+"technical questions. You will receive a detailed report which will contain a "
+"maturity estimation as well as recommendations to enhance the information "
+"security maturity."
+msgstr ""
+"Der Diagnostic CASES ist ein Service zur Analyse des Reifegrads eines "
+"Unternehmens im Hinblick auf die Sicherheit der benötigten Informationen. "
+"Mit einer Dauer von ungefähr 2 Stunden kommt ein CASES-Berater zu Ihnen auf "
+"ihr Firmengelände und stellt ungefähr 30 Fragen, die sowohl "
+"organisatorischer als auch etwas technischer Natur sein können. Am Ende "
+"dieses Diagnostic wird ein Bericht verfasst und Ihnen kurze Zeit später "
+"übermittelt: er enthält eine Schätzung der Laufzeit sowie Empfehlungen zur "
+"Verbesserung der Laufzeit der Informationssicherheit."
+
+#~ msgid "internally performed by someone at ease with computers"
+#~ msgstr ""
+#~ "intern ausgeführt durch einen Mitarbeiter die sich mit Computern auskennt"
+
+#~ msgid ""
+#~ "A contract in written form should be made, and if it's possible "
+#~ "personalized for you."
+#~ msgstr ""
+#~ "Schriftliche Verträge sollten vereinbart werden und falls möglich an Ihre "
+#~ "Situation angepasst sein."
+
+#~ msgid "can be left alone occasionally"
+#~ msgstr "kann gelegentlich unbeaufsichtigt gelassen werden"
+
+#~ msgid "can go away without being noticed"
+#~ msgstr "kann unbemerkt verschwinden"
