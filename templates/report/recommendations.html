@@ -20,9 +20,20 @@
 {% for category, items in recommendations.items %}
     <h5 id="{{ category }}">{{ category }}</h5>
     <ol>
+      {% with False as isSubList %}
         {% for recommendation in items %}
-            <li>{{ recommendation | safe }}</li>
+          <li class="text-justify">{{ recommendation | safe }}</li>
+
+          {% if recommendation|slice:"-1:" == ":" %}
+            <ul>
+            {% update_variable True as isSubList %}
+          {% endif %}
+            {% if forloop.last and isSubList %}
+            </ul>
+            {% endif %}
+
         {% endfor %}
+      {% endwith %}
     </ol>
 {% endfor %}
 

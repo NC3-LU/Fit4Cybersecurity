@@ -1,5 +1,7 @@
 {% extends 'survey/base.html' %}
 
+{% load apptags %}
+
 {% load bootstrap4 %}
 {% load i18n %}
 {% load static %}
@@ -167,9 +169,20 @@
       {% for category, items in recommendations.items %}
       <h4>{{ category | safe }}</h4>
       <ol>
-        {% for recommendation in items %}
-        <li class="text-justify">{{ recommendation | safe }}</li>
-        {% endfor %}
+        {% with False as isSubList %}
+          {% for recommendation in items %}
+            <li class="text-justify">{{ recommendation | safe }}</li>
+
+            {% if recommendation|slice:"-1:" == ":" %}
+              <ul>
+              {% update_variable True as isSubList %}
+            {% endif %}
+              {% if forloop.last and isSubList %}
+              </ul>
+              {% endif %}
+
+          {% endfor %}
+        {% endwith %}
       </ol>
       {% endfor %}
     </div>
