@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-04-28 17:51+0000\n"
+"POT-Creation-Date: 2022-05-04 07:55+0000\n"
 "PO-Revision-Date: 2022-05-03 13:47+0000\n"
 "Last-Translator: Benjamin Joly <benjamin.joly@cases.lu>\n"
 "Language-Team: German <https://translate.monarc.lu/projects/"
@@ -4442,13 +4442,13 @@ msgstr ""
 
 #: data/fit4ehealth/questions.json:1636
 msgid ""
-"used with respect to the rules or guidelines for installing and downloading "
-"software, otherwise it leads to illegal or dangerous activities e.g. "
-"installing something without permission"
+"used in accordance with the rules or guidelines for installing and "
+"downloading software, in order to avoid illegal or dangerous activities, "
+"such as unauthorised installation of software"
 msgstr ""
-"verwendet unter Einhaltung von Regeln oder Richtlinien für die Installation "
-"und das Herunterladen von Software, die sich auf illegale oder gefährliche "
-"Aktivitäten beziehen, z. B. die Installation von Programmen  ohne Erlaubnis"
+"Installation und das Herunterladen von Software festgelegt wurden, um "
+"illegale oder gefährliche Aktivitäten zu verhindern, z. B. die unerlaubte "
+"Installation von Software"
 
 #: data/fit4ehealth/questions.json:1637
 msgid ""
@@ -7485,10 +7485,8 @@ msgid "You need to choose at least one answer"
 msgstr "Sie müssen mindestens eine Antwort auswählen"
 
 #: survey/forms.py:106 survey/forms.py:181
-#: templates/survey/finishedSurvey.html:183
-#: templates/survey/finishedSurvey.html:197 templates/survey/review.html:50
-#: templates/survey/finishedSurvey.html:178
-#: templates/survey/finishedSurvey.html:192
+#: templates/survey/finishedSurvey.html:196
+#: templates/survey/finishedSurvey.html:210 templates/survey/review.html:50
 msgid "Your feedback"
 msgstr "Ihre Rückmeldung"
 
@@ -7753,7 +7751,7 @@ msgstr ""
 msgid "Introduction and Warning"
 msgstr "Einführung und Warnung"
 
-#: templates/report/intro.html:7 templates/report/intro.html:8
+#: templates/report/intro.html:7
 #, python-format
 msgid ""
 "The objective of the self-assessment tool, %(tool_name)s is to assess the "
@@ -7801,7 +7799,6 @@ msgid "Recommendations"
 msgstr "Empfehlungen"
 
 #: templates/report/recommendations.html:7
-#: templates/report/recommendations.html:6
 msgid ""
 "The recommendations list was based in your company context and on your "
 "answers."
@@ -7827,7 +7824,7 @@ msgstr ""
 "Selbsteinschätzung ist. Es versteht sich, dass alle Ergebnisse in keiner "
 "Weise erschöpfend sein können."
 
-#: templates/report/results.html:17 templates/survey/finishedSurvey.html:53
+#: templates/report/results.html:17 templates/survey/finishedSurvey.html:55
 #, python-format
 msgid ""
 "You have scored an additional %(bonus)s %% of bonus points for adherence to "
@@ -7886,17 +7883,15 @@ msgstr ""
 msgid "Download direct link"
 msgstr "Direkten Link herunterladen"
 
-#: templates/survey/continue.html:26 templates/survey/finishedSurvey.html:207
-#: templates/survey/finishedSurvey.html:202
+#: templates/survey/continue.html:26 templates/survey/finishedSurvey.html:220
 msgid "Close"
 msgstr "Schließen"
 
-#: templates/survey/finishedSurvey.html:24
+#: templates/survey/finishedSurvey.html:26
 msgid "Summary"
 msgstr "Zusammenfassung"
 
-#: templates/survey/finishedSurvey.html:28
-#: templates/survey/finishedSurvey.html:27
+#: templates/survey/finishedSurvey.html:30
 msgid ""
 "This is the list of recommendations to improve the information security "
 "maturity in your company, provided that your answers did correctly reflect "
@@ -7911,8 +7906,7 @@ msgstr ""
 "Reifegrads der Informationssicherheit abbilden kann, und wir daher nicht für "
 "die Ergebnisse dieser Umfrage haften."
 
-#: templates/survey/finishedSurvey.html:40
-#: templates/survey/finishedSurvey.html:38
+#: templates/survey/finishedSurvey.html:42
 #, python-format
 msgid ""
 "Based on your score %(score)s, the CASES Diagnostic is not available for "
@@ -7928,17 +7922,15 @@ msgstr ""
 "Kenntnisse in Ihrem Unternehmen durch eine Schulung verbessern möchten, "
 "zögern Sie nicht"
 
-#: templates/survey/finishedSurvey.html:65
-#: templates/survey/finishedSurvey.html:64
+#: templates/survey/finishedSurvey.html:67
 msgid "Your results link"
 msgstr "Ihr Ergebnislink"
 
-#: templates/survey/finishedSurvey.html:70
-#: templates/survey/finishedSurvey.html:68
+#: templates/survey/finishedSurvey.html:72
 msgid "About the CASES Diagnostic"
 msgstr "Über die CASES-Diagnose"
 
-#: templates/survey/finishedSurvey.html:72
+#: templates/survey/finishedSurvey.html:74
 msgid ""
 "The CASES Diagnostic is a service which analyses the company maturity in the "
 "information security depending on company's requirements. The analysis "
@@ -7958,8 +7950,7 @@ msgstr ""
 "übermittelt: er enthält eine Schätzung der Laufzeit sowie Empfehlungen zur "
 "Verbesserung der Laufzeit der Informationssicherheit."
 
-#: templates/survey/finishedSurvey.html:84
-#: templates/survey/finishedSurvey.html:82
+#: templates/survey/finishedSurvey.html:86
 msgid ""
 "The CASES Diagnostic is available for all the companies located in "
 "Luxembourg and free of charge."
@@ -7967,46 +7958,40 @@ msgstr ""
 "Der Diagnostic ist für jedes Unternehmen mit Sitz in Luxemburg möglich und "
 "kostenlos."
 
-#: templates/survey/finishedSurvey.html:121
-#: templates/survey/finishedSurvey.html:116
+#: templates/survey/finishedSurvey.html:123
 msgid "Report"
 msgstr "Bericht"
 
-#: templates/survey/finishedSurvey.html:128
-#: templates/survey/finishedSurvey.html:123
+#: templates/survey/finishedSurvey.html:130
 msgid "Download"
 msgstr "Herunterladen"
 
-#: templates/survey/finishedSurvey.html:138
-#: templates/survey/finishedSurvey.html:133
+#: templates/survey/finishedSurvey.html:140
 msgid "Email"
 msgstr "Email"
 
-#: templates/survey/finishedSurvey.html:149
-#: templates/survey/finishedSurvey.html:144
+#: templates/survey/finishedSurvey.html:151
 msgid "Score by section"
 msgstr "Punktzahl nach Abschnitt"
 
-#: templates/survey/finishedSurvey.html:155
-#: templates/survey/finishedSurvey.html:150
+#: templates/survey/finishedSurvey.html:157
 msgid "Score by category"
 msgstr "Punktzahl nach Kategorie"
 
-#: templates/survey/finishedSurvey.html:212
+#: templates/survey/finishedSurvey.html:225
 #: templates/survey/sendReportEmail.html:14
-#: templates/survey/finishedSurvey.html:207
 msgid "Send"
 msgstr "Senden"
 
-#: templates/survey/index.html:18 templates/survey/index.html:17
+#: templates/survey/index.html:18
 msgid "Welcome to the CASES self-assessment tool:"
 msgstr "Willkommen beim CASES-Tool zur Selbstbewertung:"
 
-#: templates/survey/index.html:28 templates/survey/index.html:26
+#: templates/survey/index.html:28
 msgid "Start"
 msgstr "Starten"
 
-#: templates/survey/index.html:36 templates/survey/index.html:34
+#: templates/survey/index.html:36
 msgid "Continue a previous survey"
 msgstr "Setzen Sie eine vorherige Umfrage fort"
 
@@ -8322,62 +8307,56 @@ msgstr "Python-Version:"
 msgid "Software version:"
 msgstr "Softwareversion:"
 
-#: csskp/fit4ehealth/__init__.py:6
-msgid "Description of the tool."
-msgstr "Beschreibung des Tools."
+#~ msgid "Description of the tool."
+#~ msgstr "Beschreibung des Tools."
 
-#: data/fit4ehealth/questions.json:830 data/fit4ehealth/questions.json:847
-msgid "managed by my ICT provide, but only on request"
-msgstr "von meinem IT-Dienstleister verwaltet, aber nur auf Anfrage"
+#~ msgid "managed by my ICT provide, but only on request"
+#~ msgstr "von meinem IT-Dienstleister verwaltet, aber nur auf Anfrage"
 
-#: templates/report/results.html:17 templates/survey/finishedSurvey.html:51
 #, python-format
-msgid ""
-"You have scored an additional %(bonus)s %% of bonus points for following "
-"best practices."
-msgstr ""
-"Sie haben zusätzliche %(bonus)s %% Bonuspunkte für das Befolgen von Best "
-"Practices gesammelt."
+#~ msgid ""
+#~ "You have scored an additional %(bonus)s %% of bonus points for following "
+#~ "best practices."
+#~ msgstr ""
+#~ "Sie haben zusätzliche %(bonus)s %% Bonuspunkte für das Befolgen von Best "
+#~ "Practices gesammelt."
 
-#: templates/survey/finishedSurvey.html:70
-msgid ""
-"The CASES Diagnostic is a service which analyses the company maturity in the "
-"information security depending on company's requirements. The analyse "
-"duration can take approxymately 2 hours. A consultant from CASES will come "
-"to your companie's premises, and ask around 30 questions concerning your "
-"information security, mostly organizational questions and possibly some "
-"technical questions. You will receive a detailed report which will contain a "
-"maturity estimation as well as recommendations to enhance the information "
-"security maturity."
-msgstr ""
-"Der Diagnostic CASES ist ein Service zur Analyse des Reifegrads eines "
-"Unternehmens im Hinblick auf die Sicherheit der benötigten Informationen. "
-"Mit einer Dauer von ungefähr 2 Stunden kommt ein CASES-Berater zu Ihnen auf "
-"ihr Firmengelände und stellt ungefähr 30 Fragen, die sowohl "
-"organisatorischer als auch etwas technischer Natur sein können. Am Ende "
-"dieses Diagnostic wird ein Bericht verfasst und Ihnen kurze Zeit später "
-"übermittelt: er enthält eine Schätzung der Laufzeit sowie Empfehlungen zur "
-"Verbesserung der Laufzeit der Informationssicherheit."
+#~ msgid ""
+#~ "The CASES Diagnostic is a service which analyses the company maturity in "
+#~ "the information security depending on company's requirements. The analyse "
+#~ "duration can take approxymately 2 hours. A consultant from CASES will "
+#~ "come to your companie's premises, and ask around 30 questions concerning "
+#~ "your information security, mostly organizational questions and possibly "
+#~ "some technical questions. You will receive a detailed report which will "
+#~ "contain a maturity estimation as well as recommendations to enhance the "
+#~ "information security maturity."
+#~ msgstr ""
+#~ "Der Diagnostic CASES ist ein Service zur Analyse des Reifegrads eines "
+#~ "Unternehmens im Hinblick auf die Sicherheit der benötigten Informationen. "
+#~ "Mit einer Dauer von ungefähr 2 Stunden kommt ein CASES-Berater zu Ihnen "
+#~ "auf ihr Firmengelände und stellt ungefähr 30 Fragen, die sowohl "
+#~ "organisatorischer als auch etwas technischer Natur sein können. Am Ende "
+#~ "dieses Diagnostic wird ein Bericht verfasst und Ihnen kurze Zeit später "
+#~ "übermittelt: er enthält eine Schätzung der Laufzeit sowie Empfehlungen "
+#~ "zur Verbesserung der Laufzeit der Informationssicherheit."
 
-#: data/fit4ehealth/questions.json:1021
-msgid ""
-"Whenever someone has to leave a computer alone (could be his/her or a "
-"computer linked to the medical device, or the one with the software), the "
-"computer is locked and no one can access it without typing a password."
-msgstr ""
-"Immer wenn jemand einen Computer alleine lassen muss (es könnte sein, dass "
-"es sich um seinen eigenen Arbeitsplatzrechner oder einen mit dem "
-"medizinischen Gerät verbundenen Computer handelt), wird der Computer "
-"gesperrt und niemand kann darauf zugreifen ohne ein Passwort einzugeben."
+#~ msgid ""
+#~ "Whenever someone has to leave a computer alone (could be his/her or a "
+#~ "computer linked to the medical device, or the one with the software), the "
+#~ "computer is locked and no one can access it without typing a password."
+#~ msgstr ""
+#~ "Immer wenn jemand einen Computer alleine lassen muss (es könnte sein, "
+#~ "dass es sich um seinen eigenen Arbeitsplatzrechner oder einen mit dem "
+#~ "medizinischen Gerät verbundenen Computer handelt), wird der Computer "
+#~ "gesperrt und niemand kann darauf zugreifen ohne ein Passwort einzugeben."
 
-#: data/fit4ehealth/questions.json:1984
-msgid ""
-"not well informed about digitial eHealth services offered at national level "
-"in Luxembourg and  are interested in participating in webinars"
-msgstr ""
-"fühlen wir uns nicht gut über die digitalen eHealth-Dienste informiert die "
-"auf nationaler Ebene in Luxemburg angeboten werden und sind an der Teilnahme "
-"an Webinaren interessiert"
+#~ msgid ""
+#~ "not well informed about digitial eHealth services offered at national "
+#~ "level in Luxembourg and  are interested in participating in webinars"
+#~ msgstr ""
+#~ "fühlen wir uns nicht gut über die digitalen eHealth-Dienste informiert "
+#~ "die auf nationaler Ebene in Luxemburg angeboten werden und sind an der "
+#~ "Teilnahme an Webinaren interessiert"
 
 #~ msgid "internally performed by someone at ease with computers"
 #~ msgstr ""
