@@ -1,20 +1,15 @@
-# -*- coding: utf-8 -*-
-
+from cryptography.fernet import Fernet
 from django.contrib import admin
 
-from survey.models import (
-    SurveyQuestion,
-    SurveyQuestionAnswer,
-    SurveyQuestionServiceCategory,
-    SurveySection,
-    SurveyUser,
-    SurveyUserAnswer,
-    Recommendations,
-    SurveyUserFeedback,
-)
-
 from csskp.settings import HASH_KEY
-from cryptography.fernet import Fernet
+from survey.models import Recommendations
+from survey.models import SurveyQuestion
+from survey.models import SurveyQuestionAnswer
+from survey.models import SurveyQuestionServiceCategory
+from survey.models import SurveySection
+from survey.models import SurveyUser
+from survey.models import SurveyUserAnswer
+from survey.models import SurveyUserFeedback
 
 
 class InputFilter(admin.SimpleListFilter):

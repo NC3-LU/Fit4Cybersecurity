@@ -1,5 +1,7 @@
 {% extends 'survey/base.html' %}
 
+{% load apptags %}
+
 {% load bootstrap4 %}
 {% load i18n %}
 {% load static %}
@@ -23,6 +25,7 @@
     <div class="col-10">
         <h2>{{ _('Summary') }}:</h2>
         <div class="qrcode"></div>
+        {% block finished_survey_description %}
         <p class="text-justify">
             {% blocktranslate trimmed %}
             This is the list of recommendations to improve the information
@@ -33,6 +36,7 @@
             and thus, we are not liable for the results of this survey.
             {% endblocktranslate %}
         </p>
+        {% endblock %}
         {% if custom.modules.requestTraining and user.get_country_code == 'LU' and txtscore < custom.minimal_acceptable_score %}
             <p class="text-justify">
                 {% blocktranslate with score=string_score|add:'/100' trimmed %}
@@ -49,8 +53,7 @@
         {% if bonus_score > 0 %}
             <p class="text-justify">
                 {% blocktranslate trimmed with bonus=bonus_score %}
-                You have scored an additional {{ bonus }} % of bonus points
-                for following best practices.
+                You have scored an additional {{ bonus }} % of bonus points for adherence to best practices.
                 {% endblocktranslate %}
             </p>
         {% endif %}
@@ -64,14 +67,15 @@
                 {{ _('Your results link') }}
             </button>
         </p>
-        {% if  custom.modules.requestDiagnostic and user.get_country_code == 'LU' and txtscore >= custom.minimal_acceptable_score %}
+        {% if custom.modules.requestDiagnostic and user.get_country_code == 'LU' and txtscore >= custom.minimal_acceptable_score %}
+            {% block finished_survey_diagnostic %}
             <h2>{{ _('About the CASES Diagnostic') }}:</h2>
             <p class="text-justify">
                 {% blocktranslate trimmed %}
                 The CASES Diagnostic is a service which analyses the company maturity
                 in the information security depending on company's requirements.
-                The analyse duration can take approxymately 2 hours.
-                A consultant from CASES will come to your companie's premises,
+                The analysis duration can take approximately 2 hours.
+                A consultant from CASES will come to your company's premises,
                 and ask around 30 questions concerning your information security,
                 mostly organizational questions and possibly some technical questions.
                 You will receive a detailed report which will contain a maturity estimation
@@ -84,6 +88,7 @@
                 located in Luxembourg and free of charge.
                 {% endblocktranslate %}
             </p>
+            {% endblock %}
         {% endif %}
     </div>
     {% if custom.modules.reportDownload %}
@@ -102,15 +107,17 @@
                             <span>/100</span>
                         </h3>
                     {% endif %}
-                    {% if custom.modules.requestTraining and user.get_country_code == 'LU' %}
+                    {% if user.get_country_code == 'LU' %}
                         {% if txtscore >= custom.minimal_acceptable_score and custom.modules.requestDiagnostic %}
                             <div class="px-2 pb-2">
                                 {% include 'survey/requestDiagnosticLink.html' with type='button' %}
                             </div>
                         {% endif %}
+                        {% if custom.modules.requestTraining %}
                             <div class="px-2">
                                 {% include 'survey/requestTrainingLink.html' with type='button' %}
                             </div>
+                        {% endif %}
                     {% endif %}
                 </div>
                 <h4 class="px-2">{{ _('Report') }}:</h4>
@@ -162,9 +169,20 @@
       {% for category, items in recommendations.items %}
       <h4>{{ category | safe }}</h4>
       <ol>
-        {% for recommendation in items %}
-        <li class="text-justify">{{ recommendation | safe }}</li>
-        {% endfor %}
+        {% with False as isSubList %}
+          {% for recommendation in items %}
+            <li class="text-justify">{{ recommendation | safe }}</li>
+
+            {% if recommendation|slice:"-1:" == ":" %}
+              <ul>
+              {% update_variable True as isSubList %}
+            {% endif %}
+              {% if forloop.last and isSubList %}
+              </ul>
+              {% endif %}
+
+          {% endfor %}
+        {% endwith %}
       </ol>
       {% endfor %}
     </div>

@@ -1,32 +1,35 @@
-# -*- coding: utf-8 -*-
-
 import json
 import logging
 from datetime import date
-from django.shortcuts import render
-from django.conf import settings
-from django.http import HttpResponse, HttpResponseRedirect
-from django.utils.translation import gettext as _
-from django import forms
-
-from survey.viewLogic import (
-    handle_start_survey,
-    handle_question_answers_request,
-    find_user_by_id,
-    get_questions_with_user_answers,
-    handle_general_feedback,
-    get_current_user_question_index_from_sequence,
-)
-from survey.reporthelper import calculateResult, getRecommendations
-from survey.report import create_html_report, makepdf
-from survey.models import SurveyUser, SURVEY_STATUS_FINISHED
-from utils.notifications import send_report
-from django.contrib import messages
-from django.utils import translation
 from uuid import UUID
-from csskp.settings import HASH_KEY, CUSTOM, LANGUAGE_CODE
-from utils.utils import can_redirect
+
 from cryptography.fernet import Fernet
+from django import forms
+from django.conf import settings
+from django.contrib import messages
+from django.http import HttpResponse
+from django.http import HttpResponseRedirect
+from django.shortcuts import render
+from django.utils import translation
+from django.utils.translation import gettext as _
+
+from csskp.settings import CUSTOM
+from csskp.settings import HASH_KEY
+from csskp.settings import LANGUAGE_CODE
+from survey.models import SURVEY_STATUS_FINISHED
+from survey.models import SurveyUser
+from survey.report import create_html_report
+from survey.report import makepdf
+from survey.reporthelper import calculateResult
+from survey.reporthelper import getRecommendations
+from survey.viewLogic import find_user_by_id
+from survey.viewLogic import get_current_user_question_index_from_sequence
+from survey.viewLogic import get_questions_with_user_answers
+from survey.viewLogic import handle_general_feedback
+from survey.viewLogic import handle_question_answers_request
+from survey.viewLogic import handle_start_survey
+from utils.notifications import send_report
+from utils.utils import can_redirect
 
 # Get an instance of a logger
 logger = logging.getLogger(__name__)

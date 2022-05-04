@@ -1,0 +1,10 @@
+{% extends 'report/results.html' %}
+{% load i18n %}
+{% load apptags %}
+
+{% block report_results %}
+{% blocktranslate trimmed with minimal_acceptable_score=custom.minimal_acceptable_score %}
+    You have achieved a score of {{ SCORE }}/100 with your answers. You must reach a score of at least {{ minimal_acceptable_score }}/100 to be able to request for further diagnosis.<br />
+    We remind you that this is a self-assessment, and therefore it is important to understand that all the results cannot be exhaustive in any way.
+{% endblocktranslate %}
+{% endblock %}

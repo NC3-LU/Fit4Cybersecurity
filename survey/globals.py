@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 SERVICE_TARGETS = [
     ("SME", "Small to Medium Size Entreprises"),
     ("BC", "Big Company"),

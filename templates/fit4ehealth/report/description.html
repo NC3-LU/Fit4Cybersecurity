@@ -1,0 +1,14 @@
+{% extends 'report/description.html' %}
+{% load i18n %}
+{% load apptags %}
+
+{% block report_description %}
+{% blocktranslate trimmed with tool_name=custom.tool_name minimal_acceptable_score=custom.minimal_acceptable_score %}
+This self-assessment tool is intended to record the current state of the information security within your organisation.
+It is also a prerequisite for performing further diagnostics: a minimum score of {{ minimal_acceptable_score }}/100 is required for this.
+The purpose of this restriction gives us the opportunity to better tailor recommendations to your organisation during further diagnostics.
+As the data has been collected anonymously, you will need to contact us explicitly for further diagnostics and provide us this report.<br /><br />
+During this self-assessment multiple choice questions will be asked and afterwards recommendations will be provided.<br />
+Finally, you can download a report to help you to analyse the results and share it with your IT service provider, if necessary.
+{% endblocktranslate %}
+{% endblock %}

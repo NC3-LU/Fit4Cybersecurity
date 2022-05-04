@@ -1,6 +1,6 @@
-# -*- coding: utf-8 -*-
+from django.urls import include
+from django.urls import path
 
-from django.urls import path, include
 from csskp.settings import DEBUG
 from survey import views
 

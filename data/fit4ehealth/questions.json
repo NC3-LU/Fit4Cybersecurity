@@ -13,7 +13,7 @@
         "score": 0,
         "atype": "P",
         "label": "not described",
-        "tooltip": "Rules are not especially specified, because they should be obvious for everyone.",
+        "tooltip": "Rules are not especially specified, because they should be obvious for everyone",
         "recommendations": [
           {
             "min_e_count": "a",
@@ -29,7 +29,7 @@
         "uniqueAnswer": false,
         "score": 2,
         "atype": "P",
-        "label": "orally given",
+        "label": "given verbally",
         "tooltip": "Rules are discussed, told to everyone whenever they are decided",
         "recommendations": [
           {
@@ -37,7 +37,7 @@
             "max_e_count": "j",
             "sector": null,
             "answerChosen": false,
-            "label": "Rules (organizational, IT or working ones) should be known and explained to everyone, at the very least orally."
+            "label": "Rules (organizational, IT or work rules) should be known and explained to everyone, at the very least verbally."
           }
         ]
       },
@@ -46,15 +46,15 @@
         "uniqueAnswer": false,
         "score": 3,
         "atype": "P",
-        "label": "written and given by mail",
-        "tooltip": "Rules are written by someone when they are decided, then send by any means (could be paper, mail, internal chat app ...)",
+        "label": "written and distributed by mail",
+        "tooltip": "Rules are written by someone when they are decided, then send by any means (could be paper, email, internal chat app ...)",
         "recommendations": [
           {
             "min_e_count": "a",
             "max_e_count": "j",
             "sector": null,
             "answerChosen": false,
-            "label": "Even if an oral transmission could be enough for a small doctor’s practice, rules should still be written in a charter, read and signed by everyone, which is very important for larger companies or if the company grows."
+            "label": "Even though a verbal transmission might be sufficient for a small medical practice, rules should still be written in a charter, read and signed by all, which is very important for larger companies or if the Company is growing."
           }
         ]
       },
@@ -63,15 +63,15 @@
         "uniqueAnswer": false,
         "score": 4,
         "atype": "P",
-        "label": "read and signed by everyone, in a cabinet/practice charter or similar",
-        "tooltip": "Rules are written and should be signed by everyone.",
+        "label": "read and signed by all, in a cabinet/practice charter or similar",
+        "tooltip": "Rules are written and should be signed by all employees",
         "recommendations": [
           {
             "min_e_count": "a",
             "max_e_count": "j",
             "sector": null,
             "answerChosen": false,
-            "label": "Written rules can:<ul><li>avoid to forget relevant points and can be consulted at any time</li><li>have a legal proof if the rules have been read.</li></ul>"
+            "label": "Written rules can:<ul><li>avoid for relevant points being forgotten and can be consulted at any time</li><li>have a legal proof that the rules have been read</li></ul>"
           }
         ]
       },
@@ -98,14 +98,14 @@
         "score": 5,
         "atype": "P",
         "label": "covering topics such as cybersecurity and data management in your profession.",
-        "tooltip": "Do you have some rules that talk about how password should be, or that you shouldn’t download any untrustworthy software?",
+        "tooltip": "Do you have some rules that talk about how password should be, or that you shouldn't download any untrustworthy software?",
         "recommendations": [
           {
             "min_e_count": "a",
             "max_e_count": "j",
             "sector": null,
             "answerChosen": false,
-            "label": "Some explanation about cybersecurity or data protection measures for the organization should be included as they help keep data safe."
+            "label": "Some explanation about cybersecurity or data protection measures for the organization should be included as they help to ensure data security."
           }
         ]
       },
@@ -114,15 +114,15 @@
         "uniqueAnswer": false,
         "score": 2,
         "atype": "P",
-        "label": "covering topics like the procedures/policies to take in place for business continuity e.g. in case the IT systems of the organization are temporarily out of order",
-        "tooltip": "You have some advice or rules on what you should do in case of a major disaster or incident that stops your activity happens.",
+        "label": "covering topics like the procedures/policies that are in place for business continuity e.g. in the event the IT systems of the organization are temporarily out of order",
+        "tooltip": "You have some advice or rules on what you should be done in case of a major disaster or incident that stops your activity happens.",
         "recommendations": [
           {
             "min_e_count": "a",
             "max_e_count": "j",
             "sector": null,
             "answerChosen": false,
-            "label": "In case of a big incident, you should have some rules or advice in order to act under panic, and keep the systems / organization operational."
+            "label": "In case of a major incident, you should have some rules or advice in order to act in a stressful situation, and keep the systems / organization operational."
           }
         ]
       },
@@ -131,7 +131,7 @@
         "uniqueAnswer": false,
         "score": 2,
         "atype": "P",
-        "label": "defined to manage the necessary steps when medical staff changes, e.g. joining of new employees, leave/removal and temporary replacement (during holidays) of staff members",
+        "label": "defined to manage the necessary steps which need to be taken when there is a change in medical staff, e.g. hiring of new employees, leave/dismissal or temporary replacement (during leave) of staff members",
         "tooltip": "For example a checklist containing the relevant steps like blocking/removing account, keys, change of assignments, etc.",
         "recommendations": [
           {
@@ -139,7 +139,7 @@
             "max_e_count": "j",
             "sector": null,
             "answerChosen": false,
-            "label": "Whenever there is a change of employees for example at a leave, all account data linked to that person should be inaccessible by them. In the same fashion, someone that joins the team, should have their accounts, authorization and computer ready to work."
+            "label": "In the event of staff turnover, e.g. departure, all account details associated with that person should be inaccessible to them. So should accounts, accesses and computers be operational when someone new joins the team."
           }
         ]
       }
@@ -148,7 +148,7 @@
   {
     "service_category": "Data Transfer",
     "section": "Organisational Awareness",
-    "label": "Medical data of the establishment is",
+    "label": "Medical data of the establishment/organisation is",
     "qtype": "M",
     "qindex": 2,
     "maxPoints": 24,
@@ -159,7 +159,7 @@
         "score": 0,
         "bonus_points": 2,
         "atype": "P",
-        "label": "still stored, if needed, on paper",
+        "label": "still stored on paper, if needed",
         "tooltip": "Some documents concerning patients are still received, printed and stored somewhere.",
         "recommendations": [
           {
@@ -167,7 +167,7 @@
             "max_e_count": "j",
             "sector": null,
             "answerChosen": false,
-            "label": "Paper documents need to be stored where only authorized persons can access them. These data can’t be kept indefinitely, and should be deleted as soon as they become useless (usually by law after 10 years a medical record)."
+            "label": "Hard copy documents must be kept where only authorized persons have access. These data can't be kept indefinitely, and should be deleted as soon as they become unusable (usually by law after 10 years for medical documents)."
           }
         ]
       },
@@ -176,15 +176,15 @@
         "uniqueAnswer": false,
         "score": 0,
         "atype": "P",
-        "label": "sent unencrypted by email to the patient or to collaborators who request it",
-        "tooltip": "Emails are sent without protecting the content.",
+        "label": "sent in unencrypted form by email to the patient or to collaborators who request it",
+        "tooltip": "Emails are sent without protecting the content",
         "recommendations": [
           {
             "min_e_count": "a",
             "max_e_count": "j",
             "sector": null,
             "answerChosen": true,
-            "label": "You should always try to give all documents directly to someone. If you can’t, then you should ensure and double check that the person is well identified and encrypt the medical information with a password to avoid any disclosure or interception."
+            "label": "You should always try to provide all documents directly to the targeted person. If you can't, you should ensure and double check that the person is well identified and encrypt the medical information with a password to avoid any disclosure or interception."
           }
         ]
       },
@@ -193,7 +193,7 @@
         "uniqueAnswer": false,
         "score": 12,
         "atype": "P",
-        "label": "sent in encrypted form via email to the patient or to collaborators who request it",
+        "label": "sent in encrypted form by email to the patient or to collaborators who request it",
         "tooltip": "Emails are sent encrypted or with medical content only in encrypted attachment or by using Regimail.",
         "recommendations": []
       },
@@ -210,7 +210,7 @@
             "max_e_count": "j",
             "sector": null,
             "answerChosen": true,
-            "label": "Prevent from sharing medical data via commercial public messengers or cloud platforms, as the data you will store in will probably be sent abroad (outside Europe) and therefore fall under different laws and policies. Depending on the platform used, you do by accepting the terms and conditions of these providers, implicitly allow them to access / analyze your stored data."
+            "label": "Avoid sharing medical data via commercial public messengers or cloud platforms, as the data you store there is likely to be sent abroad (outside Europe) and therefore fall under different laws and policies. Depending on the platform used, by accepting the terms and conditions of these providers, implicitly allows them to access / analyze your stored data."
           }
         ]
       },
@@ -219,7 +219,7 @@
         "uniqueAnswer": false,
         "score": 0,
         "atype": "P",
-        "label": "sometimes sent by fax to external collaborators",
+        "label": "sometimes sent by fax to external healthcare professionals / institutions",
         "tooltip": "Data are sent by fax to any professional, laboratory, hospital or other organization.",
         "recommendations": [
           {
@@ -227,7 +227,7 @@
             "max_e_count": "j",
             "sector": null,
             "answerChosen": true,
-            "label": "Fax is not a secure way to exchange sensitive data. It is also important to refuse the sending of sensitive data unencrypted via mail, as you are responsible in case the data is leaked."
+            "label": "Fax is not a secure way to exchange sensitive data. It is also important to refuse the sending of sensitive data by unencrypted mail, as you will be responsible if the data is leaked."
           }
         ]
       },
@@ -236,7 +236,7 @@
         "uniqueAnswer": false,
         "score": 0,
         "atype": "P",
-        "label": "kept indefinitely, even after the patients have left the country or died",
+        "label": "kept indefinitely, even after patients have left the country or died",
         "tooltip": "You never dispose the data when the patient is inaccessible.",
         "recommendations": [
           {
@@ -244,7 +244,7 @@
             "max_e_count": "j",
             "sector": null,
             "answerChosen": true,
-            "label": "Of course, data should be discarded as soon as you don’t need them anymore, when your patient explicitly requests for or when the law (e.g. after 10 years for medical data) permits you to. This will concern data gathered with IT systems electronically, but also all papers and mail."
+            "label": "Of course, data should be discarded as soon as you don't need them anymore, when your patient explicitly requests for or when the law (e.g. after 10 years for medical data) permits you to. This will concern data gathered with IT systems electronically, but also all papers and mail."
           }
         ]
       },
@@ -260,9 +260,10 @@
             "max_e_count": "j",
             "sector": null,
             "answerChosen": false,
-            "label": "If data are shared, it should be encrypted so that only the intended recipient should be able to access the data."
+            "label": "If data is shared, it should be encrypted so that only the intended recipient can access the data."
           }
-        ]
+        ],
+        "tooltip": ""
       }
     ]
   },
@@ -279,7 +280,7 @@
         "uniqueAnswer": false,
         "score": 4,
         "atype": "P",
-        "label": "the software they use on a regular basis",
+        "label": "software they use on a regular basis",
         "tooltip": "You have received training on software or devices that you use, and you are able to face or understand some particular situation to avoid any data loss.",
         "recommendations": [
           {
@@ -287,7 +288,7 @@
             "max_e_count": "j",
             "sector": null,
             "answerChosen": false,
-            "label": "Learning to use your software correctly is important to avoid loss of time and data. It prevents you from mistakes which might affect as well the security of the data processed."
+            "label": "To avoid loss of time and data, it is important to learn to use your software properly. It prevents you from making mistakes that could compromise the security of the data being processed."
           }
         ]
       },
@@ -296,7 +297,7 @@
         "uniqueAnswer": false,
         "score": 6,
         "atype": "P",
-        "label": "information security, to have the knowledge to protect themselves against attacks or information security issues",
+        "label": "information security, to be able to protect themselves from attacks or information security issues",
         "tooltip": "You have received training on the information security basics, or you have personally invested some time to search some ways or practice, either to be more protected or to understand how cyber attackers can harm you or your data.",
         "recommendations": [
           {
@@ -304,7 +305,7 @@
             "max_e_count": "j",
             "sector": null,
             "answerChosen": false,
-            "label": "By informing about attacks that are current, common or well known, employees could more easily identify them and avoid being affected by them."
+            "label": "By sharing information about current, common or well known attacks, employees could take measures to identify and prevent from being affected by them."
           }
         ]
       },
@@ -313,7 +314,7 @@
         "uniqueAnswer": false,
         "score": 8,
         "atype": "P",
-        "label": "the importance of correctly managing and protecting personal data",
+        "label": "the importance of managing and protecting personal data correctly",
         "tooltip": "You have received training on the personal data protection, or asked a professional how you should proceed to protect them.",
         "recommendations": [
           {
@@ -321,7 +322,7 @@
             "max_e_count": "j",
             "sector": null,
             "answerChosen": false,
-            "label": "Train users on the sensitivity of the processed information, in order to put their attention on how to protect these data."
+            "label": "Train users on the sensitivity of the information processed, in order to focus their attention on how to protect this data."
           }
         ]
       },
@@ -330,7 +331,7 @@
         "uniqueAnswer": true,
         "score": 0,
         "atype": "P",
-        "label": "neither of those cases",
+        "label": "none of those cases",
         "tooltip": "You have never received any training for the software you use, on information security or on personal data.",
         "recommendations": []
       }
@@ -349,7 +350,7 @@
         "uniqueAnswer": false,
         "score": 16,
         "atype": "P",
-        "label": "internally performed by an IT specialist",
+        "label": "performed internally by an IT specialist",
         "tooltip": "Someone in the establishment specifically has to take care of all issues that concerns computers or servers, or any issues in that field.",
         "recommendations": []
       },
@@ -358,7 +359,7 @@
         "uniqueAnswer": false,
         "score": 8,
         "atype": "P",
-        "label": "internally performed by someone at ease with computers",
+        "label": "performed internally by a person who is computer literate",
         "tooltip": "Someone in the establishment take care of computers or even servers if there is a problem, but the person is not dedicated to this and do other tasks in the establishment.",
         "recommendations": [
           {
@@ -366,7 +367,7 @@
             "max_e_count": "j",
             "sector": null,
             "answerChosen": false,
-            "label": "It's important to define responsibilities, either externally or internally, with one or more persons, or a company, but specialized into their own domain, at best supported by relevant training."
+            "label": "It is important to define responsibilities, for internal and external staff / companies, related to their specific domain. At best this should be supported by relevant trainings."
           }
         ]
       },
@@ -375,15 +376,15 @@
         "uniqueAnswer": false,
         "score": 0,
         "atype": "P",
-        "label": "internally performed by the one finding or encountering the problem, or externally without contract",
-        "tooltip": "The one who encounters the problem has to solve it, or eventually ask to someone who could be external but don’t have any contract with the establishment.",
+        "label": "performed internally by the person who found or encountered the problem, or externally without contract",
+        "tooltip": "The one who encounters the problem has to solve it, or eventually ask to someone who could be external but don't have any contract with the establishment.",
         "recommendations": [
           {
             "min_e_count": "a",
             "max_e_count": "j",
             "sector": null,
             "answerChosen": true,
-            "label": "It's important to define responsibilities, either externally or internally, with one or more persons, or a company, but specialized into their own domain, at best supported by relevant training."
+            "label": "It is important to define responsibilities, for internal and external staff / companies, related to their specific domain. At best this should be supported by relevant trainings."
           }
         ]
       },
@@ -393,7 +394,7 @@
         "score": 16,
         "atype": "P",
         "label": "externally by a third party with a contract",
-        "tooltip": "ly by a third party with a contract tooltip: Whenever a problem is encountered, another company will try to solve it. This company is mainly under contract.",
+        "tooltip": "Whenever a problem is encountered, another company will try to solve it. This company is under contract.",
         "recommendations": []
       }
     ]
@@ -401,7 +402,7 @@
   {
     "service_category": "Mobility",
     "section": "Employee Management in Your Cabinet or Practice",
-    "label": "During any work/visit outside the establishment, the medical professional uses",
+    "label": "When working outside the facility/ establishment or during visits, the health professional uses:",
     "qtype": "M",
     "qindex": 5,
     "maxPoints": 26,
@@ -411,7 +412,7 @@
         "uniqueAnswer": true,
         "score": 26,
         "atype": "P",
-        "label": "no professional tools/devices because home office or visits are not allowed or necessary, or the only connection to the internal network is on the company premises",
+        "label": "no professional tools/devices because home office or visits are not allowed or necessary, or the only connection is the internal network on company premises",
         "tooltip": "Accessing to the internal data is impossible from outside the establishment.",
         "recommendations": [
           {
@@ -419,14 +420,14 @@
             "max_e_count": "j",
             "sector": null,
             "answerChosen": true,
-            "label": "For now, no outside work is done. If it's changed, it's important to take care that:"
+            "label": "External connection which is not controlled and monitored should be avoided to prevent from data theft."
           },
           {
             "min_e_count": "a",
             "max_e_count": "j",
             "sector": null,
             "answerChosen": true,
-            "label": "External connection which is not controlled and monitored should be avoided to avoid data theft."
+            "label": "For now, no work outside the facility/establishment is done. If this changes, it is important to take care that:"
           }
         ]
       },
@@ -435,16 +436,18 @@
         "uniqueAnswer": false,
         "score": 8,
         "atype": "P",
-        "label": "VPN (Virtual Private Network) to encrypt all data from any external network to the internal server of the establishment",
+        "label": "VPN (Virtual Private Network) to encrypt all data from any external network to the establishment's internal server",
         "tooltip": "Before accessing your data from outside, you need to connect (or automatically connect) to a software that permits to access the data you have inside the establishment.",
-        "dependant_answers": ["devices that are not connected to any IT network while on the trip."],
+        "dependant_answers": [
+          "devices that are not connected to an IT network during the visit."
+        ],
         "recommendations": [
           {
             "min_e_count": "a",
             "max_e_count": "j",
             "sector": null,
             "answerChosen": false,
-            "label": "Whenever users have the need to work outside, from home office or other missions outside the premises, they must have a VPN connection to connect to the server/network of the organization."
+            "label": "Whenever users need to work offsite, from home office or other offsite assignments, they need a VPN connection to connect to the organization's server/network."
           }
         ]
       },
@@ -455,14 +458,16 @@
         "atype": "P",
         "label": "Public Internet, Wi-Fi, open networks or connection protected by external organizations or individuals",
         "tooltip": "You can connect from any place that provides you an internet access",
-        "dependant_answers": ["devices that are not connected to any IT network while on the trip."],
+        "dependant_answers": [
+          "devices that are not connected to an IT network during the visit."
+        ],
         "recommendations": [
           {
             "min_e_count": "a",
             "max_e_count": "j",
             "sector": null,
             "answerChosen": true,
-            "label": "External connection which is not controlled and monitored should be avoided to avoid data theft."
+            "label": "External connection which is not controlled and monitored should be avoided to prevent from data theft."
           }
         ]
       },
@@ -471,16 +476,18 @@
         "uniqueAnswer": false,
         "score": 4,
         "atype": "P",
-        "label": "a private connection or connection sharing from a private or professional smartphone (tethering/hotspot)",
+        "label": "a private connection or connection sharing from a private or professional/work smartphone tethering/hotspot)",
         "tooltip": "You only use a connection where you have some control, such as your own private connection or your phone's shared one.",
-        "dependant_answers": ["devices that are not connected to any IT network while on the trip."],
+        "dependant_answers": [
+          "devices that are not connected to an IT network during the visit."
+        ],
         "recommendations": [
           {
             "min_e_count": "a",
             "max_e_count": "j",
             "sector": null,
             "answerChosen": false,
-            "label": "Having a network environment that you can control or easily check is important, as you can be sure that only you have an access to this network."
+            "label": "Having a network environment that you can control or easily check is important, to ensure that only you have access to this network."
           }
         ]
       },
@@ -489,7 +496,7 @@
         "uniqueAnswer": false,
         "score": 6,
         "atype": "P",
-        "label": "a screen filter or adjusts their position to ensure that no unauthorized person could see what is on the screen of their mobile device (tablet or laptop)",
+        "label": "a screen filter or setting that ensures that no unauthorized person can see what is displayed on the screen of their mobile device (tablet or laptop)",
         "tooltip": "Whenever you are outside, you always try to pay attention to who could see your screen, or you have a screen filter to avoid any curious look.",
         "recommendations": [
           {
@@ -497,7 +504,7 @@
             "max_e_count": "j",
             "sector": null,
             "answerChosen": false,
-            "label": "The visual environment is really important, to avoid curiosity or spying."
+            "label": "Protection against unauthorised viewing of medical data by third parties while you are working on visual terminals, e.g. the screen at your workplace and also on mobile devices, must be ensured."
           }
         ]
       },
@@ -506,7 +513,7 @@
         "uniqueAnswer": false,
         "score": 8,
         "atype": "P",
-        "label": "mobile devices that are encrypted (protected by a password at startup) or without any confidential data",
+        "label": "mobile devices that are encrypted (password protected at startup) or do not contain confidential data",
         "tooltip": "Each time you boot your device, you have to type an extra password (e.g. for Bitlocker) or your computer does not store any medical data on it.",
         "recommendations": [
           {
@@ -514,7 +521,7 @@
             "max_e_count": "j",
             "sector": null,
             "answerChosen": false,
-            "label": "Devices that are taken away and that contain confidential data should always have their internal memory encrypted to avoid data theft."
+            "label": "For devices that are taken away and that contain confidential data, the internal memory should always be encrypted to avoid data theft."
           }
         ]
       },
@@ -523,12 +530,12 @@
         "uniqueAnswer": false,
         "score": 12,
         "atype": "P",
-        "label": "devices that are not connected to any IT network while on the trip.",
-        "tooltip": "The device you use cannot connect to any network from outside, or you take care it never do it.  ",
+        "label": "devices that are not connected to an IT network during the visit.",
+        "tooltip": "The device you use cannot connect to any network from outside, or you take care it never do it.",
         "dependant_answers": [
-          "VPN (Virtual Private Network) to encrypt all data from any external network to the internal server of the establishment",
           "Public Internet, Wi-Fi, open networks or connection protected by external organizations or individuals",
-          "a private connection or connection sharing from a private or professional smartphone (tethering/hotspot)"
+          "VPN (Virtual Private Network) to encrypt all data from any external network to the establishment's internal server",
+          "a private connection or connection sharing from a private or professional/work smartphone tethering/hotspot)"
         ],
         "recommendations": [
           {
@@ -536,7 +543,7 @@
             "max_e_count": "j",
             "sector": null,
             "answerChosen": false,
-            "label": "But a possible solution could be to take a laptop or a mobile device that you should avoid connecting it to any network. If this device has any medical data in it, you ensure that the device is always near you in any case."
+            "label": "A possible solution is to use a laptop or a mobile device that is not connected to any network. If on this device any medical data is stored, it needs to be ensured that the device is always kept secure and under control."
           }
         ]
       }
@@ -555,7 +562,7 @@
         "uniqueAnswer": true,
         "score": 0,
         "atype": "P",
-        "label": "are not defined, because they only come in case of an incident or specific needs",
+        "label": "are not defined, as they are only concluded in case of an incident or special needs",
         "tooltip": "You do not have any contract defined with your ICT provider which only acts when they have time, without any guarantee.",
         "recommendations": [
           {
@@ -563,7 +570,7 @@
             "max_e_count": "j",
             "sector": null,
             "answerChosen": true,
-            "label": "Contract should be defined with all external actors. Here are some advices:"
+            "label": "Contracts should be defined with all external actors. Here are some advices:"
           }
         ]
       },
@@ -572,7 +579,7 @@
         "uniqueAnswer": false,
         "score": 7,
         "atype": "P",
-        "label": "contain a confidentiality clause in that the provider should not disclose any personal data they would be able to access while working for you",
+        "label": "contain a confidentiality clause stating that the provider must  not disclose any personal data he might access in the course of his work",
         "tooltip": "You may have an NDA (Non-Disclosure Agreement) or this is written in the signed contract with the ICT provider.",
         "recommendations": [
           {
@@ -580,7 +587,7 @@
             "max_e_count": "j",
             "sector": null,
             "answerChosen": false,
-            "label": "As you have medical data from your patient, you should definitely have an NDA (Non-Disclosure Agreement) with all entities that can access the data, even incidentally. It could be the employees from the practice, the company that do the maintenance of the software or hardware, or even the cleaning company."
+            "label": "Since you have medical data of your patients, you should definitely sign an NDA (Non-Disclosure Agreement) with all entities who may have access to the data, even by accident. This could be the practice staff, the company that maintains the software or hardware, or even the cleaning company."
           }
         ]
       },
@@ -589,7 +596,7 @@
         "uniqueAnswer": false,
         "score": 5,
         "atype": "P",
-        "label": "refer to clear data protection responsibilities – namely of data controller and data processor",
+        "label": "refer to clear data protection responsibilities – namely that of data controller and data processor",
         "tooltip": "Terms such as “data controller” and “data processor” are clearly stated in a contract defining the personal data protection.",
         "recommendations": [
           {
@@ -597,7 +604,7 @@
             "max_e_count": "j",
             "sector": null,
             "answerChosen": false,
-            "label": "Some terms are defined by the law (such as “Data Processor” and “Data Controller” by the GDPR) and should be clearly indicated in the contract."
+            "label": "Some terms are legally defined by the GDPR (e.g. “Data Processor” and “Data Controller”) and should be clearly stated in the contract."
           }
         ]
       },
@@ -606,7 +613,7 @@
         "uniqueAnswer": false,
         "score": 2,
         "atype": "P",
-        "label": "define the maximum time until intervention needs to be performed after an incident",
+        "label": "define the maximum time until an intervention must be performed following an incident",
         "tooltip": "Whenever an incident is happening, the ICT provider needs to react under a certain time which is defined in the contract.",
         "recommendations": [
           {
@@ -614,7 +621,7 @@
             "max_e_count": "j",
             "sector": null,
             "answerChosen": false,
-            "label": "If means and needs permit it, a contract should be signed to ensure that the external IT provider will ensure the availability of system to remain operational. These kinds of contracts named \"Service Level Agreement (SLA)\""
+            "label": "If means and needs permit it, a contract should be signed to ensure that the external IT provider guarantees the availability of the system so that it remains operational. This kind of contract is called \"Service Level Agreement (SLA)\"."
           }
         ]
       },
@@ -623,7 +630,7 @@
         "uniqueAnswer": false,
         "score": 4,
         "atype": "P",
-        "label": "are regularly reviewed to ensure that they correspond to the needs",
+        "label": "are reviewed regularly to ensure that they are compliant with the requirements",
         "tooltip": "Contracts are reviewed, once every year or two years, to see if the needs of the establishment fit the contract.",
         "recommendations": [
           {
@@ -640,7 +647,7 @@
         "uniqueAnswer": true,
         "score": 0,
         "atype": "P",
-        "label": "are defined orally",
+        "label": "are specified verbally",
         "tooltip": "There is no written agreement between the third party and the establishment, only a discussion beforehand.",
         "recommendations": [
           {
@@ -648,7 +655,7 @@
             "max_e_count": "j",
             "sector": null,
             "answerChosen": true,
-            "label": "Even if this point is valid by the law, an oral contract should always be avoided at all costs, as you will have no proof if anything happens, and then will not be protected anymore. Beside that, an oral contract can keep things unclear."
+            "label": "Even if this point is valid by law, a verbal agreement should always be avoided, as you will have no proof in the case an incident happens, and will not be protected anymore. Besides that, a verbal agreement can be imprecise."
           }
         ]
       },
@@ -665,7 +672,7 @@
             "max_e_count": "j",
             "sector": null,
             "answerChosen": false,
-            "label": "A contract in written form should be made, and if it’s possible personalized for you."
+            "label": "A written contract should be made, customized for your needs, if possible."
           }
         ]
       }
@@ -674,7 +681,7 @@
   {
     "service_category": "Cleaning",
     "section": "Third Party Management",
-    "label": "The establishment cleaning is done",
+    "label": "The establishment / facility cleaning is done:",
     "qtype": "M",
     "qindex": 7,
     "maxPoints": 15,
@@ -699,7 +706,7 @@
             "max_e_count": "j",
             "sector": null,
             "answerChosen": true,
-            "label": "To not giving a key, even to someone we trust, as it is a risk as the key can be lost or copied, and used by someone else."
+            "label": "Not to provide keys, as there is the risk that keys can be lost or copied and then misused by someone else."
           }
         ]
       },
@@ -716,7 +723,7 @@
             "max_e_count": "j",
             "sector": null,
             "answerChosen": true,
-            "label": "Giving a key, even to someone we trust, is a risk as the key can be lost or copied, and used by someone else."
+            "label": "When giving the keys, there is the risk that keys can be lost or copied and then misused by someone else."
           }
         ]
       },
@@ -725,7 +732,7 @@
         "uniqueAnswer": false,
         "score": 2,
         "atype": "P",
-        "label": "during the working hours of the establishment",
+        "label": "during the working hours of the establishment/facility",
         "tooltip": "The cleaning is done only while there is still someone who works on the establishment.",
         "recommendations": [
           {
@@ -733,7 +740,7 @@
             "max_e_count": "j",
             "sector": null,
             "answerChosen": false,
-            "label": "The office cleaning should be done, whenever possible, during work time to avoid potential data or material theft."
+            "label": "Whenever possible, the office cleaning should be done during office hours to avoid potential theft of data or material."
           }
         ]
       },
@@ -742,15 +749,15 @@
         "uniqueAnswer": false,
         "score": 3,
         "atype": "P",
-        "label": "with clear rules of what should be done and what shouldn't be done",
-        "tooltip": "The cleaning has to be done respecting some rules, such precision on what should be accessed or what shouldn’t be, or what mustn’t be unplugged.",
+        "label": "with clear rules what may and may not be done",
+        "tooltip": "The cleaning has to be done respecting some rules, such precision on what should be accessed or what shouldn't be, or what mustn't be unplugged.",
         "recommendations": [
           {
             "min_e_count": "a",
             "max_e_count": "j",
             "sector": null,
             "answerChosen": false,
-            "label": "Rules should be given mainly to specify what should be done or avoided, as misunderstandings can happen."
+            "label": "Rules should be set on what to do and what to avoid, as misunderstandings can occur."
           }
         ]
       },
@@ -759,7 +766,7 @@
         "uniqueAnswer": false,
         "score": 4,
         "atype": "P",
-        "label": "with a contract which specifies medical confidentiality",
+        "label": "with a contract that stipulates medical confidentiality",
         "tooltip": "The contract you have signed with the person or the company has some part concerning the confidentiality of medical data.",
         "recommendations": [
           {
@@ -767,7 +774,7 @@
             "max_e_count": "j",
             "sector": null,
             "answerChosen": false,
-            "label": "It's important to define a confidentiality clause in all the contracts to ensure the confidentiality of information heard or seen."
+            "label": "It is important to define a confidentiality clause in all the contracts to ensure the confidentiality of information heard or seen."
           }
         ]
       },
@@ -776,7 +783,7 @@
         "uniqueAnswer": false,
         "score": 4,
         "atype": "P",
-        "label": "with all confidential documents locked away in a room, a desk or a closet",
+        "label": "with all confidential documents locked away in a room, in a  desk or a cabinet",
         "tooltip": "The cleaning always happen when all documents are locked somewhere, or are inaccessible without breaking something",
         "recommendations": [
           {
@@ -784,7 +791,7 @@
             "max_e_count": "j",
             "sector": null,
             "answerChosen": false,
-            "label": "To avoid problems due to the human curiosity, it is important to have a clean desk policy to avoid confidential documents being seen."
+            "label": "To prevent confidential documents from being seen by unauthorized persons / third parties, it is important to establish a clean desk policy."
           }
         ]
       },
@@ -793,7 +800,7 @@
         "uniqueAnswer": false,
         "score": 2,
         "atype": "P",
-        "label": "while avoiding rooms which have restricted access, like an archive room or a server room",
+        "label": "avoiding rooms with restricted access, like an archive room or a server room",
         "tooltip": "The cleaning is not done by externals in some places which contain confidential equipment or data.",
         "recommendations": [
           {
@@ -801,7 +808,7 @@
             "max_e_count": "j",
             "sector": null,
             "answerChosen": false,
-            "label": "The staff shouldn't clean restricted access areas, such as archive room or IT room."
+            "label": "Only appropriately authorised persons should clean areas with restricted access, such as the archive or the IT room."
           }
         ]
       }
@@ -820,7 +827,7 @@
         "uniqueAnswer": true,
         "score": 0,
         "atype": "P",
-        "label": "managed by my ICT provider without being informed",
+        "label": "managed by my ICT provide without being informed",
         "tooltip": "When a problem occurs, you contact your ICT provider to take care of it, without being noticed about their activities (such as when it starts, when it is finished …). But the ICT provider could still access the server or computer without restrictions.",
         "recommendations": [
           {
@@ -828,7 +835,7 @@
             "max_e_count": "j",
             "sector": null,
             "answerChosen": true,
-            "label": "Whenever someone uses remotely your computer, you must be aware by whom, what will be accessed and for which reason the access is aimed to be done. Here some advice to manage it:"
+            "label": "Whenever someone is accessing your computer remotely, you need to be aware who is accessing, what is being accessed and for what reason. Here is some advice on how to deal with it:"
           }
         ]
       },
@@ -837,7 +844,7 @@
         "uniqueAnswer": false,
         "score": 6,
         "atype": "P",
-        "label": "managed by my ICT provider, but only when I ask",
+        "label": "managed by my ICT provide, but only when I ask for",
         "tooltip": "Your ICT provider can access your server or your computer when you ask for it.",
         "recommendations": [
           {
@@ -845,7 +852,7 @@
             "max_e_count": "j",
             "sector": null,
             "answerChosen": false,
-            "label": "You should decide whenever you need maintenance. You should assure that a backup of your data is stored before doing the maintenance."
+            "label": "You should decide when you need maintenance. You should ensure that a backup of your data is saved before the maintenance."
           }
         ]
       },
@@ -862,7 +869,7 @@
             "max_e_count": "j",
             "sector": null,
             "answerChosen": false,
-            "label": "Whenever someone does a remote maintenance on your computer, you should check that no one can gain access to data that they shouldn’t have access to."
+            "label": "If someone is performing remote maintenance on your computer, you should check that no one can access data to which they shouldn't have access to."
           }
         ]
       },
@@ -871,7 +878,7 @@
         "uniqueAnswer": false,
         "score": 8,
         "atype": "P",
-        "label": "verified by keeping contact with the ICT provider",
+        "label": "verified by continuous contact with the ICT provider",
         "tooltip": "When your ICT provider can look at your screen (by software to make remote access such as Teamviewer), you are always in contact with him, by phone or any other mean.",
         "recommendations": [
           {
@@ -879,7 +886,7 @@
             "max_e_count": "j",
             "sector": null,
             "answerChosen": false,
-            "label": "You should know when the remote maintenance starts and when it ends. Besides that, the person accessing from remote should ask you before acting on your personal space. The best way to do that is to be on the phone with them and if possible, to be able to view the screen while they are performing the remote maintenance."
+            "label": "You should know when the remote maintenance starts and when it ends. Besides that, the person accessing remotely should ask you before invading your personal space. It is best to talk to the person on the phone and if feasible, to observe the screen while the person is performing the remote maintenance."
           }
         ]
       },
@@ -888,7 +895,7 @@
         "uniqueAnswer": true,
         "score": 20,
         "atype": "P",
-        "label": "never done, a technician need to be on-site at the establishment",
+        "label": "never carried out, a technician must be on site of the facility",
         "tooltip": "An ICT provider cannot do maintenance  without being physically present in your establishment.",
         "recommendations": [
           {
@@ -896,7 +903,7 @@
             "max_e_count": "j",
             "sector": null,
             "answerChosen": true,
-            "label": "The best is to have the technician that you can recognize in front of you, while doing the maintenance, but there is no obligation as long as they respect the fact that :<ul><li>You decide when the maintenance is done.</li><li>You watch that no personal data are accessed.</il><il>You keep contact during the process.</il></ul>"
+            "label": "The best is to be present while technicians doing the maintenance, but there is no obligation as long as they respect the fact that: <ul><li>You decide when the maintenance is done.</li><li>You watch that no personal data are accessed.</il><il>You keep contact during the process.</il></ul>"
           }
         ]
       }
@@ -915,7 +922,7 @@
         "uniqueAnswer": false,
         "score": 0,
         "atype": "P",
-        "label": "can be able to walk freely in the premises",
+        "label": "can circulate freely in the premises",
         "tooltip": "The patient can visit the premises as he wishes. Some doors could be left open (by accident). Also the patient could come in the premises without announcing himself (by ringing, knocking ...).",
         "recommendations": [
           {
@@ -923,7 +930,7 @@
             "max_e_count": "j",
             "sector": null,
             "answerChosen": true,
-            "label": "Someone you do not know must not be able to walk everywhere in the practice, because it is always possible to grab data without being seen."
+            "label": "Ensure that external persons cannot freely circulate within your premises, because it is always possible to grab data without being seen."
           }
         ]
       },
@@ -932,16 +939,18 @@
         "uniqueAnswer": false,
         "score": 0,
         "atype": "P",
-        "label": "can be left alone occasionally",
+        "label": "can occasionally be left alone",
         "tooltip": "The patient could be alone, occasionally (when the person who welcomes the patient need to do something quickly) or frequently (they just need to come to the waiting room without being announced).",
-        "dependant_answers": ["is always under surveillance (by someone, physically or remotely)"],
+        "dependant_answers": [
+          "is always under surveillance (by someone, physically or remotely)"
+        ],
         "recommendations": [
           {
             "min_e_count": "a",
             "max_e_count": "j",
             "sector": null,
             "answerChosen": true,
-            "label": "As you do not know the goal of the people, you shouldn’t let without surveillance external people as they can steal something. An internal presence should be near the waiting room, or near the exit for instance."
+            "label": "You shouldn't let external people without surveillance, as they can steal something. An internal presence should be for instance near the waiting room or near the exit."
           }
         ]
       },
@@ -950,16 +959,18 @@
         "uniqueAnswer": false,
         "score": 0,
         "atype": "P",
-        "label": "can go away without being noticed",
-        "tooltip": "No one can see or know that a patient leave or enter the premises. He/she cannot be not spotted by physical sight, cameras or a ringing bell at the door.",
-        "dependant_answers": ["is always under surveillance (by someone, physically or remotely)"],
+        "label": "can leave unnoticed",
+        "tooltip": "No one can see or know that a patient leaves or enters the premises. He/she cannot be spotted by physical sight, cameras or a ringing bell at the door",
+        "dependant_answers": [
+          "is always under surveillance (by someone, physically or remotely)"
+        ],
         "recommendations": [
           {
             "min_e_count": "a",
             "max_e_count": "j",
             "sector": null,
             "answerChosen": true,
-            "label": "In order to discourage theft, and avoid any sneaking, having a way to know who enters or who leaves the practice is important. It could be physical or other means as long as they are protected."
+            "label": "To prevent theft and avoid snooping, it is important to know who enters and leaves the practice. This can be achieved by physical or other means as long as they are protected."
           }
         ]
       },
@@ -970,14 +981,17 @@
         "atype": "P",
         "label": "is always under surveillance (by someone, physically or remotely)",
         "tooltip": "Someone should always see or know a patient leave or enter the premises. He/she can be spotted by physical sight, cameras or a ringing bell at the door.",
-        "dependant_answers": ["can be left alone occasionally","can go away without being noticed"],
+        "dependant_answers": [
+          "can leave unnoticed",
+          "can occasionally be left alone"
+        ],
         "recommendations": [
           {
             "min_e_count": "a",
             "max_e_count": "j",
             "sector": null,
             "answerChosen": true,
-            "label": "If you save some video to keep evidence, remember that they are personal data and the patient can ask you to discard all personal data you have on them."
+            "label": "If you store videos for evidence purposes, remember that this is personal data and the patient may ask you to delete any personal data you have stored about them."
           }
         ]
       },
@@ -986,7 +1000,7 @@
         "uniqueAnswer": false,
         "score": 4,
         "atype": "P",
-        "label": "can't access to any documents because they are locked away",
+        "label": "has no access to any documents, as these are locked up",
         "tooltip": "Important documents are always locked, and the only person that access them is a person that got the right to access them. If someone who doesn't have the initial right to access them, he has to ask to the person who got the key.",
         "recommendations": [
           {
@@ -994,7 +1008,7 @@
             "max_e_count": "j",
             "sector": null,
             "answerChosen": false,
-            "label": "You must lock every sensitive physical document to avoid data theft or disclosure. It’s the same for hardware or storage device that contains confidential data."
+            "label": "You must lock every sensitive physical document to avoid data theft or disclosure. It's the same for hardware or storage device that contains confidential data."
           }
         ]
       },
@@ -1003,15 +1017,15 @@
         "uniqueAnswer": false,
         "score": 5,
         "atype": "P",
-        "label": "can't access to any computer because they are locked",
-        "tooltip": "Whenever someone has to leave a computer alone (could be his/her or a computer linked to the medical device, or the one with the software), the computer is locked and no one can access it without typing a password.",
+        "label": "has no access to any computers because they are locked",
+        "tooltip": "Whenever someone has to leave a computer alone (could be his/her or a computer linked to the medical device, or the one with the medical software), the computer is locked and no one can access it without typing a password.",
         "recommendations": [
           {
             "min_e_count": "a",
             "max_e_count": "j",
             "sector": null,
             "answerChosen": false,
-            "label": "You must lock every computer or storage device as soon as you leave it, even for a small break, to avoid someone accessing it without having any right, and see or steal data from it."
+            "label": "You must lock any computer or storage device as soon as you leave it, even for a short break, to prevent anyone from accessing it without authorization."
           }
         ]
       },
@@ -1020,7 +1034,7 @@
         "uniqueAnswer": false,
         "score": 4,
         "atype": "P",
-        "label": "can't access printers without being seen",
+        "label": "cannot access printers without being seen",
         "tooltip": "Printed documents couldn't be grabbed by someone who has not printed it, or if it's the case the person has the authorization to read or take it.",
         "recommendations": [
           {
@@ -1028,7 +1042,7 @@
             "max_e_count": "j",
             "sector": null,
             "answerChosen": false,
-            "label": "Printers can contain confidential information, such as the last printed documents, or some printed documents that someone did not yet have the time to fetch."
+            "label": "Printers can contain confidential information, such as the last documents printed, or some printed documents that have not been collected."
           }
         ]
       },
@@ -1037,7 +1051,7 @@
         "uniqueAnswer": false,
         "score": 5,
         "atype": "P",
-        "label": "can't enter the office when there is no one in the office",
+        "label": "cannot enter the office when no one is in the office",
         "tooltip": "The premises are only open at a certain time, and otherwise are closed with a key (or other means) and under alarm (if possible).",
         "recommendations": [
           {
@@ -1045,7 +1059,7 @@
             "max_e_count": "j",
             "sector": null,
             "answerChosen": false,
-            "label": "No one should be able to enter as soon as no one is in the medical practice. You should then double-check to ensure no one can enter, or even better, has an alarm installed."
+            "label": "No one should be able to enter after everybody has left the medical practice. You should then make sure no one can enter the practice, or even better, have an alarm system is installed."
           }
         ]
       }
@@ -1054,7 +1068,7 @@
   {
     "service_category": "Passwords",
     "section": "Logical Access",
-    "label": "Passwords in the company are",
+    "label": "Passwords in the company:",
     "qtype": "M",
     "qindex": 10,
     "maxPoints": 28,
@@ -1064,7 +1078,7 @@
         "uniqueAnswer": true,
         "score": 0,
         "atype": "P",
-        "label": "not having requirements or guidelines, employees can manage them as they prefer",
+        "label": "have no specifications or guidelines, employees can manage them at their own discretion",
         "tooltip": "There is no indication for people on what they should do, so password could be anything.",
         "recommendations": [
           {
@@ -1079,21 +1093,21 @@
             "max_e_count": "j",
             "sector": null,
             "answerChosen": true,
-            "label": "Passwords should be kept secret and personal. If it's impossible, then there should be a trustworthy person named responsible for the computer to ensure its use, and give minimum access."
+            "label": "Everyone should access their data by using their own password, even from the computer of someone else."
           },
           {
             "min_e_count": "a",
             "max_e_count": "j",
             "sector": null,
             "answerChosen": true,
-            "label": "Each and everyone should access their data by using their password, even from the computer of someone else."
+            "label": "It is mandatory to be careful with the password storage in  internet browsers, as they are not protected well."
           },
           {
             "min_e_count": "a",
             "max_e_count": "j",
             "sector": null,
             "answerChosen": true,
-            "label": "It's mandatory to be careful with the password storage in the internet browsers as they are not protected well."
+            "label": "Passwords should be kept secret and personal. If it's impossible, then there should be a trustworthy person being responsible for the computer to ensure its use, and provide minimal access rights."
           }
         ]
       },
@@ -1102,7 +1116,7 @@
         "uniqueAnswer": false,
         "score": 0,
         "atype": "P",
-        "label": "centralised in a file, or are all known by one or more people",
+        "label": "are centralized in a file, or are all known by one or more people",
         "tooltip": "Passwords are all listed on a file so everyone can access to all computers if they need it.",
         "recommendations": [
           {
@@ -1110,7 +1124,7 @@
             "max_e_count": "j",
             "sector": null,
             "answerChosen": true,
-            "label": "Passwords should be kept secret and personal. If it's impossible, then there should be a trustworthy person named responsible for the computer to ensure its use, and give minimum access."
+            "label": "Passwords should be kept secret and personal. If it's impossible, then there should be a trustworthy person being responsible for the computer to ensure its use, and provide minimal access rights."
           }
         ]
       },
@@ -1119,7 +1133,7 @@
         "uniqueAnswer": false,
         "score": 0,
         "atype": "P",
-        "label": "shared whenever there is a need to access a protected device",
+        "label": "are shared when a protected device needs to be accessed",
         "tooltip": "Passwords are shared by multiple people to access a medical device, or even to access some patient folders.",
         "recommendations": [
           {
@@ -1127,7 +1141,7 @@
             "max_e_count": "j",
             "sector": null,
             "answerChosen": true,
-            "label": "Passwords should be kept secret and personal. Each and everyone should access their data by using their password, even from the computer of someone else."
+            "label": "Passwords should be kept secret and personal. Everyone should access their data by using their own password, even from the computer of someone else."
           }
         ]
       },
@@ -1136,7 +1150,7 @@
         "uniqueAnswer": false,
         "score": 8,
         "atype": "P",
-        "label": "made up of 12 or more characters which are uppercase, lowercase, digits and special character",
+        "label": "consist of 12 or more characters, made up of which are upper case letters, lower case letters, digits and special characters",
         "tooltip": "Passwords such as \"MyPassword123!\", \"IL0veS@ndwichs\" or \"Jp7njQs#FpdCF5oF\" can be considered here.",
         "recommendations": [
           {
@@ -1144,7 +1158,7 @@
             "max_e_count": "j",
             "sector": null,
             "answerChosen": false,
-            "label": "It's necessary to have passwords which have at least one uppercase, lowercase, digit and special character, and a minimum of 12 characters."
+            "label": "Passwords must at least consist of one uppercase letter, one lowercase letter, one digit and one special character, and must be at least 12 characters long."
           }
         ]
       },
@@ -1153,7 +1167,7 @@
         "uniqueAnswer": false,
         "score": 6,
         "atype": "P",
-        "label": "not forming any words or dates, or are complete sentences",
+        "label": "do not form any words or dates, or complete sentences",
         "tooltip": "Passwords such as \"Jp7njQs#FpdCF5oF\", \"kjahebf\", \"OuattwSWat7D\" or \"Once upon a time, there was Snow White and the 7 Dwarfs.\" can be considered here.",
         "recommendations": [
           {
@@ -1161,7 +1175,7 @@
             "max_e_count": "j",
             "sector": null,
             "answerChosen": false,
-            "label": "Passwords shouldn't be a coherent word or date, except if they are in a complete sentence."
+            "label": "Passwords shouldn't be a coherent word or date, except if they are part of a complete sentence."
           }
         ]
       },
@@ -1170,7 +1184,7 @@
         "uniqueAnswer": false,
         "score": 6,
         "atype": "P",
-        "label": "regularly changed, every year or two",
+        "label": "are changed regularly, every one or two years",
         "tooltip": "Passwords are changed at least once every two years. This might not be strict, but could be done more often.",
         "recommendations": [
           {
@@ -1178,7 +1192,7 @@
             "max_e_count": "j",
             "sector": null,
             "answerChosen": false,
-            "label": "Passwords should be changed from time to time, to prevent serious consequences in case of a leak or data theft."
+            "label": "Passwords should be changed from time to time, to prevent serious consequences in case of a leakage or data theft."
           }
         ]
       },
@@ -1188,15 +1202,15 @@
         "score": 0,
         "atype": "P",
         "bonus_points": 2,
-        "label": "included in a password manager",
-        "tooltip": "Passwords are stored in a password manager which is dedicated to this activity. Example: Lastpass, 1Password, KeePass, Dashlane ...",
+        "label": "are included in a password manager",
+        "tooltip": "Passwords are stored in a password manager which is dedicated to this activity. Example: Lastpass, 1Password, KeePass, Dashlane …",
         "recommendations": [
           {
             "min_e_count": "a",
             "max_e_count": "j",
             "sector": null,
             "answerChosen": false,
-            "label": "To make the storage easier, a password manager could be used."
+            "label": "A password manager application can be used to facilitate secure storage."
           }
         ]
       },
@@ -1205,7 +1219,7 @@
         "uniqueAnswer": false,
         "score": 0,
         "atype": "P",
-        "label": "saved in web browsers",
+        "label": "are saved in web browsers",
         "tooltip": "Passwords are stored in a web browser, a VPN or another service such as the OS. Example : Mozilla Firefox, Google Chrome, Windows, Apple, NordVPN.",
         "recommendations": [
           {
@@ -1213,7 +1227,7 @@
             "max_e_count": "j",
             "sector": null,
             "answerChosen": true,
-            "label": "It's mandatory to be careful with the password storage in the internet browsers as they are not protected well."
+            "label": "It is mandatory to be careful with the password storage in  internet browsers, as they are not protected well."
           }
         ]
       },
@@ -1222,7 +1236,7 @@
         "uniqueAnswer": false,
         "score": 8,
         "atype": "P",
-        "label": "different for each application used, even for a user",
+        "label": "are different for each application used, even for one user",
         "tooltip": "Passwords are never used twice, or this should be an exception. Each password you have to type is different.",
         "recommendations": [
           {
@@ -1230,7 +1244,7 @@
             "max_e_count": "j",
             "sector": null,
             "answerChosen": false,
-            "label": "Same passwords used on different website makes a leak easier. Besides, only one leak is enough to compromise all the access using the same password."
+            "label": "Same passwords used on different website facilitate a leak. A single leak is enough to compromise all accesses that use the same password."
           }
         ]
       }
@@ -1239,7 +1253,7 @@
   {
     "service_category": "Logical Access",
     "section": "Logical Access",
-    "label": "Authorization for the access to patient data",
+    "label": "Authorisation for the access to patient data",
     "qtype": "M",
     "qindex": 11,
     "maxPoints": 25,
@@ -1257,7 +1271,7 @@
             "max_e_count": "j",
             "sector": null,
             "answerChosen": false,
-            "label": "Defining and assigning different access roles is mandatory, as it will limit the different data each role can read and modify, according to the function of the person inside the organization. Assiging simply all permissions will give access to some people who shouldn’t have, according to the sensitivity of medical data."
+            "label": "Defining and assigning different access roles is imperative, as this will limit the different data that each role can read and modify, depending on the persons' function within the organization. By simply assigning all permissions, this will give access to some people who should not have access, depending on the sensitivity of the medical data."
           }
         ]
       },
@@ -1269,7 +1283,7 @@
         "label": "is managed within the application by own personal with specific access rights",
         "tooltip": "A member of your organization, with specific access rights (like e.g. Administrator) is able to manage the authorization roles/assignments within the patient data management application.",
         "dependant_answers": [
-          "is managed within the application by external people like e.g. IT-Service provider"
+          "is managed within the application by external people such as IT-Service provider"
         ],
         "recommendations": [
           {
@@ -1277,7 +1291,7 @@
             "max_e_count": "j",
             "sector": null,
             "answerChosen": false,
-            "label": "It is possible to delegate the decision to someone working within your organization,  it will ease to customize the permission you need to give to people that should access data. Anyway, you shouldn’t give your own access to anyone else."
+            "label": "It is possible to delegate the decision to someone working within your organization, and thus adjust the permissions you need to give people who should have access to the data. In any case you shouldn't give your own access to anyone else."
           }
         ]
       },
@@ -1286,7 +1300,7 @@
         "uniqueAnswer": false,
         "score": 0,
         "atype": "P",
-        "label": "is managed within the application by external people like e.g. IT-Service provider",
+        "label": "is managed within the application by external people such as IT-Service provider",
         "tooltip": "Your software vendor or IT-Service provider is managing the authorization roles/assignments within the patient data management application.",
         "dependant_answers": [
           "is managed within the application by own personal with specific access rights"
@@ -1297,7 +1311,7 @@
             "max_e_count": "j",
             "sector": null,
             "answerChosen": true,
-            "label": "You shouldn’t let others define every right, as they can have any access to confidential data. Besides that, role assignment can then be badly decided by externals, not knowing exactly about your needs and change of staff."
+            "label": "You shouldn't allow others to define all permissions, as they can have access to any confidential data. Besides that, role assignment can then be poorly decided by externals, who do not know exactly about your needs and change of staff."
           }
         ]
       }
@@ -1316,7 +1330,7 @@
         "uniqueAnswer": true,
         "score": 21,
         "atype": "P",
-        "label": "are not used in the establishment at all",
+        "label": "are not used in the establishment/facility at all",
         "tooltip": "There is no WiFi accessible in the establishment that come from any router (such as FritzBox! or equivalent).",
         "recommendations": [
           {
@@ -1324,7 +1338,7 @@
             "max_e_count": "j",
             "sector": null,
             "answerChosen": false,
-            "label": "For now, wireless network isn't activated in the company. If it is changed, it's important to:"
+            "label": "For now, the wireless network is not yet installed in the company. If this is changing, it is important that:"
           }
         ]
       },
@@ -1333,11 +1347,11 @@
         "uniqueAnswer": false,
         "score": 12,
         "atype": "P",
-        "label": "are closed and for professional use only",
+        "label": "are locked and intended for professional use only",
         "tooltip": "Only the staff can access to the WiFi, and no personal devices are connected.",
         "dependant_answers": [
-          "are given to everyone, without checking the identity of the user that connects to it",
-          "are divided in guests and internal network"
+          "are accessible to anyone, without checking the identity of the user connecting to the network",
+          "are divided into guests and internal network"
         ],
         "recommendations": [
           {
@@ -1345,7 +1359,7 @@
             "max_e_count": "j",
             "sector": null,
             "answerChosen": false,
-            "label": "Wireless Network should be split between internal and external users to avoid access problems."
+            "label": "The WIFI Network is separated for internal and external users to avoid access problems."
           }
         ]
       },
@@ -1354,10 +1368,10 @@
         "uniqueAnswer": false,
         "score": 0,
         "atype": "P",
-        "label": "are given to everyone, without checking the identity of the user that connects to it",
+        "label": "are accessible to anyone, without checking the identity of the user connecting to the network",
         "tooltip": "WiFi is given to anyone without any distinction, without asking who they are. It could be a separate network or the same network that you use.",
         "dependant_answers": [
-          "are closed and for professional use only"
+          "are locked and intended for professional use only"
         ],
         "recommendations": [
           {
@@ -1365,7 +1379,7 @@
             "max_e_count": "j",
             "sector": null,
             "answerChosen": true,
-            "label": "If a wireless network is used for external people, strong precautions should be taken, for example the collection of an identity."
+            "label": "If a WIFI network is used for external people, strict precautions should be taken, for example the collection of an identity."
           }
         ]
       },
@@ -1374,10 +1388,10 @@
         "uniqueAnswer": false,
         "score": 12,
         "atype": "P",
-        "label": "are divided in guests and internal network",
+        "label": "are divided into guests and internal network",
         "tooltip": "WiFi for patients/guests are separated from the WiFi used for the services by the employees and professionals in the establishment.",
         "dependant_answers": [
-          "are closed and for professional use only"
+          "are locked and intended for professional use only"
         ],
         "recommendations": [
           {
@@ -1385,7 +1399,7 @@
             "max_e_count": "j",
             "sector": null,
             "answerChosen": false,
-            "label": "Ensure strong separation of the two Wireless networks by strong passwords and possibly limiting access to internal network to known devices."
+            "label": "Ensure strong separation of the two wireless networks by using strong passwords and by providing access to the internal network for known devices only."
           }
         ]
       },
@@ -1394,7 +1408,7 @@
         "uniqueAnswer": false,
         "score": 9,
         "atype": "P",
-        "label": "are protected by long passwords of 20 characters or more",
+        "label": "are protected by long passwords of 20 or more characters",
         "tooltip": "The password needed to access the WiFi is at least 20 characters, or more.",
         "recommendations": [
           {
@@ -1402,7 +1416,7 @@
             "max_e_count": "j",
             "sector": null,
             "answerChosen": false,
-            "label": "The password shouldn't be easily guessable, to avoid connections which are not wanted."
+            "label": "The password cannot be easily guessed, to avoid unwanted connections."
           }
         ]
       },
@@ -1413,14 +1427,14 @@
         "bonus_points": 2,
         "atype": "P",
         "label": "of the printers are protected by a strong password",
-        "tooltip": "if the printer can be accessed by WiFi, then this network is protected with a long password (more than 20 characters).",
+        "tooltip": "If the printer can be accessed by WiFi, then this network is protected with a long password (more than 20 characters).",
         "recommendations": [
           {
             "min_e_count": "a",
             "max_e_count": "j",
             "sector": null,
             "answerChosen": false,
-            "label": "Also, wireless networks of printers should be protected to avoid the leak of all printed documents."
+            "label": "The wireless network for printers is protected to prevent leakage of all printed documents."
           }
         ]
       }
@@ -1440,14 +1454,14 @@
         "score": 0,
         "atype": "P",
         "label": "is not installed or used",
-        "tooltip": "There is no antivirus software in the establishment, or you have no idea if it’s the case.",
+        "tooltip": "There is no antivirus software in the establishment, or you have no idea if it's the case.",
         "recommendations": [
           {
             "min_e_count": "a",
             "max_e_count": "j",
             "sector": null,
             "answerChosen": true,
-            "label": "The company should have an antivirus and be careful to:"
+            "label": "The company should have an antivirus and ensure that:"
           }
         ]
       },
@@ -1464,7 +1478,7 @@
             "max_e_count": "j",
             "sector": null,
             "answerChosen": false,
-            "label": "An antivirus software must be installed on all devices."
+            "label": "An antivirus software is installed on all devices."
           }
         ]
       },
@@ -1481,7 +1495,7 @@
             "max_e_count": "j",
             "sector": null,
             "answerChosen": false,
-            "label": "It should be up to date, preferably automatically to cover as many threats as possible."
+            "label": "It is kept up to date, preferably via automatic updates to cover as many threats as possible."
           }
         ]
       },
@@ -1490,7 +1504,7 @@
         "uniqueAnswer": false,
         "score": 4,
         "atype": "P",
-        "label": "is activated and protects computer",
+        "label": "is activated and protects the computer",
         "tooltip": "All downloaded files are analysed by the antivirus, and same for every media storage plugged in the computer.",
         "recommendations": [
           {
@@ -1498,7 +1512,7 @@
             "max_e_count": "j",
             "sector": null,
             "answerChosen": false,
-            "label": "It should be activated in any case to protect the device continuously."
+            "label": "It is activated to continuously protect the device."
           }
         ]
       },
@@ -1515,7 +1529,7 @@
             "max_e_count": "j",
             "sector": null,
             "answerChosen": false,
-            "label": "All devices, like smartphones, tablets should have an antivirus, even if it is the one by default from the operating system."
+            "label": "All devices, including smartphones and tablets, have an antivirus software installed, even if it is the operating system's default one."
           }
         ]
       },
@@ -1524,7 +1538,7 @@
         "uniqueAnswer": false,
         "score": 2,
         "atype": "P",
-        "label": "is used from time to time in order to analyse the computer, even without external events",
+        "label": "is used from time to time to analyse the computer, even in absence of external events",
         "tooltip": "Sometime you (or your ICT provider) do a full scan of the computer to check there is no virus in it.",
         "recommendations": [
           {
@@ -1532,7 +1546,7 @@
             "max_e_count": "j",
             "sector": null,
             "answerChosen": false,
-            "label": "Configure and take advantage that most of the antivirus applications allow the configuration of regular schedules for full scans."
+            "label": "It is configured in order to benefit of the fact that most of the antivirus applications allow the configuration of regular schedules for full scans."
           }
         ]
       },
@@ -1549,7 +1563,7 @@
             "max_e_count": "j",
             "sector": null,
             "answerChosen": false,
-            "label": "Some tests should be done in case of suspicion of infection."
+            "label": "In case of suspicion of infection, some additional tests are done."
           }
         ]
       }
@@ -1568,7 +1582,7 @@
         "uniqueAnswer": true,
         "score": 0,
         "atype": "P",
-        "label": "used without any specific rules and users have to take care of them",
+        "label": "used without any specific rules and maintained by the users themselves",
         "tooltip": "There are no rules (orally given, written …) or advice on how to keep the workstations safe and everyone can do what ever they want on their computer (such as downloading and installing software, or updating the computer…).",
         "recommendations": [
           {
@@ -1576,7 +1590,7 @@
             "max_e_count": "j",
             "sector": null,
             "answerChosen": true,
-            "label": "Some rules and specific advice should be given concerning users workstations or laptops. Some points that are important:"
+            "label": "Some rules and specific advice should be given for the usage of workstations or laptops. Important points are:"
           }
         ]
       },
@@ -1585,7 +1599,7 @@
         "uniqueAnswer": false,
         "score": 4,
         "atype": "P",
-        "label": "automatically or manually updated regarding the software and operating system",
+        "label": "updated automatically or manually with regard to the software and the operating system",
         "tooltip": "The laptop and the software installed on it are updated as soon as possible, or sometimes they are updated by the ICT provider.",
         "recommendations": [
           {
@@ -1593,7 +1607,7 @@
             "max_e_count": "j",
             "sector": null,
             "answerChosen": false,
-            "label": "A device should always be up to date in order to avoid security problems, and also avoid network intrusion. Many operating systems now update automatically, but installed software needs some permission to be given or manual maintenance."
+            "label": "A device should always be up to date in order to avoid security problems and to prevent network intrusion. Automatic updates of the operating system and the business applications should be activated. If this feature is not provided by the business application, regular updates / patches must be installed manually."
           }
         ]
       },
@@ -1602,15 +1616,15 @@
         "uniqueAnswer": false,
         "score": 4,
         "atype": "P",
-        "label": "controlled by one or more administrators, which won't let users install software because they do not have administrator right",
-        "tooltip": "You do not own the administrator rights on your computer and you can’t install any software.",
+        "label": "controlled by one or more administrators, who do not allow users to install software because they do not have administrator rights",
+        "tooltip": "You do not own the administrator rights on your computer and you can't install any software.",
         "recommendations": [
           {
             "min_e_count": "a",
             "max_e_count": "j",
             "sector": null,
             "answerChosen": false,
-            "label": "Administrator rights should be left only to the users who are specialised in IT, or well advised respecting the rules."
+            "label": "Administrator rights should only be given to users who are specialised in IT."
           }
         ]
       },
@@ -1619,7 +1633,7 @@
         "uniqueAnswer": false,
         "score": 4,
         "atype": "P",
-        "label": "needed to comply with rules or guidelines about installation and downloading software, concerning illegal or dangerous activities e.g. installing something without authorization",
+        "label": "used with respect to the rules or guidelines for installing and downloading software, otherwise it leads to illegal or dangerous activities e.g. installing something without permission",
         "tooltip": "You have some advice or rule to respect whenever you try to download software, and do it only when you are allowed to do it.",
         "recommendations": [
           {
@@ -1627,7 +1641,7 @@
             "max_e_count": "j",
             "sector": null,
             "answerChosen": false,
-            "label": "Downloads should only be done from the official websites, the original developers of the software, to avoid manipulated download files or infections."
+            "label": "Downloads should only be made from the official websites, the original developers of the software, to avoid manipulated download files or malicious code. Where possible, corresponding checksums should be checked after the download."
           }
         ]
       },
@@ -1636,7 +1650,7 @@
         "uniqueAnswer": false,
         "score": 7,
         "atype": "P",
-        "label": "locked whenever the user is not at his desk, even for a short time",
+        "label": "being locked when the user is away from his desk, even if this is for a short time",
         "tooltip": "As soon as you leave the computer, even if it is for one or two minutes, you lock your computer and need to type the password as soon as you come back.",
         "recommendations": [
           {
@@ -1653,7 +1667,7 @@
         "uniqueAnswer": false,
         "score": 4,
         "atype": "P",
-        "label": "shut down regularly outside of office hours",
+        "label": "regularly shut down outside office hours",
         "tooltip": "Whenever you leave the establishment, the computer is shut down, and sometimes an update screen appears.",
         "recommendations": [
           {
@@ -1661,7 +1675,7 @@
             "max_e_count": "j",
             "sector": null,
             "answerChosen": false,
-            "label": "Devices should be shut down outside of service hours, in order to avoid having someone external to try to connect to it, but also to perform updates for the operating system."
+            "label": "Devices should be shut down outside operating hours, in order to prevent anyone from the outside to try to connect to it. It also allows the system to perform an operating system update during the shutdown process."
           }
         ]
       }
@@ -1681,8 +1695,8 @@
         "score": 0,
         "bonus_points": 3,
         "atype": "P",
-        "label": "on paper that is stored in a place always locked",
-        "tooltip": "Whenever you don’t need them, papers are locked in a room or at any storage mean. The lock does not need to be solid, but is always used to prevent unauthorized persons getting access to these documents.",
+        "label": "on paper, are stored in a locked place at all times",
+        "tooltip": "Whenever you don't need them, papers are locked in a room or at any storage mean. The lock does not need to be solid, but is always used to prevent unauthorized persons getting access to these documents.",
         "recommendations": []
       },
       {
@@ -1690,12 +1704,12 @@
         "uniqueAnswer": false,
         "score": 0,
         "atype": "P",
-        "label": "not my preoccupation and should be handled by my ICT provider",
+        "label": "not my responsibility and should be handled by my ICT provider",
         "tooltip": "A contract is signed (or you consider this is the job of the ICT provider), but you couldn't look where the data are, or check if your backups are safe and done.",
         "dependant_answers": [
+          "checked by me from time to time",
           "on an external storage device",
-          "tested by me sometimes",
-          "only readable by me, and the persons I gave permission to"
+          "only readable by me and the persons to whom I gave permission"
         ],
         "recommendations": [
           {
@@ -1703,7 +1717,7 @@
             "max_e_count": "j",
             "sector": null,
             "answerChosen": false,
-            "label": "Ensure that Backup policy is part of contract with your ICT provider, incl. verification of backup, secure storage location and restore tests."
+            "label": "Ensure that the backup policy is part of the contract with your ICT provider, incl. verification of backup, secure storage location and restore tests."
           }
         ]
       },
@@ -1713,9 +1727,9 @@
         "score": 8,
         "atype": "P",
         "label": "on an external storage device",
-        "tooltip": "All information is saved on an additional hard drive managed by someone internal to the medical infrastructure. It’s possible to have more than one hard drive. The hard drive can stay at the office or can be changed of location.",
+        "tooltip": "All information is saved on an additional hard drive managed by someone internal to the medical infrastructure. It's possible to have more than one hard drive. The hard drive can stay at the office or can be changed of location.",
         "dependant_answers": [
-          "not my preoccupation and should be handled by my ICT provider"
+          "not my responsibility and should be handled by my ICT provider"
         ],
         "recommendations": [
           {
@@ -1723,7 +1737,7 @@
             "max_e_count": "j",
             "sector": null,
             "answerChosen": false,
-            "label": "External storage can be devices or external storage location. Consider relevance of storing the backup/backup device in a protected environment."
+            "label": "External storage can be a device or external storage location. Remember the importance of storing the backup device in a secure environment."
           }
         ]
       },
@@ -1732,10 +1746,10 @@
         "uniqueAnswer": false,
         "score": 10,
         "atype": "P",
-        "label": "tested by me sometimes",
+        "label": "checked by me from time to time",
         "tooltip": "All information is saved at a place where you do have access, or you ask someone to verify it for you, or this is something written in a contract.",
         "dependant_answers": [
-          "not my preoccupation and should be handled by my ICT provider"
+          "not my responsibility and should be handled by my ICT provider"
         ],
         "recommendations": [
           {
@@ -1743,7 +1757,7 @@
             "max_e_count": "j",
             "sector": null,
             "answerChosen": false,
-            "label": "Backups should be tested (restored) from time to time, just to ensure that the data is readable and has integrity."
+            "label": "Backups should be tested (restored) from time to time, just to ensure that the data is readable and its integrity is maintained."
           }
         ]
       },
@@ -1752,10 +1766,10 @@
         "uniqueAnswer": false,
         "score": 6,
         "atype": "P",
-        "label": "only readable by me, and the persons I gave permission to",
+        "label": "only readable by me and the persons to whom I gave permission",
         "tooltip": "All information (on paper, on the server, in the backup, in any hard drive) are only accessible by me and the person who have signed a contract with me. Any maintenance or service provider must not have access unless it is specified in a contract.",
         "dependant_answers": [
-          "not my preoccupation and should be handled by my ICT provider"
+          "not my responsibility and should be handled by my ICT provider"
         ],
         "recommendations": [
           {
@@ -1763,7 +1777,7 @@
             "max_e_count": "j",
             "sector": null,
             "answerChosen": false,
-            "label": "Even with backups, you must know who can access it, and you should give permission only to someone who needs it, as they are also considered as medical data."
+            "label": "Even with backups, you need to know who can access them, and you should only give permission to those who need it, as they are containing medical data."
           }
         ]
       }
@@ -1772,7 +1786,7 @@
   {
     "service_category": "BYOD",
     "section": "Information Systems within the Establishment",
-    "label": "Having some personal IT devices (USB Key, Hard Drive, Smartphone, Tablet, Laptop …) in the professional environment (network that is connected to the server)",
+    "label": "Using personal IT devices (USB Key, Hard Drive, Smartphone, Tablet, Laptop …) in the professional environment (network that is connected to the server)",
     "qtype": "M",
     "qindex": 16,
     "maxPoints": 21,
@@ -1790,7 +1804,7 @@
             "max_e_count": "j",
             "sector": null,
             "answerChosen": true,
-            "label": "For now, the personal devices are not connected in the local network. If it's changed, it's important to:"
+            "label": "For now, the personal devices are not connected in the local network. If this is changed, it is important to:"
           }
         ]
       },
@@ -1807,7 +1821,7 @@
             "max_e_count": "j",
             "sector": null,
             "answerChosen": false,
-            "label": "Personal devices shouldn't be used in company without any controls, rules and explanations. By knowing all the different existing ways to attack an organization, it's possible to avoid them."
+            "label": "Personal devices shouldn't be used in the company without controls, rules and explanations. Knowing all the different ways a company can be attacked, can help avoid them."
           }
         ]
       },
@@ -1816,7 +1830,7 @@
         "uniqueAnswer": false,
         "score": 6,
         "atype": "P",
-        "label": "is under a strict antivirus control",
+        "label": "is subject to a strict antivirus control",
         "tooltip": "Any personal device you connect to the network has to get through an antivirus scan.",
         "recommendations": [
           {
@@ -1824,7 +1838,7 @@
             "max_e_count": "j",
             "sector": null,
             "answerChosen": false,
-            "label": "Personal devices should have an antivirus installed, updated and active to avoid as many threats as possible."
+            "label": "Personal devices should have an antivirus installed, updated and active to avoid information security threats."
           }
         ]
       },
@@ -1841,7 +1855,7 @@
             "max_e_count": "j",
             "sector": null,
             "answerChosen": false,
-            "label": "Defining rules and best practices help to protect the internal networks."
+            "label": "Defining rules and best practices help protect internal networks."
           }
         ]
       },
@@ -1850,7 +1864,7 @@
         "uniqueAnswer": false,
         "score": 3,
         "atype": "P",
-        "label": "is possible and if problems arise, the IT service provider or a staff member will help deal with them.",
+        "label": "is possible and if problems occur, the IT service provider or a staff member helps to solve them",
         "tooltip": "The ICT provider, or the person responsible to any IT or security problem can help to resolve the problem and has a good procedure to take care of it.",
         "recommendations": [
           {
@@ -1858,7 +1872,7 @@
             "max_e_count": "j",
             "sector": null,
             "answerChosen": false,
-            "label": "If you ever have an information security problem, and you have no idea on what to do or not having anyone in the practice that can deal with such a problem, you can contact CIRCL (info@circl.lu) in order to have some help to deal with the situation."
+            "label": "If you ever have an information security problem, and you don't know what to do or have no one in the practice who can deal with such a problem, you can contact CIRCL (info@circl.lu) for help in handling the situation."
           }
         ]
       }
@@ -1878,7 +1892,7 @@
         "score": 0,
         "bonus_points": 1,
         "atype": "P",
-        "label": "are using the DSP (\"Dossier de Soins Partagé\") to access or share relevant medical information of the patient",
+        "label": "use the DSP (\"Dossier de Soins Partagé\") to access or share relevant medical information of the patient",
         "tooltip": "\"Dossier soin partagé\" (DSP) should be used for the exchange of medical data with other professionals and the patient.",
         "recommendations": [
           {
@@ -1886,7 +1900,7 @@
             "max_e_count": "j",
             "sector": null,
             "answerChosen": false,
-            "label": "Sharing medical data via the DSP has the advantage of providing the relevant medical information in a secure way for the patient and for other healthcare professionals for the continuity of care."
+            "label": "Sharing medical data via the DSP has the advantage of providing relevant medical information in a secure way for the patient and for other health professionals to ensure continuity of care."
           }
         ]
       },
@@ -1896,7 +1910,7 @@
         "score": 0,
         "bonus_points": 1,
         "atype": "P",
-        "label": "are using the electronic transmission of the bills (\"Mémoire d’honoraire(s)\") within the project of the \"Remboursement accélèré\"",
+        "label": "use the electronic transmission of the invoices (\"Mémoire d'honoraire(s)\") as part of the project of the \"Remboursement accélèré\"",
         "tooltip": "You are providing electronically the bills of your patients, for the accelerated reimbursement by CNS, electronically to the CNS.",
         "recommendations": [
           {
@@ -1904,7 +1918,7 @@
             "max_e_count": "j",
             "sector": null,
             "answerChosen": false,
-            "label": "\"Reimbursement acceleré\" is enforcing the digitalisation and speeds up the billing process."
+            "label": "\"Reimbursement acceleré\" promotes the digitalisation and speeds up the billing process."
           }
         ]
       },
@@ -1914,7 +1928,7 @@
         "score": 0,
         "bonus_points": 1,
         "atype": "P",
-        "label": "are using the EU cross-border eHealth services to support treatment of foreign patients",
+        "label": "use the EU cross-border eHealth services to support the treatment of foreign patients",
         "tooltip": "As part of the MyHealth@EU Initiative, Agence eSanté provides cross-border eHealth services to access for consultation the Patient Summary of patients from other EU countries.",
         "recommendations": [
           {
@@ -1922,7 +1936,7 @@
             "max_e_count": "j",
             "sector": null,
             "answerChosen": false,
-            "label": "Cross-border eHealth services can provide additional support to your treatment of patients from other European countries. Get in contact with Agence eSanté and visit the Website <a href=\"https://www.esante.lu\" target=\"_blank\">https://www.esante.lu</a> to gain more information."
+            "label": "Cross-border eHealth services can provide you with additional support when treating patients from other European countries. Get in contact with Agence eSanté and visit the Website <a href=\"https://www.esante.lu\" target=\"_blank\">https://www.esante.lu</a> for further information."
           }
         ]
       },
@@ -1932,7 +1946,7 @@
         "score": 0,
         "bonus_points": 2,
         "atype": "P",
-        "label": "are using Regimail for the secure email exchange with hospitals and other professionals",
+        "label": "use Regimail for secure email exchange with hospitals and other professionals",
         "tooltip": "",
         "recommendations": [
           {
@@ -1940,7 +1954,7 @@
             "max_e_count": "j",
             "sector": null,
             "answerChosen": false,
-            "label": "Regimail can be used free of charge by all authorized health professionals in Luxembourg and ensures the secure and encrypted mail exchange"
+            "label": "Regimail can be used free of charge by all authorized health professionals in Luxembourg. It ensures the data exchange by secure and encrypted e-mail."
           }
         ]
       },
@@ -1949,7 +1963,7 @@
         "uniqueAnswer": false,
         "score": 0,
         "atype": "P",
-        "label": "want to use a secure direct messaging system in the eHealth domain, to support direct secure communication with healthcare professionals",
+        "label": "want use a secure direct messaging system in eHealth, to support direct secure communication with healthcare professionals",
         "tooltip": "On governmental level a secure messaging solution is planned to be taken in place, which would allow secure messaging between professionals replacing tools like WhatsApp, Signal, …",
         "recommendations": []
       },
@@ -1958,7 +1972,7 @@
         "uniqueAnswer": false,
         "score": 0,
         "atype": "P",
-        "label": "feel well supported in terms of IT and the capability on digitalization by our software provider / IT Integrator",
+        "label": "are well supported in terms of IT and digitalization opportunities in the healthcare domain, by our software provider / IT Integrator",
         "tooltip": "",
         "recommendations": []
       },
@@ -1967,7 +1981,7 @@
         "uniqueAnswer": false,
         "score": 0,
         "atype": "P",
-        "label": "feel not being well informed about eHealth related digital services provided on national level in Luxembourg and we are interested in participating to webinars",
+        "label": "feel not well informed about our digital eHealth services offered at national level in Luxembourg and  are interested in participating in webinars",
         "tooltip": "",
         "recommendations": []
       }

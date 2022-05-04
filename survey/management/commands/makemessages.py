@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 import os
 import subprocess
 
@@ -7,7 +5,7 @@ from django.core.management.commands import makemessages
 
 
 def templatize(path):
-    keywords = ["label", "service_category", "section"]
+    keywords = ["label", "tooltip", "service_category", "section"]
     custom_regex = ""
     for keyword in keywords:
         custom_regex = (

@@ -1,10 +1,11 @@
-# -*- coding: utf-8 -*-
+import json
 
 from django import forms
 from django.utils.translation import gettext_lazy as _
-from survey.models import SurveyQuestionAnswer
 from django_countries.fields import CountryField
-import json
+
+from csskp.settings import CUSTOM
+from survey.models import SurveyQuestionAnswer
 
 
 class AnswerMChoice(forms.Form):
@@ -56,7 +57,7 @@ class AnswerMChoice(forms.Form):
             self.fields["answers"] = CountryField().formfield(
                 label="",
                 required=True,
-                initial="LU",
+                initial=CUSTOM.get("defaultCountryCode", "LU"),
                 error_messages={"required": _("Please select your country")},
             )
 

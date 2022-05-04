@@ -1,10 +1,9 @@
 #! /usr/bin/env python
-# -*- coding: utf-8 -*-
-
 from django.core.mail import EmailMultiAlternatives
 from django.template.loader import render_to_string
 
-from csskp.settings import CUSTOM, OPERATOR_EMAIL
+from csskp.settings import CUSTOM
+from csskp.settings import OPERATOR_EMAIL
 from utils.decorators import async_maker
 
 

@@ -1,9 +1,9 @@
-# -*- coding: utf-8 -*-
-
-from typing import List
 import subprocess
-from csskp.settings import PUBLIC_URL, BASE_DIR
+from typing import List
 from urllib.parse import urlparse
+
+from csskp.settings import BASE_DIR
+from csskp.settings import PUBLIC_URL
 
 
 def can_redirect(url: str) -> bool:
