@@ -98,7 +98,7 @@
         "score": 5,
         "atype": "P",
         "label": "covering topics such as cybersecurity and data management in your profession.",
-        "tooltip": "Do you have some rules that talk about how password should be, or that you shouldn't download any untrustworthy software?",
+        "tooltip": "Do you have rules that talk about how password should be, or that you shouldn't download any untrustworthy software?",
         "recommendations": [
           {
             "min_e_count": "a",
@@ -115,7 +115,7 @@
         "score": 2,
         "atype": "P",
         "label": "covering topics like the procedures/policies that are in place for business continuity e.g. in the event the IT systems of the organization are temporarily out of order",
-        "tooltip": "You have some advice or rules on what you should be done in case of a major disaster or incident that stops your activity happens.",
+        "tooltip": "You have some advice or rules on what should be done in case of a major disaster or incident that stops your activity happens.",
         "recommendations": [
           {
             "min_e_count": "a",
@@ -262,15 +262,14 @@
             "answerChosen": false,
             "label": "If data is shared, it should be encrypted so that only the intended recipient can access the data."
           }
-        ],
-        "tooltip": ""
+        ]
       }
     ]
   },
   {
     "service_category": "Trainings",
     "section": "Employee Management in Your Cabinet or Practice",
-    "label": "All working professionals are trained for/in",
+    "label": "All staff is trained for/in",
     "qtype": "M",
     "qindex": 3,
     "maxPoints": 18,
@@ -360,7 +359,7 @@
         "score": 8,
         "atype": "P",
         "label": "performed internally by a person who is computer literate",
-        "tooltip": "Someone in the establishment take care of computers or even servers if there is a problem, but the person is not dedicated to this and do other tasks in the establishment.",
+        "tooltip": "An employee of your organization who has some IT skills takes care if there is an IT problem, but the main function of this person is not IT management.",
         "recommendations": [
           {
             "min_e_count": "a",
@@ -377,7 +376,7 @@
         "score": 0,
         "atype": "P",
         "label": "performed internally by the person who found or encountered the problem, or externally without contract",
-        "tooltip": "The one who encounters the problem has to solve it, or eventually ask to someone who could be external but don't have any contract with the establishment.",
+        "tooltip": "The employee who encounters the problem has to solve it himself/herself or is allowed to request external support. The external service supplier does not have a contract with your organization",
         "recommendations": [
           {
             "min_e_count": "a",
@@ -393,7 +392,7 @@
         "uniqueAnswer": false,
         "score": 16,
         "atype": "P",
-        "label": "externally by a third party with a contract",
+        "label": "contractually outsourced to a service provider",
         "tooltip": "Whenever a problem is encountered, another company will try to solve it. This company is under contract.",
         "recommendations": []
       }
@@ -497,7 +496,7 @@
         "score": 6,
         "atype": "P",
         "label": "a screen filter or setting that ensures that no unauthorized person can see what is displayed on the screen of their mobile device (tablet or laptop)",
-        "tooltip": "Whenever you are outside, you always try to pay attention to who could see your screen, or you have a screen filter to avoid any curious look.",
+        "tooltip": "While working with sensitive data on a mobile device, you take measures to prevent others from reading the data from your screen.",
         "recommendations": [
           {
             "min_e_count": "a",
@@ -521,7 +520,7 @@
             "max_e_count": "j",
             "sector": null,
             "answerChosen": false,
-            "label": "For devices that are taken away and that contain confidential data, the internal memory should always be encrypted to avoid data theft."
+            "label": "For devices that are taken along and contain confidential data, the internal memory/disc should always be encrypted to prevent data theft."
           }
         ]
       },
@@ -552,7 +551,7 @@
   {
     "service_category": "Contracts",
     "section": "Third Party Management",
-    "label": "Contracts with third parties",
+    "label": "Contracts with external IT service providers",
     "qtype": "M",
     "qindex": 6,
     "maxPoints": 23,
@@ -613,15 +612,15 @@
         "uniqueAnswer": false,
         "score": 2,
         "atype": "P",
-        "label": "define the maximum time until an intervention must be performed following an incident",
-        "tooltip": "Whenever an incident is happening, the ICT provider needs to react under a certain time which is defined in the contract.",
+        "label": "define the maximum time until an intervention must be performed after an incident or problem has been reported",
+        "tooltip": "Whenever an incident is happening, the ICT provider needs to react within a certain time which is defined in the contract.",
         "recommendations": [
           {
             "min_e_count": "a",
             "max_e_count": "j",
             "sector": null,
             "answerChosen": false,
-            "label": "If means and needs permit it, a contract should be signed to ensure that the external IT provider guarantees the availability of the system so that it remains operational. This kind of contract is called \"Service Level Agreement (SLA)\"."
+            "label": "If possible, a contract should be signed to ensure that the external IT provider guarantees the availability of the system so that it remains operational. This kind of contract is called \"Service Level Agreement (SLA)\"."
           }
         ]
       },
@@ -638,7 +637,7 @@
             "max_e_count": "j",
             "sector": null,
             "answerChosen": false,
-            "label": "It's necessary to review the contracts to ensure :<ul><li>having an intervention solution whenever it is essential</li><li>to not pay too much for a service which is not necessary</li><li>to evaluate if the services paid are satisfying the necessary</li></ul>"
+            "label": "It's necessary to review the contracts to ensure :<ul><li>having an intervention solution whenever necessary</li><li>to not pay too much for a service that is not necessary</li><li>to evaluate if the paid services meet the necessary requirements.</li></ul>"
           }
         ]
       },
@@ -749,8 +748,8 @@
         "uniqueAnswer": false,
         "score": 3,
         "atype": "P",
-        "label": "with clear rules what may and may not be done",
-        "tooltip": "The cleaning has to be done respecting some rules, such precision on what should be accessed or what shouldn't be, or what mustn't be unplugged.",
+        "label": "with clear rules on what must or must not be done",
+        "tooltip": "When cleaning, some rules have to be followed, e.g. which rooms need to be cleaned or how sensitive equipment has to be cleaned",
         "recommendations": [
           {
             "min_e_count": "a",
@@ -783,8 +782,8 @@
         "uniqueAnswer": false,
         "score": 4,
         "atype": "P",
-        "label": "with all confidential documents locked away in a room, in a  desk or a cabinet",
-        "tooltip": "The cleaning always happen when all documents are locked somewhere, or are inaccessible without breaking something",
+        "label": "with all confidential documents locked away in a room, desk or cabinet",
+        "tooltip": "The cleaning will be done when all documents are locked up or otherwise made inaccessible.",
         "recommendations": [
           {
             "min_e_count": "a",
@@ -827,15 +826,15 @@
         "uniqueAnswer": true,
         "score": 0,
         "atype": "P",
-        "label": "managed by my ICT provide without being informed",
-        "tooltip": "When a problem occurs, you contact your ICT provider to take care of it, without being noticed about their activities (such as when it starts, when it is finished …). But the ICT provider could still access the server or computer without restrictions.",
+        "label": "managed by my ICT service provider without being informed",
+        "tooltip": "When a problem occurs, you contact your ICT service provider to take care of it, without being noticed about their activities (such as when it starts, when it is finished …). But the ICT provider could still access the server or computer without restrictions.",
         "recommendations": [
           {
             "min_e_count": "a",
             "max_e_count": "j",
             "sector": null,
             "answerChosen": true,
-            "label": "Whenever someone is accessing your computer remotely, you need to be aware who is accessing, what is being accessed and for what reason. Here is some advice on how to deal with it:"
+            "label": "Whenever someone is accessing your computer remotely, you need to be aware who is accessing, what is being accessed and for which reason. Here is some advice on how to deal with it:"
           }
         ]
       },
@@ -844,8 +843,8 @@
         "uniqueAnswer": false,
         "score": 6,
         "atype": "P",
-        "label": "managed by my ICT provide, but only when I ask for",
-        "tooltip": "Your ICT provider can access your server or your computer when you ask for it.",
+        "label": "managed by my ICT service provider, but only when I ask for",
+        "tooltip": "Your ICT service provider can access your server or your computer when you ask for it.",
         "recommendations": [
           {
             "min_e_count": "a",
@@ -862,7 +861,7 @@
         "score": 6,
         "atype": "P",
         "label": "monitored as soon as this happens",
-        "tooltip": "When your ICT provider can look at your screen (by software to make remote access such as Teamviewer), you always check that nothing weird happens.",
+        "tooltip": "If your IT service provider can access your computer (using remote access software such as Teamviewer), you always monitor/observe their activity.",
         "recommendations": [
           {
             "min_e_count": "a",
@@ -878,8 +877,8 @@
         "uniqueAnswer": false,
         "score": 8,
         "atype": "P",
-        "label": "verified by continuous contact with the ICT provider",
-        "tooltip": "When your ICT provider can look at your screen (by software to make remote access such as Teamviewer), you are always in contact with him, by phone or any other mean.",
+        "label": "observed under constant contact with the ICT service provider during the maintenance",
+        "tooltip": "While your IT service provider can access your computer (using remote access software such as Teamviewer), you are always in contact with them, either by phone or otherwise.",
         "recommendations": [
           {
             "min_e_count": "a",
@@ -895,8 +894,8 @@
         "uniqueAnswer": true,
         "score": 20,
         "atype": "P",
-        "label": "never carried out, a technician must be on site of the facility",
-        "tooltip": "An ICT provider cannot do maintenance  without being physically present in your establishment.",
+        "label": "never carried out, a technician must be on-site",
+        "tooltip": "An ICT service provider cannot do maintenance without being physically present in your establishment.",
         "recommendations": [
           {
             "min_e_count": "a",
@@ -922,7 +921,7 @@
         "uniqueAnswer": false,
         "score": 0,
         "atype": "P",
-        "label": "can circulate freely in the premises",
+        "label": "can move freely around in the premises",
         "tooltip": "The patient can visit the premises as he wishes. Some doors could be left open (by accident). Also the patient could come in the premises without announcing himself (by ringing, knocking ...).",
         "recommendations": [
           {
@@ -930,7 +929,7 @@
             "max_e_count": "j",
             "sector": null,
             "answerChosen": true,
-            "label": "Ensure that external persons cannot freely circulate within your premises, because it is always possible to grab data without being seen."
+            "label": "Ensure that external persons cannot move freely around your premises, because it is always possible to get hold of the data without being seen."
           }
         ]
       },
@@ -940,7 +939,7 @@
         "score": 0,
         "atype": "P",
         "label": "can occasionally be left alone",
-        "tooltip": "The patient could be alone, occasionally (when the person who welcomes the patient need to do something quickly) or frequently (they just need to come to the waiting room without being announced).",
+        "tooltip": "The patient might occasionally be left alone (when the person who admits the patient has to go somewhere else) or frequently (if he/she simply enters the waiting room unrecognized).",
         "dependant_answers": [
           "is always under surveillance (by someone, physically or remotely)"
         ],
@@ -1001,7 +1000,7 @@
         "score": 4,
         "atype": "P",
         "label": "has no access to any documents, as these are locked up",
-        "tooltip": "Important documents are always locked, and the only person that access them is a person that got the right to access them. If someone who doesn't have the initial right to access them, he has to ask to the person who got the key.",
+        "tooltip": "Important documents are always stored securely and are only accessible to people with the appropriate access rights.",
         "recommendations": [
           {
             "min_e_count": "a",
@@ -1035,14 +1034,14 @@
         "score": 4,
         "atype": "P",
         "label": "cannot access printers without being seen",
-        "tooltip": "Printed documents couldn't be grabbed by someone who has not printed it, or if it's the case the person has the authorization to read or take it.",
+        "tooltip": "Printed documents can only be withdrawn by persons with the right of access to these documents",
         "recommendations": [
           {
             "min_e_count": "a",
             "max_e_count": "j",
             "sector": null,
             "answerChosen": false,
-            "label": "Printers can contain confidential information, such as the last documents printed, or some printed documents that have not been collected."
+            "label": "Printers can contain confidential information, such as the last documents printed, or some printed documents that have not been collected yet."
           }
         ]
       },
@@ -1059,7 +1058,7 @@
             "max_e_count": "j",
             "sector": null,
             "answerChosen": false,
-            "label": "No one should be able to enter after everybody has left the medical practice. You should then make sure no one can enter the practice, or even better, have an alarm system is installed."
+            "label": "After the regular working hours, when everybody has left the medical practice, it needs to be ensured that no unauthorised person is able to enter the premises. This should be ensured by physical means and if possible complemented by using an alarm system."
           }
         ]
       }
@@ -1271,7 +1270,7 @@
             "max_e_count": "j",
             "sector": null,
             "answerChosen": false,
-            "label": "Defining and assigning different access roles is imperative, as this will limit the different data that each role can read and modify, depending on the persons' function within the organization. By simply assigning all permissions, this will give access to some people who should not have access, depending on the sensitivity of the medical data."
+            "label": "Defining and assigning different access roles is imperative, as this will limit the different data that each role can read and modify, depending on the persons' function within the organization."
           }
         ]
       },
@@ -1311,7 +1310,7 @@
             "max_e_count": "j",
             "sector": null,
             "answerChosen": true,
-            "label": "You shouldn't allow others to define all permissions, as they can have access to any confidential data. Besides that, role assignment can then be poorly decided by externals, who do not know exactly about your needs and change of staff."
+            "label": "The management of permissions and roles is a sensitive task and should be handled by known and trustful persons, as they may gain access to confidential data."
           }
         ]
       }
@@ -1461,7 +1460,7 @@
             "max_e_count": "j",
             "sector": null,
             "answerChosen": true,
-            "label": "The company should have an antivirus and ensure that:"
+            "label": "The company should have an antivirus software and ensure that:"
           }
         ]
       },
@@ -1539,7 +1538,7 @@
         "score": 2,
         "atype": "P",
         "label": "is used from time to time to analyse the computer, even in absence of external events",
-        "tooltip": "Sometime you (or your ICT provider) do a full scan of the computer to check there is no virus in it.",
+        "tooltip": "Sometimes you (or your ICT provider) run a full scan of the computer to make sure it does not contain viruses.",
         "recommendations": [
           {
             "min_e_count": "a",
@@ -1563,7 +1562,7 @@
             "max_e_count": "j",
             "sector": null,
             "answerChosen": false,
-            "label": "In case of suspicion of infection, some additional tests are done."
+            "label": "In the case of suspicion of an infection, some additional tests are done."
           }
         ]
       }
@@ -1684,7 +1683,7 @@
   {
     "service_category": "Backups",
     "section": "Information Systems within the Establishment",
-    "label": "Medical data backups are",
+    "label": "Data backups are",
     "qtype": "M",
     "qindex": 15,
     "maxPoints": 24,
@@ -1717,7 +1716,7 @@
             "max_e_count": "j",
             "sector": null,
             "answerChosen": false,
-            "label": "Ensure that the backup policy is part of the contract with your ICT provider, incl. verification of backup, secure storage location and restore tests."
+            "label": "Ensure that the backup policy is part of the contract with your ICT provider, incl. verification of the backups, secure storage location and restore tests."
           }
         ]
       },
@@ -1727,7 +1726,7 @@
         "score": 8,
         "atype": "P",
         "label": "on an external storage device",
-        "tooltip": "All information is saved on an additional hard drive managed by someone internal to the medical infrastructure. It's possible to have more than one hard drive. The hard drive can stay at the office or can be changed of location.",
+        "tooltip": "All information is stored on one or more additional hard drives managed by a staff member. These disks are kept secured in the office or off-site.",
         "dependant_answers": [
           "not my responsibility and should be handled by my ICT provider"
         ],
@@ -1747,7 +1746,7 @@
         "score": 10,
         "atype": "P",
         "label": "checked by me from time to time",
-        "tooltip": "All information is saved at a place where you do have access, or you ask someone to verify it for you, or this is something written in a contract.",
+        "tooltip": "All information is stored in a location that can be accessed and that allows you or another authorised person to perform the backup review. Conducting the review may also be part of a contractual agreement  between you and your IT service provider.",
         "dependant_answers": [
           "not my responsibility and should be handled by my ICT provider"
         ],
@@ -1777,7 +1776,7 @@
             "max_e_count": "j",
             "sector": null,
             "answerChosen": false,
-            "label": "Even with backups, you need to know who can access them, and you should only give permission to those who need it, as they are containing medical data."
+            "label": "Even for the backup files it must be defined who is authorized to access them, as they may contain medical data."
           }
         ]
       }
@@ -1804,7 +1803,7 @@
             "max_e_count": "j",
             "sector": null,
             "answerChosen": true,
-            "label": "For now, the personal devices are not connected in the local network. If this is changed, it is important to:"
+            "label": "For now, the personal devices are not connected to the local network. If this is changed, it is important that:"
           }
         ]
       },
@@ -1821,7 +1820,7 @@
             "max_e_count": "j",
             "sector": null,
             "answerChosen": false,
-            "label": "Personal devices shouldn't be used in the company without controls, rules and explanations. Knowing all the different ways a company can be attacked, can help avoid them."
+            "label": "Personal devices shouldn't be used in the company without controls, rules and explanations. The knowledge of the various ways in which a company can be attacked, can help to avoid them."
           }
         ]
       },
@@ -1838,7 +1837,7 @@
             "max_e_count": "j",
             "sector": null,
             "answerChosen": false,
-            "label": "Personal devices should have an antivirus installed, updated and active to avoid information security threats."
+            "label": "Personal devices should have an antivirus software installed, updated and active to avoid information security threats."
           }
         ]
       },
@@ -1855,7 +1854,7 @@
             "max_e_count": "j",
             "sector": null,
             "answerChosen": false,
-            "label": "Defining rules and best practices help protect internal networks."
+            "label": "Defining rules and best practices to contribute to internal protection networks."
           }
         ]
       },
@@ -1872,7 +1871,7 @@
             "max_e_count": "j",
             "sector": null,
             "answerChosen": false,
-            "label": "If you ever have an information security problem, and you don't know what to do or have no one in the practice who can deal with such a problem, you can contact CIRCL (info@circl.lu) for help in handling the situation."
+            "label": "If you have encountered an information security problem and need further advice, you can contact CIRCL (info@circl.lu) for support."
           }
         ]
       }
@@ -1893,7 +1892,7 @@
         "bonus_points": 1,
         "atype": "P",
         "label": "use the DSP (\"Dossier de Soins Partagé\") to access or share relevant medical information of the patient",
-        "tooltip": "\"Dossier soin partagé\" (DSP) should be used for the exchange of medical data with other professionals and the patient.",
+        "tooltip": "\"Dossier de Soins Partagé\" (DSP) should be used for the exchange of medical data with other professionals and the patient.",
         "recommendations": [
           {
             "min_e_count": "a",
@@ -1947,7 +1946,6 @@
         "bonus_points": 2,
         "atype": "P",
         "label": "use Regimail for secure email exchange with hospitals and other professionals",
-        "tooltip": "",
         "recommendations": [
           {
             "min_e_count": "a",
@@ -1973,7 +1971,6 @@
         "score": 0,
         "atype": "P",
         "label": "are well supported in terms of IT and digitalization opportunities in the healthcare domain, by our software provider / IT Integrator",
-        "tooltip": "",
         "recommendations": []
       },
       {
@@ -1982,7 +1979,6 @@
         "score": 0,
         "atype": "P",
         "label": "feel not well informed about our digital eHealth services offered at national level in Luxembourg and  are interested in participating in webinars",
-        "tooltip": "",
         "recommendations": []
       }
     ]

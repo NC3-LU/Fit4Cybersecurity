@@ -1,0 +1,13 @@
+{% extends 'survey/finishedSurvey.html' %}
+{% load i18n %}
+
+{% block finished_survey_description %}
+<p class="text-justify">
+    {% blocktranslate trimmed %}
+    This is the list of recommendations to improve the maturity level of information security in your organization,
+    provided that your answers correctly reflect the state in your organization. Also keep in mind that this is a
+    self-assessment and the calculation of your information security maturity level is based only on the information
+    you provided.
+    {% endblocktranslate %}
+</p>
+{% endblock %}
