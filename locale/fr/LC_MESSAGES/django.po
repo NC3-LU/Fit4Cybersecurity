@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-06-08 20:28+0000\n"
+"POT-Creation-Date: 2022-06-09 10:15+0000\n"
 "PO-Revision-Date: 2022-05-03 13:47+0000\n"
 "Last-Translator: Benjamin Joly <benjamin.joly@cases.lu>\n"
 "Language-Team: French <https://translate.monarc.lu/projects/"
@@ -1738,7 +1738,7 @@ msgstr ""
 
 #: data/fit4africa/questions.json:1303
 #: data/fit4cybersecurity/questions.json:1302
-#: data/fit4ehealth/questions.json:1798
+#: data/fit4ehealth/questions.json:1815
 msgid "is forbidden or impossible in the company"
 msgstr "est interdite ou impossible dans l'organisme"
 
@@ -1756,7 +1756,7 @@ msgstr ""
 
 #: data/fit4africa/questions.json:1319
 #: data/fit4cybersecurity/questions.json:1318
-#: data/fit4ehealth/questions.json:1815
+#: data/fit4ehealth/questions.json:1832
 msgid ""
 "is subject to precise rules, particularly before connecting to the company "
 "network"
@@ -1788,7 +1788,7 @@ msgstr ""
 
 #: data/fit4africa/questions.json:1351
 #: data/fit4cybersecurity/questions.json:1350
-#: data/fit4ehealth/questions.json:1849
+#: data/fit4ehealth/questions.json:1866
 msgid "has been explained to employees through training or explanations"
 msgstr ""
 "a été expliquée aux employés à travers des formations ou des explications"
@@ -2900,7 +2900,7 @@ msgstr ""
 "Former les utilisateurs sur la sensibilité des informations traitées, afin "
 "d'attirer leur attention sur la manière de protéger ces données."
 
-#: data/fit4ehealth/questions.json:333
+#: data/fit4ehealth/questions.json:333 data/fit4ehealth/questions.json:2006
 msgid "none of those cases"
 msgstr "aucun de ces cas"
 
@@ -3570,8 +3570,8 @@ msgid ""
 "software such as Teamviewer), you always monitor/observe their activity."
 msgstr ""
 "Lorsque votre prestataire de services informatiques peut regarder votre "
-"écran (par un logiciel d'accès à distance tel que Teamviewer), vérifier "
-"le bon déroulement."
+"écran (par un logiciel d'accès à distance tel que Teamviewer), vérifier le "
+"bon déroulement."
 
 #: data/fit4ehealth/questions.json:871
 msgid ""
@@ -4613,8 +4613,9 @@ msgid ""
 "the review may also be part of a contractual agreement  between you and your "
 "IT service provider."
 msgstr ""
-"Toutes les informations sont sauvegardées à un endroit auquel vous avez accès, "
-"ou vous demandez à quelqu'un de le vérifier pour vous, ou spécifié dans un contrat."
+"Toutes les informations sont sauvegardées à un endroit auquel vous avez "
+"accès, ou vous demandez à quelqu'un de le vérifier pour vous, ou spécifié "
+"dans un contrat."
 
 #: data/fit4ehealth/questions.json:1759
 msgid ""
@@ -4661,7 +4662,27 @@ msgstr ""
 "smartphone, tablette, ordinateur portable...) dans l'environnement "
 "professionnel (réseau qui est connecté au serveur)"
 
+#: data/fit4ehealth/questions.json:1798
+msgid "is possible but not subject to any rules"
+msgstr "est possible mais n'est pas soumis à des règles précises"
+
 #: data/fit4ehealth/questions.json:1799
+msgid ""
+"There are no rules (orally given, written …) or advice on how to safely use "
+"personal IT devices in the professional environment."
+msgstr ""
+"Il n'y a pas de règles (données oralement, écrites...) ou de conseils sur la "
+"façon de sécuriser l'utilisation de dispositifs informatiques personnels dans "
+"l'environnement professionnel."
+
+#: data/fit4ehealth/questions.json:1806
+msgid ""
+"As personal devices can connect in the local network, it is important that:"
+msgstr ""
+"Car les appareils personnels peuvent se connecter dans le réseau local, il "
+"est important de :"
+
+#: data/fit4ehealth/questions.json:1816
 msgid ""
 "You cannot connect your personal device in the network of the establishment, "
 "or this is something forbidden."
@@ -4669,7 +4690,7 @@ msgstr ""
 "Vous ne pouvez pas connecter votre appareil personnel dans le réseau de "
 "l'établissement, ou c'est quelque chose d'interdit."
 
-#: data/fit4ehealth/questions.json:1806
+#: data/fit4ehealth/questions.json:1823
 msgid ""
 "For now, the personal devices are not connected to the local network. If "
 "this is changed, it is important that:"
@@ -4677,14 +4698,14 @@ msgstr ""
 "Pour l'instant, les appareils personnels ne sont pas connectés dans le "
 "réseau local. Si cela est modifié, il est important de :"
 
-#: data/fit4ehealth/questions.json:1816
+#: data/fit4ehealth/questions.json:1833
 msgid ""
 "If you connect any personal device, you have to respect some precise rules."
 msgstr ""
 "Si vous connectez un appareil personnel, vous devez respecter des règles "
 "précises."
 
-#: data/fit4ehealth/questions.json:1823
+#: data/fit4ehealth/questions.json:1840
 msgid ""
 "Personal devices shouldn't be used in the company without controls, rules "
 "and explanations. The knowledge of the various ways in which a company can "
@@ -4694,11 +4715,11 @@ msgstr ""
 "sans contrôles, règles et explications. Connaître toutes les différentes "
 "façons dont une entreprise peut être attaquée, peut aider à les éviter."
 
-#: data/fit4ehealth/questions.json:1832
+#: data/fit4ehealth/questions.json:1849
 msgid "is subject to a strict antivirus control"
 msgstr "fait l'objet d'un contrôle antivirus strict"
 
-#: data/fit4ehealth/questions.json:1833
+#: data/fit4ehealth/questions.json:1850
 msgid ""
 "Any personal device you connect to the network has to get through an "
 "antivirus scan."
@@ -4706,7 +4727,7 @@ msgstr ""
 "Tout appareil personnel que vous connectez au réseau doit passer par un scan "
 "antivirus."
 
-#: data/fit4ehealth/questions.json:1840
+#: data/fit4ehealth/questions.json:1857
 msgid ""
 "Personal devices should have an antivirus software installed, updated and "
 "active to avoid information security threats."
@@ -4714,7 +4735,7 @@ msgstr ""
 "Les appareils personnels doivent avoir un antivirus installé, mis à jour et "
 "actif pour éviter les menaces à la sécurité de l'information."
 
-#: data/fit4ehealth/questions.json:1850
+#: data/fit4ehealth/questions.json:1867
 msgid ""
 "The danger to connect personal devices or the rules about them has been "
 "explained to everyone."
@@ -4722,7 +4743,7 @@ msgstr ""
 "Le danger de connecter des appareils personnels ou les règles les concernant "
 "ont été expliquées à tout le monde."
 
-#: data/fit4ehealth/questions.json:1857
+#: data/fit4ehealth/questions.json:1874
 msgid ""
 "Defining rules and best practices to contribute to internal protection "
 "networks."
@@ -4730,7 +4751,7 @@ msgstr ""
 "La définition de règles et de bonnes pratiques permet de protéger les "
 "réseaux internes."
 
-#: data/fit4ehealth/questions.json:1866
+#: data/fit4ehealth/questions.json:1883
 msgid ""
 "is possible and if problems occur, the IT service provider or a staff member "
 "helps to solve them"
@@ -4738,7 +4759,7 @@ msgstr ""
 "est possible et si des problèmes surviennent, le fournisseur de services "
 "informatiques ou un membre du personnel aide à les résoudre"
 
-#: data/fit4ehealth/questions.json:1867
+#: data/fit4ehealth/questions.json:1884
 msgid ""
 "The ICT provider, or the person responsible to any IT or security problem "
 "can help to resolve the problem and has a good procedure to take care of it."
@@ -4747,7 +4768,7 @@ msgstr ""
 "problème informatique ou de sécurité, peut aider à résoudre le problème et "
 "dispose d'une bonne procédure pour s'en occuper."
 
-#: data/fit4ehealth/questions.json:1874
+#: data/fit4ehealth/questions.json:1891
 msgid ""
 "If you have encountered an information security problem and need further "
 "advice, you can contact CIRCL (info@circl.lu) for support."
@@ -4757,19 +4778,19 @@ msgstr ""
 "problème, vous pouvez contacter CIRCL (info@circl.lu) pour obtenir de l'aide "
 "pour gérer la situation."
 
-#: data/fit4ehealth/questions.json:1881
+#: data/fit4ehealth/questions.json:1898
 msgid "eHealth services usage"
 msgstr "Utilisation des services eHealth"
 
-#: data/fit4ehealth/questions.json:1882
+#: data/fit4ehealth/questions.json:1899
 msgid "eSanté"
 msgstr "eSanté"
 
-#: data/fit4ehealth/questions.json:1883
+#: data/fit4ehealth/questions.json:1900
 msgid "In our daily practice, we"
 msgstr "Dans notre pratique quotidienne, nous"
 
-#: data/fit4ehealth/questions.json:1894
+#: data/fit4ehealth/questions.json:1911
 msgid ""
 "use the DSP (\"Dossier de Soins Partagé\") to access or share relevant "
 "medical information of the patient"
@@ -4777,7 +4798,7 @@ msgstr ""
 "utilisons le DSP (\"Dossier de Soins Partagé\") pour accéder aux "
 "informations médicales pertinentes du patient ou les partager"
 
-#: data/fit4ehealth/questions.json:1895
+#: data/fit4ehealth/questions.json:1912
 msgid ""
 "\"Dossier de Soins Partagé\" (DSP) should be used for the exchange of "
 "medical data with other professionals and the patient."
@@ -4785,7 +4806,7 @@ msgstr ""
 "\"Dossier soin partagé\" (DSP) doit être utilisé pour l'échange de données "
 "médicales avec d'autres professionnels et le patient."
 
-#: data/fit4ehealth/questions.json:1902
+#: data/fit4ehealth/questions.json:1919
 msgid ""
 "Sharing medical data via the DSP has the advantage of providing relevant "
 "medical information in a secure way for the patient and for other health "
@@ -4796,7 +4817,7 @@ msgstr ""
 "et pour les autres professionnels de santé afin d'assurer la continuité des "
 "soins."
 
-#: data/fit4ehealth/questions.json:1912
+#: data/fit4ehealth/questions.json:1929
 msgid ""
 "use the electronic transmission of the invoices (\"Mémoire d'honoraire(s)\") "
 "as part of the project of the \"Remboursement accélèré\""
@@ -4804,7 +4825,7 @@ msgstr ""
 "utilisons la transmission électronique des factures (\"Mémoire "
 "d'honoraire(s)\") dans le cadre du projet de \"Remboursement accéléré\""
 
-#: data/fit4ehealth/questions.json:1913
+#: data/fit4ehealth/questions.json:1930
 msgid ""
 "You are providing electronically the bills of your patients, for the "
 "accelerated reimbursement by CNS, electronically to the CNS."
@@ -4812,7 +4833,7 @@ msgstr ""
 "Vous fournissez électroniquement les factures de vos patients, pour le "
 "remboursement accéléré par la CNS, à la CNS."
 
-#: data/fit4ehealth/questions.json:1920
+#: data/fit4ehealth/questions.json:1937
 msgid ""
 "\"Reimbursement acceleré\" promotes the digitalisation and speeds up the "
 "billing process."
@@ -4820,7 +4841,7 @@ msgstr ""
 "Le \"remboursement accéléré\" favorise la numérisation et accélère le "
 "processus de facturation."
 
-#: data/fit4ehealth/questions.json:1930
+#: data/fit4ehealth/questions.json:1947
 msgid ""
 "use the EU cross-border eHealth services to support the treatment of foreign "
 "patients"
@@ -4828,7 +4849,7 @@ msgstr ""
 "utilisons les services transfrontaliers de santé en ligne de l'UE pour "
 "soutenir le traitement des patients étrangers"
 
-#: data/fit4ehealth/questions.json:1931
+#: data/fit4ehealth/questions.json:1948
 msgid ""
 "As part of the MyHealth@EU Initiative, Agence eSanté provides cross-border "
 "eHealth services to access for consultation the Patient Summary of patients "
@@ -4838,7 +4859,7 @@ msgstr ""
 "services transfrontaliers de santé en ligne permettant d'accéder pour "
 "consultation au Patient Summary des patients d'autres pays de l'UE."
 
-#: data/fit4ehealth/questions.json:1938
+#: data/fit4ehealth/questions.json:1955
 msgid ""
 "Cross-border eHealth services can provide you with additional support when "
 "treating patients from other European countries. Get in contact with Agence "
@@ -4851,14 +4872,14 @@ msgstr ""
 "\"https://www.esante.lu\" target=\"_blank\">https://www.esante.lu</a> pour "
 "plus d'informations."
 
-#: data/fit4ehealth/questions.json:1948
+#: data/fit4ehealth/questions.json:1965
 msgid ""
 "use Regimail for secure email exchange with hospitals and other professionals"
 msgstr ""
 "utilisons Regimail pour l'échange de courriels sécurisés avec les hôpitaux "
 "et d'autres professionnels"
 
-#: data/fit4ehealth/questions.json:1955
+#: data/fit4ehealth/questions.json:1972
 msgid ""
 "Regimail can be used free of charge by all authorized health professionals "
 "in Luxembourg. It ensures the data exchange by secure and encrypted e-mail."
@@ -4867,7 +4888,7 @@ msgstr ""
 "autorisés au Luxembourg. Il assure l'échange de données par courrier "
 "électronique sécurisé et chiffré."
 
-#: data/fit4ehealth/questions.json:1964
+#: data/fit4ehealth/questions.json:1981
 msgid ""
 "want use a secure direct messaging system in eHealth, to support direct "
 "secure communication with healthcare professionals"
@@ -4876,7 +4897,7 @@ msgstr ""
 "de la santé en ligne, afin de soutenir la communication directe sécurisée "
 "avec les professionnels de la santé"
 
-#: data/fit4ehealth/questions.json:1965
+#: data/fit4ehealth/questions.json:1982
 msgid ""
 "On governmental level a secure messaging solution is planned to be taken in "
 "place, which would allow secure messaging between professionals replacing "
@@ -4886,7 +4907,7 @@ msgstr ""
 "messagerie sécurisée, qui permettrait une messagerie sécurisée entre "
 "professionnels en remplaçant des outils comme WhatsApp, Signal, …"
 
-#: data/fit4ehealth/questions.json:1973
+#: data/fit4ehealth/questions.json:1990
 msgid ""
 "are well supported in terms of IT and digitalization opportunities in the "
 "healthcare domain, by our software provider / IT Integrator"
@@ -4895,7 +4916,7 @@ msgstr ""
 "digitalisation dans le domaine de la santé, par notre fournisseur de "
 "logiciels / intégrateur IT"
 
-#: data/fit4ehealth/questions.json:1981
+#: data/fit4ehealth/questions.json:1998
 msgid ""
 "feel not well informed about our digital eHealth services offered at "
 "national level in Luxembourg and  are interested in participating in webinars"
