@@ -68,6 +68,7 @@ def create_html_report(user: SurveyUser, lang: str, request: HttpRequest) -> str
             "GLOBALS": globals,
             "CASES_LOGO": cases_logo,
             "SECIN_LOGO": secin_logo,
+            "BASE_DIR": settings.BASE_DIR,
             "TOOL_LOGO": SITE_IMAGES_DIR + "/logo-" + lang + ".png",
             "DATE": datetime.today(),
             "SURVEY_USER": user,
