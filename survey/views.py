@@ -117,11 +117,11 @@ def change_lang(request, lang: str):
     user.chosen_lang = lang
     user.save()
 
-    if user.is_survey_in_progress() and previous_path.__contains__("/survey/question/"):
-        return HttpResponseRedirect(
-            "/survey/question/"
-            + str(get_current_user_question_index_from_sequence(user))
-        )
+    if (
+        (user.is_survey_in_progress() or user.is_survey_under_review())
+        and previous_path.__contains__("/survey/question/")
+    ):
+        return HttpResponseRedirect(previous_path)
 
     if user.is_survey_under_review() and previous_path.__contains__("/survey/review"):
         return HttpResponseRedirect("/survey/review")
