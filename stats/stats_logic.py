@@ -82,8 +82,6 @@ def get_finished_surveys_list(start_date, end_date):
                 }
 
             question = user_answer.answer.question
-            if question.maxPoints == 0:
-                continue
             if (
                 question.id
                 not in surveys_users_results["survey_users"][user_id]["sections"][
@@ -112,6 +110,9 @@ def get_finished_surveys_list(start_date, end_date):
                     }
                 }
             )
+
+            if question.maxPoints == 0:
+                continue
 
             if user_answer.uvalue == "1":
                 answer_score = user_answer.answer.score
