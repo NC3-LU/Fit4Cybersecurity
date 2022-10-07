@@ -314,7 +314,6 @@ def answers_per_section(request):
 
     result = tree()
     generators = tree()
-    max_evaluations_per_section: Dict[int, int] = {}
 
     questions = (
         SurveyQuestion.objects.exclude(section__label__in=chart_exclude_sections)
@@ -331,7 +330,7 @@ def answers_per_section(request):
 
         for index, section in enumerate(sections):
             section_label = str(_(section))
-            if section not in generators.get(employees_number_code, {}):
+            if section_label not in generators.get(employees_number_code, {}):
                 generators[employees_number_code][section_label] = mean_gen()
                 generators[employees_number_code][section_label].send(None)
             result["all"][employees_number_code][section_label] = generators[
@@ -368,7 +367,6 @@ def answers_per_category(request):
 
     result = tree()
     generators = tree()
-    max_evaluations_per_category: Dict[int, int] = {}
 
     questions = (
         SurveyQuestion.objects.exclude(section__label__in=chart_exclude_sections)
@@ -388,7 +386,7 @@ def answers_per_category(request):
         employees_number_code = user.get_employees_number_label()
         for index, category in enumerate(categories):
             category_label = str(_(category))
-            if category not in generators.get(employees_number_code, {}):
+            if category_label not in generators.get(employees_number_code, {}):
                 generators[employees_number_code][category_label] = mean_gen()
                 generators[employees_number_code][category_label].send(None)
             result["all"][employees_number_code][category_label] = generators[
