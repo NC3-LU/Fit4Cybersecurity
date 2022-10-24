@@ -37,7 +37,7 @@ Welcome to the $TOOL_NAME Virtual Machine!
 The Web interface is available at: http://\4:$SERVICE_PORT
 
 If you find any bugs:
-https://github.com/CASES-LU/Fit4Cybersecurity/issues
+https://github.com/NC3-LU/Fit4Cybersecurity/issues
 
 
 EOF"

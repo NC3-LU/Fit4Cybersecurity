@@ -10,7 +10,7 @@ Feel free to fork the code, play with it, make some patches and send us pull req
 Before starting to contribute please install the Git hook scripts:
 
 ```bash
-$ git clone https://github.com/CASES-LU/Fit4Cybersecurity
+$ git clone https://github.com/NC3-LU/Fit4Cybersecurity
 $ cd Fit4Cybersecurity/
 $ poetry install
 $ pre-commit install
@@ -27,7 +27,7 @@ to update the documentation is strongly recommended.
 
 Please, do not open directly a GitHub issue if you think you have found a
 security vulnerability. See our
-[security policy](https://github.com/CASES-LU/Fit4Cybersecurity/security/policy)
+[security policy](https://github.com/NC3-LU/Fit4Cybersecurity/security/policy)
 page.
 
 [Django](https://www.djangoproject.com/) is used for the backend.

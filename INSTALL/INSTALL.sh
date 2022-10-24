@@ -65,7 +65,7 @@ bash -c 'source /home/ubuntu/.bashrc'
 
 
 echo "--- Installing $TOOL_NAME… ---"
-sudo -u ubuntu git clone https://github.com/CASES-LU/Fit4Cybersecurity.git $PROJECT_PATH
+sudo -u ubuntu git clone https://github.com/NC3-LU/Fit4Cybersecurity.git $PROJECT_PATH
 cd $PROJECT_PATH
 npm ci
 poetry install --no-dev
