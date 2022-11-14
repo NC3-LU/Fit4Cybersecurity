@@ -1,32 +1,35 @@
 [
   {
-    "label": "Select the type of element for certification.",
-    "service_category": "Context",
-    "section": "First question",
+    "section": "Select survey",
+    "service_category": "Select survey",
     "qtype": "S",
     "qindex": 1,
     "maxPoints": 0,
+    "label": "Select the type of element for certification.",
     "answers": [
       {
-        "label": "ICT Services",
+        "aindex": 1,
         "uniqueAnswer": true,
-        "value": "SERV",
+        "score": 0,
         "atype": "P",
-        "aindex": 1
-      },
-      {
+        "questions_map": [],
         "label": "ICT Process",
-        "value": "PROC",
-        "uniqueAnswer": true,
-        "atype": "P",
-        "aindex": 2
+        "recommendations": []
       },
       {
-        "label": "ICT Generic Products",
-        "value": "GPRO",
+        "aindex": 2,
         "uniqueAnswer": true,
+        "score": 0,
         "atype": "P",
+        "questions_map": [],
+        "label": "ICT Process",
+        "recommendations": []
+      },
+      {
         "aindex": 3,
+        "uniqueAnswer": true,
+        "score": 0,
+        "atype": "P",
         "questions_map": [
           {
             "label": "As part of your product design, is there any specification of security features that is understandable and available to users?",
@@ -34,20 +37,24 @@
             "level": 1,
             "order": 1
           }
-        ]
+        ],
+        "label": "ICT Generic Products",
+        "recommendations": []
       },
       {
-        "label": "ICT Web Application",
-        "value": "WEBA",
-        "uniqueAnswer": true,
+        "aindex": 4,
+        "uniqueAnswer": false,
+        "score": 0,
         "atype": "P",
-        "aindex": 4
+        "questions_map": [],
+        "label": "ICT Web Application",
+        "recommendations": []
       }
     ]
   },
   {
     "section": "Functional specification (ADV_FSP)",
-    "service_category": "Basic functional specification  and operational user guidance",
+    "service_category": "Basic functional specification and operational user guidance",
     "qtype": "S",
     "qindex": 2,
     "maxPoints": 0,
@@ -2447,11 +2454,11 @@
         "label": "N/A",
         "recommendations": [
           {
-            "label": "It is normal that users should have the means or capacity to lock or terminate their own interactive sessions. However, they should not be able to manage (lock, modify or terminate, etc.) other users' sessions.",
             "min_e_count": "a",
             "max_e_count": "j",
             "sector": null,
-            "answerChosen": true
+            "answerChosen": true,
+            "label": "It is normal that users should have the means or capacity to lock or terminate their own interactive sessions. However, they should not be able to manage (lock, modify or terminate, etc.) other users' sessions."
           }
         ]
       }
