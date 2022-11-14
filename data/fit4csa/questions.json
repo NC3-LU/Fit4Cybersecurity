@@ -33,8 +33,254 @@
         "questions_map": [
           {
             "label": "As part of your product design, is there any specification of security features that is understandable and available to users?",
-            "branch": 1,
+            "branch": 3,
             "level": 1,
+            "order": 1
+          },
+          {
+            "label": "Do you have a documented process for tracking major development decisions or changes applied to the product?",
+            "branch": 3,
+            "level": 2,
+            "order": 1
+          },
+          {
+            "label": "Was functional testing of your product on a defined scope conducted?",
+            "branch": 3,
+            "level": 3,
+            "order": 1
+          },
+          {
+            "label": "Have you realized a vulnerability assessment of your product in order to identify and address potential vulnerabilities introduced during development or operation?",
+            "branch": 3,
+            "level": 4,
+            "order": 1
+          },
+          {
+            "label": "Is there an automatic response process implemented in case a potential security violation is detected?",
+            "branch": 3,
+            "level": 5,
+            "order": 1
+          },
+          {
+            "label": "Have you defined for each security event alert, a list of data that should be recorded?",
+            "branch": 3,
+            "level": 6,
+            "order": 1
+          },
+          {
+            "label": "Is it possible to associate each auditable event with the identity of the user that caused the event?",
+            "branch": 3,
+            "level": 7,
+            "order": 1
+          },
+          {
+            "label": "Are there controls implemented to log all types of access to the product?",
+            "branch": 3,
+            "level": 8,
+            "order": 1
+          },
+          {
+            "label": "Are there any controls implemented to identify potential violation based on predefined rule set and known vulnerabilities ?",
+            "branch": 3,
+            "level": 9,
+            "order": 1
+          },
+          {
+            "label": "Is it possible for users of your product to access and read information from the audit records?",
+            "branch": 3,
+            "level": 10,
+            "order": 1
+          },
+          {
+            "label": "Have you implemented controls to prevent any modification or deletion of the audit trail?",
+            "branch": 3,
+            "level": 11,
+            "order": 1
+          },
+          {
+            "label": "Are there controls implemented to monitor the audit storage capability and ensure audit data availability?",
+            "branch": 3,
+            "level": 12,
+            "order": 1
+          },
+          {
+            "label": "Have you implemented controls to detect and prevent potential audit data loss due to imminent audit storage failure.",
+            "branch": 3,
+            "level": 13,
+            "order": 1
+          },
+          {
+            "label": "Is there a cryptographic key management function implemented in your product?",
+            "branch": 3,
+            "level": 14,
+            "order": 1
+          },
+          {
+            "label": "Are there controls implemented to guarantee the security of data stored or processed by your product?",
+            "branch": 3,
+            "level": 15,
+            "order": 1
+          },
+          {
+            "label": "Have you implemented any controls to ensure the security of data while in transit?",
+            "branch": 3,
+            "level": 16,
+            "order": 1
+          },
+          {
+            "label": "Is your product able to recover from a list of known recoverable errors?",
+            "branch": 3,
+            "level": 17,
+            "order": 1
+          },
+          {
+            "label": "Are controls implemented to manage a threshold of unsuccessful authentification attempts?",
+            "branch": 3,
+            "level": 18,
+            "order": 1
+          },
+          {
+            "label": "Are users of the product have a set of security attributes, other than the user?s identity?",
+            "branch": 3,
+            "level": 19,
+            "order": 1
+          },
+          {
+            "label": "Is there a secret verification method implemented?",
+            "branch": 3,
+            "level": 20,
+            "order": 1
+          },
+          {
+            "label": "Is there an algorithm implemented for a secret generation?",
+            "branch": 3,
+            "level": 21,
+            "order": 1
+          },
+          {
+            "label": "Have you implemented an access control mechanism that requires users to authenticate before any other action is allowed?",
+            "branch": 3,
+            "level": 22,
+            "order": 1
+          },
+          {
+            "label": "Are there any controls implemented to detect and prevent the use of authentication data that has been forged or copied?",
+            "branch": 3,
+            "level": 23,
+            "order": 1
+          },
+          {
+            "label": "Have you implemented any function that allows authorized administrators to manage subject security attributes?",
+            "branch": 3,
+            "level": 24,
+            "order": 1
+          },
+          {
+            "label": "Have you implemented any method that allows authorized administrators to manage security function rules or attributes?",
+            "branch": 3,
+            "level": 25,
+            "order": 1
+          },
+          {
+            "label": "Are there controls implemented that allows authorized administrators to manage the group of roles that can interact with private or sensible data?",
+            "branch": 3,
+            "level": 26,
+            "order": 1
+          },
+          {
+            "label": "Are there controls implemented to allow authorized roles to manage the revocation of accounts?",
+            "branch": 3,
+            "level": 27,
+            "order": 1
+          },
+          {
+            "label": "Is there any controls or mechanism implemented to ensure  anonymity when required?",
+            "branch": 3,
+            "level": 28,
+            "order": 1
+          },
+          {
+            "label": "Are there controls implemented to ensure that the product preserves a secure state in case of failure?",
+            "branch": 3,
+            "level": 29,
+            "order": 1
+          },
+          {
+            "label": "Are there controls implemented to ensure that any possible modification to data during transmission is detected and remediated accordantly?",
+            "branch": 3,
+            "level": 30,
+            "order": 1
+          },
+          {
+            "label": "Are controls implemented to ensure the security of data when it is transferred internally between services and components.?",
+            "branch": 3,
+            "level": 31,
+            "order": 1
+          },
+          {
+            "label": "Is the security and resilience of your product against potential physical security attacks tested?",
+            "branch": 3,
+            "level": 32,
+            "order": 1
+          },
+          {
+            "label": "Is there a manual recovery mechanism implemented to guarantee a return to a secure state when needed?",
+            "branch": 3,
+            "level": 33,
+            "order": 1
+          },
+          {
+            "label": "Are controls implemented to detect and prevent any potential replay attacks?",
+            "branch": 3,
+            "level": 34,
+            "order": 1
+          },
+          {
+            "label": "Have you tested the accuracy, reliability, and security of the timestamp function in your product?",
+            "branch": 3,
+            "level": 35,
+            "order": 1
+          },
+          {
+            "label": "Are there controls implemented within the product to ensure data replication consistency?",
+            "branch": 3,
+            "level": 36,
+            "order": 1
+          },
+          {
+            "label": "Does your product run any self-tests to verify the correct operation of key services?",
+            "branch": 3,
+            "level": 37,
+            "order": 1
+          },
+          {
+            "label": "Are there any controls implemented to limit the number of concurrent sessions per user?",
+            "branch": 3,
+            "level": 38,
+            "order": 1
+          },
+          {
+            "label": "Are there controls implemented to ensure that open sessions are automatically locked after a specified period of user inactivity?",
+            "branch": 3,
+            "level": 39,
+            "order": 1
+          },
+          {
+            "label": "Are there methods implemented to provide users the capabilities to lock their own interactive sessions?",
+            "branch": 3,
+            "level": 40,
+            "order": 1
+          },
+          {
+            "label": "Are there functions implemented to provide users the capability to terminate their own interactive sessions?",
+            "branch": 3,
+            "level": 41,
+            "order": 1
+          },
+          {
+            "label": "Is there a configurable banner service available to authorized administrators to warn authorized users?",
+            "branch": 3,
+            "level": 42,
             "order": 1
           }
         ],
@@ -65,14 +311,6 @@
         "uniqueAnswer": true,
         "score": 0,
         "atype": "P",
-        "questions_map": [
-          {
-            "label": "Do you have a documented process for tracking major development decisions or changes applied to the product?",
-            "branch": 1,
-            "level": 2,
-            "order": 1
-          }
-        ],
         "label": "There is nothing",
         "recommendations": [
           {
@@ -89,14 +327,6 @@
         "uniqueAnswer": true,
         "score": 0,
         "atype": "P",
-        "questions_map": [
-          {
-            "label": "Do you have a documented process for tracking major development decisions or changes applied to the product?",
-            "branch": 1,
-            "level": 2,
-            "order": 1
-          }
-        ],
         "label": "There is a specification and we have invested effort into making it understandable for most users.",
         "recommendations": []
       }
@@ -115,14 +345,6 @@
         "uniqueAnswer": true,
         "score": 0,
         "atype": "P",
-        "questions_map": [
-          {
-            "label": "Was functional testing of your product on a defined scope conducted?",
-            "branch": 1,
-            "level": 3,
-            "order": 1
-          }
-        ],
         "label": "No, there is no process available.",
         "recommendations": [
           {
@@ -139,14 +361,6 @@
         "uniqueAnswer": true,
         "score": 0,
         "atype": "P",
-        "questions_map": [
-          {
-            "label": "Was functional testing of your product on a defined scope conducted?",
-            "branch": 1,
-            "level": 3,
-            "order": 1
-          }
-        ],
         "label": "Yes, there is a documented process for tracking the major development of the product.",
         "recommendations": []
       },
@@ -155,14 +369,6 @@
         "uniqueAnswer": true,
         "score": 0,
         "atype": "P",
-        "questions_map": [
-          {
-            "label": "Was functional testing of your product on a defined scope conducted?",
-            "branch": 1,
-            "level": 3,
-            "order": 1
-          }
-        ],
         "label": "N/A",
         "recommendations": []
       }
@@ -181,14 +387,6 @@
         "uniqueAnswer": true,
         "score": 0,
         "atype": "P",
-        "questions_map": [
-          {
-            "label": "Have you realized a vulnerability assessment of your product in order to identify and address potential vulnerabilities introduced during development or operation?",
-            "branch": 1,
-            "level": 4,
-            "order": 1
-          }
-        ],
         "label": "No, there is no functional testing conducted for the product.",
         "recommendations": [
           {
@@ -205,14 +403,6 @@
         "uniqueAnswer": true,
         "score": 0,
         "atype": "P",
-        "questions_map": [
-          {
-            "label": "Have you realized a vulnerability assessment of your product in order to identify and address potential vulnerabilities introduced during development or operation?",
-            "branch": 1,
-            "level": 4,
-            "order": 1
-          }
-        ],
         "label": "functional testing of the product has been conducted.",
         "recommendations": []
       }
@@ -231,14 +421,6 @@
         "uniqueAnswer": true,
         "score": 0,
         "atype": "P",
-        "questions_map": [
-          {
-            "label": "Is there an automatic response process implemented in case a potential security violation is detected?",
-            "branch": 1,
-            "level": 5,
-            "order": 1
-          }
-        ],
         "label": "No, there was not any vulnerability assessment conducted for the product.",
         "recommendations": [
           {
@@ -255,14 +437,6 @@
         "uniqueAnswer": true,
         "score": 0,
         "atype": "P",
-        "questions_map": [
-          {
-            "label": "Is there an automatic response process implemented in case a potential security violation is detected?",
-            "branch": 1,
-            "level": 5,
-            "order": 1
-          }
-        ],
         "label": "Yes, a vulnerability assessment has been conducted .",
         "recommendations": []
       },
@@ -271,14 +445,6 @@
         "uniqueAnswer": true,
         "score": 0,
         "atype": "P",
-        "questions_map": [
-          {
-            "label": "Is there an automatic response process implemented in case a potential security violation is detected?",
-            "branch": 1,
-            "level": 5,
-            "order": 1
-          }
-        ],
         "label": "A vulnerability assessment has been conducted and all identified vulnerabilities have been remediated.",
         "recommendations": []
       }
@@ -297,14 +463,6 @@
         "uniqueAnswer": true,
         "score": 0,
         "atype": "P",
-        "questions_map": [
-          {
-            "label": "Have you defined for each security event alert, a list of data that should be recorded?",
-            "branch": 1,
-            "level": 6,
-            "order": 1
-          }
-        ],
         "label": "No, there is not any automatic response process implemented to deal with potential security violations.",
         "recommendations": [
           {
@@ -321,14 +479,6 @@
         "uniqueAnswer": true,
         "score": 0,
         "atype": "P",
-        "questions_map": [
-          {
-            "label": "Have you defined for each security event alert, a list of data that should be recorded?",
-            "branch": 1,
-            "level": 6,
-            "order": 1
-          }
-        ],
         "label": "An automatic response process has been implemented to deal with defined security violations.",
         "recommendations": [
           {
@@ -355,14 +505,6 @@
         "uniqueAnswer": true,
         "score": 0,
         "atype": "P",
-        "questions_map": [
-          {
-            "label": "Is it possible to associate each auditable event with the identity of the user that caused the event?",
-            "branch": 1,
-            "level": 7,
-            "order": 1
-          }
-        ],
         "label": "There is no alert configured for any security event.",
         "recommendations": [
           {
@@ -379,14 +521,6 @@
         "uniqueAnswer": true,
         "score": 0,
         "atype": "P",
-        "questions_map": [
-          {
-            "label": "Is it possible to associate each auditable event with the identity of the user that caused the event?",
-            "branch": 1,
-            "level": 7,
-            "order": 1
-          }
-        ],
         "label": "A list of data that should be recorded for each security event has been defined.",
         "recommendations": []
       }
@@ -405,14 +539,6 @@
         "uniqueAnswer": true,
         "score": 0,
         "atype": "P",
-        "questions_map": [
-          {
-            "label": "Are there controls implemented to log all types of access to the product?",
-            "branch": 1,
-            "level": 8,
-            "order": 1
-          }
-        ],
         "label": "Nominative profiles can not be created with our product, hence it is not possible to associate the event with a user?s identity.",
         "recommendations": [
           {
@@ -429,14 +555,6 @@
         "uniqueAnswer": true,
         "score": 0,
         "atype": "P",
-        "questions_map": [
-          {
-            "label": "Are there controls implemented to log all types of access to the product?",
-            "branch": 1,
-            "level": 8,
-            "order": 1
-          }
-        ],
         "label": "Yes, It is possible to associate a security event with the identity of the user that caused it.",
         "recommendations": []
       },
@@ -445,14 +563,6 @@
         "uniqueAnswer": true,
         "score": 0,
         "atype": "P",
-        "questions_map": [
-          {
-            "label": "Are there controls implemented to log all types of access to the product?",
-            "branch": 1,
-            "level": 8,
-            "order": 1
-          }
-        ],
         "label": "N/A",
         "recommendations": []
       }
@@ -471,14 +581,6 @@
         "uniqueAnswer": true,
         "score": 0,
         "atype": "P",
-        "questions_map": [
-          {
-            "label": "Are there any controls implemented to identify potential violation based on predefined rule set and known vulnerabilities ?",
-            "branch": 1,
-            "level": 9,
-            "order": 1
-          }
-        ],
         "label": "There is no control to log all types of access to the product.",
         "recommendations": [
           {
@@ -495,14 +597,6 @@
         "uniqueAnswer": true,
         "score": 0,
         "atype": "P",
-        "questions_map": [
-          {
-            "label": "Are there any controls implemented to identify potential violation based on predefined rule set and known vulnerabilities ?",
-            "branch": 1,
-            "level": 9,
-            "order": 1
-          }
-        ],
         "label": "The product has a log function that logs all types of access to the product.",
         "recommendations": []
       }
@@ -521,14 +615,6 @@
         "uniqueAnswer": true,
         "score": 0,
         "atype": "P",
-        "questions_map": [
-          {
-            "label": "Is it possible for users of your product to access and read information from the audit records?",
-            "branch": 1,
-            "level": 10,
-            "order": 1
-          }
-        ],
         "label": "No, there is no control implemented to identify potential violation based on predefined rule set.",
         "recommendations": [
           {
@@ -545,14 +631,6 @@
         "uniqueAnswer": true,
         "score": 0,
         "atype": "P",
-        "questions_map": [
-          {
-            "label": "Is it possible for users of your product to access and read information from the audit records?",
-            "branch": 1,
-            "level": 10,
-            "order": 1
-          }
-        ],
         "label": "A number of rule sets have been implemented and are capable to flag any potential violation.",
         "recommendations": []
       },
@@ -561,14 +639,6 @@
         "uniqueAnswer": true,
         "score": 0,
         "atype": "P",
-        "questions_map": [
-          {
-            "label": "Is it possible for users of your product to access and read information from the audit records?",
-            "branch": 1,
-            "level": 10,
-            "order": 1
-          }
-        ],
         "label": "N/A",
         "recommendations": []
       }
@@ -587,14 +657,6 @@
         "uniqueAnswer": true,
         "score": 0,
         "atype": "P",
-        "questions_map": [
-          {
-            "label": "Have you implemented controls to prevent any modification or deletion of the audit trail?",
-            "branch": 1,
-            "level": 11,
-            "order": 1
-          }
-        ],
         "label": "Audit records is accessible to all users of the product, there is no control restrict access to only authorised users.",
         "recommendations": [
           {
@@ -611,14 +673,6 @@
         "uniqueAnswer": true,
         "score": 0,
         "atype": "P",
-        "questions_map": [
-          {
-            "label": "Have you implemented controls to prevent any modification or deletion of the audit trail?",
-            "branch": 1,
-            "level": 11,
-            "order": 1
-          }
-        ],
         "label": "There are controls implemented to limit access to audit record to only authorized users.",
         "recommendations": []
       },
@@ -627,14 +681,6 @@
         "uniqueAnswer": true,
         "score": 0,
         "atype": "P",
-        "questions_map": [
-          {
-            "label": "Have you implemented controls to prevent any modification or deletion of the audit trail?",
-            "branch": 1,
-            "level": 11,
-            "order": 1
-          }
-        ],
         "label": "There are not any audit data recorded.",
         "recommendations": []
       }
@@ -653,14 +699,6 @@
         "uniqueAnswer": true,
         "score": 0,
         "atype": "P",
-        "questions_map": [
-          {
-            "label": "Are there controls implemented to monitor the audit storage capability and ensure audit data availability?",
-            "branch": 1,
-            "level": 12,
-            "order": 1
-          }
-        ],
         "label": "Audit trails or records ar modifiable by any user profile.",
         "recommendations": [
           {
@@ -677,14 +715,6 @@
         "uniqueAnswer": true,
         "score": 0,
         "atype": "P",
-        "questions_map": [
-          {
-            "label": "Are there controls implemented to monitor the audit storage capability and ensure audit data availability?",
-            "branch": 1,
-            "level": 12,
-            "order": 1
-          }
-        ],
         "label": "Only authorized administrators can edit or modify an audit trail.",
         "recommendations": [
           {
@@ -701,14 +731,6 @@
         "uniqueAnswer": true,
         "score": 0,
         "atype": "P",
-        "questions_map": [
-          {
-            "label": "Are there controls implemented to monitor the audit storage capability and ensure audit data availability?",
-            "branch": 1,
-            "level": 12,
-            "order": 1
-          }
-        ],
         "label": "Audit trail cannot be modified or delited by any user profile.",
         "recommendations": []
       }
@@ -727,14 +749,6 @@
         "uniqueAnswer": true,
         "score": 0,
         "atype": "P",
-        "questions_map": [
-          {
-            "label": "Have you implemented controls to detect and prevent potential audit data loss due to imminent audit storage failure.",
-            "branch": 1,
-            "level": 13,
-            "order": 1
-          }
-        ],
         "label": "No, there is no control implemented to monitor audit storage capability.",
         "recommendations": [
           {
@@ -751,14 +765,6 @@
         "uniqueAnswer": true,
         "score": 0,
         "atype": "P",
-        "questions_map": [
-          {
-            "label": "Have you implemented controls to detect and prevent potential audit data loss due to imminent audit storage failure.",
-            "branch": 1,
-            "level": 13,
-            "order": 1
-          }
-        ],
         "label": "The product has controls implemented to ensure that any potential issues the storage capability is proactively detected in advance.",
         "recommendations": []
       }
@@ -777,14 +783,6 @@
         "uniqueAnswer": true,
         "score": 0,
         "atype": "P",
-        "questions_map": [
-          {
-            "label": "Is there a cryptographic key management function implemented in your product?",
-            "branch": 1,
-            "level": 14,
-            "order": 1
-          }
-        ],
         "label": "There is no control implemented to detect any potential incident with the audit storage.",
         "recommendations": [
           {
@@ -801,14 +799,6 @@
         "uniqueAnswer": true,
         "score": 0,
         "atype": "P",
-        "questions_map": [
-          {
-            "label": "Is there a cryptographic key management function implemented in your product?",
-            "branch": 1,
-            "level": 14,
-            "order": 1
-          }
-        ],
         "label": "There are controls implemented to ensure that potential audit storage incident or failure is proactively detected and resolved.",
         "recommendations": []
       }
@@ -827,14 +817,6 @@
         "uniqueAnswer": true,
         "score": 0,
         "atype": "P",
-        "questions_map": [
-          {
-            "label": "Are there controls implemented to guarantee the security of data stored or processed by your product?",
-            "branch": 1,
-            "level": 15,
-            "order": 1
-          }
-        ],
         "label": "There is no cryptographic key management function implemented.",
         "recommendations": [
           {
@@ -851,14 +833,6 @@
         "uniqueAnswer": false,
         "score": 0,
         "atype": "P",
-        "questions_map": [
-          {
-            "label": "Are there controls implemented to guarantee the security of data stored or processed by your product?",
-            "branch": 1,
-            "level": 15,
-            "order": 1
-          }
-        ],
         "label": "Cryptographic key generation function is implemented.",
         "recommendations": [
           {
@@ -875,14 +849,6 @@
         "uniqueAnswer": false,
         "score": 0,
         "atype": "P",
-        "questions_map": [
-          {
-            "label": "Are users of the product have a set of security attributes, other than the user?s identity?",
-            "branch": 1,
-            "level": 15,
-            "order": 1
-          }
-        ],
         "label": "Cryptographic key distribution function is implemented.",
         "recommendations": [
           {
@@ -899,14 +865,6 @@
         "uniqueAnswer": false,
         "score": 0,
         "atype": "P",
-        "questions_map": [
-          {
-            "label": "Are users of the product have a set of security attributes, other than the user?s identity?",
-            "branch": 1,
-            "level": 15,
-            "order": 1
-          }
-        ],
         "label": "Cryptographic key access function is implemented.",
         "recommendations": [
           {
@@ -923,14 +881,6 @@
         "uniqueAnswer": false,
         "score": 0,
         "atype": "P",
-        "questions_map": [
-          {
-            "label": "Are users of the product have a set of security attributes, other than the user?s identity?",
-            "branch": 1,
-            "level": 15,
-            "order": 1
-          }
-        ],
         "label": "Cryptographic key destruction function is implemented.",
         "recommendations": [
           {
@@ -947,14 +897,6 @@
         "uniqueAnswer": true,
         "score": 0,
         "atype": "P",
-        "questions_map": [
-          {
-            "label": "Are users of the product have a set of security attributes, other than the user?s identity?",
-            "branch": 1,
-            "level": 15,
-            "order": 1
-          }
-        ],
         "label": "N/A",
         "recommendations": []
       }
@@ -973,14 +915,6 @@
         "uniqueAnswer": true,
         "score": 0,
         "atype": "P",
-        "questions_map": [
-          {
-            "label": "Have you implemented any controls to ensure the security of data while in transit?",
-            "branch": 1,
-            "level": 16,
-            "order": 1
-          }
-        ],
         "label": "There is no security control implemented to ensure data security at rest or when being used for certain operations.",
         "recommendations": [
           {
@@ -997,14 +931,6 @@
         "uniqueAnswer": true,
         "score": 0,
         "atype": "P",
-        "questions_map": [
-          {
-            "label": "Have you implemented any controls to ensure the security of data while in transit?",
-            "branch": 1,
-            "level": 16,
-            "order": 1
-          }
-        ],
         "label": "There are controls implemented to ensure the security of data stored or processed by the product.",
         "recommendations": []
       }
@@ -1023,14 +949,6 @@
         "uniqueAnswer": true,
         "score": 0,
         "atype": "P",
-        "questions_map": [
-          {
-            "label": "Is your product able to recover from a list of known recoverable errors?",
-            "branch": 1,
-            "level": 17,
-            "order": 1
-          }
-        ],
         "label": "There is no security control implemented to ensure data security while in transit.",
         "recommendations": [
           {
@@ -1047,14 +965,6 @@
         "uniqueAnswer": true,
         "score": 0,
         "atype": "P",
-        "questions_map": [
-          {
-            "label": "Is your product able to recover from a list of known recoverable errors?",
-            "branch": 1,
-            "level": 17,
-            "order": 1
-          }
-        ],
         "label": "There are controls implemented to ensure the security of data in transit.",
         "recommendations": []
       }
@@ -1073,14 +983,6 @@
         "uniqueAnswer": true,
         "score": 0,
         "atype": "P",
-        "questions_map": [
-          {
-            "label": "Are controls implemented to manage a threshold of unsuccessful authentification attempts?",
-            "branch": 1,
-            "level": 18,
-            "order": 1
-          }
-        ],
         "label": "No, there is not any automatic recovery mechanism implemented.",
         "recommendations": [
           {
@@ -1097,14 +999,6 @@
         "uniqueAnswer": true,
         "score": 0,
         "atype": "P",
-        "questions_map": [
-          {
-            "label": "Are controls implemented to manage a threshold of unsuccessful authentification attempts?",
-            "branch": 1,
-            "level": 18,
-            "order": 1
-          }
-        ],
         "label": "Yes, automatic recovery mechanisms from known incidents and events are implemented.",
         "recommendations": []
       },
@@ -1113,14 +1007,6 @@
         "uniqueAnswer": true,
         "score": 0,
         "atype": "P",
-        "questions_map": [
-          {
-            "label": "Have you implemented an access control mechanism that requires users to authenticate before any other action is allowed?",
-            "branch": 1,
-            "level": 18,
-            "order": 1
-          }
-        ],
         "label": "N/A",
         "recommendations": []
       }
@@ -1139,14 +1025,6 @@
         "uniqueAnswer": false,
         "score": 0,
         "atype": "P",
-        "questions_map": [
-          {
-            "label": "Are users of the product have a set of security attributes, other than the user?s identity?",
-            "branch": 1,
-            "level": 19,
-            "order": 1
-          }
-        ],
         "label": "The number of unsuccessful authentification attempts is not tracked.",
         "recommendations": [
           {
@@ -1163,14 +1041,6 @@
         "uniqueAnswer": false,
         "score": 0,
         "atype": "P",
-        "questions_map": [
-          {
-            "label": "Are users of the product have a set of security attributes, other than the user?s identity?",
-            "branch": 1,
-            "level": 19,
-            "order": 1
-          }
-        ],
         "label": "The user account is permanently or temporarily locked after a defined number of unsuccessful authentification attempts.",
         "recommendations": []
       },
@@ -1179,14 +1049,6 @@
         "uniqueAnswer": false,
         "score": 0,
         "atype": "P",
-        "questions_map": [
-          {
-            "label": "Are there any controls implemented to detect and prevent the use of authentication data that has been forged or copied?",
-            "branch": 1,
-            "level": 19,
-            "order": 1
-          }
-        ],
         "label": "The user is informed via email or text message after a defined number of unsuccessful authentification attempts.",
         "recommendations": []
       }
@@ -1205,14 +1067,6 @@
         "uniqueAnswer": true,
         "score": 0,
         "atype": "P",
-        "questions_map": [
-          {
-            "label": "Is there a secret verification method implemented?",
-            "branch": 1,
-            "level": 20,
-            "order": 1
-          }
-        ],
         "label": "No, users do not have any security attribute, other than their identity.",
         "recommendations": [
           {
@@ -1229,14 +1083,6 @@
         "uniqueAnswer": true,
         "score": 0,
         "atype": "P",
-        "questions_map": [
-          {
-            "label": "Is there a secret verification method implemented?",
-            "branch": 1,
-            "level": 20,
-            "order": 1
-          }
-        ],
         "label": "In addition to their identity, users do have other security attributes.",
         "recommendations": []
       },
@@ -1245,14 +1091,6 @@
         "uniqueAnswer": true,
         "score": 0,
         "atype": "P",
-        "questions_map": [
-          {
-            "label": "Have you implemented any method that allows authorized administrators to manage security function rules or attributes?",
-            "branch": 1,
-            "level": 20,
-            "order": 1
-          }
-        ],
         "label": "N/A",
         "recommendations": []
       }
@@ -1271,14 +1109,6 @@
         "uniqueAnswer": true,
         "score": 0,
         "atype": "P",
-        "questions_map": [
-          {
-            "label": "Is there an algorithm implemented for a secret generation?",
-            "branch": 1,
-            "level": 21,
-            "order": 1
-          }
-        ],
         "label": "There is no secret verification method implemented.",
         "recommendations": [
           {
@@ -1295,14 +1125,6 @@
         "uniqueAnswer": true,
         "score": 0,
         "atype": "P",
-        "questions_map": [
-          {
-            "label": "Is there an algorithm implemented for a secret generation?",
-            "branch": 1,
-            "level": 21,
-            "order": 1
-          }
-        ],
         "label": "There is a secret verification method implemented, however, we do not know if it is secure.",
         "recommendations": []
       },
@@ -1311,14 +1133,6 @@
         "uniqueAnswer": true,
         "score": 0,
         "atype": "P",
-        "questions_map": [
-          {
-            "label": "Is there any controls or mechanism implemented to ensure  anonymity when required?",
-            "branch": 1,
-            "level": 21,
-            "order": 1
-          }
-        ],
         "label": "The secret verification method implemented, has been tested and any identified vulnerabilities have been remediated.",
         "recommendations": []
       }
@@ -1337,14 +1151,6 @@
         "uniqueAnswer": true,
         "score": 0,
         "atype": "P",
-        "questions_map": [
-          {
-            "label": "Have you implemented an access control mechanism that requires users to authenticate before any other action is allowed?",
-            "branch": 1,
-            "level": 22,
-            "order": 1
-          }
-        ],
         "label": "The algorithm implemented for secrets generation has a known flaw.",
         "recommendations": [
           {
@@ -1361,14 +1167,6 @@
         "uniqueAnswer": true,
         "score": 0,
         "atype": "P",
-        "questions_map": [
-          {
-            "label": "Have you implemented an access control mechanism that requires users to authenticate before any other action is allowed?",
-            "branch": 1,
-            "level": 22,
-            "order": 1
-          }
-        ],
         "label": "We have implemented a proprietary secret generation algorithm.",
         "recommendations": []
       },
@@ -1377,14 +1175,6 @@
         "uniqueAnswer": true,
         "score": 0,
         "atype": "P",
-        "questions_map": [
-          {
-            "label": "Are there controls implemented to ensure that the product preserves a secure state in case of failure?",
-            "branch": 1,
-            "level": 22,
-            "order": 1
-          }
-        ],
         "label": "A secure secret generation algorithm has been implemented.",
         "recommendations": []
       },
@@ -1393,14 +1183,6 @@
         "uniqueAnswer": true,
         "score": 0,
         "atype": "P",
-        "questions_map": [
-          {
-            "label": "Are there controls implemented to ensure that the product preserves a secure state in case of failure?",
-            "branch": 1,
-            "level": 22,
-            "order": 1
-          }
-        ],
         "label": "N/A",
         "recommendations": []
       }
@@ -1419,14 +1201,6 @@
         "uniqueAnswer": true,
         "score": 0,
         "atype": "P",
-        "questions_map": [
-          {
-            "label": "Are there any controls implemented to detect and prevent the use of authentication data that has been forged or copied?",
-            "branch": 1,
-            "level": 23,
-            "order": 1
-          }
-        ],
         "label": "Users can perform certain actions without being authenticated.",
         "recommendations": [
           {
@@ -1434,7 +1208,7 @@
             "max_e_count": "j",
             "sector": null,
             "answerChosen": true,
-            "label": "Authentification is the fundamental security control, hence when applicable, It is recommended to establish an authentication mechanism based on the user?s ?Username? and ?Password? or ?PIN?."
+            "label": "Authentication is the fundamental security control, hence when applicable, It is recommended to establish an authentication mechanism based on the user's \"Username\" and \"Password\" or \"PIN\"."
           }
         ]
       },
@@ -1443,15 +1217,7 @@
         "uniqueAnswer": true,
         "score": 0,
         "atype": "P",
-        "questions_map": [
-          {
-            "label": "Are there any controls implemented to detect and prevent the use of authentication data that has been forged or copied?",
-            "branch": 1,
-            "level": 23,
-            "order": 1
-          }
-        ],
-        "label": "b  Users do not need to authenticate, in order to do any action  with the product.",
+        "label": "Users do not need to authenticate, in order to do any action  with the product.",
         "recommendations": []
       },
       {
@@ -1459,14 +1225,6 @@
         "uniqueAnswer": true,
         "score": 0,
         "atype": "P",
-        "questions_map": [
-          {
-            "label": "Are there controls implemented to ensure that any possible modification to data during transmission is detected and remediated accordantly?",
-            "branch": 1,
-            "level": 23,
-            "order": 1
-          }
-        ],
         "label": "Users can only perform any given action or activity if only they are authenticated and authorized.",
         "recommendations": []
       },
@@ -1475,14 +1233,6 @@
         "uniqueAnswer": true,
         "score": 0,
         "atype": "P",
-        "questions_map": [
-          {
-            "label": "Are there controls implemented to ensure that any possible modification to data during transmission is detected and remediated accordantly?",
-            "branch": 1,
-            "level": 23,
-            "order": 1
-          }
-        ],
         "label": "N/A",
         "recommendations": []
       }
@@ -1501,14 +1251,6 @@
         "uniqueAnswer": true,
         "score": 0,
         "atype": "P",
-        "questions_map": [
-          {
-            "label": "Have you implemented any function that allows authorized administrators to manage subject security attributes?",
-            "branch": 1,
-            "level": 24,
-            "order": 1
-          }
-        ],
         "label": "No, there is no control implemented to detect and prevent the use of authentication data that has been forged or copied.",
         "recommendations": [
           {
@@ -1525,14 +1267,6 @@
         "uniqueAnswer": true,
         "score": 0,
         "atype": "P",
-        "questions_map": [
-          {
-            "label": "Have you implemented any function that allows authorized administrators to manage subject security attributes?",
-            "branch": 1,
-            "level": 24,
-            "order": 1
-          }
-        ],
         "label": "Yes, controls have been implemented to detect and prevent the use of authentication data that has been forged or copied.",
         "recommendations": []
       }
@@ -1551,14 +1285,6 @@
         "uniqueAnswer": true,
         "score": 0,
         "atype": "P",
-        "questions_map": [
-          {
-            "label": "Have you implemented any method that allows authorized administrators to manage security function rules or attributes?",
-            "branch": 1,
-            "level": 25,
-            "order": 1
-          }
-        ],
         "label": "There is no function that allows authorized administrators to manage subject security attributes.",
         "recommendations": [
           {
@@ -1575,14 +1301,6 @@
         "uniqueAnswer": true,
         "score": 0,
         "atype": "P",
-        "questions_map": [
-          {
-            "label": "Have you implemented any method that allows authorized administrators to manage security function rules or attributes?",
-            "branch": 1,
-            "level": 25,
-            "order": 1
-          }
-        ],
         "label": "Administrators are able to manage subjects? security attributes.",
         "recommendations": [
           {
@@ -1599,14 +1317,6 @@
         "uniqueAnswer": true,
         "score": 0,
         "atype": "P",
-        "questions_map": [
-          {
-            "label": "Are there controls implemented within the product to ensure data replication consistency?",
-            "branch": 1,
-            "level": 25,
-            "order": 1
-          }
-        ],
         "label": "N/A",
         "recommendations": []
       }
@@ -1625,14 +1335,6 @@
         "uniqueAnswer": true,
         "score": 0,
         "atype": "P",
-        "questions_map": [
-          {
-            "label": "Are there controls implemented that allows authorized administrators to manage the group of roles that can interact with private or sensible data?",
-            "branch": 1,
-            "level": 26,
-            "order": 1
-          }
-        ],
         "label": "There is no method implemented to allow authorized administrators to manage security function rules or attributes.",
         "recommendations": [
           {
@@ -1649,14 +1351,6 @@
         "uniqueAnswer": true,
         "score": 0,
         "atype": "P",
-        "questions_map": [
-          {
-            "label": "Are there controls implemented that allows authorized administrators to manage the group of roles that can interact with private or sensible data?",
-            "branch": 1,
-            "level": 26,
-            "order": 1
-          }
-        ],
         "label": "There are methods implemented to allow authorized administrators to manage security function rules or attributes.",
         "recommendations": [
           {
@@ -1683,14 +1377,6 @@
         "uniqueAnswer": true,
         "score": 0,
         "atype": "P",
-        "questions_map": [
-          {
-            "label": "Are there controls implemented to allow authorized roles to manage the revocation of accounts?",
-            "branch": 1,
-            "level": 27,
-            "order": 1
-          }
-        ],
         "label": "All users can access all data stored or processed by the product.",
         "recommendations": [
           {
@@ -1707,14 +1393,6 @@
         "uniqueAnswer": true,
         "score": 0,
         "atype": "P",
-        "questions_map": [
-          {
-            "label": "Are there controls implemented to allow authorized roles to manage the revocation of accounts?",
-            "branch": 1,
-            "level": 27,
-            "order": 1
-          }
-        ],
         "label": "Access to data can be granted based on the profile of the user and the rights given by the administrators.",
         "recommendations": []
       }
@@ -1733,14 +1411,6 @@
         "uniqueAnswer": true,
         "score": 0,
         "atype": "P",
-        "questions_map": [
-          {
-            "label": "Is there any controls or mechanism implemented to ensure  anonymity when required?",
-            "branch": 1,
-            "level": 28,
-            "order": 1
-          }
-        ],
         "label": "Only users can decide to delete their account or profile.",
         "recommendations": [
           {
@@ -1757,14 +1427,6 @@
         "uniqueAnswer": true,
         "score": 0,
         "atype": "P",
-        "questions_map": [
-          {
-            "label": "Is there any controls or mechanism implemented to ensure  anonymity when required?",
-            "branch": 1,
-            "level": 28,
-            "order": 1
-          }
-        ],
         "label": "All users are able to revocate any accounts.",
         "recommendations": []
       },
@@ -1773,14 +1435,6 @@
         "uniqueAnswer": true,
         "score": 0,
         "atype": "P",
-        "questions_map": [
-          {
-            "label": "Is there any controls or mechanism implemented to ensure  anonymity when required?",
-            "branch": 1,
-            "level": 28,
-            "order": 1
-          }
-        ],
         "label": "Only administrators are able to revoke users' accounts.",
         "recommendations": []
       }
@@ -1799,14 +1453,6 @@
         "uniqueAnswer": true,
         "score": 0,
         "atype": "P",
-        "questions_map": [
-          {
-            "label": "Are there controls implemented to ensure that the product preserves a secure state in case of failure?",
-            "branch": 1,
-            "level": 29,
-            "order": 1
-          }
-        ],
         "label": "There is no control implemented to ensure  anonymity.",
         "recommendations": [
           {
@@ -1823,14 +1469,6 @@
         "uniqueAnswer": true,
         "score": 0,
         "atype": "P",
-        "questions_map": [
-          {
-            "label": "Are there controls implemented to ensure that the product preserves a secure state in case of failure?",
-            "branch": 1,
-            "level": 29,
-            "order": 1
-          }
-        ],
         "label": "Data privacy controls are considered and implemented.",
         "recommendations": []
       },
@@ -1839,14 +1477,6 @@
         "uniqueAnswer": true,
         "score": 0,
         "atype": "P",
-        "questions_map": [
-          {
-            "label": "Are there controls implemented to ensure that the product preserves a secure state in case of failure?",
-            "branch": 1,
-            "level": 29,
-            "order": 1
-          }
-        ],
         "label": "Data anonymity feature is available and could be activated by an administrator.",
         "recommendations": []
       },
@@ -1855,14 +1485,6 @@
         "uniqueAnswer": true,
         "score": 0,
         "atype": "P",
-        "questions_map": [
-          {
-            "label": "Are there controls implemented to ensure that the product preserves a secure state in case of failure?",
-            "branch": 1,
-            "level": 29,
-            "order": 1
-          }
-        ],
         "label": "There are controls implemented that allow only authorized users to access data, in order to ensure confidentiality.",
         "recommendations": []
       }
@@ -1881,14 +1503,6 @@
         "uniqueAnswer": true,
         "score": 0,
         "atype": "P",
-        "questions_map": [
-          {
-            "label": "Are there controls implemented to ensure that any possible modification to data during transmission is detected and remediated accordantly?",
-            "branch": 1,
-            "level": 30,
-            "order": 1
-          }
-        ],
         "label": "There is no control implemented to ensure that the product preserves a secure state in case of failure.",
         "recommendations": [
           {
@@ -1905,14 +1519,6 @@
         "uniqueAnswer": true,
         "score": 0,
         "atype": "P",
-        "questions_map": [
-          {
-            "label": "Are there controls implemented to ensure that any possible modification to data during transmission is detected and remediated accordantly?",
-            "branch": 1,
-            "level": 30,
-            "order": 1
-          }
-        ],
         "label": "There is no test conducted to verify if the product preserves a secure state in case of failure.",
         "recommendations": []
       },
@@ -1921,14 +1527,6 @@
         "uniqueAnswer": true,
         "score": 0,
         "atype": "P",
-        "questions_map": [
-          {
-            "label": "Are there controls implemented to ensure that any possible modification to data during transmission is detected and remediated accordantly?",
-            "branch": 1,
-            "level": 30,
-            "order": 1
-          }
-        ],
         "label": "Our product has been tested and the results show that it preserves a secure state in case of failure.",
         "recommendations": []
       }
@@ -1947,14 +1545,6 @@
         "uniqueAnswer": true,
         "score": 0,
         "atype": "P",
-        "questions_map": [
-          {
-            "label": "Are controls implemented to ensure the security of data when it is transferred internally between services and components.?",
-            "branch": 1,
-            "level": 31,
-            "order": 1
-          }
-        ],
         "label": "No, There is no control implemented to ensure that any possible modification to data during transmission is detected.",
         "recommendations": [
           {
@@ -1971,14 +1561,6 @@
         "uniqueAnswer": true,
         "score": 0,
         "atype": "P",
-        "questions_map": [
-          {
-            "label": "Are controls implemented to ensure the security of data when it is transferred internally between services and components.?",
-            "branch": 1,
-            "level": 31,
-            "order": 1
-          }
-        ],
         "label": "Controls are implemented to detect, notify any potential modification to data during transmission.",
         "recommendations": []
       }
@@ -1997,14 +1579,6 @@
         "uniqueAnswer": true,
         "score": 0,
         "atype": "P",
-        "questions_map": [
-          {
-            "label": "Is the security and resilience of your product against potential physical security attacks tested?",
-            "branch": 1,
-            "level": 32,
-            "order": 1
-          }
-        ],
         "label": "No, there is no control implemented to ensure the security of data when it is transferred internally between services and components.",
         "recommendations": [
           {
@@ -2021,14 +1595,6 @@
         "uniqueAnswer": true,
         "score": 0,
         "atype": "P",
-        "questions_map": [
-          {
-            "label": "Is the security and resilience of your product against potential physical security attacks tested?",
-            "branch": 1,
-            "level": 32,
-            "order": 1
-          }
-        ],
         "label": "There are controls implemented to ensure the security of data when it is transferred internally between services and components.",
         "recommendations": []
       }
@@ -2047,14 +1613,6 @@
         "uniqueAnswer": true,
         "score": 0,
         "atype": "P",
-        "questions_map": [
-          {
-            "label": "Is there a manual recovery mechanism implemented to guarantee a return to a secure state when needed?",
-            "branch": 1,
-            "level": 33,
-            "order": 1
-          }
-        ],
         "label": "No, the product has not been tested to verify its resilience to potential physical security attacks.",
         "recommendations": [
           {
@@ -2071,14 +1629,6 @@
         "uniqueAnswer": true,
         "score": 0,
         "atype": "P",
-        "questions_map": [
-          {
-            "label": "Is there a manual recovery mechanism implemented to guarantee a return to a secure state when needed?",
-            "branch": 1,
-            "level": 33,
-            "order": 1
-          }
-        ],
         "label": "Our product has been tested, and it is resilient to any potential physical security attack.",
         "recommendations": []
       }
@@ -2097,14 +1647,6 @@
         "uniqueAnswer": true,
         "score": 0,
         "atype": "P",
-        "questions_map": [
-          {
-            "label": "Are controls implemented to detect and prevent any potential replay attacks?",
-            "branch": 1,
-            "level": 34,
-            "order": 1
-          }
-        ],
         "label": "There is no reset or manual recovery mechanism implemented to ensure a return to a secure state when needed.",
         "recommendations": [
           {
@@ -2121,14 +1663,6 @@
         "uniqueAnswer": true,
         "score": 0,
         "atype": "P",
-        "questions_map": [
-          {
-            "label": "Are controls implemented to detect and prevent any potential replay attacks?",
-            "branch": 1,
-            "level": 34,
-            "order": 1
-          }
-        ],
         "label": "There is a manual recovery mechanism implemented to ensure a return to a secure state when needed.",
         "recommendations": []
       }
@@ -2147,14 +1681,6 @@
         "uniqueAnswer": true,
         "score": 0,
         "atype": "P",
-        "questions_map": [
-          {
-            "label": "Have you tested the accuracy, reliability, and security of the timestamp function in your product?",
-            "branch": 1,
-            "level": 35,
-            "order": 1
-          }
-        ],
         "label": "No, there is no control implemented to detect potential replay attacks.",
         "recommendations": [
           {
@@ -2171,14 +1697,6 @@
         "uniqueAnswer": true,
         "score": 0,
         "atype": "P",
-        "questions_map": [
-          {
-            "label": "Have you tested the accuracy, reliability, and security of the timestamp function in your product?",
-            "branch": 1,
-            "level": 35,
-            "order": 1
-          }
-        ],
         "label": "Controls have been implemented to ensure that potential relay attacks are detected and flagged.",
         "recommendations": []
       },
@@ -2187,14 +1705,6 @@
         "uniqueAnswer": true,
         "score": 0,
         "atype": "P",
-        "questions_map": [
-          {
-            "label": "Have you tested the accuracy, reliability, and security of the timestamp function in your product?",
-            "branch": 1,
-            "level": 35,
-            "order": 1
-          }
-        ],
         "label": "N/A",
         "recommendations": []
       }
@@ -2213,14 +1723,6 @@
         "uniqueAnswer": true,
         "score": 0,
         "atype": "P",
-        "questions_map": [
-          {
-            "label": "Are there controls implemented within the product to ensure data replication consistency?",
-            "branch": 1,
-            "level": 36,
-            "order": 1
-          }
-        ],
         "label": "No, this has not been tested.",
         "recommendations": [
           {
@@ -2237,14 +1739,6 @@
         "uniqueAnswer": true,
         "score": 0,
         "atype": "P",
-        "questions_map": [
-          {
-            "label": "Are there controls implemented within the product to ensure data replication consistency?",
-            "branch": 1,
-            "level": 36,
-            "order": 1
-          }
-        ],
         "label": "Yes, we have realized a series of tests to ensure that the timestamp function is accurate, reliable, and secure.",
         "recommendations": []
       },
@@ -2253,14 +1747,6 @@
         "uniqueAnswer": true,
         "score": 0,
         "atype": "P",
-        "questions_map": [
-          {
-            "label": "Are there controls implemented within the product to ensure data replication consistency?",
-            "branch": 1,
-            "level": 36,
-            "order": 1
-          }
-        ],
         "label": "N/A",
         "recommendations": []
       }
@@ -2279,14 +1765,6 @@
         "uniqueAnswer": true,
         "score": 0,
         "atype": "P",
-        "questions_map": [
-          {
-            "label": "Does your product run any self-tests to verify the correct operation of key services?",
-            "branch": 1,
-            "level": 37,
-            "order": 1
-          }
-        ],
         "label": "There is no control implemented within the product to ensure data replication consistency.",
         "recommendations": [
           {
@@ -2303,14 +1781,6 @@
         "uniqueAnswer": true,
         "score": 0,
         "atype": "P",
-        "questions_map": [
-          {
-            "label": "Does your product run any self-tests to verify the correct operation of key services?",
-            "branch": 1,
-            "level": 37,
-            "order": 1
-          }
-        ],
         "label": "The product has control implemented to guarantee data replication consistency.",
         "recommendations": []
       }
@@ -2329,14 +1799,6 @@
         "uniqueAnswer": true,
         "score": 0,
         "atype": "P",
-        "questions_map": [
-          {
-            "label": "Are there any controls implemented to limit the number of concurrent sessions per user?",
-            "branch": 1,
-            "level": 38,
-            "order": 1
-          }
-        ],
         "label": "There is no self-test run by the product to verify the correct operation of key services.",
         "recommendations": [
           {
@@ -2353,14 +1815,6 @@
         "uniqueAnswer": true,
         "score": 0,
         "atype": "P",
-        "questions_map": [
-          {
-            "label": "Are there any controls implemented to limit the number of concurrent sessions per user?",
-            "branch": 1,
-            "level": 38,
-            "order": 1
-          }
-        ],
         "label": "There are preconfigured self-tests that run  to ensure the correct operation of key services.",
         "recommendations": []
       },
@@ -2369,14 +1823,6 @@
         "uniqueAnswer": true,
         "score": 0,
         "atype": "P",
-        "questions_map": [
-          {
-            "label": "Are there any controls implemented to limit the number of concurrent sessions per user?",
-            "branch": 1,
-            "level": 38,
-            "order": 1
-          }
-        ],
         "label": "N/A",
         "recommendations": []
       }
@@ -2395,14 +1841,6 @@
         "uniqueAnswer": true,
         "score": 0,
         "atype": "P",
-        "questions_map": [
-          {
-            "label": "Are there controls implemented to ensure that open sessions are automatically locked after a specified period of user inactivity?",
-            "branch": 1,
-            "level": 39,
-            "order": 1
-          }
-        ],
         "label": "There is no control implemented to limit the number of concurrent sessions per user.",
         "recommendations": [
           {
@@ -2419,14 +1857,6 @@
         "uniqueAnswer": true,
         "score": 0,
         "atype": "P",
-        "questions_map": [
-          {
-            "label": "Are there controls implemented to ensure that open sessions are automatically locked after a specified period of user inactivity?",
-            "branch": 1,
-            "level": 39,
-            "order": 1
-          }
-        ],
         "label": "The number of concurrent sessions per user is limited to a defined number.",
         "recommendations": [
           {
@@ -2443,14 +1873,6 @@
         "uniqueAnswer": true,
         "score": 0,
         "atype": "P",
-        "questions_map": [
-          {
-            "label": "Are there controls implemented to ensure that open sessions are automatically locked after a specified period of user inactivity?",
-            "branch": 1,
-            "level": 39,
-            "order": 1
-          }
-        ],
         "label": "N/A",
         "recommendations": [
           {
@@ -2477,14 +1899,6 @@
         "uniqueAnswer": true,
         "score": 0,
         "atype": "P",
-        "questions_map": [
-          {
-            "label": "Are there methods implemented to provide users the capabilities to lock their own interactive sessions?",
-            "branch": 1,
-            "level": 40,
-            "order": 1
-          }
-        ],
         "label": "Open sessions are not automatically locked, this can only be done by the user.",
         "recommendations": [
           {
@@ -2501,14 +1915,6 @@
         "uniqueAnswer": true,
         "score": 0,
         "atype": "P",
-        "questions_map": [
-          {
-            "label": "Are there methods implemented to provide users the capabilities to lock their own interactive sessions?",
-            "branch": 1,
-            "level": 40,
-            "order": 1
-          }
-        ],
         "label": "An open session without any activity for a defined period of time is automatically locked by the product.",
         "recommendations": [
           {
@@ -2535,14 +1941,6 @@
         "uniqueAnswer": true,
         "score": 0,
         "atype": "P",
-        "questions_map": [
-          {
-            "label": "Are there functions implemented to provide users the capability to terminate their own interactive sessions?",
-            "branch": 1,
-            "level": 41,
-            "order": 1
-          }
-        ],
         "label": "No, there is no method implemented.",
         "recommendations": [
           {
@@ -2559,14 +1957,6 @@
         "uniqueAnswer": true,
         "score": 0,
         "atype": "P",
-        "questions_map": [
-          {
-            "label": "Are there functions implemented to provide users the capability to terminate their own interactive sessions?",
-            "branch": 1,
-            "level": 41,
-            "order": 1
-          }
-        ],
         "label": "Yes, there are methods implemented.",
         "recommendations": [
           {
@@ -2593,14 +1983,6 @@
         "uniqueAnswer": true,
         "score": 0,
         "atype": "P",
-        "questions_map": [
-          {
-            "label": "Is there a configurable banner service available to authorized administrators to warn authorized users?",
-            "branch": 1,
-            "level": 42,
-            "order": 1
-          }
-        ],
         "label": "There is no function available that provides users the capability to terminate their own sessions.",
         "recommendations": [
           {
@@ -2617,14 +1999,6 @@
         "uniqueAnswer": true,
         "score": 0,
         "atype": "P",
-        "questions_map": [
-          {
-            "label": "Is there a configurable banner service available to authorized administrators to warn authorized users?",
-            "branch": 1,
-            "level": 42,
-            "order": 1
-          }
-        ],
         "label": "There is a function implemented that gives users the capability to terminate their own sessions.",
         "recommendations": [
           {
@@ -2632,7 +2006,7 @@
             "max_e_count": "j",
             "sector": null,
             "answerChosen": true,
-            "label": "Another important recommendation on session management, is to have a configurable that can be set to automaticaly locked or terminate open sessions after a defined period period of user inactivity."
+            "label": "Another important recommendation on session management, is to have a configurable that can be set to automatically locked or terminate open sessions after a defined period period of user inactivity."
           }
         ]
       }
@@ -2651,7 +2025,6 @@
         "uniqueAnswer": true,
         "score": 0,
         "atype": "P",
-        "questions_map": [],
         "label": "No, there is no configurable banner service available.",
         "recommendations": [
           {
@@ -2668,7 +2041,6 @@
         "uniqueAnswer": true,
         "score": 0,
         "atype": "P",
-        "questions_map": [],
         "label": "Yes, there is a configurable banner service available to authorized administrators.",
         "recommendations": []
       }
