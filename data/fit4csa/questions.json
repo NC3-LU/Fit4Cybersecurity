@@ -4,7 +4,7 @@
     "service_category": "Context",
     "section": "First question",
     "qtype": "S",
-    "qindex": 0,
+    "qindex": 1,
     "maxPoints": 0,
     "answers": [
       {
@@ -49,7 +49,7 @@
     "section": "Functional specification (ADV_FSP)",
     "service_category": "Basic functional specification  and operational user guidance",
     "qtype": "S",
-    "qindex": 1,
+    "qindex": 2,
     "maxPoints": 0,
     "label": "As part of your product design, is there any specification of security features that is understandable and available to users?",
     "answers": [
@@ -99,7 +99,7 @@
     "section": "CM scope (ALC_CMS)",
     "service_category": "TOE CM coverage",
     "qtype": "S",
-    "qindex": 2,
+    "qindex": 3,
     "maxPoints": 0,
     "label": "Do you have a documented process for tracking major development decisions or changes applied to the product?",
     "answers": [
@@ -165,7 +165,7 @@
     "section": "Independent testing (ATE_IND)",
     "service_category": "Independent testing - conformance",
     "qtype": "S",
-    "qindex": 3,
+    "qindex": 4,
     "maxPoints": 0,
     "label": "Was functional testing of your product on a defined scope conducted?",
     "answers": [
@@ -215,7 +215,7 @@
     "section": "Vulnerability analysis (AVA_VAN)",
     "service_category": "Vulnerability survey",
     "qtype": "S",
-    "qindex": 4,
+    "qindex": 5,
     "maxPoints": 0,
     "label": "Have you realized a vulnerability assessment of your product in order to identify and address potential vulnerabilities introduced during development or operation?",
     "answers": [
@@ -281,7 +281,7 @@
     "section": "Security audit automatic response (FAU_ARP)",
     "service_category": "Security alarms",
     "qtype": "S",
-    "qindex": 5,
+    "qindex": 6,
     "maxPoints": 0,
     "label": "Is there an automatic response process implemented in case a potential security violation is detected?",
     "answers": [
@@ -339,7 +339,7 @@
     "section": "Security audit data generation (FAU_GEN)",
     "service_category": "Audit data generation",
     "qtype": "S",
-    "qindex": 6,
+    "qindex": 7,
     "maxPoints": 0,
     "label": "Have you defined for each security event alert, a list of data that should be recorded?",
     "answers": [
@@ -389,7 +389,7 @@
     "section": "Security audit data generation (FAU_GEN)",
     "service_category": "User identity association",
     "qtype": "S",
-    "qindex": 7,
+    "qindex": 8,
     "maxPoints": 0,
     "label": "Is it possible to associate each auditable event with the identity of the user that caused the event?",
     "answers": [
@@ -455,7 +455,7 @@
     "section": "TOE access history (FTA_TAH)",
     "service_category": "TOE access history",
     "qtype": "S",
-    "qindex": 8,
+    "qindex": 9,
     "maxPoints": 0,
     "label": "Are there controls implemented to log all types of access to the product?",
     "answers": [
@@ -505,7 +505,7 @@
     "section": "Security audit analysis (FAU_SAA)",
     "service_category": "Potential violation or attack detection and analysis",
     "qtype": "S",
-    "qindex": 9,
+    "qindex": 10,
     "maxPoints": 0,
     "label": "Are there any controls implemented to identify potential violation based on predefined rule set and known vulnerabilities ?",
     "answers": [
@@ -571,7 +571,7 @@
     "section": "Security audit review (FAU_SAR)",
     "service_category": "Security audit review management",
     "qtype": "S",
-    "qindex": 10,
+    "qindex": 11,
     "maxPoints": 0,
     "label": "Is it possible for users of your product to access and read information from the audit records?",
     "answers": [
@@ -637,7 +637,7 @@
     "section": "Security audit event storage (FAU_STG)",
     "service_category": "Protected audit trail storage",
     "qtype": "S",
-    "qindex": 11,
+    "qindex": 12,
     "maxPoints": 0,
     "label": "Have you implemented controls to prevent any modification or deletion of the audit trail?",
     "answers": [
@@ -711,7 +711,7 @@
     "section": "Security audit event storage (FAU_STG)",
     "service_category": "Guarantees of audit data availability",
     "qtype": "S",
-    "qindex": 12,
+    "qindex": 13,
     "maxPoints": 0,
     "label": "Are there controls implemented to monitor the audit storage capability and ensure audit data availability?",
     "answers": [
@@ -761,7 +761,7 @@
     "section": "Security audit event storage (FAU_STG)",
     "service_category": "Audit data loss management",
     "qtype": "S",
-    "qindex": 13,
+    "qindex": 14,
     "maxPoints": 0,
     "label": "Have you implemented controls to detect and prevent potential audit data loss due to imminent audit storage failure.",
     "answers": [
@@ -811,7 +811,7 @@
     "section": "Cryptographic key management (FCS_CKM)",
     "service_category": "Cryptographic key management",
     "qtype": "M",
-    "qindex": 14,
+    "qindex": 15,
     "maxPoints": 0,
     "label": "Is there a cryptographic key management function implemented in your product?",
     "answers": [
@@ -957,7 +957,7 @@
     "section": "Stored data integrity (FDP_SDI)",
     "service_category": "Stored data integrity monitoring and action",
     "qtype": "S",
-    "qindex": 15,
+    "qindex": 16,
     "maxPoints": 0,
     "label": "Are there controls implemented to guarantee the security of data stored or processed by your product?",
     "answers": [
@@ -1007,7 +1007,7 @@
     "section": "Inter-TSF user data confidentiality transfer protection (FDP_UCT)",
     "service_category": "Basic data exchange confidentiality",
     "qtype": "S",
-    "qindex": 16,
+    "qindex": 17,
     "maxPoints": 0,
     "label": "Have you implemented any controls to ensure the security of data while in transit?",
     "answers": [
@@ -1057,7 +1057,7 @@
     "section": "Inter-TSF user data integrity transfer protection (FDP_UIT)",
     "service_category": "Data recovery process",
     "qtype": "S",
-    "qindex": 17,
+    "qindex": 18,
     "maxPoints": 0,
     "label": "Is your product able to recover from a list of known recoverable errors?",
     "answers": [
@@ -1123,7 +1123,7 @@
     "section": "Authentication failures (FIA_AFL)",
     "service_category": "Authentication failure handling",
     "qtype": "M",
-    "qindex": 18,
+    "qindex": 19,
     "maxPoints": 0,
     "label": "Are controls implemented to manage a threshold of unsuccessful authentification attempts?",
     "answers": [
@@ -1189,7 +1189,7 @@
     "section": "User attribute definition (FIA_ATD)",
     "service_category": "User attribute definition",
     "qtype": "S",
-    "qindex": 19,
+    "qindex": 20,
     "maxPoints": 0,
     "label": "Are users of the product have a set of security attributes, other than the user?s identity?",
     "answers": [
@@ -1255,7 +1255,7 @@
     "section": "Specification of secrets (FIA_SOS)",
     "service_category": "Verification of secrets",
     "qtype": "S",
-    "qindex": 20,
+    "qindex": 21,
     "maxPoints": 0,
     "label": "Is there a secret verification method implemented?",
     "answers": [
@@ -1321,7 +1321,7 @@
     "section": "Specification of secrets (FIA_SOS)",
     "service_category": "TSF Generation of secrets",
     "qtype": "S",
-    "qindex": 21,
+    "qindex": 22,
     "maxPoints": 0,
     "label": "Is there an algorithm implemented for a secret generation?",
     "answers": [
@@ -1403,7 +1403,7 @@
     "section": "User authentication (FIA_UAU)",
     "service_category": "User authentication requirements",
     "qtype": "S",
-    "qindex": 22,
+    "qindex": 23,
     "maxPoints": 0,
     "label": "Have you implemented an access control mechanism that requires users to authenticate before any other action is allowed?",
     "answers": [
@@ -1485,7 +1485,7 @@
     "section": "User authentication (FIA_UAU)",
     "service_category": "Unforgeable authentication",
     "qtype": "S",
-    "qindex": 23,
+    "qindex": 24,
     "maxPoints": 0,
     "label": "Are there any controls implemented to detect and prevent the use of authentication data that has been forged or copied?",
     "answers": [
@@ -1535,7 +1535,7 @@
     "section": "User-subject binding (FIA_USB)",
     "service_category": "User-subject binding",
     "qtype": "S",
-    "qindex": 24,
+    "qindex": 25,
     "maxPoints": 0,
     "label": "Have you implemented any function that allows authorized administrators to manage subject security attributes?",
     "answers": [
@@ -1609,7 +1609,7 @@
     "section": "Management of functions in TSF (FMT_MOF)",
     "service_category": "Management of security functions and attributes",
     "qtype": "S",
-    "qindex": 25,
+    "qindex": 26,
     "maxPoints": 0,
     "label": "Have you implemented any method that allows authorized administrators to manage security function rules or attributes?",
     "answers": [
@@ -1667,7 +1667,7 @@
     "section": "No Section",
     "service_category": "FMT_MTD.2 Management of limits on TSF data",
     "qtype": "S",
-    "qindex": 26,
+    "qindex": 27,
     "maxPoints": 0,
     "label": "Are there controls implemented that allows authorized administrators to manage the group of roles that can interact with private or sensible data?",
     "answers": [
@@ -1717,7 +1717,7 @@
     "section": "Revocation (FMT_REV)",
     "service_category": "Access Revocation Management",
     "qtype": "S",
-    "qindex": 27,
+    "qindex": 28,
     "maxPoints": 0,
     "label": "Are there controls implemented to allow authorized roles to manage the revocation of accounts?",
     "answers": [
@@ -1783,7 +1783,7 @@
     "section": "Data Anonymity , Pseudonymity, unlinkability, unobservability solutions",
     "service_category": "Data Anonymity , Pseudonymity, unlinkability, unobservability solutions",
     "qtype": "S",
-    "qindex": 28,
+    "qindex": 29,
     "maxPoints": 0,
     "label": "Is there any controls or mechanism implemented to ensure  anonymity when required?",
     "answers": [
@@ -1865,7 +1865,7 @@
     "section": "Fail secure (FPT_FLS)",
     "service_category": "Failure with preservation of secure state",
     "qtype": "S",
-    "qindex": 29,
+    "qindex": 30,
     "maxPoints": 0,
     "label": "Are there controls implemented to ensure that the product preserves a secure state in case of failure?",
     "answers": [
@@ -1931,7 +1931,7 @@
     "section": "Internal TOE TSF data transfer (FPT_ITT)",
     "service_category": "Finter-TSF detection and correction of modification",
     "qtype": "S",
-    "qindex": 30,
+    "qindex": 31,
     "maxPoints": 0,
     "label": "Are there controls implemented to ensure that any possible modification to data during transmission is detected and remediated accordantly?",
     "answers": [
@@ -1981,7 +1981,7 @@
     "section": "Internal TOE TSF data transfer (FPT_ITT)",
     "service_category": "Basic internal TSF data transfer protection",
     "qtype": "S",
-    "qindex": 31,
+    "qindex": 32,
     "maxPoints": 0,
     "label": "Are controls implemented to ensure the security of data when it is transferred internally between services and components.?",
     "answers": [
@@ -2031,7 +2031,7 @@
     "section": "No Section",
     "service_category": "No Category",
     "qtype": "S",
-    "qindex": 32,
+    "qindex": 33,
     "maxPoints": 0,
     "label": "Is the security and resilience of your product against potential physical security attacks tested?",
     "answers": [
@@ -2081,7 +2081,7 @@
     "section": "Trusted recovery (FPT_RCV)",
     "service_category": "Manual recovery",
     "qtype": "S",
-    "qindex": 33,
+    "qindex": 34,
     "maxPoints": 0,
     "label": "Is there a manual recovery mechanism implemented to guarantee a return to a secure state when needed?",
     "answers": [
@@ -2131,7 +2131,7 @@
     "section": "Replay detection (FPT_RPL)",
     "service_category": "Replay detection",
     "qtype": "S",
-    "qindex": 34,
+    "qindex": 35,
     "maxPoints": 0,
     "label": "Are controls implemented to detect and prevent any potential replay attacks?",
     "answers": [
@@ -2197,7 +2197,7 @@
     "section": "Time stamps (FPT_STM)",
     "service_category": "Reliable time stamps",
     "qtype": "S",
-    "qindex": 35,
+    "qindex": 36,
     "maxPoints": 0,
     "label": "Have you tested the accuracy, reliability, and security of the timestamp function in your product?",
     "answers": [
@@ -2263,7 +2263,7 @@
     "section": "Internal TOE TSF data replication consistency (FPT_TRC)",
     "service_category": "Internal TSF consistency.",
     "qtype": "S",
-    "qindex": 36,
+    "qindex": 37,
     "maxPoints": 0,
     "label": "Are there controls implemented within the product to ensure data replication consistency?",
     "answers": [
@@ -2313,7 +2313,7 @@
     "section": "TSF self test (FPT_TST)",
     "service_category": "TSF testing",
     "qtype": "S",
-    "qindex": 37,
+    "qindex": 38,
     "maxPoints": 0,
     "label": "Does your product run any self-tests to verify the correct operation of key services?",
     "answers": [
@@ -2379,7 +2379,7 @@
     "section": "Limitation on multiple concurrent sessions (FTA_MCS)",
     "service_category": "Basic limitation on multiple concurrent sessions",
     "qtype": "S",
-    "qindex": 38,
+    "qindex": 39,
     "maxPoints": 0,
     "label": "Are there any controls implemented to limit the number of concurrent sessions per user?",
     "answers": [
@@ -2447,7 +2447,11 @@
         "label": "N/A",
         "recommendations": [
           {
-            "label": "It is normal that users should have the means or capacity to lock or terminate their own interactive sessions. However, they should not be able to manage (lock, modify or terminate, etc.) other users' sessions."
+            "label": "It is normal that users should have the means or capacity to lock or terminate their own interactive sessions. However, they should not be able to manage (lock, modify or terminate, etc.) other users' sessions.",
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": true
           }
         ]
       }
@@ -2457,7 +2461,7 @@
     "section": "Session locking and termination (FTA_SSL)",
     "service_category": "TSF-initiated session locking",
     "qtype": "S",
-    "qindex": 39,
+    "qindex": 40,
     "maxPoints": 0,
     "label": "Are there controls implemented to ensure that open sessions are automatically locked after a specified period of user inactivity?",
     "answers": [
@@ -2515,7 +2519,7 @@
     "section": "Session locking and termination (FTA_SSL)",
     "service_category": "User-initiated locking",
     "qtype": "S",
-    "qindex": 40,
+    "qindex": 41,
     "maxPoints": 0,
     "label": "Are there methods implemented to provide users the capabilities to lock their own interactive sessions?",
     "answers": [
@@ -2573,7 +2577,7 @@
     "section": "Session locking and termination (FTA_SSL)",
     "service_category": "User-initiated termination",
     "qtype": "S",
-    "qindex": 41,
+    "qindex": 42,
     "maxPoints": 0,
     "label": "Are there functions implemented to provide users the capability to terminate their own interactive sessions?",
     "answers": [
@@ -2631,7 +2635,7 @@
     "section": "TOE access banners (FTA_TAB)",
     "service_category": "TOE access banners (FTA_TAB)",
     "qtype": "S",
-    "qindex": 42,
+    "qindex": 43,
     "maxPoints": 0,
     "label": "Is there a configurable banner service available to authorized administrators to warn authorized users?",
     "answers": [
