@@ -813,7 +813,8 @@ def increment_questions_sequence_order_from(
 
 
 def get_total_questions_number(user: SurveyUser, question_index: int) -> int:
-    if (not SurveyAnswerQuestionMap.objects.exists()
+    if (
+        not SurveyAnswerQuestionMap.objects.exists()
         or CUSTOM["is_simple_questionnaire_tree"]
     ):
         return SurveyUserQuestionSequence.objects.filter(
