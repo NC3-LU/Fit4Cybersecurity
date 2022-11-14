@@ -1,0 +1,2666 @@
+[
+  {
+    "label": "Select the type of element for certification.",
+    "service_category": "Context",
+    "section": "First question",
+    "qtype": "S",
+    "qindex": 0,
+    "maxPoints": 0,
+    "answers": [
+      {
+        "label": "ICT Services",
+        "uniqueAnswer": true,
+        "value": "SERV",
+        "atype": "P",
+        "aindex": 1
+      },
+      {
+        "label": "ICT Process",
+        "value": "PROC",
+        "uniqueAnswer": true,
+        "atype": "P",
+        "aindex": 2
+      },
+      {
+        "label": "ICT Generic Products",
+        "value": "GPRO",
+        "uniqueAnswer": true,
+        "atype": "P",
+        "aindex": 3,
+        "questions_map": [
+          {
+            "label": "As part of your product design, is there any specification of security features that is understandable and available to users?",
+            "branch": 1,
+            "level": 1,
+            "order": 1
+          }
+        ]
+      },
+      {
+        "label": "ICT Web Application",
+        "value": "WEBA",
+        "uniqueAnswer": true,
+        "atype": "P",
+        "aindex": 4
+      }
+    ]
+  },
+  {
+    "section": "Functional specification (ADV_FSP)",
+    "service_category": "Basic functional specification  and operational user guidance",
+    "qtype": "S",
+    "qindex": 1,
+    "maxPoints": 0,
+    "label": "As part of your product design, is there any specification of security features that is understandable and available to users?",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": true,
+        "score": 0,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Do you have a documented process for tracking major development decisions or changes applied to the product?",
+            "branch": 1,
+            "level": 2,
+            "order": 1
+          }
+        ],
+        "label": "There is nothing",
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": true,
+            "label": "It is recommended that product designers distribute their products with all key specifications that describe not only the functional features but also the security features and functionalities."
+          }
+        ]
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": true,
+        "score": 0,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Do you have a documented process for tracking major development decisions or changes applied to the product?",
+            "branch": 1,
+            "level": 2,
+            "order": 1
+          }
+        ],
+        "label": "There is a specification and we have invested effort into making it understandable for most users.",
+        "recommendations": []
+      }
+    ]
+  },
+  {
+    "section": "CM scope (ALC_CMS)",
+    "service_category": "TOE CM coverage",
+    "qtype": "S",
+    "qindex": 2,
+    "maxPoints": 0,
+    "label": "Do you have a documented process for tracking major development decisions or changes applied to the product?",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": true,
+        "score": 0,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Was functional testing of your product on a defined scope conducted?",
+            "branch": 1,
+            "level": 3,
+            "order": 1
+          }
+        ],
+        "label": "No, there is no process available.",
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": true,
+            "label": "It is recommended to have a registry or a document where you record major developments and changes applied to your product. The information to be provided can be, for example, an update or modification done to the security features, an update done to the security specification guidance document, product architecture, etc."
+          }
+        ]
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": true,
+        "score": 0,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Was functional testing of your product on a defined scope conducted?",
+            "branch": 1,
+            "level": 3,
+            "order": 1
+          }
+        ],
+        "label": "Yes, there is a documented process for tracking the major development of the product.",
+        "recommendations": []
+      },
+      {
+        "aindex": 3,
+        "uniqueAnswer": true,
+        "score": 0,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Was functional testing of your product on a defined scope conducted?",
+            "branch": 1,
+            "level": 3,
+            "order": 1
+          }
+        ],
+        "label": "N/A",
+        "recommendations": []
+      }
+    ]
+  },
+  {
+    "section": "Independent testing (ATE_IND)",
+    "service_category": "Independent testing - conformance",
+    "qtype": "S",
+    "qindex": 3,
+    "maxPoints": 0,
+    "label": "Was functional testing of your product on a defined scope conducted?",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": true,
+        "score": 0,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Have you realized a vulnerability assessment of your product in order to identify and address potential vulnerabilities introduced during development or operation?",
+            "branch": 1,
+            "level": 4,
+            "order": 1
+          }
+        ],
+        "label": "No, there is no functional testing conducted for the product.",
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": true,
+            "label": "It is a good practice to test and ensure that the designed product  and all the security features  implemented works correctly as intended."
+          }
+        ]
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": true,
+        "score": 0,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Have you realized a vulnerability assessment of your product in order to identify and address potential vulnerabilities introduced during development or operation?",
+            "branch": 1,
+            "level": 4,
+            "order": 1
+          }
+        ],
+        "label": "functional testing of the product has been conducted.",
+        "recommendations": []
+      }
+    ]
+  },
+  {
+    "section": "Vulnerability analysis (AVA_VAN)",
+    "service_category": "Vulnerability survey",
+    "qtype": "S",
+    "qindex": 4,
+    "maxPoints": 0,
+    "label": "Have you realized a vulnerability assessment of your product in order to identify and address potential vulnerabilities introduced during development or operation?",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": true,
+        "score": 0,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Is there an automatic response process implemented in case a potential security violation is detected?",
+            "branch": 1,
+            "level": 5,
+            "order": 1
+          }
+        ],
+        "label": "No, there was not any vulnerability assessment conducted for the product.",
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": true,
+            "label": "Good vulnerability management is key in designing and maintaining a secure product. Hence, it is recommended to run an automatic vulnerability scan of all software modules in the product in order to identify and remediate known vulnerabilities before moving the product to production and on the market."
+          }
+        ]
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": true,
+        "score": 0,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Is there an automatic response process implemented in case a potential security violation is detected?",
+            "branch": 1,
+            "level": 5,
+            "order": 1
+          }
+        ],
+        "label": "Yes, a vulnerability assessment has been conducted .",
+        "recommendations": []
+      },
+      {
+        "aindex": 3,
+        "uniqueAnswer": true,
+        "score": 0,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Is there an automatic response process implemented in case a potential security violation is detected?",
+            "branch": 1,
+            "level": 5,
+            "order": 1
+          }
+        ],
+        "label": "A vulnerability assessment has been conducted and all identified vulnerabilities have been remediated.",
+        "recommendations": []
+      }
+    ]
+  },
+  {
+    "section": "Security audit automatic response (FAU_ARP)",
+    "service_category": "Security alarms",
+    "qtype": "S",
+    "qindex": 5,
+    "maxPoints": 0,
+    "label": "Is there an automatic response process implemented in case a potential security violation is detected?",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": true,
+        "score": 0,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Have you defined for each security event alert, a list of data that should be recorded?",
+            "branch": 1,
+            "level": 6,
+            "order": 1
+          }
+        ],
+        "label": "No, there is not any automatic response process implemented to deal with potential security violations.",
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": true,
+            "label": "It is recommended to have a configurable feature that the user can set to receive security alerts or notifications."
+          }
+        ]
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": true,
+        "score": 0,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Have you defined for each security event alert, a list of data that should be recorded?",
+            "branch": 1,
+            "level": 6,
+            "order": 1
+          }
+        ],
+        "label": "An automatic response process has been implemented to deal with defined security violations.",
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": true,
+            "label": "For certain products, it is recommended to have configurable predefined actions for certain types of incidents or events."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "section": "Security audit data generation (FAU_GEN)",
+    "service_category": "Audit data generation",
+    "qtype": "S",
+    "qindex": 6,
+    "maxPoints": 0,
+    "label": "Have you defined for each security event alert, a list of data that should be recorded?",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": true,
+        "score": 0,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Is it possible to associate each auditable event with the identity of the user that caused the event?",
+            "branch": 1,
+            "level": 7,
+            "order": 1
+          }
+        ],
+        "label": "There is no alert configured for any security event.",
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": true,
+            "label": "For better management of incidents or security events, it is recommended to have enough information in the audit logs or alerts generated by the product. The alerts generated by the product should at least contain information such as date, time, system or component affected, IP address, etc."
+          }
+        ]
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": true,
+        "score": 0,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Is it possible to associate each auditable event with the identity of the user that caused the event?",
+            "branch": 1,
+            "level": 7,
+            "order": 1
+          }
+        ],
+        "label": "A list of data that should be recorded for each security event has been defined.",
+        "recommendations": []
+      }
+    ]
+  },
+  {
+    "section": "Security audit data generation (FAU_GEN)",
+    "service_category": "User identity association",
+    "qtype": "S",
+    "qindex": 7,
+    "maxPoints": 0,
+    "label": "Is it possible to associate each auditable event with the identity of the user that caused the event?",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": true,
+        "score": 0,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Are there controls implemented to log all types of access to the product?",
+            "branch": 1,
+            "level": 8,
+            "order": 1
+          }
+        ],
+        "label": "Nominative profiles can not be created with our product, hence it is not possible to associate the event with a user?s identity.",
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": true,
+            "label": "For the purpose of accountability when applicable, it is recommended that audit logs generated by the product can be associated with a profile and user. Also, the administrator profile should have access to the audit logs but should not be able to modify any data in the log."
+          }
+        ]
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": true,
+        "score": 0,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Are there controls implemented to log all types of access to the product?",
+            "branch": 1,
+            "level": 8,
+            "order": 1
+          }
+        ],
+        "label": "Yes, It is possible to associate a security event with the identity of the user that caused it.",
+        "recommendations": []
+      },
+      {
+        "aindex": 3,
+        "uniqueAnswer": true,
+        "score": 0,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Are there controls implemented to log all types of access to the product?",
+            "branch": 1,
+            "level": 8,
+            "order": 1
+          }
+        ],
+        "label": "N/A",
+        "recommendations": []
+      }
+    ]
+  },
+  {
+    "section": "TOE access history (FTA_TAH)",
+    "service_category": "TOE access history",
+    "qtype": "S",
+    "qindex": 8,
+    "maxPoints": 0,
+    "label": "Are there controls implemented to log all types of access to the product?",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": true,
+        "score": 0,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Are there any controls implemented to identify potential violation based on predefined rule set and known vulnerabilities ?",
+            "branch": 1,
+            "level": 9,
+            "order": 1
+          }
+        ],
+        "label": "There is no control to log all types of access to the product.",
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": true,
+            "label": "For the purpose of accountability when applicable, it is recommended that audit logs generated by the product can be associated with a profile and user. Also, the administrator profile should have access to the audit logs but should not be able to modify any data in the log."
+          }
+        ]
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": true,
+        "score": 0,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Are there any controls implemented to identify potential violation based on predefined rule set and known vulnerabilities ?",
+            "branch": 1,
+            "level": 9,
+            "order": 1
+          }
+        ],
+        "label": "The product has a log function that logs all types of access to the product.",
+        "recommendations": []
+      }
+    ]
+  },
+  {
+    "section": "Security audit analysis (FAU_SAA)",
+    "service_category": "Potential violation or attack detection and analysis",
+    "qtype": "S",
+    "qindex": 9,
+    "maxPoints": 0,
+    "label": "Are there any controls implemented to identify potential violation based on predefined rule set and known vulnerabilities ?",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": true,
+        "score": 0,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Is it possible for users of your product to access and read information from the audit records?",
+            "branch": 1,
+            "level": 10,
+            "order": 1
+          }
+        ],
+        "label": "No, there is no control implemented to identify potential violation based on predefined rule set.",
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": true,
+            "label": "When applicable, it is recommended to have configurable features for administrators to set rules for the identification of security violations and incidents."
+          }
+        ]
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": true,
+        "score": 0,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Is it possible for users of your product to access and read information from the audit records?",
+            "branch": 1,
+            "level": 10,
+            "order": 1
+          }
+        ],
+        "label": "A number of rule sets have been implemented and are capable to flag any potential violation.",
+        "recommendations": []
+      },
+      {
+        "aindex": 3,
+        "uniqueAnswer": true,
+        "score": 0,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Is it possible for users of your product to access and read information from the audit records?",
+            "branch": 1,
+            "level": 10,
+            "order": 1
+          }
+        ],
+        "label": "N/A",
+        "recommendations": []
+      }
+    ]
+  },
+  {
+    "section": "Security audit review (FAU_SAR)",
+    "service_category": "Security audit review management",
+    "qtype": "S",
+    "qindex": 10,
+    "maxPoints": 0,
+    "label": "Is it possible for users of your product to access and read information from the audit records?",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": true,
+        "score": 0,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Have you implemented controls to prevent any modification or deletion of the audit trail?",
+            "branch": 1,
+            "level": 11,
+            "order": 1
+          }
+        ],
+        "label": "Audit records is accessible to all users of the product, there is no control restrict access to only authorised users.",
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": true,
+            "label": "The access control on your product should be very explicit and denied by default. Access to audit logs should be limited to administrators and authorized users only. No user or even administrator should not have the capacity to modify or delete an audit log."
+          }
+        ]
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": true,
+        "score": 0,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Have you implemented controls to prevent any modification or deletion of the audit trail?",
+            "branch": 1,
+            "level": 11,
+            "order": 1
+          }
+        ],
+        "label": "There are controls implemented to limit access to audit record to only authorized users.",
+        "recommendations": []
+      },
+      {
+        "aindex": 3,
+        "uniqueAnswer": true,
+        "score": 0,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Have you implemented controls to prevent any modification or deletion of the audit trail?",
+            "branch": 1,
+            "level": 11,
+            "order": 1
+          }
+        ],
+        "label": "There are not any audit data recorded.",
+        "recommendations": []
+      }
+    ]
+  },
+  {
+    "section": "Security audit event storage (FAU_STG)",
+    "service_category": "Protected audit trail storage",
+    "qtype": "S",
+    "qindex": 11,
+    "maxPoints": 0,
+    "label": "Have you implemented controls to prevent any modification or deletion of the audit trail?",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": true,
+        "score": 0,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Are there controls implemented to monitor the audit storage capability and ensure audit data availability?",
+            "branch": 1,
+            "level": 12,
+            "order": 1
+          }
+        ],
+        "label": "Audit trails or records ar modifiable by any user profile.",
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": true,
+            "label": "Audit logs are key for accountability and forensic investigation. Hence, it is recommended to implement controls and prevent any user, even administrator from modifying and deleting information generated in the audit trail."
+          }
+        ]
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": true,
+        "score": 0,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Are there controls implemented to monitor the audit storage capability and ensure audit data availability?",
+            "branch": 1,
+            "level": 12,
+            "order": 1
+          }
+        ],
+        "label": "Only authorized administrators can edit or modify an audit trail.",
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": true,
+            "label": "Audit logs are key for accountability and forensic investigation. Hence, it is recommended to implement controls and prevent any user, even administrator from modifying and deleting information generated in the audit trail."
+          }
+        ]
+      },
+      {
+        "aindex": 3,
+        "uniqueAnswer": true,
+        "score": 0,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Are there controls implemented to monitor the audit storage capability and ensure audit data availability?",
+            "branch": 1,
+            "level": 12,
+            "order": 1
+          }
+        ],
+        "label": "Audit trail cannot be modified or delited by any user profile.",
+        "recommendations": []
+      }
+    ]
+  },
+  {
+    "section": "Security audit event storage (FAU_STG)",
+    "service_category": "Guarantees of audit data availability",
+    "qtype": "S",
+    "qindex": 12,
+    "maxPoints": 0,
+    "label": "Are there controls implemented to monitor the audit storage capability and ensure audit data availability?",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": true,
+        "score": 0,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Have you implemented controls to detect and prevent potential audit data loss due to imminent audit storage failure.",
+            "branch": 1,
+            "level": 13,
+            "order": 1
+          }
+        ],
+        "label": "No, there is no control implemented to monitor audit storage capability.",
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": true,
+            "label": "As there is no infinite storage capacity available on the products, it is recommended to have functionalities that allow administrators to monitor and manage audit storage capacity."
+          }
+        ]
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": true,
+        "score": 0,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Have you implemented controls to detect and prevent potential audit data loss due to imminent audit storage failure.",
+            "branch": 1,
+            "level": 13,
+            "order": 1
+          }
+        ],
+        "label": "The product has controls implemented to ensure that any potential issues the storage capability is proactively detected in advance.",
+        "recommendations": []
+      }
+    ]
+  },
+  {
+    "section": "Security audit event storage (FAU_STG)",
+    "service_category": "Audit data loss management",
+    "qtype": "S",
+    "qindex": 13,
+    "maxPoints": 0,
+    "label": "Have you implemented controls to detect and prevent potential audit data loss due to imminent audit storage failure.",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": true,
+        "score": 0,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Is there a cryptographic key management function implemented in your product?",
+            "branch": 1,
+            "level": 14,
+            "order": 1
+          }
+        ],
+        "label": "There is no control implemented to detect any potential incident with the audit storage.",
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": true,
+            "label": "It also recommended having a configurable feature that can detect and alert the administrator or the user on potential audit storage failure."
+          }
+        ]
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": true,
+        "score": 0,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Is there a cryptographic key management function implemented in your product?",
+            "branch": 1,
+            "level": 14,
+            "order": 1
+          }
+        ],
+        "label": "There are controls implemented to ensure that potential audit storage incident or failure is proactively detected and resolved.",
+        "recommendations": []
+      }
+    ]
+  },
+  {
+    "section": "Cryptographic key management (FCS_CKM)",
+    "service_category": "Cryptographic key management",
+    "qtype": "M",
+    "qindex": 14,
+    "maxPoints": 0,
+    "label": "Is there a cryptographic key management function implemented in your product?",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": true,
+        "score": 0,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Are there controls implemented to guarantee the security of data stored or processed by your product?",
+            "branch": 1,
+            "level": 15,
+            "order": 1
+          }
+        ],
+        "label": "There is no cryptographic key management function implemented.",
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": true,
+            "label": "Cryptographic keys must be managed throughout their life cycle. Hence, it is recommended when applicable to implement controls to ensure secure key generation, key distribution, key access, and key destruction."
+          }
+        ]
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": false,
+        "score": 0,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Are there controls implemented to guarantee the security of data stored or processed by your product?",
+            "branch": 1,
+            "level": 15,
+            "order": 1
+          }
+        ],
+        "label": "Cryptographic key generation function is implemented.",
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": false,
+            "label": "Cryptographic key generation should be done in accordance with a specified algorithm and key sizes which can be based on an assigned standard."
+          }
+        ]
+      },
+      {
+        "aindex": 3,
+        "uniqueAnswer": false,
+        "score": 0,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Are users of the product have a set of security attributes, other than the user?s identity?",
+            "branch": 1,
+            "level": 15,
+            "order": 1
+          }
+        ],
+        "label": "Cryptographic key distribution function is implemented.",
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": false,
+            "label": "Cryptographic key distribution should be distributed in accordance with a specified distribution method which can be based on an assigned standard."
+          }
+        ]
+      },
+      {
+        "aindex": 4,
+        "uniqueAnswer": false,
+        "score": 0,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Are users of the product have a set of security attributes, other than the user?s identity?",
+            "branch": 1,
+            "level": 15,
+            "order": 1
+          }
+        ],
+        "label": "Cryptographic key access function is implemented.",
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": false,
+            "label": "Cryptographic key access should be performed in accordance with a specified access method which can be based on an assigned standard."
+          }
+        ]
+      },
+      {
+        "aindex": 5,
+        "uniqueAnswer": false,
+        "score": 0,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Are users of the product have a set of security attributes, other than the user?s identity?",
+            "branch": 1,
+            "level": 15,
+            "order": 1
+          }
+        ],
+        "label": "Cryptographic key destruction function is implemented.",
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": false,
+            "label": "Cryptographic key destruction should be done in accordance with a specified destruction method which can be based on an assigned standard."
+          }
+        ]
+      },
+      {
+        "aindex": 6,
+        "uniqueAnswer": true,
+        "score": 0,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Are users of the product have a set of security attributes, other than the user?s identity?",
+            "branch": 1,
+            "level": 15,
+            "order": 1
+          }
+        ],
+        "label": "N/A",
+        "recommendations": []
+      }
+    ]
+  },
+  {
+    "section": "Stored data integrity (FDP_SDI)",
+    "service_category": "Stored data integrity monitoring and action",
+    "qtype": "S",
+    "qindex": 15,
+    "maxPoints": 0,
+    "label": "Are there controls implemented to guarantee the security of data stored or processed by your product?",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": true,
+        "score": 0,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Have you implemented any controls to ensure the security of data while in transit?",
+            "branch": 1,
+            "level": 16,
+            "order": 1
+          }
+        ],
+        "label": "There is no security control implemented to ensure data security at rest or when being used for certain operations.",
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": true,
+            "label": "Data privacy is crucial for the survival of your product and even your company in today's market. Hence, it is recommended to implement controls to ensure the security of users' data when it is processed or stored by your product. Encryption or anonymization could be an example of security control."
+          }
+        ]
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": true,
+        "score": 0,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Have you implemented any controls to ensure the security of data while in transit?",
+            "branch": 1,
+            "level": 16,
+            "order": 1
+          }
+        ],
+        "label": "There are controls implemented to ensure the security of data stored or processed by the product.",
+        "recommendations": []
+      }
+    ]
+  },
+  {
+    "section": "Inter-TSF user data confidentiality transfer protection (FDP_UCT)",
+    "service_category": "Basic data exchange confidentiality",
+    "qtype": "S",
+    "qindex": 16,
+    "maxPoints": 0,
+    "label": "Have you implemented any controls to ensure the security of data while in transit?",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": true,
+        "score": 0,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Is your product able to recover from a list of known recoverable errors?",
+            "branch": 1,
+            "level": 17,
+            "order": 1
+          }
+        ],
+        "label": "There is no security control implemented to ensure data security while in transit.",
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": true,
+            "label": "Data privacy is crucial for the survival of your product and even your company in today's market. Hence, it is recommended to implement controls to ensure the security of users' data when it is processed or stored by your product. Encryption or anonymization could be an example of security control."
+          }
+        ]
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": true,
+        "score": 0,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Is your product able to recover from a list of known recoverable errors?",
+            "branch": 1,
+            "level": 17,
+            "order": 1
+          }
+        ],
+        "label": "There are controls implemented to ensure the security of data in transit.",
+        "recommendations": []
+      }
+    ]
+  },
+  {
+    "section": "Inter-TSF user data integrity transfer protection (FDP_UIT)",
+    "service_category": "Data recovery process",
+    "qtype": "S",
+    "qindex": 17,
+    "maxPoints": 0,
+    "label": "Is your product able to recover from a list of known recoverable errors?",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": true,
+        "score": 0,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Are controls implemented to manage a threshold of unsuccessful authentification attempts?",
+            "branch": 1,
+            "level": 18,
+            "order": 1
+          }
+        ],
+        "label": "No, there is not any automatic recovery mechanism implemented.",
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": true,
+            "label": "Being able to recover from incidents or security events is key in maintaining the operational continuity of a product. Hence, the product should have configurable parameters and/or implemented controls for recovery point objectives for defined security events."
+          }
+        ]
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": true,
+        "score": 0,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Are controls implemented to manage a threshold of unsuccessful authentification attempts?",
+            "branch": 1,
+            "level": 18,
+            "order": 1
+          }
+        ],
+        "label": "Yes, automatic recovery mechanisms from known incidents and events are implemented.",
+        "recommendations": []
+      },
+      {
+        "aindex": 3,
+        "uniqueAnswer": true,
+        "score": 0,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Have you implemented an access control mechanism that requires users to authenticate before any other action is allowed?",
+            "branch": 1,
+            "level": 18,
+            "order": 1
+          }
+        ],
+        "label": "N/A",
+        "recommendations": []
+      }
+    ]
+  },
+  {
+    "section": "Authentication failures (FIA_AFL)",
+    "service_category": "Authentication failure handling",
+    "qtype": "M",
+    "qindex": 18,
+    "maxPoints": 0,
+    "label": "Are controls implemented to manage a threshold of unsuccessful authentification attempts?",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": false,
+        "score": 0,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Are users of the product have a set of security attributes, other than the user?s identity?",
+            "branch": 1,
+            "level": 19,
+            "order": 1
+          }
+        ],
+        "label": "The number of unsuccessful authentification attempts is not tracked.",
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": true,
+            "label": "Efficient access management controls are key to ensuring the security of all products. It is therefore recommended to define a threshold of possible unsuccessful authentification attempts. Passing this threshold the product should automatically lock the user account and inform the user via a provided communication medium (email or text message)."
+          }
+        ]
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": false,
+        "score": 0,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Are users of the product have a set of security attributes, other than the user?s identity?",
+            "branch": 1,
+            "level": 19,
+            "order": 1
+          }
+        ],
+        "label": "The user account is permanently or temporarily locked after a defined number of unsuccessful authentification attempts.",
+        "recommendations": []
+      },
+      {
+        "aindex": 3,
+        "uniqueAnswer": false,
+        "score": 0,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Are there any controls implemented to detect and prevent the use of authentication data that has been forged or copied?",
+            "branch": 1,
+            "level": 19,
+            "order": 1
+          }
+        ],
+        "label": "The user is informed via email or text message after a defined number of unsuccessful authentification attempts.",
+        "recommendations": []
+      }
+    ]
+  },
+  {
+    "section": "User attribute definition (FIA_ATD)",
+    "service_category": "User attribute definition",
+    "qtype": "S",
+    "qindex": 19,
+    "maxPoints": 0,
+    "label": "Are users of the product have a set of security attributes, other than the user?s identity?",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": true,
+        "score": 0,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Is there a secret verification method implemented?",
+            "branch": 1,
+            "level": 20,
+            "order": 1
+          }
+        ],
+        "label": "No, users do not have any security attribute, other than their identity.",
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": true,
+            "label": "It is important to define all possible user security attributes, other than the user?s identity for better access management. These attributes can be profiles, roles, accounts, rights revocation, etc."
+          }
+        ]
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": true,
+        "score": 0,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Is there a secret verification method implemented?",
+            "branch": 1,
+            "level": 20,
+            "order": 1
+          }
+        ],
+        "label": "In addition to their identity, users do have other security attributes.",
+        "recommendations": []
+      },
+      {
+        "aindex": 3,
+        "uniqueAnswer": true,
+        "score": 0,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Have you implemented any method that allows authorized administrators to manage security function rules or attributes?",
+            "branch": 1,
+            "level": 20,
+            "order": 1
+          }
+        ],
+        "label": "N/A",
+        "recommendations": []
+      }
+    ]
+  },
+  {
+    "section": "Specification of secrets (FIA_SOS)",
+    "service_category": "Verification of secrets",
+    "qtype": "S",
+    "qindex": 20,
+    "maxPoints": 0,
+    "label": "Is there a secret verification method implemented?",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": true,
+        "score": 0,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Is there an algorithm implemented for a secret generation?",
+            "branch": 1,
+            "level": 21,
+            "order": 1
+          }
+        ],
+        "label": "There is no secret verification method implemented.",
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": true,
+            "label": "The secret verification mechanism implemented in the product must not have any exploitable vulnerability. Hence, it is recommended to test and verify that the secret verification method implemented does not have any vulnerability. For example product secret information (PIN, Password, etc.) should not be stored in plain text on the product."
+          }
+        ]
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": true,
+        "score": 0,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Is there an algorithm implemented for a secret generation?",
+            "branch": 1,
+            "level": 21,
+            "order": 1
+          }
+        ],
+        "label": "There is a secret verification method implemented, however, we do not know if it is secure.",
+        "recommendations": []
+      },
+      {
+        "aindex": 3,
+        "uniqueAnswer": true,
+        "score": 0,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Is there any controls or mechanism implemented to ensure  anonymity when required?",
+            "branch": 1,
+            "level": 21,
+            "order": 1
+          }
+        ],
+        "label": "The secret verification method implemented, has been tested and any identified vulnerabilities have been remediated.",
+        "recommendations": []
+      }
+    ]
+  },
+  {
+    "section": "Specification of secrets (FIA_SOS)",
+    "service_category": "TSF Generation of secrets",
+    "qtype": "S",
+    "qindex": 21,
+    "maxPoints": 0,
+    "label": "Is there an algorithm implemented for a secret generation?",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": true,
+        "score": 0,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Have you implemented an access control mechanism that requires users to authenticate before any other action is allowed?",
+            "branch": 1,
+            "level": 22,
+            "order": 1
+          }
+        ],
+        "label": "The algorithm implemented for secrets generation has a known flaw.",
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": true,
+            "label": "As part of the security of the product is based on the secret data generated, we recommend using a secure secret generation algorithm and possibly evaluating and testing the security of the implementation of the algorithm."
+          }
+        ]
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": true,
+        "score": 0,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Have you implemented an access control mechanism that requires users to authenticate before any other action is allowed?",
+            "branch": 1,
+            "level": 22,
+            "order": 1
+          }
+        ],
+        "label": "We have implemented a proprietary secret generation algorithm.",
+        "recommendations": []
+      },
+      {
+        "aindex": 3,
+        "uniqueAnswer": true,
+        "score": 0,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Are there controls implemented to ensure that the product preserves a secure state in case of failure?",
+            "branch": 1,
+            "level": 22,
+            "order": 1
+          }
+        ],
+        "label": "A secure secret generation algorithm has been implemented.",
+        "recommendations": []
+      },
+      {
+        "aindex": 4,
+        "uniqueAnswer": true,
+        "score": 0,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Are there controls implemented to ensure that the product preserves a secure state in case of failure?",
+            "branch": 1,
+            "level": 22,
+            "order": 1
+          }
+        ],
+        "label": "N/A",
+        "recommendations": []
+      }
+    ]
+  },
+  {
+    "section": "User authentication (FIA_UAU)",
+    "service_category": "User authentication requirements",
+    "qtype": "S",
+    "qindex": 22,
+    "maxPoints": 0,
+    "label": "Have you implemented an access control mechanism that requires users to authenticate before any other action is allowed?",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": true,
+        "score": 0,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Are there any controls implemented to detect and prevent the use of authentication data that has been forged or copied?",
+            "branch": 1,
+            "level": 23,
+            "order": 1
+          }
+        ],
+        "label": "Users can perform certain actions without being authenticated.",
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": true,
+            "label": "Authentification is the fundamental security control, hence when applicable, It is recommended to establish an authentication mechanism based on the user?s ?Username? and ?Password? or ?PIN?."
+          }
+        ]
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": true,
+        "score": 0,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Are there any controls implemented to detect and prevent the use of authentication data that has been forged or copied?",
+            "branch": 1,
+            "level": 23,
+            "order": 1
+          }
+        ],
+        "label": "b  Users do not need to authenticate, in order to do any action  with the product.",
+        "recommendations": []
+      },
+      {
+        "aindex": 3,
+        "uniqueAnswer": true,
+        "score": 0,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Are there controls implemented to ensure that any possible modification to data during transmission is detected and remediated accordantly?",
+            "branch": 1,
+            "level": 23,
+            "order": 1
+          }
+        ],
+        "label": "Users can only perform any given action or activity if only they are authenticated and authorized.",
+        "recommendations": []
+      },
+      {
+        "aindex": 4,
+        "uniqueAnswer": true,
+        "score": 0,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Are there controls implemented to ensure that any possible modification to data during transmission is detected and remediated accordantly?",
+            "branch": 1,
+            "level": 23,
+            "order": 1
+          }
+        ],
+        "label": "N/A",
+        "recommendations": []
+      }
+    ]
+  },
+  {
+    "section": "User authentication (FIA_UAU)",
+    "service_category": "Unforgeable authentication",
+    "qtype": "S",
+    "qindex": 23,
+    "maxPoints": 0,
+    "label": "Are there any controls implemented to detect and prevent the use of authentication data that has been forged or copied?",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": true,
+        "score": 0,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Have you implemented any function that allows authorized administrators to manage subject security attributes?",
+            "branch": 1,
+            "level": 24,
+            "order": 1
+          }
+        ],
+        "label": "No, there is no control implemented to detect and prevent the use of authentication data that has been forged or copied.",
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": true,
+            "label": "Secure authentication mechanism is key in ensuring security. Hence, controls should be implemented to detect potential fraudulent authentication data. For example, the product should be able to detect expired session cookies and deny access when it is used for authentication."
+          }
+        ]
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": true,
+        "score": 0,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Have you implemented any function that allows authorized administrators to manage subject security attributes?",
+            "branch": 1,
+            "level": 24,
+            "order": 1
+          }
+        ],
+        "label": "Yes, controls have been implemented to detect and prevent the use of authentication data that has been forged or copied.",
+        "recommendations": []
+      }
+    ]
+  },
+  {
+    "section": "User-subject binding (FIA_USB)",
+    "service_category": "User-subject binding",
+    "qtype": "S",
+    "qindex": 24,
+    "maxPoints": 0,
+    "label": "Have you implemented any function that allows authorized administrators to manage subject security attributes?",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": true,
+        "score": 0,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Have you implemented any method that allows authorized administrators to manage security function rules or attributes?",
+            "branch": 1,
+            "level": 25,
+            "order": 1
+          }
+        ],
+        "label": "There is no function that allows authorized administrators to manage subject security attributes.",
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": true,
+            "label": "Security attributes are an important part of a product. Administrators being able to grant or retrieve access rights is an example of ensuring security through access management. It is, therefore, a good practice to evaluate and define all possible security attributes of your product based on functional and operational requirements during the design phase."
+          }
+        ]
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": true,
+        "score": 0,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Have you implemented any method that allows authorized administrators to manage security function rules or attributes?",
+            "branch": 1,
+            "level": 25,
+            "order": 1
+          }
+        ],
+        "label": "Administrators are able to manage subjects? security attributes.",
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": true,
+            "label": "It is also crucial to limit the management of these security attributes only to administrators' profiles. Any other profiles should not have the means or capacity to manage any of the security attributes."
+          }
+        ]
+      },
+      {
+        "aindex": 3,
+        "uniqueAnswer": true,
+        "score": 0,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Are there controls implemented within the product to ensure data replication consistency?",
+            "branch": 1,
+            "level": 25,
+            "order": 1
+          }
+        ],
+        "label": "N/A",
+        "recommendations": []
+      }
+    ]
+  },
+  {
+    "section": "Management of functions in TSF (FMT_MOF)",
+    "service_category": "Management of security functions and attributes",
+    "qtype": "S",
+    "qindex": 25,
+    "maxPoints": 0,
+    "label": "Have you implemented any method that allows authorized administrators to manage security function rules or attributes?",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": true,
+        "score": 0,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Are there controls implemented that allows authorized administrators to manage the group of roles that can interact with private or sensible data?",
+            "branch": 1,
+            "level": 26,
+            "order": 1
+          }
+        ],
+        "label": "There is no method implemented to allow authorized administrators to manage security function rules or attributes.",
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": true,
+            "label": "Security attributes are an important part of a product. Administrators being able to grant or retrieve access rights is an example of ensuring security through access management. It is, therefore, a good practice to evaluate and define all possible security attributes of your product based on functional and operational requirements during the design phase."
+          }
+        ]
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": true,
+        "score": 0,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Are there controls implemented that allows authorized administrators to manage the group of roles that can interact with private or sensible data?",
+            "branch": 1,
+            "level": 26,
+            "order": 1
+          }
+        ],
+        "label": "There are methods implemented to allow authorized administrators to manage security function rules or attributes.",
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": true,
+            "label": "It is also crucial to limit the management of these security attributes only to administrators' profiles. Any other profiles should not have the means or capacity to manage any of the security attributes."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "section": "No Section",
+    "service_category": "FMT_MTD.2 Management of limits on TSF data",
+    "qtype": "S",
+    "qindex": 26,
+    "maxPoints": 0,
+    "label": "Are there controls implemented that allows authorized administrators to manage the group of roles that can interact with private or sensible data?",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": true,
+        "score": 0,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Are there controls implemented to allow authorized roles to manage the revocation of accounts?",
+            "branch": 1,
+            "level": 27,
+            "order": 1
+          }
+        ],
+        "label": "All users can access all data stored or processed by the product.",
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": true,
+            "label": "To ensure data privacy, it is key to have access management controls implemented. Hence, it is crucial to implement features and user profiles that can allow administrators to grant access to data based on the need-to-know principle."
+          }
+        ]
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": true,
+        "score": 0,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Are there controls implemented to allow authorized roles to manage the revocation of accounts?",
+            "branch": 1,
+            "level": 27,
+            "order": 1
+          }
+        ],
+        "label": "Access to data can be granted based on the profile of the user and the rights given by the administrators.",
+        "recommendations": []
+      }
+    ]
+  },
+  {
+    "section": "Revocation (FMT_REV)",
+    "service_category": "Access Revocation Management",
+    "qtype": "S",
+    "qindex": 27,
+    "maxPoints": 0,
+    "label": "Are there controls implemented to allow authorized roles to manage the revocation of accounts?",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": true,
+        "score": 0,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Is there any controls or mechanism implemented to ensure  anonymity when required?",
+            "branch": 1,
+            "level": 28,
+            "order": 1
+          }
+        ],
+        "label": "Only users can decide to delete their account or profile.",
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": true,
+            "label": "Users' account management should only be reserved for an administrator's profile. Any other profile should not have the required rights and means to create, modify or revocate users' accounts."
+          }
+        ]
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": true,
+        "score": 0,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Is there any controls or mechanism implemented to ensure  anonymity when required?",
+            "branch": 1,
+            "level": 28,
+            "order": 1
+          }
+        ],
+        "label": "All users are able to revocate any accounts.",
+        "recommendations": []
+      },
+      {
+        "aindex": 3,
+        "uniqueAnswer": true,
+        "score": 0,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Is there any controls or mechanism implemented to ensure  anonymity when required?",
+            "branch": 1,
+            "level": 28,
+            "order": 1
+          }
+        ],
+        "label": "Only administrators are able to revoke users' accounts.",
+        "recommendations": []
+      }
+    ]
+  },
+  {
+    "section": "Data Anonymity , Pseudonymity, unlinkability, unobservability solutions",
+    "service_category": "Data Anonymity , Pseudonymity, unlinkability, unobservability solutions",
+    "qtype": "S",
+    "qindex": 28,
+    "maxPoints": 0,
+    "label": "Is there any controls or mechanism implemented to ensure  anonymity when required?",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": true,
+        "score": 0,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Are there controls implemented to ensure that the product preserves a secure state in case of failure?",
+            "branch": 1,
+            "level": 29,
+            "order": 1
+          }
+        ],
+        "label": "There is no control implemented to ensure  anonymity.",
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": true,
+            "label": "If data anonymity is required for your product or business model, it is recommended to not collect Personal Identifiable Information in the first place. Only collect information that is necessary for your product to work and active its objectives."
+          }
+        ]
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": true,
+        "score": 0,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Are there controls implemented to ensure that the product preserves a secure state in case of failure?",
+            "branch": 1,
+            "level": 29,
+            "order": 1
+          }
+        ],
+        "label": "Data privacy controls are considered and implemented.",
+        "recommendations": []
+      },
+      {
+        "aindex": 3,
+        "uniqueAnswer": true,
+        "score": 0,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Are there controls implemented to ensure that the product preserves a secure state in case of failure?",
+            "branch": 1,
+            "level": 29,
+            "order": 1
+          }
+        ],
+        "label": "Data anonymity feature is available and could be activated by an administrator.",
+        "recommendations": []
+      },
+      {
+        "aindex": 4,
+        "uniqueAnswer": true,
+        "score": 0,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Are there controls implemented to ensure that the product preserves a secure state in case of failure?",
+            "branch": 1,
+            "level": 29,
+            "order": 1
+          }
+        ],
+        "label": "There are controls implemented that allow only authorized users to access data, in order to ensure confidentiality.",
+        "recommendations": []
+      }
+    ]
+  },
+  {
+    "section": "Fail secure (FPT_FLS)",
+    "service_category": "Failure with preservation of secure state",
+    "qtype": "S",
+    "qindex": 29,
+    "maxPoints": 0,
+    "label": "Are there controls implemented to ensure that the product preserves a secure state in case of failure?",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": true,
+        "score": 0,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Are there controls implemented to ensure that any possible modification to data during transmission is detected and remediated accordantly?",
+            "branch": 1,
+            "level": 30,
+            "order": 1
+          }
+        ],
+        "label": "There is no control implemented to ensure that the product preserves a secure state in case of failure.",
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": true,
+            "label": "The resilience of your product depends on its fault tolerance and on how certain functional incidents are handled. It is there recommended to implement controls that safeguard the security state of the product in case of failure. It is crucial to evaluate and confirm that the controls implemented work effectively."
+          }
+        ]
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": true,
+        "score": 0,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Are there controls implemented to ensure that any possible modification to data during transmission is detected and remediated accordantly?",
+            "branch": 1,
+            "level": 30,
+            "order": 1
+          }
+        ],
+        "label": "There is no test conducted to verify if the product preserves a secure state in case of failure.",
+        "recommendations": []
+      },
+      {
+        "aindex": 3,
+        "uniqueAnswer": true,
+        "score": 0,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Are there controls implemented to ensure that any possible modification to data during transmission is detected and remediated accordantly?",
+            "branch": 1,
+            "level": 30,
+            "order": 1
+          }
+        ],
+        "label": "Our product has been tested and the results show that it preserves a secure state in case of failure.",
+        "recommendations": []
+      }
+    ]
+  },
+  {
+    "section": "Internal TOE TSF data transfer (FPT_ITT)",
+    "service_category": "Finter-TSF detection and correction of modification",
+    "qtype": "S",
+    "qindex": 30,
+    "maxPoints": 0,
+    "label": "Are there controls implemented to ensure that any possible modification to data during transmission is detected and remediated accordantly?",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": true,
+        "score": 0,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Are controls implemented to ensure the security of data when it is transferred internally between services and components.?",
+            "branch": 1,
+            "level": 31,
+            "order": 1
+          }
+        ],
+        "label": "No, There is no control implemented to ensure that any possible modification to data during transmission is detected.",
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": true,
+            "label": "When there are considerable risks of data during transfer either between components or products, it is highly recommended to implement security controls. Based on the processing capacity/power of your product, encryption of data during transfer should be done."
+          }
+        ]
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": true,
+        "score": 0,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Are controls implemented to ensure the security of data when it is transferred internally between services and components.?",
+            "branch": 1,
+            "level": 31,
+            "order": 1
+          }
+        ],
+        "label": "Controls are implemented to detect, notify any potential modification to data during transmission.",
+        "recommendations": []
+      }
+    ]
+  },
+  {
+    "section": "Internal TOE TSF data transfer (FPT_ITT)",
+    "service_category": "Basic internal TSF data transfer protection",
+    "qtype": "S",
+    "qindex": 31,
+    "maxPoints": 0,
+    "label": "Are controls implemented to ensure the security of data when it is transferred internally between services and components.?",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": true,
+        "score": 0,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Is the security and resilience of your product against potential physical security attacks tested?",
+            "branch": 1,
+            "level": 32,
+            "order": 1
+          }
+        ],
+        "label": "No, there is no control implemented to ensure the security of data when it is transferred internally between services and components.",
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": true,
+            "label": "When there are considerable risks of data during transfer either between components or products, it is highly recommended to implement security controls. Based on the processing capacity/power of your product, encryption of data during transfer should be done."
+          }
+        ]
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": true,
+        "score": 0,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Is the security and resilience of your product against potential physical security attacks tested?",
+            "branch": 1,
+            "level": 32,
+            "order": 1
+          }
+        ],
+        "label": "There are controls implemented to ensure the security of data when it is transferred internally between services and components.",
+        "recommendations": []
+      }
+    ]
+  },
+  {
+    "section": "No Section",
+    "service_category": "No Category",
+    "qtype": "S",
+    "qindex": 32,
+    "maxPoints": 0,
+    "label": "Is the security and resilience of your product against potential physical security attacks tested?",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": true,
+        "score": 0,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Is there a manual recovery mechanism implemented to guarantee a return to a secure state when needed?",
+            "branch": 1,
+            "level": 33,
+            "order": 1
+          }
+        ],
+        "label": "No, the product has not been tested to verify its resilience to potential physical security attacks.",
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": true,
+            "label": "When there are considerable risks of data during transfer either between components or products, it is highly recommended to implement security controls. Based on the processing capacity/power of your product, encryption of data during transfer should be done."
+          }
+        ]
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": true,
+        "score": 0,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Is there a manual recovery mechanism implemented to guarantee a return to a secure state when needed?",
+            "branch": 1,
+            "level": 33,
+            "order": 1
+          }
+        ],
+        "label": "Our product has been tested, and it is resilient to any potential physical security attack.",
+        "recommendations": []
+      }
+    ]
+  },
+  {
+    "section": "Trusted recovery (FPT_RCV)",
+    "service_category": "Manual recovery",
+    "qtype": "S",
+    "qindex": 33,
+    "maxPoints": 0,
+    "label": "Is there a manual recovery mechanism implemented to guarantee a return to a secure state when needed?",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": true,
+        "score": 0,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Are controls implemented to detect and prevent any potential replay attacks?",
+            "branch": 1,
+            "level": 34,
+            "order": 1
+          }
+        ],
+        "label": "There is no reset or manual recovery mechanism implemented to ensure a return to a secure state when needed.",
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": true,
+            "label": "It is normal that a product has malfunction issues, however, it is recommended to provide users with the features or methods to reset the product to a know secure state."
+          }
+        ]
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": true,
+        "score": 0,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Are controls implemented to detect and prevent any potential replay attacks?",
+            "branch": 1,
+            "level": 34,
+            "order": 1
+          }
+        ],
+        "label": "There is a manual recovery mechanism implemented to ensure a return to a secure state when needed.",
+        "recommendations": []
+      }
+    ]
+  },
+  {
+    "section": "Replay detection (FPT_RPL)",
+    "service_category": "Replay detection",
+    "qtype": "S",
+    "qindex": 34,
+    "maxPoints": 0,
+    "label": "Are controls implemented to detect and prevent any potential replay attacks?",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": true,
+        "score": 0,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Have you tested the accuracy, reliability, and security of the timestamp function in your product?",
+            "branch": 1,
+            "level": 35,
+            "order": 1
+          }
+        ],
+        "label": "No, there is no control implemented to detect potential replay attacks.",
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": true,
+            "label": "Accessing and identifying entities and components for which a replay attack is possible is the first step in proactively preventing such an attack. Then, controls should be implemented to detect and automatically protect the product against the successful execution of the attack."
+          }
+        ]
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": true,
+        "score": 0,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Have you tested the accuracy, reliability, and security of the timestamp function in your product?",
+            "branch": 1,
+            "level": 35,
+            "order": 1
+          }
+        ],
+        "label": "Controls have been implemented to ensure that potential relay attacks are detected and flagged.",
+        "recommendations": []
+      },
+      {
+        "aindex": 3,
+        "uniqueAnswer": true,
+        "score": 0,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Have you tested the accuracy, reliability, and security of the timestamp function in your product?",
+            "branch": 1,
+            "level": 35,
+            "order": 1
+          }
+        ],
+        "label": "N/A",
+        "recommendations": []
+      }
+    ]
+  },
+  {
+    "section": "Time stamps (FPT_STM)",
+    "service_category": "Reliable time stamps",
+    "qtype": "S",
+    "qindex": 35,
+    "maxPoints": 0,
+    "label": "Have you tested the accuracy, reliability, and security of the timestamp function in your product?",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": true,
+        "score": 0,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Are there controls implemented within the product to ensure data replication consistency?",
+            "branch": 1,
+            "level": 36,
+            "order": 1
+          }
+        ],
+        "label": "No, this has not been tested.",
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": true,
+            "label": "Accurate and secure timestamp is crucial for the efficient operation of a product, when this finctionality is available in a product."
+          }
+        ]
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": true,
+        "score": 0,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Are there controls implemented within the product to ensure data replication consistency?",
+            "branch": 1,
+            "level": 36,
+            "order": 1
+          }
+        ],
+        "label": "Yes, we have realized a series of tests to ensure that the timestamp function is accurate, reliable, and secure.",
+        "recommendations": []
+      },
+      {
+        "aindex": 3,
+        "uniqueAnswer": true,
+        "score": 0,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Are there controls implemented within the product to ensure data replication consistency?",
+            "branch": 1,
+            "level": 36,
+            "order": 1
+          }
+        ],
+        "label": "N/A",
+        "recommendations": []
+      }
+    ]
+  },
+  {
+    "section": "Internal TOE TSF data replication consistency (FPT_TRC)",
+    "service_category": "Internal TSF consistency.",
+    "qtype": "S",
+    "qindex": 36,
+    "maxPoints": 0,
+    "label": "Are there controls implemented within the product to ensure data replication consistency?",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": true,
+        "score": 0,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Does your product run any self-tests to verify the correct operation of key services?",
+            "branch": 1,
+            "level": 37,
+            "order": 1
+          }
+        ],
+        "label": "There is no control implemented within the product to ensure data replication consistency.",
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": true,
+            "label": "Accuracy and security are crucial requirements for any timestamp function within a product. Especially if this product can be used in a network with other products. Hence, it is recommended to implement the necessary controls to protect and ensure the accuracy of the timestamp function."
+          }
+        ]
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": true,
+        "score": 0,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Does your product run any self-tests to verify the correct operation of key services?",
+            "branch": 1,
+            "level": 37,
+            "order": 1
+          }
+        ],
+        "label": "The product has control implemented to guarantee data replication consistency.",
+        "recommendations": []
+      }
+    ]
+  },
+  {
+    "section": "TSF self test (FPT_TST)",
+    "service_category": "TSF testing",
+    "qtype": "S",
+    "qindex": 37,
+    "maxPoints": 0,
+    "label": "Does your product run any self-tests to verify the correct operation of key services?",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": true,
+        "score": 0,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Are there any controls implemented to limit the number of concurrent sessions per user?",
+            "branch": 1,
+            "level": 38,
+            "order": 1
+          }
+        ],
+        "label": "There is no self-test run by the product to verify the correct operation of key services.",
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": true,
+            "label": "The product should be able to verify during the initial start-up or under specified conditions, the integrity of a given data set or if some operations, functions, services, etc. work correctly as intended."
+          }
+        ]
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": true,
+        "score": 0,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Are there any controls implemented to limit the number of concurrent sessions per user?",
+            "branch": 1,
+            "level": 38,
+            "order": 1
+          }
+        ],
+        "label": "There are preconfigured self-tests that run  to ensure the correct operation of key services.",
+        "recommendations": []
+      },
+      {
+        "aindex": 3,
+        "uniqueAnswer": true,
+        "score": 0,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Are there any controls implemented to limit the number of concurrent sessions per user?",
+            "branch": 1,
+            "level": 38,
+            "order": 1
+          }
+        ],
+        "label": "N/A",
+        "recommendations": []
+      }
+    ]
+  },
+  {
+    "section": "Limitation on multiple concurrent sessions (FTA_MCS)",
+    "service_category": "Basic limitation on multiple concurrent sessions",
+    "qtype": "S",
+    "qindex": 38,
+    "maxPoints": 0,
+    "label": "Are there any controls implemented to limit the number of concurrent sessions per user?",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": true,
+        "score": 0,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Are there controls implemented to ensure that open sessions are automatically locked after a specified period of user inactivity?",
+            "branch": 1,
+            "level": 39,
+            "order": 1
+          }
+        ],
+        "label": "There is no control implemented to limit the number of concurrent sessions per user.",
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": true,
+            "label": "Session management is a key element in resource management and more importantly in preventing attacks such as denial of service. It is recommended to establish controls that allow limiting the number of concurrent sessions per user."
+          }
+        ]
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": true,
+        "score": 0,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Are there controls implemented to ensure that open sessions are automatically locked after a specified period of user inactivity?",
+            "branch": 1,
+            "level": 39,
+            "order": 1
+          }
+        ],
+        "label": "The number of concurrent sessions per user is limited to a defined number.",
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": true,
+            "label": "Another important recommendation on session management, is to have a configurable that can be set to automaticaly locked or terminate open sessions after a defined period period of user inactivity."
+          }
+        ]
+      },
+      {
+        "aindex": 3,
+        "uniqueAnswer": true,
+        "score": 0,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Are there controls implemented to ensure that open sessions are automatically locked after a specified period of user inactivity?",
+            "branch": 1,
+            "level": 39,
+            "order": 1
+          }
+        ],
+        "label": "N/A",
+        "recommendations": [
+          {
+            "label": "It is normal that users should have the means or capacity to lock or terminate their own interactive sessions. However, they should not be able to manage (lock, modify or terminate, etc.) other users' sessions."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "section": "Session locking and termination (FTA_SSL)",
+    "service_category": "TSF-initiated session locking",
+    "qtype": "S",
+    "qindex": 39,
+    "maxPoints": 0,
+    "label": "Are there controls implemented to ensure that open sessions are automatically locked after a specified period of user inactivity?",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": true,
+        "score": 0,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Are there methods implemented to provide users the capabilities to lock their own interactive sessions?",
+            "branch": 1,
+            "level": 40,
+            "order": 1
+          }
+        ],
+        "label": "Open sessions are not automatically locked, this can only be done by the user.",
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": true,
+            "label": "Session management is a key element in resource management and more importantly in preventing attacks such as denial of service. It is recommended to establish controls that allow limiting the number of concurrent sessions per user."
+          }
+        ]
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": true,
+        "score": 0,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Are there methods implemented to provide users the capabilities to lock their own interactive sessions?",
+            "branch": 1,
+            "level": 40,
+            "order": 1
+          }
+        ],
+        "label": "An open session without any activity for a defined period of time is automatically locked by the product.",
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": true,
+            "label": "Another important recommendation on session management, is to have a configurable that can be set to automaticaly locked or terminate open sessions after a defined period period of user inactivity."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "section": "Session locking and termination (FTA_SSL)",
+    "service_category": "User-initiated locking",
+    "qtype": "S",
+    "qindex": 40,
+    "maxPoints": 0,
+    "label": "Are there methods implemented to provide users the capabilities to lock their own interactive sessions?",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": true,
+        "score": 0,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Are there functions implemented to provide users the capability to terminate their own interactive sessions?",
+            "branch": 1,
+            "level": 41,
+            "order": 1
+          }
+        ],
+        "label": "No, there is no method implemented.",
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": true,
+            "label": "Session management is a key element in resource management and more importantly in preventing attacks such as denial of service. It is recommended to establish controls that allow limiting the number of concurrent sessions per user."
+          }
+        ]
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": true,
+        "score": 0,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Are there functions implemented to provide users the capability to terminate their own interactive sessions?",
+            "branch": 1,
+            "level": 41,
+            "order": 1
+          }
+        ],
+        "label": "Yes, there are methods implemented.",
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": true,
+            "label": "Another important recommendation on session management, is to have a configurable that can be set to automaticaly locked or terminate open sessions after a defined period period of user inactivity."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "section": "Session locking and termination (FTA_SSL)",
+    "service_category": "User-initiated termination",
+    "qtype": "S",
+    "qindex": 41,
+    "maxPoints": 0,
+    "label": "Are there functions implemented to provide users the capability to terminate their own interactive sessions?",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": true,
+        "score": 0,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Is there a configurable banner service available to authorized administrators to warn authorized users?",
+            "branch": 1,
+            "level": 42,
+            "order": 1
+          }
+        ],
+        "label": "There is no function available that provides users the capability to terminate their own sessions.",
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": true,
+            "label": "Session management is a key element in resource management and more importantly in preventing attacks such as denial of service. It is recommended to establish controls that allow limiting the number of concurrent sessions per user."
+          }
+        ]
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": true,
+        "score": 0,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Is there a configurable banner service available to authorized administrators to warn authorized users?",
+            "branch": 1,
+            "level": 42,
+            "order": 1
+          }
+        ],
+        "label": "There is a function implemented that gives users the capability to terminate their own sessions.",
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": true,
+            "label": "Another important recommendation on session management, is to have a configurable that can be set to automaticaly locked or terminate open sessions after a defined period period of user inactivity."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "section": "TOE access banners (FTA_TAB)",
+    "service_category": "TOE access banners (FTA_TAB)",
+    "qtype": "S",
+    "qindex": 42,
+    "maxPoints": 0,
+    "label": "Is there a configurable banner service available to authorized administrators to warn authorized users?",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": true,
+        "score": 0,
+        "atype": "P",
+        "questions_map": [],
+        "label": "No, there is no configurable banner service available.",
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": true,
+            "label": "Banners are deterrent measures to warn unauthorized or malicious users. Though their efficiency can be questioned, it is recommended to have this feature available to administrators in order to set warning messages."
+          }
+        ]
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": true,
+        "score": 0,
+        "atype": "P",
+        "questions_map": [],
+        "label": "Yes, there is a configurable banner service available to authorized administrators.",
+        "recommendations": []
+      }
+    ]
+  }
+]
