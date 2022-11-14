@@ -31,7 +31,6 @@ CORS_ALLOW_METHODS = [
     "OPTIONS",
 ]
 
-
 EMAIL_HOST = "localhost"
 EMAIL_PORT = 25
 

@@ -276,6 +276,7 @@ def handle_question_answers_request(
         "previous_question_index": question_index - 1 if question_index > 1 else 1,
         "total_questions_num": get_total_questions_number(user, question_index),
         "show_warning_dialog": current_sequence.has_been_answered and does_map_exist,
+        "does_map_exist": does_map_exist,
     }
 
 
@@ -812,7 +813,9 @@ def increment_questions_sequence_order_from(
 
 
 def get_total_questions_number(user: SurveyUser, question_index: int) -> int:
-    if not SurveyAnswerQuestionMap.objects.exists():
+    if (not SurveyAnswerQuestionMap.objects.exists()
+        or CUSTOM["is_simple_questionnaire_tree"]
+    ):
         return SurveyUserQuestionSequence.objects.filter(
             user=user, is_active=True
         ).count()

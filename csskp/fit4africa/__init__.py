@@ -64,4 +64,5 @@ CUSTOM = {
         "category": False,
     },
     "chart_exclude_sections": [],
+    "is_simple_questionnaire_tree": True,
 }
