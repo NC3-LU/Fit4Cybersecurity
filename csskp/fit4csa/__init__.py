@@ -68,6 +68,6 @@ CUSTOM = {
         "section": True,
         "category": True,
     },
-    "chart_exclude_sections": [],
+    "chart_exclude_sections": ['Select survey'],
     "is_simple_questionnaire_tree": True,
 }
