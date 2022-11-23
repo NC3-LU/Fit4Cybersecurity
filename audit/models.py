@@ -7,7 +7,7 @@ class Audit(models.Model):
 
     label = models.TextField()
     company_name = models.TextField()
-    survey_user = models.OneToOneField(models.SurveyUser, on_delete=models.CASCADE)
+    # survey_user = models.OneToOneField(models.SurveyUser, on_delete=models.CASCADE)
 
     def __str__(self):
         return self.label
