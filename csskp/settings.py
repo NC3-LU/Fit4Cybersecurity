@@ -102,6 +102,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "django.contrib.sites",
     "survey",
+    "audit",
     "bootstrap4",
     "django_countries",
     "bootstrap_datepicker_plus",
