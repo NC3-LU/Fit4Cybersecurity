@@ -1,8 +1,7 @@
 from django.urls import path
 
-from survey import views
+from audit import views
 
 urlpatterns = [
-    # Root
-    path("", views.index, name="index"),
+    path("", views.index, name="audit"),
 ]

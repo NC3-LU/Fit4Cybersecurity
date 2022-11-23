@@ -25,7 +25,9 @@ urlpatterns = [
     path("terms/", views.get_terms, name="terms"),
     # Stats
     path("stats/", include("stats.urls")),
+    # Audit
     path("audit/", include("audit.urls")),
+    path("audit/", include("django.contrib.auth.urls")),
     # Admin
     path("admin/", include("admin.urls")),
     path("admin/", include("django.contrib.auth.urls")),

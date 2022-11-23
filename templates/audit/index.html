@@ -1,0 +1,38 @@
+{% extends 'survey/base.html' %}
+
+{% load bootstrap4 %}
+{% load apptags %}
+{% load static %}
+
+{% block bootstrap4_extra_head %}
+    {{ block.super }}
+    <link rel="stylesheet" type="text/css" href="{% static "survey/css/survey-index.css" %}" />
+    <script type="text/javascript" src="{% static "survey/js/survey-index.js" %}"></script>
+{% endblock %}
+
+{% block content %}
+    <div class="d-flex flex-row align-items-center px-3">
+        <div class="p-2 flex-grow-1 text-justify">
+            <h5>
+                {% block index_welcome_message %}
+                {{ _('Welcome to the CASES self-assessment tool:') }} {{ custom.tool_name }}.
+                {% endblock %}
+            </h5>
+            {{ custom.intro_text | safe }}
+        </div>
+    </div>
+
+    <div class="col px-2 py-4 text-center">
+        <a href="/survey/start">
+            <button class="btn border border-rounded btn-primary" type="button">
+                {{ _('Login') }}
+            </button>
+        </a>
+        <a href="/survey/start">
+            <button class="btn border border-rounded btn-primary" type="button">
+                {{ _('Register') }}
+            </button>
+        </a>
+    </div>
+
+{% endblock %}
