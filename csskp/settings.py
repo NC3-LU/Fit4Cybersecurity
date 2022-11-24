@@ -162,8 +162,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = "csskp.wsgi.application"
 
-LOGIN_URL = "/admin/login/"
-LOGIN_REDIRECT_URL = "/admin/"
+LOGIN_URL = "/login/"
 LOGOUT_REDIRECT_URL = "/"
 
 DEFAULT_AUTO_FIELD = "django.db.models.AutoField"

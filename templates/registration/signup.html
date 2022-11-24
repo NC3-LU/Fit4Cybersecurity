@@ -14,20 +14,13 @@
 <div class="container">
     <div class="row">
         <div class="form mx-auto p-4">
-            <form method="post" class="text-center justify-content-center">
+            <form method="post" class="justify-content-center">
                 {% csrf_token %}
                 {{ form.as_p }}
-                <div class="text-right">
-                    <button class="btn border border-rounded btn-primary " type="summit">
-                        {{ _('Login') }}
-                    </button>
-                </div>
+                <button class="btn border border-rounded btn-primary " type="summit">
+                    {{ _('Sign Up') }}
+                </button>
             </form>
-            <div class="text-center">
-                {{ _('No Account?') }}
-                <a href="/audit/signup">{{ _('Sign Up') }}</a>
-            </div>
-
         </div>
     </div>
 </div>

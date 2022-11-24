@@ -23,6 +23,8 @@ urlpatterns = [
     # Root
     path("", views.index, name="index"),
     path("terms/", views.get_terms, name="terms"),
+    #Login
+    path("", include("django.contrib.auth.urls")),
     # Stats
     path("stats/", include("stats.urls")),
     # Audit
