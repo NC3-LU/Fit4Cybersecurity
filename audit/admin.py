@@ -1,12 +1,15 @@
 from django.contrib import admin
 
-from .models import Audit
-from .models import Auditor
+from audit.models import AuditCompany
+from audit.models import CompanyUser
+from audit.models import Auditor
+from audit.models import Audit
+from audit.models import AuditAuditor
+from audit.models import AuditCompanyUser
 
-
-class AuditAdmin(admin.ModelAdmin):
-    fields = ["pub_date", "question_text"]
-
-
-admin.site.register(Audit, AuditAdmin)
-admin.site.register(Auditor, AuditAdmin)
+admin.site.register(AuditCompany)
+admin.site.register(CompanyUser)
+admin.site.register(Auditor)
+admin.site.register(Audit)
+admin.site.register(AuditAuditor)
+admin.site.register(AuditCompanyUser)
