@@ -1,10 +1,11 @@
 COMPANY_TYPE = [
-    ('AU', 'Audit'),
-    ('CU', 'Customer')
+    ('AD', 'Audit'),
+    ('CS', 'Customer')
 ]
 
 CERTIFICATE_STATUS = [
     ('RQ', 'Requested'),
-    ('VD', 'Valid'),
-    ('RK', 'Revoked')
+    ('RF', 'Refused'),
+    ('VL', 'Valid'),
+    ('RV', 'Revoked')
 ]
