@@ -12,8 +12,8 @@ class Company(models.Model):
     address_zip_code = models.CharField("ZIP / Postal code", max_length=10)
     address_city = models.CharField("City", max_length=64)
     address_country = models.CharField("Country", max_length=64)
-    phone = models.CharField(max_length=12)
-    email = models.EmailField()
+    phone = models.CharField(max_length=20)
+    email = models.EmailField(blank=True)
     type = models.CharField(
         max_length=2,
         choices=COMPANY_TYPE,
