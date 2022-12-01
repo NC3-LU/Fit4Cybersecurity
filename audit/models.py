@@ -3,7 +3,7 @@ import uuid
 from django.db import models
 from survey.models import SurveyUser
 from django.contrib.auth.models import User
-from audit.globals import *
+from audit.globals import COMPANY_TYPE, CERTIFICATE_STATUS
 
 
 class Company(models.Model):
