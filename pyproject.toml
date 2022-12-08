@@ -44,6 +44,9 @@ black = "^22.3.0"
 pyupgrade = "^2.31.1"
 reorder-python-imports = "^3.0.1"
 
+[tool.poetry.group.ded.dependencies]
+pip-audit = "^2.4.8"
+
 [tool.flake8]
 max-line-length = 100
 extend-ignore = "E203,"
