@@ -1165,40 +1165,40 @@ setuptools = "*"
 
 [[package]]
 name = "numpy"
-version = "1.24.0rc2"
-description = "Fundamental package for array computing in Python"
+version = "1.23.5"
+description = "NumPy is the fundamental package for array computing with Python."
 category = "main"
 optional = false
 python-versions = ">=3.8"
 files = [
-    {file = "numpy-1.24.0rc2-cp310-cp310-macosx_10_9_x86_64.whl", hash = "sha256:dce26877ad77c9722e35c9ca82e9272cb6d10aa0a4f95e633b13511dcf549b5f"},
-    {file = "numpy-1.24.0rc2-cp310-cp310-macosx_11_0_arm64.whl", hash = "sha256:0983fb5b475406cd6aa2f4f364768fb388e1211fd94fb496ad49e214d5c79792"},
-    {file = "numpy-1.24.0rc2-cp310-cp310-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:df9a9c28ad95c87b4047e1acd45715eb430fb5f6df39556279b3f36ce75c697b"},
-    {file = "numpy-1.24.0rc2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:bdd44d3133c800792f2beda0e24f86b3ae06a8a31172395c650d13e4c05d1d5b"},
-    {file = "numpy-1.24.0rc2-cp310-cp310-win32.whl", hash = "sha256:ab18e29ad73ce560747de10ebe75f145be3026b7480e76d7a5314c2bef0fc831"},
-    {file = "numpy-1.24.0rc2-cp310-cp310-win_amd64.whl", hash = "sha256:1651a59e5d8dbb09b84254e358aa2fe10431df5a92ddefb1ac20208c75bd2fa2"},
-    {file = "numpy-1.24.0rc2-cp311-cp311-macosx_10_9_x86_64.whl", hash = "sha256:146d7e5ee04433ce8eb504d0dcffff524a5ba759bd1fb9c73189c3436b04d59c"},
-    {file = "numpy-1.24.0rc2-cp311-cp311-macosx_11_0_arm64.whl", hash = "sha256:a68647adc9945eac88f4fce96195177c2a81577baa448c1c1bbd5751c550e8b5"},
-    {file = "numpy-1.24.0rc2-cp311-cp311-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:50346a0d81444f420518c7d6996524d7e559cdfa2e41886381442f012593590e"},
-    {file = "numpy-1.24.0rc2-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:8bc069b085289f3b7a578519504962330fab91459a847195b914f69b9170b75c"},
-    {file = "numpy-1.24.0rc2-cp311-cp311-win32.whl", hash = "sha256:07c0f3b174970054c613c33e90627fbafbc5d9115adf8829658b833278e7017c"},
-    {file = "numpy-1.24.0rc2-cp311-cp311-win_amd64.whl", hash = "sha256:1d6198ee7eb45e5d9cc8a5c9102b734f0c5683c0e440ae7cfad90ad8cb9316d2"},
-    {file = "numpy-1.24.0rc2-cp38-cp38-macosx_10_9_x86_64.whl", hash = "sha256:e948367a0b9aa68a081c4cf817751c6d0d589a37ce6bb40fea39a882b4858834"},
-    {file = "numpy-1.24.0rc2-cp38-cp38-macosx_11_0_arm64.whl", hash = "sha256:e4909946cf43ff713f95780d483793d8fb23c1559686a8221e91f89e5ecceea0"},
-    {file = "numpy-1.24.0rc2-cp38-cp38-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:0704c94f89bf8d5d4f5722b305a29cbb1ad91c7f3dcdcda61cb80d6e5443365b"},
-    {file = "numpy-1.24.0rc2-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:748285bca9fb0f06a16034d4b9c6dce77997d2ccddf769aaeb4760fea4752ea2"},
-    {file = "numpy-1.24.0rc2-cp38-cp38-win32.whl", hash = "sha256:b6e807f59c1f71e74603a2a88b0b997d7f43e002f6e5f7f55649c6e07738f1ad"},
-    {file = "numpy-1.24.0rc2-cp38-cp38-win_amd64.whl", hash = "sha256:0a5c85f625751b77a6f613db2de5f62514024a7ea6d3be534421746e094b2121"},
-    {file = "numpy-1.24.0rc2-cp39-cp39-macosx_10_9_x86_64.whl", hash = "sha256:5db5f7a8f150614684c34449010c15b61df8d8e5fc0cd79ce30e82f493598599"},
-    {file = "numpy-1.24.0rc2-cp39-cp39-macosx_11_0_arm64.whl", hash = "sha256:6f34b8f2996ebad781cd878276e03d247f0129640fb0ae76bb16addc4df822d1"},
-    {file = "numpy-1.24.0rc2-cp39-cp39-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:e30689dd418f2db3d2d3039cb08011047d27708fdc24c592d56fa58aaeb01672"},
-    {file = "numpy-1.24.0rc2-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:925d39290878d680eb8dd690f969faa0a4956b7bd77daf3573486eb39d8e5724"},
-    {file = "numpy-1.24.0rc2-cp39-cp39-win32.whl", hash = "sha256:a2495e48db12f546e4e3f9ea1f665390828098344bf63bca50309a68d713d302"},
-    {file = "numpy-1.24.0rc2-cp39-cp39-win_amd64.whl", hash = "sha256:ea9ca0989fdd42d3320a94f540f317fb615be9ceab75a07078a84b9933582da5"},
-    {file = "numpy-1.24.0rc2-pp38-pypy38_pp73-macosx_10_9_x86_64.whl", hash = "sha256:c9ff51e627e7584eb7ee09f6fe494862e45f796e53b5ee7267d3d5633a79dac6"},
-    {file = "numpy-1.24.0rc2-pp38-pypy38_pp73-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:b4eca15593bec5ef3e2e05c157ff1be3990d04a862f49fd46b4e527ff390b778"},
-    {file = "numpy-1.24.0rc2-pp38-pypy38_pp73-win_amd64.whl", hash = "sha256:b45bdcde72ce02a92ae183ef211bcf7f04e15d5e3df6714866de66d8ec8cc822"},
-    {file = "numpy-1.24.0rc2.tar.gz", hash = "sha256:c943c61fa708a6225e199aff755b2c3f5a353a2bbb726e10334a05b8e1fc030b"},
+    {file = "numpy-1.23.5-cp310-cp310-macosx_10_9_x86_64.whl", hash = "sha256:9c88793f78fca17da0145455f0d7826bcb9f37da4764af27ac945488116efe63"},
+    {file = "numpy-1.23.5-cp310-cp310-macosx_11_0_arm64.whl", hash = "sha256:e9f4c4e51567b616be64e05d517c79a8a22f3606499941d97bb76f2ca59f982d"},
+    {file = "numpy-1.23.5-cp310-cp310-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:7903ba8ab592b82014713c491f6c5d3a1cde5b4a3bf116404e08f5b52f6daf43"},
+    {file = "numpy-1.23.5-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:5e05b1c973a9f858c74367553e236f287e749465f773328c8ef31abe18f691e1"},
+    {file = "numpy-1.23.5-cp310-cp310-win32.whl", hash = "sha256:522e26bbf6377e4d76403826ed689c295b0b238f46c28a7251ab94716da0b280"},
+    {file = "numpy-1.23.5-cp310-cp310-win_amd64.whl", hash = "sha256:dbee87b469018961d1ad79b1a5d50c0ae850000b639bcb1b694e9981083243b6"},
+    {file = "numpy-1.23.5-cp311-cp311-macosx_10_9_x86_64.whl", hash = "sha256:ce571367b6dfe60af04e04a1834ca2dc5f46004ac1cc756fb95319f64c095a96"},
+    {file = "numpy-1.23.5-cp311-cp311-macosx_11_0_arm64.whl", hash = "sha256:56e454c7833e94ec9769fa0f86e6ff8e42ee38ce0ce1fa4cbb747ea7e06d56aa"},
+    {file = "numpy-1.23.5-cp311-cp311-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:5039f55555e1eab31124a5768898c9e22c25a65c1e0037f4d7c495a45778c9f2"},
+    {file = "numpy-1.23.5-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:58f545efd1108e647604a1b5aa809591ccd2540f468a880bedb97247e72db387"},
+    {file = "numpy-1.23.5-cp311-cp311-win32.whl", hash = "sha256:b2a9ab7c279c91974f756c84c365a669a887efa287365a8e2c418f8b3ba73fb0"},
+    {file = "numpy-1.23.5-cp311-cp311-win_amd64.whl", hash = "sha256:0cbe9848fad08baf71de1a39e12d1b6310f1d5b2d0ea4de051058e6e1076852d"},
+    {file = "numpy-1.23.5-cp38-cp38-macosx_10_9_x86_64.whl", hash = "sha256:f063b69b090c9d918f9df0a12116029e274daf0181df392839661c4c7ec9018a"},
+    {file = "numpy-1.23.5-cp38-cp38-macosx_11_0_arm64.whl", hash = "sha256:0aaee12d8883552fadfc41e96b4c82ee7d794949e2a7c3b3a7201e968c7ecab9"},
+    {file = "numpy-1.23.5-cp38-cp38-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:92c8c1e89a1f5028a4c6d9e3ccbe311b6ba53694811269b992c0b224269e2398"},
+    {file = "numpy-1.23.5-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:d208a0f8729f3fb790ed18a003f3a57895b989b40ea4dce4717e9cf4af62c6bb"},
+    {file = "numpy-1.23.5-cp38-cp38-win32.whl", hash = "sha256:06005a2ef6014e9956c09ba07654f9837d9e26696a0470e42beedadb78c11b07"},
+    {file = "numpy-1.23.5-cp38-cp38-win_amd64.whl", hash = "sha256:ca51fcfcc5f9354c45f400059e88bc09215fb71a48d3768fb80e357f3b457e1e"},
+    {file = "numpy-1.23.5-cp39-cp39-macosx_10_9_x86_64.whl", hash = "sha256:8969bfd28e85c81f3f94eb4a66bc2cf1dbdc5c18efc320af34bffc54d6b1e38f"},
+    {file = "numpy-1.23.5-cp39-cp39-macosx_11_0_arm64.whl", hash = "sha256:a7ac231a08bb37f852849bbb387a20a57574a97cfc7b6cabb488a4fc8be176de"},
+    {file = "numpy-1.23.5-cp39-cp39-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:bf837dc63ba5c06dc8797c398db1e223a466c7ece27a1f7b5232ba3466aafe3d"},
+    {file = "numpy-1.23.5-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:33161613d2269025873025b33e879825ec7b1d831317e68f4f2f0f84ed14c719"},
+    {file = "numpy-1.23.5-cp39-cp39-win32.whl", hash = "sha256:af1da88f6bc3d2338ebbf0e22fe487821ea4d8e89053e25fa59d1d79786e7481"},
+    {file = "numpy-1.23.5-cp39-cp39-win_amd64.whl", hash = "sha256:09b7847f7e83ca37c6e627682f145856de331049013853f344f37b0c9690e3df"},
+    {file = "numpy-1.23.5-pp38-pypy38_pp73-macosx_10_9_x86_64.whl", hash = "sha256:abdde9f795cf292fb9651ed48185503a2ff29be87770c3b8e2a14b0cd7aa16f8"},
+    {file = "numpy-1.23.5-pp38-pypy38_pp73-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:f9a909a8bae284d46bbfdefbdd4a262ba19d3bc9921b1e76126b1d21c3c34135"},
+    {file = "numpy-1.23.5-pp38-pypy38_pp73-win_amd64.whl", hash = "sha256:01dd17cbb340bf0fc23981e52e1d18a9d4050792e8fb8363cecbf066a84b827d"},
+    {file = "numpy-1.23.5.tar.gz", hash = "sha256:1b1766d6f397c18153d40015ddfc79ddb715cabadc04d2d228d4e5a8bc4ded1a"},
 ]
 
 [[package]]
@@ -2088,4 +2088,4 @@ test = ["pytest"]
 [metadata]
 lock-version = "2.0"
 python-versions = ">=3.8,<4.0"
-content-hash = "ee58da4a5b7568d0816a9f6c096f92f24f10ec5fa0cbdbfe197ca178e9e2b1c8"
+content-hash = "d4a929d57eae317c87ca3b1a4bf0b6510b377ee4d429017b2af7e6ce1fae0491"
