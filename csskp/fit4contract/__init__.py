@@ -47,7 +47,7 @@ CUSTOM = {
         # path of the templates parts
         "terms": "terms_part.html",
         "footer": "fit4contract/footer_part.html",
-        "main_logo": "logo_part.html",
+        "main_logo": "fit4contract/logo_part.html",
     },
     # Available modules
     "modules": {

@@ -39,7 +39,7 @@ CUSTOM = {
         # path of the templates parts
         "terms": "terms_part.html",
         "footer": "footer_part.html",
-        "main_logo": "logo_part.html",
+        "main_logo": "fit4cybersecurity/logo_part.html",
     },
     # Available modules
     "modules": {
