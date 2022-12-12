@@ -7,7 +7,7 @@
 [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit)
 
 
-Fit4Cybersecurity is a self-assessment tool by [NC3-LU](https://opensource.nc3.lu)
+Fit4Cybersecurity is a self-assessment tool by [NC3-LU](https://nc3.lu)
 to help business owners implement a better cybersecurity strategy.
 
 This tool allows instantiation of the following self-assessment websites:
