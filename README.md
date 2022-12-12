@@ -17,6 +17,7 @@ This tool allows instantiation of the following self-assessment websites:
 - [OperatorSurvey](https://operatorsurvey.cases.lu),
 - [Cyber4Africa](https://start.cyber4africa.org);
 - [Fit4Contract](https://contract.cases.lu).
+- [Fit4eHealth](https://fit4ehealth.cases.lu).
 
 
 ## Contributing
