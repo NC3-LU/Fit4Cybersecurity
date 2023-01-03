@@ -21,8 +21,12 @@ from survey.viewLogic import get_questions_with_user_answers
 # Get an instance of a logger
 logger = logging.getLogger(__name__)
 
-cases_logo = os.path.abspath(os.path.join(settings.BASE_DIR, CUSTOM["cases_logo"]))
-secin_logo = os.path.abspath(os.path.join(settings.BASE_DIR, CUSTOM["secin_logo"]))
+right_cover_logo = os.path.abspath(
+    os.path.join(settings.BASE_DIR, CUSTOM["right_cover_logo"])
+)
+left_cover_logo = os.path.abspath(
+    os.path.join(settings.BASE_DIR, CUSTOM["left_cover_logo"])
+)
 
 
 def create_html_report(user: SurveyUser, lang: str, request: HttpRequest) -> str:
@@ -66,8 +70,8 @@ def create_html_report(user: SurveyUser, lang: str, request: HttpRequest) -> str
         "report/template.html",
         {
             "GLOBALS": globals,
-            "CASES_LOGO": cases_logo,
-            "SECIN_LOGO": secin_logo,
+            "RIGHT_COVER_LOGO": right_cover_logo,
+            "LEFT_COVER_LOGO": left_cover_logo,
             "BASE_DIR": settings.BASE_DIR,
             "TOOL_LOGO": SITE_IMAGES_DIR + "/logo-" + lang + ".png",
             "DATE": datetime.today(),
@@ -101,8 +105,8 @@ def makepdf(html: str, lang: str) -> bytes:
             + lang
             + ".png"
             + '''");
-                --secin_logo_url: url("'''
-            + secin_logo
+                --left_logo_url: url("'''
+            + left_cover_logo
             + """");
             }
             """

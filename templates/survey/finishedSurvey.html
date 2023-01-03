@@ -40,7 +40,7 @@
         {% if custom.modules.requestTraining and user.get_country_code == 'LU' and txtscore < custom.minimal_acceptable_score %}
             <p class="text-justify">
                 {% blocktranslate with score=string_score|add:'/100' trimmed %}
-                Based on your score {{ score }}, the CASES Diagnostic
+                Based on your score {{ score }}, the NC3 Diagnostic
                 is not available for your organization at this moment.
                 We recommend you improve the information security maturity
                 level by implementing the recommendations listed below.
@@ -69,13 +69,13 @@
         </p>
         {% if custom.modules.requestDiagnostic and user.get_country_code == 'LU' and txtscore >= custom.minimal_acceptable_score %}
             {% block finished_survey_diagnostic %}
-            <h2>{{ _('About the CASES Diagnostic') }}:</h2>
+            <h2>{{ _('About the NC3 Diagnostic') }}:</h2>
             <p class="text-justify">
                 {% blocktranslate trimmed %}
-                The CASES Diagnostic is a service which analyses the company maturity
+                The NC3 Diagnostic is a service which analyses the company maturity
                 in the information security depending on company's requirements.
                 The analysis duration can take approximately 2 hours.
-                A consultant from CASES will come to your company's premises,
+                A consultant from NC3 will come to your company's premises,
                 and ask around 30 questions concerning your information security,
                 mostly organizational questions and possibly some technical questions.
                 You will receive a detailed report which will contain a maturity estimation
@@ -84,7 +84,7 @@
             <p>
             <p class="text-justify">
                 {% blocktranslate trimmed %}
-                The CASES Diagnostic is available for all the companies
+                The NC3 Diagnostic is available for all the companies
                 located in Luxembourg and free of charge.
                 {% endblocktranslate %}
             </p>

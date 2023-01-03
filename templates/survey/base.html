@@ -7,7 +7,7 @@
 {% block bootstrap4_extra_head %}
 <meta name="description" content="{{ custom.tool_name }} by NC3-LU" />
 <link rel="stylesheet" type="text/css" href="{% static custom.survey_css %}" />
-<link rel="icon" type="image/x-icon" href="{% static 'images/favicon.png' %}" />
+<link rel="icon" type="image/x-icon" href="{% static 'images/favicon.ico' %}" />
 <link rel="apple-touch-icon" sizes="152x152" href="{% static 'images/apple-touch-icon.png' %}" />
 <link rel="apple-touch-icon" sizes="180x180" href="{% static 'images/apple-touch-icon.png' %}" />
 <link rel="stylesheet" href="{% static 'npm_components/fork-awesome/css/fork-awesome.min.css' %}">
@@ -16,7 +16,7 @@
 {% endblock %}
 
 {% block title %}
-{{ custom.tool_name }} {{ _('a CASES self-assessment tool!') }}
+{{ custom.tool_name }} {{ _('a NC3 self-assessment tool!') }}
 {% endblock %}
 
 {% block bootstrap4_content %}
@@ -51,7 +51,7 @@
   {% block main_logo %}
   <div class="row">
     <div class="col text-center">
-      <div class="border-bottom border-primary">
+      <div class="mt-3 border-bottom border-primary">
         {% include custom.templates_parts.main_logo %}
       </div>
     </div>
