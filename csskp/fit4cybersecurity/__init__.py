@@ -24,8 +24,8 @@ CUSTOM = {
         ("de", "German"),
     ],
     # Logos paths
-    "cases_logo": "templates/report/images/cases_logo.svg",
-    "secin_logo": "templates/report/images/secin_logo.svg",
+    "right_cover_logo": "templates/report/images/nc3_logo.svg",
+    "left_cover_logo": "templates/report/images/lhc_logo.svg",
     # Custom CSS:
     "survey_css": "survey/css/style.css",
     # Minimal score
