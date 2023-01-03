@@ -21,8 +21,12 @@ from survey.viewLogic import get_questions_with_user_answers
 # Get an instance of a logger
 logger = logging.getLogger(__name__)
 
-right_cover_logo = os.path.abspath(os.path.join(settings.BASE_DIR, CUSTOM["right_cover_logo"]))
-left_cover_logo = os.path.abspath(os.path.join(settings.BASE_DIR, CUSTOM["left_cover_logo"]))
+right_cover_logo = os.path.abspath(
+    os.path.join(settings.BASE_DIR, CUSTOM["right_cover_logo"])
+)
+left_cover_logo = os.path.abspath(
+    os.path.join(settings.BASE_DIR, CUSTOM["left_cover_logo"])
+)
 
 
 def create_html_report(user: SurveyUser, lang: str, request: HttpRequest) -> str:
