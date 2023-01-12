@@ -1,9 +1,10 @@
 import uuid
+from typing import Any
 
 from django.db import models
-from survey.models import SurveyUser
+from survey.models import SurveyUser, SurveyQuestion
 from django.contrib.auth.models import User
-from audit.globals import COMPANY_TYPE, CERTIFICATE_STATUS
+from audit.globals import COMPANY_TYPE, CERTIFICATE_STATUS, QUESTION_STATUS
 
 
 class Company(models.Model):
@@ -33,6 +34,14 @@ class AuditUser(models.Model):
 
     def __str__(self):
         return self.user.first_name + " " + self.user.last_name
+
+    def get_all_audits(self) -> dict[str, Any]:
+        audits = AuditByUser.objects.filter(audit_user=self.id)
+
+        for audit in audits:
+            audit.company = AuditByCompany.objects.filter(audit=audit.id).first()
+
+        return audits
 
 
 class Certificate(models.Model):
@@ -83,15 +92,30 @@ class AuditByCompany(models.Model):
 
 
 class AuditByUser(models.Model):
-    audit_by_company = models.ForeignKey(AuditByCompany, on_delete=models.CASCADE)
+    audit = models.ForeignKey(Audit, on_delete=models.CASCADE)
     audit_user = models.ForeignKey(AuditUser, on_delete=models.CASCADE)
 
     class Meta:
         constraints = [
             models.UniqueConstraint(
-                fields=["audit_by_company", "audit_user"], name="unique_auditByUser"
+                fields=["audit", "audit_user"], name="unique_auditByUser"
             ),
         ]
 
     def __str__(self):
         return self.audit_user.user.first_name
+
+
+class AuditQuestion(models.Model):
+    survey_user = models.ForeignKey(SurveyUser, on_delete=models.CASCADE)
+    survey_question = models.ForeignKey(SurveyQuestion, on_delete=models.CASCADE)
+    references = models.TextField(null=False, blank=True, default="")
+    observations = models.TextField(null=False, blank=True, default="")
+    status = models.CharField(
+        max_length=2,
+        choices=QUESTION_STATUS,
+        default="",
+    )
+
+    def __str__(self):
+        return self.status

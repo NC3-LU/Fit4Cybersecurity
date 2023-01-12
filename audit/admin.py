@@ -51,11 +51,6 @@ class AuditByCompanyAdmin(admin.ModelAdmin):
 
 @admin.register(AuditByUser)
 class AuditByUserAdmin(admin.ModelAdmin):
-    def get_audit(self, obj):
-        return obj.audit_by_company.audit
-
-    get_audit.short_description = "Audit"
-
-    list_display = ["audit_user", "audit_by_company", "get_audit"]
+    list_display = ["audit", "audit_user"]
     list_filter = ["audit_user"]
-    search_fields = ["audit_user", "audit_by_company"]
+    search_fields = ["audit", "audit_user"]
