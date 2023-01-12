@@ -1,0 +1,86 @@
+{% extends 'survey/base.html' %}
+
+{% load bootstrap4 %}
+{% load static %}
+
+{% block bootstrap4_extra_head %}
+    {{ block.super }}
+    <link rel="stylesheet" type="text/css" href="{% static "survey/css/survey-questions.css" %}" />
+    <script type="text/javascript" src="{% static "survey/js/qrcode.min.js" %}"></script>
+    <script type="text/javascript" src="{% static "survey/js/survey-questions.js" %}"></script>
+    <script type="text/javascript" src="{% static "survey/js/survey-review.js" %}"></script>
+{% endblock %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+    <div class="row p-2">
+        <h3 class="col-12">{{ _('Title Audit') }}</h3>
+        <div class="row col-12">
+            <p class="col-10 pt-2 ">
+                {{ _('Explanation of the audit request')}}
+            </p>
+        </div>
+
+        <div class="col-12">
+            <table class="table table-hover">
+                <thead>
+                  <tr class="d-flex">
+                    <th class="col-3">{{ _('Question') }}</th>
+                    <th class="col-3">{{ _('Answer(s)') }}</th>
+                    <th class="col-3">{{ _('Reference / context') }}</th>
+                    <th class="col-2">{{ _('Auditor observations') }}</th>
+                    <th class="col-1">{{ _('Status') }}</th>
+                  </tr>
+                </thead>
+                <tbody>
+                    {% for question_index, audit_question in audit_questions.items %}
+                    {% if question_index != 0  %}
+                        <tr class="d-flex">
+                            <td class="col-3">
+                                <span class="font-weight-bold">{{ question_index }}. </span>
+                                {{ audit_question.question | safe }}
+                            </td>
+                            <td class="col-3">
+                            {% for answer in audit_question.answer %}
+                                <span>{{ answer.answer__label | safe }}</span></br>
+                            {% endfor %}
+                            </td>
+
+                            <td class="col-3 p-0">
+                                {% if type_of_company == "CS"  %}
+                                    <textarea rows="5" class="w-100 h-100 border-0 bg-transparent">{{ audit_question.references | safe }}</textarea>
+                                {% else %}
+                                <textarea rows="5" class="w-100 h-100 border-0 bg-transparent" disabled>{{ audit_question.references | safe }}</textarea>
+                                {% endif %}
+                            </td>
+                            <td class="col-2 p-0">
+                                {% if type_of_company == "CS"  %}
+                                    <textarea rows="5" class="w-100 h-100 border-0 bg-transparent" disabled>{{ audit_question.observations | safe }}</textarea>
+                                {% else %}
+                                    <textarea rows="5" class="w-100 h-100 border-0 bg-transparent">{{ audit_question.observations | safe }}</textarea>
+                                {% endif %}
+                                
+                            </td>
+                            <td class="col-1 p-0" style="display:flex;">
+                                {% if type_of_company == "CS"  %}
+                                    <select class="form-select w-100 border-0 bg-transparent" disabled>
+                                {% else %}
+                                    <select class="form-select w-100 border-0 bg-transparent">
+                                {% endif %}
+                                    <option value="0">{{ _('Choose') }}...</option>
+                                    <option value="1">{{ _('Accepted') }}</option>
+                                    <option value="2">{{ _('To review') }}</option>
+                                    <option value="3">{{ _('Refused') }}</option>
+                                </select>                            
+                            </td>
+                        </tr>
+                    {% endif %}
+                {% endfor %}
+                </tbody>
+            </table>
+        </div> 
+    </div>
+
+    {% include 'survey/leaveSurvey.html' %}
+{% endblock %}
