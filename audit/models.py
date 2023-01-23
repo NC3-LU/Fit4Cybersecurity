@@ -109,12 +109,12 @@ class AuditByUser(models.Model):
 class AuditQuestion(models.Model):
     survey_user = models.ForeignKey(SurveyUser, on_delete=models.CASCADE)
     survey_question = models.ForeignKey(SurveyQuestion, on_delete=models.CASCADE)
-    references = models.TextField(null=False, blank=True, default="")
-    observations = models.TextField(null=False, blank=True, default="")
+    references = models.TextField(null=True, blank=True, default=None)
+    observations = models.TextField(null=True, blank=True, default=None)
     status = models.CharField(
         max_length=2,
         choices=QUESTION_STATUS,
-        default="",
+        default="OG",
     )
 
     def __str__(self):
