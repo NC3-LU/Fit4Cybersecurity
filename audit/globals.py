@@ -8,7 +8,8 @@ CERTIFICATE_STATUS = [
 ]
 
 QUESTION_STATUS = [
-    ("AC", "Accepted"),
+    ("OG", "Ongoing"),
     ("TR", "To review"),
+    ("AC", "Accepted"),
     ("RF", "Refused"),
 ]
