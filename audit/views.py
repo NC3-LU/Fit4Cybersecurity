@@ -1,16 +1,17 @@
+import json
+
 from django.shortcuts import render
 from typing import Dict
 from typing import Any
 
 from django.contrib.auth.decorators import login_required
-
 from django.urls import reverse_lazy
 from django.views.generic import CreateView
-from audit.forms import SignUpForm
-
 from django.http import HttpResponseRedirect
 from django.utils.translation import gettext as _
+
 from csskp.settings import CUSTOM
+
 from survey.viewLogic import find_user_by_id
 from survey.viewLogic import get_answered_questions_sequences
 from survey.models import (
@@ -18,6 +19,13 @@ from survey.models import (
     SurveyUserAnswer,
     SurveyQuestion,
     CONTEXT_SECTION_LABEL,
+)
+
+from audit.forms import (
+    SignUpForm,
+    ObservationsTextarea,
+    ReferencesTextarea,
+    StatusChoices,
 )
 from audit.models import Audit, AuditUser, AuditByUser, AuditQuestion
 
@@ -55,6 +63,12 @@ def audit(request, audit_id: int):
     user = find_user_by_id(survey_user_id)
     type_of_company = AuditUser.objects.filter(id=auth_user_id).first().company.type
 
+    if request.method == "POST":
+        body_unicode = request.body.decode("utf-8")
+        body = json.loads(body_unicode)
+        id = body.pop("id", None)
+        AuditQuestion.objects.filter(id=id).update(**body)
+
     audit_questions = AuditQuestion.objects.filter(
         survey_user__user_id=survey_user_id
     ).order_by("id")
@@ -84,19 +98,31 @@ def audit(request, audit_id: int):
 
     for index, audit_question in enumerate(audit_questions):
         audit_questions_formatted[index] = {
+            "id": audit_question.id,
             "question": _(audit_question.survey_question.label),
             "answer": survey_user_answers.filter(
                 answer__question__id=audit_question.survey_question.id
             ).values("answer__label"),
-            "references": audit_question.references,
-            "observations": audit_question.observations,
-            "status": audit_question.status,
+            "referenceForm": ReferencesTextarea(
+                id=audit_question.id,
+                reference=audit_question.references,
+                type_of_company=type_of_company,
+            ),
+            "observationForm": ObservationsTextarea(
+                id=audit_question.id,
+                observation=audit_question.observations,
+                type_of_company=type_of_company,
+            ),
+            "statusForm": StatusChoices(
+                id=audit_question.id,
+                status=audit_question.status,
+                type_of_company=type_of_company,
+            ),
         }
 
     context = {
         "title": CUSTOM["tool_name"] + " - " + _("Audit"),
         "audit_questions": audit_questions_formatted,
-        "type_of_company": type_of_company,
     }
 
     return render(request, "audit/audit.html", context=context)
