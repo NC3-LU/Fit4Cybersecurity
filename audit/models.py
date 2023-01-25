@@ -40,6 +40,24 @@ class AuditUser(models.Model):
 
         for audit in audits:
             audit.company = AuditByCompany.objects.filter(audit=audit.id).first()
+            survey_user_id = (
+                Audit.objects.filter(id=audit.id).first().survey_user.user_id
+            )
+            audit_questions = AuditQuestion.objects.filter(
+                survey_user__user_id=survey_user_id
+            )
+            audit.status = {
+                "label": None,
+                "details": {},
+            }
+            for status in QUESTION_STATUS:
+                audit.status["details"][status[1]] = audit_questions.filter(
+                    status=status[0]
+                ).count()
+
+            audit.status["label"] = max(
+                audit.status["details"], key=audit.status["details"].get
+            )
 
         return audits
 
@@ -71,6 +89,12 @@ class Audit(models.Model):
     certificate = models.OneToOneField(
         Certificate, on_delete=models.CASCADE, blank=True, null=True
     )
+    status = models.CharField(
+        max_length=2,
+        choices=QUESTION_STATUS,
+        default="OG",
+    )
+    audit_comments = models.TextField(null=True, blank=True, default=None)
 
     def __str__(self):
         return self.product_name
