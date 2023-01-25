@@ -50,14 +50,16 @@ class AuditUser(models.Model):
                 "label": None,
                 "details": {},
             }
-            for status in QUESTION_STATUS:
-                audit.status["details"][status[1]] = audit_questions.filter(
-                    status=status[0]
-                ).count()
+            
+            if audit_questions:
+                for status in QUESTION_STATUS:
+                    audit.status["details"][status[1]] = audit_questions.filter(
+                        status=status[0]
+                    ).count()
 
-            audit.status["label"] = max(
-                audit.status["details"], key=audit.status["details"].get
-            )
+                audit.status["label"] = max(
+                    audit.status["details"], key=audit.status["details"].get
+                )
 
         return audits
 
@@ -138,7 +140,7 @@ class AuditQuestion(models.Model):
     status = models.CharField(
         max_length=2,
         choices=QUESTION_STATUS,
-        default="OG",
+        default=None,
     )
 
     def __str__(self):
