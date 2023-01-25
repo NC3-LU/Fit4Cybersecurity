@@ -5,8 +5,10 @@
 {% load static %}
 
 {% block bootstrap4_extra_head %}
-    {{ block.super }}
+{{ block.super }}
     <link rel="stylesheet" type="text/css" href="{% static "survey/css/survey-index.css" %}" />
+    <script type="text/javascript" src="/static/npm_components/chart.js/dist/chart.min.js"></script>
+    <script type="text/javascript" src="/static/npm_components/chartjs-plugin-datalabels/dist/chartjs-plugin-datalabels.min.js"></script>
     <script type="text/javascript" src="{% static "survey/js/survey-index.js" %}"></script>
     <script type="text/javascript" src="{% static "audit/js/audit.js" %}"></script>
 {% endblock %}
@@ -30,18 +32,53 @@
                 <th scope="col">{{ _('Product reference') }}</th>
                 <th scope="col">{{ _('Audit company') }}</th>
                 <th scope="col">{{ _('Status') }}</th>
+                <th scope="col">{{ _('Actions') }}</th>
               </tr>
             </thead>
             <tbody>
                 {% for audit in audits %}
-                <tr class="go-to-audit" data-go-to-audit="{{ audit.audit.id }}">
+                <tr>
                     <td>{{ audit.audit.product_name | safe }}</td>
                     <td>{{ audit.audit.product_ref | safe }}</td>
                     <td>{{ audit.company.audit_company.name | safe }}</td>
-                    <td></td>
-                  </tr>
+                    <td>{{ audit.status.label }}
+                        <i type="button" class="btn bi bi-info-circle-fill text-primary" data-audit-id="{{ audit.id | safe }}" data-toggle="modal" data-target="#statusDetails"></i>
+                        <script>
+                            complianceData[{{audit.id}}] = {{ audit.status.details | safe }}
+                        </script>
+                    </td>
+                    <td>
+                        <i class="bi bi-gear"></i>
+                        <i class="go-to-audit bi bi-list-check text-success" data-go-to-audit="{{ audit.audit.id }}"></i>
+                    </td>
+                </tr>
             {% endfor %}
             </tbody>
         </table>
-    </div> 
+    </div>
+
+    <!-- Status Details Modal -->
+    <div class="modal fade" 
+        id="statusDetails"
+        data-backdrop="static"
+        data-keyboard="false"
+        tabindex="-1"
+        aria-labelledby="StatusDetailsModal"
+        aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="StatusDetailsModal">{{ _('Compliance status details') }}</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                <div class="col-10 mx-auto">
+                    <canvas id="complianceStatus"></canvas>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
 {% endblock %}
