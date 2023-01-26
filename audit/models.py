@@ -50,16 +50,21 @@ class AuditUser(models.Model):
                 "label": None,
                 "details": {},
             }
-            
+
             if audit_questions:
                 for status in QUESTION_STATUS:
                     audit.status["details"][status[1]] = audit_questions.filter(
                         status=status[0]
                     ).count()
 
-                audit.status["label"] = max(
-                    audit.status["details"], key=audit.status["details"].get
-                )
+                    audit.status["label"] = max(
+                        audit.status["details"], key=audit.status["details"].get
+                    )
+
+                    if status[1] == audit.status["label"]:
+                        audit_status = {"status": status[0]}
+
+                Audit.objects.filter(id=audit.id).update(**audit_status)
 
         return audits
 

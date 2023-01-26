@@ -41,11 +41,14 @@
                     <td>{{ audit.audit.product_name | safe }}</td>
                     <td>{{ audit.audit.product_ref | safe }}</td>
                     <td>{{ audit.company.audit_company.name | safe }}</td>
-                    <td>{{ audit.status.label }}
-                        <i type="button" class="btn bi bi-info-circle-fill text-primary" data-audit-id="{{ audit.id | safe }}" data-toggle="modal" data-target="#statusDetails"></i>
-                        <script>
-                            complianceData[{{audit.id}}] = {{ audit.status.details | safe }}
-                        </script>
+                    <td>
+                        {% if audit.status.label %}
+                            {{ audit.status.label }}
+                            <i type="button" class="btn bi bi-info-circle-fill text-primary" data-audit-id="{{ audit.id | safe }}" data-toggle="modal" data-target="#statusDetails"></i>
+                            <script>
+                                complianceData[{{audit.id}}] = {{ audit.status.details | safe }}
+                            </script>
+                        {% endif %}
                     </td>
                     <td>
                         <i class="bi bi-gear"></i>
@@ -74,7 +77,7 @@
               </button>
             </div>
             <div class="modal-body">
-                <div class="col-10 mx-auto">
+                <div class="col-8 mx-auto">
                     <canvas id="complianceStatus"></canvas>
                 </div>
             </div>
