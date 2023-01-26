@@ -36,37 +36,25 @@ class AuditUser(models.Model):
         return self.user.first_name + " " + self.user.last_name
 
     def get_all_audits(self) -> dict[str, Any]:
-        audits = AuditByUser.objects.filter(audit_user=self.id)
+        auditsByUser = AuditByUser.objects.filter(audit_user=self.id)
 
-        for audit in audits:
-            audit.company = AuditByCompany.objects.filter(audit=audit.id).first()
+        for auditByUser in auditsByUser:
+            auditByUser.company = AuditByCompany.objects.filter(audit=auditByUser.audit.id).first()
             survey_user_id = (
-                Audit.objects.filter(id=audit.id).first().survey_user.user_id
+                Audit.objects.filter(id=auditByUser.audit.id).first().survey_user.user_id
             )
             audit_questions = AuditQuestion.objects.filter(
                 survey_user__user_id=survey_user_id
             )
-            audit.status = {
-                "label": None,
-                "details": {},
-            }
+            auditByUser.audit.statusDetails = {}
 
             if audit_questions:
                 for status in QUESTION_STATUS:
-                    audit.status["details"][status[1]] = audit_questions.filter(
+                    auditByUser.audit.statusDetails[status[1]] = audit_questions.filter(
                         status=status[0]
                     ).count()
 
-                    audit.status["label"] = max(
-                        audit.status["details"], key=audit.status["details"].get
-                    )
-
-                    if status[1] == audit.status["label"]:
-                        audit_status = {"status": status[0]}
-
-                Audit.objects.filter(id=audit.id).update(**audit_status)
-
-        return audits
+        return auditsByUser
 
 
 class Certificate(models.Model):

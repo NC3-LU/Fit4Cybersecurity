@@ -32,10 +32,24 @@ from audit.models import Audit, AuditUser, AuditByUser, AuditQuestion
 
 @login_required
 def index(request):
+    if request.method == "POST":
+        body_unicode = request.body.decode("utf-8")
+        body = json.loads(body_unicode)
+        id = body.pop("id", None)
+        Audit.objects.filter(id=id).update(**body)
+        
     user = AuditUser.objects.get(user=request.session.get("_auth_user_id", None))
-    audits = user.get_all_audits()
+    auditsByUser = user.get_all_audits()
+    
+    for auditByUser in auditsByUser:
+        auditByUser.statusForm = StatusChoices(
+                id=auditByUser.audit.id,
+                status=auditByUser.audit.status,
+                type_of_company=user.company.type,
+            )
+
     context = {
-        "audits": audits,
+        "auditsByUser": auditsByUser
     }
 
     return render(request, "audit/index.html", context=context)

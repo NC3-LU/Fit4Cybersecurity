@@ -36,23 +36,24 @@
               </tr>
             </thead>
             <tbody>
-                {% for audit in audits %}
+                {% for auditByUser in auditsByUser %}
                 <tr>
-                    <td>{{ audit.audit.product_name | safe }}</td>
-                    <td>{{ audit.audit.product_ref | safe }}</td>
-                    <td>{{ audit.company.audit_company.name | safe }}</td>
-                    <td>
-                        {% if audit.status.label %}
-                            {{ audit.status.label }}
-                            <i type="button" class="btn bi bi-info-circle-fill text-primary" data-audit-id="{{ audit.id | safe }}" data-toggle="modal" data-target="#statusDetails"></i>
+                    <td>{{ auditByUser.audit.product_name | safe }}</td>
+                    <td>{{ auditByUser.audit.product_ref | safe }}</td>
+                    <td>{{ auditByUser.company.audit_company.name | safe }}</td>
+                    <td class="p-0 d-flex">
+                        <form method="POST">
+                            {% csrf_token %}
+                            {% bootstrap_form auditByUser.statusForm show_label=False %}
+                        </form>  
+                            <i type="button" class="btn bi bi-info-circle-fill text-primary" data-audit-id="{{ auditByUser.audit.id | safe }}" data-toggle="modal" data-target="#statusDetails"></i>
                             <script>
-                                complianceData[{{audit.id}}] = {{ audit.status.details | safe }}
+                                complianceData[{{auditByUser.audit.id}}] = {{ auditByUser.audit.statusDetails | safe }}
                             </script>
-                        {% endif %}
                     </td>
                     <td>
                         <i class="bi bi-gear"></i>
-                        <i class="go-to-audit bi bi-list-check text-success" data-go-to-audit="{{ audit.audit.id }}"></i>
+                        <i class="go-to-audit bi bi-list-check text-success" data-go-to-audit="{{ auditByUser.audit.id }}"></i>
                     </td>
                 </tr>
             {% endfor %}
