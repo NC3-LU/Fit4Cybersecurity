@@ -19,9 +19,7 @@ CUSTOM = {
     ],
     "defaultLanguage": "en",
     "languages": [
-        ("en", "English"),
-        ("fr", "French"),
-        ("de", "German"),
+        ("en", "English")
     ],
     # Logos paths
     "right_cover_logo": "templates/report/images/nc3_logo.svg",
@@ -38,15 +36,15 @@ CUSTOM = {
     "templates_parts": {
         # path of the templates parts
         "terms": "terms_part.html",
-        "footer": "footer_part.html",
-        "main_logo": "logo_part.html",
+        "footer": "fit4csa/footer_part.html",
+        "main_logo": "fit4csa/logo_part.html",
     },
     # Available modules
     "modules": {
         "reportDownload": True,
         "reportEmail": False,
-        "requestDiagnostic": True,
-        "requestTraining": True,
+        "requestDiagnostic": False,
+        "requestTraining": False,
         "displayResults": True,
     },
     # Available report parts
@@ -59,12 +57,12 @@ CUSTOM = {
     },
     # Available stats charts
     "stats": {
-        "activity": True,
-        "sector": True,
-        "size": True,
-        "country": True,
+        "activity": False,
+        "sector": False,
+        "size": False,
+        "country": False,
         "status": True,
-        "language": True,
+        "language": False,
         "section": True,
         "category": True,
     },
