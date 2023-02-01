@@ -68,7 +68,7 @@ echo "--- Installing $TOOL_NAME… ---"
 sudo -u ubuntu git clone https://github.com/NC3-LU/Fit4Cybersecurity.git $PROJECT_PATH
 cd $PROJECT_PATH
 npm ci
-poetry install --no-dev
+poetry install --only main
 
 sudo -u ubuntu mkdir logs
 sudo -u ubuntu touch logs/django.log

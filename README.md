@@ -66,7 +66,7 @@ $ curl -sSL https://install.python-poetry.org | python -
 $ git clone https://github.com/NC3-LU/Fit4Cybersecurity.git
 $ cd Fit4Cybersecurity
 $ npm ci
-$ poetry install --no-dev
+$ poetry install --only main
 ```
 
 
@@ -191,7 +191,7 @@ be *password*.
 $ cd Fit4Cybersecurity/
 $ git pull origin master --tags
 $ npm ci
-$ poetry install --no-dev
+$ poetry install --only main
 $ poetry run python manage.py collectstatic
 $ poetry run python manage.py migrate
 $ poetry run python manage.py compilemessages

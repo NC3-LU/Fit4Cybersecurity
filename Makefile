@@ -43,7 +43,7 @@ generatepot:
 
 update:
 	npm ci
-	poetry install --no-dev
+	poetry install --only main
 	python manage.py collectstatic
 	python manage.py compilemessages
 	python manage.py migrate
