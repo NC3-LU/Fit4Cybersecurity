@@ -8293,7 +8293,7 @@
     "service_category": "Anti-automation is implemented (e.g. CAPTCHA)",
     "qtype": "S",
     "qindex": 125,
-    "maxPoints": 0,
+    "maxPoints": 20,
     "label": "Have you implemented any anti-automation controls to prevent credential brute force and account lockout attacks?",
     "answers": [
       {
@@ -8323,7 +8323,7 @@
       {
         "aindex": 2,
         "uniqueAnswer": true,
-        "score": 0,
+        "score": 20,
         "atype": "P",
         "questions_map": [
           {
@@ -8343,7 +8343,7 @@
     "service_category": "Notify user following updates to authentication details.",
     "qtype": "S",
     "qindex": 126,
-    "maxPoints": 0,
+    "maxPoints": 15,
     "label": "Are users of your application automatically informed when their authentication details are updated?",
     "answers": [
       {
@@ -8373,7 +8373,7 @@
       {
         "aindex": 2,
         "uniqueAnswer": true,
-        "score": 0,
+        "score": 15,
         "atype": "P",
         "questions_map": [
           {
@@ -8393,7 +8393,7 @@
     "service_category": "Password complexity",
     "qtype": "S",
     "qindex": 127,
-    "maxPoints": 0,
+    "maxPoints": 15,
     "label": "Do the password requirements defined for your application respect best practices in terms of length and complexity?",
     "answers": [
       {
@@ -8410,12 +8410,20 @@
           }
         ],
         "label": "There is no password required to access our application.",
-        "recommendations": []
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": false,
+            "label": "Passwords must be at least 12 characters long, with at least one upper case, one lower case, one number, and one special character.\n\nPasswords should be changed at least once a year to prevent possible leakage.\n\nPassword managers can be used to facilitate management and storage.\n\nPasswords that are reused on other sites are more likely to be disclosed. In addition, one lost password is enough to compromise all access."
+          }
+        ]
       },
       {
         "aindex": 2,
         "uniqueAnswer": true,
-        "score": 0,
+        "score": 5,
         "atype": "P",
         "questions_map": [
           {
@@ -8426,12 +8434,20 @@
           }
         ],
         "label": "There is a password, but there are no particular requirements in place on its composition.",
-        "recommendations": []
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": false,
+            "label": "Passwords must be at least 12 characters long, with at least one upper case, one lower case, one number, and one special character.\n\nPasswords should be changed at least once a year to prevent possible leakage.\n\nPassword managers can be used to facilitate management and storage.\n\nPasswords that are reused on other sites are more likely to be disclosed. In addition, one lost password is enough to compromise all access."
+          }
+        ]
       },
       {
         "aindex": 3,
         "uniqueAnswer": true,
-        "score": 0,
+        "score": 10,
         "atype": "P",
         "questions_map": [
           {
@@ -8442,12 +8458,20 @@
           }
         ],
         "label": "There is a password and the requirements are set according to our own developers' expertise.",
-        "recommendations": []
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": false,
+            "label": "Passwords must be at least 12 characters long, with at least one upper case, one lower case, one number, and one special character.\n\nPasswords should be changed at least once a year to prevent possible leakage.\n\nPassword managers can be used to facilitate management and storage.\n\nPasswords that are reused on other sites are more likely to be disclosed. In addition, one lost password is enough to compromise all access."
+          }
+        ]
       },
       {
         "aindex": 4,
         "uniqueAnswer": true,
-        "score": 0,
+        "score": 15,
         "atype": "P",
         "questions_map": [
           {
@@ -8458,15 +8482,7 @@
           }
         ],
         "label": "The password requirements set for our application are based on best practices.",
-        "recommendations": [
-          {
-            "min_e_count": "a",
-            "max_e_count": "j",
-            "sector": null,
-            "answerChosen": false,
-            "label": "Passwords must be at least 12 characters long, with at least one upper case, one lower case, one number, and one special character.\n\nPasswords should be changed at least once a year to prevent possible leakage.\n\nPassword managers can be used to facilitate management and storage.\n\nPasswords that are reused on other sites are more likely to be disclosed. In addition, one lost password is enough to compromise all access."
-          }
-        ]
+        "recommendations": []
       }
     ]
   },
@@ -8475,13 +8491,13 @@
     "service_category": "Users can change their password",
     "qtype": "M",
     "qindex": 128,
-    "maxPoints": 0,
+    "maxPoints": 15,
     "label": "Is it possible for users of your application to update their passwords whenever they want to do so?",
     "answers": [
       {
         "aindex": 1,
         "uniqueAnswer": true,
-        "score": 0,
+        "score": 5,
         "atype": "P",
         "questions_map": [
           {
@@ -8505,7 +8521,7 @@
       {
         "aindex": 2,
         "uniqueAnswer": false,
-        "score": 0,
+        "score": 10,
         "atype": "P",
         "questions_map": [
           {
@@ -8529,7 +8545,7 @@
       {
         "aindex": 3,
         "uniqueAnswer": false,
-        "score": 0,
+        "score": 5,
         "atype": "P",
         "questions_map": [
           {
@@ -8549,7 +8565,7 @@
     "service_category": "Password storage requirements",
     "qtype": "S",
     "qindex": 129,
-    "maxPoints": 0,
+    "maxPoints": 15,
     "label": "How do you store users' passwords in your application databases?",
     "answers": [
       {
@@ -8572,14 +8588,14 @@
             "max_e_count": "j",
             "sector": null,
             "answerChosen": true,
-            "label": "Users' password information must never be stored in plain text in the database. Passwords must be hashes with a secure hashing algorithm (OWASP recommends using Argon2 to hash passwords.) then salted before being stored in a database."
+            "label": "Users' password information must never be stored in plain text in the database. Passwords must be hashed with a secure hashing algorithm (OWASP recommends using Argon2 to hash passwords.) then salted before being stored in a database."
           }
         ]
       },
       {
         "aindex": 2,
         "uniqueAnswer": true,
-        "score": 0,
+        "score": 15,
         "atype": "P",
         "questions_map": [
           {
@@ -8599,13 +8615,13 @@
     "service_category": "Password Users can change their password",
     "qtype": "S",
     "qindex": 130,
-    "maxPoints": 0,
+    "maxPoints": 15,
     "label": "Is a password hint or any functionality that could help users recall their password implemented in your application?",
     "answers": [
       {
         "aindex": 1,
         "uniqueAnswer": true,
-        "score": 0,
+        "score": 15,
         "atype": "P",
         "questions_map": [
           {
@@ -8616,20 +8632,12 @@
           }
         ],
         "label": "We have not implemented any functionality that could help users recall their user account passwords.",
-        "recommendations": [
-          {
-            "min_e_count": "a",
-            "max_e_count": "j",
-            "sector": null,
-            "answerChosen": false,
-            "label": "Password hints should not be used in any form to ensure the highest level of security for users of your application. It is very easy to find the answer to the question via users' social network accounts or profiles."
-          }
-        ]
+        "recommendations": []
       },
       {
         "aindex": 2,
         "uniqueAnswer": true,
-        "score": 0,
+        "score": 7,
         "atype": "P",
         "questions_map": [
           {
@@ -8640,7 +8648,15 @@
           }
         ],
         "label": "We have implemented a password hint functionality, which users can decide to use or not.",
-        "recommendations": []
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": false,
+            "label": "Password hints should not be used in any form to ensure the highest level of security for users of your application. It is very easy to find the answer to the question via users' social network accounts or profiles."
+          }
+        ]
       },
       {
         "aindex": 3,
@@ -8656,7 +8672,15 @@
           }
         ],
         "label": "We have implemented a password hint functionality, which is mandatory to configure by the user.",
-        "recommendations": []
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": false,
+            "label": "Password hints should not be used in any form to ensure the highest level of security for users of your application. It is very easy to find the answer to the question via users' social network accounts or profiles."
+          }
+        ]
       }
     ]
   },
@@ -8665,13 +8689,13 @@
     "service_category": "Default accounts and credentials are changed or deactivated.",
     "qtype": "S",
     "qindex": 131,
-    "maxPoints": 0,
+    "maxPoints": 20,
     "label": "In case default credentials are provided, are users forced/require to change their password in order to use the application?",
     "answers": [
       {
         "aindex": 1,
         "uniqueAnswer": true,
-        "score": 0,
+        "score": 20,
         "atype": "P",
         "questions_map": [
           {
@@ -8711,7 +8735,7 @@
       {
         "aindex": 3,
         "uniqueAnswer": true,
-        "score": 0,
+        "score": 20,
         "atype": "P",
         "questions_map": [
           {
@@ -8731,7 +8755,7 @@
     "service_category": "New session token is generated on user authentication.",
     "qtype": "S",
     "qindex": 132,
-    "maxPoints": 0,
+    "maxPoints": 15,
     "label": "Does your application generate a new session token on user authentication?",
     "answers": [
       {
@@ -8761,7 +8785,7 @@
       {
         "aindex": 2,
         "uniqueAnswer": true,
-        "score": 0,
+        "score": 15,
         "atype": "P",
         "questions_map": [
           {
@@ -8781,13 +8805,13 @@
     "service_category": "Session tokens are in the browser using secure methods.",
     "qtype": "S",
     "qindex": 133,
-    "maxPoints": 0,
+    "maxPoints": 15,
     "label": "In your application, are session tokens transmitted via the URL?",
     "answers": [
       {
         "aindex": 1,
         "uniqueAnswer": true,
-        "score": 0,
+        "score": 15,
         "atype": "P",
         "questions_map": [
           {
@@ -8831,7 +8855,7 @@
     "service_category": "Security of session token generation",
     "qtype": "S",
     "qindex": 134,
-    "maxPoints": 0,
+    "maxPoints": 15,
     "label": "Have you tested session token generation in your application to ensure their security?",
     "answers": [
       {
@@ -8861,7 +8885,7 @@
       {
         "aindex": 2,
         "uniqueAnswer": true,
-        "score": 0,
+        "score": 15,
         "atype": "P",
         "questions_map": [
           {
@@ -8881,7 +8905,7 @@
     "service_category": "The \"Httponly\" flag is set for cookie-based session tokens.",
     "qtype": "S",
     "qindex": 135,
-    "maxPoints": 0,
+    "maxPoints": 5,
     "label": "Is the \"httponly\" flag set for cookie-based session tokens?",
     "answers": [
       {
@@ -8911,7 +8935,7 @@
       {
         "aindex": 2,
         "uniqueAnswer": true,
-        "score": 0,
+        "score": 5,
         "atype": "P",
         "questions_map": [
           {
@@ -8931,7 +8955,7 @@
     "service_category": "Prevent reuse of the session token",
     "qtype": "S",
     "qindex": 136,
-    "maxPoints": 0,
+    "maxPoints": 15,
     "label": "Have you implemented any control to prevent the reuse of session tokens?",
     "answers": [
       {
@@ -8948,12 +8972,20 @@
           }
         ],
         "label": "We have not implemented any control to prevent the reuse of session tokens.",
-        "recommendations": []
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": false,
+            "label": "The session replay attack targets the reuse of a valid session ID to spoof the target system in order to gain privileges. Hence, it is recommended to set the web application to invalidate a session after it exceeds the predefined inactivity time and after the user logs out. Also, it is recommended to set the session lifetime to be as short as possible, to encrypt session data."
+          }
+        ]
       },
       {
         "aindex": 2,
         "uniqueAnswer": true,
-        "score": 0,
+        "score": 7,
         "atype": "P",
         "questions_map": [
           {
@@ -8964,12 +8996,20 @@
           }
         ],
         "label": "There are certain controls (session token timeout, protection of session variables, or other) implemented to prevent the reuse of session tokens, based on our developers' experience.",
-        "recommendations": []
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": false,
+            "label": "The session replay attack targets the reuse of a valid session ID to spoof the target system in order to gain privileges. Hence, it is recommended to set the web application to invalidate a session after it exceeds the predefined inactivity time and after the user logs out. Also, it is recommended to set the session lifetime to be as short as possible, to encrypt session data."
+          }
+        ]
       },
       {
         "aindex": 3,
         "uniqueAnswer": true,
-        "score": 0,
+        "score": 15,
         "atype": "P",
         "questions_map": [
           {
@@ -8980,15 +9020,7 @@
           }
         ],
         "label": "Controls to prevent session token reuse are implemented based on best practices.",
-        "recommendations": [
-          {
-            "min_e_count": "a",
-            "max_e_count": "j",
-            "sector": null,
-            "answerChosen": false,
-            "label": "The session replay attack targets the reuse of a valid session ID to spoof the target system in order to gain privileges. Hence, it is recommended to set the web application to invalidate a session after it exceeds the predefined inactivity time and after the user logs out. Also, it is recommended to set the session lifetime to be as short as possible, to encrypt session data."
-          }
-        ]
+        "recommendations": []
       }
     ]
   },
@@ -8997,7 +9029,7 @@
     "service_category": "Principle of least privilege is implemented.",
     "qtype": "S",
     "qindex": 137,
-    "maxPoints": 0,
+    "maxPoints": 15,
     "label": "Does your application's access management process respect the principles of least privilege and deny by default?",
     "answers": [
       {
@@ -9027,7 +9059,7 @@
       {
         "aindex": 2,
         "uniqueAnswer": true,
-        "score": 0,
+        "score": 15,
         "atype": "P",
         "questions_map": [
           {
@@ -9047,7 +9079,7 @@
     "service_category": "Principle of least privilege is implemented.",
     "qtype": "S",
     "qindex": 138,
-    "maxPoints": 0,
+    "maxPoints": 15,
     "label": "Is access to the application back-end controlled by a secure access management system with an MFA?",
     "answers": [
       {
@@ -9064,12 +9096,20 @@
           }
         ],
         "label": "No, the access management system for the back-end is just based on a username and password.",
-        "recommendations": []
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": false,
+            "label": "Back-end infrastructure and systems are the heart of your application, hence another layer of security other than a username and a password is crucial to ensure security. Hence, it is recommended to implement a multi-factor authentication mechanism, which adds a layer of security to the normal authentication mechanism."
+          }
+        ]
       },
       {
         "aindex": 2,
         "uniqueAnswer": true,
-        "score": 0,
+        "score": 15,
         "atype": "P",
         "questions_map": [
           {
@@ -9080,15 +9120,7 @@
           }
         ],
         "label": "The access management system for the back-end is based on an MFA.",
-        "recommendations": [
-          {
-            "min_e_count": "a",
-            "max_e_count": "j",
-            "sector": null,
-            "answerChosen": false,
-            "label": "Back-end infrastructure and systems are the heart of your application, hence another layer of security other than a username and a password is crucial to ensure security. Hence, it is recommended to implement a multi-factor authentication mechanism, which adds a layer of security to the normal authentication mechanism."
-          }
-        ]
+        "recommendations": []
       },
       {
         "aindex": 3,
@@ -9104,7 +9136,15 @@
           }
         ],
         "label": "There is no password required to access the back-end.",
-        "recommendations": []
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": false,
+            "label": "Back-end infrastructure and systems are the heart of your application, hence another layer of security other than a username and a password is crucial to ensure security. Hence, it is recommended to implement a multi-factor authentication mechanism, which adds a layer of security to the normal authentication mechanism."
+          }
+        ]
       }
     ]
   },
@@ -9113,7 +9153,7 @@
     "service_category": "Anti-CSRF is implemented.",
     "qtype": "S",
     "qindex": 139,
-    "maxPoints": 0,
+    "maxPoints": 15,
     "label": "Have you implemented any controls to prevent Cross-Site Request Forgery attacks (CSRF)?",
     "answers": [
       {
@@ -9143,7 +9183,7 @@
       {
         "aindex": 2,
         "uniqueAnswer": true,
-        "score": 0,
+        "score": 15,
         "atype": "P",
         "questions_map": [
           {
@@ -9163,7 +9203,7 @@
     "service_category": "Directory browsing is disabled.",
     "qtype": "S",
     "qindex": 140,
-    "maxPoints": 0,
+    "maxPoints": 15,
     "label": "Are controls to prevent directory transversal attacks implemented?",
     "answers": [
       {
@@ -9193,7 +9233,7 @@
       {
         "aindex": 2,
         "uniqueAnswer": true,
-        "score": 0,
+        "score": 15,
         "atype": "P",
         "questions_map": [
           {
@@ -9213,7 +9253,7 @@
     "service_category": "Input validation and data sanitization",
     "qtype": "S",
     "qindex": 141,
-    "maxPoints": 0,
+    "maxPoints": 30,
     "label": "Have you implemented data sanitization and input validation controls to prevent the injection of malicious code in your application?",
     "answers": [
       {
@@ -9243,7 +9283,7 @@
       {
         "aindex": 2,
         "uniqueAnswer": true,
-        "score": 0,
+        "score": 30,
         "atype": "P",
         "questions_map": [
           {
@@ -9263,7 +9303,7 @@
     "service_category": "Measure against HTTP parameter pollution attacks",
     "qtype": "S",
     "qindex": 142,
-    "maxPoints": 0,
+    "maxPoints": 10,
     "label": "Is your application protected against HTTP parameter pollution attacks ?",
     "answers": [
       {
@@ -9293,7 +9333,7 @@
       {
         "aindex": 2,
         "uniqueAnswer": true,
-        "score": 0,
+        "score": 10,
         "atype": "P",
         "questions_map": [
           {
@@ -9313,7 +9353,7 @@
     "service_category": "Protection against SSRF attacks",
     "qtype": "S",
     "qindex": 143,
-    "maxPoints": 0,
+    "maxPoints": 25,
     "label": "Have you implemented a domain whitelisting or any controls to prevent your application from SSRF attacks?",
     "answers": [
       {
@@ -9343,7 +9383,7 @@
       {
         "aindex": 2,
         "uniqueAnswer": true,
-        "score": 0,
+        "score": 25,
         "atype": "P",
         "questions_map": [
           {
@@ -9363,7 +9403,7 @@
     "service_category": "Prevent executable file to be uploaded",
     "qtype": "S",
     "qindex": 144,
-    "maxPoints": 0,
+    "maxPoints": 30,
     "label": "Are controls to prevent executable files to be uploaded implemented ?",
     "answers": [
       {
@@ -9393,7 +9433,7 @@
       {
         "aindex": 2,
         "uniqueAnswer": true,
-        "score": 0,
+        "score": 30,
         "atype": "P",
         "questions_map": [
           {
@@ -9413,7 +9453,7 @@
     "service_category": "All application components and systems fail securely.",
     "qtype": "S",
     "qindex": 145,
-    "maxPoints": 0,
+    "maxPoints": 20,
     "label": "Have you tested if all components and systems of your application fail securely (without disclosing sensitive information)?",
     "answers": [
       {
@@ -9443,7 +9483,7 @@
       {
         "aindex": 2,
         "uniqueAnswer": true,
-        "score": 0,
+        "score": 20,
         "atype": "P",
         "questions_map": [
           {
@@ -9463,7 +9503,7 @@
     "service_category": "Information disclosure management",
     "qtype": "S",
     "qindex": 146,
-    "maxPoints": 0,
+    "maxPoints": 10,
     "label": "Does your application log any sensitive information or data in the log systems?",
     "answers": [
       {
@@ -9493,7 +9533,7 @@
       {
         "aindex": 2,
         "uniqueAnswer": true,
-        "score": 0,
+        "score": 10,
         "atype": "P",
         "questions_map": [
           {
@@ -9513,13 +9553,13 @@
     "service_category": "PII and sensitive data are not stored in the browser.",
     "qtype": "S",
     "qindex": 147,
-    "maxPoints": 0,
+    "maxPoints": 10,
     "label": "Does your application store any PII or sensitive data in the browser?",
     "answers": [
       {
         "aindex": 1,
         "uniqueAnswer": true,
-        "score": 0,
+        "score": 10,
         "atype": "P",
         "questions_map": [
           {
@@ -9563,13 +9603,13 @@
     "service_category": "Clear authenticated data from browser",
     "qtype": "S",
     "qindex": 148,
-    "maxPoints": 0,
+    "maxPoints": 10,
     "label": "Do you cache any authentication data in the browser after a session is terminated?",
     "answers": [
       {
         "aindex": 1,
         "uniqueAnswer": true,
-        "score": 0,
+        "score": 10,
         "atype": "P",
         "questions_map": [
           {
@@ -9613,7 +9653,7 @@
     "service_category": "Data subject rights",
     "qtype": "M",
     "qindex": 149,
-    "maxPoints": 0,
+    "maxPoints": 5,
     "label": "Is it possible for users of your application to delete, modify or export their personal information (PI)?",
     "answers": [
       {
@@ -9630,44 +9670,21 @@
           }
         ],
         "label": "No, it is not possible for users to delete their PI.",
-        "recommendations": []
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": false,
+            "label": "As per EU GDPR obligations, your application should provide users with features to modify, update, or request that their personal data be deleted."
+          }
+
+        ]
       },
       {
         "aindex": 2,
         "uniqueAnswer": false,
-        "score": 0,
-        "atype": "P",
-        "questions_map": [
-          {
-            "label": "Is there a data privacy notice available on your application to all users?",
-            "branch": 3,
-            "level": 26,
-            "order": 1
-          }
-        ],
-        "label": "No, it is not possible for users to modify their PI.",
-        "recommendations": []
-      },
-      {
-        "aindex": 3,
-        "uniqueAnswer": false,
-        "score": 0,
-        "atype": "P",
-        "questions_map": [
-          {
-            "label": "Is there a data privacy notice available on your application to all users?",
-            "branch": 3,
-            "level": 26,
-            "order": 1
-          }
-        ],
-        "label": "No, it is not possible for users to export their PI.",
-        "recommendations": []
-      },
-      {
-        "aindex": 4,
-        "uniqueAnswer": true,
-        "score": 0,
+        "score": 5,
         "atype": "P",
         "questions_map": [
           {
@@ -9678,15 +9695,7 @@
           }
         ],
         "label": "Yes, it is possible for users to delete, modify or export their PI.",
-        "recommendations": [
-          {
-            "min_e_count": "a",
-            "max_e_count": "j",
-            "sector": null,
-            "answerChosen": false,
-            "label": "As per EU GDPR obligations, your application should provide users with features to modify, update, or request that their personal data be deleted."
-          }
-        ]
+        "recommendations": []
       }
     ]
   },
@@ -9695,7 +9704,7 @@
     "service_category": "Data privacy policy",
     "qtype": "S",
     "qindex": 150,
-    "maxPoints": 0,
+    "maxPoints": 5,
     "label": "Is there a data privacy notice available on your application to all users?",
     "answers": [
       {
@@ -9725,7 +9734,7 @@
       {
         "aindex": 2,
         "uniqueAnswer": true,
-        "score": 0,
+        "score": 5,
         "atype": "P",
         "questions_map": [
           {
@@ -9745,7 +9754,7 @@
     "service_category": "Secured TLS is implemented",
     "qtype": "S",
     "qindex": 151,
-    "maxPoints": 0,
+    "maxPoints": 20,
     "label": "Are up-to-date TLS protocols and algorithms implemented in your application?",
     "answers": [
       {
@@ -9775,7 +9784,7 @@
       {
         "aindex": 2,
         "uniqueAnswer": true,
-        "score": 0,
+        "score": 20,
         "atype": "P",
         "questions_map": [
           {
@@ -9795,7 +9804,7 @@
     "service_category": "Updates are done securely.",
     "qtype": "S",
     "qindex": 152,
-    "maxPoints": 0,
+    "maxPoints": 15,
     "label": "Are tests conducted to ensure that updates are done securely?",
     "answers": [
       {
@@ -9825,7 +9834,7 @@
       {
         "aindex": 2,
         "uniqueAnswer": true,
-        "score": 0,
+        "score": 7,
         "atype": "P",
         "questions_map": [
           {
@@ -9849,7 +9858,7 @@
       {
         "aindex": 3,
         "uniqueAnswer": true,
-        "score": 0,
+        "score": 15,
         "atype": "P",
         "questions_map": [
           {
@@ -9869,7 +9878,7 @@
     "service_category": "Subdomain takeover",
     "qtype": "S",
     "qindex": 153,
-    "maxPoints": 0,
+    "maxPoints": 20,
     "label": "Have you tested for any misconfiguration that can allow a subdomain takeover attack?",
     "answers": [
       {
@@ -9899,7 +9908,7 @@
       {
         "aindex": 2,
         "uniqueAnswer": true,
-        "score": 0,
+        "score": 20,
         "atype": "P",
         "questions_map": [
           {
@@ -9919,7 +9928,7 @@
     "service_category": "File size restriction is set.",
     "qtype": "S",
     "qindex": 154,
-    "maxPoints": 0,
+    "maxPoints": 10,
     "label": "When required, have you set a file size restriction in your application?",
     "answers": [
       {
@@ -9973,7 +9982,7 @@
       {
         "aindex": 3,
         "uniqueAnswer": true,
-        "score": 0,
+        "score": 10,
         "atype": "P",
         "questions_map": [
           {
@@ -9993,7 +10002,7 @@
     "service_category": "Protection against path transversal",
     "qtype": "S",
     "qindex": 155,
-    "maxPoints": 0,
+    "maxPoints": 15,
     "label": "Are your application and infrastructure well segregated/isolated to prevent path transversal attacks?",
     "answers": [
       {
@@ -10023,7 +10032,7 @@
       {
         "aindex": 2,
         "uniqueAnswer": true,
-        "score": 0,
+        "score": 15,
         "atype": "P",
         "questions_map": [
           {
@@ -10043,7 +10052,7 @@
     "service_category": "Protection against local and remote file inclusion",
     "qtype": "S",
     "qindex": 156,
-    "maxPoints": 0,
+    "maxPoints": 25,
     "label": "Have you implemented any controls to protect your application against local and remote file inclusion attacks?",
     "answers": [
       {
@@ -10073,7 +10082,7 @@
       {
         "aindex": 2,
         "uniqueAnswer": true,
-        "score": 0,
+        "score": 25,
         "atype": "P",
         "questions_map": [
           {
@@ -10093,7 +10102,7 @@
     "service_category": "Protection against Reflective File Download (RFD)",
     "qtype": "S",
     "qindex": 157,
-    "maxPoints": 0,
+    "maxPoints": 25,
     "label": "Have you tested and mitigated any vulnerability related to Reflective File Download (RFD) attacks?",
     "answers": [
       {
@@ -10123,7 +10132,7 @@
       {
         "aindex": 2,
         "uniqueAnswer": true,
-        "score": 0,
+        "score": 25,
         "atype": "P",
         "questions_map": [
           {
@@ -10143,7 +10152,7 @@
     "service_category": "Protection against OS command injection",
     "qtype": "S",
     "qindex": 158,
-    "maxPoints": 0,
+    "maxPoints": 20,
     "label": "Have you implemented input validation across your application to prevent potential OS command injection?",
     "answers": [
       {
@@ -10173,7 +10182,7 @@
       {
         "aindex": 2,
         "uniqueAnswer": true,
-        "score": 0,
+        "score": 20,
         "atype": "P",
         "questions_map": [
           {
@@ -10193,7 +10202,7 @@
     "service_category": "Upload file security",
     "qtype": "S",
     "qindex": 159,
-    "maxPoints": 0,
+    "maxPoints": 25,
     "label": "Are there security controls such as antivirus scan and/or file security analysis implemented to ensure the security of uploaded files?",
     "answers": [
       {
@@ -10223,7 +10232,7 @@
       {
         "aindex": 2,
         "uniqueAnswer": true,
-        "score": 0,
+        "score": 25,
         "atype": "P",
         "questions_map": [
           {
@@ -10243,7 +10252,7 @@
     "service_category": "Administrator access requirements",
     "qtype": "S",
     "qindex": 160,
-    "maxPoints": 0,
+    "maxPoints": 25,
     "label": "Are administrator access requirements well defined in your application?",
     "answers": [
       {
@@ -10266,14 +10275,14 @@
             "max_e_count": "j",
             "sector": null,
             "answerChosen": true,
-            "label": "It is recommended that your application has an administrator profile defined with all the necessary requirements and rights allowing an administrator to realize key activities such as creating or removing users, assigning or retracting rights, managing incidents, etc."
+            "label": "It is recommended that your application has an administrator profile defined with all the necessary requirements and rights allowing only administrator to realize key activities such as creating or removing users, assigning or retracting rights, managing incidents, etc."
           }
         ]
       },
       {
         "aindex": 2,
         "uniqueAnswer": true,
-        "score": 0,
+        "score": 25,
         "atype": "P",
         "questions_map": [
           {
@@ -10293,7 +10302,7 @@
     "service_category": "Protection of sensitive information / credentials",
     "qtype": "S",
     "qindex": 161,
-    "maxPoints": 0,
+    "maxPoints": 20,
     "label": "Have you implemented controls (encryption, authentification mechanisms, etc.) to protect any sensitive data collected or processed by your application?",
     "answers": [
       {
@@ -10323,7 +10332,7 @@
       {
         "aindex": 2,
         "uniqueAnswer": true,
-        "score": 0,
+        "score": 20,
         "atype": "P",
         "questions_map": [
           {
@@ -10343,7 +10352,7 @@
     "service_category": "Validation of JSON schema",
     "qtype": "S",
     "qindex": 162,
-    "maxPoints": 0,
+    "maxPoints": 10,
     "label": "Have you tested if all your JSON schema, instances are correctly validated?",
     "answers": [
       {
@@ -10373,7 +10382,7 @@
       {
         "aindex": 2,
         "uniqueAnswer": true,
-        "score": 0,
+        "score": 10,
         "atype": "P",
         "questions_map": [
           {
@@ -10393,7 +10402,7 @@
     "service_category": "Secure RESTful web services",
     "qtype": "S",
     "qindex": 163,
-    "maxPoints": 0,
+    "maxPoints": 20,
     "label": "Have you implemented controls (encryption, authentification mechanisms, etc.) to ensure that RESTful web services are secured?",
     "answers": [
       {
@@ -10423,7 +10432,7 @@
       {
         "aindex": 2,
         "uniqueAnswer": true,
-        "score": 0,
+        "score": 20,
         "atype": "P",
         "questions_map": [
           {
@@ -10443,13 +10452,13 @@
     "service_category": "Secure dependencies update and disable unused features.",
     "qtype": "S",
     "qindex": 164,
-    "maxPoints": 0,
+    "maxPoints": 15,
     "label": "Have you implemented any controls to ensure the security of dependencies and certain features in your application?",
     "answers": [
       {
         "aindex": 1,
         "uniqueAnswer": true,
-        "score": 0,
+        "score": 15,
         "atype": "P",
         "questions_map": [
           {
@@ -10489,7 +10498,7 @@
       {
         "aindex": 3,
         "uniqueAnswer": true,
-        "score": 0,
+        "score": 7,
         "atype": "P",
         "questions_map": [
           {
@@ -10517,7 +10526,7 @@
     "service_category": "Disable debug mode",
     "qtype": "S",
     "qindex": 165,
-    "maxPoints": 0,
+    "maxPoints": 15,
     "label": "Have you implemented any controls to ensure that you are not deploying your application's codes in production with debug features activated?",
     "answers": [
       {
@@ -10547,7 +10556,7 @@
       {
         "aindex": 2,
         "uniqueAnswer": true,
-        "score": 0,
+        "score": 15,
         "atype": "P",
         "questions_map": [
           {
@@ -10567,7 +10576,7 @@
     "service_category": "Limit HTTP header and response information disclosure",
     "qtype": "S",
     "qindex": 166,
-    "maxPoints": 0,
+    "maxPoints": 10,
     "label": "Are there controls implemented to limit any information disclosure vulnerabilities in either HTTP headers or API response?",
     "answers": [
       {
@@ -10597,7 +10606,7 @@
       {
         "aindex": 2,
         "uniqueAnswer": true,
-        "score": 0,
+        "score": 10,
         "atype": "P",
         "questions_map": [
           {
@@ -10617,7 +10626,7 @@
     "service_category": "API responses contain an X-Content type.",
     "qtype": "S",
     "qindex": 167,
-    "maxPoints": 0,
+    "maxPoints": 15,
     "label": "Are X-content-type security controls implemented?",
     "answers": [
       {
@@ -10647,7 +10656,7 @@
       {
         "aindex": 2,
         "uniqueAnswer": true,
-        "score": 0,
+        "score": 15,
         "atype": "P",
         "questions_map": [
           {
@@ -10667,7 +10676,7 @@
     "service_category": "A secure Referrer Policy is implemented",
     "qtype": "S",
     "qindex": 168,
-    "maxPoints": 0,
+    "maxPoints": 15,
     "label": "Have you implemented a referrer policy for all requests in your application?",
     "answers": [
       {
@@ -10690,7 +10699,7 @@
       {
         "aindex": 2,
         "uniqueAnswer": true,
-        "score": 0,
+        "score": 15,
         "atype": "P",
         "questions_map": [],
         "label": "We have a referrer policy configured for communication between servers and clients and any other systems in our application.",
