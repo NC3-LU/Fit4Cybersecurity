@@ -1,33 +1,29 @@
 import json
-
-from django.shortcuts import render
-from typing import Dict
 from typing import Any
+from typing import Dict
 
 from django.contrib.auth.decorators import login_required
-from django.urls import reverse_lazy
-from django.views.generic import CreateView
 from django.http import HttpResponseRedirect
+from django.shortcuts import render
+from django.urls import reverse_lazy
 from django.utils.translation import gettext as _
+from django.views.generic import CreateView
 
+from audit.forms import ObservationsTextarea
+from audit.forms import ReferencesTextarea
+from audit.forms import SignUpForm
+from audit.forms import StatusChoices
+from audit.models import Audit
+from audit.models import AuditByUser
+from audit.models import AuditQuestion
+from audit.models import AuditUser
 from csskp.settings import CUSTOM
-
+from survey.models import CONTEXT_SECTION_LABEL
+from survey.models import SurveyQuestion
+from survey.models import SurveyUser
+from survey.models import SurveyUserAnswer
 from survey.viewLogic import find_user_by_id
 from survey.viewLogic import get_answered_questions_sequences
-from survey.models import (
-    SurveyUser,
-    SurveyUserAnswer,
-    SurveyQuestion,
-    CONTEXT_SECTION_LABEL,
-)
-
-from audit.forms import (
-    SignUpForm,
-    ObservationsTextarea,
-    ReferencesTextarea,
-    StatusChoices,
-)
-from audit.models import Audit, AuditUser, AuditByUser, AuditQuestion
 
 
 @login_required
@@ -37,20 +33,18 @@ def index(request):
         body = json.loads(body_unicode)
         id = body.pop("id", None)
         Audit.objects.filter(id=id).update(**body)
-        
+
     user = AuditUser.objects.get(user=request.session.get("_auth_user_id", None))
     auditsByUser = user.get_all_audits()
-    
+
     for auditByUser in auditsByUser:
         auditByUser.statusForm = StatusChoices(
-                id=auditByUser.audit.id,
-                status=auditByUser.audit.status,
-                type_of_company=user.company.type,
-            )
+            id=auditByUser.audit.id,
+            status=auditByUser.audit.status,
+            type_of_company=user.company.type,
+        )
 
-    context = {
-        "auditsByUser": auditsByUser
-    }
+    context = {"auditsByUser": auditsByUser}
 
     return render(request, "audit/index.html", context=context)
 
