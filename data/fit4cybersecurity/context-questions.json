@@ -1,1 +1,214 @@
-[]
+[
+  {
+    "label": "What is your sector?",
+    "service_category": "Context",
+    "section": "__context",
+    "qtype": "SO",
+    "qindex": 1,
+    "maxPoints": 0,
+    "answers_order": "label",
+    "answers": [
+      {
+        "label": "Banking, insurance and real estate",
+        "value": "BANK",
+        "uniqueAnswer": true,
+        "atype": "P",
+        "aindex": 1
+      },
+      {
+        "label": "Trading, sales and mass distribution",
+        "value": "SALE",
+        "uniqueAnswer": true,
+        "atype": "P",
+        "aindex": 2
+      },
+      {
+        "label": "Marketing, media and multimedia",
+        "value": "MARK",
+        "uniqueAnswer": true,
+        "atype": "P",
+        "aindex": 3
+      },
+      {
+        "label": "Construction industries and civil engineering",
+        "value": "BUIL",
+        "uniqueAnswer": true,
+        "atype": "P",
+        "aindex": 4
+      },
+      {
+        "label": "Hotel and restoration, tourism and entertainment",
+        "value": "REST",
+        "uniqueAnswer": true,
+        "atype": "P",
+        "aindex": 5
+      },
+      {
+        "label": "Industry",
+        "value": "INDU",
+        "uniqueAnswer": true,
+        "atype": "P",
+        "aindex": 6
+      },
+      {
+        "label": "Installation and maintenance",
+        "value": "INST",
+        "uniqueAnswer": true,
+        "atype": "P",
+        "aindex": 7
+      },
+      {
+        "label": "Creation or placing of objects that are artistic and decorative",
+        "value": "ARTI",
+        "uniqueAnswer": true,
+        "atype": "P",
+        "aindex": 8
+      },
+      {
+        "label": "Health",
+        "value": "HEAL",
+        "uniqueAnswer": true,
+        "atype": "P",
+        "aindex": 9
+      },
+      {
+        "label": "Home-Care Service or Community Service",
+        "value": "SERV",
+        "uniqueAnswer": true,
+        "atype": "P",
+        "aindex": 10
+      },
+      {
+        "label": "Shows",
+        "value": "SHOW",
+        "uniqueAnswer": true,
+        "atype": "P",
+        "aindex": 11
+      },
+      {
+        "label": "Company Support",
+        "value": "SUPP",
+        "uniqueAnswer": true,
+        "atype": "P",
+        "aindex": 12
+      },
+      {
+        "label": "Transport and Logistics",
+        "value": "LOGI",
+        "uniqueAnswer": true,
+        "atype": "P",
+        "aindex": 13
+      },
+      {
+        "label": "Farming and fishing, natural spaces and green spaces, animal care",
+        "value": "FARM",
+        "uniqueAnswer": true,
+        "atype": "P",
+        "aindex": 14
+      },
+      {
+        "label": "Public Administration",
+        "value": "PUBL",
+        "uniqueAnswer": true,
+        "atype": "P",
+        "aindex": 15
+      }
+    ]
+  },
+  {
+    "label": "How many employees?",
+    "service_category": "Context",
+    "section": "__context",
+    "qtype": "SO",
+    "qindex": 2,
+    "maxPoints": 0,
+    "answers": [
+      {
+        "label": "1-5",
+        "value": "a",
+        "uniqueAnswer": true,
+        "atype": "P",
+        "aindex": 1
+      },
+      {
+        "label": "6-10",
+        "value": "b",
+        "uniqueAnswer": true,
+        "atype": "P",
+        "aindex": 2
+      },
+      {
+        "label": "10-20",
+        "value": "c",
+        "uniqueAnswer": true,
+        "atype": "P",
+        "aindex": 3
+      },
+      {
+        "label": "20-50",
+        "value": "d",
+        "uniqueAnswer": true,
+        "atype": "P",
+        "aindex": 4
+      },
+      {
+        "label": "50-100",
+        "value": "e",
+        "uniqueAnswer": true,
+        "atype": "P",
+        "aindex": 5
+      },
+      {
+        "label": "100-200",
+        "value": "f",
+        "uniqueAnswer": true,
+        "atype": "P",
+        "aindex": 6
+      },
+      {
+        "label": "200-500",
+        "value": "g",
+        "uniqueAnswer": true,
+        "atype": "P",
+        "aindex": 7
+      },
+      {
+        "label": "500-1000",
+        "value": "h",
+        "uniqueAnswer": true,
+        "atype": "P",
+        "aindex": 8
+      },
+      {
+        "label": "1000-5000",
+        "value": "i",
+        "uniqueAnswer": true,
+        "atype": "P",
+        "aindex": 9
+      },
+      {
+        "label": "5000+",
+        "value": "j",
+        "uniqueAnswer": true,
+        "atype": "P",
+        "aindex": 10
+      }
+    ]
+  },
+  {
+    "label": "Please select your country",
+    "service_category": "Context",
+    "section": "__context",
+    "qtype": "CL",
+    "qindex": 3,
+    "maxPoints": 0,
+    "answers": [
+      {
+        "label": "",
+        "uniqueAnswer": true,
+        "atype": "P",
+        "aindex": 1
+      }
+    ]
+  }
+]
