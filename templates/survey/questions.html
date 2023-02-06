@@ -14,7 +14,7 @@
 {% block title %}{{ title }}{% endblock %}
 
 {% block content %}
-    {% if user.is_survey_in_progress %}
+    {% if user.is_survey_in_progress and not does_map_exist or current_question_index > 1 and does_map_exist %}
         <div class="progress m-2" style="background-color: #C1CBD5; height: 30px;">
             <div
                 class="progress-bar"

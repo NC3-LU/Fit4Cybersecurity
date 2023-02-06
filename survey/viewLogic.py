@@ -816,10 +816,22 @@ def get_total_questions_number(user: SurveyUser, question_index: int) -> int:
         return SurveyUserQuestionSequence.objects.filter(
             user=user, is_active=True
         ).count()
+    
+    if CUSTOM["is_simple_questionnaire_tree"]:
+        return (
+            SurveyAnswerQuestionMap.objects.filter(
+                branch=get_last_user_sequence(user).branch
+            )
+            .order_by("question")
+            .distinct("question")
+            .count()
+            + 1
+        )
 
     branches_number = SurveyAnswerQuestionMap.objects.aggregate(Max("branch"))[
         "branch__max"
     ]
+    
     if question_index > 1:
         branches_number = (
             SurveyUserQuestionSequence.objects.filter(
