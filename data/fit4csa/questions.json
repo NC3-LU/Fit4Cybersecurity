@@ -638,7 +638,7 @@
     "service_category": "Employee terms and conditions",
     "qtype": "S",
     "qindex": 10,
-    "maxPoints": 0,
+    "maxPoints": 20,
     "label": "As part of your employee onboarding process, do you inform your employees about all applicable information security policies and procedures?",
     "answers": [
       {
@@ -1113,7 +1113,15 @@
           }
         ],
         "label": "Our rules on acceptable use or safe handling of assets are formalized in a policy or procedure but their application is not verified.",
-        "recommendations": []
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": true,
+            "label": "It is great that a procedure or guideline exist already related to the safe handling or usage of company IT assets, yet it is essential to check to what extent employees apply such procedure or guideline."
+          }
+        ]
       },
       {
         "aindex": 4,
@@ -1161,7 +1169,7 @@
             "max_e_count": "j",
             "sector": null,
             "answerChosen": true,
-            "label": "Hardware commissioning (how to ensure that computing assets are designed, installed, tested and maintained in a way that abides by your company's requirements) and decommissioning (what to do at the end of the lifetime of a computing asset) is essential for managing assets in a reliable and risk-aware way. You should consider the rules related to these topics in your company, document them and implement them."
+            "label": "Hardware commissioning (how to ensure that computing assets are designed, installed, tested and maintained in a way that abides by your company's requirements) and decommissioning (what to do at the end of the lifetime of a computing asset) is essential for managing assets in a reliable and risk-aware way. You should consider the rules related to these topics in your company, document them and implement them. them."
           }
         ]
       },
@@ -1203,15 +1211,7 @@
           }
         ],
         "label": "Procedures or guidelines for commissioning and decommissioning of hardware exist and their application is audited.",
-        "recommendations": [
-          {
-            "min_e_count": "a",
-            "max_e_count": "j",
-            "sector": null,
-            "answerChosen": true,
-            "label": "It is great that a procedure or guideline exist already related to the safe handling or usage of company IT assets, yet it is essential to check to what extent employees apply such procedure or guideline."
-          }
-        ]
+        "recommendations": []
       }
     ]
   },
@@ -1795,15 +1795,7 @@
           }
         ],
         "label": "All systems and application data are backed up.",
-        "recommendations": [
-          {
-            "min_e_count": "a",
-            "max_e_count": "j",
-            "sector": null,
-            "answerChosen": false,
-            "label": "Ideally, everything that has value to your company or your employees should be backed up, to keep as much as possible business continuity."
-          }
-        ]
+        "recommendations": []
       },
       {
         "aindex": 2,
@@ -1819,7 +1811,15 @@
           }
         ],
         "label": "Critical applications and their data are backed up.",
-        "recommendations": []
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": false,
+            "label": "Ideally, everything that has value to your company or your employees should be backed up, to keep as much as possible business continuity."
+          }
+        ]
       },
       {
         "aindex": 3,
@@ -1835,7 +1835,15 @@
           }
         ],
         "label": "Client information files.",
-        "recommendations": []
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": false,
+            "label": "Ideally, everything that has value to your company or your employees should be backed up, to keep as much as possible business continuity."
+          }
+        ]
       },
       {
         "aindex": 4,
@@ -1851,7 +1859,15 @@
           }
         ],
         "label": "Invoicing, billing, contracts data.",
-        "recommendations": []
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": false,
+            "label": "Ideally, everything that has value to your company or your employees should be backed up, to keep as much as possible business continuity."
+          }
+        ]
       },
       {
         "aindex": 5,
@@ -1867,7 +1883,15 @@
           }
         ],
         "label": "Personnel files, payroll.",
-        "recommendations": []
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": false,
+            "label": "Ideally, everything that has value to your company or your employees should be backed up, to keep as much as possible business continuity."
+          }
+        ]
       },
       {
         "aindex": 6,
@@ -1883,7 +1907,15 @@
           }
         ],
         "label": "Communications (internal and external)",
-        "recommendations": []
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": false,
+            "label": "Ideally, everything that has value to your company or your employees should be backed up, to keep as much as possible business continuity."
+          }
+        ]
       },
       {
         "aindex": 7,
@@ -1899,7 +1931,15 @@
           }
         ],
         "label": "Project management data.",
-        "recommendations": []
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": false,
+            "label": "Ideally, everything that has value to your company or your employees should be backed up, to keep as much as possible business continuity."
+          }
+        ]
       },
       {
         "aindex": 8,
@@ -1914,8 +1954,16 @@
             "order": 1
           }
         ],
-        "label": "Frequently updated files.",
-        "recommendations": []
+        "label": "Nothing",
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "sector": null,
+            "answerChosen": false,
+            "label": "Ideally, everything that has value to your company or your employees should be backed up, to keep as much as possible business continuity."
+          }
+        ]
       }
     ]
   },
