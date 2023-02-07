@@ -831,7 +831,7 @@ def get_total_questions_number(user: SurveyUser, question_index: int) -> int:
     branches_number = SurveyAnswerQuestionMap.objects.aggregate(Max("branch"))[
         "branch__max"
     ]
-    
+    branches_number = 1
     if question_index > 1:
         branches_number = (
             SurveyUserQuestionSequence.objects.filter(
