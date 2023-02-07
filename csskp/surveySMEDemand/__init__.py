@@ -70,4 +70,5 @@ CUSTOM = {
     },
     "chart_exclude_sections": [],
     "is_simple_questionnaire_tree": True,
+    "is_single_branch_tree": True,
 }

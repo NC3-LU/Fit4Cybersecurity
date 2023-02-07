@@ -324,7 +324,13 @@ def save_answers(
             # for the first question we take branch from the question number.
             if does_map_exist and current_sequence is not None and question_index == 1:
                 # The first question defines branch(es) number(s) to proceed with.
-                current_branch = index + 1
+                if (
+                    "is_single_branch_tree" in CUSTOM
+                    and CUSTOM["is_single_branch_tree"]
+                ):
+                    current_branch = 0
+                else:
+                    current_branch = index + 1
 
             is_answer_selected = question_answer.id in posted_answers
             is_answer_changed = (user_answer.uvalue == "0" and is_answer_selected) or (
@@ -816,8 +822,11 @@ def get_total_questions_number(user: SurveyUser, question_index: int) -> int:
         return SurveyUserQuestionSequence.objects.filter(
             user=user, is_active=True
         ).count()
-    
-    if CUSTOM["is_simple_questionnaire_tree"]:
+
+    if (
+        "is_simple_questionnaire_tree" in CUSTOM
+        and CUSTOM["is_simple_questionnaire_tree"]
+    ):
         return (
             SurveyAnswerQuestionMap.objects.filter(
                 branch=get_last_user_sequence(user).branch
@@ -831,7 +840,6 @@ def get_total_questions_number(user: SurveyUser, question_index: int) -> int:
     branches_number = SurveyAnswerQuestionMap.objects.aggregate(Max("branch"))[
         "branch__max"
     ]
-    branches_number = 1
     if question_index > 1:
         branches_number = (
             SurveyUserQuestionSequence.objects.filter(
