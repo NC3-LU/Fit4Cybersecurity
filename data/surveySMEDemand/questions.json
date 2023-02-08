@@ -470,7 +470,7 @@
         "atype": "P",
         "questions_map": [
           {
-            "label": "Are cybersecurity policy decisions made locally?",
+            "label": "Are your company's cybersecurity policy decisions made locally?",
             "branch": 0,
             "level": 7,
             "order": 1
@@ -484,7 +484,7 @@
         "atype": "P",
         "questions_map": [
           {
-            "label": "Are cybersecurity policy decisions made locally?",
+            "label": "Are your company's cybersecurity policy decisions made locally?",
             "branch": 0,
             "level": 7,
             "order": 1
@@ -499,7 +499,7 @@
     "service_category": "Governance",
     "qtype": "S",
     "qindex": 8,
-    "label": "Are cybersecurity policy decisions made locally?",
+    "label": "Are your company's cybersecurity policy decisions made locally?",
     "answers": [
       {
         "aindex": 1,
@@ -708,7 +708,7 @@
             "order": 1
           }
         ],
-        "label": "0,00%"
+        "label": "<5%"
       },
       {
         "aindex": 3,
@@ -722,7 +722,7 @@
             "order": 1
           }
         ],
-        "label": "<2%"
+        "label": "<10%"
       },
       {
         "aindex": 4,
@@ -736,7 +736,7 @@
             "order": 1
           }
         ],
-        "label": "<5%"
+        "label": "<20%"
       },
       {
         "aindex": 5,
@@ -750,21 +750,7 @@
             "order": 1
           }
         ],
-        "label": "<20%"
-      },
-      {
-        "aindex": 6,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "questions_map": [
-          {
-            "label": "Do you have an annual budget dedicated solely to cybersecurity? If so, how much does that add up to your overall budget",
-            "branch": 0,
-            "level": 11,
-            "order": 1
-          }
-        ],
-        "label": ">50%"
+        "label": ">20%"
       }
     ]
   },
@@ -801,7 +787,7 @@
             "order": 1
           }
         ],
-        "label": "0,00%"
+        "label": "<1%"
       },
       {
         "aindex": 3,
@@ -815,7 +801,7 @@
             "order": 1
           }
         ],
-        "label": "<1%"
+        "label": "<2%"
       },
       {
         "aindex": 4,
@@ -829,7 +815,7 @@
             "order": 1
           }
         ],
-        "label": "<2%"
+        "label": "<3%"
       },
       {
         "aindex": 5,
@@ -843,7 +829,7 @@
             "order": 1
           }
         ],
-        "label": "<3%"
+        "label": "<5%"
       },
       {
         "aindex": 6,
@@ -3206,7 +3192,7 @@
         "atype": "P",
         "questions_map": [
           {
-            "label": "Have you ever had a cybersecurity issue regarding another regulation than Luxembourg?",
+            "label": "Have you ever had a cybersecurity incident involving regulations other than Luxembourg?",
             "branch": 0,
             "level": 47,
             "order": 1
@@ -3220,7 +3206,7 @@
         "atype": "P",
         "questions_map": [
           {
-            "label": "Have you ever had a cybersecurity issue regarding another regulation than Luxembourg?",
+            "label": "Have you ever had a cybersecurity incident involving regulations other than Luxembourg?",
             "branch": 0,
             "level": 45,
             "order": 1
@@ -3234,7 +3220,7 @@
         "atype": "P",
         "questions_map": [
           {
-            "label": "Have you ever had a cybersecurity issue regarding another regulation than Luxembourg?",
+            "label": "Have you ever had a cybersecurity incident involving regulations other than Luxembourg?",
             "branch": 0,
             "level": 45,
             "order": 1
@@ -3248,7 +3234,7 @@
         "atype": "P",
         "questions_map": [
           {
-            "label": "Have you ever had a cybersecurity issue regarding another regulation than Luxembourg?",
+            "label": "Have you ever had a cybersecurity incident involving regulations other than Luxembourg?",
             "branch": 0,
             "level": 45,
             "order": 1
@@ -3263,7 +3249,7 @@
     "service_category": "Incident",
     "qtype": "S",
     "qindex": 46,
-    "label": "Have you ever had a cybersecurity issue regarding another regulation than Luxembourg?",
+    "label": "Have you ever had a cybersecurity incident involving regulations other than Luxembourg?",
     "answers": [
       {
         "aindex": 1,
@@ -4132,7 +4118,7 @@
             "order": 1
           }
         ],
-        "label": "specialized PSF"
+        "label": "ISO 27000"
       },
       {
         "aindex": 4,
@@ -4146,7 +4132,7 @@
             "order": 1
           }
         ],
-        "label": "support PSF"
+        "label": "COBIT"
       },
       {
         "aindex": 5,
@@ -4160,7 +4146,7 @@
             "order": 1
           }
         ],
-        "label": "ISO 27001"
+        "label": "IEC/ANSI 62443"
       },
       {
         "aindex": 6,
@@ -4174,7 +4160,7 @@
             "order": 1
           }
         ],
-        "label": "Other ISO 2700X"
+        "label": "UNECE WP.29 Cybersecurity Regulation (CSMS)"
       },
       {
         "aindex": 7,
@@ -4253,7 +4239,7 @@
             "order": 1
           }
         ],
-        "label": "specialized PSF"
+        "label": "ISO 27000F"
       },
       {
         "aindex": 4,
@@ -4267,7 +4253,7 @@
             "order": 1
           }
         ],
-        "label": "support PSF"
+        "label": "COBIT"
       },
       {
         "aindex": 5,
@@ -4281,7 +4267,7 @@
             "order": 1
           }
         ],
-        "label": "ISO 27001"
+        "label": "IEC/ANSI 62443"
       },
       {
         "aindex": 6,
@@ -4295,7 +4281,7 @@
             "order": 1
           }
         ],
-        "label": "Other ISO 2700X"
+        "label": "UNECE WP.29 Cybersecurity Regulation (CSMS)"
       },
       {
         "aindex": 7,
@@ -4415,25 +4401,25 @@
         "aindex": 3,
         "uniqueAnswer": false,
         "atype": "P",
-        "label": "specialized PSF"
+        "label": "ISO 27000"
       },
       {
         "aindex": 4,
         "uniqueAnswer": false,
         "atype": "P",
-        "label": "support PSF"
+        "label": "COBIT"
       },
       {
         "aindex": 5,
         "uniqueAnswer": false,
         "atype": "P",
-        "label": "ISO 27001"
+        "label": "IEC/ANSI 62443"
       },
       {
         "aindex": 6,
         "uniqueAnswer": false,
         "atype": "P",
-        "label": "Other ISO 2700X"
+        "label": "UNECE WP.29 Cybersecurity Regulation (CSMS)"
       },
       {
         "aindex": 7,
