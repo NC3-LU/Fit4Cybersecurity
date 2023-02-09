@@ -4,7 +4,7 @@
       "service_category": "Context",
       "section": "__context",
       "qtype": "SO",
-      "qindex": 2,
+      "qindex": 1,
       "maxPoints": 0,
       "answers": [
         {
@@ -84,7 +84,7 @@
       "service_category": "Context",
       "section": "__context",
       "qtype": "SO",
-      "qindex": 1,
+      "qindex": 2,
       "maxPoints": 0,
       "answers_order": "label",
       "answers": [
@@ -205,24 +205,28 @@
       "answers": [
         {
           "label": "0 à 5 ans",
+          "value": "5",
           "uniqueAnswer": true,
           "atype": "P",
           "aindex": 1
         },
         {
           "label": "5 à 10 ans",
+          "value": "10",
           "uniqueAnswer": true,
           "atype": "P",
           "aindex": 2
         },
         {
           "label": "10 à 15 ans",
+          "value": "15",
           "uniqueAnswer": true,
           "atype": "P",
           "aindex": 3
         },
         {
           "label": "+ 15 ans",
+          "value": "+15",
           "uniqueAnswer": true,
           "atype": "P",
           "aindex": 4
@@ -233,44 +237,50 @@
       "label": "Fonction de la personne qui remplit ce questionnaire :",
       "service_category": "Context",
       "section": "__context",
-      "qtype": "ST",
+      "qtype": "SO",
       "qindex": 4,
       "maxPoints": 0,
       "answers": [
         {
           "label": "CEO",
+          "value": "CEO",
           "uniqueAnswer": true,
           "atype": "P",
           "aindex": 1
         },
         {
           "label": "DPO",
+          "value": "DPO",
           "uniqueAnswer": true,
           "atype": "P",
           "aindex": 2
         },
         {
           "label": "Juriste",
+          "value": "JUR",
           "uniqueAnswer": true,
           "atype": "P",
           "aindex": 3
         },
         {
           "label": "RH",
+          "value": "RH",
           "uniqueAnswer": true,
           "atype": "P",
           "aindex": 4
         },
         {
           "label": "Resp. informatique",
+          "value": "CIO",
           "uniqueAnswer": true,
           "atype": "P",
           "aindex": 5
         },
         {
           "label": "Autre",
+          "value": "AUT",
           "uniqueAnswer": true,
-          "atype": "T",
+          "atype": "P",
           "aindex": 6
         }
       ]
