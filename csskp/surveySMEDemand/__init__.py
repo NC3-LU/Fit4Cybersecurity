@@ -84,13 +84,13 @@ CUSTOM = {
     # Available stats charts
     "stats": {
         "activity": True,
-        "sector": True,
-        "size": True,
-        "country": True,
+        "sector": False,
+        "size": False,
+        "country": False,
         "status": True,
         "language": True,
-        "section": True,
-        "category": True,
+        "section": False,
+        "category": False,
     },
     "chart_exclude_sections": [],
     "is_simple_questionnaire_tree": True,
