@@ -382,27 +382,13 @@
   {
     "section": "ALTO",
     "service_category": "Défis des PME",
-    "qtype": "MT",
+    "qtype": "ST",
     "qindex": 9,
     "label": "Y-a-t-il des cas/problématiques concret(e)s pour lesquels la CNPD peut apporter des solutions ?",
     "answers": [
       {
         "aindex": 1,
         "uniqueAnswer": false,
-        "atype": "P",
-        "label": "Oui",
-        "questions_map": [
-          {
-            "label": "Connaissez-vous la différence entre les deux notions?",
-            "branch": 0,
-            "level": 9,
-            "order": 1
-          }
-        ]
-      },
-      {
-        "aindex": 2,
-        "uniqueAnswer": true,
         "atype": "P",
         "label": "Non",
         "questions_map": [
@@ -415,8 +401,8 @@
         ]
       },
       {
-        "aindex": 3,
-        "uniqueAnswer": false,
+        "aindex": 2,
+        "uniqueAnswer": true,
         "atype": "T",
         "label": "Si oui, veuillez préciser :",
         "questions_map": [
