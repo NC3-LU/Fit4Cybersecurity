@@ -27,12 +27,17 @@
         {% block finished_survey_description %}
         <p class="text-justify">
             {% blocktranslate trimmed %}
-            Keep in touch with us to receive the study results as well as cybersecurity content for your smes by registrering to our newsletter: <a href="https://newsletter.cybersecurity-luxembourg.com/" target="_blank" rel="noopener noreferrer">click here!</a>
+            Keep in touch with us to receive the study results as well as cybersecurity content for your smes by registrering to our newsletter by <a href="https://newsletter.cybersecurity-luxembourg.com/" target="_blank" rel="noopener noreferrer">clicking here!</a>
             {% endblocktranslate %}
         </p>
+        <br>
+        <p>
+            If you want to assess your level of cybersecurity or privacy, we have created tools that will provide you with tailored recommendations to improve your standards.
+            Using all these self-assessment tools is anonymous and for free.
+        </p>
         <ul>
-            <li><a href="https://fit4cybersecurity.nc3.lu/" target="_blank">Fit4Cybersecurity</a></li>
-            <li><a href="https://fit4privacy.nc3.lu/" target="_blank">Fit4Privacy</a></li>    
+            <li><a href="https://fit4cybersecurity.nc3.lu/" target="_blank">Fit4Cybersecurity</a> - a service that includes multiple self-assessment tools. Its main goal is to allow users to quickly assess their information security maturity in different areas that NC3 considers critical.</li>
+            <li><a href="https://fit4privacy.nc3.lu/" target="_blank">Fit4Privacy</a> - This questionnaire, created in consultation with the National Commission for Data Protection, aims to help organisations assess to what extent they are in control of their personal data risks.</li>    
         </ul>
         {% endblock %}
         {% if custom.modules.requestTraining and user.get_country_code == 'LU' and txtscore < custom.minimal_acceptable_score %}
