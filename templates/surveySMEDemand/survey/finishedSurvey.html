@@ -60,16 +60,7 @@
                 {% endblocktranslate %}
             </p>
         {% endif %}
-        <p class="continue-later-link">
-            <button
-                class="pl-0 btn btn-link"
-                type="button"
-                name="continue-later"
-                data-toggle="modal"
-                data-target="#modal">
-                {{ _('Your results link') }}
-            </button>
-        </p>
+
         {% if custom.modules.requestDiagnostic and user.get_country_code == 'LU' and txtscore >= custom.minimal_acceptable_score %}
             {% block finished_survey_diagnostic %}
             <h2>{{ _('About the NC3 Diagnostic') }}:</h2>
