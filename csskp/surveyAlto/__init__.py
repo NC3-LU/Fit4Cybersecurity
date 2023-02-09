@@ -4,10 +4,11 @@ CUSTOM = {
     # Generic configurations
     "tool_name": "Survey ALTO",
     "intro_text": gettext_lazy(
-        "This survey will ask a few questions and provide "
-        "recommendations. Keep in mind, that it is a self-assessment tool and that it "
-        "only touches the surface of information security by giving a very basic maturity "
-        "level estimate and some basic recommendations."
+        "Les PME ne disposent souvent pas de l'expertise nécessaire en interne afin de gérer les données personnelles conformément au RGPD. Elles sont désavantagées par rapport aux grandes structures en termes de coûts, d'impact, notamment. De plus, elles sont peu nombreuses à avoir développé des stratégies ou des « réflexes de responsable de traitement ». Ces constats sont dus à un manque de connaissance et de sensibilisation, d'une part, et à un manque d'informations et d'outils pratiques, d'autre part. Par conséquent, il est nécessaire de renforcer la sensibilisation des PME à l'importance de la protection des données à caractère personnel et de les accompagner pour améliorer leur mise en conformité au RGPD." 
+        "<br><br>"
+        "Le projet ALTO a pour objectif de mettre en œuvre un outil d'auto-évaluation afin de répondre aux défis quotidiens des PME en matière de protection des données."
+        "<br><br>"
+        "Le présent questionnaire <strong><ins>strictement anonyme</ins></strong> est adressé aux PME pour cerner les défis en matière de protection des données auxquels sont confrontées les PME, afin de créer et mettre à leur disposition un outil d'auto-évaluation répondant à leurs besoins."
     ),
     "countries_first": [
         "LU",
