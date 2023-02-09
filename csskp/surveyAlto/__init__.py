@@ -42,11 +42,11 @@ CUSTOM = {
     },
     # Available modules
     "modules": {
-        "reportDownload": True,
+        "reportDownload": False,
         "reportEmail": False,
-        "requestDiagnostic": True,
-        "requestTraining": True,
-        "displayResults": True,
+        "requestDiagnostic": False,
+        "requestTraining": False,
+        "displayResults": False,
     },
     # Available report parts
     "report": {
@@ -59,13 +59,13 @@ CUSTOM = {
     # Available stats charts
     "stats": {
         "activity": True,
-        "sector": True,
-        "size": True,
-        "country": True,
+        "sector": False,
+        "size": False,
+        "country": False,
         "status": True,
-        "language": True,
-        "section": True,
-        "category": True,
+        "language": False,
+        "section": False,
+        "category": False,
     },
     "chart_exclude_sections": [],
     "is_simple_questionnaire_tree": True,
