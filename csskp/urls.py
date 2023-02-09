@@ -33,4 +33,5 @@ urlpatterns = [
     path("survey/", include("survey.urls")),
     # API
     path("api-auth/", include("rest_framework.urls")),
+    path("api/", include("survey.api.urls")),
 ]
