@@ -1,0 +1,1582 @@
+[
+  {
+    "section": "ALTO",
+    "service_category": "ALTO en bref",
+    "qtype": "T",
+    "qindex": 1,
+    "label": "Votre entreprise a-t-elle des questions relatives au projet ALTO ?",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": true,
+        "atype": "T",
+        "label": "Veuillez préciser le cas échéant :",
+        "questions_map": [
+          {
+            "label": "Votre participation au projet est-elle également envisagée pour la phase « test de l'outil ALTO » ? Prévu courant fin décembre 2023",
+            "branch": 0,
+            "level": 1,
+            "order": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "section": "ALTO",
+    "service_category": "ALTO en bref",
+    "qtype": "S",
+    "qindex": 2,
+    "label": "Votre participation au projet est-elle également envisagée pour la phase « test de l'outil ALTO » ? Prévu courant fin décembre 2023",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "Oui",
+        "questions_map": [
+          {
+            "label": "Quels éléments le projet ALTO doit-il prévoir selon vous?",
+            "branch": 0,
+            "level": 2,
+            "order": 1
+          }
+        ]
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "Non",
+        "questions_map": [
+          {
+            "label": "Quels éléments le projet ALTO doit-il prévoir selon vous?",
+            "branch": 0,
+            "level": 2,
+            "order": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "section": "ALTO",
+    "service_category": "ALTO en bref",
+    "qtype": "T",
+    "qindex": 3,
+    "label": "Quels éléments le projet ALTO doit-il prévoir selon vous?",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": true,
+        "atype": "T",
+        "label": "Veuillez préciser le cas échéant :",
+        "questions_map": [
+          {
+            "label": "Considérez-vous la conformité au RGPD dans vos activités ?",
+            "branch": 0,
+            "level": 3,
+            "order": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "section": "ALTO",
+    "service_category": "Le RGPD en général",
+    "qtype": "S",
+    "qindex": 4,
+    "label": "Considérez-vous la conformité au RGPD dans vos activités ?",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "Oui",
+        "questions_map": [
+          {
+            "label": "Quel/le organisme/personne (sa fonction) soutient votre PME dans votre mise en conformité au RGPD ?",
+            "branch": 0,
+            "level": 4,
+            "order": 1
+          }
+        ]
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "Non",
+        "questions_map": [
+          {
+            "label": "Quel/le organisme/personne (sa fonction) soutient votre PME dans votre mise en conformité au RGPD ?",
+            "branch": 0,
+            "level": 4,
+            "order": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "section": "ALTO",
+    "service_category": "Le RGPD en général",
+    "qtype": "ST",
+    "qindex": 5,
+    "label": "Quel/le organisme/personne (sa fonction) soutient votre PME dans votre mise en conformité au RGPD ?",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "Notre PME n'est pas soutenu par un organisme/une personne extérieure",
+        "questions_map": [
+          {
+            "label": "À quelle organisme/personne (sa fonction) votre entreprise s'adresse-elle pour obtenir des informations/une aide en la matière ?",
+            "branch": 0,
+            "level": 5,
+            "order": 1
+          }
+        ]
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": true,
+        "atype": "T",
+        "label": "Veuillez préciser le cas échéant :\nNe pas mentionner de données personnelles de type nom, prénom, etc.",
+        "questions_map": [
+          {
+            "label": "À quelle organisme/personne (sa fonction) votre entreprise s'adresse-elle pour obtenir des informations/une aide en la matière ?",
+            "branch": 0,
+            "level": 5,
+            "order": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "section": "ALTO",
+    "service_category": "Le RGPD en général",
+    "qtype": "ST",
+    "qindex": 6,
+    "label": "À quelle organisme/personne (sa fonction) votre entreprise s'adresse-elle pour obtenir des informations/une aide en la matière ?",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "Notre PME ne sait pas vers qui se tourner",
+        "questions_map": [
+          {
+            "label": "Quels sont les principaux défis auxquels votre PME est confrontée ?",
+            "branch": 0,
+            "level": 6,
+            "order": 1
+          }
+        ]
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": true,
+        "atype": "T",
+        "label": "Veuillez préciser le cas échéant :\nNe pas mentionner de données personnelles de type nom, prénom, etc.",
+        "questions_map": [
+          {
+            "label": "Quels sont les principaux défis auxquels votre PME est confrontée ?",
+            "branch": 0,
+            "level": 6,
+            "order": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "section": "ALTO",
+    "service_category": "Défis des PME",
+    "qtype": "MT",
+    "qindex": 7,
+    "label": "Quels sont les principaux défis auxquels votre PME est confrontée ?",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "label": "Suis-je concerné par le RGPD ?",
+        "questions_map": [
+          {
+            "label": "Quels sont les trois thématiques que l'outil d'auto évaluation ALTO devrait aborder pour répondre à vos besoins / défis en matière de protection des données?",
+            "branch": 0,
+            "level": 7,
+            "order": 1
+          }
+        ]
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "label": "Suis-je un responsable de traitement ou un sous-traitant ?",
+        "questions_map": [
+          {
+            "label": "Quels sont les trois thématiques que l'outil d'auto évaluation ALTO devrait aborder pour répondre à vos besoins / défis en matière de protection des données?",
+            "branch": 0,
+            "level": 7,
+            "order": 1
+          }
+        ]
+      },
+      {
+        "aindex": 3,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "label": "Comment dois-je documenter mes traitements de données ?",
+        "questions_map": [
+          {
+            "label": "Quels sont les trois thématiques que l'outil d'auto évaluation ALTO devrait aborder pour répondre à vos besoins / défis en matière de protection des données?",
+            "branch": 0,
+            "level": 7,
+            "order": 1
+          }
+        ]
+      },
+      {
+        "aindex": 4,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "label": "Que doit comporter une politique d'information ?",
+        "questions_map": [
+          {
+            "label": "Quels sont les trois thématiques que l'outil d'auto évaluation ALTO devrait aborder pour répondre à vos besoins / défis en matière de protection des données?",
+            "branch": 0,
+            "level": 7,
+            "order": 1
+          }
+        ]
+      },
+      {
+        "aindex": 5,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "label": "Quels sont les droits des personnes concernées ?",
+        "questions_map": [
+          {
+            "label": "Quels sont les trois thématiques que l'outil d'auto évaluation ALTO devrait aborder pour répondre à vos besoins / défis en matière de protection des données?",
+            "branch": 0,
+            "level": 7,
+            "order": 1
+          }
+        ]
+      },
+      {
+        "aindex": 6,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "label": "Quelles sont les bases légales adéquates à chacun de mes traitements de données ?",
+        "questions_map": [
+          {
+            "label": "Quels sont les trois thématiques que l'outil d'auto évaluation ALTO devrait aborder pour répondre à vos besoins / défis en matière de protection des données?",
+            "branch": 0,
+            "level": 7,
+            "order": 1
+          }
+        ]
+      },
+      {
+        "aindex": 7,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "label": "Quelles sont mes obligations RGPD ?",
+        "questions_map": [
+          {
+            "label": "Quels sont les trois thématiques que l'outil d'auto évaluation ALTO devrait aborder pour répondre à vos besoins / défis en matière de protection des données?",
+            "branch": 0,
+            "level": 7,
+            "order": 1
+          }
+        ]
+      },
+      {
+        "aindex": 8,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "label": "Dois-je désigner un DPO (délégué à la protection des données) ?",
+        "questions_map": [
+          {
+            "label": "Quels sont les trois thématiques que l'outil d'auto évaluation ALTO devrait aborder pour répondre à vos besoins / défis en matière de protection des données?",
+            "branch": 0,
+            "level": 7,
+            "order": 1
+          }
+        ]
+      },
+      {
+        "aindex": 9,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "label": "Combien de temps dois-je conserver les données collectées ?Comment vérifier si j'applique le principe de minimisation correctement ?",
+        "questions_map": [
+          {
+            "label": "Quels sont les trois thématiques que l'outil d'auto évaluation ALTO devrait aborder pour répondre à vos besoins / défis en matière de protection des données?",
+            "branch": 0,
+            "level": 7,
+            "order": 1
+          }
+        ]
+      },
+      {
+        "aindex": 10,
+        "uniqueAnswer": false,
+        "atype": "T",
+        "label": "Veuillez préciser le cas échéant :",
+        "questions_map": [
+          {
+            "label": "Quels sont les trois thématiques que l'outil d'auto évaluation ALTO devrait aborder pour répondre à vos besoins / défis en matière de protection des données?",
+            "branch": 0,
+            "level": 7,
+            "order": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "section": "ALTO",
+    "service_category": "Défis des PME",
+    "qtype": "ST",
+    "qindex": 8,
+    "label": "Quels sont les trois thématiques que l'outil d'auto évaluation ALTO devrait aborder pour répondre à vos besoins / défis en matière de protection des données?",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "Je ne sais pas",
+        "questions_map": [
+          {
+            "label": "Y-a-t-il des cas/problématiques concret(e)s pour lesquels la CNPD peut apporter des solutions ?",
+            "branch": 0,
+            "level": 8,
+            "order": 1
+          }
+        ]
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": true,
+        "atype": "T",
+        "label": "Veuillez préciser les trois thématiques :",
+        "questions_map": [
+          {
+            "label": "Y-a-t-il des cas/problématiques concret(e)s pour lesquels la CNPD peut apporter des solutions ?",
+            "branch": 0,
+            "level": 8,
+            "order": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "section": "ALTO",
+    "service_category": "Défis des PME",
+    "qtype": "MT",
+    "qindex": 9,
+    "label": "Y-a-t-il des cas/problématiques concret(e)s pour lesquels la CNPD peut apporter des solutions ?",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "label": "Oui",
+        "questions_map": [
+          {
+            "label": "Connaissez-vous la différence entre les deux notions?",
+            "branch": 0,
+            "level": 9,
+            "order": 1
+          }
+        ]
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "Non",
+        "questions_map": [
+          {
+            "label": "Connaissez-vous la différence entre les deux notions?",
+            "branch": 0,
+            "level": 9,
+            "order": 1
+          }
+        ]
+      },
+      {
+        "aindex": 3,
+        "uniqueAnswer": false,
+        "atype": "T",
+        "label": "Si oui, veuillez préciser :",
+        "questions_map": [
+          {
+            "label": "Connaissez-vous la différence entre les deux notions?",
+            "branch": 0,
+            "level": 9,
+            "order": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "section": "ALTO",
+    "service_category": "Responsable du traitement et sous-traitant",
+    "qtype": "S",
+    "qindex": 10,
+    "label": "Connaissez-vous la différence entre les deux notions?",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "Oui",
+        "questions_map": [
+          {
+            "label": "Connaissez-vous les responsabilités relevant du RT et du ST ?",
+            "branch": 0,
+            "level": 10,
+            "order": 1
+          }
+        ]
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "Non",
+        "questions_map": [
+          {
+            "label": "Connaissez-vous les responsabilités relevant du RT et du ST ?",
+            "branch": 0,
+            "level": 10,
+            "order": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "section": "ALTO",
+    "service_category": "Responsable du traitement et sous-traitant",
+    "qtype": "S",
+    "qindex": 11,
+    "label": "Connaissez-vous les responsabilités relevant du RT et du ST ?",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "Oui",
+        "questions_map": [
+          {
+            "label": "Sous-traitez-vous tout ou partie des traitements de données ?",
+            "branch": 0,
+            "level": 11,
+            "order": 1
+          }
+        ]
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "Non",
+        "questions_map": [
+          {
+            "label": "Sous-traitez-vous tout ou partie des traitements de données ?",
+            "branch": 0,
+            "level": 11,
+            "order": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "section": "ALTO",
+    "service_category": "Responsable du traitement et sous-traitant",
+    "qtype": "S",
+    "qindex": 12,
+    "label": "Sous-traitez-vous tout ou partie des traitements de données ?",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "Oui",
+        "questions_map": [
+          {
+            "label": "Le cas échéant, avez-vous conclu un contrat de sous-traitance ?",
+            "branch": 0,
+            "level": 12,
+            "order": 1
+          }
+        ]
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "Non",
+        "questions_map": [
+          {
+            "label": "Le cas échéant, avez-vous conclu un contrat de sous-traitance ?",
+            "branch": 0,
+            "level": 12,
+            "order": 1
+          }
+        ]
+      },
+      {
+        "aindex": 3,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "En cours de projet",
+        "questions_map": [
+          {
+            "label": "Le cas échéant, avez-vous conclu un contrat de sous-traitance ?",
+            "branch": 0,
+            "level": 12,
+            "order": 1
+          }
+        ]
+      },
+      {
+        "aindex": 4,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "Je ne sais pas",
+        "questions_map": [
+          {
+            "label": "Le cas échéant, avez-vous conclu un contrat de sous-traitance ?",
+            "branch": 0,
+            "level": 12,
+            "order": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "section": "ALTO",
+    "service_category": "Responsable du traitement et sous-traitant",
+    "qtype": "S",
+    "qindex": 13,
+    "label": "Le cas échéant, avez-vous conclu un contrat de sous-traitance ?",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "Oui",
+        "questions_map": [
+          {
+            "label": "Votre entreprise sait-elle comment et quand désigner un DPO ?",
+            "branch": 0,
+            "level": 13,
+            "order": 1
+          }
+        ]
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "Non",
+        "questions_map": [
+          {
+            "label": "Votre entreprise sait-elle comment et quand désigner un DPO ?",
+            "branch": 0,
+            "level": 13,
+            "order": 1
+          }
+        ]
+      },
+      {
+        "aindex": 3,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "En cours de projet",
+        "questions_map": [
+          {
+            "label": "Votre entreprise sait-elle comment et quand désigner un DPO ?",
+            "branch": 0,
+            "level": 13,
+            "order": 1
+          }
+        ]
+      },
+      {
+        "aindex": 4,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "Je ne sais pas",
+        "questions_map": [
+          {
+            "label": "Votre entreprise sait-elle comment et quand désigner un DPO ?",
+            "branch": 0,
+            "level": 13,
+            "order": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "section": "ALTO",
+    "service_category": "Les bases du RGPD",
+    "qtype": "S",
+    "qindex": 14,
+    "label": "Votre entreprise sait-elle comment et quand désigner un DPO ?",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "Oui",
+        "questions_map": [
+          {
+            "label": "Votre entreprise dispose-t-elle d'une liste des traitements de données ?",
+            "branch": 0,
+            "level": 14,
+            "order": 1
+          }
+        ]
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "Non",
+        "questions_map": [
+          {
+            "label": "Votre entreprise dispose-t-elle d'une liste des traitements de données ?",
+            "branch": 0,
+            "level": 14,
+            "order": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "section": "ALTO",
+    "service_category": "Les bases du RGPD",
+    "qtype": "S",
+    "qindex": 15,
+    "label": "Votre entreprise dispose-t-elle d'une liste des traitements de données ?",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "Oui",
+        "questions_map": [
+          {
+            "label": "Votre entreprise a-t-elle établie des finalités claires pour ses traitements de données ?",
+            "branch": 0,
+            "level": 15,
+            "order": 1
+          }
+        ]
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "Non",
+        "questions_map": [
+          {
+            "label": "Votre entreprise a-t-elle établie des finalités claires pour ses traitements de données ?",
+            "branch": 0,
+            "level": 15,
+            "order": 1
+          }
+        ]
+      },
+      {
+        "aindex": 3,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "En cours de projet",
+        "questions_map": [
+          {
+            "label": "Votre entreprise a-t-elle établie des finalités claires pour ses traitements de données ?",
+            "branch": 0,
+            "level": 15,
+            "order": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "section": "ALTO",
+    "service_category": "Les bases du RGPD",
+    "qtype": "S",
+    "qindex": 16,
+    "label": "Votre entreprise a-t-elle établie des finalités claires pour ses traitements de données ?",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "Oui",
+        "questions_map": [
+          {
+            "label": "Votre entreprise a-t-elle identifiée des bases légales spécifiques pour ses traitements de données ?",
+            "branch": 0,
+            "level": 16,
+            "order": 1
+          }
+        ]
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "Non",
+        "questions_map": [
+          {
+            "label": "Votre entreprise a-t-elle identifiée des bases légales spécifiques pour ses traitements de données ?",
+            "branch": 0,
+            "level": 16,
+            "order": 1
+          }
+        ]
+      },
+      {
+        "aindex": 3,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "En cours de projet",
+        "questions_map": [
+          {
+            "label": "Votre entreprise a-t-elle identifiée des bases légales spécifiques pour ses traitements de données ?",
+            "branch": 0,
+            "level": 16,
+            "order": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "section": "ALTO",
+    "service_category": "Les bases du RGPD",
+    "qtype": "S",
+    "qindex": 17,
+    "label": "Votre entreprise a-t-elle identifiée des bases légales spécifiques pour ses traitements de données ?",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "Oui",
+        "questions_map": [
+          {
+            "label": "Votre entreprise a-t-elle mis en œuvre le principe de minimisation des données consistant à n'utiliser que les données nécessaires à la gestion de vos traitements ?",
+            "branch": 0,
+            "level": 17,
+            "order": 1
+          }
+        ]
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "Non",
+        "questions_map": [
+          {
+            "label": "Votre entreprise a-t-elle mis en œuvre le principe de minimisation des données consistant à n'utiliser que les données nécessaires à la gestion de vos traitements ?",
+            "branch": 0,
+            "level": 17,
+            "order": 1
+          }
+        ]
+      },
+      {
+        "aindex": 3,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "En cours de projet",
+        "questions_map": [
+          {
+            "label": "Votre entreprise a-t-elle mis en œuvre le principe de minimisation des données consistant à n'utiliser que les données nécessaires à la gestion de vos traitements ?",
+            "branch": 0,
+            "level": 17,
+            "order": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "section": "ALTO",
+    "service_category": "Les bases du RGPD",
+    "qtype": "S",
+    "qindex": 18,
+    "label": "Votre entreprise a-t-elle mis en œuvre le principe de minimisation des données consistant à n'utiliser que les données nécessaires à la gestion de vos traitements ?",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "Oui",
+        "questions_map": [
+          {
+            "label": "Votre entreprise a-t-elle connaissance des principes « Privacy by default / by design » ?",
+            "branch": 0,
+            "level": 18,
+            "order": 1
+          }
+        ]
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "Non",
+        "questions_map": [
+          {
+            "label": "Votre entreprise a-t-elle connaissance des principes « Privacy by default / by design » ?",
+            "branch": 0,
+            "level": 18,
+            "order": 1
+          }
+        ]
+      },
+      {
+        "aindex": 3,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "En cours de projet",
+        "questions_map": [
+          {
+            "label": "Votre entreprise a-t-elle connaissance des principes « Privacy by default / by design » ?",
+            "branch": 0,
+            "level": 18,
+            "order": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "section": "ALTO",
+    "service_category": "Les bases du RGPD",
+    "qtype": "S",
+    "qindex": 19,
+    "label": "Votre entreprise a-t-elle connaissance des principes « Privacy by default / by design » ?",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "Oui",
+        "questions_map": [
+          {
+            "label": "Votre entreprise informe-t-elle les salariés et clients des traitements de données les concernant ?",
+            "branch": 0,
+            "level": 19,
+            "order": 1
+          }
+        ]
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "Non",
+        "questions_map": [
+          {
+            "label": "Votre entreprise informe-t-elle les salariés et clients des traitements de données les concernant ?",
+            "branch": 0,
+            "level": 19,
+            "order": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "section": "ALTO",
+    "service_category": "Les bases du RGPD",
+    "qtype": "S",
+    "qindex": 20,
+    "label": "Votre entreprise informe-t-elle les salariés et clients des traitements de données les concernant ?",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "Oui",
+        "questions_map": [
+          {
+            "label": "Votre entreprise informe-t-elle les salariés et clients sur leurs droits ?",
+            "branch": 0,
+            "level": 20,
+            "order": 1
+          }
+        ]
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "Non",
+        "questions_map": [
+          {
+            "label": "Votre entreprise informe-t-elle les salariés et clients sur leurs droits ?",
+            "branch": 0,
+            "level": 20,
+            "order": 1
+          }
+        ]
+      },
+      {
+        "aindex": 3,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "En cours de projet",
+        "questions_map": [
+          {
+            "label": "Votre entreprise informe-t-elle les salariés et clients sur leurs droits ?",
+            "branch": 0,
+            "level": 20,
+            "order": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "section": "ALTO",
+    "service_category": "Les bases du RGPD",
+    "qtype": "S",
+    "qindex": 21,
+    "label": "Votre entreprise informe-t-elle les salariés et clients sur leurs droits ?",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "Oui",
+        "questions_map": [
+          {
+            "label": "Votre entreprise applique-t-elle des délais de conservation adaptés à la nature des données traitées ?",
+            "branch": 0,
+            "level": 21,
+            "order": 1
+          }
+        ]
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "Non",
+        "questions_map": [
+          {
+            "label": "Votre entreprise applique-t-elle des délais de conservation adaptés à la nature des données traitées ?",
+            "branch": 0,
+            "level": 21,
+            "order": 1
+          }
+        ]
+      },
+      {
+        "aindex": 3,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "En cours de projet",
+        "questions_map": [
+          {
+            "label": "Votre entreprise applique-t-elle des délais de conservation adaptés à la nature des données traitées ?",
+            "branch": 0,
+            "level": 21,
+            "order": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "section": "ALTO",
+    "service_category": "Les bases du RGPD",
+    "qtype": "S",
+    "qindex": 22,
+    "label": "Votre entreprise applique-t-elle des délais de conservation adaptés à la nature des données traitées ?",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "Oui",
+        "questions_map": [
+          {
+            "label": "Votre entreprise héberge-t-elle les données traitées dans un lieu de stockage dont la sécurité est adaptée à la sensibilité/ gravité ?",
+            "branch": 0,
+            "level": 22,
+            "order": 1
+          }
+        ]
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "Non",
+        "questions_map": [
+          {
+            "label": "Votre entreprise héberge-t-elle les données traitées dans un lieu de stockage dont la sécurité est adaptée à la sensibilité/ gravité ?",
+            "branch": 0,
+            "level": 22,
+            "order": 1
+          }
+        ]
+      },
+      {
+        "aindex": 3,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "En cours de projet",
+        "questions_map": [
+          {
+            "label": "Votre entreprise héberge-t-elle les données traitées dans un lieu de stockage dont la sécurité est adaptée à la sensibilité/ gravité ?",
+            "branch": 0,
+            "level": 22,
+            "order": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "section": "ALTO",
+    "service_category": "Les bases du RGPD",
+    "qtype": "S",
+    "qindex": 23,
+    "label": "Votre entreprise héberge-t-elle les données traitées dans un lieu de stockage dont la sécurité est adaptée à la sensibilité/ gravité ?",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "Oui",
+        "questions_map": [
+          {
+            "label": "Comment votre entreprise documente ses traitements (politique de protection des données, contrat de travail, registres des activités de traitement, etc.) afin de démontrer sa mise en conformité ?",
+            "branch": 0,
+            "level": 23,
+            "order": 1
+          }
+        ]
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "Non",
+        "questions_map": [
+          {
+            "label": "Comment votre entreprise documente ses traitements (politique de protection des données, contrat de travail, registres des activités de traitement, etc.) afin de démontrer sa mise en conformité ?",
+            "branch": 0,
+            "level": 23,
+            "order": 1
+          }
+        ]
+      },
+      {
+        "aindex": 3,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "En cours de projet",
+        "questions_map": [
+          {
+            "label": "Comment votre entreprise documente ses traitements (politique de protection des données, contrat de travail, registres des activités de traitement, etc.) afin de démontrer sa mise en conformité ?",
+            "branch": 0,
+            "level": 23,
+            "order": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "section": "ALTO",
+    "service_category": "Les bases du RGPD",
+    "qtype": "ST",
+    "qindex": 24,
+    "label": "Comment votre entreprise documente ses traitements (politique de protection des données, contrat de travail, registres des activités de traitement, etc.) afin de démontrer sa mise en conformité ?",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "Je ne sais pas",
+        "questions_map": [
+          {
+            "label": "Y-a-t-il d'autres thèmes non listés ci-avant qui vous semble important de traiter ?",
+            "branch": 0,
+            "level": 24,
+            "order": 1
+          }
+        ]
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": true,
+        "atype": "T",
+        "label": "Veuillez préciser :",
+        "questions_map": [
+          {
+            "label": "Y-a-t-il d'autres thèmes non listés ci-avant qui vous semble important de traiter ?",
+            "branch": 0,
+            "level": 24,
+            "order": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "section": "ALTO",
+    "service_category": "Les bases du RGPD",
+    "qtype": "T",
+    "qindex": 25,
+    "label": "Y-a-t-il d'autres thèmes non listés ci-avant qui vous semble important de traiter ?",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": true,
+        "atype": "T",
+        "label": "Veuillez préciser :",
+        "questions_map": [
+          {
+            "label": "Quel sont les risques en terme de traitement de données rencontrés ou possibles pouvant affecter votre entreprise ?",
+            "branch": 0,
+            "level": 25,
+            "order": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "section": "ALTO",
+    "service_category": "Les risques des PME liés au RGPD",
+    "qtype": "ST",
+    "qindex": 26,
+    "label": "Quel sont les risques en terme de traitement de données rencontrés ou possibles pouvant affecter votre entreprise ?",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "Je ne sais pas",
+        "questions_map": [
+          {
+            "label": "Votre entreprise a-t-elle une vue d'ensemble sur les flux des données ?",
+            "branch": 0,
+            "level": 26,
+            "order": 1
+          }
+        ]
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": true,
+        "atype": "T",
+        "label": "Veuillez préciser les principaux risques :",
+        "questions_map": [
+          {
+            "label": "Votre entreprise a-t-elle une vue d'ensemble sur les flux des données ?",
+            "branch": 0,
+            "level": 26,
+            "order": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "section": "ALTO",
+    "service_category": "Les risques des PME liés au RGPD",
+    "qtype": "S",
+    "qindex": 27,
+    "label": "Votre entreprise a-t-elle une vue d'ensemble sur les flux des données ?",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "Oui",
+        "questions_map": [
+          {
+            "label": "Votre entreprise a-t-elle sécurisé la gestion de vos traitements de données ?",
+            "branch": 0,
+            "level": 27,
+            "order": 1
+          }
+        ]
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "Non",
+        "questions_map": [
+          {
+            "label": "Votre entreprise a-t-elle sécurisé la gestion de vos traitements de données ?",
+            "branch": 0,
+            "level": 27,
+            "order": 1
+          }
+        ]
+      },
+      {
+        "aindex": 3,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "En cours de projet",
+        "questions_map": [
+          {
+            "label": "Votre entreprise a-t-elle sécurisé la gestion de vos traitements de données ?",
+            "branch": 0,
+            "level": 27,
+            "order": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "section": "ALTO",
+    "service_category": "Les risques des PME liés au RGPD",
+    "qtype": "S",
+    "qindex": 28,
+    "label": "Votre entreprise a-t-elle sécurisé la gestion de vos traitements de données ?",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "Oui",
+        "questions_map": [
+          {
+            "label": "Votre entreprise a-t-elle mis en place une procédure de réaction en cas de fuite de données personnelles (data breach) ?",
+            "branch": 0,
+            "level": 28,
+            "order": 1
+          }
+        ]
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "Non",
+        "questions_map": [
+          {
+            "label": "Votre entreprise a-t-elle mis en place une procédure de réaction en cas de fuite de données personnelles (data breach) ?",
+            "branch": 0,
+            "level": 28,
+            "order": 1
+          }
+        ]
+      },
+      {
+        "aindex": 3,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "En cours de projet",
+        "questions_map": [
+          {
+            "label": "Votre entreprise a-t-elle mis en place une procédure de réaction en cas de fuite de données personnelles (data breach) ?",
+            "branch": 0,
+            "level": 28,
+            "order": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "section": "ALTO",
+    "service_category": "Les risques des PME liés au RGPD",
+    "qtype": "S",
+    "qindex": 29,
+    "label": "Votre entreprise a-t-elle mis en place une procédure de réaction en cas de fuite de données personnelles (data breach) ?",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "Oui",
+        "questions_map": [
+          {
+            "label": "Comment cela est documenté en interne (analyse d'impact, tableau des risques, procédure de réaction, instruction verbale, e-mail, etc.) ?",
+            "branch": 0,
+            "level": 29,
+            "order": 1
+          }
+        ]
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "Non",
+        "questions_map": [
+          {
+            "label": "Comment cela est documenté en interne (analyse d'impact, tableau des risques, procédure de réaction, instruction verbale, e-mail, etc.) ?",
+            "branch": 0,
+            "level": 29,
+            "order": 1
+          }
+        ]
+      },
+      {
+        "aindex": 3,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "En cours de projet",
+        "questions_map": [
+          {
+            "label": "Comment cela est documenté en interne (analyse d'impact, tableau des risques, procédure de réaction, instruction verbale, e-mail, etc.) ?",
+            "branch": 0,
+            "level": 29,
+            "order": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "section": "ALTO",
+    "service_category": "Les risques des PME liés au RGPD",
+    "qtype": "ST",
+    "qindex": 30,
+    "label": "Comment cela est documenté en interne (analyse d'impact, tableau des risques, procédure de réaction, instruction verbale, e-mail, etc.) ?",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "Je ne sais pas",
+        "questions_map": [
+          {
+            "label": "Les données traitées sont-elles transférées en tout ou en partie vers un pays tiers (hors de l'Union européenne) ?",
+            "branch": 0,
+            "level": 30,
+            "order": 1
+          }
+        ]
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": true,
+        "atype": "T",
+        "label": "Veuillez préciser :",
+        "questions_map": [
+          {
+            "label": "Les données traitées sont-elles transférées en tout ou en partie vers un pays tiers (hors de l'Union européenne) ?",
+            "branch": 0,
+            "level": 30,
+            "order": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "section": "ALTO",
+    "service_category": "Les transferts de données vers un pays tiers",
+    "qtype": "S",
+    "qindex": 31,
+    "label": "Les données traitées sont-elles transférées en tout ou en partie vers un pays tiers (hors de l'Union européenne) ?",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "Oui",
+        "questions_map": [
+          {
+            "label": "Votre entreprise utilise-t-elle des services en ligne gratuits ou payants ?",
+            "branch": 0,
+            "level": 31,
+            "order": 1
+          }
+        ]
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "Non",
+        "questions_map": [
+          {
+            "label": "Votre entreprise utilise-t-elle des services en ligne gratuits ou payants ?",
+            "branch": 0,
+            "level": 31,
+            "order": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "section": "ALTO",
+    "service_category": "Les transferts de données vers un pays tiers",
+    "qtype": "S",
+    "qindex": 32,
+    "label": "Votre entreprise utilise-t-elle des services en ligne gratuits ou payants ?",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "Oui",
+        "questions_map": [
+          {
+            "label": "Le cas échéant, votre entreprise vérifie-t-elle où sont hébergées les données collectées via ces fournisseurs  de services en ligne ?",
+            "branch": 0,
+            "level": 32,
+            "order": 1
+          }
+        ]
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "Non",
+        "questions_map": [
+          {
+            "label": "Le cas échéant, votre entreprise vérifie-t-elle où sont hébergées les données collectées via ces fournisseurs  de services en ligne ?",
+            "branch": 0,
+            "level": 32,
+            "order": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "section": "ALTO",
+    "service_category": "Les transferts de données vers un pays tiers",
+    "qtype": "S",
+    "qindex": 33,
+    "label": "Le cas échéant, votre entreprise vérifie-t-elle où sont hébergées les données collectées via ces fournisseurs  de services en ligne ?",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "Oui",
+        "questions_map": [
+          {
+            "label": "Votre entreprise a-t-elle fait signer un document écrit reprenant les exigences en matière de protection des données à respecter par la société située dans un pays hors de l'Union européenne ?",
+            "branch": 0,
+            "level": 33,
+            "order": 1
+          }
+        ]
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "Non",
+        "questions_map": [
+          {
+            "label": "Votre entreprise a-t-elle fait signer un document écrit reprenant les exigences en matière de protection des données à respecter par la société située dans un pays hors de l'Union européenne ?",
+            "branch": 0,
+            "level": 33,
+            "order": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "section": "ALTO",
+    "service_category": "Les transferts de données vers un pays tiers",
+    "qtype": "S",
+    "qindex": 34,
+    "label": "Votre entreprise a-t-elle fait signer un document écrit reprenant les exigences en matière de protection des données à respecter par la société située dans un pays hors de l'Union européenne ?",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "Oui",
+        "questions_map": [
+          {
+            "label": "0",
+            "branch": 0,
+            "level": 34,
+            "order": 1
+          }
+        ]
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "Non",
+        "questions_map": [
+          {
+            "label": "0",
+            "branch": 0,
+            "level": 34,
+            "order": 1
+          }
+        ]
+      },
+      {
+        "aindex": 3,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "En cours de projet",
+        "questions_map": [
+          {
+            "label": "0",
+            "branch": 0,
+            "level": 34,
+            "order": 1
+          }
+        ]
+      },
+      {
+        "aindex": 4,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "Le fournisseur est établi à Andorre, en Argentine, au Canada, aux Îles Féroé, au Guernesey, à l'Île de Man, au Japon, à Jersey, en Nouvelle-Zélande, en Suisse, en Uruguay ou aux États-Unis.",
+        "questions_map": [
+          {
+            "label": "0",
+            "branch": 0,
+            "level": 34,
+            "order": 1
+          }
+        ]
+      }
+    ]
+  }
+]
