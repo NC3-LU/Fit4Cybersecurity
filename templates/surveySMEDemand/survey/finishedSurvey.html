@@ -28,14 +28,18 @@
         {% block finished_survey_description %}
         <p class="text-justify">
             {% blocktranslate trimmed %}
-            This is the list of recommendations to improve the information
-            security maturity in your company, provided that your answers
-            did correctly reflect the state in your company.
-            Also keep in mind that it is a self-assessment and only
-            scratches the surface of the information security maturity level
-            and thus, we are not liable for the results of this survey.
+            Keep in touch with us to receive the study results as well as cybersecurity content for your smes by registrering to our newsletter:
             {% endblocktranslate %}
         </p>
+        <p class="text-justify">
+            {% blocktranslate trimmed %}
+            Keep in touch with us to receive the study results as well as cybersecurity content for your smes by registrering to our newsletter:
+            {% endblocktranslate %}
+        </p>
+        <ul>
+            <li><a href="https://fit4cybersecurity.nc3.lu/" target="_blank">Fit4Cybersecurity</a></li>
+            <li><a href="https://fit4privacy.nc3.lu/" target="_blank">Fit4Privacy</a></li>    
+        </ul>
         {% endblock %}
         {% if custom.modules.requestTraining and user.get_country_code == 'LU' and txtscore < custom.minimal_acceptable_score %}
             <p class="text-justify">
