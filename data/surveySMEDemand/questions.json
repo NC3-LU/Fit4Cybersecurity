@@ -1799,13 +1799,13 @@
     "answers": [
       {
         "aindex": 1,
-        "uniqueAnswer": true,
+        "uniqueAnswer": false,
         "atype": "P",
         "questions_map": [
           {
             "label": "If communication,do you have the following?",
             "branch": 0,
-            "level": 28,
+            "level": 26,
             "order": 1
           }
         ],
@@ -1820,7 +1820,7 @@
             "label": "If accounting,do you have the following?",
             "branch": 0,
             "level": 26,
-            "order": 1
+            "order": 2
           }
         ],
         "label": "Accounting"
@@ -1834,7 +1834,7 @@
             "label": "If sales,do you have the following?",
             "branch": 0,
             "level": 26,
-            "order": 1
+            "order": 3
           }
         ],
         "label": "Sales"
@@ -1848,21 +1848,21 @@
             "label": "If management,do you have the following?",
             "branch": 0,
             "level": 26,
-            "order": 1
+            "order": 4
           }
         ],
         "label": "Management"
       },
       {
         "aindex": 5,
-        "uniqueAnswer": false,
+        "uniqueAnswer": true,
         "atype": "P",
         "questions_map": [
           {
             "label": "Did you perform any particular actions to secure them?",
             "branch": 0,
             "level": 26,
-            "order": 1
+            "order": 5
           }
         ],
         "label": "No"
@@ -1876,7 +1876,7 @@
             "label": "Did you perform any particular actions to secure them?",
             "branch": 0,
             "level": 26,
-            "order": 1
+            "order": 6
           }
         ],
         "label": "Other"
