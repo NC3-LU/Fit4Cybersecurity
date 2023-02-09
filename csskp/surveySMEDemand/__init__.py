@@ -43,10 +43,11 @@ CUSTOM = {
     },
     # Available modules
     "modules": {
-        "reportDownload": True,
+        "displayProgressBar": False,
+        "reportDownload": False,
         "reportEmail": False,
-        "requestDiagnostic": True,
-        "requestTraining": True,
+        "requestDiagnostic": False,
+        "requestTraining": False,
         "displayResults": True,
     },
     # Available report parts

@@ -50,6 +50,7 @@ CUSTOM = {
     },
     # Available modules
     "modules": {
+        "displayProgressBar": True,
         "reportDownload": True,
         "reportEmail": False,
         "requestDiagnostic": False,
