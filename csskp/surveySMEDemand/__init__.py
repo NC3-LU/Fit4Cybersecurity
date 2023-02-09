@@ -2,12 +2,35 @@ from django.utils.translation import gettext_lazy
 
 CUSTOM = {
     # Generic configurations
-    "tool_name": "SurveySMEDemand",
+    "tool_name": "Survey SME Demand",
     "intro_text": gettext_lazy(
-        "This survey will ask a few questions and provide "
-        "recommendations. Keep in mind, that it is a self-assessment tool and that it "
-        "only touches the surface of information security by giving a very basic maturity "
-        "level estimate and some basic recommendations."
+        "This questionnaire is intended for managers of small"
+        " and medium-sized businesses, between 1 and 250"
+        " employees, and must be completed by them in order"
+        " to share their vision of their needs in terms of"
+        " cybersecurity services and solutions. The objective"
+        " is to better understand market practices,"
+        " expectations and trends in order to identify the"
+        " levers of demand for this type of player in"
+        " Luxembourg. Our desire is not to audit companies"
+        " individually, this questionnaire is anonymous,"
+        " but to understand how the managers of SMEs position"
+        " themselves in the face of the regulatory,"
+        " technological and human challenges of cybersecurity."
+        " <br>"
+        " <br>"
+        "The study is the work product of the Data For Research,"
+        " Innovation, and Governance (D4RIG) team of"
+        " the National Cybersecurity Competence Center (NC3)"
+        " of the Luxembourg House of Cybersecurity. This is"
+        " carried out as part of the research activities"
+        " supporting the creation of the Cybersecurity Market"
+        " Intelligence Observatory Platform (CSMIOP)."
+        " This purposeful work has also engaged local partners"
+        " such as chambers and professional organizations, as"
+        " well as all the institutional players in the market"
+        " who can support and disseminate this questionnaire"
+        " as well as the results of the study."
     ),
     "countries_first": [
         "LU",
