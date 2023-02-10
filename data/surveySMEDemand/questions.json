@@ -18,7 +18,7 @@
             "order": 1
           }
         ],
-        "label": "CEO"
+        "label": "Chief Executive Officer"
       },
       {
         "aindex": 2,
@@ -32,7 +32,7 @@
             "order": 1
           }
         ],
-        "label": "COO"
+        "label": "Chief Operating Officer"
       },
       {
         "aindex": 3,
@@ -338,261 +338,7 @@
         "aindex": 1,
         "uniqueAnswer": true,
         "atype": "T",
-        "questions_map": [
-          {
-            "label": "What languages do your employees use at work?",
-            "branch": 0,
-            "level": 5,
-            "order": 1
-          }
-        ],
         "label": "Year only"
-      }
-    ]
-  },
-  {
-    "section": "Entreprise & organisation",
-    "service_category": "Socio-economic data",
-    "qtype": "MT",
-    "qindex": 6,
-    "label": "What languages do your employees use at work?",
-    "answers": [
-      {
-        "aindex": 1,
-        "uniqueAnswer": false,
-        "atype": "P",
-        "questions_map": [
-          {
-            "label": "Where is your company's global headquarters located?",
-            "branch": 0,
-            "level": 6,
-            "order": 1
-          }
-        ],
-        "label": "Luxembourgish"
-      },
-      {
-        "aindex": 2,
-        "uniqueAnswer": false,
-        "atype": "P",
-        "questions_map": [
-          {
-            "label": "Where is your company's global headquarters located?",
-            "branch": 0,
-            "level": 6,
-            "order": 1
-          }
-        ],
-        "label": "French"
-      },
-      {
-        "aindex": 3,
-        "uniqueAnswer": false,
-        "atype": "P",
-        "questions_map": [
-          {
-            "label": "Where is your company's global headquarters located?",
-            "branch": 0,
-            "level": 6,
-            "order": 1
-          }
-        ],
-        "label": "German"
-      },
-      {
-        "aindex": 4,
-        "uniqueAnswer": false,
-        "atype": "P",
-        "questions_map": [
-          {
-            "label": "Where is your company's global headquarters located?",
-            "branch": 0,
-            "level": 6,
-            "order": 1
-          }
-        ],
-        "label": "English"
-      },
-      {
-        "aindex": 5,
-        "uniqueAnswer": false,
-        "atype": "P",
-        "questions_map": [
-          {
-            "label": "Where is your company's global headquarters located?",
-            "branch": 0,
-            "level": 6,
-            "order": 1
-          }
-        ],
-        "label": "Portuguese"
-      },
-      {
-        "aindex": 6,
-        "uniqueAnswer": false,
-        "atype": "T",
-        "questions_map": [
-          {
-            "label": "Where is your company's global headquarters located?",
-            "branch": 0,
-            "level": 6,
-            "order": 1
-          }
-        ],
-        "label": "Other"
-      }
-    ]
-  },
-  {
-    "section": "Entreprise & organisation",
-    "service_category": "Socio-economic data",
-    "qtype": "S",
-    "qindex": 7,
-    "label": "Where is your company's global headquarters located?",
-    "answers": [
-      {
-        "aindex": 1,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "questions_map": [
-          {
-            "label": "Is your cybersecurity technical team located in Luxembourg?",
-            "branch": 0,
-            "level": 7,
-            "order": 1
-          }
-        ],
-        "label": "Luxembourg"
-      },
-      {
-        "aindex": 2,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "questions_map": [
-          {
-            "label": "Are your company's cybersecurity policy decisions made locally?",
-            "branch": 0,
-            "level": 7,
-            "order": 1
-          }
-        ],
-        "label": "Other EU country"
-      },
-      {
-        "aindex": 3,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "questions_map": [
-          {
-            "label": "Are your company's cybersecurity policy decisions made locally?",
-            "branch": 0,
-            "level": 7,
-            "order": 1
-          }
-        ],
-        "label": "Non EU country"
-      }
-    ]
-  },
-  {
-    "section": "Entreprise & organisation",
-    "service_category": "Governance",
-    "qtype": "S",
-    "qindex": 8,
-    "label": "Are your company's cybersecurity policy decisions made locally?",
-    "answers": [
-      {
-        "aindex": 1,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "questions_map": [
-          {
-            "label": "Is cybersecurity an important subject for your company?",
-            "branch": 0,
-            "level": 8,
-            "order": 1
-          }
-        ],
-        "label": "Yes"
-      },
-      {
-        "aindex": 2,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "questions_map": [
-          {
-            "label": "Is cybersecurity an important subject for your company?",
-            "branch": 0,
-            "level": 8,
-            "order": 1
-          }
-        ],
-        "label": "No"
-      },
-      {
-        "aindex": 3,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "questions_map": [
-          {
-            "label": "Is cybersecurity an important subject for your company?",
-            "branch": 0,
-            "level": 8,
-            "order": 1
-          }
-        ],
-        "label": "Not sure"
-      }
-    ]
-  },
-  {
-    "section": "Entreprise & organisation",
-    "service_category": "Governance",
-    "qtype": "S",
-    "qindex": 9,
-    "label": "Is your cybersecurity technical team located in Luxembourg?",
-    "answers": [
-      {
-        "aindex": 1,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "questions_map": [
-          {
-            "label": "Is cybersecurity an important subject for your company?",
-            "branch": 0,
-            "level": 9,
-            "order": 1
-          }
-        ],
-        "label": "Yes"
-      },
-      {
-        "aindex": 2,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "questions_map": [
-          {
-            "label": "Is cybersecurity an important subject for your company?",
-            "branch": 0,
-            "level": 9,
-            "order": 1
-          }
-        ],
-        "label": "No"
-      },
-      {
-        "aindex": 3,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "questions_map": [
-          {
-            "label": "Is cybersecurity an important subject for your company?",
-            "branch": 0,
-            "level": 9,
-            "order": 1
-          }
-        ],
-        "label": "Not sure"
       }
     ]
   },
@@ -600,77 +346,37 @@
     "section": "Entreprise & organisation",
     "service_category": "Activities",
     "qtype": "S",
-    "qindex": 10,
+    "qindex": 6,
     "label": "Is cybersecurity an important subject for your company?",
     "answers": [
       {
         "aindex": 1,
         "uniqueAnswer": true,
         "atype": "P",
-        "questions_map": [
-          {
-            "label": "Do you have an annual IT budget? If so, how much does that add up to your overall budget",
-            "branch": 0,
-            "level": 10,
-            "order": 1
-          }
-        ],
         "label": "Very important"
       },
       {
         "aindex": 2,
         "uniqueAnswer": true,
         "atype": "P",
-        "questions_map": [
-          {
-            "label": "Do you have an annual IT budget? If so, how much does that add up to your overall budget",
-            "branch": 0,
-            "level": 10,
-            "order": 1
-          }
-        ],
         "label": "Important"
       },
       {
         "aindex": 3,
         "uniqueAnswer": true,
         "atype": "P",
-        "questions_map": [
-          {
-            "label": "Do you have an annual IT budget? If so, how much does that add up to your overall budget",
-            "branch": 0,
-            "level": 10,
-            "order": 1
-          }
-        ],
         "label": "Fairly important"
       },
       {
         "aindex": 4,
         "uniqueAnswer": true,
         "atype": "P",
-        "questions_map": [
-          {
-            "label": "Do you have an annual IT budget? If so, how much does that add up to your overall budget",
-            "branch": 0,
-            "level": 10,
-            "order": 1
-          }
-        ],
         "label": "Slightly important"
       },
       {
         "aindex": 5,
         "uniqueAnswer": true,
         "atype": "P",
-        "questions_map": [
-          {
-            "label": "Do you have an annual IT budget? If so, how much does that add up to your overall budget",
-            "branch": 0,
-            "level": 10,
-            "order": 1
-          }
-        ],
         "label": "Not important"
       }
     ]
@@ -679,86 +385,7 @@
     "section": "Entreprise & organisation",
     "service_category": "Activities",
     "qtype": "S",
-    "qindex": 11,
-    "label": "Do you have an annual IT budget? If so, how much does that add up to your overall budget",
-    "answers": [
-      {
-        "aindex": 1,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "questions_map": [
-          {
-            "label": "Do you have an annual budget dedicated solely to cybersecurity? If so, how much does that add up to your overall budget",
-            "branch": 0,
-            "level": 11,
-            "order": 1
-          }
-        ],
-        "label": "No"
-      },
-      {
-        "aindex": 2,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "questions_map": [
-          {
-            "label": "Do you have an annual budget dedicated solely to cybersecurity? If so, how much does that add up to your overall budget",
-            "branch": 0,
-            "level": 11,
-            "order": 1
-          }
-        ],
-        "label": "<5%"
-      },
-      {
-        "aindex": 3,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "questions_map": [
-          {
-            "label": "Do you have an annual budget dedicated solely to cybersecurity? If so, how much does that add up to your overall budget",
-            "branch": 0,
-            "level": 11,
-            "order": 1
-          }
-        ],
-        "label": "<10%"
-      },
-      {
-        "aindex": 4,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "questions_map": [
-          {
-            "label": "Do you have an annual budget dedicated solely to cybersecurity? If so, how much does that add up to your overall budget",
-            "branch": 0,
-            "level": 11,
-            "order": 1
-          }
-        ],
-        "label": "<20%"
-      },
-      {
-        "aindex": 5,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "questions_map": [
-          {
-            "label": "Do you have an annual budget dedicated solely to cybersecurity? If so, how much does that add up to your overall budget",
-            "branch": 0,
-            "level": 11,
-            "order": 1
-          }
-        ],
-        "label": ">20%"
-      }
-    ]
-  },
-  {
-    "section": "Entreprise & organisation",
-    "service_category": "Activities",
-    "qtype": "S",
-    "qindex": 12,
+    "qindex": 7,
     "label": "Do you have an annual budget dedicated solely to cybersecurity? If so, how much does that add up to your overall budget",
     "answers": [
       {
@@ -851,91 +478,43 @@
     "section": "Entreprise & organisation",
     "service_category": "Activities",
     "qtype": "ST",
-    "qindex": 13,
+    "qindex": 8,
     "label": "Who is the decision maker regarding cybersecurity issues in your company ?",
     "answers": [
       {
         "aindex": 1,
         "uniqueAnswer": true,
         "atype": "P",
-        "questions_map": [
-          {
-            "label": "Does your company have activities outside of Luxembourg?",
-            "branch": 0,
-            "level": 15,
-            "order": 1
-          }
-        ],
-        "label": "CEO"
+        "label": "Chief Executive Officer"
       },
       {
         "aindex": 2,
         "uniqueAnswer": true,
         "atype": "P",
-        "questions_map": [
-          {
-            "label": "Does your company have activities outside of Luxembourg?",
-            "branch": 0,
-            "level": 13,
-            "order": 1
-          }
-        ],
-        "label": "COO"
+        "label": "Chief Operating Officer"
       },
       {
         "aindex": 3,
         "uniqueAnswer": true,
         "atype": "P",
-        "questions_map": [
-          {
-            "label": "Does your company have activities outside of Luxembourg?",
-            "branch": 0,
-            "level": 13,
-            "order": 1
-          }
-        ],
         "label": "IT manager"
       },
       {
         "aindex": 4,
         "uniqueAnswer": true,
         "atype": "P",
-        "questions_map": [
-          {
-            "label": "Does your company have activities outside of Luxembourg?",
-            "branch": 0,
-            "level": 13,
-            "order": 1
-          }
-        ],
         "label": "Cybersecurity manager"
       },
       {
         "aindex": 5,
         "uniqueAnswer": true,
         "atype": "P",
-        "questions_map": [
-          {
-            "label": "Does your company have activities outside of Luxembourg?",
-            "branch": 0,
-            "level": 13,
-            "order": 1
-          }
-        ],
         "label": "External service provider"
       },
       {
         "aindex": 6,
         "uniqueAnswer": true,
         "atype": "T",
-        "questions_map": [
-          {
-            "label": "Does your company have activities outside of Luxembourg?",
-            "branch": 0,
-            "level": 13,
-            "order": 1
-          }
-        ],
         "label": "Other"
       }
     ]
@@ -944,193 +523,7 @@
     "section": "Entreprise & organisation",
     "service_category": "Activities",
     "qtype": "S",
-    "qindex": 14,
-    "label": "Does your company have activities outside of Luxembourg?",
-    "answers": [
-      {
-        "aindex": 1,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "questions_map": [
-          {
-            "label": "If yes in which countries / regions",
-            "branch": 0,
-            "level": 16,
-            "order": 1
-          }
-        ],
-        "label": "Yes"
-      },
-      {
-        "aindex": 2,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "questions_map": [
-          {
-            "label": "Are your employees allowed to work outside of Luxembourg (telecommuting and/or business travel)?",
-            "branch": 0,
-            "level": 14,
-            "order": 1
-          }
-        ],
-        "label": "No"
-      }
-    ]
-  },
-  {
-    "section": "Entreprise & organisation",
-    "service_category": "Activities",
-    "qtype": "M",
-    "qindex": 15,
-    "label": "If yes in which countries / regions",
-    "answers": [
-      {
-        "aindex": 1,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "questions_map": [
-          {
-            "label": "Are your employees allowed to work outside of Luxembourg (telecommuting and/or business travel)?",
-            "branch": 0,
-            "level": 17,
-            "order": 1
-          }
-        ],
-        "label": "Germany"
-      },
-      {
-        "aindex": 2,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "questions_map": [
-          {
-            "label": "Are your employees allowed to work outside of Luxembourg (telecommuting and/or business travel)?",
-            "branch": 0,
-            "level": 15,
-            "order": 1
-          }
-        ],
-        "label": "Belgium"
-      },
-      {
-        "aindex": 3,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "questions_map": [
-          {
-            "label": "Are your employees allowed to work outside of Luxembourg (telecommuting and/or business travel)?",
-            "branch": 0,
-            "level": 15,
-            "order": 1
-          }
-        ],
-        "label": "France"
-      },
-      {
-        "aindex": 4,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "questions_map": [
-          {
-            "label": "Are your employees allowed to work outside of Luxembourg (telecommuting and/or business travel)?",
-            "branch": 0,
-            "level": 15,
-            "order": 1
-          }
-        ],
-        "label": "other EU countries"
-      },
-      {
-        "aindex": 5,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "questions_map": [
-          {
-            "label": "Are your employees allowed to work outside of Luxembourg (telecommuting and/or business travel)?",
-            "branch": 0,
-            "level": 15,
-            "order": 1
-          }
-        ],
-        "label": "non-EU Europe"
-      },
-      {
-        "aindex": 6,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "questions_map": [
-          {
-            "label": "Are your employees allowed to work outside of Luxembourg (telecommuting and/or business travel)?",
-            "branch": 0,
-            "level": 15,
-            "order": 1
-          }
-        ],
-        "label": "Asia"
-      },
-      {
-        "aindex": 7,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "questions_map": [
-          {
-            "label": "Are your employees allowed to work outside of Luxembourg (telecommuting and/or business travel)?",
-            "branch": 0,
-            "level": 15,
-            "order": 1
-          }
-        ],
-        "label": "Africa"
-      },
-      {
-        "aindex": 8,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "questions_map": [
-          {
-            "label": "Are your employees allowed to work outside of Luxembourg (telecommuting and/or business travel)?",
-            "branch": 0,
-            "level": 15,
-            "order": 1
-          }
-        ],
-        "label": "North America"
-      },
-      {
-        "aindex": 9,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "questions_map": [
-          {
-            "label": "Are your employees allowed to work outside of Luxembourg (telecommuting and/or business travel)?",
-            "branch": 0,
-            "level": 15,
-            "order": 1
-          }
-        ],
-        "label": "South America"
-      },
-      {
-        "aindex": 10,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "questions_map": [
-          {
-            "label": "Are your employees allowed to work outside of Luxembourg (telecommuting and/or business travel)?",
-            "branch": 0,
-            "level": 15,
-            "order": 1
-          }
-        ],
-        "label": "Australia"
-      }
-    ]
-  },
-  {
-    "section": "Entreprise & organisation",
-    "service_category": "Activities",
-    "qtype": "S",
-    "qindex": 16,
+    "qindex": 9,
     "label": "Are your employees allowed to work outside of Luxembourg (telecommuting and/or business travel)?",
     "answers": [
       {
@@ -1181,7 +574,7 @@
     "section": "Entreprise & organisation",
     "service_category": "Activities",
     "qtype": "S",
-    "qindex": 17,
+    "qindex": 10,
     "label": "Are your employees allowed to use their personal devices (phones, tablets, computers) to work?",
     "answers": [
       {
@@ -1232,7 +625,7 @@
     "section": "Entreprise & organisation",
     "service_category": "Activities",
     "qtype": "S",
-    "qindex": 18,
+    "qindex": 11,
     "label": "Have your customers ever asked you for information about your cybersecurity management?",
     "answers": [
       {
@@ -1283,7 +676,7 @@
     "section": "Skills & awareness",
     "service_category": "Training",
     "qtype": "S",
-    "qindex": 19,
+    "qindex": 12,
     "label": "Have your company's employees ever participated in an awareness program?",
     "answers": [
       {
@@ -1292,7 +685,7 @@
         "atype": "P",
         "questions_map": [
           {
-            "label": "Do you feel that you have a good understanding of cybersecurity issues?",
+            "label": "Do you personally feel that you have a good understanding of the topic of cybersecurity?",
             "branch": 0,
             "level": 21,
             "order": 1
@@ -1306,7 +699,7 @@
         "atype": "P",
         "questions_map": [
           {
-            "label": "Do you feel that you have a good understanding of cybersecurity issues?",
+            "label": "Do you personally feel that you have a good understanding of the topic of cybersecurity?",
             "branch": 0,
             "level": 19,
             "order": 1
@@ -1320,7 +713,7 @@
         "atype": "P",
         "questions_map": [
           {
-            "label": "Do you feel that you have a good understanding of cybersecurity issues?",
+            "label": "Do you personally feel that you have a good understanding of the topic of cybersecurity?",
             "branch": 0,
             "level": 19,
             "order": 1
@@ -1334,7 +727,7 @@
         "atype": "P",
         "questions_map": [
           {
-            "label": "Do you feel that you have a good understanding of cybersecurity issues?",
+            "label": "Do you personally feel that you have a good understanding of the topic of cybersecurity?",
             "branch": 0,
             "level": 19,
             "order": 1
@@ -1348,7 +741,7 @@
         "atype": "P",
         "questions_map": [
           {
-            "label": "Do you feel that you have a good understanding of cybersecurity issues?",
+            "label": "Do you personally feel that you have a good understanding of the topic of cybersecurity?",
             "branch": 0,
             "level": 19,
             "order": 1
@@ -1362,8 +755,8 @@
     "section": "Skills & awareness",
     "service_category": "Training",
     "qtype": "S",
-    "qindex": 20,
-    "label": "Do you feel that you have a good understanding of cybersecurity issues?",
+    "qindex": 13,
+    "label": "Do you personally feel that you have a good understanding of the topic of cybersecurity?",
     "answers": [
       {
         "aindex": 1,
@@ -1371,7 +764,7 @@
         "atype": "P",
         "questions_map": [
           {
-            "label": "Do you feel competent to manage your cybersecurity?",
+            "label": "How confident are you in dealing with cybersecurity issues?",
             "branch": 0,
             "level": 22,
             "order": 1
@@ -1385,7 +778,7 @@
         "atype": "P",
         "questions_map": [
           {
-            "label": "Do you feel competent to manage your cybersecurity?",
+            "label": "How confident are you in dealing with cybersecurity issues?",
             "branch": 0,
             "level": 20,
             "order": 1
@@ -1399,7 +792,7 @@
         "atype": "P",
         "questions_map": [
           {
-            "label": "Do you feel competent to manage your cybersecurity?",
+            "label": "How confident are you in dealing with cybersecurity issues?",
             "branch": 0,
             "level": 20,
             "order": 1
@@ -1413,7 +806,7 @@
         "atype": "P",
         "questions_map": [
           {
-            "label": "Do you feel competent to manage your cybersecurity?",
+            "label": "How confident are you in dealing with cybersecurity issues?",
             "branch": 0,
             "level": 20,
             "order": 1
@@ -1427,7 +820,7 @@
         "atype": "P",
         "questions_map": [
           {
-            "label": "Do you feel competent to manage your cybersecurity?",
+            "label": "How confident are you in dealing with cybersecurity issues?",
             "branch": 0,
             "level": 20,
             "order": 1
@@ -1441,8 +834,8 @@
     "section": "Skills & awareness",
     "service_category": "Training",
     "qtype": "S",
-    "qindex": 21,
-    "label": "Do you feel competent to manage your cybersecurity?",
+    "qindex": 14,
+    "label": "How confident are you in dealing with cybersecurity issues?",
     "answers": [
       {
         "aindex": 1,
@@ -1450,13 +843,13 @@
         "atype": "P",
         "questions_map": [
           {
-            "label": "Do you have cybersecurity training?",
+            "label": "Have you personally received cybersecurity training?",
             "branch": 0,
             "level": 23,
             "order": 1
           }
         ],
-        "label": "Yes"
+        "label": "Very high"
       },
       {
         "aindex": 2,
@@ -1464,13 +857,13 @@
         "atype": "P",
         "questions_map": [
           {
-            "label": "Do you have cybersecurity training?",
+            "label": "Have you personally received cybersecurity training?",
             "branch": 0,
             "level": 21,
             "order": 1
           }
         ],
-        "label": "No"
+        "label": "High"
       },
       {
         "aindex": 3,
@@ -1478,13 +871,41 @@
         "atype": "P",
         "questions_map": [
           {
-            "label": "Do you have cybersecurity training?",
+            "label": "Have you personally received cybersecurity training?",
             "branch": 0,
             "level": 21,
             "order": 1
           }
         ],
-        "label": "Not sure"
+        "label": "Moderate"
+      },
+      {
+        "aindex": 4,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Have you personally received cybersecurity training?",
+            "branch": 0,
+            "level": 21,
+            "order": 1
+          }
+        ],
+        "label": "Low"
+      },
+      {
+        "aindex": 5,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Have you personally received cybersecurity training?",
+            "branch": 0,
+            "level": 21,
+            "order": 1
+          }
+        ],
+        "label": "Very low"
       }
     ]
   },
@@ -1492,8 +913,8 @@
     "section": "Skills & awareness",
     "service_category": "Training",
     "qtype": "S",
-    "qindex": 22,
-    "label": "Do you have cybersecurity training?",
+    "qindex": 15,
+    "label": "Have you personally received cybersecurity training?",
     "answers": [
       {
         "aindex": 1,
@@ -1501,16 +922,58 @@
         "atype": "P",
         "questions_map": [
           {
-            "label": "If yes, what kind of training is it?",
+            "label": "Do you have one or more employees with computer skills?",
             "branch": 0,
-            "level": 24,
+            "level": 22,
             "order": 1
           }
         ],
-        "label": "Yes"
+        "label": "Awareness event/training organized by professional chambers"
       },
       {
         "aindex": 2,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Do you have one or more employees with computer skills?",
+            "branch": 0,
+            "level": 22,
+            "order": 1
+          }
+        ],
+        "label": "Professional certification"
+      },
+      {
+        "aindex": 3,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Do you have one or more employees with computer skills?",
+            "branch": 0,
+            "level": 22,
+            "order": 1
+          }
+        ],
+        "label": "University degree"
+      },
+      {
+        "aindex": 4,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Do you have one or more employees with computer skills?",
+            "branch": 0,
+            "level": 22,
+            "order": 1
+          }
+        ],
+        "label": "Self-study"
+      },
+      {
+        "aindex": 5,
         "uniqueAnswer": true,
         "atype": "P",
         "questions_map": [
@@ -1528,265 +991,45 @@
   {
     "section": "Skills & awareness",
     "service_category": "Training",
-    "qtype": "ST",
-    "qindex": 23,
-    "label": "If yes, what kind of training is it?",
-    "answers": [
-      {
-        "aindex": 1,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "questions_map": [
-          {
-            "label": "Do you have one or more employees with computer skills?",
-            "branch": 0,
-            "level": 25,
-            "order": 1
-          }
-        ],
-        "label": "University study in cybersecurity"
-      },
-      {
-        "aindex": 2,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "questions_map": [
-          {
-            "label": "Do you have one or more employees with computer skills?",
-            "branch": 0,
-            "level": 23,
-            "order": 1
-          }
-        ],
-        "label": "University study in computer science"
-      },
-      {
-        "aindex": 3,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "questions_map": [
-          {
-            "label": "Do you have one or more employees with computer skills?",
-            "branch": 0,
-            "level": 23,
-            "order": 1
-          }
-        ],
-        "label": "Professional training in cybersecurity (including certification)"
-      },
-      {
-        "aindex": 4,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "questions_map": [
-          {
-            "label": "Do you have one or more employees with computer skills?",
-            "branch": 0,
-            "level": 23,
-            "order": 1
-          }
-        ],
-        "label": "Professional training in computer science (including certification)"
-      },
-      {
-        "aindex": 5,
-        "uniqueAnswer": true,
-        "atype": "T",
-        "questions_map": [
-          {
-            "label": "Do you have one or more employees with computer skills?",
-            "branch": 0,
-            "level": 23,
-            "order": 1
-          }
-        ],
-        "label": "Other"
-      }
-    ]
-  },
-  {
-    "section": "Skills & awareness",
-    "service_category": "Training",
     "qtype": "S",
-    "qindex": 24,
+    "qindex": 16,
     "label": "Do you have one or more employees with computer skills?",
     "answers": [
       {
         "aindex": 1,
         "uniqueAnswer": true,
         "atype": "P",
-        "questions_map": [
-          {
-            "label": "What digital tools is your company using?",
-            "branch": 0,
-            "level": 26,
-            "order": 1
-          }
-        ],
         "label": "0"
       },
       {
         "aindex": 2,
         "uniqueAnswer": true,
         "atype": "P",
-        "questions_map": [
-          {
-            "label": "If yes, what are their missions? (if more than two assignments per employee please choose the \"generalist\" box)",
-            "branch": 0,
-            "level": 24,
-            "order": 1
-          }
-        ],
         "label": "1"
       },
       {
         "aindex": 3,
         "uniqueAnswer": true,
         "atype": "P",
-        "questions_map": [
-          {
-            "label": "If yes, what are their missions? (if more than two assignments per employee please choose the \"generalist\" box)",
-            "branch": 0,
-            "level": 24,
-            "order": 1
-          }
-        ],
         "label": "<5"
       },
       {
         "aindex": 4,
         "uniqueAnswer": true,
         "atype": "P",
-        "questions_map": [
-          {
-            "label": "If yes, what are their missions? (if more than two assignments per employee please choose the \"generalist\" box)",
-            "branch": 0,
-            "level": 24,
-            "order": 1
-          }
-        ],
         "label": "<10"
       },
       {
         "aindex": 5,
         "uniqueAnswer": true,
         "atype": "P",
-        "questions_map": [
-          {
-            "label": "If yes, what are their missions? (if more than two assignments per employee please choose the \"generalist\" box)",
-            "branch": 0,
-            "level": 24,
-            "order": 1
-          }
-        ],
         "label": "<20"
       },
       {
         "aindex": 6,
         "uniqueAnswer": true,
         "atype": "P",
-        "questions_map": [
-          {
-            "label": "If yes, what are their missions? (if more than two assignments per employee please choose the \"generalist\" box)",
-            "branch": 0,
-            "level": 24,
-            "order": 1
-          }
-        ],
         "label": ">20"
-      }
-    ]
-  },
-  {
-    "section": "Skills & awareness",
-    "service_category": "Training",
-    "qtype": "MT",
-    "qindex": 25,
-    "label": "If yes, what are their missions? (if more than two assignments per employee please choose the \"generalist\" box)",
-    "answers": [
-      {
-        "aindex": 1,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "questions_map": [
-          {
-            "label": "What digital tools is your company using?",
-            "branch": 0,
-            "level": 27,
-            "order": 1
-          }
-        ],
-        "label": "System administrator"
-      },
-      {
-        "aindex": 2,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "questions_map": [
-          {
-            "label": "What digital tools is your company using?",
-            "branch": 0,
-            "level": 25,
-            "order": 1
-          }
-        ],
-        "label": "Software development"
-      },
-      {
-        "aindex": 3,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "questions_map": [
-          {
-            "label": "What digital tools is your company using?",
-            "branch": 0,
-            "level": 25,
-            "order": 1
-          }
-        ],
-        "label": "Web development"
-      },
-      {
-        "aindex": 4,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "questions_map": [
-          {
-            "label": "What digital tools is your company using?",
-            "branch": 0,
-            "level": 25,
-            "order": 1
-          }
-        ],
-        "label": "Cybersecurity"
-      },
-      {
-        "aindex": 5,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "questions_map": [
-          {
-            "label": "What digital tools is your company using?",
-            "branch": 0,
-            "level": 25,
-            "order": 1
-          }
-        ],
-        "label": "Generalist"
-      },
-      {
-        "aindex": 6,
-        "uniqueAnswer": true,
-        "atype": "T",
-        "questions_map": [
-          {
-            "label": "What digital tools is your company using?",
-            "branch": 0,
-            "level": 25,
-            "order": 1
-          }
-        ],
-        "label": "Other"
       }
     ]
   },
@@ -1794,91 +1037,43 @@
     "section": "Digital services and products",
     "service_category": "Tools",
     "qtype": "MT",
-    "qindex": 26,
+    "qindex": 17,
     "label": "What digital tools is your company using?",
     "answers": [
       {
         "aindex": 1,
         "uniqueAnswer": false,
         "atype": "P",
-        "questions_map": [
-          {
-            "label": "If communication,do you have the following?",
-            "branch": 0,
-            "level": 26,
-            "order": 1
-          }
-        ],
         "label": "Communication"
       },
       {
         "aindex": 2,
         "uniqueAnswer": false,
         "atype": "P",
-        "questions_map": [
-          {
-            "label": "If accounting,do you have the following?",
-            "branch": 0,
-            "level": 26,
-            "order": 2
-          }
-        ],
         "label": "Accounting"
       },
       {
         "aindex": 3,
         "uniqueAnswer": false,
         "atype": "P",
-        "questions_map": [
-          {
-            "label": "If sales,do you have the following?",
-            "branch": 0,
-            "level": 26,
-            "order": 3
-          }
-        ],
         "label": "Sales"
       },
       {
         "aindex": 4,
         "uniqueAnswer": false,
         "atype": "P",
-        "questions_map": [
-          {
-            "label": "If management,do you have the following?",
-            "branch": 0,
-            "level": 26,
-            "order": 4
-          }
-        ],
         "label": "Management"
       },
       {
         "aindex": 5,
         "uniqueAnswer": true,
         "atype": "P",
-        "questions_map": [
-          {
-            "label": "Did you perform any particular actions to secure them?",
-            "branch": 0,
-            "level": 26,
-            "order": 5
-          }
-        ],
         "label": "No"
       },
       {
         "aindex": 6,
         "uniqueAnswer": false,
         "atype": "T",
-        "questions_map": [
-          {
-            "label": "Did you perform any particular actions to secure them?",
-            "branch": 0,
-            "level": 26,
-            "order": 6
-          }
-        ],
         "label": "Other"
       }
     ]
@@ -1887,119 +1082,55 @@
     "section": "Digital services and products",
     "service_category": "Tools",
     "qtype": "MT",
-    "qindex": 27,
+    "qindex": 18,
     "label": "If communication,do you have the following?",
     "answers": [
       {
         "aindex": 1,
         "uniqueAnswer": false,
         "atype": "P",
-        "questions_map": [
-          {
-            "label": "Did you perform any particular actions to secure them?",
-            "branch": 0,
-            "level": 29,
-            "order": 1
-          }
-        ],
         "label": "Website"
       },
       {
         "aindex": 2,
         "uniqueAnswer": false,
         "atype": "P",
-        "questions_map": [
-          {
-            "label": "Did you perform any particular actions to secure them?",
-            "branch": 0,
-            "level": 27,
-            "order": 1
-          }
-        ],
         "label": "Social networks"
       },
       {
         "aindex": 3,
         "uniqueAnswer": false,
         "atype": "P",
-        "questions_map": [
-          {
-            "label": "Did you perform any particular actions to secure them?",
-            "branch": 0,
-            "level": 27,
-            "order": 1
-          }
-        ],
         "label": "Mailbox"
       },
       {
         "aindex": 4,
         "uniqueAnswer": false,
         "atype": "P",
-        "questions_map": [
-          {
-            "label": "Did you perform any particular actions to secure them?",
-            "branch": 0,
-            "level": 27,
-            "order": 1
-          }
-        ],
         "label": "Emailing"
       },
       {
         "aindex": 5,
         "uniqueAnswer": false,
         "atype": "P",
-        "questions_map": [
-          {
-            "label": "Did you perform any particular actions to secure them?",
-            "branch": 0,
-            "level": 27,
-            "order": 1
-          }
-        ],
         "label": "Videoconferencing"
       },
       {
         "aindex": 6,
         "uniqueAnswer": false,
         "atype": "P",
-        "questions_map": [
-          {
-            "label": "Did you perform any particular actions to secure them?",
-            "branch": 0,
-            "level": 27,
-            "order": 1
-          }
-        ],
         "label": "Internet traffic monitoring protocol"
       },
       {
         "aindex": 7,
         "uniqueAnswer": false,
         "atype": "P",
-        "questions_map": [
-          {
-            "label": "Did you perform any particular actions to secure them?",
-            "branch": 0,
-            "level": 27,
-            "order": 1
-          }
-        ],
         "label": "Online tool for sending large files"
       },
       {
         "aindex": 8,
         "uniqueAnswer": false,
         "atype": "T",
-        "questions_map": [
-          {
-            "label": "Did you perform any particular actions to secure them?",
-            "branch": 0,
-            "level": 27,
-            "order": 1
-          }
-        ],
         "label": "Other"
       }
     ]
@@ -2008,91 +1139,43 @@
     "section": "Digital services and products",
     "service_category": "Tools",
     "qtype": "MT",
-    "qindex": 28,
+    "qindex": 19,
     "label": "If accounting,do you have the following?",
     "answers": [
       {
         "aindex": 1,
         "uniqueAnswer": false,
         "atype": "P",
-        "questions_map": [
-          {
-            "label": "Did you perform any particular actions to secure them?",
-            "branch": 0,
-            "level": 30,
-            "order": 1
-          }
-        ],
         "label": "Accounting software"
       },
       {
         "aindex": 2,
         "uniqueAnswer": false,
         "atype": "P",
-        "questions_map": [
-          {
-            "label": "Did you perform any particular actions to secure them?",
-            "branch": 0,
-            "level": 28,
-            "order": 1
-          }
-        ],
         "label": "Expense report tracking tool"
       },
       {
         "aindex": 3,
         "uniqueAnswer": false,
         "atype": "P",
-        "questions_map": [
-          {
-            "label": "Did you perform any particular actions to secure them?",
-            "branch": 0,
-            "level": 28,
-            "order": 1
-          }
-        ],
         "label": "Electronic invoicing"
       },
       {
         "aindex": 4,
         "uniqueAnswer": false,
         "atype": "P",
-        "questions_map": [
-          {
-            "label": "Did you perform any particular actions to secure them?",
-            "branch": 0,
-            "level": 28,
-            "order": 1
-          }
-        ],
         "label": "Electronic signature"
       },
       {
         "aindex": 5,
         "uniqueAnswer": false,
         "atype": "P",
-        "questions_map": [
-          {
-            "label": "Did you perform any particular actions to secure them?",
-            "branch": 0,
-            "level": 28,
-            "order": 1
-          }
-        ],
         "label": "Authentication"
       },
       {
         "aindex": 6,
         "uniqueAnswer": false,
         "atype": "T",
-        "questions_map": [
-          {
-            "label": "Did you perform any particular actions to secure them?",
-            "branch": 0,
-            "level": 28,
-            "order": 1
-          }
-        ],
         "label": "Other"
       }
     ]
@@ -2101,63 +1184,31 @@
     "section": "Digital services and products",
     "service_category": "Tools",
     "qtype": "MT",
-    "qindex": 29,
+    "qindex": 20,
     "label": "If sales,do you have the following?",
     "answers": [
       {
         "aindex": 1,
         "uniqueAnswer": false,
         "atype": "P",
-        "questions_map": [
-          {
-            "label": "Did you perform any particular actions to secure them?",
-            "branch": 0,
-            "level": 31,
-            "order": 1
-          }
-        ],
         "label": "Online payment tool"
       },
       {
         "aindex": 2,
         "uniqueAnswer": false,
         "atype": "P",
-        "questions_map": [
-          {
-            "label": "Did you perform any particular actions to secure them?",
-            "branch": 0,
-            "level": 29,
-            "order": 1
-          }
-        ],
         "label": "Online sales platform"
       },
       {
         "aindex": 3,
         "uniqueAnswer": false,
         "atype": "P",
-        "questions_map": [
-          {
-            "label": "Did you perform any particular actions to secure them?",
-            "branch": 0,
-            "level": 29,
-            "order": 1
-          }
-        ],
         "label": "Customer relationship management (CRM)"
       },
       {
         "aindex": 4,
         "uniqueAnswer": false,
         "atype": "T",
-        "questions_map": [
-          {
-            "label": "Did you perform any particular actions to secure them?",
-            "branch": 0,
-            "level": 29,
-            "order": 1
-          }
-        ],
         "label": "Other"
       }
     ]
@@ -2166,157 +1217,44 @@
     "section": "Digital services and products",
     "service_category": "Tools",
     "qtype": "MT",
-    "qindex": 30,
+    "qindex": 21,
     "label": "If management,do you have the following?",
     "answers": [
       {
         "aindex": 1,
         "uniqueAnswer": false,
         "atype": "P",
-        "questions_map": [
-          {
-            "label": "Did you perform any particular actions to secure them?",
-            "branch": 0,
-            "level": 32,
-            "order": 1
-          }
-        ],
         "label": "Inventory management"
       },
       {
         "aindex": 2,
         "uniqueAnswer": false,
         "atype": "P",
-        "questions_map": [
-          {
-            "label": "Did you perform any particular actions to secure them?",
-            "branch": 0,
-            "level": 30,
-            "order": 1
-          }
-        ],
         "label": "Integrated management software package (ERP)"
       },
       {
         "aindex": 3,
         "uniqueAnswer": false,
         "atype": "P",
-        "questions_map": [
-          {
-            "label": "Did you perform any particular actions to secure them?",
-            "branch": 0,
-            "level": 30,
-            "order": 1
-          }
-        ],
         "label": "Project management software"
       },
       {
         "aindex": 4,
         "uniqueAnswer": false,
         "atype": "P",
-        "questions_map": [
-          {
-            "label": "Did you perform any particular actions to secure them?",
-            "branch": 0,
-            "level": 30,
-            "order": 1
-          }
-        ],
         "label": "Document sharing tool (cloud)"
       },
       {
         "aindex": 5,
         "uniqueAnswer": false,
         "atype": "P",
-        "questions_map": [
-          {
-            "label": "Did you perform any particular actions to secure them?",
-            "branch": 0,
-            "level": 30,
-            "order": 1
-          }
-        ],
         "label": "Automatic data backup software)"
       },
       {
         "aindex": 6,
         "uniqueAnswer": false,
         "atype": "T",
-        "questions_map": [
-          {
-            "label": "Did you perform any particular actions to secure them?",
-            "branch": 0,
-            "level": 30,
-            "order": 1
-          }
-        ],
         "label": "Other"
-      }
-    ]
-  },
-  {
-    "section": "Digital services and products",
-    "service_category": "Tools",
-    "qtype": "S",
-    "qindex": 31,
-    "label": "Did you perform any particular actions to secure them?",
-    "answers": [
-      {
-        "aindex": 1,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "questions_map": [
-          {
-            "label": "Do you have a cybersecurity solution in place?",
-            "branch": 0,
-            "level": 33,
-            "order": 1
-          }
-        ],
-        "label": "Yes"
-      },
-      {
-        "aindex": 2,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "questions_map": [
-          {
-            "label": "Do you have a cybersecurity solution in place?",
-            "branch": 0,
-            "level": 31,
-            "order": 1
-          }
-        ],
-        "label": "No"
-      },
-      {
-        "aindex": 3,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "questions_map": [
-          {
-            "label": "Do you have a cybersecurity solution in place?",
-            "branch": 0,
-            "level": 31,
-            "order": 1
-          }
-        ],
-        "label": "Partially"
-      },
-      {
-        "aindex": 4,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "questions_map": [
-          {
-            "label": "Do you have a cybersecurity solution in place?",
-            "branch": 0,
-            "level": 31,
-            "order": 1
-          }
-        ],
-        "label": "I don’t know"
       }
     ]
   },
@@ -2324,278 +1262,68 @@
     "section": "Digital services and products",
     "service_category": "Focus on cybersecurity practices",
     "qtype": "MT",
-    "qindex": 32,
+    "qindex": 22,
     "label": "Do you have a cybersecurity solution in place?",
     "answers": [
       {
         "aindex": 1,
         "uniqueAnswer": false,
         "atype": "P",
-        "questions_map": [
-          {
-            "label": "Do you have an inventory of your digital assets?",
-            "branch": 0,
-            "level": 34,
-            "order": 1
-          }
-        ],
         "label": "Firewall"
       },
       {
         "aindex": 2,
         "uniqueAnswer": false,
         "atype": "P",
-        "questions_map": [
-          {
-            "label": "Do you have an inventory of your digital assets?",
-            "branch": 0,
-            "level": 32,
-            "order": 1
-          }
-        ],
         "label": "Antivirus"
       },
       {
         "aindex": 3,
         "uniqueAnswer": false,
         "atype": "P",
-        "questions_map": [
-          {
-            "label": "Do you have an inventory of your digital assets?",
-            "branch": 0,
-            "level": 32,
-            "order": 1
-          }
-        ],
         "label": "Encryption system"
       },
       {
         "aindex": 4,
         "uniqueAnswer": false,
         "atype": "P",
-        "questions_map": [
-          {
-            "label": "Do you have an inventory of your digital assets?",
-            "branch": 0,
-            "level": 32,
-            "order": 1
-          }
-        ],
         "label": "VPN"
       },
       {
         "aindex": 5,
         "uniqueAnswer": false,
         "atype": "P",
-        "questions_map": [
-          {
-            "label": "Do you have an inventory of your digital assets?",
-            "branch": 0,
-            "level": 32,
-            "order": 1
-          }
-        ],
         "label": "Public key infrastructure (PKI)"
       },
       {
         "aindex": 6,
         "uniqueAnswer": false,
         "atype": "P",
-        "questions_map": [
-          {
-            "label": "Do you have an inventory of your digital assets?",
-            "branch": 0,
-            "level": 32,
-            "order": 1
-          }
-        ],
         "label": "Password Manager"
       },
       {
         "aindex": 7,
         "uniqueAnswer": false,
         "atype": "P",
-        "questions_map": [
-          {
-            "label": "Do you have an inventory of your digital assets?",
-            "branch": 0,
-            "level": 32,
-            "order": 1
-          }
-        ],
         "label": "Data backup solution"
       },
       {
         "aindex": 8,
         "uniqueAnswer": false,
         "atype": "P",
-        "questions_map": [
-          {
-            "label": "Do you have an inventory of your digital assets?",
-            "branch": 0,
-            "level": 32,
-            "order": 1
-          }
-        ],
         "label": "Two factors authentication (2FA)"
       },
       {
         "aindex": 9,
         "uniqueAnswer": false,
         "atype": "P",
-        "questions_map": [
-          {
-            "label": "Do you have an inventory of your digital assets?",
-            "branch": 0,
-            "level": 32,
-            "order": 1
-          }
-        ],
         "label": "No"
       },
       {
         "aindex": 10,
         "uniqueAnswer": false,
         "atype": "T",
-        "questions_map": [
-          {
-            "label": "Do you have an inventory of your digital assets?",
-            "branch": 0,
-            "level": 32,
-            "order": 1
-          }
-        ],
         "label": "Other"
-      }
-    ]
-  },
-  {
-    "section": "Digital services and products",
-    "service_category": "Focus on cybersecurity practices",
-    "qtype": "S",
-    "qindex": 33,
-    "label": "Do you have an inventory of your digital assets?",
-    "answers": [
-      {
-        "aindex": 1,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "questions_map": [
-          {
-            "label": "Would you like a scan of your digital assets to help determine their vulnerability?",
-            "branch": 0,
-            "level": 35,
-            "order": 1
-          }
-        ],
-        "label": "Yes"
-      },
-      {
-        "aindex": 2,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "questions_map": [
-          {
-            "label": "Would you like a scan of your digital assets to help determine their vulnerability?",
-            "branch": 0,
-            "level": 33,
-            "order": 1
-          }
-        ],
-        "label": "No"
-      },
-      {
-        "aindex": 3,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "questions_map": [
-          {
-            "label": "Would you like a scan of your digital assets to help determine their vulnerability?",
-            "branch": 0,
-            "level": 33,
-            "order": 1
-          }
-        ],
-        "label": "Partially"
-      },
-      {
-        "aindex": 4,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "questions_map": [
-          {
-            "label": "Would you like a scan of your digital assets to help determine their vulnerability?",
-            "branch": 0,
-            "level": 33,
-            "order": 1
-          }
-        ],
-        "label": "I don’t know"
-      }
-    ]
-  },
-  {
-    "section": "Digital services and products",
-    "service_category": "Focus on cybersecurity practices",
-    "qtype": "S",
-    "qindex": 34,
-    "label": "Would you like a scan of your digital assets to help determine their vulnerability?",
-    "answers": [
-      {
-        "aindex": 1,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "questions_map": [
-          {
-            "label": "Are you supported by an external service provider to manage your cybersecurity?",
-            "branch": 0,
-            "level": 36,
-            "order": 1
-          }
-        ],
-        "label": "Yes"
-      },
-      {
-        "aindex": 2,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "questions_map": [
-          {
-            "label": "Are you supported by an external service provider to manage your cybersecurity?",
-            "branch": 0,
-            "level": 34,
-            "order": 1
-          }
-        ],
-        "label": "No"
-      },
-      {
-        "aindex": 3,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "questions_map": [
-          {
-            "label": "Are you supported by an external service provider to manage your cybersecurity?",
-            "branch": 0,
-            "level": 34,
-            "order": 1
-          }
-        ],
-        "label": "Partially"
-      },
-      {
-        "aindex": 4,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "questions_map": [
-          {
-            "label": "Are you supported by an external service provider to manage your cybersecurity?",
-            "branch": 0,
-            "level": 34,
-            "order": 1
-          }
-        ],
-        "label": "I don’t know"
       }
     ]
   },
@@ -2603,7 +1331,7 @@
     "section": "Market and service providers",
     "service_category": "Market and service providers",
     "qtype": "S",
-    "qindex": 35,
+    "qindex": 23,
     "label": "Are you supported by an external service provider to manage your cybersecurity?",
     "answers": [
       {
@@ -2668,7 +1396,7 @@
     "section": "Market and service providers",
     "service_category": "Market and service providers",
     "qtype": "S",
-    "qindex": 36,
+    "qindex": 24,
     "label": "Is it an IT or cybersecurity company?",
     "answers": [
       {
@@ -2705,7 +1433,7 @@
     "section": "Market and service providers",
     "service_category": "Market and service providers",
     "qtype": "MT",
-    "qindex": 37,
+    "qindex": 25,
     "label": "What are your criteria for evaluating cybersecurity services or solutions?",
     "answers": [
       {
@@ -2734,7 +1462,7 @@
             "order": 1
           }
         ],
-        "label": "Exhaustivity"
+        "label": "Comprehensiveness"
       },
       {
         "aindex": 3,
@@ -2795,6 +1523,20 @@
       {
         "aindex": 7,
         "uniqueAnswer": false,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Are the cybersecurity services available on the market suited to your needs?",
+            "branch": 0,
+            "level": 37,
+            "order": 1
+          }
+        ],
+        "label": "I don't know"
+      },
+      {
+        "aindex": 8,
+        "uniqueAnswer": false,
         "atype": "T",
         "questions_map": [
           {
@@ -2812,7 +1554,7 @@
     "section": "Market and service providers",
     "service_category": "Market and service providers",
     "qtype": "S",
-    "qindex": 38,
+    "qindex": 26,
     "label": "Are the cybersecurity services available on the market suited to your needs?",
     "answers": [
       {
@@ -2821,7 +1563,7 @@
         "atype": "P",
         "questions_map": [
           {
-            "label": "How much trust do you have in your service providers?",
+            "label": "How much trust do you have in your cybersecurity service providers?",
             "branch": 0,
             "level": 40,
             "order": 1
@@ -2863,7 +1605,7 @@
         "atype": "P",
         "questions_map": [
           {
-            "label": "How much trust do you have in your service providers?",
+            "label": "How much trust do you have in your cybersecurity service providers?",
             "branch": 0,
             "level": 38,
             "order": 1
@@ -2877,7 +1619,7 @@
     "section": "Market and service providers",
     "service_category": "Market and service providers",
     "qtype": "T",
-    "qindex": 39,
+    "qindex": 27,
     "label": "If not, what are you missing?",
     "answers": [
       {
@@ -2886,7 +1628,7 @@
         "atype": "T",
         "questions_map": [
           {
-            "label": "How much trust do you have in your service providers?",
+            "label": "How much trust do you have in your cybersecurity service providers?",
             "branch": 0,
             "level": 41,
             "order": 1
@@ -2900,8 +1642,8 @@
     "section": "Market and service providers",
     "service_category": "Market and service providers",
     "qtype": "S",
-    "qindex": 40,
-    "label": "How much trust do you have in your service providers?",
+    "qindex": 28,
+    "label": "How much trust do you have in your cybersecurity service providers?",
     "answers": [
       {
         "aindex": 1,
@@ -2979,7 +1721,7 @@
     "section": "Market and service providers",
     "service_category": "Market and service providers",
     "qtype": "T",
-    "qindex": 41,
+    "qindex": 29,
     "label": "If not, what is your main issue?",
     "answers": [
       {
@@ -3002,128 +1744,31 @@
     "section": "Market and service providers",
     "service_category": "Market and service providers",
     "qtype": "S",
-    "qindex": 42,
+    "qindex": 30,
     "label": "Is your IT service provider also your internet service provider?",
     "answers": [
       {
         "aindex": 1,
         "uniqueAnswer": true,
         "atype": "P",
-        "questions_map": [
-          {
-            "label": "Do you limit your IT vendors' access to your sensitive information?",
-            "branch": 0,
-            "level": 44,
-            "order": 1
-          }
-        ],
         "label": "Yes"
       },
       {
         "aindex": 2,
         "uniqueAnswer": true,
         "atype": "P",
-        "questions_map": [
-          {
-            "label": "Do you limit your IT vendors' access to your sensitive information?",
-            "branch": 0,
-            "level": 42,
-            "order": 1
-          }
-        ],
         "label": "No"
       },
       {
         "aindex": 3,
         "uniqueAnswer": true,
         "atype": "P",
-        "questions_map": [
-          {
-            "label": "Do you limit your IT vendors' access to your sensitive information?",
-            "branch": 0,
-            "level": 42,
-            "order": 1
-          }
-        ],
         "label": "Partially"
       },
       {
         "aindex": 4,
         "uniqueAnswer": true,
         "atype": "P",
-        "questions_map": [
-          {
-            "label": "Do you limit your IT vendors' access to your sensitive information?",
-            "branch": 0,
-            "level": 42,
-            "order": 1
-          }
-        ],
-        "label": "I don’t know"
-      }
-    ]
-  },
-  {
-    "section": "Market and service providers",
-    "service_category": "Market and service providers",
-    "qtype": "S",
-    "qindex": 43,
-    "label": "Do you limit your IT vendors' access to your sensitive information?",
-    "answers": [
-      {
-        "aindex": 1,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "questions_map": [
-          {
-            "label": "Have your employees ever had a cyber incident on their personal devices?",
-            "branch": 0,
-            "level": 45,
-            "order": 1
-          }
-        ],
-        "label": "Yes"
-      },
-      {
-        "aindex": 2,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "questions_map": [
-          {
-            "label": "Have your employees ever had a cyber incident on their personal devices?",
-            "branch": 0,
-            "level": 43,
-            "order": 1
-          }
-        ],
-        "label": "No"
-      },
-      {
-        "aindex": 3,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "questions_map": [
-          {
-            "label": "Have your employees ever had a cyber incident on their personal devices?",
-            "branch": 0,
-            "level": 43,
-            "order": 1
-          }
-        ],
-        "label": "Partially"
-      },
-      {
-        "aindex": 4,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "questions_map": [
-          {
-            "label": "Have your employees ever had a cyber incident on their personal devices?",
-            "branch": 0,
-            "level": 43,
-            "order": 1
-          }
-        ],
         "label": "I don’t know"
       }
     ]
@@ -3132,7 +1777,7 @@
     "section": "Incident",
     "service_category": "Incident",
     "qtype": "S",
-    "qindex": 44,
+    "qindex": 31,
     "label": "Have your employees ever had a cyber incident on their personal devices?",
     "answers": [
       {
@@ -3183,63 +1828,31 @@
     "section": "Incident",
     "service_category": "Incident",
     "qtype": "S",
-    "qindex": 45,
+    "qindex": 32,
     "label": "Has this had an impact on your business?",
     "answers": [
       {
         "aindex": 1,
         "uniqueAnswer": true,
         "atype": "P",
-        "questions_map": [
-          {
-            "label": "Have you ever had a cybersecurity incident involving regulations other than Luxembourg?",
-            "branch": 0,
-            "level": 47,
-            "order": 1
-          }
-        ],
         "label": "Yes"
       },
       {
         "aindex": 2,
         "uniqueAnswer": true,
         "atype": "P",
-        "questions_map": [
-          {
-            "label": "Have you ever had a cybersecurity incident involving regulations other than Luxembourg?",
-            "branch": 0,
-            "level": 45,
-            "order": 1
-          }
-        ],
         "label": "No"
       },
       {
         "aindex": 3,
         "uniqueAnswer": true,
         "atype": "P",
-        "questions_map": [
-          {
-            "label": "Have you ever had a cybersecurity incident involving regulations other than Luxembourg?",
-            "branch": 0,
-            "level": 45,
-            "order": 1
-          }
-        ],
         "label": "Partially"
       },
       {
         "aindex": 4,
         "uniqueAnswer": true,
         "atype": "P",
-        "questions_map": [
-          {
-            "label": "Have you ever had a cybersecurity incident involving regulations other than Luxembourg?",
-            "branch": 0,
-            "level": 45,
-            "order": 1
-          }
-        ],
         "label": "I don’t know"
       }
     ]
@@ -3248,235 +1861,31 @@
     "section": "Incident",
     "service_category": "Incident",
     "qtype": "ST",
-    "qindex": 46,
-    "label": "Have you ever had a cybersecurity incident involving regulations other than Luxembourg?",
-    "answers": [
-      {
-        "aindex": 1,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "questions_map": [
-          {
-            "label": "Have you been a victim of cyber attacks?",
-            "branch": 0,
-            "level": 48,
-            "order": 1
-          }
-        ],
-        "label": "Yes"
-      },
-      {
-        "aindex": 2,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "questions_map": [
-          {
-            "label": "Have you been a victim of cyber attacks?",
-            "branch": 0,
-            "level": 46,
-            "order": 1
-          }
-        ],
-        "label": "No"
-      },
-      {
-        "aindex": 3,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "questions_map": [
-          {
-            "label": "Have you been a victim of cyber attacks?",
-            "branch": 0,
-            "level": 46,
-            "order": 1
-          }
-        ],
-        "label": "I don’t know"
-      },
-      {
-        "aindex": 4,
-        "uniqueAnswer": true,
-        "atype": "T",
-        "questions_map": [
-          {
-            "label": "Have you been a victim of cyber attacks?",
-            "branch": 0,
-            "level": 46,
-            "order": 1
-          }
-        ],
-        "label": "Other"
-      }
-    ]
-  },
-  {
-    "section": "Incident",
-    "service_category": "Incident",
-    "qtype": "ST",
-    "qindex": 47,
+    "qindex": 33,
     "label": "Have you been a victim of cyber attacks?",
     "answers": [
       {
         "aindex": 1,
         "uniqueAnswer": true,
         "atype": "P",
-        "questions_map": [
-          {
-            "label": "If yes, What type of attack was it?",
-            "branch": 0,
-            "level": 49,
-            "order": 1
-          }
-        ],
         "label": "Yes"
       },
       {
         "aindex": 2,
         "uniqueAnswer": true,
         "atype": "P",
-        "questions_map": [
-          {
-            "label": "Have you ever paid a ransom online?",
-            "branch": 0,
-            "level": 47,
-            "order": 1
-          }
-        ],
         "label": "No"
       },
       {
         "aindex": 3,
         "uniqueAnswer": true,
         "atype": "P",
-        "questions_map": [
-          {
-            "label": "Have you ever paid a ransom online?",
-            "branch": 0,
-            "level": 47,
-            "order": 1
-          }
-        ],
         "label": "I don’t know"
       },
       {
         "aindex": 4,
         "uniqueAnswer": true,
         "atype": "T",
-        "questions_map": [
-          {
-            "label": "If yes, What type of attack was it?",
-            "branch": 0,
-            "level": 47,
-            "order": 1
-          }
-        ],
-        "label": "Other"
-      }
-    ]
-  },
-  {
-    "section": "Incident",
-    "service_category": "Incident",
-    "qtype": "MT",
-    "qindex": 48,
-    "label": "If yes, What type of attack was it?",
-    "answers": [
-      {
-        "aindex": 1,
-        "uniqueAnswer": false,
-        "atype": "P",
-        "questions_map": [
-          {
-            "label": "Have you ever paid a ransom online?",
-            "branch": 0,
-            "level": 50,
-            "order": 1
-          }
-        ],
-        "label": "Ransomware"
-      },
-      {
-        "aindex": 2,
-        "uniqueAnswer": false,
-        "atype": "P",
-        "questions_map": [
-          {
-            "label": "Have you ever paid a ransom online?",
-            "branch": 0,
-            "level": 48,
-            "order": 1
-          }
-        ],
-        "label": "IP spoofing"
-      },
-      {
-        "aindex": 3,
-        "uniqueAnswer": false,
-        "atype": "P",
-        "questions_map": [
-          {
-            "label": "Have you ever paid a ransom online?",
-            "branch": 0,
-            "level": 48,
-            "order": 1
-          }
-        ],
-        "label": "Denial of service attack (DoS or DDoS)"
-      },
-      {
-        "aindex": 4,
-        "uniqueAnswer": false,
-        "atype": "P",
-        "questions_map": [
-          {
-            "label": "Have you ever paid a ransom online?",
-            "branch": 0,
-            "level": 48,
-            "order": 1
-          }
-        ],
-        "label": "Phishing"
-      },
-      {
-        "aindex": 5,
-        "uniqueAnswer": false,
-        "atype": "P",
-        "questions_map": [
-          {
-            "label": "Have you ever paid a ransom online?",
-            "branch": 0,
-            "level": 48,
-            "order": 1
-          }
-        ],
-        "label": "Password cracking"
-      },
-      {
-        "aindex": 6,
-        "uniqueAnswer": false,
-        "atype": "P",
-        "questions_map": [
-          {
-            "label": "Have you ever paid a ransom online?",
-            "branch": 0,
-            "level": 48,
-            "order": 1
-          }
-        ],
-        "label": "Other virus / malware (not ransomware)"
-      },
-      {
-        "aindex": 7,
-        "uniqueAnswer": false,
-        "atype": "T",
-        "questions_map": [
-          {
-            "label": "Have you ever paid a ransom online?",
-            "branch": 0,
-            "level": 48,
-            "order": 1
-          }
-        ],
         "label": "Other"
       }
     ]
@@ -3485,7 +1894,7 @@
     "section": "Incident",
     "service_category": "Incident",
     "qtype": "ST",
-    "qindex": 49,
+    "qindex": 34,
     "label": "Have you ever paid a ransom online?",
     "answers": [
       {
@@ -3550,170 +1959,31 @@
     "section": "Incident",
     "service_category": "Incident",
     "qtype": "S",
-    "qindex": 50,
+    "qindex": 35,
     "label": "Would you do it again?",
     "answers": [
       {
         "aindex": 1,
         "uniqueAnswer": true,
         "atype": "P",
-        "questions_map": [
-          {
-            "label": "Who would you contact in the event of a computer incident?",
-            "branch": 0,
-            "level": 52,
-            "order": 1
-          }
-        ],
         "label": "Yes"
       },
       {
         "aindex": 2,
         "uniqueAnswer": true,
         "atype": "P",
-        "questions_map": [
-          {
-            "label": "Who would you contact in the event of a computer incident?",
-            "branch": 0,
-            "level": 50,
-            "order": 1
-          }
-        ],
         "label": "No"
       },
       {
         "aindex": 3,
         "uniqueAnswer": true,
         "atype": "P",
-        "questions_map": [
-          {
-            "label": "Who would you contact in the event of a computer incident?",
-            "branch": 0,
-            "level": 50,
-            "order": 1
-          }
-        ],
         "label": "I don’t know"
       },
       {
         "aindex": 4,
         "uniqueAnswer": true,
         "atype": "T",
-        "questions_map": [
-          {
-            "label": "Who would you contact in the event of a computer incident?",
-            "branch": 0,
-            "level": 50,
-            "order": 1
-          }
-        ],
-        "label": "Other"
-      }
-    ]
-  },
-  {
-    "section": "Incident",
-    "service_category": "Incident",
-    "qtype": "MT",
-    "qindex": 51,
-    "label": "Who would you contact in the event of a computer incident?",
-    "answers": [
-      {
-        "aindex": 1,
-        "uniqueAnswer": false,
-        "atype": "P",
-        "questions_map": [
-          {
-            "label": "Have you participated in a cybersecurity awareness event/training organized by professional chambers?",
-            "branch": 0,
-            "level": 53,
-            "order": 1
-          }
-        ],
-        "label": "Police"
-      },
-      {
-        "aindex": 2,
-        "uniqueAnswer": false,
-        "atype": "P",
-        "questions_map": [
-          {
-            "label": "Have you participated in a cybersecurity awareness event/training organized by professional chambers?",
-            "branch": 0,
-            "level": 51,
-            "order": 1
-          }
-        ],
-        "label": "Internet service provider"
-      },
-      {
-        "aindex": 3,
-        "uniqueAnswer": false,
-        "atype": "P",
-        "questions_map": [
-          {
-            "label": "Have you participated in a cybersecurity awareness event/training organized by professional chambers?",
-            "branch": 0,
-            "level": 51,
-            "order": 1
-          }
-        ],
-        "label": "IT service provider (if different from Internet service provider)"
-      },
-      {
-        "aindex": 4,
-        "uniqueAnswer": false,
-        "atype": "P",
-        "questions_map": [
-          {
-            "label": "Have you participated in a cybersecurity awareness event/training organized by professional chambers?",
-            "branch": 0,
-            "level": 51,
-            "order": 1
-          }
-        ],
-        "label": "CIRCL (CSIRT for private sector)"
-      },
-      {
-        "aindex": 5,
-        "uniqueAnswer": false,
-        "atype": "P",
-        "questions_map": [
-          {
-            "label": "Have you participated in a cybersecurity awareness event/training organized by professional chambers?",
-            "branch": 0,
-            "level": 51,
-            "order": 1
-          }
-        ],
-        "label": "CNPD (National data protection agency)"
-      },
-      {
-        "aindex": 6,
-        "uniqueAnswer": false,
-        "atype": "P",
-        "questions_map": [
-          {
-            "label": "Have you participated in a cybersecurity awareness event/training organized by professional chambers?",
-            "branch": 0,
-            "level": 51,
-            "order": 1
-          }
-        ],
-        "label": "Cybersecurity specialist you are not already working with."
-      },
-      {
-        "aindex": 7,
-        "uniqueAnswer": false,
-        "atype": "T",
-        "questions_map": [
-          {
-            "label": "Have you participated in a cybersecurity awareness event/training organized by professional chambers?",
-            "branch": 0,
-            "level": 51,
-            "order": 1
-          }
-        ],
         "label": "Other"
       }
     ]
@@ -3722,202 +1992,7 @@
     "section": "Regulations and public actions",
     "service_category": "Regulations and public actions",
     "qtype": "ST",
-    "qindex": 52,
-    "label": "Have you participated in a cybersecurity awareness event/training organized by professional chambers?",
-    "answers": [
-      {
-        "aindex": 1,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "questions_map": [
-          {
-            "label": "Have you participated in or benefited from public digitization aid or programs provided by professional chambers?",
-            "branch": 0,
-            "level": 54,
-            "order": 1
-          }
-        ],
-        "label": "Yes"
-      },
-      {
-        "aindex": 2,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "questions_map": [
-          {
-            "label": "Have you participated in or benefited from public digitization aid or programs provided by professional chambers?",
-            "branch": 0,
-            "level": 52,
-            "order": 1
-          }
-        ],
-        "label": "No"
-      },
-      {
-        "aindex": 3,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "questions_map": [
-          {
-            "label": "Have you participated in or benefited from public digitization aid or programs provided by professional chambers?",
-            "branch": 0,
-            "level": 52,
-            "order": 1
-          }
-        ],
-        "label": "I don’t know"
-      },
-      {
-        "aindex": 4,
-        "uniqueAnswer": true,
-        "atype": "T",
-        "questions_map": [
-          {
-            "label": "Have you participated in or benefited from public digitization aid or programs provided by professional chambers?",
-            "branch": 0,
-            "level": 52,
-            "order": 1
-          }
-        ],
-        "label": "Other"
-      }
-    ]
-  },
-  {
-    "section": "Regulations and public actions",
-    "service_category": "Regulations and public actions",
-    "qtype": "ST",
-    "qindex": 53,
-    "label": "Have you participated in or benefited from public digitization aid or programs provided by professional chambers?",
-    "answers": [
-      {
-        "aindex": 1,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "questions_map": [
-          {
-            "label": "Have you changed the way you work to align with General Data Protection Regulation (GDPR) requirements?",
-            "branch": 0,
-            "level": 55,
-            "order": 1
-          }
-        ],
-        "label": "Yes"
-      },
-      {
-        "aindex": 2,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "questions_map": [
-          {
-            "label": "Have you changed the way you work to align with General Data Protection Regulation (GDPR) requirements?",
-            "branch": 0,
-            "level": 53,
-            "order": 1
-          }
-        ],
-        "label": "No"
-      },
-      {
-        "aindex": 3,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "questions_map": [
-          {
-            "label": "Have you changed the way you work to align with General Data Protection Regulation (GDPR) requirements?",
-            "branch": 0,
-            "level": 53,
-            "order": 1
-          }
-        ],
-        "label": "I don’t know"
-      },
-      {
-        "aindex": 4,
-        "uniqueAnswer": true,
-        "atype": "T",
-        "questions_map": [
-          {
-            "label": "Have you changed the way you work to align with General Data Protection Regulation (GDPR) requirements?",
-            "branch": 0,
-            "level": 53,
-            "order": 1
-          }
-        ],
-        "label": "Other"
-      }
-    ]
-  },
-  {
-    "section": "Regulations and public actions",
-    "service_category": "Regulations and public actions",
-    "qtype": "ST",
-    "qindex": 54,
-    "label": "Have you changed the way you work to align with General Data Protection Regulation (GDPR) requirements?",
-    "answers": [
-      {
-        "aindex": 1,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "questions_map": [
-          {
-            "label": "Do you know your cybersecurity and data protection obligations?",
-            "branch": 0,
-            "level": 56,
-            "order": 1
-          }
-        ],
-        "label": "Yes"
-      },
-      {
-        "aindex": 2,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "questions_map": [
-          {
-            "label": "Do you know your cybersecurity and data protection obligations?",
-            "branch": 0,
-            "level": 54,
-            "order": 1
-          }
-        ],
-        "label": "No"
-      },
-      {
-        "aindex": 3,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "questions_map": [
-          {
-            "label": "Do you know your cybersecurity and data protection obligations?",
-            "branch": 0,
-            "level": 54,
-            "order": 1
-          }
-        ],
-        "label": "I don’t know"
-      },
-      {
-        "aindex": 4,
-        "uniqueAnswer": true,
-        "atype": "T",
-        "questions_map": [
-          {
-            "label": "Do you know your cybersecurity and data protection obligations?",
-            "branch": 0,
-            "level": 54,
-            "order": 1
-          }
-        ],
-        "label": "Other"
-      }
-    ]
-  },
-  {
-    "section": "Regulations and public actions",
-    "service_category": "Regulations and public actions",
-    "qtype": "ST",
-    "qindex": 55,
+    "qindex": 36,
     "label": "Do you know your cybersecurity and data protection obligations?",
     "answers": [
       {
@@ -3996,7 +2071,7 @@
     "section": "Regulations and public actions",
     "service_category": "Regulations and public actions",
     "qtype": "ST",
-    "qindex": 56,
+    "qindex": 37,
     "label": "(If yes) do you understand your obligations?",
     "answers": [
       {
@@ -4054,20 +2129,6 @@
           }
         ],
         "label": "Partially"
-      },
-      {
-        "aindex": 5,
-        "uniqueAnswer": true,
-        "atype": "T",
-        "questions_map": [
-          {
-            "label": "Does your company have cybersecurity certification?",
-            "branch": 0,
-            "level": 56,
-            "order": 1
-          }
-        ],
-        "label": "Other"
       }
     ]
   },
@@ -4075,7 +2136,7 @@
     "section": "Certification",
     "service_category": "Certification",
     "qtype": "S",
-    "qindex": 57,
+    "qindex": 38,
     "label": "Does your company have cybersecurity certification?",
     "answers": [
       {
