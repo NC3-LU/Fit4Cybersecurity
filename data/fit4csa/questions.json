@@ -1638,7 +1638,14 @@
           }
         ],
         "label": "There is a malware management policy or procedure, but it is not kept up to date with new practices.",
-        "recommendations": []
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "answerChosen": true,
+            "label": "It is great you have a policy or procedure in place. However, it is crucial to constantly review and update it to ensure that all risks and potential attack vectors are considered and managed properly. "
+          }
+        ]
       },
       {
         "aindex": 6,
@@ -5936,6 +5943,22 @@
           }
         ],
         "label": "All of the above.",
+        "recommendations": []
+      },
+      {
+        "aindex": 5,
+        "uniqueAnswer": false,
+        "score": 0,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Does the contract with your clients explicitly refer to the jurisdictions, system component locations hosting client data and subcontractors processing this data?",
+            "branch": 1,
+            "level": 83,
+            "order": 1
+          }
+        ],
+        "label": "None of the above.",
         "recommendations": [
           {
             "min_e_count": "a",
@@ -9756,7 +9779,7 @@
             "min_e_count": "a",
             "max_e_count": "j",
             "answerChosen": true,
-            "label": "It is recommended to verify and ensure that you are pulling your update packages from a verified trusted source. Verify that any manually downloaded software updates fingerprints match the ones available on the provider's website."
+            "label": "It is recommended to implement a secure transmission protocol such as TLS 1.2 or TLS 1.3. You should generate your own private key in a secure and trusted environment with at least 2048 bit of RSA key or 256-bit ECDSA key. Never allow a CA (or anyone else) to generate private keys on your behalf."
           }
         ]
       },
@@ -10593,7 +10616,7 @@
             "min_e_count": "a",
             "max_e_count": "j",
             "answerChosen": true,
-            "label": "The absence of an X-content type header option indicates that the concerned website could be at risk of a Multipurpose Internet Mail Extension (MIME) sniffing attacks, for example. Hence, it is recommended to activate the X-content-type options on the web servers hosting your application to mitigate such attack."
+            "label": "It is recommended to implement a secure transmission protocol such as TLS 1.2 or TLS 1.3. You should generate your own private key in a secure and trusted environment with at least 2048 bit of RSA key or 256-bit ECDSA key. Never allow a CA (or anyone else) to generate private keys on your behalf."
           }
         ]
       },
