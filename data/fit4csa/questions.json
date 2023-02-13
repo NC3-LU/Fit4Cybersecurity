@@ -11896,13 +11896,13 @@
     "service_category": "User authentication requirements",
     "qtype": "S",
     "qindex": 191,
-    "maxPoints": 0,
+    "maxPoints": 25,
     "label": "Have you implemented an access control mechanism that requires users to authenticate before any other action is allowed?",
     "answers": [
       {
         "aindex": 1,
         "uniqueAnswer": true,
-        "score": 0,
+        "score": 13,
         "atype": "P",
         "questions_map": [
           {
@@ -11948,7 +11948,7 @@
       {
         "aindex": 3,
         "uniqueAnswer": true,
-        "score": 0,
+        "score": 25,
         "atype": "P",
         "questions_map": [
           {
@@ -11975,7 +11975,14 @@
           }
         ],
         "label": "N/A",
-        "recommendations": []
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "answerChosen": true,
+            "label": "Authentication is the fundamental security control, hence when applicable. It is recommended to establish an authentication mechanism based on the user's Username and Password or PIN."
+          }
+        ]
       }
     ]
   },
@@ -11984,7 +11991,7 @@
     "service_category": "Unforgettable authentication",
     "qtype": "S",
     "qindex": 192,
-    "maxPoints": 0,
+    "maxPoints": 25,
     "label": "Are there any controls implemented to detect and prevent the use of authentication data that has been forged or copied?",
     "answers": [
       {
@@ -12013,7 +12020,7 @@
       {
         "aindex": 2,
         "uniqueAnswer": true,
-        "score": 0,
+        "score": 25,
         "atype": "P",
         "questions_map": [
           {
@@ -12033,7 +12040,7 @@
     "service_category": "User-subject binding",
     "qtype": "S",
     "qindex": 193,
-    "maxPoints": 0,
+    "maxPoints": 30,
     "label": "Have you implemented any function that allows authorized administrators to manage subject security attributes?",
     "answers": [
       {
@@ -12062,7 +12069,7 @@
       {
         "aindex": 2,
         "uniqueAnswer": true,
-        "score": 0,
+        "score": 25,
         "atype": "P",
         "questions_map": [
           {
@@ -12072,7 +12079,7 @@
             "order": 1
           }
         ],
-        "label": "Administrators are able to manage subjects? Security attributes.",
+        "label": "Administrators are able to manage subjects Security attributes.",
         "recommendations": []
       },
       {
@@ -12089,7 +12096,14 @@
           }
         ],
         "label": "N/A",
-        "recommendations": []
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "answerChosen": true,
+            "label": "Security attributes are an important part of a product. Administrators being able to grant or retrieve access rights is an example of ensuring security through access management. It is, therefore, a good practice to evaluate and define all possible security attributes of your product based on functional and operational requirements during the design phase."
+          }
+        ]
       }
     ]
   },
@@ -12098,7 +12112,7 @@
     "service_category": "Management of security functions and attributes",
     "qtype": "S",
     "qindex": 194,
-    "maxPoints": 0,
+    "maxPoints": 30,
     "label": "Have you implemented any method that allows authorized administrators to manage security function rules or attributes?",
     "answers": [
       {
@@ -12127,7 +12141,7 @@
       {
         "aindex": 2,
         "uniqueAnswer": true,
-        "score": 0,
+        "score": 30,
         "atype": "P",
         "questions_map": [
           {
@@ -12154,7 +12168,7 @@
     "service_category": "Management of limits on TSF data",
     "qtype": "S",
     "qindex": 195,
-    "maxPoints": 0,
+    "maxPoints": 30,
     "label": "Are there controls implemented that allows authorized administrators to manage the group of roles that can interact with private or sensitive data?",
     "answers": [
       {
@@ -12183,7 +12197,7 @@
       {
         "aindex": 2,
         "uniqueAnswer": true,
-        "score": 0,
+        "score": 30,
         "atype": "P",
         "questions_map": [
           {
@@ -12210,7 +12224,7 @@
     "service_category": "Access Revocation Management",
     "qtype": "S",
     "qindex": 196,
-    "maxPoints": 0,
+    "maxPoints": 25,
     "label": "Are there controls implemented to allow authorized roles to manage the revocation of accounts?",
     "answers": [
       {
@@ -12250,12 +12264,19 @@
           }
         ],
         "label": "All users are able to revocate any accounts.",
-        "recommendations": []
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "answerChosen": true,
+            "label": "Users' account management should only be reserved for an administrator's profile. Any other profile should not have the required rights and means to create, modify or revocate users' accounts."
+          }
+        ]
       },
       {
         "aindex": 3,
         "uniqueAnswer": true,
-        "score": 0,
+        "score": 25,
         "atype": "P",
         "questions_map": [
           {
@@ -12275,7 +12296,7 @@
     "service_category": "Data Anonymity , Pseudonymity, unlinkability, unobservability solutions.",
     "qtype": "S",
     "qindex": 197,
-    "maxPoints": 0,
+    "maxPoints": 15,
     "label": "Is there any controls or mechanism implemented to ensure anonymity when required?",
     "answers": [
       {
@@ -12314,27 +12335,11 @@
             "order": 1
           }
         ],
-        "label": "Data privacy controls are considered and implemented.",
-        "recommendations": []
-      },
-      {
-        "aindex": 3,
-        "uniqueAnswer": true,
-        "score": 0,
-        "atype": "P",
-        "questions_map": [
-          {
-            "label": "Are there controls implemented to ensure that the product preserves a secure state in case of failure?",
-            "branch": 4,
-            "level": 27,
-            "order": 1
-          }
-        ],
         "label": "Data anonymity feature is available and could be activated by an administrator.",
         "recommendations": []
       },
       {
-        "aindex": 4,
+        "aindex": 3,
         "uniqueAnswer": false,
         "score": 0,
         "atype": "P",
@@ -12346,8 +12351,15 @@
             "order": 1
           }
         ],
-        "label": "There are controls implemented that allow only authorized users to access data, in order to ensure confidentiality.",
-        "recommendations": []
+        "label": "N/A",
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "answerChosen": true,
+            "label": "If data anonymity is required for your product or business model, it is recommended to not collect Personal Identifiable Information in the first place. Only collect information that is necessary for your product to work and active its objectives."
+          }
+        ]
       }
     ]
   },
@@ -12356,7 +12368,7 @@
     "service_category": "Failure with preservation of secure state",
     "qtype": "S",
     "qindex": 198,
-    "maxPoints": 0,
+    "maxPoints": 35,
     "label": "Are there controls implemented to ensure that the product preserves a secure state in case of failure?",
     "answers": [
       {
@@ -12373,12 +12385,19 @@
           }
         ],
         "label": "There is no control implemented to ensure that the product preserves a secure state in case of failure.",
-        "recommendations": []
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "answerChosen": false,
+            "label": "The resilience of your product depends on its fault tolerance and on how certain functional incidents are handled. It is there recommended to implement controls that safeguard the security state of the product in case of failure. It is crucial to evaluate and confirm that the controls implemented work effectively."
+          }
+        ]
       },
       {
         "aindex": 2,
         "uniqueAnswer": true,
-        "score": 0,
+        "score": 18,
         "atype": "P",
         "questions_map": [
           {
@@ -12389,12 +12408,19 @@
           }
         ],
         "label": "There is no test conducted to verify if the product preserves a secure state in case of failure.",
-        "recommendations": []
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "answerChosen": false,
+            "label": "The resilience of your product depends on its fault tolerance and on how certain functional incidents are handled. It is there recommended to implement controls that safeguard the security state of the product in case of failure. It is crucial to evaluate and confirm that the controls implemented work effectively."
+          }
+        ]
       },
       {
         "aindex": 3,
         "uniqueAnswer": true,
-        "score": 0,
+        "score": 35,
         "atype": "P",
         "questions_map": [
           {
@@ -12405,14 +12431,7 @@
           }
         ],
         "label": "Our product has been tested and the results show that it preserves a secure state in case of failure.",
-        "recommendations": [
-          {
-            "min_e_count": "a",
-            "max_e_count": "j",
-            "answerChosen": false,
-            "label": "The resilience of your product depends on its fault tolerance and on how certain functional incidents are handled. It is there recommended to implement controls that safeguard the security state of the product in case of failure. It is crucial to evaluate and confirm that the controls implemented work effectively."
-          }
-        ]
+        "recommendations": []
       }
     ]
   },
@@ -12421,7 +12440,7 @@
     "service_category": "Inter-TSF detection and correction of modification",
     "qtype": "S",
     "qindex": 199,
-    "maxPoints": 0,
+    "maxPoints": 20,
     "label": "Are there controls implemented to ensure that any possible modification to data during transmission is detected and remediated accordantly?",
     "answers": [
       {
@@ -12450,7 +12469,7 @@
       {
         "aindex": 2,
         "uniqueAnswer": true,
-        "score": 0,
+        "score": 20,
         "atype": "P",
         "questions_map": [
           {
@@ -12519,7 +12538,7 @@
     "service_category": "Replay detection",
     "qtype": "S",
     "qindex": 201,
-    "maxPoints": 0,
+    "maxPoints": 15,
     "label": "Are controls implemented to detect and prevent any potential replay attacks?",
     "answers": [
       {
@@ -12548,7 +12567,7 @@
       {
         "aindex": 2,
         "uniqueAnswer": true,
-        "score": 0,
+        "score": 15,
         "atype": "P",
         "questions_map": [
           {
@@ -12575,7 +12594,14 @@
           }
         ],
         "label": "N/A",
-        "recommendations": []
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "answerChosen": true,
+            "label": "Accessing and identifying entities and components for which a replay attack is possible is the first step in proactively preventing such an attack. Then, controls should be implemented to detect and automatically protect the product against the successful execution of the attack."
+          }
+        ]
       }
     ]
   },
@@ -12584,7 +12610,7 @@
     "service_category": "Reliable time stamps",
     "qtype": "S",
     "qindex": 202,
-    "maxPoints": 0,
+    "maxPoints": 25,
     "label": "Have you tested the accuracy, reliability, and security of the timestamp function in your product?",
     "answers": [
       {
@@ -12613,7 +12639,7 @@
       {
         "aindex": 2,
         "uniqueAnswer": true,
-        "score": 0,
+        "score": 25,
         "atype": "P",
         "questions_map": [
           {
@@ -12640,7 +12666,14 @@
           }
         ],
         "label": "N/A",
-        "recommendations": []
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "answerChosen": true,
+            "label": "Accurate and secure timestamp is crucial for the efficient operation of a product when this functionality is available in a product."
+          }
+        ]
       }
     ]
   },
@@ -12649,7 +12682,7 @@
     "service_category": "Internal TSF consistency.",
     "qtype": "S",
     "qindex": 203,
-    "maxPoints": 0,
+    "maxPoints": 20,
     "label": "Are there controls implemented within the product to ensure data replication consistency?",
     "answers": [
       {
@@ -12678,7 +12711,7 @@
       {
         "aindex": 2,
         "uniqueAnswer": true,
-        "score": 0,
+        "score": 20,
         "atype": "P",
         "questions_map": [
           {
@@ -12698,7 +12731,7 @@
     "service_category": "TSF testing",
     "qtype": "S",
     "qindex": 204,
-    "maxPoints": 0,
+    "maxPoints": 25,
     "label": "Does your product run any self-tests to verify the correct operation of key services?",
     "answers": [
       {
@@ -12727,7 +12760,7 @@
       {
         "aindex": 2,
         "uniqueAnswer": true,
-        "score": 0,
+        "score": 25,
         "atype": "P",
         "questions_map": [
           {
@@ -12754,7 +12787,14 @@
           }
         ],
         "label": "N/A",
-        "recommendations": []
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "answerChosen": true,
+            "label": "The product should be able to verify during the initial start-up or under specified conditions, the integrity of a given data set or if some operations, functions, services, etc. work correctly as intended."
+          }
+        ]
       }
     ]
   },
@@ -12763,7 +12803,7 @@
     "service_category": "Basic limitation on multiple concurrent sessions",
     "qtype": "S",
     "qindex": 205,
-    "maxPoints": 0,
+    "maxPoints": 20,
     "label": "Are there any controls implemented to limit the number of concurrent sessions per user?",
     "answers": [
       {
@@ -12792,7 +12832,7 @@
       {
         "aindex": 2,
         "uniqueAnswer": true,
-        "score": 0,
+        "score": 20,
         "atype": "P",
         "questions_map": [
           {
@@ -12819,7 +12859,14 @@
           }
         ],
         "label": "N/A",
-        "recommendations": []
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "answerChosen": true,
+            "label": "Session management is a key element in resource management and more importantly in preventing attacks such as denial of service. It is recommended to establish controls that allow limiting the number of concurrent sessions per user."
+          }
+        ]
       }
     ]
   },
@@ -12828,7 +12875,7 @@
     "service_category": "TSF-initiated session locking",
     "qtype": "S",
     "qindex": 206,
-    "maxPoints": 0,
+    "maxPoints": 20,
     "label": "Are there controls implemented to ensure that open sessions are automatically locked after a specified period of user inactivity?",
     "answers": [
       {
@@ -12857,7 +12904,7 @@
       {
         "aindex": 2,
         "uniqueAnswer": true,
-        "score": 0,
+        "score": 20,
         "atype": "P",
         "questions_map": [
           {
@@ -12884,7 +12931,7 @@
     "service_category": "User-initiated locking",
     "qtype": "S",
     "qindex": 207,
-    "maxPoints": 0,
+    "maxPoints": 20,
     "label": "Are there methods implemented to provide users the capabilities to lock their own interactive sessions?",
     "answers": [
       {
@@ -12913,7 +12960,7 @@
       {
         "aindex": 2,
         "uniqueAnswer": true,
-        "score": 0,
+        "score": 20,
         "atype": "P",
         "questions_map": [
           {
@@ -12940,7 +12987,7 @@
     "service_category": "User-initiated termination",
     "qtype": "S",
     "qindex": 208,
-    "maxPoints": 0,
+    "maxPoints": 20,
     "label": "Are there functions implemented to provide users the capability to terminate their own interactive sessions?",
     "answers": [
       {
@@ -12969,7 +13016,7 @@
       {
         "aindex": 2,
         "uniqueAnswer": true,
-        "score": 0,
+        "score": 20,
         "atype": "P",
         "questions_map": [
           {
@@ -12996,7 +13043,7 @@
     "service_category": "TOE access banners (FTA_TAB)",
     "qtype": "S",
     "qindex": 209,
-    "maxPoints": 0,
+    "maxPoints": 25,
     "label": "Is there a configurable banner service available to authorized administrators to warn authorized users?",
     "answers": [
       {
@@ -13017,7 +13064,7 @@
       {
         "aindex": 2,
         "uniqueAnswer": true,
-        "score": 0,
+        "score": 25,
         "atype": "P",
         "label": "Yes, there is a configurable banner service available to authorized administrators.",
         "recommendations": [
