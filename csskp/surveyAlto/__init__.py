@@ -44,7 +44,7 @@ CUSTOM = {
         # path of the templates parts
         "terms": "terms_part.html",
         "footer": "surveyAlto/footer_part.html",
-        "main_logo": "logo_part.html",
+        "main_logo": "surveyAlto/logo_part.html",
     },
     # Available modules
     "modules": {
