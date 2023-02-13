@@ -9,6 +9,12 @@ CUSTOM = {
         "Le projet ALTO a pour objectif de mettre en œuvre un outil d'auto-évaluation afin de répondre aux défis quotidiens des PME en matière de protection des données."
         "<br><br>"
         "Le présent questionnaire <strong><ins>strictement anonyme</ins></strong> est adressé aux PME pour cerner les défis en matière de protection des données auxquels sont confrontées les PME, afin de créer et mettre à leur disposition un outil d'auto-évaluation répondant à leurs besoins."
+        "<br><br>"
+        "Pour en savoir plus sur le projet ALTO, nous vous invitons à vous rendre sur <a href=https://cnpd.public.lu target=_blank rel=noopener noreferrer>la page internet dédiée.</a>"
+        "<br><br>"
+        "<strong>Appel à participation :</strong>"
+        "<br><br>"
+        "La phase « Pilote » du projet ALTO nécessitera un appel à participation des PME lors du 4ème trimestre de l'année 2023. Un appel à participation sera communiqué en ce sens."
     ),
     "countries_first": [
         "LU",
@@ -37,7 +43,7 @@ CUSTOM = {
     "templates_parts": {
         # path of the templates parts
         "terms": "terms_part.html",
-        "footer": "footer_part.html",
+        "footer": "surveyAlto/footer_part.html",
         "main_logo": "logo_part.html",
     },
     # Available modules
