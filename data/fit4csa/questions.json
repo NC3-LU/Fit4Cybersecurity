@@ -10676,7 +10676,7 @@
     "service_category": "Basic functional specification and operational user guidance",
     "qtype": "S",
     "qindex": 172,
-    "maxPoints": 0,
+    "maxPoints": 15,
     "label": "As part of your product design, is there any specification of security features that is understandable and available to users?",
     "answers": [
       {
@@ -10705,7 +10705,7 @@
       {
         "aindex": 2,
         "uniqueAnswer": true,
-        "score": 0,
+        "score": 15,
         "atype": "P",
         "questions_map": [
           {
@@ -10725,7 +10725,7 @@
     "service_category": "TOE CM coverage",
     "qtype": "S",
     "qindex": 173,
-    "maxPoints": 0,
+    "maxPoints": 15,
     "label": "Do you have a documented process for tracking major development decisions or changes applied to the product?",
     "answers": [
       {
@@ -10754,7 +10754,7 @@
       {
         "aindex": 2,
         "uniqueAnswer": true,
-        "score": 0,
+        "score": 20,
         "atype": "P",
         "questions_map": [
           {
@@ -10790,7 +10790,7 @@
     "service_category": "Independent testing - conformance",
     "qtype": "S",
     "qindex": 174,
-    "maxPoints": 0,
+    "maxPoints": 20,
     "label": "Was functional testing of your product on a defined scope conducted?",
     "answers": [
       {
@@ -10819,7 +10819,7 @@
       {
         "aindex": 2,
         "uniqueAnswer": true,
-        "score": 0,
+        "score": 20,
         "atype": "P",
         "questions_map": [
           {
@@ -10839,7 +10839,7 @@
     "service_category": "Vulnerability survey",
     "qtype": "S",
     "qindex": 175,
-    "maxPoints": 0,
+    "maxPoints": 45,
     "label": "Have you realized a vulnerability assessment of your product in order to identify and address potential vulnerabilities introduced during development or operation?",
     "answers": [
       {
@@ -10868,23 +10868,7 @@
       {
         "aindex": 2,
         "uniqueAnswer": true,
-        "score": 0,
-        "atype": "P",
-        "questions_map": [
-          {
-            "label": "Is there an automatic response process implemented in case a potential security violation is detected?",
-            "branch": 4,
-            "level": 5,
-            "order": 1
-          }
-        ],
-        "label": "Yes, a vulnerability assessment has been conducted .",
-        "recommendations": []
-      },
-      {
-        "aindex": 3,
-        "uniqueAnswer": true,
-        "score": 0,
+        "score": 45,
         "atype": "P",
         "questions_map": [
           {
@@ -10904,7 +10888,7 @@
     "service_category": "Security alarms",
     "qtype": "S",
     "qindex": 176,
-    "maxPoints": 0,
+    "maxPoints": 45,
     "label": "Is there an automatic response process implemented in case a potential security violation is detected?",
     "answers": [
       {
@@ -10933,7 +10917,7 @@
       {
         "aindex": 2,
         "uniqueAnswer": true,
-        "score": 0,
+        "score": 45,
         "atype": "P",
         "questions_map": [
           {
@@ -10953,7 +10937,7 @@
     "service_category": "Audit data generation",
     "qtype": "S",
     "qindex": 177,
-    "maxPoints": 0,
+    "maxPoints": 25,
     "label": "Have you defined for each security event alert, a list of data that should be recorded?",
     "answers": [
       {
@@ -10982,7 +10966,7 @@
       {
         "aindex": 2,
         "uniqueAnswer": true,
-        "score": 0,
+        "score": 25,
         "atype": "P",
         "questions_map": [
           {
@@ -11009,7 +10993,7 @@
     "service_category": "User identity association",
     "qtype": "S",
     "qindex": 178,
-    "maxPoints": 0,
+    "maxPoints": 25,
     "label": "Is it possible to associate each auditable event with the identity of the user that caused the event?",
     "answers": [
       {
@@ -11038,7 +11022,7 @@
       {
         "aindex": 2,
         "uniqueAnswer": true,
-        "score": 0,
+        "score": 25,
         "atype": "P",
         "questions_map": [
           {
@@ -11074,7 +11058,7 @@
     "service_category": "Potential violation or attack detection and analysis",
     "qtype": "S",
     "qindex": 179,
-    "maxPoints": 0,
+    "maxPoints": 35,
     "label": "Are there any controls implemented to identify potential violation based on predefined rule set and known vulnerabilities ?",
     "answers": [
       {
@@ -11103,7 +11087,7 @@
       {
         "aindex": 2,
         "uniqueAnswer": true,
-        "score": 0,
+        "score": 35,
         "atype": "P",
         "questions_map": [
           {
@@ -11139,7 +11123,7 @@
     "service_category": "Security audit review management",
     "qtype": "S",
     "qindex": 180,
-    "maxPoints": 0,
+    "maxPoints": 25,
     "label": "Is it possible for users of your product to access and read information from the audit records?",
     "answers": [
       {
@@ -11168,7 +11152,7 @@
       {
         "aindex": 2,
         "uniqueAnswer": true,
-        "score": 0,
+        "score": 25,
         "atype": "P",
         "questions_map": [
           {
@@ -11204,7 +11188,7 @@
     "service_category": "Protected audit trail storage",
     "qtype": "S",
     "qindex": 181,
-    "maxPoints": 0,
+    "maxPoints": 30,
     "label": "Have you implemented controls to prevent any modification or deletion of the audit trail?",
     "answers": [
       {
@@ -11221,12 +11205,19 @@
           }
         ],
         "label": "Audit trails or records are modifiable by any user profile.",
-        "recommendations": []
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "answerChosen": false,
+            "label": "Audit logs are key for accountability and forensic investigation. Hence, it is recommended to implement controls and prevent any user, even administrator from modifying and deleting information generated in the audit trail."
+          }
+        ]
       },
       {
         "aindex": 2,
         "uniqueAnswer": true,
-        "score": 0,
+        "score": 15,
         "atype": "P",
         "questions_map": [
           {
@@ -11237,12 +11228,19 @@
           }
         ],
         "label": "Only authorized administrators can edit or modify an audit trail.",
-        "recommendations": []
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "answerChosen": false,
+            "label": "Audit logs are key for accountability and forensic investigation. Hence, it is recommended to implement controls and prevent any user, even administrator from modifying and deleting information generated in the audit trail."
+          }
+        ]
       },
       {
         "aindex": 3,
         "uniqueAnswer": true,
-        "score": 0,
+        "score": 30,
         "atype": "P",
         "questions_map": [
           {
@@ -11253,14 +11251,7 @@
           }
         ],
         "label": "The audit trail cannot be modified or deleted by any user profile.",
-        "recommendations": [
-          {
-            "min_e_count": "a",
-            "max_e_count": "j",
-            "answerChosen": false,
-            "label": "Audit logs are key for accountability and forensic investigation. Hence, it is recommended to implement controls and prevent any user, even administrator from modifying and deleting information generated in the audit trail."
-          }
-        ]
+        "recommendations": []
       }
     ]
   },
@@ -11269,7 +11260,7 @@
     "service_category": "Guarantees of audit data availability",
     "qtype": "S",
     "qindex": 182,
-    "maxPoints": 0,
+    "maxPoints": 25,
     "label": "Are there controls implemented to monitor the audit storage capability and ensure audit data availability?",
     "answers": [
       {
@@ -11298,7 +11289,7 @@
       {
         "aindex": 2,
         "uniqueAnswer": true,
-        "score": 0,
+        "score": 25,
         "atype": "P",
         "questions_map": [
           {
@@ -11309,14 +11300,7 @@
           }
         ],
         "label": "The product has controls implemented to ensure that any potential issues the storage capability is proactively detected in advance.",
-        "recommendations": [
-          {
-            "min_e_count": "a",
-            "max_e_count": "j",
-            "answerChosen": true,
-            "label": "Audit logs are key for accountability and forensic investigation. Hence, it is recommended to implement controls and prevent any user, even administrator from modifying and deleting information generated in the audit trail."
-          }
-        ]
+        "recommendations": []
       }
     ]
   },
@@ -11325,7 +11309,7 @@
     "service_category": "Audit data loss management",
     "qtype": "S",
     "qindex": 183,
-    "maxPoints": 0,
+    "maxPoints": 25,
     "label": "Have you implemented controls to detect and prevent potential audit data loss due to imminent audit storage failure?",
     "answers": [
       {
@@ -11354,7 +11338,7 @@
       {
         "aindex": 2,
         "uniqueAnswer": true,
-        "score": 0,
+        "score": 25,
         "atype": "P",
         "questions_map": [
           {
@@ -11374,7 +11358,7 @@
     "service_category": "Cryptographic key management",
     "qtype": "M",
     "qindex": 184,
-    "maxPoints": 0,
+    "maxPoints": 40,
     "label": "Is there a cryptographic key management function implemented in your product?",
     "answers": [
       {
@@ -11403,7 +11387,7 @@
       {
         "aindex": 2,
         "uniqueAnswer": false,
-        "score": 0,
+        "score": 10,
         "atype": "P",
         "questions_map": [
           {
@@ -11419,7 +11403,7 @@
       {
         "aindex": 3,
         "uniqueAnswer": true,
-        "score": 0,
+        "score": 10,
         "atype": "P",
         "questions_map": [
           {
@@ -11435,7 +11419,7 @@
       {
         "aindex": 4,
         "uniqueAnswer": false,
-        "score": 0,
+        "score": 10,
         "atype": "P",
         "questions_map": [
           {
@@ -11458,7 +11442,7 @@
       {
         "aindex": 5,
         "uniqueAnswer": false,
-        "score": 0,
+        "score": 10,
         "atype": "P",
         "questions_map": [
           {
@@ -11501,7 +11485,7 @@
     "service_category": "Stored data integrity monitoring and action",
     "qtype": "S",
     "qindex": 185,
-    "maxPoints": 0,
+    "maxPoints": 45,
     "label": "Are there controls implemented to guarantee the security of data stored or processed by your product?",
     "answers": [
       {
@@ -11530,7 +11514,7 @@
       {
         "aindex": 2,
         "uniqueAnswer": true,
-        "score": 0,
+        "score": 45,
         "atype": "P",
         "questions_map": [
           {
@@ -11557,7 +11541,7 @@
     "service_category": "Data recovery process",
     "qtype": "S",
     "qindex": 186,
-    "maxPoints": 0,
+    "maxPoints": 15,
     "label": "Is your product able to recover from a list of known recoverable errors?",
     "answers": [
       {
@@ -11586,7 +11570,7 @@
       {
         "aindex": 2,
         "uniqueAnswer": true,
-        "score": 0,
+        "score": 15,
         "atype": "P",
         "questions_map": [
           {
@@ -11622,7 +11606,7 @@
     "service_category": "Authentication failure handling",
     "qtype": "M",
     "qindex": 187,
-    "maxPoints": 0,
+    "maxPoints": 25,
     "label": "Are controls implemented to manage a threshold of unsuccessful authentification attempts?",
     "answers": [
       {
@@ -11651,7 +11635,7 @@
       {
         "aindex": 2,
         "uniqueAnswer": false,
-        "score": 0,
+        "score": 13,
         "atype": "P",
         "questions_map": [
           {
@@ -11667,7 +11651,7 @@
       {
         "aindex": 3,
         "uniqueAnswer": false,
-        "score": 0,
+        "score": 12,
         "atype": "P",
         "questions_map": [
           {
@@ -11678,14 +11662,7 @@
           }
         ],
         "label": "The user is informed via email or text message after a defined number of unsuccessful authentification attempts.",
-        "recommendations": [
-          {
-            "min_e_count": "a",
-            "max_e_count": "j",
-            "answerChosen": false,
-            "label": "Efficient access management controls are key to ensuring the security of all products. It is therefore recommended to define a threshold of possible unsuccessful authentification attempts. Passing this threshold the product should automatically lock the user account and inform the user via a provided communication medium (email or text message)."
-          }
-        ]
+        "recommendations": []
       }
     ]
   },
@@ -11694,7 +11671,7 @@
     "service_category": "User attribute definition",
     "qtype": "S",
     "qindex": 188,
-    "maxPoints": 0,
+    "maxPoints": 25,
     "label": "Are users of the product have a set of security attributes, other than the user's identity?",
     "answers": [
       {
@@ -11723,7 +11700,7 @@
       {
         "aindex": 2,
         "uniqueAnswer": true,
-        "score": 0,
+        "score": 25,
         "atype": "P",
         "questions_map": [
           {
@@ -11759,7 +11736,7 @@
     "service_category": "Verification of secrets",
     "qtype": "S",
     "qindex": 189,
-    "maxPoints": 0,
+    "maxPoints": 25,
     "label": "Is there a secret verification method implemented?",
     "answers": [
       {
@@ -11776,12 +11753,19 @@
           }
         ],
         "label": "There is no secret verification method implemented.",
-        "recommendations": []
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "answerChosen": false,
+            "label": "The secret verification mechanism implemented in the product must not have any exploitable vulnerability. Hence, it is recommended to test and verify that the secret verification method implemented does not have any vulnerability. For example, product secret information (PIN, Password, etc.) should not be stored in plain text on the product."
+          }
+        ]
       },
       {
         "aindex": 2,
         "uniqueAnswer": true,
-        "score": 0,
+        "score": 13,
         "atype": "P",
         "questions_map": [
           {
@@ -11792,12 +11776,19 @@
           }
         ],
         "label": "There is a secret verification method implemented, however, we do not know if it is secure.",
-        "recommendations": []
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "answerChosen": false,
+            "label": "The secret verification mechanism implemented in the product must not have any exploitable vulnerability. Hence, it is recommended to test and verify that the secret verification method implemented does not have any vulnerability. For example, product secret information (PIN, Password, etc.) should not be stored in plain text on the product."
+          }
+        ]
       },
       {
         "aindex": 3,
         "uniqueAnswer": true,
-        "score": 0,
+        "score": 25,
         "atype": "P",
         "questions_map": [
           {
@@ -11808,14 +11799,7 @@
           }
         ],
         "label": "The secret verification method implemented, has been tested and any identified vulnerabilities have been remediated.",
-        "recommendations": [
-          {
-            "min_e_count": "a",
-            "max_e_count": "j",
-            "answerChosen": false,
-            "label": "The secret verification mechanism implemented in the product must not have any exploitable vulnerability. Hence, it is recommended to test and verify that the secret verification method implemented does not have any vulnerability. For example, product secret information (PIN, Password, etc.) should not be stored in plain text on the product."
-          }
-        ]
+        "recommendations": []
       }
     ]
   },
@@ -11824,7 +11808,7 @@
     "service_category": "TSF Generation of secrets",
     "qtype": "S",
     "qindex": 190,
-    "maxPoints": 0,
+    "maxPoints": 25,
     "label": "Is there an algorithm implemented for a secret generation?",
     "answers": [
       {
@@ -11841,12 +11825,19 @@
           }
         ],
         "label": "The algorithm implemented for secrets generation has a known flaw.",
-        "recommendations": []
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "answerChosen": false,
+            "label": "As part of the security of the product is based on the secret data generated, we recommend using a secure secret generation algorithm and possibly evaluating and testing the security of the implementation of the algorithm."
+          }
+        ]
       },
       {
         "aindex": 2,
         "uniqueAnswer": true,
-        "score": 0,
+        "score": 13,
         "atype": "P",
         "questions_map": [
           {
@@ -11857,12 +11848,19 @@
           }
         ],
         "label": "We have implemented a proprietary secret generation algorithm.",
-        "recommendations": []
+        "recommendations": [
+          {
+            "min_e_count": "a",
+            "max_e_count": "j",
+            "answerChosen": false,
+            "label": "As part of the security of the product is based on the secret data generated, we recommend using a secure secret generation algorithm and possibly evaluating and testing the security of the implementation of the algorithm."
+          }
+        ]
       },
       {
         "aindex": 3,
         "uniqueAnswer": true,
-        "score": 0,
+        "score": 25,
         "atype": "P",
         "questions_map": [
           {
@@ -11873,14 +11871,7 @@
           }
         ],
         "label": "A secure secret generation algorithm has been implemented.",
-        "recommendations": [
-          {
-            "min_e_count": "a",
-            "max_e_count": "j",
-            "answerChosen": false,
-            "label": "As part of the security of the product is based on the secret data generated, we recommend using a secure secret generation algorithm and possibly evaluating and testing the security of the implementation of the algorithm."
-          }
-        ]
+        "recommendations": []
       },
       {
         "aindex": 4,
