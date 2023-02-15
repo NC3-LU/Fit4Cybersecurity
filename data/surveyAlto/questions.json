@@ -140,6 +140,20 @@
             "order": 1
           }
         ]
+      },
+      {
+        "aindex": 8,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "Je ne sais pas",
+        "questions_map": [
+          {
+            "label": "À quelle organisme/personne (sa fonction) votre entreprise s'adresse-elle pour obtenir des informations/une aide en la matière ?",
+            "branch": 0,
+            "level": 2,
+            "order": 1
+          }
+        ]
       }
     ]
   },
@@ -239,6 +253,20 @@
         "uniqueAnswer": true,
         "atype": "P",
         "label": "Notre PME n'est pas soutenu par un organisme/une personne extérieure",
+        "questions_map": [
+          {
+            "label": "Quels sont les principaux défis auxquels votre PME est confrontée ?",
+            "branch": 0,
+            "level": 3,
+            "order": 1
+          }
+        ]
+      },
+      {
+        "aindex": 8,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "Je ne sais pas",
         "questions_map": [
           {
             "label": "Quels sont les principaux défis auxquels votre PME est confrontée ?",
@@ -416,6 +444,20 @@
         "uniqueAnswer": false,
         "atype": "P",
         "label": "J'ai besoin d'information sur la violation de données"
+      },
+      {
+        "aindex": 12,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "Je ne sais pas",
+        "questions_map": [
+          {
+            "label": "Parmi les réponses précédentes, quels sont les trois thématiques que l'outil d'auto-évaluation ALTO devrait privilégier pour répondre à vos besoins / défis en matière de protection des données?",
+            "branch": 0,
+            "level": 4,
+            "order": 1
+          }
+        ]
       }
     ]
   },
@@ -585,6 +627,20 @@
         "uniqueAnswer": false,
         "atype": "P",
         "label": "J'ai besoin d'information sur la violation de données"
+      },
+      {
+        "aindex": 12,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "Je ne sais pas",
+        "questions_map": [
+          {
+            "label": "Connaissez-vous la différence entre la notion de «Responsable du traitement » et la notion de « sous-traitant »?",
+            "branch": 0,
+            "level": 5,
+            "order": 1
+          }
+        ]
       }
     ]
   },
@@ -690,7 +746,7 @@
         "label": "Non",
         "questions_map": [
           {
-            "label": "Le cas échéant, avez-vous conclu un contrat de sous-traitance ?",
+            "label": "Avez-vous conclu un contrat de sous-traitance ?",
             "branch": 0,
             "level": 8,
             "order": 1
@@ -732,7 +788,7 @@
     "service_category": "Responsable du traitement et sous-traitant",
     "qtype": "S",
     "qindex": 9,
-    "label": "Le cas échéant, avez-vous conclu un contrat de sous-traitance ?",
+    "label": "Avez-vous conclu un contrat de sous-traitance ?",
     "answers": [
       {
         "aindex": 1,
@@ -2255,7 +2311,15 @@
         "aindex": 2,
         "uniqueAnswer": true,
         "atype": "P",
-        "label": "Non"
+        "label": "Non",
+        "questions_map": [
+          {
+            "label": "La société étrangère est-elle établie dans un des pays reconnu* par la Commission européenne comme assurant un niveau de protection adéquat des données à caractère personnel ?<br><br><em><small>* Andorre, en Argentine, au Canada, aux Îles Féroé, au Guernesey, à l'Île de Man, au Japon, à Jersey, en Nouvelle-Zélande, en Suisse, en Uruguay ou aux États-Unis</small></em>",
+            "branch": 0,
+            "level": 30,
+            "order": 1
+          }
+        ]
       },
       {
         "aindex": 3,
@@ -2268,12 +2332,33 @@
         "uniqueAnswer": true,
         "atype": "P",
         "label": "Je ne sais pas"
-      },
+      }
+    ]
+  },
+  {
+    "section": "ALTO",
+    "service_category": "Les transferts de données vers un pays tiers",
+    "qtype": "S",
+    "qindex": 31,
+    "label": "La société étrangère est-elle établie dans un des pays reconnu* par la Commission européenne comme assurant un niveau de protection adéquat des données à caractère personnel ?<br><br><em><small>* Andorre, en Argentine, au Canada, aux Îles Féroé, au Guernesey, à l'Île de Man, au Japon, à Jersey, en Nouvelle-Zélande, en Suisse, en Uruguay ou aux États-Unis</small></em>",
+    "answers": [
       {
-        "aindex": 5,
+        "aindex": 1,
         "uniqueAnswer": true,
         "atype": "P",
-        "label": "Non, la société est établie à Andorre, en Argentine, au Canada, aux Îles Féroé, au Guernesey, à l'Île de Man, au Japon, à Jersey, en Nouvelle-Zélande, en Suisse, en Uruguay ou aux États-Unis."
+        "label": "Oui"
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "Non"
+      },
+      {
+        "aindex": 4,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "Je ne sais pas"
       }
     ]
   }
