@@ -1,0 +1,22 @@
+{% load i18n %}
+{% load apptags %}
+
+<h2 id="intro">{{ _('Introduction and disclaimer') }}</h2>
+<p>
+{% block report_intro_description %}
+{% blocktranslate %}
+As a building block of the CORAL EU-project, Fit4CSA is a questionnaire-based tool that helps assess the cybersecurity maturity of an ICT service, ICT process, an ICT web application or an ICT generic product.<br><br>
+
+The questions within Fit4CSA are separated into four streams depending on the target of assessment. Each stream of questions is grounded on existing standards and solid state-of-the-art best practices, as follows:
+<li>For ICT services, the relevant Fit4CSA questions are based on the candidate Cloud Services scheme (EUCS) (primarily its objectives and controls at the basic-level) issued by <a href="https://www.enisa.europa.eu/publications/eucs-cloud-service-scheme" target="_blank">ENISA</a>.</li>
+<li>ICT processes, the relevant Fit4CSA questions are based on the standard ISO/IEC 21827:2008 Information technology — Security techniques — Systems Security Engineering — Capability Maturity Model.</li>
+<li>For ICT web applications, the relevant Fit4CSA questions are based on <a href="https://raw.githubusercontent.com/OWASP/ASVS/v4.0.2/4.0/OWASP%20Application%20Security%20Verification%20Standard%204.0.2-en.pdf" target="_blank">OWASP requirements</a>.</li>
+<li>For ICT generic products, the relevant Fit4CSA questions are based on the Common Criteria based European candidate cybersecurity certification (EUCC) scheme issued by <a href="https://www.enisa.europa.eu/publications/cybersecurity-certification-eucc-candidate-scheme" target="_blank">ENISA</a>.</li>
+
+The answers are scored and depending on the scoring achieved, the tool proposes a set of recommendations. These recommendations can be implemented as first steps in order to improve the cybersecurity maturity of the service, process, web application or generic product for which the assessment was done. The answers chosen, the score and the recommendations are all included in the present report, which can be used as a conformity self-assessment in the spirit of the Cybersecurity Act.<br><br>
+The responder of the questionnaire is responsible for any omission or error which could alter the analysis resulting from this self-assessment. This report is intended for the exclusive use of the customer. It is in this respect confidential.
+{% endblocktranslate %}
+{% endblock %}
+</p>
+
+<p class="page-break" ></p>

@@ -11,7 +11,13 @@
             <span class="bold">
                 {{ _('Type of conformity self-assessment') }}
             </span>
-            : {{ 'Type of conformity self-assessment' }}
+            {% for user_answer in questions.1.user_answers %}
+                {% if user_answer.value == '1' %}
+                    
+                    : {{ user_answer.title | safe }}
+
+                {% endif %}
+            {% endfor %}
         </li>
         <li>
             <span class="bold">
