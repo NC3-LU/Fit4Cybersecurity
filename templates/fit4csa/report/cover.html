@@ -1,0 +1,43 @@
+{% load apptags %}
+
+<img class="center tool_logo" src="file:{{ TOOL_LOGO }}" />
+
+<hr />
+
+<div class="cover_information">
+    <h1 >{{ REPORT_TITLE }}</h1>
+    <ul>
+        <li>
+            <span class="bold">
+                {{ _('Type of conformity self-assessment') }}
+            </span>
+            : {{ 'Type of conformity self-assessment' }}
+        </li>
+        <li>
+            <span class="bold">
+                {{ _('Date') }}
+            </span>
+            : {{ DATE|format_datetime:"compact" }}
+        </li>
+        <li>
+            <span class="bold">
+                {{ _('Self-assessment id') }}
+            </span>
+            : {{ SURVEY_USER.user_id }}
+        </li>
+        {% if custom.report.results %}
+            <li>
+                <span class="bold">
+                    {{ _('Score') }}
+                </span>
+                : {{ SCORE }}/100
+            </li>
+        {% endif %}
+
+    </ul>
+</div>
+
+<img class="bottom left_cover_logo" src="file:{{ LEFT_COVER_LOGO }}" />
+<img class="bottom right_cover_logo" src="file:{{ RIGHT_COVER_LOGO }}" />
+
+<p class="page-break" ></p>
