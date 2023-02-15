@@ -1,1355 +1,2369 @@
 [
   {
-    "service_category": "Rules/Charter",
-    "section": "Awareness and Compliance",
-    "qtype": "M",
-    "qindex": 1,
-    "maxPoints": 45,
-    "answers": [
-      {
-        "aindex": 1,
-        "uniqueAnswer": true,
-        "score": 0,
-        "atype": "P",
-        "recommendations": [
-          {
-            "min_e_count": "a",
-            "max_e_count": "j",
-            "sector": null,
-            "answerChosen": true,
-            "label": "The company should define rules in order to avoid misunderstandings."
-          }
-        ],
-        "label": "not described"
-      },
-      {
-        "aindex": 2,
-        "uniqueAnswer": false,
-        "score": 15,
-        "atype": "P",
-        "recommendations": [
-          {
-            "min_e_count": "a",
-            "max_e_count": "j",
-            "sector": null,
-            "answerChosen": false,
-            "label": "Rules (organizational, IT or working ones) should be known and explained to everyone, at the very least orally."
-          }
-        ],
-        "label": "orally given"
-      },
-      {
-        "aindex": 3,
-        "uniqueAnswer": false,
-        "score": 5,
-        "atype": "P",
-        "recommendations": [
-          {
-            "min_e_count": "a",
-            "max_e_count": "b",
-            "sector": null,
-            "answerChosen": false,
-            "label": "If an oral transmission could be enough for a small company, rules should still be written in a charter, read and signed by everyone, very important if the company grows."
-          },
-          {
-            "min_e_count": "c",
-            "max_e_count": "j",
-            "sector": null,
-            "answerChosen": false,
-            "label": "An oral transmission could be a lot more complicated when there are lots of employees, and is really impossible when lots of people are hired and leaving."
-          }
-        ],
-        "label": "written and given by mail"
-      },
-      {
-        "aindex": 4,
-        "uniqueAnswer": false,
-        "score": 10,
-        "atype": "P",
-        "recommendations": [
-          {
-            "min_e_count": "a",
-            "max_e_count": "j",
-            "sector": null,
-            "answerChosen": false,
-            "label": "Besides, written rules can :<ul><li>avoid to forget some points</li><li>have a legal proof if the rules have been read.</li></ul>"
-          }
-        ],
-        "label": "read and signed by everyone, in a user charter"
-      },
-      {
-        "aindex": 5,
-        "uniqueAnswer": false,
-        "score": 5,
-        "atype": "P",
-        "recommendations": [
-          {
-            "min_e_count": "a",
-            "max_e_count": "j",
-            "sector": null,
-            "answerChosen": false,
-            "label": "If it's possible, rules should be as short and as easy as possible to be attractive and readable."
-          }
-        ],
-        "label": "written and explained with simple words, which are non-specific to a type of work"
-      },
-      {
-        "aindex": 6,
-        "uniqueAnswer": false,
-        "score": 0,
-        "atype": "P",
-        "recommendations": [
-          {
-            "min_e_count": "a",
-            "max_e_count": "j",
-            "sector": null,
-            "answerChosen": true,
-            "label": "Rules that are too long or too heavy with technical vocabulary could become confusing."
-          }
-        ],
-        "label": "quite heavy, but really accurate"
-      },
-      {
-        "aindex": 7,
-        "uniqueAnswer": false,
-        "score": 5,
-        "atype": "P",
-        "recommendations": [
-          {
-            "min_e_count": "a",
-            "max_e_count": "j",
-            "sector": null,
-            "answerChosen": false,
-            "label": "Each time when it's possible, some advice or some best practices should be given, and explained."
-          }
-        ],
-        "label": "given with advice and the best practices"
-      },
-      {
-        "aindex": 8,
-        "uniqueAnswer": false,
-        "score": 5,
-        "atype": "P",
-        "recommendations": [
-          {
-            "min_e_count": "a",
-            "max_e_count": "j",
-            "sector": null,
-            "answerChosen": false,
-            "label": "Some differences might be appropriate depending on the role, or if it's a temporary contract for instance."
-          }
-        ],
-        "label": "adapted depending on the role of the reader"
-      }
-    ],
-    "label": "In the company, rules are"
-  },
-  {
-    "service_category": "GDPR",
-    "section": "Awareness and Compliance",
-    "qtype": "M",
-    "qindex": 2,
-    "maxPoints": 30,
-    "answers": [
-      {
-        "aindex": 1,
-        "uniqueAnswer": true,
-        "score": 0,
-        "atype": "P",
-        "recommendations": [
-          {
-            "min_e_count": "a",
-            "max_e_count": "j",
-            "sector": null,
-            "answerChosen": true,
-            "label": "For the moment, the company does not have a lot of personal data, or haven't done anything to it. If there is more personal data, or if nothing were done, the company should think:"
-          }
-        ],
-        "label": "no personal data other than the employee data, or nothing related to the personal data"
-      },
-      {
-        "aindex": 2,
-        "uniqueAnswer": false,
-        "score": 10,
-        "atype": "P",
-        "recommendations": [
-          {
-            "min_e_count": "a",
-            "max_e_count": "j",
-            "sector": null,
-            "answerChosen": false,
-            "label": "Define, whenever possible, someone responsible for the personal data in order to avoid the lack of response when there is an incident."
-          }
-        ],
-        "label": "someone who does every action bound to personal data"
-      },
-      {
-        "aindex": 3,
-        "uniqueAnswer": false,
-        "score": 10,
-        "atype": "P",
-        "recommendations": [
-          {
-            "min_e_count": "a",
-            "max_e_count": "j",
-            "sector": null,
-            "answerChosen": false,
-            "label": "Data Lifecycle should be accessible by everyone :<ul><li>How they are obtained</li><li>How they are used</li><li>How they are accessible, by whom and the contract linked</li><li>How they are alterable</li><li>How much time they are stored</li><li>How they are destroyed</li></ul>This cycle should be described somewhere and accessible by anyone (sell contracts, websites, files that could be shown …)."
-          }
-        ],
-        "label": "a written explanation about the personal data lifecycle (how there are get, stored, and when and how they are destroyed)"
-      },
-      {
-        "aindex": 4,
-        "uniqueAnswer": false,
-        "score": 5,
-        "atype": "P",
-        "recommendations": [
-          {
-            "min_e_count": "a",
-            "max_e_count": "j",
-            "sector": null,
-            "answerChosen": false,
-            "label": "People should know who is the responsible person for the data in order to ask all the necessary questions, requests and about data manipulation or data sensitivity."
-          }
-        ],
-        "label": "an oral or a written explanation of what should be done when there is a problem with personal data"
-      },
-      {
-        "aindex": 5,
-        "uniqueAnswer": false,
-        "score": 5,
-        "atype": "P",
-        "recommendations": [
-          {
-            "min_e_count": "a",
-            "max_e_count": "j",
-            "sector": null,
-            "answerChosen": false,
-            "label": "Concerning the image rights, some authorisations are required (to take an image and to diffuse it), and people need to know when a place is under video surveillance."
-          }
-        ],
-        "label": "some video surveillance, or some pictures taken, that contains face or people and possibly location data"
-      }
-    ],
-    "label": "In the company, there is/are"
-  },
-  {
-    "service_category": "Trainings",
-    "section": "Employee Management",
-    "qtype": "M",
-    "qindex": 3,
-    "maxPoints": 35,
-    "answers": [
-      {
-        "aindex": 1,
-        "uniqueAnswer": false,
-        "score": 15,
-        "atype": "P",
-        "recommendations": [
-          {
-            "min_e_count": "a",
-            "max_e_count": "j",
-            "sector": null,
-            "answerChosen": false,
-            "label": "Updating the best practices for daily tasks is important to avoid all the basic mistakes and loss of time."
-          }
-        ],
-        "label": "their work, their daily tasks by their studies, but also receive trainings to update their knowledge"
-      },
-      {
-        "aindex": 2,
-        "uniqueAnswer": false,
-        "score": 5,
-        "atype": "P",
-        "recommendations": [
-          {
-            "min_e_count": "a",
-            "max_e_count": "j",
-            "sector": null,
-            "answerChosen": false,
-            "label": "Learning to use software is important to avoid time loss, data loss and manipulation mistakes."
-          }
-        ],
-        "label": "the software they daily use"
-      },
-      {
-        "aindex": 3,
-        "uniqueAnswer": false,
-        "score": 5,
-        "atype": "P",
-        "recommendations": [
-          {
-            "min_e_count": "a",
-            "max_e_count": "j",
-            "sector": null,
-            "answerChosen": false,
-            "label": "By informing about attacks that are current, common or well known, employees could more easily identify them and avoid being affected by them."
-          }
-        ],
-        "label": "information security, to have the knowledge to protect themselves against attacks or information security issues"
-      },
-      {
-        "aindex": 4,
-        "uniqueAnswer": false,
-        "score": 5,
-        "atype": "P",
-        "recommendations": [
-          {
-            "min_e_count": "a",
-            "max_e_count": "j",
-            "sector": null,
-            "answerChosen": false,
-            "label": "Trainings that are done internally do not have the same impact as external ones, but could be more appropriate by the mastery of the subject within the company environment."
-          }
-        ],
-        "label": "by specialists, that could be internal or external"
-      },
-      {
-        "aindex": 5,
-        "uniqueAnswer": false,
-        "score": 5,
-        "atype": "P",
-        "recommendations": [
-          {
-            "min_e_count": "a",
-            "max_e_count": "j",
-            "sector": null,
-            "answerChosen": false,
-            "label": "Train users on the sensitivity of the processed information, in order to put their attention on how to protect these data."
-          }
-        ],
-        "label": "the importance to keep confidential data confidential, and more importantly if they are personal"
-      }
-    ],
-    "label": "Employees are trained for/in"
-  },
-  {
-    "service_category": "IT and Information Security Responsibilities",
-    "section": "Employee Management",
+    "section": "Entreprise & organisation",
+    "service_category": "Socio-economic data",
     "qtype": "S",
+    "qindex": 1,
+    "label": "What is your position within the company?",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "CEO"
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "COO"
+      },
+      {
+        "aindex": 3,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "Director"
+      }
+    ]
+  },
+  {
+    "section": "Entreprise & organisation",
+    "service_category": "Socio-economic data",
+    "qtype": "S",
+    "qindex": 2,
+    "label": "How many employees does your business have?",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "1"
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "<10"
+      },
+      {
+        "aindex": 3,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "<50"
+      },
+      {
+        "aindex": 4,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "<250"
+      }
+    ]
+  },
+  {
+    "section": "Entreprise & organisation",
+    "service_category": "Socio-economic data",
+    "qtype": "SO",
+    "qindex": 3,
+    "label": "In which canton is your head office located?",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "Capellen"
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "Clervaux"
+      },
+      {
+        "aindex": 3,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "Diekirch"
+      },
+      {
+        "aindex": 4,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "Echternach"
+      },
+      {
+        "aindex": 5,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "Esch-sur-Alzette"
+      },
+      {
+        "aindex": 6,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "Grevenmacher"
+      },
+      {
+        "aindex": 7,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "Luxembourg"
+      },
+      {
+        "aindex": 8,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "Mersch"
+      },
+      {
+        "aindex": 9,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "Redange"
+      },
+      {
+        "aindex": 10,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "Remich"
+      },
+      {
+        "aindex": 11,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "Vianden"
+      },
+      {
+        "aindex": 11,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "Wiltz"
+      }
+    ]
+  },
+  {
+    "section": "Entreprise & organisation",
+    "service_category": "Socio-economic data",
+    "qtype": "T",
     "qindex": 4,
-    "maxPoints": 15,
+    "label": "What is your activity sector?",
     "answers": [
       {
         "aindex": 1,
         "uniqueAnswer": true,
-        "score": 15,
-        "atype": "P",
-        "recommendations": [],
-        "label": "internally defined, with someone who is specialised in IT field"
-      },
-      {
-        "aindex": 2,
-        "uniqueAnswer": true,
-        "score": 15,
-        "atype": "P",
-        "recommendations": [],
-        "label": "internally defined, with at least two people that were trained in the field"
-      },
-      {
-        "aindex": 3,
-        "uniqueAnswer": true,
-        "score": 15,
-        "atype": "P",
-        "recommendations": [],
-        "label": "externally defined, with a contract"
-      },
-      {
-        "aindex": 4,
-        "uniqueAnswer": true,
-        "score": 15,
-        "atype": "P",
-        "recommendations": [],
-        "label": "externally defined, depending on the needs, without any contract specified"
-      },
-      {
-        "aindex": 5,
-        "uniqueAnswer": true,
-        "score": 0,
-        "atype": "P",
-        "recommendations": [
-          {
-            "min_e_count": "a",
-            "max_e_count": "j",
-            "sector": null,
-            "answerChosen": true,
-            "label": "It's important to define responsibilities, either externally or internally, with one or more persons, or a company, but specialized into their own domain, at best supported by relevant training."
-          }
-        ],
-        "label": "aren't defined; anyone tries to resolve their problems, asking someone else if they can"
+        "atype": "T",
+        "label": "NACE CODE"
       }
-    ],
-    "label": "IT and Information Security responsibilities are"
+    ]
   },
   {
-    "service_category": "Home Office/Mobility",
-    "section": "Employee Management",
-    "qtype": "M",
+    "section": "Entreprise & organisation",
+    "service_category": "Socio-economic data",
+    "qtype": "T",
     "qindex": 5,
-    "maxPoints": 35,
+    "label": "Date your business was established (year only)?",
     "answers": [
       {
         "aindex": 1,
         "uniqueAnswer": true,
-        "score": 35,
-        "atype": "P",
-        "recommendations": [
-          {
-            "min_e_count": "a",
-            "max_e_count": "j",
-            "sector": null,
-            "answerChosen": true,
-            "label": "For now, no outside work is done. If it's changed, it's important to take care that:<ul><li>External connections which are not controlled and monitored should be avoided to avoid data loss.</li></ul>"
-          }
-        ],
-        "label": "no professional tools because home office or travel is not allowed or necessary, or the only connection to the internal network is on the company premises"
-      },
-      {
-        "aindex": 2,
-        "uniqueAnswer": false,
-        "score": 15,
-        "atype": "P",
-        "recommendations": [
-          {
-            "min_e_count": "a",
-            "max_e_count": "j",
-            "sector": null,
-            "answerChosen": false,
-            "label": "Whenever users have the need to work outside, from home office to missions outside the premises, they must have a VPN connection to connect to the server."
-          }
-        ],
-        "label": "VPN (Virtual Private Network) is used to encrypt all data from any external network to the internal server"
-      },
-      {
-        "aindex": 3,
-        "uniqueAnswer": false,
-        "score": 0,
-        "atype": "P",
-        "recommendations": [],
-        "label": "Public Internet, Wi-Fi, open networks or connection protected by external organizations or individuals"
-      },
-      {
-        "aindex": 4,
-        "uniqueAnswer": false,
-        "score": 10,
-        "atype": "P",
-        "recommendations": [
-          {
-            "min_e_count": "a",
-            "max_e_count": "j",
-            "sector": null,
-            "answerChosen": true,
-            "label": "External connection which is not controlled and monitored should be avoided to avoid data theft."
-          }
-        ],
-        "label": "a private connection or connection sharing from a private or professional smartphone (tethering/hotspot)"
-      },
-      {
-        "aindex": 5,
-        "uniqueAnswer": false,
-        "score": 5,
-        "atype": "P",
-        "recommendations": [
-          {
-            "min_e_count": "a",
-            "max_e_count": "j",
-            "sector": null,
-            "answerChosen": false,
-            "label": "The visual environment is really important, to avoid curiosity or spying."
-          }
-        ],
-        "label": "a screen filter or adjusts their position to ensure that no unauthorized person could see what is on the screen of their mobile device (tablet or laptop)"
-      },
-      {
-        "aindex": 6,
-        "uniqueAnswer": false,
-        "score": 5,
-        "atype": "P",
-        "recommendations": [
-          {
-            "min_e_count": "a",
-            "max_e_count": "j",
-            "sector": null,
-            "answerChosen": false,
-            "label": "Devices that are taken away and that contain confidential data should always have their internal memory encrypted to avoid data theft."
-          }
-        ],
-        "label": "devices that are encrypted (protected by a password at boot) or without any confidential data"
+        "atype": "T",
+        "label": "Year only"
       }
-    ],
-    "label": "During any trip outside the company, the employee uses"
+    ]
   },
   {
-    "service_category": "Contracts (SLA/NDA)",
-    "section": "Third Party Management",
-    "qtype": "M",
+    "section": "Entreprise & organisation",
+    "service_category": "Socio-economic data",
+    "qtype": "MT",
     "qindex": 6,
-    "maxPoints": 15,
+    "label": "What languages do your employees use at work?",
     "answers": [
       {
         "aindex": 1,
-        "uniqueAnswer": true,
-        "score": 0,
+        "uniqueAnswer": false,
         "atype": "P",
-        "recommendations": [
-          {
-            "min_e_count": "a",
-            "max_e_count": "j",
-            "sector": null,
-            "answerChosen": true,
-            "label": "For now, no contracts with third parties are signed. If it's changed, it's important to:"
-          }
-        ],
-        "label": "are not defined, because they only come punctually in case of an incident or needs"
+        "label": "Luxembourgish"
       },
       {
         "aindex": 2,
         "uniqueAnswer": false,
-        "score": 5,
         "atype": "P",
-        "recommendations": [
-          {
-            "min_e_count": "a",
-            "max_e_count": "j",
-            "sector": null,
-            "answerChosen": false,
-            "label": "If confidential data is accessible by different third parties, like external maintenace companies, or financial data by a fiduciary, a Non-Disclosure Agreement (NDA) should be signed with them."
-          }
-        ],
-        "label": "define confidentiality of data, and their protection"
+        "label": "French"
       },
       {
         "aindex": 3,
         "uniqueAnswer": false,
-        "score": 5,
         "atype": "P",
-        "recommendations": [
-          {
-            "min_e_count": "a",
-            "max_e_count": "j",
-            "sector": null,
-            "answerChosen": false,
-            "label": "If means and needs permit it, a contract should be signed to ensure that the external IT provider will ensure the availability of system to remain operational. These kinds of contracts named \"Service Level Agreement (SLA)\""
-          }
-        ],
-        "label": "define the maximum time until intervention needs to be performed after an incident"
+        "label": "German"
       },
       {
         "aindex": 4,
         "uniqueAnswer": false,
-        "score": 5,
         "atype": "P",
-        "recommendations": [
-          {
-            "min_e_count": "a",
-            "max_e_count": "j",
-            "sector": null,
-            "answerChosen": false,
-            "label": "It's necessary to review the contracts to ensure :<ul><li>having an intervention solution whenever it is essential</li><li>to not pay too much for a service which is not necessary</li><li>to evaluate if the services paid are satisfying the necessary</li></ul>"
-          }
-        ],
-        "label": "are regularly reviewed to ensure that they correspond to the needs"
+        "label": "English"
+      },
+      {
+        "aindex": 5,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "label": "Portuguese"
+      },
+      {
+        "aindex": 6,
+        "uniqueAnswer": false,
+        "atype": "T",
+        "label": "Other"
       }
-    ],
-    "label": "Contracts with third parties"
+    ]
   },
   {
-    "service_category": "Office Cleaning",
-    "section": "Third Party Management",
-    "qtype": "M",
+    "section": "Entreprise & organisation",
+    "service_category": "Socio-economic data",
+    "qtype": "S",
     "qindex": 7,
-    "maxPoints": 30,
+    "label": "Where is your company's global headquarters located?",
     "answers": [
       {
         "aindex": 1,
         "uniqueAnswer": true,
-        "score": 30,
         "atype": "P",
-        "recommendations": [
-          {
-            "min_e_count": "a",
-            "max_e_count": "j",
-            "sector": null,
-            "answerChosen": true,
-            "label": "For now, no third parties clean the premises. If it changes, it's important to:"
-          }
-        ],
-        "label": "internally, by employees, punctually"
+        "label": "Luxembourg"
       },
       {
         "aindex": 2,
-        "uniqueAnswer": false,
-        "score": 10,
+        "uniqueAnswer": true,
         "atype": "P",
-        "recommendations": [
-          {
-            "min_e_count": "a",
-            "max_e_count": "j",
-            "sector": null,
-            "answerChosen": false,
-            "label": "The office cleaning should be done, whenever possible, during work time to avoid potential data or material theft."
-          }
-        ],
-        "label": "during the work time"
+        "label": "Other EU country"
       },
       {
         "aindex": 3,
-        "uniqueAnswer": false,
-        "score": 5,
+        "uniqueAnswer": true,
         "atype": "P",
-        "recommendations": [
-          {
-            "min_e_count": "a",
-            "max_e_count": "j",
-            "sector": null,
-            "answerChosen": false,
-            "label": "Rules should be given mainly to specify what should be done or avoided, as misunderstandings can happen."
-          }
-        ],
-        "label": "with clear rules of what should be done and what shouldn't be done"
-      },
-      {
-        "aindex": 4,
-        "uniqueAnswer": false,
-        "score": 5,
-        "atype": "P",
-        "recommendations": [
-          {
-            "min_e_count": "a",
-            "max_e_count": "j",
-            "sector": null,
-            "answerChosen": false,
-            "label": "It's important to define a confidentiality clause in all the contracts to ensure the confidentiality of information heard or seen."
-          }
-        ],
-        "label": "with a contract which specifies confidentiality"
-      },
-      {
-        "aindex": 5,
-        "uniqueAnswer": false,
-        "score": 5,
-        "atype": "P",
-        "recommendations": [
-          {
-            "min_e_count": "a",
-            "max_e_count": "j",
-            "sector": null,
-            "answerChosen": false,
-            "label": "To avoid problems due to the human curiosity, it is important to have a clean desk policy to avoid confidential documents being seen."
-          }
-        ],
-        "label": "with all confidential documents locked away in a room, a desk or a closet"
-      },
-      {
-        "aindex": 6,
-        "uniqueAnswer": false,
-        "score": 5,
-        "atype": "P",
-        "recommendations": [
-          {
-            "min_e_count": "a",
-            "max_e_count": "j",
-            "sector": null,
-            "answerChosen": false,
-            "label": "The staff shouldn't clean restricted access areas, such as archive room or IT room."
-          }
-        ],
-        "label": "while avoiding rooms which have restricted access, like an archive room or a server room"
+        "label": "Non EU country"
       }
-    ],
-    "label": "The office cleaning is done"
+    ]
   },
   {
-    "service_category": "Passwords",
-    "section": "Logical Access",
-    "qtype": "M",
+    "section": "Entreprise & organisation",
+    "service_category": "Governance",
+    "qtype": "S",
     "qindex": 8,
-    "maxPoints": 45,
+    "label": "Are cybersecurity policy decisions made locally?",
     "answers": [
       {
         "aindex": 1,
         "uniqueAnswer": true,
-        "score": 0,
         "atype": "P",
-        "recommendations": [
-          {
-            "min_e_count": "a",
-            "max_e_count": "j",
-            "sector": null,
-            "answerChosen": true,
-            "label": "Advice should be given to avoid weak passwords. Some tips or techniques could be given to employees to remember their passwords. Here some examples:<ul><li>Passwords should be kept secret and personal. Each and everyone should access their data by using their password, even from a computer of someone else.</li><li>There shouldn't be a computer which is shared with one and unique password. If it's inevitable, then a trsutworthy person should be defined responsible, and access should be really limited.</li><li>It's mandatory to be careful with the password storage in the internet browser as they are not protected.</li></ul>"
-          }
-        ],
-        "label": "not having requirements or guidelines, employees are left on their own"
+        "label": "Yes"
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "No"
+      },
+      {
+        "aindex": 3,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "Not sure"
+      }
+    ]
+  },
+  {
+    "section": "Entreprise & organisation",
+    "service_category": "Governance",
+    "qtype": "S",
+    "qindex": 9,
+    "label": "Is your cybersecurity technical team located in Luxembourg?",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "Yes"
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "No"
+      },
+      {
+        "aindex": 3,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "Not sure"
+      }
+    ]
+  },
+  {
+    "section": "Entreprise & organisation",
+    "service_category": "Activities",
+    "qtype": "S",
+    "qindex": 10,
+    "label": "Is cybersecurity an important subject for your company?",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "Very important"
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "Important"
+      },
+      {
+        "aindex": 3,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "Fairly important"
+      },
+      {
+        "aindex": 4,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "Slightly important"
+      },
+      {
+        "aindex": 5,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "Not important"
+      }
+    ]
+  },
+  {
+    "section": "Entreprise & organisation",
+    "service_category": "Activities",
+    "qtype": "S",
+    "qindex": 11,
+    "label": "Do you have an annual IT budget?",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "Yes"
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "No"
+      },
+      {
+        "aindex": 3,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "Not sure"
+      }
+    ]
+  },
+  {
+    "section": "Entreprise & organisation",
+    "service_category": "Activities",
+    "qtype": "S",
+    "qindex": 12,
+    "label": "What percentage of your total budget does this represent?",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "0,00%"
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "<2%"
+      },
+      {
+        "aindex": 3,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "<5%"
+      },
+      {
+        "aindex": 4,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "<20%"
+      },
+      {
+        "aindex": 5,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "<50%"
+      },
+      {
+        "aindex": 6,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": ">50%"
+      }
+    ]
+  },
+  {
+    "section": "Entreprise & organisation",
+    "service_category": "Activities",
+    "qtype": "S",
+    "qindex": 13,
+    "label": "Do you have an annual budget dedicated solely to cybersecurity?",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "Yes"
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "No"
+      }
+    ]
+  },
+  {
+    "section": "Entreprise & organisation",
+    "service_category": "Activities",
+    "qtype": "S",
+    "qindex": 14,
+    "label": "What percentage of your total budget does this represent?",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "0,00%"
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "<1%"
+      },
+      {
+        "aindex": 3,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "<2%"
+      },
+      {
+        "aindex": 4,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "<3%"
+      },
+      {
+        "aindex": 5,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "<5%"
+      },
+      {
+        "aindex": 6,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": ">5%"
+      }
+    ]
+  },
+  {
+    "section": "Entreprise & organisation",
+    "service_category": "Activities",
+    "qtype": "ST",
+    "qindex": 15,
+    "label": "Who is the decision maker regarding cybersecurity issues in your company ?",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "CEO"
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "COO"
+      },
+      {
+        "aindex": 3,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "IT manager"
+      },
+      {
+        "aindex": 4,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "Cybersecurity manager"
+      },
+      {
+        "aindex": 5,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "External service provider"
+      },
+      {
+        "aindex": 6,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "Other"
+      }
+    ]
+  },
+  {
+    "section": "Entreprise & organisation",
+    "service_category": "Activities",
+    "qtype": "S",
+    "qindex": 16,
+    "label": "Does your company have activities outside of Luxembourg?",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "Yes"
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "No"
+      }
+    ]
+  },
+  {
+    "section": "Entreprise & organisation",
+    "service_category": "Activities",
+    "qtype": "CL",
+    "qindex": 17,
+    "label": "If yes in which countries / regions",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "Germany"
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "Belgium"
+      },
+      {
+        "aindex": 3,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "France"
+      },
+      {
+        "aindex": 4,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "other EU countries"
+      },
+      {
+        "aindex": 5,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "non-EU Europe"
+      },
+      {
+        "aindex": 6,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "Asia"
+      },
+      {
+        "aindex": 7,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "Africa"
+      },
+      {
+        "aindex": 8,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "North America"
+      },
+      {
+        "aindex": 9,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "South America"
+      },
+      {
+        "aindex": 10,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "Australia"
+      }
+    ]
+  },
+  {
+    "section": "Entreprise & organisation",
+    "service_category": "Activities",
+    "qtype": "S",
+    "qindex": 18,
+    "label": "Are your employees allowed to work outside of Luxembourg (telecommuting and/or business travel)?",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "Yes"
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "No"
+      },
+      {
+        "aindex": 3,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "Not sure"
+      }
+    ]
+  },
+  {
+    "section": "Entreprise & organisation",
+    "service_category": "Activities",
+    "qtype": "S",
+    "qindex": 19,
+    "label": "Are your employees allowed to use their personal devices (phones, tablets, computers) to work?",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "Yes"
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "No"
+      },
+      {
+        "aindex": 3,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "Not sure"
+      }
+    ]
+  },
+  {
+    "section": "Entreprise & organisation",
+    "service_category": "Activities",
+    "qtype": "S",
+    "qindex": 20,
+    "label": "Have your customers ever asked you for information about your cybersecurity management?",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "Yes"
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "No"
+      },
+      {
+        "aindex": 3,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "Not sure"
+      }
+    ]
+  },
+  {
+    "section": "Skills & awareness",
+    "service_category": "Training",
+    "qtype": "S",
+    "qindex": 21,
+    "label": "Have your company's employees ever been part of a awareness program?",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "No"
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "Partially"
+      },
+      {
+        "aindex": 3,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "1 year ago"
+      },
+      {
+        "aindex": 4,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "2 years ago"
+      },
+      {
+        "aindex": 5,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "3 years ago"
+      }
+    ]
+  },
+  {
+    "section": "Skills & awareness",
+    "service_category": "Training",
+    "qtype": "S",
+    "qindex": 22,
+    "label": "Do you feel that you have a good understanding of cybersecurity issues?",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "Very good"
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "Good"
+      },
+      {
+        "aindex": 3,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "Fair"
+      },
+      {
+        "aindex": 4,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "Poor"
+      },
+      {
+        "aindex": 5,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "Very Poor"
+      }
+    ]
+  },
+  {
+    "section": "Skills & awareness",
+    "service_category": "Training",
+    "qtype": "S",
+    "qindex": 23,
+    "label": "Do you feel competent to manage your cybersecurity?",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "Yes"
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "No"
+      },
+      {
+        "aindex": 3,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "Not sure"
+      }
+    ]
+  },
+  {
+    "section": "Skills & awareness",
+    "service_category": "Training",
+    "qtype": "S",
+    "qindex": 24,
+    "label": "Do you have cybersecurity training?",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "Yes"
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "No"
+      }
+    ]
+  },
+  {
+    "section": "Skills & awareness",
+    "service_category": "Training",
+    "qtype": "ST",
+    "qindex": 25,
+    "label": "If yes, what kind of training is it?",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "university study in cybersecurity"
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "university study in computer science"
+      },
+      {
+        "aindex": 3,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "professional training in cybersecurity (including certification)"
+      },
+      {
+        "aindex": 4,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "professional training in computer science (including certification)"
+      },
+      {
+        "aindex": 5,
+        "uniqueAnswer": true,
+        "atype": "T",
+        "label": "Other"
+      }
+    ]
+  },
+  {
+    "section": "Skills & awareness",
+    "service_category": "Training",
+    "qtype": "S",
+    "qindex": 26,
+    "label": "Do you have one or more employees with computer skills?",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "0"
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "1"
+      },
+      {
+        "aindex": 3,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "<5"
+      },
+      {
+        "aindex": 4,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "<10"
+      },
+      {
+        "aindex": 5,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "<20"
+      },
+      {
+        "aindex": 6,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": ">20"
+      }
+    ]
+  },
+  {
+    "section": "Skills & awareness",
+    "service_category": "Training",
+    "qtype": "MT",
+    "qindex": 27,
+    "label": "If yes, what are their missions? (if more than two assignments per employee please choose the \"generalist\" box)",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "System administrator"
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "Software development"
+      },
+      {
+        "aindex": 3,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "Web development"
+      },
+      {
+        "aindex": 4,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "Cybersecurity"
+      },
+      {
+        "aindex": 5,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "Generalist"
+      },
+      {
+        "aindex": 6,
+        "uniqueAnswer": true,
+        "atype": "T",
+        "label": "Other"
+      }
+    ]
+  },
+  {
+    "section": "Digital services and products",
+    "service_category": "Tools",
+    "qtype": "MT",
+    "qindex": 28,
+    "label": "What digital tools is your company using?",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "Communication"
       },
       {
         "aindex": 2,
         "uniqueAnswer": false,
-        "score": 0,
         "atype": "P",
-        "recommendations": [
-          {
-            "min_e_count": "a",
-            "max_e_count": "j",
-            "sector": null,
-            "answerChosen": true,
-            "label": "Passwords should be kept secret and personal. If it's impossible, then there should be a trustworthy person named responsible for the computer to ensure its use, and give minimum access."
-          }
-        ],
-        "label": "centralised in a file, or are all known by one or more people"
+        "label": "Accounting"
       },
       {
         "aindex": 3,
         "uniqueAnswer": false,
-        "score": 0,
         "atype": "P",
-        "recommendations": [
-          {
-            "min_e_count": "a",
-            "max_e_count": "j",
-            "sector": null,
-            "answerChosen": true,
-            "label": "Passwords should be kept secret and personal. Each and everyone should access their data by using their password, even from the computer of someone else."
-          }
-        ],
-        "label": "shared whenever there is a need to access a protected device"
+        "label": "Sales"
       },
       {
         "aindex": 4,
         "uniqueAnswer": false,
-        "score": 15,
         "atype": "P",
-        "recommendations": [
-          {
-            "min_e_count": "a",
-            "max_e_count": "j",
-            "sector": null,
-            "answerChosen": false,
-            "label": "It's necessary to have passwords which have at least one uppercase, lowercase, digit and special character, and a minimum of 12 characters."
-          }
-        ],
-        "label": "made up of 12 or more characters which are uppercase, lowercase, digits and special character"
+        "label": "Management"
       },
       {
         "aindex": 5,
         "uniqueAnswer": false,
-        "score": 5,
         "atype": "P",
-        "recommendations": [
-          {
-            "min_e_count": "a",
-            "max_e_count": "j",
-            "sector": null,
-            "answerChosen": false,
-            "label": "Passwords shouldn't be a coherent word or date, except if they are in a complete sentence."
-          }
-        ],
-        "label": "not forming any words or dates"
+        "label": "No"
       },
       {
         "aindex": 6,
         "uniqueAnswer": false,
-        "score": 5,
+        "atype": "T",
+        "label": "Other"
+      }
+    ]
+  },
+  {
+    "section": "Digital services and products",
+    "service_category": "Tools",
+    "qtype": "MT",
+    "qindex": 29,
+    "label": "If communication,do you have the following?",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": false,
         "atype": "P",
-        "recommendations": [
-          {
-            "min_e_count": "a",
-            "max_e_count": "j",
-            "sector": null,
-            "answerChosen": false,
-            "label": "Complete sentences could be used, even if they represent complete words."
-          }
-        ],
-        "label": "complete sentences"
+        "label": "Website"
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "label": "Social networks"
+      },
+      {
+        "aindex": 3,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "label": "Mailbox"
+      },
+      {
+        "aindex": 4,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "label": "Emailing"
+      },
+      {
+        "aindex": 5,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "label": "Videoconferencing"
+      },
+      {
+        "aindex": 6,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "label": "Internet traffic monitoring protocol"
       },
       {
         "aindex": 7,
         "uniqueAnswer": false,
-        "score": 5,
         "atype": "P",
-        "recommendations": [
-          {
-            "min_e_count": "a",
-            "max_e_count": "j",
-            "sector": null,
-            "answerChosen": false,
-            "label": "Passwords should be changed from time to time, to prevent serious consequences in case of a leak or data theft."
-          }
-        ],
-        "label": "regularly changed, every year or two"
+        "label": "Online tool for sending large files"
       },
       {
         "aindex": 8,
         "uniqueAnswer": false,
-        "score": 5,
+        "atype": "T",
+        "label": "Other"
+      }
+    ]
+  },
+  {
+    "section": "Digital services and products",
+    "service_category": "Tools",
+    "qtype": "MT",
+    "qindex": 30,
+    "label": "If accounting,do you have the following?",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": false,
         "atype": "P",
-        "recommendations": [
-          {
-            "min_e_count": "a",
-            "max_e_count": "j",
-            "sector": null,
-            "answerChosen": false,
-            "label": "To make the storage easier, a password manager could be used."
-          }
-        ],
-        "label": "included in a password manager"
+        "label": "Accounting software"
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "label": "Expense report tracking tool"
+      },
+      {
+        "aindex": 3,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "label": "Electronic invoicing"
+      },
+      {
+        "aindex": 4,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "label": "Electronic signature"
+      },
+      {
+        "aindex": 5,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "label": "Authentication"
+      },
+      {
+        "aindex": 6,
+        "uniqueAnswer": false,
+        "atype": "T",
+        "label": "Other"
+      }
+    ]
+  },
+  {
+    "section": "Digital services and products",
+    "service_category": "Tools",
+    "qtype": "MT",
+    "qindex": 31,
+    "label": "If sales,do you have the following?",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "label": "Online payment tool"
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "label": "Online sales platform"
+      },
+      {
+        "aindex": 3,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "label": "Customer relationship management (CRM)"
+      },
+      {
+        "aindex": 4,
+        "uniqueAnswer": false,
+        "atype": "T",
+        "label": "Other"
+      }
+    ]
+  },
+  {
+    "section": "Digital services and products",
+    "service_category": "Tools",
+    "qtype": "MT",
+    "qindex": 32,
+    "label": "If management,do you have the following?",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "label": "Inventory management"
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "label": "Integrated management software package (ERP)"
+      },
+      {
+        "aindex": 3,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "label": "Project management software"
+      },
+      {
+        "aindex": 4,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "label": "Document sharing tool (cloud)"
+      },
+      {
+        "aindex": 5,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "label": "Automatic data backup software)"
+      },
+      {
+        "aindex": 6,
+        "uniqueAnswer": false,
+        "atype": "T",
+        "label": "Other"
+      }
+    ]
+  },
+  {
+    "section": "Digital services and products",
+    "service_category": "Tools",
+    "qtype": "ST",
+    "qindex": 33,
+    "label": "Did you perform any particular actions to secure them?",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "Yes"
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "No"
+      },
+      {
+        "aindex": 3,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "Partially"
+      },
+      {
+        "aindex": 4,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "I don't know"
+      }
+    ]
+  },
+  {
+    "section": "Digital services and products",
+    "service_category": "Focus on cybersecurity practices",
+    "qtype": "MT",
+    "qindex": 34,
+    "label": "Do you have a cybersecurity solution in place?",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "label": "Firewall"
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "label": "Antivirus"
+      },
+      {
+        "aindex": 3,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "label": "Encryption system"
+      },
+      {
+        "aindex": 4,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "label": "VPN"
+      },
+      {
+        "aindex": 5,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "label": "Public key infrastructure (PKI)"
+      },
+      {
+        "aindex": 6,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "label": "Password Manager"
+      },
+      {
+        "aindex": 7,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "label": "Data backup solution"
+      },
+      {
+        "aindex": 8,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "label": "Two factors authentication (2FA)"
       },
       {
         "aindex": 9,
         "uniqueAnswer": false,
-        "score": 0,
         "atype": "P",
-        "recommendations": [
-          {
-            "min_e_count": "a",
-            "max_e_count": "j",
-            "sector": null,
-            "answerChosen": true,
-            "label": "It's mandatory to be careful with the password storage in the internet browsers as they are not protected well."
-          }
-        ],
-        "label": "included in web browsers"
+        "label": "No"
       },
       {
         "aindex": 10,
         "uniqueAnswer": false,
-        "score": 10,
-        "atype": "P",
-        "recommendations": [
-          {
-            "min_e_count": "a",
-            "max_e_count": "j",
-            "sector": null,
-            "answerChosen": false,
-            "label": "Same passwords used on different website makes a leak easier. Besides, only one leak is enough to compromise all the access using the same password."
-          }
-        ],
-        "label": "different for each application used, even for a user"
+        "atype": "T",
+        "label": "Other"
       }
-    ],
-    "label": "Passwords in the company are"
+    ]
   },
   {
-    "service_category": "WiFi",
-    "section": "Local Area Network",
-    "qtype": "M",
-    "qindex": 9,
-    "maxPoints": 25,
+    "section": "Digital services and products",
+    "service_category": "Focus on cybersecurity practices",
+    "qtype": "S",
+    "qindex": 35,
+    "label": "Do you have an inventory of your digital assets?",
     "answers": [
       {
         "aindex": 1,
         "uniqueAnswer": true,
-        "score": 25,
         "atype": "P",
-        "recommendations": [
-          {
-            "min_e_count": "a",
-            "max_e_count": "j",
-            "sector": null,
-            "answerChosen": true,
-            "label": "For now, wireless network isn't activated in the company. If it is changed, it's important to:<ul><li>Wireless Network should be split between internal and external users to avoid access problems.</li><li>If a wireless network is used for external people, strong precautions should be taken, for example the collection of an identity.</li></ul>"
-          }
-        ],
-        "label": "are not used in the company"
+        "label": "Yes"
       },
       {
         "aindex": 2,
-        "uniqueAnswer": false,
-        "score": 0,
+        "uniqueAnswer": true,
         "atype": "P",
-        "recommendations": [
-          {
-            "min_e_count": "a",
-            "max_e_count": "j",
-            "sector": null,
-            "answerChosen": true,
-            "label": "Wireless Network should be split between internal and external users to avoid access problems."
-          }
-        ],
-        "label": "are used by everyone and access is granted to the company server"
+        "label": "No"
       },
       {
         "aindex": 3,
-        "uniqueAnswer": false,
-        "score": 0,
+        "uniqueAnswer": true,
         "atype": "P",
-        "recommendations": [
-          {
-            "min_e_count": "a",
-            "max_e_count": "j",
-            "sector": null,
-            "answerChosen": true,
-            "label": "If a wireless network is used for external people, strong precautions should be taken, for example the collection of an identity."
-          }
-        ],
-        "label": "are given to everyone, without any way to get identity of the persons"
+        "label": "Partially"
       },
       {
         "aindex": 4,
-        "uniqueAnswer": false,
-        "score": 15,
+        "uniqueAnswer": true,
         "atype": "P",
-        "recommendations": [
-          {
-            "min_e_count": "a",
-            "max_e_count": "j",
-            "sector": null,
-            "answerChosen": false,
-            "label": "The password shouldn't be easily guessable, to avoid connections which are not wanted."
-          }
-        ],
-        "label": "are protected by long passwords of 20 characters or more"
-      },
-      {
-        "aindex": 5,
-        "uniqueAnswer": false,
-        "score": 10,
-        "atype": "P",
-        "recommendations": [
-          {
-            "min_e_count": "a",
-            "max_e_count": "j",
-            "sector": null,
-            "answerChosen": false,
-            "label": "Also, wireless networks of printers should be protected to avoid the leak of all printed documents."
-          }
-        ],
-        "label": "of the printers are protected by a strong password"
+        "label": "I don't know"
       }
-    ],
-    "label": "Wireless networks"
+    ]
   },
   {
-    "service_category": "Antivirus",
-    "section": "Local Area Network",
-    "qtype": "M",
-    "qindex": 10,
-    "maxPoints": 35,
+    "section": "Digital services and products",
+    "service_category": "Focus on cybersecurity practices",
+    "qtype": "S",
+    "qindex": 36,
+    "label": "Would you like a scan of your digital assets to help determine their vulnerability? (yes, no, I don't know)",
     "answers": [
       {
         "aindex": 1,
         "uniqueAnswer": true,
-        "score": 0,
         "atype": "P",
-        "recommendations": [
-          {
-            "min_e_count": "a",
-            "max_e_count": "j",
-            "sector": null,
-            "answerChosen": true,
-            "label": "The company should have an antivirus and be careful to:"
-          }
-        ],
-        "label": "is not installed or used"
+        "label": "Yes"
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "No"
+      },
+      {
+        "aindex": 3,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "Partially"
+      },
+      {
+        "aindex": 4,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "I don't know"
+      }
+    ]
+  },
+  {
+    "section": "Market and service providers",
+    "service_category": "Market and service providers",
+    "qtype": "S",
+    "qindex": 37,
+    "label": "Are you supported by an external service provider to manage your cybersecurity?",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "Yes"
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "No"
+      },
+      {
+        "aindex": 3,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "Partially"
+      },
+      {
+        "aindex": 4,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "I don't know"
+      }
+    ]
+  },
+  {
+    "section": "Market and service providers",
+    "service_category": "Market and service providers",
+    "qtype": "S",
+    "qindex": 38,
+    "label": "Is it an IT or cybersecurity company?",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "IT"
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "Cybersecurity"
+      }
+    ]
+  },
+  {
+    "section": "Market and service providers",
+    "service_category": "Market and service providers",
+    "qtype": "MT",
+    "qindex": 39,
+    "label": "What are your criteria for evaluating cybersecurity services or solutions?",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "label": "Price"
       },
       {
         "aindex": 2,
         "uniqueAnswer": false,
-        "score": 10,
         "atype": "P",
-        "recommendations": [
-          {
-            "min_e_count": "a",
-            "max_e_count": "j",
-            "sector": null,
-            "answerChosen": false,
-            "label": "An antivirus software must be installed on all devices."
-          }
-        ],
-        "label": "is installed on computers and laptops"
+        "label": "Exhaustivity"
       },
       {
         "aindex": 3,
         "uniqueAnswer": false,
-        "score": 5,
         "atype": "P",
-        "recommendations": [
-          {
-            "min_e_count": "a",
-            "max_e_count": "j",
-            "sector": null,
-            "answerChosen": false,
-            "label": "It should be up to date, preferably automatically to cover as many threats as possible."
-          }
-        ],
-        "label": "is updated on all computers, automatically or manually"
+        "label": "Ease of use"
       },
       {
         "aindex": 4,
         "uniqueAnswer": false,
-        "score": 5,
         "atype": "P",
-        "recommendations": [
-          {
-            "min_e_count": "a",
-            "max_e_count": "j",
-            "sector": null,
-            "answerChosen": false,
-            "label": "It should be activated in any case to protect the device continuously."
-          }
-        ],
-        "label": "is activated and protects computer"
+        "label": "Trust in the seller"
       },
       {
         "aindex": 5,
         "uniqueAnswer": false,
-        "score": 5,
         "atype": "P",
-        "recommendations": [
-          {
-            "min_e_count": "a",
-            "max_e_count": "j",
-            "sector": null,
-            "answerChosen": false,
-            "label": "All devices, like smartphones, tablets should have an antivirus, even if it is the one by default from the operating system."
-          }
-        ],
-        "label": "is installed on all mobile phones that are on network"
+        "label": "Technical specifications"
       },
       {
         "aindex": 6,
         "uniqueAnswer": false,
-        "score": 5,
         "atype": "P",
-        "recommendations": [
-          {
-            "min_e_count": "a",
-            "max_e_count": "j",
-            "sector": null,
-            "answerChosen": false,
-            "label": "Some tests should be done from time to time."
-          }
-        ],
-        "label": "is used from time to time in order to analyse the computer, even without external events"
+        "label": "Certification"
       },
       {
         "aindex": 7,
         "uniqueAnswer": false,
-        "score": 5,
-        "atype": "P",
-        "recommendations": [
-          {
-            "min_e_count": "a",
-            "max_e_count": "j",
-            "sector": null,
-            "answerChosen": false,
-            "label": "Some tests should be done in case of suspicion of infection."
-          }
-        ],
-        "label": "is used to analyse the network whenever a suspicious event occurs"
+        "atype": "T",
+        "label": "Other"
       }
-    ],
-    "label": "Antivirus software"
+    ]
   },
   {
-    "service_category": "User Work Stations/Updates",
-    "section": "Information System",
-    "qtype": "M",
-    "qindex": 11,
-    "maxPoints": 35,
+    "section": "Market and service providers",
+    "service_category": "Market and service providers",
+    "qtype": "S",
+    "qindex": 40,
+    "label": "Are the cybersecurity services available on the market suited to your needs?",
     "answers": [
       {
         "aindex": 1,
         "uniqueAnswer": true,
-        "score": 0,
         "atype": "P",
-        "recommendations": [
-          {
-            "min_e_count": "a",
-            "max_e_count": "j",
-            "sector": null,
-            "answerChosen": true,
-            "label": "Some rules and specific advice should be given concerning users stations or laptop. Some points that are important:"
-          }
-        ],
-        "label": "left without any rules, and users have to take care of their on workstations"
+        "label": "Yes"
       },
       {
         "aindex": 2,
-        "uniqueAnswer": false,
-        "score": 15,
+        "uniqueAnswer": true,
         "atype": "P",
-        "recommendations": [
-          {
-            "min_e_count": "a",
-            "max_e_count": "j",
-            "sector": null,
-            "answerChosen": false,
-            "label": "A device should always be up to date in order to avoid security problems, and also avoid network intrusion. Many operating systems now update automatically, but installed software needs some permission to be given or manual maintenance."
-          }
-        ],
-        "label": "automatically or manually updated regarding the software and operating system"
+        "label": "No"
       },
       {
         "aindex": 3,
-        "uniqueAnswer": false,
-        "score": 5,
+        "uniqueAnswer": true,
         "atype": "P",
-        "recommendations": [
-          {
-            "min_e_count": "a",
-            "max_e_count": "j",
-            "sector": null,
-            "answerChosen": false,
-            "label": "Administrator rights should be left only to the users who are specialised in IT, or well advised respecting the rules."
-          }
-        ],
-        "label": "controlled by administrators, which won't let users install software because they do not have administrator rights"
+        "label": "Partially"
       },
       {
         "aindex": 4,
-        "uniqueAnswer": false,
-        "score": 5,
+        "uniqueAnswer": true,
         "atype": "P",
-        "recommendations": [
-          {
-            "min_e_count": "a",
-            "max_e_count": "j",
-            "sector": null,
-            "answerChosen": false,
-            "label": "Downloads should only be done from the official websites, the original developers of the software, to avoid manipulated download files or infections."
-          }
-        ],
-        "label": "needed to comply with rules or guidelines about installation and downloading software, concerning illegality or the danger to install something without authorisation"
-      },
-      {
-        "aindex": 5,
-        "uniqueAnswer": false,
-        "score": 10,
-        "atype": "P",
-        "recommendations": [
-          {
-            "min_e_count": "a",
-            "max_e_count": "j",
-            "sector": null,
-            "answerChosen": false,
-            "label": "Devices should be locked to avoid identity theft."
-          }
-        ],
-        "label": "locked whenever the user is not at his desk, even for a short time"
+        "label": "I don't know"
       }
-    ],
-    "label": "The user workstations are"
+    ]
   },
   {
-    "service_category": "Backups",
-    "section": "Information System",
-    "qtype": "M",
-    "qindex": 12,
-    "maxPoints": 65,
+    "section": "Market and service providers",
+    "service_category": "Market and service providers",
+    "qtype": "T",
+    "qindex": 41,
+    "label": "If not, what are you missing?",
     "answers": [
       {
         "aindex": 1,
         "uniqueAnswer": true,
-        "score": 0,
+        "atype": "T",
+        "label": "Provide us with more details, please"
+      }
+    ]
+  },
+  {
+    "section": "Market and service providers",
+    "service_category": "Market and service providers",
+    "qtype": "S",
+    "qindex": 42,
+    "label": "How much trust do you have in your service providers?",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": true,
         "atype": "P",
-        "recommendations": [
-          {
-            "min_e_count": "a",
-            "max_e_count": "j",
-            "sector": null,
-            "answerChosen": true,
-            "label": "It's important to have backups for various reason, to have redundancy of data if they disappeared. It's important to have:"
-          }
-        ],
-        "label": "non existent: they are not done or not working"
+        "label": "Very high"
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "High"
+      },
+      {
+        "aindex": 3,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "Moderate"
+      },
+      {
+        "aindex": 4,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "Low"
+      },
+      {
+        "aindex": 5,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "Very Low"
+      }
+    ]
+  },
+  {
+    "section": "Market and service providers",
+    "service_category": "Market and service providers",
+    "qtype": "T",
+    "qindex": 43,
+    "label": "If not, what is your main issue?",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": true,
+        "atype": "T",
+        "label": "Provide us with more details, please"
+      }
+    ]
+  },
+  {
+    "section": "Market and service providers",
+    "service_category": "Market and service providers",
+    "qtype": "S",
+    "qindex": 44,
+    "label": "Is your IT service provider also your internet service provider?",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "Yes"
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "No"
+      },
+      {
+        "aindex": 3,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "Partially"
+      },
+      {
+        "aindex": 4,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "I don't know"
+      }
+    ]
+  },
+  {
+    "section": "Market and service providers",
+    "service_category": "Market and service providers",
+    "qtype": "S",
+    "qindex": 45,
+    "label": "Do you limit your IT vendors' access to your sensitive information?",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "Yes"
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "No"
+      },
+      {
+        "aindex": 3,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "Partially"
+      },
+      {
+        "aindex": 4,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "I don't know"
+      }
+    ]
+  },
+  {
+    "section": "Incident",
+    "service_category": "Incident",
+    "qtype": "S",
+    "qindex": 46,
+    "label": "Have your employees ever had a cyber incident on their personal devices?",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "Yes"
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "No"
+      },
+      {
+        "aindex": 3,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "I don't know"
+      }
+    ]
+  },
+  {
+    "section": "Incident",
+    "service_category": "Incident",
+    "qtype": "S",
+    "qindex": 47,
+    "label": "Has this had an impact on your business?",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "Yes"
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "No"
+      },
+      {
+        "aindex": 3,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "Partially"
+      },
+      {
+        "aindex": 4,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "I don't know"
+      }
+    ]
+  },
+  {
+    "section": "Incident",
+    "service_category": "Incident",
+    "qtype": "S",
+    "qindex": 48,
+    "label": "Have you ever had a cybersecurity issue regarding another regulation than Luxembourg?",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "Yes"
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "No"
+      },
+      {
+        "aindex": 3,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "I don't know"
+      },
+      {
+        "aindex": 4,
+        "uniqueAnswer": true,
+        "atype": "T",
+        "label": "Other"
+      }
+    ]
+  },
+  {
+    "section": "Incident",
+    "service_category": "Incident",
+    "qtype": "S",
+    "qindex": 49,
+    "label": "Have you been a victim of cyber attacks?",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "Yes"
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "No"
+      },
+      {
+        "aindex": 3,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "I don't know"
+      },
+      {
+        "aindex": 4,
+        "uniqueAnswer": true,
+        "atype": "T",
+        "label": "Other"
+      }
+    ]
+  },
+  {
+    "section": "Incident",
+    "service_category": "Incident",
+    "qtype": "MT",
+    "qindex": 50,
+    "label": "If yes, What type of attack was it?",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "label": "Ransomware"
       },
       {
         "aindex": 2,
         "uniqueAnswer": false,
-        "score": 5,
         "atype": "P",
-        "recommendations": [],
-        "label": "shared: a third party has the responsibility of the backup"
+        "label": "IP spoofing"
       },
       {
         "aindex": 3,
         "uniqueAnswer": false,
-        "score": 10,
         "atype": "P",
-        "recommendations": [
-          {
-            "min_e_count": "a",
-            "max_e_count": "j",
-            "sector": null,
-            "answerChosen": false,
-            "label": "Backups should concern the whole company, and everyone should be aware to put all data on the systems that are backed up, to ensure to have a copy of them."
-          }
-        ],
-        "label": "exhaustive: all data is on backups, and all users know that and avoid storing information locally"
+        "label": "Denial of service attack (DoS or DDoS)"
       },
       {
         "aindex": 4,
         "uniqueAnswer": false,
-        "score": 10,
         "atype": "P",
-        "recommendations": [
-          {
-            "min_e_count": "a",
-            "max_e_count": "j",
-            "sector": null,
-            "answerChosen": false,
-            "label": "Backups should be done daily to avoid major data loss."
-          }
-        ],
-        "label": "done daily: backups are made at least once daily"
+        "label": "Phishing"
       },
       {
         "aindex": 5,
         "uniqueAnswer": false,
-        "score": 10,
         "atype": "P",
-        "recommendations": [
-          {
-            "min_e_count": "a",
-            "max_e_count": "j",
-            "sector": null,
-            "answerChosen": false,
-            "label": "Backups should be retained at least a month to avoid problems caused by ransomware."
-          }
-        ],
-        "label": "retained: it is possible to get back a month or more"
+        "label": "Password cracking"
       },
       {
         "aindex": 6,
         "uniqueAnswer": false,
-        "score": 5,
         "atype": "P",
-        "recommendations": [
-          {
-            "min_e_count": "a",
-            "max_e_count": "j",
-            "sector": null,
-            "answerChosen": false,
-            "label": "Backups should be outside the premises, decentralized, with more than 3 kilometres between them."
-          }
-        ],
-        "label": "decentralized: the server, and at least one full backup system is separated by at leaset 3 kilometres"
+        "label": "Other virus / malware (not ransomware)"
       },
       {
         "aindex": 7,
         "uniqueAnswer": false,
-        "score": 10,
-        "atype": "P",
-        "recommendations": [
-          {
-            "min_e_count": "a",
-            "max_e_count": "j",
-            "sector": null,
-            "answerChosen": false,
-            "label": "Backups should be disconnected, outside the local network, to be invisible by crypto-ransomwares."
-          }
-        ],
-        "label": "disconnected: they are disconnected from the server once they are done"
-      },
-      {
-        "aindex": 8,
-        "uniqueAnswer": false,
-        "score": 10,
-        "atype": "P",
-        "recommendations": [
-          {
-            "min_e_count": "a",
-            "max_e_count": "j",
-            "sector": null,
-            "answerChosen": false,
-            "label": "Backups should be tested (restored) from time to time, just to ensure that the data is readable and has integrity."
-          }
-        ],
-        "label": "tested: one or all the files are restored from a backup from occasionally"
-      },
-      {
-        "aindex": 9,
-        "uniqueAnswer": false,
-        "score": 5,
-        "atype": "P",
-        "recommendations": [
-          {
-            "min_e_count": "a",
-            "max_e_count": "j",
-            "sector": null,
-            "answerChosen": false,
-            "label": "Backups should be encrypted to avoid problems concerning the data theft, mainly if they are moved."
-          }
-        ],
-        "label": "encrypted: so when they are taken outside the company, they can't be read"
+        "atype": "T",
+        "label": "Other"
       }
-    ],
-    "label": "Backups are"
+    ]
   },
   {
-    "service_category": "BYOD",
-    "section": "Information System",
-    "qtype": "M",
-    "qindex": 13,
-    "maxPoints": 20,
+    "section": "Incident",
+    "service_category": "Incident",
+    "qtype": "S",
+    "qindex": 51,
+    "label": "Have you ever paid a ransom online?",
     "answers": [
       {
         "aindex": 1,
         "uniqueAnswer": true,
-        "score": 20,
         "atype": "P",
-        "recommendations": [
-          {
-            "min_e_count": "a",
-            "max_e_count": "j",
-            "sector": null,
-            "answerChosen": true,
-            "label": "For now, the personal devices are not connected in the local network. If it's changed, it's important to:"
-          }
-        ],
-        "label": "is forbidden or impossible in the company"
+        "label": "Yes"
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "No"
+      },
+      {
+        "aindex": 3,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "I don't know"
+      },
+      {
+        "aindex": 4,
+        "uniqueAnswer": true,
+        "atype": "T",
+        "label": "Other"
+      }
+    ]
+  },
+  {
+    "section": "Incident",
+    "service_category": "Incident",
+    "qtype": "S",
+    "qindex": 52,
+    "label": "Would you do it again?",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "Yes"
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "No"
+      },
+      {
+        "aindex": 3,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "I don't know"
+      },
+      {
+        "aindex": 4,
+        "uniqueAnswer": true,
+        "atype": "T",
+        "label": "Other"
+      }
+    ]
+  },
+  {
+    "section": "Incident",
+    "service_category": "Incident",
+    "qtype": "MT",
+    "qindex": 53,
+    "label": "Who would you contact in the event of a computer incident?",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "label": "Police"
       },
       {
         "aindex": 2,
         "uniqueAnswer": false,
-        "score": 10,
         "atype": "P",
-        "recommendations": [
-          {
-            "min_e_count": "a",
-            "max_e_count": "j",
-            "sector": null,
-            "answerChosen": false,
-            "label": "Personal devices shouldn't be used in company without any controls, rules and explanations. By knowing all the different existing ways to attack an organization, it's possible to avoid them."
-          }
-        ],
-        "label": "is subject to precise rules, particularly before connecting to the company network"
+        "label": "Internet service provider"
       },
       {
         "aindex": 3,
         "uniqueAnswer": false,
-        "score": 5,
         "atype": "P",
-        "recommendations": [
-          {
-            "min_e_count": "a",
-            "max_e_count": "j",
-            "sector": null,
-            "answerChosen": false,
-            "label": "Personal devices should have an antivirus installed, updated and active to avoid as many threats as possible."
-          }
-        ],
-        "label": "is under a strict antivirus control"
+        "label": "IT service provider (if different from Internet service provider)"
       },
       {
         "aindex": 4,
         "uniqueAnswer": false,
-        "score": 5,
         "atype": "P",
-        "recommendations": [
-          {
-            "min_e_count": "a",
-            "max_e_count": "j",
-            "sector": null,
-            "answerChosen": false,
-            "label": "Defining rules and best practices help to protect the internal networks."
-          }
-        ],
-        "label": "has been explained to employees through training or explanations"
+        "label": "CIRCL (CSIRT for private sector)"
+      },
+      {
+        "aindex": 5,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "label": "CNPD (National data protection agency)"
+      },
+      {
+        "aindex": 6,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "label": "Cybersecurity specialist you are not already working with."
+      },
+      {
+        "aindex": 7,
+        "uniqueAnswer": false,
+        "atype": "T",
+        "label": "Other"
       }
-    ],
-    "label": "Having some personal IT devices (USB Key, Hard Drive, Smartphone, Tablet, Laptop …) in the professional environment (network that is connected to the server)"
+    ]
+  },
+  {
+    "section": "Regulations and public actions",
+    "service_category": "Regulations and public actions",
+    "qtype": "S",
+    "qindex": 54,
+    "label": "Have you participated in a cybersecurity awareness event/training organized by professional chambers?",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "Yes"
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "No"
+      },
+      {
+        "aindex": 3,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "I don't know"
+      },
+      {
+        "aindex": 4,
+        "uniqueAnswer": true,
+        "atype": "T",
+        "label": "Other"
+      }
+    ]
+  },
+  {
+    "section": "Regulations and public actions",
+    "service_category": "Regulations and public actions",
+    "qtype": "S",
+    "qindex": 55,
+    "label": "Have you participated in or benefited from public digitization aid or programs provided by professional chambers?",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "Yes"
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "No"
+      },
+      {
+        "aindex": 3,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "I don't know"
+      },
+      {
+        "aindex": 4,
+        "uniqueAnswer": true,
+        "atype": "T",
+        "label": "Other"
+      }
+    ]
+  },
+  {
+    "section": "Regulations and public actions",
+    "service_category": "Regulations and public actions",
+    "qtype": "S",
+    "qindex": 56,
+    "label": "Have you changed the way you work to align with General Data Protection Regulation (GDPR) requirements?",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "Yes"
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "No"
+      },
+      {
+        "aindex": 3,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "I don't know"
+      },
+      {
+        "aindex": 4,
+        "uniqueAnswer": true,
+        "atype": "T",
+        "label": "Other"
+      }
+    ]
+  },
+  {
+    "section": "Regulations and public actions",
+    "service_category": "Regulations and public actions",
+    "qtype": "S",
+    "qindex": 57,
+    "label": "Do you know your cybersecurity and data protection obligations?",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "Yes"
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "No"
+      },
+      {
+        "aindex": 3,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "I don't know"
+      },
+      {
+        "aindex": 4,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "Partially"
+      },
+      {
+        "aindex": 5,
+        "uniqueAnswer": true,
+        "atype": "T",
+        "label": "Other"
+      }
+    ]
+  },
+  {
+    "section": "Regulations and public actions",
+    "service_category": "Regulations and public actions",
+    "qtype": "S",
+    "qindex": 58,
+    "label": "(If yes) do you understand your obligations?",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "Yes"
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "No"
+      },
+      {
+        "aindex": 3,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "I don't know"
+      },
+      {
+        "aindex": 4,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "Partially"
+      },
+      {
+        "aindex": 5,
+        "uniqueAnswer": true,
+        "atype": "T",
+        "label": "Other"
+      }
+    ]
+  },
+  {
+    "section": "Certification",
+    "service_category": "Certification",
+    "qtype": "S",
+    "qindex": 59,
+    "label": "Does your company have cybersecurity certification?",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "Yes"
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "No"
+      },
+      {
+        "aindex": 3,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "I don't know"
+      },
+      {
+        "aindex": 4,
+        "uniqueAnswer": true,
+        "atype": "T",
+        "label": "Other"
+      }
+    ]
+  },
+  {
+    "section": "Certification",
+    "service_category": "Certification",
+    "qtype": "MT",
+    "qindex": 60,
+    "label": "(If yes) Which one?",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "label": "PSF"
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "label": "specialized PSF"
+      },
+      {
+        "aindex": 3,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "label": "support PSF"
+      },
+      {
+        "aindex": 4,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "label": "ISO 27001"
+      },
+      {
+        "aindex": 5,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "label": "Other ISO 2700X"
+      },
+      {
+        "aindex": 6,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "label": "PSDC"
+      },
+      {
+        "aindex": 7,
+        "uniqueAnswer": false,
+        "atype": "T",
+        "label": "Other"
+      }
+    ]
+  },
+  {
+    "section": "Certification",
+    "service_category": "Certification",
+    "qtype": "S",
+    "qindex": 61,
+    "label": "Do you plan to pursue certification work for your company?",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "Yes"
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "No"
+      },
+      {
+        "aindex": 3,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "I don't know"
+      },
+      {
+        "aindex": 4,
+        "uniqueAnswer": true,
+        "atype": "T",
+        "label": "Other"
+      }
+    ]
+  },
+  {
+    "section": "Certification",
+    "service_category": "Certification",
+    "qtype": "MT",
+    "qindex": 62,
+    "label": "(If yes) Which one?",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "label": "PSF"
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "label": "specialized PSF"
+      },
+      {
+        "aindex": 3,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "label": "support PSF"
+      },
+      {
+        "aindex": 4,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "label": "ISO 27001"
+      },
+      {
+        "aindex": 5,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "label": "Other ISO 2700X"
+      },
+      {
+        "aindex": 6,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "label": "PSDC"
+      },
+      {
+        "aindex": 7,
+        "uniqueAnswer": false,
+        "atype": "T",
+        "label": "Other"
+      }
+    ]
+  },
+  {
+    "section": "Certification",
+    "service_category": "Certification",
+    "qtype": "MT",
+    "qindex": 63,
+    "label": "Have you had any of your products certified (non cyber)?",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "Yes"
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "No"
+      },
+      {
+        "aindex": 3,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "I don't know"
+      },
+      {
+        "aindex": 4,
+        "uniqueAnswer": true,
+        "atype": "T",
+        "label": "Other"
+      }
+    ]
+  },
+  {
+    "section": "Certification",
+    "service_category": "Certification",
+    "qtype": "MT",
+    "qindex": 64,
+    "label": "Has your company had to pass a cybersecurity certification or audit at the request of your customers?",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "Yes"
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "No"
+      },
+      {
+        "aindex": 3,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "I don't know"
+      },
+      {
+        "aindex": 4,
+        "uniqueAnswer": true,
+        "atype": "T",
+        "label": "Other"
+      }
+    ]
+  },
+  {
+    "section": "Certification",
+    "service_category": "Certification",
+    "qtype": "MT",
+    "qindex": 65,
+    "label": "(If yes) Which one?",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "label": "PSF"
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "label": "specialized PSF"
+      },
+      {
+        "aindex": 3,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "label": "support PSF"
+      },
+      {
+        "aindex": 4,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "label": "ISO 27001"
+      },
+      {
+        "aindex": 5,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "label": "Other ISO 2700X"
+      },
+      {
+        "aindex": 6,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "label": "PSDC"
+      },
+      {
+        "aindex": 7,
+        "uniqueAnswer": false,
+        "atype": "T",
+        "label": "Other"
+      }
+    ]
   }
 ]
