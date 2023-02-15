@@ -12349,58 +12349,10 @@
     ]
   },
   {
-    "section": "TSF physical protection",
-    "service_category": "Passive detection of physical attack",
-    "qtype": "S",
-    "qindex": 201,
-    "maxPoints": 45,
-    "label": "Is the security and resilience of your product against potential physical security attacks tested?",
-    "answers": [
-      {
-        "aindex": 1,
-        "uniqueAnswer": true,
-        "score": 0,
-        "atype": "P",
-        "questions_map": [
-          {
-            "label": "Is there a manual recovery mechanism implemented to guarantee a return to a secure state when needed?",
-            "branch": 4,
-            "level": 33,
-            "order": 1
-          }
-        ],
-        "label": "No, the product has not been tested to verify its resilience to potential physical security attacks.",
-        "recommendations": [
-          {
-            "min_e_count": "a",
-            "max_e_count": "j",
-            "answerChosen": true,
-            "label": "To review"
-          }
-        ]
-      },
-      {
-        "aindex": 2,
-        "uniqueAnswer": true,
-        "score": 45,
-        "atype": "P",
-        "questions_map": [
-          {
-            "label": "Is there a manual recovery mechanism implemented to guarantee a return to a secure state when needed?",
-            "branch": 4,
-            "level": 33,
-            "order": 1
-          }
-        ],
-        "label": "Our product has been tested, and it is resilient to any potential physical security attack."
-      }
-    ]
-  },
-  {
     "section": "Trusted recovery (FPT_RCV)",
     "service_category": "Manual recovery",
     "qtype": "S",
-    "qindex": 202,
+    "qindex": 201,
     "maxPoints": 35,
     "label": "Is there a manual recovery mechanism implemented to guarantee a return to a secure state when needed?",
     "answers": [
@@ -12413,7 +12365,7 @@
           {
             "label": "Are controls implemented to detect and prevent any potential replay attacks?",
             "branch": 4,
-            "level": 34,
+            "level": 33,
             "order": 1
           }
         ],
@@ -12436,7 +12388,7 @@
           {
             "label": "Are controls implemented to detect and prevent any potential replay attacks?",
             "branch": 4,
-            "level": 34,
+            "level": 33,
             "order": 1
           }
         ],
@@ -12448,7 +12400,7 @@
     "section": "Replay detection (FPT_RPL)",
     "service_category": "Replay detection",
     "qtype": "S",
-    "qindex": 203,
+    "qindex": 202,
     "maxPoints": 15,
     "label": "Are controls implemented to detect and prevent any potential replay attacks?",
     "answers": [
@@ -12461,7 +12413,7 @@
           {
             "label": "Have you tested the accuracy, reliability, and security of the timestamp function in your product?",
             "branch": 4,
-            "level": 35,
+            "level": 34,
             "order": 1
           }
         ],
@@ -12484,7 +12436,7 @@
           {
             "label": "Have you tested the accuracy, reliability, and security of the timestamp function in your product?",
             "branch": 4,
-            "level": 35,
+            "level": 34,
             "order": 1
           }
         ],
@@ -12499,7 +12451,7 @@
           {
             "label": "Have you tested the accuracy, reliability, and security of the timestamp function in your product?",
             "branch": 4,
-            "level": 35,
+            "level": 34,
             "order": 1
           }
         ],
@@ -12519,7 +12471,7 @@
     "section": "Time stamps (FPT_STM)",
     "service_category": "Reliable time stamps",
     "qtype": "S",
-    "qindex": 204,
+    "qindex": 203,
     "maxPoints": 25,
     "label": "Have you tested the accuracy, reliability, and security of the timestamp function in your product?",
     "answers": [
@@ -12532,7 +12484,7 @@
           {
             "label": "Are there controls implemented within the product to ensure data replication consistency?",
             "branch": 4,
-            "level": 36,
+            "level": 35,
             "order": 1
           }
         ],
@@ -12555,7 +12507,7 @@
           {
             "label": "Are there controls implemented within the product to ensure data replication consistency?",
             "branch": 4,
-            "level": 36,
+            "level": 35,
             "order": 1
           }
         ],
@@ -12570,7 +12522,7 @@
           {
             "label": "Are there controls implemented within the product to ensure data replication consistency?",
             "branch": 4,
-            "level": 36,
+            "level": 35,
             "order": 1
           }
         ],
@@ -12590,7 +12542,7 @@
     "section": "Internal TOE TSF data replication consistency (FPT_TRC)",
     "service_category": "Internal TSF consistency.",
     "qtype": "S",
-    "qindex": 205,
+    "qindex": 204,
     "maxPoints": 20,
     "label": "Are there controls implemented within the product to ensure data replication consistency?",
     "answers": [
@@ -12603,7 +12555,7 @@
           {
             "label": "Does your product run any self-tests to verify the correct operation of key services?",
             "branch": 4,
-            "level": 37,
+            "level": 36,
             "order": 1
           }
         ],
@@ -12626,7 +12578,7 @@
           {
             "label": "Does your product run any self-tests to verify the correct operation of key services?",
             "branch": 4,
-            "level": 37,
+            "level": 36,
             "order": 1
           }
         ],
@@ -12638,7 +12590,7 @@
     "section": "TSF self-test (FPT_TST)",
     "service_category": "TSF testing",
     "qtype": "S",
-    "qindex": 206,
+    "qindex": 205,
     "maxPoints": 25,
     "label": "Does your product run any self-tests to verify the correct operation of key services?",
     "answers": [
@@ -12651,7 +12603,7 @@
           {
             "label": "Are there any controls implemented to limit the number of concurrent sessions per user?",
             "branch": 4,
-            "level": 38,
+            "level": 37,
             "order": 1
           }
         ],
@@ -12674,7 +12626,7 @@
           {
             "label": "Are there any controls implemented to limit the number of concurrent sessions per user?",
             "branch": 4,
-            "level": 38,
+            "level": 37,
             "order": 1
           }
         ],
@@ -12689,7 +12641,7 @@
           {
             "label": "Are there any controls implemented to limit the number of concurrent sessions per user?",
             "branch": 4,
-            "level": 38,
+            "level": 37,
             "order": 1
           }
         ],
@@ -12709,7 +12661,7 @@
     "section": "Limitation on multiple concurrent sessions (FTA_MCS)",
     "service_category": "Basic limitation on multiple concurrent sessions",
     "qtype": "S",
-    "qindex": 207,
+    "qindex": 206,
     "maxPoints": 20,
     "label": "Are there any controls implemented to limit the number of concurrent sessions per user?",
     "answers": [
@@ -12722,7 +12674,7 @@
           {
             "label": "Are there controls implemented to ensure that open sessions are automatically locked after a specified period of user inactivity?",
             "branch": 4,
-            "level": 39,
+            "level": 38,
             "order": 1
           }
         ],
@@ -12745,7 +12697,7 @@
           {
             "label": "Are there controls implemented to ensure that open sessions are automatically locked after a specified period of user inactivity?",
             "branch": 4,
-            "level": 39,
+            "level": 38,
             "order": 1
           }
         ],
@@ -12760,7 +12712,7 @@
           {
             "label": "Are there controls implemented to ensure that open sessions are automatically locked after a specified period of user inactivity?",
             "branch": 4,
-            "level": 39,
+            "level": 38,
             "order": 1
           }
         ],
@@ -12780,7 +12732,7 @@
     "section": "Session locking and termination (FTA_SSL)",
     "service_category": "TSF-initiated session locking",
     "qtype": "S",
-    "qindex": 208,
+    "qindex": 207,
     "maxPoints": 20,
     "label": "Are there controls implemented to ensure that open sessions are automatically locked after a specified period of user inactivity?",
     "answers": [
@@ -12793,7 +12745,7 @@
           {
             "label": "Are there methods implemented to provide users the capabilities to lock their own interactive sessions?",
             "branch": 4,
-            "level": 40,
+            "level": 39,
             "order": 1
           }
         ],
@@ -12816,7 +12768,7 @@
           {
             "label": "Are there methods implemented to provide users the capabilities to lock their own interactive sessions?",
             "branch": 4,
-            "level": 40,
+            "level": 39,
             "order": 1
           }
         ],
@@ -12836,7 +12788,7 @@
     "section": "Session locking and termination (FTA_SSL)",
     "service_category": "User-initiated locking",
     "qtype": "S",
-    "qindex": 209,
+    "qindex": 208,
     "maxPoints": 20,
     "label": "Are there methods implemented to provide users the capabilities to lock their own interactive sessions?",
     "answers": [
@@ -12849,7 +12801,7 @@
           {
             "label": "Are there functions implemented to provide users the capability to terminate their own interactive sessions?",
             "branch": 4,
-            "level": 41,
+            "level": 40,
             "order": 1
           }
         ],
@@ -12872,7 +12824,7 @@
           {
             "label": "Are there functions implemented to provide users the capability to terminate their own interactive sessions?",
             "branch": 4,
-            "level": 41,
+            "level": 40,
             "order": 1
           }
         ],
@@ -12892,7 +12844,7 @@
     "section": "Session locking and termination (FTA_SSL)",
     "service_category": "User-initiated termination",
     "qtype": "S",
-    "qindex": 210,
+    "qindex": 209,
     "maxPoints": 20,
     "label": "Are there functions implemented to provide users the capability to terminate their own interactive sessions?",
     "answers": [
@@ -12905,7 +12857,7 @@
           {
             "label": "Is there a configurable banner service available to authorized administrators to warn authorized users?",
             "branch": 4,
-            "level": 42,
+            "level": 41,
             "order": 1
           }
         ],
@@ -12928,7 +12880,7 @@
           {
             "label": "Is there a configurable banner service available to authorized administrators to warn authorized users?",
             "branch": 4,
-            "level": 42,
+            "level": 41,
             "order": 1
           }
         ],
@@ -12948,7 +12900,7 @@
     "section": "TOE access banners (FTA_TAB)",
     "service_category": "TOE access banners (FTA_TAB)",
     "qtype": "S",
-    "qindex": 211,
+    "qindex": 210,
     "maxPoints": 25,
     "label": "Is there a configurable banner service available to authorized administrators to warn authorized users?",
     "answers": [
