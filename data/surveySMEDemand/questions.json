@@ -1869,7 +1869,7 @@
         "atype": "P",
         "questions_map": [
           {
-            "label": "What are your criteria for evaluating cybersecurity services or solutions?",
+            "label": "What are your key drivers in the adoption of cybersecurity services or solutions?",
             "branch": 0,
             "level": 24,
             "order": 1
@@ -1883,7 +1883,7 @@
         "atype": "P",
         "questions_map": [
           {
-            "label": "What are your criteria for evaluating cybersecurity services or solutions?",
+            "label": "What are your key drivers in the adoption of cybersecurity services or solutions?",
             "branch": 0,
             "level": 24,
             "order": 1
@@ -1898,7 +1898,7 @@
     "service_category": "Market and service providers",
     "qtype": "MT",
     "qindex": 25,
-    "label": "What are your criteria for evaluating cybersecurity services or solutions?",
+    "label": "What are your key drivers in the adoption of cybersecurity services or solutions?",
     "answers": [
       {
         "aindex": 1,
@@ -1906,13 +1906,13 @@
         "atype": "P",
         "questions_map": [
           {
-            "label": "Are the cybersecurity services available on the market suited to your needs?",
+            "label": "What are your criteria for evaluating cybersecurity services or solutions?",
             "branch": 0,
             "level": 25,
             "order": 1
           }
         ],
-        "label": "Price"
+        "label": "Your company is facing a cybersecurity incident"
       },
       {
         "aindex": 2,
@@ -1920,13 +1920,13 @@
         "atype": "P",
         "questions_map": [
           {
-            "label": "Are the cybersecurity services available on the market suited to your needs?",
+            "label": "What are your criteria for evaluating cybersecurity services or solutions?",
             "branch": 0,
             "level": 25,
             "order": 1
           }
         ],
-        "label": "Comprehensiveness"
+        "label": "A client has requested your company to adopt new tools"
       },
       {
         "aindex": 3,
@@ -1934,13 +1934,13 @@
         "atype": "P",
         "questions_map": [
           {
-            "label": "Are the cybersecurity services available on the market suited to your needs?",
+            "label": "What are your criteria for evaluating cybersecurity services or solutions?",
             "branch": 0,
             "level": 25,
             "order": 1
           }
         ],
-        "label": "Ease of use"
+        "label": "Your company's IT service provider advised you to adopt new tools"
       },
       {
         "aindex": 4,
@@ -1948,13 +1948,13 @@
         "atype": "P",
         "questions_map": [
           {
-            "label": "Are the cybersecurity services available on the market suited to your needs?",
+            "label": "What are your criteria for evaluating cybersecurity services or solutions?",
             "branch": 0,
             "level": 25,
             "order": 1
           }
         ],
-        "label": "Trust in the seller"
+        "label": "You have heard about new threats from peers / other companies in your sector of activity"
       },
       {
         "aindex": 5,
@@ -1962,13 +1962,13 @@
         "atype": "P",
         "questions_map": [
           {
-            "label": "Are the cybersecurity services available on the market suited to your needs?",
+            "label": "What are your criteria for evaluating cybersecurity services or solutions?",
             "branch": 0,
             "level": 25,
             "order": 1
           }
         ],
-        "label": "Technical specifications"
+        "label": "You have heard about new threats in the news"
       },
       {
         "aindex": 6,
@@ -1976,13 +1976,13 @@
         "atype": "P",
         "questions_map": [
           {
-            "label": "Are the cybersecurity services available on the market suited to your needs?",
+            "label": "What are your criteria for evaluating cybersecurity services or solutions?",
             "branch": 0,
             "level": 25,
             "order": 1
           }
         ],
-        "label": "Certification"
+        "label": "Legal constraints"
       },
       {
         "aindex": 7,
@@ -1990,7 +1990,7 @@
         "atype": "P",
         "questions_map": [
           {
-            "label": "Are the cybersecurity services available on the market suited to your needs?",
+            "label": "What are your criteria for evaluating cybersecurity services or solutions?",
             "branch": 0,
             "level": 25,
             "order": 1
@@ -2004,7 +2004,7 @@
         "atype": "T",
         "questions_map": [
           {
-            "label": "Are the cybersecurity services available on the market suited to your needs?",
+            "label": "What are your criteria for evaluating cybersecurity services or solutions?",
             "branch": 0,
             "level": 25,
             "order": 1
@@ -2017,8 +2017,129 @@
   {
     "section": "Market and service providers",
     "service_category": "Market and service providers",
-    "qtype": "S",
+    "qtype": "MT",
     "qindex": 26,
+    "label": "What are your criteria for evaluating cybersecurity services or solutions?",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Are the cybersecurity services available on the market suited to your needs?",
+            "branch": 0,
+            "level": 26,
+            "order": 1
+          }
+        ],
+        "label": "Price"
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Are the cybersecurity services available on the market suited to your needs?",
+            "branch": 0,
+            "level": 26,
+            "order": 1
+          }
+        ],
+        "label": "Comprehensiveness"
+      },
+      {
+        "aindex": 3,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Are the cybersecurity services available on the market suited to your needs?",
+            "branch": 0,
+            "level": 26,
+            "order": 1
+          }
+        ],
+        "label": "Ease of use"
+      },
+      {
+        "aindex": 4,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Are the cybersecurity services available on the market suited to your needs?",
+            "branch": 0,
+            "level": 26,
+            "order": 1
+          }
+        ],
+        "label": "Trust in the seller"
+      },
+      {
+        "aindex": 5,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Are the cybersecurity services available on the market suited to your needs?",
+            "branch": 0,
+            "level": 26,
+            "order": 1
+          }
+        ],
+        "label": "Technical specifications"
+      },
+      {
+        "aindex": 6,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Are the cybersecurity services available on the market suited to your needs?",
+            "branch": 0,
+            "level": 26,
+            "order": 1
+          }
+        ],
+        "label": "Certification"
+      },
+      {
+        "aindex": 7,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Are the cybersecurity services available on the market suited to your needs?",
+            "branch": 0,
+            "level": 26,
+            "order": 1
+          }
+        ],
+        "label": "I don't know"
+      },
+      {
+        "aindex": 8,
+        "uniqueAnswer": false,
+        "atype": "T",
+        "questions_map": [
+          {
+            "label": "Are the cybersecurity services available on the market suited to your needs?",
+            "branch": 0,
+            "level": 26,
+            "order": 1
+          }
+        ],
+        "label": "Other"
+      }
+    ]
+  },
+  {
+    "section": "Market and service providers",
+    "service_category": "Market and service providers",
+    "qtype": "S",
+    "qindex": 27,
     "label": "Are the cybersecurity services available on the market suited to your needs?",
     "answers": [
       {
@@ -2029,7 +2150,7 @@
           {
             "label": "How much trust do you have in your cybersecurity service providers?",
             "branch": 0,
-            "level": 26,
+            "level": 27,
             "order": 1
           }
         ],
@@ -2043,7 +2164,7 @@
           {
             "label": "If not, what are you missing?",
             "branch": 0,
-            "level": 26,
+            "level": 27,
             "order": 1
           }
         ],
@@ -2057,7 +2178,7 @@
           {
             "label": "If not, what are you missing?",
             "branch": 0,
-            "level": 26,
+            "level": 27,
             "order": 1
           }
         ],
@@ -2071,7 +2192,7 @@
           {
             "label": "How much trust do you have in your cybersecurity service providers?",
             "branch": 0,
-            "level": 26,
+            "level": 27,
             "order": 1
           }
         ],
@@ -2083,7 +2204,7 @@
     "section": "Market and service providers",
     "service_category": "Market and service providers",
     "qtype": "T",
-    "qindex": 27,
+    "qindex": 28,
     "label": "If not, what are you missing?",
     "answers": [
       {
@@ -2094,7 +2215,7 @@
           {
             "label": "How much trust do you have in your cybersecurity service providers?",
             "branch": 0,
-            "level": 27,
+            "level": 28,
             "order": 1
           }
         ],
@@ -2106,7 +2227,7 @@
     "section": "Market and service providers",
     "service_category": "Market and service providers",
     "qtype": "S",
-    "qindex": 28,
+    "qindex": 29,
     "label": "How much trust do you have in your cybersecurity service providers?",
     "answers": [
       {
@@ -2117,7 +2238,7 @@
           {
             "label": "Is your IT service provider also your internet service provider?",
             "branch": 0,
-            "level": 28,
+            "level": 29,
             "order": 1
           }
         ],
@@ -2131,7 +2252,7 @@
           {
             "label": "Is your IT service provider also your internet service provider?",
             "branch": 0,
-            "level": 28,
+            "level": 29,
             "order": 1
           }
         ],
@@ -2145,7 +2266,7 @@
           {
             "label": "If not, what is your main issue?",
             "branch": 0,
-            "level": 28,
+            "level": 29,
             "order": 1
           }
         ],
@@ -2159,7 +2280,7 @@
           {
             "label": "If not, what is your main issue?",
             "branch": 0,
-            "level": 28,
+            "level": 29,
             "order": 1
           }
         ],
@@ -2173,7 +2294,7 @@
           {
             "label": "If not, what is your main issue?",
             "branch": 0,
-            "level": 28,
+            "level": 29,
             "order": 1
           }
         ],
@@ -2185,7 +2306,7 @@
     "section": "Market and service providers",
     "service_category": "Market and service providers",
     "qtype": "T",
-    "qindex": 29,
+    "qindex": 30,
     "label": "If not, what is your main issue?",
     "answers": [
       {
@@ -2196,7 +2317,7 @@
           {
             "label": "Is your IT service provider also your internet service provider?",
             "branch": 0,
-            "level": 29,
+            "level": 30,
             "order": 1
           }
         ],
@@ -2208,7 +2329,7 @@
     "section": "Market and service providers",
     "service_category": "Market and service providers",
     "qtype": "S",
-    "qindex": 30,
+    "qindex": 31,
     "label": "Is your IT service provider also your internet service provider?",
     "answers": [
       {
@@ -2217,9 +2338,9 @@
         "atype": "P",
         "questions_map": [
           {
-            "label": "Have your employees ever had a cyber incident on their personal devices?",
+            "label": "Have your employees ever had a cyber incident on the personal devices they use for work?",
             "branch": 0,
-            "level": 30,
+            "level": 31,
             "order": 1
           }
         ],
@@ -2231,9 +2352,9 @@
         "atype": "P",
         "questions_map": [
           {
-            "label": "Have your employees ever had a cyber incident on their personal devices?",
+            "label": "Have your employees ever had a cyber incident on the personal devices they use for work?",
             "branch": 0,
-            "level": 30,
+            "level": 31,
             "order": 1
           }
         ],
@@ -2245,9 +2366,9 @@
         "atype": "P",
         "questions_map": [
           {
-            "label": "Have your employees ever had a cyber incident on their personal devices?",
+            "label": "Have your employees ever had a cyber incident on the personal devices they use for work?",
             "branch": 0,
-            "level": 30,
+            "level": 31,
             "order": 1
           }
         ],
@@ -2259,58 +2380,7 @@
         "atype": "P",
         "questions_map": [
           {
-            "label": "Have your employees ever had a cyber incident on their personal devices?",
-            "branch": 0,
-            "level": 30,
-            "order": 1
-          }
-        ],
-        "label": "I don't know"
-      }
-    ]
-  },
-  {
-    "section": "Incident",
-    "service_category": "Incident",
-    "qtype": "S",
-    "qindex": 31,
-    "label": "Have your employees ever had a cyber incident on their personal devices?",
-    "answers": [
-      {
-        "aindex": 1,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "questions_map": [
-          {
-            "label": "Has this had an impact on your business?",
-            "branch": 0,
-            "level": 31,
-            "order": 1
-          }
-        ],
-        "label": "Yes"
-      },
-      {
-        "aindex": 2,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "questions_map": [
-          {
-            "label": "Has this had an impact on your business?",
-            "branch": 0,
-            "level": 31,
-            "order": 1
-          }
-        ],
-        "label": "No"
-      },
-      {
-        "aindex": 3,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "questions_map": [
-          {
-            "label": "Has this had an impact on your business?",
+            "label": "Have your employees ever had a cyber incident on the personal devices they use for work?",
             "branch": 0,
             "level": 31,
             "order": 1
@@ -2325,7 +2395,7 @@
     "service_category": "Incident",
     "qtype": "S",
     "qindex": 32,
-    "label": "Has this had an impact on your business?",
+    "label": "Have your employees ever had a cyber incident on the personal devices they use for work?",
     "answers": [
       {
         "aindex": 1,
@@ -2333,7 +2403,7 @@
         "atype": "P",
         "questions_map": [
           {
-            "label": "Have you been a victim of cyber attacks?",
+            "label": "Did this incident have an impact on your business?",
             "branch": 0,
             "level": 32,
             "order": 1
@@ -2347,7 +2417,7 @@
         "atype": "P",
         "questions_map": [
           {
-            "label": "Have you been a victim of cyber attacks?",
+            "label": "Did this incident have an impact on your business?",
             "branch": 0,
             "level": 32,
             "order": 1
@@ -2361,9 +2431,60 @@
         "atype": "P",
         "questions_map": [
           {
-            "label": "Have you been a victim of cyber attacks?",
+            "label": "Did this incident have an impact on your business?",
             "branch": 0,
             "level": 32,
+            "order": 1
+          }
+        ],
+        "label": "I don't know"
+      }
+    ]
+  },
+  {
+    "section": "Incident",
+    "service_category": "Incident",
+    "qtype": "S",
+    "qindex": 33,
+    "label": "Did this incident have an impact on your business?",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Have you been a victim of cyber attacks?",
+            "branch": 0,
+            "level": 33,
+            "order": 1
+          }
+        ],
+        "label": "Yes"
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Have you been a victim of cyber attacks?",
+            "branch": 0,
+            "level": 33,
+            "order": 1
+          }
+        ],
+        "label": "No"
+      },
+      {
+        "aindex": 3,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Have you been a victim of cyber attacks?",
+            "branch": 0,
+            "level": 33,
             "order": 1
           }
         ],
@@ -2377,7 +2498,7 @@
           {
             "label": "Have you been a victim of cyber attacks?",
             "branch": 0,
-            "level": 32,
+            "level": 33,
             "order": 1
           }
         ],
@@ -2389,7 +2510,7 @@
     "section": "Incident",
     "service_category": "Incident",
     "qtype": "ST",
-    "qindex": 33,
+    "qindex": 34,
     "label": "Have you been a victim of cyber attacks?",
     "answers": [
       {
@@ -2400,7 +2521,7 @@
           {
             "label": "Have you ever paid a ransom online?",
             "branch": 0,
-            "level": 33,
+            "level": 34,
             "order": 1
           }
         ],
@@ -2414,7 +2535,7 @@
           {
             "label": "Have you ever paid a ransom online?",
             "branch": 0,
-            "level": 33,
+            "level": 34,
             "order": 1
           }
         ],
@@ -2428,7 +2549,7 @@
           {
             "label": "Have you ever paid a ransom online?",
             "branch": 0,
-            "level": 33,
+            "level": 34,
             "order": 1
           }
         ],
@@ -2442,7 +2563,7 @@
           {
             "label": "Have you ever paid a ransom online?",
             "branch": 0,
-            "level": 33,
+            "level": 34,
             "order": 1
           }
         ],
@@ -2454,7 +2575,7 @@
     "section": "Incident",
     "service_category": "Incident",
     "qtype": "ST",
-    "qindex": 34,
+    "qindex": 35,
     "label": "Have you ever paid a ransom online?",
     "answers": [
       {
@@ -2465,7 +2586,7 @@
           {
             "label": "Would you do it again?",
             "branch": 0,
-            "level": 34,
+            "level": 35,
             "order": 1
           }
         ],
@@ -2477,9 +2598,9 @@
         "atype": "P",
         "questions_map": [
           {
-            "label": "Do you know your cybersecurity and data protection obligations?",
+            "label": "Do you know your cybersecurity and data protection legal obligations?",
             "branch": 0,
-            "level": 34,
+            "level": 35,
             "order": 1
           }
         ],
@@ -2491,9 +2612,9 @@
         "atype": "P",
         "questions_map": [
           {
-            "label": "Do you know your cybersecurity and data protection obligations?",
+            "label": "Do you know your cybersecurity and data protection legal obligations?",
             "branch": 0,
-            "level": 34,
+            "level": 35,
             "order": 1
           }
         ],
@@ -2505,9 +2626,9 @@
         "atype": "T",
         "questions_map": [
           {
-            "label": "Do you know your cybersecurity and data protection obligations?",
+            "label": "Do you know your cybersecurity and data protection legal obligations?",
             "branch": 0,
-            "level": 34,
+            "level": 35,
             "order": 1
           }
         ],
@@ -2519,7 +2640,7 @@
     "section": "Incident",
     "service_category": "Incident",
     "qtype": "S",
-    "qindex": 35,
+    "qindex": 36,
     "label": "Would you do it again?",
     "answers": [
       {
@@ -2528,72 +2649,7 @@
         "atype": "P",
         "questions_map": [
           {
-            "label": "Do you know your cybersecurity and data protection obligations?",
-            "branch": 0,
-            "level": 35,
-            "order": 1
-          }
-        ],
-        "label": "Yes"
-      },
-      {
-        "aindex": 2,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "questions_map": [
-          {
-            "label": "Do you know your cybersecurity and data protection obligations?",
-            "branch": 0,
-            "level": 35,
-            "order": 1
-          }
-        ],
-        "label": "No"
-      },
-      {
-        "aindex": 3,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "questions_map": [
-          {
-            "label": "Do you know your cybersecurity and data protection obligations?",
-            "branch": 0,
-            "level": 35,
-            "order": 1
-          }
-        ],
-        "label": "I don't know"
-      },
-      {
-        "aindex": 4,
-        "uniqueAnswer": true,
-        "atype": "T",
-        "questions_map": [
-          {
-            "label": "Do you know your cybersecurity and data protection obligations?",
-            "branch": 0,
-            "level": 35,
-            "order": 1
-          }
-        ],
-        "label": "Other"
-      }
-    ]
-  },
-  {
-    "section": "Regulations and public actions",
-    "service_category": "Regulations and public actions",
-    "qtype": "ST",
-    "qindex": 36,
-    "label": "Do you know your cybersecurity and data protection obligations?",
-    "answers": [
-      {
-        "aindex": 1,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "questions_map": [
-          {
-            "label": "(If yes) do you understand your obligations?",
+            "label": "Do you know your cybersecurity and data protection legal obligations?",
             "branch": 0,
             "level": 36,
             "order": 1
@@ -2607,7 +2663,7 @@
         "atype": "P",
         "questions_map": [
           {
-            "label": "Does your company have cybersecurity certification?",
+            "label": "Do you know your cybersecurity and data protection legal obligations?",
             "branch": 0,
             "level": 36,
             "order": 1
@@ -2621,7 +2677,7 @@
         "atype": "P",
         "questions_map": [
           {
-            "label": "Does your company have cybersecurity certification?",
+            "label": "Do you know your cybersecurity and data protection legal obligations?",
             "branch": 0,
             "level": 36,
             "order": 1
@@ -2632,24 +2688,10 @@
       {
         "aindex": 4,
         "uniqueAnswer": true,
-        "atype": "P",
-        "questions_map": [
-          {
-            "label": "(If yes) do you understand your obligations?",
-            "branch": 0,
-            "level": 36,
-            "order": 1
-          }
-        ],
-        "label": "Partially"
-      },
-      {
-        "aindex": 5,
-        "uniqueAnswer": true,
         "atype": "T",
         "questions_map": [
           {
-            "label": "Does your company have cybersecurity certification?",
+            "label": "Do you know your cybersecurity and data protection legal obligations?",
             "branch": 0,
             "level": 36,
             "order": 1
@@ -2664,7 +2706,7 @@
     "service_category": "Regulations and public actions",
     "qtype": "ST",
     "qindex": 37,
-    "label": "(If yes) do you understand your obligations?",
+    "label": "Do you know your cybersecurity and data protection legal obligations?",
     "answers": [
       {
         "aindex": 1,
@@ -2672,7 +2714,7 @@
         "atype": "P",
         "questions_map": [
           {
-            "label": "Does your company have cybersecurity certification?",
+            "label": "(If yes) do you understand your obligations?",
             "branch": 0,
             "level": 37,
             "order": 1
@@ -2714,9 +2756,88 @@
         "atype": "P",
         "questions_map": [
           {
+            "label": "(If yes) do you understand your obligations?",
+            "branch": 0,
+            "level": 37,
+            "order": 1
+          }
+        ],
+        "label": "Partially"
+      },
+      {
+        "aindex": 5,
+        "uniqueAnswer": true,
+        "atype": "T",
+        "questions_map": [
+          {
             "label": "Does your company have cybersecurity certification?",
             "branch": 0,
             "level": 37,
+            "order": 1
+          }
+        ],
+        "label": "Other"
+      }
+    ]
+  },
+  {
+    "section": "Regulations and public actions",
+    "service_category": "Regulations and public actions",
+    "qtype": "ST",
+    "qindex": 38,
+    "label": "(If yes) do you understand your obligations?",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Does your company have cybersecurity certification?",
+            "branch": 0,
+            "level": 38,
+            "order": 1
+          }
+        ],
+        "label": "Yes"
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Does your company have cybersecurity certification?",
+            "branch": 0,
+            "level": 38,
+            "order": 1
+          }
+        ],
+        "label": "No"
+      },
+      {
+        "aindex": 3,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Does your company have cybersecurity certification?",
+            "branch": 0,
+            "level": 38,
+            "order": 1
+          }
+        ],
+        "label": "I don't know"
+      },
+      {
+        "aindex": 4,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Does your company have cybersecurity certification?",
+            "branch": 0,
+            "level": 38,
             "order": 1
           }
         ],
@@ -2728,7 +2849,7 @@
     "section": "Certification",
     "service_category": "Certification",
     "qtype": "S",
-    "qindex": 38,
+    "qindex": 39,
     "label": "Does your company have cybersecurity certification?",
     "answers": [
       {
