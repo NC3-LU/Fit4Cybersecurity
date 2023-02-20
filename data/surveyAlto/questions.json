@@ -39,13 +39,13 @@
   {
     "section": "ALTO",
     "service_category": "Le RGPD en général",
-    "qtype": "S",
+    "qtype": "M",
     "qindex": 2,
     "label": "Quel/le organisme/personne (sa fonction) soutient votre PME dans votre mise en conformité au RGPD ?",
     "answers": [
       {
         "aindex": 1,
-        "uniqueAnswer": true,
+        "uniqueAnswer": false,
         "atype": "P",
         "label": "La CNPD",
         "questions_map": [
@@ -59,7 +59,7 @@
       },
       {
         "aindex": 2,
-        "uniqueAnswer": true,
+        "uniqueAnswer": false,
         "atype": "P",
         "label": "Un délégué à la protection des données interne",
         "questions_map": [
@@ -73,7 +73,7 @@
       },
       {
         "aindex": 3,
-        "uniqueAnswer": true,
+        "uniqueAnswer": false,
         "atype": "P",
         "label": "Un délégué à la protection des données externe",
         "questions_map": [
@@ -87,7 +87,7 @@
       },
       {
         "aindex": 4,
-        "uniqueAnswer": true,
+        "uniqueAnswer": false,
         "atype": "P",
         "label": "Un avocat",
         "questions_map": [
@@ -101,7 +101,7 @@
       },
       {
         "aindex": 5,
-        "uniqueAnswer": true,
+        "uniqueAnswer": false,
         "atype": "P",
         "label": "Une société de conseils",
         "questions_map": [
@@ -115,7 +115,7 @@
       },
       {
         "aindex": 6,
-        "uniqueAnswer": true,
+        "uniqueAnswer": false,
         "atype": "P",
         "label": "Une chambre/union professionnelle",
         "questions_map": [
@@ -129,7 +129,7 @@
       },
       {
         "aindex": 7,
-        "uniqueAnswer": true,
+        "uniqueAnswer": false,
         "atype": "P",
         "label": "Notre PME n'est pas soutenu par un organisme/une personne extérieure",
         "questions_map": [
@@ -160,13 +160,13 @@
   {
     "section": "ALTO",
     "service_category": "Le RGPD en général",
-    "qtype": "S",
+    "qtype": "M",
     "qindex": 3,
     "label": "À quelle organisme/personne (sa fonction) votre entreprise s'adresse-elle pour obtenir des informations/une aide en la matière ?",
     "answers": [
       {
         "aindex": 1,
-        "uniqueAnswer": true,
+        "uniqueAnswer": false,
         "atype": "P",
         "label": "La CNPD",
         "questions_map": [
@@ -180,7 +180,7 @@
       },
       {
         "aindex": 2,
-        "uniqueAnswer": true,
+        "uniqueAnswer": false,
         "atype": "P",
         "label": "Un délégué à la protection des données interne",
         "questions_map": [
@@ -194,7 +194,7 @@
       },
       {
         "aindex": 3,
-        "uniqueAnswer": true,
+        "uniqueAnswer": false,
         "atype": "P",
         "label": "Un délégué à la protection des données externe",
         "questions_map": [
@@ -208,7 +208,7 @@
       },
       {
         "aindex": 4,
-        "uniqueAnswer": true,
+        "uniqueAnswer": false,
         "atype": "P",
         "label": "Un avocat",
         "questions_map": [
@@ -222,7 +222,7 @@
       },
       {
         "aindex": 5,
-        "uniqueAnswer": true,
+        "uniqueAnswer": false,
         "atype": "P",
         "label": "Une société de conseils",
         "questions_map": [
@@ -236,7 +236,7 @@
       },
       {
         "aindex": 6,
-        "uniqueAnswer": true,
+        "uniqueAnswer": false,
         "atype": "P",
         "label": "Une chambre/union professionnelle",
         "questions_map": [
@@ -250,7 +250,7 @@
       },
       {
         "aindex": 7,
-        "uniqueAnswer": true,
+        "uniqueAnswer": false,
         "atype": "P",
         "label": "Notre PME n'est pas soutenu par un organisme/une personne extérieure",
         "questions_map": [
@@ -264,7 +264,7 @@
       },
       {
         "aindex": 8,
-        "uniqueAnswer": true,
+        "uniqueAnswer": false,
         "atype": "P",
         "label": "Je ne sais pas",
         "questions_map": [
@@ -913,7 +913,7 @@
         "label": "Non",
         "questions_map": [
           {
-            "label": "Votre entreprise a-t-elle établie des finalités claires pour ses traitements de données ?",
+            "label": "Votre entreprise a-t-elle connaissance des principes « Privacy by default / by design » ?",
             "branch": 0,
             "level": 11,
             "order": 1
