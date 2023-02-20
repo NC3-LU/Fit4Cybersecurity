@@ -4,6 +4,7 @@ from survey.models import SurveyQuestion
 from survey.models import SurveyQuestionAnswer
 from survey.models import SurveySection
 from survey.models import SurveyUser
+from survey.models import SurveyUserAnswer
 
 
 class SurveySectionSerializer(serializers.ModelSerializer):
@@ -28,3 +29,9 @@ class SurveyUserSerializer(serializers.ModelSerializer):
     class Meta:
         model = SurveyUser
         fields = ["user_id", "chosen_lang", "status", "created_at", "updated_at"]
+
+
+class SurveyUserAnswerSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = SurveyUserAnswer
+        fields = ["user", "answer", "uvalue", "content"]

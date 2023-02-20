@@ -5,11 +5,13 @@ from rest_framework.views import APIView
 from .serializers import SurveyQuestionAnszerSerializer
 from .serializers import SurveyQuestionSerializer
 from .serializers import SurveySectionSerializer
+from .serializers import SurveyUserAnswerSerializer
 from .serializers import SurveyUserSerializer
 from survey.models import SurveyQuestion
 from survey.models import SurveyQuestionAnswer
 from survey.models import SurveySection
 from survey.models import SurveyUser
+from survey.models import SurveyUserAnswer
 
 
 #
@@ -98,4 +100,22 @@ class SurveyUserApiView(APIView):
         """
         objects = SurveyUser.objects.filter(user_id=id)
         serializer = SurveyUserSerializer(objects, many=True)
+        return Response(serializer.data, status=status.HTTP_200_OK)
+
+
+#
+# Model: SurveryUserAnswer
+#
+
+
+class SurveyUserAnswerApiView(APIView):
+    permission_classes = []
+
+    # Get an elemtent
+    def get(self, request, id):
+        """
+        Get an item.
+        """
+        objects = SurveyUserAnswer.objects.filter(user__user_id=id)
+        serializer = SurveyUserAnswerSerializer(objects, many=True)
         return Response(serializer.data, status=status.HTTP_200_OK)
