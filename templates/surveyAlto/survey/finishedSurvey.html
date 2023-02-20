@@ -23,13 +23,10 @@
 {% block content %}
 <div class="row px-4">
     <div class="col-10">
-        <h2>{{ _('Merci beaucoup pour votre temps!') }}</h2>
-        {% block finished_survey_description %}
-        
+        {% block finished_survey_description %}       
         <p class="text-justify">
-            <h4>{{ 'Rappel à participation' }}:</h4>
             {% blocktranslate trimmed %}
-            La phase « Pilote » du projet ALTO nécessitera un appel à participation des PME lors du 4ème trimestre de l'année 2023. Un appel à participation sera communiqué en ce sens.
+            Nous vous remercions pour votre participation au projet ALTO, outil d'auto-évaluation dédié à la mise en conformité des PME aux exigences du RGPD.
             {% endblocktranslate %}
         </p>
         {% endblock %}
