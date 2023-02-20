@@ -44,6 +44,7 @@ CUSTOM = {
     },
     # Available modules
     "modules": {
+        "displayProgressBar": True,
         "reportDownload": False,
         "reportEmail": False,
         "requestDiagnostic": False,
