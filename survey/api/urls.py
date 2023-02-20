@@ -3,6 +3,10 @@ from django.views.generic import TemplateView
 
 from .views import SurveyQuestionAnswerApiView
 from .views import SurveyQuestionApiView
+from .views import SurveySectionApiView
+from .views import SurveyUserApiView
+from .views import SurveyUsersApiView
+
 
 urlpatterns = [
     path(
@@ -13,6 +17,9 @@ urlpatterns = [
         ),
         name="swagger-ui",
     ),
-    path("survey_question", SurveyQuestionApiView.as_view()),
-    path("survey_question_answer", SurveyQuestionAnswerApiView.as_view()),
+    path("survey_section/", SurveySectionApiView.as_view()),
+    path("survey_question/", SurveyQuestionApiView.as_view()),
+    path("survey_question_answer/", SurveyQuestionAnswerApiView.as_view()),
+    path("survey_user/", SurveyUsersApiView.as_view()),
+    path("survey_user/<uuid:id>/", SurveyUserApiView.as_view()),
 ]
