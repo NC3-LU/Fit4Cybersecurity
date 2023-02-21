@@ -1,6 +1,7 @@
 from rest_framework import status
 from rest_framework.authentication import BasicAuthentication
 from rest_framework.authentication import SessionAuthentication
+from rest_framework.permissions import IsAdminUser
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 from rest_framework.views import APIView
@@ -25,7 +26,7 @@ from survey.models import SurveyUserAnswer
 class SurveySectionApiView(APIView):
     # add permission to check if user is authenticated
     authentication_classes = [SessionAuthentication, BasicAuthentication]
-    permission_classes = [IsAuthenticated]
+    permission_classes = [IsAuthenticated, IsAdminUser]
 
     # List all
     def get(self, request, *args, **kwargs):
@@ -45,7 +46,7 @@ class SurveySectionApiView(APIView):
 class SurveyQuestionApiView(APIView):
     # add permission to check if user is authenticated
     authentication_classes = [SessionAuthentication, BasicAuthentication]
-    permission_classes = [IsAuthenticated]
+    permission_classes = [IsAuthenticated, IsAdminUser]
 
     # List all
     def get(self, request, *args, **kwargs):
@@ -65,7 +66,7 @@ class SurveyQuestionApiView(APIView):
 class SurveyQuestionAnswerApiView(APIView):
     # add permission to check if user is authenticated
     authentication_classes = [SessionAuthentication, BasicAuthentication]
-    permission_classes = [IsAuthenticated]
+    permission_classes = [IsAuthenticated, IsAdminUser]
 
     # List all
     def get(self, request, *args, **kwargs):
@@ -84,7 +85,7 @@ class SurveyQuestionAnswerApiView(APIView):
 
 class SurveyUsersApiView(APIView):
     authentication_classes = [SessionAuthentication, BasicAuthentication]
-    permission_classes = [IsAuthenticated]
+    permission_classes = [IsAuthenticated, IsAdminUser]
     queryset = SurveyUser.objects.all().order_by("-created_at")
 
     # List all
@@ -99,8 +100,7 @@ class SurveyUsersApiView(APIView):
 
 class SurveyUserApiView(APIView):
     authentication_classes = [SessionAuthentication, BasicAuthentication]
-    permission_classes = [IsAuthenticated]
-    permission_classes = []
+    permission_classes = [IsAuthenticated, IsAdminUser]
 
     # Get an elemtent
     def get(self, request, id):
@@ -119,7 +119,7 @@ class SurveyUserApiView(APIView):
 
 class SurveyUserAnswerApiView(APIView):
     authentication_classes = [SessionAuthentication, BasicAuthentication]
-    permission_classes = [IsAuthenticated]
+    permission_classes = [IsAuthenticated, IsAdminUser]
 
     # Get an elemtent
     def get(self, request, id):
