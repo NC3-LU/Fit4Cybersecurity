@@ -1,6 +1,7 @@
 from django.urls import path
 from django.views.generic import TemplateView
 
+from .views import RecommendationsApiView
 from .views import SurveyQuestionAnswerApiView
 from .views import SurveyQuestionApiView
 from .views import SurveySectionApiView
@@ -18,6 +19,7 @@ urlpatterns = [
         ),
         name="swagger-ui",
     ),
+    path("recommendation/", RecommendationsApiView.as_view()),
     path("survey_section/", SurveySectionApiView.as_view()),
     path("survey_question/", SurveyQuestionApiView.as_view()),
     path("survey_question_answer/", SurveyQuestionAnswerApiView.as_view()),

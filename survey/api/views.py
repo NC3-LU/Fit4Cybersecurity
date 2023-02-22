@@ -6,16 +6,38 @@ from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 from rest_framework.views import APIView
 
+from .serializers import RecommendationsSerializer
 from .serializers import SurveyQuestionAnszerSerializer
 from .serializers import SurveyQuestionSerializer
 from .serializers import SurveySectionSerializer
 from .serializers import SurveyUserAnswerSerializer
 from .serializers import SurveyUserSerializer
+from survey.models import Recommendations
 from survey.models import SurveyQuestion
 from survey.models import SurveyQuestionAnswer
 from survey.models import SurveySection
 from survey.models import SurveyUser
 from survey.models import SurveyUserAnswer
+
+
+#
+# Model: Recommendations
+#
+
+
+class RecommendationsApiView(APIView):
+    # add permission to check if user is authenticated
+    authentication_classes = [SessionAuthentication, BasicAuthentication]
+    permission_classes = [IsAuthenticated, IsAdminUser]
+
+    # List all
+    def get(self, request, *args, **kwargs):
+        """
+        List all the items.
+        """
+        objects = Recommendations.objects.all()
+        serializer = RecommendationsSerializer(objects, many=True)
+        return Response(serializer.data, status=status.HTTP_200_OK)
 
 
 #

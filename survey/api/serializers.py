@@ -1,10 +1,17 @@
 from rest_framework import serializers
 
+from survey.models import Recommendations
 from survey.models import SurveyQuestion
 from survey.models import SurveyQuestionAnswer
 from survey.models import SurveySection
 from survey.models import SurveyUser
 from survey.models import SurveyUserAnswer
+
+
+class RecommendationsSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Recommendations
+        fields = ["id", "label", "min_e_count", "max_e_count", "sector"]
 
 
 class SurveySectionSerializer(serializers.ModelSerializer):
