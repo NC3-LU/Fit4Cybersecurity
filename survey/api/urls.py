@@ -15,12 +15,11 @@ from .views import SurveyUsersApiView
 
 schema_view = get_schema_view(
     openapi.Info(
-        title="Snippets API",
+        title="Fit4Cybersecurity API",
         default_version="v1",
-        description="Test description",
-        terms_of_service="https://www.google.com/policies/terms/",
-        contact=openapi.Contact(email="contact@snippets.local"),
-        license=openapi.License(name="BSD License"),
+        description="Documentation of the Fit4Cybersecurity API.",
+        contact=openapi.Contact(email="opensource@nc3.lu"),
+        license=openapi.License(name="GNU Affero General Public License version 3"),
     ),
     public=True,
     permission_classes=[permissions.AllowAny],

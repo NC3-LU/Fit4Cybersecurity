@@ -116,7 +116,7 @@ paths:
           description: ''
       tags:
       - survey
-  /api/recommendation/:
+  /api/v1/recommendation/:
     get:
       operationId: listRecommendationsApis
       description: List all the items.
@@ -131,7 +131,7 @@ paths:
           description: ''
       tags:
       - api
-  /api/survey_section/:
+  /api/v1/survey_section/:
     get:
       operationId: listSurveySectionApis
       description: List all the items.
@@ -146,7 +146,7 @@ paths:
           description: ''
       tags:
       - api
-  /api/survey_question/:
+  /api/v1/survey_question/:
     get:
       operationId: listSurveyQuestionApis
       description: List all the items.
@@ -161,7 +161,7 @@ paths:
           description: ''
       tags:
       - api
-  /api/survey_question_answer/:
+  /api/v1/survey_question_answer/:
     get:
       operationId: listSurveyQuestionAnswerApis
       description: List all the items.
@@ -176,7 +176,7 @@ paths:
           description: ''
       tags:
       - api
-  /api/survey_user/:
+  /api/v1/survey_user/:
     get:
       operationId: listSurveyUsers
       description: Get all the items.
@@ -191,7 +191,7 @@ paths:
           description: ''
       tags:
       - api
-  /api/survey_user/{id}/:
+  /api/v1/survey_user/{id}/:
     get:
       operationId: retrieveSurveyUserApi
       description: Get an item.
@@ -210,7 +210,7 @@ paths:
           description: ''
       tags:
       - api
-  /api/survey_user_answer/{id}/:
+  /api/v1/survey_user_answer/{id}/:
     get:
       operationId: retrieveSurveyUserAnswerApi
       description: Get an item.

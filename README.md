@@ -25,18 +25,9 @@ This tool allows instantiation of the following self-assessment websites:
 Instructions available in [reStructuredText](docs/installation.rst).
 
 
-## Documentation
-
-A [documentation](https://www.monarc.lu/documentation/MOSP-documentation)
-is available on the MONARC website.
-
-
 ## Contributing
 
 Please read the [CONTRIBUTING](CONTRIBUTING.md) instructions.
-
-
-
 
 
 ## License
