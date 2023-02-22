@@ -1,0 +1,231 @@
+openapi: 3.0.2
+info:
+  title: ''
+  version: ''
+paths:
+  /survey/api/recommendation/:
+    get:
+      operationId: listRecommendationsApis
+      description: List all the items.
+      parameters: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items: {}
+          description: ''
+      tags:
+      - survey
+  /survey/api/survey_section/:
+    get:
+      operationId: listSurveySectionApis
+      description: List all the items.
+      parameters: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items: {}
+          description: ''
+      tags:
+      - survey
+  /survey/api/survey_question/:
+    get:
+      operationId: listSurveyQuestionApis
+      description: List all the items.
+      parameters: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items: {}
+          description: ''
+      tags:
+      - survey
+  /survey/api/survey_question_answer/:
+    get:
+      operationId: listSurveyQuestionAnswerApis
+      description: List all the items.
+      parameters: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items: {}
+          description: ''
+      tags:
+      - survey
+  /survey/api/survey_user/:
+    get:
+      operationId: listSurveyUsers
+      description: Get all the items.
+      parameters: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items: {}
+          description: ''
+      tags:
+      - survey
+  /survey/api/survey_user/{id}/:
+    get:
+      operationId: retrieveSurveyUserApi
+      description: Get an item.
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: ''
+        schema:
+          type: string
+      responses:
+        '200':
+          content:
+            application/json:
+              schema: {}
+          description: ''
+      tags:
+      - survey
+  /survey/api/survey_user_answer/{id}/:
+    get:
+      operationId: retrieveSurveyUserAnswerApi
+      description: Get an item.
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: ''
+        schema:
+          type: string
+      responses:
+        '200':
+          content:
+            application/json:
+              schema: {}
+          description: ''
+      tags:
+      - survey
+  /api/recommendation/:
+    get:
+      operationId: listRecommendationsApis
+      description: List all the items.
+      parameters: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items: {}
+          description: ''
+      tags:
+      - api
+  /api/survey_section/:
+    get:
+      operationId: listSurveySectionApis
+      description: List all the items.
+      parameters: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items: {}
+          description: ''
+      tags:
+      - api
+  /api/survey_question/:
+    get:
+      operationId: listSurveyQuestionApis
+      description: List all the items.
+      parameters: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items: {}
+          description: ''
+      tags:
+      - api
+  /api/survey_question_answer/:
+    get:
+      operationId: listSurveyQuestionAnswerApis
+      description: List all the items.
+      parameters: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items: {}
+          description: ''
+      tags:
+      - api
+  /api/survey_user/:
+    get:
+      operationId: listSurveyUsers
+      description: Get all the items.
+      parameters: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items: {}
+          description: ''
+      tags:
+      - api
+  /api/survey_user/{id}/:
+    get:
+      operationId: retrieveSurveyUserApi
+      description: Get an item.
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: ''
+        schema:
+          type: string
+      responses:
+        '200':
+          content:
+            application/json:
+              schema: {}
+          description: ''
+      tags:
+      - api
+  /api/survey_user_answer/{id}/:
+    get:
+      operationId: retrieveSurveyUserAnswerApi
+      description: Get an item.
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: ''
+        schema:
+          type: string
+      responses:
+        '200':
+          content:
+            application/json:
+              schema: {}
+          description: ''
+      tags:
+      - api
