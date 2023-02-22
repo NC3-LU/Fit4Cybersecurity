@@ -106,6 +106,7 @@ INSTALLED_APPS = [
     "django_countries",
     "bootstrap_datepicker_plus",
     "rest_framework",
+    "drf_yasg",
     "corsheaders",
 ]
 
