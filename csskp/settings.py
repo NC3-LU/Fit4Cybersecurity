@@ -206,9 +206,14 @@ SPECTACULAR_SETTINGS = {
     "SWAGGER_UI_DIST": "SIDECAR",  # shorthand to use the sidecar instead
     "SWAGGER_UI_FAVICON_HREF": "SIDECAR",
     "REDOC_DIST": "SIDECAR",
-    "TITLE": "Fit4CyberSecurity",
+    "TITLE": "Fit4Cybersecurity API documentation.",
     "DESCRIPTION": "Documentation of the Fit4Cybersecurity API.",
     "CONTACT": {"email": OPERATOR_EMAIL},
+    "VERSION": "2.1.0",
+    "LICENSE": {
+        "name": "GNU Affero General Public License version 3",
+        "url": "https://www.gnu.org/licenses/agpl-3.0.html",
+    },
 }
 
 # Internationalization
