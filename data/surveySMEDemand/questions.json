@@ -444,7 +444,7 @@
         "atype": "P",
         "questions_map": [
           {
-            "label": "How confident are you in dealing with cybersecurity issues?",
+            "label": "What's your confidence level in dealing with cybersecurity issues?",
             "branch": 0,
             "level": 7,
             "order": 1
@@ -458,7 +458,7 @@
         "atype": "P",
         "questions_map": [
           {
-            "label": "How confident are you in dealing with cybersecurity issues?",
+            "label": "What's your confidence level in dealing with cybersecurity issues?",
             "branch": 0,
             "level": 7,
             "order": 1
@@ -472,7 +472,7 @@
         "atype": "P",
         "questions_map": [
           {
-            "label": "How confident are you in dealing with cybersecurity issues?",
+            "label": "What's your confidence level in dealing with cybersecurity issues?",
             "branch": 0,
             "level": 7,
             "order": 1
@@ -486,7 +486,7 @@
         "atype": "P",
         "questions_map": [
           {
-            "label": "How confident are you in dealing with cybersecurity issues?",
+            "label": "What's your confidence level in dealing with cybersecurity issues?",
             "branch": 0,
             "level": 7,
             "order": 1
@@ -500,7 +500,21 @@
         "atype": "P",
         "questions_map": [
           {
-            "label": "How confident are you in dealing with cybersecurity issues?",
+            "label": "What's your confidence level in dealing with cybersecurity issues?",
+            "branch": 0,
+            "level": 7,
+            "order": 1
+          }
+        ],
+        "label": "3 years ago"
+      },
+      {
+        "aindex": 6,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "What's your confidence level in dealing with cybersecurity issues?",
             "branch": 0,
             "level": 7,
             "order": 1
@@ -515,7 +529,7 @@
     "service_category": "Training",
     "qtype": "S",
     "qindex": 8,
-    "label": "How confident are you in dealing with cybersecurity issues?",
+    "label": "What's your confidence level in dealing with cybersecurity issues?",
     "answers": [
       {
         "aindex": 1,
@@ -830,16 +844,30 @@
         "atype": "P",
         "questions_map": [
           {
+            "label": "As you have digital tools for manufacturing, could you specify which kind?",
+            "branch": 0,
+            "level": 11,
+            "order": 4
+          }
+        ],
+        "label": "Manufacturing (Industrial Internet of Things (IIoT), Big Data and analytics tools, ...)"
+      },
+      {
+        "aindex": 6,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "questions_map": [
+          {
             "label": "Does your company have any of the following cybersecurity solutions?",
             "branch": 0,
             "level": 11,
             "order": 1
           }
         ],
-        "label": "No"
+        "label": "None"
       },
       {
-        "aindex": 6,
+        "aindex": 7,
         "uniqueAnswer": false,
         "atype": "T",
         "questions_map": [
@@ -1228,9 +1256,116 @@
   },
   {
     "section": "Digital services and products",
-    "service_category": "Focus on cybersecurity practices",
+    "service_category": "Tools",
     "qtype": "MT",
     "qindex": 16,
+    "label": "As you have digital tools for manufacturing, could you specify which kind?",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Does your company have any of the following cybersecurity solutions?",
+            "branch": 0,
+            "level": 15,
+            "order": 1
+          }
+        ],
+        "label": "Industrial Internet of Things (IIoT)"
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Does your company have any of the following cybersecurity solutions?",
+            "branch": 0,
+            "level": 15,
+            "order": 1
+          }
+        ],
+        "label": "Big Data and analytics tools"
+      },
+      {
+        "aindex": 3,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Does your company have any of the following cybersecurity solutions?",
+            "branch": 0,
+            "level": 15,
+            "order": 1
+          }
+        ],
+        "label": "Advanced robotics"
+      },
+      {
+        "aindex": 4,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Does your company have any of the following cybersecurity solutions?",
+            "branch": 0,
+            "level": 15,
+            "order": 1
+          }
+        ],
+        "label": "Additive manufacturing"
+      },
+      {
+        "aindex": 5,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Does your company have any of the following cybersecurity solutions?",
+            "branch": 0,
+            "level": 15,
+            "order": 1
+          }
+        ],
+        "label": "Digital thread and twins"
+      },
+      {
+        "aindex": 6,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Does your company have any of the following cybersecurity solutions?",
+            "branch": 0,
+            "level": 15,
+            "order": 1
+          }
+        ],
+        "label": "Augmented reality"
+      },
+      {
+        "aindex": 7,
+        "uniqueAnswer": false,
+        "atype": "T",
+        "questions_map": [
+          {
+            "label": "Does your company have any of the following cybersecurity solutions?",
+            "branch": 0,
+            "level": 15,
+            "order": 1
+          }
+        ],
+        "label": "Other"
+      }
+    ]
+  },
+  {
+    "section": "Digital services and products",
+    "service_category": "Focus on cybersecurity practices",
+    "qtype": "MT",
+    "qindex": 17,
     "label": "Does your company have any of the following cybersecurity solutions?",
     "answers": [
       {
@@ -1301,7 +1436,7 @@
             "order": 1
           }
         ],
-        "label": "Public key infrastructure (PKI)"
+        "label": "Email encryption"
       },
       {
         "aindex": 6,
@@ -1343,10 +1478,24 @@
             "order": 1
           }
         ],
-        "label": "No"
+        "label": "Access management system"
       },
       {
         "aindex": 9,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Who supports you to manage your cybersecurity?",
+            "branch": 0,
+            "level": 16,
+            "order": 1
+          }
+        ],
+        "label": "No"
+      },
+      {
+        "aindex": 10,
         "uniqueAnswer": false,
         "atype": "T",
         "questions_map": [
@@ -1365,7 +1514,7 @@
     "section": "Market and service providers",
     "service_category": "Market and service providers",
     "qtype": "MT",
-    "qindex": 17,
+    "qindex": 18,
     "label": "Who supports you to manage your cybersecurity?",
     "answers": [
       {
@@ -1486,7 +1635,7 @@
     "section": "Market and service providers",
     "service_category": "Market and service providers",
     "qtype": "MT",
-    "qindex": 18,
+    "qindex": 19,
     "label": "Would you like another organization to be in charge of your cybersecurity?",
     "answers": [
       {
@@ -1565,7 +1714,7 @@
     "section": "Market and service providers",
     "service_category": "Market and service providers",
     "qtype": "MT",
-    "qindex": 19,
+    "qindex": 20,
     "label": "What are your key drivers in the adoption of cybersecurity services or solutions?",
     "answers": [
       {
@@ -1686,7 +1835,7 @@
     "section": "Market and service providers",
     "service_category": "Market and service providers",
     "qtype": "MT",
-    "qindex": 20,
+    "qindex": 21,
     "label": "What are your criteria for evaluating cybersecurity services or solutions?",
     "answers": [
       {
@@ -1807,7 +1956,7 @@
     "section": "Market and service providers",
     "service_category": "Market and service providers",
     "qtype": "S",
-    "qindex": 21,
+    "qindex": 22,
     "label": "Are the cybersecurity services available on the market suited to your needs?",
     "answers": [
       {
@@ -1872,7 +2021,7 @@
     "section": "Market and service providers",
     "service_category": "Market and service providers",
     "qtype": "T",
-    "qindex": 22,
+    "qindex": 23,
     "label": "If the cybersecurity services available on the market not suited to your needs, what are you missing?",
     "answers": [
       {
@@ -1895,7 +2044,7 @@
     "section": "Market and service providers",
     "service_category": "Market and service providers",
     "qtype": "S",
-    "qindex": 23,
+    "qindex": 24,
     "label": "How much trust do you have in your cybersecurity service provider(s)?",
     "answers": [
       {
@@ -1988,7 +2137,7 @@
     "section": "Market and service providers",
     "service_category": "Market and service providers",
     "qtype": "T",
-    "qindex": 24,
+    "qindex": 25,
     "label": "If you don't trust your cybersecurity service provider very much, what is the main reason?",
     "answers": [
       {
@@ -2011,7 +2160,7 @@
     "section": "Incident",
     "service_category": "Incident",
     "qtype": "MT",
-    "qindex": 25,
+    "qindex": 26,
     "label": "Has your company, to your knowledge, been the victim of a cyberattack?",
     "answers": [
       {
@@ -2054,7 +2203,7 @@
             "order": 1
           }
         ],
-        "label": "Yes, we had an incident but we did not perform any root cause analysis"
+        "label": "Yes, we had an incident but we could not define the origin"
       },
       {
         "aindex": 4,
@@ -2117,8 +2266,8 @@
   {
     "section": "Incident",
     "service_category": "Incident",
-    "qtype": "ST",
-    "qindex": 26,
+    "qtype": "MT",
+    "qindex": 27,
     "label": "What kind of impact did the cyberattack have on your system?",
     "answers": [
       {
@@ -2197,7 +2346,7 @@
     "section": "Regulations and public actions",
     "service_category": "Regulations and public actions",
     "qtype": "MT",
-    "qindex": 27,
+    "qindex": 28,
     "label": "From your point of view, you lack information on...",
     "answers": [
       {
@@ -2248,7 +2397,7 @@
     "section": "Certification",
     "service_category": "Certification",
     "qtype": "S",
-    "qindex": 28,
+    "qindex": 29,
     "label": "Does your company have a cybersecurity certification?",
     "answers": [
       {
