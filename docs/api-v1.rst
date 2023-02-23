@@ -10,12 +10,13 @@ The API version 1 uses the OpenAPI Specification for its documentation.
    :caption: OpenAPI Schema
 
 
-
 Updating the OpenAPI Schema
 ===========================
 
 If you have updated the API, you can generate a new OpenAPI Schema:
 
-```bash
-$ python manage.py generateschema --file docs/static/openapi-schema.yml
-```
+.. code-block:: bash
+
+    $ python manage.py generateschema --file docs/static/openapi-schema.yml
+
+This file is included in the documentation of Fit4Cybersecurity.

@@ -34,7 +34,7 @@ matplotlib = "^3.5.0"
 numpy = "^1.24.1"
 types-python-dateutil = "^2.8.8"
 django-cors-headers = "^3.11.0"
-drf-yasg = {extras = ["validation"], version = "^1.21.5"}
+drf-spectacular = {extras = ["sidecar"], version = "^0.25.1"}
 
 [tool.poetry.group.dev.dependencies]
 sphinx-book-theme = "^0.1.0"
