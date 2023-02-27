@@ -23,13 +23,13 @@ class SurveySectionSerializer(serializers.ModelSerializer):
 class SurveyQuestionSerializer(serializers.ModelSerializer):
     class Meta:
         model = SurveyQuestion
-        fields = ["section", "label", "tooltip", "qindex", "maxPoints"]
+        fields = ["section", "label", "tooltip", "qindex", "maxPoints", "is_active"]
 
 
 class SurveyQuestionAnszerSerializer(serializers.ModelSerializer):
     class Meta:
         model = SurveyQuestionAnswer
-        fields = ["label", "value"]
+        fields = ["label", "value", "tooltip", "score", "bonus_points", "atype"]
 
 
 class SurveyUserSerializer(serializers.ModelSerializer):
