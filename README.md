@@ -12,17 +12,15 @@ to help business owners implement a better cybersecurity strategy.
 
 This tool allows instantiation of the following self-assessment websites:
 
-- [Fit4Cybersecurity](https://fit4cybersecurity.nc3.lu),
-- [Fit4Privacy](https://fit4privacy.nc3.lu),
-- [OperatorSurvey](https://operatorsurvey.nc3.lu),
-- [Cyber4Africa](https://start.cyber4africa.org);
-- [Fit4Contract](https://contract.nc3.lu).
+- [Fit4Cybersecurity](https://fit4cybersecurity.nc3.lu);
+- [Fit4Privacy](https://fit4privacy.nc3.lu);
+- [Fit4Contract](https://contract.nc3.lu);
 - [Fit4eHealth](https://fit4ehealth.nc3.lu).
 
 
 ## Installation
 
-Instructions available in [reStructuredText](docs/installation.rst).
+Instructions available in the [documentation](https://fit4cybersecurity.readthedocs.io/en/latest/installation.html),
 
 
 ## Contributing
