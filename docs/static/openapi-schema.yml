@@ -1,231 +1,168 @@
-openapi: 3.0.2
+openapi: 3.0.3
 info:
-  title: ''
-  version: ''
+  title: Fit4Cybersecurity API documentation.
+  version: 2.1.0
+  description: Documentation of the Fit4Cybersecurity API.
+  contact:
+    email: opensource@nc3.lu
+  license:
+    name: GNU Affero General Public License version 3
+    url: https://www.gnu.org/licenses/agpl-3.0.html
 paths:
-  /survey/api/recommendation/:
+  /survey/api/v1/recommendation/:
     get:
-      operationId: listRecommendationsApis
+      operationId: recommendation_retrieve
       description: List all the items.
-      parameters: []
+      tags:
+      - recommendation
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      responses:
+        '200':
+          description: No response body
+  /survey/api/v1/schema/:
+    get:
+      operationId: schema_retrieve
+      description: |-
+        OpenApi3 schema for this API. Format can be selected via content negotiation.
+
+        - YAML: application/vnd.oai.openapi
+        - JSON: application/vnd.oai.openapi+json
+      parameters:
+      - in: query
+        name: format
+        schema:
+          type: string
+          enum:
+          - json
+          - yaml
+      - in: query
+        name: lang
+        schema:
+          type: string
+          enum:
+          - de
+          - en
+          - fr
+      tags:
+      - schema
+      security:
+      - basicAuth: []
+      - cookieAuth: []
+      - {}
       responses:
         '200':
           content:
+            application/vnd.oai.openapi:
+              schema:
+                type: object
+                additionalProperties: {}
+            application/yaml:
+              schema:
+                type: object
+                additionalProperties: {}
+            application/vnd.oai.openapi+json:
+              schema:
+                type: object
+                additionalProperties: {}
             application/json:
               schema:
-                type: array
-                items: {}
+                type: object
+                additionalProperties: {}
           description: ''
-      tags:
-      - survey
-  /survey/api/survey_section/:
+  /survey/api/v1/survey_question/:
     get:
-      operationId: listSurveySectionApis
+      operationId: survey_question_retrieve
       description: List all the items.
-      parameters: []
+      tags:
+      - survey_question
+      security:
+      - cookieAuth: []
+      - basicAuth: []
       responses:
         '200':
-          content:
-            application/json:
-              schema:
-                type: array
-                items: {}
-          description: ''
-      tags:
-      - survey
-  /survey/api/survey_question/:
+          description: No response body
+  /survey/api/v1/survey_question_answer/:
     get:
-      operationId: listSurveyQuestionApis
+      operationId: survey_question_answer_retrieve
       description: List all the items.
-      parameters: []
+      tags:
+      - survey_question_answer
+      security:
+      - cookieAuth: []
+      - basicAuth: []
       responses:
         '200':
-          content:
-            application/json:
-              schema:
-                type: array
-                items: {}
-          description: ''
-      tags:
-      - survey
-  /survey/api/survey_question_answer/:
+          description: No response body
+  /survey/api/v1/survey_section/:
     get:
-      operationId: listSurveyQuestionAnswerApis
+      operationId: survey_section_retrieve
       description: List all the items.
-      parameters: []
+      tags:
+      - survey_section
+      security:
+      - cookieAuth: []
+      - basicAuth: []
       responses:
         '200':
-          content:
-            application/json:
-              schema:
-                type: array
-                items: {}
-          description: ''
-      tags:
-      - survey
-  /survey/api/survey_user/:
+          description: No response body
+  /survey/api/v1/survey_user/:
     get:
-      operationId: listSurveyUsers
+      operationId: survey_user_retrieve
       description: Get all the items.
-      parameters: []
+      tags:
+      - survey_user
+      security:
+      - cookieAuth: []
+      - basicAuth: []
       responses:
         '200':
-          content:
-            application/json:
-              schema:
-                type: array
-                items: {}
-          description: ''
-      tags:
-      - survey
-  /survey/api/survey_user/{id}/:
+          description: No response body
+  /survey/api/v1/survey_user/{id}/:
     get:
-      operationId: retrieveSurveyUserApi
+      operationId: survey_user_retrieve_2
       description: Get an item.
       parameters:
-      - name: id
-        in: path
-        required: true
-        description: ''
+      - in: path
+        name: id
         schema:
           type: string
+          format: uuid
+        required: true
+      tags:
+      - survey_user
+      security:
+      - cookieAuth: []
+      - basicAuth: []
       responses:
         '200':
-          content:
-            application/json:
-              schema: {}
-          description: ''
-      tags:
-      - survey
-  /survey/api/survey_user_answer/{id}/:
+          description: No response body
+  /survey/api/v1/survey_user_answer/{id}/:
     get:
-      operationId: retrieveSurveyUserAnswerApi
+      operationId: survey_user_answer_retrieve
       description: Get an item.
       parameters:
-      - name: id
-        in: path
-        required: true
-        description: ''
+      - in: path
+        name: id
         schema:
           type: string
-      responses:
-        '200':
-          content:
-            application/json:
-              schema: {}
-          description: ''
-      tags:
-      - survey
-  /api/v1/recommendation/:
-    get:
-      operationId: listRecommendationsApis
-      description: List all the items.
-      parameters: []
-      responses:
-        '200':
-          content:
-            application/json:
-              schema:
-                type: array
-                items: {}
-          description: ''
-      tags:
-      - api
-  /api/v1/survey_section/:
-    get:
-      operationId: listSurveySectionApis
-      description: List all the items.
-      parameters: []
-      responses:
-        '200':
-          content:
-            application/json:
-              schema:
-                type: array
-                items: {}
-          description: ''
-      tags:
-      - api
-  /api/v1/survey_question/:
-    get:
-      operationId: listSurveyQuestionApis
-      description: List all the items.
-      parameters: []
-      responses:
-        '200':
-          content:
-            application/json:
-              schema:
-                type: array
-                items: {}
-          description: ''
-      tags:
-      - api
-  /api/v1/survey_question_answer/:
-    get:
-      operationId: listSurveyQuestionAnswerApis
-      description: List all the items.
-      parameters: []
-      responses:
-        '200':
-          content:
-            application/json:
-              schema:
-                type: array
-                items: {}
-          description: ''
-      tags:
-      - api
-  /api/v1/survey_user/:
-    get:
-      operationId: listSurveyUsers
-      description: Get all the items.
-      parameters: []
-      responses:
-        '200':
-          content:
-            application/json:
-              schema:
-                type: array
-                items: {}
-          description: ''
-      tags:
-      - api
-  /api/v1/survey_user/{id}/:
-    get:
-      operationId: retrieveSurveyUserApi
-      description: Get an item.
-      parameters:
-      - name: id
-        in: path
+          format: uuid
         required: true
-        description: ''
-        schema:
-          type: string
+      tags:
+      - survey_user_answer
+      security:
+      - cookieAuth: []
+      - basicAuth: []
       responses:
         '200':
-          content:
-            application/json:
-              schema: {}
-          description: ''
-      tags:
-      - api
-  /api/v1/survey_user_answer/{id}/:
-    get:
-      operationId: retrieveSurveyUserAnswerApi
-      description: Get an item.
-      parameters:
-      - name: id
-        in: path
-        required: true
-        description: ''
-        schema:
-          type: string
-      responses:
-        '200':
-          content:
-            application/json:
-              schema: {}
-          description: ''
-      tags:
-      - api
+          description: No response body
+components:
+  securitySchemes:
+    basicAuth:
+      type: http
+      scheme: basic
+    cookieAuth:
+      type: apiKey
+      in: cookie
+      name: sessionid

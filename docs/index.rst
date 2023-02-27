@@ -9,6 +9,20 @@ Presentation
 This document is intended to be a documentation for
 `Fit4Cybersecurity <https://github.com/NC3-LU/Fit4Cybersecurity>`_
 
+Fit4Cybersecurity is a self-assessment tool by
+`NC3-LU <https://www.nc3.lu>`__ to help business owners implement a better
+cybersecurity strategy.
+
+
+This tool allows instantiation of the following self-assessment
+websites:
+
+-  `Fit4Cybersecurity <https://fit4cybersecurity.nc3.lu>`__,
+-  `Fit4Privacy <https://fit4privacy.nc3.lu>`__,
+-  `OperatorSurvey <https://operatorsurvey.nc3.lu>`__,
+-  `Cyber4Africa <https://start.cyber4africa.org>`__;
+-  `Fit4Contract <https://contract.nc3.lu>`__.
+-  `Fit4eHealth <https://fit4ehealth.nc3.lu>`__.
 
 
 .. toctree::

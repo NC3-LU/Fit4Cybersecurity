@@ -18,9 +18,10 @@ Updating the translations
 If you want to update the translations (in the case **you have locally**
 changed the source code), you must first run:
 
-```bash
-$ python manage.py makemessages -a --keep-pot -e html,txt,py,json # extract the translations
-```
+.. code-block:: bash
+
+    $ python manage.py makemessages -a --keep-pot -e html,txt,py,json
+
 
 Then you can use a tool like
 [poedit](https://poedit.net) to translate the strings and you can compile with
@@ -28,6 +29,6 @@ the previously mentioned command.
 
 If you want to re-generate the .pot template file:
 
-```bash
-$ python manage.py makemessages -a --keep-pot
-```
+.. code-block:: bash
+
+    $ python manage.py makemessages -a --keep-pot

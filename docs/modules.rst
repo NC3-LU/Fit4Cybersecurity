@@ -9,8 +9,8 @@ Indices and tables
 * :ref:`search`
 
 
-mosp
-----
+Survey
+------
 
 .. automodule:: survey
     :members:

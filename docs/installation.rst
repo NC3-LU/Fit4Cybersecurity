@@ -30,7 +30,8 @@ The following instructions are detailed in the
 `installation script <INSTALL/INSTALL.sh>`_.
 
 
-Requirements:
+System requirements
+```````````````````
 
 .. code-block:: bash
 
@@ -49,7 +50,8 @@ Requirements:
     $ sudo apt install libpango-1.0-0 libharfbuzz0b libpangoft2-1.0-0
 
 
-Set up your Python environment:
+Set up your Python environment
+``````````````````````````````
 
 .. code-block:: bash
 
@@ -60,7 +62,8 @@ Set up your Python environment:
     $ curl -sSL https://install.python-poetry.org | python -
 
 
-Install the application:
+Install the application
+```````````````````````
 
 .. code-block:: bash
 
@@ -70,7 +73,8 @@ Install the application:
     $ poetry install --only main
 
 
-Configure application
+Configure the application
+`````````````````````````
 
 Create and configure a file **csskp/config.py** based on **csskp/config_dev.py**.
 Settings in the __CUSTOM__ dictionnary will be automatically discovered by the software
@@ -122,11 +126,12 @@ For the Django secret key, you can for example use ```from django.utils.crypto i
 at your convenience.
 
 
-Run the application:
+Run the application
+```````````````````
 
 .. code-block:: bash
 
-    $ python manage.py runserver # not for production
+    $ python manage.py runserver
 
 
 For production you can use [Gunicorn](https://gunicorn.org) (an example file for use
@@ -134,14 +139,15 @@ with Nginx is provided in the contrib folder) or mod_wsgi and **turn off** the d
 mode in the configuration file.
 
 
-Configuration with Apache and mod_wsgi:
+Configuration with Apache and mod_wsgi
+``````````````````````````````````````
 
 .. code-block:: bash
 
     $ sudo apt install apache2 apache2-dev # apxs2
-    $ wget https://github.com/GrahamDumpleton/mod_wsgi/archive/refs/tags/4.9.0.tar.gz
-    $ tar -xzvf 4.9.0.tar.gz
-    $ cd mod_wsgi-4.9.0/
+    $ wget https://github.com/GrahamDumpleton/mod_wsgi/archive/refs/tags/4.9.4.tar.gz
+    $ tar -xzvf 4.9.4.tar.gz
+    $ cd mod_wsgi-4.9.4/
     $ ./configure --with-apxs=/usr/bin/apxs2 --with-python=/home/<user>/.pyenv/shims/python
     $ make
     $ sudo make install
