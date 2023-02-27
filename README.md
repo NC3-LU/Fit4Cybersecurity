@@ -20,7 +20,7 @@ This tool allows instantiation of the following self-assessment websites:
 
 ## Installation
 
-Instructions available in the [documentation](https://fit4cybersecurity.readthedocs.io/en/latest/installation.html),
+Instructions available in the [documentation](https://fit4cybersecurity.readthedocs.io/en/latest/installation.html).
 
 
 ## Contributing
