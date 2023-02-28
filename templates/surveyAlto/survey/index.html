@@ -39,11 +39,18 @@
     <div class="card bg-warning m-4 h7">
         <div class="card-body font-weight-light">
             <h6 class="card-title text-center">{{ _('Appel à participation :') }}</h6>
-            <p><small>{{ _('La phase « Pilote » du projet ALTO nécessitera un appel à participation des PME lors du 4ème trimestre de l’année 2023. Un appel à participation sera communiqué en ce sens.') }}</small></p>
+            <p class="text-justify small">
+                {% blocktranslate trimmed %}
+                La phase « Pilote » du projet ALTO nécessitera un appel à participation des PME lors du 4ème trimestre de l'année 2023.
+                <br><br>
+                Toute PME est invitée à faire part de son intérêt à participer à la phase « Pilote » par e-mail à l'adresse électronique : <a href="mailto:alto@cnpd.lu">alto@cnpd.lu</a>
+                {% endblocktranslate %}
+                
+            </p>
         </div>
     </div>
     <div class="p-4">
-        <p class="text-justify small"> [1]
+        <p class="text-justify small font-italic"> [1]
             {% blocktranslate trimmed %}
             Le présent questionnaire est anonyme et ne nécessite pas la collecte de données à caractère personnel auprès des personnes amenées à y répondre.
             Les PME sont donc invitées à répondre au présent questionnaire en veillant à ne pas communiquer, dans les champs libres de celui-ci, toute information permettant d'identifier une personne physique (ex. : nom, prénom, coordonnées, etc.).
