@@ -2,6 +2,7 @@
 
 {% load bootstrap4 %}
 {% load apptags %}
+{% load i18n %}
 {% load static %}
 
 {% block bootstrap4_extra_head %}
@@ -41,6 +42,18 @@
             <p><small>{{ _('La phase « Pilote » du projet ALTO nécessitera un appel à participation des PME lors du 4ème trimestre de l’année 2023. Un appel à participation sera communiqué en ce sens.') }}</small></p>
         </div>
     </div>
+    <div class="p-4">
+        <p class="text-justify small"> [1]
+            {% blocktranslate trimmed %}
+            Le présent questionnaire est anonyme et ne nécessite pas la collecte de données à caractère personnel auprès des personnes amenées à y répondre.
+            Les PME sont donc invitées à répondre au présent questionnaire en veillant à ne pas communiquer, dans les champs libres de celui-ci, toute information permettant d'identifier une personne physique (ex. : nom, prénom, coordonnées, etc.).
+            Pour le cas où des données à caractère personnel seraient toutefois renseignées par erreur dans les champs libres du questionnaire en ligne, celles-ci seront supprimées.
+            Les réponses au questionnaire en ligne seront accessibles uniquement par le Commissaires et les agents de la CNPD ainsi que par les agents de la LHC-NC3 dédiés au projet ALTO, afin d'assurer l'analyse des réponses données et le bon fonctionnement technique.
+            Pour toute question concernant les traitements de données à caractère personnel effectués par la CNPD, vous pouvez contacter le délégué à la protection des données (DPO) de la CNPD : <a href="mailto:dpo@cnpd.lu">dpo@cnpd.lu</a>
+            {% endblocktranslate %}
+        </p>
+    </div>
+
 
     <div class="row py-3">
         <div class="col">
