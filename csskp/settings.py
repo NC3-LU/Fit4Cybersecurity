@@ -7,6 +7,8 @@ import sys
 
 from django.contrib.messages import constants as messages
 
+from django.utils.translation import gettext_lazy as _
+
 try:
     from csskp import config  # type: ignore
 except ImportError:  # pragma: no cover
@@ -41,6 +43,32 @@ STATIC_DIR = os.path.join(BASE_DIR, "static")
 
 PICTURE_DIR = "/tmp/csskp/"
 
+#Cookie Banner settings
+COOKIEBANNER = {
+    "title": _("Cookie settings"),
+    "header_text": _("We are using cookies on this website. Just the essential"),
+    "groups": [
+        {
+            "id": "essential",
+            "name": _("Essential"),
+            "description": _("Essential cookies allow this page to work."),
+            "cookies": [
+                {
+                    "pattern": "cookiebanner",
+                    "description": _("Meta cookie for the cookies that are set. Conservation: 1 year"),
+                },
+                {
+                    "pattern": "csrftoken",
+                    "description": _("This cookie prevents Cross-Site-Request-Forgery attacks. Conservation: 1 year"),
+                },
+                {
+                    "pattern": "sessionid",
+                    "description": _("This cookie is necessary for the language options, for example. Conservation 15 days"),
+                },
+            ],
+        }
+    ],
+}
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
@@ -107,6 +135,7 @@ INSTALLED_APPS = [
     "bootstrap_datepicker_plus",
     "rest_framework",
     "corsheaders",
+    "cookiebanner", 
 ]
 
 context_processors = [

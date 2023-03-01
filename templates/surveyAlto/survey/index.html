@@ -4,6 +4,7 @@
 {% load apptags %}
 {% load i18n %}
 {% load static %}
+{% load cookiebanner %}
 
 {% block bootstrap4_extra_head %}
     {{ block.super }}
@@ -12,6 +13,7 @@
 {% endblock %}
 
 {% block content %}
+    {% cookiebanner_modal 'bootstrap4' %}
     <div class="d-flex flex-row align-items-center px-3">
         <div class="p-2 flex-grow-1 text-justify">
             <h5>
