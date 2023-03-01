@@ -4,16 +4,16 @@
     "service_category": "Le RGPD en général",
     "qtype": "S",
     "qindex": 1,
-    "label": "Considérez-vous la conformité au RGPD dans vos activités ?",
+    "label": "Comment évaluez-vous votre connaissance générale du RGPD ?",
     "answers": [
       {
         "aindex": 1,
         "uniqueAnswer": true,
         "atype": "P",
-        "label": "Oui",
+        "label": "0 (Non acquis)",
         "questions_map": [
           {
-            "label": "Quel/le organisme/personne (sa fonction) soutient votre PME dans votre mise en conformité au RGPD ?",
+            "label": "Quel/le organisme/personne soutient votre PME dans votre mise en conformité au RGPD ?",
             "branch": 0,
             "level": 1,
             "order": 1
@@ -24,12 +24,68 @@
         "aindex": 2,
         "uniqueAnswer": true,
         "atype": "P",
-        "label": "Non",
+        "label": "1",
         "questions_map": [
           {
-            "label": "Quel/le organisme/personne (sa fonction) soutient votre PME dans votre mise en conformité au RGPD ?",
+            "label": "Quel/le organisme/personne soutient votre PME dans votre mise en conformité au RGPD ?",
             "branch": 0,
-            "level": 4,
+            "level": 1,
+            "order": 1
+          }
+        ]
+      },
+      {
+        "aindex": 3,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "2",
+        "questions_map": [
+          {
+            "label": "Quel/le organisme/personne soutient votre PME dans votre mise en conformité au RGPD ?",
+            "branch": 0,
+            "level": 1,
+            "order": 1
+          }
+        ]
+      },
+      {
+        "aindex": 4,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "3",
+        "questions_map": [
+          {
+            "label": "Quel/le organisme/personne soutient votre PME dans votre mise en conformité au RGPD ?",
+            "branch": 0,
+            "level": 1,
+            "order": 1
+          }
+        ]
+      },
+      {
+        "aindex": 5,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "4",
+        "questions_map": [
+          {
+            "label": "Quel/le organisme/personne soutient votre PME dans votre mise en conformité au RGPD ?",
+            "branch": 0,
+            "level": 1,
+            "order": 1
+          }
+        ]
+      },
+      {
+        "aindex": 6,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "5 (Parfaitment maîtrisé)",
+        "questions_map": [
+          {
+            "label": "Quel/le organisme/personne soutient votre PME dans votre mise en conformité au RGPD ?",
+            "branch": 0,
+            "level": 1,
             "order": 1
           }
         ]
@@ -41,7 +97,7 @@
     "service_category": "Le RGPD en général",
     "qtype": "M",
     "qindex": 2,
-    "label": "Quel/le organisme/personne (sa fonction) soutient votre PME dans votre mise en conformité au RGPD ?",
+    "label": "Quel/le organisme/personne soutient votre PME dans votre mise en conformité au RGPD ?",
     "answers": [
       {
         "aindex": 1,
@@ -50,7 +106,7 @@
         "label": "La CNPD",
         "questions_map": [
           {
-            "label": "À quelle organisme/personne (sa fonction) votre entreprise s'adresse-elle pour obtenir des informations/une aide en la matière ?",
+            "label": "À quelle organisme/personne votre entreprise s'adresse-t-elle pour obtenir des informations/une aide en la matière ?",
             "branch": 0,
             "level": 2,
             "order": 1
@@ -64,7 +120,7 @@
         "label": "Un délégué à la protection des données interne",
         "questions_map": [
           {
-            "label": "À quelle organisme/personne (sa fonction) votre entreprise s'adresse-elle pour obtenir des informations/une aide en la matière ?",
+            "label": "À quelle organisme/personne votre entreprise s'adresse-t-elle pour obtenir des informations/une aide en la matière ?",
             "branch": 0,
             "level": 2,
             "order": 1
@@ -78,7 +134,7 @@
         "label": "Un délégué à la protection des données externe",
         "questions_map": [
           {
-            "label": "À quelle organisme/personne (sa fonction) votre entreprise s'adresse-elle pour obtenir des informations/une aide en la matière ?",
+            "label": "À quelle organisme/personne votre entreprise s'adresse-t-elle pour obtenir des informations/une aide en la matière ?",
             "branch": 0,
             "level": 2,
             "order": 1
@@ -92,7 +148,7 @@
         "label": "Un avocat",
         "questions_map": [
           {
-            "label": "À quelle organisme/personne (sa fonction) votre entreprise s'adresse-elle pour obtenir des informations/une aide en la matière ?",
+            "label": "À quelle organisme/personne votre entreprise s'adresse-t-elle pour obtenir des informations/une aide en la matière ?",
             "branch": 0,
             "level": 2,
             "order": 1
@@ -106,7 +162,7 @@
         "label": "Une société de conseils",
         "questions_map": [
           {
-            "label": "À quelle organisme/personne (sa fonction) votre entreprise s'adresse-elle pour obtenir des informations/une aide en la matière ?",
+            "label": "À quelle organisme/personne votre entreprise s'adresse-t-elle pour obtenir des informations/une aide en la matière ?",
             "branch": 0,
             "level": 2,
             "order": 1
@@ -120,7 +176,7 @@
         "label": "Une chambre/union professionnelle",
         "questions_map": [
           {
-            "label": "À quelle organisme/personne (sa fonction) votre entreprise s'adresse-elle pour obtenir des informations/une aide en la matière ?",
+            "label": "À quelle organisme/personne votre entreprise s'adresse-t-elle pour obtenir des informations/une aide en la matière ?",
             "branch": 0,
             "level": 2,
             "order": 1
@@ -131,10 +187,10 @@
         "aindex": 7,
         "uniqueAnswer": false,
         "atype": "P",
-        "label": "Notre PME n'est pas soutenu par un organisme/une personne extérieure",
+        "label": "Notre PME n'est pas soutenue par un organisme/une personne extérieure",
         "questions_map": [
           {
-            "label": "À quelle organisme/personne (sa fonction) votre entreprise s'adresse-elle pour obtenir des informations/une aide en la matière ?",
+            "label": "À quelle organisme/personne votre entreprise s'adresse-t-elle pour obtenir des informations/une aide en la matière ?",
             "branch": 0,
             "level": 2,
             "order": 1
@@ -148,7 +204,7 @@
         "label": "Je ne sais pas",
         "questions_map": [
           {
-            "label": "À quelle organisme/personne (sa fonction) votre entreprise s'adresse-elle pour obtenir des informations/une aide en la matière ?",
+            "label": "À quelle organisme/personne votre entreprise s'adresse-t-elle pour obtenir des informations/une aide en la matière ?",
             "branch": 0,
             "level": 2,
             "order": 1
@@ -162,7 +218,7 @@
     "service_category": "Le RGPD en général",
     "qtype": "M",
     "qindex": 3,
-    "label": "À quelle organisme/personne (sa fonction) votre entreprise s'adresse-elle pour obtenir des informations/une aide en la matière ?",
+    "label": "À quelle organisme/personne votre entreprise s'adresse-t-elle pour obtenir des informations/une aide en la matière ?",
     "answers": [
       {
         "aindex": 1,
@@ -252,7 +308,7 @@
         "aindex": 7,
         "uniqueAnswer": false,
         "atype": "P",
-        "label": "Notre PME n'est pas soutenu par un organisme/une personne extérieure",
+        "label": "Notre PME n'est pas soutenue par un organisme/une personne extérieure",
         "questions_map": [
           {
             "label": "Quels sont les principaux défis auxquels votre PME est confrontée ?",
@@ -292,7 +348,7 @@
         "label": "J'ai besoin de comprendre si je suis concerné par le RGPD",
         "questions_map": [
           {
-            "label": "Parmi les réponses précédentes, quels sont les trois thématiques que l'outil d'auto-évaluation ALTO devrait privilégier pour répondre à vos besoins / défis en matière de protection des données?",
+            "label": "Parmi les réponses données, quelles sont les trois thématiques que l'outil d'auto-évaluation ALTO devrait privilégier pour répondre à vos besoins / défis en matière de protection des données?",
             "branch": 0,
             "level": 4,
             "order": 1
@@ -306,7 +362,7 @@
         "label": "J'ai besoin de savoir si je suis un responsable de traitement ou un sous-traitant",
         "questions_map": [
           {
-            "label": "Parmi les réponses précédentes, quels sont les trois thématiques que l'outil d'auto-évaluation ALTO devrait privilégier pour répondre à vos besoins / défis en matière de protection des données?",
+            "label": "Parmi les réponses données, quelles sont les trois thématiques que l'outil d'auto-évaluation ALTO devrait privilégier pour répondre à vos besoins / défis en matière de protection des données?",
             "branch": 0,
             "level": 4,
             "order": 1
@@ -320,7 +376,7 @@
         "label": "J'ai besoins d'explications quant à mes obligations RGPD",
         "questions_map": [
           {
-            "label": "Parmi les réponses précédentes, quels sont les trois thématiques que l'outil d'auto-évaluation ALTO devrait privilégier pour répondre à vos besoins / défis en matière de protection des données?",
+            "label": "Parmi les réponses données, quelles sont les trois thématiques que l'outil d'auto-évaluation ALTO devrait privilégier pour répondre à vos besoins / défis en matière de protection des données?",
             "branch": 0,
             "level": 4,
             "order": 1
@@ -334,7 +390,7 @@
         "label": "J'ai besoin de savoir comment documenter la gestion des données",
         "questions_map": [
           {
-            "label": "Parmi les réponses précédentes, quels sont les trois thématiques que l'outil d'auto-évaluation ALTO devrait privilégier pour répondre à vos besoins / défis en matière de protection des données?",
+            "label": "Parmi les réponses données, quelles sont les trois thématiques que l'outil d'auto-évaluation ALTO devrait privilégier pour répondre à vos besoins / défis en matière de protection des données?",
             "branch": 0,
             "level": 4,
             "order": 1
@@ -348,7 +404,7 @@
         "label": "J'ai besoin de savoir ce que doit comporter une politique d'information",
         "questions_map": [
           {
-            "label": "Parmi les réponses précédentes, quels sont les trois thématiques que l'outil d'auto-évaluation ALTO devrait privilégier pour répondre à vos besoins / défis en matière de protection des données?",
+            "label": "Parmi les réponses données, quelles sont les trois thématiques que l'outil d'auto-évaluation ALTO devrait privilégier pour répondre à vos besoins / défis en matière de protection des données?",
             "branch": 0,
             "level": 4,
             "order": 1
@@ -362,7 +418,7 @@
         "label": "J'ai besoin d'explication sur les droits des personnes concernées",
         "questions_map": [
           {
-            "label": "Parmi les réponses précédentes, quels sont les trois thématiques que l'outil d'auto-évaluation ALTO devrait privilégier pour répondre à vos besoins / défis en matière de protection des données?",
+            "label": "Parmi les réponses données, quelles sont les trois thématiques que l'outil d'auto-évaluation ALTO devrait privilégier pour répondre à vos besoins / défis en matière de protection des données?",
             "branch": 0,
             "level": 4,
             "order": 1
@@ -376,7 +432,7 @@
         "label": "J'ai besoin d'explication sur les bases légales adéquates pour chacun de mes traitements de données",
         "questions_map": [
           {
-            "label": "Parmi les réponses précédentes, quels sont les trois thématiques que l'outil d'auto-évaluation ALTO devrait privilégier pour répondre à vos besoins / défis en matière de protection des données?",
+            "label": "Parmi les réponses données, quelles sont les trois thématiques que l'outil d'auto-évaluation ALTO devrait privilégier pour répondre à vos besoins / défis en matière de protection des données?",
             "branch": 0,
             "level": 4,
             "order": 1
@@ -390,7 +446,7 @@
         "label": "J'ai besoin de savoir quand désigner un délégué à la protection des données (DPD ou DPO)",
         "questions_map": [
           {
-            "label": "Parmi les réponses précédentes, quels sont les trois thématiques que l'outil d'auto-évaluation ALTO devrait privilégier pour répondre à vos besoins / défis en matière de protection des données?",
+            "label": "Parmi les réponses données, quelles sont les trois thématiques que l'outil d'auto-évaluation ALTO devrait privilégier pour répondre à vos besoins / défis en matière de protection des données?",
             "branch": 0,
             "level": 4,
             "order": 1
@@ -401,10 +457,10 @@
         "aindex": 9,
         "uniqueAnswer": false,
         "atype": "P",
-        "label": "J'ai besoin de savoir combien de temps dois-je conserver les données collectées",
+        "label": "J'ai besoin de savoir combien de temps je dois conserver les données collectées",
         "questions_map": [
           {
-            "label": "Parmi les réponses précédentes, quels sont les trois thématiques que l'outil d'auto-évaluation ALTO devrait privilégier pour répondre à vos besoins / défis en matière de protection des données?",
+            "label": "Parmi les réponses données, quelles sont les trois thématiques que l'outil d'auto-évaluation ALTO devrait privilégier pour répondre à vos besoins / défis en matière de protection des données?",
             "branch": 0,
             "level": 4,
             "order": 1
@@ -415,12 +471,12 @@
         "aindex": 10,
         "uniqueAnswer": false,
         "atype": "P",
-        "label": "J'ai besoin de savoir si j'applique le principe de minimisation correctement ?"
+        "label": "J'ai besoin de savoir si j'applique le principe de minimisation correctement"
       },
       {
         "questions_map": [
           {
-            "label": "Parmi les réponses précédentes, quels sont les trois thématiques que l'outil d'auto-évaluation ALTO devrait privilégier pour répondre à vos besoins / défis en matière de protection des données?",
+            "label": "Parmi les réponses données, quelles sont les trois thématiques que l'outil d'auto-évaluation ALTO devrait privilégier pour répondre à vos besoins / défis en matière de protection des données?",
             "branch": 0,
             "level": 4,
             "order": 1
@@ -434,7 +490,7 @@
       {
         "questions_map": [
           {
-            "label": "Parmi les réponses précédentes, quels sont les trois thématiques que l'outil d'auto-évaluation ALTO devrait privilégier pour répondre à vos besoins / défis en matière de protection des données?",
+            "label": "Parmi les réponses données, quelles sont les trois thématiques que l'outil d'auto-évaluation ALTO devrait privilégier pour répondre à vos besoins / défis en matière de protection des données?",
             "branch": 0,
             "level": 4,
             "order": 1
@@ -446,13 +502,13 @@
         "label": "J'ai besoin d'information sur la violation de données"
       },
       {
-        "aindex": 12,
+        "aindex": 13,
         "uniqueAnswer": true,
         "atype": "P",
         "label": "Je ne sais pas",
         "questions_map": [
           {
-            "label": "Parmi les réponses précédentes, quels sont les trois thématiques que l'outil d'auto-évaluation ALTO devrait privilégier pour répondre à vos besoins / défis en matière de protection des données?",
+            "label": "Parmi les réponses données, quelles sont les trois thématiques que l'outil d'auto-évaluation ALTO devrait privilégier pour répondre à vos besoins / défis en matière de protection des données?",
             "branch": 0,
             "level": 4,
             "order": 1
@@ -466,7 +522,7 @@
     "service_category": "Défis des PME",
     "qtype": "M",
     "qindex": 5,
-    "label": "Parmi les réponses précédentes, quels sont les trois thématiques que l'outil d'auto-évaluation ALTO devrait privilégier pour répondre à vos besoins / défis en matière de protection des données?",
+    "label": "Parmi les réponses données, quelles sont les trois thématiques que l'outil d'auto-évaluation ALTO devrait privilégier pour répondre à vos besoins / défis en matière de protection des données?",
     "answers": [
       {
         "aindex": 1,
@@ -475,7 +531,7 @@
         "label": "J'ai besoin de comprendre si je suis concerné par le RGPD",
         "questions_map": [
           {
-            "label": "Connaissez-vous la différence entre la notion de «Responsable du traitement » et la notion de « sous-traitant »?",
+            "label": "Êtes-vous responsable de traitement ?",
             "branch": 0,
             "level": 5,
             "order": 1
@@ -489,7 +545,7 @@
         "label": "J'ai besoin de savoir si je suis un responsable de traitement ou un sous-traitant",
         "questions_map": [
           {
-            "label": "Connaissez-vous la différence entre la notion de «Responsable du traitement » et la notion de « sous-traitant »?",
+            "label": "Êtes-vous responsable de traitement ?",
             "branch": 0,
             "level": 5,
             "order": 1
@@ -500,10 +556,10 @@
         "aindex": 3,
         "uniqueAnswer": false,
         "atype": "P",
-        "label": "J'ai besoins d'explications quant à mes obligations RGPD",
+        "label": "J'ai besoin d'explications quant à mes obligations RGPD",
         "questions_map": [
           {
-            "label": "Connaissez-vous la différence entre la notion de «Responsable du traitement » et la notion de « sous-traitant »?",
+            "label": "Êtes-vous responsable de traitement ?",
             "branch": 0,
             "level": 5,
             "order": 1
@@ -517,7 +573,7 @@
         "label": "J'ai besoin de savoir comment documenter la gestion des données",
         "questions_map": [
           {
-            "label": "Connaissez-vous la différence entre la notion de «Responsable du traitement » et la notion de « sous-traitant »?",
+            "label": "Êtes-vous responsable de traitement ?",
             "branch": 0,
             "level": 5,
             "order": 1
@@ -531,7 +587,7 @@
         "label": "J'ai besoin de savoir ce que doit comporter une politique d'information",
         "questions_map": [
           {
-            "label": "Connaissez-vous la différence entre la notion de «Responsable du traitement » et la notion de « sous-traitant »?",
+            "label": "Êtes-vous responsable de traitement ?",
             "branch": 0,
             "level": 5,
             "order": 1
@@ -545,7 +601,7 @@
         "label": "J'ai besoin d'explication sur les droits des personnes concernées",
         "questions_map": [
           {
-            "label": "Connaissez-vous la différence entre la notion de «Responsable du traitement » et la notion de « sous-traitant »?",
+            "label": "Êtes-vous responsable de traitement ?",
             "branch": 0,
             "level": 5,
             "order": 1
@@ -559,7 +615,7 @@
         "label": "J'ai besoin d'explication sur les bases légales adéquates pour chacun de mes traitements de données",
         "questions_map": [
           {
-            "label": "Connaissez-vous la différence entre la notion de «Responsable du traitement » et la notion de « sous-traitant »?",
+            "label": "Êtes-vous responsable de traitement ?",
             "branch": 0,
             "level": 5,
             "order": 1
@@ -573,7 +629,7 @@
         "label": "J'ai besoin de savoir quand désigner un délégué à la protection des données (DPD ou DPO)",
         "questions_map": [
           {
-            "label": "Connaissez-vous la différence entre la notion de «Responsable du traitement » et la notion de « sous-traitant »?",
+            "label": "Êtes-vous responsable de traitement ?",
             "branch": 0,
             "level": 5,
             "order": 1
@@ -584,10 +640,10 @@
         "aindex": 9,
         "uniqueAnswer": false,
         "atype": "P",
-        "label": "J'ai besoin de savoir combien de temps dois-je conserver les données collectées",
+        "label": "J'ai besoin de savoir combien de temps je dois conserver les données collectées",
         "questions_map": [
           {
-            "label": "Connaissez-vous la différence entre la notion de «Responsable du traitement » et la notion de « sous-traitant »?",
+            "label": "Êtes-vous responsable de traitement ?",
             "branch": 0,
             "level": 5,
             "order": 1
@@ -598,12 +654,12 @@
         "aindex": 10,
         "uniqueAnswer": false,
         "atype": "P",
-        "label": "J'ai besoin de savoir si j'applique le principe de minimisation correctement ?"
+        "label": "J'ai besoin de savoir si j'applique le principe de minimisation correctement"
       },
       {
         "questions_map": [
           {
-            "label": "Connaissez-vous la différence entre la notion de «Responsable du traitement » et la notion de « sous-traitant »?",
+            "label": "Êtes-vous responsable de traitement ?",
             "branch": 0,
             "level": 5,
             "order": 1
@@ -617,7 +673,7 @@
       {
         "questions_map": [
           {
-            "label": "Connaissez-vous la différence entre la notion de «Responsable du traitement » et la notion de « sous-traitant »?",
+            "label": "Êtes-vous responsable de traitement ?",
             "branch": 0,
             "level": 5,
             "order": 1
@@ -629,13 +685,13 @@
         "label": "J'ai besoin d'information sur la violation de données"
       },
       {
-        "aindex": 12,
+        "aindex": 13,
         "uniqueAnswer": true,
         "atype": "P",
         "label": "Je ne sais pas",
         "questions_map": [
           {
-            "label": "Connaissez-vous la différence entre la notion de «Responsable du traitement » et la notion de « sous-traitant »?",
+            "label": "Êtes-vous responsable de traitement ?",
             "branch": 0,
             "level": 5,
             "order": 1
@@ -649,7 +705,7 @@
     "service_category": "Responsable du traitement et sous-traitant",
     "qtype": "S",
     "qindex": 6,
-    "label": "Connaissez-vous la différence entre la notion de «Responsable du traitement » et la notion de « sous-traitant »?",
+    "label": "Êtes-vous responsable de traitement ?",
     "answers": [
       {
         "aindex": 1,
@@ -658,7 +714,7 @@
         "label": "Oui",
         "questions_map": [
           {
-            "label": "Connaissez-vous les responsabilités relevant du « Responsable du traitement » et du « sous-traitant » ?",
+            "label": "Êtes-vous un sous-traitant ?",
             "branch": 0,
             "level": 6,
             "order": 1
@@ -672,9 +728,23 @@
         "label": "Non",
         "questions_map": [
           {
-            "label": "Connaissez-vous les responsabilités relevant du « Responsable du traitement » et du « sous-traitant » ?",
+            "label": "Êtes-vous un sous-traitant ?",
             "branch": 0,
-            "level": 9,
+            "level": 6,
+            "order": 1
+          }
+        ]
+      },
+      {
+        "aindex": 3,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "Je ne sais pas",
+        "questions_map": [
+          {
+            "label": "Êtes-vous un sous-traitant ?",
+            "branch": 0,
+            "level": 6,
             "order": 1
           }
         ]
@@ -686,7 +756,7 @@
     "service_category": "Responsable du traitement et sous-traitant",
     "qtype": "S",
     "qindex": 7,
-    "label": "Connaissez-vous les responsabilités relevant du « Responsable du traitement » et du « sous-traitant » ?",
+    "label": "Êtes-vous un sous-traitant ?",
     "answers": [
       {
         "aindex": 1,
@@ -695,7 +765,7 @@
         "label": "Oui",
         "questions_map": [
           {
-            "label": "Sous-traitez-vous tout ou partie des traitements de données ?",
+            "label": "Connaissez-vous la différence entre la notion de « Responsable du traitement » et la notion de « sous-traitant » ?",
             "branch": 0,
             "level": 7,
             "order": 1
@@ -709,9 +779,23 @@
         "label": "Non",
         "questions_map": [
           {
-            "label": "Sous-traitez-vous tout ou partie des traitements de données ?",
+            "label": "Connaissez-vous la différence entre la notion de « Responsable du traitement » et la notion de « sous-traitant » ?",
             "branch": 0,
-            "level": 10,
+            "level": 7,
+            "order": 1
+          }
+        ]
+      },
+      {
+        "aindex": 3,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "Je ne sais pas",
+        "questions_map": [
+          {
+            "label": "Connaissez-vous la différence entre la notion de « Responsable du traitement » et la notion de « sous-traitant » ?",
+            "branch": 0,
+            "level": 7,
             "order": 1
           }
         ]
@@ -723,16 +807,16 @@
     "service_category": "Responsable du traitement et sous-traitant",
     "qtype": "S",
     "qindex": 8,
-    "label": "Sous-traitez-vous tout ou partie des traitements de données ?",
+    "label": "Connaissez-vous la différence entre la notion de « Responsable du traitement » et la notion de « sous-traitant » ?",
     "answers": [
       {
         "aindex": 1,
         "uniqueAnswer": true,
         "atype": "P",
-        "label": "Oui",
+        "label": "0 (Non acquis)",
         "questions_map": [
           {
-            "label": "Votre entreprise sait-elle comment et quand désigner un délégué à la protection des données (DPD ou DPO) ?",
+            "label": "Connaissez-vous les responsabilités qui vous incombent en qualité de « Responsable du traitement » et/ou de « sous-traitant » ?",
             "branch": 0,
             "level": 8,
             "order": 1
@@ -743,10 +827,10 @@
         "aindex": 2,
         "uniqueAnswer": true,
         "atype": "P",
-        "label": "Non",
+        "label": "1",
         "questions_map": [
           {
-            "label": "Avez-vous conclu un contrat de sous-traitance ?",
+            "label": "Connaissez-vous les responsabilités qui vous incombent en qualité de « Responsable du traitement » et/ou de « sous-traitant » ?",
             "branch": 0,
             "level": 8,
             "order": 1
@@ -757,10 +841,10 @@
         "aindex": 3,
         "uniqueAnswer": true,
         "atype": "P",
-        "label": "En cours de projet",
+        "label": "2",
         "questions_map": [
           {
-            "label": "Votre entreprise sait-elle comment et quand désigner un délégué à la protection des données (DPD ou DPO) ?",
+            "label": "Connaissez-vous les responsabilités qui vous incombent en qualité de « Responsable du traitement » et/ou de « sous-traitant » ?",
             "branch": 0,
             "level": 8,
             "order": 1
@@ -771,10 +855,38 @@
         "aindex": 4,
         "uniqueAnswer": true,
         "atype": "P",
-        "label": "Je ne sais pas",
+        "label": "3",
         "questions_map": [
           {
-            "label": "Votre entreprise sait-elle comment et quand désigner un délégué à la protection des données (DPD ou DPO) ?",
+            "label": "Connaissez-vous les responsabilités qui vous incombent en qualité de « Responsable du traitement » et/ou de « sous-traitant » ?",
+            "branch": 0,
+            "level": 8,
+            "order": 1
+          }
+        ]
+      },
+      {
+        "aindex": 5,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "4",
+        "questions_map": [
+          {
+            "label": "Connaissez-vous les responsabilités qui vous incombent en qualité de « Responsable du traitement » et/ou de « sous-traitant » ?",
+            "branch": 0,
+            "level": 8,
+            "order": 1
+          }
+        ]
+      },
+      {
+        "aindex": 6,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "5 (Parfaitment maîtrisé)",
+        "questions_map": [
+          {
+            "label": "Connaissez-vous les responsabilités qui vous incombent en qualité de « Responsable du traitement » et/ou de « sous-traitant » ?",
             "branch": 0,
             "level": 8,
             "order": 1
@@ -788,16 +900,16 @@
     "service_category": "Responsable du traitement et sous-traitant",
     "qtype": "S",
     "qindex": 9,
-    "label": "Avez-vous conclu un contrat de sous-traitance ?",
+    "label": "Connaissez-vous les responsabilités qui vous incombent en qualité de « Responsable du traitement » et/ou de « sous-traitant » ?",
     "answers": [
       {
         "aindex": 1,
         "uniqueAnswer": true,
         "atype": "P",
-        "label": "Oui",
+        "label": "0 (Non acquis)",
         "questions_map": [
           {
-            "label": "Votre entreprise sait-elle comment et quand désigner un délégué à la protection des données (DPD ou DPO) ?",
+            "label": "Sous-traitez-vous certains de vos traitements<sup>1</sup> de données ? <br><br><small>[1] Un traitement de données personnelles est une opération, ou ensemble d'opérations, portant sur des données personnelles, quel que soit le procédé utilisé. Le RGPD nomme toute une série de différents types de traitement comme la collecte, l'enregistrement, la modification, la diffusion ou toute autre forme de mise à disposition, ou encore l'effacement et la destruction (p.ex : traitement des salaires, traitement des candidats, listes de clients, listes de client prospects).<br><br>Note : Les dossiers papiers peuvent également être concernés (s'ils sont structurés, par exemple par un classement alphabétique ou chronologique).</small>",
             "branch": 0,
             "level": 9,
             "order": 1
@@ -808,12 +920,12 @@
         "aindex": 2,
         "uniqueAnswer": true,
         "atype": "P",
-        "label": "Non",
+        "label": "1",
         "questions_map": [
           {
-            "label": "Votre entreprise sait-elle comment et quand désigner un délégué à la protection des données (DPD ou DPO) ?",
+            "label": "Sous-traitez-vous certains de vos traitements<sup>1</sup> de données ? <br><br><small>[1] Un traitement de données personnelles est une opération, ou ensemble d'opérations, portant sur des données personnelles, quel que soit le procédé utilisé. Le RGPD nomme toute une série de différents types de traitement comme la collecte, l'enregistrement, la modification, la diffusion ou toute autre forme de mise à disposition, ou encore l'effacement et la destruction (p.ex : traitement des salaires, traitement des candidats, listes de clients, listes de client prospects).<br><br>Note : Les dossiers papiers peuvent également être concernés (s'ils sont structurés, par exemple par un classement alphabétique ou chronologique).</small>",
             "branch": 0,
-            "level": 12,
+            "level": 9,
             "order": 1
           }
         ]
@@ -822,12 +934,54 @@
         "aindex": 3,
         "uniqueAnswer": true,
         "atype": "P",
-        "label": "En cours de projet",
+        "label": "2",
         "questions_map": [
           {
-            "label": "Votre entreprise sait-elle comment et quand désigner un délégué à la protection des données (DPD ou DPO) ?",
+            "label": "Sous-traitez-vous certains de vos traitements<sup>1</sup> de données ? <br><br><small>[1] Un traitement de données personnelles est une opération, ou ensemble d'opérations, portant sur des données personnelles, quel que soit le procédé utilisé. Le RGPD nomme toute une série de différents types de traitement comme la collecte, l'enregistrement, la modification, la diffusion ou toute autre forme de mise à disposition, ou encore l'effacement et la destruction (p.ex : traitement des salaires, traitement des candidats, listes de clients, listes de client prospects).<br><br>Note : Les dossiers papiers peuvent également être concernés (s'ils sont structurés, par exemple par un classement alphabétique ou chronologique).</small>",
             "branch": 0,
-            "level": 12,
+            "level": 9,
+            "order": 1
+          }
+        ]
+      },
+      {
+        "aindex": 4,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "3",
+        "questions_map": [
+          {
+            "label": "Sous-traitez-vous certains de vos traitements<sup>1</sup> de données ? <br><br><small>[1] Un traitement de données personnelles est une opération, ou ensemble d'opérations, portant sur des données personnelles, quel que soit le procédé utilisé. Le RGPD nomme toute une série de différents types de traitement comme la collecte, l'enregistrement, la modification, la diffusion ou toute autre forme de mise à disposition, ou encore l'effacement et la destruction (p.ex : traitement des salaires, traitement des candidats, listes de clients, listes de client prospects).<br><br>Note : Les dossiers papiers peuvent également être concernés (s'ils sont structurés, par exemple par un classement alphabétique ou chronologique).</small>",
+            "branch": 0,
+            "level": 9,
+            "order": 1
+          }
+        ]
+      },
+      {
+        "aindex": 5,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "4",
+        "questions_map": [
+          {
+            "label": "Sous-traitez-vous certains de vos traitements<sup>1</sup> de données ? <br><br><small>[1] Un traitement de données personnelles est une opération, ou ensemble d'opérations, portant sur des données personnelles, quel que soit le procédé utilisé. Le RGPD nomme toute une série de différents types de traitement comme la collecte, l'enregistrement, la modification, la diffusion ou toute autre forme de mise à disposition, ou encore l'effacement et la destruction (p.ex : traitement des salaires, traitement des candidats, listes de clients, listes de client prospects).<br><br>Note : Les dossiers papiers peuvent également être concernés (s'ils sont structurés, par exemple par un classement alphabétique ou chronologique).</small>",
+            "branch": 0,
+            "level": 9,
+            "order": 1
+          }
+        ]
+      },
+      {
+        "aindex": 6,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "5 (Parfaitment maîtrisé)",
+        "questions_map": [
+          {
+            "label": "Sous-traitez-vous certains de vos traitements<sup>1</sup> de données ? <br><br><small>[1] Un traitement de données personnelles est une opération, ou ensemble d'opérations, portant sur des données personnelles, quel que soit le procédé utilisé. Le RGPD nomme toute une série de différents types de traitement comme la collecte, l'enregistrement, la modification, la diffusion ou toute autre forme de mise à disposition, ou encore l'effacement et la destruction (p.ex : traitement des salaires, traitement des candidats, listes de clients, listes de client prospects).<br><br>Note : Les dossiers papiers peuvent également être concernés (s'ils sont structurés, par exemple par un classement alphabétique ou chronologique).</small>",
+            "branch": 0,
+            "level": 9,
             "order": 1
           }
         ]
@@ -836,10 +990,10 @@
   },
   {
     "section": "ALTO",
-    "service_category": "Les bases du RGPD",
+    "service_category": "Responsable du traitement et sous-traitant",
     "qtype": "S",
     "qindex": 10,
-    "label": "Votre entreprise sait-elle comment et quand désigner un délégué à la protection des données (DPD ou DPO) ?",
+    "label": "Sous-traitez-vous certains de vos traitements<sup>1</sup> de données ? <br><br><small>[1] Un traitement de données personnelles est une opération, ou ensemble d'opérations, portant sur des données personnelles, quel que soit le procédé utilisé. Le RGPD nomme toute une série de différents types de traitement comme la collecte, l'enregistrement, la modification, la diffusion ou toute autre forme de mise à disposition, ou encore l'effacement et la destruction (p.ex : traitement des salaires, traitement des candidats, listes de clients, listes de client prospects).<br><br>Note : Les dossiers papiers peuvent également être concernés (s'ils sont structurés, par exemple par un classement alphabétique ou chronologique).</small>",
     "answers": [
       {
         "aindex": 1,
@@ -848,7 +1002,7 @@
         "label": "Oui",
         "questions_map": [
           {
-            "label": "Votre entreprise dispose-t-elle d'une liste des traitements de données ?",
+            "label": "Avez-vous conclu un contrat de sous-traitance ?",
             "branch": 0,
             "level": 10,
             "order": 1
@@ -862,9 +1016,9 @@
         "label": "Non",
         "questions_map": [
           {
-            "label": "Votre entreprise dispose-t-elle d'une liste des traitements de données ?",
+            "label": "Votre entreprise sait-elle comment et quand désigner un délégué à la protection des données (DPD ou DPO) ?",
             "branch": 0,
-            "level": 13,
+            "level": 10,
             "order": 1
           }
         ]
@@ -876,9 +1030,9 @@
         "label": "Je ne sais pas",
         "questions_map": [
           {
-            "label": "Votre entreprise dispose-t-elle d'une liste des traitements de données ?",
+            "label": "Votre entreprise sait-elle comment et quand désigner un délégué à la protection des données (DPD ou DPO) ?",
             "branch": 0,
-            "level": 13,
+            "level": 10,
             "order": 1
           }
         ]
@@ -887,10 +1041,10 @@
   },
   {
     "section": "ALTO",
-    "service_category": "Les bases du RGPD",
+    "service_category": "Responsable du traitement et sous-traitant",
     "qtype": "S",
     "qindex": 11,
-    "label": "Votre entreprise dispose-t-elle d'une liste des traitements de données ?",
+    "label": "Avez-vous conclu un contrat de sous-traitance ?",
     "answers": [
       {
         "aindex": 1,
@@ -899,7 +1053,7 @@
         "label": "Oui",
         "questions_map": [
           {
-            "label": "Votre entreprise a-t-elle établie des finalités claires pour ses traitements de données ?",
+            "label": "Votre entreprise sait-elle comment et quand désigner un délégué à la protection des données (DPD ou DPO) ?",
             "branch": 0,
             "level": 11,
             "order": 1
@@ -913,7 +1067,7 @@
         "label": "Non",
         "questions_map": [
           {
-            "label": "Votre entreprise a-t-elle connaissance des principes « Privacy by default / by design » ?",
+            "label": "Votre entreprise sait-elle comment et quand désigner un délégué à la protection des données (DPD ou DPO) ?",
             "branch": 0,
             "level": 11,
             "order": 1
@@ -927,21 +1081,7 @@
         "label": "En cours de projet",
         "questions_map": [
           {
-            "label": "Votre entreprise a-t-elle établie des finalités claires pour ses traitements de données ?",
-            "branch": 0,
-            "level": 11,
-            "order": 1
-          }
-        ]
-      },
-      {
-        "aindex": 4,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "label": "Je ne sais pas",
-        "questions_map": [
-          {
-            "label": "Votre entreprise a-t-elle établie des finalités claires pour ses traitements de données ?",
+            "label": "Votre entreprise sait-elle comment et quand désigner un délégué à la protection des données (DPD ou DPO) ?",
             "branch": 0,
             "level": 11,
             "order": 1
@@ -955,7 +1095,7 @@
     "service_category": "Les bases du RGPD",
     "qtype": "S",
     "qindex": 12,
-    "label": "Votre entreprise a-t-elle établie des finalités claires pour ses traitements de données ?",
+    "label": "Votre entreprise sait-elle comment et quand désigner un délégué à la protection des données (DPD ou DPO) ?",
     "answers": [
       {
         "aindex": 1,
@@ -964,7 +1104,7 @@
         "label": "Oui",
         "questions_map": [
           {
-            "label": "Votre entreprise a-t-elle identifiée des bases légales spécifiques pour ses traitements de données ?",
+            "label": "Votre entreprise dispose-t-elle d'une liste des traitements de données ?",
             "branch": 0,
             "level": 12,
             "order": 1
@@ -978,35 +1118,7 @@
         "label": "Non",
         "questions_map": [
           {
-            "label": "Votre entreprise a-t-elle identifiée des bases légales spécifiques pour ses traitements de données ?",
-            "branch": 0,
-            "level": 12,
-            "order": 1
-          }
-        ]
-      },
-      {
-        "aindex": 3,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "label": "En cours de projet",
-        "questions_map": [
-          {
-            "label": "Votre entreprise a-t-elle identifiée des bases légales spécifiques pour ses traitements de données ?",
-            "branch": 0,
-            "level": 12,
-            "order": 1
-          }
-        ]
-      },
-      {
-        "aindex": 4,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "label": "Je ne sais pas",
-        "questions_map": [
-          {
-            "label": "Votre entreprise a-t-elle identifiée des bases légales spécifiques pour ses traitements de données ?",
+            "label": "Votre entreprise dispose-t-elle d'une liste des traitements de données ?",
             "branch": 0,
             "level": 12,
             "order": 1
@@ -1020,7 +1132,7 @@
     "service_category": "Les bases du RGPD",
     "qtype": "S",
     "qindex": 13,
-    "label": "Votre entreprise a-t-elle identifiée des bases légales spécifiques pour ses traitements de données ?",
+    "label": "Votre entreprise dispose-t-elle d'une liste des traitements de données ?",
     "answers": [
       {
         "aindex": 1,
@@ -1029,7 +1141,7 @@
         "label": "Oui",
         "questions_map": [
           {
-            "label": "Votre entreprise a-t-elle mis en œuvre le principe de minimisation des données consistant à n'utiliser que les données nécessaires à la gestion de vos traitements ?",
+            "label": "Votre entreprise a-t-elle établi des finalités claires pour ses traitements de données ?",
             "branch": 0,
             "level": 13,
             "order": 1
@@ -1043,7 +1155,7 @@
         "label": "Non",
         "questions_map": [
           {
-            "label": "Votre entreprise a-t-elle mis en œuvre le principe de minimisation des données consistant à n'utiliser que les données nécessaires à la gestion de vos traitements ?",
+            "label": "Votre entreprise a-t-elle établi des finalités claires pour ses traitements de données ?",
             "branch": 0,
             "level": 13,
             "order": 1
@@ -1057,7 +1169,7 @@
         "label": "En cours de projet",
         "questions_map": [
           {
-            "label": "Votre entreprise a-t-elle mis en œuvre le principe de minimisation des données consistant à n'utiliser que les données nécessaires à la gestion de vos traitements ?",
+            "label": "Votre entreprise a-t-elle établi des finalités claires pour ses traitements de données ?",
             "branch": 0,
             "level": 13,
             "order": 1
@@ -1071,7 +1183,7 @@
         "label": "Je ne sais pas",
         "questions_map": [
           {
-            "label": "Votre entreprise a-t-elle mis en œuvre le principe de minimisation des données consistant à n'utiliser que les données nécessaires à la gestion de vos traitements ?",
+            "label": "Votre entreprise a-t-elle établi des finalités claires pour ses traitements de données ?",
             "branch": 0,
             "level": 13,
             "order": 1
@@ -1085,7 +1197,7 @@
     "service_category": "Les bases du RGPD",
     "qtype": "S",
     "qindex": 14,
-    "label": "Votre entreprise a-t-elle mis en œuvre le principe de minimisation des données consistant à n'utiliser que les données nécessaires à la gestion de vos traitements ?",
+    "label": "Votre entreprise a-t-elle établi des finalités claires pour ses traitements de données ?",
     "answers": [
       {
         "aindex": 1,
@@ -1094,7 +1206,7 @@
         "label": "Oui",
         "questions_map": [
           {
-            "label": "Votre entreprise a-t-elle connaissance des principes « Privacy by default / by design » ?",
+            "label": "Votre entreprise a-t-elle identifié des bases légales spécifiques pour ses traitements de données ?",
             "branch": 0,
             "level": 14,
             "order": 1
@@ -1108,7 +1220,7 @@
         "label": "Non",
         "questions_map": [
           {
-            "label": "Votre entreprise a-t-elle connaissance des principes « Privacy by default / by design » ?",
+            "label": "Votre entreprise a-t-elle identifié des bases légales spécifiques pour ses traitements de données ?",
             "branch": 0,
             "level": 14,
             "order": 1
@@ -1122,7 +1234,7 @@
         "label": "En cours de projet",
         "questions_map": [
           {
-            "label": "Votre entreprise a-t-elle connaissance des principes « Privacy by default / by design » ?",
+            "label": "Votre entreprise a-t-elle identifié des bases légales spécifiques pour ses traitements de données ?",
             "branch": 0,
             "level": 14,
             "order": 1
@@ -1136,7 +1248,7 @@
         "label": "Je ne sais pas",
         "questions_map": [
           {
-            "label": "Votre entreprise a-t-elle connaissance des principes « Privacy by default / by design » ?",
+            "label": "Votre entreprise a-t-elle identifié des bases légales spécifiques pour ses traitements de données ?",
             "branch": 0,
             "level": 14,
             "order": 1
@@ -1150,7 +1262,7 @@
     "service_category": "Les bases du RGPD",
     "qtype": "S",
     "qindex": 15,
-    "label": "Votre entreprise a-t-elle connaissance des principes « Privacy by default / by design » ?",
+    "label": "Votre entreprise a-t-elle identifié des bases légales spécifiques pour ses traitements de données ?",
     "answers": [
       {
         "aindex": 1,
@@ -1159,7 +1271,7 @@
         "label": "Oui",
         "questions_map": [
           {
-            "label": "Votre entreprise informe-t-elle les salariés et clients des traitements de données les concernant ?",
+            "label": "Votre entreprise a-t-elle mis en œuvre le principe de minimisation des données consistant à n'utiliser que les données nécessaires à la réalisation de ses traitements ?",
             "branch": 0,
             "level": 15,
             "order": 1
@@ -1173,9 +1285,9 @@
         "label": "Non",
         "questions_map": [
           {
-            "label": "Votre entreprise informe-t-elle les salariés et clients des traitements de données les concernant ?",
+            "label": "Votre entreprise a-t-elle mis en œuvre le principe de minimisation des données consistant à n'utiliser que les données nécessaires à la réalisation de ses traitements ?",
             "branch": 0,
-            "level": 18,
+            "level": 15,
             "order": 1
           }
         ]
@@ -1184,12 +1296,26 @@
         "aindex": 3,
         "uniqueAnswer": true,
         "atype": "P",
+        "label": "En cours de projet",
+        "questions_map": [
+          {
+            "label": "Votre entreprise a-t-elle mis en œuvre le principe de minimisation des données consistant à n'utiliser que les données nécessaires à la réalisation de ses traitements ?",
+            "branch": 0,
+            "level": 15,
+            "order": 1
+          }
+        ]
+      },
+      {
+        "aindex": 4,
+        "uniqueAnswer": true,
+        "atype": "P",
         "label": "Je ne sais pas",
         "questions_map": [
           {
-            "label": "Votre entreprise informe-t-elle les salariés et clients des traitements de données les concernant ?",
+            "label": "Votre entreprise a-t-elle mis en œuvre le principe de minimisation des données consistant à n'utiliser que les données nécessaires à la réalisation de ses traitements ?",
             "branch": 0,
-            "level": 18,
+            "level": 15,
             "order": 1
           }
         ]
@@ -1201,7 +1327,7 @@
     "service_category": "Les bases du RGPD",
     "qtype": "S",
     "qindex": 16,
-    "label": "Votre entreprise informe-t-elle les salariés et clients des traitements de données les concernant ?",
+    "label": "Votre entreprise a-t-elle mis en œuvre le principe de minimisation des données consistant à n'utiliser que les données nécessaires à la réalisation de ses traitements ?",
     "answers": [
       {
         "aindex": 1,
@@ -1210,7 +1336,7 @@
         "label": "Oui",
         "questions_map": [
           {
-            "label": "Votre entreprise informe-t-elle les salariés et clients sur leurs droits ?",
+            "label": "Votre entreprise a-t-elle connaissance des principes « Privacy by default / Privacy by design » ?",
             "branch": 0,
             "level": 16,
             "order": 1
@@ -1224,7 +1350,7 @@
         "label": "Non",
         "questions_map": [
           {
-            "label": "Votre entreprise informe-t-elle les salariés et clients sur leurs droits ?",
+            "label": "Votre entreprise a-t-elle connaissance des principes « Privacy by default / Privacy by design » ?",
             "branch": 0,
             "level": 16,
             "order": 1
@@ -1238,7 +1364,7 @@
         "label": "En cours de projet",
         "questions_map": [
           {
-            "label": "Votre entreprise informe-t-elle les salariés et clients sur leurs droits ?",
+            "label": "Votre entreprise a-t-elle connaissance des principes « Privacy by default / Privacy by design » ?",
             "branch": 0,
             "level": 16,
             "order": 1
@@ -1252,7 +1378,7 @@
         "label": "Je ne sais pas",
         "questions_map": [
           {
-            "label": "Votre entreprise informe-t-elle les salariés et clients sur leurs droits ?",
+            "label": "Votre entreprise a-t-elle connaissance des principes « Privacy by default / Privacy by design » ?",
             "branch": 0,
             "level": 16,
             "order": 1
@@ -1266,7 +1392,7 @@
     "service_category": "Les bases du RGPD",
     "qtype": "S",
     "qindex": 17,
-    "label": "Votre entreprise informe-t-elle les salariés et clients sur leurs droits ?",
+    "label": "Votre entreprise a-t-elle connaissance des principes « Privacy by default / Privacy by design » ?",
     "answers": [
       {
         "aindex": 1,
@@ -1275,7 +1401,7 @@
         "label": "Oui",
         "questions_map": [
           {
-            "label": "Votre entreprise applique-t-elle des délais de conservation adaptés à la nature des données traitées ?",
+            "label": "Votre entreprise informe-t-elle les salariés et clients des traitements de données les concernant ?",
             "branch": 0,
             "level": 17,
             "order": 1
@@ -1289,7 +1415,7 @@
         "label": "Non",
         "questions_map": [
           {
-            "label": "Votre entreprise applique-t-elle des délais de conservation adaptés à la nature des données traitées ?",
+            "label": "Votre entreprise informe-t-elle les salariés et clients des traitements de données les concernant ?",
             "branch": 0,
             "level": 17,
             "order": 1
@@ -1300,24 +1426,10 @@
         "aindex": 3,
         "uniqueAnswer": true,
         "atype": "P",
-        "label": "En cours de projet",
-        "questions_map": [
-          {
-            "label": "Votre entreprise applique-t-elle des délais de conservation adaptés à la nature des données traitées ?",
-            "branch": 0,
-            "level": 17,
-            "order": 1
-          }
-        ]
-      },
-      {
-        "aindex": 4,
-        "uniqueAnswer": true,
-        "atype": "P",
         "label": "Je ne sais pas",
         "questions_map": [
           {
-            "label": "Votre entreprise applique-t-elle des délais de conservation adaptés à la nature des données traitées ?",
+            "label": "Votre entreprise informe-t-elle les salariés et clients des traitements de données les concernant ?",
             "branch": 0,
             "level": 17,
             "order": 1
@@ -1331,7 +1443,7 @@
     "service_category": "Les bases du RGPD",
     "qtype": "S",
     "qindex": 18,
-    "label": "Votre entreprise applique-t-elle des délais de conservation adaptés à la nature des données traitées ?",
+    "label": "Votre entreprise informe-t-elle les salariés et clients des traitements de données les concernant ?",
     "answers": [
       {
         "aindex": 1,
@@ -1340,7 +1452,7 @@
         "label": "Oui",
         "questions_map": [
           {
-            "label": "Votre entreprise héberge-t-elle les données traitées dans un lieu de stockage dont la sécurité est adaptée à la sensibilité/ gravité ?",
+            "label": "Votre entreprise informe-t-elle les salariés et clients sur leurs droits prévus par le RGPD ?",
             "branch": 0,
             "level": 18,
             "order": 1
@@ -1354,7 +1466,7 @@
         "label": "Non",
         "questions_map": [
           {
-            "label": "Votre entreprise héberge-t-elle les données traitées dans un lieu de stockage dont la sécurité est adaptée à la sensibilité/ gravité ?",
+            "label": "Votre entreprise informe-t-elle les salariés et clients sur leurs droits prévus par le RGPD ?",
             "branch": 0,
             "level": 18,
             "order": 1
@@ -1368,7 +1480,7 @@
         "label": "En cours de projet",
         "questions_map": [
           {
-            "label": "Votre entreprise héberge-t-elle les données traitées dans un lieu de stockage dont la sécurité est adaptée à la sensibilité/ gravité ?",
+            "label": "Votre entreprise informe-t-elle les salariés et clients sur leurs droits prévus par le RGPD ?",
             "branch": 0,
             "level": 18,
             "order": 1
@@ -1382,7 +1494,7 @@
         "label": "Je ne sais pas",
         "questions_map": [
           {
-            "label": "Votre entreprise héberge-t-elle les données traitées dans un lieu de stockage dont la sécurité est adaptée à la sensibilité/ gravité ?",
+            "label": "Votre entreprise informe-t-elle les salariés et clients sur leurs droits prévus par le RGPD ?",
             "branch": 0,
             "level": 18,
             "order": 1
@@ -1396,7 +1508,7 @@
     "service_category": "Les bases du RGPD",
     "qtype": "S",
     "qindex": 19,
-    "label": "Votre entreprise héberge-t-elle les données traitées dans un lieu de stockage dont la sécurité est adaptée à la sensibilité/ gravité ?",
+    "label": "Votre entreprise informe-t-elle les salariés et clients sur leurs droits prévus par le RGPD ?",
     "answers": [
       {
         "aindex": 1,
@@ -1405,7 +1517,7 @@
         "label": "Oui",
         "questions_map": [
           {
-            "label": "Comment votre entreprise documente ses traitements afin de démontrer sa mise en conformité ?",
+            "label": "Votre entreprise applique-t-elle des délais de conservation adaptés à la nature des données traitées ?",
             "branch": 0,
             "level": 19,
             "order": 1
@@ -1419,7 +1531,7 @@
         "label": "Non",
         "questions_map": [
           {
-            "label": "Comment votre entreprise documente ses traitements afin de démontrer sa mise en conformité ?",
+            "label": "Votre entreprise applique-t-elle des délais de conservation adaptés à la nature des données traitées ?",
             "branch": 0,
             "level": 19,
             "order": 1
@@ -1433,7 +1545,7 @@
         "label": "En cours de projet",
         "questions_map": [
           {
-            "label": "Comment votre entreprise documente ses traitements afin de démontrer sa mise en conformité ?",
+            "label": "Votre entreprise applique-t-elle des délais de conservation adaptés à la nature des données traitées ?",
             "branch": 0,
             "level": 19,
             "order": 1
@@ -1447,7 +1559,7 @@
         "label": "Je ne sais pas",
         "questions_map": [
           {
-            "label": "Comment votre entreprise documente ses traitements afin de démontrer sa mise en conformité ?",
+            "label": "Votre entreprise applique-t-elle des délais de conservation adaptés à la nature des données traitées ?",
             "branch": 0,
             "level": 19,
             "order": 1
@@ -1459,18 +1571,18 @@
   {
     "section": "ALTO",
     "service_category": "Les bases du RGPD",
-    "qtype": "M",
+    "qtype": "S",
     "qindex": 20,
-    "label": "Comment votre entreprise documente ses traitements afin de démontrer sa mise en conformité ?",
+    "label": "Votre entreprise applique-t-elle des délais de conservation adaptés à la nature des données traitées ?",
     "answers": [
       {
         "aindex": 1,
-        "uniqueAnswer": false,
+        "uniqueAnswer": true,
         "atype": "P",
-        "label": "Politiques de protection des données",
+        "label": "Oui",
         "questions_map": [
           {
-            "label": "Y-a-t-il d'autres thèmes non listés ci-avant qui vous semble important de traiter ?",
+            "label": "Votre entreprise héberge-t-elle les données traitées dans un lieu de stockage dont la sécurité est adaptée à la sensibilité des données ?",
             "branch": 0,
             "level": 20,
             "order": 1
@@ -1479,12 +1591,12 @@
       },
       {
         "aindex": 2,
-        "uniqueAnswer": false,
+        "uniqueAnswer": true,
         "atype": "P",
-        "label": "Annexe au contrat de travail",
+        "label": "Non",
         "questions_map": [
           {
-            "label": "Y-a-t-il d'autres thèmes non listés ci-avant qui vous semble important de traiter ?",
+            "label": "Votre entreprise héberge-t-elle les données traitées dans un lieu de stockage dont la sécurité est adaptée à la sensibilité des données ?",
             "branch": 0,
             "level": 20,
             "order": 1
@@ -1493,14 +1605,144 @@
       },
       {
         "aindex": 3,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "En cours de projet",
+        "questions_map": [
+          {
+            "label": "Votre entreprise héberge-t-elle les données traitées dans un lieu de stockage dont la sécurité est adaptée à la sensibilité des données ?",
+            "branch": 0,
+            "level": 20,
+            "order": 1
+          }
+        ]
+      },
+      {
+        "aindex": 4,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "Je ne sais pas",
+        "questions_map": [
+          {
+            "label": "Votre entreprise héberge-t-elle les données traitées dans un lieu de stockage dont la sécurité est adaptée à la sensibilité des données ?",
+            "branch": 0,
+            "level": 20,
+            "order": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "section": "ALTO",
+    "service_category": "Les bases du RGPD",
+    "qtype": "S",
+    "qindex": 21,
+    "label": "Votre entreprise héberge-t-elle les données traitées dans un lieu de stockage dont la sécurité est adaptée à la sensibilité des données ?",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "Oui",
+        "questions_map": [
+          {
+            "label": "Comment votre entreprise documente-t-elle ses traitements afin de démontrer sa mise en conformité ?",
+            "branch": 0,
+            "level": 21,
+            "order": 1
+          }
+        ]
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "Non",
+        "questions_map": [
+          {
+            "label": "Comment votre entreprise documente-t-elle ses traitements afin de démontrer sa mise en conformité ?",
+            "branch": 0,
+            "level": 21,
+            "order": 1
+          }
+        ]
+      },
+      {
+        "aindex": 3,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "En cours de projet",
+        "questions_map": [
+          {
+            "label": "Comment votre entreprise documente-t-elle ses traitements afin de démontrer sa mise en conformité ?",
+            "branch": 0,
+            "level": 21,
+            "order": 1
+          }
+        ]
+      },
+      {
+        "aindex": 4,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "Je ne sais pas",
+        "questions_map": [
+          {
+            "label": "Comment votre entreprise documente-t-elle ses traitements afin de démontrer sa mise en conformité ?",
+            "branch": 0,
+            "level": 21,
+            "order": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "section": "ALTO",
+    "service_category": "Les bases du RGPD",
+    "qtype": "M",
+    "qindex": 22,
+    "label": "Comment votre entreprise documente-t-elle ses traitements afin de démontrer sa mise en conformité ?",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "label": "Politiques de protection des données",
+        "questions_map": [
+          {
+            "label": "Avez-vous conscience des risques liés à la gestion des données ?",
+            "branch": 0,
+            "level": 22,
+            "order": 1
+          }
+        ]
+      },
+      {
+        "aindex": 2,
         "uniqueAnswer": false,
         "atype": "P",
         "label": "Contrat de sous-traitance",
         "questions_map": [
           {
-            "label": "Y-a-t-il d'autres thèmes non listés ci-avant qui vous semble important de traiter ?",
+            "label": "Avez-vous conscience des risques liés à la gestion des données ?",
             "branch": 0,
-            "level": 20,
+            "level": 22,
+            "order": 1
+          }
+        ]
+      },
+      {
+        "aindex": 3,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "label": "Annexe au contrat de travail (information relative à la gestion des données des salariés)",
+        "questions_map": [
+          {
+            "label": "Avez-vous conscience des risques liés à la gestion des données ?",
+            "branch": 0,
+            "level": 22,
             "order": 1
           }
         ]
@@ -1512,9 +1754,9 @@
         "label": "Registres des activités de traitements",
         "questions_map": [
           {
-            "label": "Y-a-t-il d'autres thèmes non listés ci-avant qui vous semble important de traiter ?",
+            "label": "Avez-vous conscience des risques liés à la gestion des données ?",
             "branch": 0,
-            "level": 20,
+            "level": 22,
             "order": 1
           }
         ]
@@ -1523,12 +1765,12 @@
         "aindex": 5,
         "uniqueAnswer": false,
         "atype": "P",
-        "label": "Politiques de protection des données",
+        "label": "Procédure interne de gestion des violations de données",
         "questions_map": [
           {
-            "label": "Y-a-t-il d'autres thèmes non listés ci-avant qui vous semble important de traiter ?",
+            "label": "Avez-vous conscience des risques liés à la gestion des données ?",
             "branch": 0,
-            "level": 20,
+            "level": 22,
             "order": 1
           }
         ]
@@ -1537,12 +1779,12 @@
         "aindex": 6,
         "uniqueAnswer": false,
         "atype": "P",
-        "label": "Procédure interne de gestion des violations de données",
+        "label": "Procédure interne sur l'exercice des droits des personnes concernées",
         "questions_map": [
           {
-            "label": "Y-a-t-il d'autres thèmes non listés ci-avant qui vous semble important de traiter ?",
+            "label": "Avez-vous conscience des risques liés à la gestion des données ?",
             "branch": 0,
-            "level": 20,
+            "level": 22,
             "order": 1
           }
         ]
@@ -1551,12 +1793,12 @@
         "aindex": 7,
         "uniqueAnswer": false,
         "atype": "P",
-        "label": "Procédure interne sur l'exercice des droits des personnes concernées",
+        "label": "Analyses d'impact",
         "questions_map": [
           {
-            "label": "Y-a-t-il d'autres thèmes non listés ci-avant qui vous semble important de traiter ?",
+            "label": "Avez-vous conscience des risques liés à la gestion des données ?",
             "branch": 0,
-            "level": 20,
+            "level": 22,
             "order": 1
           }
         ]
@@ -1565,12 +1807,12 @@
         "aindex": 8,
         "uniqueAnswer": false,
         "atype": "P",
-        "label": "Analyses d'impact",
+        "label": "Clauses contractuelles types (transfert pays-tiers)",
         "questions_map": [
           {
-            "label": "Y-a-t-il d'autres thèmes non listés ci-avant qui vous semble important de traiter ?",
+            "label": "Avez-vous conscience des risques liés à la gestion des données ?",
             "branch": 0,
-            "level": 20,
+            "level": 22,
             "order": 1
           }
         ]
@@ -1579,216 +1821,24 @@
         "aindex": 9,
         "uniqueAnswer": false,
         "atype": "P",
-        "label": "Clauses contractuelles types (transfert pays-tiers)",
+        "label": "Document de recueil du consentement",
         "questions_map": [
           {
-            "label": "Y-a-t-il d'autres thèmes non listés ci-avant qui vous semble important de traiter ?",
+            "label": "Avez-vous conscience des risques liés à la gestion des données ?",
             "branch": 0,
-            "level": 20,
+            "level": 22,
             "order": 1
           }
         ]
       },
       {
         "aindex": 10,
-        "uniqueAnswer": false,
-        "atype": "P",
-        "label": "Document de recueil du consentement"
-      },
-      {
-        "questions_map": [
-          {
-            "label": "Y-a-t-il d'autres thèmes non listés ci-avant qui vous semble important de traiter ?",
-            "branch": 0,
-            "level": 20,
-            "order": 1
-          }
-        ],
-        "aindex": 11,
-        "uniqueAnswer": false,
-        "atype": "P",
-        "label": "Annexe au contrat de travail (information relatives à la gestion des données des salariés)"
-      },
-      {
-        "questions_map": [
-          {
-            "label": "Y-a-t-il d'autres thèmes non listés ci-avant qui vous semble important de traiter ?",
-            "branch": 0,
-            "level": 20,
-            "order": 1
-          }
-        ],
-        "aindex": 12,
-        "uniqueAnswer": false,
-        "atype": "P",
-        "label": "Analyses d'impact"
-      },
-      {
-        "questions_map": [
-          {
-            "label": "Quel sont les risques en terme de traitement de données rencontrés ou possibles pouvant affecter votre entreprise ?",
-            "branch": 0,
-            "level": 20,
-            "order": 1
-          }
-        ],
-        "aindex": 13,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "label": "Je ne sais pas"
-      }
-    ]
-  },
-  {
-    "section": "ALTO",
-    "service_category": "Les bases du RGPD",
-    "qtype": "T",
-    "qindex": 21,
-    "label": "Y-a-t-il d'autres thèmes non listés ci-avant qui vous semble important de traiter ?",
-    "answers": [
-      {
-        "aindex": 1,
-        "uniqueAnswer": true,
-        "atype": "T",
-        "label": "Veuillez préciser :",
-        "questions_map": [
-          {
-            "label": "Quel sont les risques en terme de traitement de données rencontrés ou possibles pouvant affecter votre entreprise ?",
-            "branch": 0,
-            "level": 21,
-            "order": 1
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "section": "ALTO",
-    "service_category": "Les risques des PME liés au RGPD",
-    "qtype": "M",
-    "qindex": 22,
-    "label": "Quel sont les risques en terme de traitement de données rencontrés ou possibles pouvant affecter votre entreprise ?",
-    "answers": [
-      {
-        "aindex": 1,
-        "uniqueAnswer": false,
-        "atype": "P",
-        "label": "Risques interne (humain, perte clé USB)",
-        "questions_map": [
-          {
-            "label": "Votre entreprise a-t-elle une vue d'ensemble sur les flux des données ?",
-            "branch": 0,
-            "level": 22,
-            "order": 1
-          }
-        ]
-      },
-      {
-        "aindex": 2,
-        "uniqueAnswer": false,
-        "atype": "P",
-        "label": "Risques externe (cyber-attaques)",
-        "questions_map": [
-          {
-            "label": "Votre entreprise a-t-elle une vue d'ensemble sur les flux des données ?",
-            "branch": 0,
-            "level": 22,
-            "order": 1
-          }
-        ]
-      },
-      {
-        "aindex": 3,
-        "uniqueAnswer": false,
-        "atype": "P",
-        "label": "Risques liés à l'usage de technologique",
-        "questions_map": [
-          {
-            "label": "Votre entreprise a-t-elle une vue d'ensemble sur les flux des données ?",
-            "branch": 0,
-            "level": 22,
-            "order": 1
-          }
-        ]
-      },
-      {
-        "aindex": 4,
-        "uniqueAnswer": false,
-        "atype": "P",
-        "label": "Risques liés à l'usage de nouvelles technologiques",
-        "questions_map": [
-          {
-            "label": "Votre entreprise a-t-elle une vue d'ensemble sur les flux des données ?",
-            "branch": 0,
-            "level": 22,
-            "order": 1
-          }
-        ]
-      },
-      {
-        "aindex": 5,
-        "uniqueAnswer": false,
-        "atype": "P",
-        "label": "Risques liés aux traitements de données (ex : prise de décision automatique et surveillance)",
-        "questions_map": [
-          {
-            "label": "Votre entreprise a-t-elle une vue d'ensemble sur les flux des données ?",
-            "branch": 0,
-            "level": 22,
-            "order": 1
-          }
-        ]
-      },
-      {
-        "aindex": 6,
-        "uniqueAnswer": false,
-        "atype": "P",
-        "label": "Risques liés aux données traitées dites sensibles (ex : origine raciale, opinion politique et religieux, orientation sexuelle, biométrie, etc.)",
-        "questions_map": [
-          {
-            "label": "Votre entreprise a-t-elle une vue d'ensemble sur les flux des données ?",
-            "branch": 0,
-            "level": 22,
-            "order": 1
-          }
-        ]
-      },
-      {
-        "aindex": 7,
-        "uniqueAnswer": false,
-        "atype": "P",
-        "label": "Risques liés aux transferts pays-tiers",
-        "questions_map": [
-          {
-            "label": "Votre entreprise a-t-elle une vue d'ensemble sur les flux des données ?",
-            "branch": 0,
-            "level": 22,
-            "order": 1
-          }
-        ]
-      },
-      {
-        "aindex": 8,
-        "uniqueAnswer": false,
-        "atype": "P",
-        "label": "Risques liés aux traitement de données de personnes vulnérables (ex : mineur)",
-        "questions_map": [
-          {
-            "label": "Votre entreprise a-t-elle une vue d'ensemble sur les flux des données ?",
-            "branch": 0,
-            "level": 22,
-            "order": 1
-          }
-        ]
-      },
-      {
-        "aindex": 9,
         "uniqueAnswer": true,
         "atype": "P",
         "label": "Je ne sais pas",
         "questions_map": [
           {
-            "label": "Votre entreprise a-t-elle une vue d'ensemble sur les flux des données ?",
+            "label": "Avez-vous conscience des risques liés à la gestion des données ?",
             "branch": 0,
             "level": 22,
             "order": 1
@@ -1802,16 +1852,16 @@
     "service_category": "Les risques des PME liés au RGPD",
     "qtype": "S",
     "qindex": 23,
-    "label": "Votre entreprise a-t-elle une vue d'ensemble sur les flux des données ?",
+    "label": "Avez-vous conscience des risques liés à la gestion des données ?",
     "answers": [
       {
         "aindex": 1,
-        "uniqueAnswer": true,
+        "uniqueAnswer": false,
         "atype": "P",
-        "label": "Oui",
+        "label": "0 (Non acquis)",
         "questions_map": [
           {
-            "label": "Votre entreprise a-t-elle sécurisé la gestion de vos traitements de données ?",
+            "label": "Quels risques ont été identifiés par votre entreprise ?",
             "branch": 0,
             "level": 23,
             "order": 1
@@ -1822,10 +1872,10 @@
         "aindex": 2,
         "uniqueAnswer": true,
         "atype": "P",
-        "label": "Non",
+        "label": "1",
         "questions_map": [
           {
-            "label": "Votre entreprise a-t-elle sécurisé la gestion de vos traitements de données ?",
+            "label": "Quels risques ont été identifiés par votre entreprise ?",
             "branch": 0,
             "level": 23,
             "order": 1
@@ -1836,10 +1886,10 @@
         "aindex": 3,
         "uniqueAnswer": true,
         "atype": "P",
-        "label": "En cours de projet",
+        "label": "2",
         "questions_map": [
           {
-            "label": "Votre entreprise a-t-elle sécurisé la gestion de vos traitements de données ?",
+            "label": "Quels risques ont été identifiés par votre entreprise ?",
             "branch": 0,
             "level": 23,
             "order": 1
@@ -1850,10 +1900,38 @@
         "aindex": 4,
         "uniqueAnswer": true,
         "atype": "P",
-        "label": "Je ne sais pas",
+        "label": "3",
         "questions_map": [
           {
-            "label": "Votre entreprise a-t-elle sécurisé la gestion de vos traitements de données ?",
+            "label": "Quels risques ont été identifiés par votre entreprise ?",
+            "branch": 0,
+            "level": 23,
+            "order": 1
+          }
+        ]
+      },
+      {
+        "aindex": 5,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "4",
+        "questions_map": [
+          {
+            "label": "Quels risques ont été identifiés par votre entreprise ?",
+            "branch": 0,
+            "level": 23,
+            "order": 1
+          }
+        ]
+      },
+      {
+        "aindex": 6,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "5 (Parfaitment maîtrisé)",
+        "questions_map": [
+          {
+            "label": "Quels risques ont été identifiés par votre entreprise ?",
             "branch": 0,
             "level": 23,
             "order": 1
@@ -1865,18 +1943,18 @@
   {
     "section": "ALTO",
     "service_category": "Les risques des PME liés au RGPD",
-    "qtype": "S",
+    "qtype": "M",
     "qindex": 24,
-    "label": "Votre entreprise a-t-elle sécurisé la gestion de vos traitements de données ?",
+    "label": "Quels risques ont été identifiés par votre entreprise ?",
     "answers": [
       {
         "aindex": 1,
-        "uniqueAnswer": true,
+        "uniqueAnswer": false,
         "atype": "P",
-        "label": "Oui",
+        "label": "Risques internes (humain, ex : perte de clé USB)",
         "questions_map": [
           {
-            "label": "Votre entreprise a-t-elle mis en place une procédure de gestion de fuites de données personnelles (data breach)?",
+            "label": "Votre entreprise a-t-elle une vue d'ensemble sur les flux des données ?",
             "branch": 0,
             "level": 24,
             "order": 1
@@ -1885,12 +1963,12 @@
       },
       {
         "aindex": 2,
-        "uniqueAnswer": true,
+        "uniqueAnswer": false,
         "atype": "P",
-        "label": "Non",
+        "label": "Risques externes (cyber-attaques)",
         "questions_map": [
           {
-            "label": "Votre entreprise a-t-elle mis en place une procédure de gestion de fuites de données personnelles (data breach)?",
+            "label": "Votre entreprise a-t-elle une vue d'ensemble sur les flux des données ?",
             "branch": 0,
             "level": 24,
             "order": 1
@@ -1899,12 +1977,12 @@
       },
       {
         "aindex": 3,
-        "uniqueAnswer": true,
+        "uniqueAnswer": false,
         "atype": "P",
-        "label": "En cours de projet",
+        "label": "Risques liés à l'usage de technologies",
         "questions_map": [
           {
-            "label": "Votre entreprise a-t-elle mis en place une procédure de gestion de fuites de données personnelles (data breach)?",
+            "label": "Votre entreprise a-t-elle une vue d'ensemble sur les flux des données ?",
             "branch": 0,
             "level": 24,
             "order": 1
@@ -1913,12 +1991,68 @@
       },
       {
         "aindex": 4,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "label": "Risques liés aux traitements de données, tels que la prise de décision automatique et la surveillance",
+        "questions_map": [
+          {
+            "label": "Votre entreprise a-t-elle une vue d'ensemble sur les flux des données ?",
+            "branch": 0,
+            "level": 24,
+            "order": 1
+          }
+        ]
+      },
+      {
+        "aindex": 5,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "label": "Risques liés aux données traitées dites sensibles (ex : origine raciale, opinion politique et religieuse, orientation sexuelle, biométrie, etc.)",
+        "questions_map": [
+          {
+            "label": "Votre entreprise a-t-elle une vue d'ensemble sur les flux des données ?",
+            "branch": 0,
+            "level": 24,
+            "order": 1
+          }
+        ]
+      },
+      {
+        "aindex": 6,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "label": "Risques liés aux transferts dans des pays situés en dehors de l'Union européenne",
+        "questions_map": [
+          {
+            "label": "Votre entreprise a-t-elle une vue d'ensemble sur les flux des données ?",
+            "branch": 0,
+            "level": 24,
+            "order": 1
+          }
+        ]
+      },
+      {
+        "aindex": 7,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "label": "Risques liés aux traitements de données de personnes vulnérables (ex : mineur)",
+        "questions_map": [
+          {
+            "label": "Votre entreprise a-t-elle une vue d'ensemble sur les flux des données ?",
+            "branch": 0,
+            "level": 24,
+            "order": 1
+          }
+        ]
+      },
+      {
+        "aindex": 8,
         "uniqueAnswer": true,
         "atype": "P",
         "label": "Je ne sais pas",
         "questions_map": [
           {
-            "label": "Votre entreprise a-t-elle mis en place une procédure de gestion de fuites de données personnelles (data breach)?",
+            "label": "Votre entreprise a-t-elle une vue d'ensemble sur les flux des données ?",
             "branch": 0,
             "level": 24,
             "order": 1
@@ -1932,7 +2066,7 @@
     "service_category": "Les risques des PME liés au RGPD",
     "qtype": "S",
     "qindex": 25,
-    "label": "Votre entreprise a-t-elle mis en place une procédure de gestion de fuites de données personnelles (data breach)?",
+    "label": "Votre entreprise a-t-elle une vue d'ensemble sur les flux des données ?",
     "answers": [
       {
         "aindex": 1,
@@ -1941,7 +2075,7 @@
         "label": "Oui",
         "questions_map": [
           {
-            "label": "Comment implémentez- vous cette procédure en interne ?",
+            "label": "Votre entreprise a-t-elle mis en place des mesures pour garantir la sécurité des données ?",
             "branch": 0,
             "level": 25,
             "order": 1
@@ -1955,7 +2089,7 @@
         "label": "Non",
         "questions_map": [
           {
-            "label": "Les données traitées sont-elles transférées en tout ou en partie vers un pays tiers (hors de l'Union européenne) ?",
+            "label": "Votre entreprise a-t-elle mis en place des mesures pour garantir la sécurité des données ?",
             "branch": 0,
             "level": 25,
             "order": 1
@@ -1969,7 +2103,7 @@
         "label": "En cours de projet",
         "questions_map": [
           {
-            "label": "Comment implémentez- vous cette procédure en interne ?",
+            "label": "Votre entreprise a-t-elle mis en place des mesures pour garantir la sécurité des données ?",
             "branch": 0,
             "level": 25,
             "order": 1
@@ -1983,7 +2117,7 @@
         "label": "Je ne sais pas",
         "questions_map": [
           {
-            "label": "Les données traitées sont-elles transférées en tout ou en partie vers un pays tiers (hors de l'Union européenne) ?",
+            "label": "Votre entreprise a-t-elle mis en place des mesures pour garantir la sécurité des données ?",
             "branch": 0,
             "level": 25,
             "order": 1
@@ -1995,18 +2129,18 @@
   {
     "section": "ALTO",
     "service_category": "Les risques des PME liés au RGPD",
-    "qtype": "M",
+    "qtype": "S",
     "qindex": 26,
-    "label": "Comment implémentez- vous cette procédure en interne ?",
+    "label": "Votre entreprise a-t-elle mis en place des mesures pour garantir la sécurité des données ?",
     "answers": [
       {
         "aindex": 1,
-        "uniqueAnswer": false,
+        "uniqueAnswer": true,
         "atype": "P",
-        "label": "Analyse d'impact",
+        "label": "Oui",
         "questions_map": [
           {
-            "label": "Les données traitées sont-elles transférées en tout ou en partie vers un pays tiers (hors de l'Union européenne) ?",
+            "label": "Votre entreprise sait-elle comment réagir en cas  de fuites ou de destructions de données personnelles (data breach) ?",
             "branch": 0,
             "level": 26,
             "order": 1
@@ -2015,12 +2149,12 @@
       },
       {
         "aindex": 2,
-        "uniqueAnswer": false,
+        "uniqueAnswer": true,
         "atype": "P",
-        "label": "Tableau des risques",
+        "label": "Non",
         "questions_map": [
           {
-            "label": "Les données traitées sont-elles transférées en tout ou en partie vers un pays tiers (hors de l'Union européenne) ?",
+            "label": "Votre entreprise sait-elle comment réagir en cas  de fuites ou de destructions de données personnelles (data breach) ?",
             "branch": 0,
             "level": 26,
             "order": 1
@@ -2029,12 +2163,12 @@
       },
       {
         "aindex": 3,
-        "uniqueAnswer": false,
+        "uniqueAnswer": true,
         "atype": "P",
-        "label": "Procédure de réaction",
+        "label": "En cours de projet",
         "questions_map": [
           {
-            "label": "Les données traitées sont-elles transférées en tout ou en partie vers un pays tiers (hors de l'Union européenne) ?",
+            "label": "Votre entreprise sait-elle comment réagir en cas  de fuites ou de destructions de données personnelles (data breach) ?",
             "branch": 0,
             "level": 26,
             "order": 1
@@ -2043,14 +2177,116 @@
       },
       {
         "aindex": 4,
-        "uniqueAnswer": false,
+        "uniqueAnswer": true,
         "atype": "P",
-        "label": "Instruction verbale",
+        "label": "Je ne sais pas",
         "questions_map": [
           {
-            "label": "Les données traitées sont-elles transférées en tout ou en partie vers un pays tiers (hors de l'Union européenne) ?",
+            "label": "Votre entreprise sait-elle comment réagir en cas  de fuites ou de destructions de données personnelles (data breach) ?",
             "branch": 0,
             "level": 26,
+            "order": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "section": "ALTO",
+    "service_category": "Les risques des PME liés au RGPD",
+    "qtype": "S",
+    "qindex": 27,
+    "label": "Votre entreprise sait-elle comment réagir en cas  de fuites ou de destructions de données personnelles (data breach) ?",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "Oui",
+        "questions_map": [
+          {
+            "label": "Comment réagissez-vous en cas de fuites ou de destructions de données personnelles ?",
+            "branch": 0,
+            "level": 27,
+            "order": 1
+          }
+        ]
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "Non",
+        "questions_map": [
+          {
+            "label": "Certaines données traitées sont-elles transférées vers un pays tiers  (hors de l'Union européenne)?",
+            "branch": 0,
+            "level": 27,
+            "order": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "section": "ALTO",
+    "service_category": "Les risques des PME liés au RGPD",
+    "qtype": "M",
+    "qindex": 28,
+    "label": "Comment réagissez-vous en cas de fuites ou de destructions de données personnelles ?",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "label": "Analyse d'impact des personnes concernées",
+        "questions_map": [
+          {
+            "label": "Certaines données traitées sont-elles transférées vers un pays tiers  (hors de l'Union européenne)?",
+            "branch": 0,
+            "level": 28,
+            "order": 1
+          }
+        ]
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "label": "Information des personnes concernées en cas de risque élevé pour les droits et libertés de ces dernières",
+        "questions_map": [
+          {
+            "label": "Certaines données traitées sont-elles transférées vers un pays tiers  (hors de l'Union européenne)?",
+            "branch": 0,
+            "level": 28,
+            "order": 1
+          }
+        ]
+      },
+      {
+        "aindex": 3,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "label": "Tableau des risques (évaluant les niveaux de gravité)",
+        "questions_map": [
+          {
+            "label": "Certaines données traitées sont-elles transférées vers un pays tiers  (hors de l'Union européenne)?",
+            "branch": 0,
+            "level": 28,
+            "order": 1
+          }
+        ]
+      },
+      {
+        "aindex": 4,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "label": "Mise en application d'une procédure de réaction",
+        "questions_map": [
+          {
+            "label": "Certaines données traitées sont-elles transférées vers un pays tiers  (hors de l'Union européenne)?",
+            "branch": 0,
+            "level": 28,
             "order": 1
           }
         ]
@@ -2059,12 +2295,12 @@
         "aindex": 5,
         "uniqueAnswer": false,
         "atype": "P",
-        "label": "E-mail",
+        "label": "Formulaire de notification des violations de données de la CNPD",
         "questions_map": [
           {
-            "label": "Les données traitées sont-elles transférées en tout ou en partie vers un pays tiers (hors de l'Union européenne) ?",
+            "label": "Certaines données traitées sont-elles transférées vers un pays tiers  (hors de l'Union européenne)?",
             "branch": 0,
-            "level": 26,
+            "level": 28,
             "order": 1
           }
         ]
@@ -2073,112 +2309,24 @@
         "aindex": 6,
         "uniqueAnswer": false,
         "atype": "P",
-        "label": "Autre",
+        "label": "Prise de mesures pour empêcher que la violation ne se reproduise",
         "questions_map": [
           {
-            "label": "Les données traitées sont-elles transférées en tout ou en partie vers un pays tiers (hors de l'Union européenne) ?",
+            "label": "Certaines données traitées sont-elles transférées vers un pays tiers  (hors de l'Union européenne)?",
             "branch": 0,
-            "level": 26,
+            "level": 28,
             "order": 1
           }
         ]
       },
       {
         "aindex": 7,
-        "uniqueAnswer": true,
+        "uniqueAnswer": false,
         "atype": "P",
-        "label": "Je ne sais pas",
+        "label": "Autre",
         "questions_map": [
           {
-            "label": "Les données traitées sont-elles transférées en tout ou en partie vers un pays tiers (hors de l'Union européenne) ?",
-            "branch": 0,
-            "level": 26,
-            "order": 1
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "section": "ALTO",
-    "service_category": "Les transferts de données vers un pays tiers",
-    "qtype": "S",
-    "qindex": 27,
-    "label": "Les données traitées sont-elles transférées en tout ou en partie vers un pays tiers (hors de l'Union européenne) ?",
-    "answers": [
-      {
-        "aindex": 1,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "label": "Oui",
-        "questions_map": [
-          {
-            "label": "Votre entreprise utilise-t-elle des services en ligne gratuits ou payants ?",
-            "branch": 0,
-            "level": 27,
-            "order": 1
-          }
-        ]
-      },
-      {
-        "aindex": 2,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "label": "Non",
-        "questions_map": [
-          {
-            "label": "Votre entreprise utilise-t-elle des services en ligne gratuits ou payants ?",
-            "branch": 0,
-            "level": 27,
-            "order": 1
-          }
-        ]
-      },
-      {
-        "aindex": 3,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "label": "En cours de projet",
-        "questions_map": [
-          {
-            "label": "Votre entreprise utilise-t-elle des services en ligne gratuits ou payants ?",
-            "branch": 0,
-            "level": 27,
-            "order": 1
-          }
-        ]
-      },
-      {
-        "aindex": 4,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "label": "Je ne sais pas",
-        "questions_map": [
-          {
-            "label": "Votre entreprise utilise-t-elle des services en ligne gratuits ou payants ?",
-            "branch": 0,
-            "level": 27,
-            "order": 1
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "section": "ALTO",
-    "service_category": "Les transferts de données vers un pays tiers",
-    "qtype": "S",
-    "qindex": 28,
-    "label": "Votre entreprise utilise-t-elle des services en ligne gratuits ou payants ?",
-    "answers": [
-      {
-        "aindex": 1,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "label": "Oui",
-        "questions_map": [
-          {
-            "label": "Le cas échéant, votre entreprise vérifie-t-elle où sont hébergées les données collectées via ces fournisseurs  de services en ligne ?",
+            "label": "Certaines données traitées sont-elles transférées vers un pays tiers  (hors de l'Union européenne)?",
             "branch": 0,
             "level": 28,
             "order": 1
@@ -2186,41 +2334,13 @@
         ]
       },
       {
-        "aindex": 2,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "label": "Non",
-        "questions_map": [
-          {
-            "label": "Votre entreprise a-t-elle fait signer un document écrit reprenant les exigences en matière de protection des données à respecter par la société située dans un pays hors de l'Union européenne ?",
-            "branch": 0,
-            "level": 28,
-            "order": 1
-          }
-        ]
-      },
-      {
-        "aindex": 3,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "label": "En cours de projet",
-        "questions_map": [
-          {
-            "label": "Le cas échéant, votre entreprise vérifie-t-elle où sont hébergées les données collectées via ces fournisseurs  de services en ligne ?",
-            "branch": 0,
-            "level": 28,
-            "order": 1
-          }
-        ]
-      },
-      {
-        "aindex": 4,
+        "aindex": 8,
         "uniqueAnswer": true,
         "atype": "P",
         "label": "Je ne sais pas",
         "questions_map": [
           {
-            "label": "Votre entreprise a-t-elle fait signer un document écrit reprenant les exigences en matière de protection des données à respecter par la société située dans un pays hors de l'Union européenne ?",
+            "label": "Certaines données traitées sont-elles transférées vers un pays tiers  (hors de l'Union européenne)?",
             "branch": 0,
             "level": 28,
             "order": 1
@@ -2234,7 +2354,7 @@
     "service_category": "Les transferts de données vers un pays tiers",
     "qtype": "S",
     "qindex": 29,
-    "label": "Le cas échéant, votre entreprise vérifie-t-elle où sont hébergées les données collectées via ces fournisseurs  de services en ligne ?",
+    "label": "Certaines données traitées sont-elles transférées vers un pays tiers  (hors de l'Union européenne)?",
     "answers": [
       {
         "aindex": 1,
@@ -2243,7 +2363,7 @@
         "label": "Oui",
         "questions_map": [
           {
-            "label": "Votre entreprise a-t-elle fait signer un document écrit reprenant les exigences en matière de protection des données à respecter par la société située dans un pays hors de l'Union européenne ?",
+            "label": "Votre entreprise utilise-t-elle des services en ligne gratuits ou payants ?",
             "branch": 0,
             "level": 29,
             "order": 1
@@ -2257,7 +2377,7 @@
         "label": "Non",
         "questions_map": [
           {
-            "label": "Votre entreprise a-t-elle fait signer un document écrit reprenant les exigences en matière de protection des données à respecter par la société située dans un pays hors de l'Union européenne ?",
+            "label": "Votre entreprise utilise-t-elle des services en ligne gratuits ou payants ?",
             "branch": 0,
             "level": 29,
             "order": 1
@@ -2271,7 +2391,7 @@
         "label": "En cours de projet",
         "questions_map": [
           {
-            "label": "Votre entreprise a-t-elle fait signer un document écrit reprenant les exigences en matière de protection des données à respecter par la société située dans un pays hors de l'Union européenne ?",
+            "label": "Votre entreprise utilise-t-elle des services en ligne gratuits ou payants ?",
             "branch": 0,
             "level": 29,
             "order": 1
@@ -2285,7 +2405,7 @@
         "label": "Je ne sais pas",
         "questions_map": [
           {
-            "label": "Votre entreprise a-t-elle fait signer un document écrit reprenant les exigences en matière de protection des données à respecter par la société située dans un pays hors de l'Union européenne ?",
+            "label": "Votre entreprise utilise-t-elle des services en ligne gratuits ou payants ?",
             "branch": 0,
             "level": 29,
             "order": 1
@@ -2299,13 +2419,21 @@
     "service_category": "Les transferts de données vers un pays tiers",
     "qtype": "S",
     "qindex": 30,
-    "label": "Votre entreprise a-t-elle fait signer un document écrit reprenant les exigences en matière de protection des données à respecter par la société située dans un pays hors de l'Union européenne ?",
+    "label": "Votre entreprise utilise-t-elle des services en ligne gratuits ou payants ?",
     "answers": [
       {
         "aindex": 1,
         "uniqueAnswer": true,
         "atype": "P",
-        "label": "Oui"
+        "label": "Oui",
+        "questions_map": [
+          {
+            "label": "Votre entreprise vérifie-t-elle où sont localisées les données hébergées par ces fournisseurs de services en ligne ?",
+            "branch": 0,
+            "level": 30,
+            "order": 1
+          }
+        ]
       },
       {
         "aindex": 2,
@@ -2314,7 +2442,7 @@
         "label": "Non",
         "questions_map": [
           {
-            "label": "La société étrangère est-elle établie dans un des pays reconnu* par la Commission européenne comme assurant un niveau de protection adéquat des données à caractère personnel ?<br><br><em><small>* Andorre, en Argentine, au Canada, aux Îles Féroé, au Guernesey, à l'Île de Man, au Japon, à Jersey, en Nouvelle-Zélande, en Suisse, en Uruguay ou aux États-Unis</small></em>",
+            "label": "Votre entreprise a-t-elle fait signer un document écrit reprenant les exigences en matière de protection des données à respecter par la société située dans un pays hors de l'Union européenne ?",
             "branch": 0,
             "level": 30,
             "order": 1
@@ -2325,13 +2453,29 @@
         "aindex": 3,
         "uniqueAnswer": true,
         "atype": "P",
-        "label": "En cours de projet"
+        "label": "En cours de projet",
+        "questions_map": [
+          {
+            "label": "Votre entreprise vérifie-t-elle où sont localisées les données hébergées par ces fournisseurs de services en ligne ?",
+            "branch": 0,
+            "level": 30,
+            "order": 1
+          }
+        ]
       },
       {
         "aindex": 4,
         "uniqueAnswer": true,
         "atype": "P",
-        "label": "Je ne sais pas"
+        "label": "Je ne sais pas",
+        "questions_map": [
+          {
+            "label": "Votre entreprise a-t-elle fait signer un document écrit reprenant les exigences en matière de protection des données à respecter par la société située dans un pays hors de l'Union européenne ?",
+            "branch": 0,
+            "level": 30,
+            "order": 1
+          }
+        ]
       }
     ]
   },
@@ -2340,25 +2484,157 @@
     "service_category": "Les transferts de données vers un pays tiers",
     "qtype": "S",
     "qindex": 31,
-    "label": "La société étrangère est-elle établie dans un des pays reconnu* par la Commission européenne comme assurant un niveau de protection adéquat des données à caractère personnel ?<br><br><em><small>* Andorre, en Argentine, au Canada, aux Îles Féroé, au Guernesey, à l'Île de Man, au Japon, à Jersey, en Nouvelle-Zélande, en Suisse, en Uruguay ou aux États-Unis</small></em>",
+    "label": "Votre entreprise vérifie-t-elle où sont localisées les données hébergées par ces fournisseurs de services en ligne ?",
     "answers": [
       {
         "aindex": 1,
         "uniqueAnswer": true,
         "atype": "P",
-        "label": "Oui"
+        "label": "Oui",
+        "questions_map": [
+          {
+            "label": "Votre entreprise a-t-elle fait signer un document écrit reprenant les exigences en matière de protection des données à respecter par la société située dans un pays hors de l'Union européenne ?",
+            "branch": 0,
+            "level": 31,
+            "order": 1
+          }
+        ]
       },
       {
         "aindex": 2,
         "uniqueAnswer": true,
         "atype": "P",
-        "label": "Non"
+        "label": "Non",
+        "questions_map": [
+          {
+            "label": "Votre entreprise a-t-elle fait signer un document écrit reprenant les exigences en matière de protection des données à respecter par la société située dans un pays hors de l'Union européenne ?",
+            "branch": 0,
+            "level": 31,
+            "order": 1
+          }
+        ]
+      },
+      {
+        "aindex": 3,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "En cours de projet",
+        "questions_map": [
+          {
+            "label": "Votre entreprise a-t-elle fait signer un document écrit reprenant les exigences en matière de protection des données à respecter par la société située dans un pays hors de l'Union européenne ?",
+            "branch": 0,
+            "level": 31,
+            "order": 1
+          }
+        ]
       },
       {
         "aindex": 4,
         "uniqueAnswer": true,
         "atype": "P",
-        "label": "Je ne sais pas"
+        "label": "Je ne sais pas",
+        "questions_map": [
+          {
+            "label": "Votre entreprise a-t-elle fait signer un document écrit reprenant les exigences en matière de protection des données à respecter par la société située dans un pays hors de l'Union européenne ?",
+            "branch": 0,
+            "level": 31,
+            "order": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "section": "ALTO",
+    "service_category": "Les transferts de données vers un pays tiers",
+    "qtype": "S",
+    "qindex": 32,
+    "label": "Votre entreprise a-t-elle fait signer un document écrit reprenant les exigences en matière de protection des données à respecter par la société située dans un pays hors de l'Union européenne ?",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "Oui",
+        "questions_map": [
+          {
+            "label": "Y a-t-il d'autres aspects non abordés dans le présent questionnaire qui semblent importants de traiter pour votre entreprise ?",
+            "branch": 0,
+            "level": 32,
+            "order": 1
+          }
+        ]
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "Non",
+        "questions_map": [
+          {
+            "label": "Y a-t-il d'autres aspects non abordés dans le présent questionnaire qui semblent importants de traiter pour votre entreprise ?",
+            "branch": 0,
+            "level": 32,
+            "order": 1
+          }
+        ]
+      },
+      {
+        "aindex": 3,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "En cours de projet",
+        "questions_map": [
+          {
+            "label": "Y a-t-il d'autres aspects non abordés dans le présent questionnaire qui semblent importants de traiter pour votre entreprise ?",
+            "branch": 0,
+            "level": 32,
+            "order": 1
+          }
+        ]
+      },
+      {
+        "aindex": 4,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "Je ne sais pas",
+        "questions_map": [
+          {
+            "label": "Y a-t-il d'autres aspects non abordés dans le présent questionnaire qui semblent importants de traiter pour votre entreprise ?",
+            "branch": 0,
+            "level": 32,
+            "order": 1
+          }
+        ]
+      },
+      {
+        "aindex": 5,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "label": "Non, le fournisseur est établi à Andorre, en Argentine, au Canada, en Corée du Sud, aux Îles Féroé, à Guernesey, en Israël, à l'Île de Man, au Japon, à Jersey, en Nouvelle-Zélande, au Royaume-Uni, en Suisse, en Uruguay ou aux États-Unis .",
+        "questions_map": [
+          {
+            "label": "Y a-t-il d'autres aspects non abordés dans le présent questionnaire qui semblent importants de traiter pour votre entreprise ?",
+            "branch": 0,
+            "level": 32,
+            "order": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "section": "ALTO",
+    "service_category": "Observations",
+    "qtype": "T",
+    "qindex": 33,
+    "label": "Y a-t-il d'autres aspects non abordés dans le présent questionnaire qui semblent importants de traiter pour votre entreprise ?",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": true,
+        "atype": "T",
+        "label": "Veuillez préciser :"
       }
     ]
   }
