@@ -24,9 +24,11 @@
 <div class="row px-4">
     <div class="col-12">
         {% block finished_survey_description %}       
-        <p class="text-justify">
+        <p class="text-justify py-2 h5">
             {% blocktranslate trimmed %}
             Nous vous remercions pour votre participation au projet ALTO, outil d'auto-évaluation dédié à la mise en conformité des PME aux exigences du RGPD.
+            <br><br>
+            Toute PME est invitée à faire part de son intérêt à participer à la phase « Pilote » par e-mail à l'adresse électronique : <a href="mailto:alto@cnpd.lu">alto@cnpd.lu</a>
             {% endblocktranslate %}
         </p>
         {% endblock %}
@@ -50,16 +52,7 @@
                 {% endblocktranslate %}
             </p>
         {% endif %}
-        <p class="continue-later-link">
-            <button
-                class="pl-0 btn btn-link"
-                type="button"
-                name="continue-later"
-                data-toggle="modal"
-                data-target="#modal">
-                {{ _('Your results link') }}
-            </button>
-        </p>
+
         {% if custom.modules.requestDiagnostic and user.get_country_code == 'LU' and txtscore >= custom.minimal_acceptable_score %}
             {% block finished_survey_diagnostic %}
             <h2>{{ _('About the NC3 Diagnostic') }}:</h2>
@@ -178,16 +171,6 @@
         {% endwith %}
       </ol>
       {% endfor %}
-    </div>
-    <div class="col-12 py-2 mx-auto text-center">
-        <button
-            class="btn btn-light border border-rounded"
-            type="button"
-            name="general-feedback"
-            data-toggle="modal"
-            data-target="#modal-feedback">
-            {{ _('Your feedback') }}
-        </button>
     </div>
 </div>
 
