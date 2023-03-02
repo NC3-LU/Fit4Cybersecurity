@@ -36,8 +36,8 @@
         </p>
         <ul>
             <li><a href="https://fit4cybersecurity.nc3.lu/" target="_blank">Fit4Cybersecurity</a> - {{ _('A service that includes multiple self-assessment tools. Its main goal is to allow users to quickly assess their information security maturity in different areas that NC3 considers critical.') }}</li>
-            <li><a href="https://fit4privacy.nc3.lu/" target="_blank">Fit4Privacy</a> - {{ _('This questionnaire, created in consultation with the National Commission for Data Protection, aims to help organisations assess to what extent they are in control of their personal data risks') }}.</li>    
-            <li><a href="https://contract.nc3.lu/" target="_blank">Fit4Contract</a> - {{ _('This questionnaire aims to identify the general scope of the contractual relationship considered, in order to set up an acquisition, a lease, a development or any other service in the field of information and communication technologies.') }}</li>  
+            <li><a href="https://fit4privacy.nc3.lu/" target="_blank">Fit4Privacy</a> - {{ _('This questionnaire, created in consultation with the National Commission for Data Protection, aims to help organisations assess to what extent they are in control of their personal data risks') }}.</li>
+            <li><a href="https://contract.nc3.lu/" target="_blank">Fit4Contract</a> - {{ _('This questionnaire aims to identify the general scope of the contractual relationship considered, in order to set up an acquisition, a lease, a development or any other service in the field of information and communication technologies.') }}</li>
         </ul>
         {% endblock %}
         {% if custom.modules.requestTraining and user.get_country_code == 'LU' and txtscore < custom.minimal_acceptable_score %}
