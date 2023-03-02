@@ -46,24 +46,29 @@ PICTURE_DIR = "/tmp/csskp/"
 #Cookie Banner settings
 COOKIEBANNER = {
     "title": _("Cookie settings"),
-    "header_text": _("We are using cookies on this website. Just the essential"),
     "groups": [
         {
             "id": "essential",
             "name": _("Essential"),
-            "description": _("Essential cookies allow this page to work."),
+            "description": _("This website uses cookies and other similar technologies strictly necessary for its operation, without the use of personal data."),
             "cookies": [
                 {
                     "pattern": "cookiebanner",
-                    "description": _("Meta cookie for the cookies that are set. Conservation: 1 year"),
+                    "description": _("Meta cookie for the cookies that are set."),
+                    "content": _("Accepted cookies"),
+                    "max_age": _("1 year"),
                 },
                 {
                     "pattern": "csrftoken",
-                    "description": _("This cookie prevents Cross-Site-Request-Forgery attacks. Conservation: 1 year"),
+                    "description": _("This cookie prevents Cross-Site-Request-Forgery attacks."),
+                    "content": _("Token"),
+                    "max_age": _("1 year"),
                 },
                 {
                     "pattern": "sessionid",
-                    "description": _("This cookie is necessary for the language options, for example. Conservation 15 days"),
+                    "description": _("This cookie is necessary for the language options, for example."),
+                    "content": "session ID",
+                    "max_age": _("15 days"),
                 },
             ],
         }
