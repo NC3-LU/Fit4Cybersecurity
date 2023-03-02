@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-09-30 07:41+0000\n"
+"POT-Creation-Date: 2023-03-02 14:11+0000\n"
 "PO-Revision-Date: 2022-05-03 13:47+0000\n"
 "Last-Translator: Benjamin Joly <benjamin.joly@cases.lu>\n"
 "Language-Team: German <https://translate.monarc.lu/projects/"
@@ -168,6 +168,27 @@ msgstr ""
 "Management und Datenschutz-Verpflichtungenauf die Organisationen bereits im "
 "Jahr 2021 vorbereitet sein sollten."
 
+#: csskp/surveySMEDemand/__init__.py:7
+msgid ""
+"This questionnaire is intended for managers of small and medium-sized "
+"businesses, between 1 and 250 employees, and must be completed by them in "
+"order to share their vision of their needs in terms of cybersecurity "
+"services and solutions. The objective is to better understand market "
+"practices, expectations and trends in order to identify the levers of demand "
+"for this type of player in Luxembourg. Our desire is not to audit companies "
+"individually, this questionnaire is anonymous, but to understand how the "
+"managers of SMEs position themselves in the face of the regulatory, "
+"technological and human challenges of cybersecurity. <br> <br>The study is "
+"the work product of the Data For Research, Innovation, and Governance "
+"(D4RIG) team of the National Cybersecurity Competence Center (NC3) of the "
+"Luxembourg House of Cybersecurity. This is carried out as part of the "
+"research activities supporting the creation of the Cybersecurity Market "
+"Intelligence Observatory Platform (CSMIOP). This purposeful work has also "
+"engaged local partners such as chambers and professional organizations, as "
+"well as all the institutional players in the market who can support and "
+"disseminate this questionnaire as well as the results of the study."
+msgstr ""
+
 #: data/fit4africa/context-questions.json:3
 #: data/fit4contract/context-questions.json:3
 #: data/fit4cybersecurity/context-questions.json:3
@@ -218,6 +239,10 @@ msgstr "Kontext"
 #: data/fit4privacy/context-questions.json:5
 #: data/fit4privacy/context-questions.json:121
 #: data/fit4privacy/context-questions.json:201
+#: data/surveySMEDemand/context-questions.json:3
+#: data/surveySMEDemand/context-questions.json:47
+#: data/surveySMEDemand/context-questions.json:84
+#: data/surveySMEDemand/context-questions.json:177
 msgid "__context"
 msgstr "__context"
 
@@ -1335,6 +1360,7 @@ msgstr "der Drucker sind durch ein starkes Passwort geschützt"
 
 #: data/fit4africa/questions.json:924 data/fit4cybersecurity/questions.json:924
 #: data/fit4ehealth/questions.json:1443
+#: data/surveySMEDemand/questions.json:1425
 msgid "Antivirus"
 msgstr "Antivirus"
 
@@ -2190,6 +2216,9 @@ msgstr "Software"
 #: data/fit4contract/questions.json:706 data/fit4contract/questions.json:888
 #: data/fit4contract/questions.json:943
 #: data/fit4operatorsurvey/context-questions.json:224
+#: data/surveySMEDemand/questions.json:337
+#: data/surveySMEDemand/questions.json:2002
+#: data/surveySMEDemand/questions.json:2441
 #: templates/survey/answerChangingWarning.html:10
 #: templates/survey/leaveSurvey.html:11
 msgid "Yes"
@@ -2217,6 +2246,13 @@ msgstr ""
 #: data/fit4contract/questions.json:741 data/fit4contract/questions.json:917
 #: data/fit4contract/questions.json:972
 #: data/fit4operatorsurvey/context-questions.json:231
+#: data/surveySMEDemand/questions.json:100
+#: data/surveySMEDemand/questions.json:351
+#: data/surveySMEDemand/questions.json:453
+#: data/surveySMEDemand/questions.json:681
+#: data/surveySMEDemand/questions.json:1523
+#: data/surveySMEDemand/questions.json:2016
+#: data/surveySMEDemand/questions.json:2435
 #: templates/survey/answerChangingWarning.html:12
 #: templates/survey/leaveSurvey.html:15
 msgid "No"
@@ -2432,6 +2468,7 @@ msgstr ""
 "Alle oder ein Teil der Daten werden in einer Cloud-Infrastruktur gespeichert."
 
 #: data/fit4ehealth/context-questions.json:28
+#: data/surveySMEDemand/context-questions.json:136
 msgid "Luxembourg"
 msgstr "Luxemburg"
 
@@ -2556,6 +2593,16 @@ msgid "Midwife"
 msgstr "Hebamme"
 
 #: data/fit4ehealth/context-questions.json:248
+#: data/surveySMEDemand/context-questions.json:42
+#: data/surveySMEDemand/questions.json:263
+#: data/surveySMEDemand/questions.json:1002
+#: data/surveySMEDemand/questions.json:1095
+#: data/surveySMEDemand/questions.json:1160
+#: data/surveySMEDemand/questions.json:1253
+#: data/surveySMEDemand/questions.json:1388
+#: data/surveySMEDemand/questions.json:1537
+#: data/surveySMEDemand/questions.json:1858
+#: data/surveySMEDemand/questions.json:1979
 msgid "Other"
 msgstr "Andere"
 
@@ -5538,6 +5585,7 @@ msgstr ""
 
 #: data/fit4operatorsurvey/questions.json:499
 #: data/fit4operatorsurvey/questions.json:685
+#: data/surveySMEDemand/questions.json:881
 msgid "Other:"
 msgstr "Sonstiges:"
 
@@ -7606,6 +7654,1149 @@ msgstr ""
 "zu Informationssicherheit und Datenschutz in Ihrem Unternehmen schriftlich "
 "fixiert und Ihren Mitarbeitern bekannt?"
 
+#: data/surveySMEDemand/context-questions.json:4
+#: data/surveySMEDemand/context-questions.json:48
+#: data/surveySMEDemand/context-questions.json:85
+#: data/surveySMEDemand/context-questions.json:178
+msgid "Socio-economic data"
+msgstr ""
+
+#: data/surveySMEDemand/context-questions.json:7
+#, fuzzy
+#| msgid "is forbidden or impossible in the company"
+msgid "What is your position within the company?"
+msgstr "ist im Unternehmen verboten oder unmöglich"
+
+#: data/surveySMEDemand/context-questions.json:14
+#: data/surveySMEDemand/questions.json:193
+msgid "Chief Executive Officer"
+msgstr ""
+
+#: data/surveySMEDemand/context-questions.json:21
+#: data/surveySMEDemand/questions.json:207
+msgid "Chief Operating Officer"
+msgstr ""
+
+#: data/surveySMEDemand/context-questions.json:28
+msgid "Director"
+msgstr ""
+
+#: data/surveySMEDemand/context-questions.json:35
+msgid "IT Admin"
+msgstr ""
+
+#: data/surveySMEDemand/context-questions.json:51
+#, fuzzy
+#| msgid "How many employees?"
+msgid "How many employees does your business have?"
+msgstr "Wie viele mitarbeiter?"
+
+#: data/surveySMEDemand/context-questions.json:58
+#: data/surveySMEDemand/questions.json:718
+msgid "1"
+msgstr ""
+
+#: data/surveySMEDemand/context-questions.json:65
+#: data/surveySMEDemand/questions.json:746
+msgid "<10"
+msgstr ""
+
+#: data/surveySMEDemand/context-questions.json:72
+msgid "<50"
+msgstr ""
+
+#: data/surveySMEDemand/context-questions.json:79
+msgid "<250"
+msgstr ""
+
+#: data/surveySMEDemand/context-questions.json:88
+msgid "In which canton is your head office located?"
+msgstr ""
+
+#: data/surveySMEDemand/context-questions.json:94
+msgid "Capellen"
+msgstr ""
+
+#: data/surveySMEDemand/context-questions.json:101
+msgid "Clervaux"
+msgstr ""
+
+#: data/surveySMEDemand/context-questions.json:108
+msgid "Diekirch"
+msgstr ""
+
+#: data/surveySMEDemand/context-questions.json:115
+msgid "Echternach"
+msgstr ""
+
+#: data/surveySMEDemand/context-questions.json:122
+msgid "Esch-sur-Alzette"
+msgstr ""
+
+#: data/surveySMEDemand/context-questions.json:129
+msgid "Grevenmacher"
+msgstr ""
+
+#: data/surveySMEDemand/context-questions.json:143
+msgid "Mersch"
+msgstr ""
+
+#: data/surveySMEDemand/context-questions.json:150
+msgid "Redange"
+msgstr ""
+
+#: data/surveySMEDemand/context-questions.json:157
+msgid "Remich"
+msgstr ""
+
+#: data/surveySMEDemand/context-questions.json:164
+msgid "Vianden"
+msgstr ""
+
+#: data/surveySMEDemand/context-questions.json:171
+msgid "Wiltz"
+msgstr ""
+
+#: data/surveySMEDemand/context-questions.json:181
+#, fuzzy
+#| msgid "What is your sector?"
+msgid "What is your activity sector?"
+msgstr "Was ist Ihre Branche?"
+
+#: data/surveySMEDemand/context-questions.json:185
+msgid "Agriculture, forestry and fishing"
+msgstr ""
+
+#: data/surveySMEDemand/context-questions.json:192
+msgid "Mining and quarrying"
+msgstr ""
+
+#: data/surveySMEDemand/context-questions.json:199
+msgid "Manufacturing"
+msgstr ""
+
+#: data/surveySMEDemand/context-questions.json:206
+msgid "Electricity, gas, steam and air conditioning supply"
+msgstr ""
+
+#: data/surveySMEDemand/context-questions.json:213
+msgid "Water supply; sewerage; waste management and remediation activities"
+msgstr ""
+
+#: data/surveySMEDemand/context-questions.json:220
+msgid "Construction"
+msgstr ""
+
+#: data/surveySMEDemand/context-questions.json:227
+msgid "Wholesale and retail trade; repair of motor vehicles and motorcycles"
+msgstr ""
+
+#: data/surveySMEDemand/context-questions.json:234
+#, fuzzy
+#| msgid "Transport and Logistics"
+msgid "Transporting and storage"
+msgstr "Transport und Logistik"
+
+#: data/surveySMEDemand/context-questions.json:241
+msgid "Accommodation and food service activities"
+msgstr ""
+
+#: data/surveySMEDemand/context-questions.json:248
+#, fuzzy
+#| msgid "Information Security"
+msgid "Information and communication"
+msgstr "Informationssicherheit"
+
+#: data/surveySMEDemand/context-questions.json:255
+msgid "Financial and insurance activities"
+msgstr ""
+
+#: data/surveySMEDemand/context-questions.json:262
+msgid "Real estate activities"
+msgstr ""
+
+#: data/surveySMEDemand/context-questions.json:269
+msgid "Professional, scientific and technical activities"
+msgstr ""
+
+#: data/surveySMEDemand/context-questions.json:276
+msgid "Administrative and support service activities"
+msgstr ""
+
+#: data/surveySMEDemand/context-questions.json:283
+msgid "Public administration and defense; compulsatory social security"
+msgstr ""
+
+#: data/surveySMEDemand/context-questions.json:290
+msgid "Education"
+msgstr ""
+
+#: data/surveySMEDemand/context-questions.json:297
+msgid "Human health and social work activities"
+msgstr ""
+
+#: data/surveySMEDemand/context-questions.json:304
+msgid "Arts, entertainment and recreation"
+msgstr ""
+
+#: data/surveySMEDemand/context-questions.json:311
+#, fuzzy
+#| msgid "Register of Processing activities"
+msgid "Other services activities"
+msgstr "Datenverzeichnis"
+
+#: data/surveySMEDemand/context-questions.json:318
+msgid ""
+"Activities of hoseholds as employers; undifferentiated goods - and services "
+"- producing activities of households for own use"
+msgstr ""
+
+#: data/surveySMEDemand/context-questions.json:325
+msgid "Activities of extraterritorial organisations and bodies"
+msgstr ""
+
+#: data/surveySMEDemand/questions.json:3 data/surveySMEDemand/questions.json:82
+#: data/surveySMEDemand/questions.json:175
+#: data/surveySMEDemand/questions.json:268
+#: data/surveySMEDemand/questions.json:319
+#: data/surveySMEDemand/questions.json:370
+msgid "Entreprise & organisation"
+msgstr ""
+
+#: data/surveySMEDemand/questions.json:4 data/surveySMEDemand/questions.json:83
+#: data/surveySMEDemand/questions.json:176
+#: data/surveySMEDemand/questions.json:269
+#: data/surveySMEDemand/questions.json:320
+#: data/surveySMEDemand/questions.json:371
+#, fuzzy
+#| msgid "Antivirus"
+msgid "Activities"
+msgstr "Antivirus"
+
+#: data/surveySMEDemand/questions.json:7
+msgid "Is cybersecurity an important topic for your company?"
+msgstr ""
+
+#: data/surveySMEDemand/questions.json:15
+#: data/surveySMEDemand/questions.json:29
+#: data/surveySMEDemand/questions.json:43
+#: data/surveySMEDemand/questions.json:57
+#: data/surveySMEDemand/questions.json:71
+#: data/surveySMEDemand/questions.json:86
+msgid ""
+"Do you have an annual budget dedicated to cybersecurity? If so, how much "
+"does that add up to your overall budget?"
+msgstr ""
+
+#: data/surveySMEDemand/questions.json:21
+msgid "Very important"
+msgstr ""
+
+#: data/surveySMEDemand/questions.json:35
+msgid "Important"
+msgstr ""
+
+#: data/surveySMEDemand/questions.json:49
+msgid "Fairly important"
+msgstr ""
+
+#: data/surveySMEDemand/questions.json:63
+msgid "Slightly important"
+msgstr ""
+
+#: data/surveySMEDemand/questions.json:77
+msgid "Not important"
+msgstr ""
+
+#: data/surveySMEDemand/questions.json:94
+#: data/surveySMEDemand/questions.json:108
+#: data/surveySMEDemand/questions.json:122
+#: data/surveySMEDemand/questions.json:136
+#: data/surveySMEDemand/questions.json:150
+#: data/surveySMEDemand/questions.json:164
+#: data/surveySMEDemand/questions.json:179
+#, fuzzy
+#| msgid "What is the risk management culture in your company?"
+msgid "Who is the decision taker regarding cybersecurity in your company?"
+msgstr "Wie sieht die Kultur des Risikomanagements in Ihrem Unternehmen aus?"
+
+#: data/surveySMEDemand/questions.json:114
+msgid "<1%"
+msgstr ""
+
+#: data/surveySMEDemand/questions.json:128
+msgid "<2%"
+msgstr ""
+
+#: data/surveySMEDemand/questions.json:142
+msgid "<3%"
+msgstr ""
+
+#: data/surveySMEDemand/questions.json:156
+msgid "<5%"
+msgstr ""
+
+#: data/surveySMEDemand/questions.json:170
+msgid ">5%"
+msgstr ""
+
+#: data/surveySMEDemand/questions.json:187
+#: data/surveySMEDemand/questions.json:201
+#: data/surveySMEDemand/questions.json:215
+#: data/surveySMEDemand/questions.json:229
+#: data/surveySMEDemand/questions.json:243
+#: data/surveySMEDemand/questions.json:257
+#: data/surveySMEDemand/questions.json:272
+msgid "Your employees are allowed to work..."
+msgstr ""
+
+#: data/surveySMEDemand/questions.json:221
+msgid "IT manager"
+msgstr ""
+
+#: data/surveySMEDemand/questions.json:235
+#, fuzzy
+#| msgid "Cybersecurity"
+msgid "Cybersecurity manager"
+msgstr "Informationssicherheit"
+
+#: data/surveySMEDemand/questions.json:249
+#, fuzzy
+#| msgid "Contracts with external IT service providers"
+msgid "External service provider"
+msgstr "Verträge, die mit Dritten geschlossen werden"
+
+#: data/surveySMEDemand/questions.json:280
+#: data/surveySMEDemand/questions.json:294
+#: data/surveySMEDemand/questions.json:308
+#: data/surveySMEDemand/questions.json:323
+msgid ""
+"Are your employees allowed to use their personal devices (phones, tablets, "
+"computers) for work?"
+msgstr ""
+
+#: data/surveySMEDemand/questions.json:286
+msgid "Outside the company (telecomuting and/or business travel)."
+msgstr ""
+
+#: data/surveySMEDemand/questions.json:300
+msgid "With their personal devices (phones, tablets, computers...)."
+msgstr ""
+
+#: data/surveySMEDemand/questions.json:314
+msgid ""
+"Only inside the company, and personal device can't be connected to the "
+"office network."
+msgstr ""
+
+#: data/surveySMEDemand/questions.json:331
+#: data/surveySMEDemand/questions.json:345
+#: data/surveySMEDemand/questions.json:359
+#: data/surveySMEDemand/questions.json:374
+msgid "Did you ever get questions from your customers about..."
+msgstr ""
+
+#: data/surveySMEDemand/questions.json:365
+msgid "Not sure"
+msgstr ""
+
+#: data/surveySMEDemand/questions.json:382
+#: data/surveySMEDemand/questions.json:396
+#: data/surveySMEDemand/questions.json:410
+#: data/surveySMEDemand/questions.json:424
+#: data/surveySMEDemand/questions.json:439
+msgid ""
+"Have your company's employees ever participated in an awareness program?"
+msgstr ""
+
+#: data/surveySMEDemand/questions.json:388
+msgid "How you protect their data?"
+msgstr ""
+
+#: data/surveySMEDemand/questions.json:402
+msgid "How you protect yourself against cybersecurity threats?"
+msgstr ""
+
+#: data/surveySMEDemand/questions.json:416
+msgid "Anything else related to cybersecurity?"
+msgstr ""
+
+#: data/surveySMEDemand/questions.json:430
+#, fuzzy
+#| msgid "None of the above."
+msgid "None of the above"
+msgstr "Keine der oben genannten Möglichkeiten."
+
+#: data/surveySMEDemand/questions.json:435
+#: data/surveySMEDemand/questions.json:528
+#: data/surveySMEDemand/questions.json:607
+#: data/surveySMEDemand/questions.json:686
+msgid "Skills & awareness"
+msgstr ""
+
+#: data/surveySMEDemand/questions.json:436
+#: data/surveySMEDemand/questions.json:529
+#: data/surveySMEDemand/questions.json:608
+#: data/surveySMEDemand/questions.json:687
+#, fuzzy
+#| msgid "Trainings"
+msgid "Training"
+msgstr "Schulungen"
+
+#: data/surveySMEDemand/questions.json:447
+#: data/surveySMEDemand/questions.json:461
+#: data/surveySMEDemand/questions.json:475
+#: data/surveySMEDemand/questions.json:489
+#: data/surveySMEDemand/questions.json:503
+#: data/surveySMEDemand/questions.json:517
+#: data/surveySMEDemand/questions.json:532
+msgid "What's your confidence level in dealing with cybersecurity?"
+msgstr ""
+
+#: data/surveySMEDemand/questions.json:467
+#: data/surveySMEDemand/questions.json:2030
+msgid "Partially"
+msgstr ""
+
+#: data/surveySMEDemand/questions.json:481
+msgid "1 year ago"
+msgstr ""
+
+#: data/surveySMEDemand/questions.json:495
+#, fuzzy
+#| msgid "More than 5 years ago."
+msgid "2 years ago"
+msgstr "Vor mehr als 5 Jahren."
+
+#: data/surveySMEDemand/questions.json:509
+#: data/surveySMEDemand/questions.json:523
+#, fuzzy
+#| msgid "More than 5 years ago."
+msgid "3 years ago"
+msgstr "Vor mehr als 5 Jahren."
+
+#: data/surveySMEDemand/questions.json:540
+#: data/surveySMEDemand/questions.json:554
+#: data/surveySMEDemand/questions.json:568
+#: data/surveySMEDemand/questions.json:582
+#: data/surveySMEDemand/questions.json:596
+#: data/surveySMEDemand/questions.json:611
+msgid "Have you personally followed a cybersecurity training?"
+msgstr ""
+
+#: data/surveySMEDemand/questions.json:546
+#: data/surveySMEDemand/questions.json:2090
+msgid "Very high"
+msgstr ""
+
+#: data/surveySMEDemand/questions.json:560
+#: data/surveySMEDemand/questions.json:2104
+msgid "High"
+msgstr ""
+
+#: data/surveySMEDemand/questions.json:574
+#: data/surveySMEDemand/questions.json:2118
+msgid "Moderate"
+msgstr ""
+
+#: data/surveySMEDemand/questions.json:588
+#: data/surveySMEDemand/questions.json:2132
+msgid "Low"
+msgstr ""
+
+#: data/surveySMEDemand/questions.json:602
+msgid "Very low"
+msgstr ""
+
+#: data/surveySMEDemand/questions.json:619
+#: data/surveySMEDemand/questions.json:633
+#: data/surveySMEDemand/questions.json:647
+#: data/surveySMEDemand/questions.json:661
+#: data/surveySMEDemand/questions.json:675
+#: data/surveySMEDemand/questions.json:690
+msgid "Do you have one or more employees with computer skills?"
+msgstr ""
+
+#: data/surveySMEDemand/questions.json:625
+msgid "Awareness event/training organized by professional chambers"
+msgstr ""
+
+#: data/surveySMEDemand/questions.json:639
+msgid "Professional certification"
+msgstr ""
+
+#: data/surveySMEDemand/questions.json:653
+msgid "University degree"
+msgstr ""
+
+#: data/surveySMEDemand/questions.json:667
+msgid "Self-study"
+msgstr ""
+
+#: data/surveySMEDemand/questions.json:698
+#: data/surveySMEDemand/questions.json:712
+#: data/surveySMEDemand/questions.json:726
+#: data/surveySMEDemand/questions.json:740
+#: data/surveySMEDemand/questions.json:754
+#: data/surveySMEDemand/questions.json:768
+#: data/surveySMEDemand/questions.json:783
+msgid "In which areas are you using digital tools/platforms in your company?"
+msgstr ""
+
+#: data/surveySMEDemand/questions.json:704
+msgid "0"
+msgstr ""
+
+#: data/surveySMEDemand/questions.json:732
+msgid "<5"
+msgstr ""
+
+#: data/surveySMEDemand/questions.json:760
+msgid "<20"
+msgstr ""
+
+#: data/surveySMEDemand/questions.json:774
+msgid ">20"
+msgstr ""
+
+#: data/surveySMEDemand/questions.json:779
+#: data/surveySMEDemand/questions.json:886
+#: data/surveySMEDemand/questions.json:1007
+#: data/surveySMEDemand/questions.json:1100
+#: data/surveySMEDemand/questions.json:1165
+#: data/surveySMEDemand/questions.json:1258
+#: data/surveySMEDemand/questions.json:1393
+msgid "Digital services and products"
+msgstr ""
+
+#: data/surveySMEDemand/questions.json:780
+#: data/surveySMEDemand/questions.json:887
+#: data/surveySMEDemand/questions.json:1008
+#: data/surveySMEDemand/questions.json:1101
+#: data/surveySMEDemand/questions.json:1166
+#: data/surveySMEDemand/questions.json:1259
+msgid "Tools"
+msgstr ""
+
+#: data/surveySMEDemand/questions.json:791
+#: data/surveySMEDemand/questions.json:890
+msgid ""
+"As you use digital tools for communication, could you specify which kind?"
+msgstr ""
+
+#: data/surveySMEDemand/questions.json:797
+msgid "Communication (website, mailbox, ...)"
+msgstr ""
+
+#: data/surveySMEDemand/questions.json:805
+#: data/surveySMEDemand/questions.json:1011
+msgid "As you use digital tools for accounting, could you specify which kind?"
+msgstr ""
+
+#: data/surveySMEDemand/questions.json:811
+msgid "Accounting (accounting software, electronic invoicing, ...)"
+msgstr ""
+
+#: data/surveySMEDemand/questions.json:819
+#: data/surveySMEDemand/questions.json:1104
+msgid "As you use digital tools for sales, could you specify which kind?"
+msgstr ""
+
+#: data/surveySMEDemand/questions.json:825
+msgid ""
+"Sales (customer relationship management tool (CRM), online sales "
+"platform, ...)"
+msgstr ""
+
+#: data/surveySMEDemand/questions.json:833
+#: data/surveySMEDemand/questions.json:1169
+msgid "As you use digital tools for management, could you specify which kind?"
+msgstr ""
+
+#: data/surveySMEDemand/questions.json:839
+msgid "Management (integrated management software package (ERP), cloud, ...)"
+msgstr ""
+
+#: data/surveySMEDemand/questions.json:847
+#: data/surveySMEDemand/questions.json:1262
+msgid ""
+"As you use digital tools for manufacturing, could you specify which kind?"
+msgstr ""
+
+#: data/surveySMEDemand/questions.json:853
+msgid ""
+"Manufacturing (Industrial Internet of Things (IIoT), Big Data and analytics "
+"tools, ...)"
+msgstr ""
+
+#: data/surveySMEDemand/questions.json:861
+#: data/surveySMEDemand/questions.json:875
+#: data/surveySMEDemand/questions.json:898
+#: data/surveySMEDemand/questions.json:912
+#: data/surveySMEDemand/questions.json:926
+#: data/surveySMEDemand/questions.json:940
+#: data/surveySMEDemand/questions.json:954
+#: data/surveySMEDemand/questions.json:968
+#: data/surveySMEDemand/questions.json:982
+#: data/surveySMEDemand/questions.json:996
+#: data/surveySMEDemand/questions.json:1019
+#: data/surveySMEDemand/questions.json:1033
+#: data/surveySMEDemand/questions.json:1047
+#: data/surveySMEDemand/questions.json:1061
+#: data/surveySMEDemand/questions.json:1075
+#: data/surveySMEDemand/questions.json:1089
+#: data/surveySMEDemand/questions.json:1112
+#: data/surveySMEDemand/questions.json:1126
+#: data/surveySMEDemand/questions.json:1140
+#: data/surveySMEDemand/questions.json:1154
+#: data/surveySMEDemand/questions.json:1177
+#: data/surveySMEDemand/questions.json:1191
+#: data/surveySMEDemand/questions.json:1205
+#: data/surveySMEDemand/questions.json:1219
+#: data/surveySMEDemand/questions.json:1233
+#: data/surveySMEDemand/questions.json:1247
+#: data/surveySMEDemand/questions.json:1270
+#: data/surveySMEDemand/questions.json:1284
+#: data/surveySMEDemand/questions.json:1298
+#: data/surveySMEDemand/questions.json:1312
+#: data/surveySMEDemand/questions.json:1326
+#: data/surveySMEDemand/questions.json:1340
+#: data/surveySMEDemand/questions.json:1354
+#: data/surveySMEDemand/questions.json:1368
+#: data/surveySMEDemand/questions.json:1382
+#: data/surveySMEDemand/questions.json:1397
+#, fuzzy
+#| msgid "Are you obliged to comply with any of the following regulations?"
+msgid "Does your company use any of the following cybersecurity solutions?"
+msgstr "Sind Sie verpflichtet, eine der folgenden Vorschriften einzuhalten?"
+
+#: data/surveySMEDemand/questions.json:867
+#, fuzzy
+#| msgid "None."
+msgid "None"
+msgstr "Keine."
+
+#: data/surveySMEDemand/questions.json:904
+msgid "Website"
+msgstr ""
+
+#: data/surveySMEDemand/questions.json:918
+#, fuzzy
+#| msgid "Social worker"
+msgid "Social networks"
+msgstr "Sozialarbeiter/in"
+
+#: data/surveySMEDemand/questions.json:932
+msgid "Mailbox"
+msgstr ""
+
+#: data/surveySMEDemand/questions.json:946
+#, fuzzy
+#| msgid "Email"
+msgid "Emailing"
+msgstr "Email"
+
+#: data/surveySMEDemand/questions.json:960
+msgid "Videoconferencing"
+msgstr ""
+
+#: data/surveySMEDemand/questions.json:974
+msgid "Internet traffic monitoring protocol"
+msgstr ""
+
+#: data/surveySMEDemand/questions.json:988
+msgid "Online tool for sending large files"
+msgstr ""
+
+#: data/surveySMEDemand/questions.json:1025
+#, fuzzy
+#| msgid "Antivirus software"
+msgid "Accounting software"
+msgstr "Antiviren-Software"
+
+#: data/surveySMEDemand/questions.json:1039
+msgid "Expense report tracking tool"
+msgstr ""
+
+#: data/surveySMEDemand/questions.json:1053
+msgid "Electronic invoicing"
+msgstr ""
+
+#: data/surveySMEDemand/questions.json:1067
+msgid "Electronic signature"
+msgstr ""
+
+#: data/surveySMEDemand/questions.json:1081
+msgid "Authentication"
+msgstr ""
+
+#: data/surveySMEDemand/questions.json:1118
+msgid "Online payment tool"
+msgstr ""
+
+#: data/surveySMEDemand/questions.json:1132
+msgid "Online sales platform"
+msgstr ""
+
+#: data/surveySMEDemand/questions.json:1146
+msgid "Customer relationship management (CRM)"
+msgstr ""
+
+#: data/surveySMEDemand/questions.json:1183
+#, fuzzy
+#| msgid "Employee Management"
+msgid "Inventory management"
+msgstr "Verwaltung von Mitarbeiter"
+
+#: data/surveySMEDemand/questions.json:1197
+msgid "Integrated management software package (ERP)"
+msgstr ""
+
+#: data/surveySMEDemand/questions.json:1211
+msgid "Project management software"
+msgstr ""
+
+#: data/surveySMEDemand/questions.json:1225
+msgid "Document sharing tool (cloud)"
+msgstr ""
+
+#: data/surveySMEDemand/questions.json:1239
+msgid "Automatic data backup software)"
+msgstr ""
+
+#: data/surveySMEDemand/questions.json:1276
+msgid "Industrial Internet of Things (IIoT)"
+msgstr ""
+
+#: data/surveySMEDemand/questions.json:1290
+msgid "Big Data and analytics tools"
+msgstr ""
+
+#: data/surveySMEDemand/questions.json:1304
+msgid "Advanced robotics"
+msgstr ""
+
+#: data/surveySMEDemand/questions.json:1318
+msgid "Additive manufacturing"
+msgstr ""
+
+#: data/surveySMEDemand/questions.json:1332
+msgid "Digital thread and twins"
+msgstr ""
+
+#: data/surveySMEDemand/questions.json:1346
+msgid "Augmented reality"
+msgstr ""
+
+#: data/surveySMEDemand/questions.json:1360
+msgid "B2B Order Management System"
+msgstr ""
+
+#: data/surveySMEDemand/questions.json:1374
+msgid "Product Information Management (PIM) system"
+msgstr ""
+
+#: data/surveySMEDemand/questions.json:1394
+msgid "Focus on cybersecurity practices"
+msgstr ""
+
+#: data/surveySMEDemand/questions.json:1405
+#: data/surveySMEDemand/questions.json:1419
+#: data/surveySMEDemand/questions.json:1433
+#: data/surveySMEDemand/questions.json:1447
+#: data/surveySMEDemand/questions.json:1461
+#: data/surveySMEDemand/questions.json:1475
+#: data/surveySMEDemand/questions.json:1489
+#: data/surveySMEDemand/questions.json:1503
+#: data/surveySMEDemand/questions.json:1517
+#: data/surveySMEDemand/questions.json:1531
+#: data/surveySMEDemand/questions.json:1546
+msgid "Who supports you to manage your cybersecurity?"
+msgstr ""
+
+#: data/surveySMEDemand/questions.json:1411
+#, fuzzy
+#| msgid "included in a password manager"
+msgid "Password manager"
+msgstr "in einem Passwort-Manager abgelegt"
+
+#: data/surveySMEDemand/questions.json:1439
+#, fuzzy
+#| msgid "Data backups are"
+msgid "Data backup solution"
+msgstr "Datensicherungen sind/werden"
+
+#: data/surveySMEDemand/questions.json:1453
+msgid "VPN"
+msgstr ""
+
+#: data/surveySMEDemand/questions.json:1467
+msgid "Email encryption"
+msgstr ""
+
+#: data/surveySMEDemand/questions.json:1481
+msgid ""
+"Intrusion detection systems (IDS) and intrusion prevention systems (IPS)"
+msgstr ""
+
+#: data/surveySMEDemand/questions.json:1495
+#, fuzzy
+#| msgid "IT and Information security tasks are:"
+msgid "Information security management system (ISMS)"
+msgstr "IT- und Informationssicherheitsaufgaben werden:"
+
+#: data/surveySMEDemand/questions.json:1509
+msgid "Access management system"
+msgstr ""
+
+#: data/surveySMEDemand/questions.json:1542
+#: data/surveySMEDemand/questions.json:1543
+#: data/surveySMEDemand/questions.json:1663
+#: data/surveySMEDemand/questions.json:1664
+#: data/surveySMEDemand/questions.json:1742
+#: data/surveySMEDemand/questions.json:1743
+#: data/surveySMEDemand/questions.json:1863
+#: data/surveySMEDemand/questions.json:1864
+#: data/surveySMEDemand/questions.json:1984
+#: data/surveySMEDemand/questions.json:1985
+#: data/surveySMEDemand/questions.json:2049
+#: data/surveySMEDemand/questions.json:2050
+#: data/surveySMEDemand/questions.json:2072
+#: data/surveySMEDemand/questions.json:2073
+#: data/surveySMEDemand/questions.json:2165
+#: data/surveySMEDemand/questions.json:2166
+#, fuzzy
+#| msgid "Digital Infrastructure and Service Providers"
+msgid "Market and service providers"
+msgstr "Anbieter digitaler Infrastruktur und Dienste"
+
+#: data/surveySMEDemand/questions.json:1554
+#: data/surveySMEDemand/questions.json:1568
+#: data/surveySMEDemand/questions.json:1582
+#: data/surveySMEDemand/questions.json:1596
+#: data/surveySMEDemand/questions.json:1610
+#: data/surveySMEDemand/questions.json:1624
+#: data/surveySMEDemand/questions.json:1638
+#: data/surveySMEDemand/questions.json:1652
+#: data/surveySMEDemand/questions.json:1667
+msgid "What other organisation(s) is(are) relevant for your cybersecurity?"
+msgstr ""
+
+#: data/surveySMEDemand/questions.json:1560
+#, fuzzy
+#| msgid "performed internally by an IT specialist"
+msgid "An external IT Specialist"
+msgstr "intern von einem IT-Spezialisten durchgeführt"
+
+#: data/surveySMEDemand/questions.json:1574
+#, fuzzy
+#| msgid "performed internally by an IT specialist"
+msgid "An internal IT Specialist"
+msgstr "intern von einem IT-Spezialisten durchgeführt"
+
+#: data/surveySMEDemand/questions.json:1588
+msgid "An external Cybersecurity Specialist"
+msgstr ""
+
+#: data/surveySMEDemand/questions.json:1602
+msgid "An internal Cybersecurity Specialist"
+msgstr ""
+
+#: data/surveySMEDemand/questions.json:1616
+#, fuzzy
+#| msgid "Contracts with external IT service providers"
+msgid "My internet service provider"
+msgstr "Verträge, die mit Dritten geschlossen werden"
+
+#: data/surveySMEDemand/questions.json:1630
+msgid "A relative or a friend"
+msgstr ""
+
+#: data/surveySMEDemand/questions.json:1644
+#, fuzzy
+#| msgid "None of the above."
+msgid "No one, or none of the above"
+msgstr "Keine der oben genannten Möglichkeiten."
+
+#: data/surveySMEDemand/questions.json:1658
+msgid ""
+"I wish to receive help from (governement, professional organisation, ...):"
+msgstr ""
+
+#: data/surveySMEDemand/questions.json:1675
+#: data/surveySMEDemand/questions.json:1689
+#: data/surveySMEDemand/questions.json:1703
+#: data/surveySMEDemand/questions.json:1717
+#: data/surveySMEDemand/questions.json:1731
+#: data/surveySMEDemand/questions.json:1746
+msgid ""
+"What are your key drivers in the adoption of cybersecurity services or "
+"solutions?"
+msgstr ""
+
+#: data/surveySMEDemand/questions.json:1681
+#, fuzzy
+#| msgid "Specialist"
+msgid "IT specialist"
+msgstr "Facharzt/Fachärztin"
+
+#: data/surveySMEDemand/questions.json:1695
+#, fuzzy
+#| msgid "Cybersecurity"
+msgid "Cybersecurity specialist"
+msgstr "Informationssicherheit"
+
+#: data/surveySMEDemand/questions.json:1709
+#, fuzzy
+#| msgid "Contracts with external IT service providers"
+msgid "Internet service provider"
+msgstr "Verträge, die mit Dritten geschlossen werden"
+
+#: data/surveySMEDemand/questions.json:1723
+msgid "Professional organisation"
+msgstr ""
+
+#: data/surveySMEDemand/questions.json:1737
+msgid "Governemental entity"
+msgstr ""
+
+#: data/surveySMEDemand/questions.json:1754
+#: data/surveySMEDemand/questions.json:1768
+#: data/surveySMEDemand/questions.json:1782
+#: data/surveySMEDemand/questions.json:1796
+#: data/surveySMEDemand/questions.json:1810
+#: data/surveySMEDemand/questions.json:1824
+#: data/surveySMEDemand/questions.json:1838
+#: data/surveySMEDemand/questions.json:1852
+#: data/surveySMEDemand/questions.json:1867
+msgid ""
+"What are your criteria for evaluating cybersecurity services or solutions?"
+msgstr ""
+
+#: data/surveySMEDemand/questions.json:1760
+msgid "Your company is facing a cybersecurity incident"
+msgstr ""
+
+#: data/surveySMEDemand/questions.json:1774
+msgid "A client has requested your company to adopt new tools"
+msgstr ""
+
+#: data/surveySMEDemand/questions.json:1788
+msgid "Your company's IT service provider advised you to adopt new tools"
+msgstr ""
+
+#: data/surveySMEDemand/questions.json:1802
+msgid ""
+"You have heard about new threats from peers / other companies in your sector "
+"of activity"
+msgstr ""
+
+#: data/surveySMEDemand/questions.json:1816
+msgid "You have heard about new threats in the news"
+msgstr ""
+
+#: data/surveySMEDemand/questions.json:1830
+#, fuzzy
+#| msgid "Regulatory constraints"
+msgid "Legal constraints"
+msgstr "Rechtsvorschriften"
+
+#: data/surveySMEDemand/questions.json:1844
+#: data/surveySMEDemand/questions.json:1965
+#: data/surveySMEDemand/questions.json:2044
+#: data/surveySMEDemand/questions.json:2290
+#: data/surveySMEDemand/questions.json:2369
+#: data/surveySMEDemand/questions.json:2447
+msgid "I don't know"
+msgstr ""
+
+#: data/surveySMEDemand/questions.json:1875
+#: data/surveySMEDemand/questions.json:1889
+#: data/surveySMEDemand/questions.json:1903
+#: data/surveySMEDemand/questions.json:1917
+#: data/surveySMEDemand/questions.json:1931
+#: data/surveySMEDemand/questions.json:1945
+#: data/surveySMEDemand/questions.json:1959
+#: data/surveySMEDemand/questions.json:1973
+#: data/surveySMEDemand/questions.json:1988
+msgid "Do the cybersecurity services available on the market suit your needs?"
+msgstr ""
+
+#: data/surveySMEDemand/questions.json:1881
+msgid "Price"
+msgstr ""
+
+#: data/surveySMEDemand/questions.json:1895
+msgid "Comprehensiveness"
+msgstr ""
+
+#: data/surveySMEDemand/questions.json:1909
+msgid "Ease of use"
+msgstr ""
+
+#: data/surveySMEDemand/questions.json:1923
+msgid "Trust in the seller"
+msgstr ""
+
+#: data/surveySMEDemand/questions.json:1937
+msgid "Technical specifications"
+msgstr ""
+
+#: data/surveySMEDemand/questions.json:1951
+#: data/surveySMEDemand/questions.json:2425
+#: data/surveySMEDemand/questions.json:2426
+msgid "Certification"
+msgstr ""
+
+#: data/surveySMEDemand/questions.json:1996
+#: data/surveySMEDemand/questions.json:2038
+#: data/surveySMEDemand/questions.json:2061
+#: data/surveySMEDemand/questions.json:2076
+msgid "How trustworthy would you evaluate your digital service provider(s)?"
+msgstr ""
+
+#: data/surveySMEDemand/questions.json:2010
+#: data/surveySMEDemand/questions.json:2024
+#: data/surveySMEDemand/questions.json:2053
+msgid ""
+"If the cybersecurity services available in the market do not match your "
+"needs, what are you missing?"
+msgstr ""
+
+#: data/surveySMEDemand/questions.json:2067
+msgid "Provide us with more details, please:"
+msgstr ""
+
+#: data/surveySMEDemand/questions.json:2084
+#: data/surveySMEDemand/questions.json:2098
+#: data/surveySMEDemand/questions.json:2154
+#: data/surveySMEDemand/questions.json:2177
+#: data/surveySMEDemand/questions.json:2192
+msgid "Has your company, to your knowledge, been the victim of a cyberattack?"
+msgstr ""
+
+#: data/surveySMEDemand/questions.json:2112
+#: data/surveySMEDemand/questions.json:2126
+#: data/surveySMEDemand/questions.json:2140
+#: data/surveySMEDemand/questions.json:2169
+msgid ""
+"If you see issues with the trustworthiness of your current service "
+"provider(s), what are the main reasons?"
+msgstr ""
+
+#: data/surveySMEDemand/questions.json:2146
+msgid "Very Low"
+msgstr ""
+
+#: data/surveySMEDemand/questions.json:2160
+msgid "I do not have a cybersecurity service provider"
+msgstr ""
+
+#: data/surveySMEDemand/questions.json:2183
+msgid "Provide us with more details, please"
+msgstr ""
+
+#: data/surveySMEDemand/questions.json:2188
+#: data/surveySMEDemand/questions.json:2189
+#: data/surveySMEDemand/questions.json:2295
+#: data/surveySMEDemand/questions.json:2296
+#, fuzzy
+#| msgid "Incident Reporting"
+msgid "Incident"
+msgstr "Berichterstattung über Vorfälle"
+
+#: data/surveySMEDemand/questions.json:2200
+#: data/surveySMEDemand/questions.json:2214
+#: data/surveySMEDemand/questions.json:2228
+#: data/surveySMEDemand/questions.json:2242
+#: data/surveySMEDemand/questions.json:2256
+#: data/surveySMEDemand/questions.json:2270
+#: data/surveySMEDemand/questions.json:2284
+#: data/surveySMEDemand/questions.json:2299
+#, fuzzy
+#| msgid "What is the risk management culture in your company?"
+msgid "What impact did the cyberattack have on your company?"
+msgstr "Wie sieht die Kultur des Risikomanagements in Ihrem Unternehmen aus?"
+
+#: data/surveySMEDemand/questions.json:2206
+msgid ""
+"Yes, we had an incident which started from a personal device used by "
+"employees for work"
+msgstr ""
+
+#: data/surveySMEDemand/questions.json:2220
+msgid "Yes, we had an incident which started from a company device"
+msgstr ""
+
+#: data/surveySMEDemand/questions.json:2234
+msgid "Yes, we had an incident but we could not define the origin"
+msgstr ""
+
+#: data/surveySMEDemand/questions.json:2248
+msgid "Yes, we had an incident and some data was hacked"
+msgstr ""
+
+#: data/surveySMEDemand/questions.json:2262
+msgid "Yes, we had an incident and we paid a ransom to get our data back"
+msgstr ""
+
+#: data/surveySMEDemand/questions.json:2276
+msgid "No, we have never had an incident"
+msgstr ""
+
+#: data/surveySMEDemand/questions.json:2307
+#: data/surveySMEDemand/questions.json:2321
+#: data/surveySMEDemand/questions.json:2335
+#: data/surveySMEDemand/questions.json:2349
+#: data/surveySMEDemand/questions.json:2363
+#: data/surveySMEDemand/questions.json:2378
+msgid ""
+"From a regulatory point of view, do you think you lack information "
+"regarding..."
+msgstr ""
+
+#: data/surveySMEDemand/questions.json:2313
+msgid "Loss of asset/material"
+msgstr ""
+
+#: data/surveySMEDemand/questions.json:2327
+msgid "Direct loss of money"
+msgstr ""
+
+#: data/surveySMEDemand/questions.json:2341
+#, fuzzy
+#| msgid "From 10 to 49 employees"
+msgid "Loss of time for employees"
+msgstr "Von 10 bis 49 Mitarbeiter"
+
+#: data/surveySMEDemand/questions.json:2355
+msgid "Loss of personal data"
+msgstr ""
+
+#: data/surveySMEDemand/questions.json:2374
+#: data/surveySMEDemand/questions.json:2375
+msgid "Regulations and public actions"
+msgstr ""
+
+#: data/surveySMEDemand/questions.json:2386
+#: data/surveySMEDemand/questions.json:2400
+#: data/surveySMEDemand/questions.json:2414
+#: data/surveySMEDemand/questions.json:2429
+msgid "Does your company have a cybersecurity certification?"
+msgstr ""
+
+#: data/surveySMEDemand/questions.json:2392
+msgid "Your cybersecurity obligations"
+msgstr ""
+
+#: data/surveySMEDemand/questions.json:2406
+msgid "Your personnal data protection obligations"
+msgstr ""
+
+#: data/surveySMEDemand/questions.json:2420
+msgid "Other types of obligations, such as:"
+msgstr ""
+
 #: stats/views.py:63
 msgid "Last week"
 msgstr "Letzte Woche"
@@ -7645,6 +8836,8 @@ msgstr "Sie müssen mindestens eine Antwort auswählen"
 #: survey/forms.py:106 survey/forms.py:181
 #: templates/survey/finishedSurvey.html:196
 #: templates/survey/finishedSurvey.html:210 templates/survey/review.html:50
+#: templates/surveySMEDemand/survey/finishedSurvey.html:190
+#: templates/surveySMEDemand/survey/finishedSurvey.html:204
 msgid "Your feedback"
 msgstr "Ihre Rückmeldung"
 
@@ -8007,12 +9200,13 @@ msgid ""
 "understand that all the results can not in any way be exhaustive."
 msgstr ""
 "Sie haben mit Ihren Antworten ein %(SCORE)s/100 erzielt. Sie müssen "
-"mindestens %(minimal_acceptable_score)s/100 erreichen, um eine NC3-"
-"Diagnose durchführen zu können. Wir erinnern Sie daran, dass dies eine "
+"mindestens %(minimal_acceptable_score)s/100 erreichen, um eine NC3-Diagnose "
+"durchführen zu können. Wir erinnern Sie daran, dass dies eine "
 "Selbsteinschätzung ist. Es versteht sich, dass alle Ergebnisse in keiner "
 "Weise erschöpfend sein können."
 
 #: templates/report/results.html:17 templates/survey/finishedSurvey.html:55
+#: templates/surveySMEDemand/survey/finishedSurvey.html:58
 #, python-format
 msgid ""
 "You have scored an additional %(bonus)s %% of bonus points for adherence to "
@@ -8072,6 +9266,7 @@ msgid "Download direct link"
 msgstr "Direkten Link herunterladen"
 
 #: templates/survey/continue.html:26 templates/survey/finishedSurvey.html:220
+#: templates/surveySMEDemand/survey/finishedSurvey.html:214
 msgid "Close"
 msgstr "Schließen"
 
@@ -8095,10 +9290,11 @@ msgstr ""
 "daher nicht für die Ergebnisse dieser Umfrage haften."
 
 #: templates/survey/finishedSurvey.html:42
+#: templates/surveySMEDemand/survey/finishedSurvey.html:45
 #, python-format
 msgid ""
-"Based on your score %(score)s, the NC3 Diagnostic is not available for "
-"your organization at this moment. We recommend you improve the information "
+"Based on your score %(score)s, the NC3 Diagnostic is not available for your "
+"organization at this moment. We recommend you improve the information "
 "security maturity level by implementing the recommendations listed below. If "
 "you need any information security training to raise awareness in your "
 "company, do not hesitate to"
@@ -8115,15 +9311,17 @@ msgid "Your results link"
 msgstr "Ihr Ergebnislink"
 
 #: templates/survey/finishedSurvey.html:72
+#: templates/surveySMEDemand/survey/finishedSurvey.html:66
 msgid "About the NC3 Diagnostic"
 msgstr "Über die NC3-Diagnose"
 
 #: templates/survey/finishedSurvey.html:74
+#: templates/surveySMEDemand/survey/finishedSurvey.html:68
 msgid ""
 "The NC3 Diagnostic is a service which analyses the company maturity in the "
 "information security depending on company's requirements. The analysis "
-"duration can take approximately 2 hours. A consultant from NC3 will come "
-"to your company's premises, and ask around 30 questions concerning your "
+"duration can take approximately 2 hours. A consultant from NC3 will come to "
+"your company's premises, and ask around 30 questions concerning your "
 "information security, mostly organizational questions and possibly some "
 "technical questions. You will receive a detailed report which will contain a "
 "maturity estimation as well as recommendations to enhance the information "
@@ -8139,35 +9337,42 @@ msgstr ""
 "Verbesserung der Laufzeit der Informationssicherheit."
 
 #: templates/survey/finishedSurvey.html:86
+#: templates/surveySMEDemand/survey/finishedSurvey.html:80
 msgid ""
-"The NC3 Diagnostic is available for all the companies located in "
-"Luxembourg and free of charge."
+"The NC3 Diagnostic is available for all the companies located in Luxembourg "
+"and free of charge."
 msgstr ""
 "Der Diagnostic ist für jedes Unternehmen mit Sitz in Luxemburg möglich und "
 "kostenlos."
 
 #: templates/survey/finishedSurvey.html:123
+#: templates/surveySMEDemand/survey/finishedSurvey.html:117
 msgid "Report"
 msgstr "Bericht"
 
 #: templates/survey/finishedSurvey.html:130
+#: templates/surveySMEDemand/survey/finishedSurvey.html:124
 msgid "Download"
 msgstr "Herunterladen"
 
 #: templates/survey/finishedSurvey.html:140
+#: templates/surveySMEDemand/survey/finishedSurvey.html:134
 msgid "Email"
 msgstr "Email"
 
 #: templates/survey/finishedSurvey.html:151
+#: templates/surveySMEDemand/survey/finishedSurvey.html:145
 msgid "Score by section"
 msgstr "Punktzahl nach Abschnitt"
 
 #: templates/survey/finishedSurvey.html:157
+#: templates/surveySMEDemand/survey/finishedSurvey.html:151
 msgid "Score by category"
 msgstr "Punktzahl nach Kategorie"
 
 #: templates/survey/finishedSurvey.html:225
 #: templates/survey/sendReportEmail.html:14
+#: templates/surveySMEDemand/survey/finishedSurvey.html:219
 msgid "Send"
 msgstr "Senden"
 
@@ -8176,10 +9381,12 @@ msgid "Welcome to the NC3 self-assessment tool:"
 msgstr "Willkommen beim NC3-Tool zur Selbstbewertung:"
 
 #: templates/survey/index.html:28
+#: templates/surveySMEDemand/survey/index.html:23
 msgid "Start"
 msgstr "Starten"
 
 #: templates/survey/index.html:36
+#: templates/surveySMEDemand/survey/index.html:31
 msgid "Continue a previous survey"
 msgstr "Setzen Sie eine vorherige Umfrage fort"
 
@@ -8187,36 +9394,37 @@ msgstr "Setzen Sie eine vorherige Umfrage fort"
 msgid "Would like to leave survey?"
 msgstr "Möchten Sie die Umfrage verlassen?"
 
-#: templates/survey/questions.html:43
+#: templates/survey/questions.html:45
 msgid "Multiple answers are possible."
 msgstr "Mehrfachnennungen sind möglich."
 
-#: templates/survey/questions.html:55
+#: templates/survey/questions.html:57
 msgid "Back"
 msgstr "Bisherige"
 
-#: templates/survey/questions.html:63
+#: templates/survey/questions.html:65
 msgid "Cancel"
 msgstr "Stornieren"
 
-#: templates/survey/questions.html:72 templates/survey/review.html:67
+#: templates/survey/questions.html:74 templates/survey/review.html:67
 msgid "Continue later"
 msgstr "Später weitermachen"
 
-#: templates/survey/questions.html:77
+#: templates/survey/questions.html:79
 msgid "Modify"
 msgstr "Ändern"
 
-#: templates/survey/questions.html:77 templates/survey/start.html:39
+#: templates/survey/questions.html:79 templates/survey/start.html:39
+#: templates/surveySMEDemand/survey/start.html:33
 msgid "Next"
 msgstr "Nächster"
 
-#: templates/survey/questions.html:86
+#: templates/survey/questions.html:88
 msgid "This text field should not be used to answer the question."
 msgstr ""
 "Dieses Textfeld sollte nicht zur Beantwortung der Frage verwendet werden."
 
-#: templates/survey/questions.html:89
+#: templates/survey/questions.html:91
 msgid ""
 "Please do not provide any sensitive or confidential information referring to "
 "your identity."
@@ -8494,3 +9702,48 @@ msgstr "Python-Version:"
 #: templates/survey/stats.html:293
 msgid "Software version:"
 msgstr "Softwareversion:"
+
+#: templates/surveySMEDemand/survey/finishedSurvey.html:26
+msgid "Thanks for your time and effort!"
+msgstr ""
+
+#: templates/surveySMEDemand/survey/finishedSurvey.html:29
+msgid ""
+"Keep in touch with us to receive the study results as well as cybersecurity "
+"content for your smes by registrering to our newsletter by <a href=\"https://"
+"newsletter.cybersecurity-luxembourg.com/\" target=\"_blank\" rel=\"noopener "
+"noreferrer\">clicking here!</a>"
+msgstr ""
+
+#: templates/surveySMEDemand/survey/finishedSurvey.html:34
+msgid ""
+"If you want to assess your level of cybersecurity or privacy, we have "
+"created tools that will provide you with tailored recommendations to improve "
+"your standards."
+msgstr ""
+
+#: templates/surveySMEDemand/survey/finishedSurvey.html:35
+msgid "Using all these self-assessment tools is anonymous and for free."
+msgstr ""
+
+#: templates/surveySMEDemand/survey/finishedSurvey.html:38
+msgid ""
+"A service that includes multiple self-assessment tools. Its main goal is to "
+"allow users to quickly assess their information security maturity in "
+"different areas that NC3 considers critical."
+msgstr ""
+
+#: templates/surveySMEDemand/survey/finishedSurvey.html:39
+msgid ""
+"This questionnaire, created in consultation with the National Commission for "
+"Data Protection, aims to help organisations assess to what extent they are "
+"in control of their personal data risks"
+msgstr ""
+
+#: templates/surveySMEDemand/survey/finishedSurvey.html:40
+msgid ""
+"This questionnaire aims to identify the general scope of the contractual "
+"relationship considered, in order to set up an acquisition, a lease, a "
+"development or any other service in the field of information and "
+"communication technologies."
+msgstr ""
