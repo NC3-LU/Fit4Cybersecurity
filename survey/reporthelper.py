@@ -79,7 +79,9 @@ def is_recommendation_already_added(recommendation: str, recommendations: dict) 
     return False
 
 
-def calculateResult(user: SurveyUser) -> Tuple[int, int, List[int], List[str]]:
+def calculateResult(
+    user: SurveyUser,
+) -> Tuple[int, int, List[int], List[str], List[int], List[str]]:
     user_bonus_points_percent = 0
 
     chart_exclude_sections = [CONTEXT_SECTION_LABEL]
