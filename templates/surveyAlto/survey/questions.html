@@ -7,6 +7,7 @@
 {% block bootstrap4_extra_head %}
     {{ block.super }}
     <link rel="stylesheet" type="text/css" href="{% static 'survey/css/survey-questions.css' %}" />
+    <script type="text/javascript" src="{% static 'npm_components/jquery-ui/dist/jquery-ui.min.js' %}"></script>
     <script type="text/javascript" src="{% static 'survey/js/qrcode.min.js' %}"></script>
     <script type="text/javascript" src="{% static 'survey/js/survey-questions.js' %}"></script>
 {% endblock %}

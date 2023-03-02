@@ -245,4 +245,6 @@ $(document).ready(function() {
             $('#survey-question-form').submit();
         }
     })
+
+    $( ".sortable" ).sortable();
 });

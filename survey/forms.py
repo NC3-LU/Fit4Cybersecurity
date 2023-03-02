@@ -21,7 +21,16 @@ class AnswerMChoice(forms.Form):
 
         super().__init__(*args, **kwargs)
 
-        if answers_field_type[0] == "M":
+        if answers_field_type == "MS":
+            self.fields["answers"] = forms.MultipleChoiceField(
+                required=True,
+                choices=[],
+                widget=forms.CheckboxSelectMultiple(
+                    attrs={"class": "multiple-selection sortable"}
+                ),
+                label="",
+            )
+        elif answers_field_type[0] == "M":
             self.fields["answers"] = forms.MultipleChoiceField(
                 required=True,
                 choices=[],

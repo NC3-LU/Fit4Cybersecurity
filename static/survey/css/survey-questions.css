@@ -262,3 +262,14 @@
 .bg-progress-bar-8 {
     background-color: var(--pink) !important;
 }
+
+div.sortable {
+    counter-reset: list-number;
+}
+
+div.sortable div span.checkmark:before {
+    counter-increment: list-number;
+    content: counter(list-number);
+    margin: -30px;
+
+}

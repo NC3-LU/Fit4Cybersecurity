@@ -8,6 +8,7 @@ SERVICE_TARGETS = [
 
 QUESTION_TYPES = [
     ("M", "Multiple Choice"),
+    ("MS", "Multiple Choice Sortable"),
     ("S", "Single Choice"),
     ("SO", "Single Option Choice"),
     ("T", "Free text"),
