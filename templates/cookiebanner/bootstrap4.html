@@ -21,7 +21,7 @@
                         <th scope="col">{{ _('Name') }}</th>
                         <th scope="col">{{ _('Description') }}</th>
                         <th scope="col">{{ _('Content') }}</th>
-                        <th scope="col">{{ _('Max. age') }}</th>
+                        <th scope="col">{{ _('Max age') }}</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -40,6 +40,18 @@
             </div>
           {% endfor %}
         </form>
+      </div>
+      <div class="modal-footer">
+        {% if cb_settings.footer_text %}
+          <p class="text-left">{{ cb_settings.footer_text|safe }}</p>
+        {% endif %}
+        <input type="submit" name="enable_all" class="cookiebannerSubmit btn btn-primary mx-auto"
+               value="{% trans 'Do not display anymore' %}">
+        <nav class="cookie-footer-links">
+          {% for link in cb_settings.footer_links %}
+            <span class="nav-item"><a class="nav-link" href="{{ link.href }}">{{ link.title }}</a></span>
+          {% endfor %}
+        </nav>
       </div>
     </div>
   </div>
