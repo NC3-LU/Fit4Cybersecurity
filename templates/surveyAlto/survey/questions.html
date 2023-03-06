@@ -19,7 +19,12 @@
         {% if user.is_survey_in_progress and not does_map_exist or current_question_index > 1 and does_map_exist %}
             <div class="progress mx-2 mt-2" style="height: 20px;">
                 {% for index, category in questions_categories %}
-                <div class="progress-bar bg-progress-bar-{{index}}" role="progressbar" style="width: {% widthratio category.count total_questions_num 100 %}%">
+                {% widthratio current_question_index total_questions_num 100 as test1 %}
+                {% widthratio category.count total_questions_num 100 as test2 %}
+                <div 
+                    class="progress-bar {% if current_question_category == category.id %}bg-progress-bar-5{% else %}bg-progress-bar-6{% endif %} {% if current_question_category < category.id %}bg-progress-bar-opacity{% endif %}" 
+                    role="progressbar" 
+                    style="width: {% widthratio category.count total_questions_num 100 %}%">
                     <span class="small">{{ category.label }}</span>
                 </div>
                 {% endfor %}
@@ -89,16 +94,6 @@
                     </div>
                 </div>
             {% endbuttons %}
-
-            <div class="form-group pt-4">
-                {% bootstrap_field form.feedback label_class="feedback-label" %}
-                <p class="select-multi-info text-muted pl-4 mb-0 small">
-                    * {{ _('This text field should not be used to answer the question.') }}
-                </p>
-                <p class="select-multi-info text-muted pl-4 mb-0 small">
-                    ** {{ _('Please do not provide any sensitive or confidential information referring to your identity.') }}
-                </p>
-            </div>
         </form>
     </div>
 

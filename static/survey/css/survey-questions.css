@@ -252,9 +252,11 @@
 }
 .bg-progress-bar-5 {
     background-color: var(--red) !important;
+    opacity: 1 !important;
 }
 .bg-progress-bar-6 {
     background-color: var(--blue) !important;
+    opacity: 1 !important;
 }
 .bg-progress-bar-7 {
     background-color: var(--teal) !important;
@@ -262,6 +264,10 @@
 .bg-progress-bar-8 {
     background-color: var(--pink) !important;
 }
+.bg-progress-bar-opacity {
+    opacity: .4 !important;
+}
+
 
 div.sortable {
     counter-reset: list-number;
