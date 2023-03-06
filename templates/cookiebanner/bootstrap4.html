@@ -11,33 +11,7 @@
       <div class="modal-body">
         <form id="cookiebannerForm">
           {% for cookiegroup in cb_settings.groups %}
-          <p class="text-justify">{{ cookiegroup.description }} <a data-toggle="collapse" href="#detailCollapse{{ cookiegroup.id }}" role="button">{% trans 'Details' %}</a></p>
-            <div id="cookiegroup_{{ cookiegroup.id }}" style="margin-bottom: 10px;">
-              <div class="collapse" id="detailCollapse{{ cookiegroup.id }}">               
-                <div class="card card-body">
-                  <table class="table">
-                    <thead>
-                      <tr>
-                        <th scope="col">{{ _('Name') }}</th>
-                        <th scope="col">{{ _('Description') }}</th>
-                        <th scope="col">{{ _('Content') }}</th>
-                        <th scope="col">{{ _('Max age') }}</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      {% for cookie in cookiegroup.cookies %}
-                      <tr class="text-justify small">
-                        <td>{{ cookie.pattern }}</td>
-                        <td>{{ cookie.description }}</td>
-                        <td>{{ cookie.content }}</td>
-                        <td>{{ cookie.max_age }}</td>                     
-                        {% endfor %}
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-            </div>
+          <p class="text-justify">{{ cookiegroup.description }} <a href="{% url 'privacy' %}" role="button">{% trans 'Details' %}</a></p>
           {% endfor %}
         </form>
       </div>
