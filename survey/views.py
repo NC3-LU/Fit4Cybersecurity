@@ -348,4 +348,4 @@ def get_terms(request):
 def get_privacy_policy(request):
     lang = request.session.get(settings.LANGUAGE_COOKIE_NAME, LANGUAGE_CODE)
     translation.activate(lang)
-    return render(request, "parts/surveyAlto/privacy_policy.html", context=COOKIEBANNER)
+    return render(request, "survey/privacy_policy.html", context=COOKIEBANNER)
