@@ -1,0 +1,18 @@
+{% load i18n %}
+{% load apptags %}
+
+<h2 id="description">{{ _('Description') }}</h2>
+
+<p>
+{% block report_description %}
+{% blocktranslate trimmed with tool_name=custom.tool_name minimal_acceptable_score=custom.minimal_acceptable_score %}
+This self-assessment tool is named Fit4CSA to highlight the basic requirements defined in the EU Cybersecurity Act. The self-assessment is the first step in the basic-level certification process defined in the CORAL project.
+<br><br>
+A minimum score of 85% is required to be able to initiate the certification process with an external auditor. The auditor will further review your controls and request potential evidence based on his/her judgments.
+<br><br>
+During this self-assessment, multiple-choice questions were asked. After analyzing your answers, recommendations have been provided. Finally, you can download a report, which would be the basic documentation of a CSA-basic level certification
+{% endblocktranslate %}
+{% endblock %}
+</p>
+
+<p class="page-break" ></p>

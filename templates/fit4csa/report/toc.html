@@ -1,0 +1,38 @@
+<h2>{{ _('Table of contents') }}</h2>
+
+<ul class="toc">
+    {% if custom.report.introduction %}
+        <li><a href="#intro"></a></li>
+    {% endif %}
+
+    {% if custom.report.description %}
+        <li><a href="#description"></a></li>
+    {% endif %}
+
+    {% if custom.report.results %}
+        <li><a href="#results"></a></li>
+        <ul>
+            <li class="sub_chapiter">
+                <a href="#bySection"></a>
+            </li>
+        </ul>
+    {% endif %}
+
+    {% if custom.report.recommendations %}
+        <li><a href="#recommendations"></a></li>
+        <ul>
+            {% for category, items in recommendations.items %}
+                <li class="sub_chapiter">
+                    <a href="#{{ category }}"></a>
+                </li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+
+
+    {% if custom.report.questions %}
+        <li><a href="#questions"></a></li>
+    {% endif %}
+</ul>
+
+<p class="page-break" ></p>
