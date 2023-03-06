@@ -16,6 +16,7 @@ from django.utils.translation import gettext as _
 from csskp.settings import CUSTOM
 from csskp.settings import HASH_KEY
 from csskp.settings import LANGUAGE_CODE
+from csskp.settings import COOKIEBANNER
 from survey.models import SURVEY_STATUS_FINISHED
 from survey.models import SurveyUser
 from survey.report import create_html_report
@@ -343,3 +344,8 @@ def get_terms(request):
     lang = request.session.get(settings.LANGUAGE_COOKIE_NAME, LANGUAGE_CODE)
     translation.activate(lang)
     return render(request, "survey/terms.html")
+
+def get_privacy_policy(request):
+    lang = request.session.get(settings.LANGUAGE_COOKIE_NAME, LANGUAGE_CODE)
+    translation.activate(lang)
+    return render(request, "parts/surveyAlto/privacy_policy.html", context=COOKIEBANNER)
