@@ -385,7 +385,7 @@ def create_questions_sequence(
     question_answer: SurveyQuestionAnswer,
     current_branch: int,
     question_index: int,
-    posted_answers: List[int],
+    posted_answers: List[Union[int, str]],
 ):
     answer_questions_map = SurveyAnswerQuestionMap.objects.filter(
         answer=question_answer
@@ -479,7 +479,7 @@ def remove_questions_sequences(
     question_answer: SurveyQuestionAnswer,
     question_index: int,
     current_sequence: SurveyUserQuestionSequence,
-    posted_answers: List[int],
+    posted_answers: List[Union[int, str]],
 ) -> None:
     sequences_to_remove = []
     """Validates all the sequences starting from the first index,
@@ -533,7 +533,7 @@ def is_question_referenced_to_user_answers(
     user_answers: QuerySet,
     current_question: SurveyQuestion,
     question: SurveyQuestion,
-    posted_answers: List[int],
+    posted_answers: List[Union[int, str]],
     question_index: int,
 ) -> bool:
     list_of_available_branches = get_list_of_available_branches(
@@ -867,7 +867,7 @@ def get_related_inactive_instances(
 
 def get_list_of_available_branches(
     user: SurveyUser,
-    posted_answers: List[int],
+    posted_answers: List[Union[int, str]],
     question_index: int,
     exclude_question: Optional[SurveyQuestion] = None,
 ) -> List[SurveyUserQuestionSequence]:
