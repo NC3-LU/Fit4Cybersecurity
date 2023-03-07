@@ -246,5 +246,9 @@ $(document).ready(function() {
         }
     })
 
-    $( ".sortable" ).sortable();
+    $( ".sortable" ).sortable({
+        start: function( event, ui ) {
+            $(ui.item.find('input')[0]).prop('checked',true)
+        }
+    });
 });
