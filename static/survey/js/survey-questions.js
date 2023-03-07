@@ -246,10 +246,13 @@ $(document).ready(function() {
         }
     })
 
-    $( ".sortable" ).sortable({
-        start: function( event, ui ) {
-            $(ui.item.find('input')[0]).prop('checked',true)
-            submitButton.attr("disabled", false);
-        }
-    });
+    let question_sortable = $('.sortable');
+    if (question_sortable.length > 0) {
+        question_sortable.sortable({
+            start: function( event, ui ) {
+                $(ui.item.find('input')[0]).prop('checked',true)
+                submitButton.attr("disabled", false);
+            }
+        });
+    }
 });
