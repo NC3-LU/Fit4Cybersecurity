@@ -314,6 +314,18 @@ def save_answers(
             ]
         case "CL":
             question_answers = [current_question.surveyquestionanswer_set.all()[0]]
+        case "MS":
+            question_answers = current_question.surveyquestionanswer_set.filter(
+                is_active=True
+            )
+            question_answers_sorted = list()
+            for id in posted_answers:
+                question_answers_sorted.append(question_answers.get(id=id))
+            for question_answer in question_answers:
+                if question_answer not in question_answers_sorted:
+                    question_answers_sorted.append(question_answer)
+
+            question_answers = question_answers_sorted
         case _:
             question_answers = current_question.surveyquestionanswer_set.filter(
                 is_active=True
