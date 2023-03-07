@@ -249,6 +249,7 @@ $(document).ready(function() {
     $( ".sortable" ).sortable({
         start: function( event, ui ) {
             $(ui.item.find('input')[0]).prop('checked',true)
+            submitButton.attr("disabled", false);
         }
     });
 });
