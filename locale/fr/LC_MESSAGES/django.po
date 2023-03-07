@@ -8104,7 +8104,6 @@ msgid ""
 msgstr ""
 
 #: data/surveyAlto/questions.json:339
-#| msgid "Défis des PME"
 msgid "Défis"
 msgstr ""
 
@@ -8203,7 +8202,6 @@ msgstr "J'ai besoin d'information sur la violation de données"
 #: data/surveyAlto/questions.json:550 data/surveyAlto/questions.json:601
 #: data/surveyAlto/questions.json:652 data/surveyAlto/questions.json:745
 #: data/surveyAlto/questions.json:838 data/surveyAlto/questions.json:889
-#| msgid "Contrat de sous-traitance"
 msgid "Sous-traitance"
 msgstr ""
 
@@ -8374,9 +8372,6 @@ msgstr ""
 
 #: data/surveyAlto/questions.json:1249 data/surveyAlto/questions.json:1263
 #: data/surveyAlto/questions.json:1277 data/surveyAlto/questions.json:1291
-#| msgid ""
-#| "Votre entreprise informe-t-elle les personnes concernées (ex : salariés, "
-#| "clients, etc.) par les traitements de leurs données effectués ?"
 msgid ""
 "Votre entreprise informe-t-elle les personnes concernées (ex : salariés, "
 "clients, etc.) des traitements effectués sur leurs données personnelles ?"
@@ -8618,7 +8613,6 @@ msgstr "Prise de mesures pour empêcher que la violation ne se reproduise"
 #: data/surveyAlto/questions.json:2213 data/surveyAlto/questions.json:2278
 #: data/surveyAlto/questions.json:2343 data/surveyAlto/questions.json:2408
 #: data/surveyAlto/questions.json:2487
-#| msgid "Transport"
 msgid "Transferts"
 msgstr ""
 
@@ -9730,7 +9724,7 @@ msgid ""
 "employees for work"
 msgstr ""
 "Oui, nous avons eu un incident qui a commencé avec un appareil personnel "
-"utilisé par les employés pour le travail"
+"utilisé par un(e) employé(e) pour travailler"
 
 #: data/surveySMEDemand/questions.json:2220
 msgid "Yes, we had an incident that started with a company device"
@@ -10847,7 +10841,6 @@ msgstr ""
 "alto@cnpd.lu\">alto@cnpd.lu</a>"
 
 #: templates/surveyAlto/survey/index.html:21
-#| msgid "Quels sont les défis RGPD des PMEs ?"
 msgid "Quels sont les défis RGPD des PME ?"
 msgstr ""
 
@@ -10886,3 +10879,80 @@ msgstr ""
 "du contenu sur la cybersécurité pour votre PME en vous inscrivant à notre "
 "newsletter en <a href=\"https://newsletter.cybersecurity-luxembourg.com/\" "
 "target=\"_blank\" rel=\" noopener noreferrer\">cliquant ici !</a>"
+
+#: data/surveyAlto/questions.json:4 data/surveyAlto/questions.json:97
+#: data/surveyAlto/questions.json:218
+msgid "Le RGPD en général"
+msgstr "Le RGPD en général"
+
+#: data/surveyAlto/questions.json:230 data/surveyAlto/questions.json:244
+#: data/surveyAlto/questions.json:258 data/surveyAlto/questions.json:272
+#: data/surveyAlto/questions.json:286 data/surveyAlto/questions.json:300
+#: data/surveyAlto/questions.json:314 data/surveyAlto/questions.json:328
+#: data/surveyAlto/questions.json:342
+msgid "Quels sont les principaux défis auxquels votre PME est confrontée ?"
+msgstr "Quels sont les principaux défis auxquels votre PME est confrontée ?"
+
+#: data/surveyAlto/questions.json:339
+msgid "Défis des PME"
+msgstr "Défis des PME"
+
+#: data/surveyAlto/questions.json:550 data/surveyAlto/questions.json:601
+#: data/surveyAlto/questions.json:652 data/surveyAlto/questions.json:745
+#: data/surveyAlto/questions.json:838 data/surveyAlto/questions.json:889
+msgid "Responsable du traitement et sous-traitant"
+msgstr "Responsable du traitement et sous-traitant"
+
+#: data/surveyAlto/questions.json:940 data/surveyAlto/questions.json:977
+#: data/surveyAlto/questions.json:1042 data/surveyAlto/questions.json:1107
+#: data/surveyAlto/questions.json:1172 data/surveyAlto/questions.json:1237
+#: data/surveyAlto/questions.json:1288 data/surveyAlto/questions.json:1353
+#: data/surveyAlto/questions.json:1418 data/surveyAlto/questions.json:1483
+#: data/surveyAlto/questions.json:1548
+msgid "Les bases du RGPD"
+msgstr "Les bases du RGPD"
+
+#: data/surveyAlto/questions.json:1249 data/surveyAlto/questions.json:1263
+#: data/surveyAlto/questions.json:1277 data/surveyAlto/questions.json:1291
+msgid ""
+"Votre entreprise informe-t-elle les personnes concernées (ex : salariés, "
+"clients, etc.) par les traitements de leurs données effectués ?"
+msgstr ""
+"Votre entreprise informe-t-elle les personnes concernées (ex : salariés, "
+"clients, etc.) par les traitements de leurs données effectués ?"
+
+#: data/surveyAlto/questions.json:1697 data/surveyAlto/questions.json:1790
+#: data/surveyAlto/questions.json:1925 data/surveyAlto/questions.json:1990
+#: data/surveyAlto/questions.json:2055 data/surveyAlto/questions.json:2092
+msgid "Les risques des PME liés au RGPD"
+msgstr "Les risques des PME liés au RGPD"
+
+#: data/surveyAlto/questions.json:2213 data/surveyAlto/questions.json:2278
+#: data/surveyAlto/questions.json:2343 data/surveyAlto/questions.json:2408
+#: data/surveyAlto/questions.json:2487
+msgid "Les transferts de données vers un pays tiers"
+msgstr "Les transferts de données vers un pays tiers"
+
+#: templates/surveyAlto/survey/index.html:21
+msgid "Quels sont les défis RGPD des PMEs ?"
+msgstr "Quels sont les défis RGPD des PMEs ?"
+
+#: templates/parts/privacy_policy_part.html:41
+msgid ""
+"Le présent questionnaire est anonyme et ne nécessite pas la collecte de "
+"données à caractère personnel auprès des personnes amenées à y répondre. "
+"<br><br> Les utilisateurs sont invités à répondre au présent questionnaire "
+"en veillant à ne pas communiquer, dans les champs libres de celui-ci, toute "
+"information permettant d'identifier une personne physique (ex. : nom, "
+"prénom, coordonnées, etc.). Pour le cas où des données à caractère personnel "
+"seraient toutefois renseignées par erreur dans les champs libres du "
+"questionnaire en ligne, celles-ci seront supprimées."
+msgstr ""
+"Le présent questionnaire est anonyme et ne nécessite pas la collecte de "
+"données à caractère personnel auprès des personnes amenées à y répondre. "
+"<br><br> Les utilisateurs sont invités à répondre au présent questionnaire "
+"en veillant à ne pas communiquer, dans les champs libres de celui-ci, toute "
+"information permettant d'identifier une personne physique (ex. : nom, "
+"prénom, coordonnées, etc.). Pour le cas où des données à caractère personnel "
+"seraient toutefois renseignées par erreur dans les champs libres du "
+"questionnaire en ligne, celles-ci seront supprimées."
