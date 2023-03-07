@@ -22,7 +22,9 @@ CUSTOM = {
     ],
     "defaultLanguage": "fr",
     "languages": [
+        # ("en", "English"),
         ("fr", "French"),
+        # ("de", "German"),
     ],
     # Logos paths
     "right_cover_logo": "templates/report/images/nc3_logo.svg",

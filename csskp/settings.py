@@ -67,7 +67,7 @@ COOKIEBANNER = {
                 {
                     "pattern": "sessionid",
                     "description": _("This cookie is necessary for the language options, for example."),
-                    "content": "session ID",
+                    "content": _("session ID"),
                     "max_age": _("15 days"),
                 },
             ],

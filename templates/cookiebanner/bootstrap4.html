@@ -20,7 +20,7 @@
           <p class="text-left">{{ cb_settings.footer_text|safe }}</p>
         {% endif %}
         <input type="submit" name="enable_all" class="cookiebannerSubmit btn btn-primary mx-auto"
-               value="{% trans 'Do not display anymore' %}">
+               value="{{ _('Do not display anymore') }}">
         <nav class="cookie-footer-links">
           {% for link in cb_settings.footer_links %}
             <span class="nav-item"><a class="nav-link" href="{{ link.href }}">{{ link.title }}</a></span>

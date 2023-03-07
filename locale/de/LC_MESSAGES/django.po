@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-03-07 10:50+0000\n"
+"POT-Creation-Date: 2023-03-07 13:54+0000\n"
 "PO-Revision-Date: 2022-05-03 13:47+0000\n"
 "Last-Translator: Benjamin Joly <benjamin.joly@cases.lu>\n"
 "Language-Team: German <https://translate.monarc.lu/projects/"
@@ -191,7 +191,6 @@ msgid "Accepted cookies"
 msgstr ""
 
 #: csskp/settings.py:59 csskp/settings.py:65
-#| msgid "Last year"
 msgid "1 year"
 msgstr ""
 
@@ -205,6 +204,11 @@ msgstr ""
 
 #: csskp/settings.py:69
 msgid "This cookie is necessary for the language options, for example."
+msgstr ""
+
+#: csskp/settings.py:70
+#| msgid "Version of"
+msgid "session ID"
 msgstr ""
 
 #: csskp/settings.py:71
@@ -7812,7 +7816,6 @@ msgid "31-50"
 msgstr ""
 
 #: data/surveyAlto/context-questions.json:39
-#| msgid "50-100"
 msgid "51-100"
 msgstr ""
 
@@ -7861,7 +7864,6 @@ msgid "Hébergement et restauration"
 msgstr ""
 
 #: data/surveyAlto/context-questions.json:120
-#| msgid "Information Security"
 msgid "Information et communication"
 msgstr ""
 
@@ -7882,7 +7884,6 @@ msgid "Activités de services administratifs et de soutien"
 msgstr ""
 
 #: data/surveyAlto/context-questions.json:155
-#| msgid "Public Administration"
 msgid "Administration publique"
 msgstr ""
 
@@ -7955,7 +7956,6 @@ msgid "RH"
 msgstr ""
 
 #: data/surveyAlto/context-questions.json:280
-#| msgid "Responsibilities"
 msgid "Responsable informatique"
 msgstr ""
 
@@ -8217,7 +8217,6 @@ msgstr ""
 #: data/surveyAlto/questions.json:2078 data/surveyAlto/questions.json:2236
 #: data/surveyAlto/questions.json:2301 data/surveyAlto/questions.json:2366
 #: data/surveyAlto/questions.json:2431
-#| msgid "No"
 msgid "Non"
 msgstr ""
 
@@ -8614,7 +8613,6 @@ msgid "Socio-economic data"
 msgstr ""
 
 #: data/surveySMEDemand/questions.json:7
-#| msgid "is forbidden or impossible in the company"
 msgid "What is your position within the company?"
 msgstr ""
 
@@ -8622,7 +8620,6 @@ msgstr ""
 #: data/surveySMEDemand/questions.json:29
 #: data/surveySMEDemand/questions.json:43
 #: data/surveySMEDemand/questions.json:58
-#| msgid "How many employees?"
 msgid "How many employees does your business have?"
 msgstr ""
 
@@ -8748,7 +8745,6 @@ msgid "Where is your company's global headquarters located?"
 msgstr ""
 
 #: data/surveySMEDemand/questions.json:372
-#| msgid "Luxembourg"
 msgid "Luxembourgish"
 msgstr ""
 
@@ -8820,7 +8816,6 @@ msgstr ""
 #: data/surveySMEDemand/questions.json:1131
 #: data/surveySMEDemand/questions.json:1182
 #: data/surveySMEDemand/questions.json:1233
-#| msgid "Antivirus"
 msgid "Activities"
 msgstr ""
 
@@ -8890,7 +8885,6 @@ msgstr ""
 #: data/surveySMEDemand/questions.json:826
 #: data/surveySMEDemand/questions.json:840
 #: data/surveySMEDemand/questions.json:855
-#| msgid "What is the risk management culture in your company?"
 msgid ""
 "Who is the decision maker regarding cybersecurity issues in your company ?"
 msgstr ""
@@ -8926,12 +8920,10 @@ msgid "IT manager"
 msgstr ""
 
 #: data/surveySMEDemand/questions.json:911
-#| msgid "Cybersecurity"
 msgid "Cybersecurity manager"
 msgstr ""
 
 #: data/surveySMEDemand/questions.json:925
-#| msgid "Contracts with external IT service providers"
 msgid "External service provider"
 msgstr ""
 
@@ -8966,12 +8958,10 @@ msgid "Belgium"
 msgstr ""
 
 #: data/surveySMEDemand/questions.json:1027
-#| msgid "Cancel"
 msgid "France"
 msgstr ""
 
 #: data/surveySMEDemand/questions.json:1041
-#| msgid "Details of other countries"
 msgid "other EU countries"
 msgstr ""
 
@@ -9042,7 +9032,6 @@ msgstr ""
 #: data/surveySMEDemand/questions.json:1530
 #: data/surveySMEDemand/questions.json:1609
 #: data/surveySMEDemand/questions.json:1702
-#| msgid "Trainings"
 msgid "Training"
 msgstr ""
 
@@ -9052,9 +9041,6 @@ msgstr ""
 #: data/surveySMEDemand/questions.json:1337
 #: data/surveySMEDemand/questions.json:1351
 #: data/surveySMEDemand/questions.json:1366
-#| msgid ""
-#| "Do you consider you have a skill shortage in terms of cybersecurity and "
-#| "risk management?"
 msgid "Do you feel that you have a good understanding of cybersecurity issues?"
 msgstr ""
 
@@ -9077,12 +9063,10 @@ msgid "1 year ago"
 msgstr ""
 
 #: data/surveySMEDemand/questions.json:1343
-#| msgid "More than 5 years ago."
 msgid "2 years ago"
 msgstr ""
 
 #: data/surveySMEDemand/questions.json:1357
-#| msgid "More than 5 years ago."
 msgid "3 years ago"
 msgstr ""
 
@@ -9196,12 +9180,10 @@ msgid "System administrator"
 msgstr ""
 
 #: data/surveySMEDemand/questions.json:1747
-#| msgid "Software development"
 msgid "Web development"
 msgstr ""
 
 #: data/surveySMEDemand/questions.json:1775
-#| msgid "General"
 msgid "Generalist"
 msgstr ""
 
@@ -9232,7 +9214,6 @@ msgid "If communication,do you have the following?"
 msgstr ""
 
 #: data/surveySMEDemand/questions.json:1812
-#| msgid "Communication services"
 msgid "Communication"
 msgstr ""
 
@@ -9260,7 +9241,6 @@ msgid "If management,do you have the following?"
 msgstr ""
 
 #: data/surveySMEDemand/questions.json:1854
-#| msgid "Risk Management"
 msgid "Management"
 msgstr ""
 
@@ -9299,7 +9279,6 @@ msgid "Website"
 msgstr ""
 
 #: data/surveySMEDemand/questions.json:1919
-#| msgid "Social worker"
 msgid "Social networks"
 msgstr ""
 
@@ -9308,7 +9287,6 @@ msgid "Mailbox"
 msgstr ""
 
 #: data/surveySMEDemand/questions.json:1947
-#| msgid "Email"
 msgid "Emailing"
 msgstr ""
 
@@ -9325,7 +9303,6 @@ msgid "Online tool for sending large files"
 msgstr ""
 
 #: data/surveySMEDemand/questions.json:2026
-#| msgid "Antivirus software"
 msgid "Accounting software"
 msgstr ""
 
@@ -9358,7 +9335,6 @@ msgid "Customer relationship management (CRM)"
 msgstr ""
 
 #: data/surveySMEDemand/questions.json:2184
-#| msgid "Employee Management"
 msgid "Inventory management"
 msgstr ""
 
@@ -9432,7 +9408,6 @@ msgid "Firewall"
 msgstr ""
 
 #: data/surveySMEDemand/questions.json:2370
-#| msgid "Information System"
 msgid "Encryption system"
 msgstr ""
 
@@ -9441,17 +9416,14 @@ msgid "VPN"
 msgstr ""
 
 #: data/surveySMEDemand/questions.json:2398
-#| msgid "Financial market infrastructure"
 msgid "Public key infrastructure (PKI)"
 msgstr ""
 
 #: data/surveySMEDemand/questions.json:2412
-#| msgid "Passwords"
 msgid "Password Manager"
 msgstr ""
 
 #: data/surveySMEDemand/questions.json:2426
-#| msgid "Data backups are"
 msgid "Data backup solution"
 msgstr ""
 
@@ -9497,7 +9469,6 @@ msgstr ""
 #: data/surveySMEDemand/questions.json:3003
 #: data/surveySMEDemand/questions.json:3067
 #: data/surveySMEDemand/questions.json:3068
-#| msgid "Digital Infrastructure and Service Providers"
 msgid "Market and service providers"
 msgstr ""
 
@@ -9643,7 +9614,6 @@ msgstr ""
 #: data/surveySMEDemand/questions.json:3551
 #: data/surveySMEDemand/questions.json:3615
 #: data/surveySMEDemand/questions.json:3616
-#| msgid "Incident Reporting"
 msgid "Incident"
 msgstr ""
 
@@ -9708,7 +9678,6 @@ msgid "Phishing"
 msgstr ""
 
 #: data/surveySMEDemand/questions.json:3452
-#| msgid "Passwords"
 msgid "Password cracking"
 msgstr ""
 
@@ -9750,7 +9719,6 @@ msgid "Police"
 msgstr ""
 
 #: data/surveySMEDemand/questions.json:3647
-#| msgid "Contracts with external IT service providers"
 msgid "Internet service provider"
 msgstr ""
 
@@ -10189,7 +10157,6 @@ msgid "Description"
 msgstr "Beschreibung"
 
 #: templates/parts/privacy_policy_part.html:23
-#| msgid "Context"
 msgid "Content"
 msgstr ""
 
