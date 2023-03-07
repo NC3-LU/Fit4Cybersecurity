@@ -7962,7 +7962,7 @@ msgstr "Vos employés sont autorisés à travailler..."
 
 #: data/surveySMEDemand/questions.json:221
 msgid "IT manager"
-msgstr "responsable informatique"
+msgstr "Responsable informatique"
 
 #: data/surveySMEDemand/questions.json:235
 msgid "Cybersecurity manager"
@@ -7999,7 +7999,7 @@ msgid ""
 "office network."
 msgstr ""
 "Seulement à l'intérieur de l'entreprise et les appareils personnels ne "
-"peuvent pas être connectés au réseau du bureau."
+"peuvent pas être connectés au réseau de l'entreprise."
 
 #: data/surveySMEDemand/questions.json:331
 #: data/surveySMEDemand/questions.json:345
@@ -8010,7 +8010,7 @@ msgstr "Avez-vous déjà reçu des questions de vos clients sur..."
 
 #: data/surveySMEDemand/questions.json:365
 msgid "Not sure"
-msgstr "Pas certain"
+msgstr "Je ne suis pas sûr"
 
 #: data/surveySMEDemand/questions.json:382
 #: data/surveySMEDemand/questions.json:396
@@ -8071,7 +8071,7 @@ msgstr "Partiellement"
 
 #: data/surveySMEDemand/questions.json:481
 msgid "1 year ago"
-msgstr "Il y a 1 an."
+msgstr "Il y a 1 an"
 
 #: data/surveySMEDemand/questions.json:495
 msgid "2 years ago"
@@ -8375,7 +8375,6 @@ msgid "Document sharing tool (cloud)"
 msgstr "Outil de partage de documents (cloud)"
 
 #: data/surveySMEDemand/questions.json:1239
-#| msgid "Automatic data backup software)"
 msgid "Automatic data backup software"
 msgstr ""
 
@@ -8503,7 +8502,7 @@ msgstr "Un informaticien interne"
 
 #: data/surveySMEDemand/questions.json:1588
 msgid "An external cybersecurity specialist"
-msgstr "Un spécialiste externe de la cybersécurité"
+msgstr "Un spécialiste de la cybersécurité externe"
 
 #: data/surveySMEDemand/questions.json:1602
 msgid "An internal cybersecurity specialist"
@@ -8546,7 +8545,6 @@ msgid "IT specialist"
 msgstr "Spécialiste en informatique"
 
 #: data/surveySMEDemand/questions.json:1695
-#| msgid "cybersecurity specialist"
 msgid "Cybersecurity specialist"
 msgstr ""
 
@@ -8657,7 +8655,6 @@ msgid "Certification"
 msgstr "Les certifications"
 
 #: data/surveySMEDemand/questions.json:1996
-#| msgid "How trustworthy would you evaluate your digital service provider(s)?"
 msgid ""
 "How trustworthy would you evaluate your cybersecurity service provider(s)?"
 msgstr ""
@@ -8670,15 +8667,16 @@ msgid ""
 "needs, what are you missing?"
 msgstr ""
 "Si les services de cybersécurité disponibles sur le marché ne correspondent "
-"pas à vos besoins, que manquez-vous ?"
+"pas à vos besoins, qu'est-ce qui vous manque ?"
 
 #: data/surveySMEDemand/questions.json:2038
 #: data/surveySMEDemand/questions.json:2061
 #: data/surveySMEDemand/questions.json:2076
+#: data/surveySMEDemand/questions.json:1996
 msgid "How trustworthy would you evaluate your digital service provider(s)?"
 msgstr ""
-"Dans quelle mesure évalueriez-vous votre (vos) fournisseur(s) de services "
-"numériques ?"
+"Quel niveau de confiance donneriez-vous à votre (vos) fournisseur(s) de "
+"services numériques ?"
 
 #: data/surveySMEDemand/questions.json:2067
 msgid "Provide us with more details, please:"
@@ -8740,7 +8738,7 @@ msgid ""
 "employees for work"
 msgstr ""
 "Oui, nous avons eu un incident qui a commencé avec un appareil personnel "
-"utilisé par les employés pour le travail"
+"utilisé par un(e) employé(e) pour travailler"
 
 #: data/surveySMEDemand/questions.json:2220
 msgid "Yes, we had an incident that started with a company device"
@@ -9784,3 +9782,11 @@ msgstr ""
 "contractuelle envisagée, en vue de la mise en place d'une acquisition, d'une "
 "location, d'un développement, ou de toute autre prestation dans le domaine "
 "des technologies de l'information et de la communication."
+
+#: data/surveySMEDemand/questions.json:1239
+msgid "Automatic data backup software)"
+msgstr "Logiciel de sauvegarde automatique des données"
+
+#: data/surveySMEDemand/questions.json:1695
+msgid "cybersecurity specialist"
+msgstr "Spécialiste de la cybersécurité"
