@@ -17,21 +17,15 @@
 {% block content %}
     {% if custom.modules.displayProgressBar %}
         {% if user.is_survey_in_progress and not does_map_exist or current_question_index > 1 and does_map_exist %}
-            <div class="progress mx-2 mt-2" style="height: 20px;">
+            
+            <nav class="nav_categories nav nav-fill">
                 {% for index, category in questions_categories %}
-                {% widthratio current_question_index total_questions_num 100 as test1 %}
-                {% widthratio category.count total_questions_num 100 as test2 %}
-                <div 
-                    class="progress-bar {% if current_question_category == category.id %}bg-progress-bar-5{% else %}bg-progress-bar-6{% endif %} {% if current_question_category < category.id %}bg-progress-bar-opacity{% endif %}" 
-                    role="progressbar" 
-                    style="width: {% widthratio category.count total_questions_num 100 %}%">
-                    <span class="small">{{ category.label }}</span>
-                </div>
+                <a class="nav-link py-1 {% if current_question_category == category.id %}nav_categories_active{% endif %}" href="#">{{ category.label }}</a>
                 {% endfor %}
-            </div>
-            <div class="progress mx-2" style="background-color: #C1CBD5; height: 20px;">
+            </nav>
+            <div class="progress mx-2 mt-2" style="height: 15px;">
                 <div
-                    class="progress-bar bg-secondary"
+                    class="progress-bar progress-bar-striped"
                     role="progressbar"
                     style="font-size: 0.9rem; width: {% widthratio current_question_index total_questions_num 100 %}%;"
                     aria-valuenow="{% widthratio current_question_index total_questions_num 100 %}"
@@ -61,36 +55,39 @@
             {% buttons %}
                 <div class="form-group pt-4">
                     <div class="d-flex flex-row justify-content-between">
-                        {% if user.is_survey_in_progress %}
-                            {% if current_question_index > 1 %}
+                        <div>
+                            {% if user.is_survey_in_progress %}
+                                {% if current_question_index > 1 %}
+                                    <button
+                                        class="btn btn-primary return-to-question"
+                                        data-return-to-question="{{ previous_question_index }}"
+                                        type="button">
+                                        {{ _('Back') }}
+                                    </button>
+                                {% endif %}
+                            {% else %}
                                 <button
-                                    class="btn btn-primary return-to-question"
-                                    data-return-to-question="{{ previous_question_index }}"
+                                    class="btn btn-primary cancel-modifications"
+                                    data-question-index="{{ current_question_index }}"
                                     type="button">
-                                    {{ _('Back') }}
+                                    {{ _('Cancel') }}
                                 </button>
                             {% endif %}
-                        {% else %}
-                            <button
-                                class="btn btn-primary cancel-modifications"
-                                data-question-index="{{ current_question_index }}"
-                                type="button">
-                                {{ _('Cancel') }}
-                            </button>
-                        {% endif %}
+                            <input
+                            class="ml-3 btn btn-primary{% if show_warning_dialog %} modify-question{% endif %}"
+                            type="submit"
+                            value="{% if user.is_survey_under_review or show_warning_dialog %}{{ _('Modify') }}{% else %}{{ _('Next') }}{% endif %}"
+                            data-question-index="{{ current_question_index }}">
+                        </div>
                         <button
-                            class="btn btn-light border border-rounded"
+                            class="btn btn btn-link"
                             type="button"
                             name="continue-later"
                             data-toggle="modal"
                             data-target="#modal">
                             {{ _('Continue later') }}
                         </button>
-                        <input
-                            class="btn btn-primary{% if show_warning_dialog %} modify-question{% endif %}"
-                            type="submit"
-                            value="{% if user.is_survey_under_review or show_warning_dialog %}{{ _('Modify') }}{% else %}{{ _('Next') }}{% endif %}"
-                            data-question-index="{{ current_question_index }}">
+
                     </div>
                 </div>
             {% endbuttons %}

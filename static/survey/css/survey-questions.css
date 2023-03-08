@@ -267,18 +267,22 @@
 .bg-progress-bar-opacity {
     opacity: .4 !important;
 }
-
-
 div.sortable {
     counter-reset: list-number;
 }
-
 div.sortable div span.checkmark:before {
     counter-increment: list-number;
     content: counter(list-number);
     margin: -30px;
-
 }
 .card-title span p {
     margin-top: 1rem;
+}
+.nav_categories a:hover {
+    cursor: default;
+    color: var(--blue);
+}
+.nav_categories_active {
+    font-weight: bold;
+    border-bottom: 2px solid var(--red) !important;
 }
