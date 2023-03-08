@@ -13,10 +13,10 @@
 }
 
 .modal-header {
-    background-color: #337AB7;
-    color: #FFF;
-    border-bottom: 1px dashed #337AB7;
- }
+    background-color: #005392;
+    color: #fff;
+    border-bottom: 1px dashed #005392;
+}
 
 #modal textarea {
     resize: none;
@@ -96,7 +96,7 @@
 }
 
 .form-check-label input:checked ~ .checkmark {
-    background-color: #2196F3;
+    background-color: #005392;
 }
 
 .multiple-selection .form-check-label .checkmark:after {
@@ -234,39 +234,6 @@
     -webkit-animation: spin 1s linear infinite;
     animation: spin 1s linear infinite;
 }
-
-.bg-progress-bar-0 {
-    background-color: var(--yellow) !important;
-}
-.bg-progress-bar-1 {
-    background-color: var(--green) !important;
-}
-.bg-progress-bar-2 {
-    background-color: var(--purple) !important;
-}
-.bg-progress-bar-3 {
-    background-color: var(--cyan) !important;
-}
-.bg-progress-bar-4 {
-    background-color: var(--orange) !important;
-}
-.bg-progress-bar-5 {
-    background-color: var(--red) !important;
-    opacity: 1 !important;
-}
-.bg-progress-bar-6 {
-    background-color: var(--blue) !important;
-    opacity: 1 !important;
-}
-.bg-progress-bar-7 {
-    background-color: var(--teal) !important;
-}
-.bg-progress-bar-8 {
-    background-color: var(--pink) !important;
-}
-.bg-progress-bar-opacity {
-    opacity: .4 !important;
-}
 div.sortable {
     counter-reset: list-number;
 }
@@ -280,7 +247,6 @@ div.sortable div span.checkmark:before {
 }
 .nav_categories a:hover {
     cursor: default;
-    color: var(--blue);
 }
 .nav_categories_active {
     font-weight: bold;

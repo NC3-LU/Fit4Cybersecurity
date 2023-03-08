@@ -30,7 +30,7 @@ CUSTOM = {
     "right_cover_logo": "templates/report/images/nc3_logo.svg",
     "left_cover_logo": "templates/report/images/lhc_logo.svg",
     # Custom CSS:
-    "survey_css": "survey/css/style.css",
+    "survey_css": "survey/css/surveyAlto/style.css",
     # Minimal score
     "minimal_acceptable_score": 65,
     # Show or not the questions number left to complete the survey.

@@ -1,0 +1,108 @@
+
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+body {
+    /* Margin bottom by footer height */
+    margin-bottom: 60px;
+}
+.bg-cssk-blue {
+    background-color: #006FBA;
+}
+.btn-primary {
+ background-color: #005392 !important;
+ border-color: #005392 !important;
+}
+.btn-primary:hover {
+    background-color: #003d6c;
+    border-color: #00365f;
+}
+.btn-primary.disabled, .btn-primary:disabled {
+    background-color: #005392;
+    border-color: #005392;
+}
+.btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show>.btn-primary.dropdown-toggle {
+    background-color: #005392 !important;
+    border-color: #005392 !important;
+}
+.btn-link:hover {
+    color: #003d6c;
+}
+.btn-link {
+    color: #005392;
+}
+a {
+    color: #005392;
+}
+a:hover {
+    color: #005392;
+}
+.text-primary {
+    color: #005392!important;
+}
+.progress-bar {
+    background-color: #005392;
+}
+
+
+.spacer-50 { margin:0; padding:0; height:50px; }
+.spacer-100 { margin:0; padding:0; height:100px; }
+
+/* Sticky footer */
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  /* height: 60px; */
+  line-height: 40px; /* Vertically center the text there */
+  background-color: #005392;
+}
+.footer a{
+    color: #FFFFFF;
+}
+.flag {
+  width: 35px !important;
+}
+#ie-warning {
+    display: none;
+}
+#browsers-list {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+#browsers-list li {
+    background-size: 28px 28px;
+    background-repeat: no-repeat;
+    padding-left: 28px;
+    display: block;
+    padding: 9px;
+    background-position: left center;
+    padding-left: 40px;
+}
+#browsers-list .bc {
+    background-image: url(/static/images/chrome.png);
+}
+#browsers-list .bf {
+    background-image: url(/static/images/firefox.png);
+}
+#browsers-list .bs {
+    background-image: url(/static/images/safari.png);
+}
+#browsers-list .be {
+    background-image: url(/static/images/edge.png);
+}
+#browsers-list .bo {
+    background-image: url(/static/images/opera.png);
+}
+@media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {
+    #ie-warning { display:block; }
+    #content-body { display: none; }
+}

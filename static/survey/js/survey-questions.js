@@ -251,6 +251,7 @@ $(document).ready(function() {
         question_sortable.sortable({
             start: function( event, ui ) {
                 $(ui.item.find('input')[0]).prop('checked',true)
+                processCheckboxSelection($(ui.item.find('input')[0]))
                 submitButton.attr("disabled", false);
             }
         });
