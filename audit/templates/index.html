@@ -6,11 +6,11 @@
 
 {% block bootstrap4_extra_head %}
 {{ block.super }}
-    <link rel="stylesheet" type="text/css" href="{% static "survey/css/survey-index.css" %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'survey/css/survey-index.css' %}" />
     <script type="text/javascript" src="/static/npm_components/chart.js/dist/chart.min.js"></script>
     <script type="text/javascript" src="/static/npm_components/chartjs-plugin-datalabels/dist/chartjs-plugin-datalabels.min.js"></script>
-    <script type="text/javascript" src="{% static "survey/js/survey-index.js" %}"></script>
-    <script type="text/javascript" src="{% static "audit/js/audit.js" %}"></script>
+    <script type="text/javascript" src="{% static 'survey/js/survey-index.js' %}"></script>
+    <script type="text/javascript" src="{% static 'audit/js/audit.js' %}"></script>
 {% endblock %}
 
 {% block content %}
@@ -18,13 +18,15 @@
         <div class="p-2 flex-grow-1 text-justify">
             <h5>
                 {% block index_welcome_message %}
-                {{ _('Welcome to the Audit Module') }} {{ custom.tool_name }}.
+                <h1>{{ _('Welcome to the Audit Module') }} {{ custom.tool_name }}</h1>
                 {% endblock %}
             </h5>
         </div>
     </div>
 
+    <div class="row">
     <div class="col-12">
+      <h2>Products</h2>
         <table class="table table-hover">
             <thead>
               <tr>
@@ -45,7 +47,7 @@
                         <form method="POST">
                             {% csrf_token %}
                             {% bootstrap_form auditByUser.statusForm show_label=False %}
-                        </form>  
+                        </form>
                             <i type="button" class="btn bi bi-info-circle-fill text-primary" data-audit-id="{{ auditByUser.audit.id | safe }}" data-toggle="modal" data-target="#statusDetails"></i>
                             <script>
                                 complianceData[{{auditByUser.audit.id}}] = {{ auditByUser.audit.statusDetails | safe }}
@@ -59,10 +61,37 @@
             {% endfor %}
             </tbody>
         </table>
+      </div>
     </div>
 
+
+    <div class="row">
+        <div class="col-12">
+          <h2>Companies you are managing</h2>
+          <table class="table table-hover">
+              <thead>
+                <tr>
+                  <th scope="col">{{ _('Company name') }}</th>
+                  <th scope="col">{{ _('# members') }}</th>
+                  <th scope="col">{{ _('Type') }}</th>
+                </tr>
+              </thead>
+              <tbody>
+                  {% for company in companies_admin %}
+                  <tr>
+                      <td><a href="#">{{ company.name }}</a></td>
+                      <td>{{ company.members.count }}</td>
+                      <td>{% if company.type == 'CS'%}Customer{% else %}Audit{% endif %}</td>
+                  </tr>
+              {% endfor %}
+              </tbody>
+          </table>
+      </div>
+    </div>
+
+
     <!-- Status Details Modal -->
-    <div class="modal fade" 
+    <div class="modal fade"
         id="statusDetails"
         data-backdrop="static"
         data-keyboard="false"

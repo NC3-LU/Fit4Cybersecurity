@@ -105,7 +105,11 @@ class AnswerMChoice(forms.Form):
         self.fields["feedback"] = forms.CharField(
             label=_("Your feedback"),
             widget=forms.Textarea(
-                attrs={"placeholder": _("Please let us know if anything can be improved in the question or its options.")}
+                attrs={
+                    "placeholder": _(
+                        "Please let us know if anything can be improved in the question or its options."
+                    )
+                }
             ),
             required=False,
         )
@@ -180,7 +184,11 @@ class GeneralFeedback(forms.Form):
         self.fields["general_feedback"] = forms.CharField(
             label=_("Your feedback"),
             widget=forms.Textarea(
-                attrs={"placeholder": _("Please let us know if anything can be improved in the question or its options.")}
+                attrs={
+                    "placeholder": _(
+                        "Please let us know if anything can be improved in the question or its options."
+                    )
+                }
             ),
             required=True,
         )

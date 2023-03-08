@@ -34,8 +34,13 @@ def index(request):
         id = body.pop("id", None)
         Audit.objects.filter(id=id).update(**body)
 
-    user = AuditUser.objects.get(user=request.session.get("_auth_user_id", None))
-    auditsByUser = user.get_all_audits()
+    auditsByUser = []
+
+    try:
+        user = AuditUser.objects.get(user=request.session.get("_auth_user_id", None))
+        auditsByUser = user.get_all_audits()
+    except AuditUser.DoesNotExist:
+        pass
 
     for auditByUser in auditsByUser:
         auditByUser.statusForm = StatusChoices(
@@ -44,9 +49,12 @@ def index(request):
             type_of_company=user.company.type,
         )
 
-    context = {"auditsByUser": auditsByUser}
+    context = {
+        "auditsByUser": auditsByUser,
+        "companies_admin": request.user.company_admin.all(),
+    }
 
-    return render(request, "audit/index.html", context=context)
+    return render(request, "index.html", context=context)
 
 
 def signup(request):
@@ -133,7 +141,7 @@ def audit(request, audit_id: int):
         "audit_questions": audit_questions_formatted,
     }
 
-    return render(request, "audit/audit.html", context=context)
+    return render(request, "audit.html", context=context)
 
 
 class SignUpView(CreateView):

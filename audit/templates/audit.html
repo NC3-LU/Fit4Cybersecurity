@@ -6,8 +6,8 @@
 
 {% block bootstrap4_extra_head %}
     {{ block.super }}
-    <link rel="stylesheet" type="text/css" href="{% static "audit/css/audit.css" %}" />
-    <script type="text/javascript" src="{% static "audit/js/audit.js" %}"></script>
+    <link rel="stylesheet" type="text/css" href="{% static 'audit/css/audit.css' %}" />
+    <script type="text/javascript" src="{% static 'audit/js/audit.js' %}"></script>
 {% endblock %}
 
 {% block title %}{{ title }}{% endblock %}
@@ -56,20 +56,20 @@
                                 <form method="POST">
                                     {% csrf_token %}
                                     {% bootstrap_form audit_question.observationForm show_label=False form_group_class="w-100 h-100" %}
-                                </form>                                
+                                </form>
                             </td>
                             <td class="col-1 p-0 align-middle">
                                 <form method="POST">
                                     {% csrf_token %}
                                     {% bootstrap_form audit_question.statusForm show_label=False form_group_class="w-100 h-100" %}
-                                </form>      
+                                </form>
                             </td>
                         </tr>
                     {% endif %}
                 {% endfor %}
                 </tbody>
             </table>
-        </div> 
+        </div>
     </div>
 
     {% include 'survey/leaveSurvey.html' %}

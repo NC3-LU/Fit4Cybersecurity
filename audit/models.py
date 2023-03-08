@@ -1,10 +1,14 @@
 import uuid
 from typing import Any
 
-from django.db import models
-from survey.models import SurveyUser, SurveyQuestion
 from django.contrib.auth.models import User
-from audit.globals import COMPANY_TYPE, CERTIFICATE_STATUS, QUESTION_STATUS
+from django.db import models
+
+from audit.globals import CERTIFICATE_STATUS
+from audit.globals import COMPANY_TYPE
+from audit.globals import QUESTION_STATUS
+from survey.models import SurveyQuestion
+from survey.models import SurveyUser
 
 
 class Company(models.Model):
@@ -22,12 +26,23 @@ class Company(models.Model):
     )
     is_active = models.BooleanField("Active", default=False)
 
+    # Relationships
+    members = models.ManyToManyField(User, blank=True)
+
+    # Foreign keys
+    company_admin = models.ForeignKey(
+        User, on_delete=models.CASCADE, related_name="company_admin"
+    )
+
     def __str__(self):
         return self.name
 
 
 class AuditUser(models.Model):
+    # Relationships
     user = models.OneToOneField(User, on_delete=models.CASCADE)
+
+    # Foreign keys
     company = models.ForeignKey(Company, on_delete=models.CASCADE)
 
     User.add_to_class("__str__", User.get_full_name)
@@ -39,9 +54,13 @@ class AuditUser(models.Model):
         auditsByUser = AuditByUser.objects.filter(audit_user=self.id)
 
         for auditByUser in auditsByUser:
-            auditByUser.company = AuditByCompany.objects.filter(audit=auditByUser.audit.id).first()
+            auditByUser.company = AuditByCompany.objects.filter(
+                audit=auditByUser.audit.id
+            ).first()
             survey_user_id = (
-                Audit.objects.filter(id=auditByUser.audit.id).first().survey_user.user_id
+                Audit.objects.filter(id=auditByUser.audit.id)
+                .first()
+                .survey_user.user_id
             )
             audit_questions = AuditQuestion.objects.filter(
                 survey_user__user_id=survey_user_id
