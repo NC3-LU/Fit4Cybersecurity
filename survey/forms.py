@@ -86,7 +86,9 @@ class AnswerMChoice(forms.Form):
                     if answers_field_type[0] == "S":
                         selected_answers = [data["answers"]]
                     if data["free_text_answer_id"] in selected_answers:
-                        isAnswerContentRequired = True
+                        isAnswerContentRequired = True                   
+                    if not question_answer.uniqueAnswer and answers_field_type == "T":
+                        isAnswerContentRequired = False
 
                 self.fields["answer_content"] = forms.CharField(
                     label="",
