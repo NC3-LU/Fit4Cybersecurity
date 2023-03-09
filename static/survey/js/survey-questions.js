@@ -159,7 +159,7 @@ $(document).ready(function() {
             let element = $(this);
             if (element.is(":checked") && element.val() == freeTextAnswerId) {
                 answerContentTextarea.show();
-                answerContentTextarea.prop('required', true);
+                answerContentTextarea.prop('required', false);
             }
         });
     }
