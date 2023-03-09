@@ -51,22 +51,16 @@ class AuditUser(models.Model):
         return self.user.first_name + " " + self.user.last_name
 
     def get_all_audits(self) -> dict[str, Any]:
-        auditsByUser = AuditByUser.objects.filter(audit_user=self.id)
+        auditsByUser = self.auditbyuser_set.all()
 
         for auditByUser in auditsByUser:
-            auditByUser.company = AuditByCompany.objects.filter(
-                audit=auditByUser.audit.id
-            ).first()
-            survey_user_id = (
-                Audit.objects.filter(id=auditByUser.audit.id)
-                .first()
-                .survey_user.user_id
-            )
-            audit_questions = AuditQuestion.objects.filter(
-                survey_user__user_id=survey_user_id
+            auditByUser.audit_company_selected = (
+                auditByUser.audit.auditbycompany_set.filter(
+                    audit_company__type="AD"
+                ).first()
             )
             auditByUser.audit.statusDetails = {}
-
+            audit_questions = auditByUser.audit.survey_user.auditquestion_set.all()
             if audit_questions:
                 for status in QUESTION_STATUS:
                     auditByUser.audit.statusDetails[status[1]] = audit_questions.filter(
@@ -152,7 +146,7 @@ class AuditQuestion(models.Model):
     status = models.CharField(
         max_length=2,
         choices=QUESTION_STATUS,
-        default=None,
+        default="OG",
     )
 
     def __str__(self):

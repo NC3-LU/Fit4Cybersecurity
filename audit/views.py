@@ -37,8 +37,7 @@ def index(request):
     auditsByUser = []
 
     try:
-        user = AuditUser.objects.get(user=request.session.get("_auth_user_id", None))
-        auditsByUser = user.get_all_audits()
+        auditsByUser = request.user.audituser.get_all_audits()
     except AuditUser.DoesNotExist:
         pass
 
@@ -46,7 +45,7 @@ def index(request):
         auditByUser.statusForm = StatusChoices(
             id=auditByUser.audit.id,
             status=auditByUser.audit.status,
-            type_of_company=user.company.type,
+            type_of_company=auditByUser.audit_user.company.type,
         )
 
     context = {
@@ -65,7 +64,7 @@ def signup(request):
 def audit(request, audit_id: int):
     auth_user_id = request.session.get("_auth_user_id", None)
     audit_by_user = AuditByUser.objects.filter(
-        audit=audit_id, audit_user__id=auth_user_id
+        audit=audit_id, audit_user__user=auth_user_id
     )
 
     if auth_user_id is None or not audit_by_user:
@@ -77,7 +76,7 @@ def audit(request, audit_id: int):
         return HttpResponseRedirect("/audit")
 
     user = find_user_by_id(survey_user_id)
-    type_of_company = AuditUser.objects.filter(id=auth_user_id).first().company.type
+    type_of_company = AuditUser.objects.filter(user=auth_user_id).first().company.type
 
     if request.method == "POST":
         body_unicode = request.body.decode("utf-8")

@@ -42,7 +42,7 @@
                 <tr>
                     <td>{{ auditByUser.audit.product_name | safe }}</td>
                     <td>{{ auditByUser.audit.product_ref | safe }}</td>
-                    <td>{{ auditByUser.company.audit_company.name | safe }}</td>
+                    <td>{{ auditByUser.audit_company_selected.audit_company.name | safe }}</td>
                     <td class="p-0 d-flex">
                         <form method="POST">
                             {% csrf_token %}
