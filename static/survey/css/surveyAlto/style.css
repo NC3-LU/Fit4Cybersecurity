@@ -63,13 +63,17 @@ a:hover {
   /* Set the fixed height of the footer here */
   /* height: 60px; */
   line-height: 40px; /* Vertically center the text there */
-  background-color: #005392;
 }
 .footer a{
-    color: #FFFFFF;
+    color: #2b2b2b;
 }
 .flag {
   width: 35px !important;
+}
+
+.filter_invert {
+    filter: invert(100%);
+    -webkit-filter: invert(100%);
 }
 #ie-warning {
     display: none;
