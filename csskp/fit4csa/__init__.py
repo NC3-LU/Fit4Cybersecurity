@@ -28,7 +28,7 @@ CUSTOM = {
     # Custom CSS:
     "survey_css": "survey/css/style.css",
     # Minimal score
-    "minimal_acceptable_score": 85,
+    "minimal_acceptable_score": 0,
     # Show or not the questions number left to complete the survey.
     "show_progress_questions_numbers": True,
     # Custom parts of templates
@@ -44,9 +44,10 @@ CUSTOM = {
     "modules": {
         "reportDownload": True,
         "reportEmail": False,
-        "requestDiagnostic": False,
+        "requestDiagnostic": True,
         "requestTraining": False,
         "displayResults": True,
+        "audit": True,
     },
     # Available report parts
     "report": {

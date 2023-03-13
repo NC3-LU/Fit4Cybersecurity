@@ -107,8 +107,8 @@
                             <span>/100</span>
                         </h3>
                     {% endif %}
-                    {% if user.get_country_code == 'LU' %}
-                        {% if txtscore >= custom.minimal_acceptable_score and custom.modules.requestDiagnostic %}
+                    {% if true %}
+                        {% if 100 >= custom.minimal_acceptable_score and custom.modules.requestDiagnostic %}
                             <div class="px-2 pb-2">
                                 {% include 'survey/requestDiagnosticLink.html' with type='button' %}
                             </div>

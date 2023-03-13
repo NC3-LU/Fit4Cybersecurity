@@ -1,7 +1,9 @@
 from django import forms
-from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.models import User
+
 from audit.globals import QUESTION_STATUS
+from audit.models import Company
 
 
 class SignUpForm(UserCreationForm):
@@ -13,12 +15,37 @@ class SignUpForm(UserCreationForm):
     class Meta:
         model = User
         fields = [
+            "username",
             "first_name",
             "last_name",
             "email",
             "company",
             "password1",
             "password2",
+        ]
+
+
+class CompanyForm(forms.ModelForm):
+    name = forms.CharField(max_length=30, required=True)
+    address_street = forms.CharField(max_length=30, required=True)
+    address_zip_code = forms.CharField(max_length=30, required=True)
+    address_city = forms.CharField(max_length=30, required=True)
+    phone = forms.CharField(max_length=30, required=True)
+    type = forms.CharField(max_length=30, required=True, help_text="Optional")
+    email = forms.EmailField(
+        max_length=254, required=True, help_text="Enter a valid email address"
+    )
+
+    class Meta:
+        model = Company
+        fields = [
+            "name",
+            "address_street",
+            "address_zip_code",
+            "address_city",
+            "phone",
+            "type",
+            "email",
         ]
 
 
