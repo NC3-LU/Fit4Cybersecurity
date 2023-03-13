@@ -135,15 +135,16 @@ def calculateResult(
         "answer__question__qindex", "answer__aindex"
     )
 
-    total_bonus_points = user_answers.aggregate(total=Sum("answer__bonus_points"))[
-        "total"
-    ]
+    total_bonus_points = (
+        user_answers.aggregate(total=Sum("answer__bonus_points"))["total"] or 0
+    )
     user_given_bonus_points = user_answers.filter(uvalue=1).aggregate(
         total=Sum("answer__bonus_points")
     )["total"]
-    total_user_score = user_answers.filter(uvalue=1).aggregate(
-        total=Sum("answer__score")
-    )["total"]
+    total_user_score = (
+        user_answers.filter(uvalue=1).aggregate(total=Sum("answer__score"))["total"]
+        or 0
+    )
 
     user_evaluations_by_section = user.get_evaluations_by_section(
         max_evaluations_per_section
