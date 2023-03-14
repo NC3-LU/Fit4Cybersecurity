@@ -205,7 +205,18 @@ def create_audit(request):
             form = AuditForm(request.POST)
             new_audit = form.save(False)
             new_audit.save()
-            return redirect(f"/audit/company/{new_audit.id}")
+            return redirect(f"/audit/audit/{new_audit.id}")
     else:
         form = AuditForm()
+    return render(request, "edit_audit.html", {"form": form})
+
+
+@login_required
+def edit_audit(request, audit_id=None):
+    """View to create an audit."""
+    audit = Audit.objects.get(id=audit_id)
+    if request.method == "POST":
+        pass
+    else:
+        form = AuditForm(instance=audit)
     return render(request, "edit_audit.html", {"form": form})
