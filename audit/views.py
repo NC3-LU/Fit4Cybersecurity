@@ -2,13 +2,16 @@ import json
 from typing import Any
 from typing import Dict
 
+from django.contrib import messages
+from django.contrib.auth import authenticate
+from django.contrib.auth import login
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponseRedirect
+from django.shortcuts import redirect
 from django.shortcuts import render
-from django.urls import reverse_lazy
 from django.utils.translation import gettext as _
-from django.views.generic import CreateView
 
+from audit.forms import CompanyForm
 from audit.forms import ObservationsTextarea
 from audit.forms import ReferencesTextarea
 from audit.forms import SignUpForm
@@ -18,6 +21,7 @@ from audit.models import Audit
 from audit.models import AuditByUser
 from audit.models import AuditQuestion
 from audit.models import AuditUser
+from audit.models import Company
 from csskp.settings import CUSTOM
 from survey.models import CONTEXT_SECTION_LABEL
 from survey.models import SurveyQuestion
@@ -29,6 +33,7 @@ from survey.viewLogic import get_answered_questions_sequences
 
 @login_required
 def index(request):
+    """Index view of the audit module."""
     if request.method == "POST":
         body_unicode = request.body.decode("utf-8")
         body = json.loads(body_unicode)
@@ -58,8 +63,26 @@ def index(request):
     return render(request, "index.html", context=context)
 
 
+def signup(request):
+    if request.method == "POST":
+        form = SignUpForm(request.POST)
+        if form.is_valid():
+            form.save()
+            clean_form = form.cleaned_data
+            username = clean_form.get("username")
+            raw_password = clean_form.get("password1")
+            user = authenticate(username=username, password=raw_password)
+            login(request, user)
+            messages.success(request, "Your signed up successfully!")
+            return redirect("/audit")
+    else:
+        form = SignUpForm()
+    return render(request, "signup.html", {"form": form})
+
+
 @login_required
 def audit(request, audit_id: int):
+    """View to create and edit audits."""
     auth_user_id = request.session.get("_auth_user_id", None)
     audit_by_user = AuditByUser.objects.filter(
         audit=audit_id, audit_user__user=auth_user_id
@@ -144,16 +167,25 @@ def audit(request, audit_id: int):
 @login_required
 def edit(request, audit_id: int):
     editProductForm = EditProduct(product=Audit.objects.get(id=audit_id))
-    test =Audit.objects.get(id=audit_id)
-    test2 = test
     return render(request, "editProduct.html", context={'form': editProductForm})
 
 
-def signup(request):
-    return render(request, "audit/signup.html")
-
-
-class SignUpView(CreateView):
-    form_class = SignUpForm
-    success_url = reverse_lazy("audit")
-    template_name = "registration/signup.html"
+@login_required
+def edit_company(request, company_id=None):
+    """View to create and edit companies."""
+    if request.method == "POST":
+        form = CompanyForm(request.POST)
+        if form.is_valid():
+            new_company = form.save(False)
+            new_company.company_admin_id = request.user.id
+            new_company = form.save()
+            new_company.members.set([request.user])
+            new_company.save()
+            return redirect(f"/audit/company/{new_company.id}")
+    else:
+        if company_id:
+            company = Company.objects.get(id=company_id)
+            form = CompanyForm(instance=company)
+        else:
+            form = CompanyForm()
+    return render(request, "edit_company.html", {"form": form})
