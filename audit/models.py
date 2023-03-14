@@ -52,11 +52,14 @@ class AuditUser(models.Model):
 
     def get_all_audits(self) -> dict[str, Any]:
         auditsByUser = self.auditbyuser_set.all()
+        filter_kind_of_company = "AD"
+        if self.company.type == "AD":
+            filter_kind_of_company = "CS"
 
         for auditByUser in auditsByUser:
             auditByUser.audit_company_selected = (
                 auditByUser.audit.auditbycompany_set.filter(
-                    audit_company__type="AD"
+                    audit_company__type=filter_kind_of_company
                 ).first()
             )
             auditByUser.audit.statusDetails = {}

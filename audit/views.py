@@ -13,6 +13,7 @@ from audit.forms import ObservationsTextarea
 from audit.forms import ReferencesTextarea
 from audit.forms import SignUpForm
 from audit.forms import StatusChoices
+from audit.forms import EditProduct
 from audit.models import Audit
 from audit.models import AuditByUser
 from audit.models import AuditQuestion
@@ -38,7 +39,7 @@ def index(request):
 
     try:
         auditsByUser = request.user.audituser.get_all_audits()
-    except AuditUser.DoesNotExist:
+    except request.user.audituser.DoesNotExist:
         pass
 
     for auditByUser in auditsByUser:
@@ -51,13 +52,10 @@ def index(request):
     context = {
         "auditsByUser": auditsByUser,
         "companies_admin": request.user.company_admin.all(),
+        "kind_of_company_label": _("Audit company") if request.user.audituser.company.type == "CS" else _("Client company"),
     }
 
     return render(request, "index.html", context=context)
-
-
-def signup(request):
-    return render(request, "audit/signup.html")
 
 
 @login_required
@@ -141,6 +139,18 @@ def audit(request, audit_id: int):
     }
 
     return render(request, "audit.html", context=context)
+
+
+@login_required
+def edit(request, audit_id: int):
+    editProductForm = EditProduct(product=Audit.objects.get(id=audit_id))
+    test =Audit.objects.get(id=audit_id)
+    test2 = test
+    return render(request, "editProduct.html", context={'form': editProductForm})
+
+
+def signup(request):
+    return render(request, "audit/signup.html")
 
 
 class SignUpView(CreateView):

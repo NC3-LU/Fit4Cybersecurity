@@ -13,7 +13,15 @@ var colors = ['rgba(230, 25, 75, 0.4)', 'rgba(60, 180, 75, 0.4)',
 $(document).ready(function() {
     $('.go-to-audit').click(function() {
         window.location.replace('/audit/product/' + $(this).data("go-to-audit"));
-    });   
+    });
+
+    $('.go-to-edit').click(function() {
+        var $popup = $("#editProduct");
+        var popup_url = '/audit/edit/' + $(this).data("go-to-edit");
+        $(".modal-body", $popup).load(popup_url, function () {
+          $popup.modal("show");
+        });
+    }); 
     
     $('#statusDetails').on('show.bs.modal', function(e) {
         let auditId = $(e.relatedTarget).data('audit-id');
