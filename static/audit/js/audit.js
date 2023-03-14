@@ -11,13 +11,10 @@ var colors = ['rgba(230, 25, 75, 0.4)', 'rgba(60, 180, 75, 0.4)',
         'rgb(255, 195, 129, 0.4)', 'rgb(204, 228, 230, 0.4)'];
 
 $(document).ready(function() {
-    $('.go-to-audit').click(function() {
-        window.location.replace('/audit/product/' + $(this).data("go-to-audit"));
-    });   
-    
+
     $('#statusDetails').on('show.bs.modal', function(e) {
         let auditId = $(e.relatedTarget).data('audit-id');
-        let chart = Chart.getChart("complianceStatus"); 
+        let chart = Chart.getChart("complianceStatus");
         if (chart != undefined) chart.destroy();
         let ctx = document.getElementById('complianceStatus');
         pieChart(complianceData[auditId],ctx);
@@ -63,11 +60,11 @@ $(document).ready(function() {
         });
     };
 });
-    
-function onBlurTextarea(form){   
+
+function onBlurTextarea(form){
     const csrftoken = $('input[name=csrfmiddlewaretoken]').val();
     data = JSON.stringify({"id":form.id, [form.name]:form.value});
-    fetch(window.location.pathname, { 
+    fetch(window.location.pathname, {
         method: "POST",
         credentials: "same-origin",
         headers: {
@@ -85,7 +82,7 @@ function onBlurTextarea(form){
 function onChangeSelect(form){
     const csrftoken = $('input[name=csrfmiddlewaretoken]').val();
     data = JSON.stringify({"id":form.id, [form.name]:form.value});
-    fetch(window.location.pathname, { 
+    fetch(window.location.pathname, {
         method: "POST",
         credentials: "same-origin",
         headers: {
@@ -99,7 +96,3 @@ function onChangeSelect(form){
         console.log(error);
       });
 }
-
-
-
-

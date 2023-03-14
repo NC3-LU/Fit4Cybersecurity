@@ -81,7 +81,7 @@ def signup(request):
 
 @login_required
 def audit(request, audit_id: int):
-    """View to create and edit audits."""
+    """Manage audits."""
     auth_user_id = request.session.get("_auth_user_id", None)
     audit_by_user = AuditByUser.objects.filter(
         audit=audit_id, audit_user__user=auth_user_id
