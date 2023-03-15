@@ -11,7 +11,9 @@ from django.shortcuts import redirect
 from django.shortcuts import render
 from django.utils.translation import gettext as _
 
+from audit.forms import AuditForm
 from audit.forms import CompanyForm
+from audit.forms import EditProduct
 from audit.forms import ObservationsTextarea
 from audit.forms import ReferencesTextarea
 from audit.forms import SignUpForm
@@ -60,6 +62,9 @@ def index(request):
         "kind_of_company_label": _("Audit company")
         if request.user.audituser.company.type == "CS"
         else _("Client company"),
+        "kind_of_company_label": _("Audit company")
+        if request.user.audituser.company.type == "CS"
+        else _("Client company"),
     }
 
     return render(request, "index.html", context=context)
@@ -84,7 +89,7 @@ def signup(request):
 
 @login_required
 def audit(request, audit_id: int):
-    """View to create and edit audits."""
+    """Manage audits."""
     auth_user_id = request.session.get("_auth_user_id", None)
     audit_by_user = AuditByUser.objects.filter(
         audit=audit_id, audit_user__user=auth_user_id
@@ -200,11 +205,12 @@ def edit_audit(request, audit_id: int):
 
 
 @login_required
-def edit_company(request, company_id=None):
-    """View to create and edit companies."""
+def create_company(request):
+    """View to create a company."""
     if request.method == "POST":
         form = CompanyForm(request.POST)
         if form.is_valid():
+            form = CompanyForm(request.POST)
             new_company = form.save(False)
             new_company.company_admin_id = request.user.id
             new_company = form.save()
@@ -212,9 +218,46 @@ def edit_company(request, company_id=None):
             new_company.save()
             return redirect(f"/audit/company/{new_company.id}")
     else:
-        if company_id:
-            company = Company.objects.get(id=company_id)
-            form = CompanyForm(instance=company)
-        else:
-            form = CompanyForm()
+        form = CompanyForm()
     return render(request, "edit_company.html", {"form": form})
+
+
+@login_required
+def edit_company(request, company_id=None):
+    """View to edit a company."""
+    company = Company.objects.get(id=company_id)
+    if request.method == "POST":
+        form = CompanyForm(request.POST, instance=company)
+        if form.is_valid():
+            form = CompanyForm(request.POST, instance=company)
+            form.save()
+            return redirect(f"/audit/company/{company.id}")
+    else:
+        form = CompanyForm(instance=company)
+    return render(request, "edit_company.html", {"form": form})
+
+
+@login_required
+def create_audit(request):
+    """View to create an audit."""
+    if request.method == "POST":
+        form = AuditForm(request.POST)
+        if form.is_valid():
+            form = AuditForm(request.POST)
+            new_audit = form.save(False)
+            new_audit.save()
+            return redirect(f"/audit/audit/{new_audit.id}")
+    else:
+        form = AuditForm()
+    return render(request, "edit_audit.html", {"form": form})
+
+
+@login_required
+def edit_audit(request, audit_id=None):
+    """View to create an audit."""
+    audit = Audit.objects.get(id=audit_id)
+    if request.method == "POST":
+        pass
+    else:
+        form = AuditForm(instance=audit)
+    return render(request, "edit_audit.html", {"form": form})

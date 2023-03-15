@@ -19,7 +19,7 @@ urlpatterns = [
         SpectacularSwaggerView.as_view(url_name="survey"),
         name="swagger-ui",
     ),
-    path("redoc/", SpectacularRedocView.as_view(url_name="surver"), name="redoc"),
+    path("redoc/", SpectacularRedocView.as_view(url_name="survey"), name="redoc"),
     path("recommendation/", RecommendationsApiView.as_view()),
     path("survey_section/", SurveySectionApiView.as_view()),
     path("survey_question/", SurveyQuestionApiView.as_view()),

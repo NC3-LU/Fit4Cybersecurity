@@ -1,8 +1,8 @@
 from django import forms
 from django.contrib.auth.forms import UserCreationForm
-from audit.models import Company
 from django.contrib.auth.models import User
 from audit.globals import QUESTION_STATUS
+from audit.models import Audit
 
 
 class SignUpForm(UserCreationForm):
@@ -45,6 +45,18 @@ class CompanyForm(forms.ModelForm):
             "phone",
             "type",
             "email",
+        ]
+
+
+class AuditForm(forms.ModelForm):
+    product_name = forms.CharField(max_length=30, required=True)
+    product_ref = forms.CharField(max_length=30, required=True)
+
+    class Meta:
+        model = Audit
+        fields = [
+            "product_name",
+            "product_ref",
         ]
 
 

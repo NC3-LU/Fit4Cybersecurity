@@ -1,0 +1,27 @@
+{% load bootstrap4 %}
+
+<div class="modal-content">
+  <div class="modal-header">
+    <h5 class="modal-title" id="EditAuditModal">{{ _('Edit audit') }}</h5>
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <form action="edit/{{audit_id}}" method="POST">
+    <div class="modal-body">
+      <td class="col-3 p-0">
+            {% csrf_token %}
+            {% bootstrap_form form %}
+      </td>
+    </div>
+    <div class="modal-footer">
+      <button type="submit" class="btn btn-primary">{{ _('Save') }}</button>
+      <button type="button" class="btn btn-secondary" data-dismiss="modal">{{ _('Close') }}</button>
+    </div>
+  </form>
+</div>
+
+
+
+
+

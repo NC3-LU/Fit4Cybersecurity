@@ -21,11 +21,11 @@ $(document).ready(function() {
         $(".modal-dialog", $popup).load(popup_url, function () {
           $popup.modal("show");
         });
-    }); 
-    
+    });
+
     $('#statusDetails').on('show.bs.modal', function(e) {
         let auditId = $(e.relatedTarget).data('audit-id');
-        let chart = Chart.getChart("complianceStatus"); 
+        let chart = Chart.getChart("complianceStatus");
         if (chart != undefined) chart.destroy();
         let ctx = document.getElementById('complianceStatus');
         pieChart(complianceData[auditId],ctx);
@@ -71,11 +71,11 @@ $(document).ready(function() {
         });
     };
 });
-    
-function onBlurTextarea(form){   
+
+function onBlurTextarea(form){
     const csrftoken = $('input[name=csrfmiddlewaretoken]').val();
     data = JSON.stringify({"id":form.id, [form.name]:form.value});
-    fetch(window.location.pathname, { 
+    fetch(window.location.pathname, {
         method: "POST",
         credentials: "same-origin",
         headers: {
@@ -93,7 +93,7 @@ function onBlurTextarea(form){
 function onChangeSelect(form){
     const csrftoken = $('input[name=csrfmiddlewaretoken]').val();
     data = JSON.stringify({"id":form.id, [form.name]:form.value});
-    fetch(window.location.pathname, { 
+    fetch(window.location.pathname, {
         method: "POST",
         credentials: "same-origin",
         headers: {
@@ -107,7 +107,3 @@ function onChangeSelect(form){
         console.log(error);
       });
 }
-
-
-
-
