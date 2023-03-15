@@ -1,3 +1,4 @@
+from django.urls import include
 from django.urls import path
 
 from audit import views
@@ -12,4 +13,5 @@ urlpatterns = [
     path("edit/<int:audit_id>", views.edit, name="edit"),
     path("company/", views.edit_company, name="create_company"),
     path("company/<int:company_id>/", views.edit_company, name="edit_company"),
+    path("api/v1/", include("audit.api.urls")),
 ]
