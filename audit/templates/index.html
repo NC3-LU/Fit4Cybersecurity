@@ -32,7 +32,7 @@
               <tr>
                 <th scope="col">{{ _('Product name') }}</th>
                 <th scope="col">{{ _('Product reference') }}</th>
-                <th scope="col">{{ _('Audit company') }}</th>
+                <th scope="col"> {{ kind_of_company_label }} </th>
                 <th scope="col">{{ _('Status') }}</th>
                 <th scope="col">{{ _('Actions') }}</th>
               </tr>
@@ -54,7 +54,8 @@
                             </script>
                     </td>
                     <td>
-                        <i class="bi bi-gear"></i>
+                        <i class="bi bi-gear go-to-edit" data-go-to-edit="{{ auditByUser.audit.id }}" data-toggle="modal" data-target="#editProduct"></i>
+                        <i class="go-to-audit bi bi-list-check text-success" data-go-to-audit="{{ auditByUser.audit.id }}"></i>
                     </td>
                 </tr>
             {% endfor %}
@@ -124,4 +125,29 @@
           </div>
         </div>
       </div>
+
+      <div class="modal fade"
+      id="editProduct"
+      data-backdrop="static"
+      data-keyboard="false"
+      tabindex="-1"
+      aria-labelledby="EditProductModal"
+      aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="EditProductModal">{{ _('Edit product') }}</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary">{{ _('Save') }}</button>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">{{ _('Close') }}</button>
+          </div>
+        </div>
+      </div>
+    </div>
 {% endblock %}

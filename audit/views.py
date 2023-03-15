@@ -13,6 +13,7 @@ from django.utils.translation import gettext as _
 
 from audit.forms import AuditForm
 from audit.forms import CompanyForm
+from audit.forms import EditProduct
 from audit.forms import ObservationsTextarea
 from audit.forms import ReferencesTextarea
 from audit.forms import SignUpForm
@@ -44,7 +45,7 @@ def index(request):
 
     try:
         auditsByUser = request.user.audituser.get_all_audits()
-    except AuditUser.DoesNotExist:
+    except request.user.audituser.DoesNotExist:
         pass
 
     for auditByUser in auditsByUser:
@@ -57,6 +58,9 @@ def index(request):
     context = {
         "auditsByUser": auditsByUser,
         "companies_admin": request.user.company_admin.all(),
+        "kind_of_company_label": _("Audit company")
+        if request.user.audituser.company.type == "CS"
+        else _("Client company"),
     }
 
     return render(request, "index.html", context=context)
@@ -161,6 +165,11 @@ def audit(request, audit_id: int):
     }
 
     return render(request, "audit.html", context=context)
+
+
+def edit(request, audit_id: int):
+    editProductForm = EditProduct(product=Audit.objects.get(id=audit_id))
+    return render(request, "editProduct.html", context={"form": editProductForm})
 
 
 @login_required

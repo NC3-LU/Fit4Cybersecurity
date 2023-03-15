@@ -1,0 +1,8 @@
+{% load bootstrap4 %}
+
+<td class="col-3 p-0">
+  <form method="POST">
+      {% csrf_token %}
+      {% bootstrap_form form %}
+  </form>
+</td>
