@@ -181,19 +181,26 @@ def edit_product(request, audit_id: int):
 
     if request.method == "POST":
         form = EditProduct(data=request.POST,
-                         product=Audit.objects.get(id=audit_id))
+                           product=Audit.objects.get(id=audit_id))
 
         if form.is_valid():
             audit = Audit.objects.get(id=audit_id)
             audit.product_name = form.cleaned_data["name"]
             audit.product_ref = form.cleaned_data["reference"]
 
-            audit.auditbycompany_set.filter(audit_company__type="AD").update_or_create(
-                audit_id=audit_id,
-                defaults={
-                    "audit_company_id": form.cleaned_data["company"].id,
-                },
-            )
+            if form.cleaned_data["company"]:
+                audit.auditbycompany_set.filter(
+                    audit_company__type="AD"
+                ).update_or_create(
+                    audit_id=audit_id,
+                    defaults={
+                        "audit_company_id": form.cleaned_data["company"].id,
+                    },
+                )
+            else:
+                audit.auditbycompany_set.filter(
+                    audit_company__type="AD").delete()
+
             audit.save()
 
         return HttpResponseRedirect("/audit")

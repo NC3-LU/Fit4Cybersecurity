@@ -129,7 +129,7 @@ class StatusChoices(forms.Form):
 class EditProduct(forms.Form):
     name = forms.CharField(max_length=50)
     reference = forms.CharField(max_length=50)
-    company = forms.ModelChoiceField(queryset=None, required=False)
+    company = forms.ModelChoiceField(queryset=None, required=False, label='Audit company')
 
     def __init__(self, *args, **kwargs):
         product = kwargs.pop("product", None)
