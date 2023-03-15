@@ -13,12 +13,11 @@ from django.utils.translation import gettext as _
 
 from audit.forms import AuditForm
 from audit.forms import CompanyForm
-from audit.forms import EditProduct
 from audit.forms import ObservationsTextarea
 from audit.forms import ReferencesTextarea
 from audit.forms import SignUpForm
 from audit.forms import StatusChoices
-from audit.forms import EditAudit
+from audit.forms import EditProduct
 from audit.models import Audit
 from audit.models import AuditByUser
 from audit.models import AuditQuestion
@@ -174,14 +173,14 @@ def audit(request, audit_id: int):
 
 
 @login_required
-def edit_audit(request, audit_id: int):
+def edit_product(request, audit_id: int):
     if not request.user.audituser.auditbyuser_set.filter(audit_id=audit_id).exists():
         return HttpResponseRedirect("/audit")
 
-    form = EditAudit(product=Audit.objects.get(id=audit_id))
+    form = EditProduct(product=Audit.objects.get(id=audit_id))
 
     if request.method == "POST":
-        form = EditAudit(data=request.POST,
+        form = EditProduct(data=request.POST,
                          product=Audit.objects.get(id=audit_id))
 
         if form.is_valid():

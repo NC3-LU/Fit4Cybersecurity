@@ -16,7 +16,7 @@ $(document).ready(function() {
     });
 
     $('.go-to-edit').click(function() {
-        var $popup = $("#editAudit");
+        var $popup = $("#editProduct");
         var popup_url = '/audit/edit/' + $(this).data("go-to-edit");
         $(".modal-dialog", $popup).load(popup_url, function () {
           $popup.modal("show");
