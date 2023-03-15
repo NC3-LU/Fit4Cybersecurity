@@ -34,7 +34,7 @@
                 <th scope="col">{{ _('Product reference') }}</th>
                 <th scope="col"> {{ kind_of_company_label }} </th>
                 <th scope="col">{{ _('Status') }}</th>
-                <th scope="col">{{ _('Actions') }}</th>
+                <th class="text-center" scope="col">{{ _('Actions') }}</th>
               </tr>
             </thead>
             <tbody>
@@ -53,7 +53,7 @@
                                 complianceData[{{auditByUser.audit.id}}] = {{ auditByUser.audit.statusDetails | safe }}
                             </script>
                     </td>
-                    <td>
+                    <td class="text-center">
                         <i class="bi bi-gear go-to-edit" data-go-to-edit="{{ auditByUser.audit.id }}" data-toggle="modal" data-target="editProduct"></i>
                     </td>
                 </tr>
