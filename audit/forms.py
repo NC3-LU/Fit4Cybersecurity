@@ -2,9 +2,7 @@ from django import forms
 from django.contrib.auth.forms import UserCreationForm
 from audit.models import Company
 from django.contrib.auth.models import User
-
 from audit.globals import QUESTION_STATUS
-from audit.models import Company
 
 
 class SignUpForm(UserCreationForm):
@@ -115,19 +113,25 @@ class StatusChoices(forms.Form):
         )
 
 
-class EditProduct(forms.Form):
+class EditAudit(forms.Form):
     name = forms.CharField(max_length=50)
     reference = forms.CharField(max_length=50)
-    company = forms.ModelChoiceField(queryset=None)
-    
+    company = forms.ModelChoiceField(queryset=None, required=False)
+
     def __init__(self, *args, **kwargs):
         product = kwargs.pop("product", None)
         initialCompany = None
-        if product.auditbycompany_set.filter(audit_company__type='AD').exists():
-            initialCompany = product.auditbycompany_set.filter(audit_company__type='AD').first().audit_company
-            
-        super(EditProduct, self).__init__(*args, **kwargs)
-        self.fields['name'].initial = product.product_name
-        self.fields['reference'].initial = product.product_ref
-        self.fields['company'].queryset = Company.objects.filter(type='AD', is_active=True)
-        self.fields['company'].initial = initialCompany
+        if product.auditbycompany_set.filter(audit_company__type="AD").exists():
+            initialCompany = (
+                product.auditbycompany_set.filter(audit_company__type="AD")
+                .first()
+                .audit_company
+            )
+
+        super(EditAudit, self).__init__(*args, **kwargs)
+        self.fields["name"].initial = product.product_name
+        self.fields["reference"].initial = product.product_ref
+        self.fields["company"].queryset = Company.objects.filter(
+            type="AD", is_active=True
+        )
+        self.fields["company"].initial = initialCompany

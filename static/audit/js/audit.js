@@ -16,9 +16,9 @@ $(document).ready(function() {
     });
 
     $('.go-to-edit').click(function() {
-        var $popup = $("#editProduct");
+        var $popup = $("#editAudit");
         var popup_url = '/audit/edit/' + $(this).data("go-to-edit");
-        $(".modal-body", $popup).load(popup_url, function () {
+        $(".modal-dialog", $popup).load(popup_url, function () {
           $popup.modal("show");
         });
     }); 

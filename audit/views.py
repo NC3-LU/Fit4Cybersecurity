@@ -16,7 +16,7 @@ from audit.forms import ObservationsTextarea
 from audit.forms import ReferencesTextarea
 from audit.forms import SignUpForm
 from audit.forms import StatusChoices
-from audit.forms import EditProduct
+from audit.forms import EditAudit
 from audit.models import Audit
 from audit.models import AuditByUser
 from audit.models import AuditQuestion
@@ -57,7 +57,9 @@ def index(request):
     context = {
         "auditsByUser": auditsByUser,
         "companies_admin": request.user.company_admin.all(),
-        "kind_of_company_label": _("Audit company") if request.user.audituser.company.type == "CS" else _("Client company"),
+        "kind_of_company_label": _("Audit company")
+        if request.user.audituser.company.type == "CS"
+        else _("Client company"),
     }
 
     return render(request, "index.html", context=context)
@@ -91,13 +93,15 @@ def audit(request, audit_id: int):
     if auth_user_id is None or not audit_by_user:
         return HttpResponseRedirect("/audit")
 
-    survey_user_id = Audit.objects.filter(id=audit_id).first().survey_user.user_id
+    survey_user_id = Audit.objects.filter(
+        id=audit_id).first().survey_user.user_id
 
     if survey_user_id is None:
         return HttpResponseRedirect("/audit")
 
     user = find_user_by_id(survey_user_id)
-    type_of_company = AuditUser.objects.filter(user=auth_user_id).first().company.type
+    type_of_company = AuditUser.objects.filter(
+        user=auth_user_id).first().company.type
 
     if request.method == "POST":
         body_unicode = request.body.decode("utf-8")
@@ -165,9 +169,34 @@ def audit(request, audit_id: int):
 
 
 @login_required
-def edit(request, audit_id: int):
-    editProductForm = EditProduct(product=Audit.objects.get(id=audit_id))
-    return render(request, "editProduct.html", context={'form': editProductForm})
+def edit_audit(request, audit_id: int):
+    if not request.user.audituser.auditbyuser_set.filter(audit_id=audit_id).exists():
+        return HttpResponseRedirect("/audit")
+
+    form = EditAudit(product=Audit.objects.get(id=audit_id))
+
+    if request.method == "POST":
+        form = EditAudit(data=request.POST,
+                         product=Audit.objects.get(id=audit_id))
+
+        if form.is_valid():
+            audit = Audit.objects.get(id=audit_id)
+            audit.product_name = form.cleaned_data["name"]
+            audit.product_ref = form.cleaned_data["reference"]
+
+            audit.auditbycompany_set.filter(audit_company__type="AD").update_or_create(
+                audit_id=audit_id,
+                defaults={
+                    "audit_company_id": form.cleaned_data["company"].id,
+                },
+            )
+            audit.save()
+
+        return HttpResponseRedirect("/audit")
+
+    return render(
+        request, "edit_audit.html", context={"form": form, "audit_id": audit_id}
+    )
 
 
 @login_required
