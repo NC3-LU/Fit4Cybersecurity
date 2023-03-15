@@ -200,7 +200,7 @@ def edit_audit(request, audit_id: int):
         return HttpResponseRedirect("/audit")
 
     return render(
-        request, "edit_audit.html", context={"form": form, "audit_id": audit_id}
+        request, "edit_product.html", context={"form": form, "audit_id": audit_id}
     )
 
 
