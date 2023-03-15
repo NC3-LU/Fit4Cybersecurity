@@ -11,10 +11,6 @@ var colors = ['rgba(230, 25, 75, 0.4)', 'rgba(60, 180, 75, 0.4)',
         'rgb(255, 195, 129, 0.4)', 'rgb(204, 228, 230, 0.4)'];
 
 $(document).ready(function() {
-    $('.go-to-audit').click(function() {
-        window.location.replace('/audit/product/' + $(this).data("go-to-audit"));
-    });
-
     $('.go-to-edit').click(function() {
         var $popup = $("#editProduct");
         var popup_url = '/audit/edit/' + $(this).data("go-to-edit");
