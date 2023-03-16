@@ -7,9 +7,9 @@ from audit.models import Company
 
 
 class SignUpForm(UserCreationForm):
-    first_name = forms.CharField(max_length=30, required=False, help_text="Optional")
-    last_name = forms.CharField(max_length=30, required=False, help_text="Optional")
-    email = forms.EmailField(max_length=254, help_text="Enter a valid email address")
+    first_name = forms.CharField(max_length=30, required=True)
+    last_name = forms.CharField(max_length=30, required=True)
+    email = forms.EmailField(max_length=254)
 
     class Meta:
         model = User
@@ -30,7 +30,7 @@ class CompanyForm(forms.ModelForm):
     address_city = forms.CharField(max_length=30, required=True)
     phone = forms.CharField(max_length=30, required=True)
     email = forms.EmailField(
-        max_length=254, required=True, help_text="Enter a valid email address"
+        max_length=254, required=True
     )
 
     class Meta:
