@@ -12,6 +12,7 @@ from django.shortcuts import redirect
 from django.shortcuts import render
 from django.utils.translation import gettext as _
 
+from audit.globals import QUESTION_STATUS
 from audit.forms import AuditForm
 from audit.forms import CompanyForm
 from audit.forms import EditProduct
@@ -21,7 +22,6 @@ from audit.forms import SignUpForm
 from audit.forms import StatusChoices
 from audit.models import Audit
 from audit.models import AuditQuestion
-from audit.models import AuditUser
 from audit.models import Company
 from csskp.settings import CUSTOM
 from survey.models import CONTEXT_SECTION_LABEL
@@ -37,18 +37,30 @@ def index(request):
         id = body.pop("id", None)
         Audit.objects.filter(id=id).update(**body)
 
-    auditsByUser = []
+    auditsByUser = request.user.auditbyuser_set.all()
+    filter_kind_of_company = "AD"
+    if request.user.company_set.all().get().type == "AD":
+        filter_kind_of_company = "CS"
 
-    try:
-        auditsByUser = request.user.audituser.get_all_audits()
-    except ObjectDoesNotExist:
-        pass
+    for auditByUser in auditsByUser:
+        auditByUser.audit_company_selected = (
+            auditByUser.audit.auditbycompany_set.filter(
+                audit_company__type=filter_kind_of_company
+            ).first()
+        )
+        auditByUser.audit.statusDetails = {}
+        audit_questions = auditByUser.audit.survey_user.auditquestion_set.all()
+        if audit_questions:
+            for status in QUESTION_STATUS:
+                auditByUser.audit.statusDetails[status[1]] = audit_questions.filter(
+                    status=status[0]
+                ).count()
 
     for auditByUser in auditsByUser:
         auditByUser.statusForm = StatusChoices(
             id=auditByUser.audit.id,
             status=auditByUser.audit.status,
-            type_of_company=auditByUser.audit_user.company.type,
+            type_of_company=auditByUser.user.company_set.all().get().type,
         )
 
     context = {
@@ -156,15 +168,15 @@ def audit(request, audit_id: int):
 
 @login_required
 def edit_product(request, audit_id: int):
-    auditUser = request.user.audituser
+    user = request.user
 
-    if not auditUser.auditbyuser_set.filter(audit_id=audit_id).exists():
+    if not user.auditbyuser_set.filter(audit_id=audit_id).exists():
         return HttpResponseRedirect("/audit")
 
     form = EditProduct(product=Audit.objects.get(id=audit_id))
 
     if request.method == "POST":
-        if auditUser.company.type == "AD":
+        if user.company_set.all().get().type == "AD":
             return HttpResponseRedirect("/audit")
 
         form = EditProduct(data=request.POST, product=Audit.objects.get(id=audit_id))
@@ -175,9 +187,6 @@ def edit_product(request, audit_id: int):
             audit.product_ref = form.cleaned_data["reference"]
 
             if form.cleaned_data["company"]:
-                user_company_admin = AuditUser.objects.get(
-                    user_id=form.cleaned_data["company"].company_admin_id
-                )
                 audit.auditbycompany_set.filter(
                     audit_company__type="AD"
                 ).update_or_create(
@@ -187,16 +196,16 @@ def edit_product(request, audit_id: int):
                     },
                 )
                 audit.auditbyuser_set.filter(
-                    audit_user__company__type="AD"
+                    user__company__type="AD"
                 ).update_or_create(
                     audit_id=audit_id,
                     defaults={
-                        "audit_user_id": user_company_admin.id,
+                        "user_id": form.cleaned_data["company"].company_admin_id,
                     },
                 )
             else:
                 audit.auditbycompany_set.filter(audit_company__type="AD").delete()
-                audit.auditbyuser_set.filter(audit_user__company__type="AD").delete()
+                audit.auditbyuser_set.filter(user__company__type="AD").delete()
 
             audit.save()
 

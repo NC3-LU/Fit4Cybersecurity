@@ -1,7 +1,6 @@
 from django.contrib import admin
 from audit.models import (
     Company,
-    AuditUser,
     Certificate,
     Audit,
     AuditByCompany,
@@ -14,13 +13,6 @@ class CompanyAdmin(admin.ModelAdmin):
     list_display = ["name", "email", "phone", "type", "is_active"]
     list_filter = ["type"]
     search_fields = ["name"]
-
-
-@admin.register(AuditUser)
-class AuditUserAdmin(admin.ModelAdmin):
-    list_display = ["user", "company"]
-    list_filter = ["company"]
-    search_fields = ["user", "company"]
 
 
 @admin.register(Certificate)
@@ -51,6 +43,6 @@ class AuditByCompanyAdmin(admin.ModelAdmin):
 
 @admin.register(AuditByUser)
 class AuditByUserAdmin(admin.ModelAdmin):
-    list_display = ["audit", "audit_user"]
-    list_filter = ["audit_user"]
-    search_fields = ["audit", "audit_user"]
+    list_display = ["audit", "user"]
+    list_filter = ["user"]
+    search_fields = ["audit", "user"]
