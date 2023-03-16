@@ -27,11 +27,24 @@ class CompanyApiView(APIView):
     @extend_schema(request=None, responses=CompanySerializer)
     def get(self, request, *args, **kwargs):
         """
-        List all the items.
+        List all the companies.
         """
         objects = Company.objects.all()
         serializer = CompanySerializer(objects, many=True)
         return Response(serializer.data, status=status.HTTP_200_OK)
+
+    # Create a company
+    @extend_schema(request=CompanySerializer, responses=CompanySerializer)
+    def post(self, request, *args, **kwargs):
+        """
+        Create new companies.
+        """
+        serializer = CompanySerializer(data=request.POST, many=True)
+        print(request.POST)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
 #
