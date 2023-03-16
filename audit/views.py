@@ -41,7 +41,7 @@ def index(request):
 
     try:
         auditsByUser = request.user.audituser.get_all_audits()
-    except request.user.audituser.DoesNotExist:
+    except ObjectDoesNotExist:
         pass
 
     for auditByUser in auditsByUser:
@@ -55,7 +55,7 @@ def index(request):
         "auditsByUser": auditsByUser,
         "companies_admin": request.user.company_admin.all(),
         "kind_of_company_label": _("Audit company")
-        if request.user.audituser.company.type == "CS"
+        if request.user.company_set.all().get().type == "CS"
         else _("Client company"),
     }
 
@@ -64,19 +64,28 @@ def index(request):
 
 def signup(request):
     if request.method == "POST":
-        form = SignUpForm(request.POST)
-        if form.is_valid():
-            form.save()
-            clean_form = form.cleaned_data
-            username = clean_form.get("username")
-            raw_password = clean_form.get("password1")
+        formSignUp = SignUpForm(request.POST)
+        formCompany = CompanyForm(request.POST)
+        if formSignUp.is_valid() and formCompany.is_valid():
+            new_user = formSignUp.save()
+            new_company = formCompany.save(False)
+            new_company.type = "CS"
+            new_company.company_admin_id = new_user.id
+            new_company.save()
+            new_company.members.set([new_user])
+            clean_formSignUp = formSignUp.cleaned_data
+            username = clean_formSignUp.get("username")
+            raw_password = clean_formSignUp.get("password1")
             user = authenticate(username=username, password=raw_password)
             login(request, user)
             messages.success(request, "Your signed up successfully!")
             return redirect("/audit")
     else:
-        form = SignUpForm()
-    return render(request, "signup.html", {"form": form})
+        formSignUp = SignUpForm()
+        formCompany = CompanyForm()
+    return render(
+        request, "signup.html", {"formSignUp": formSignUp, "formCompany": formCompany}
+    )
 
 
 @login_required

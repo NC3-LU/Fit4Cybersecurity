@@ -15,7 +15,8 @@
         <div class="form mx-auto p-4">
             <form method="post" class="justify-content-center">
                 {% csrf_token %}
-                {{ form.as_p }}
+                {% bootstrap_form formCompany %}
+                {% bootstrap_form formSignUp %}
                 <button class="btn border border-rounded btn-primary " type="summit">
                     {{ _('Sign Up') }}
                 </button>

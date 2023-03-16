@@ -10,7 +10,6 @@ class SignUpForm(UserCreationForm):
     first_name = forms.CharField(max_length=30, required=False, help_text="Optional")
     last_name = forms.CharField(max_length=30, required=False, help_text="Optional")
     email = forms.EmailField(max_length=254, help_text="Enter a valid email address")
-    company = forms.CharField(max_length=254)
 
     class Meta:
         model = User
@@ -19,7 +18,6 @@ class SignUpForm(UserCreationForm):
             "first_name",
             "last_name",
             "email",
-            "company",
             "password1",
             "password2",
         ]
@@ -31,7 +29,6 @@ class CompanyForm(forms.ModelForm):
     address_zip_code = forms.CharField(max_length=30, required=True)
     address_city = forms.CharField(max_length=30, required=True)
     phone = forms.CharField(max_length=30, required=True)
-    type = forms.CharField(max_length=30, required=True, help_text="Optional")
     email = forms.EmailField(
         max_length=254, required=True, help_text="Enter a valid email address"
     )
@@ -44,7 +41,6 @@ class CompanyForm(forms.ModelForm):
             "address_zip_code",
             "address_city",
             "phone",
-            "type",
             "email",
         ]
 
