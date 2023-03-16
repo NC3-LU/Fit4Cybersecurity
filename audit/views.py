@@ -13,11 +13,11 @@ from django.utils.translation import gettext as _
 
 from audit.forms import AuditForm
 from audit.forms import CompanyForm
+from audit.forms import EditProduct
 from audit.forms import ObservationsTextarea
 from audit.forms import ReferencesTextarea
 from audit.forms import SignUpForm
 from audit.forms import StatusChoices
-from audit.forms import EditProduct
 from audit.models import Audit
 from audit.models import AuditByUser
 from audit.models import AuditQuestion
@@ -61,9 +61,6 @@ def index(request):
         "kind_of_company_label": _("Audit company")
         if request.user.audituser.company.type == "CS"
         else _("Client company"),
-        "kind_of_company_label": _("Audit company")
-        if request.user.audituser.company.type == "CS"
-        else _("Client company"),
     }
 
     return render(request, "index.html", context=context)
@@ -97,15 +94,13 @@ def audit(request, audit_id: int):
     if auth_user_id is None or not audit_by_user:
         return HttpResponseRedirect("/audit")
 
-    survey_user_id = Audit.objects.filter(
-        id=audit_id).first().survey_user.user_id
+    survey_user_id = Audit.objects.filter(id=audit_id).first().survey_user.user_id
 
     if survey_user_id is None:
         return HttpResponseRedirect("/audit")
 
     user = find_user_by_id(survey_user_id)
-    type_of_company = AuditUser.objects.filter(
-        user=auth_user_id).first().company.type
+    type_of_company = AuditUser.objects.filter(user=auth_user_id).first().company.type
 
     if request.method == "POST":
         body_unicode = request.body.decode("utf-8")
@@ -180,8 +175,7 @@ def edit_product(request, audit_id: int):
     form = EditProduct(product=Audit.objects.get(id=audit_id))
 
     if request.method == "POST":
-        form = EditProduct(data=request.POST,
-                           product=Audit.objects.get(id=audit_id))
+        form = EditProduct(data=request.POST, product=Audit.objects.get(id=audit_id))
 
         if form.is_valid():
             audit = Audit.objects.get(id=audit_id)
@@ -198,8 +192,7 @@ def edit_product(request, audit_id: int):
                     },
                 )
             else:
-                audit.auditbycompany_set.filter(
-                    audit_company__type="AD").delete()
+                audit.auditbycompany_set.filter(audit_company__type="AD").delete()
 
             audit.save()
 
