@@ -104,10 +104,10 @@ def signup(request):
 def audit(request, audit_id: int):
     """Manage audits."""
     try:
-        audituser = request.user.audituser
-        auditbyuser = audituser.auditbyuser_set.get(audit_id=audit_id)
+        user = request.user
+        auditbyuser = user.auditbyuser_set.get(audit_id=audit_id)
         survey_user = auditbyuser.audit.survey_user
-        type_of_company = audituser.company.type
+        type_of_company = request.user.company_set.all().get().type
     except ObjectDoesNotExist:
         return HttpResponseRedirect("/audit")
 
