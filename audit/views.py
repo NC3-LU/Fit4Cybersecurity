@@ -6,6 +6,7 @@ from django.contrib import messages
 from django.contrib.auth import authenticate
 from django.contrib.auth import login
 from django.contrib.auth.decorators import login_required
+from django.core.exceptions import ObjectDoesNotExist
 from django.http import HttpResponseRedirect
 from django.shortcuts import redirect
 from django.shortcuts import render
@@ -19,16 +20,11 @@ from audit.forms import SignUpForm
 from audit.forms import StatusChoices
 from audit.forms import EditProduct
 from audit.models import Audit
-from audit.models import AuditByUser
 from audit.models import AuditQuestion
 from audit.models import AuditUser
 from audit.models import Company
 from csskp.settings import CUSTOM
 from survey.models import CONTEXT_SECTION_LABEL
-from survey.models import SurveyQuestion
-from survey.models import SurveyUser
-from survey.models import SurveyUserAnswer
-from survey.viewLogic import find_user_by_id
 from survey.viewLogic import get_answered_questions_sequences
 
 
@@ -61,9 +57,6 @@ def index(request):
         "kind_of_company_label": _("Audit company")
         if request.user.audituser.company.type == "CS"
         else _("Client company"),
-        "kind_of_company_label": _("Audit company")
-        if request.user.audituser.company.type == "CS"
-        else _("Client company"),
     }
 
     return render(request, "index.html", context=context)
@@ -89,23 +82,13 @@ def signup(request):
 @login_required
 def audit(request, audit_id: int):
     """Manage audits."""
-    auth_user_id = request.session.get("_auth_user_id", None)
-    audit_by_user = AuditByUser.objects.filter(
-        audit=audit_id, audit_user__user=auth_user_id
-    )
-
-    if auth_user_id is None or not audit_by_user:
+    try:
+        audituser = request.user.audituser
+        auditbyuser = audituser.auditbyuser_set.get(audit_id=audit_id)
+        survey_user = auditbyuser.audit.survey_user
+        type_of_company = audituser.company.type
+    except ObjectDoesNotExist:
         return HttpResponseRedirect("/audit")
-
-    survey_user_id = Audit.objects.filter(
-        id=audit_id).first().survey_user.user_id
-
-    if survey_user_id is None:
-        return HttpResponseRedirect("/audit")
-
-    user = find_user_by_id(survey_user_id)
-    type_of_company = AuditUser.objects.filter(
-        user=auth_user_id).first().company.type
 
     if request.method == "POST":
         body_unicode = request.body.decode("utf-8")
@@ -113,31 +96,21 @@ def audit(request, audit_id: int):
         id = body.pop("id", None)
         AuditQuestion.objects.filter(id=id).update(**body)
 
-    audit_questions = AuditQuestion.objects.filter(
-        survey_user__user_id=survey_user_id
-    ).order_by("id")
-    survey_user_answers = (
-        SurveyUserAnswer.objects.filter(user=user, uvalue=1)
-        .exclude(answer__question__section__label=CONTEXT_SECTION_LABEL)
-        .order_by("answer__question__qindex", "answer__aindex")
-    )
-
-    if not audit_questions:
-        answered_questions_sequences = get_answered_questions_sequences(user)
-        audit_questions = AuditQuestion.objects.filter(
-            survey_user__user_id=survey_user_id
-        ).order_by("id")
+    if not survey_user.auditquestion_set.all().order_by("id").exists():
+        answered_questions_sequences = get_answered_questions_sequences(survey_user)
 
         for answered_question_sequence in answered_questions_sequences:
             audit_question = AuditQuestion()
-            audit_question.survey_question = SurveyQuestion.objects.filter(
-                id=answered_question_sequence.question.id
-            ).first()
-            audit_question.survey_user = SurveyUser.objects.filter(
-                user_id=survey_user_id
-            ).first()
+            audit_question.survey_question = answered_question_sequence.question
+            audit_question.survey_user = answered_question_sequence.user
             audit_question.save()
 
+    audit_questions = survey_user.auditquestion_set.all().order_by("id")
+    survey_user_answers = (
+        survey_user.surveyuseranswer_set.filter(uvalue=1)
+        .exclude(answer__question__section__label=CONTEXT_SECTION_LABEL)
+        .order_by("answer__question__qindex", "answer__aindex")
+    )
     audit_questions_formatted: Dict[int, Any] = {}
 
     for index, audit_question in enumerate(audit_questions):
@@ -174,14 +147,18 @@ def audit(request, audit_id: int):
 
 @login_required
 def edit_product(request, audit_id: int):
-    if not request.user.audituser.auditbyuser_set.filter(audit_id=audit_id).exists():
+    auditUser = request.user.audituser
+
+    if not auditUser.auditbyuser_set.filter(audit_id=audit_id).exists():
         return HttpResponseRedirect("/audit")
 
     form = EditProduct(product=Audit.objects.get(id=audit_id))
 
     if request.method == "POST":
-        form = EditProduct(data=request.POST,
-                           product=Audit.objects.get(id=audit_id))
+        if auditUser.company.type == "AD":
+            return HttpResponseRedirect("/audit")
+
+        form = EditProduct(data=request.POST, product=Audit.objects.get(id=audit_id))
 
         if form.is_valid():
             audit = Audit.objects.get(id=audit_id)
@@ -189,6 +166,9 @@ def edit_product(request, audit_id: int):
             audit.product_ref = form.cleaned_data["reference"]
 
             if form.cleaned_data["company"]:
+                user_company_admin = AuditUser.objects.get(
+                    user_id=form.cleaned_data["company"].company_admin_id
+                )
                 audit.auditbycompany_set.filter(
                     audit_company__type="AD"
                 ).update_or_create(
@@ -197,9 +177,17 @@ def edit_product(request, audit_id: int):
                         "audit_company_id": form.cleaned_data["company"].id,
                     },
                 )
+                audit.auditbyuser_set.filter(
+                    audit_user__company__type="AD"
+                ).update_or_create(
+                    audit_id=audit_id,
+                    defaults={
+                        "audit_user_id": user_company_admin.id,
+                    },
+                )
             else:
-                audit.auditbycompany_set.filter(
-                    audit_company__type="AD").delete()
+                audit.auditbycompany_set.filter(audit_company__type="AD").delete()
+                audit.auditbyuser_set.filter(audit_user__company__type="AD").delete()
 
             audit.save()
 
