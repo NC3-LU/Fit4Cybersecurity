@@ -19,6 +19,12 @@ class CompanySerializer(serializers.ModelSerializer):
             "is_active",
         ]
 
+    def create(self, validated_data):
+        """
+        Create and return a new `Snippet` instance, given the validated data.
+        """
+        return Company.objects.create(**validated_data)
+
 
 class AuditQuestionSerializer(serializers.ModelSerializer):
     class Meta:

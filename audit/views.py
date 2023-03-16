@@ -14,11 +14,11 @@ from django.utils.translation import gettext as _
 
 from audit.forms import AuditForm
 from audit.forms import CompanyForm
+from audit.forms import EditProduct
 from audit.forms import ObservationsTextarea
 from audit.forms import ReferencesTextarea
 from audit.forms import SignUpForm
 from audit.forms import StatusChoices
-from audit.forms import EditProduct
 from audit.models import Audit
 from audit.models import AuditQuestion
 from audit.models import AuditUser

@@ -17,6 +17,7 @@ from django.conf.urls import include
 from django.contrib import admin
 from django.urls import path
 
+from csskp.settings import CUSTOM
 from survey import views
 
 urlpatterns = [
@@ -27,9 +28,6 @@ urlpatterns = [
     path("", include("django.contrib.auth.urls")),
     # Stats
     path("stats/", include("stats.urls")),
-    # Audit
-    path("audit/", include("audit.urls")),
-    path("audit/", include("django.contrib.auth.urls")),
     # Admin
     path("admin/", include("admin.urls")),
     path("admin/", include("django.contrib.auth.urls")),
@@ -39,3 +37,11 @@ urlpatterns = [
     # API
     path("api-auth/", include("rest_framework.urls")),
 ]
+
+if CUSTOM["modules"].get("audit", False):
+    urlpatterns.extend(
+        [
+            path("audit/", include("audit.urls")),
+            path("audit/", include("django.contrib.auth.urls")),
+        ]
+    )
