@@ -19,6 +19,14 @@ $(document).ready(function() {
         });
     });
 
+    $('.go-to-add').click(function() {
+        var $popup = $("#editProduct");
+        var popup_url = '/audit/add';
+        $(".modal-dialog", $popup).load(popup_url, function () {
+          $popup.modal("show");
+        });
+    });
+
     $('#statusDetails').on('show.bs.modal', function(e) {
         let auditId = $(e.relatedTarget).data('audit-id');
         let chart = Chart.getChart("complianceStatus");

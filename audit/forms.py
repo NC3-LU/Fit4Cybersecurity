@@ -29,9 +29,7 @@ class CompanyForm(forms.ModelForm):
     address_zip_code = forms.CharField(max_length=30, required=True)
     address_city = forms.CharField(max_length=30, required=True)
     phone = forms.CharField(max_length=30, required=True)
-    email = forms.EmailField(
-        max_length=254, required=True
-    )
+    email = forms.EmailField(max_length=254, required=True)
 
     class Meta:
         model = Company
@@ -48,6 +46,7 @@ class CompanyForm(forms.ModelForm):
 class AuditForm(forms.ModelForm):
     product_name = forms.CharField(max_length=30, required=True)
     product_ref = forms.CharField(max_length=30, required=True)
+    survey_user_uuid = forms.CharField(max_length=50, required=True)
 
     class Meta:
         model = Audit
@@ -125,7 +124,9 @@ class StatusChoices(forms.Form):
 class EditProduct(forms.Form):
     name = forms.CharField(max_length=50)
     reference = forms.CharField(max_length=50)
-    company = forms.ModelChoiceField(queryset=None, required=False, label='Audit company')
+    company = forms.ModelChoiceField(
+        queryset=None, required=False, label="Audit company"
+    )
 
     def __init__(self, *args, **kwargs):
         product = kwargs.pop("product", None)

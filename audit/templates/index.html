@@ -60,17 +60,16 @@
             {% endfor %}
             </tbody>
         </table>
-        <a href="/audit/product/" id="download-report">
-          <button class="btn btn-sm btn-block border border-rounded btn-primary" type="button">
-              {{ _('Add an audit') }}
-          </button>
-        </a>
+        <button class="btn btn-sm btn-block border border-rounded btn-primary go-to-add" type="button">
+            {{ _('Add an audit') }}
+        </button>
+        
       </div>
     </div>
 
     <br /><br />
 
-    <div class="row">
+    {% comment %} <div class="row">
         <div class="col-12">
           <h2>Companies you are managing</h2>
           <table class="table table-hover">
@@ -97,7 +96,7 @@
             </button>
           </a>
       </div>
-    </div>
+    </div> {% endcomment %}
 
 
     <!-- Status Details Modal -->
