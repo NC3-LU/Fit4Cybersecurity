@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-03-08 10:35+0000\n"
+"POT-Creation-Date: 2023-03-20 15:36+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -99,7 +99,8 @@ msgid ""
 "obligations for which organisations should already be prepared as of 2021."
 msgstr ""
 
-#: csskp/settings.py:48
+#: csskp/settings.py:48 templates/parts/privacy_policy_part.html:4
+#: templates/parts/privacy_policy_part.html:7
 msgid "Cookie settings"
 msgstr ""
 
@@ -147,31 +148,29 @@ msgstr ""
 
 #: csskp/surveyAlto/__init__.py:7
 msgid ""
-"Gérer les données personnelles conformément au Règlement Général relatif à "
-"la Protection des Données (ci-après le « <strong>RGPD</strong> ») peut "
-"constituer un défi pour les petites et moyennes entreprises (ci-après les « "
-"<strong>PME</strong> »), qui sont souvent désavantagées par rapport aux "
-"grandes structures en termes de coûts et d'impact, notamment. De plus, le "
-"développement de stratégies de gestion de données ou de « réflexes de "
-"responsable de traitement » sont rarement en tête des priorités – les "
-"éventuels manques de connaissance et de sensibilisation, d'une part, et "
-"d'informations et d'outils pratiques, d'autre part pourraient constituer les "
-"causes présumées. En tout état de cause, il est nécessaire de renforcer la "
-"sensibilisation des PME à l'importance de la protection des données à "
-"caractère personnel et de les accompagner pour améliorer leur mise en "
-"conformité au RGPD<br><br>Le projet ALTO, né d'un partenariat entre la "
-"Commission nationale pour la protection des données (ci-après « "
-"<strong>CNPD</strong> ») et la Luxembourg House of Cybersecurity, National "
-"Cybersecurity Competence Center (ci-après le « <strong>LHC-NC3</strong> »), "
-"a pour objectif de mettre en œuvre un outil d'auto-évaluation afin de "
-"répondre aux défis quotidiens des PME en matière de protection des données."
-"<br><br>Le présent questionnaire, qui se veut anonyme, a pour but de cerner "
-"les obstacles/problèmes/questions en matière de protection des données "
-"auxquels sont confrontés les PME, afin de créer et mettre à leur disposition "
-"un outil d'auto-évaluation répondant à leurs besoins.<br><br>Pour en savoir "
-"plus sur le projet ALTO, nous vous invitons à vous rendre sur <a "
-"href=https://cnpd.public.lu target=_blank rel=noopener noreferrer>la page "
-"internet dédiée.</a>"
+"Managing personal data in accordance with the General Data Protection "
+"Regulation (hereinafter \"<strong>GDPR</strong>\") can be a challenge for "
+"small and medium-sized enterprises (hereinafter \"<strong>SMEs</strong>\"), "
+"which are often at a disadvantage compared to large structures in terms of "
+"costs and impact, in particular. Moreover, the development of data "
+"management strategies or \"data controller reflexes\" are rarely at the top "
+"of the agenda - the possible lack of knowledge and awareness, on the one "
+"hand, and information and practical tools , on the other hand could "
+"constitute the presumed causes. In any case, it is necessary to raise "
+"awareness among SMEs of the importance of protecting personal data and to "
+"support them in improving their compliance with the GDPR.<br><br>The ALTO "
+"project, born of a partnership between the National Commission for Data "
+"Protection (<i>Commission Nationale pour la Protection des Données</i> - "
+"\"<strong>CNPD</strong>\") and the Luxembourg House of CyberSecurity, "
+"National CyberSecurity Competence Center (hereafter \"<strong>LHC-NC3</"
+"strong>\"), has aims to implement a self-assessment tool to meet the daily "
+"challenges of SMEs in terms of data protection.<br><br>This questionnaire, "
+"which is intended to be anonymous, aims to identify the data protection "
+"obstacles/problems/questions faced by SMEs, in order to create and make "
+"available to them a self-assessment tool that meets their needs.<br><br>To "
+"find out more about the ALTO project, we invite you to visit <a href=https://"
+"cnpd.public.lu/fr/professionnels/outils-conformite/projet-alto.html "
+"target=_blank rel=noopener noreferrer>the dedicated web page.</a>"
 msgstr ""
 
 #: csskp/surveySMEDemand/__init__.py:7
@@ -1859,7 +1858,17 @@ msgstr ""
 #: data/fit4contract/questions.json:706 data/fit4contract/questions.json:888
 #: data/fit4contract/questions.json:943
 #: data/fit4operatorsurvey/context-questions.json:224
-#: data/surveySMEDemand/questions.json:337
+#: data/surveyAlto/questions.json:559 data/surveyAlto/questions.json:610
+#: data/surveyAlto/questions.json:847 data/surveyAlto/questions.json:898
+#: data/surveyAlto/questions.json:949 data/surveyAlto/questions.json:986
+#: data/surveyAlto/questions.json:1051 data/surveyAlto/questions.json:1116
+#: data/surveyAlto/questions.json:1181 data/surveyAlto/questions.json:1246
+#: data/surveyAlto/questions.json:1297 data/surveyAlto/questions.json:1362
+#: data/surveyAlto/questions.json:1427 data/surveyAlto/questions.json:1492
+#: data/surveyAlto/questions.json:1934 data/surveyAlto/questions.json:1999
+#: data/surveyAlto/questions.json:2064 data/surveyAlto/questions.json:2222
+#: data/surveyAlto/questions.json:2287 data/surveyAlto/questions.json:2352
+#: data/surveyAlto/questions.json:2417 data/surveySMEDemand/questions.json:337
 #: data/surveySMEDemand/questions.json:2002
 #: data/surveySMEDemand/questions.json:2441
 #: templates/survey/answerChangingWarning.html:10
@@ -1884,7 +1893,17 @@ msgstr ""
 #: data/fit4contract/questions.json:741 data/fit4contract/questions.json:917
 #: data/fit4contract/questions.json:972
 #: data/fit4operatorsurvey/context-questions.json:231
-#: data/surveySMEDemand/questions.json:100
+#: data/surveyAlto/questions.json:573 data/surveyAlto/questions.json:624
+#: data/surveyAlto/questions.json:861 data/surveyAlto/questions.json:912
+#: data/surveyAlto/questions.json:963 data/surveyAlto/questions.json:1000
+#: data/surveyAlto/questions.json:1065 data/surveyAlto/questions.json:1130
+#: data/surveyAlto/questions.json:1195 data/surveyAlto/questions.json:1260
+#: data/surveyAlto/questions.json:1311 data/surveyAlto/questions.json:1376
+#: data/surveyAlto/questions.json:1441 data/surveyAlto/questions.json:1506
+#: data/surveyAlto/questions.json:1948 data/surveyAlto/questions.json:2013
+#: data/surveyAlto/questions.json:2078 data/surveyAlto/questions.json:2236
+#: data/surveyAlto/questions.json:2301 data/surveyAlto/questions.json:2366
+#: data/surveyAlto/questions.json:2431 data/surveySMEDemand/questions.json:100
 #: data/surveySMEDemand/questions.json:351
 #: data/surveySMEDemand/questions.json:453
 #: data/surveySMEDemand/questions.json:681
@@ -2183,6 +2202,8 @@ msgid "Midwife"
 msgstr ""
 
 #: data/fit4ehealth/context-questions.json:248
+#: data/surveyAlto/context-questions.json:287
+#: data/surveyAlto/questions.json:530 data/surveyAlto/questions.json:2185
 #: data/surveySMEDemand/context-questions.json:42
 #: data/surveySMEDemand/questions.json:263
 #: data/surveySMEDemand/questions.json:1002
@@ -5878,7 +5899,7 @@ msgid ""
 msgstr ""
 
 #: data/surveyAlto/context-questions.json:3
-msgid "Taille (nombre de salariés) :"
+msgid "Size (number of employees):"
 msgstr ""
 
 #: data/surveyAlto/context-questions.json:18
@@ -5894,35 +5915,35 @@ msgid "31-50"
 msgstr ""
 
 #: data/surveyAlto/context-questions.json:39
-msgid "51-100"
+msgid "51-75"
 msgstr ""
 
 #: data/surveyAlto/context-questions.json:48
-msgid "Secteur d'activité :"
+msgid "Activity area:"
 msgstr ""
 
 #: data/surveyAlto/context-questions.json:57
-msgid "Agriculture, sylviculture et pêche"
+#: data/surveySMEDemand/context-questions.json:185
+msgid "Agriculture, forestry and fishing"
 msgstr ""
 
 #: data/surveyAlto/context-questions.json:64
-msgid "Industries extractives"
+#: data/surveySMEDemand/context-questions.json:192
+msgid "Mining and quarrying"
 msgstr ""
 
 #: data/surveyAlto/context-questions.json:71
-msgid "Industrie manufacturière"
+#: data/surveySMEDemand/context-questions.json:199
+msgid "Manufacturing"
 msgstr ""
 
 #: data/surveyAlto/context-questions.json:78
-msgid ""
-"Production et distribution d'électricité, de gaz, de vapeur et d'air "
-"conditionné"
+#: data/surveySMEDemand/context-questions.json:206
+msgid "Electricity, gas, steam and air conditioning supply"
 msgstr ""
 
 #: data/surveyAlto/context-questions.json:85
-msgid ""
-"Production et distribution d'eau; assainissement, gestion des déchets et "
-"dépollution"
+msgid "Water supply; sewerage, waste management and remediation activities"
 msgstr ""
 
 #: data/surveyAlto/context-questions.json:92
@@ -5931,89 +5952,100 @@ msgid "Construction"
 msgstr ""
 
 #: data/surveyAlto/context-questions.json:99
-msgid "Commerce; réparation d'automobiles et de motocycles"
+#: data/surveySMEDemand/context-questions.json:227
+msgid "Wholesale and retail trade; repair of motor vehicles and motorcycles"
 msgstr ""
 
 #: data/surveyAlto/context-questions.json:106
-msgid "Transports et entreposage"
+msgid "Transportation and storage"
 msgstr ""
 
 #: data/surveyAlto/context-questions.json:113
-msgid "Hébergement et restauration"
+#: data/surveySMEDemand/context-questions.json:241
+msgid "Accommodation and food service activities"
 msgstr ""
 
 #: data/surveyAlto/context-questions.json:120
-msgid "Information et communication"
+#: data/surveySMEDemand/context-questions.json:248
+msgid "Information and communication"
 msgstr ""
 
 #: data/surveyAlto/context-questions.json:127
-msgid "Activités financières et d'assurance"
+#: data/surveySMEDemand/context-questions.json:255
+msgid "Financial and insurance activities"
 msgstr ""
 
 #: data/surveyAlto/context-questions.json:134
-msgid "Activités immobilières"
+#: data/surveySMEDemand/context-questions.json:262
+msgid "Real estate activities"
 msgstr ""
 
 #: data/surveyAlto/context-questions.json:141
-msgid "Activités spécialisées, scientifiques et techniques"
+#: data/surveySMEDemand/context-questions.json:269
+msgid "Professional, scientific and technical activities"
 msgstr ""
 
 #: data/surveyAlto/context-questions.json:148
-msgid "Activités de services administratifs et de soutien"
+#: data/surveySMEDemand/context-questions.json:276
+msgid "Administrative and support service activities"
 msgstr ""
 
 #: data/surveyAlto/context-questions.json:155
-msgid "Administration publique"
+msgid "Public administration and defence; compulsory social security"
 msgstr ""
 
 #: data/surveyAlto/context-questions.json:162
-msgid "Enseignement"
+#: data/surveySMEDemand/context-questions.json:290
+msgid "Education"
 msgstr ""
 
 #: data/surveyAlto/context-questions.json:169
-msgid "Santé humaine et action sociale"
+#: data/surveySMEDemand/context-questions.json:297
+msgid "Human health and social work activities"
 msgstr ""
 
 #: data/surveyAlto/context-questions.json:176
-msgid "Arts, spectacles et activités récréatives"
+#: data/surveySMEDemand/context-questions.json:304
+msgid "Arts, entertainment and recreation"
 msgstr ""
 
 #: data/surveyAlto/context-questions.json:183
-msgid "Autres activités de services"
+msgid "Other service activities"
 msgstr ""
 
 #: data/surveyAlto/context-questions.json:190
 msgid ""
-"Activités des ménages en tant qu'employeurs; activités indifférenciées des "
-"ménages en tant que producteurs de biens et services pour usage propre"
+"Activities of households as employers; undifferentiated goods- and services-"
+"producing activities of households for own use"
 msgstr ""
 
 #: data/surveyAlto/context-questions.json:197
-msgid "Activités extra territoriales"
+#: data/surveySMEDemand/context-questions.json:325
+msgid "Activities of extraterritorial organisations and bodies"
 msgstr ""
 
 #: data/surveyAlto/context-questions.json:206
-msgid "Maturité de la société :"
+msgid "Company age:"
 msgstr ""
 
 #: data/surveyAlto/context-questions.json:214
-msgid "0 à 5 ans"
+msgid "0 to 5 years"
 msgstr ""
 
 #: data/surveyAlto/context-questions.json:221
-msgid "5 à 10 ans"
+msgid "5 to 10 years"
 msgstr ""
 
 #: data/surveyAlto/context-questions.json:228
-msgid "10 à 15 ans"
+msgid "10 to 15 years"
 msgstr ""
 
 #: data/surveyAlto/context-questions.json:235
-msgid "+ 15 ans"
+msgid "+15 years"
 msgstr ""
 
 #: data/surveyAlto/context-questions.json:244
-msgid "Fonction de la personne qui remplit ce questionnaire :"
+msgid "Function of the person completing this questionnaire:"
 msgstr ""
 
 #: data/surveyAlto/context-questions.json:252
@@ -6025,20 +6057,15 @@ msgid "DPO"
 msgstr ""
 
 #: data/surveyAlto/context-questions.json:266
-msgid "Juriste"
+msgid "Lawyer"
 msgstr ""
 
 #: data/surveyAlto/context-questions.json:273
-msgid "RH"
+msgid "HR"
 msgstr ""
 
 #: data/surveyAlto/context-questions.json:280
-msgid "Responsable informatique"
-msgstr ""
-
-#: data/surveyAlto/context-questions.json:287
-#: data/surveyAlto/questions.json:530 data/surveyAlto/questions.json:2185
-msgid "Autre"
+msgid "IT-manager"
 msgstr ""
 
 #: data/surveyAlto/questions.json:3 data/surveyAlto/questions.json:96
@@ -6062,30 +6089,27 @@ msgstr ""
 
 #: data/surveyAlto/questions.json:4 data/surveyAlto/questions.json:97
 #: data/surveyAlto/questions.json:218
-msgid "Généralités"
+msgid "Generalities"
 msgstr ""
 
 #: data/surveyAlto/questions.json:7
 msgid ""
-"Comment évaluez-vous votre connaissance générale du RGPD<sup>1</sup> ?"
-"<p><small>[1] Le Règlement Général sur la Protection des Données (RGPD) est "
-"un texte européen applicable depuis le 25 mai 2018 et qui encadre le "
-"traitement de données personnelles sur les territoires de l'Union "
-"européenne<p></small>"
+"How would you rate your general knowledge of the GDPR<sup>1</sup> ?"
+"<p><small>[1] The General Data Protection Regulation (GDPR) is a European "
+"text applicable since May 25, 2018 and which governs the processing of "
+"personal data in the territories of the European Union.</small></p>"
 msgstr ""
 
 #: data/surveyAlto/questions.json:13 data/surveyAlto/questions.json:661
 #: data/surveyAlto/questions.json:754 data/surveyAlto/questions.json:1706
-msgid "0 (Non acquis)"
+msgid "0 (Not acquired)"
 msgstr ""
 
 #: data/surveyAlto/questions.json:16 data/surveyAlto/questions.json:30
 #: data/surveyAlto/questions.json:44 data/surveyAlto/questions.json:58
 #: data/surveyAlto/questions.json:72 data/surveyAlto/questions.json:86
 #: data/surveyAlto/questions.json:100
-msgid ""
-"Quel organisme / quelle personne soutient votre PME dans votre mise en "
-"conformité au RGPD ?"
+msgid "Which organization / person supports your SME in your GDPR compliance?"
 msgstr ""
 
 #: data/surveyAlto/questions.json:27 data/surveyAlto/questions.json:675
@@ -6112,11 +6136,13 @@ msgstr ""
 
 #: data/surveyAlto/questions.json:83 data/surveyAlto/questions.json:731
 #: data/surveyAlto/questions.json:824 data/surveyAlto/questions.json:1776
-msgid "5 (Parfaitment maîtrisé)"
+msgid "5 (Perfectly mastered)"
 msgstr ""
 
 #: data/surveyAlto/questions.json:106 data/surveyAlto/questions.json:227
-msgid "La Commission Nationale pour la Protection des Données (CNPD)"
+msgid ""
+"The National Commission for Data Protection (<i>Commission Nationale pour la "
+"Protection des Données</i> - CNPD)"
 msgstr ""
 
 #: data/surveyAlto/questions.json:109 data/surveyAlto/questions.json:123
@@ -6125,33 +6151,31 @@ msgstr ""
 #: data/surveyAlto/questions.json:193 data/surveyAlto/questions.json:207
 #: data/surveyAlto/questions.json:221
 msgid ""
-"À quel organisme / quelle personne votre entreprise s'adresse-t-elle pour "
-"obtenir des informations/une aide en la matière ?"
+"What body/person does your business turn to for information/help on this?"
 msgstr ""
 
 #: data/surveyAlto/questions.json:120 data/surveyAlto/questions.json:241
-msgid "Un délégué à la protection des données interne"
+msgid "An internal data protection officer"
 msgstr ""
 
 #: data/surveyAlto/questions.json:134 data/surveyAlto/questions.json:255
-msgid "Un délégué à la protection des données externe"
+msgid "An external data protection officer"
 msgstr ""
 
 #: data/surveyAlto/questions.json:148 data/surveyAlto/questions.json:269
-msgid "Un avocat"
+msgid "A lawyer"
 msgstr ""
 
 #: data/surveyAlto/questions.json:162 data/surveyAlto/questions.json:283
-msgid "Une société de conseil"
+msgid "A consulting company"
 msgstr ""
 
 #: data/surveyAlto/questions.json:176 data/surveyAlto/questions.json:297
-msgid "Une chambre/union professionnelle"
+msgid "A professional chamber/union"
 msgstr ""
 
 #: data/surveyAlto/questions.json:190 data/surveyAlto/questions.json:311
-msgid ""
-"Notre entreprise n'est pas soutenue par un organisme/une personne extérieure"
+msgid "Our company is not supported by any outside organization/person"
 msgstr ""
 
 #: data/surveyAlto/questions.json:204 data/surveyAlto/questions.json:325
@@ -6166,7 +6190,13 @@ msgstr ""
 #: data/surveyAlto/questions.json:2041 data/surveyAlto/questions.json:2199
 #: data/surveyAlto/questions.json:2264 data/surveyAlto/questions.json:2329
 #: data/surveyAlto/questions.json:2394 data/surveyAlto/questions.json:2459
-msgid "Je ne sais pas"
+#: data/surveySMEDemand/questions.json:1844
+#: data/surveySMEDemand/questions.json:1965
+#: data/surveySMEDemand/questions.json:2044
+#: data/surveySMEDemand/questions.json:2290
+#: data/surveySMEDemand/questions.json:2369
+#: data/surveySMEDemand/questions.json:2447
+msgid "I don't know"
 msgstr ""
 
 #: data/surveyAlto/questions.json:230 data/surveyAlto/questions.json:244
@@ -6175,16 +6205,16 @@ msgstr ""
 #: data/surveyAlto/questions.json:314 data/surveyAlto/questions.json:328
 #: data/surveyAlto/questions.json:342
 msgid ""
-"Veuillez classer les principaux défis auxquels votre entreprise est "
-"confrontée, en les déplaçant vers le haut (cliquez et déplacez)."
+"Please rank the top challenges your business is facing, moving them up "
+"(click and drag)."
 msgstr ""
 
 #: data/surveyAlto/questions.json:339
-msgid "Défis"
+msgid "Challenges"
 msgstr ""
 
 #: data/surveyAlto/questions.json:348
-msgid "J'ai besoin de comprendre si je suis concerné par le RGPD"
+msgid "I need to understand whether I am concerned by the GDPR"
 msgstr ""
 
 #: data/surveyAlto/questions.json:351 data/surveyAlto/questions.json:365
@@ -6195,115 +6225,81 @@ msgstr ""
 #: data/surveyAlto/questions.json:493 data/surveyAlto/questions.json:507
 #: data/surveyAlto/questions.json:521 data/surveyAlto/questions.json:539
 #: data/surveyAlto/questions.json:553
-msgid "Êtes-vous responsable de traitement ?"
+msgid "Are you a data controller?"
 msgstr ""
 
 #: data/surveyAlto/questions.json:362
-msgid ""
-"J'ai besoin de savoir si je suis un responsable de traitement ou un sous-"
-"traitant"
+msgid "I need to know if I am a data controller or a data processor"
 msgstr ""
 
 #: data/surveyAlto/questions.json:376
-msgid "J'ai besoins d'explications quant à mes obligations RGPD"
+msgid "I need explanations about my GDPR obligations"
 msgstr ""
 
 #: data/surveyAlto/questions.json:390
-msgid "J'ai besoin de savoir comment documenter la gestion des données"
+msgid "I need to know how to document data management"
 msgstr ""
 
 #: data/surveyAlto/questions.json:404
-msgid "J'ai besoin de savoir ce que doit comporter une politique d'information"
+msgid "I need to know what an information policy should include"
 msgstr ""
 
 #: data/surveyAlto/questions.json:418
-msgid "J'ai besoin d'explications sur les droits des personnes concernées"
+msgid "I need explanations on the rights of data subjects"
 msgstr ""
 
 #: data/surveyAlto/questions.json:432
 msgid ""
-"J'ai besoin d'explications sur les bases légales adéquates pour chacun de "
-"mes traitements de données"
+"I need explanations on the adequate legal basis for each of my data "
+"processing"
 msgstr ""
 
 #: data/surveyAlto/questions.json:446
-msgid ""
-"J'ai besoin de savoir quand désigner un délégué à la protection des données "
-"(DPD ou DPO)"
+msgid "I need to know when to appoint a Data Protection Officer (DPO)"
 msgstr ""
 
 #: data/surveyAlto/questions.json:460
-msgid ""
-"J'ai besoin de savoir combien de temps je dois conserver les données "
-"collectées"
+msgid "I need to know how long I have to retain the collected data"
 msgstr ""
 
 #: data/surveyAlto/questions.json:474
 msgid ""
-"J'ai besoin de savoir si j'applique le principe de minimisation correctement"
+"I need to know if I am correctly applying the data minimization principle"
 msgstr ""
 
 #: data/surveyAlto/questions.json:488
 msgid ""
-"J'ai besoin d'informations s'agissant des obligations relatives à la "
-"sécurité des données personnelles au regard du RGPD"
+"I need information about security obligations concerning personal data under "
+"the GDPR"
 msgstr ""
 
 #: data/surveyAlto/questions.json:502
 msgid ""
-"J'ai besoin d'informations s'agissant des mesures techniques et "
-"organisationnelles appropriées aux risques liés à ma gestion des données "
-"personnelles"
+"I need information regarding the technical and organizational measures "
+"appropriate to the risks related to my personal data management"
 msgstr ""
 
 #: data/surveyAlto/questions.json:516
-msgid "J'ai besoin d'information sur la violation de données"
+msgid ""
+"I need information about the rules governing the management of data breaches"
 msgstr ""
 
 #: data/surveyAlto/questions.json:550 data/surveyAlto/questions.json:601
 #: data/surveyAlto/questions.json:652 data/surveyAlto/questions.json:745
 #: data/surveyAlto/questions.json:838 data/surveyAlto/questions.json:889
-msgid "Sous-traitance"
-msgstr ""
-
-#: data/surveyAlto/questions.json:559 data/surveyAlto/questions.json:610
-#: data/surveyAlto/questions.json:847 data/surveyAlto/questions.json:898
-#: data/surveyAlto/questions.json:949 data/surveyAlto/questions.json:986
-#: data/surveyAlto/questions.json:1051 data/surveyAlto/questions.json:1116
-#: data/surveyAlto/questions.json:1181 data/surveyAlto/questions.json:1246
-#: data/surveyAlto/questions.json:1297 data/surveyAlto/questions.json:1362
-#: data/surveyAlto/questions.json:1427 data/surveyAlto/questions.json:1492
-#: data/surveyAlto/questions.json:1934 data/surveyAlto/questions.json:1999
-#: data/surveyAlto/questions.json:2064 data/surveyAlto/questions.json:2222
-#: data/surveyAlto/questions.json:2287 data/surveyAlto/questions.json:2352
-#: data/surveyAlto/questions.json:2417
-msgid "Oui"
+msgid "Data processing"
 msgstr ""
 
 #: data/surveyAlto/questions.json:562 data/surveyAlto/questions.json:576
 #: data/surveyAlto/questions.json:590 data/surveyAlto/questions.json:604
-msgid "Etes-vous un sous-traitant au sens du RGPD ?"
-msgstr ""
-
-#: data/surveyAlto/questions.json:573 data/surveyAlto/questions.json:624
-#: data/surveyAlto/questions.json:861 data/surveyAlto/questions.json:912
-#: data/surveyAlto/questions.json:963 data/surveyAlto/questions.json:1000
-#: data/surveyAlto/questions.json:1065 data/surveyAlto/questions.json:1130
-#: data/surveyAlto/questions.json:1195 data/surveyAlto/questions.json:1260
-#: data/surveyAlto/questions.json:1311 data/surveyAlto/questions.json:1376
-#: data/surveyAlto/questions.json:1441 data/surveyAlto/questions.json:1506
-#: data/surveyAlto/questions.json:1948 data/surveyAlto/questions.json:2013
-#: data/surveyAlto/questions.json:2078 data/surveyAlto/questions.json:2236
-#: data/surveyAlto/questions.json:2301 data/surveyAlto/questions.json:2366
-#: data/surveyAlto/questions.json:2431
-msgid "Non"
+msgid "Are you a data processor within the meaning of GDPR?"
 msgstr ""
 
 #: data/surveyAlto/questions.json:613 data/surveyAlto/questions.json:627
 #: data/surveyAlto/questions.json:641 data/surveyAlto/questions.json:655
 msgid ""
-"Connaissez-vous la différence entre la notion de « Responsable du traitement "
-"» et la notion de « sous-traitant » ?"
+"Do you know the difference between the notion of \"data controller\" and the "
+"notion of \"data processor\"?"
 msgstr ""
 
 #: data/surveyAlto/questions.json:664 data/surveyAlto/questions.json:678
@@ -6311,8 +6307,8 @@ msgstr ""
 #: data/surveyAlto/questions.json:720 data/surveyAlto/questions.json:734
 #: data/surveyAlto/questions.json:748
 msgid ""
-"Connaissez-vous l'étendue de vos responsabilités en qualité de « Responsable "
-"du traitement » et/ou de « sous-traitant » ?"
+"Do you know the extent of your responsibilities as \"data controller\" and/"
+"or \"data processor\"?"
 msgstr ""
 
 #: data/surveyAlto/questions.json:757 data/surveyAlto/questions.json:771
@@ -6320,28 +6316,27 @@ msgstr ""
 #: data/surveyAlto/questions.json:813 data/surveyAlto/questions.json:827
 #: data/surveyAlto/questions.json:841
 msgid ""
-"Sous-traitez-vous certains de vos traitements<sup>1</sup> de données ? "
-"<p><small>[1] Un traitement de données personnelles est une opération, ou "
-"ensemble d'opérations, portant sur des données personnelles, quel que soit "
-"le procédé utilisé. Le RGPD nomme toute une série de différents types de "
-"traitement comme la collecte, l'enregistrement, la modification, la "
-"diffusion ou toute autre forme de mise à disposition, ou encore l'effacement "
-"et la destruction (p.ex : traitement des salaires, traitement des candidats, "
-"listes de clients, listes de client prospects).<p>Note : Les dossiers "
-"papiers peuvent également être concernés (s'ils sont structurés, par exemple "
-"par un classement alphabétique ou chronologique).<p></small>"
+"Do you outsource some of your data processing<sup>1</sup>? <p><small>[1] A "
+"processing of personal data is an operation, or set of operations, relating "
+"to personal data, regardless of the process used.  The GDPR names a whole "
+"series of different types of processing such as collecting, recording, "
+"modifying, disseminating or otherwise making available, or erasing and "
+"destroying (e.g. salary processing, candidate processing, client lists, "
+"prospect client lists).<p>Note : Paper files may also be concerned (if they "
+"are structured, for example by an alphabetical or chronological "
+"classification).</p></small></p>"
 msgstr ""
 
 #: data/surveyAlto/questions.json:850 data/surveyAlto/questions.json:892
-msgid "Avez-vous conclu un contrat de sous-traitance ?"
+msgid "Have you entered into a data processing agreement?"
 msgstr ""
 
 #: data/surveyAlto/questions.json:864 data/surveyAlto/questions.json:878
 #: data/surveyAlto/questions.json:901 data/surveyAlto/questions.json:915
 #: data/surveyAlto/questions.json:929 data/surveyAlto/questions.json:943
 msgid ""
-"Votre entreprise sait-elle comment et quand désigner un délégué à la "
-"protection des données (DPD ou DPO) ?"
+"Does your company know how and when to appoint a Data Protection Officer "
+"(DPO)?"
 msgstr ""
 
 #: data/surveyAlto/questions.json:926 data/surveyAlto/questions.json:1014
@@ -6351,8 +6346,8 @@ msgstr ""
 #: data/surveyAlto/questions.json:1520 data/surveyAlto/questions.json:1962
 #: data/surveyAlto/questions.json:2027 data/surveyAlto/questions.json:2250
 #: data/surveyAlto/questions.json:2315 data/surveyAlto/questions.json:2380
-#: data/surveyAlto/questions.json:2445
-msgid "En cours de projet"
+#: data/surveyAlto/questions.json:2445 stats/views.py:133
+msgid "In progress"
 msgstr ""
 
 #: data/surveyAlto/questions.json:940 data/surveyAlto/questions.json:977
@@ -6361,93 +6356,90 @@ msgstr ""
 #: data/surveyAlto/questions.json:1288 data/surveyAlto/questions.json:1353
 #: data/surveyAlto/questions.json:1418 data/surveyAlto/questions.json:1483
 #: data/surveyAlto/questions.json:1548
-msgid "Principes"
+msgid "Principles"
 msgstr ""
 
 #: data/surveyAlto/questions.json:952 data/surveyAlto/questions.json:966
 #: data/surveyAlto/questions.json:980
-msgid ""
-"Votre entreprise dispose-t-elle d'une liste des traitements de données ?"
+msgid "Does your company have a list of data processing operations?"
 msgstr ""
 
 #: data/surveyAlto/questions.json:989 data/surveyAlto/questions.json:1003
 #: data/surveyAlto/questions.json:1017 data/surveyAlto/questions.json:1031
 #: data/surveyAlto/questions.json:1045
 msgid ""
-"Votre entreprise a-t-elle établi des finalités claires pour ses traitements "
-"de données ?"
+"Has your company established clear purposes for its data processing "
+"operations?"
 msgstr ""
 
 #: data/surveyAlto/questions.json:1054 data/surveyAlto/questions.json:1068
 #: data/surveyAlto/questions.json:1082 data/surveyAlto/questions.json:1096
 #: data/surveyAlto/questions.json:1110
 msgid ""
-"Votre entreprise a-t-elle identifié des bases légales spécifiques pour ses "
-"traitements de données ?"
+"Has your company identified specific legal bases for its data processing "
+"operations?"
 msgstr ""
 
 #: data/surveyAlto/questions.json:1119 data/surveyAlto/questions.json:1133
 #: data/surveyAlto/questions.json:1147 data/surveyAlto/questions.json:1161
 #: data/surveyAlto/questions.json:1175
 msgid ""
-"Votre entreprise a-t-elle mis en œuvre le principe de minimisation des "
-"données consistant à n'utiliser que les données nécessaires à la réalisation "
-"de ses traitements ?"
+"Has your company implemented the data minimization principle consisting of "
+"using only necessary data to carry out its processing operations?"
 msgstr ""
 
 #: data/surveyAlto/questions.json:1184 data/surveyAlto/questions.json:1198
 #: data/surveyAlto/questions.json:1212 data/surveyAlto/questions.json:1226
 #: data/surveyAlto/questions.json:1240
 msgid ""
-"Votre entreprise a-t-elle connaissance des principes « Privacy by default / "
-"Privacy by design »<sup>1</sup> ?<p><small>[1] Le respect de la vie privée "
-"par défaut / le respect de la vie privée dès la conception<p></small>"
+"Is your company aware of the \"Privacy-by-default/Privacy-by-design\" "
+"principles?"
 msgstr ""
 
 #: data/surveyAlto/questions.json:1249 data/surveyAlto/questions.json:1263
 #: data/surveyAlto/questions.json:1277 data/surveyAlto/questions.json:1291
 msgid ""
-"Votre entreprise informe-t-elle les personnes concernées (ex : salariés, "
-"clients, etc.) des traitements effectués sur leurs données personnelles ?"
+"Does your company inform the data subjects (e.g.: employees, customers, "
+"etc.) about the processing carried out from their personal data?"
 msgstr ""
 
 #: data/surveyAlto/questions.json:1300 data/surveyAlto/questions.json:1314
 #: data/surveyAlto/questions.json:1328 data/surveyAlto/questions.json:1342
 #: data/surveyAlto/questions.json:1356
 msgid ""
-"Votre entreprise informe-t-elle les personnes concernées (ex. : salariés, "
-"clients, etc.) sur leurs droits prévus par le RGPD ?"
+"Does your company inform the data subjects (e.g.: employees, customers, "
+"etc.) about their rights under the GDPR?"
 msgstr ""
 
 #: data/surveyAlto/questions.json:1365 data/surveyAlto/questions.json:1379
 #: data/surveyAlto/questions.json:1393 data/surveyAlto/questions.json:1407
 #: data/surveyAlto/questions.json:1421
 msgid ""
-"Votre entreprise applique-t-elle des délais de conservation adaptés à la "
-"nature des données traitées ?"
+"Does your company apply a retention period adapted to each purpose of the "
+"processing?"
 msgstr ""
 
 #: data/surveyAlto/questions.json:1430 data/surveyAlto/questions.json:1444
 #: data/surveyAlto/questions.json:1458 data/surveyAlto/questions.json:1472
 #: data/surveyAlto/questions.json:1486
 msgid ""
-"Votre entreprise héberge-t-elle les données traitées dans un lieu<sup>1</"
-"sup> de stockage dont la sécurité est adaptée à la sensibilité des données ?"
-"<p><small>[1] Il peut s'agir du local physique (ex. : salle serveurs, "
-"armoire papier, etc.) ou du lieu de stockage effectif (bases de données, "
-"archives, back-ups, classeurs physiques, etc.)<p></small></p>"
+"Does your company host the processed data in a storage location<sup>1</sup> "
+"that ensures appropriate security to the sensitivity of the data?"
+"<p><small>[1] This can be the physical room (e.g. server room, paper "
+"cabinet, etc.) or the actual storage location (databases, archives, back-"
+"ups, physical filing cabinets, etc.) </small></p>"
 msgstr ""
 
 #: data/surveyAlto/questions.json:1495 data/surveyAlto/questions.json:1509
 #: data/surveyAlto/questions.json:1523 data/surveyAlto/questions.json:1537
 #: data/surveyAlto/questions.json:1551
 msgid ""
-"Quelle documentation votre entreprise a mis en place afin de démontrer que "
-"sa gestion des données est conforme au RGPD ?"
+"What documentation has your company put in place to demonstrate that its "
+"data processing is GDPR compliant?"
 msgstr ""
 
 #: data/surveyAlto/questions.json:1557
-msgid "Politiques de protection des données"
+msgid "Data protection policies"
 msgstr ""
 
 #: data/surveyAlto/questions.json:1560 data/surveyAlto/questions.json:1574
@@ -6456,58 +6448,58 @@ msgstr ""
 #: data/surveyAlto/questions.json:1644 data/surveyAlto/questions.json:1658
 #: data/surveyAlto/questions.json:1672 data/surveyAlto/questions.json:1686
 #: data/surveyAlto/questions.json:1700
-msgid "Avez-vous conscience des risques liés à la gestion des données ?"
+msgid "Are you aware of the risks associated with data processing?"
 msgstr ""
 
 #: data/surveyAlto/questions.json:1571
-msgid "Contrat de sous-traitance"
+msgid "Data Processing Agreement"
 msgstr ""
 
 #: data/surveyAlto/questions.json:1585
 msgid ""
-"Annexe au contrat de travail (information relative à la gestion des données "
-"des salariés)"
+"Annex to the employment contract (information on the management of employee "
+"data)"
 msgstr ""
 
 #: data/surveyAlto/questions.json:1599
-msgid "Registres des activités de traitements"
+msgid "Record of processing activities"
 msgstr ""
 
 #: data/surveyAlto/questions.json:1613
-msgid "Procédure interne de gestion des violations de données"
+msgid "Internal standards of data breach management"
 msgstr ""
 
 #: data/surveyAlto/questions.json:1627
-msgid "Procédure interne sur l'exercice des droits des personnes concernées"
+msgid "Internal standards on the exercise of the rights of data subjects"
 msgstr ""
 
 #: data/surveyAlto/questions.json:1641
-msgid "Analyses d'impact"
+msgid "Impact assessment"
 msgstr ""
 
 #: data/surveyAlto/questions.json:1655
-msgid "Clauses contractuelles types (transfert pays-tiers)"
+msgid "Standard contractual clauses (transfer to third countries)"
 msgstr ""
 
 #: data/surveyAlto/questions.json:1669
-msgid "Document de recueil du consentement"
+msgid "Consent collection document"
 msgstr ""
 
 #: data/surveyAlto/questions.json:1697 data/surveyAlto/questions.json:1790
 #: data/surveyAlto/questions.json:1925 data/surveyAlto/questions.json:1990
 #: data/surveyAlto/questions.json:2055 data/surveyAlto/questions.json:2092
-msgid "Risques"
+msgid "Risks"
 msgstr ""
 
 #: data/surveyAlto/questions.json:1709 data/surveyAlto/questions.json:1723
 #: data/surveyAlto/questions.json:1737 data/surveyAlto/questions.json:1751
 #: data/surveyAlto/questions.json:1765 data/surveyAlto/questions.json:1779
 #: data/surveyAlto/questions.json:1793
-msgid "Quels risques ont été identifiés par votre entreprise ?"
+msgid "What risks has your company identified?"
 msgstr ""
 
 #: data/surveyAlto/questions.json:1799
-msgid "Risques internes (humain, ex : perte de clé USB)"
+msgid "Internal risks (human, e.g. loss of USB stick)"
 msgstr ""
 
 #: data/surveyAlto/questions.json:1802 data/surveyAlto/questions.json:1816
@@ -6515,65 +6507,60 @@ msgstr ""
 #: data/surveyAlto/questions.json:1858 data/surveyAlto/questions.json:1872
 #: data/surveyAlto/questions.json:1886 data/surveyAlto/questions.json:1900
 #: data/surveyAlto/questions.json:1914 data/surveyAlto/questions.json:1928
-msgid "Votre entreprise a-t-elle une vue d'ensemble sur les flux des données ?"
+msgid "Does your company have an overview of data flows?"
 msgstr ""
 
 #: data/surveyAlto/questions.json:1813
-msgid "Risques externes (cyber-attaques)"
+msgid "External risks (cyber-attacks)"
 msgstr ""
 
 #: data/surveyAlto/questions.json:1827
-msgid "Risques liés à l'usage de technologies"
+msgid "Risks related to the use of technologies"
 msgstr ""
 
 #: data/surveyAlto/questions.json:1841
-msgid "Accidents (ex. : pannes informatiques, incendies, inondations, etc.)"
+msgid "Accidents (e.g. computer failures, fires, floods, etc.)"
 msgstr ""
 
 #: data/surveyAlto/questions.json:1855
 msgid ""
-"Risques liés aux traitements de données, tels que la prise de décision "
-"automatique et la surveillance"
+"Risks related to data processing, such as automatic decision-making and "
+"monitoring"
 msgstr ""
 
 #: data/surveyAlto/questions.json:1869
 msgid ""
-"Risques liés aux données traitées dites sensibles (ex : origine raciale, "
-"opinion politique et religieuse, orientation sexuelle, biométrie, etc.)"
+"Risks related to processing of sensitive data (e.g. racial origin, political "
+"and religious opinion, sexual orientation, biometrics, etc.)"
 msgstr ""
 
 #: data/surveyAlto/questions.json:1883
 msgid ""
-"Risques liés aux transferts dans des pays situés en dehors de l'Union "
-"européenne"
+"Risks related to transfers to a third country outside the European Union"
 msgstr ""
 
 #: data/surveyAlto/questions.json:1897
 msgid ""
-"Risques liés aux traitements de données de personnes vulnérables (ex : "
-"mineur)"
+"Risks related to the processing of data of vulnerable natural persons (e.g. "
+"children)"
 msgstr ""
 
 #: data/surveyAlto/questions.json:1937 data/surveyAlto/questions.json:1951
 #: data/surveyAlto/questions.json:1965 data/surveyAlto/questions.json:1979
 #: data/surveyAlto/questions.json:1993
-msgid ""
-"Votre entreprise a-t-elle mis en place des mesures pour garantir la sécurité "
-"des données ?"
+msgid "Does your company have some process in place to ensure data security?"
 msgstr ""
 
 #: data/surveyAlto/questions.json:2002 data/surveyAlto/questions.json:2016
 #: data/surveyAlto/questions.json:2030 data/surveyAlto/questions.json:2044
 #: data/surveyAlto/questions.json:2058
 msgid ""
-"Votre entreprise sait-elle comment réagir en cas  de fuites ou de "
-"destructions de données personnelles (data breach) ?"
+"Does your company know how to react in the event of leaks or destruction of "
+"personal data (data breach)?"
 msgstr ""
 
 #: data/surveyAlto/questions.json:2067 data/surveyAlto/questions.json:2095
-msgid ""
-"Comment réagissez-vous en cas de fuites ou de destructions de données "
-"personnelles ?"
+msgid "How do you react in the event of leaks or destruction of personal data?"
 msgstr ""
 
 #: data/surveyAlto/questions.json:2081 data/surveyAlto/questions.json:2104
@@ -6582,84 +6569,86 @@ msgstr ""
 #: data/surveyAlto/questions.json:2174 data/surveyAlto/questions.json:2188
 #: data/surveyAlto/questions.json:2202 data/surveyAlto/questions.json:2216
 msgid ""
-"Certaines données traitées sont-elles transférées vers un pays tiers  (hors "
-"de l'Union européenne)?"
+"Are some processed data transferred to a third country (outside the European "
+"Union)?"
 msgstr ""
 
 #: data/surveyAlto/questions.json:2101
-msgid "Analyse d'impact des personnes concernées"
+msgid "Impact analysis of data subjects"
 msgstr ""
 
 #: data/surveyAlto/questions.json:2115
 msgid ""
-"Information des personnes concernées en cas de risque élevé pour les droits "
-"et libertés de ces dernières"
+"Information of data subjects in the event of a high risk to their rights and "
+"freedoms"
 msgstr ""
 
 #: data/surveyAlto/questions.json:2129
-msgid "Tableau des risques (évaluant les niveaux de gravité)"
+msgid "Risk table (assessing severity levels)"
 msgstr ""
 
 #: data/surveyAlto/questions.json:2143
-msgid "Mise à exécution d'une procédure de réaction prévue à cet effet"
+msgid "Implementation of a reaction procedure provided for this purpose"
 msgstr ""
 
 #: data/surveyAlto/questions.json:2157
-msgid "Formulaire de notification des violations de données de la CNPD"
+msgid "CNPD data breach notification form"
 msgstr ""
 
 #: data/surveyAlto/questions.json:2171
-msgid "Prise de mesures pour empêcher que la violation ne se reproduise"
+msgid "Taking adequate actions to ensure that the breach does not happen again"
 msgstr ""
 
 #: data/surveyAlto/questions.json:2213 data/surveyAlto/questions.json:2278
 #: data/surveyAlto/questions.json:2343 data/surveyAlto/questions.json:2408
-#: data/surveyAlto/questions.json:2487
-msgid "Transferts"
+msgid "Transfers"
 msgstr ""
 
 #: data/surveyAlto/questions.json:2225 data/surveyAlto/questions.json:2239
 #: data/surveyAlto/questions.json:2253 data/surveyAlto/questions.json:2267
 #: data/surveyAlto/questions.json:2281
-msgid ""
-"Votre entreprise utilise-t-elle des services en ligne gratuits ou payants ?"
+msgid "Does your company use free or paid online services?"
 msgstr ""
 
 #: data/surveyAlto/questions.json:2290 data/surveyAlto/questions.json:2318
 #: data/surveyAlto/questions.json:2346
 msgid ""
-"Votre entreprise vérifie-t-elle où sont localisées les données hébergées par "
-"ces fournisseurs de services en ligne ?"
+"Does your company check where the data hosted by these online service "
+"providers is located?"
 msgstr ""
 
 #: data/surveyAlto/questions.json:2304 data/surveyAlto/questions.json:2332
-#: data/surveyAlto/questions.json:2355 data/surveyAlto/questions.json:2369
-#: data/surveyAlto/questions.json:2383 data/surveyAlto/questions.json:2397
-#: data/surveyAlto/questions.json:2411
-msgid ""
-"Votre entreprise a-t-elle fait signer un document écrit reprenant les "
-"exigences en matière de protection des données à respecter par la société "
-"située dans un pays hors de l'Union européenne ?"
-msgstr ""
-
 #: data/surveyAlto/questions.json:2420 data/surveyAlto/questions.json:2434
 #: data/surveyAlto/questions.json:2448 data/surveyAlto/questions.json:2462
 #: data/surveyAlto/questions.json:2476 data/surveyAlto/questions.json:2490
 msgid ""
-"Y a-t-il d'autres aspects non abordés dans le présent questionnaire qui "
-"semblent importants de traiter pour votre entreprise ?"
+"Are there other aspects not dealt with in this questionnaire that seem "
+"important to address for your company?"
+msgstr ""
+
+#: data/surveyAlto/questions.json:2355 data/surveyAlto/questions.json:2369
+#: data/surveyAlto/questions.json:2383 data/surveyAlto/questions.json:2397
+#: data/surveyAlto/questions.json:2411
+msgid ""
+"Has your company had a written document signed containing the data "
+"protection requirements to be respected by the  company located in a third "
+"country outside the European Union?"
 msgstr ""
 
 #: data/surveyAlto/questions.json:2473
 msgid ""
-"Non, le fournisseur est établi àdans un Etat fournissant une protection des "
-"données adéquate au RGPD<sup>1</sup><p><small>[1] Andorre, Argentine, "
-"Canada, Corée du Sud, Îles Féroé, Guernesey, Israël, l'Île de Man, Japon, "
-"Jersey, Nouvelle-Zélande, Royaume-Uni, Suisse ou Uruguay.</small></p>"
+"No, the provider is established in a state having an adequate level of data "
+"protection to the GDPR<sup>1</sup><p><small>[1] Andorra, Argentina, Canada, "
+"South Korea, Faroe Islands, Guernsey, Israel, Isle of Man, Japan, Jersey, "
+"New Zealand , United Kingdom, Switzerland or Uruguay.</small></p>"
+msgstr ""
+
+#: data/surveyAlto/questions.json:2487
+msgid "Comments"
 msgstr ""
 
 #: data/surveyAlto/questions.json:2496
-msgid "Veuillez préciser :"
+msgid "Please specify:"
 msgstr ""
 
 #: data/surveySMEDemand/context-questions.json:4
@@ -6760,72 +6749,16 @@ msgstr ""
 msgid "What is your activity sector?"
 msgstr ""
 
-#: data/surveySMEDemand/context-questions.json:185
-msgid "Agriculture, forestry and fishing"
-msgstr ""
-
-#: data/surveySMEDemand/context-questions.json:192
-msgid "Mining and quarrying"
-msgstr ""
-
-#: data/surveySMEDemand/context-questions.json:199
-msgid "Manufacturing"
-msgstr ""
-
-#: data/surveySMEDemand/context-questions.json:206
-msgid "Electricity, gas, steam and air conditioning supply"
-msgstr ""
-
 #: data/surveySMEDemand/context-questions.json:213
 msgid "Water supply; sewerage; waste management and remediation activities"
-msgstr ""
-
-#: data/surveySMEDemand/context-questions.json:227
-msgid "Wholesale and retail trade; repair of motor vehicles and motorcycles"
 msgstr ""
 
 #: data/surveySMEDemand/context-questions.json:234
 msgid "Transporting and storage"
 msgstr ""
 
-#: data/surveySMEDemand/context-questions.json:241
-msgid "Accommodation and food service activities"
-msgstr ""
-
-#: data/surveySMEDemand/context-questions.json:248
-msgid "Information and communication"
-msgstr ""
-
-#: data/surveySMEDemand/context-questions.json:255
-msgid "Financial and insurance activities"
-msgstr ""
-
-#: data/surveySMEDemand/context-questions.json:262
-msgid "Real estate activities"
-msgstr ""
-
-#: data/surveySMEDemand/context-questions.json:269
-msgid "Professional, scientific and technical activities"
-msgstr ""
-
-#: data/surveySMEDemand/context-questions.json:276
-msgid "Administrative and support service activities"
-msgstr ""
-
 #: data/surveySMEDemand/context-questions.json:283
 msgid "Public administration and defense; compulsatory social security"
-msgstr ""
-
-#: data/surveySMEDemand/context-questions.json:290
-msgid "Education"
-msgstr ""
-
-#: data/surveySMEDemand/context-questions.json:297
-msgid "Human health and social work activities"
-msgstr ""
-
-#: data/surveySMEDemand/context-questions.json:304
-msgid "Arts, entertainment and recreation"
 msgstr ""
 
 #: data/surveySMEDemand/context-questions.json:311
@@ -6836,10 +6769,6 @@ msgstr ""
 msgid ""
 "Activities of hoseholds as employers; undifferentiated goods - and services "
 "- producing activities of households for own use"
-msgstr ""
-
-#: data/surveySMEDemand/context-questions.json:325
-msgid "Activities of extraterritorial organisations and bodies"
 msgstr ""
 
 #: data/surveySMEDemand/questions.json:3 data/surveySMEDemand/questions.json:82
@@ -7536,15 +7465,6 @@ msgstr ""
 msgid "Legal constraints"
 msgstr ""
 
-#: data/surveySMEDemand/questions.json:1844
-#: data/surveySMEDemand/questions.json:1965
-#: data/surveySMEDemand/questions.json:2044
-#: data/surveySMEDemand/questions.json:2290
-#: data/surveySMEDemand/questions.json:2369
-#: data/surveySMEDemand/questions.json:2447
-msgid "I don't know"
-msgstr ""
-
 #: data/surveySMEDemand/questions.json:1875
 #: data/surveySMEDemand/questions.json:1889
 #: data/surveySMEDemand/questions.json:1903
@@ -7747,10 +7667,6 @@ msgid "Others"
 msgstr ""
 
 #: stats/views.py:133
-msgid "In progress"
-msgstr ""
-
-#: stats/views.py:133
 msgid "Under review"
 msgstr ""
 
@@ -7762,7 +7678,7 @@ msgstr ""
 msgid "You need to choose at least one answer"
 msgstr ""
 
-#: survey/forms.py:115 survey/forms.py:190
+#: survey/forms.py:117 survey/forms.py:192
 #: templates/survey/finishedSurvey.html:196
 #: templates/survey/finishedSurvey.html:210 templates/survey/review.html:50
 #: templates/surveyAlto/survey/finishedSurvey.html:186
@@ -7771,15 +7687,15 @@ msgstr ""
 msgid "Your feedback"
 msgstr ""
 
-#: survey/forms.py:117 survey/forms.py:192
+#: survey/forms.py:119 survey/forms.py:194
 msgid "Please let us know if anything is missing"
 msgstr ""
 
-#: survey/forms.py:152
+#: survey/forms.py:154
 msgid "You can't choose multiple answers if the answer {} is choosen."
 msgstr ""
 
-#: survey/forms.py:167
+#: survey/forms.py:169
 msgid "You can't choose the answers {} if answer '{}' is choosen."
 msgstr ""
 
@@ -7979,29 +7895,23 @@ msgid "eQualis"
 msgstr ""
 
 #: templates/parts/privacy_policy_part.html:2
-msgid "Politique de confidentialité et gestion des cookies"
-msgstr ""
-
-#: templates/parts/privacy_policy_part.html:4
-#: templates/parts/privacy_policy_part.html:7
-msgid "Gestion des cookies"
+msgid "Privacy policy and cookie settings"
 msgstr ""
 
 #: templates/parts/privacy_policy_part.html:5
 #: templates/parts/privacy_policy_part.html:39
-msgid "Information concernant le traitement de données à caractère personnel"
+msgid "Information regarding the processing of personal data "
 msgstr ""
 
 #: templates/parts/privacy_policy_part.html:9
 msgid ""
-"Un cookie est un fichier texte envoyé à votre navigateur et enregistré sur "
-"le disque dur de votre terminal (PC, ordinateur portable ou smartphone, par "
-"exemple) lors de la visite d'un site internet. <br><br> Les cookies peuvent "
-"par exemple être utilisés afin d'assurer le bon fonctionnement d'un site et "
-"d'optimiser son ergonomie et ses fonctionnalités. <br><br> Les cookies que "
-"nous utilisons sur ce site sont strictement nécessaires afin d'assurer son "
-"bon fonctionnement et pour vous permettre de compléter le formulaire en "
-"ligne, à savoir :"
+"A cookie is a text file sent to your browser and saved on the hard drive of "
+"your terminal (PC, laptop or smartphone, for example) when visiting a "
+"website. <br><br> Cookies can for example be used to ensure the proper "
+"functioning of a site and to optimize its ergonomics and its "
+"functionalities. <br><br> The cookies we use on this site are strictly "
+"necessary to ensure its proper functioning and to allow you to complete the "
+"online form, namely:"
 msgstr ""
 
 #: templates/parts/privacy_policy_part.html:21
@@ -8018,25 +7928,23 @@ msgid "Content"
 msgstr ""
 
 #: templates/parts/privacy_policy_part.html:24
-msgid "Max age"
+msgid "Maximum term"
 msgstr ""
 
 #: templates/parts/privacy_policy_part.html:41
 msgid ""
-"Le présent questionnaire est anonyme et ne nécessite pas la collecte de "
-"données à caractère personnel auprès des personnes amenées à y répondre. "
-"<br><br> Les utilisateurs sont invités à répondre au présent questionnaire "
-"en veillant à ne pas communiquer, dans les champs libres de celui-ci, toute "
-"information permettant d'identifier une personne physique (ex. : nom, "
-"prénom, coordonnées, etc.). Pour le cas où des données à caractère personnel "
-"seraient toutefois renseignées par erreur dans les champs libres du "
-"questionnaire en ligne, celles-ci seront supprimées. <br><br> Les réponses "
-"au questionnaire en ligne seront accessibles uniquement par le Commissaire "
-"et les agents de la CNPD ainsi que par les agents de la LHC-NC3 dédiés au "
-"projet ALTO, afin d'assurer l'analyse des réponses données et le bon "
-"fonctionnement technique. <br><br> Pour toute question concernant les "
-"traitements de données à caractère personnel effectués par la CNPD, vous "
-"pouvez contacter le délégué à la protection des données (DPO) de la CNPD : "
+"This questionnaire is anonymous and does not require the collection of "
+"personal data from the people who replies to it. <br><br> Users are invited "
+"to answer this questionnaire, taking care not to communicate, in the free-"
+"text fields of it, any information allowing the identification of a natural "
+"person (e.g. surname, first name, contact details, etc.). In the event that "
+"personal data is however entered in the free-text fields of the online "
+"questionnaire, these will be deleted. <br><br> The answers to the online "
+"questionnaire will be accessible only by the Commissioner and the CNPD "
+"agents as well as by the LHC-NC3 agents dedicated to the ALTO project, in "
+"order to ensure the analysis of the answers given and the proper technical "
+"operation. <br><br> For any questions regarding the processing of personal "
+"data by the CNPD, you can contact the CNPD's Data Protection Officer (DPO): "
 "<a href=\"mailto:dpo@cnpd.lu\">dpo@cnpd.lu</a>"
 msgstr ""
 
@@ -8147,7 +8055,7 @@ msgid ""
 "loosing of your answer(s). Would you like to proceed?"
 msgstr ""
 
-#: templates/survey/base.html:19
+#: templates/survey/base.html:19 templates/surveyAlto/survey/base.html:19
 msgid "a NC3 self-assessment tool!"
 msgstr ""
 
@@ -8284,32 +8192,32 @@ msgid "Would like to leave survey?"
 msgstr ""
 
 #: templates/survey/questions.html:45
-#: templates/surveyAlto/survey/questions.html:58
+#: templates/surveyAlto/survey/questions.html:52
 msgid "Multiple answers are possible."
 msgstr ""
 
 #: templates/survey/questions.html:57
-#: templates/surveyAlto/survey/questions.html:70
+#: templates/surveyAlto/survey/questions.html:65
 msgid "Back"
 msgstr ""
 
 #: templates/survey/questions.html:65
-#: templates/surveyAlto/survey/questions.html:78
+#: templates/surveyAlto/survey/questions.html:73
 msgid "Cancel"
 msgstr ""
 
 #: templates/survey/questions.html:74 templates/survey/review.html:67
-#: templates/surveyAlto/survey/questions.html:87
+#: templates/surveyAlto/survey/questions.html:88
 msgid "Continue later"
 msgstr ""
 
 #: templates/survey/questions.html:79
-#: templates/surveyAlto/survey/questions.html:92
+#: templates/surveyAlto/survey/questions.html:79
 msgid "Modify"
 msgstr ""
 
 #: templates/survey/questions.html:79 templates/survey/start.html:39
-#: templates/surveyAlto/survey/questions.html:92
+#: templates/surveyAlto/survey/questions.html:79
 #: templates/surveyAlto/survey/start.html:33
 msgid "Next"
 msgstr ""
@@ -8547,31 +8455,32 @@ msgstr ""
 
 #: templates/surveyAlto/survey/finishedSurvey.html:28
 msgid ""
-"Nous vous remercions pour votre participation au projet ALTO, outil d'auto-"
-"évaluation dédié à la mise en conformité des PME aux exigences du RGPD. "
-"<br><br> Toute PME est invitée à faire part de son intérêt à participer à la "
-"phase « Pilote » par e-mail à l'adresse électronique : <a href=\"mailto:"
-"alto@cnpd.lu\">alto@cnpd.lu</a>"
+"Thank you for your participation in the ALTO project, a self-assessment tool "
+"dedicated to bringing SMEs into compliance with GDPR requirements. <br><br> "
+"Any SME is invited to express its interest in participating in the “Pilot” "
+"phase by e-mail to the e-mail address: <a href=\"mailto:alto@cnpd.lu"
+"\">alto@cnpd.lu</a>"
 msgstr ""
 
 #: templates/surveyAlto/survey/index.html:21
-msgid "Quels sont les défis RGPD des PME ?"
+msgid "What are the GDPR challenges for SMEs?"
 msgstr ""
 
 #: templates/surveyAlto/survey/index.html:36
-msgid "Durée: 15 min"
+msgid "Length: 15 min"
 msgstr ""
 
 #: templates/surveyAlto/survey/index.html:43
-msgid "Appel à participation :"
+msgid "Call for participation:"
 msgstr ""
 
 #: templates/surveyAlto/survey/index.html:45
 msgid ""
-"La phase « Pilote » du projet ALTO nécessitera un appel à participation des "
-"PME lors du 4ème trimestre de l'année 2023. <br><br> Toute PME est invitée à "
-"faire part de son intérêt à participer à la phase « Pilote » par e-mail à "
-"l'adresse électronique : <a href=\"mailto:alto@cnpd.lu\">alto@cnpd.lu</a>"
+"The \"Pilot\" phase of the ALTO project will require a call for "
+"participation from SMEs during the 4th quarter of 2023. <br><br> All SMEs "
+"are invited to express their interest in participating in the \"Pilot\" "
+"phase by e-mail to email address: <a href=\"mailto:alto@cnpd.lu\">alto@cnpd."
+"lu</a>"
 msgstr ""
 
 #: templates/surveySMEDemand/survey/finishedSurvey.html:26
