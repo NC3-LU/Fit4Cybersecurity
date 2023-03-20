@@ -1,17 +1,17 @@
 {% load i18n %}
-  <h1>{{ _('Politique de confidentialité et gestion des cookies') }}</h1>
+  <h1>{{ _('Privacy policy and cookie settings') }}</h1>
   <ul>
-  <li><a href="#cookies">{{ _('Gestion des cookies') }}</a></li>
-  <li><a href="#privacy">{{ _('Information concernant le traitement de données à caractère personnel') }}</a></li>
+  <li><a href="#cookies">{{ _('Cookie settings') }}</a></li>
+  <li><a href="#privacy">{{ _('Information regarding the processing of personal data ') }}</a></li>
   </ul>
-  <h2><a id="cookies">{{ _('Gestion des cookies') }}</a></h2>
+  <h2><a id="cookies">{{ _('Cookie settings') }}</a></h2>
   <p class="text-justify">
     {% blocktranslate trimmed %}
-    Un cookie est un fichier texte envoyé à votre navigateur et enregistré sur le disque dur de votre terminal (PC, ordinateur portable ou smartphone, par exemple) lors de la visite d'un site internet.
+    A cookie is a text file sent to your browser and saved on the hard drive of your terminal (PC, laptop or smartphone, for example) when visiting a website.
     <br><br>
-    Les cookies peuvent par exemple être utilisés afin d'assurer le bon fonctionnement d'un site et d'optimiser son ergonomie et ses fonctionnalités.
+    Cookies can for example be used to ensure the proper functioning of a site and to optimize its ergonomics and its functionalities. 
     <br><br>
-    Les cookies que nous utilisons sur ce site sont strictement nécessaires afin d'assurer son bon fonctionnement et pour vous permettre de compléter le formulaire en ligne, à savoir :
+    The cookies we use on this site are strictly necessary to ensure its proper functioning and to allow you to complete the online form, namely:
     {% endblocktranslate %}
   </p>
   {% for cookiegroup in groups %}
@@ -21,7 +21,7 @@
           <th scope="col">{{ _('Name') }}</th>
           <th scope="col">{{ _('Description') }}</th>
           <th scope="col">{{ _('Content') }}</th>
-          <th scope="col">{{ _('Max age') }}</th>
+          <th scope="col">{{ _('Maximum term') }}</th>
         </tr>
       </thead>
       <tbody>
@@ -36,16 +36,16 @@
       </tbody>
     </table>
   {% endfor %}
-  <h2><a id="privacy">{{ _('Information concernant le traitement de données à caractère personnel') }}</a></h2>
+  <h2><a id="privacy">{{ _('Information regarding the processing of personal data ') }}</a></h2>
   <p class="text-justify">
     {% blocktranslate trimmed %}
-    Le présent questionnaire est anonyme et ne nécessite pas la collecte de données à caractère personnel auprès des personnes amenées à y répondre. 
+    This questionnaire is anonymous and does not require the collection of personal data from the people who replies to it.
     <br><br>
-    Les utilisateurs sont invités à répondre au présent questionnaire en veillant à ne pas communiquer, dans les champs libres de celui-ci, toute information permettant d'identifier une personne physique (ex. : nom, prénom, coordonnées, etc.). Pour le cas où des données à caractère personnel seraient toutefois renseignées par erreur dans les champs libres du questionnaire en ligne, celles-ci seront supprimées. 
+    Users are invited to answer this questionnaire, taking care not to communicate, in the free-text fields of it, any information allowing the identification of a natural person (e.g. surname, first name, contact details, etc.). In the event that personal data is however entered in the free-text fields of the online questionnaire, these will be deleted.
     <br><br>
-    Les réponses au questionnaire en ligne seront accessibles uniquement par le Commissaire et les agents de la CNPD ainsi que par les agents de la LHC-NC3 dédiés au projet ALTO, afin d'assurer l'analyse des réponses données et le bon fonctionnement technique. 
+    The answers to the online questionnaire will be accessible only by the Commissioner and the CNPD agents as well as by the LHC-NC3 agents dedicated to the ALTO project, in order to ensure the analysis of the answers given and the proper technical operation. 
     <br><br>
-    Pour toute question concernant les traitements de données à caractère personnel effectués par la CNPD, vous pouvez contacter le délégué à la protection des données (DPO) de la CNPD : <a href="mailto:dpo@cnpd.lu">dpo@cnpd.lu</a>
+    For any questions regarding the processing of personal data by the CNPD, you can contact the CNPD's Data Protection Officer (DPO): <a href="mailto:dpo@cnpd.lu">dpo@cnpd.lu</a>
     {% endblocktranslate %}
   </p>
 

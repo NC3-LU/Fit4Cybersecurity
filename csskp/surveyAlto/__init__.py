@@ -4,13 +4,13 @@ CUSTOM = {
     # Generic configurations
     "tool_name": "Survey ALTO",
     "intro_text": gettext_lazy(
-        "Gérer les données personnelles conformément au Règlement Général relatif à la Protection des Données (ci-après le « <strong>RGPD</strong> ») peut constituer un défi pour les petites et moyennes entreprises (ci-après les « <strong>PME</strong> »), qui sont souvent désavantagées par rapport aux grandes structures en termes de coûts et d'impact, notamment. De plus, le développement de stratégies de gestion de données ou de « réflexes de responsable de traitement » sont rarement en tête des priorités – les éventuels manques de connaissance et de sensibilisation, d'une part, et d'informations et d'outils pratiques, d'autre part pourraient constituer les causes présumées. En tout état de cause, il est nécessaire de renforcer la sensibilisation des PME à l'importance de la protection des données à caractère personnel et de les accompagner pour améliorer leur mise en conformité au RGPD" 
+        "Managing personal data in accordance with the General Data Protection Regulation (hereinafter \"<strong>GDPR</strong>\") can be a challenge for small and medium-sized enterprises (hereinafter \"<strong>SMEs</strong>\"), which are often at a disadvantage compared to large structures in terms of costs and impact, in particular. Moreover, the development of data management strategies or \"data controller reflexes\" are rarely at the top of the agenda - the possible lack of knowledge and awareness, on the one hand, and information and practical tools , on the other hand could constitute the presumed causes. In any case, it is necessary to raise awareness among SMEs of the importance of protecting personal data and to support them in improving their compliance with the GDPR." 
         "<br><br>"
-        "Le projet ALTO, né d'un partenariat entre la Commission nationale pour la protection des données (ci-après « <strong>CNPD</strong> ») et la Luxembourg House of Cybersecurity, National Cybersecurity Competence Center (ci-après le « <strong>LHC-NC3</strong> »), a pour objectif de mettre en œuvre un outil d'auto-évaluation afin de répondre aux défis quotidiens des PME en matière de protection des données."
+        "The ALTO project, born of a partnership between the National Commission for Data Protection (<i>Commission Nationale pour la Protection des Données</i> - \"<strong>CNPD</strong>\") and the Luxembourg House of CyberSecurity, National CyberSecurity Competence Center (hereafter \"<strong>LHC-NC3</strong>\"), has aims to implement a self-assessment tool to meet the daily challenges of SMEs in terms of data protection."
+        "<br><br>" 
+        "This questionnaire, which is intended to be anonymous, aims to identify the data protection obstacles/problems/questions faced by SMEs, in order to create and make available to them a self-assessment tool that meets their needs."
         "<br><br>"
-        "Le présent questionnaire, qui se veut anonyme, a pour but de cerner les obstacles/problèmes/questions en matière de protection des données auxquels sont confrontés les PME, afin de créer et mettre à leur disposition un outil d'auto-évaluation répondant à leurs besoins."
-        "<br><br>"
-        "Pour en savoir plus sur le projet ALTO, nous vous invitons à vous rendre sur <a href=https://cnpd.public.lu/fr/professionnels/outils-conformite/projet-alto.html target=_blank rel=noopener noreferrer>la page internet dédiée.</a>"
+        "To find out more about the ALTO project, we invite you to visit <a href=https://cnpd.public.lu/fr/professionnels/outils-conformite/projet-alto.html target=_blank rel=noopener noreferrer>the dedicated web page.</a>"
     ),
     "countries_first": [
         "LU",
@@ -22,9 +22,9 @@ CUSTOM = {
     ],
     "defaultLanguage": "fr",
     "languages": [
-        # ("en", "English"),
+        ("en", "English"),
         ("fr", "French"),
-        # ("de", "German"),
+        ("de", "German"),
     ],
     # Logos paths
     "right_cover_logo": "templates/report/images/nc3_logo.svg",
