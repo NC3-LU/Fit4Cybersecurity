@@ -44,9 +44,6 @@ def index(request):
 
     user = request.user
 
-    if not user.auditbyuser_set.all():
-        create_audit(request)
-
     auditsByUser = user.auditbyuser_set.all()
     filter_kind_of_company = "AD"
     if user.company_set.all().get().type == "AD":
@@ -57,6 +54,18 @@ def index(request):
             auditByUser.audit.auditbycompany_set.filter(
                 audit_company__type=filter_kind_of_company
             ).first()
+        )
+        auditByUser.typeOfConformity = (
+            auditByUser.audit.survey_user.surveyuseranswer_set.filter(
+                answer__question__id=get_answered_questions_sequences(
+                    auditByUser.audit.survey_user
+                )
+                .first()
+                .question_id,
+                uvalue=1,
+            )
+            .get()
+            .answer.label
         )
         auditByUser.audit.statusDetails = {}
         audit_questions = auditByUser.audit.survey_user.auditquestion_set.all()
@@ -106,8 +115,7 @@ def signup(request):
         formSignUp = SignUpForm()
         formCompany = CompanyForm()
     return render(
-        request, "signup.html", {
-            "formSignUp": formSignUp, "formCompany": formCompany}
+        request, "signup.html", {"formSignUp": formSignUp, "formCompany": formCompany}
     )
 
 
@@ -129,8 +137,7 @@ def audit(request, audit_id: int):
         AuditQuestion.objects.filter(id=id).update(**body)
 
     if not survey_user.auditquestion_set.all().order_by("id").exists():
-        answered_questions_sequences = get_answered_questions_sequences(
-            survey_user)
+        answered_questions_sequences = get_answered_questions_sequences(survey_user)
 
         for answered_question_sequence in answered_questions_sequences:
             audit_question = AuditQuestion()
@@ -191,8 +198,7 @@ def edit_product(request, audit_id: int):
         if user.company_set.all().get().type == "AD":
             return HttpResponseRedirect("/audit")
 
-        form = EditProduct(data=request.POST,
-                           product=Audit.objects.get(id=audit_id))
+        form = EditProduct(data=request.POST, product=Audit.objects.get(id=audit_id))
 
         if form.is_valid():
             audit = Audit.objects.get(id=audit_id)
@@ -215,8 +221,7 @@ def edit_product(request, audit_id: int):
                     },
                 )
             else:
-                audit.auditbycompany_set.filter(
-                    audit_company__type="AD").delete()
+                audit.auditbycompany_set.filter(audit_company__type="AD").delete()
                 audit.auditbyuser_set.filter(user__company__type="AD").delete()
 
             audit.save()
@@ -269,22 +274,15 @@ def create_audit(request):
         if form.is_valid():
             new_certificate = Certificate()
             new_certificate.save()
-            survey_user = find_user_by_id(
-                UUID(form.cleaned_data["survey_user_uuid"]))
+            survey_user = find_user_by_id(UUID(form.cleaned_data["survey_user_uuid"]))
             new_audit = form.save(False)
             new_audit.certificate_id = new_certificate.id
             new_audit.survey_user_id = survey_user.id
             new_audit.save()
-            new_auditbycompany = AuditByCompany(False)
-            new_auditbycompany.audit_id = new_audit.id
-            new_auditbycompany.audit_company_id = (
-                request.user.company_set.all().get().id
+            new_audit.auditbycompany_set.create(
+                audit_company_id=request.user.company_set.all().get().id
             )
-            new_auditbycompany.save()
-            new_auditbyuser = AuditByUser(False)
-            new_auditbyuser.audit_id = new_audit.id
-            new_auditbyuser.user_id = request.user.id
-            new_auditbyuser.save()
+            new_audit.auditbyuser_set.create(user_id=request.user.id)
 
             return HttpResponseRedirect("/audit")
     else:
