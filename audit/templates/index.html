@@ -32,7 +32,10 @@
               <tr>
                 <th scope="col">{{ _('Product name') }}</th>
                 <th scope="col">{{ _('Product reference') }}</th>
-                <th scope="col"> {{ kind_of_company_label }} </th>
+                <th scope="col"> 
+                  {{ kind_of_company_label }} 
+                  <a class="btn bi bi-info-circle-fill text-primary" href="/audit/companies" role="button"></a>
+                </th>
                 <th scope="col">{{ _('Status') }}</th>
                 <th class="text-center" scope="col">{{ _('Actions') }}</th>
               </tr>

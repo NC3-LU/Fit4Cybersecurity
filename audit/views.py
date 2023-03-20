@@ -301,3 +301,10 @@ def edit_audit(request, audit_id=None):
     else:
         form = AuditForm(instance=audit)
     return render(request, "edit_audit.html", {"form": form})
+
+
+@login_required
+def companies_list(request):
+    """View of companies list"""
+    companies = Company.objects.filter(type="AD")
+    return render(request, "companies_list.html", {"companies": companies})

@@ -1,0 +1,46 @@
+{% extends 'survey/base.html' %}
+
+{% load bootstrap4 %}
+{% load apptags %}
+{% load static %}
+
+{% block bootstrap4_extra_head %}
+{{ block.super }}
+    <script type="text/javascript" src="{% static 'audit/js/audit.js' %}"></script>
+{% endblock %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-12">
+            <h2>{{ _('Audit Companies') }}</h2>
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                    <th scope="col">{{ _('Name') }}</th>
+                    <th scope="col">{{ _('Address') }}</th>
+                    <th scope="col">{{ _('Phone') }}</th>
+                    <th scope="col">{{ _('Email') }}</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for company in companies %}
+                    <tr>
+                        <td>{{ company.name }}</td>
+                        <td>
+                            <p>
+                                {{ company.address_street }}<br>
+                                {{ company.address_zip_code }}
+                                {{ company.address_city }}<br>
+                                {{ company.address_country }}
+                            </p>
+
+                        </td>
+                        <td>{{ company.phone }}</td>
+                        <td>{{ company.email }}</td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+{% endblock %}
