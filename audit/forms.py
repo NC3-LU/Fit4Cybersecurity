@@ -44,9 +44,9 @@ class CompanyForm(forms.ModelForm):
 
 
 class AuditForm(forms.ModelForm):
-    product_name = forms.CharField(max_length=30, required=True)
-    product_ref = forms.CharField(max_length=30, required=True)
-    survey_user_uuid = forms.CharField(max_length=50, required=True)
+    product_name = forms.CharField(max_length=30, required=True, label="Name")
+    product_ref = forms.CharField(max_length=30, required=True, label="Reference")
+    survey_user_uuid = forms.CharField(max_length=50, required=True, label="Self-assessment id")
 
     class Meta:
         model = Audit
