@@ -1,6 +1,7 @@
 import json
 from typing import Any
 from typing import Dict
+from uuid import UUID
 
 from django.contrib import messages
 from django.contrib.auth import authenticate
@@ -22,10 +23,14 @@ from audit.forms import SignUpForm
 from audit.forms import StatusChoices
 from audit.models import Audit
 from audit.models import AuditQuestion
+from audit.models import Certificate
 from audit.models import Company
+from audit.models import AuditByCompany
+from audit.models import AuditByUser
 from csskp.settings import CUSTOM
 from survey.models import CONTEXT_SECTION_LABEL
 from survey.viewLogic import get_answered_questions_sequences
+from survey.viewLogic import find_user_by_id
 
 
 @login_required
@@ -37,9 +42,14 @@ def index(request):
         id = body.pop("id", None)
         Audit.objects.filter(id=id).update(**body)
 
-    auditsByUser = request.user.auditbyuser_set.all()
+    user = request.user
+
+    if not user.auditbyuser_set.all():
+        create_audit(request)
+
+    auditsByUser = user.auditbyuser_set.all()
     filter_kind_of_company = "AD"
-    if request.user.company_set.all().get().type == "AD":
+    if user.company_set.all().get().type == "AD":
         filter_kind_of_company = "CS"
 
     for auditByUser in auditsByUser:
@@ -96,7 +106,8 @@ def signup(request):
         formSignUp = SignUpForm()
         formCompany = CompanyForm()
     return render(
-        request, "signup.html", {"formSignUp": formSignUp, "formCompany": formCompany}
+        request, "signup.html", {
+            "formSignUp": formSignUp, "formCompany": formCompany}
     )
 
 
@@ -118,7 +129,8 @@ def audit(request, audit_id: int):
         AuditQuestion.objects.filter(id=id).update(**body)
 
     if not survey_user.auditquestion_set.all().order_by("id").exists():
-        answered_questions_sequences = get_answered_questions_sequences(survey_user)
+        answered_questions_sequences = get_answered_questions_sequences(
+            survey_user)
 
         for answered_question_sequence in answered_questions_sequences:
             audit_question = AuditQuestion()
@@ -179,7 +191,8 @@ def edit_product(request, audit_id: int):
         if user.company_set.all().get().type == "AD":
             return HttpResponseRedirect("/audit")
 
-        form = EditProduct(data=request.POST, product=Audit.objects.get(id=audit_id))
+        form = EditProduct(data=request.POST,
+                           product=Audit.objects.get(id=audit_id))
 
         if form.is_valid():
             audit = Audit.objects.get(id=audit_id)
@@ -195,16 +208,15 @@ def edit_product(request, audit_id: int):
                         "audit_company_id": form.cleaned_data["company"].id,
                     },
                 )
-                audit.auditbyuser_set.filter(
-                    user__company__type="AD"
-                ).update_or_create(
+                audit.auditbyuser_set.filter(user__company__type="AD").update_or_create(
                     audit_id=audit_id,
                     defaults={
                         "user_id": form.cleaned_data["company"].company_admin_id,
                     },
                 )
             else:
-                audit.auditbycompany_set.filter(audit_company__type="AD").delete()
+                audit.auditbycompany_set.filter(
+                    audit_company__type="AD").delete()
                 audit.auditbyuser_set.filter(user__company__type="AD").delete()
 
             audit.save()
@@ -255,10 +267,26 @@ def create_audit(request):
     if request.method == "POST":
         form = AuditForm(request.POST)
         if form.is_valid():
-            form = AuditForm(request.POST)
+            new_certificate = Certificate()
+            new_certificate.save()
+            survey_user = find_user_by_id(
+                UUID(form.cleaned_data["survey_user_uuid"]))
             new_audit = form.save(False)
+            new_audit.certificate_id = new_certificate.id
+            new_audit.survey_user_id = survey_user.id
             new_audit.save()
-            return redirect(f"/audit/audit/{new_audit.id}")
+            new_auditbycompany = AuditByCompany(False)
+            new_auditbycompany.audit_id = new_audit.id
+            new_auditbycompany.audit_company_id = (
+                request.user.company_set.all().get().id
+            )
+            new_auditbycompany.save()
+            new_auditbyuser = AuditByUser(False)
+            new_auditbyuser.audit_id = new_audit.id
+            new_auditbyuser.user_id = request.user.id
+            new_auditbyuser.save()
+
+            return HttpResponseRedirect("/audit")
     else:
         form = AuditForm()
     return render(request, "edit_audit.html", {"form": form})
