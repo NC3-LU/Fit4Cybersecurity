@@ -8,7 +8,9 @@ from rest_framework.response import Response
 from rest_framework.views import APIView
 
 from .serializers import AuditQuestionSerializer
+from .serializers import AuditSerializer
 from .serializers import CompanySerializer
+from audit.models import Audit
 from audit.models import AuditQuestion
 from audit.models import Company
 
@@ -45,6 +47,27 @@ class CompanyApiView(APIView):
             serializer.save()
             return Response(serializer.data)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+
+#
+# Model: Audit
+#
+
+
+class AuditApiView(APIView):
+    # add permission to check if user is authenticated
+    authentication_classes = [SessionAuthentication, BasicAuthentication]
+    permission_classes = [IsAuthenticated, IsAdminUser]
+
+    # List all
+    @extend_schema(request=None, responses=AuditSerializer)
+    def get(self, request, *args, **kwargs):
+        """
+        List all the items.
+        """
+        objects = Audit.objects.all()
+        serializer = AuditSerializer(objects, many=True)
+        return Response(serializer.data, status=status.HTTP_200_OK)
 
 
 #

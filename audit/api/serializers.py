@@ -26,6 +26,12 @@ class CompanySerializer(serializers.ModelSerializer):
         return Company.objects.create(**validated_data)
 
 
+class AuditSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = AuditQuestion
+        fields = ["id", "product_name", "product_ref", "status"]
+
+
 class AuditQuestionSerializer(serializers.ModelSerializer):
     class Meta:
         model = AuditQuestion
