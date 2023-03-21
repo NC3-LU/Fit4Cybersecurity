@@ -8,6 +8,7 @@ from rest_framework.response import Response
 from rest_framework.views import APIView
 
 from .serializers import AuditQuestionSerializer
+from .serializers import AuditRequestSerializer
 from .serializers import AuditSerializer
 from .serializers import CompanySerializer
 from audit.models import Audit
@@ -68,6 +69,18 @@ class AuditApiView(APIView):
         objects = Audit.objects.all()
         serializer = AuditSerializer(objects, many=True)
         return Response(serializer.data, status=status.HTTP_200_OK)
+
+    # Create an audit
+    @extend_schema(request=AuditRequestSerializer)
+    def post(self, request, *args, **kwargs):
+        """
+        Create a new audit.
+        """
+        serializer = AuditRequestSerializer(data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
 #

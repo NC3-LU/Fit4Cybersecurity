@@ -17,6 +17,6 @@ urlpatterns = [
     ),
     path("redoc/", SpectacularRedocView.as_view(url_name="audit"), name="redoc-audit"),
     path("company/", CompanyApiView.as_view()),
-    path("audit_question/", AuditApiView.as_view()),
+    path("audit/", AuditApiView.as_view()),
     path("audit_question/", AuditQuestionApiView.as_view()),
 ]
