@@ -145,3 +145,5 @@ class EditProduct(forms.Form):
             type="AD", is_active=True
         )
         self.fields["company"].initial = initialCompany
+        if product.auditbycompany_set.filter(audit_company__type="AD"):
+             self.fields["company"].disabled = True
