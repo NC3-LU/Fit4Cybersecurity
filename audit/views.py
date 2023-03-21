@@ -1,7 +1,6 @@
 import json
 from typing import Any
 from typing import Dict
-from uuid import UUID
 
 from django.contrib import messages
 from django.contrib.auth import authenticate
@@ -25,8 +24,6 @@ from audit.models import Audit
 from audit.models import AuditQuestion
 from audit.models import Certificate
 from audit.models import Company
-from audit.models import AuditByCompany
-from audit.models import AuditByUser
 from csskp.settings import CUSTOM
 from survey.models import CONTEXT_SECTION_LABEL
 from survey.viewLogic import get_answered_questions_sequences
@@ -274,7 +271,7 @@ def create_audit(request):
         if form.is_valid():
             new_certificate = Certificate()
             new_certificate.save()
-            survey_user = find_user_by_id(UUID(form.cleaned_data["survey_user_uuid"]))
+            survey_user = find_user_by_id(form.cleaned_data["survey_user_uuid"])
             new_audit = form.save(False)
             new_audit.certificate_id = new_certificate.id
             new_audit.survey_user_id = survey_user.id
