@@ -7,4 +7,6 @@ class IsAuditor(BasePermission):
     """
 
     def has_permission(self, request, view):
-        return bool(request.user and request.user.audit_user)
+        return bool(
+            request.user and request.user.groups.filter(name="auditor").exists()
+        )
