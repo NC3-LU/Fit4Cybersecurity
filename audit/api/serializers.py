@@ -47,7 +47,12 @@ class AuditRequestSerializer(serializers.ModelSerializer):
         """
         Create and return a new instance, given the validated data.
         """
-        # print(validated_data)
+        print(validated_data)
+        if not SurveyUser.objects.filter(
+            user_id=validated_data["survey_user"].user_id, status=3
+        ).exists():
+            error = {"message": "This survey is not finished."}
+            raise serializers.ValidationError(error)
         return Audit.objects.create(**validated_data)
 
 
