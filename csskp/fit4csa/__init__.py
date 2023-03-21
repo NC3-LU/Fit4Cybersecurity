@@ -4,13 +4,18 @@ CUSTOM = {
     # Generic configurations
     "tool_name": "Fit4CSA",
     "intro_text": gettext_lazy(
-        "You might want to assess either an ICT service, an ICT process, an ICT Web application or an ICT generic product."
+        "Fit4CSA is a self-assessment tool to streamline the process of applying for a basic-level cybersecurity certification in the context of the CyberSecurity Act (CSA - EU 2019/881). Fit4CSA is part of the <a href=\"https://coral-project.org/\" target=\"_blank\">CORAL</a> EU-funded project."
         "<br><br>"
-        "Depending on your choice from these 4 options, the tool will present to you a questionnaire with several multiple choice questions. Sometimes you can select one single answer, sometimes multiple answers are possible."
+        "<h4>How does Fit4CSA work?</h4>"
+        "<ol>"
+        "<li>Select what you would like to assess: an ICT service, an ICT process, an ICT product - Web application or an ICT generic product.</li>"
+        "<li>Depending on your choice, you will need to fill in a questionnaire with both single choice and multiple choice questions. If you have supporting evidence for each of your answers (a policy, procedure, etc.), we recommend that you to keep track of this all throughout the questionnaire in order to establish a mapping of this evidence as you progress.</li>"
+        "<li>At the end of the survey, you will be given a score and a set of recommendations. Your cybersecurity maturity can improve if you follow these recommendations.</li>"
+        "<li>If you scored at least 85%, Fit4CSA will additionally ask if you want a CSA conformity self-assessment, or to apply a basic-level certification. In the first case, you will be able to download the report with your answers and use it as a basis of your conformity self-assessment. In the second case, you will be asked to register and start an audit process based on the report issued within Fit4CSA. Keep in mind that all evidence supporting your answers might be requested later by the auditor of your choice.</li>"
+        "</ol>"
+        "The first 3 steps of this process are anonymous."
         "<br><br>"
-        "Please take your time and respond truthfully, knowing that your self-assessment is key to correctly quantify the maturity of your service, process, application or generic product."
-        "<br><br>"
-        "Depending on your answers, after the survey you will be offered a set of recommendations, as well as a report that can serve as a conformity self-assessment. If the overall score is good enough (85% correct answers), you will be able to use the report as the basic documentation of a CSA-basic level certification conducted separately by an external auditor. If your score is lower, you can improve your cybersecurity maturity by implementing the given recommendations."
+        "If at some point, you wish to continue the survey later, you click on the <strong>Continue later button</strong> and save the provided link separately. Using that link, you can pick up where you left off anytime."
     ),
     "countries_first": [
         "LU",

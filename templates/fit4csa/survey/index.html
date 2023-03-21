@@ -13,11 +13,11 @@
 {% block content %}
     <div class="d-flex flex-row align-items-center px-3">
         <div class="p-2 flex-grow-1 text-justify">
-            <h5>
+            <h3>
                 {% block index_welcome_message %}
-                {{ _('Welcome to Fit4CSA, a self-assessment tool to lead the way to a cybersecurity certification at the basic level in line with the CyberSecurity Act. Fit4CSA is part of the <a href="https://coral-project.org/" target="_blank">CORAL</a> EU-funded project.') }}
+                {{ _('Welcome to Fit4CSA') }}
                 {% endblock %}
-            </h5>
+            </h3>
             {{ custom.intro_text | safe }}
         </div>
     </div>
