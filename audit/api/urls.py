@@ -3,6 +3,7 @@ from drf_spectacular.views import SpectacularAPIView
 from drf_spectacular.views import SpectacularRedocView
 from drf_spectacular.views import SpectacularSwaggerView
 
+from .views import AuditApiView
 from .views import AuditQuestionApiView
 from .views import CompanyApiView
 
@@ -16,5 +17,6 @@ urlpatterns = [
     ),
     path("redoc/", SpectacularRedocView.as_view(url_name="audit"), name="redoc-audit"),
     path("company/", CompanyApiView.as_view()),
+    path("audit/", AuditApiView.as_view()),
     path("audit_question/", AuditQuestionApiView.as_view()),
 ]

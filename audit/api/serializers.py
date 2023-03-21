@@ -1,7 +1,9 @@
 from rest_framework import serializers
 
+from audit.models import Audit
 from audit.models import AuditQuestion
 from audit.models import Company
+from survey.models import SurveyUser
 
 
 class CompanySerializer(serializers.ModelSerializer):
@@ -21,9 +23,37 @@ class CompanySerializer(serializers.ModelSerializer):
 
     def create(self, validated_data):
         """
-        Create and return a new `Snippet` instance, given the validated data.
+        Create and return a new instance, given the validated data.
         """
         return Company.objects.create(**validated_data)
+
+
+class AuditSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Audit
+        fields = ["id", "product_name", "product_ref", "status"]
+
+
+class AuditRequestSerializer(serializers.ModelSerializer):
+    survey_user = serializers.SlugRelatedField(
+        queryset=SurveyUser.objects.all(), slug_field="user_id"
+    )
+
+    class Meta:
+        model = Audit
+        fields = ["survey_user", "product_name", "product_ref", "status"]
+
+    def create(self, validated_data):
+        """
+        Create and return a new instance, given the validated data.
+        """
+        print(validated_data)
+        if not SurveyUser.objects.filter(
+            user_id=validated_data["survey_user"].user_id, status=3
+        ).exists():
+            error = {"message": "This survey is not finished."}
+            raise serializers.ValidationError(error)
+        return Audit.objects.create(**validated_data)
 
 
 class AuditQuestionSerializer(serializers.ModelSerializer):
