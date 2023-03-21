@@ -41,7 +41,7 @@ class AuditRequestSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Audit
-        fields = ["survey_user", "product_name", "product_ref", "status"]
+        fields = ["survey_user", "product_name", "product_ref"]
 
     def create(self, validated_data):
         """
