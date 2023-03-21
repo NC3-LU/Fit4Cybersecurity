@@ -33,8 +33,8 @@
                 <th scope="col">{{ _('Name') }}</th>
                 <th scope="col">{{ _('Reference') }}</th>
                 <th scope="col">{{ _('Type of conformity') }}</th>
-                <th scope="col"> 
-                  {{ kind_of_company_label }} 
+                <th scope="col">
+                  {{ kind_of_company_label }}
                   <a class="btn bi bi-info-circle-fill text-primary" href="/audit/companies" role="button"></a>
                 </th>
                 <th scope="col">{{ _('Status') }}</th>
@@ -68,7 +68,7 @@
         <button class="col-2 mx-auto btn btn-sm btn-block border border-rounded btn-primary go-to-add" type="button">
             {{ _('Add an audit') }}
         </button>
-        
+
       </div>
     </div>
 
@@ -139,4 +139,24 @@
       <div class="modal-dialog">
       </div>
     </div>
+    <script>
+      console.log("echo");
+      document.addEventListener("DOMContentLoaded", function() {
+        console.log("test");
+        function processForm(e) {
+          if (e.preventDefault) e.preventDefault();
+
+          console.log(e);
+
+          return false;
+        }
+
+        var form = document.getElementsByClassName('form-create-company');
+        if (form.attachEvent) {
+            form.attachEvent("submit", processForm);
+        } else {
+            form.addEventListener("submit", processForm);
+        }
+      })
+    </script>
 {% endblock %}

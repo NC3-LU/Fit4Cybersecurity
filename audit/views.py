@@ -12,7 +12,6 @@ from django.shortcuts import redirect
 from django.shortcuts import render
 from django.utils.translation import gettext as _
 
-from audit.globals import QUESTION_STATUS
 from audit.forms import AuditForm
 from audit.forms import CompanyForm
 from audit.forms import EditProduct
@@ -20,14 +19,15 @@ from audit.forms import ObservationsTextarea
 from audit.forms import ReferencesTextarea
 from audit.forms import SignUpForm
 from audit.forms import StatusChoices
+from audit.globals import QUESTION_STATUS
 from audit.models import Audit
 from audit.models import AuditQuestion
 from audit.models import Certificate
 from audit.models import Company
 from csskp.settings import CUSTOM
 from survey.models import CONTEXT_SECTION_LABEL
-from survey.viewLogic import get_answered_questions_sequences
 from survey.viewLogic import find_user_by_id
+from survey.viewLogic import get_answered_questions_sequences
 
 
 @login_required
@@ -43,8 +43,8 @@ def index(request):
 
     auditsByUser = user.auditbyuser_set.all()
     filter_kind_of_company = "AD"
-    if user.company_set.all().get().type == "AD":
-        filter_kind_of_company = "CS"
+    # if user.company_set.all().get().type == "AD":
+    #     filter_kind_of_company = "CS"
 
     for auditByUser in auditsByUser:
         auditByUser.audit_company_selected = (
@@ -83,8 +83,8 @@ def index(request):
         "auditsByUser": auditsByUser,
         "companies_admin": request.user.company_admin.all(),
         "kind_of_company_label": _("Audit company")
-        if request.user.company_set.all().get().type == "CS"
-        else _("Client company"),
+        # if request.user.company_set.all().get().type == "CS"
+        # else _("Client company"),
     }
 
     return render(request, "index.html", context=context)
