@@ -1,7 +1,7 @@
 {% extends 'survey/base.html' %}
 
 {% load bootstrap4 %}
-
+{% load i18n %}
 {% load static %}
 
 {% block bootstrap4_extra_head %}
@@ -20,7 +20,7 @@
             
             <nav class="nav_categories nav nav-fill">
                 {% for index, category in questions_categories %}
-                <a class="nav-link py-1 {% if current_question_category == category.id %}nav_categories_active{% endif %}" href="#">{{ category.label }}</a>
+                <a class="nav-link py-1 {% if current_question_category == category.id %}nav_categories_active{% endif %}" href="#">{% trans category.label %}</a>
                 {% endfor %}
             </nav>
             <div class="progress mx-2 mt-2" style="height: 15px;">
