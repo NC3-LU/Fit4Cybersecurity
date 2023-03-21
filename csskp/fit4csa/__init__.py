@@ -33,7 +33,7 @@ CUSTOM = {
     # Custom CSS:
     "survey_css": "survey/css/style.css",
     # Minimal score
-    "minimal_acceptable_score": 0,
+    "minimal_acceptable_score": 85,
     # Show or not the questions number left to complete the survey.
     "show_progress_questions_numbers": True,
     # Custom parts of templates

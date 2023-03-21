@@ -35,10 +35,17 @@
             <li>{{ _('a list of recommendations that can be used to further improve the state of cybersecurity of your service/process/application/generic product,') }}</li>
             <li>{{ _('the report summarising and detailing the maturity of your service/process/application/generic product, and that can be used as a conformity self-assessment.') }}</li><br>
 
-
-            {% blocktranslate trimmed %}
-            If you have achieved a score higher than 85%, CORAL suggests that you can move to the next step: share this report with your selected external auditor. This report will be the basic document for your CSA basic level certification evaluation, together with any further evidence that might be requested.
-            {% endblocktranslate %}
+            {% if custom.modules.audit and txtscore >= custom.minimal_acceptable_score %}
+                {% blocktranslate trimmed %}
+                Congratulations, you have achieved a score of at least 85%! You can now move on to the next step: log in or create an account, in order to be able to manage your audit requests. Please save the below questionnaire ID to your filled-in survey, that you can use in the next steps: 
+                {% endblocktranslate %}
+                <span class="font-weight-bold">{{ user }}</span>
+                <div class="p-4">
+                    <a href="/audit/signup" class="btn btn-sm btn-block border border-rounded btn-primary col-2 mx-auto" role="button">
+                        {{ _('Sign up ') }}
+                    </a>
+                </div>
+            {% endif %}
         </p>
         {% endblock %}
         {% if custom.modules.requestTraining and user.get_country_code == 'LU' and txtscore < custom.minimal_acceptable_score %}
@@ -145,15 +152,11 @@
                         </button>
                     {% endif %}
 
-
-                    {% if custom.modules.audit and user.get_country_code == '' and txtscore >= custom.minimal_acceptable_score %}
-                    <a href="/audit/signup" id="download-report">
-                      <button class="btn btn-sm btn-block border border-rounded btn-primary" type="button">
-                          {{ _('Ask for an audit') }}
-                      </button>
-                  </a>
-                {% endif %}
-
+                    {% if custom.modules.audit and txtscore >= custom.minimal_acceptable_score %}
+                        <a href="/audit/signup" class="btn btn-sm btn-block border border-rounded btn-primary" role="button">
+                            {{ _('Sign up ') }}
+                        </a>
+                    {% endif %}
                 </div>
             </div>
         </div>
