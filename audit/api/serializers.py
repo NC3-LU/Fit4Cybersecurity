@@ -47,8 +47,7 @@ class AuditRequestSerializer(serializers.ModelSerializer):
         """
         Create and return a new instance, given the validated data.
         """
-        print(validated_data)
-        # validated_data.update({"survey_user_id": })
+        # print(validated_data)
         return Audit.objects.create(**validated_data)
 
 

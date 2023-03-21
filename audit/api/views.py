@@ -43,7 +43,6 @@ class CompanyApiView(APIView):
         Create new companies.
         """
         serializer = CompanySerializer(data=request.POST, many=True)
-        print(request.POST)
         if serializer.is_valid():
             serializer.save()
             return Response(serializer.data)
@@ -71,7 +70,7 @@ class AuditApiView(APIView):
         return Response(serializer.data, status=status.HTTP_200_OK)
 
     # Create an audit
-    @extend_schema(request=AuditRequestSerializer)
+    @extend_schema(request=AuditRequestSerializer, responses=AuditSerializer)
     def post(self, request, *args, **kwargs):
         """
         Create a new audit.
