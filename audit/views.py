@@ -43,8 +43,8 @@ def index(request):
 
     auditsByUser = user.auditbyuser_set.all()
     filter_kind_of_company = "AD"
-    # if user.company_set.all().get().type == "AD":
-    #     filter_kind_of_company = "CS"
+    if user.company_set.all().get().type == "AD":
+        filter_kind_of_company = "CS"
 
     for auditByUser in auditsByUser:
         auditByUser.audit_company_selected = (
@@ -83,8 +83,8 @@ def index(request):
         "auditsByUser": auditsByUser,
         "companies_admin": request.user.company_admin.all(),
         "kind_of_company_label": _("Audit company")
-        # if request.user.company_set.all().get().type == "CS"
-        # else _("Client company"),
+        if request.user.company_set.all().get().type == "CS"
+        else _("Client company"),
     }
 
     return render(request, "index.html", context=context)
