@@ -31,7 +31,7 @@
             <thead>
               <tr>
                 <th scope="col">{{ _('Name') }}</th>
-                <th scope="col">{{ _('Reference') }}</th>
+                <th scope="col">{{ _('Self-assessment id') }}</th>
                 <th scope="col">{{ _('Type of conformity') }}</th>
                 <th scope="col">
                   {{ kind_of_company_label }}
@@ -45,7 +45,7 @@
                 {% for auditByUser in auditsByUser %}
                 <tr>
                     <td><a href="/audit/product/{{ auditByUser.audit.id }}">{{ auditByUser.audit.product_name | safe }}</a></td>
-                    <td>{{ auditByUser.audit.product_ref | safe }}</td>
+                    <td>{{ auditByUser.audit.survey_user.user_id | safe }}</td>
                     <td>{{ auditByUser.typeOfConformity }}</td>
                     <td>{{ auditByUser.audit_company_selected.audit_company.name | safe }}</td>
                     <td class="p-0 d-flex">

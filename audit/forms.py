@@ -45,14 +45,12 @@ class CompanyForm(forms.ModelForm):
 
 class AuditForm(forms.ModelForm):
     product_name = forms.CharField(max_length=30, required=True, label="Name")
-    product_ref = forms.CharField(max_length=30, required=True, label="Reference")
     survey_user_uuid = forms.UUIDField(required=True, label="Self-assessment id")
 
     class Meta:
         model = Audit
         fields = [
-            "product_name",
-            "product_ref",
+            "product_name"
         ]
 
 
@@ -123,7 +121,6 @@ class StatusChoices(forms.Form):
 
 class EditProduct(forms.Form):
     name = forms.CharField(max_length=50)
-    reference = forms.CharField(max_length=50)
     company = forms.ModelChoiceField(
         queryset=None, required=False, label="Audit company"
     )
@@ -140,10 +137,9 @@ class EditProduct(forms.Form):
 
         super(EditProduct, self).__init__(*args, **kwargs)
         self.fields["name"].initial = product.product_name
-        self.fields["reference"].initial = product.product_ref
         self.fields["company"].queryset = Company.objects.filter(
             type="AD", is_active=True
         )
         self.fields["company"].initial = initialCompany
         if product.auditbycompany_set.filter(audit_company__type="AD"):
-            self.fields["company"].disabled = True
+            self.fields["company"].widget = forms.HiddenInput()

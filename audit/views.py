@@ -200,7 +200,6 @@ def edit_product(request, audit_id: int):
         if form.is_valid():
             audit = Audit.objects.get(id=audit_id)
             audit.product_name = form.cleaned_data["name"]
-            audit.product_ref = form.cleaned_data["reference"]
 
             if form.cleaned_data["company"]:
                 audit.auditbycompany_set.filter(
