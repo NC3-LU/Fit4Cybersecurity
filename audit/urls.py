@@ -4,7 +4,7 @@ from django.urls import path
 from audit import views
 
 urlpatterns = [
-    path("", views.index, name="audit"),
+    path("", views.index, name="audit_index"),
     path("signup/", views.signup, name="signup"),
     path("product/<int:audit_id>", views.audit),
     path("add", views.create_audit, name="create_audit"),
