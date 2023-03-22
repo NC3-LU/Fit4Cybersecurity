@@ -10,7 +10,7 @@ CUSTOM = {
         "<br><br>" 
         "This questionnaire, which is intended to be anonymous, aims to identify the data protection obstacles/problems/questions faced by SMEs, in order to create and make available to them a self-assessment tool that meets their needs."
         "<br><br>"
-        "To find out more about the ALTO project, we invite you to visit <a href=https://cnpd.public.lu/fr/professionnels/outils-conformite/projet-alto.html target=_blank rel=noopener noreferrer>the dedicated web page.</a>"
+        "To find out more about the ALTO project, we invite you to visit <a href=https://cnpd.public.lu/en/professionnels/outils-conformite/projet-alto.html target=_blank rel=noopener noreferrer>the dedicated web page.</a>"
     ),
     "countries_first": [
         "LU",
