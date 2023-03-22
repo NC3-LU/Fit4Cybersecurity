@@ -35,7 +35,7 @@
                 <th scope="col">{{ _('Type of conformity') }}</th>
                 <th scope="col">
                   {{ kind_of_company_label }}
-                  <a class="btn bi bi-info-circle-fill text-primary" href="/audit/companies" role="button"></a>
+                  <a class="btn bi bi-info-circle-fill text-primary p-0 align-text-bottom" href="/audit/companies" role="button"></a>
                 </th>
                 <th scope="col">{{ _('Status') }}</th>
                 <th class="text-center" scope="col">{{ _('Actions') }}</th>
@@ -51,9 +51,9 @@
                     <td class="p-0 d-flex">
                         <form method="POST">
                             {% csrf_token %}
-                            {% bootstrap_form auditByUser.statusForm show_label=False %}
+                            {% bootstrap_field auditByUser.statusForm.status show_label=False form_group_class="form-group m-0 p-1" %}
                         </form>
-                            <i type="button" class="btn bi bi-info-circle-fill text-primary" data-audit-id="{{ auditByUser.audit.id | safe }}" data-toggle="modal" data-target="#statusDetails"></i>
+                            <i type="button" class="btn bi bi-info-circle-fill text-primary pt-2" data-audit-id="{{ auditByUser.audit.id | safe }}" data-toggle="modal" data-target="#statusDetails"></i>
                             <script>
                                 complianceData[{{auditByUser.audit.id}}] = {{ auditByUser.audit.statusDetails | safe }}
                             </script>
