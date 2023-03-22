@@ -280,7 +280,7 @@ def survey_per_company_sector(request):
             user__status=3,
             user__created_at__gte=date_from,
             answer__question__section__label=CONTEXT_SECTION_LABEL,
-            answer__question__label__contains="sector",
+            answer__question__label__contains="Activity",
         )
         .values("answer__label")
         .annotate(count=Count("answer"))
