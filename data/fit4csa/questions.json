@@ -8305,7 +8305,7 @@
           {
             "min_e_count": "a",
             "max_e_count": "j",
-            "answerChosen": false,
+            "answerChosen": true,
             "label": "Password hints should not be used in any form to ensure the highest level of security for users of your application. It is very easy to find the answer to the question via users' social network accounts or profiles."
           }
         ]
@@ -8328,7 +8328,7 @@
           {
             "min_e_count": "a",
             "max_e_count": "j",
-            "answerChosen": false,
+            "answerChosen": true,
             "label": "Password hints should not be used in any form to ensure the highest level of security for users of your application. It is very easy to find the answer to the question via users' social network accounts or profiles."
           }
         ]
@@ -9263,7 +9263,7 @@
   {
     "section": "Data Protection Verification Requirements",
     "service_category": "Data subject rights",
-    "qtype": "M",
+    "qtype": "S",
     "qindex": 147,
     "maxPoints": 5,
     "label": "Is it possible for users of your application to delete, modify or export their personal information (PI)?",
@@ -9809,7 +9809,7 @@
         "atype": "P",
         "questions_map": [
           {
-            "label": "Have you implemented input validation across your application to prevent potential OS command injection?",
+            "label": "Have you implemented input validation across your application to prevent potential Operating System command injection?",
             "branch": 3,
             "level": 36,
             "order": 1
@@ -9832,7 +9832,7 @@
         "atype": "P",
         "questions_map": [
           {
-            "label": "Have you implemented input validation across your application to prevent potential OS command injection?",
+            "label": "Have you implemented input validation across your application to prevent potential Operating System command injection?",
             "branch": 3,
             "level": 36,
             "order": 1
@@ -9844,11 +9844,11 @@
   },
   {
     "section": "File and Resources Verification Requirements",
-    "service_category": "Protection against OS command injection",
+    "service_category": "Protection against Operating System command injection",
     "qtype": "S",
     "qindex": 158,
     "maxPoints": 20,
-    "label": "Have you implemented input validation across your application to prevent potential OS command injection?",
+    "label": "Have you implemented input validation across your application to prevent potential Operating System command injection?",
     "answers": [
       {
         "aindex": 1,
@@ -9863,13 +9863,13 @@
             "order": 1
           }
         ],
-        "label": "We have not tested our application to confirm that it is not vulnerable to OS command injection.",
+        "label": "We have not tested our application to confirm that it is not vulnerable to Operating System command injection.",
         "recommendations": [
           {
             "min_e_count": "a",
             "max_e_count": "j",
             "answerChosen": true,
-            "label": "By far the most effective way to prevent OS command injection vulnerabilities is to never call out to OS commands from application-layer code. In virtually every case, there are alternate ways of implementing the required functionality using safer platform APIs. Implement strong input validation."
+            "label": "By far the most effective way to prevent Operating System command injection vulnerabilities is to never call out to Operating System commands from application-layer code. In virtually every case, there are alternate ways of implementing the required functionality using safer platform APIs. Implement strong input validation."
           }
         ]
       },
@@ -9886,7 +9886,7 @@
             "order": 1
           }
         ],
-        "label": "We have tested and mitigated any OS command injection vulnerabilities in our application."
+        "label": "We have tested and mitigated any Operating System command injection vulnerabilities in our application."
       }
     ]
   },
@@ -9982,7 +9982,7 @@
             "order": 1
           }
         ],
-        "label": "Cb Administrators' access requirements are explicitly defined and implemented."
+        "label": "Administrators' access requirements are explicitly defined and implemented."
       }
     ]
   },
