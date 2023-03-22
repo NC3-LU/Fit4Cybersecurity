@@ -41,7 +41,7 @@
                 {% endblocktranslate %}
                 <span class="font-weight-bold">{{ user }}</span>
                 <div class="p-4">
-                    <a href="audit/login" class="btn btn-sm btn-block border border-rounded btn-primary col-2 mx-auto" role="button">
+                    <a href="/audit/login" class="btn btn-sm btn-block border border-rounded btn-primary col-2 mx-auto" role="button">
                         {{ _('Log in ') }}
                     </a>
                 </div>
@@ -152,7 +152,7 @@
                         </button>
                     {% endif %}
 
-                    {% if custom.modules.audit and txtscore <= custom.minimal_acceptable_score %}
+                    {% if custom.modules.audit and txtscore >= custom.minimal_acceptable_score %}
                         <a href="/audit/login" class="btn btn-sm btn-block border border-rounded btn-primary" role="button">
                             {{ _('Log in ') }}
                         </a>
