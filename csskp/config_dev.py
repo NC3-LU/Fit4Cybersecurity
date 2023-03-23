@@ -2,6 +2,8 @@ import os
 
 PUBLIC_URL = ""
 ALLOWED_HOSTS = ["127.0.0.1", locals().get("PUBLIC_URL", "")]
+OPERATOR_NAME = "Organisation Example"
+OPERATOR_WEBSITE = "https://www.example.org"
 OPERATOR_EMAIL = "info@example.org"
 
 # The generic site/tool name. Used to load specific config, templates, styles, logo.
