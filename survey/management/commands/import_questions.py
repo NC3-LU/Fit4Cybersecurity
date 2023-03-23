@@ -71,7 +71,7 @@ class Command(BaseCommand):
                 question_obj.qtype = question["qtype"]
                 question_obj.section = section
                 question_obj.service_category = service_cat
-                question_obj.maxPoints = question["maxPoints"]
+                question_obj.maxPoints = question.get("maxPoints", 0)
                 question_obj.answers_order = question.get("answers_order", "aindex")
                 question_obj.is_active = True
 
@@ -84,7 +84,7 @@ class Command(BaseCommand):
                     section=section,
                     service_category=service_cat,
                     qindex=qindex,
-                    maxPoints=question["maxPoints"],
+                    maxPoints=question.get("maxPoints", 0),
                     answers_order=question.get("answers_order", "aindex"),
                     is_active=True,
                 )
@@ -162,9 +162,9 @@ class Command(BaseCommand):
                             categories.append(reco_cat)
                     reco_obj, created = Recommendations.objects.get_or_create(
                         label=reco["label"],
-                        min_e_count=reco["min_e_count"],
-                        max_e_count=reco["max_e_count"],
-                        sector=reco["sector"],
+                        min_e_count=reco.get("min_e_count", "a"),
+                        max_e_count=reco.get("max_e_count", "z"),
+                        sector=reco.get("sector", None),
                         forAnswer=answer_obj,
                         answerChosen=reco["answerChosen"],
                     )
