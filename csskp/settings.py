@@ -6,7 +6,6 @@ import os
 import sys
 
 from django.contrib.messages import constants as messages
-
 from django.utils.translation import gettext_lazy as _
 
 try:
