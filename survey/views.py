@@ -108,6 +108,9 @@ def change_lang(request, lang: str):
     if previous_path.__contains__("/terms/"):
         return HttpResponseRedirect("/terms/")
 
+    if previous_path.__contains__("/privacy/"):
+        return HttpResponseRedirect("/privacy/")
+
     if user_id is None:
         return HttpResponseRedirect("/")
 
