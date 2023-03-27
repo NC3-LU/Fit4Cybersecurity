@@ -28,7 +28,6 @@ translations = [elem for elem in data if elem["model"] == "survey.translationkey
 
 questions_json = []
 for question in questions:
-
     new_question = question["fields"]
 
     # Related answers

@@ -13,7 +13,7 @@
             </span>
             {% for user_answer in questions.1.user_answers %}
                 {% if user_answer.value == '1' %}
-                    
+
                     : {{ user_answer.title | safe }}
 
                 {% endif %}

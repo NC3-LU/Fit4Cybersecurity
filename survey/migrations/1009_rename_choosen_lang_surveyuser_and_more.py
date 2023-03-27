@@ -11,7 +11,6 @@ def load_data_from_sql(apps, schema_editor):
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
         ("survey", "1008_surveyquestion_answers_order_and_more"),
     ]

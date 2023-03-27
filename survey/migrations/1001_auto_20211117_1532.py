@@ -4,7 +4,6 @@ from django.db import models
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
         ("survey", "1000_alter_company_contact_address_country"),
     ]

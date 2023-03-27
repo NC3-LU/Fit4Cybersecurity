@@ -1,11 +1,10 @@
 from django.contrib import admin
-from audit.models import (
-    Company,
-    Certificate,
-    Audit,
-    AuditByCompany,
-    AuditByUser,
-)
+
+from audit.models import Audit
+from audit.models import AuditByCompany
+from audit.models import AuditByUser
+from audit.models import Certificate
+from audit.models import Company
 
 
 @admin.register(Company)

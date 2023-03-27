@@ -1,6 +1,7 @@
 from django import forms
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
+
 from audit.globals import QUESTION_STATUS
 from audit.models import Audit
 from audit.models import Company
@@ -49,9 +50,7 @@ class AuditForm(forms.ModelForm):
 
     class Meta:
         model = Audit
-        fields = [
-            "product_name"
-        ]
+        fields = ["product_name"]
 
 
 class ReferencesTextarea(forms.Form):
@@ -135,7 +134,7 @@ class EditProduct(forms.Form):
                 .audit_company
             )
 
-        super(EditProduct, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
         self.fields["name"].initial = product.product_name
         self.fields["company"].queryset = Company.objects.filter(
             type="AD", is_active=True

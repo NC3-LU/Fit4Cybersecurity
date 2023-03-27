@@ -4,7 +4,7 @@ CUSTOM = {
     # Generic configurations
     "tool_name": "Fit4CSA",
     "intro_text": gettext_lazy(
-        "Fit4CSA is a self-assessment tool to streamline the process of applying for a basic-level cybersecurity certification in the context of the CyberSecurity Act (CSA - EU 2019/881). Fit4CSA is part of the <a href=\"https://coral-project.org/\" target=\"_blank\">CORAL</a> EU-funded project."
+        'Fit4CSA is a self-assessment tool to streamline the process of applying for a basic-level cybersecurity certification in the context of the CyberSecurity Act (CSA - EU 2019/881). Fit4CSA is part of the <a href="https://coral-project.org/" target="_blank">CORAL</a> EU-funded project.'
         "<br><br>"
         "<h4>How does Fit4CSA work?</h4>"
         "<ol>"
