@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-03-22 08:47+0000\n"
+"POT-Creation-Date: 2023-03-27 14:17+0000\n"
 "PO-Revision-Date: 2023-03-21 13:35+0100\n"
 "Language: fr\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -158,57 +158,88 @@ msgstr ""
 "obligations de base en matière de protection des données pour lesquelles les "
 "organisations devraient déjà être préparées en 2021."
 
-#: csskp/settings.py:48 templates/parts/privacy_policy_part.html:4
+#: csskp/settings.py:47 templates/parts/privacy_policy_part.html:4
 #: templates/parts/privacy_policy_part.html:7
 msgid "Cookie settings"
 msgstr "Paramètres des cookies"
 
-#: csskp/settings.py:52
+#: csskp/settings.py:51
 msgid "Essential"
 msgstr "Essentiel"
 
 #: csskp/settings.py:53
+#, fuzzy
+#| msgid ""
+#| "This website uses cookies and other similar technologies strictly "
+#| "necessary for its operation, without the use of personal data."
 msgid ""
-"This website uses cookies and other similar technologies strictly necessary "
-"for its operation, without the use of personal data."
+"This website uses cookies and other similar technologies strictly "
+"necessary                 for its operation, without the use of personal "
+"data."
 msgstr ""
 "Ce site web utilise des cookies et d'autres technologies similaires "
 "strictement nécessaires à son fonctionnement, sans utiliser de données "
 "personnelles."
 
-#: csskp/settings.py:57
+#: csskp/settings.py:59
 msgid "Meta cookie for the cookies that are set."
 msgstr "Meta cookie pour les cookies qui sont mis en place."
 
-#: csskp/settings.py:58
+#: csskp/settings.py:60
 msgid "Accepted cookies"
 msgstr "Cookies acceptés"
 
-#: csskp/settings.py:59 csskp/settings.py:65
+#: csskp/settings.py:61 csskp/settings.py:69
 msgid "1 year"
 msgstr "1 an"
 
-#: csskp/settings.py:63
+#: csskp/settings.py:66
 msgid "This cookie prevents Cross-Site-Request-Forgery attacks."
 msgstr "Ce cookie empêche les attaques de type Cross-Site-Request-Forgery."
 
-#: csskp/settings.py:64
+#: csskp/settings.py:68
 msgid "Token"
 msgstr "Jeton"
 
-#: csskp/settings.py:69
+#: csskp/settings.py:74
 msgid "This cookie is necessary for the language options, for example."
 msgstr "Ce cookie est nécessaire pour les options linguistiques, par exemple."
 
-#: csskp/settings.py:70
+#: csskp/settings.py:76
 msgid "session ID"
 msgstr "ID de la session"
 
-#: csskp/settings.py:71
+#: csskp/settings.py:77
 msgid "15 days"
 msgstr "15 jours"
 
 #: csskp/surveyAlto/__init__.py:7
+#, fuzzy
+#| msgid ""
+#| "Managing personal data in accordance with the General Data Protection "
+#| "Regulation (hereinafter \"<strong>GDPR</strong>\") can be a challenge for "
+#| "small and medium-sized enterprises (hereinafter \"<strong>SMEs</strong>"
+#| "\"), which are often at a disadvantage compared to large structures in "
+#| "terms of costs and impact, in particular. Moreover, the development of "
+#| "data management strategies or \"data controller reflexes\" are rarely at "
+#| "the top of the agenda - the possible lack of knowledge and awareness, on "
+#| "the one hand, and information and practical tools , on the other hand "
+#| "could constitute the presumed causes. In any case, it is necessary to "
+#| "raise awareness among SMEs of the importance of protecting personal data "
+#| "and to support them in improving their compliance with the GDPR."
+#| "<br><br>The ALTO project, born of a partnership between the National "
+#| "Commission for Data Protection (<i>Commission Nationale pour la "
+#| "Protection des Données</i> - \"<strong>CNPD</strong>\") and the "
+#| "Luxembourg House of CyberSecurity, National CyberSecurity Competence "
+#| "Center (hereafter \"<strong>LHC-NC3</strong>\"), has aims to implement a "
+#| "self-assessment tool to meet the daily challenges of SMEs in terms of "
+#| "data protection.<br><br>This questionnaire, which is intended to be "
+#| "anonymous, aims to identify the data protection obstacles/problems/"
+#| "questions faced by SMEs, in order to create and make available to them a "
+#| "self-assessment tool that meets their needs.<br><br>To find out more "
+#| "about the ALTO project, we invite you to visit <a href=https://cnpd."
+#| "public.lu/en/professionnels/outils-conformite/projet-alto.html "
+#| "target=_blank rel=noopener noreferrer>the dedicated web page.</a>"
 msgid ""
 "Managing personal data in accordance with the General Data Protection "
 "Regulation (hereinafter \"<strong>GDPR</strong>\") can be a challenge for "
@@ -9809,11 +9840,11 @@ msgstr ""
 msgid "Feedback sending errors: "
 msgstr "Erreurs d'envoi du retour d'information : "
 
-#: templates/cookiebanner/bootstrap4.html:14
+#: templates/cookiebanner/bootstrap4.html:21
 msgid "Details"
 msgstr "Détails"
 
-#: templates/cookiebanner/bootstrap4.html:23
+#: templates/cookiebanner/bootstrap4.html:30
 msgid "Do not display anymore"
 msgstr "Ne plus afficher"
 
