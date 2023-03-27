@@ -3,7 +3,7 @@ from django.core.mail import EmailMultiAlternatives
 from django.template.loader import render_to_string
 
 from csskp.settings import CUSTOM
-from csskp.settings import OPERATOR_EMAIL
+from csskp.settings import OPERATOR_CONTACT
 from utils.decorators import async_maker
 
 
@@ -13,7 +13,7 @@ def send_report(email_address: str, pdf_data: bytes) -> None:
     Send a survey report to an email address.
     """
     subject = "[{}] Your report".format(CUSTOM["tool_name"])
-    from_email = OPERATOR_EMAIL
+    from_email = OPERATOR_CONTACT["contact_email"]
     to = email_address
     text_content = render_to_string(
         "emails/send_report.txt",

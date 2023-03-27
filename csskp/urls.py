@@ -23,6 +23,7 @@ urlpatterns = [
     # Root
     path("", views.index, name="index"),
     path("terms/", views.get_terms, name="terms"),
+    path("privacy/", views.get_privacy_policy, name="privacy"),
     # Stats
     path("stats/", include("stats.urls")),
     # Admin

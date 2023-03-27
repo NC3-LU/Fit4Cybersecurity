@@ -1,0 +1,151 @@
+{% load apptags %}
+<div class="text-justify">
+  <h1>Privacy policy</h1>
+  <p>We collect and process personal data in accordance with the applicable data protection legislations such as, but
+    not imited to, Regulation (EU) 2016/679 on the protection of natural persons with regards to the processing of their
+    personal data and the free movement of such data ("GDPR") and the national law adopting GDPR.
+  </p>
+  <p>It may occur that we change or amend our Privacy Policy in order to ensure that its content accurately reflects
+    regulatory developments. Any such modification, if substantial, will be clearly communicated to you, either via the
+    website or via other appropriate means. The latest applicable version will be available on our website.
+  </p>
+  <p>Should you have any questions or remarks regarding this Privacy Policy, do not hesitate to contact us at 
+    <a href="mailto:{{operator.privacy_email}}">{{operator.privacy_email}}</a>.
+  </p>
+  <p>Skip to:</p>
+  <ul>
+    <li><a href="#processing">Processing of personal data</a></li>
+    <li><a href="#collect">What personal data do we collect on our website and to which end?</a></li>
+    <li><a href="#cookies">Does our website use cookies?</a></li>
+    <li><a href="#retention">How long do we retain your personal data?</a></li>
+    <li><a href="#sharing">Sharing personal data</a></li>
+    <li><a href="#security">Security of your personal data</a></li>
+    <li><a href="#rights">Your rights as a data subject</a></li>
+  </ul>
+
+  <h2><a id="processing">Processing of personal data</a></h2>
+  <p>By "personal data" we understand any information that can identify you, both directly and indirectly.</p>
+  <p>By "processing" we refer to anything we do with such personal data, including collection,recording, organisation,
+    structuring, storage, adaptation or alteration, retrieval, consultation, use, disclosure by transmission,
+    dissemination or otherwise making available, alignment or combination, restriction, erasure or destruction.
+  </p>
+  <p>By "data controller" we understand the person responsible for the processing of your personal data, this is the
+    entity which determines the means and purpose of the processing activities. For our website and all related
+    services, the data controller is:
+  <p class="col-md-auto">
+    <a class="row font-weight-bold justify-content-center" href="{{operator.website}}" target="_blank">{{ operator.name }}</a>
+    <span class="row justify-content-center">{{ operator.street }}</span>
+    <span class="row justify-content-center">{{ operator.zip_code }}</span>
+    <span class="row justify-content-center">{{ operator.phone }}</span>
+    <span class="row justify-content-center">{{ operator.privacy_email }}</span>
+  </p>
+  </p>
+  <h2><a id="collect">What personal data do we collect on our website and to which end?</a></h2>
+  <p>When you are surfing our website, we collect and process web server logs, including IP
+    addresses, user-agents, URLs,
+    date and time logs. We collect those logs for our legitimate interest as these logs enable the technical and
+    functional management of our website. Furthermore, we analyse the data to ensure the optimal security of our
+    website.
+  </p>
+  <p>The legal basis for this processing is point (f) of Article 6(1) of the GDPR. We have a
+    legitimate interest in
+    presenting you with an optimally rendered website in your browser and enabling communication between our server and
+    your end device.
+  </p>
+  <p>When you contact us by mail, we process your contact information and any other details you
+    provide us. We will use
+    these details, if provided, for further case management and to facilitate our ticket system. In that case, we
+    collect
+    personal data for the public interest, to help our constituency handle security incidents (e.g. help with
+    compromised
+    websites).
+  </p>
+  <p>We store the data for 31 days.</p>
+  <p>Luxembourg House of Cybersecurity offers different services, where each service has its dedicate
+    website and
+    conditions of use.</p>
+  <p>We confirm that we process your personal data in a fair and lawful manner and only for the
+    explicit and legitimate
+    purposes as above-mentioned. At all times, we strive to ensure that your personal data is adequate, relevant and not
+    excessive in relation to the purposes for which they are processed.
+  <p>
+  <p>In case you enter and use one of the websites that are link to this website, personal data will
+    be processed
+    according to the privacy policies of these respective networks.</p>
+  <h2><a id="cookies">Does our website use cookies?</a></h2>
+  <p> A cookie is a text file sent to your browser and saved on the hard drive of your terminal (PC,
+    laptop or smartphone, for example) when visiting a website.</p>
+  <p>Cookies can for example be used to ensure the proper functioning of a site and to optimize its
+    ergonomics and its functionalities.</p>
+  <p>The cookies we use on this site are strictly necessary to ensure its proper functioning and to
+    allow you to complete
+    the online form, namely:</p>
+  {% for cookiegroup in cookieBanner.groups %}
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">{{ _('Name') }}</th>
+        <th scope="col">{{ _('Description') }}</th>
+        <th scope="col">{{ _('Content') }}</th>
+        <th scope="col">{{ _('Maximum term') }}</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for cookie in cookiegroup.cookies %}
+      <tr class="text-justify small">
+        <td>{{ cookie.pattern }}</td>
+        <td>{{ cookie.description }}</td>
+        <td>{{ cookie.content }}</td>
+        <td>{{ cookie.max_age }}</td>
+        {% endfor %}
+      </tr>
+    </tbody>
+  </table>
+  {% endfor %}
+  <p></p>
+  <h2><a id="retention">Your Content</a></h2>
+  <p>In no circumstances, we keep your personal data for a longer period than strictly necessary to
+    fulfil the purpose for which it was collected.
+  </p>
+  <p>As the retention period is dependent on the purpose for which the personal data were initially
+    collected, the purpose is the criterion that is used to determine the appropriate retention period.
+  <p>After the expiry of the retention period, we strive to securely erase, destroy or anonymize
+    personal data that is no longer required in relation to the purpose for which they were collected.
+  </p>
+  <p>However, if requested by local and national law, certain personal data may be retained for a
+    longer period. For instance, for accounting purposes, such as but limited to, payment of the services fees and
+    no-show
+    fee for free events, data will be retained for the time required by the national law and for no longer than ten
+    years.
+  </p>
+  <h2><a id="sharing">Sharing personal data</a></h2>
+  <p>We formally confirm that we will not sell, rent or otherwise commercially transfer to or share
+    with a third party any personal data.
+  </p>
+  <p>The data submitted will only be made available to Luxembourg House of Cybersecurity personnel
+    for the above mentioned purposes.
+  </p>
+  <p>As our web server is hosted and managed in Luxembourg, your personal data is in no circumstances
+    transferred to third countries outside the EU.
+  </p>
+  <h2><a id="security">Security of your personal data</a></h2>
+  <p>We are striving to keep your personal data secure. To that end, we have adopted the appropriate
+    legal, organizational and technical precautions to prevent any unauthorised access and use of your personal data.
+    These measures include, but are not limited to the encryption of all traffic between our website and your browser.
+  </p>
+  <h2><a id="rights">Your rights as a data subject</a></h2>
+  <p>At {{operator.name}}, we aim to be transparent, not only about how we process
+    personal data about
+    you, but also about your rights that are linked to such processing.
+  </p>
+  <p>In particular, you have the right to access your personal data, to obtain the updating, the
+    adjustment and the erasure of the personal data and you can exercise the rights to restrict and to object the
+    processing. You can exercise the rights provided by articles 15 and the following of the GDPR contacting the
+    following
+    email address <a href="mailto:{{operator.privacy_email}}">{{operator.privacy_email}}</a>. In order to avoid unlawful
+    access to your personal data, we will request you to provide a proof of your identity. If you have any queries about
+    this Privacy Notice or experiencing any other privacy issue, we are striving to promptly dealing with any
+    privacy-related complaints. If you have a complaint related to the processing of your personal data by
+    <a href="{{operator.website}}" target="_blank">{{operator.name}}</a>, please contact us.
+  </p>
+</div>
