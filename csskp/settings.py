@@ -52,7 +52,8 @@ COOKIEBANNER = {
             "id": "essential",
             "name": _("Essential"),
             "description": _(
-                "This website uses cookies and other similar technologies strictly necessary for its operation, without the use of personal data."
+                "This website uses cookies and other similar technologies strictly necessary \
+                for its operation, without the use of personal data."
             ),
             "cookies": [
                 {
