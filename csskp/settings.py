@@ -22,8 +22,7 @@ except ImportError as e:  # pragma: no cover
     exit(1)
 
 # Initialization of the custom variables (strings, templates, icons, active modules)
-CUSTOM = {key: value for key, value in getattr(
-    site_config, "CUSTOM", {}).items()}
+CUSTOM = {key: value for key, value in getattr(site_config, "CUSTOM", {}).items()}
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))

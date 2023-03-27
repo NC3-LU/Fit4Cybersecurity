@@ -13,10 +13,10 @@ from django.shortcuts import render
 from django.utils import translation
 from django.utils.translation import gettext as _
 
+from csskp.settings import COOKIEBANNER
 from csskp.settings import CUSTOM
 from csskp.settings import HASH_KEY
 from csskp.settings import LANGUAGE_CODE
-from csskp.settings import COOKIEBANNER
 from csskp.settings import OPERATOR_CONTACT
 from survey.models import SURVEY_STATUS_FINISHED
 from survey.models import SurveyUser
