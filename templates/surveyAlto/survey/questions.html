@@ -17,7 +17,7 @@
 {% block content %}
     {% if custom.modules.displayProgressBar %}
         {% if user.is_survey_in_progress and not does_map_exist or current_question_index > 1 and does_map_exist %}
-            
+
             <nav class="nav_categories nav nav-fill">
                 {% for index, category in questions_categories %}
                 <a class="nav-link py-1 {% if current_question_category == category.id %}nav_categories_active{% endif %}" href="#">{% trans category.label %}</a>

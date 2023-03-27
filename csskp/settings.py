@@ -6,7 +6,6 @@ import os
 import sys
 
 from django.contrib.messages import constants as messages
-
 from django.utils.translation import gettext_lazy as _
 
 try:
@@ -43,14 +42,16 @@ STATIC_DIR = os.path.join(BASE_DIR, "static")
 
 PICTURE_DIR = "/tmp/csskp/"
 
-#Cookie Banner settings
+# Cookie Banner settings
 COOKIEBANNER = {
     "title": _("Cookie settings"),
     "groups": [
         {
             "id": "essential",
             "name": _("Essential"),
-            "description": _("This website uses cookies and other similar technologies strictly necessary for its operation, without the use of personal data."),
+            "description": _(
+                "This website uses cookies and other similar technologies strictly necessary for its operation, without the use of personal data."
+            ),
             "cookies": [
                 {
                     "pattern": "cookiebanner",
@@ -60,13 +61,17 @@ COOKIEBANNER = {
                 },
                 {
                     "pattern": "csrftoken",
-                    "description": _("This cookie prevents Cross-Site-Request-Forgery attacks."),
+                    "description": _(
+                        "This cookie prevents Cross-Site-Request-Forgery attacks."
+                    ),
                     "content": _("Token"),
                     "max_age": _("1 year"),
                 },
                 {
                     "pattern": "sessionid",
-                    "description": _("This cookie is necessary for the language options, for example."),
+                    "description": _(
+                        "This cookie is necessary for the language options, for example."
+                    ),
                     "content": _("session ID"),
                     "max_age": _("15 days"),
                 },
@@ -142,7 +147,7 @@ INSTALLED_APPS = [
     "bootstrap_datepicker_plus",
     "rest_framework",
     "corsheaders",
-    "cookiebanner", 
+    "cookiebanner",
 ]
 
 context_processors = [
