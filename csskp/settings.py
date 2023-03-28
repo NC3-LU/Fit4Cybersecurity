@@ -6,6 +6,7 @@ import os
 import sys
 
 from django.contrib.messages import constants as messages
+from django.utils.translation import gettext_lazy as _
 
 try:
     from csskp import config  # type: ignore
@@ -41,6 +42,44 @@ STATIC_DIR = os.path.join(BASE_DIR, "static")
 
 PICTURE_DIR = "/tmp/csskp/"
 
+# Cookie Banner settings
+COOKIEBANNER = {
+    "title": _("Cookie settings"),
+    "groups": [
+        {
+            "id": "essential",
+            "name": _("Essential"),
+            "description": _(
+                "This website uses cookies and other similar technologies strictly necessary \
+                for its operation, without the use of personal data."
+            ),
+            "cookies": [
+                {
+                    "pattern": "cookiebanner",
+                    "description": _("Meta cookie for the cookies that are set."),
+                    "content": _("Accepted cookies"),
+                    "max_age": _("1 year"),
+                },
+                {
+                    "pattern": "csrftoken",
+                    "description": _(
+                        "This cookie prevents Cross-Site-Request-Forgery attacks."
+                    ),
+                    "content": _("Token"),
+                    "max_age": _("1 year"),
+                },
+                {
+                    "pattern": "sessionid",
+                    "description": _(
+                        "This cookie is necessary for the language options, for example."
+                    ),
+                    "content": _("session ID"),
+                    "max_age": _("15 days"),
+                },
+            ],
+        }
+    ],
+}
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
@@ -63,7 +102,7 @@ try:
 
     ALLOWED_HOSTS = config.ALLOWED_HOSTS
     PUBLIC_URL = config.PUBLIC_URL
-    OPERATOR_EMAIL = config.OPERATOR_EMAIL
+    OPERATOR_CONTACT = config.OPERATOR_CONTACT
 
     EMAIL_HOST = config.EMAIL_HOST
     EMAIL_PORT = config.EMAIL_PORT
@@ -109,6 +148,7 @@ INSTALLED_APPS = [
     "drf_spectacular",
     "drf_spectacular_sidecar",  # required for Django collectstatic discovery
     "corsheaders",
+    "cookiebanner",
 ]
 
 context_processors = [
@@ -208,7 +248,7 @@ SPECTACULAR_SETTINGS = {
     "REDOC_DIST": "SIDECAR",
     "TITLE": "Fit4Cybersecurity API documentation.",
     "DESCRIPTION": "Documentation of the Fit4Cybersecurity API.",
-    "CONTACT": {"email": OPERATOR_EMAIL},
+    "CONTACT": {"email": OPERATOR_CONTACT["contact_email"]},
     "VERSION": "2.1.0",
     "LICENSE": {
         "name": "GNU Affero General Public License version 3",

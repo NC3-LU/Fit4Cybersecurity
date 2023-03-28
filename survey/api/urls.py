@@ -12,27 +12,14 @@ from .views import SurveyUserApiView
 from .views import SurveyUsersApiView
 
 
-# schema_view = get_schema_view(
-#     openapi.Info(
-#         title="Fit4Cybersecurity API",
-#         default_version="v1",
-#         description="Documentation of the Fit4Cybersecurity API.",
-#         contact=openapi.Contact(email="opensource@nc3.lu"),
-#         license=openapi.License(name="GNU Affero General Public License version 3"),
-#     ),
-#     public=True,
-#     permission_classes=[permissions.AllowAny],
-# )
-
-
 urlpatterns = [
-    path("schema/", SpectacularAPIView.as_view(), name="schema"),
+    path("schema/", SpectacularAPIView.as_view(), name="survey"),
     path(
         "swagger-ui/",
-        SpectacularSwaggerView.as_view(url_name="schema"),
+        SpectacularSwaggerView.as_view(url_name="survey"),
         name="swagger-ui",
     ),
-    path("redoc/", SpectacularRedocView.as_view(url_name="schema"), name="redoc"),
+    path("redoc/", SpectacularRedocView.as_view(url_name="surver"), name="redoc"),
     path("recommendation/", RecommendationsApiView.as_view()),
     path("survey_section/", SurveySectionApiView.as_view()),
     path("survey_question/", SurveyQuestionApiView.as_view()),

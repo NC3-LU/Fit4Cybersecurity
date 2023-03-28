@@ -1,3 +1,4 @@
+from drf_spectacular.utils import extend_schema
 from rest_framework import status
 from rest_framework.authentication import BasicAuthentication
 from rest_framework.authentication import SessionAuthentication
@@ -31,6 +32,7 @@ class RecommendationsApiView(APIView):
     permission_classes = [IsAuthenticated, IsAdminUser]
 
     # List all
+    @extend_schema(request=None, responses=RecommendationsSerializer)
     def get(self, request, *args, **kwargs):
         """
         List all the items.
@@ -51,6 +53,7 @@ class SurveySectionApiView(APIView):
     permission_classes = [IsAuthenticated, IsAdminUser]
 
     # List all
+    @extend_schema(request=None, responses=SurveySectionSerializer)
     def get(self, request, *args, **kwargs):
         """
         List all the items.
@@ -71,6 +74,7 @@ class SurveyQuestionApiView(APIView):
     permission_classes = [IsAuthenticated, IsAdminUser]
 
     # List all
+    @extend_schema(request=None, responses=SurveyQuestionSerializer)
     def get(self, request, *args, **kwargs):
         """
         List all the items.
@@ -91,6 +95,7 @@ class SurveyQuestionAnswerApiView(APIView):
     permission_classes = [IsAuthenticated, IsAdminUser]
 
     # List all
+    @extend_schema(request=None, responses=SurveyQuestionAnszerSerializer)
     def get(self, request, *args, **kwargs):
         """
         List all the items.
@@ -111,6 +116,7 @@ class SurveyUsersApiView(APIView):
     queryset = SurveyUser.objects.all().order_by("-created_at")
 
     # List all
+    @extend_schema(request=None, responses=SurveyUserSerializer)
     def get(self, request):
         """
         Get all the items.
@@ -125,6 +131,7 @@ class SurveyUserApiView(APIView):
     permission_classes = [IsAuthenticated, IsAdminUser]
 
     # Get an elemtent
+    @extend_schema(request=None, responses=SurveyUserSerializer)
     def get(self, request, id):
         """
         Get an item.
@@ -144,6 +151,7 @@ class SurveyUserAnswerApiView(APIView):
     permission_classes = [IsAuthenticated, IsAdminUser]
 
     # Get an elemtent
+    @extend_schema(request=None, responses=SurveyUserAnswerSerializer)
     def get(self, request, id):
         """
         Get an item.
