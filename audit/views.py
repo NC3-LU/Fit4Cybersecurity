@@ -56,9 +56,7 @@ def index(request):
             auditByUser.audit.survey_user.surveyuseranswer_set.filter(
                 answer__question__id=get_answered_questions_sequences(
                     auditByUser.audit.survey_user
-                )
-                .first()
-                .question_id,
+                )[0].question_id,
                 uvalue=1,
             )
             .get()
