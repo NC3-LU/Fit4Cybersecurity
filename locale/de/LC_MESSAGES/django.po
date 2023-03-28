@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-03-07 15:03+0000\n"
+"POT-Creation-Date: 2023-03-28 09:40+0000\n"
 "PO-Revision-Date: 2022-05-03 13:47+0000\n"
 "Last-Translator: Benjamin Joly <benjamin.joly@cases.lu>\n"
 "Language-Team: German <https://translate.monarc.lu/projects/"
@@ -167,6 +167,55 @@ msgstr ""
 "wichtigen Themen wie der Verarbeitung personenbezogene Daten, Data Lifecycle "
 "Management und Datenschutz-Verpflichtungenauf die Organisationen bereits im "
 "Jahr 2021 vorbereitet sein sollten."
+
+#: csskp/settings.py:47
+msgid "Cookie settings"
+msgstr ""
+
+#: csskp/settings.py:51
+msgid "Essential"
+msgstr ""
+
+#: csskp/settings.py:53
+msgid ""
+"This website uses cookies and other similar technologies strictly "
+"necessary                 for its operation, without the use of personal "
+"data."
+msgstr ""
+
+#: csskp/settings.py:59
+msgid "Meta cookie for the cookies that are set."
+msgstr ""
+
+#: csskp/settings.py:60
+msgid "Accepted cookies"
+msgstr ""
+
+#: csskp/settings.py:61 csskp/settings.py:69
+#| msgid "Last year"
+msgid "1 year"
+msgstr ""
+
+#: csskp/settings.py:66
+msgid "This cookie prevents Cross-Site-Request-Forgery attacks."
+msgstr ""
+
+#: csskp/settings.py:68
+msgid "Token"
+msgstr ""
+
+#: csskp/settings.py:74
+msgid "This cookie is necessary for the language options, for example."
+msgstr ""
+
+#: csskp/settings.py:76
+#| msgid "Version of"
+msgid "session ID"
+msgstr ""
+
+#: csskp/settings.py:77
+msgid "15 days"
+msgstr ""
 
 #: csskp/surveySMEDemand/__init__.py:7
 msgid ""
@@ -8585,8 +8634,10 @@ msgid "Certification"
 msgstr ""
 
 #: data/surveySMEDemand/questions.json:1996
-msgid ""
-"How trustworthy would you evaluate your cybersecurity service provider(s)?"
+#: data/surveySMEDemand/questions.json:2038
+#: data/surveySMEDemand/questions.json:2061
+#: data/surveySMEDemand/questions.json:2076
+msgid "How trustworthy would you evaluate your digital service provider(s)?"
 msgstr ""
 
 #: data/surveySMEDemand/questions.json:2010
@@ -8595,12 +8646,6 @@ msgstr ""
 msgid ""
 "If the cybersecurity services available in the market do not match your "
 "needs, what are you missing?"
-msgstr ""
-
-#: data/surveySMEDemand/questions.json:2038
-#: data/surveySMEDemand/questions.json:2061
-#: data/surveySMEDemand/questions.json:2076
-msgid "How trustworthy would you evaluate your digital service provider(s)?"
 msgstr ""
 
 #: data/surveySMEDemand/questions.json:2067
@@ -8798,29 +8843,37 @@ msgstr "Lasst uns beginnen"
 msgid "Question"
 msgstr "Frage"
 
-#: survey/views.py:144
+#: survey/views.py:149
 msgid "To generate a report you have to finish the survey."
 msgstr ""
 "Um einen Bericht zu erstellen, muss erst die Umfrage beantwortet werden."
 
-#: survey/views.py:215
+#: survey/views.py:220
 msgid "Answers review"
 msgstr "Überprüfung der Antworten"
 
-#: survey/views.py:256
+#: survey/views.py:261
 msgid "Final summary"
 msgstr "Zusammenfassung"
 
-#: survey/views.py:292
+#: survey/views.py:297
 msgid ""
 "We could not find a survey with the requested key, please start a new one."
 msgstr ""
 "Wir konnten keine Umfrage mit dem angeforderten Schlüssel finden. Bitte "
 "starten Sie eine neue."
 
-#: survey/views.py:325
+#: survey/views.py:330
 msgid "Feedback sending errors: "
 msgstr "Fehler beim Senden von Rückmeldungen: "
+
+#: templates/cookiebanner/bootstrap4.html:21
+msgid "Details"
+msgstr ""
+
+#: templates/cookiebanner/bootstrap4.html:30
+msgid "Do not display anymore"
+msgstr ""
 
 #: templates/fit4contract/survey/finishedSurvey.html:6
 msgid ""
@@ -8995,12 +9048,24 @@ msgid "Stats"
 msgstr "Statistiken"
 
 #: templates/parts/fit4africa/footer_part.html:17
+#: templates/parts/fit4africa/footer_part.html:18
 #: templates/parts/fit4contract/footer_part.html:24
+#: templates/parts/fit4contract/footer_part.html:25
 #: templates/parts/fit4ehealth/footer_part.html:37
 #: templates/parts/fit4ehealth/footer_part.html:38
 #: templates/parts/footer_part.html:31 templates/parts/footer_part.html:32
 msgid "Terms of Service"
 msgstr "Nutzungsbedingungen"
+
+#: templates/parts/fit4africa/footer_part.html:21
+#: templates/parts/fit4africa/footer_part.html:22
+#: templates/parts/fit4contract/footer_part.html:28
+#: templates/parts/fit4contract/footer_part.html:29
+#: templates/parts/fit4ehealth/footer_part.html:41
+#: templates/parts/fit4ehealth/footer_part.html:42
+#: templates/parts/footer_part.html:35 templates/parts/footer_part.html:36
+msgid "Privacy policy"
+msgstr ""
 
 #: templates/parts/fit4contract/footer_part.html:7
 #: templates/parts/fit4contract/footer_part.html:8
@@ -9033,9 +9098,23 @@ msgstr "Version von"
 msgid "eQualis"
 msgstr "eQualis"
 
+#: templates/parts/privacy_policy_part.html:87
+msgid "Name"
+msgstr ""
+
+#: templates/parts/privacy_policy_part.html:88
 #: templates/report/description.html:4
 msgid "Description"
 msgstr "Beschreibung"
+
+#: templates/parts/privacy_policy_part.html:89
+#| msgid "Context"
+msgid "Content"
+msgstr ""
+
+#: templates/parts/privacy_policy_part.html:90
+msgid "Maximum term"
+msgstr ""
 
 #: templates/report/description.html:8
 #, python-format
@@ -9310,17 +9389,17 @@ msgstr "Punktzahl nach Kategorie"
 msgid "Send"
 msgstr "Senden"
 
-#: templates/survey/index.html:18
+#: templates/survey/index.html:20
 msgid "Welcome to the NC3 self-assessment tool:"
 msgstr "Willkommen beim NC3-Tool zur Selbstbewertung:"
 
-#: templates/survey/index.html:28
-#: templates/surveySMEDemand/survey/index.html:23
+#: templates/survey/index.html:30
+#: templates/surveySMEDemand/survey/index.html:25
 msgid "Start"
 msgstr "Starten"
 
-#: templates/survey/index.html:36
-#: templates/surveySMEDemand/survey/index.html:31
+#: templates/survey/index.html:38
+#: templates/surveySMEDemand/survey/index.html:33
 msgid "Continue a previous survey"
 msgstr "Setzen Sie eine vorherige Umfrage fort"
 
