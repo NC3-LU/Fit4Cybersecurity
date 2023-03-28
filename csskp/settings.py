@@ -50,7 +50,8 @@ COOKIEBANNER = {
             "id": "essential",
             "name": _("Essential"),
             "description": _(
-                "This website uses cookies and other similar technologies strictly necessary for its operation, without the use of personal data."
+                "This website uses cookies and other similar technologies strictly necessary \
+                for its operation, without the use of personal data."
             ),
             "cookies": [
                 {
@@ -101,8 +102,6 @@ try:
 
     ALLOWED_HOSTS = config.ALLOWED_HOSTS
     PUBLIC_URL = config.PUBLIC_URL
-    OPERATOR_NAME = config.OPERATOR_NAME
-    OPERATOR_WEBSITE = config.OPERATOR_WEBSITE
     OPERATOR_EMAIL = config.OPERATOR_EMAIL
 
     EMAIL_HOST = config.EMAIL_HOST
