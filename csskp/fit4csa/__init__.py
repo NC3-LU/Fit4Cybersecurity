@@ -61,6 +61,7 @@ CUSTOM = {
         "terms": "terms_part.html",
         "footer": "fit4csa/footer_part.html",
         "main_logo": "fit4csa/logo_part.html",
+        "privacy": "privacy_policy_part.html",
     },
     # Available modules
     "modules": {
