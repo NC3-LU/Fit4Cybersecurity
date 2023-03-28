@@ -1,0 +1,42 @@
+{% load i18n %}
+{% load bootstrap4 %}
+{% load static %}
+
+{% block bootstrap4_extra_head %}
+    <link rel="stylesheet" type="text/css" href="{% static 'survey/css/cookie_banner.css' %}" />
+    <script type="text/javascript" src="{% static 'survey/js/cookie_banner.js' %}"></script>
+{% endblock %}
+<div class="modal fade" id="cookiebannerModal" tabindex="-1" role="dialog" aria-labelledby="cookiebannerModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title" id="cookiebannerModalLabel">{{ cb_settings.title }}</h3>
+        {% if cb_settings.header_text %}
+          <p>{{ cb_settings.header_text|safe }}</p>
+        {% endif %}
+      </div>
+      <div class="modal-body">
+        <form id="cookiebannerForm">
+          {% for cookiegroup in cb_settings.groups %}
+          <p class="text-justify">{{ cookiegroup.description }} <a href="{% url 'privacy' %}" role="button">{% trans 'Details' %}</a></p>
+          {% endfor %}
+        </form>
+      </div>
+      <div class="modal-footer">
+        {% if cb_settings.footer_text %}
+          <p class="text-left">{{ cb_settings.footer_text|safe }}</p>
+        {% endif %}
+        <input type="submit" name="enable_all" class="cookiebannerSubmit btn btn-primary mx-auto"
+               value="{{ _('Do not display anymore') }}">
+        <nav class="cookie-footer-links">
+          {% for link in cb_settings.footer_links %}
+            <span class="nav-item"><a class="nav-link" href="{{ link.href }}">{{ link.title }}</a></span>
+          {% endfor %}
+        </nav>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  const cookiegroups = JSON.parse("{{ cookiegroups_json|escapejs }}");
+</script>

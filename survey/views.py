@@ -13,9 +13,11 @@ from django.shortcuts import render
 from django.utils import translation
 from django.utils.translation import gettext as _
 
+from csskp.settings import COOKIEBANNER
 from csskp.settings import CUSTOM
 from csskp.settings import HASH_KEY
 from csskp.settings import LANGUAGE_CODE
+from csskp.settings import OPERATOR_CONTACT
 from survey.models import SURVEY_STATUS_FINISHED
 from survey.models import SurveyUser
 from survey.report import create_html_report
@@ -105,6 +107,9 @@ def change_lang(request, lang: str):
 
     if previous_path.__contains__("/terms/"):
         return HttpResponseRedirect("/terms/")
+
+    if previous_path.__contains__("/privacy/"):
+        return HttpResponseRedirect("/privacy/")
 
     if user_id is None:
         return HttpResponseRedirect("/")
@@ -342,4 +347,14 @@ def save_general_feedback(request):
 def get_terms(request):
     lang = request.session.get(settings.LANGUAGE_COOKIE_NAME, LANGUAGE_CODE)
     translation.activate(lang)
-    return render(request, "survey/terms.html")
+    return render(request, "survey/terms.html", context={"operator": OPERATOR_CONTACT})
+
+
+def get_privacy_policy(request):
+    lang = request.session.get(settings.LANGUAGE_COOKIE_NAME, LANGUAGE_CODE)
+    translation.activate(lang)
+    return render(
+        request,
+        "survey/privacy_policy.html",
+        context={"cookieBanner": COOKIEBANNER, "operator": OPERATOR_CONTACT},
+    )

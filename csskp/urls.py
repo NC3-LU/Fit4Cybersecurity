@@ -26,6 +26,8 @@ urlpatterns = [
     path("terms/", views.get_terms, name="terms"),
     # Login
     path("", include("django.contrib.auth.urls")),
+    # Privacy Policy
+    path("privacy/", views.get_privacy_policy, name="privacy"),
     # Stats
     path("stats/", include("stats.urls")),
     # Admin

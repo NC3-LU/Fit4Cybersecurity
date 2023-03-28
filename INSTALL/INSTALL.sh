@@ -85,7 +85,16 @@ from socket import gethostname, gethostbyname
 
 PUBLIC_URL = ""
 ALLOWED_HOSTS = [gethostname(), gethostbyname(gethostname())]
-OPERATOR_EMAIL = "info@example.org"
+OPERATOR_CONTACT = {
+    "name": "Organization Name",
+    "street": "Organization Street",
+    "zip_code": "Organization Zip Code",
+    "country": "Organization Country",
+    "phone": "Organization Phone Number",
+    "website": "https://www.example.org",
+    "contact_email": "contact@example.org",
+    "privacy_email": "privacy@exemple.org",
+}
 
 # The generic site/tool name. Used to load specific config, templates, styles, logo.
 SITE_NAME = "$SITE_NAME"

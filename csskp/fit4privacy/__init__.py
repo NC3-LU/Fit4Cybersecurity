@@ -48,6 +48,7 @@ CUSTOM = {
         "terms": "terms_part.html",
         "footer": "footer_part.html",
         "main_logo": "logo_part.html",
+        "privacy": "privacy_policy_part.html",
     },
     # Available modules
     "modules": {
