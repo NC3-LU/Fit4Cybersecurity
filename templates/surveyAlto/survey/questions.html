@@ -8,6 +8,7 @@
     {{ block.super }}
     <link rel="stylesheet" type="text/css" href="{% static 'survey/css/survey-questions.css' %}" />
     <script type="text/javascript" src="{% static 'npm_components/jquery-ui/dist/jquery-ui.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'npm_components/jquery-ui-touch-punch/jquery.ui.touch-punch.min.js' %}"></script>
     <script type="text/javascript" src="{% static 'survey/js/qrcode.min.js' %}"></script>
     <script type="text/javascript" src="{% static 'survey/js/survey-questions.js' %}"></script>
 {% endblock %}
@@ -53,13 +54,13 @@
             </p>
 
             {% buttons %}
-                <div class="form-group pt-4">
-                    <div class="d-flex flex-row justify-content-between">
-                        <div>
+                <div class="form-group pt-4 container">
+                    <div class="row">
+                        <div class="col-8">
                             {% if user.is_survey_in_progress %}
                                 {% if current_question_index > 1 %}
                                     <button
-                                        class="btn btn-primary return-to-question"
+                                        class="btn col-5 col-md-2 btn-sm btn btn-primary return-to-question "
                                         data-return-to-question="{{ previous_question_index }}"
                                         type="button">
                                         {{ _('Back') }}
@@ -67,20 +68,20 @@
                                 {% endif %}
                             {% else %}
                                 <button
-                                    class="btn btn-primary cancel-modifications"
+                                    class="col-5 col-md-2 btn-sm btn btn-primary cancel-modifications"
                                     data-question-index="{{ current_question_index }}"
                                     type="button">
                                     {{ _('Cancel') }}
                                 </button>
                             {% endif %}
                             <input
-                            class="ml-3 btn btn-primary{% if show_warning_dialog %} modify-question{% endif %}"
+                            class="ml-3 btn col-5 col-md-2 btn-sm btn-primary{% if show_warning_dialog %} modify-question{% endif %}"
                             type="submit"
                             value="{% if user.is_survey_under_review or show_warning_dialog %}{{ _('Modify') }}{% else %}{{ _('Next') }}{% endif %}"
                             data-question-index="{{ current_question_index }}">
                         </div>
                         <button
-                            class="btn btn btn-link"
+                            class="col btn btn-link btn-sm"
                             type="button"
                             name="continue-later"
                             data-toggle="modal"
