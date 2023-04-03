@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-03-27 14:17+0000\n"
+"POT-Creation-Date: 2023-04-03 12:21+0000\n"
 "PO-Revision-Date: 2023-03-21 13:35+0100\n"
 "Language: fr\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -168,7 +168,6 @@ msgid "Essential"
 msgstr "Essentiel"
 
 #: csskp/settings.py:53
-#, fuzzy
 #| msgid ""
 #| "This website uses cookies and other similar technologies strictly "
 #| "necessary for its operation, without the use of personal data."
@@ -177,9 +176,6 @@ msgid ""
 "necessary                 for its operation, without the use of personal "
 "data."
 msgstr ""
-"Ce site web utilise des cookies et d'autres technologies similaires "
-"strictement nécessaires à son fonctionnement, sans utiliser de données "
-"personnelles."
 
 #: csskp/settings.py:59
 msgid "Meta cookie for the cookies that are set."
@@ -214,7 +210,6 @@ msgid "15 days"
 msgstr "15 jours"
 
 #: csskp/surveyAlto/__init__.py:7
-#, fuzzy
 #| msgid ""
 #| "Managing personal data in accordance with the General Data Protection "
 #| "Regulation (hereinafter \"<strong>GDPR</strong>\") can be a challenge for "
@@ -265,31 +260,6 @@ msgid ""
 "cnpd.public.lu/en/professionnels/outils-conformite/projet-alto.html "
 "target=_blank rel=noopener noreferrer>the dedicated web page.</a>"
 msgstr ""
-"Gérer les données personnelles conformément au Règlement Général relatif à "
-"la Protection des Données (ci-après le « <strong>RGPD</strong> ») peut "
-"constituer un défi pour les petites et moyennes entreprises (ci-après les « "
-"<strong>PME</strong> »), qui sont souvent désavantagées par rapport aux "
-"grandes structures en termes de coûts et d'impact, notamment. De plus, le "
-"développement de stratégies de gestion de données ou de « réflexes de "
-"responsable de traitement » sont rarement en tête des priorités – les "
-"éventuels manques de connaissance et de sensibilisation, d'une part, et "
-"d'informations et d'outils pratiques, d'autre part pourraient constituer les "
-"causes présumées. En tout état de cause, il est nécessaire de renforcer la "
-"sensibilisation des PME à l'importance de la protection des données à "
-"caractère personnel et de les accompagner pour améliorer leur mise en "
-"conformité au RGPD<br><br>Le projet ALTO, né d'un partenariat entre la "
-"Commission nationale pour la protection des données (ci-après « "
-"<strong>CNPD</strong> ») et la Luxembourg House of Cybersecurity, National "
-"Cybersecurity Competence Center (ci-après le « <strong>LHC-NC3</strong> »), "
-"a pour objectif de mettre en œuvre un outil d'auto-évaluation afin de "
-"répondre aux défis quotidiens des PME en matière de protection des données."
-"<br><br>Le présent questionnaire, qui se veut anonyme, a pour but de cerner "
-"les obstacles/problèmes/questions en matière de protection des données "
-"auxquels sont confrontés les PME, afin de créer et mettre à leur disposition "
-"un outil d'auto-évaluation répondant à leurs besoins.<br><br>Pour en savoir "
-"plus sur le projet ALTO, nous vous invitons à vous rendre sur <a "
-"href=https://cnpd.public.lu/fr/professionnels/outils-conformite/projet-alto."
-"html target=_blank rel=noopener noreferrer>la page internet dédiée.</a>"
 
 #: csskp/surveySMEDemand/__init__.py:7
 msgid ""
@@ -609,7 +579,7 @@ msgstr "5000+"
 #: data/fit4contract/context-questions.json:199
 #: data/fit4cybersecurity/context-questions.json:199
 #: data/fit4ehealth/context-questions.json:20
-#: data/fit4privacy/context-questions.json:199 survey/forms.py:70
+#: data/fit4privacy/context-questions.json:199 survey/forms.py:71
 msgid "Please select your country"
 msgstr "Veuillez sélectionner votre pays"
 
@@ -9781,11 +9751,16 @@ msgstr "Examen des réponses"
 msgid "Finished"
 msgstr "Accompli"
 
-#: survey/forms.py:74
+#: survey/forms.py:43
+#| msgid "Please specify:"
+msgid "Please select"
+msgstr ""
+
+#: survey/forms.py:75
 msgid "You need to choose at least one answer"
 msgstr "Vous devez choisir au moins une réponse"
 
-#: survey/forms.py:117 survey/forms.py:192
+#: survey/forms.py:118 survey/forms.py:193
 #: templates/survey/finishedSurvey.html:196
 #: templates/survey/finishedSurvey.html:210 templates/survey/review.html:50
 #: templates/surveyAlto/survey/finishedSurvey.html:186
@@ -9794,16 +9769,16 @@ msgstr "Vous devez choisir au moins une réponse"
 msgid "Your feedback"
 msgstr "Vos retours"
 
-#: survey/forms.py:119 survey/forms.py:194
+#: survey/forms.py:120 survey/forms.py:195
 msgid "Please let us know if anything is missing"
 msgstr "Signalez-nous ce qui manque"
 
-#: survey/forms.py:154
+#: survey/forms.py:155
 msgid "You can't choose multiple answers if the answer {} is choosen."
 msgstr ""
 "Vous ne pouvez pas choisir plusieurs réponses si la réponse {} est choisie."
 
-#: survey/forms.py:169
+#: survey/forms.py:170
 msgid "You can't choose the answers {} if answer '{}' is choosen."
 msgstr ""
 "Vous ne pouvez pas choisir plusieurs réponses {} si la réponse {} est "
@@ -10451,32 +10426,32 @@ msgid "Would like to leave survey?"
 msgstr "Voulez vous quitter l'enquête ?"
 
 #: templates/survey/questions.html:45
-#: templates/surveyAlto/survey/questions.html:52
+#: templates/surveyAlto/survey/questions.html:53
 msgid "Multiple answers are possible."
 msgstr "Plusieurs réponses sont possibles."
 
 #: templates/survey/questions.html:57
-#: templates/surveyAlto/survey/questions.html:65
+#: templates/surveyAlto/survey/questions.html:66
 msgid "Back"
 msgstr "Précédent"
 
 #: templates/survey/questions.html:65
-#: templates/surveyAlto/survey/questions.html:73
+#: templates/surveyAlto/survey/questions.html:74
 msgid "Cancel"
 msgstr "Annuler"
 
 #: templates/survey/questions.html:74 templates/survey/review.html:67
-#: templates/surveyAlto/survey/questions.html:88
+#: templates/surveyAlto/survey/questions.html:89
 msgid "Continue later"
 msgstr "Continuer plus tard"
 
 #: templates/survey/questions.html:79
-#: templates/surveyAlto/survey/questions.html:79
+#: templates/surveyAlto/survey/questions.html:80
 msgid "Modify"
 msgstr "Modifier"
 
 #: templates/survey/questions.html:79 templates/survey/start.html:39
-#: templates/surveyAlto/survey/questions.html:79
+#: templates/surveyAlto/survey/questions.html:80
 #: templates/surveyAlto/survey/start.html:33
 msgid "Next"
 msgstr "Suivant"
