@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-04-04 07:28+0000\n"
+"POT-Creation-Date: 2023-04-04 11:15+0000\n"
 "PO-Revision-Date: 2023-04-03 12:34+0000\n"
 "Last-Translator: Gregory Wawszyniak-dumont <gregory.wawszyniak-dumont@nc3."
 "lu>\n"
@@ -309,8 +309,8 @@ msgstr "Kontext"
 #: data/fit4privacy/context-questions.json:201
 #: data/surveySMEDemand/context-questions.json:3
 #: data/surveySMEDemand/context-questions.json:47
-#: data/surveySMEDemand/context-questions.json:84
-#: data/surveySMEDemand/context-questions.json:177
+#: data/surveySMEDemand/context-questions.json:98
+#: data/surveySMEDemand/context-questions.json:191
 msgid "__context"
 msgstr "__context"
 
@@ -463,6 +463,7 @@ msgstr "1-5"
 #: data/fit4contract/context-questions.json:134
 #: data/fit4cybersecurity/context-questions.json:134
 #: data/fit4privacy/context-questions.json:134
+#: data/surveySMEDemand/questions.json:746
 msgid "6-10"
 msgstr "6-10"
 
@@ -526,7 +527,7 @@ msgstr "5000+"
 #: data/fit4contract/context-questions.json:199
 #: data/fit4cybersecurity/context-questions.json:199
 #: data/fit4ehealth/context-questions.json:20
-#: data/fit4privacy/context-questions.json:199 survey/forms.py:61
+#: data/fit4privacy/context-questions.json:199 survey/forms.py:62
 msgid "Please select your country"
 msgstr "Bitte wählen Sie Ihr Land"
 
@@ -2536,7 +2537,7 @@ msgstr ""
 "Alle oder ein Teil der Daten werden in einer Cloud-Infrastruktur gespeichert."
 
 #: data/fit4ehealth/context-questions.json:28
-#: data/surveySMEDemand/context-questions.json:136
+#: data/surveySMEDemand/context-questions.json:150
 msgid "Luxembourg"
 msgstr "Luxemburg"
 
@@ -2662,15 +2663,6 @@ msgstr "Hebamme"
 
 #: data/fit4ehealth/context-questions.json:248
 #: data/surveySMEDemand/context-questions.json:42
-#: data/surveySMEDemand/questions.json:263
-#: data/surveySMEDemand/questions.json:1002
-#: data/surveySMEDemand/questions.json:1095
-#: data/surveySMEDemand/questions.json:1160
-#: data/surveySMEDemand/questions.json:1253
-#: data/surveySMEDemand/questions.json:1388
-#: data/surveySMEDemand/questions.json:1537
-#: data/surveySMEDemand/questions.json:1858
-#: data/surveySMEDemand/questions.json:1979
 msgid "Other"
 msgstr "Andere"
 
@@ -5653,7 +5645,16 @@ msgstr ""
 
 #: data/fit4operatorsurvey/questions.json:499
 #: data/fit4operatorsurvey/questions.json:685
+#: data/surveySMEDemand/questions.json:263
 #: data/surveySMEDemand/questions.json:881
+#: data/surveySMEDemand/questions.json:1002
+#: data/surveySMEDemand/questions.json:1095
+#: data/surveySMEDemand/questions.json:1160
+#: data/surveySMEDemand/questions.json:1253
+#: data/surveySMEDemand/questions.json:1388
+#: data/surveySMEDemand/questions.json:1537
+#: data/surveySMEDemand/questions.json:1858
+#: data/surveySMEDemand/questions.json:1979
 msgid "Other:"
 msgstr "Sonstiges:"
 
@@ -7724,8 +7725,8 @@ msgstr ""
 
 #: data/surveySMEDemand/context-questions.json:4
 #: data/surveySMEDemand/context-questions.json:48
-#: data/surveySMEDemand/context-questions.json:85
-#: data/surveySMEDemand/context-questions.json:178
+#: data/surveySMEDemand/context-questions.json:99
+#: data/surveySMEDemand/context-questions.json:192
 msgid "Socio-economic data"
 msgstr "Sozioökonomische Daten"
 
@@ -7761,151 +7762,158 @@ msgid "1"
 msgstr "1"
 
 #: data/surveySMEDemand/context-questions.json:65
-#: data/surveySMEDemand/questions.json:746
-msgid "<10"
-msgstr "<10"
+msgid "2-10"
+msgstr ""
 
 #: data/surveySMEDemand/context-questions.json:72
-msgid "<50"
-msgstr "<50"
+msgid "11-25"
+msgstr ""
 
 #: data/surveySMEDemand/context-questions.json:79
-msgid "<250"
-msgstr "<250"
+msgid "26-50"
+msgstr ""
 
-#: data/surveySMEDemand/context-questions.json:88
+#: data/surveySMEDemand/context-questions.json:86
+msgid "51-75"
+msgstr ""
+
+#: data/surveySMEDemand/context-questions.json:93
+msgid "76-250"
+msgstr ""
+
+#: data/surveySMEDemand/context-questions.json:102
 msgid "In which canton is your head office located?"
 msgstr "In welchem Kanton befindet sich Ihr Hauptsitz?"
 
-#: data/surveySMEDemand/context-questions.json:94
+#: data/surveySMEDemand/context-questions.json:108
 msgid "Capellen"
 msgstr "Capellen"
 
-#: data/surveySMEDemand/context-questions.json:101
+#: data/surveySMEDemand/context-questions.json:115
 msgid "Clervaux"
 msgstr "Clervaux"
 
-#: data/surveySMEDemand/context-questions.json:108
+#: data/surveySMEDemand/context-questions.json:122
 msgid "Diekirch"
 msgstr "Diekirch"
 
-#: data/surveySMEDemand/context-questions.json:115
+#: data/surveySMEDemand/context-questions.json:129
 msgid "Echternach"
 msgstr "Echternach"
 
-#: data/surveySMEDemand/context-questions.json:122
+#: data/surveySMEDemand/context-questions.json:136
 msgid "Esch-sur-Alzette"
 msgstr "Esch-sur-Alzette"
 
-#: data/surveySMEDemand/context-questions.json:129
+#: data/surveySMEDemand/context-questions.json:143
 msgid "Grevenmacher"
 msgstr "Grevenmacher"
 
-#: data/surveySMEDemand/context-questions.json:143
+#: data/surveySMEDemand/context-questions.json:157
 msgid "Mersch"
 msgstr "Mersch"
 
-#: data/surveySMEDemand/context-questions.json:150
+#: data/surveySMEDemand/context-questions.json:164
 msgid "Redange"
 msgstr "Redange"
 
-#: data/surveySMEDemand/context-questions.json:157
+#: data/surveySMEDemand/context-questions.json:171
 msgid "Remich"
 msgstr "Remich"
 
-#: data/surveySMEDemand/context-questions.json:164
+#: data/surveySMEDemand/context-questions.json:178
 msgid "Vianden"
 msgstr "Vianden"
 
-#: data/surveySMEDemand/context-questions.json:171
+#: data/surveySMEDemand/context-questions.json:185
 msgid "Wiltz"
 msgstr "Wiltz"
 
-#: data/surveySMEDemand/context-questions.json:181
+#: data/surveySMEDemand/context-questions.json:195
 msgid "What is your activity sector?"
 msgstr "Was ist Ihr Tätigkeitsbereich?"
 
-#: data/surveySMEDemand/context-questions.json:185
+#: data/surveySMEDemand/context-questions.json:199
 msgid "Agriculture, forestry and fishing"
 msgstr "Land- und Forstwirtschaft, Fischerei"
 
-#: data/surveySMEDemand/context-questions.json:192
+#: data/surveySMEDemand/context-questions.json:206
 msgid "Mining and quarrying"
 msgstr "Bergbau und Gewinnung von Steinen und Erden"
 
-#: data/surveySMEDemand/context-questions.json:199
+#: data/surveySMEDemand/context-questions.json:213
 msgid "Manufacturing"
 msgstr "Verarbeitendes Gewerbe/Herstellung von Waren"
 
-#: data/surveySMEDemand/context-questions.json:206
+#: data/surveySMEDemand/context-questions.json:220
 msgid "Electricity, gas, steam and air conditioning supply"
 msgstr "Energieversorgung"
 
-#: data/surveySMEDemand/context-questions.json:213
+#: data/surveySMEDemand/context-questions.json:227
 msgid "Water supply; sewerage; waste management and remediation activities"
 msgstr ""
 "Wasserversorgung; Abwasser- und Abfallentsorgung und Beseitigung von "
 "Umweltverschmutzungen"
 
-#: data/surveySMEDemand/context-questions.json:220
+#: data/surveySMEDemand/context-questions.json:234
 msgid "Construction"
 msgstr "Baugewerbe/Bau"
 
-#: data/surveySMEDemand/context-questions.json:227
+#: data/surveySMEDemand/context-questions.json:241
 msgid "Wholesale and retail trade; repair of motor vehicles and motorcycles"
 msgstr "Handel; Instandhaltung und Reparatur von Kraftfahrzeugen"
 
-#: data/surveySMEDemand/context-questions.json:234
+#: data/surveySMEDemand/context-questions.json:248
 msgid "Transporting and storage"
 msgstr "Verkehr und Lagerei"
 
-#: data/surveySMEDemand/context-questions.json:241
+#: data/surveySMEDemand/context-questions.json:255
 msgid "Accommodation and food service activities"
 msgstr "Gastgewerbe/Beherbergung und Gastronomie"
 
-#: data/surveySMEDemand/context-questions.json:248
+#: data/surveySMEDemand/context-questions.json:262
 msgid "Information and communication"
 msgstr "Information und Kommunikation"
 
-#: data/surveySMEDemand/context-questions.json:255
+#: data/surveySMEDemand/context-questions.json:269
 msgid "Financial and insurance activities"
 msgstr "Erbringung von Finanz- und Versicherungsdienstleistungen"
 
-#: data/surveySMEDemand/context-questions.json:262
+#: data/surveySMEDemand/context-questions.json:276
 msgid "Real estate activities"
 msgstr "Grundstücks- und Wohnungswesen"
 
-#: data/surveySMEDemand/context-questions.json:269
+#: data/surveySMEDemand/context-questions.json:283
 msgid "Professional, scientific and technical activities"
 msgstr ""
 "Erbringung freiberuflicher, wissenschaftlicher und technischer "
 "Dienstleistungen"
 
-#: data/surveySMEDemand/context-questions.json:276
+#: data/surveySMEDemand/context-questions.json:290
 msgid "Administrative and support service activities"
 msgstr "Erbringung von sonstigen wirtschaftlichen Dienstleistungen"
 
-#: data/surveySMEDemand/context-questions.json:283
+#: data/surveySMEDemand/context-questions.json:297
 msgid "Public administration and defense; compulsatory social security"
 msgstr "Öffentliche Verwaltung, Verteidigung; Sozialversicherung"
 
-#: data/surveySMEDemand/context-questions.json:290
+#: data/surveySMEDemand/context-questions.json:304
 msgid "Education"
 msgstr "Erziehung und Unterricht"
 
-#: data/surveySMEDemand/context-questions.json:297
+#: data/surveySMEDemand/context-questions.json:311
 msgid "Human health and social work activities"
 msgstr "Gesundheits- und Sozialwesen"
 
-#: data/surveySMEDemand/context-questions.json:304
+#: data/surveySMEDemand/context-questions.json:318
 msgid "Arts, entertainment and recreation"
 msgstr "Kunst, Unterhaltung und Erholung"
 
-#: data/surveySMEDemand/context-questions.json:311
+#: data/surveySMEDemand/context-questions.json:325
 msgid "Other services activities"
 msgstr "Andere Servicetätigkeiten"
 
-#: data/surveySMEDemand/context-questions.json:318
+#: data/surveySMEDemand/context-questions.json:332
 msgid ""
 "Activities of hoseholds as employers; undifferentiated goods - and services "
 "- producing activities of households for own use"
@@ -7914,7 +7922,7 @@ msgstr ""
 "Dienstleistungen durch private Haushalte für den Eigenbedarf ohne "
 "ausgeprägten Schwerpunkt"
 
-#: data/surveySMEDemand/context-questions.json:325
+#: data/surveySMEDemand/context-questions.json:339
 msgid "Activities of extraterritorial organisations and bodies"
 msgstr "Schwerpunkt, Exterritoriale Organisationen und Körperschaften"
 
@@ -7988,16 +7996,16 @@ msgid "<1%"
 msgstr "<1%"
 
 #: data/surveySMEDemand/questions.json:128
-msgid "<2%"
-msgstr "<2%"
+msgid "1-2%"
+msgstr ""
 
 #: data/surveySMEDemand/questions.json:142
-msgid "<3%"
-msgstr "<3%"
+msgid "2-3%"
+msgstr ""
 
 #: data/surveySMEDemand/questions.json:156
-msgid "<5%"
-msgstr "<5%"
+msgid "3-5%"
+msgstr ""
 
 #: data/surveySMEDemand/questions.json:170
 msgid ">5%"
@@ -8127,9 +8135,13 @@ msgid "2 years ago"
 msgstr "Vor 2 Jahren"
 
 #: data/surveySMEDemand/questions.json:509
-#: data/surveySMEDemand/questions.json:523
 msgid "3 years ago"
 msgstr "Vor 3 Jahren"
+
+#: data/surveySMEDemand/questions.json:523
+#| msgid "3 years ago"
+msgid "over 3 years ago"
+msgstr ""
 
 #: data/surveySMEDemand/questions.json:540
 #: data/surveySMEDemand/questions.json:554
@@ -8209,16 +8221,18 @@ msgid "0"
 msgstr "0"
 
 #: data/surveySMEDemand/questions.json:732
-msgid "<5"
-msgstr "<5"
+#| msgid "20-50"
+msgid "2-5"
+msgstr ""
 
 #: data/surveySMEDemand/questions.json:760
-msgid "<20"
-msgstr "<20"
+msgid "11-20"
+msgstr ""
 
 #: data/surveySMEDemand/questions.json:774
-msgid ">20"
-msgstr ">20"
+#| msgid "<20"
+msgid "+20"
+msgstr ""
 
 #: data/surveySMEDemand/questions.json:779
 #: data/surveySMEDemand/questions.json:886
@@ -8236,8 +8250,8 @@ msgstr "Digitale Dienstleistungen und Produkte"
 #: data/surveySMEDemand/questions.json:1101
 #: data/surveySMEDemand/questions.json:1166
 #: data/surveySMEDemand/questions.json:1259
-msgid "Tools"
-msgstr "Werkzeug"
+msgid "Digital tools"
+msgstr ""
 
 #: data/surveySMEDemand/questions.json:791
 #: data/surveySMEDemand/questions.json:890
@@ -8460,8 +8474,9 @@ msgid "Product Information Management (PIM) system"
 msgstr "System zur Verwaltung von Produktinformationen (PIM)"
 
 #: data/surveySMEDemand/questions.json:1394
-msgid "Focus on cybersecurity practices"
-msgstr "Konzentrieren Sie sich auf Cybersicherheitspraktiken"
+#| msgid "Focus on cybersecurity practices"
+msgid "Cybersecurity practices"
+msgstr ""
 
 #: data/surveySMEDemand/questions.json:1405
 #: data/surveySMEDemand/questions.json:1419
@@ -8524,8 +8539,9 @@ msgstr "Zugriffs-Managementsystem"
 #: data/surveySMEDemand/questions.json:2073
 #: data/surveySMEDemand/questions.json:2165
 #: data/surveySMEDemand/questions.json:2166
-msgid "Market and service providers"
-msgstr "Markt- und Dienstleister"
+#| msgid "Data backup solution"
+msgid "Market & solutions"
+msgstr ""
 
 #: data/surveySMEDemand/questions.json:1554
 #: data/surveySMEDemand/questions.json:1568
@@ -8769,8 +8785,6 @@ msgstr "Vorfall"
 #: data/surveySMEDemand/questions.json:2242
 #: data/surveySMEDemand/questions.json:2256
 #: data/surveySMEDemand/questions.json:2299
-#: data/surveySMEDemand/questions.json:2270
-#: data/surveySMEDemand/questions.json:2284
 msgid "What impact did the cyberattack have on your company?"
 msgstr "Welche Auswirkung hatte der Cyberangriff auf das Unternehmen?"
 
@@ -8839,8 +8853,9 @@ msgstr "Verlust personenbezogener Daten"
 
 #: data/surveySMEDemand/questions.json:2374
 #: data/surveySMEDemand/questions.json:2375
-msgid "Regulations and public actions"
-msgstr "Verordnungen und öffentliche Maßnahmen"
+#| msgid "Aviation Regulations."
+msgid "Regulations"
+msgstr ""
 
 #: data/surveySMEDemand/questions.json:2386
 #: data/surveySMEDemand/questions.json:2400
@@ -8893,11 +8908,16 @@ msgstr "Wird überprüft"
 msgid "Finished"
 msgstr "Beendet"
 
-#: survey/forms.py:65
+#: survey/forms.py:34
+#| msgid "Please select your country"
+msgid "Please select"
+msgstr ""
+
+#: survey/forms.py:66
 msgid "You need to choose at least one answer"
 msgstr "Sie müssen mindestens eine Antwort auswählen"
 
-#: survey/forms.py:106 survey/forms.py:181
+#: survey/forms.py:107 survey/forms.py:182
 #: templates/survey/finishedSurvey.html:196
 #: templates/survey/finishedSurvey.html:210 templates/survey/review.html:50
 #: templates/surveySMEDemand/survey/finishedSurvey.html:190
@@ -8905,26 +8925,26 @@ msgstr "Sie müssen mindestens eine Antwort auswählen"
 msgid "Your feedback"
 msgstr "Ihre Rückmeldung"
 
-#: survey/forms.py:108 survey/forms.py:183
+#: survey/forms.py:109 survey/forms.py:184
 msgid "Please let us know if anything is missing"
 msgstr "Bitte lassen Sie uns wissen, wenn etwas fehlt"
 
-#: survey/forms.py:143
+#: survey/forms.py:144
 msgid "You can't choose multiple answers if the answer {} is choosen."
 msgstr ""
 "Sie können nicht mehrere Antworten wählen, wenn die Antwort {} gewählt wurde."
 
-#: survey/forms.py:158
+#: survey/forms.py:159
 msgid "You can't choose the answers {} if answer '{}' is choosen."
 msgstr ""
 "Sie können die Antworten {} nicht wählen, wenn die Antwort '{}' gewählt "
 "wurde."
 
-#: survey/viewLogic.py:96
+#: survey/viewLogic.py:98
 msgid "Let's start"
 msgstr "Lasst uns beginnen"
 
-#: survey/viewLogic.py:267
+#: survey/viewLogic.py:278
 msgid "Question"
 msgstr "Frage"
 
@@ -9174,7 +9194,7 @@ msgstr "Quellcode auf GitHub"
 #: templates/parts/fit4ehealth/footer_part.html:19
 #: templates/parts/fit4ehealth/footer_part.html:20
 #: templates/parts/footer_part.html:20 templates/parts/footer_part.html:21
-#: templates/survey/stats.html:295 templates/survey/stats.html:296
+#: templates/survey/stats.html:316 templates/survey/stats.html:317
 msgid "Version of"
 msgstr "Version von"
 
@@ -9492,26 +9512,32 @@ msgid "Would like to leave survey?"
 msgstr "Möchten Sie die Umfrage verlassen?"
 
 #: templates/survey/questions.html:45
+#: templates/surveySMEDemand/survey/questions.html:53
 msgid "Multiple answers are possible."
 msgstr "Mehrfachnennungen sind möglich."
 
 #: templates/survey/questions.html:57
+#: templates/surveySMEDemand/survey/questions.html:66
 msgid "Back"
 msgstr "Bisherige"
 
 #: templates/survey/questions.html:65
+#: templates/surveySMEDemand/survey/questions.html:74
 msgid "Cancel"
 msgstr "Stornieren"
 
 #: templates/survey/questions.html:74 templates/survey/review.html:67
+#: templates/surveySMEDemand/survey/questions.html:89
 msgid "Continue later"
 msgstr "Später weitermachen"
 
 #: templates/survey/questions.html:79
+#: templates/surveySMEDemand/survey/questions.html:80
 msgid "Modify"
 msgstr "Ändern"
 
 #: templates/survey/questions.html:79 templates/survey/start.html:39
+#: templates/surveySMEDemand/survey/questions.html:80
 #: templates/surveySMEDemand/survey/start.html:33
 msgid "Next"
 msgstr "Nächster"
@@ -9688,6 +9714,7 @@ msgstr "Einige Statistiken zu den aktuellen Umfragen."
 #: templates/survey/stats.html:131 templates/survey/stats.html:151
 #: templates/survey/stats.html:190 templates/survey/stats.html:210
 #: templates/survey/stats.html:243 templates/survey/stats.html:276
+#: templates/survey/stats.html:298
 msgid "No statistics available"
 msgstr "Keine Statistiken verfügbar"
 
@@ -9715,6 +9742,7 @@ msgstr "Aktivitäten im letzten Jahr"
 #: templates/survey/stats.html:125 templates/survey/stats.html:145
 #: templates/survey/stats.html:184 templates/survey/stats.html:204
 #: templates/survey/stats.html:227 templates/survey/stats.html:260
+#: templates/survey/stats.html:292
 msgid "Loading..."
 msgstr "Laden..."
 
@@ -9789,14 +9817,19 @@ msgid "Answers by category and company size"
 msgstr "Antworten nach Kategorie und Unternehmensgröße"
 
 #: templates/survey/stats.html:288
+#| msgid "Surveys countries"
+msgid "Survey's current question"
+msgstr ""
+
+#: templates/survey/stats.html:309
 msgid "Server information"
 msgstr "Serverinformation"
 
-#: templates/survey/stats.html:290
+#: templates/survey/stats.html:311
 msgid "Python version:"
 msgstr "Python-Version:"
 
-#: templates/survey/stats.html:293
+#: templates/survey/stats.html:314
 msgid "Software version:"
 msgstr "Softwareversion:"
 
