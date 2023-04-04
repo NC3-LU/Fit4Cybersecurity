@@ -9,6 +9,8 @@ from typing import Union
 from uuid import UUID
 
 from django.db import transaction
+from django.db.models import Count
+from django.db.models import F
 from django.db.models import Max
 from django.db.models import QuerySet
 from django.http import HttpRequest
@@ -260,6 +262,15 @@ def handle_question_answers_request(
         ",".join(str(uniqueAnswer.id) for uniqueAnswer in uniqueAnswers)
     )
     form.set_free_text_answer_id(free_text_answer_id)
+    
+    questions_categories = (
+        SurveyQuestion.objects.values("service_category_id", "service_category__label")
+        .order_by("service_category_id")
+        .exclude(section__label__contains=CONTEXT_SECTION_LABEL)
+        .annotate(count=Count("service_category_id"))
+        .annotate(id=F("service_category_id"))
+        .annotate(label=F("service_category__label"))
+    )
 
     return {
         "title": CUSTOM["tool_name"]
@@ -276,6 +287,8 @@ def handle_question_answers_request(
         "previous_question_index": question_index - 1 if question_index > 1 else 1,
         "total_questions_num": get_total_questions_number(user, question_index),
         "show_warning_dialog": current_sequence.has_been_answered and does_map_exist,
+        "current_question_category": current_question.service_category.id,
+        "questions_categories": enumerate(questions_categories),
     }
 
 

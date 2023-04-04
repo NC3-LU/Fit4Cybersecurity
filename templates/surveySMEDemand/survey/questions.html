@@ -1,0 +1,103 @@
+{% extends 'survey/base.html' %}
+
+{% load bootstrap4 %}
+{% load i18n %}
+{% load static %}
+
+{% block bootstrap4_extra_head %}
+    {{ block.super }}
+    <link rel="stylesheet" type="text/css" href="{% static 'survey/css/survey-questions.css' %}" />
+    <script type="text/javascript" src="{% static 'npm_components/jquery-ui/dist/jquery-ui.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'npm_components/jquery-ui-touch-punch/jquery.ui.touch-punch.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'survey/js/qrcode.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'survey/js/survey-questions.js' %}"></script>
+{% endblock %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+    {% if custom.modules.displayProgressBar %}
+        {% if user.is_survey_in_progress and not does_map_exist or current_question_index > 1 and does_map_exist %}
+
+            <nav class="nav_categories nav nav-fill">
+                {% for index, category in questions_categories %}
+                <a class="nav-link py-1 {% if current_question_category == category.id %}nav_categories_active{% endif %}" href="#">{% trans category.label %}</a>
+                {% endfor %}
+            </nav>
+            <div class="progress mx-2 mt-2" style="height: 15px;">
+                <div
+                    class="progress-bar progress-bar-striped"
+                    role="progressbar"
+                    style="font-size: 0.9rem; width: {% widthratio current_question_index total_questions_num 100 %}%;"
+                    aria-valuenow="{% widthratio current_question_index total_questions_num 100 %}"
+                    aria-valuemin="0"
+                    aria-valuemax="100">
+                    {% if custom.show_progress_questions_numbers %}
+                    {{ current_question_index }} of {{ total_questions_num }}
+                    {% endif %}
+                </div>
+            </div>
+        {% endif %}
+    {% endif %}
+
+    <div class="m-2 p-3">
+        <div class="card-title">
+            <span data-bs-toggle="tooltip" title="{{ question_tooltip | safe }}">{{ question | safe }}</span>
+        </div>
+        <form action="{{ action }}" method="post" class="form" id="survey-question-form">
+            {% csrf_token %}
+
+            {% bootstrap_form form exclude="feedback" %}
+
+            <p class="select-multi-info text-muted pl-4 small" style="display: none;">
+                ** {{ _('Multiple answers are possible.') }}
+            </p>
+
+            {% buttons %}
+                <div class="form-group pt-4 container">
+                    <div class="row">
+                        <div class="col-8">
+                            {% if user.is_survey_in_progress %}
+                                {% if current_question_index > 1 %}
+                                    <button
+                                        class="btn col-5 col-md-2 btn-sm btn btn-primary return-to-question "
+                                        data-return-to-question="{{ previous_question_index }}"
+                                        type="button">
+                                        {{ _('Back') }}
+                                    </button>
+                                {% endif %}
+                            {% else %}
+                                <button
+                                    class="col-5 col-md-2 btn-sm btn btn-primary cancel-modifications"
+                                    data-question-index="{{ current_question_index }}"
+                                    type="button">
+                                    {{ _('Cancel') }}
+                                </button>
+                            {% endif %}
+                            <input
+                            class="ml-3 btn col-5 col-md-2 btn-sm btn-primary{% if show_warning_dialog %} modify-question{% endif %}"
+                            type="submit"
+                            value="{% if user.is_survey_under_review or show_warning_dialog %}{{ _('Modify') }}{% else %}{{ _('Next') }}{% endif %}"
+                            data-question-index="{{ current_question_index }}">
+                        </div>
+                        <button
+                            class="col btn btn-link btn-sm"
+                            type="button"
+                            name="continue-later"
+                            data-toggle="modal"
+                            data-target="#modal">
+                            {{ _('Continue later') }}
+                        </button>
+
+                    </div>
+                </div>
+            {% endbuttons %}
+        </form>
+    </div>
+
+    {% include 'survey/continue.html' %}
+    {% include 'survey/leaveSurvey.html' %}
+    {% if show_warning_dialog %}
+        {% include 'survey/answerChangingWarning.html' %}
+    {% endif %}
+{% endblock %}
