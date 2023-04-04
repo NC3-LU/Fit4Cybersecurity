@@ -262,7 +262,7 @@ def handle_question_answers_request(
         ",".join(str(uniqueAnswer.id) for uniqueAnswer in uniqueAnswers)
     )
     form.set_free_text_answer_id(free_text_answer_id)
-    
+
     questions_categories = (
         SurveyQuestion.objects.values("service_category_id", "service_category__label")
         .order_by("service_category_id")
