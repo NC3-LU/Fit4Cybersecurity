@@ -304,6 +304,20 @@ $(document).ready(function() {
         }
     }
 
+    if (stats_options.current_question) {
+        fetch("/stats/survey_current_question.json?from="+date_from+"&to="+date_to)
+        .then(response => response.json())
+        .then(result => {
+            document.getElementById("spinner-stats-current_question").innerHTML = "";
+            if (Object.entries(result).length > 0) {
+                var ctx = document.getElementById("stats-current_question").getContext('2d');
+                pieChart(result,ctx);
+            }
+        }).catch((error) => {
+            console.error('Error:', error);
+        });
+    }
+
     function pieChart(data,ctx){
         return new Chart(ctx, {
             plugins: [ChartDataLabels],
