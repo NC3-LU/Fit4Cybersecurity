@@ -54,7 +54,7 @@ CUSTOM = {
     # Minimal score
     "minimal_acceptable_score": 65,
     # Show or not the questions number left to complete the survey.
-    "show_progress_questions_numbers": True,
+    "show_progress_questions_numbers": False,
     # Custom parts of templates
     #   main dir for PARTS_TEMPLATE_DIR:
     "templates_parts_dir": "templates/parts",
@@ -67,7 +67,7 @@ CUSTOM = {
     },
     # Available modules
     "modules": {
-        "displayProgressBar": False,
+        "displayProgressBar": True,
         "reportDownload": False,
         "reportEmail": False,
         "requestDiagnostic": False,
@@ -85,8 +85,8 @@ CUSTOM = {
     # Available stats charts
     "stats": {
         "activity": True,
-        "sector": False,
-        "size": False,
+        "sector": True,
+        "size": True,
         "country": False,
         "status": True,
         "language": True,
