@@ -414,3 +414,34 @@ def activity_chart(request):
     for elem in count:
         result.append({"timestamp": str(elem["created_at"]), "count": elem["c"]})
     return JsonResponse(result, safe=False)
+
+
+def survey_current_question(request):
+    """Returns the count for the SurveyUser current_question_id property."""
+    lang = request.session.get(settings.LANGUAGE_COOKIE_NAME, LANGUAGE_CODE)
+    translation.activate(lang)
+
+    date_from = request.GET.get("from", None)
+    # date_to = request.GET.get('to', None)
+    if not date_from:
+        # 12 months ago
+        date_from = datetime.now() - relativedelta(months=12)
+
+    query = (
+        SurveyUser.objects.filter(
+            created_at__gte=date_from,
+        )
+        .values("current_question_id__qindex", "current_question_id__label")
+        .annotate(count=Count("current_question_id__label"))
+        .order_by("count")
+        .reverse()
+    )
+    result = {
+        str(q["current_question_id__qindex"])
+        + ". "
+        + _(q["current_question_id__label"])[:45]
+        + "...": q["count"]
+        for q in query
+    }
+
+    return JsonResponse(result)
