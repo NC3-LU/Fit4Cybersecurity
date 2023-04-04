@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-03-28 09:40+0000\n"
+"POT-Creation-Date: 2023-04-04 07:25+0000\n"
 "PO-Revision-Date: 2023-03-09 08:57+0000\n"
 "Last-Translator: Gregory Wawszyniak-dumont <gregory.wawszyniak-dumont@nc3."
 "lu>\n"
@@ -193,7 +193,6 @@ msgid "Accepted cookies"
 msgstr ""
 
 #: csskp/settings.py:61 csskp/settings.py:69
-#| msgid "1 year ago"
 msgid "1 year"
 msgstr ""
 
@@ -210,7 +209,6 @@ msgid "This cookie is necessary for the language options, for example."
 msgstr ""
 
 #: csskp/settings.py:76
-#| msgid "Version of"
 msgid "session ID"
 msgstr ""
 
@@ -8771,8 +8769,6 @@ msgstr "Incident"
 #: data/surveySMEDemand/questions.json:2228
 #: data/surveySMEDemand/questions.json:2242
 #: data/surveySMEDemand/questions.json:2256
-#: data/surveySMEDemand/questions.json:2270
-#: data/surveySMEDemand/questions.json:2284
 #: data/surveySMEDemand/questions.json:2299
 msgid "What impact did the cyberattack have on your company?"
 msgstr "Quel impact la cyberattaque a-t-elle eu sur votre entreprise ?"
@@ -8806,10 +8802,8 @@ msgstr ""
 "Oui, nous avons eu un incident et nous avons payé une rançon pour récupérer "
 "nos données"
 
-#: data/surveySMEDemand/questions.json:2276
-msgid "No, we have never had an incident"
-msgstr "Non, nous n'avons jamais eu d'incident"
-
+#: data/surveySMEDemand/questions.json:2270
+#: data/surveySMEDemand/questions.json:2284
 #: data/surveySMEDemand/questions.json:2307
 #: data/surveySMEDemand/questions.json:2321
 #: data/surveySMEDemand/questions.json:2335
@@ -8822,6 +8816,10 @@ msgid ""
 msgstr ""
 "D'un point de vue réglementaire, pensez-vous manquer d'informations "
 "concernant..."
+
+#: data/surveySMEDemand/questions.json:2276
+msgid "No, we have never had an incident"
+msgstr "Non, nous n'avons jamais eu d'incident"
 
 #: data/surveySMEDemand/questions.json:2313
 msgid "Loss of asset/material"
@@ -9192,7 +9190,6 @@ msgid "Description"
 msgstr "Description"
 
 #: templates/parts/privacy_policy_part.html:89
-#| msgid "Context"
 msgid "Content"
 msgstr ""
 
