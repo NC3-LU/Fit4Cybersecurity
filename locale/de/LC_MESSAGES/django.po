@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-04-03 12:21+0000\n"
+"POT-Creation-Date: 2023-04-05 14:15+0000\n"
 "PO-Revision-Date: 2023-04-03 12:35+0000\n"
 "Last-Translator: Juan Rocha <juan.rocha@cases.lu>\n"
 "Language-Team: German <https://translate.monarc.lu/projects/"
@@ -263,8 +263,8 @@ msgstr ""
 "KMU in Bezug auf den Datenschutz ermittelt werden, um ein auf ihre "
 "Bedürfnisse zugeschnittenes Selbstbewertungstool zu schaffen und zur "
 "Verfügung zu stellen. <br><br> Um mehr über das ALTO-Projekt zu erfahren, "
-"besuchen Sie bitte <a href=https://cnpd.public.lu/de/professionnels/"
-"outils-conformite/projet-alto.html target=_blank rel=noopener noreferrer>die "
+"besuchen Sie bitte <a href=https://cnpd.public.lu/de/professionnels/outils-"
+"conformite/projet-alto.html target=_blank rel=noopener noreferrer>die "
 "entsprechende Webseite.</a>"
 
 #: csskp/surveySMEDemand/__init__.py:7
@@ -8281,7 +8281,7 @@ msgstr ""
 #: data/surveyAlto/questions.json:1520 data/surveyAlto/questions.json:1962
 #: data/surveyAlto/questions.json:2027 data/surveyAlto/questions.json:2250
 #: data/surveyAlto/questions.json:2315 data/surveyAlto/questions.json:2380
-#: data/surveyAlto/questions.json:2445 stats/views.py:133
+#: data/surveyAlto/questions.json:2445 stats/views.py:176
 msgid "In progress"
 msgstr "In Bearbeitung"
 
@@ -9641,35 +9641,35 @@ msgstr ""
 msgid "Other types of obligations, such as:"
 msgstr ""
 
-#: stats/views.py:63
+#: stats/views.py:98
 msgid "Last week"
 msgstr "Letzte Woche"
 
-#: stats/views.py:67
+#: stats/views.py:102
 msgid "Last month"
 msgstr "Letzter Monat"
 
-#: stats/views.py:71
+#: stats/views.py:106
 msgid "Last quarter"
 msgstr "Letztes Quartal"
 
-#: stats/views.py:75
+#: stats/views.py:110
 msgid "Last year"
 msgstr "Letztes Jahr"
 
-#: stats/views.py:90 stats/views.py:225 stats/views.py:232
+#: stats/views.py:138 stats/views.py:259 stats/views.py:266
 msgid "Others"
 msgstr "Andere"
 
-#: stats/views.py:133
+#: stats/views.py:176
 msgid "Under review"
 msgstr "Wird überprüft"
 
-#: stats/views.py:133
+#: stats/views.py:176
 msgid "Finished"
 msgstr "Beendet"
 
-#: survey/forms.py:43
+#: survey/forms.py:43 templates/survey/stats.html:81
 msgid "Please select"
 msgstr "Bitte auswählen"
 
@@ -9952,7 +9952,7 @@ msgstr "Quellcode auf GitHub"
 #: templates/parts/footer_part.html:20 templates/parts/footer_part.html:21
 #: templates/parts/surveyAlto/footer_part.html:26
 #: templates/parts/surveyAlto/footer_part.html:27
-#: templates/survey/stats.html:295 templates/survey/stats.html:296
+#: templates/survey/stats.html:330 templates/survey/stats.html:331
 msgid "Version of"
 msgstr "Version von"
 
@@ -10541,123 +10541,143 @@ msgstr ""
 "Benötigen wir einige Informationen, um Ihnen nützliche Empfehlungen geben zu "
 "können, sobald die Selbsteinschätzung abgeschlossen ist."
 
-#: templates/survey/stats.html:16
+#: templates/survey/stats.html:17
 msgid "Some statistics about the current surveys."
 msgstr "Einige Statistiken zu den aktuellen Umfragen."
 
-#: templates/survey/stats.html:23 templates/survey/stats.html:111
-#: templates/survey/stats.html:131 templates/survey/stats.html:151
-#: templates/survey/stats.html:190 templates/survey/stats.html:210
-#: templates/survey/stats.html:243 templates/survey/stats.html:276
+#: templates/survey/stats.html:24 templates/survey/stats.html:125
+#: templates/survey/stats.html:145 templates/survey/stats.html:165
+#: templates/survey/stats.html:204 templates/survey/stats.html:224
+#: templates/survey/stats.html:257 templates/survey/stats.html:290
+#: templates/survey/stats.html:312
 msgid "No statistics available"
 msgstr "Keine Statistiken verfügbar"
 
-#: templates/survey/stats.html:32
+#: templates/survey/stats.html:33
 msgid "Main figures"
 msgstr "Hauptfiguren"
 
-#: templates/survey/stats.html:35
+#: templates/survey/stats.html:36
 msgid "Number of surveys:"
 msgstr "Anzahl Umfragen:"
 
-#: templates/survey/stats.html:38
+#: templates/survey/stats.html:39
 msgid "Number of finished surveys:"
 msgstr "Anzahl der abgeschlossenen Umfragen:"
 
-#: templates/survey/stats.html:41
+#: templates/survey/stats.html:42
 msgid "First completed survey on:"
 msgstr "Anzahl abgeschlossener Umfragen:"
 
-#: templates/survey/stats.html:51
+#: templates/survey/stats.html:52
 msgid "Activity over the past year"
 msgstr "Aktivitäten im letzten Jahr"
 
-#: templates/survey/stats.html:55 templates/survey/stats.html:105
-#: templates/survey/stats.html:125 templates/survey/stats.html:145
-#: templates/survey/stats.html:184 templates/survey/stats.html:204
-#: templates/survey/stats.html:227 templates/survey/stats.html:260
+#: templates/survey/stats.html:56 templates/survey/stats.html:119
+#: templates/survey/stats.html:139 templates/survey/stats.html:159
+#: templates/survey/stats.html:198 templates/survey/stats.html:218
+#: templates/survey/stats.html:241 templates/survey/stats.html:274
+#: templates/survey/stats.html:306
 msgid "Loading..."
 msgstr "Laden..."
 
-#: templates/survey/stats.html:64
-msgid "Click on a date to load stats since this day or use the list below."
+#: templates/survey/stats.html:63
+msgid "Less"
+msgstr "Weniger"
+
+#: templates/survey/stats.html:69
+msgid "More"
+msgstr "Mehr"
+
+#: templates/survey/stats.html:74
+#, fuzzy
+#| msgid "Click on a date to load stats since this day or use the list below."
+msgid "Click on a date to load stats since this day or use the filter below."
 msgstr ""
 "Klicken Sie auf ein Datum, um die Statistiken seit diesem Tag zu laden, oder "
 "verwenden Sie die Liste unten."
 
-#: templates/survey/stats.html:69
-msgid "Less"
-msgstr "Weniger"
-
-#: templates/survey/stats.html:75
-msgid "More"
-msgstr "Mehr"
-
-#: templates/survey/stats.html:78
+#: templates/survey/stats.html:79
 msgid "Time frame"
 msgstr "Zeitrahmen"
 
-#: templates/survey/stats.html:88
-msgid "Reset filters"
-msgstr "Filter zurücksetzen"
+#: templates/survey/stats.html:98
+msgid "Load"
+msgstr ""
 
-#: templates/survey/stats.html:94
-msgid "Statistics since"
+#: templates/survey/stats.html:100
+msgid "Reset"
+msgstr ""
+
+#: templates/survey/stats.html:108
+#, fuzzy
+#| msgid "Statistics since"
+msgid "Statistics from"
 msgstr "Statistik seit"
 
-#: templates/survey/stats.html:95
+#: templates/survey/stats.html:108
+msgid "to"
+msgstr ""
+
+#: templates/survey/stats.html:109
 msgid "Total of completed surveys:"
 msgstr "Gesamtzahl der abgeschlossenen Umfragen:"
 
-#: templates/survey/stats.html:101
+#: templates/survey/stats.html:115
 msgid "Surveys company sector"
 msgstr "Umfragen Unternehmenssektor"
 
-#: templates/survey/stats.html:121
+#: templates/survey/stats.html:135
 msgid "Surveys company size"
 msgstr "Umfragen zur Unternehmensgröße"
 
-#: templates/survey/stats.html:141
+#: templates/survey/stats.html:155
 msgid "Surveys countries"
 msgstr "Umfragen Länder"
 
-#: templates/survey/stats.html:164
+#: templates/survey/stats.html:178
 msgid "Details of other countries"
 msgstr "Angaben zu anderen Ländern"
 
-#: templates/survey/stats.html:180
+#: templates/survey/stats.html:194
 msgid "Surveys status"
 msgstr "Status der Umfragen"
 
-#: templates/survey/stats.html:200
+#: templates/survey/stats.html:214
 msgid "Surveys languages"
 msgstr "Umfragen Sprachen"
 
-#: templates/survey/stats.html:223
+#: templates/survey/stats.html:237
 msgid "Answers by section and company size"
 msgstr "Antworten nach Bereich und Unternehmensgröße"
 
-#: templates/survey/stats.html:231 templates/survey/stats.html:264
+#: templates/survey/stats.html:245 templates/survey/stats.html:278
 msgid "Country"
 msgstr "Land"
 
-#: templates/survey/stats.html:233 templates/survey/stats.html:266
+#: templates/survey/stats.html:247 templates/survey/stats.html:280
 msgid "All"
 msgstr "Alle"
 
-#: templates/survey/stats.html:256
+#: templates/survey/stats.html:270
 msgid "Answers by category and company size"
 msgstr "Antworten nach Kategorie und Unternehmensgröße"
 
-#: templates/survey/stats.html:288
+#: templates/survey/stats.html:302
+#, fuzzy
+#| msgid "Surveys countries"
+msgid "Survey's current question"
+msgstr "Umfragen Länder"
+
+#: templates/survey/stats.html:323
 msgid "Server information"
 msgstr "Serverinformation"
 
-#: templates/survey/stats.html:290
+#: templates/survey/stats.html:325
 msgid "Python version:"
 msgstr "Python-Version:"
 
-#: templates/survey/stats.html:293
+#: templates/survey/stats.html:328
 msgid "Software version:"
 msgstr "Softwareversion:"
 

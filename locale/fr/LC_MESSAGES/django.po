@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-04-03 12:21+0000\n"
+"POT-Creation-Date: 2023-04-05 14:15+0000\n"
 "PO-Revision-Date: 2023-04-03 12:35+0000\n"
 "Last-Translator: Juan Rocha <juan.rocha@cases.lu>\n"
 "Language-Team: French <https://translate.monarc.lu/projects/"
@@ -257,15 +257,14 @@ msgstr ""
 "<strong>CNPD</strong> ») et la Luxembourg House of Cybersecurity, National "
 "Cybersecurity Competence Center (ci-après le « <strong>LHC-NC3</strong> »), "
 "a pour objectif de mettre en œuvre un outil d'auto-évaluation afin de "
-"répondre aux défis quotidiens des PME en matière de protection des "
-"données.<br><br>Le présent questionnaire, qui se veut anonyme, a pour but de "
-"cerner les obstacles/problèmes/questions en matière de protection des "
-"données auxquels sont confrontés les PME, afin de créer et mettre à leur "
-"disposition un outil d'auto-évaluation répondant à leurs "
-"besoins.<br><br>Pour en savoir plus sur le projet ALTO, nous vous invitons à "
-"vous rendre sur <a href=https://cnpd.public.lu/fr/professionnels/"
-"outils-conformite/projet-alto.html target=_blank rel=noopener noreferrer>la "
-"page internet dédiée.</a>"
+"répondre aux défis quotidiens des PME en matière de protection des données."
+"<br><br>Le présent questionnaire, qui se veut anonyme, a pour but de cerner "
+"les obstacles/problèmes/questions en matière de protection des données "
+"auxquels sont confrontés les PME, afin de créer et mettre à leur disposition "
+"un outil d'auto-évaluation répondant à leurs besoins.<br><br>Pour en savoir "
+"plus sur le projet ALTO, nous vous invitons à vous rendre sur <a "
+"href=https://cnpd.public.lu/fr/professionnels/outils-conformite/projet-alto."
+"html target=_blank rel=noopener noreferrer>la page internet dédiée.</a>"
 
 #: csskp/surveySMEDemand/__init__.py:7
 msgid ""
@@ -8301,7 +8300,7 @@ msgstr ""
 #: data/surveyAlto/questions.json:1520 data/surveyAlto/questions.json:1962
 #: data/surveyAlto/questions.json:2027 data/surveyAlto/questions.json:2250
 #: data/surveyAlto/questions.json:2315 data/surveyAlto/questions.json:2380
-#: data/surveyAlto/questions.json:2445 stats/views.py:133
+#: data/surveyAlto/questions.json:2445 stats/views.py:176
 msgid "In progress"
 msgstr "En cours"
 
@@ -9729,35 +9728,35 @@ msgstr "Vos obligations en matière de protection des données personnelles"
 msgid "Other types of obligations, such as:"
 msgstr "Autres types d'obligations, telles que :"
 
-#: stats/views.py:63
+#: stats/views.py:98
 msgid "Last week"
 msgstr "Semaine dernière"
 
-#: stats/views.py:67
+#: stats/views.py:102
 msgid "Last month"
 msgstr "Mois dernier"
 
-#: stats/views.py:71
+#: stats/views.py:106
 msgid "Last quarter"
 msgstr "trimestre dernier"
 
-#: stats/views.py:75
+#: stats/views.py:110
 msgid "Last year"
 msgstr "Année dernière"
 
-#: stats/views.py:90 stats/views.py:225 stats/views.py:232
+#: stats/views.py:138 stats/views.py:259 stats/views.py:266
 msgid "Others"
 msgstr "Autres"
 
-#: stats/views.py:133
+#: stats/views.py:176
 msgid "Under review"
 msgstr "Examen des réponses"
 
-#: stats/views.py:133
+#: stats/views.py:176
 msgid "Finished"
 msgstr "Accompli"
 
-#: survey/forms.py:43
+#: survey/forms.py:43 templates/survey/stats.html:81
 msgid "Please select"
 msgstr "Veuillez sélectionner"
 
@@ -10037,7 +10036,7 @@ msgstr "Code source sur GitHub"
 #: templates/parts/footer_part.html:20 templates/parts/footer_part.html:21
 #: templates/parts/surveyAlto/footer_part.html:26
 #: templates/parts/surveyAlto/footer_part.html:27
-#: templates/survey/stats.html:295 templates/survey/stats.html:296
+#: templates/survey/stats.html:330 templates/survey/stats.html:331
 msgid "Version of"
 msgstr "Version de"
 
@@ -10623,123 +10622,143 @@ msgstr ""
 "Nous avons besoin de quelques informations pour pouvoir vous faire des "
 "recommandations utiles, une fois l'auto-évaluation terminée."
 
-#: templates/survey/stats.html:16
+#: templates/survey/stats.html:17
 msgid "Some statistics about the current surveys."
 msgstr "Quelques statistiques sur les enquêtes en cours."
 
-#: templates/survey/stats.html:23 templates/survey/stats.html:111
-#: templates/survey/stats.html:131 templates/survey/stats.html:151
-#: templates/survey/stats.html:190 templates/survey/stats.html:210
-#: templates/survey/stats.html:243 templates/survey/stats.html:276
+#: templates/survey/stats.html:24 templates/survey/stats.html:125
+#: templates/survey/stats.html:145 templates/survey/stats.html:165
+#: templates/survey/stats.html:204 templates/survey/stats.html:224
+#: templates/survey/stats.html:257 templates/survey/stats.html:290
+#: templates/survey/stats.html:312
 msgid "No statistics available"
 msgstr "Aucune statistique disponible"
 
-#: templates/survey/stats.html:32
+#: templates/survey/stats.html:33
 msgid "Main figures"
 msgstr "Principaux chiffres"
 
-#: templates/survey/stats.html:35
+#: templates/survey/stats.html:36
 msgid "Number of surveys:"
 msgstr "Nombre d'enquêtes :"
 
-#: templates/survey/stats.html:38
+#: templates/survey/stats.html:39
 msgid "Number of finished surveys:"
 msgstr "Nombre d'enquêtes terminées :"
 
-#: templates/survey/stats.html:41
+#: templates/survey/stats.html:42
 msgid "First completed survey on:"
 msgstr "Première enquête complétée le :"
 
-#: templates/survey/stats.html:51
+#: templates/survey/stats.html:52
 msgid "Activity over the past year"
 msgstr "Activité au cours de l'année écoulée"
 
-#: templates/survey/stats.html:55 templates/survey/stats.html:105
-#: templates/survey/stats.html:125 templates/survey/stats.html:145
-#: templates/survey/stats.html:184 templates/survey/stats.html:204
-#: templates/survey/stats.html:227 templates/survey/stats.html:260
+#: templates/survey/stats.html:56 templates/survey/stats.html:119
+#: templates/survey/stats.html:139 templates/survey/stats.html:159
+#: templates/survey/stats.html:198 templates/survey/stats.html:218
+#: templates/survey/stats.html:241 templates/survey/stats.html:274
+#: templates/survey/stats.html:306
 msgid "Loading..."
 msgstr "Chargement..."
 
-#: templates/survey/stats.html:64
-msgid "Click on a date to load stats since this day or use the list below."
+#: templates/survey/stats.html:63
+msgid "Less"
+msgstr "Moins"
+
+#: templates/survey/stats.html:69
+msgid "More"
+msgstr "Plus"
+
+#: templates/survey/stats.html:74
+#, fuzzy
+#| msgid "Click on a date to load stats since this day or use the list below."
+msgid "Click on a date to load stats since this day or use the filter below."
 msgstr ""
 "Cliquez sur une date pour afficher les statistiques depuis ce jour ou "
 "utilisez la liste ci-dessous."
 
-#: templates/survey/stats.html:69
-msgid "Less"
-msgstr "Moins"
-
-#: templates/survey/stats.html:75
-msgid "More"
-msgstr "Plus"
-
-#: templates/survey/stats.html:78
+#: templates/survey/stats.html:79
 msgid "Time frame"
 msgstr "Période de temps"
 
-#: templates/survey/stats.html:88
-msgid "Reset filters"
-msgstr "Réinitialiser les filtres"
+#: templates/survey/stats.html:98
+msgid "Load"
+msgstr ""
 
-#: templates/survey/stats.html:94
-msgid "Statistics since"
+#: templates/survey/stats.html:100
+msgid "Reset"
+msgstr ""
+
+#: templates/survey/stats.html:108
+#, fuzzy
+#| msgid "Statistics since"
+msgid "Statistics from"
 msgstr "Statistiques depuis"
 
-#: templates/survey/stats.html:95
+#: templates/survey/stats.html:108
+msgid "to"
+msgstr ""
+
+#: templates/survey/stats.html:109
 msgid "Total of completed surveys:"
 msgstr "Total des enquêtes réalisées :"
 
-#: templates/survey/stats.html:101
+#: templates/survey/stats.html:115
 msgid "Surveys company sector"
 msgstr "Enquêtes secteur entreprise"
 
-#: templates/survey/stats.html:121
+#: templates/survey/stats.html:135
 msgid "Surveys company size"
 msgstr "Taille de l'entreprise"
 
-#: templates/survey/stats.html:141
+#: templates/survey/stats.html:155
 msgid "Surveys countries"
 msgstr "Pays d'enquête"
 
-#: templates/survey/stats.html:164
+#: templates/survey/stats.html:178
 msgid "Details of other countries"
 msgstr "Détails sur les autres pays"
 
-#: templates/survey/stats.html:180
+#: templates/survey/stats.html:194
 msgid "Surveys status"
 msgstr "État des sondages"
 
-#: templates/survey/stats.html:200
+#: templates/survey/stats.html:214
 msgid "Surveys languages"
 msgstr "Langues des sondages"
 
-#: templates/survey/stats.html:223
+#: templates/survey/stats.html:237
 msgid "Answers by section and company size"
 msgstr "Réponses par section et taille d'entreprise"
 
-#: templates/survey/stats.html:231 templates/survey/stats.html:264
+#: templates/survey/stats.html:245 templates/survey/stats.html:278
 msgid "Country"
 msgstr "Pays"
 
-#: templates/survey/stats.html:233 templates/survey/stats.html:266
+#: templates/survey/stats.html:247 templates/survey/stats.html:280
 msgid "All"
 msgstr "Tous"
 
-#: templates/survey/stats.html:256
+#: templates/survey/stats.html:270
 msgid "Answers by category and company size"
 msgstr "Réponses par catégorie et taille d'entreprise"
 
-#: templates/survey/stats.html:288
+#: templates/survey/stats.html:302
+#, fuzzy
+#| msgid "Surveys countries"
+msgid "Survey's current question"
+msgstr "Pays d'enquête"
+
+#: templates/survey/stats.html:323
 msgid "Server information"
 msgstr "Informations sur le serveur"
 
-#: templates/survey/stats.html:290
+#: templates/survey/stats.html:325
 msgid "Python version:"
 msgstr "Version de Python :"
 
-#: templates/survey/stats.html:293
+#: templates/survey/stats.html:328
 msgid "Software version:"
 msgstr "Version du logiciel :"
 
