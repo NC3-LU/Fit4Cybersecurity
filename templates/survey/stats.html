@@ -7,6 +7,7 @@
 {{ block.super }}
     <script type="text/javascript" src="/static/stats/js/github_contribution.js"></script>
     <link href="/static/stats/css/github_contribution_graph.css" media="all" rel="stylesheet">
+    {{ datepicker_form.media }}
     <script>
         var stats_options = "{{ stats_options | safe }}"
     </script>
@@ -38,7 +39,7 @@
                         {{ _('Number of finished surveys:') }} {{ nb_finished_surveys }}
                     </li>
                     <li class="list-group-item">
-                        {{ _('First completed survey on:') }} {{ first_survey_date }}
+                        {{ _('First completed survey on:') }} {{ first_survey_finished_date }}
                     </li>
                 </ul>
             </div>
@@ -56,42 +57,55 @@
                         </div>
                     </div>
                     <div id="surveys-activity"></div>
-                  </div>
+                </div>
+            </div>
+            <div class="col-2 mx-auto">
+                {{ _('Less') }}&nbsp;
+                {% for i in range %}
+                    <svg width="10" height="10" class="d-inline-block activity-chart-legend">
+                        <rect width="10" height="10" class="activity-chart-legend_{{i}}"></rect>
+                    </svg>
+                {% endfor %}
+                {{ _('More') }}
             </div>
             <div class="w-100 p-2"></div>
             <div class="row">
               <div class="col mx-auto text-center">
-                <p>{{ _('Click on a date to load stats since this day or use the list below.') }}</p>
+                <p>{{ _('Click on a date to load stats since this day or use the filter below.') }}</p>
               </div>
             </div>
             <div class="row justify-content-center align-items-center">
-                <div class="col-2">
-                    {{ _('Less') }}&nbsp;
-                    {% for i in range %}
-                        <svg width="10" height="10" class="d-inline-block activity-chart-legend">
-                            <rect width="10" height="10" class="activity-chart-legend_{{i}}"></rect>
-                        </svg>
-                    {% endfor %}
-                    {{ _('More') }}
-                </div>
-                <div class="col-3">
+                <div class="col-3 form-group">
                     <label for="section_displayTimeFrame">{{ _('Time frame')}}</label>
-                    <select id="section_displayTimeFrame">
-                        <option value=""></option>
+                    <select class="form-control" id="section_displayTimeFrame">
+                        <option value="">{{_('Please select')}}</option>
                         {% for time_frame in time_frames %}
                             <option value="{{ time_frame.1 }}">{{ time_frame.0 }}</option>
                         {% endfor %}
                     </select>
                 </div>
-                <div class="col-2">
-                    <a class="btn border border-rounded" type="button"  href="{% url 'stats' %}">
-                        {{ _('Reset filters') }}
-                    </a>
+                <div class="col-7">
+                    <form method="post" class="row">
+                        {% csrf_token %}
+                        <div class="col-4">
+                            {% bootstrap_field datepicker_form.start_date %}
+                        </div>
+                        <div class="col-4">
+                            {% bootstrap_field datepicker_form.end_date %}
+                        </div>
+                        <div class="col-4 my-auto pt-3">
+                            <div class="btn-group">
+                                    <button type="submit" name="load_stats" class="btn btn-primary">{{ _('Load') }}</button>
+                                    <div class="p-1"></div>
+                                    <button type="button "name="reset_stats" href="{% url 'stats' %}" class="btn btn-primary">{{ _('Reset') }}</button>
+                            </div>
+                        </div>
+                    </form>
                 </div>
             </div>
         {% endif %}
         <div class="w-100 p-4"></div>
-        <h4 class="text-center">{{ _('Statistics since') }} {{ date_from }}</h4>
+        <h4 class="text-center">{{ _('Statistics from') }} {{ date_from }} {{_('to')}} {{ date_to }}</h4>
         <h5 class="text-center">{{ _('Total of completed surveys:') }} {{ nb_finished_surveys_for_period }}</h5>
         <div class="w-100 p-4"></div>
         <div class="row justify-content-center">
