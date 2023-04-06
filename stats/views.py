@@ -63,7 +63,7 @@ def index(request):
     datepicker_form = DatesLimitForm(
         start_date=date_from,
         end_date=date_to,
-        minDate=first_survey.created_at,
+        minDate=getattr(first_survey, "created_at", None),
     )
 
     nb_finished_surveys = SurveyUser.objects.filter(status=3).count()
@@ -107,7 +107,7 @@ def index(request):
     ]
     time_frames = []
     for tf in temp_time_frames[:]:
-        if first_survey.created_at < tf[1].date():
+        if not isinstance(first_survey, str) and first_survey.created_at < tf[1].date():
             time_frames.append((tf[0], tf[1].strftime(DEFAULT_DATE_FORMAT)))
 
     context = {
@@ -478,7 +478,10 @@ def get_default_date_from():
     except Exception:
         first_survey = ""
 
-    if first_survey.created_at > (now - relativedelta(months=12)).date():
+    if (
+        not isinstance(first_survey, str)
+        and first_survey.created_at > (now - relativedelta(months=12)).date()
+    ):
         default_date_from = first_survey.created_at
 
     return default_date_from
