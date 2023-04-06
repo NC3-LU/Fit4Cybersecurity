@@ -22,16 +22,15 @@ $(document).ready(function() {
 
     const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);
+    var date_from = $("#id_start_date").val();
+    var date_to = $("#id_end_date").val();
+
     if (urlParams.has('from')) {
-      var date_from = urlParams.get('from');
-    } else {
-      var date_from = '';
+      date_from = urlParams.get('from');
     }
 
     if (urlParams.has('to')) {
-      var date_to = urlParams.get('to');
-    } else {
-      var date_to = '';
+      date_to = urlParams.get('to');
     }
 
     var colors = ['rgba(230, 25, 75, 0.4)', 'rgba(60, 180, 75, 0.4)',
@@ -302,6 +301,20 @@ $(document).ready(function() {
             categoryChart.canvas.config.data.datasets = data_sets;
             categoryChart.canvas.update()
         }
+    }
+
+    if (stats_options.current_question) {
+        fetch("/stats/survey_current_question.json?from="+date_from+"&to="+date_to)
+        .then(response => response.json())
+        .then(result => {
+            document.getElementById("spinner-stats-current_question").innerHTML = "";
+            if (Object.entries(result).length > 0) {
+                var ctx = document.getElementById("stats-current_question").getContext('2d');
+                pieChart(result,ctx);
+            }
+        }).catch((error) => {
+            console.error('Error:', error);
+        });
     }
 
     function pieChart(data,ctx){

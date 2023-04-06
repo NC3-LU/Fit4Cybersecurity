@@ -1,26 +1,26 @@
 from datetime import datetime
-from datetime import timedelta
 
 from bootstrap_datepicker_plus.widgets import DatePickerInput
 from django import forms
 
-DEFAULT_DATE_FORMAT = "%Y-%m-%d"
-
-
-def one_month_before_today():
-    return datetime.now() - timedelta(days=30)
-
 
 class DatesLimitForm(forms.Form):
-    start_date = forms.DateField(
-        widget=DatePickerInput(
-            format=DEFAULT_DATE_FORMAT, attrs={"class": "form-control"}
-        ).start_of("event"),
-        initial=one_month_before_today(),
-    )
+    start_date = forms.DateField(widget=DatePickerInput())
     end_date = forms.DateField(
         widget=DatePickerInput(
-            format=DEFAULT_DATE_FORMAT, attrs={"class": "form-control"}
-        ).end_of("event"),
-        initial=datetime.today(),
+            options={"maxDate": datetime.now().strftime("%Y-%m-%d")},
+            range_from="start_date",
+        )
     )
+
+    def __init__(self, *args, **kwargs):
+        initial_start_date = kwargs.pop("start_date", None)
+        initial_end_date = kwargs.pop("end_date", None)
+        minDate_start_date = kwargs.pop("minDate", None)
+
+        super().__init__(*args, **kwargs)
+        self.fields["start_date"].initial = initial_start_date
+        self.fields["start_date"].widget.config.options = {
+            "minDate": minDate_start_date
+        }
+        self.fields["end_date"].initial = initial_end_date

@@ -17,6 +17,7 @@ from django_countries import countries
 
 from csskp.settings import CUSTOM
 from csskp.settings import LANGUAGE_CODE
+from stats.forms import DatesLimitForm
 from survey.lib.utils import mean_gen
 from survey.lib.utils import tree
 from survey.models import CONTEXT_SECTION_LABEL
@@ -26,62 +27,103 @@ from survey.models import SurveyUser
 from survey.models import SurveyUserAnswer
 from survey.reporthelper import calculateResult
 
+DEFAULT_DATE_FORMAT = "%Y-%m-%d"
+now = datetime.now()
+
 
 def index(request):
+    default_date_from = get_default_date_from()
     lang = request.session.get(settings.LANGUAGE_COOKIE_NAME, LANGUAGE_CODE)
     translation.activate(lang)
-    date_from = request.GET.get("from", None)
-    # date_to = request.GET.get('to', None)
-    now = datetime.now()
-    if not date_from:
-        # 12 months ago
-        date_from = (now - relativedelta(months=12)).strftime("%Y-%m-%d")
+    date_from = request.GET.get("from", default_date_from)
+    date_to = request.GET.get("to", now)
+
+    try:
+        first_survey = SurveyUser.objects.all().order_by("created_at")[0]
+    except Exception:
+        first_survey = ""
+
+    try:
+        first_survey_finished = SurveyUser.objects.filter(status=3).order_by(
+            "created_at"
+        )[0]
+    except Exception:
+        first_survey_finished = ""
+
+    if request.method == "POST" and "load_stats" in request.POST:
+        datepicker_form = DatesLimitForm(request.POST)
+        if datepicker_form.is_valid():
+            clean_datepicker_form = datepicker_form.cleaned_data
+            date_from = clean_datepicker_form["start_date"]
+            date_to = clean_datepicker_form["end_date"]
+    elif "reset_stats" in request.POST:
+        date_from = default_date_from
+        date_to = now
+
+    datepicker_form = DatesLimitForm(
+        start_date=date_from,
+        end_date=date_to,
+        minDate=getattr(first_survey, "created_at", None),
+    )
 
     nb_finished_surveys = SurveyUser.objects.filter(status=3).count()
     nb_finished_surveys_for_period = SurveyUser.objects.filter(
-        status=3, created_at__gte=date_from
+        status=3, created_at__gte=date_from, created_at__lte=date_to
     ).count()
-    nb_surveys_for_period = SurveyUser.objects.filter(created_at__gte=date_from).count()
+    nb_surveys_for_period = SurveyUser.objects.filter(
+        created_at__gte=date_from, created_at__lte=date_to
+    ).count()
     survey_countries = (
         SurveyUserAnswer.objects.filter(
             user__status=3,
             user__created_at__gte=date_from,
+            user__created_at__lte=date_to,
             answer__question__section__label=CONTEXT_SECTION_LABEL,
             answer__question__label__contains="country",
         )
         .values_list("uvalue", flat=True)
         .distinct()
     )
-    try:
-        first_survey = SurveyUser.objects.filter(status=3).order_by("created_at")[0]
-    except Exception:
-        first_survey = ""
+
     nb_surveys = SurveyUser.objects.count()
 
-    time_frames = (
+    temp_time_frames = [
         (
             _("Last week"),
-            (now - relativedelta(weeks=1)).strftime("%Y-%m-%d"),
+            (now - relativedelta(weeks=1)),
         ),
         (
             _("Last month"),
-            (now - relativedelta(months=1)).strftime("%Y-%m-%d"),
+            (now - relativedelta(months=1)),
         ),
         (
             _("Last quarter"),
-            (now - relativedelta(months=4)).strftime("%Y-%m-%d"),
+            (now - relativedelta(months=4)),
         ),
         (
             _("Last year"),
-            (now - relativedelta(months=12)).strftime("%Y-%m-%d"),
+            (now - relativedelta(months=12)),
         ),
-    )
+    ]
+    time_frames = []
+    for tf in temp_time_frames[:]:
+        if not isinstance(first_survey, str) and first_survey.created_at < tf[1].date():
+            time_frames.append((tf[0], tf[1].strftime(DEFAULT_DATE_FORMAT)))
 
     context = {
-        "date_from": date_from,
+        "date_from": date_from.strftime(DEFAULT_DATE_FORMAT)
+        if not isinstance(date_from, str)
+        else date_from,
+        "date_to": date_to.strftime(DEFAULT_DATE_FORMAT)
+        if not isinstance(date_to, str)
+        else date_to,
         "time_frames": time_frames,
+        "datepicker_form": datepicker_form,
         "nb_surveys": nb_surveys,
         "first_survey_date": getattr(first_survey, "created_at", False),
+        "first_survey_finished_date": getattr(
+            first_survey_finished, "created_at", False
+        ),
         "nb_finished_surveys": nb_finished_surveys,
         "nb_surveys_for_period": nb_surveys_for_period,
         "nb_finished_surveys_for_period": nb_finished_surveys_for_period,
@@ -114,16 +156,13 @@ def survey_status_count(request):
     """Returns the count for the SurveyUser status property."""
     lang = request.session.get(settings.LANGUAGE_COOKIE_NAME, LANGUAGE_CODE)
     translation.activate(lang)
-
-    date_from = request.GET.get("from", None)
-    # date_to = request.GET.get('to', None)
-    if not date_from:
-        # 12 months ago
-        date_from = datetime.now() - relativedelta(months=12)
+    date_from = request.GET.get("from", get_default_date_from())
+    date_to = request.GET.get("to", now)
 
     result = (
         SurveyUser.objects.filter(
             created_at__gte=date_from,
+            created_at__lte=date_to,
         )
         .values("status")
         .annotate(count=Count("status"))
@@ -140,16 +179,13 @@ def survey_language_count(request):
     """Returns the count for the SurveyUser chosen_lang property."""
     lang = request.session.get(settings.LANGUAGE_COOKIE_NAME, LANGUAGE_CODE)
     translation.activate(lang)
-
-    date_from = request.GET.get("from", None)
-    # date_to = request.GET.get('to', None)
-    if not date_from:
-        # 12 months ago
-        date_from = datetime.now() - relativedelta(months=12)
+    date_from = request.GET.get("from", get_default_date_from())
+    date_to = request.GET.get("to", now)
 
     result = (
         SurveyUser.objects.filter(
             created_at__gte=date_from,
+            created_at__lte=date_to,
         )
         .values("chosen_lang")
         .annotate(count=Count("chosen_lang"))
@@ -170,15 +206,11 @@ def survey_per_country(request):
     """Return the count the surveys per country"""
     lang = request.session.get(settings.LANGUAGE_COOKIE_NAME, LANGUAGE_CODE)
     translation.activate(lang)
-
-    date_from = request.GET.get("from", None)
-    # date_to = request.GET.get('to', None)
-    if not date_from:
-        # 12 months ago
-        date_from = datetime.now() - relativedelta(months=12)
+    date_from = request.GET.get("from", get_default_date_from())
+    date_to = request.GET.get("to", now)
 
     nb_finished_surveys = SurveyUser.objects.filter(
-        status=3, created_at__gte=date_from
+        status=3, created_at__gte=date_from, created_at__lte=date_to
     ).count()
     threshold = 0.01
 
@@ -188,6 +220,7 @@ def survey_per_country(request):
         .filter(
             user__status=3,
             user__created_at__gte=date_from,
+            user__created_at__lte=date_to,
             answer__question__section__label=CONTEXT_SECTION_LABEL,
             answer__question__label__contains="country",
             entries__gt=nb_finished_surveys * threshold,
@@ -203,6 +236,7 @@ def survey_per_country(request):
         .filter(
             user__status=3,
             user__created_at__gte=date_from,
+            user__created_at__lte=date_to,
             answer__question__section__label=CONTEXT_SECTION_LABEL,
             answer__question__label__contains="country",
             entries__lte=nb_finished_surveys * threshold,
@@ -238,18 +272,15 @@ def survey_per_company_size(request):
     """Return the count the surveys per company size"""
     lang = request.session.get(settings.LANGUAGE_COOKIE_NAME, LANGUAGE_CODE)
     translation.activate(lang)
-
-    date_from = request.GET.get("from", None)
-    # date_to = request.GET.get('to', None)
-    if not date_from:
-        # 12 months ago
-        date_from = datetime.now() - relativedelta(months=12)
+    date_from = request.GET.get("from", get_default_date_from())
+    date_to = request.GET.get("to", now)
 
     result: Dict[str, int] = dict()
     query = (
         SurveyUserAnswer.objects.filter(
             user__status=3,
             user__created_at__gte=date_from,
+            user__created_at__lte=date_to,
             answer__question__section__label=CONTEXT_SECTION_LABEL,
             answer__question__label__contains="employees",
         )
@@ -267,18 +298,15 @@ def survey_per_company_sector(request):
     """Return the count the surveys per company sector"""
     lang = request.session.get(settings.LANGUAGE_COOKIE_NAME, LANGUAGE_CODE)
     translation.activate(lang)
-
-    date_from = request.GET.get("from", None)
-    # date_to = request.GET.get('to', None)
-    if not date_from:
-        # 12 months ago
-        date_from = datetime.now() - relativedelta(months=12)
+    date_from = request.GET.get("from", get_default_date_from())
+    date_to = request.GET.get("to", now)
 
     result: Dict[str, int] = dict()
     query = (
         SurveyUserAnswer.objects.filter(
             user__status=3,
             user__created_at__gte=date_from,
+            user__created_at__lte=date_to,
             answer__question__section__label=CONTEXT_SECTION_LABEL,
             answer__question__label__contains="sector",
         )
@@ -297,20 +325,19 @@ def answers_per_section(request):
     surveys completed during the last month."""
     lang = request.session.get(settings.LANGUAGE_COOKIE_NAME, LANGUAGE_CODE)
     translation.activate(lang)
+    date_from = request.GET.get("from", get_default_date_from())
+    date_to = request.GET.get("to", now)
     chart_exclude_sections = [CONTEXT_SECTION_LABEL]
     if "chart_exclude_sections" in CUSTOM.keys():
         chart_exclude_sections = (
             chart_exclude_sections + CUSTOM["chart_exclude_sections"]
         )
 
-    date_from = request.GET.get("from", None)
-    # date_to = request.GET.get('to', None)
-    if not date_from:
-        # 12 month ago
-        date_from = datetime.now() - relativedelta(months=12)
-        # date_to = datetime.now()
-
-    users = SurveyUser.objects.filter(status=3, created_at__gte=date_from)
+    users = SurveyUser.objects.filter(
+        status=3,
+        created_at__gte=date_from,
+        created_at__lte=date_to,
+    )
 
     result = tree()
     generators = tree()
@@ -350,20 +377,19 @@ def answers_per_category(request):
     surveys completed during the last year."""
     lang = request.session.get(settings.LANGUAGE_COOKIE_NAME, LANGUAGE_CODE)
     translation.activate(lang)
+    date_from = request.GET.get("from", get_default_date_from())
+    date_to = request.GET.get("to", now)
     chart_exclude_sections = ["__context"]
     if "chart_exclude_sections" in CUSTOM.keys():
         chart_exclude_sections = (
             chart_exclude_sections + CUSTOM["chart_exclude_sections"]
         )
 
-    date_from = request.GET.get("from", None)
-    # date_to = request.GET.get('to', None)
-    if not date_from:
-        # 12 month ago
-        date_from = datetime.now() - relativedelta(months=12)
-        # date_to = datetime.now()
-
-    users = SurveyUser.objects.filter(status=3, created_at__gte=date_from)
+    users = SurveyUser.objects.filter(
+        status=3,
+        created_at__gte=date_from,
+        created_at__lte=date_to,
+    )
 
     result = tree()
     generators = tree()
@@ -414,3 +440,48 @@ def activity_chart(request):
     for elem in count:
         result.append({"timestamp": str(elem["created_at"]), "count": elem["c"]})
     return JsonResponse(result, safe=False)
+
+
+def survey_current_question(request):
+    """Returns the count for the SurveyUser current_question_id property."""
+    lang = request.session.get(settings.LANGUAGE_COOKIE_NAME, LANGUAGE_CODE)
+    translation.activate(lang)
+    date_from = request.GET.get("from", get_default_date_from())
+    date_to = request.GET.get("to", now)
+
+    query = (
+        SurveyUser.objects.filter(
+            created_at__gte=date_from,
+            created_at__lte=date_to,
+        )
+        .values("current_question_id__qindex", "current_question_id__label")
+        .annotate(count=Count("current_question_id__label"))
+        .order_by("count")
+        .reverse()
+    )
+    result = {
+        str(q["current_question_id__qindex"])
+        + ". "
+        + _(q["current_question_id__label"])[:45]
+        + "...": q["count"]
+        for q in query
+    }
+
+    return JsonResponse(result)
+
+
+def get_default_date_from():
+    default_date_from = (now - relativedelta(months=12)).date()
+
+    try:
+        first_survey = SurveyUser.objects.all().order_by("created_at")[0]
+    except Exception:
+        first_survey = ""
+
+    if (
+        not isinstance(first_survey, str)
+        and first_survey.created_at > (now - relativedelta(months=12)).date()
+    ):
+        default_date_from = first_survey.created_at
+
+    return default_date_from

@@ -1,4 +1,4 @@
-from stats.forms import DEFAULT_DATE_FORMAT
+from stats.views import DEFAULT_DATE_FORMAT
 from survey.models import CONTEXT_SECTION_LABEL
 from survey.models import SURVEY_STATUS_FINISHED
 from survey.models import SurveyQuestion

@@ -83,4 +83,13 @@ if CUSTOM["stats"].get("category", False):
         )
     )
 
+if CUSTOM["stats"].get("current_question", False):
+    extrapatterns.append(
+        path(
+            "survey_current_question.json",
+            views.survey_current_question,
+            name="survey_current_question",
+        )
+    )
+
 urlpatterns.extend(extrapatterns)
