@@ -89,7 +89,7 @@
                     </select>
                 </div>
                 <div class="col-7">
-                    <form method="post" class="row">
+                    <form action="{% url 'stats' %}" method="post" class="row">
                         {% csrf_token %}
                         <div class="col-4">
                             {% bootstrap_field datepicker_form.start_date %}
