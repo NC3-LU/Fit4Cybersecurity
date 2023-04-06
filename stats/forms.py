@@ -8,7 +8,7 @@ class DatesLimitForm(forms.Form):
     start_date = forms.DateField(widget=DatePickerInput())
     end_date = forms.DateField(
         widget=DatePickerInput(
-            options={"maxDate": datetime.now()},
+            options={"maxDate": datetime.now().strftime("%Y-%m-%d")},
             range_from="start_date",
         )
     )
