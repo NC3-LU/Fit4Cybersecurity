@@ -22,16 +22,15 @@ $(document).ready(function() {
 
     const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);
+    var date_from = $("#id_start_date").val();
+    var date_to = $("#id_end_date").val();
+
     if (urlParams.has('from')) {
-      var date_from = urlParams.get('from');
-    } else {
-      var date_from = '';
+      date_from = urlParams.get('from');
     }
 
     if (urlParams.has('to')) {
-      var date_to = urlParams.get('to');
-    } else {
-      var date_to = '';
+      date_to = urlParams.get('to');
     }
 
     var colors = ['rgba(230, 25, 75, 0.4)', 'rgba(60, 180, 75, 0.4)',

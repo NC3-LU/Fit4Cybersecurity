@@ -28,15 +28,15 @@ from survey.models import SurveyUserAnswer
 from survey.reporthelper import calculateResult
 
 DEFAULT_DATE_FORMAT = "%Y-%m-%d"
+now = datetime.now()
 
 
 def index(request):
-    global date_from
-    global date_to
-    now = datetime.now()
-    default_date_from = (now - relativedelta(months=12)).date()
+    default_date_from = get_default_date_from()
     lang = request.session.get(settings.LANGUAGE_COOKIE_NAME, LANGUAGE_CODE)
     translation.activate(lang)
+    date_from = request.GET.get("from", default_date_from)
+    date_to = request.GET.get("to", now)
 
     try:
         first_survey = SurveyUser.objects.all().order_by("created_at")[0]
@@ -49,12 +49,6 @@ def index(request):
         )[0]
     except Exception:
         first_survey_finished = ""
-
-    if first_survey.created_at > (now - relativedelta(months=12)).date():
-        default_date_from = first_survey.created_at
-
-    date_from = request.GET.get("from", default_date_from)
-    date_to = request.GET.get("to", now)
 
     if request.method == "POST" and "load_stats" in request.POST:
         datepicker_form = DatesLimitForm(request.POST)
@@ -162,6 +156,8 @@ def survey_status_count(request):
     """Returns the count for the SurveyUser status property."""
     lang = request.session.get(settings.LANGUAGE_COOKIE_NAME, LANGUAGE_CODE)
     translation.activate(lang)
+    date_from = request.GET.get("from", get_default_date_from())
+    date_to = request.GET.get("to", now)
 
     result = (
         SurveyUser.objects.filter(
@@ -183,6 +179,8 @@ def survey_language_count(request):
     """Returns the count for the SurveyUser chosen_lang property."""
     lang = request.session.get(settings.LANGUAGE_COOKIE_NAME, LANGUAGE_CODE)
     translation.activate(lang)
+    date_from = request.GET.get("from", get_default_date_from())
+    date_to = request.GET.get("to", now)
 
     result = (
         SurveyUser.objects.filter(
@@ -208,6 +206,8 @@ def survey_per_country(request):
     """Return the count the surveys per country"""
     lang = request.session.get(settings.LANGUAGE_COOKIE_NAME, LANGUAGE_CODE)
     translation.activate(lang)
+    date_from = request.GET.get("from", get_default_date_from())
+    date_to = request.GET.get("to", now)
 
     nb_finished_surveys = SurveyUser.objects.filter(
         status=3, created_at__gte=date_from, created_at__lte=date_to
@@ -272,6 +272,8 @@ def survey_per_company_size(request):
     """Return the count the surveys per company size"""
     lang = request.session.get(settings.LANGUAGE_COOKIE_NAME, LANGUAGE_CODE)
     translation.activate(lang)
+    date_from = request.GET.get("from", get_default_date_from())
+    date_to = request.GET.get("to", now)
 
     result: Dict[str, int] = dict()
     query = (
@@ -296,6 +298,8 @@ def survey_per_company_sector(request):
     """Return the count the surveys per company sector"""
     lang = request.session.get(settings.LANGUAGE_COOKIE_NAME, LANGUAGE_CODE)
     translation.activate(lang)
+    date_from = request.GET.get("from", get_default_date_from())
+    date_to = request.GET.get("to", now)
 
     result: Dict[str, int] = dict()
     query = (
@@ -321,6 +325,8 @@ def answers_per_section(request):
     surveys completed during the last month."""
     lang = request.session.get(settings.LANGUAGE_COOKIE_NAME, LANGUAGE_CODE)
     translation.activate(lang)
+    date_from = request.GET.get("from", get_default_date_from())
+    date_to = request.GET.get("to", now)
     chart_exclude_sections = [CONTEXT_SECTION_LABEL]
     if "chart_exclude_sections" in CUSTOM.keys():
         chart_exclude_sections = (
@@ -371,6 +377,8 @@ def answers_per_category(request):
     surveys completed during the last year."""
     lang = request.session.get(settings.LANGUAGE_COOKIE_NAME, LANGUAGE_CODE)
     translation.activate(lang)
+    date_from = request.GET.get("from", get_default_date_from())
+    date_to = request.GET.get("to", now)
     chart_exclude_sections = ["__context"]
     if "chart_exclude_sections" in CUSTOM.keys():
         chart_exclude_sections = (
@@ -438,6 +446,8 @@ def survey_current_question(request):
     """Returns the count for the SurveyUser current_question_id property."""
     lang = request.session.get(settings.LANGUAGE_COOKIE_NAME, LANGUAGE_CODE)
     translation.activate(lang)
+    date_from = request.GET.get("from", get_default_date_from())
+    date_to = request.GET.get("to", now)
 
     query = (
         SurveyUser.objects.filter(
@@ -458,3 +468,17 @@ def survey_current_question(request):
     }
 
     return JsonResponse(result)
+
+
+def get_default_date_from():
+    default_date_from = (now - relativedelta(months=12)).date()
+
+    try:
+        first_survey = SurveyUser.objects.all().order_by("created_at")[0]
+    except Exception:
+        first_survey = ""
+
+    if first_survey.created_at > (now - relativedelta(months=12)).date():
+        default_date_from = first_survey.created_at
+
+    return default_date_from
