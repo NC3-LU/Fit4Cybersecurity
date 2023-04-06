@@ -228,6 +228,26 @@
                     {% endif %}
                 </div>
             {% endif %}
+            {% if custom.stats.current_question %}
+                <div class="col-4">
+                    <h4 class="text-center">
+                        {{ _("Survey's current question") }}
+                    </h4>
+                    <div id="spinner-stats-current_question" class="row justify-content-center align-items-center">
+                        <div class="text-primary spinner-border custom-spinner m-5" role="status">
+                            <span class="sr-only">{{ _('Loading...') }}</span>
+                        </div>
+                    </div>
+                    {% if nb_surveys_for_period == 0 %}
+                        <div class="text-center">
+                            <i class="bi bi-x-circle text-warning display-1"></i>
+                            <p class="font-italic">{{ _('No statistics available') }}</p>
+                        </div>
+                    {% else %}
+                        <canvas id="stats-current_question"></canvas>
+                    {% endif %}
+                </div>
+            {% endif %}
         </div>
         {% if custom.stats.section %}
             <div class="w-100 p-4"></div>
@@ -293,27 +313,6 @@
                         <canvas id="answers-per-category"></canvas>
                     {% endif %}
                 </div>
-            </div>
-        {% endif %}
-        {% if custom.stats.current_question %}
-            <div class="w-100 p-4"></div>
-            <div class="col-4 mx-auto text-center">
-                <h4 class="text-center">
-                    {{ _("Survey's current question") }}
-                </h4>
-                <div id="spinner-stats-current_question" class="row justify-content-center align-items-center">
-                    <div class="text-primary spinner-border custom-spinner m-5" role="status">
-                        <span class="sr-only">{{ _('Loading...') }}</span>
-                    </div>
-                </div>
-                {% if nb_surveys_for_period == 0 %}
-                    <div class="text-center">
-                        <i class="bi bi-x-circle text-warning display-1"></i>
-                        <p class="font-italic">{{ _('No statistics available') }}</p>
-                    </div>
-                {% else %}
-                    <canvas id="stats-current_question"></canvas>
-                {% endif %}
             </div>
         {% endif %}
         <div class="w-100 p-4"></div>
