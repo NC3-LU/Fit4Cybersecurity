@@ -82,9 +82,6 @@ COOKIEBANNER = {
 }
 
 BOOTSTRAP_DATEPICKER_PLUS = {
-    "options": {
-        "showTodayButton": True,
-    },
     "variant_options": {
         "date": {
             "format": "YYYY-MM-DD",
