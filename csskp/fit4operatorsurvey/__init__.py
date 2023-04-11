@@ -75,6 +75,7 @@ CUSTOM = {
         "language": False,
         "section": False,
         "category": False,
+        "current_question": True,
     },
     "chart_exclude_sections": [],
 }
