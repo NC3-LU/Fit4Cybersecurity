@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-04-06 11:46+0000\n"
+"POT-Creation-Date: 2023-04-11 08:31+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -5792,6 +5792,14 @@ msgid ""
 "known to your employees?"
 msgstr ""
 
+#: stats/forms.py:9
+msgid "Start date"
+msgstr ""
+
+#: stats/forms.py:11
+msgid "End date"
+msgstr ""
+
 #: stats/views.py:92
 msgid "Last week"
 msgstr ""
@@ -6035,7 +6043,7 @@ msgstr ""
 #: templates/parts/fit4ehealth/footer_part.html:19
 #: templates/parts/fit4ehealth/footer_part.html:20
 #: templates/parts/footer_part.html:20 templates/parts/footer_part.html:21
-#: templates/survey/stats.html:329 templates/survey/stats.html:330
+#: templates/survey/stats.html:333 templates/survey/stats.html:334
 msgid "Version of"
 msgstr ""
 
@@ -6410,138 +6418,138 @@ msgid ""
 "the self-assessment is done."
 msgstr ""
 
-#: templates/survey/stats.html:17
+#: templates/survey/stats.html:21
 msgid "Some statistics about the current surveys."
 msgstr ""
 
-#: templates/survey/stats.html:24 templates/survey/stats.html:125
-#: templates/survey/stats.html:145 templates/survey/stats.html:165
-#: templates/survey/stats.html:204 templates/survey/stats.html:224
-#: templates/survey/stats.html:244 templates/survey/stats.html:277
-#: templates/survey/stats.html:310
+#: templates/survey/stats.html:28 templates/survey/stats.html:129
+#: templates/survey/stats.html:149 templates/survey/stats.html:169
+#: templates/survey/stats.html:208 templates/survey/stats.html:228
+#: templates/survey/stats.html:248 templates/survey/stats.html:281
+#: templates/survey/stats.html:314
 msgid "No statistics available"
 msgstr ""
 
-#: templates/survey/stats.html:33
+#: templates/survey/stats.html:37
 msgid "Main figures"
 msgstr ""
 
-#: templates/survey/stats.html:36
+#: templates/survey/stats.html:40
 msgid "Number of surveys:"
 msgstr ""
 
-#: templates/survey/stats.html:39
+#: templates/survey/stats.html:43
 msgid "Number of finished surveys:"
 msgstr ""
 
-#: templates/survey/stats.html:42
+#: templates/survey/stats.html:46
 msgid "First completed survey on:"
 msgstr ""
 
-#: templates/survey/stats.html:52
+#: templates/survey/stats.html:56
 msgid "Activity over the past year"
 msgstr ""
 
-#: templates/survey/stats.html:56 templates/survey/stats.html:119
-#: templates/survey/stats.html:139 templates/survey/stats.html:159
-#: templates/survey/stats.html:198 templates/survey/stats.html:218
-#: templates/survey/stats.html:238 templates/survey/stats.html:261
-#: templates/survey/stats.html:294
+#: templates/survey/stats.html:60 templates/survey/stats.html:123
+#: templates/survey/stats.html:143 templates/survey/stats.html:163
+#: templates/survey/stats.html:202 templates/survey/stats.html:222
+#: templates/survey/stats.html:242 templates/survey/stats.html:265
+#: templates/survey/stats.html:298
 msgid "Loading..."
 msgstr ""
 
-#: templates/survey/stats.html:63
+#: templates/survey/stats.html:67
 msgid "Less"
 msgstr ""
 
-#: templates/survey/stats.html:69
+#: templates/survey/stats.html:73
 msgid "More"
 msgstr ""
 
-#: templates/survey/stats.html:74
+#: templates/survey/stats.html:78
 msgid "Click on a date to load stats since this day or use the filter below."
 msgstr ""
 
-#: templates/survey/stats.html:79
+#: templates/survey/stats.html:83
 msgid "Time frame"
 msgstr ""
 
-#: templates/survey/stats.html:81
+#: templates/survey/stats.html:85
 msgid "Please select"
 msgstr ""
 
-#: templates/survey/stats.html:98
+#: templates/survey/stats.html:102
 msgid "Load"
 msgstr ""
 
-#: templates/survey/stats.html:100
+#: templates/survey/stats.html:104
 msgid "Reset"
 msgstr ""
 
-#: templates/survey/stats.html:108
+#: templates/survey/stats.html:112
 msgid "Statistics from"
 msgstr ""
 
-#: templates/survey/stats.html:108
+#: templates/survey/stats.html:112
 msgid "to"
 msgstr ""
 
-#: templates/survey/stats.html:109
+#: templates/survey/stats.html:113
 msgid "Total of completed surveys:"
 msgstr ""
 
-#: templates/survey/stats.html:115
+#: templates/survey/stats.html:119
 msgid "Surveys company sector"
 msgstr ""
 
-#: templates/survey/stats.html:135
+#: templates/survey/stats.html:139
 msgid "Surveys company size"
 msgstr ""
 
-#: templates/survey/stats.html:155
+#: templates/survey/stats.html:159
 msgid "Surveys countries"
 msgstr ""
 
-#: templates/survey/stats.html:178
+#: templates/survey/stats.html:182
 msgid "Details of other countries"
 msgstr ""
 
-#: templates/survey/stats.html:194
+#: templates/survey/stats.html:198
 msgid "Surveys status"
 msgstr ""
 
-#: templates/survey/stats.html:214
+#: templates/survey/stats.html:218
 msgid "Surveys languages"
 msgstr ""
 
-#: templates/survey/stats.html:234
+#: templates/survey/stats.html:238
 msgid "Survey's current question"
 msgstr ""
 
-#: templates/survey/stats.html:257
+#: templates/survey/stats.html:261
 msgid "Answers by section and company size"
 msgstr ""
 
-#: templates/survey/stats.html:265 templates/survey/stats.html:298
+#: templates/survey/stats.html:269 templates/survey/stats.html:302
 msgid "Country"
 msgstr ""
 
-#: templates/survey/stats.html:267 templates/survey/stats.html:300
+#: templates/survey/stats.html:271 templates/survey/stats.html:304
 msgid "All"
 msgstr ""
 
-#: templates/survey/stats.html:290
+#: templates/survey/stats.html:294
 msgid "Answers by category and company size"
 msgstr ""
 
-#: templates/survey/stats.html:322
+#: templates/survey/stats.html:326
 msgid "Server information"
 msgstr ""
 
-#: templates/survey/stats.html:324
+#: templates/survey/stats.html:328
 msgid "Python version:"
 msgstr ""
 
-#: templates/survey/stats.html:327
+#: templates/survey/stats.html:331
 msgid "Software version:"
 msgstr ""
