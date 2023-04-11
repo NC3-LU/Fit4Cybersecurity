@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-04-11 08:03+0000\n"
+"POT-Creation-Date: 2023-04-11 08:21+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -6924,6 +6924,14 @@ msgstr ""
 msgid "Other types of obligations, such as:"
 msgstr ""
 
+#: stats/forms.py:9
+msgid "Start date"
+msgstr ""
+
+#: stats/forms.py:11
+msgid "End date"
+msgstr ""
+
 #: stats/views.py:92
 msgid "Last week"
 msgstr ""
@@ -7173,7 +7181,7 @@ msgstr ""
 #: templates/parts/fit4ehealth/footer_part.html:19
 #: templates/parts/fit4ehealth/footer_part.html:20
 #: templates/parts/footer_part.html:20 templates/parts/footer_part.html:21
-#: templates/survey/stats.html:354 templates/survey/stats.html:355
+#: templates/survey/stats.html:333 templates/survey/stats.html:334
 msgid "Version of"
 msgstr ""
 
@@ -7577,7 +7585,7 @@ msgstr ""
 #: templates/survey/stats.html:149 templates/survey/stats.html:169
 #: templates/survey/stats.html:208 templates/survey/stats.html:228
 #: templates/survey/stats.html:248 templates/survey/stats.html:281
-#: templates/survey/stats.html:314 templates/survey/stats.html:336
+#: templates/survey/stats.html:314
 msgid "No statistics available"
 msgstr ""
 
@@ -7605,7 +7613,7 @@ msgstr ""
 #: templates/survey/stats.html:143 templates/survey/stats.html:163
 #: templates/survey/stats.html:202 templates/survey/stats.html:222
 #: templates/survey/stats.html:242 templates/survey/stats.html:265
-#: templates/survey/stats.html:298 templates/survey/stats.html:330
+#: templates/survey/stats.html:298
 msgid "Loading..."
 msgstr ""
 
@@ -7669,7 +7677,7 @@ msgstr ""
 msgid "Surveys languages"
 msgstr ""
 
-#: templates/survey/stats.html:238 templates/survey/stats.html:326
+#: templates/survey/stats.html:238
 msgid "Survey's current question"
 msgstr ""
 
@@ -7689,15 +7697,15 @@ msgstr ""
 msgid "Answers by category and company size"
 msgstr ""
 
-#: templates/survey/stats.html:347
+#: templates/survey/stats.html:326
 msgid "Server information"
 msgstr ""
 
-#: templates/survey/stats.html:349
+#: templates/survey/stats.html:328
 msgid "Python version:"
 msgstr ""
 
-#: templates/survey/stats.html:352
+#: templates/survey/stats.html:331
 msgid "Software version:"
 msgstr ""
 

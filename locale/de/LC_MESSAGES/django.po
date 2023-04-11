@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-04-11 08:03+0000\n"
+"POT-Creation-Date: 2023-04-11 08:21+0000\n"
 "PO-Revision-Date: 2023-04-04 14:33+0000\n"
 "Last-Translator: Gregory Wawszyniak-dumont <gregory.wawszyniak-dumont@nc3."
 "lu>\n"
@@ -8870,6 +8870,14 @@ msgstr "Ihren Verpflichtungen zum Schutz personenbezogener Daten"
 msgid "Other types of obligations, such as:"
 msgstr "Andersartigen Verpflichtungen wie beispielsweise:"
 
+#: stats/forms.py:9
+msgid "Start date"
+msgstr "Startdatum"
+
+#: stats/forms.py:11
+msgid "End date"
+msgstr "Enddatum"
+
 #: stats/views.py:92
 msgid "Last week"
 msgstr "Letzte Woche"
@@ -9187,7 +9195,7 @@ msgstr "Quellcode auf GitHub"
 #: templates/parts/fit4ehealth/footer_part.html:19
 #: templates/parts/fit4ehealth/footer_part.html:20
 #: templates/parts/footer_part.html:20 templates/parts/footer_part.html:21
-#: templates/survey/stats.html:354 templates/survey/stats.html:355
+#: templates/survey/stats.html:333 templates/survey/stats.html:334
 msgid "Version of"
 msgstr "Version von"
 
@@ -9707,7 +9715,7 @@ msgstr "Einige Statistiken zu den aktuellen Umfragen."
 #: templates/survey/stats.html:149 templates/survey/stats.html:169
 #: templates/survey/stats.html:208 templates/survey/stats.html:228
 #: templates/survey/stats.html:248 templates/survey/stats.html:281
-#: templates/survey/stats.html:314 templates/survey/stats.html:336
+#: templates/survey/stats.html:314
 msgid "No statistics available"
 msgstr "Keine Statistiken verfügbar"
 
@@ -9735,7 +9743,7 @@ msgstr "Aktivitäten im letzten Jahr"
 #: templates/survey/stats.html:143 templates/survey/stats.html:163
 #: templates/survey/stats.html:202 templates/survey/stats.html:222
 #: templates/survey/stats.html:242 templates/survey/stats.html:265
-#: templates/survey/stats.html:298 templates/survey/stats.html:330
+#: templates/survey/stats.html:298
 msgid "Loading..."
 msgstr "Laden..."
 
@@ -9801,7 +9809,7 @@ msgstr "Status der Umfragen"
 msgid "Surveys languages"
 msgstr "Umfragen Sprachen"
 
-#: templates/survey/stats.html:238 templates/survey/stats.html:326
+#: templates/survey/stats.html:238
 msgid "Survey's current question"
 msgstr "Die aktuelle Frage der Umfrage"
 
@@ -9821,15 +9829,15 @@ msgstr "Alle"
 msgid "Answers by category and company size"
 msgstr "Antworten nach Kategorie und Unternehmensgröße"
 
-#: templates/survey/stats.html:347
+#: templates/survey/stats.html:326
 msgid "Server information"
 msgstr "Serverinformation"
 
-#: templates/survey/stats.html:349
+#: templates/survey/stats.html:328
 msgid "Python version:"
 msgstr "Python-Version:"
 
-#: templates/survey/stats.html:352
+#: templates/survey/stats.html:331
 msgid "Software version:"
 msgstr "Softwareversion:"
 

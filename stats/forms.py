@@ -2,15 +2,17 @@ from datetime import datetime
 
 from bootstrap_datepicker_plus.widgets import DatePickerInput
 from django import forms
+from django.utils.translation import gettext_lazy as _
 
 
 class DatesLimitForm(forms.Form):
-    start_date = forms.DateField(widget=DatePickerInput())
+    start_date = forms.DateField(label=_("Start date"), widget=DatePickerInput())
     end_date = forms.DateField(
+        label=_("End date"),
         widget=DatePickerInput(
             options={"maxDate": datetime.now().strftime("%Y-%m-%d")},
             range_from="start_date",
-        )
+        ),
     )
 
     def __init__(self, *args, **kwargs):
