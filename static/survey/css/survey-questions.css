@@ -234,3 +234,12 @@
     -webkit-animation: spin 1s linear infinite;
     animation: spin 1s linear infinite;
 }
+
+.nav_categories a:hover {
+    color: #007bff;
+    cursor: default;
+}
+.nav_categories_active {
+    font-weight: bold;
+    border-bottom: 2px solid var(--red) !important;
+}

@@ -31,8 +31,9 @@ class AnswerMChoice(forms.Form):
                 label="",
             )
         elif answers_field_type == "SO":
+            tanswers.insert(0, (None, "---- " + _("Please select") + " ----"))
             self.fields["answers"] = forms.ChoiceField(
-                required=False,
+                required=True,
                 choices=question_answers,
                 widget=forms.Select(),
                 label="",

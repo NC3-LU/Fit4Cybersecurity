@@ -1,0 +1,40 @@
+{% extends 'survey/base.html' %}
+
+{% load bootstrap4 %}
+{% load apptags %}
+
+{% load static %}
+
+{% block bootstrap4_extra_head %}
+    {{ block.super }}
+    <link rel="stylesheet" type="text/css" href="{% static "survey/css/survey-questions.css" %}" />
+    <script type="text/javascript" src="{% static "survey/js/survey-questions.js" %}"></script>
+{% endblock %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% load i18n %}
+
+{% block content %}
+    <div class="m-2 p-3">
+        <form method="post" id="context_questions">
+        {% csrf_token %}
+        {% for key, form in forms.items %}
+        <div class="card-title" >
+            <span data-bs-toggle="tooltip" title="{{ question_tooltip | safe }}">{{ questions_per_id|get_item:key }}</span>
+        </div>
+          {% language chosen_lang %}
+            {% bootstrap_form form exclude="feedback" %}
+          {% endlanguage %}
+        {%  endfor %}
+        {% buttons %}
+            <div class="form-group pt-4">
+                <div class="d-flex flex-row justify-content-between float-right">
+                    <input class="btn btn-primary" type="submit" value="{{ _('Next') }}">
+                </div>
+            </div>
+        {% endbuttons %}
+        </form>
+        <br />
+    </div>
+{% endblock %}
