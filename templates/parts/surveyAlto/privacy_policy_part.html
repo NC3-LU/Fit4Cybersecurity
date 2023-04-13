@@ -1,0 +1,50 @@
+{% load i18n %}
+  <h1>{{ _('Privacy policy and cookie settings') }}</h1>
+  <ul>
+  <li><a href="#cookies">{{ _('Cookie settings') }}</a></li>
+  <li><a href="#privacy">{{ _('Information regarding the processing of personal data') }}</a></li>
+  </ul>
+  <h2><a id="cookies">{{ _('Cookie settings') }}</a></h2>
+  <p class="text-justify">
+    {% blocktranslate trimmed %}
+    A cookie is a text file sent to your browser and saved on the hard drive of your terminal (PC, laptop or smartphone, for example) when visiting a website.
+    <br><br>
+    Cookies can for example be used to ensure the proper functioning of a site and to optimize its ergonomics and its functionalities.
+    <br><br>
+    The cookies we use on this site are strictly necessary to ensure its proper functioning and to allow you to complete the online form, namely:
+    {% endblocktranslate %}
+  </p>
+  {% for cookiegroup in groups %}
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">{{ _('Name') }}</th>
+          <th scope="col">{{ _('Description') }}</th>
+          <th scope="col">{{ _('Content') }}</th>
+          <th scope="col">{{ _('Maximum term') }}</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for cookie in cookiegroup.cookies %}
+        <tr class="text-justify small">
+          <td>{{ cookie.pattern }}</td>
+          <td>{{ cookie.description }}</td>
+          <td>{{ cookie.content }}</td>
+          <td>{{ cookie.max_age }}</td>
+          {% endfor %}
+        </tr>
+      </tbody>
+    </table>
+  {% endfor %}
+  <h2><a id="privacy">{{ _('Information regarding the processing of personal data') }}</a></h2>
+  <p class="text-justify">
+    {% blocktranslate trimmed %}
+    This questionnaire is anonymous and does not require the collection of personal data from the people who replies to it.
+    <br><br>
+    Users are invited to answer this questionnaire, taking care not to communicate, in the free-text fields of it, any information allowing the identification of a natural person (e.g. surname, first name, contact details, etc.). In the event that personal data is however entered in the free-text fields of the online questionnaire, these will be deleted.
+    <br><br>
+    The answers to the online questionnaire will be accessible only by the Commissioner and the CNPD agents as well as by the LHC-NC3 agents dedicated to the ALTO project, in order to ensure the analysis of the answers given and the proper technical operation.
+    <br><br>
+    For any questions regarding the processing of personal data by the CNPD, you can contact the CNPD's Data Protection Officer (DPO): <a href="mailto:dpo@cnpd.lu">dpo@cnpd.lu</a>
+    {% endblocktranslate %}
+  </p>

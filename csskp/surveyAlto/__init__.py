@@ -63,7 +63,7 @@ CUSTOM = {
         "terms": "terms_part.html",
         "footer": "surveyAlto/footer_part.html",
         "main_logo": "surveyAlto/logo_part.html",
-        "privacy": "privacy_policy_part.html",
+        "privacy": "surveyAlto/privacy_policy_part.html",
     },
     # Available modules
     "modules": {
