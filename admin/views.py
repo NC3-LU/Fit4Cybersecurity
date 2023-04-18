@@ -7,7 +7,7 @@ from django.http import HttpResponseRedirect
 from django.http import JsonResponse
 from django.shortcuts import render
 
-from stats.forms import DatesLimitForm
+from admin.forms import AdminDatesLimitForm
 from stats.stats_logic import get_finished_surveys_list
 from survey.lib.utils import export_survey
 from survey.models import SurveyUser
@@ -42,13 +42,13 @@ def site_stats(request):
 @login_required
 def results_stats(request):
     if request.method == "POST":
-        dates_limit_form = DatesLimitForm(data=request.POST)
+        dates_limit_form = AdminDatesLimitForm(data=request.POST)
         if not dates_limit_form.is_valid():
             return None
         start_date = dates_limit_form.cleaned_data["start_date"]
         end_date = dates_limit_form.cleaned_data["end_date"]
     else:
-        dates_limit_form = DatesLimitForm()
+        dates_limit_form = AdminDatesLimitForm()
         start_date = dates_limit_form.fields["start_date"].initial
         end_date = dates_limit_form.fields["end_date"].initial
 
