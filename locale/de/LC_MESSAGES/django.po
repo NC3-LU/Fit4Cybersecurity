@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-04-11 08:21+0000\n"
+"POT-Creation-Date: 2023-04-20 14:36+0000\n"
 "PO-Revision-Date: 2023-04-04 14:33+0000\n"
 "Last-Translator: Gregory Wawszyniak-dumont <gregory.wawszyniak-dumont@nc3."
 "lu>\n"
@@ -9150,6 +9150,7 @@ msgstr "Ein Service von ACRC"
 #: templates/parts/fit4contract/footer_part.html:21
 #: templates/parts/fit4ehealth/footer_part.html:34
 #: templates/parts/footer_part.html:28
+#: templates/parts/surveySMEDemand/footer_part.html:42
 msgid "Stats"
 msgstr "Statistiken"
 
@@ -9160,6 +9161,8 @@ msgstr "Statistiken"
 #: templates/parts/fit4ehealth/footer_part.html:37
 #: templates/parts/fit4ehealth/footer_part.html:38
 #: templates/parts/footer_part.html:31 templates/parts/footer_part.html:32
+#: templates/parts/surveySMEDemand/footer_part.html:45
+#: templates/parts/surveySMEDemand/footer_part.html:46
 msgid "Terms of Service"
 msgstr "Nutzungsbedingungen"
 
@@ -9170,6 +9173,8 @@ msgstr "Nutzungsbedingungen"
 #: templates/parts/fit4ehealth/footer_part.html:41
 #: templates/parts/fit4ehealth/footer_part.html:42
 #: templates/parts/footer_part.html:35 templates/parts/footer_part.html:36
+#: templates/parts/surveySMEDemand/footer_part.html:49
+#: templates/parts/surveySMEDemand/footer_part.html:50
 msgid "Privacy policy"
 msgstr "Datenschutz-Bestimmungen"
 
@@ -9183,18 +9188,24 @@ msgstr "Ein Service von ANSSI.LU"
 #: templates/parts/fit4ehealth/footer_part.html:7
 #: templates/parts/fit4ehealth/footer_part.html:8
 #: templates/parts/footer_part.html:7 templates/parts/footer_part.html:8
+#: templates/parts/surveySMEDemand/footer_part.html:7
+#: templates/parts/surveySMEDemand/footer_part.html:8
 msgid "A service provided by NC3-LU"
 msgstr "Ein Service von NC3-LU"
 
 #: templates/parts/fit4ehealth/footer_part.html:14
 #: templates/parts/fit4ehealth/footer_part.html:15
 #: templates/parts/footer_part.html:15 templates/parts/footer_part.html:16
+#: templates/parts/surveySMEDemand/footer_part.html:29
+#: templates/parts/surveySMEDemand/footer_part.html:30
 msgid "Source code on GitHub"
 msgstr "Quellcode auf GitHub"
 
 #: templates/parts/fit4ehealth/footer_part.html:19
 #: templates/parts/fit4ehealth/footer_part.html:20
 #: templates/parts/footer_part.html:20 templates/parts/footer_part.html:21
+#: templates/parts/surveySMEDemand/footer_part.html:34
+#: templates/parts/surveySMEDemand/footer_part.html:35
 #: templates/survey/stats.html:333 templates/survey/stats.html:334
 msgid "Version of"
 msgstr "Version von"
@@ -9220,6 +9231,21 @@ msgstr "Inhalt"
 #: templates/parts/privacy_policy_part.html:90
 msgid "Maximum term"
 msgstr "Maximale Laufzeit"
+
+#: templates/parts/surveySMEDemand/footer_part.html:14
+#: templates/parts/surveySMEDemand/footer_part.html:15
+#: templates/parts/surveySMEDemand/footer_part.html:21
+#: templates/parts/surveySMEDemand/footer_part.html:22
+#: templates/surveySMEDemand/survey/index.html:32
+#: templates/surveySMEDemand/survey/index.html:33
+#: templates/surveySMEDemand/survey/index.html:39
+#: templates/surveySMEDemand/survey/index.html:40
+#: templates/surveySMEDemand/survey/index.html:46
+#: templates/surveySMEDemand/survey/index.html:47
+#: templates/surveySMEDemand/survey/index.html:53
+#: templates/surveySMEDemand/survey/index.html:54
+msgid "Your logo here"
+msgstr ""
 
 #: templates/report/description.html:8
 #, python-format
@@ -9499,12 +9525,12 @@ msgid "Welcome to the NC3 self-assessment tool:"
 msgstr "Willkommen beim NC3-Tool zur Selbstbewertung:"
 
 #: templates/survey/index.html:30
-#: templates/surveySMEDemand/survey/index.html:25
+#: templates/surveySMEDemand/survey/index.html:77
 msgid "Start"
 msgstr "Starten"
 
 #: templates/survey/index.html:38
-#: templates/surveySMEDemand/survey/index.html:33
+#: templates/surveySMEDemand/survey/index.html:85
 msgid "Continue a previous survey"
 msgstr "Setzen Sie eine vorherige Umfrage fort"
 
@@ -9903,3 +9929,17 @@ msgstr ""
 "Vertragsverhältnisses zur Begründung einer Erwerbs-, Miet-, Entwicklungs- "
 "oder sonstigen Dienstleistung im Bereich der Informations- und "
 "Kommunikationstechnologien zu ermitteln."
+
+#: templates/surveySMEDemand/survey/index.html:24
+msgid "This project is supported by:"
+msgstr ""
+
+#: templates/surveySMEDemand/survey/index.html:63
+msgid "The results of the survey are anonymous."
+msgstr ""
+
+#: templates/surveySMEDemand/survey/index.html:66
+msgid ""
+"There are no right or wrong answers. We invite you to be as honest as "
+"possible."
+msgstr ""
