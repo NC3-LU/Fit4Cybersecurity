@@ -11,9 +11,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-04-06 11:46+0000\n"
-"PO-Revision-Date: 2023-04-06 11:50+0000\n"
-"Last-Translator: Juan Rocha <juan.rocha@cases.lu>\n"
+"POT-Creation-Date: 2023-04-20 14:36+0000\n"
+"PO-Revision-Date: 2023-04-04 14:33+0000\n"
+"Last-Translator: Gregory Wawszyniak-dumont <gregory.wawszyniak-dumont@nc3."
+"lu>\n"
 "Language-Team: French <https://translate.monarc.lu/projects/"
 "Fit4Cybersecurity/fit4cybersecurity/fr/>\n"
 "Language: fr\n"
@@ -217,6 +218,45 @@ msgstr "ID de la session"
 #: csskp/settings.py:77
 msgid "15 days"
 msgstr "15 jours"
+
+#: csskp/surveySMEDemand/__init__.py:7
+msgid ""
+"This questionnaire is intended for managers of small and medium-sized "
+"businesses, between 1 and 250 employees, and must be completed by them in "
+"order to share their vision of their needs in terms of cybersecurity "
+"services and solutions. The objective is to better understand market "
+"practices, expectations and trends in order to identify the levers of demand "
+"for this type of player in Luxembourg. Our desire is not to audit companies "
+"individually, this questionnaire is anonymous, but to understand how the "
+"managers of SMEs position themselves in the face of the regulatory, "
+"technological and human challenges of cybersecurity. <br> <br>The study is "
+"the work product of the Data For Research, Innovation, and Governance "
+"(D4RIG) team of the National Cybersecurity Competence Center (NC3) of the "
+"Luxembourg House of Cybersecurity. This is carried out as part of the "
+"research activities supporting the creation of the Cybersecurity Market "
+"Intelligence Observatory Platform (CSMIOP). This purposeful work has also "
+"engaged local partners such as chambers and professional organizations, as "
+"well as all the institutional players in the market who can support and "
+"disseminate this questionnaire as well as the results of the study."
+msgstr ""
+"Ce questionnaire est destiné aux dirigeants de petites et moyennes "
+"entreprises, entre 1 et 250 salariés, et doit être rempli par eux afin de "
+"partager leur vision de leurs besoins en termes de services et solutions de "
+"cybersécurité. L'objectif est de mieux comprendre les pratiques, les "
+"attentes et les tendances du marché afin d'identifier les leviers de la "
+"demande pour ce type d'acteur au Luxembourg. Notre volonté n'est pas "
+"d'auditer les entreprises individuellement, ce questionnaire est anonyme, "
+"mais de comprendre comment les dirigeants de PME se positionnent face aux "
+"enjeux réglementaires, technologiques et humains de la cybersécurité. <br> "
+"<br>L'étude est le fruit du travail de l'équipe Data For Research, "
+"Innovation, and Governance (D4RIG) du National Cybersecurity Competence "
+"Center (NC3) de la Luxembourg House of Cybersecurity. Ceci est réalisé dans "
+"le cadre des activités de recherche soutenant la création de la "
+"Cybersecurity Market Intelligence Observatory Platform (CSMIOP). Ce travail "
+"volontariste a également engagé des partenaires locaux comme les chambres et "
+"les organisations professionnelles, ainsi que tous les acteurs "
+"institutionnels du marché qui peuvent soutenir et diffuser ce questionnaire "
+"ainsi que les résultats de l'étude."
 
 #: data/fit4africa/context-questions.json:3
 #: data/fit4contract/context-questions.json:3
@@ -489,8 +529,7 @@ msgstr "5000+"
 #: data/fit4contract/context-questions.json:199
 #: data/fit4cybersecurity/context-questions.json:199
 #: data/fit4ehealth/context-questions.json:20
-#: data/fit4privacy/context-questions.json:199 survey/forms.py:61
-#: survey/forms.py:62
+#: data/fit4privacy/context-questions.json:199 survey/forms.py:62
 msgid "Please select your country"
 msgstr "Veuillez sélectionner votre pays"
 
@@ -2271,10 +2310,11 @@ msgstr "Logiciel"
 #: data/fit4contract/questions.json:706 data/fit4contract/questions.json:888
 #: data/fit4contract/questions.json:943
 #: data/fit4operatorsurvey/context-questions.json:224
-#: templates/survey/answerChangingWarning.html:10
-#: templates/survey/leaveSurvey.html:11 data/surveySMEDemand/questions.json:337
+#: data/surveySMEDemand/questions.json:337
 #: data/surveySMEDemand/questions.json:2002
 #: data/surveySMEDemand/questions.json:2441
+#: templates/survey/answerChangingWarning.html:10
+#: templates/survey/leaveSurvey.html:11
 msgid "Yes"
 msgstr "Oui"
 
@@ -2300,14 +2340,15 @@ msgstr ""
 #: data/fit4contract/questions.json:741 data/fit4contract/questions.json:917
 #: data/fit4contract/questions.json:972
 #: data/fit4operatorsurvey/context-questions.json:231
-#: templates/survey/answerChangingWarning.html:12
-#: templates/survey/leaveSurvey.html:15 data/surveySMEDemand/questions.json:100
+#: data/surveySMEDemand/questions.json:100
 #: data/surveySMEDemand/questions.json:351
 #: data/surveySMEDemand/questions.json:453
 #: data/surveySMEDemand/questions.json:681
 #: data/surveySMEDemand/questions.json:1523
 #: data/surveySMEDemand/questions.json:2016
 #: data/surveySMEDemand/questions.json:2435
+#: templates/survey/answerChangingWarning.html:12
+#: templates/survey/leaveSurvey.html:15
 msgid "No"
 msgstr "Non"
 
@@ -7683,1018 +7724,6 @@ msgstr ""
 "la sécurité de l'information et la protection des données sont-elles écrites "
 "et connues par vos employés ?"
 
-#: stats/views.py:92 stats/views.py:63
-msgid "Last week"
-msgstr "Semaine dernière"
-
-#: stats/views.py:96 stats/views.py:67
-msgid "Last month"
-msgstr "Mois dernier"
-
-#: stats/views.py:100 stats/views.py:71
-msgid "Last quarter"
-msgstr "trimestre dernier"
-
-#: stats/views.py:104 stats/views.py:75
-msgid "Last year"
-msgstr "Année dernière"
-
-#: stats/views.py:132 stats/views.py:259 stats/views.py:266 stats/views.py:90
-#: stats/views.py:225 stats/views.py:232
-msgid "Others"
-msgstr "Autres"
-
-#: stats/views.py:172 stats/views.py:133
-msgid "In progress"
-msgstr "En cours"
-
-#: stats/views.py:172 stats/views.py:133
-msgid "Under review"
-msgstr "Examen des réponses"
-
-#: stats/views.py:172 stats/views.py:133
-msgid "Finished"
-msgstr "Accompli"
-
-#: survey/forms.py:65 survey/forms.py:66
-msgid "You need to choose at least one answer"
-msgstr "Vous devez choisir au moins une réponse"
-
-#: survey/forms.py:106 survey/forms.py:181
-#: templates/survey/finishedSurvey.html:196
-#: templates/survey/finishedSurvey.html:210 templates/survey/review.html:50
-#: survey/forms.py:107 survey/forms.py:182
-#: templates/surveySMEDemand/survey/finishedSurvey.html:190
-#: templates/surveySMEDemand/survey/finishedSurvey.html:204
-msgid "Your feedback"
-msgstr "Vos retours"
-
-#: survey/forms.py:108 survey/forms.py:183 survey/forms.py:109
-#: survey/forms.py:184
-msgid "Please let us know if anything is missing"
-msgstr "Signalez-nous ce qui manque"
-
-#: survey/forms.py:143 survey/forms.py:144
-msgid "You can't choose multiple answers if the answer {} is choosen."
-msgstr ""
-"Vous ne pouvez pas choisir plusieurs réponses si la réponse {} est choisie."
-
-#: survey/forms.py:158 survey/forms.py:159
-msgid "You can't choose the answers {} if answer '{}' is choosen."
-msgstr ""
-"Vous ne pouvez pas choisir plusieurs réponses {} si la réponse {} est "
-"choisie."
-
-#: survey/viewLogic.py:96 survey/viewLogic.py:98
-msgid "Let's start"
-msgstr "Commençons"
-
-#: survey/viewLogic.py:267 survey/viewLogic.py:278
-msgid "Question"
-msgstr "Question"
-
-#: survey/views.py:149
-msgid "To generate a report you have to finish the survey."
-msgstr "Pour générer un rapport vous devez finir l'enquête."
-
-#: survey/views.py:220
-msgid "Answers review"
-msgstr "Votre aperçu des réponses"
-
-#: survey/views.py:261
-msgid "Final summary"
-msgstr "Résumé final"
-
-#: survey/views.py:297
-msgid ""
-"We could not find a survey with the requested key, please start a new one."
-msgstr ""
-"Nous n'avons pas pu trouver un sondage avec la clé demandée, veuillez en "
-"commencer un nouveau."
-
-#: survey/views.py:330
-msgid "Feedback sending errors: "
-msgstr "Erreurs d'envoi du retour d'information : "
-
-#: templates/cookiebanner/bootstrap4.html:21
-msgid "Details"
-msgstr "Détails"
-
-#: templates/cookiebanner/bootstrap4.html:30
-msgid "Do not display anymore"
-msgstr "Ne plus afficher"
-
-#: templates/fit4contract/survey/finishedSurvey.html:6
-msgid ""
-"This is the list of recommendations to help you to write a subcontract, "
-"provided that your answers did correctly reflect the context. Also keep in "
-"mind that it is a self-assessment and only scratches the surface of the "
-"information security maturity level and thus, we are not liable for the "
-"results of this survey."
-msgstr ""
-"Voici la liste des recommandations visant à vous aider à rédiger un contrat "
-"de sous-traitance, à condition que vos réponses reflètent correctement le "
-"contexte. N'oubliez pas non plus qu'il s'agit d'une auto-évaluation et "
-"qu'elle ne fait qu'effleurer le niveau de maturité de la sécurité de "
-"l'information. Par conséquent, nous ne sommes pas responsables des résultats "
-"de cette enquête."
-
-#: templates/fit4ehealth/report/cover.html:12 templates/report/cover.html:12
-msgid "Date"
-msgstr "Date"
-
-#: templates/fit4ehealth/report/cover.html:18 templates/report/cover.html:18
-msgid "Self-assessment id"
-msgstr "Auto-évaluation id"
-
-#: templates/fit4ehealth/report/cover.html:25 templates/report/cover.html:25
-msgid "Score"
-msgstr "Score"
-
-#: templates/fit4ehealth/report/description.html:6
-#, python-format
-msgid ""
-"This self-assessment tool is intended to record the current state of the "
-"information security within your organisation. It is also a prerequisite for "
-"performing further diagnostics: a minimum score of "
-"%(minimal_acceptable_score)s/100 is required for this. The purpose of this "
-"restriction gives us the opportunity to better tailor recommendations to "
-"your organisation during further diagnostics. As the data has been collected "
-"anonymously, you will need to contact us explicitly for further diagnostics "
-"and provide us this report.<br /><br /> During this self-assessment multiple "
-"choice questions will be asked and afterwards recommendations will be "
-"provided.<br /> Finally, you can download a report to help you to analyse "
-"the results and share it with your IT service provider, if necessary."
-msgstr ""
-"Cet outil d'auto-évaluation a pour but de mettre en évidence l'état actuel "
-"de votre sécurité informatique. Il constitue également une condition "
-"préalable à la réalisation de diagnostics plus poussés pour cela un score "
-"minimum de %(minimal_acceptable_score)s/100 est requis. L’objectif de cette "
-"restriction nous donne la possibilité de mieux adapter les recommandations à "
-"votre organisation lors d’un diagnostic plus approfondi. Comme les données "
-"ont été saisies de manière anonyme, vous devez nous contacter explicitement "
-"pour un diagnostic plus détaillé et nous faire parvenir ce rapport.<br /"
-"><br /> Au cours de cette auto-évaluation, des questions à choix multiples "
-"vous seront posées et après cela vous recevrez des recommandations.<br /"
-"><br />Enfin, vous pouvez télécharger un rapport, pour vous aidera à "
-"analyser les résultats et que vous pourrez transmettre, si nécessaire, à "
-"votre prestataire de services informatiques."
-
-#: templates/fit4ehealth/report/recommendations.html:6
-msgid ""
-"The list of recommendations is based on your business context and your "
-"answers."
-msgstr ""
-"La liste des recommandations est basée sur le contexte de votre activité et "
-"de vos réponses."
-
-#: templates/fit4ehealth/report/results.html:6
-#, python-format
-msgid ""
-"You have achieved a score of %(SCORE)s/100 with your answers. You must reach "
-"a score of at least %(minimal_acceptable_score)s/100 to be able to request "
-"for further diagnosis.<br /> We remind you that this is a self-assessment, "
-"and therefore it is important to understand that all the results cannot be "
-"exhaustive in any way."
-msgstr ""
-"Vous avez obtenu %(SCORE)s/100 points avec vos réponses. Vous devez obtenir "
-"au moins %(minimal_acceptable_score)s/100 points pour pouvoir demander un "
-"diagnostic complémentaire.<br /><br />Nous vous rappelons qu'il s'agit d'une "
-"auto-évaluation, et qu'il est important de comprendre que tous les résultats "
-"ne peuvent en aucun cas être exhaustifs."
-
-#: templates/fit4ehealth/survey/finishedSurvey.html:6
-msgid ""
-"This is the list of recommendations to improve the maturity level of "
-"information security in your organization, provided that your answers "
-"correctly reflect the state in your organization. Also keep in mind that "
-"this is a self-assessment and the calculation of your information security "
-"maturity level is based only on the information you provided."
-msgstr ""
-"Voici la liste des recommandations visant à améliorer la maturité de la "
-"sécurité de l'information dans votre entreprise, à condition que vos "
-"réponses reflètent correctement l'état de votre entreprise. N'oubliez pas "
-"non plus qu'il s'agit d'une auto-évaluation et qu'elle ne fait qu'effleurer "
-"le niveau de maturité de la sécurité de l'information. Par conséquent, nous "
-"ne sommes pas responsables des résultats de cette enquête."
-
-#: templates/fit4ehealth/survey/index.html:4
-msgid "Welcome to the self-assessment tool:"
-msgstr "Bienvenue dans l'outil d'auto-évaluation :"
-
-#: templates/fit4ehealth/survey/start.html:5
-msgid "Please click the Next button to start the questionnaire."
-msgstr "Veuillez cliquer sur le bouton Suivant pour démarrer le questionnaire."
-
-#: templates/fit4operatorsurvey/report/intro.html:6
-#, python-format
-msgid ""
-"The objective of the self-assessment tool, %(custom.tool_name)s is to "
-"understand the level of maturity in information security of operators, in "
-"preparation for informed governance and anticipation of the NISv2.<br /><br /"
-"> This document, based on the %(custom.tool_name)s, is for the exclusive use "
-"of the customer. It is in this respect confidential.<br /><br /> The tool, "
-"%(custom.tool_name)s can possibly provide recommendations. It is understood "
-"by the client that the recommendations are neither exclusive nor exhaustive."
-"<br /><br /> It should also be noted that the information you have provided "
-"to us will be recorded for statistical informational reasons. Due to the "
-"nature of the data, we can not identify you. Unless you later contact us and "
-"provide us your results."
-msgstr ""
-"L'outil d'auto-évaluation, %(custom.tool_name)s, a pour objectif d'apprécier "
-"la maturité d'une organisation au regard des bonnes pratiques applicables en "
-"matière de la sécurité de l'information.<br /><br />Le présent document, "
-"basé sur le %(custom.tool_name)s, est destiné à l'usage exclusif du client. "
-"Il est à ce titre confidentiel.<br /><br /> En vu de la méthodologie "
-"employée et du fait qu'il s'agit d'une auto-évaluation, il est entendu que "
-"l'ensemble des résultats ne peut en aucune manière être exhaustif. À ce "
-"titre, l'appréciation du risque réel ou la liste des risques et "
-"vulnérabilités détectés sont basées sur les informations fournies par le "
-"client. L'analyse issue de cette appréciation ne peut engager que le client "
-"pour toute omission ou erreur qui serait due à des tiers ou non.<br /><br /"
-">L'outil, %(custom.tool_name)s peut éventuellement fournir des "
-"recommandations. Il est entendu par le client que les recommandations ne "
-"sont ni exclusives ni exhaustives.<br /><br />Il faut aussi noter que les "
-"informations que vous nous avez fourni seront enregistrés pour des raisons "
-"de statistiques. De part de la nature des données, nous ne pouvons vous "
-"identifier. Sauf si par la suite vous nous contacter pour faire un "
-"diagnostic NC3."
-
-#: templates/fit4privacy/survey/finishedSurvey.html:6
-msgid ""
-"This is the list of recommendations to improve the maturity of your company "
-"in the field of privacy and data protection, provided that your answers "
-"correctly reflected the state of practice in your company. Also keep in mind "
-"that it is a self-assessment and only scratches the surface of the privacy "
-"and data protection maturity level and thus, we are not liable for the "
-"results of this survey. Also remember that GDPR is about accountability: "
-"your company is expected to put measures in place to be able to demonstrate "
-"it is respecting GDPR, and that these measures are effective."
-msgstr ""
-"Voici la liste des recommandations visant à améliorer la maturité de la "
-"protection des données à caractère personnel dans votre entreprise, à "
-"condition que vos réponses reflètent correctement l'état de votre "
-"entreprise. N'oubliez pas non plus qu'il s'agit d'une auto-évaluation et "
-"qu'elle ne fait qu'effleurer le niveau de maturité de la protection de la "
-"vie privée et protection des données. Par conséquent, nous ne sommes pas "
-"responsables des résultats de cette enquête. Aussi, n'oubliez pas que le "
-"RGPD concerne la responsabilité : votre entreprise doit mettre en place des "
-"mesures pour pouvoir démontrer qu'elle respecte le RGPD et que ces mesures "
-"sont efficaces."
-
-#: templates/parts/fit4africa/footer_part.html:7
-#: templates/parts/fit4africa/footer_part.html:8
-msgid "A service provided by ACRC"
-msgstr "Un service fourni par ACRC"
-
-#: templates/parts/fit4africa/footer_part.html:14
-#: templates/parts/fit4contract/footer_part.html:21
-#: templates/parts/fit4ehealth/footer_part.html:34
-#: templates/parts/footer_part.html:28
-msgid "Stats"
-msgstr "Statistiques"
-
-#: templates/parts/fit4africa/footer_part.html:17
-#: templates/parts/fit4africa/footer_part.html:18
-#: templates/parts/fit4contract/footer_part.html:24
-#: templates/parts/fit4contract/footer_part.html:25
-#: templates/parts/fit4ehealth/footer_part.html:37
-#: templates/parts/fit4ehealth/footer_part.html:38
-#: templates/parts/footer_part.html:31 templates/parts/footer_part.html:32
-msgid "Terms of Service"
-msgstr "Conditions d'utilisation"
-
-#: templates/parts/fit4africa/footer_part.html:21
-#: templates/parts/fit4africa/footer_part.html:22
-#: templates/parts/fit4contract/footer_part.html:28
-#: templates/parts/fit4contract/footer_part.html:29
-#: templates/parts/fit4ehealth/footer_part.html:41
-#: templates/parts/fit4ehealth/footer_part.html:42
-#: templates/parts/footer_part.html:35 templates/parts/footer_part.html:36
-msgid "Privacy policy"
-msgstr "Politique de confidentialité"
-
-#: templates/parts/fit4contract/footer_part.html:7
-#: templates/parts/fit4contract/footer_part.html:8
-msgid "A service provided by ANSSI.LU"
-msgstr "Un service fourni par ANSSI.LU"
-
-#: templates/parts/fit4contract/footer_part.html:14
-#: templates/parts/fit4contract/footer_part.html:15
-#: templates/parts/fit4ehealth/footer_part.html:7
-#: templates/parts/fit4ehealth/footer_part.html:8
-#: templates/parts/footer_part.html:7 templates/parts/footer_part.html:8
-msgid "A service provided by NC3-LU"
-msgstr "Un service fourni par NC3-LU"
-
-#: templates/parts/fit4ehealth/footer_part.html:14
-#: templates/parts/fit4ehealth/footer_part.html:15
-#: templates/parts/footer_part.html:15 templates/parts/footer_part.html:16
-msgid "Source code on GitHub"
-msgstr "Code source sur GitHub"
-
-#: templates/parts/fit4ehealth/footer_part.html:19
-#: templates/parts/fit4ehealth/footer_part.html:20
-#: templates/parts/footer_part.html:20 templates/parts/footer_part.html:21
-#: templates/survey/stats.html:329 templates/survey/stats.html:330
-#: templates/survey/stats.html:316 templates/survey/stats.html:317
-msgid "Version of"
-msgstr "Version de"
-
-#: templates/parts/fit4ehealth/footer_part.html:27
-#: templates/parts/fit4ehealth/footer_part.html:28
-msgid "eQualis"
-msgstr "eQualis"
-
-#: templates/parts/privacy_policy_part.html:87
-msgid "Name"
-msgstr "Nom"
-
-#: templates/parts/privacy_policy_part.html:88
-#: templates/report/description.html:4
-msgid "Description"
-msgstr "Description"
-
-#: templates/parts/privacy_policy_part.html:89
-msgid "Content"
-msgstr "Content"
-
-#: templates/parts/privacy_policy_part.html:90
-msgid "Maximum term"
-msgstr "Durée maximum"
-
-#: templates/report/description.html:8
-#, python-format
-msgid ""
-"This self-assessment tool is named %(tool_name)s to highlight the "
-"introduction to information security. It is also a prerequisite for doing a "
-"NC3 Diagnostic: a minimum score of %(minimal_acceptable_score)s/100 is "
-"required. The purpose for this restriction gives us the opportunity to "
-"better tailor the recommendations to your organization during the Diagnostic."
-"<br /><br /> During this self-assessment multiple choice questions were "
-"asked. After analyzing your answers, recommendations have been provided.<br /"
-"><br /> Finally, you can download a report, which will help you to "
-"communicate the results to your suppliers, if necessary."
-msgstr ""
-"Cet outil d'auto-évaluation est nommé %(tool_name)s pour souligner "
-"l'introduction à la sécurité de l'information. Il est aussi un prérequis "
-"pour faire un Diagnostic NC3: un score minimal de "
-"%(minimal_acceptable_score)s/100 est requis. Le but pour cette restriction "
-"nous donne la possibilité pour mieux adapter les recommandations à votre "
-"organisation lors du Diagnostic. <br /><br /> Durant cette auto-evaluation "
-"questions à choix multiples vous ont été posées. Après avoir analysé vos "
-"réponses, des recommandations vous ont été fournies. <br /><br /> "
-"Finalement, vous pouvez télécharger ce document qui vous aidera pour "
-"communiquer les résultats à vos fournisseurs si besoin."
-
-#: templates/report/intro.html:4
-msgid "Introduction and Warning"
-msgstr "Introduction et avertissement"
-
-#: templates/report/intro.html:7
-#, python-format
-msgid ""
-"The objective of the self-assessment tool, %(tool_name)s is to assess the "
-"maturity of an organization in terms of applicable good practices in the "
-"field of information security.<br /><br /> This document, based on the "
-"%(tool_name)s, is for the exclusive use of the customer. It is in this "
-"respect confidential.<br /><br /> In view of the methodology used and the "
-"fact that it is a self-assessment, it is understood that the overall results "
-"can not in any way be exhaustive. As such, the actual risk assessment or the "
-"list of identified risks and vulnerabilities are based on the information "
-"provided by the client. The analysis resulting from this assessment can "
-"engage only the customer for any omission or error that would be due to "
-"third parties or not.<br /><br /> The tool, %(tool_name)s can possibly "
-"provide recommendations. It is understood by the client that the "
-"recommendations are neither exclusive nor exhaustive.<br /><br /> It should "
-"also be noted that the information you have provided to us will be recorded "
-"for statistical reasons. Due to the nature of the data, we can not identify "
-"you. Unless you later contact us to do a Diagnostic NC3."
-msgstr ""
-"L'outil d'auto-évaluation, %(tool_name)s, a pour objectif d'apprécier la "
-"maturité d'une organisation au regard des bonnes pratiques applicables en "
-"matière de la sécurité de l'information.<br /><br />Le présent document, "
-"basé sur le %(tool_name)s, est destiné à l'usage exclusif du client. Il est "
-"à ce titre confidentiel.<br /><br /> En vu de la méthodologie employée et du "
-"fait qu'il s'agit d'une auto-évaluation, il est entendu que l'ensemble des "
-"résultats ne peut en aucune manière être exhaustif. À ce titre, "
-"l'appréciation du risque réel ou la liste des risques et vulnérabilités "
-"détectés sont basées sur les informations fournies par le client. L'analyse "
-"issue de cette appréciation ne peut engager que le client pour toute "
-"omission ou erreur qui serait due à des tiers ou non.<br /><br />L'outil, "
-"%(tool_name)s peut éventuellement fournir des recommandations. Il est "
-"entendu par le client que les recommandations ne sont ni exclusives ni "
-"exhaustives.<br /><br />Il faut aussi noter que les informations que vous "
-"nous avez fourni seront enregistrés pour des raisons de statistiques. De "
-"part de la nature des données, nous ne pouvons vous identifier. Sauf si par "
-"la suite vous nous contacter pour faire un diagnostic NC3."
-
-#: templates/report/questions.html:1
-msgid "Questions"
-msgstr "Questions"
-
-#: templates/report/recommendations.html:3
-msgid "Recommendations"
-msgstr "Recommandations"
-
-#: templates/report/recommendations.html:7
-msgid ""
-"The recommendations list was based in your company context and on your "
-"answers."
-msgstr ""
-"La liste des recommandations a été établie en fonction du contexte de votre "
-"entreprise et de vos réponses."
-
-#: templates/report/results.html:4
-msgid "Result"
-msgstr "Résultat"
-
-#: templates/report/results.html:8
-#, python-format
-msgid ""
-"You have achieved %(SCORE)s/100 with your answers. You must reach at least "
-"%(minimal_acceptable_score)s/100 to be able to make a NC3 Diagnosis.<br /"
-"><br /> We remind you that this is a self-assessment, and it is important to "
-"understand that all the results can not in any way be exhaustive."
-msgstr ""
-"Vous avez atteint %(SCORE)s/100 avec vos réponses. Vous devez atteindre au "
-"moins %(minimal_acceptable_score)s/100 pour pouvoir faire un Diagnostic NC3. "
-"<br /><br /> Nous vous rappelons qu'il s'agit d'une auto-évaluation, il est "
-"entendu que l'ensemble des résultats ne peut en aucune manière être "
-"exhaustif."
-
-#: templates/report/results.html:17 templates/survey/finishedSurvey.html:55
-#: templates/surveySMEDemand/survey/finishedSurvey.html:58
-#, python-format
-msgid ""
-"You have scored an additional %(bonus)s %% of bonus points for adherence to "
-"best practices."
-msgstr ""
-"Vous avez obtenu un bonus de %(bonus)s %% de points supplémentaires pour le "
-"respect des bonnes pratiques."
-
-#: templates/report/results.html:25
-msgid "By section"
-msgstr "Par section"
-
-#: templates/report/results.html:31
-msgid "By category"
-msgstr "Par catégorie"
-
-#: templates/report/template.html:9 templates/report/template.html:14
-msgid "Final report"
-msgstr "Rapport final"
-
-#: templates/report/template.html:13
-#, python-format
-msgid "Generated with %(tool_name)s"
-msgstr "Généré avec %(tool_name)s"
-
-#: templates/report/toc.html:1
-msgid "Table of contents"
-msgstr "Table des matières"
-
-#: templates/survey/answerChangingWarning.html:6
-msgid ""
-"Change of previously selected answer(s) can lead to additional questions or "
-"loosing of your answer(s). Would you like to proceed?"
-msgstr ""
-"Le changement de réponse(s) précédemment sélectionnée(s) peut conduire à des "
-"questions supplémentaires ou à la perte de vos réponses. Voulez vous "
-"procéder ?"
-
-#: templates/survey/base.html:19
-msgid "a NC3 self-assessment tool!"
-msgstr "est un outil d'auto-évaluation NC3 !"
-
-#: templates/survey/continue.html:4
-msgid "Continue the evaluation later"
-msgstr "Continuer l'évaluation plus tard"
-
-#: templates/survey/continue.html:9
-msgid ""
-"To continue the evaluation process later you can copy the provided link, "
-"create a bookmark or use the code to resume later on the main page:"
-msgstr ""
-"Pour continuer le processus d'évaluation plus tard, vous pouvez copier le "
-"lien fourni, créer un signet ou utiliser le code pour reprendre plus tard "
-"sur la page principale :"
-
-#: templates/survey/continue.html:23
-msgid "Download direct link"
-msgstr "Télécharger le lien direct"
-
-#: templates/survey/continue.html:26 templates/survey/finishedSurvey.html:220
-#: templates/surveySMEDemand/survey/finishedSurvey.html:214
-msgid "Close"
-msgstr "Fermer"
-
-#: templates/survey/finishedSurvey.html:26
-msgid "Summary"
-msgstr "Résumé"
-
-#: templates/survey/finishedSurvey.html:30
-msgid ""
-"This is the list of recommendations to improve the information security "
-"maturity in your company, provided that your answers did correctly reflect "
-"the state in your company. Also keep in mind that it is a self-assessment "
-"and only scratches the surface of the information security maturity level "
-"and thus, we are not liable for the results of this survey."
-msgstr ""
-"Voici la liste des recommandations visant à améliorer la maturité de la "
-"sécurité de l'information dans votre entreprise, à condition que vos "
-"réponses reflètent correctement l'état de votre entreprise. N'oubliez pas "
-"non plus qu'il s'agit d'une auto-évaluation et qu'elle ne fait qu'effleurer "
-"le niveau de maturité de la sécurité de l'information. Par conséquent, nous "
-"ne sommes pas responsables des résultats de cette enquête."
-
-#: templates/survey/finishedSurvey.html:42
-#: templates/surveySMEDemand/survey/finishedSurvey.html:45
-#, python-format
-msgid ""
-"Based on your score %(score)s, the NC3 Diagnostic is not available for your "
-"organization at this moment. We recommend you improve the information "
-"security maturity level by implementing the recommendations listed below. If "
-"you need any information security training to raise awareness in your "
-"company, do not hesitate to"
-msgstr ""
-"Sur base de votre score de %(score)s, le diagnostic NC3 n'est pas disponible "
-"pour votre organisation pour le moment. Nous vous recommandons d'améliorer "
-"le niveau de maturité de la sécurité de l'information en mettant en œuvre "
-"les recommandations ci-dessous. Si vous avez besoin d'une formation à la "
-"sécurité de l'information pour sensibiliser votre entreprise, n'hésitez pas à"
-
-#: templates/survey/finishedSurvey.html:67
-msgid "Your results link"
-msgstr "Votre lien de résultats"
-
-#: templates/survey/finishedSurvey.html:72
-#: templates/surveySMEDemand/survey/finishedSurvey.html:66
-msgid "About the NC3 Diagnostic"
-msgstr "À propos du Diagnostic NC3"
-
-#: templates/survey/finishedSurvey.html:74
-#: templates/surveySMEDemand/survey/finishedSurvey.html:68
-msgid ""
-"The NC3 Diagnostic is a service which analyses the company maturity in the "
-"information security depending on company's requirements. The analysis "
-"duration can take approximately 2 hours. A consultant from NC3 will come to "
-"your company's premises, and ask around 30 questions concerning your "
-"information security, mostly organizational questions and possibly some "
-"technical questions. You will receive a detailed report which will contain a "
-"maturity estimation as well as recommendations to enhance the information "
-"security maturity."
-msgstr ""
-"Le Diagnostic NC3 est un service qui analyse la maturité de l'entreprise "
-"dans la sécurité de l'information en fonction des exigences de l'entreprise. "
-"La durée de l'analyse peut prendre environ 2 heures. Un consultant du NC3 se "
-"déplacera dans les locaux de votre entreprise, et posera une trentaine de "
-"questions concernant la sécurité de votre information, majoritairement des "
-"questions d'organisation et éventuellement quelques questions techniques. "
-"Vous recevrez un rapport détaillé qui contiendra une estimation de la "
-"maturité ainsi que des recommandations pour améliorer la maturité de la "
-"sécurité de l'information."
-
-#: templates/survey/finishedSurvey.html:86
-#: templates/surveySMEDemand/survey/finishedSurvey.html:80
-msgid ""
-"The NC3 Diagnostic is available for all the companies located in Luxembourg "
-"and free of charge."
-msgstr ""
-"Le Diagnostic est gratuit et possible pour toute entreprise ayant des locaux "
-"au Luxembourg."
-
-#: templates/survey/finishedSurvey.html:123
-#: templates/surveySMEDemand/survey/finishedSurvey.html:117
-msgid "Report"
-msgstr "Rapport"
-
-#: templates/survey/finishedSurvey.html:130
-#: templates/surveySMEDemand/survey/finishedSurvey.html:124
-msgid "Download"
-msgstr "Téléchargement"
-
-#: templates/survey/finishedSurvey.html:140
-#: templates/surveySMEDemand/survey/finishedSurvey.html:134
-msgid "Email"
-msgstr "Courriel"
-
-#: templates/survey/finishedSurvey.html:151
-#: templates/surveySMEDemand/survey/finishedSurvey.html:145
-msgid "Score by section"
-msgstr "Score par section"
-
-#: templates/survey/finishedSurvey.html:157
-#: templates/surveySMEDemand/survey/finishedSurvey.html:151
-msgid "Score by category"
-msgstr "Score par catégorie"
-
-#: templates/survey/finishedSurvey.html:225
-#: templates/survey/sendReportEmail.html:14
-#: templates/surveySMEDemand/survey/finishedSurvey.html:219
-msgid "Send"
-msgstr "Envoyer"
-
-#: templates/survey/index.html:20
-msgid "Welcome to the NC3 self-assessment tool:"
-msgstr "Bienvenue dans l'outil d'auto-évaluation NC3 :"
-
-#: templates/survey/index.html:30
-#: templates/surveySMEDemand/survey/index.html:25
-msgid "Start"
-msgstr "Démarrer"
-
-#: templates/survey/index.html:38
-#: templates/surveySMEDemand/survey/index.html:33
-msgid "Continue a previous survey"
-msgstr "Continuer une enquête précédente"
-
-#: templates/survey/leaveSurvey.html:5
-msgid "Would like to leave survey?"
-msgstr "Voulez vous quitter l'enquête ?"
-
-#: templates/survey/questions.html:43 templates/survey/questions.html:45
-#: templates/surveySMEDemand/survey/questions.html:53
-msgid "Multiple answers are possible."
-msgstr "Plusieurs réponses sont possibles."
-
-#: templates/survey/questions.html:55 templates/survey/questions.html:57
-#: templates/surveySMEDemand/survey/questions.html:66
-msgid "Back"
-msgstr "Précédent"
-
-#: templates/survey/questions.html:63 templates/survey/questions.html:65
-#: templates/surveySMEDemand/survey/questions.html:74
-msgid "Cancel"
-msgstr "Annuler"
-
-#: templates/survey/questions.html:72 templates/survey/review.html:67
-#: templates/survey/questions.html:74
-#: templates/surveySMEDemand/survey/questions.html:89
-msgid "Continue later"
-msgstr "Continuer plus tard"
-
-#: templates/survey/questions.html:77 templates/survey/questions.html:79
-#: templates/surveySMEDemand/survey/questions.html:80
-msgid "Modify"
-msgstr "Modifier"
-
-#: templates/survey/questions.html:77 templates/survey/start.html:39
-#: templates/survey/questions.html:79
-#: templates/surveySMEDemand/survey/questions.html:80
-#: templates/surveySMEDemand/survey/start.html:33
-msgid "Next"
-msgstr "Suivant"
-
-#: templates/survey/questions.html:86 templates/survey/questions.html:88
-msgid "This text field should not be used to answer the question."
-msgstr ""
-"Ce champ de texte ne doit pas être utilisé pour répondre à la question."
-
-#: templates/survey/questions.html:89 templates/survey/questions.html:91
-msgid ""
-"Please do not provide any sensitive or confidential information referring to "
-"your identity."
-msgstr ""
-"Veuillez ne fournir aucune donnée sensible ou confidentielle faisant "
-"référence à votre identité."
-
-#: templates/survey/requestDiagnosticLink.html:5
-#: templates/survey/requestDiagnosticLink.html:22
-msgid "Request diagnostic"
-msgstr "Demander un diagnostic"
-
-#: templates/survey/requestDiagnosticLink.html:7
-#, python-format
-msgid ""
-"Dear Cases Team,\n"
-"\n"
-"We would like to request a Diagnostic NC3 from you.\n"
-"\n"
-"Here is our evaluation results identifier: %(userId)s\n"
-"\n"
-"Here also additional information that could be useful:\n"
-"\n"
-"Lastname of the contact:\n"
-"Firstname of the contact:\n"
-"Email address of the contact:\n"
-"Address of the company for the Diagnostic (Luxembourg only):\n"
-"Desired language for the Diagnostic:\n"
-msgstr ""
-"À l'attention de l'équipe NC3,\n"
-"\n"
-"Nous aimerions planifier un Diagnostic NC3.\n"
-"\n"
-"Voici l'identifiant lié à notre évaluation : %(userId)s\n"
-"\n"
-"Voici également les informations qui vous seront nécessaires :\n"
-"\n"
-"Nom du point de contact :\n"
-"Prénom du point de contact :\n"
-"Adresse mail du point de contact :\n"
-"Adresse de l'entreprise et du Diagnostic (Luxembourg uniquement) :\n"
-"Langue souhaitée du Diagnostic :\n"
-
-#: templates/survey/requestTrainingLink.html:5
-#: templates/survey/requestTrainingLink.html:36
-msgid "Request training offer"
-msgstr "Demander une offre de formation"
-
-#: templates/survey/requestTrainingLink.html:7
-#, python-format
-msgid ""
-"Dear Cases Team,\n"
-"\n"
-"We would like an information about security awareness training offer.\n"
-"\n"
-"Here is our evaluation results identifier: %(userId)s\n"
-"\n"
-"Here is also the information necessary to establish the offer:\n"
-"\n"
-"Contact details:\n"
-"    - Name of the contact:\n"
-"    - Email address of the contact:\n"
-"\n"
-"Organization:\n"
-"    - Company Name:\n"
-"    - Company address:\n"
-"    - Postal code:\n"
-"    - City:\n"
-"    - VAT number (if applicable):\n"
-"\n"
-"Training:\n"
-"    - Number of participants*:\n"
-"    - Desired language(s) for the training(s):\n"
-"    - Personalized topics to discuss:\n"
-"\n"
-"* For a number of people greater than 25, the training will be done in "
-"several installments, involving a higher cost.\n"
-msgstr ""
-"À l'attention de l'équipe NC3,\n"
-"\n"
-"Nous souhaitons une offre de sensibilisation à la sécurité de "
-"l'information.\n"
-"\n"
-"Voici l'identifiant lié à notre évaluation : %(userId)s\n"
-"\n"
-"Voici également les informations nécessaires à l'établissement de l'offre :\n"
-"\n"
-"Point de contact :\n"
-"    - Nom du point de contact :\n"
-"    - Adresse mail du point de contact :\n"
-"\n"
-"Entreprise :\n"
-"    - Nom de l'entreprise :\n"
-"    - Adresse de l'entreprise :\n"
-"    - Code postal :\n"
-"    - Ville :\n"
-"    - Numéro TVA (si applicable) :\n"
-"\n"
-"Formations :\n"
-"    - Nombre de personnes à sensibiliser* :\n"
-"    - Langue(s) souhaitée(s) pour la/les formation(s) :\n"
-"    - Sujets personnalisés à aborder :\n"
-"\n"
-"*Pour un nombre de personnes supérieur à 25, la formation sera alors faite "
-"en plusieurs fois, impliquant un cout plus élevé.\n"
-
-#: templates/survey/requestTrainingLink.html:38
-msgid "let us know."
-msgstr "nous le faire savoir."
-
-#: templates/survey/resume.html:5
-msgid "Please insert your code to continue the survey or go to your results"
-msgstr ""
-"Veuillez insérer votre code pour continuer l'enquête ou consulter vos "
-"résultats"
-
-#: templates/survey/resume.html:16
-msgid "Confirm"
-msgstr "Confirmer"
-
-#: templates/survey/review.html:19
-msgid "Your answers review"
-msgstr "Votre aperçu des réponses"
-
-#: templates/survey/review.html:22
-msgid ""
-"You can modify the answers to each question before you get the result of the "
-"survey."
-msgstr ""
-"Vous pouvez modifier les réponses à chaque question avant d'obtenir le "
-"résultat de l'enquête."
-
-#: templates/survey/review.html:26 templates/survey/review.html:73
-msgid "Validate answers"
-msgstr "Valider les réponses"
-
-#: templates/survey/review.html:57
-msgid "Modify answers"
-msgstr "Modifier les réponses"
-
-#: templates/survey/sendReportEmail.html:5
-msgid "Send the report via email"
-msgstr "Envoyer le rapport par e-mail"
-
-#: templates/survey/sendReportEmail.html:17
-msgid "Your email address won't be stored."
-msgstr "Votre adresse électronique ne sera pas conservée."
-
-#: templates/survey/start.html:22
-msgid ""
-"We need this information to be able to give you useful recommendations, once "
-"the self-assessment is done."
-msgstr ""
-"Nous avons besoin de quelques informations pour pouvoir vous faire des "
-"recommandations utiles, une fois l'auto-évaluation terminée."
-
-#: templates/survey/stats.html:17 templates/survey/stats.html:16
-msgid "Some statistics about the current surveys."
-msgstr "Quelques statistiques sur les enquêtes en cours."
-
-#: templates/survey/stats.html:24 templates/survey/stats.html:125
-#: templates/survey/stats.html:145 templates/survey/stats.html:165
-#: templates/survey/stats.html:204 templates/survey/stats.html:224
-#: templates/survey/stats.html:244 templates/survey/stats.html:277
-#: templates/survey/stats.html:310 templates/survey/stats.html:23
-#: templates/survey/stats.html:111 templates/survey/stats.html:131
-#: templates/survey/stats.html:151 templates/survey/stats.html:190
-#: templates/survey/stats.html:210 templates/survey/stats.html:243
-#: templates/survey/stats.html:276 templates/survey/stats.html:298
-msgid "No statistics available"
-msgstr "Aucune statistique disponible"
-
-#: templates/survey/stats.html:33 templates/survey/stats.html:32
-msgid "Main figures"
-msgstr "Principaux chiffres"
-
-#: templates/survey/stats.html:36 templates/survey/stats.html:35
-msgid "Number of surveys:"
-msgstr "Nombre d'enquêtes :"
-
-#: templates/survey/stats.html:39 templates/survey/stats.html:38
-msgid "Number of finished surveys:"
-msgstr "Nombre d'enquêtes terminées :"
-
-#: templates/survey/stats.html:42 templates/survey/stats.html:41
-msgid "First completed survey on:"
-msgstr "Première enquête complétée le :"
-
-#: templates/survey/stats.html:52 templates/survey/stats.html:51
-msgid "Activity over the past year"
-msgstr "Activité au cours de l'année écoulée"
-
-#: templates/survey/stats.html:56 templates/survey/stats.html:119
-#: templates/survey/stats.html:139 templates/survey/stats.html:159
-#: templates/survey/stats.html:198 templates/survey/stats.html:218
-#: templates/survey/stats.html:238 templates/survey/stats.html:261
-#: templates/survey/stats.html:294 templates/survey/stats.html:55
-#: templates/survey/stats.html:105 templates/survey/stats.html:125
-#: templates/survey/stats.html:145 templates/survey/stats.html:184
-#: templates/survey/stats.html:204 templates/survey/stats.html:227
-#: templates/survey/stats.html:260 templates/survey/stats.html:292
-msgid "Loading..."
-msgstr "Chargement..."
-
-#: templates/survey/stats.html:63 templates/survey/stats.html:69
-msgid "Less"
-msgstr "Moins"
-
-#: templates/survey/stats.html:69 templates/survey/stats.html:75
-msgid "More"
-msgstr "Plus"
-
-#: templates/survey/stats.html:74
-msgid "Click on a date to load stats since this day or use the filter below."
-msgstr ""
-"Cliquez sur une date pour afficher les statistiques depuis ce jour ou "
-"utilisez le filtre ci-dessous."
-
-#: templates/survey/stats.html:79 templates/survey/stats.html:78
-msgid "Time frame"
-msgstr "Période de temps"
-
-#: templates/survey/stats.html:81 survey/forms.py:34
-msgid "Please select"
-msgstr "Veuillez sélectionner"
-
-#: templates/survey/stats.html:98
-msgid "Load"
-msgstr "Charger"
-
-#: templates/survey/stats.html:100
-msgid "Reset"
-msgstr "Réinitialisatiser"
-
-#: templates/survey/stats.html:108
-msgid "Statistics from"
-msgstr "Statistiques du"
-
-#: templates/survey/stats.html:108
-msgid "to"
-msgstr "au"
-
-#: templates/survey/stats.html:109 templates/survey/stats.html:95
-msgid "Total of completed surveys:"
-msgstr "Total des enquêtes réalisées :"
-
-#: templates/survey/stats.html:115 templates/survey/stats.html:101
-msgid "Surveys company sector"
-msgstr "Enquêtes secteur entreprise"
-
-#: templates/survey/stats.html:135 templates/survey/stats.html:121
-msgid "Surveys company size"
-msgstr "Taille de l'entreprise"
-
-#: templates/survey/stats.html:155 templates/survey/stats.html:141
-msgid "Surveys countries"
-msgstr "Pays d'enquête"
-
-#: templates/survey/stats.html:178 templates/survey/stats.html:164
-msgid "Details of other countries"
-msgstr "Détails sur les autres pays"
-
-#: templates/survey/stats.html:194 templates/survey/stats.html:180
-msgid "Surveys status"
-msgstr "État des sondages"
-
-#: templates/survey/stats.html:214 templates/survey/stats.html:200
-msgid "Surveys languages"
-msgstr "Langues des sondages"
-
-#: templates/survey/stats.html:234 templates/survey/stats.html:288
-msgid "Survey's current question"
-msgstr "Question actuelle du sondage"
-
-#: templates/survey/stats.html:257 templates/survey/stats.html:223
-msgid "Answers by section and company size"
-msgstr "Réponses par section et taille d'entreprise"
-
-#: templates/survey/stats.html:265 templates/survey/stats.html:298
-#: templates/survey/stats.html:231 templates/survey/stats.html:264
-msgid "Country"
-msgstr "Pays"
-
-#: templates/survey/stats.html:267 templates/survey/stats.html:300
-#: templates/survey/stats.html:233 templates/survey/stats.html:266
-msgid "All"
-msgstr "Tous"
-
-#: templates/survey/stats.html:290 templates/survey/stats.html:256
-msgid "Answers by category and company size"
-msgstr "Réponses par catégorie et taille d'entreprise"
-
-#: templates/survey/stats.html:322 templates/survey/stats.html:309
-msgid "Server information"
-msgstr "Informations sur le serveur"
-
-#: templates/survey/stats.html:324 templates/survey/stats.html:311
-msgid "Python version:"
-msgstr "Version de Python :"
-
-#: templates/survey/stats.html:327 templates/survey/stats.html:314
-msgid "Software version:"
-msgstr "Version du logiciel :"
-
-#: csskp/surveySMEDemand/__init__.py:7
-msgid ""
-"This questionnaire is intended for managers of small and medium-sized "
-"businesses, between 1 and 250 employees, and must be completed by them in "
-"order to share their vision of their needs in terms of cybersecurity "
-"services and solutions. The objective is to better understand market "
-"practices, expectations and trends in order to identify the levers of demand "
-"for this type of player in Luxembourg. Our desire is not to audit companies "
-"individually, this questionnaire is anonymous, but to understand how the "
-"managers of SMEs position themselves in the face of the regulatory, "
-"technological and human challenges of cybersecurity. <br> <br>The study is "
-"the work product of the Data For Research, Innovation, and Governance "
-"(D4RIG) team of the National Cybersecurity Competence Center (NC3) of the "
-"Luxembourg House of Cybersecurity. This is carried out as part of the "
-"research activities supporting the creation of the Cybersecurity Market "
-"Intelligence Observatory Platform (CSMIOP). This purposeful work has also "
-"engaged local partners such as chambers and professional organizations, as "
-"well as all the institutional players in the market who can support and "
-"disseminate this questionnaire as well as the results of the study."
-msgstr ""
-"Ce questionnaire est destiné aux dirigeants de petites et moyennes "
-"entreprises, entre 1 et 250 salariés, et doit être rempli par eux afin de "
-"partager leur vision de leurs besoins en termes de services et solutions de "
-"cybersécurité. L'objectif est de mieux comprendre les pratiques, les "
-"attentes et les tendances du marché afin d'identifier les leviers de la "
-"demande pour ce type d'acteur au Luxembourg. Notre volonté n'est pas "
-"d'auditer les entreprises individuellement, ce questionnaire est anonyme, "
-"mais de comprendre comment les dirigeants de PME se positionnent face aux "
-"enjeux réglementaires, technologiques et humains de la cybersécurité. <br> "
-"<br>L'étude est le fruit du travail de l'équipe Data For Research, "
-"Innovation, and Governance (D4RIG) du National Cybersecurity Competence "
-"Center (NC3) de la Luxembourg House of Cybersecurity. Ceci est réalisé dans "
-"le cadre des activités de recherche soutenant la création de la "
-"Cybersecurity Market Intelligence Observatory Platform (CSMIOP). Ce travail "
-"volontariste a également engagé des partenaires locaux comme les chambres et "
-"les organisations professionnelles, ainsi que tous les acteurs "
-"institutionnels du marché qui peuvent soutenir et diffuser ce questionnaire "
-"ainsi que les résultats de l'étude."
-
 #: data/surveySMEDemand/context-questions.json:4
 #: data/surveySMEDemand/context-questions.json:48
 #: data/surveySMEDemand/context-questions.json:99
@@ -9846,19 +8875,996 @@ msgstr "Vos obligations en matière de protection des données personnelles"
 msgid "Other types of obligations, such as:"
 msgstr "Autres types d'obligations, telles que :"
 
-#: templates/survey/stats.html:64
-msgid "Click on a date to load stats since this day or use the list below."
+#: stats/forms.py:9
+msgid "Start date"
+msgstr "Date de début"
+
+#: stats/forms.py:11
+msgid "End date"
+msgstr "Date de fin"
+
+#: stats/views.py:92
+msgid "Last week"
+msgstr "Semaine dernière"
+
+#: stats/views.py:96
+msgid "Last month"
+msgstr "Mois dernier"
+
+#: stats/views.py:100
+msgid "Last quarter"
+msgstr "trimestre dernier"
+
+#: stats/views.py:104
+msgid "Last year"
+msgstr "Année dernière"
+
+#: stats/views.py:132 stats/views.py:259 stats/views.py:266
+msgid "Others"
+msgstr "Autres"
+
+#: stats/views.py:172
+msgid "In progress"
+msgstr "En cours"
+
+#: stats/views.py:172
+msgid "Under review"
+msgstr "Examen des réponses"
+
+#: stats/views.py:172
+msgid "Finished"
+msgstr "Accompli"
+
+#: survey/forms.py:34 templates/survey/stats.html:85
+msgid "Please select"
+msgstr "Veuillez sélectionner"
+
+#: survey/forms.py:66
+msgid "You need to choose at least one answer"
+msgstr "Vous devez choisir au moins une réponse"
+
+#: survey/forms.py:107 survey/forms.py:182
+#: templates/survey/finishedSurvey.html:196
+#: templates/survey/finishedSurvey.html:210 templates/survey/review.html:50
+#: templates/surveySMEDemand/survey/finishedSurvey.html:190
+#: templates/surveySMEDemand/survey/finishedSurvey.html:204
+msgid "Your feedback"
+msgstr "Vos retours"
+
+#: survey/forms.py:109 survey/forms.py:184
+msgid "Please let us know if anything is missing"
+msgstr "Signalez-nous ce qui manque"
+
+#: survey/forms.py:144
+msgid "You can't choose multiple answers if the answer {} is choosen."
+msgstr ""
+"Vous ne pouvez pas choisir plusieurs réponses si la réponse {} est choisie."
+
+#: survey/forms.py:159
+msgid "You can't choose the answers {} if answer '{}' is choosen."
+msgstr ""
+"Vous ne pouvez pas choisir plusieurs réponses {} si la réponse {} est "
+"choisie."
+
+#: survey/viewLogic.py:98
+msgid "Let's start"
+msgstr "Commençons"
+
+#: survey/viewLogic.py:278
+msgid "Question"
+msgstr "Question"
+
+#: survey/views.py:149
+msgid "To generate a report you have to finish the survey."
+msgstr "Pour générer un rapport vous devez finir l'enquête."
+
+#: survey/views.py:220
+msgid "Answers review"
+msgstr "Votre aperçu des réponses"
+
+#: survey/views.py:261
+msgid "Final summary"
+msgstr "Résumé final"
+
+#: survey/views.py:297
+msgid ""
+"We could not find a survey with the requested key, please start a new one."
+msgstr ""
+"Nous n'avons pas pu trouver un sondage avec la clé demandée, veuillez en "
+"commencer un nouveau."
+
+#: survey/views.py:330
+msgid "Feedback sending errors: "
+msgstr "Erreurs d'envoi du retour d'information : "
+
+#: templates/cookiebanner/bootstrap4.html:21
+msgid "Details"
+msgstr "Détails"
+
+#: templates/cookiebanner/bootstrap4.html:30
+msgid "Do not display anymore"
+msgstr "Ne plus afficher"
+
+#: templates/fit4contract/survey/finishedSurvey.html:6
+msgid ""
+"This is the list of recommendations to help you to write a subcontract, "
+"provided that your answers did correctly reflect the context. Also keep in "
+"mind that it is a self-assessment and only scratches the surface of the "
+"information security maturity level and thus, we are not liable for the "
+"results of this survey."
+msgstr ""
+"Voici la liste des recommandations visant à vous aider à rédiger un contrat "
+"de sous-traitance, à condition que vos réponses reflètent correctement le "
+"contexte. N'oubliez pas non plus qu'il s'agit d'une auto-évaluation et "
+"qu'elle ne fait qu'effleurer le niveau de maturité de la sécurité de "
+"l'information. Par conséquent, nous ne sommes pas responsables des résultats "
+"de cette enquête."
+
+#: templates/fit4ehealth/report/cover.html:12 templates/report/cover.html:12
+msgid "Date"
+msgstr "Date"
+
+#: templates/fit4ehealth/report/cover.html:18 templates/report/cover.html:18
+msgid "Self-assessment id"
+msgstr "Auto-évaluation id"
+
+#: templates/fit4ehealth/report/cover.html:25 templates/report/cover.html:25
+msgid "Score"
+msgstr "Score"
+
+#: templates/fit4ehealth/report/description.html:6
+#, python-format
+msgid ""
+"This self-assessment tool is intended to record the current state of the "
+"information security within your organisation. It is also a prerequisite for "
+"performing further diagnostics: a minimum score of "
+"%(minimal_acceptable_score)s/100 is required for this. The purpose of this "
+"restriction gives us the opportunity to better tailor recommendations to "
+"your organisation during further diagnostics. As the data has been collected "
+"anonymously, you will need to contact us explicitly for further diagnostics "
+"and provide us this report.<br /><br /> During this self-assessment multiple "
+"choice questions will be asked and afterwards recommendations will be "
+"provided.<br /> Finally, you can download a report to help you to analyse "
+"the results and share it with your IT service provider, if necessary."
+msgstr ""
+"Cet outil d'auto-évaluation a pour but de mettre en évidence l'état actuel "
+"de votre sécurité informatique. Il constitue également une condition "
+"préalable à la réalisation de diagnostics plus poussés pour cela un score "
+"minimum de %(minimal_acceptable_score)s/100 est requis. L’objectif de cette "
+"restriction nous donne la possibilité de mieux adapter les recommandations à "
+"votre organisation lors d’un diagnostic plus approfondi. Comme les données "
+"ont été saisies de manière anonyme, vous devez nous contacter explicitement "
+"pour un diagnostic plus détaillé et nous faire parvenir ce rapport.<br /"
+"><br /> Au cours de cette auto-évaluation, des questions à choix multiples "
+"vous seront posées et après cela vous recevrez des recommandations.<br /"
+"><br />Enfin, vous pouvez télécharger un rapport, pour vous aidera à "
+"analyser les résultats et que vous pourrez transmettre, si nécessaire, à "
+"votre prestataire de services informatiques."
+
+#: templates/fit4ehealth/report/recommendations.html:6
+msgid ""
+"The list of recommendations is based on your business context and your "
+"answers."
+msgstr ""
+"La liste des recommandations est basée sur le contexte de votre activité et "
+"de vos réponses."
+
+#: templates/fit4ehealth/report/results.html:6
+#, python-format
+msgid ""
+"You have achieved a score of %(SCORE)s/100 with your answers. You must reach "
+"a score of at least %(minimal_acceptable_score)s/100 to be able to request "
+"for further diagnosis.<br /> We remind you that this is a self-assessment, "
+"and therefore it is important to understand that all the results cannot be "
+"exhaustive in any way."
+msgstr ""
+"Vous avez obtenu %(SCORE)s/100 points avec vos réponses. Vous devez obtenir "
+"au moins %(minimal_acceptable_score)s/100 points pour pouvoir demander un "
+"diagnostic complémentaire.<br /><br />Nous vous rappelons qu'il s'agit d'une "
+"auto-évaluation, et qu'il est important de comprendre que tous les résultats "
+"ne peuvent en aucun cas être exhaustifs."
+
+#: templates/fit4ehealth/survey/finishedSurvey.html:6
+msgid ""
+"This is the list of recommendations to improve the maturity level of "
+"information security in your organization, provided that your answers "
+"correctly reflect the state in your organization. Also keep in mind that "
+"this is a self-assessment and the calculation of your information security "
+"maturity level is based only on the information you provided."
+msgstr ""
+"Voici la liste des recommandations visant à améliorer la maturité de la "
+"sécurité de l'information dans votre entreprise, à condition que vos "
+"réponses reflètent correctement l'état de votre entreprise. N'oubliez pas "
+"non plus qu'il s'agit d'une auto-évaluation et qu'elle ne fait qu'effleurer "
+"le niveau de maturité de la sécurité de l'information. Par conséquent, nous "
+"ne sommes pas responsables des résultats de cette enquête."
+
+#: templates/fit4ehealth/survey/index.html:4
+msgid "Welcome to the self-assessment tool:"
+msgstr "Bienvenue dans l'outil d'auto-évaluation :"
+
+#: templates/fit4ehealth/survey/start.html:5
+msgid "Please click the Next button to start the questionnaire."
+msgstr "Veuillez cliquer sur le bouton Suivant pour démarrer le questionnaire."
+
+#: templates/fit4operatorsurvey/report/intro.html:6
+#, python-format
+msgid ""
+"The objective of the self-assessment tool, %(custom.tool_name)s is to "
+"understand the level of maturity in information security of operators, in "
+"preparation for informed governance and anticipation of the NISv2.<br /><br /"
+"> This document, based on the %(custom.tool_name)s, is for the exclusive use "
+"of the customer. It is in this respect confidential.<br /><br /> The tool, "
+"%(custom.tool_name)s can possibly provide recommendations. It is understood "
+"by the client that the recommendations are neither exclusive nor exhaustive."
+"<br /><br /> It should also be noted that the information you have provided "
+"to us will be recorded for statistical informational reasons. Due to the "
+"nature of the data, we can not identify you. Unless you later contact us and "
+"provide us your results."
+msgstr ""
+"L'outil d'auto-évaluation, %(custom.tool_name)s, a pour objectif d'apprécier "
+"la maturité d'une organisation au regard des bonnes pratiques applicables en "
+"matière de la sécurité de l'information.<br /><br />Le présent document, "
+"basé sur le %(custom.tool_name)s, est destiné à l'usage exclusif du client. "
+"Il est à ce titre confidentiel.<br /><br /> En vu de la méthodologie "
+"employée et du fait qu'il s'agit d'une auto-évaluation, il est entendu que "
+"l'ensemble des résultats ne peut en aucune manière être exhaustif. À ce "
+"titre, l'appréciation du risque réel ou la liste des risques et "
+"vulnérabilités détectés sont basées sur les informations fournies par le "
+"client. L'analyse issue de cette appréciation ne peut engager que le client "
+"pour toute omission ou erreur qui serait due à des tiers ou non.<br /><br /"
+">L'outil, %(custom.tool_name)s peut éventuellement fournir des "
+"recommandations. Il est entendu par le client que les recommandations ne "
+"sont ni exclusives ni exhaustives.<br /><br />Il faut aussi noter que les "
+"informations que vous nous avez fourni seront enregistrés pour des raisons "
+"de statistiques. De part de la nature des données, nous ne pouvons vous "
+"identifier. Sauf si par la suite vous nous contacter pour faire un "
+"diagnostic NC3."
+
+#: templates/fit4privacy/survey/finishedSurvey.html:6
+msgid ""
+"This is the list of recommendations to improve the maturity of your company "
+"in the field of privacy and data protection, provided that your answers "
+"correctly reflected the state of practice in your company. Also keep in mind "
+"that it is a self-assessment and only scratches the surface of the privacy "
+"and data protection maturity level and thus, we are not liable for the "
+"results of this survey. Also remember that GDPR is about accountability: "
+"your company is expected to put measures in place to be able to demonstrate "
+"it is respecting GDPR, and that these measures are effective."
+msgstr ""
+"Voici la liste des recommandations visant à améliorer la maturité de la "
+"protection des données à caractère personnel dans votre entreprise, à "
+"condition que vos réponses reflètent correctement l'état de votre "
+"entreprise. N'oubliez pas non plus qu'il s'agit d'une auto-évaluation et "
+"qu'elle ne fait qu'effleurer le niveau de maturité de la protection de la "
+"vie privée et protection des données. Par conséquent, nous ne sommes pas "
+"responsables des résultats de cette enquête. Aussi, n'oubliez pas que le "
+"RGPD concerne la responsabilité : votre entreprise doit mettre en place des "
+"mesures pour pouvoir démontrer qu'elle respecte le RGPD et que ces mesures "
+"sont efficaces."
+
+#: templates/parts/fit4africa/footer_part.html:7
+#: templates/parts/fit4africa/footer_part.html:8
+msgid "A service provided by ACRC"
+msgstr "Un service fourni par ACRC"
+
+#: templates/parts/fit4africa/footer_part.html:14
+#: templates/parts/fit4contract/footer_part.html:21
+#: templates/parts/fit4ehealth/footer_part.html:34
+#: templates/parts/footer_part.html:28
+#: templates/parts/surveySMEDemand/footer_part.html:42
+msgid "Stats"
+msgstr "Statistiques"
+
+#: templates/parts/fit4africa/footer_part.html:17
+#: templates/parts/fit4africa/footer_part.html:18
+#: templates/parts/fit4contract/footer_part.html:24
+#: templates/parts/fit4contract/footer_part.html:25
+#: templates/parts/fit4ehealth/footer_part.html:37
+#: templates/parts/fit4ehealth/footer_part.html:38
+#: templates/parts/footer_part.html:31 templates/parts/footer_part.html:32
+#: templates/parts/surveySMEDemand/footer_part.html:45
+#: templates/parts/surveySMEDemand/footer_part.html:46
+msgid "Terms of Service"
+msgstr "Conditions d'utilisation"
+
+#: templates/parts/fit4africa/footer_part.html:21
+#: templates/parts/fit4africa/footer_part.html:22
+#: templates/parts/fit4contract/footer_part.html:28
+#: templates/parts/fit4contract/footer_part.html:29
+#: templates/parts/fit4ehealth/footer_part.html:41
+#: templates/parts/fit4ehealth/footer_part.html:42
+#: templates/parts/footer_part.html:35 templates/parts/footer_part.html:36
+#: templates/parts/surveySMEDemand/footer_part.html:49
+#: templates/parts/surveySMEDemand/footer_part.html:50
+msgid "Privacy policy"
+msgstr "Politique de confidentialité"
+
+#: templates/parts/fit4contract/footer_part.html:7
+#: templates/parts/fit4contract/footer_part.html:8
+msgid "A service provided by ANSSI.LU"
+msgstr "Un service fourni par ANSSI.LU"
+
+#: templates/parts/fit4contract/footer_part.html:14
+#: templates/parts/fit4contract/footer_part.html:15
+#: templates/parts/fit4ehealth/footer_part.html:7
+#: templates/parts/fit4ehealth/footer_part.html:8
+#: templates/parts/footer_part.html:7 templates/parts/footer_part.html:8
+#: templates/parts/surveySMEDemand/footer_part.html:7
+#: templates/parts/surveySMEDemand/footer_part.html:8
+msgid "A service provided by NC3-LU"
+msgstr "Un service fourni par NC3-LU"
+
+#: templates/parts/fit4ehealth/footer_part.html:14
+#: templates/parts/fit4ehealth/footer_part.html:15
+#: templates/parts/footer_part.html:15 templates/parts/footer_part.html:16
+#: templates/parts/surveySMEDemand/footer_part.html:29
+#: templates/parts/surveySMEDemand/footer_part.html:30
+msgid "Source code on GitHub"
+msgstr "Code source sur GitHub"
+
+#: templates/parts/fit4ehealth/footer_part.html:19
+#: templates/parts/fit4ehealth/footer_part.html:20
+#: templates/parts/footer_part.html:20 templates/parts/footer_part.html:21
+#: templates/parts/surveySMEDemand/footer_part.html:34
+#: templates/parts/surveySMEDemand/footer_part.html:35
+#: templates/survey/stats.html:333 templates/survey/stats.html:334
+msgid "Version of"
+msgstr "Version de"
+
+#: templates/parts/fit4ehealth/footer_part.html:27
+#: templates/parts/fit4ehealth/footer_part.html:28
+msgid "eQualis"
+msgstr "eQualis"
+
+#: templates/parts/privacy_policy_part.html:87
+msgid "Name"
+msgstr "Nom"
+
+#: templates/parts/privacy_policy_part.html:88
+#: templates/report/description.html:4
+msgid "Description"
+msgstr "Description"
+
+#: templates/parts/privacy_policy_part.html:89
+msgid "Content"
+msgstr "Content"
+
+#: templates/parts/privacy_policy_part.html:90
+msgid "Maximum term"
+msgstr "Durée maximum"
+
+#: templates/parts/surveySMEDemand/footer_part.html:14
+#: templates/parts/surveySMEDemand/footer_part.html:15
+#: templates/parts/surveySMEDemand/footer_part.html:21
+#: templates/parts/surveySMEDemand/footer_part.html:22
+#: templates/surveySMEDemand/survey/index.html:32
+#: templates/surveySMEDemand/survey/index.html:33
+#: templates/surveySMEDemand/survey/index.html:39
+#: templates/surveySMEDemand/survey/index.html:40
+#: templates/surveySMEDemand/survey/index.html:46
+#: templates/surveySMEDemand/survey/index.html:47
+#: templates/surveySMEDemand/survey/index.html:53
+#: templates/surveySMEDemand/survey/index.html:54
+msgid "Your logo here"
+msgstr ""
+
+#: templates/report/description.html:8
+#, python-format
+msgid ""
+"This self-assessment tool is named %(tool_name)s to highlight the "
+"introduction to information security. It is also a prerequisite for doing a "
+"NC3 Diagnostic: a minimum score of %(minimal_acceptable_score)s/100 is "
+"required. The purpose for this restriction gives us the opportunity to "
+"better tailor the recommendations to your organization during the Diagnostic."
+"<br /><br /> During this self-assessment multiple choice questions were "
+"asked. After analyzing your answers, recommendations have been provided.<br /"
+"><br /> Finally, you can download a report, which will help you to "
+"communicate the results to your suppliers, if necessary."
+msgstr ""
+"Cet outil d'auto-évaluation est nommé %(tool_name)s pour souligner "
+"l'introduction à la sécurité de l'information. Il est aussi un prérequis "
+"pour faire un Diagnostic NC3: un score minimal de "
+"%(minimal_acceptable_score)s/100 est requis. Le but pour cette restriction "
+"nous donne la possibilité pour mieux adapter les recommandations à votre "
+"organisation lors du Diagnostic. <br /><br /> Durant cette auto-evaluation "
+"questions à choix multiples vous ont été posées. Après avoir analysé vos "
+"réponses, des recommandations vous ont été fournies. <br /><br /> "
+"Finalement, vous pouvez télécharger ce document qui vous aidera pour "
+"communiquer les résultats à vos fournisseurs si besoin."
+
+#: templates/report/intro.html:4
+msgid "Introduction and Warning"
+msgstr "Introduction et avertissement"
+
+#: templates/report/intro.html:7
+#, python-format
+msgid ""
+"The objective of the self-assessment tool, %(tool_name)s is to assess the "
+"maturity of an organization in terms of applicable good practices in the "
+"field of information security.<br /><br /> This document, based on the "
+"%(tool_name)s, is for the exclusive use of the customer. It is in this "
+"respect confidential.<br /><br /> In view of the methodology used and the "
+"fact that it is a self-assessment, it is understood that the overall results "
+"can not in any way be exhaustive. As such, the actual risk assessment or the "
+"list of identified risks and vulnerabilities are based on the information "
+"provided by the client. The analysis resulting from this assessment can "
+"engage only the customer for any omission or error that would be due to "
+"third parties or not.<br /><br /> The tool, %(tool_name)s can possibly "
+"provide recommendations. It is understood by the client that the "
+"recommendations are neither exclusive nor exhaustive.<br /><br /> It should "
+"also be noted that the information you have provided to us will be recorded "
+"for statistical reasons. Due to the nature of the data, we can not identify "
+"you. Unless you later contact us to do a Diagnostic NC3."
+msgstr ""
+"L'outil d'auto-évaluation, %(tool_name)s, a pour objectif d'apprécier la "
+"maturité d'une organisation au regard des bonnes pratiques applicables en "
+"matière de la sécurité de l'information.<br /><br />Le présent document, "
+"basé sur le %(tool_name)s, est destiné à l'usage exclusif du client. Il est "
+"à ce titre confidentiel.<br /><br /> En vu de la méthodologie employée et du "
+"fait qu'il s'agit d'une auto-évaluation, il est entendu que l'ensemble des "
+"résultats ne peut en aucune manière être exhaustif. À ce titre, "
+"l'appréciation du risque réel ou la liste des risques et vulnérabilités "
+"détectés sont basées sur les informations fournies par le client. L'analyse "
+"issue de cette appréciation ne peut engager que le client pour toute "
+"omission ou erreur qui serait due à des tiers ou non.<br /><br />L'outil, "
+"%(tool_name)s peut éventuellement fournir des recommandations. Il est "
+"entendu par le client que les recommandations ne sont ni exclusives ni "
+"exhaustives.<br /><br />Il faut aussi noter que les informations que vous "
+"nous avez fourni seront enregistrés pour des raisons de statistiques. De "
+"part de la nature des données, nous ne pouvons vous identifier. Sauf si par "
+"la suite vous nous contacter pour faire un diagnostic NC3."
+
+#: templates/report/questions.html:1
+msgid "Questions"
+msgstr "Questions"
+
+#: templates/report/recommendations.html:3
+msgid "Recommendations"
+msgstr "Recommandations"
+
+#: templates/report/recommendations.html:7
+msgid ""
+"The recommendations list was based in your company context and on your "
+"answers."
+msgstr ""
+"La liste des recommandations a été établie en fonction du contexte de votre "
+"entreprise et de vos réponses."
+
+#: templates/report/results.html:4
+msgid "Result"
+msgstr "Résultat"
+
+#: templates/report/results.html:8
+#, python-format
+msgid ""
+"You have achieved %(SCORE)s/100 with your answers. You must reach at least "
+"%(minimal_acceptable_score)s/100 to be able to make a NC3 Diagnosis.<br /"
+"><br /> We remind you that this is a self-assessment, and it is important to "
+"understand that all the results can not in any way be exhaustive."
+msgstr ""
+"Vous avez atteint %(SCORE)s/100 avec vos réponses. Vous devez atteindre au "
+"moins %(minimal_acceptable_score)s/100 pour pouvoir faire un Diagnostic NC3. "
+"<br /><br /> Nous vous rappelons qu'il s'agit d'une auto-évaluation, il est "
+"entendu que l'ensemble des résultats ne peut en aucune manière être "
+"exhaustif."
+
+#: templates/report/results.html:17 templates/survey/finishedSurvey.html:55
+#: templates/surveySMEDemand/survey/finishedSurvey.html:58
+#, python-format
+msgid ""
+"You have scored an additional %(bonus)s %% of bonus points for adherence to "
+"best practices."
+msgstr ""
+"Vous avez obtenu un bonus de %(bonus)s %% de points supplémentaires pour le "
+"respect des bonnes pratiques."
+
+#: templates/report/results.html:25
+msgid "By section"
+msgstr "Par section"
+
+#: templates/report/results.html:31
+msgid "By category"
+msgstr "Par catégorie"
+
+#: templates/report/template.html:9 templates/report/template.html:14
+msgid "Final report"
+msgstr "Rapport final"
+
+#: templates/report/template.html:13
+#, python-format
+msgid "Generated with %(tool_name)s"
+msgstr "Généré avec %(tool_name)s"
+
+#: templates/report/toc.html:1
+msgid "Table of contents"
+msgstr "Table des matières"
+
+#: templates/survey/answerChangingWarning.html:6
+msgid ""
+"Change of previously selected answer(s) can lead to additional questions or "
+"loosing of your answer(s). Would you like to proceed?"
+msgstr ""
+"Le changement de réponse(s) précédemment sélectionnée(s) peut conduire à des "
+"questions supplémentaires ou à la perte de vos réponses. Voulez vous "
+"procéder ?"
+
+#: templates/survey/base.html:19
+msgid "a NC3 self-assessment tool!"
+msgstr "est un outil d'auto-évaluation NC3 !"
+
+#: templates/survey/continue.html:4
+msgid "Continue the evaluation later"
+msgstr "Continuer l'évaluation plus tard"
+
+#: templates/survey/continue.html:9
+msgid ""
+"To continue the evaluation process later you can copy the provided link, "
+"create a bookmark or use the code to resume later on the main page:"
+msgstr ""
+"Pour continuer le processus d'évaluation plus tard, vous pouvez copier le "
+"lien fourni, créer un signet ou utiliser le code pour reprendre plus tard "
+"sur la page principale :"
+
+#: templates/survey/continue.html:23
+msgid "Download direct link"
+msgstr "Télécharger le lien direct"
+
+#: templates/survey/continue.html:26 templates/survey/finishedSurvey.html:220
+#: templates/surveySMEDemand/survey/finishedSurvey.html:214
+msgid "Close"
+msgstr "Fermer"
+
+#: templates/survey/finishedSurvey.html:26
+msgid "Summary"
+msgstr "Résumé"
+
+#: templates/survey/finishedSurvey.html:30
+msgid ""
+"This is the list of recommendations to improve the information security "
+"maturity in your company, provided that your answers did correctly reflect "
+"the state in your company. Also keep in mind that it is a self-assessment "
+"and only scratches the surface of the information security maturity level "
+"and thus, we are not liable for the results of this survey."
+msgstr ""
+"Voici la liste des recommandations visant à améliorer la maturité de la "
+"sécurité de l'information dans votre entreprise, à condition que vos "
+"réponses reflètent correctement l'état de votre entreprise. N'oubliez pas "
+"non plus qu'il s'agit d'une auto-évaluation et qu'elle ne fait qu'effleurer "
+"le niveau de maturité de la sécurité de l'information. Par conséquent, nous "
+"ne sommes pas responsables des résultats de cette enquête."
+
+#: templates/survey/finishedSurvey.html:42
+#: templates/surveySMEDemand/survey/finishedSurvey.html:45
+#, python-format
+msgid ""
+"Based on your score %(score)s, the NC3 Diagnostic is not available for your "
+"organization at this moment. We recommend you improve the information "
+"security maturity level by implementing the recommendations listed below. If "
+"you need any information security training to raise awareness in your "
+"company, do not hesitate to"
+msgstr ""
+"Sur base de votre score de %(score)s, le diagnostic NC3 n'est pas disponible "
+"pour votre organisation pour le moment. Nous vous recommandons d'améliorer "
+"le niveau de maturité de la sécurité de l'information en mettant en œuvre "
+"les recommandations ci-dessous. Si vous avez besoin d'une formation à la "
+"sécurité de l'information pour sensibiliser votre entreprise, n'hésitez pas à"
+
+#: templates/survey/finishedSurvey.html:67
+msgid "Your results link"
+msgstr "Votre lien de résultats"
+
+#: templates/survey/finishedSurvey.html:72
+#: templates/surveySMEDemand/survey/finishedSurvey.html:66
+msgid "About the NC3 Diagnostic"
+msgstr "À propos du Diagnostic NC3"
+
+#: templates/survey/finishedSurvey.html:74
+#: templates/surveySMEDemand/survey/finishedSurvey.html:68
+msgid ""
+"The NC3 Diagnostic is a service which analyses the company maturity in the "
+"information security depending on company's requirements. The analysis "
+"duration can take approximately 2 hours. A consultant from NC3 will come to "
+"your company's premises, and ask around 30 questions concerning your "
+"information security, mostly organizational questions and possibly some "
+"technical questions. You will receive a detailed report which will contain a "
+"maturity estimation as well as recommendations to enhance the information "
+"security maturity."
+msgstr ""
+"Le Diagnostic NC3 est un service qui analyse la maturité de l'entreprise "
+"dans la sécurité de l'information en fonction des exigences de l'entreprise. "
+"La durée de l'analyse peut prendre environ 2 heures. Un consultant du NC3 se "
+"déplacera dans les locaux de votre entreprise, et posera une trentaine de "
+"questions concernant la sécurité de votre information, majoritairement des "
+"questions d'organisation et éventuellement quelques questions techniques. "
+"Vous recevrez un rapport détaillé qui contiendra une estimation de la "
+"maturité ainsi que des recommandations pour améliorer la maturité de la "
+"sécurité de l'information."
+
+#: templates/survey/finishedSurvey.html:86
+#: templates/surveySMEDemand/survey/finishedSurvey.html:80
+msgid ""
+"The NC3 Diagnostic is available for all the companies located in Luxembourg "
+"and free of charge."
+msgstr ""
+"Le Diagnostic est gratuit et possible pour toute entreprise ayant des locaux "
+"au Luxembourg."
+
+#: templates/survey/finishedSurvey.html:123
+#: templates/surveySMEDemand/survey/finishedSurvey.html:117
+msgid "Report"
+msgstr "Rapport"
+
+#: templates/survey/finishedSurvey.html:130
+#: templates/surveySMEDemand/survey/finishedSurvey.html:124
+msgid "Download"
+msgstr "Téléchargement"
+
+#: templates/survey/finishedSurvey.html:140
+#: templates/surveySMEDemand/survey/finishedSurvey.html:134
+msgid "Email"
+msgstr "Courriel"
+
+#: templates/survey/finishedSurvey.html:151
+#: templates/surveySMEDemand/survey/finishedSurvey.html:145
+msgid "Score by section"
+msgstr "Score par section"
+
+#: templates/survey/finishedSurvey.html:157
+#: templates/surveySMEDemand/survey/finishedSurvey.html:151
+msgid "Score by category"
+msgstr "Score par catégorie"
+
+#: templates/survey/finishedSurvey.html:225
+#: templates/survey/sendReportEmail.html:14
+#: templates/surveySMEDemand/survey/finishedSurvey.html:219
+msgid "Send"
+msgstr "Envoyer"
+
+#: templates/survey/index.html:20
+msgid "Welcome to the NC3 self-assessment tool:"
+msgstr "Bienvenue dans l'outil d'auto-évaluation NC3 :"
+
+#: templates/survey/index.html:30
+#: templates/surveySMEDemand/survey/index.html:77
+msgid "Start"
+msgstr "Démarrer"
+
+#: templates/survey/index.html:38
+#: templates/surveySMEDemand/survey/index.html:85
+msgid "Continue a previous survey"
+msgstr "Continuer une enquête précédente"
+
+#: templates/survey/leaveSurvey.html:5
+msgid "Would like to leave survey?"
+msgstr "Voulez vous quitter l'enquête ?"
+
+#: templates/survey/questions.html:45
+#: templates/surveySMEDemand/survey/questions.html:53
+msgid "Multiple answers are possible."
+msgstr "Plusieurs réponses sont possibles."
+
+#: templates/survey/questions.html:57
+#: templates/surveySMEDemand/survey/questions.html:66
+msgid "Back"
+msgstr "Précédent"
+
+#: templates/survey/questions.html:65
+#: templates/surveySMEDemand/survey/questions.html:74
+msgid "Cancel"
+msgstr "Annuler"
+
+#: templates/survey/questions.html:74 templates/survey/review.html:67
+#: templates/surveySMEDemand/survey/questions.html:89
+msgid "Continue later"
+msgstr "Continuer plus tard"
+
+#: templates/survey/questions.html:79
+#: templates/surveySMEDemand/survey/questions.html:80
+msgid "Modify"
+msgstr "Modifier"
+
+#: templates/survey/questions.html:79 templates/survey/start.html:39
+#: templates/surveySMEDemand/survey/questions.html:80
+#: templates/surveySMEDemand/survey/start.html:33
+msgid "Next"
+msgstr "Suivant"
+
+#: templates/survey/questions.html:88
+msgid "This text field should not be used to answer the question."
+msgstr ""
+"Ce champ de texte ne doit pas être utilisé pour répondre à la question."
+
+#: templates/survey/questions.html:91
+msgid ""
+"Please do not provide any sensitive or confidential information referring to "
+"your identity."
+msgstr ""
+"Veuillez ne fournir aucune donnée sensible ou confidentielle faisant "
+"référence à votre identité."
+
+#: templates/survey/requestDiagnosticLink.html:5
+#: templates/survey/requestDiagnosticLink.html:22
+msgid "Request diagnostic"
+msgstr "Demander un diagnostic"
+
+#: templates/survey/requestDiagnosticLink.html:7
+#, python-format
+msgid ""
+"Dear Cases Team,\n"
+"\n"
+"We would like to request a Diagnostic NC3 from you.\n"
+"\n"
+"Here is our evaluation results identifier: %(userId)s\n"
+"\n"
+"Here also additional information that could be useful:\n"
+"\n"
+"Lastname of the contact:\n"
+"Firstname of the contact:\n"
+"Email address of the contact:\n"
+"Address of the company for the Diagnostic (Luxembourg only):\n"
+"Desired language for the Diagnostic:\n"
+msgstr ""
+"À l'attention de l'équipe NC3,\n"
+"\n"
+"Nous aimerions planifier un Diagnostic NC3.\n"
+"\n"
+"Voici l'identifiant lié à notre évaluation : %(userId)s\n"
+"\n"
+"Voici également les informations qui vous seront nécessaires :\n"
+"\n"
+"Nom du point de contact :\n"
+"Prénom du point de contact :\n"
+"Adresse mail du point de contact :\n"
+"Adresse de l'entreprise et du Diagnostic (Luxembourg uniquement) :\n"
+"Langue souhaitée du Diagnostic :\n"
+
+#: templates/survey/requestTrainingLink.html:5
+#: templates/survey/requestTrainingLink.html:36
+msgid "Request training offer"
+msgstr "Demander une offre de formation"
+
+#: templates/survey/requestTrainingLink.html:7
+#, python-format
+msgid ""
+"Dear Cases Team,\n"
+"\n"
+"We would like an information about security awareness training offer.\n"
+"\n"
+"Here is our evaluation results identifier: %(userId)s\n"
+"\n"
+"Here is also the information necessary to establish the offer:\n"
+"\n"
+"Contact details:\n"
+"    - Name of the contact:\n"
+"    - Email address of the contact:\n"
+"\n"
+"Organization:\n"
+"    - Company Name:\n"
+"    - Company address:\n"
+"    - Postal code:\n"
+"    - City:\n"
+"    - VAT number (if applicable):\n"
+"\n"
+"Training:\n"
+"    - Number of participants*:\n"
+"    - Desired language(s) for the training(s):\n"
+"    - Personalized topics to discuss:\n"
+"\n"
+"* For a number of people greater than 25, the training will be done in "
+"several installments, involving a higher cost.\n"
+msgstr ""
+"À l'attention de l'équipe NC3,\n"
+"\n"
+"Nous souhaitons une offre de sensibilisation à la sécurité de "
+"l'information.\n"
+"\n"
+"Voici l'identifiant lié à notre évaluation : %(userId)s\n"
+"\n"
+"Voici également les informations nécessaires à l'établissement de l'offre :\n"
+"\n"
+"Point de contact :\n"
+"    - Nom du point de contact :\n"
+"    - Adresse mail du point de contact :\n"
+"\n"
+"Entreprise :\n"
+"    - Nom de l'entreprise :\n"
+"    - Adresse de l'entreprise :\n"
+"    - Code postal :\n"
+"    - Ville :\n"
+"    - Numéro TVA (si applicable) :\n"
+"\n"
+"Formations :\n"
+"    - Nombre de personnes à sensibiliser* :\n"
+"    - Langue(s) souhaitée(s) pour la/les formation(s) :\n"
+"    - Sujets personnalisés à aborder :\n"
+"\n"
+"*Pour un nombre de personnes supérieur à 25, la formation sera alors faite "
+"en plusieurs fois, impliquant un cout plus élevé.\n"
+
+#: templates/survey/requestTrainingLink.html:38
+msgid "let us know."
+msgstr "nous le faire savoir."
+
+#: templates/survey/resume.html:5
+msgid "Please insert your code to continue the survey or go to your results"
+msgstr ""
+"Veuillez insérer votre code pour continuer l'enquête ou consulter vos "
+"résultats"
+
+#: templates/survey/resume.html:16
+msgid "Confirm"
+msgstr "Confirmer"
+
+#: templates/survey/review.html:19
+msgid "Your answers review"
+msgstr "Votre aperçu des réponses"
+
+#: templates/survey/review.html:22
+msgid ""
+"You can modify the answers to each question before you get the result of the "
+"survey."
+msgstr ""
+"Vous pouvez modifier les réponses à chaque question avant d'obtenir le "
+"résultat de l'enquête."
+
+#: templates/survey/review.html:26 templates/survey/review.html:73
+msgid "Validate answers"
+msgstr "Valider les réponses"
+
+#: templates/survey/review.html:57
+msgid "Modify answers"
+msgstr "Modifier les réponses"
+
+#: templates/survey/sendReportEmail.html:5
+msgid "Send the report via email"
+msgstr "Envoyer le rapport par e-mail"
+
+#: templates/survey/sendReportEmail.html:17
+msgid "Your email address won't be stored."
+msgstr "Votre adresse électronique ne sera pas conservée."
+
+#: templates/survey/start.html:22
+msgid ""
+"We need this information to be able to give you useful recommendations, once "
+"the self-assessment is done."
+msgstr ""
+"Nous avons besoin de quelques informations pour pouvoir vous faire des "
+"recommandations utiles, une fois l'auto-évaluation terminée."
+
+#: templates/survey/stats.html:21
+msgid "Some statistics about the current surveys."
+msgstr "Quelques statistiques sur les enquêtes en cours."
+
+#: templates/survey/stats.html:28 templates/survey/stats.html:129
+#: templates/survey/stats.html:149 templates/survey/stats.html:169
+#: templates/survey/stats.html:208 templates/survey/stats.html:228
+#: templates/survey/stats.html:248 templates/survey/stats.html:281
+#: templates/survey/stats.html:314
+msgid "No statistics available"
+msgstr "Aucune statistique disponible"
+
+#: templates/survey/stats.html:37
+msgid "Main figures"
+msgstr "Principaux chiffres"
+
+#: templates/survey/stats.html:40
+msgid "Number of surveys:"
+msgstr "Nombre d'enquêtes :"
+
+#: templates/survey/stats.html:43
+msgid "Number of finished surveys:"
+msgstr "Nombre d'enquêtes terminées :"
+
+#: templates/survey/stats.html:46
+msgid "First completed survey on:"
+msgstr "Première enquête complétée le :"
+
+#: templates/survey/stats.html:56
+msgid "Activity over the past year"
+msgstr "Activité au cours de l'année écoulée"
+
+#: templates/survey/stats.html:60 templates/survey/stats.html:123
+#: templates/survey/stats.html:143 templates/survey/stats.html:163
+#: templates/survey/stats.html:202 templates/survey/stats.html:222
+#: templates/survey/stats.html:242 templates/survey/stats.html:265
+#: templates/survey/stats.html:298
+msgid "Loading..."
+msgstr "Chargement..."
+
+#: templates/survey/stats.html:67
+msgid "Less"
+msgstr "Moins"
+
+#: templates/survey/stats.html:73
+msgid "More"
+msgstr "Plus"
+
+#: templates/survey/stats.html:78
+msgid "Click on a date to load stats since this day or use the filter below."
 msgstr ""
 "Cliquez sur une date pour afficher les statistiques depuis ce jour ou "
-"utilisez la liste ci-dessous."
+"utilisez le filtre ci-dessous."
 
-#: templates/survey/stats.html:88
-msgid "Reset filters"
-msgstr "Réinitialiser les filtres"
+#: templates/survey/stats.html:83
+msgid "Time frame"
+msgstr "Période de temps"
 
-#: templates/survey/stats.html:94
-msgid "Statistics since"
-msgstr "Statistiques depuis"
+#: templates/survey/stats.html:102
+msgid "Load"
+msgstr "Charger"
+
+#: templates/survey/stats.html:104
+msgid "Reset"
+msgstr "Réinitialisatiser"
+
+#: templates/survey/stats.html:112
+msgid "Statistics from"
+msgstr "Statistiques du"
+
+#: templates/survey/stats.html:112
+msgid "to"
+msgstr "au"
+
+#: templates/survey/stats.html:113
+msgid "Total of completed surveys:"
+msgstr "Total des enquêtes réalisées :"
+
+#: templates/survey/stats.html:119
+msgid "Surveys company sector"
+msgstr "Enquêtes secteur entreprise"
+
+#: templates/survey/stats.html:139
+msgid "Surveys company size"
+msgstr "Taille de l'entreprise"
+
+#: templates/survey/stats.html:159
+msgid "Surveys countries"
+msgstr "Pays d'enquête"
+
+#: templates/survey/stats.html:182
+msgid "Details of other countries"
+msgstr "Détails sur les autres pays"
+
+#: templates/survey/stats.html:198
+msgid "Surveys status"
+msgstr "État des sondages"
+
+#: templates/survey/stats.html:218
+msgid "Surveys languages"
+msgstr "Langues des sondages"
+
+#: templates/survey/stats.html:238
+msgid "Survey's current question"
+msgstr "Question actuelle du sondage"
+
+#: templates/survey/stats.html:261
+msgid "Answers by section and company size"
+msgstr "Réponses par section et taille d'entreprise"
+
+#: templates/survey/stats.html:269 templates/survey/stats.html:302
+msgid "Country"
+msgstr "Pays"
+
+#: templates/survey/stats.html:271 templates/survey/stats.html:304
+msgid "All"
+msgstr "Tous"
+
+#: templates/survey/stats.html:294
+msgid "Answers by category and company size"
+msgstr "Réponses par catégorie et taille d'entreprise"
+
+#: templates/survey/stats.html:326
+msgid "Server information"
+msgstr "Informations sur le serveur"
+
+#: templates/survey/stats.html:328
+msgid "Python version:"
+msgstr "Version de Python :"
+
+#: templates/survey/stats.html:331
+msgid "Software version:"
+msgstr "Version du logiciel :"
 
 #: templates/surveySMEDemand/survey/finishedSurvey.html:26
 msgid "Thanks for your time and effort!"
@@ -9924,3 +9930,17 @@ msgstr ""
 "contractuelle envisagée, en vue de la mise en place d'une acquisition, d'une "
 "location, d'un développement, ou de toute autre prestation dans le domaine "
 "des technologies de l'information et de la communication."
+
+#: templates/surveySMEDemand/survey/index.html:24
+msgid "This project is supported by:"
+msgstr ""
+
+#: templates/surveySMEDemand/survey/index.html:63
+msgid "The results of the survey are anonymous."
+msgstr ""
+
+#: templates/surveySMEDemand/survey/index.html:66
+msgid ""
+"There are no right or wrong answers. We invite you to be as honest as "
+"possible."
+msgstr ""
