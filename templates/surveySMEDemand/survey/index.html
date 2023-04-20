@@ -19,53 +19,56 @@
         </div>
     </div>
 
-	<div>
-		<h3>{{ _('This project is supported by:') }}</h3>
-	</div>
+    <div class="px-3">
+        <div class="p-2">
+            <h5>{{ _('This project is supported by:') }}</h5>
+        </div>
 
-	<div class="d-flex justify-content-between">
-		<ul class="nav flex-column flex-sm-row">
-			<li class="nav-item">
-				<a class="nav-link" href="#" target="_blank" rel="noopener noreferrer">
-					<img class="img-fluid" src="{% static '/images/surveySMEDemand/partners_logo/Your logo here.png' %}" width="32px"
-						 title="{{ _('Your logo here') }}"
-						 alt="{{ _('Your logo here') }}"/>
-				</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" href="#" target="_blank" rel="noopener noreferrer">
-					<img class="img-fluid" src="{% static '/images/surveySMEDemand/partners_logo/Your logo here.png' %}" width="32px"
-						 title="{{ _('Your logo here') }}"
-						 alt="{{ _('Your logo here') }}"/>
-				</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" href="#" target="_blank" rel="noopener noreferrer">
-					<img class="img-fluid" src="{% static '/images/surveySMEDemand/partners_logo/Your logo here.png' %}" width="32px"
-						 title="{{ _('Your logo here') }}"
-						 alt="{{ _('Your logo here') }}"/>
-				</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" href="#" target="_blank" rel="noopener noreferrer">
-					<img class="img-fluid" src="{% static '/images/surveySMEDemand/partners_logo/Your logo here.png' %}" width="32px"
-						 title="{{ _('Your logo here') }}"
-						 alt="{{ _('Your logo here') }}"/>
-				</a>
-			</li>
-		</ul>	
-	</div>
-
-	<div>
-		<ul><strong>
-			<li>
-				{{ _('The results of the survey are anonymous.') }}
-			</li>
-			<li>
-				{{ _('There are no right or wrong answers. We invite you to be as honest as possible.') }}
-			</li>
-		</strong></ul>
-	</div>
+        <div class="d-flex justify-content-between">
+            <ul class="nav flex-column flex-sm-row">
+                <li class="nav-item">
+                    <a class="nav-link" href="#" target="_blank" rel="noopener noreferrer">
+                        <img class="img-fluid" src="{% static '/images/surveySMEDemand/partners_logo/Your logo here.png' %}" width="80px"
+                            title="{{ _('Your logo here') }}"
+                            alt="{{ _('Your logo here') }}"/>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" target="_blank" rel="noopener noreferrer">
+                        <img class="img-fluid" src="{% static '/images/surveySMEDemand/partners_logo/Your logo here.png' %}" width="80px"
+                            title="{{ _('Your logo here') }}"
+                            alt="{{ _('Your logo here') }}"/>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" target="_blank" rel="noopener noreferrer">
+                        <img class="img-fluid" src="{% static '/images/surveySMEDemand/partners_logo/Your logo here.png' %}" width="80px"
+                            title="{{ _('Your logo here') }}"
+                            alt="{{ _('Your logo here') }}"/>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" target="_blank" rel="noopener noreferrer">
+                        <img class="img-fluid" src="{% static '/images/surveySMEDemand/partners_logo/Your logo here.png' %}" width="80px"
+                            title="{{ _('Your logo here') }}"
+                            alt="{{ _('Your logo here') }}"/>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="p-2">
+            <ul class="list-unstyled">
+                <strong>
+                    <li>
+                        <i class="bi bi-arrow-right">{{ _('The results of the survey are anonymous.') }}</i>
+                    </li>
+                    <li>
+                        <i class="bi bi-arrow-right">{{ _('There are no right or wrong answers. We invite you to be as honest as possible.') }}</i>
+                    </li>
+                </strong>
+            </ul>
+        </div>
+    </div>
 
     <div class="col px-2 py-4 text-center">
         <a href="/survey/start">
