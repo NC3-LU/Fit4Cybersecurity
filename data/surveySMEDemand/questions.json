@@ -206,7 +206,7 @@
         ],
         "label": "Chief Operating Officer"
       },
-      {
+	  {
         "aindex": 3,
         "uniqueAnswer": true,
         "atype": "P",
@@ -218,9 +218,9 @@
             "order": 1
           }
         ],
-        "label": "IT manager"
+        "label": "Chief Information Officer"
       },
-      {
+	  {
         "aindex": 4,
         "uniqueAnswer": true,
         "atype": "P",
@@ -232,7 +232,7 @@
             "order": 1
           }
         ],
-        "label": "Cybersecurity manager"
+        "label": "Chief Information Security Officer"
       },
       {
         "aindex": 5,
@@ -246,10 +246,38 @@
             "order": 1
           }
         ],
-        "label": "External service provider"
+        "label": "IT manager"
       },
       {
         "aindex": 6,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Your employees are allowed to work...",
+            "branch": 0,
+            "level": 3,
+            "order": 1
+          }
+        ],
+        "label": "Cybersecurity manager"
+      },
+      {
+        "aindex": 7,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Your employees are allowed to work...",
+            "branch": 0,
+            "level": 3,
+            "order": 1
+          }
+        ],
+        "label": "External service provider"
+      },
+      {
+        "aindex": 8,
         "uniqueAnswer": true,
         "atype": "T",
         "questions_map": [
@@ -2191,8 +2219,22 @@
     "qindex": 26,
     "label": "Has your company, to your knowledge, been the victim of a cyberattack?",
     "answers": [
+	  {
+		"aindex": 2,
+		"uniqueAnswer": false,
+		"atype": "P",
+		"questions_map": [
+			{
+			"label": "What impact did the cyberattack have on your company?",
+			"branch": 0,
+			"level": 25,
+			"order": 1
+			}
+		],
+		"label": "Yes, we had an incident that started by an employee clicking on a phishing email"
+	  },
       {
-        "aindex": 1,
+        "aindex": 2,
         "uniqueAnswer": false,
         "atype": "P",
         "questions_map": [
@@ -2206,7 +2248,7 @@
         "label": "Yes, we had an incident that started with a personal device used by employees for work"
       },
       {
-        "aindex": 2,
+        "aindex": 3,
         "uniqueAnswer": false,
         "atype": "P",
         "questions_map": [
@@ -2220,7 +2262,7 @@
         "label": "Yes, we had an incident that started with a company device"
       },
       {
-        "aindex": 3,
+        "aindex": 4,
         "uniqueAnswer": false,
         "atype": "P",
         "questions_map": [
@@ -2234,7 +2276,7 @@
         "label": "Yes, we had an incident but we could not define the origin"
       },
       {
-        "aindex": 4,
+        "aindex": 5,
         "uniqueAnswer": false,
         "atype": "P",
         "questions_map": [
@@ -2248,7 +2290,7 @@
         "label": "Yes, we had an incident and some data was hacked"
       },
       {
-        "aindex": 5,
+        "aindex": 6,
         "uniqueAnswer": false,
         "atype": "P",
         "questions_map": [
@@ -2262,7 +2304,7 @@
         "label": "Yes, we had an incident and we paid a ransom to get our data back"
       },
       {
-        "aindex": 6,
+        "aindex": 7,
         "uniqueAnswer": true,
         "atype": "P",
         "questions_map": [
@@ -2276,7 +2318,7 @@
         "label": "No, we have never had an incident"
       },
       {
-        "aindex": 7,
+        "aindex": 8,
         "uniqueAnswer": true,
         "atype": "P",
         "questions_map": [
@@ -2288,6 +2330,20 @@
           }
         ],
         "label": "I don't know"
+      },
+      {
+        "aindex": 9,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "From a regulatory point of view, do you think you lack information regarding...",
+            "branch": 0,
+            "level": 25,
+            "order": 1
+          }
+        ],
+        "label": "I don't want to share this information"
       }
     ]
   },
