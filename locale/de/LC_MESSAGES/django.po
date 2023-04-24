@@ -11,8 +11,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-04-20 14:36+0000\n"
-"PO-Revision-Date: 2023-04-04 14:33+0000\n"
+"POT-Creation-Date: 2023-04-24 07:04+0000\n"
+"PO-Revision-Date: 2023-04-24 06:57+0000\n"
 "Last-Translator: Gregory Wawszyniak-dumont <gregory.wawszyniak-dumont@nc3."
 "lu>\n"
 "Language-Team: German <https://translate.monarc.lu/projects/"
@@ -308,7 +308,7 @@ msgstr "Kontext"
 #: data/fit4privacy/context-questions.json:121
 #: data/fit4privacy/context-questions.json:201
 #: data/surveySMEDemand/context-questions.json:3
-#: data/surveySMEDemand/context-questions.json:47
+#: data/surveySMEDemand/context-questions.json:61
 #: data/surveySMEDemand/context-questions.json:98
 #: data/surveySMEDemand/context-questions.json:191
 msgid "__context"
@@ -463,7 +463,7 @@ msgstr "1-5"
 #: data/fit4contract/context-questions.json:134
 #: data/fit4cybersecurity/context-questions.json:134
 #: data/fit4privacy/context-questions.json:134
-#: data/surveySMEDemand/questions.json:746
+#: data/surveySMEDemand/questions.json:774
 msgid "6-10"
 msgstr "6-10"
 
@@ -1429,7 +1429,7 @@ msgstr "der Drucker sind durch ein starkes Passwort geschützt"
 
 #: data/fit4africa/questions.json:924 data/fit4cybersecurity/questions.json:924
 #: data/fit4ehealth/questions.json:1443
-#: data/surveySMEDemand/questions.json:1425
+#: data/surveySMEDemand/questions.json:1453
 msgid "Antivirus"
 msgstr "Antivirus"
 
@@ -2285,9 +2285,9 @@ msgstr "Software"
 #: data/fit4contract/questions.json:706 data/fit4contract/questions.json:888
 #: data/fit4contract/questions.json:943
 #: data/fit4operatorsurvey/context-questions.json:224
-#: data/surveySMEDemand/questions.json:337
-#: data/surveySMEDemand/questions.json:2002
-#: data/surveySMEDemand/questions.json:2441
+#: data/surveySMEDemand/questions.json:365
+#: data/surveySMEDemand/questions.json:2030
+#: data/surveySMEDemand/questions.json:2497
 #: templates/survey/answerChangingWarning.html:10
 #: templates/survey/leaveSurvey.html:11
 msgid "Yes"
@@ -2316,12 +2316,12 @@ msgstr ""
 #: data/fit4contract/questions.json:972
 #: data/fit4operatorsurvey/context-questions.json:231
 #: data/surveySMEDemand/questions.json:100
-#: data/surveySMEDemand/questions.json:351
-#: data/surveySMEDemand/questions.json:453
-#: data/surveySMEDemand/questions.json:681
-#: data/surveySMEDemand/questions.json:1523
-#: data/surveySMEDemand/questions.json:2016
-#: data/surveySMEDemand/questions.json:2435
+#: data/surveySMEDemand/questions.json:379
+#: data/surveySMEDemand/questions.json:481
+#: data/surveySMEDemand/questions.json:709
+#: data/surveySMEDemand/questions.json:1551
+#: data/surveySMEDemand/questions.json:2044
+#: data/surveySMEDemand/questions.json:2491
 #: templates/survey/answerChangingWarning.html:12
 #: templates/survey/leaveSurvey.html:15
 msgid "No"
@@ -2662,7 +2662,7 @@ msgid "Midwife"
 msgstr "Hebamme"
 
 #: data/fit4ehealth/context-questions.json:248
-#: data/surveySMEDemand/context-questions.json:42
+#: data/surveySMEDemand/context-questions.json:56
 msgid "Other"
 msgstr "Andere"
 
@@ -5645,16 +5645,16 @@ msgstr ""
 
 #: data/fit4operatorsurvey/questions.json:499
 #: data/fit4operatorsurvey/questions.json:685
-#: data/surveySMEDemand/questions.json:263
-#: data/surveySMEDemand/questions.json:881
-#: data/surveySMEDemand/questions.json:1002
-#: data/surveySMEDemand/questions.json:1095
-#: data/surveySMEDemand/questions.json:1160
-#: data/surveySMEDemand/questions.json:1253
-#: data/surveySMEDemand/questions.json:1388
-#: data/surveySMEDemand/questions.json:1537
-#: data/surveySMEDemand/questions.json:1858
-#: data/surveySMEDemand/questions.json:1979
+#: data/surveySMEDemand/questions.json:291
+#: data/surveySMEDemand/questions.json:909
+#: data/surveySMEDemand/questions.json:1030
+#: data/surveySMEDemand/questions.json:1123
+#: data/surveySMEDemand/questions.json:1188
+#: data/surveySMEDemand/questions.json:1281
+#: data/surveySMEDemand/questions.json:1416
+#: data/surveySMEDemand/questions.json:1565
+#: data/surveySMEDemand/questions.json:1886
+#: data/surveySMEDemand/questions.json:2007
 msgid "Other:"
 msgstr "Sonstiges:"
 
@@ -7724,7 +7724,7 @@ msgstr ""
 "fixiert und Ihren Mitarbeitern bekannt?"
 
 #: data/surveySMEDemand/context-questions.json:4
-#: data/surveySMEDemand/context-questions.json:48
+#: data/surveySMEDemand/context-questions.json:62
 #: data/surveySMEDemand/context-questions.json:99
 #: data/surveySMEDemand/context-questions.json:192
 msgid "Socio-economic data"
@@ -7745,41 +7745,46 @@ msgid "Chief Operating Officer"
 msgstr "Geschäftsführer"
 
 #: data/surveySMEDemand/context-questions.json:28
+#: data/surveySMEDemand/questions.json:221
+#| msgid "Chief Operating Officer"
+msgid "Chief Information Officer"
+msgstr ""
+
+#: data/surveySMEDemand/context-questions.json:35
+#: data/surveySMEDemand/questions.json:235
+#| msgid "Information Security"
+msgid "Chief Information Security Officer"
+msgstr ""
+
+#: data/surveySMEDemand/context-questions.json:42
 msgid "Director"
 msgstr "Direktor(in)"
 
-#: data/surveySMEDemand/context-questions.json:35
+#: data/surveySMEDemand/context-questions.json:49
 msgid "IT Admin"
 msgstr "IT-Administrator"
 
-#: data/surveySMEDemand/context-questions.json:51
+#: data/surveySMEDemand/context-questions.json:65
 msgid "How many employees does your business have?"
 msgstr "Wie viele Mitarbeiter hat Ihr Unternehmen?"
 
-#: data/surveySMEDemand/context-questions.json:58
-#: data/surveySMEDemand/questions.json:718
+#: data/surveySMEDemand/context-questions.json:72
+#: data/surveySMEDemand/questions.json:746
 msgid "1"
 msgstr "1"
 
-#: data/surveySMEDemand/context-questions.json:65
-msgid "2-10"
-msgstr "2-10"
-
-#: data/surveySMEDemand/context-questions.json:72
-msgid "11-25"
-msgstr "11-25"
-
 #: data/surveySMEDemand/context-questions.json:79
-msgid "26-50"
-msgstr "26-50"
+#| msgid "<1%"
+msgid "<10"
+msgstr ""
 
 #: data/surveySMEDemand/context-questions.json:86
-msgid "51-75"
-msgstr "51-75"
+msgid "<50"
+msgstr ""
 
 #: data/surveySMEDemand/context-questions.json:93
-msgid "76-250"
-msgstr "76-250"
+msgid "<250"
+msgstr ""
 
 #: data/surveySMEDemand/context-questions.json:102
 msgid "In which canton is your head office located?"
@@ -7928,17 +7933,17 @@ msgstr "Schwerpunkt, Exterritoriale Organisationen und Körperschaften"
 
 #: data/surveySMEDemand/questions.json:3 data/surveySMEDemand/questions.json:82
 #: data/surveySMEDemand/questions.json:175
-#: data/surveySMEDemand/questions.json:268
-#: data/surveySMEDemand/questions.json:319
-#: data/surveySMEDemand/questions.json:370
+#: data/surveySMEDemand/questions.json:296
+#: data/surveySMEDemand/questions.json:347
+#: data/surveySMEDemand/questions.json:398
 msgid "Entreprise & organisation"
 msgstr "Unternehmen & Organisation"
 
 #: data/surveySMEDemand/questions.json:4 data/surveySMEDemand/questions.json:83
 #: data/surveySMEDemand/questions.json:176
-#: data/surveySMEDemand/questions.json:269
-#: data/surveySMEDemand/questions.json:320
-#: data/surveySMEDemand/questions.json:371
+#: data/surveySMEDemand/questions.json:297
+#: data/surveySMEDemand/questions.json:348
+#: data/surveySMEDemand/questions.json:399
 msgid "Activities"
 msgstr "Aktivitäten"
 
@@ -8017,26 +8022,28 @@ msgstr ">5%"
 #: data/surveySMEDemand/questions.json:229
 #: data/surveySMEDemand/questions.json:243
 #: data/surveySMEDemand/questions.json:257
-#: data/surveySMEDemand/questions.json:272
+#: data/surveySMEDemand/questions.json:271
+#: data/surveySMEDemand/questions.json:285
+#: data/surveySMEDemand/questions.json:300
 msgid "Your employees are allowed to work..."
 msgstr "Ihren Mitarbeiter/innen ist die Arbeit erlaubt ..."
 
-#: data/surveySMEDemand/questions.json:221
+#: data/surveySMEDemand/questions.json:249
 msgid "IT manager"
 msgstr "IT-Manager"
 
-#: data/surveySMEDemand/questions.json:235
+#: data/surveySMEDemand/questions.json:263
 msgid "Cybersecurity manager"
 msgstr "Cyber-Sicherheits-Manager"
 
-#: data/surveySMEDemand/questions.json:249
+#: data/surveySMEDemand/questions.json:277
 msgid "External service provider"
 msgstr "Externer Dienstleister"
 
-#: data/surveySMEDemand/questions.json:280
-#: data/surveySMEDemand/questions.json:294
 #: data/surveySMEDemand/questions.json:308
-#: data/surveySMEDemand/questions.json:323
+#: data/surveySMEDemand/questions.json:322
+#: data/surveySMEDemand/questions.json:336
+#: data/surveySMEDemand/questions.json:351
 msgid ""
 "Are your employees allowed to use their personal devices (phones, tablets, "
 "computers) for work?"
@@ -8044,15 +8051,15 @@ msgstr ""
 "Dürfen Ihre Mitarbeiter/innen ihre persönlichen Geräte (Telefon, Tablet, "
 "Computer) bei der Arbeit einsetzen?"
 
-#: data/surveySMEDemand/questions.json:286
+#: data/surveySMEDemand/questions.json:314
 msgid "Outside the company (telecommuting and/or business travel)."
 msgstr "außerhalb des Unternehmens (Telearbeit und/oder Geschäftsreisen)."
 
-#: data/surveySMEDemand/questions.json:300
+#: data/surveySMEDemand/questions.json:328
 msgid "With their personal devices (phones, tablets, computers...)."
 msgstr "mit ihren persönlichen Geräten (Telefon, Tablet, Computer usw.)."
 
-#: data/surveySMEDemand/questions.json:314
+#: data/surveySMEDemand/questions.json:342
 msgid ""
 "Only inside the company and personal devices can't be connected to the "
 "office network."
@@ -8060,252 +8067,252 @@ msgstr ""
 "Nur innerhalb des Unternehmens, und persönliche Geräte können nicht an das "
 "Büronetz angeschlossen werden."
 
-#: data/surveySMEDemand/questions.json:331
-#: data/surveySMEDemand/questions.json:345
 #: data/surveySMEDemand/questions.json:359
-#: data/surveySMEDemand/questions.json:374
+#: data/surveySMEDemand/questions.json:373
+#: data/surveySMEDemand/questions.json:387
+#: data/surveySMEDemand/questions.json:402
 msgid "Did you ever get questions from your customers about..."
 msgstr "Wurden Sie von Kunden jemals gefragt,"
 
-#: data/surveySMEDemand/questions.json:365
+#: data/surveySMEDemand/questions.json:393
 msgid "Not sure"
 msgstr "Unklar"
 
-#: data/surveySMEDemand/questions.json:382
-#: data/surveySMEDemand/questions.json:396
 #: data/surveySMEDemand/questions.json:410
 #: data/surveySMEDemand/questions.json:424
-#: data/surveySMEDemand/questions.json:439
+#: data/surveySMEDemand/questions.json:438
+#: data/surveySMEDemand/questions.json:452
+#: data/surveySMEDemand/questions.json:467
 msgid ""
 "Have your company's employees ever participated in an awareness program?"
 msgstr ""
 "Haben Ihre Mitarbeiter/innen an einem Sensibilisierungsprogramm teilgenommen?"
 
-#: data/surveySMEDemand/questions.json:388
+#: data/surveySMEDemand/questions.json:416
 msgid "How you protect their data?"
 msgstr "wie Sie deren Daten schützen?"
 
-#: data/surveySMEDemand/questions.json:402
+#: data/surveySMEDemand/questions.json:430
 msgid "How you protect yourself against cybersecurity threats?"
 msgstr "wie Sie sich selbst gegen Cyber-Sicherheits-Bedrohungen schützen?"
 
-#: data/surveySMEDemand/questions.json:416
+#: data/surveySMEDemand/questions.json:444
 msgid "Anything else related to cybersecurity?"
 msgstr "Sonstige Fragen zum Thema Cyber-Sicherheit?"
 
-#: data/surveySMEDemand/questions.json:430
+#: data/surveySMEDemand/questions.json:458
 msgid "None of the above"
 msgstr "Nichts davon"
 
-#: data/surveySMEDemand/questions.json:435
-#: data/surveySMEDemand/questions.json:528
-#: data/surveySMEDemand/questions.json:607
-#: data/surveySMEDemand/questions.json:686
+#: data/surveySMEDemand/questions.json:463
+#: data/surveySMEDemand/questions.json:556
+#: data/surveySMEDemand/questions.json:635
+#: data/surveySMEDemand/questions.json:714
 msgid "Skills & awareness"
 msgstr "Fähigkeiten & Bewusstsein"
 
-#: data/surveySMEDemand/questions.json:436
-#: data/surveySMEDemand/questions.json:529
-#: data/surveySMEDemand/questions.json:608
-#: data/surveySMEDemand/questions.json:687
+#: data/surveySMEDemand/questions.json:464
+#: data/surveySMEDemand/questions.json:557
+#: data/surveySMEDemand/questions.json:636
+#: data/surveySMEDemand/questions.json:715
 msgid "Training"
 msgstr "Ausbildung"
 
-#: data/surveySMEDemand/questions.json:447
-#: data/surveySMEDemand/questions.json:461
 #: data/surveySMEDemand/questions.json:475
 #: data/surveySMEDemand/questions.json:489
 #: data/surveySMEDemand/questions.json:503
 #: data/surveySMEDemand/questions.json:517
-#: data/surveySMEDemand/questions.json:532
+#: data/surveySMEDemand/questions.json:531
+#: data/surveySMEDemand/questions.json:545
+#: data/surveySMEDemand/questions.json:560
 msgid "What's your confidence level in dealing with cybersecurity?"
 msgstr "Wie hoch ist Ihr Vertrauensniveau in Bezug auf Cyber-Sicherheit?"
 
-#: data/surveySMEDemand/questions.json:467
-#: data/surveySMEDemand/questions.json:2030
+#: data/surveySMEDemand/questions.json:495
+#: data/surveySMEDemand/questions.json:2058
 msgid "Partially"
 msgstr "Teilweise"
 
-#: data/surveySMEDemand/questions.json:481
+#: data/surveySMEDemand/questions.json:509
 msgid "1 year ago"
 msgstr "Vor 1 Jahr"
 
-#: data/surveySMEDemand/questions.json:495
+#: data/surveySMEDemand/questions.json:523
 msgid "2 years ago"
 msgstr "Vor 2 Jahren"
 
-#: data/surveySMEDemand/questions.json:509
+#: data/surveySMEDemand/questions.json:537
 msgid "3 years ago"
 msgstr "Vor 3 Jahren"
 
-#: data/surveySMEDemand/questions.json:523
+#: data/surveySMEDemand/questions.json:551
 msgid "over 3 years ago"
 msgstr "vor über 3 Jahren"
 
-#: data/surveySMEDemand/questions.json:540
-#: data/surveySMEDemand/questions.json:554
 #: data/surveySMEDemand/questions.json:568
 #: data/surveySMEDemand/questions.json:582
 #: data/surveySMEDemand/questions.json:596
-#: data/surveySMEDemand/questions.json:611
+#: data/surveySMEDemand/questions.json:610
+#: data/surveySMEDemand/questions.json:624
+#: data/surveySMEDemand/questions.json:639
 msgid "Have you personally received cybersecurity training?"
 msgstr ""
 "Haben Sie persönlich an einer Cyber-Sicherheits-Fortbildung teilgenommen?"
 
-#: data/surveySMEDemand/questions.json:546
-#: data/surveySMEDemand/questions.json:2090
+#: data/surveySMEDemand/questions.json:574
+#: data/surveySMEDemand/questions.json:2118
 msgid "Very high"
 msgstr "Sehr hoch"
 
-#: data/surveySMEDemand/questions.json:560
-#: data/surveySMEDemand/questions.json:2104
+#: data/surveySMEDemand/questions.json:588
+#: data/surveySMEDemand/questions.json:2132
 msgid "High"
 msgstr "Hoch"
 
-#: data/surveySMEDemand/questions.json:574
-#: data/surveySMEDemand/questions.json:2118
+#: data/surveySMEDemand/questions.json:602
+#: data/surveySMEDemand/questions.json:2146
 msgid "Moderate"
 msgstr "Mittel"
 
-#: data/surveySMEDemand/questions.json:588
-#: data/surveySMEDemand/questions.json:2132
+#: data/surveySMEDemand/questions.json:616
+#: data/surveySMEDemand/questions.json:2160
 msgid "Low"
 msgstr "Niedrig"
 
-#: data/surveySMEDemand/questions.json:602
+#: data/surveySMEDemand/questions.json:630
 msgid "Very low"
 msgstr "Sehr niedrig"
 
-#: data/surveySMEDemand/questions.json:619
-#: data/surveySMEDemand/questions.json:633
 #: data/surveySMEDemand/questions.json:647
 #: data/surveySMEDemand/questions.json:661
 #: data/surveySMEDemand/questions.json:675
-#: data/surveySMEDemand/questions.json:690
+#: data/surveySMEDemand/questions.json:689
+#: data/surveySMEDemand/questions.json:703
+#: data/surveySMEDemand/questions.json:718
 msgid "Do you have one or more employees with computer skills?"
 msgstr ""
 "Verfügen Sie über eine/n oder mehrere Mitarbeiter/innen mit Computer-"
 "Kenntnissen?"
 
-#: data/surveySMEDemand/questions.json:625
+#: data/surveySMEDemand/questions.json:653
 msgid "Awareness event/training organized by professional chambers"
 msgstr "Sensibilisierungs-Veranstaltung / Fortbildung durch Berufskammern"
 
-#: data/surveySMEDemand/questions.json:639
+#: data/surveySMEDemand/questions.json:667
 msgid "Professional certification"
 msgstr "Berufliche Zertifizierung"
 
-#: data/surveySMEDemand/questions.json:653
+#: data/surveySMEDemand/questions.json:681
 msgid "University degree"
 msgstr "Universitätsabschluss"
 
-#: data/surveySMEDemand/questions.json:667
+#: data/surveySMEDemand/questions.json:695
 msgid "Self-study"
 msgstr "Selbststudium"
 
-#: data/surveySMEDemand/questions.json:698
-#: data/surveySMEDemand/questions.json:712
 #: data/surveySMEDemand/questions.json:726
 #: data/surveySMEDemand/questions.json:740
 #: data/surveySMEDemand/questions.json:754
 #: data/surveySMEDemand/questions.json:768
-#: data/surveySMEDemand/questions.json:783
+#: data/surveySMEDemand/questions.json:782
+#: data/surveySMEDemand/questions.json:796
+#: data/surveySMEDemand/questions.json:811
 msgid "In which areas are you using digital tools/platforms in your company?"
 msgstr ""
 "In welchen Bereichen nutzen Sie digitale Werkzeuge bzw. Plattformen in Ihrem "
 "Unternehmen?"
 
-#: data/surveySMEDemand/questions.json:704
+#: data/surveySMEDemand/questions.json:732
 msgid "0"
 msgstr "0"
 
-#: data/surveySMEDemand/questions.json:732
+#: data/surveySMEDemand/questions.json:760
 msgid "2-5"
 msgstr "2-5"
 
-#: data/surveySMEDemand/questions.json:760
+#: data/surveySMEDemand/questions.json:788
 msgid "11-20"
 msgstr "11-20"
 
-#: data/surveySMEDemand/questions.json:774
+#: data/surveySMEDemand/questions.json:802
 msgid "+20"
 msgstr "+20"
 
-#: data/surveySMEDemand/questions.json:779
-#: data/surveySMEDemand/questions.json:886
-#: data/surveySMEDemand/questions.json:1007
-#: data/surveySMEDemand/questions.json:1100
-#: data/surveySMEDemand/questions.json:1165
-#: data/surveySMEDemand/questions.json:1258
-#: data/surveySMEDemand/questions.json:1393
+#: data/surveySMEDemand/questions.json:807
+#: data/surveySMEDemand/questions.json:914
+#: data/surveySMEDemand/questions.json:1035
+#: data/surveySMEDemand/questions.json:1128
+#: data/surveySMEDemand/questions.json:1193
+#: data/surveySMEDemand/questions.json:1286
+#: data/surveySMEDemand/questions.json:1421
 msgid "Digital services and products"
 msgstr "Digitale Dienstleistungen und Produkte"
 
-#: data/surveySMEDemand/questions.json:780
-#: data/surveySMEDemand/questions.json:887
-#: data/surveySMEDemand/questions.json:1008
-#: data/surveySMEDemand/questions.json:1101
-#: data/surveySMEDemand/questions.json:1166
-#: data/surveySMEDemand/questions.json:1259
+#: data/surveySMEDemand/questions.json:808
+#: data/surveySMEDemand/questions.json:915
+#: data/surveySMEDemand/questions.json:1036
+#: data/surveySMEDemand/questions.json:1129
+#: data/surveySMEDemand/questions.json:1194
+#: data/surveySMEDemand/questions.json:1287
 msgid "Digital tools"
 msgstr "Digitale Werkzeuge"
 
-#: data/surveySMEDemand/questions.json:791
-#: data/surveySMEDemand/questions.json:890
+#: data/surveySMEDemand/questions.json:819
+#: data/surveySMEDemand/questions.json:918
 msgid ""
 "As you use digital tools for communication, could you specify which kind?"
 msgstr ""
 "Wenn Sie digitale Werkzeuge für die Kommunikation einsetzen, können Sie die "
 "Art angeben?"
 
-#: data/surveySMEDemand/questions.json:797
+#: data/surveySMEDemand/questions.json:825
 msgid "Communication (website, mailbox, ...)"
 msgstr "Kommunikation (Website, Mailbox usw.)"
 
-#: data/surveySMEDemand/questions.json:805
-#: data/surveySMEDemand/questions.json:1011
+#: data/surveySMEDemand/questions.json:833
+#: data/surveySMEDemand/questions.json:1039
 msgid "As you use digital tools for accounting, could you specify which kind?"
 msgstr ""
 "Wenn Sie digitale Werkzeuge für die Buchhaltung einsetzen, können Sie die "
 "Art angeben?"
 
-#: data/surveySMEDemand/questions.json:811
+#: data/surveySMEDemand/questions.json:839
 msgid "Accounting (accounting software, electronic invoicing, ...)"
 msgstr ""
 "Buchhaltung (Buchhaltungs-Software, elektronische Rechnungsstellung usw.)"
 
-#: data/surveySMEDemand/questions.json:819
-#: data/surveySMEDemand/questions.json:1104
+#: data/surveySMEDemand/questions.json:847
+#: data/surveySMEDemand/questions.json:1132
 msgid "As you use digital tools for sales, could you specify which kind?"
 msgstr ""
 "Wenn Sie digitale Werkzeuge für den Vertrieb einsetzen, können Sie die Art "
 "angeben?"
 
-#: data/surveySMEDemand/questions.json:825
+#: data/surveySMEDemand/questions.json:853
 msgid ""
 "Sales (customer relationship management tool (CRM), online sales "
 "platform, ...)"
 msgstr "Vertrieb Kundenpflege-Tool (CRM), Online-Verkaufsplattform usw.)"
 
-#: data/surveySMEDemand/questions.json:833
-#: data/surveySMEDemand/questions.json:1169
+#: data/surveySMEDemand/questions.json:861
+#: data/surveySMEDemand/questions.json:1197
 msgid "As you use digital tools for management, could you specify which kind?"
 msgstr ""
 "Wenn Sie digitale Management-Werkzeuge einsetzen, können Sie die Art angeben?"
 
-#: data/surveySMEDemand/questions.json:839
+#: data/surveySMEDemand/questions.json:867
 msgid "Management (integrated management software package (ERP), cloud, ...)"
 msgstr "Management (Integriertes Management-Softwarepaket (ERP), Cloud usw.)"
 
-#: data/surveySMEDemand/questions.json:847
-#: data/surveySMEDemand/questions.json:1262
+#: data/surveySMEDemand/questions.json:875
+#: data/surveySMEDemand/questions.json:1290
 msgid ""
 "As you use digital tools for manufacturing, could you specify which kind?"
 msgstr ""
 "Wenn Sie digitale Werkzeuge für die Herstellung einsetzen, können Sie die "
 "Art angeben?"
 
-#: data/surveySMEDemand/questions.json:853
+#: data/surveySMEDemand/questions.json:881
 msgid ""
 "Manufacturing (Industrial Internet of Things (IIoT), Big Data and analytics "
 "tools, ...)"
@@ -8313,34 +8320,32 @@ msgstr ""
 "Herstellung (Industrielles Internet der Dinge (IIoT), Massendaten und "
 "Analyse-Tools usw.)"
 
-#: data/surveySMEDemand/questions.json:861
-#: data/surveySMEDemand/questions.json:875
-#: data/surveySMEDemand/questions.json:898
-#: data/surveySMEDemand/questions.json:912
+#: data/surveySMEDemand/questions.json:889
+#: data/surveySMEDemand/questions.json:903
 #: data/surveySMEDemand/questions.json:926
 #: data/surveySMEDemand/questions.json:940
 #: data/surveySMEDemand/questions.json:954
 #: data/surveySMEDemand/questions.json:968
 #: data/surveySMEDemand/questions.json:982
 #: data/surveySMEDemand/questions.json:996
-#: data/surveySMEDemand/questions.json:1019
-#: data/surveySMEDemand/questions.json:1033
+#: data/surveySMEDemand/questions.json:1010
+#: data/surveySMEDemand/questions.json:1024
 #: data/surveySMEDemand/questions.json:1047
 #: data/surveySMEDemand/questions.json:1061
 #: data/surveySMEDemand/questions.json:1075
 #: data/surveySMEDemand/questions.json:1089
-#: data/surveySMEDemand/questions.json:1112
-#: data/surveySMEDemand/questions.json:1126
+#: data/surveySMEDemand/questions.json:1103
+#: data/surveySMEDemand/questions.json:1117
 #: data/surveySMEDemand/questions.json:1140
 #: data/surveySMEDemand/questions.json:1154
-#: data/surveySMEDemand/questions.json:1177
-#: data/surveySMEDemand/questions.json:1191
+#: data/surveySMEDemand/questions.json:1168
+#: data/surveySMEDemand/questions.json:1182
 #: data/surveySMEDemand/questions.json:1205
 #: data/surveySMEDemand/questions.json:1219
 #: data/surveySMEDemand/questions.json:1233
 #: data/surveySMEDemand/questions.json:1247
-#: data/surveySMEDemand/questions.json:1270
-#: data/surveySMEDemand/questions.json:1284
+#: data/surveySMEDemand/questions.json:1261
+#: data/surveySMEDemand/questions.json:1275
 #: data/surveySMEDemand/questions.json:1298
 #: data/surveySMEDemand/questions.json:1312
 #: data/surveySMEDemand/questions.json:1326
@@ -8348,134 +8353,134 @@ msgstr ""
 #: data/surveySMEDemand/questions.json:1354
 #: data/surveySMEDemand/questions.json:1368
 #: data/surveySMEDemand/questions.json:1382
-#: data/surveySMEDemand/questions.json:1397
+#: data/surveySMEDemand/questions.json:1396
+#: data/surveySMEDemand/questions.json:1410
+#: data/surveySMEDemand/questions.json:1425
 msgid "Does your company use any of the following cybersecurity solutions?"
 msgstr ""
 "Setzt Ihr Unternehmen irgendeine der nachstehenden Cyber-Sicherheitslösungen "
 "ein?"
 
-#: data/surveySMEDemand/questions.json:867
+#: data/surveySMEDemand/questions.json:895
 msgid "None"
 msgstr "Keiner"
 
-#: data/surveySMEDemand/questions.json:904
+#: data/surveySMEDemand/questions.json:932
 msgid "Website"
 msgstr "Website"
 
-#: data/surveySMEDemand/questions.json:918
+#: data/surveySMEDemand/questions.json:946
 msgid "Social networks"
 msgstr "Soziale Netze"
 
-#: data/surveySMEDemand/questions.json:932
+#: data/surveySMEDemand/questions.json:960
 msgid "Mailbox"
 msgstr "Mailbox"
 
-#: data/surveySMEDemand/questions.json:946
+#: data/surveySMEDemand/questions.json:974
 msgid "Email marketing"
 msgstr "E-Mail-Marketing"
 
-#: data/surveySMEDemand/questions.json:960
+#: data/surveySMEDemand/questions.json:988
 msgid "Videoconferencing"
 msgstr "Videokonferenzen"
 
-#: data/surveySMEDemand/questions.json:974
+#: data/surveySMEDemand/questions.json:1002
 msgid "Internet traffic monitoring protocol"
 msgstr "Datenverkehr-Überwachungsprotokoll"
 
-#: data/surveySMEDemand/questions.json:988
+#: data/surveySMEDemand/questions.json:1016
 msgid "Online tool for sending large files"
 msgstr "Online-Tool zum Versenden großer Dateien"
 
-#: data/surveySMEDemand/questions.json:1025
+#: data/surveySMEDemand/questions.json:1053
 msgid "Accounting software"
 msgstr "Buchhaltungssoftware"
 
-#: data/surveySMEDemand/questions.json:1039
+#: data/surveySMEDemand/questions.json:1067
 msgid "Expense report tracking tool"
 msgstr "Nachverfolgungstool für Aufwandsberichte"
 
-#: data/surveySMEDemand/questions.json:1053
+#: data/surveySMEDemand/questions.json:1081
 msgid "Electronic invoicing"
 msgstr "Elektronische Rechnungsstellung"
 
-#: data/surveySMEDemand/questions.json:1067
+#: data/surveySMEDemand/questions.json:1095
 msgid "Electronic signature"
 msgstr "Elektronische Unterschrift"
 
-#: data/surveySMEDemand/questions.json:1081
+#: data/surveySMEDemand/questions.json:1109
 msgid "Authentication"
 msgstr "Authentifizierung"
 
-#: data/surveySMEDemand/questions.json:1118
+#: data/surveySMEDemand/questions.json:1146
 msgid "Online payment tool"
 msgstr "Online-Zahlungstool"
 
-#: data/surveySMEDemand/questions.json:1132
+#: data/surveySMEDemand/questions.json:1160
 msgid "Online sales platform"
 msgstr "Online-Vertriebsplattform"
 
-#: data/surveySMEDemand/questions.json:1146
+#: data/surveySMEDemand/questions.json:1174
 msgid "Customer relationship management (CRM)"
 msgstr "Kundenpflege (CRM)"
 
-#: data/surveySMEDemand/questions.json:1183
+#: data/surveySMEDemand/questions.json:1211
 msgid "Inventory management"
 msgstr "Lagerhaltung"
 
-#: data/surveySMEDemand/questions.json:1197
+#: data/surveySMEDemand/questions.json:1225
 msgid "Integrated management software package (ERP)"
 msgstr "Integriertes Management-Softwarepaket (ERP)"
 
-#: data/surveySMEDemand/questions.json:1211
+#: data/surveySMEDemand/questions.json:1239
 msgid "Project management software"
 msgstr "Projektverwaltungs-Software"
 
-#: data/surveySMEDemand/questions.json:1225
+#: data/surveySMEDemand/questions.json:1253
 msgid "Document sharing tool (cloud)"
 msgstr "Tool zum Teilen von Dokumenten (Cloud)"
 
-#: data/surveySMEDemand/questions.json:1239
+#: data/surveySMEDemand/questions.json:1267
 msgid "Automatic data backup software"
 msgstr "Automatische Datensicherungs-Software"
 
-#: data/surveySMEDemand/questions.json:1276
+#: data/surveySMEDemand/questions.json:1304
 msgid "Industrial Internet of Things (IIoT)"
 msgstr "Industrielles Internet der Dinge (IIoT)"
 
-#: data/surveySMEDemand/questions.json:1290
+#: data/surveySMEDemand/questions.json:1318
 msgid "Big Data and analytics tools"
 msgstr "Massendaten und Analyse-Tools"
 
-#: data/surveySMEDemand/questions.json:1304
+#: data/surveySMEDemand/questions.json:1332
 msgid "Advanced robotics"
 msgstr "Fortgeschrittene Robotik"
 
-#: data/surveySMEDemand/questions.json:1318
+#: data/surveySMEDemand/questions.json:1346
 msgid "Additive manufacturing / 3D printing"
 msgstr "Additive Fertigung / 3D-Druck"
 
-#: data/surveySMEDemand/questions.json:1332
+#: data/surveySMEDemand/questions.json:1360
 msgid "Digital thread and twins"
 msgstr "Digitale Prozessstränge und Zwillinge"
 
-#: data/surveySMEDemand/questions.json:1346
+#: data/surveySMEDemand/questions.json:1374
 msgid "Augmented reality"
 msgstr "Erweiterte Realität"
 
-#: data/surveySMEDemand/questions.json:1360
+#: data/surveySMEDemand/questions.json:1388
 msgid "B2B Order Management System"
 msgstr "B2B-Auftragsverwaltungs-System"
 
-#: data/surveySMEDemand/questions.json:1374
+#: data/surveySMEDemand/questions.json:1402
 msgid "Product Information Management (PIM) system"
 msgstr "System zur Verwaltung von Produktinformationen (PIM)"
 
-#: data/surveySMEDemand/questions.json:1394
+#: data/surveySMEDemand/questions.json:1422
 msgid "Cybersecurity practices"
 msgstr "Cybersicherheitspraktiken"
 
-#: data/surveySMEDemand/questions.json:1405
-#: data/surveySMEDemand/questions.json:1419
 #: data/surveySMEDemand/questions.json:1433
 #: data/surveySMEDemand/questions.json:1447
 #: data/surveySMEDemand/questions.json:1461
@@ -8484,114 +8489,116 @@ msgstr "Cybersicherheitspraktiken"
 #: data/surveySMEDemand/questions.json:1503
 #: data/surveySMEDemand/questions.json:1517
 #: data/surveySMEDemand/questions.json:1531
-#: data/surveySMEDemand/questions.json:1546
+#: data/surveySMEDemand/questions.json:1545
+#: data/surveySMEDemand/questions.json:1559
+#: data/surveySMEDemand/questions.json:1574
 msgid "Who supports you to manage your cybersecurity?"
 msgstr "Wer unterstützt Sie beim Umgang mit Cyber-Sicherheit?"
 
-#: data/surveySMEDemand/questions.json:1411
+#: data/surveySMEDemand/questions.json:1439
 msgid "Password manager"
 msgstr "Password-Manager"
 
-#: data/surveySMEDemand/questions.json:1439
+#: data/surveySMEDemand/questions.json:1467
 msgid "Data backup solution"
 msgstr "Datensicherungs-Lösung"
 
-#: data/surveySMEDemand/questions.json:1453
+#: data/surveySMEDemand/questions.json:1481
 msgid "VPN"
 msgstr "VPN (Virtuelles privates Netz)"
 
-#: data/surveySMEDemand/questions.json:1467
+#: data/surveySMEDemand/questions.json:1495
 msgid "Email encryption"
 msgstr "E-Mail-Verschlüsselung"
 
-#: data/surveySMEDemand/questions.json:1481
+#: data/surveySMEDemand/questions.json:1509
 msgid ""
 "Intrusion detection systems (IDS) and intrusion prevention systems (IPS)"
 msgstr ""
 "Angriffserkennungssysteme (IDS) und Systeme zur Verhinderung von "
 "Eindringungsversuchen (IPS)"
 
-#: data/surveySMEDemand/questions.json:1495
+#: data/surveySMEDemand/questions.json:1523
 msgid "Information security management system (ISMS)"
 msgstr "Informationssicherheits-Managementsystem (ISMS)"
 
-#: data/surveySMEDemand/questions.json:1509
+#: data/surveySMEDemand/questions.json:1537
 msgid "Access management system"
 msgstr "Zugriffs-Managementsystem"
 
-#: data/surveySMEDemand/questions.json:1542
-#: data/surveySMEDemand/questions.json:1543
-#: data/surveySMEDemand/questions.json:1663
-#: data/surveySMEDemand/questions.json:1664
-#: data/surveySMEDemand/questions.json:1742
-#: data/surveySMEDemand/questions.json:1743
-#: data/surveySMEDemand/questions.json:1863
-#: data/surveySMEDemand/questions.json:1864
-#: data/surveySMEDemand/questions.json:1984
-#: data/surveySMEDemand/questions.json:1985
-#: data/surveySMEDemand/questions.json:2049
-#: data/surveySMEDemand/questions.json:2050
-#: data/surveySMEDemand/questions.json:2072
-#: data/surveySMEDemand/questions.json:2073
-#: data/surveySMEDemand/questions.json:2165
-#: data/surveySMEDemand/questions.json:2166
+#: data/surveySMEDemand/questions.json:1570
+#: data/surveySMEDemand/questions.json:1571
+#: data/surveySMEDemand/questions.json:1691
+#: data/surveySMEDemand/questions.json:1692
+#: data/surveySMEDemand/questions.json:1770
+#: data/surveySMEDemand/questions.json:1771
+#: data/surveySMEDemand/questions.json:1891
+#: data/surveySMEDemand/questions.json:1892
+#: data/surveySMEDemand/questions.json:2012
+#: data/surveySMEDemand/questions.json:2013
+#: data/surveySMEDemand/questions.json:2077
+#: data/surveySMEDemand/questions.json:2078
+#: data/surveySMEDemand/questions.json:2100
+#: data/surveySMEDemand/questions.json:2101
+#: data/surveySMEDemand/questions.json:2193
+#: data/surveySMEDemand/questions.json:2194
 msgid "Market & solutions"
 msgstr "Markt & Dienstleistungen"
 
-#: data/surveySMEDemand/questions.json:1554
-#: data/surveySMEDemand/questions.json:1568
 #: data/surveySMEDemand/questions.json:1582
 #: data/surveySMEDemand/questions.json:1596
 #: data/surveySMEDemand/questions.json:1610
 #: data/surveySMEDemand/questions.json:1624
 #: data/surveySMEDemand/questions.json:1638
 #: data/surveySMEDemand/questions.json:1652
-#: data/surveySMEDemand/questions.json:1667
+#: data/surveySMEDemand/questions.json:1666
+#: data/surveySMEDemand/questions.json:1680
+#: data/surveySMEDemand/questions.json:1695
 msgid "What other organisation(s) is(are) relevant for your cybersecurity?"
 msgstr ""
 "Welche sonstige(n) Organisation(en) ist (sind) für Ihre Cyber-Sicherheit von "
 "Belang?"
 
-#: data/surveySMEDemand/questions.json:1560
+#: data/surveySMEDemand/questions.json:1588
 msgid "An external IT specialist"
 msgstr "Ein externer IT-Fachmann"
 
-#: data/surveySMEDemand/questions.json:1574
+#: data/surveySMEDemand/questions.json:1602
 msgid "An internal IT specialist"
 msgstr "Ein interner IT-Fachmann"
 
-#: data/surveySMEDemand/questions.json:1588
+#: data/surveySMEDemand/questions.json:1616
 msgid "An external cybersecurity specialist"
 msgstr "Ein externer Cyber-Sicherheits-Fachmann"
 
-#: data/surveySMEDemand/questions.json:1602
+#: data/surveySMEDemand/questions.json:1630
 msgid "An internal cybersecurity specialist"
 msgstr "Ein interner Syber-Sicherheits-Fachmann"
 
-#: data/surveySMEDemand/questions.json:1616
+#: data/surveySMEDemand/questions.json:1644
 msgid "My internet service provider"
 msgstr "Mein Internet-Dienstleister"
 
-#: data/surveySMEDemand/questions.json:1630
+#: data/surveySMEDemand/questions.json:1658
 msgid "A relative or a friend"
 msgstr "Ein Verwandter oder Bekannter"
 
-#: data/surveySMEDemand/questions.json:1644
+#: data/surveySMEDemand/questions.json:1672
 msgid "No one, or none of the above"
 msgstr "Niemand bzw. niemand der Genannten"
 
-#: data/surveySMEDemand/questions.json:1658
+#: data/surveySMEDemand/questions.json:1686
 msgid ""
 "I wish to receive help from (government, professional organisation, ...):"
 msgstr ""
 "Ich wünsche mir Unterstützung von (staatlichen Stellen, Berufsverband usw.):"
 
-#: data/surveySMEDemand/questions.json:1675
-#: data/surveySMEDemand/questions.json:1689
 #: data/surveySMEDemand/questions.json:1703
 #: data/surveySMEDemand/questions.json:1717
 #: data/surveySMEDemand/questions.json:1731
-#: data/surveySMEDemand/questions.json:1746
+#: data/surveySMEDemand/questions.json:1745
+#: data/surveySMEDemand/questions.json:1759
+#: data/surveySMEDemand/questions.json:1774
 msgid ""
 "What are your key drivers in the adoption of cybersecurity services or "
 "solutions?"
@@ -8599,57 +8606,57 @@ msgstr ""
 "Was sind Ihre Haupt-Antriebskräfte bei der Übernahme von Cyber-Sicherheits-"
 "Dienstleistungen bzw. -Lösungen?"
 
-#: data/surveySMEDemand/questions.json:1681
+#: data/surveySMEDemand/questions.json:1709
 msgid "IT specialist"
 msgstr "IT-Spezialist"
 
-#: data/surveySMEDemand/questions.json:1695
+#: data/surveySMEDemand/questions.json:1723
 msgid "Cybersecurity specialist"
 msgstr "Cyber-Sicherheits-Fachmann"
 
-#: data/surveySMEDemand/questions.json:1709
+#: data/surveySMEDemand/questions.json:1737
 msgid "Internet service provider"
 msgstr "Internet-Dienstleister"
 
-#: data/surveySMEDemand/questions.json:1723
+#: data/surveySMEDemand/questions.json:1751
 msgid "Professional organisation"
 msgstr "Berufsverband"
 
-#: data/surveySMEDemand/questions.json:1737
+#: data/surveySMEDemand/questions.json:1765
 msgid "Government entity"
 msgstr "Staatliche Stelle"
 
-#: data/surveySMEDemand/questions.json:1754
-#: data/surveySMEDemand/questions.json:1768
 #: data/surveySMEDemand/questions.json:1782
 #: data/surveySMEDemand/questions.json:1796
 #: data/surveySMEDemand/questions.json:1810
 #: data/surveySMEDemand/questions.json:1824
 #: data/surveySMEDemand/questions.json:1838
 #: data/surveySMEDemand/questions.json:1852
-#: data/surveySMEDemand/questions.json:1867
+#: data/surveySMEDemand/questions.json:1866
+#: data/surveySMEDemand/questions.json:1880
+#: data/surveySMEDemand/questions.json:1895
 msgid ""
 "What are your criteria for evaluating cybersecurity services or solutions?"
 msgstr ""
 "Welches sind Ihre Kriterien für die Bewertung von Cyber-Sicherheits-"
 "Dienstleistungen bzw. -Lösungen?"
 
-#: data/surveySMEDemand/questions.json:1760
+#: data/surveySMEDemand/questions.json:1788
 msgid "Your company is facing a cybersecurity incident"
 msgstr "Ihr Unternehmen ist mit einem Cyber-Sicherheits-Vorfall konfrontiert"
 
-#: data/surveySMEDemand/questions.json:1774
+#: data/surveySMEDemand/questions.json:1802
 msgid "A client has requested your company to adopt new tools"
 msgstr ""
 "Ein Kunde hat von Ihrem Unternehmen die Übernahme neuer Tools gefordert"
 
-#: data/surveySMEDemand/questions.json:1788
+#: data/surveySMEDemand/questions.json:1816
 msgid "Your company's IT service provider advised you to adopt new tools"
 msgstr ""
 "Der IT-Dienstleister Ihres Unternehmes hat Ihnen geraten, neue Tools zu "
 "übernehmen"
 
-#: data/surveySMEDemand/questions.json:1802
+#: data/surveySMEDemand/questions.json:1830
 msgid ""
 "You have heard about new threats from peers / other companies in your sector "
 "of activity"
@@ -8657,74 +8664,74 @@ msgstr ""
 "Von Fachkollegen bzw. andern Unternehmen in Ihrem Tätigkeitsbereich haben "
 "Sie von neuen Bedrohungen erfahren"
 
-#: data/surveySMEDemand/questions.json:1816
+#: data/surveySMEDemand/questions.json:1844
 msgid "You have heard about new threats in the news"
 msgstr "In den Nachrichten haben Sie von neuen Bedrohungen erfahren"
 
-#: data/surveySMEDemand/questions.json:1830
+#: data/surveySMEDemand/questions.json:1858
 msgid "Legal constraints"
 msgstr "Rechtliche Beschränkungen"
 
-#: data/surveySMEDemand/questions.json:1844
-#: data/surveySMEDemand/questions.json:1965
-#: data/surveySMEDemand/questions.json:2044
-#: data/surveySMEDemand/questions.json:2290
-#: data/surveySMEDemand/questions.json:2369
-#: data/surveySMEDemand/questions.json:2447
+#: data/surveySMEDemand/questions.json:1872
+#: data/surveySMEDemand/questions.json:1993
+#: data/surveySMEDemand/questions.json:2072
+#: data/surveySMEDemand/questions.json:2332
+#: data/surveySMEDemand/questions.json:2425
+#: data/surveySMEDemand/questions.json:2503
 msgid "I don't know"
 msgstr "Weiß nicht"
 
-#: data/surveySMEDemand/questions.json:1875
-#: data/surveySMEDemand/questions.json:1889
 #: data/surveySMEDemand/questions.json:1903
 #: data/surveySMEDemand/questions.json:1917
 #: data/surveySMEDemand/questions.json:1931
 #: data/surveySMEDemand/questions.json:1945
 #: data/surveySMEDemand/questions.json:1959
 #: data/surveySMEDemand/questions.json:1973
-#: data/surveySMEDemand/questions.json:1988
+#: data/surveySMEDemand/questions.json:1987
+#: data/surveySMEDemand/questions.json:2001
+#: data/surveySMEDemand/questions.json:2016
 msgid "Do the cybersecurity services available on the market suit your needs?"
 msgstr ""
 "Entsprechen die am Markt verfügbaren Cyber-Sicherheits-Dienstleistungen "
 "Ihren Bedürfnissen?"
 
-#: data/surveySMEDemand/questions.json:1881
+#: data/surveySMEDemand/questions.json:1909
 msgid "Price"
 msgstr "Preis"
 
-#: data/surveySMEDemand/questions.json:1895
+#: data/surveySMEDemand/questions.json:1923
 msgid "Comprehensiveness"
 msgstr "Verständlichkeit"
 
-#: data/surveySMEDemand/questions.json:1909
+#: data/surveySMEDemand/questions.json:1937
 msgid "Ease of use"
 msgstr "Benutzerfreundlichkeit"
 
-#: data/surveySMEDemand/questions.json:1923
+#: data/surveySMEDemand/questions.json:1951
 msgid "Trust in the seller"
 msgstr "Vertrauen in Anbieter"
 
-#: data/surveySMEDemand/questions.json:1937
+#: data/surveySMEDemand/questions.json:1965
 msgid "Technical specifications"
 msgstr "Technische Spezifikationen"
 
-#: data/surveySMEDemand/questions.json:1951
-#: data/surveySMEDemand/questions.json:2425
-#: data/surveySMEDemand/questions.json:2426
+#: data/surveySMEDemand/questions.json:1979
+#: data/surveySMEDemand/questions.json:2481
+#: data/surveySMEDemand/questions.json:2482
 msgid "Certification"
 msgstr "Zertifizierung"
 
-#: data/surveySMEDemand/questions.json:1996
-#: data/surveySMEDemand/questions.json:2038
-#: data/surveySMEDemand/questions.json:2061
-#: data/surveySMEDemand/questions.json:2076
+#: data/surveySMEDemand/questions.json:2024
+#: data/surveySMEDemand/questions.json:2066
+#: data/surveySMEDemand/questions.json:2089
+#: data/surveySMEDemand/questions.json:2104
 msgid "How trustworthy would you evaluate your digital service provider(s)?"
 msgstr ""
 "Für wie vertrauenswürdig würden Sie Ihre(n) IT-Dienstleister einschätzen?"
 
-#: data/surveySMEDemand/questions.json:2010
-#: data/surveySMEDemand/questions.json:2024
-#: data/surveySMEDemand/questions.json:2053
+#: data/surveySMEDemand/questions.json:2038
+#: data/surveySMEDemand/questions.json:2052
+#: data/surveySMEDemand/questions.json:2081
 msgid ""
 "If the cybersecurity services available in the market do not match your "
 "needs, what are you missing?"
@@ -8732,22 +8739,22 @@ msgstr ""
 "Falls die am Markt verfügbaren Cyber-Sicherheits-Dienstleistungen nicht "
 "Ihren Bedürfnissen entsprechen, was vermissen Sie dann?"
 
-#: data/surveySMEDemand/questions.json:2067
+#: data/surveySMEDemand/questions.json:2095
 msgid "Provide us with more details, please:"
 msgstr "Bitte stellen Sie uns weitere Details zur Verfügung:"
 
-#: data/surveySMEDemand/questions.json:2084
-#: data/surveySMEDemand/questions.json:2098
-#: data/surveySMEDemand/questions.json:2154
-#: data/surveySMEDemand/questions.json:2177
-#: data/surveySMEDemand/questions.json:2192
+#: data/surveySMEDemand/questions.json:2112
+#: data/surveySMEDemand/questions.json:2126
+#: data/surveySMEDemand/questions.json:2182
+#: data/surveySMEDemand/questions.json:2205
+#: data/surveySMEDemand/questions.json:2220
 msgid "Has your company, to your knowledge, been the victim of a cyberattack?"
 msgstr "Wurde Ihre Unternehmen nach Ihrem Wissen Opfer eines Cyberangriffs?"
 
-#: data/surveySMEDemand/questions.json:2112
-#: data/surveySMEDemand/questions.json:2126
 #: data/surveySMEDemand/questions.json:2140
-#: data/surveySMEDemand/questions.json:2169
+#: data/surveySMEDemand/questions.json:2154
+#: data/surveySMEDemand/questions.json:2168
+#: data/surveySMEDemand/questions.json:2197
 msgid ""
 "If you see issues with the trustworthiness of your current service "
 "provider(s), what are the main reasons?"
@@ -8755,35 +8762,43 @@ msgstr ""
 "Wenn Sie Probleme bei Ihrem/Ihren derzeitigen Dienstleister(n) sehen, "
 "welches sind die Hauptgründe dafür?"
 
-#: data/surveySMEDemand/questions.json:2146
+#: data/surveySMEDemand/questions.json:2174
 msgid "Very Low"
 msgstr "Sehr niedrig"
 
-#: data/surveySMEDemand/questions.json:2160
+#: data/surveySMEDemand/questions.json:2188
 msgid "I do not have a cybersecurity service provider"
 msgstr "Ich habe keinen Cyber-Sicherheits-Dienstleister"
 
-#: data/surveySMEDemand/questions.json:2183
+#: data/surveySMEDemand/questions.json:2211
 msgid "Provide us with more details, please"
 msgstr "Bitte stellen Sie uns weitere Details zur Verfügung:"
 
-#: data/surveySMEDemand/questions.json:2188
-#: data/surveySMEDemand/questions.json:2189
-#: data/surveySMEDemand/questions.json:2295
-#: data/surveySMEDemand/questions.json:2296
+#: data/surveySMEDemand/questions.json:2216
+#: data/surveySMEDemand/questions.json:2217
+#: data/surveySMEDemand/questions.json:2351
+#: data/surveySMEDemand/questions.json:2352
 msgid "Incident"
 msgstr "Vorfall"
 
-#: data/surveySMEDemand/questions.json:2200
-#: data/surveySMEDemand/questions.json:2214
 #: data/surveySMEDemand/questions.json:2228
 #: data/surveySMEDemand/questions.json:2242
 #: data/surveySMEDemand/questions.json:2256
-#: data/surveySMEDemand/questions.json:2299
+#: data/surveySMEDemand/questions.json:2270
+#: data/surveySMEDemand/questions.json:2284
+#: data/surveySMEDemand/questions.json:2298
+#: data/surveySMEDemand/questions.json:2355
 msgid "What impact did the cyberattack have on your company?"
 msgstr "Welche Auswirkung hatte der Cyberangriff auf das Unternehmen?"
 
-#: data/surveySMEDemand/questions.json:2206
+#: data/surveySMEDemand/questions.json:2234
+#| msgid "Yes, we had an incident that started with a company device"
+msgid ""
+"Yes, we had an incident that started by an employee clicking on a phishing "
+"email"
+msgstr ""
+
+#: data/surveySMEDemand/questions.json:2248
 msgid ""
 "Yes, we had an incident that started with a personal device used by "
 "employees for work"
@@ -8791,34 +8806,35 @@ msgstr ""
 "Ja, wir hatten einen Vorfall, der von einem persönlichen Gerät ausging, das "
 "von Mitarbeitern bei der Arbeit eingesetzt wurde"
 
-#: data/surveySMEDemand/questions.json:2220
+#: data/surveySMEDemand/questions.json:2262
 msgid "Yes, we had an incident that started with a company device"
 msgstr ""
 "Ja, wir hatten einen Vorfall, der von einem firmeninternen Gerät ausging"
 
-#: data/surveySMEDemand/questions.json:2234
+#: data/surveySMEDemand/questions.json:2276
 msgid "Yes, we had an incident but we could not define the origin"
 msgstr ""
 "Ja, wir hatten einen Vorfall, jedoch konnten wir die Herkunft nicht ermitteln"
 
-#: data/surveySMEDemand/questions.json:2248
+#: data/surveySMEDemand/questions.json:2290
 msgid "Yes, we had an incident and some data was hacked"
 msgstr "Ja, wir hatten einen Vorfall, bei dem einige Daten abgegriffen wurden"
 
-#: data/surveySMEDemand/questions.json:2262
+#: data/surveySMEDemand/questions.json:2304
 msgid "Yes, we had an incident and we paid a ransom to get our data back"
 msgstr ""
 "Ja, wir hatten einen Vorfall, bei dem wir Lösegeld zahlten, um unsere Daten "
 "wiederzuerlangen"
 
-#: data/surveySMEDemand/questions.json:2270
-#: data/surveySMEDemand/questions.json:2284
-#: data/surveySMEDemand/questions.json:2307
-#: data/surveySMEDemand/questions.json:2321
-#: data/surveySMEDemand/questions.json:2335
-#: data/surveySMEDemand/questions.json:2349
+#: data/surveySMEDemand/questions.json:2312
+#: data/surveySMEDemand/questions.json:2326
+#: data/surveySMEDemand/questions.json:2340
 #: data/surveySMEDemand/questions.json:2363
-#: data/surveySMEDemand/questions.json:2378
+#: data/surveySMEDemand/questions.json:2377
+#: data/surveySMEDemand/questions.json:2391
+#: data/surveySMEDemand/questions.json:2405
+#: data/surveySMEDemand/questions.json:2419
+#: data/surveySMEDemand/questions.json:2434
 msgid ""
 "From a regulatory point of view, do you think you lack information "
 "regarding..."
@@ -8826,47 +8842,51 @@ msgstr ""
 "Aus aufsichtsrechtlicher Sicht gesehen, glauben Sie, dass Ihnen "
 "Informationen fehlen zu..."
 
-#: data/surveySMEDemand/questions.json:2276
+#: data/surveySMEDemand/questions.json:2318
 msgid "No, we have never had an incident"
 msgstr "Nein, wir hatten noch nie einen Vorfall"
 
-#: data/surveySMEDemand/questions.json:2313
+#: data/surveySMEDemand/questions.json:2346
+msgid "I don't want to share this information"
+msgstr ""
+
+#: data/surveySMEDemand/questions.json:2369
 msgid "Loss of asset/material"
 msgstr "Verlust von Vermögenswerten / Material"
 
-#: data/surveySMEDemand/questions.json:2327
+#: data/surveySMEDemand/questions.json:2383
 msgid "Direct loss of money"
 msgstr "Direkter Geldverlust"
 
-#: data/surveySMEDemand/questions.json:2341
+#: data/surveySMEDemand/questions.json:2397
 msgid "Loss of time for employees"
 msgstr "Zeitverlust von Mitarbeiter/innen"
 
-#: data/surveySMEDemand/questions.json:2355
+#: data/surveySMEDemand/questions.json:2411
 msgid "Loss of personal data"
 msgstr "Verlust personenbezogener Daten"
 
-#: data/surveySMEDemand/questions.json:2374
-#: data/surveySMEDemand/questions.json:2375
+#: data/surveySMEDemand/questions.json:2430
+#: data/surveySMEDemand/questions.json:2431
 msgid "Regulations"
 msgstr "Vorschriften"
 
-#: data/surveySMEDemand/questions.json:2386
-#: data/surveySMEDemand/questions.json:2400
-#: data/surveySMEDemand/questions.json:2414
-#: data/surveySMEDemand/questions.json:2429
+#: data/surveySMEDemand/questions.json:2442
+#: data/surveySMEDemand/questions.json:2456
+#: data/surveySMEDemand/questions.json:2470
+#: data/surveySMEDemand/questions.json:2485
 msgid "Does your company have a cybersecurity certification?"
 msgstr "Verfügt Ihr Unternehmen über eine Cyber-Sicherheits-Zertifizierung?"
 
-#: data/surveySMEDemand/questions.json:2392
+#: data/surveySMEDemand/questions.json:2448
 msgid "Your cybersecurity obligations"
 msgstr "Ihren Cyber-Sicherheits-Verpflichtungen"
 
-#: data/surveySMEDemand/questions.json:2406
+#: data/surveySMEDemand/questions.json:2462
 msgid "Your personal data protection obligations"
 msgstr "Ihren Verpflichtungen zum Schutz personenbezogener Daten"
 
-#: data/surveySMEDemand/questions.json:2420
+#: data/surveySMEDemand/questions.json:2476
 msgid "Other types of obligations, such as:"
 msgstr "Andersartigen Verpflichtungen wie beispielsweise:"
 
@@ -9234,10 +9254,13 @@ msgstr "Maximale Laufzeit"
 
 #: templates/parts/surveySMEDemand/footer_part.html:14
 #: templates/parts/surveySMEDemand/footer_part.html:15
-#: templates/parts/surveySMEDemand/footer_part.html:21
-#: templates/parts/surveySMEDemand/footer_part.html:22
 #: templates/surveySMEDemand/survey/index.html:32
 #: templates/surveySMEDemand/survey/index.html:33
+msgid "FEDIL"
+msgstr ""
+
+#: templates/parts/surveySMEDemand/footer_part.html:21
+#: templates/parts/surveySMEDemand/footer_part.html:22
 #: templates/surveySMEDemand/survey/index.html:39
 #: templates/surveySMEDemand/survey/index.html:40
 #: templates/surveySMEDemand/survey/index.html:46
@@ -9245,7 +9268,7 @@ msgstr "Maximale Laufzeit"
 #: templates/surveySMEDemand/survey/index.html:53
 #: templates/surveySMEDemand/survey/index.html:54
 msgid "Your logo here"
-msgstr ""
+msgstr "Ihr Logo hier"
 
 #: templates/report/description.html:8
 #, python-format
@@ -9932,14 +9955,16 @@ msgstr ""
 
 #: templates/surveySMEDemand/survey/index.html:24
 msgid "This project is supported by:"
-msgstr ""
+msgstr "Dieses Projekt wird unterstützt von:"
 
 #: templates/surveySMEDemand/survey/index.html:63
 msgid "The results of the survey are anonymous."
-msgstr ""
+msgstr "Die Ergebnisse der Umfrage sind anonym."
 
 #: templates/surveySMEDemand/survey/index.html:66
 msgid ""
 "There are no right or wrong answers. We invite you to be as honest as "
 "possible."
 msgstr ""
+"Es gibt keine richtigen oder falschen Antworten. Wir laden Sie ein, so "
+"ehrlich wie möglich zu sein."
