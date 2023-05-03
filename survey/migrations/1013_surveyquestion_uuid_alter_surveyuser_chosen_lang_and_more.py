@@ -45,7 +45,6 @@ def create_existing_users_sequences(apps, schema_editor):
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
         ("survey", "1012_surveyquestion_tooltip_surveyquestionanswer_tooltip"),
     ]

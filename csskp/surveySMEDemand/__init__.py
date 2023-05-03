@@ -4,6 +4,9 @@ CUSTOM = {
     # Generic configurations
     "tool_name": "Survey SME Demand",
     "intro_text": gettext_lazy(
+        " Cybersecurity refers to the practice of protecting computer systems, networks, and sensitive information from unauthorized access, theft, and damage. In today's digital age, cybersecurity is essential for businesses of all sizes, as even the smallest company can fall victim to cyber attacks that can result in financial loss, reputational damage, and legal liabilities. By taking proactive measures to safeguard their digital assets, SMEs can ensure their continued success and protect their customers' trust. "
+        " <br /> "
+        " <br /> "
         "This questionnaire is intended for managers of small"
         " and medium-sized businesses, between 1 and 250"
         " employees, and must be completed by them in order"
@@ -17,8 +20,8 @@ CUSTOM = {
         " but to understand how the managers of SMEs position"
         " themselves in the face of the regulatory,"
         " technological and human challenges of cybersecurity."
-        " <br>"
-        " <br>"
+        " <br /> "
+        " <br /> "
         "The study is the work product of the Data For Research,"
         " Innovation, and Governance (D4RIG) team of"
         " the National Cybersecurity Competence Center (NC3)"
