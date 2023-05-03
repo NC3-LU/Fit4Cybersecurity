@@ -97,9 +97,9 @@
             "order": 1
           }
         ],
-        "label": "No"
+        "label": "No dedicated budget"
       },
-      {
+	  {
         "aindex": 2,
         "uniqueAnswer": true,
         "atype": "P",
@@ -111,9 +111,9 @@
             "order": 1
           }
         ],
-        "label": "<1%"
+        "label": "No, cybersecurity is part of a package"
       },
-      {
+	  {
         "aindex": 3,
         "uniqueAnswer": true,
         "atype": "P",
@@ -125,7 +125,7 @@
             "order": 1
           }
         ],
-        "label": "1-2%"
+        "label": "Yes, but I don't know how much"
       },
       {
         "aindex": 4,
@@ -139,7 +139,7 @@
             "order": 1
           }
         ],
-        "label": "2-3%"
+        "label": "<1%"
       },
       {
         "aindex": 5,
@@ -153,10 +153,38 @@
             "order": 1
           }
         ],
-        "label": "3-5%"
+        "label": "1-2%"
       },
       {
         "aindex": 6,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Who is the decision taker regarding cybersecurity in your company?",
+            "branch": 0,
+            "level": 2,
+            "order": 1
+          }
+        ],
+        "label": "2-3%"
+      },
+      {
+        "aindex": 7,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Who is the decision taker regarding cybersecurity in your company?",
+            "branch": 0,
+            "level": 2,
+            "order": 1
+          }
+        ],
+        "label": "3-5%"
+      },
+      {
+        "aindex": 8,
         "uniqueAnswer": true,
         "atype": "P",
         "questions_map": [
@@ -190,7 +218,7 @@
             "order": 1
           }
         ],
-        "label": "Chief Executive Officer"
+        "label": "Chief Executive Officer / Business Owner"
       },
       {
         "aindex": 2,
@@ -204,52 +232,10 @@
             "order": 1
           }
         ],
-        "label": "Chief Operating Officer"
+        "label": "Chief Operating Officer / Manager"
       },
-	  {
+      {
         "aindex": 3,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "questions_map": [
-          {
-            "label": "Your employees are allowed to work...",
-            "branch": 0,
-            "level": 3,
-            "order": 1
-          }
-        ],
-        "label": "Chief Information Officer"
-      },
-	  {
-        "aindex": 4,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "questions_map": [
-          {
-            "label": "Your employees are allowed to work...",
-            "branch": 0,
-            "level": 3,
-            "order": 1
-          }
-        ],
-        "label": "Chief Information Security Officer"
-      },
-      {
-        "aindex": 5,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "questions_map": [
-          {
-            "label": "Your employees are allowed to work...",
-            "branch": 0,
-            "level": 3,
-            "order": 1
-          }
-        ],
-        "label": "IT manager"
-      },
-      {
-        "aindex": 6,
         "uniqueAnswer": true,
         "atype": "P",
         "questions_map": [
@@ -263,6 +249,48 @@
         "label": "Cybersecurity manager"
       },
       {
+        "aindex": 4,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Your employees are allowed to work...",
+            "branch": 0,
+            "level": 3,
+            "order": 1
+          }
+        ],
+        "label": "IT manager"
+      },
+      {
+        "aindex": 5,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Your employees are allowed to work...",
+            "branch": 0,
+            "level": 3,
+            "order": 1
+          }
+        ],
+        "label": "External cybersecurity service provider"
+      },
+      {
+        "aindex": 6,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Your employees are allowed to work...",
+            "branch": 0,
+            "level": 3,
+            "order": 1
+          }
+        ],
+        "label": "External IT service provider"
+      },
+      {
         "aindex": 7,
         "uniqueAnswer": true,
         "atype": "P",
@@ -274,7 +302,7 @@
             "order": 1
           }
         ],
-        "label": "External service provider"
+        "label": "The most IT-savvy employee, who has a different main duty"
       },
       {
         "aindex": 8,
@@ -464,7 +492,7 @@
     "service_category": "Training",
     "qtype": "S",
     "qindex": 7,
-    "label": "Have your company's employees ever participated in an awareness program?",
+    "label": "Have your employees undergone any cybersecurity awareness training to help them identify and respond to potential risks?",
     "answers": [
       {
         "aindex": 1,
@@ -628,6 +656,20 @@
           }
         ],
         "label": "Very low"
+      },
+      {
+        "aindex": 6,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Have you personally received cybersecurity training?",
+            "branch": 0,
+            "level": 8,
+            "order": 1
+          }
+        ],
+        "label": "It's not my responsibility as it's covered by an IT package"
       }
     ]
   },
@@ -864,7 +906,7 @@
             "order": 4
           }
         ],
-        "label": "Management (integrated management software package (ERP), cloud, ...)"
+        "label": "Management (cloud, project management, ERP, ...)"
       },
       {
         "aindex": 5,
@@ -943,7 +985,7 @@
             "order": 1
           }
         ],
-        "label": "Social networks"
+        "label": "Whatsapp"
       },
       {
         "aindex": 3,
@@ -957,7 +999,7 @@
             "order": 1
           }
         ],
-        "label": "Mailbox"
+        "label": "Social networks"
       },
       {
         "aindex": 4,
@@ -971,7 +1013,7 @@
             "order": 1
           }
         ],
-        "label": "Email marketing"
+        "label": "Mailbox"
       },
       {
         "aindex": 5,
@@ -985,7 +1027,7 @@
             "order": 1
           }
         ],
-        "label": "Videoconferencing"
+        "label": "Email marketing"
       },
       {
         "aindex": 6,
@@ -999,7 +1041,7 @@
             "order": 1
           }
         ],
-        "label": "Internet traffic monitoring protocol"
+        "label": "Videoconferencing"
       },
       {
         "aindex": 7,
@@ -1176,6 +1218,34 @@
       {
         "aindex": 4,
         "uniqueAnswer": false,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Does your company use any of the following cybersecurity solutions?",
+            "branch": 0,
+            "level": 14,
+            "order": 1
+          }
+        ],
+        "label": "Appointment scheduling software"
+      },
+      {
+        "aindex": 5,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Does your company use any of the following cybersecurity solutions?",
+            "branch": 0,
+            "level": 14,
+            "order": 1
+          }
+        ],
+        "label": "Order management software"
+      },
+      {
+        "aindex": 6,
+        "uniqueAnswer": false,
         "atype": "T",
         "questions_map": [
           {
@@ -1208,7 +1278,7 @@
             "order": 1
           }
         ],
-        "label": "Inventory management"
+        "label": "Cloud, Document sharing tool"
       },
       {
         "aindex": 2,
@@ -1236,7 +1306,7 @@
             "order": 1
           }
         ],
-        "label": "Project management software"
+        "label": "Inventory management"
       },
       {
         "aindex": 4,
@@ -1250,7 +1320,7 @@
             "order": 1
           }
         ],
-        "label": "Document sharing tool (cloud)"
+        "label": "Project management software"
       },
       {
         "aindex": 5,
@@ -1329,7 +1399,7 @@
             "order": 1
           }
         ],
-        "label": "Advanced robotics"
+        "label": "Computer-aided design software (CAD/CAD)"
       },
       {
         "aindex": 4,
@@ -1343,7 +1413,7 @@
             "order": 1
           }
         ],
-        "label": "Additive manufacturing / 3D printing"
+        "label": "Advanced robotics"
       },
       {
         "aindex": 5,
@@ -1357,7 +1427,7 @@
             "order": 1
           }
         ],
-        "label": "Digital thread and twins"
+        "label": "Additive manufacturing / 3D printing"
       },
       {
         "aindex": 6,
@@ -1371,7 +1441,7 @@
             "order": 1
           }
         ],
-        "label": "Augmented reality"
+        "label": "Digital thread and twins"
       },
       {
         "aindex": 7,
@@ -1385,7 +1455,7 @@
             "order": 1
           }
         ],
-        "label": "B2B Order Management System"
+        "label": "Augmented reality"
       },
       {
         "aindex": 8,
@@ -1399,10 +1469,24 @@
             "order": 1
           }
         ],
-        "label": "Product Information Management (PIM) system"
+        "label": "B2B Order Management System"
       },
       {
         "aindex": 9,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Does your company use any of the following cybersecurity solutions?",
+            "branch": 0,
+            "level": 15,
+            "order": 1
+          }
+        ],
+        "label": "Product Information Management (PIM) system"
+      },
+      {
+        "aindex": 10,
         "uniqueAnswer": false,
         "atype": "T",
         "questions_map": [
@@ -1436,9 +1520,9 @@
             "order": 1
           }
         ],
-        "label": "Password manager"
+        "label": "It's not my responsibility as it's covered by an IT package"
       },
-      {
+	  {
         "aindex": 2,
         "uniqueAnswer": false,
         "atype": "P",
@@ -1450,9 +1534,9 @@
             "order": 1
           }
         ],
-        "label": "Antivirus"
+        "label": "Passwords for each device and service"
       },
-      {
+	  {
         "aindex": 3,
         "uniqueAnswer": false,
         "atype": "P",
@@ -1464,7 +1548,7 @@
             "order": 1
           }
         ],
-        "label": "Data backup solution"
+        "label": "Password manager"
       },
       {
         "aindex": 4,
@@ -1478,7 +1562,7 @@
             "order": 1
           }
         ],
-        "label": "VPN"
+        "label": "Antivirus"
       },
       {
         "aindex": 5,
@@ -1492,7 +1576,7 @@
             "order": 1
           }
         ],
-        "label": "Email encryption"
+        "label": "Data backup solution"
       },
       {
         "aindex": 6,
@@ -1506,7 +1590,7 @@
             "order": 1
           }
         ],
-        "label": "Intrusion detection systems (IDS) and intrusion prevention systems (IPS)"
+        "label": "VPN"
       },
       {
         "aindex": 7,
@@ -1520,7 +1604,7 @@
             "order": 1
           }
         ],
-        "label": "Information security management system (ISMS)"
+        "label": "Email encryption"
       },
       {
         "aindex": 8,
@@ -1534,10 +1618,38 @@
             "order": 1
           }
         ],
-        "label": "Access management system"
+        "label": "Intrusion detection systems (IDS) and intrusion prevention systems (IPS)"
       },
       {
         "aindex": 9,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Who supports you to manage your cybersecurity?",
+            "branch": 0,
+            "level": 16,
+            "order": 1
+          }
+        ],
+        "label": "Information security management system (ISMS)"
+      },
+      {
+        "aindex": 10,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Who supports you to manage your cybersecurity?",
+            "branch": 0,
+            "level": 16,
+            "order": 1
+          }
+        ],
+        "label": "Access management system"
+      },
+      {
+        "aindex": 11,
         "uniqueAnswer": true,
         "atype": "P",
         "questions_map": [
@@ -1551,7 +1663,7 @@
         "label": "No"
       },
       {
-        "aindex": 10,
+        "aindex": 12,
         "uniqueAnswer": false,
         "atype": "T",
         "questions_map": [
@@ -1573,47 +1685,47 @@
     "qindex": 18,
     "label": "Who supports you to manage your cybersecurity?",
     "answers": [
-      {
-        "aindex": 1,
-        "uniqueAnswer": false,
-        "atype": "P",
-        "questions_map": [
-          {
-            "label": "What other organisation(s) is(are) relevant for your cybersecurity?",
-            "branch": 0,
-            "level": 17,
-            "order": 1
-          }
-        ],
-        "label": "An external IT specialist"
-      },
-      {
+	{
+		"aindex": 1,
+		"uniqueAnswer": false,
+		"atype": "P",
+		"questions_map": [
+			{
+			"label": "Are there any specific organizations or partners that you would like to collaborate with for cybersecurity support?",
+			"branch": 0,
+			"level": 17,
+			"order": 1
+			}
+		],
+		"label": "Your internet service provider"
+	},
+	{
         "aindex": 2,
         "uniqueAnswer": false,
         "atype": "P",
         "questions_map": [
           {
-            "label": "What other organisation(s) is(are) relevant for your cybersecurity?",
+            "label": "Are there any specific organizations or partners that you would like to collaborate with for cybersecurity support?",
             "branch": 0,
             "level": 17,
             "order": 1
           }
         ],
-        "label": "An internal IT specialist"
+        "label": "An IT consultant not affiliated with your internet service provider"
       },
-      {
+	  {
         "aindex": 3,
         "uniqueAnswer": false,
         "atype": "P",
         "questions_map": [
           {
-            "label": "What other organisation(s) is(are) relevant for your cybersecurity?",
+            "label": "Are there any specific organizations or partners that you would like to collaborate with for cybersecurity support?",
             "branch": 0,
             "level": 17,
             "order": 1
           }
         ],
-        "label": "An external cybersecurity specialist"
+        "label": "A cybersecurity consultant not affiliated with your internet service provider"
       },
       {
         "aindex": 4,
@@ -1621,13 +1733,13 @@
         "atype": "P",
         "questions_map": [
           {
-            "label": "What other organisation(s) is(are) relevant for your cybersecurity?",
+            "label": "Are there any specific organizations or partners that you would like to collaborate with for cybersecurity support?",
             "branch": 0,
             "level": 17,
             "order": 1
           }
         ],
-        "label": "An internal cybersecurity specialist"
+        "label": "Your in-house IT expert"
       },
       {
         "aindex": 5,
@@ -1635,13 +1747,13 @@
         "atype": "P",
         "questions_map": [
           {
-            "label": "What other organisation(s) is(are) relevant for your cybersecurity?",
+            "label": "Are there any specific organizations or partners that you would like to collaborate with for cybersecurity support?",
             "branch": 0,
             "level": 17,
             "order": 1
           }
         ],
-        "label": "My internet service provider"
+        "label": "Your in-house cybersecurity expert"
       },
       {
         "aindex": 6,
@@ -1649,7 +1761,21 @@
         "atype": "P",
         "questions_map": [
           {
-            "label": "What other organisation(s) is(are) relevant for your cybersecurity?",
+            "label": "Are there any specific organizations or partners that you would like to collaborate with for cybersecurity support?",
+            "branch": 0,
+            "level": 17,
+            "order": 1
+          }
+        ],
+        "label": "The most IT-savvy employee, who has a different main duty"
+      },
+      {
+        "aindex": 7,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Are there any specific organizations or partners that you would like to collaborate with for cybersecurity support?",
             "branch": 0,
             "level": 17,
             "order": 1
@@ -1658,32 +1784,18 @@
         "label": "A relative or a friend"
       },
       {
-        "aindex": 7,
+        "aindex": 8,
         "uniqueAnswer": false,
         "atype": "P",
         "questions_map": [
           {
-            "label": "What other organisation(s) is(are) relevant for your cybersecurity?",
+            "label": "Are there any specific organizations or partners that you would like to collaborate with for cybersecurity support?",
             "branch": 0,
             "level": 17,
             "order": 1
           }
         ],
         "label": "No one, or none of the above"
-      },
-      {
-        "aindex": 8,
-        "uniqueAnswer": false,
-        "atype": "T",
-        "questions_map": [
-          {
-            "label": "What other organisation(s) is(are) relevant for your cybersecurity?",
-            "branch": 0,
-            "level": 17,
-            "order": 1
-          }
-        ],
-        "label": "I wish to receive help from (government, professional organisation, ...):"
       }
     ]
   },
@@ -1692,23 +1804,23 @@
     "service_category": "Market & solutions",
     "qtype": "MT",
     "qindex": 19,
-    "label": "What other organisation(s) is(are) relevant for your cybersecurity?",
+    "label": "Are there any specific organizations or partners that you would like to collaborate with for cybersecurity support?",
     "answers": [
-      {
-        "aindex": 1,
-        "uniqueAnswer": false,
-        "atype": "P",
-        "questions_map": [
-          {
-            "label": "What are your key drivers in the adoption of cybersecurity services or solutions?",
-            "branch": 0,
-            "level": 18,
-            "order": 1
-          }
-        ],
-        "label": "IT specialist"
-      },
-      {
+	{
+		"aindex": 1,
+		"uniqueAnswer": false,
+		"atype": "P",
+		"questions_map": [
+			{
+			"label": "What are your key drivers in the adoption of cybersecurity services or solutions?",
+			"branch": 0,
+			"level": 18,
+			"order": 1
+			}
+		],
+		"label": "Your internet service provider"
+	},
+	{
         "aindex": 2,
         "uniqueAnswer": false,
         "atype": "P",
@@ -1720,7 +1832,7 @@
             "order": 1
           }
         ],
-        "label": "Cybersecurity specialist"
+        "label": "An IT consultant not affiliated with your internet service provider"
       },
       {
         "aindex": 3,
@@ -1734,7 +1846,7 @@
             "order": 1
           }
         ],
-        "label": "Internet service provider"
+        "label": "A cybersecurity consultant not affiliated with your internet service provider"
       },
       {
         "aindex": 4,
@@ -1762,7 +1874,7 @@
             "order": 1
           }
         ],
-        "label": "Government entity"
+        "label": "Public sector organization"
       }
     ]
   },
@@ -1785,9 +1897,8 @@
             "order": 1
           }
         ],
-        "label": "Your company is facing a cybersecurity incident"
-      },
-      {
+        "label": "It's not my responsibility as it's covered by an IT package"
+      },      {
         "aindex": 2,
         "uniqueAnswer": false,
         "atype": "P",
@@ -1799,7 +1910,7 @@
             "order": 1
           }
         ],
-        "label": "A client has requested your company to adopt new tools"
+        "label": "Your company is facing a cybersecurity incident"
       },
       {
         "aindex": 3,
@@ -1813,7 +1924,7 @@
             "order": 1
           }
         ],
-        "label": "Your company's IT service provider advised you to adopt new tools"
+        "label": "Peer recommendation"
       },
       {
         "aindex": 4,
@@ -1827,7 +1938,7 @@
             "order": 1
           }
         ],
-        "label": "You have heard about new threats from peers / other companies in your sector of activity"
+        "label": "A client has requested your company to adopt new tools"
       },
       {
         "aindex": 5,
@@ -1841,7 +1952,7 @@
             "order": 1
           }
         ],
-        "label": "You have heard about new threats in the news"
+        "label": "Your company's IT service provider advised you to adopt new tools"
       },
       {
         "aindex": 6,
@@ -1855,10 +1966,38 @@
             "order": 1
           }
         ],
-        "label": "Legal constraints"
+        "label": "You have heard about new threats from peers / other companies in your sector of activity"
       },
       {
         "aindex": 7,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "What are your criteria for evaluating cybersecurity services or solutions?",
+            "branch": 0,
+            "level": 19,
+            "order": 1
+          }
+        ],
+        "label": "You have heard about new threats in the news"
+      },
+      {
+        "aindex": 8,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "What are your criteria for evaluating cybersecurity services or solutions?",
+            "branch": 0,
+            "level": 19,
+            "order": 1
+          }
+        ],
+        "label": "Legal constraints"
+      },
+      {
+        "aindex": 9,
         "uniqueAnswer": true,
         "atype": "P",
         "questions_map": [
@@ -1872,7 +2011,7 @@
         "label": "I don't know"
       },
       {
-        "aindex": 8,
+        "aindex": 10,
         "uniqueAnswer": false,
         "atype": "T",
         "questions_map": [
@@ -1906,9 +2045,9 @@
             "order": 1
           }
         ],
-        "label": "Price"
+        "label": "It's not my responsibility as it's covered by an IT package"
       },
-      {
+	  {
         "aindex": 2,
         "uniqueAnswer": false,
         "atype": "P",
@@ -1920,7 +2059,7 @@
             "order": 1
           }
         ],
-        "label": "Comprehensiveness"
+        "label": "Price"
       },
       {
         "aindex": 3,
@@ -1934,7 +2073,7 @@
             "order": 1
           }
         ],
-        "label": "Ease of use"
+        "label": "Comprehensiveness"
       },
       {
         "aindex": 4,
@@ -1948,7 +2087,7 @@
             "order": 1
           }
         ],
-        "label": "Trust in the seller"
+        "label": "Ease of use"
       },
       {
         "aindex": 5,
@@ -1962,7 +2101,7 @@
             "order": 1
           }
         ],
-        "label": "Technical specifications"
+        "label": "Trust in the seller"
       },
       {
         "aindex": 6,
@@ -1976,10 +2115,24 @@
             "order": 1
           }
         ],
-        "label": "Certification"
+        "label": "Technical specifications"
       },
       {
         "aindex": 7,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Do the cybersecurity services available on the market suit your needs?",
+            "branch": 0,
+            "level": 20,
+            "order": 1
+          }
+        ],
+        "label": "Certification"
+      },
+      {
+        "aindex": 8,
         "uniqueAnswer": true,
         "atype": "P",
         "questions_map": [
@@ -1993,7 +2146,7 @@
         "label": "I don't know"
       },
       {
-        "aindex": 8,
+        "aindex": 9,
         "uniqueAnswer": false,
         "atype": "T",
         "questions_map": [
@@ -2172,6 +2325,20 @@
           }
         ],
         "label": "Very Low"
+      },
+      {
+        "aindex": 6,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Has your company, to your knowledge, been the victim of a cyberattack?",
+            "branch": 0,
+            "level": 23,
+            "order": 1
+          }
+        ],
+        "label": "I don't know"
       },
       {
         "aindex": 6,
@@ -2445,10 +2612,24 @@
             "order": 1
           }
         ],
+        "label": "At this point in time, I am confident in our cybersecurity competences/situation/services"
+      },
+	  {
+        "aindex": 2,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Does your company have a cybersecurity certification?",
+            "branch": 0,
+            "level": 27,
+            "order": 1
+          }
+        ],
         "label": "Your cybersecurity obligations"
       },
       {
-        "aindex": 2,
+        "aindex": 3,
         "uniqueAnswer": false,
         "atype": "P",
         "questions_map": [
@@ -2462,7 +2643,7 @@
         "label": "Your personal data protection obligations"
       },
       {
-        "aindex": 3,
+        "aindex": 4,
         "uniqueAnswer": false,
         "atype": "T",
         "questions_map": [
