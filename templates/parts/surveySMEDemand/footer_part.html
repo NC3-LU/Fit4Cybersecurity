@@ -1,6 +1,6 @@
 {% load static %}
-<div class="d-flex justify-content-between">
-    <ul class="nav flex-column flex-sm-row">
+<div class="d-flex justify-content-center border-top border-primary bg-light">
+	<ul class="nav flex-column flex-sm-row align-items-center">
         <li class="nav-item">
             <a class="nav-link" href="https://nc3.lu" target="_blank" rel="noopener noreferrer">
                 <img class="img-fluid" src="{% static 'images/logo-nc3.png' %}" width="32px"
@@ -50,7 +50,12 @@
 					alt="{{ _('Your logo here') }}"/>
 			</a>
 		</li>
-        <li class="nav-item">
+
+    </ul>
+</div>
+<div class="d-flex justify-content-center">
+    <ul class="nav flex-column flex-sm-row">
+		<li class="nav-item">
             <a class="nav-link" href="https://github.com/NC3-LU/Fit4Cybersecurity" target="_blank"
                rel="noopener noreferrer">
                 <img class="img-fluid" src="{% static 'images/github-9-512.png' %}" width="32px"
@@ -64,8 +69,6 @@
                 {{ app_version }}
             </a>
         </li>
-    </ul>
-    <ul class="nav flex-column flex-sm-row">
         <li class="nav-item">
             <a class="nav-link" href="{% url 'stats' %}" title="{{ _('Stats') }}" alt="{{ _('Stats') }}">Stats</a>
         </li>
