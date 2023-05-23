@@ -357,7 +357,7 @@
       },
       {
         "aindex": 3,
-        "uniqueAnswer": false,
+        "uniqueAnswer": true,
         "atype": "P",
         "questions_map": [
           {
@@ -771,7 +771,7 @@
             "order": 1
           }
         ],
-        "label": "0"
+        "label": "Yes"
       },
       {
         "aindex": 2,
@@ -785,7 +785,7 @@
             "order": 1
           }
         ],
-        "label": "1"
+        "label": "No"
       },
       {
         "aindex": 3,
@@ -799,49 +799,7 @@
             "order": 1
           }
         ],
-        "label": "2-5"
-      },
-      {
-        "aindex": 4,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "questions_map": [
-          {
-            "label": "In which areas are you using digital tools/platforms in your company?",
-            "branch": 0,
-            "level": 10,
-            "order": 1
-          }
-        ],
-        "label": "6-10"
-      },
-      {
-        "aindex": 5,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "questions_map": [
-          {
-            "label": "In which areas are you using digital tools/platforms in your company?",
-            "branch": 0,
-            "level": 10,
-            "order": 1
-          }
-        ],
-        "label": "11-20"
-      },
-      {
-        "aindex": 6,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "questions_map": [
-          {
-            "label": "In which areas are you using digital tools/platforms in your company?",
-            "branch": 0,
-            "level": 10,
-            "order": 1
-          }
-        ],
-        "label": "+20"
+        "label": "I don't know"
       }
     ]
   },
@@ -2386,20 +2344,20 @@
     "qindex": 26,
     "label": "Has your company, to your knowledge, been the victim of a cyberattack?",
     "answers": [
-	  {
-		"aindex": 2,
-		"uniqueAnswer": false,
-		"atype": "P",
-		"questions_map": [
-			{
-			"label": "What impact did the cyberattack have on your company?",
-			"branch": 0,
-			"level": 25,
-			"order": 1
-			}
-		],
-		"label": "Yes, we had an incident that started by an employee clicking on a phishing email"
-	  },
+      {
+      "aindex": 1,
+      "uniqueAnswer": false,
+      "atype": "P",
+      "questions_map": [
+        {
+        "label": "What impact did the cyberattack have on your company?",
+        "branch": 0,
+        "level": 25,
+        "order": 1
+        }
+      ],
+      "label": "Yes, we had an incident that started by an employee clicking on a phishing email"
+      },
       {
         "aindex": 2,
         "uniqueAnswer": false,
