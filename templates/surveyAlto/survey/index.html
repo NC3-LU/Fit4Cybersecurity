@@ -16,7 +16,7 @@
     {% cookiebanner_modal 'bootstrap4' %}
     <div class="px-3">
         <div class="p-2 text-center">
-            <h2 class="text-primary">
+            <h2 class="text-blue-color p-3">
                 {{ _('The questionnaire is closed') }}
             </h2>
             <h4 class="py-2 col-8 mx-auto">
@@ -27,24 +27,22 @@
 
     <div class="col px-2 py-4 text-center">
         <a href="/stats">
-            <button class="btn border border-rounded btn-primary" type="button">
+            <button class="btn rounded btn-outline-primary text-blue-color font-weight-bold" type="button">
                 {{ _('View statistics') }}
             </button>
         </a>
     </div>
-    <div class="card bg-warning m-4 h7">
-        <div class="card-body">
-            <h3 class="card-title text-center">{{ _('Contribute to the design !') }}</h3>
-            <p class="text-center">
-                {{ _("The Pilot prototyping phase will begin soon.") }}
-                {% blocktranslate trimmed %}
-                <a href="https://cnpd.public.lu/en/actualites/national/2023/03/projet-alto.html">Details</a>
-                {% endblocktranslate %}
-                <br />
-                {{ _('You can now register by email: ')}}
-                <a href="mailto:alto@cnpd.lu">alto@cnpd.lu</a>
-            </p>
-        </div>
+    <div class="m-4">
+        <h4 class="card-title text-center">{{ _('Contribute to the design !') }}</h4>
+        <p class="text-center">
+            {{ _("The Pilot prototyping phase will begin soon.") }}
+            {% blocktranslate trimmed %}
+            <a class="text-blue-color" href="https://cnpd.public.lu/en/actualites/national/2023/03/projet-alto.html">Details</a>
+            {% endblocktranslate %}
+            <br />
+            {{ _('You can now register by email: ')}}
+            <a class="text-blue-color" href="mailto:alto@cnpd.lu">alto@cnpd.lu</a>
+        </p>
     </div>
     {% include 'survey/resume.html' %}
 {% endblock %}
