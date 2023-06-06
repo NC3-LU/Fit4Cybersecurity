@@ -14,51 +14,37 @@
 
 {% block content %}
     {% cookiebanner_modal 'bootstrap4' %}
-    <div class="d-flex flex-row align-items-center px-3">
-        <div class="p-2 flex-grow-1 text-justify">
-            <h5>
-                {% block index_welcome_message %}
-                {{ _('What are the GDPR challenges for SMEs?') }}
-                {% endblock %}
-            </h5>
-            {{ custom.intro_text | safe }}
+    <div class="px-3">
+        <div class="p-2 text-center">
+            <h2 class="text-primary">
+                {{ _('The questionnaire is closed') }}
+            </h2>
+            <h4 class="py-2 col-8 mx-auto">
+                {{ _('The ALTO team thanks you for your interest and your participation in phase 1 of the project.') }}
+            </h4>
         </div>
     </div>
 
-
     <div class="col px-2 py-4 text-center">
-        <a href="/survey/start">
+        <a href="/stats">
             <button class="btn border border-rounded btn-primary" type="button">
-                {{ _('Start') }}
+                {{ _('View statistics') }}
             </button>
         </a>
-        <h5 class="text-primary">
-            {{ _('Length: 15 min') }}
-        </h5>
-
-
     </div>
     <div class="card bg-warning m-4 h7">
-        <div class="card-body font-weight-light">
-            <h6 class="card-title text-center">{{ _('Call for participation:') }}</h6>
-            <p class="text-justify small">
+        <div class="card-body">
+            <h3 class="card-title text-center">{{ _('Contribute to the design !') }}</h3>
+            <p class="text-center">
+                {{ _("The Pilot prototyping phase will begin soon.") }}
                 {% blocktranslate trimmed %}
-                The "Pilot" phase of the ALTO project will require a call for participation from SMEs during the 4th quarter of 2023.
-                <br><br>
-                All SMEs are invited to express their interest in participating in the "Pilot" phase by e-mail to email address: <a href="mailto:alto@cnpd.lu">alto@cnpd.lu</a>
+                <a href="https://cnpd.public.lu/en/actualites/national/2023/03/projet-alto.html">Details</a>
                 {% endblocktranslate %}
-
+                <br />
+                {{ _('You can now register by email: ')}}
+                <a href="mailto:alto@cnpd.lu">alto@cnpd.lu</a>
             </p>
         </div>
     </div>
-
-    <div class="row py-3">
-        <div class="col">
-            <button class="btn btn-link" type="button" name="resume-show-popup" data-toggle="modal" data-target="#modal" data-tooltip>
-                {{ _('Continue a previous survey') }}
-            </button>
-        </div>
-    </div>
-
     {% include 'survey/resume.html' %}
 {% endblock %}
