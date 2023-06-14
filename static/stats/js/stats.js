@@ -96,7 +96,7 @@ $(document).ready(function() {
             document.getElementById("spinner-stats-sector").innerHTML = "";
             if (Object.entries(result).length > 0) {
                 var ctx = document.getElementById("stats-sector").getContext('2d');
-                var sectorChart = pieChart(result,ctx);
+                var sectorChart = barChart(result,ctx);
             }
         })
         .catch((error) => {
@@ -310,12 +310,56 @@ $(document).ready(function() {
             document.getElementById("spinner-stats-current_question").innerHTML = "";
             if (Object.entries(result).length > 0) {
                 var ctx = document.getElementById("stats-current_question").getContext('2d');
-                pieChart(result,ctx);
+                lineChart(result, ctx);
             }
         }).catch((error) => {
             console.error('Error:', error);
         });
     }
+
+    function barChart(data, ctx) {
+        return new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: Object.keys(data),
+                datasets: [{
+                    data: Object.values(data),
+                    backgroundColor: colors
+                }],
+            },
+            options: {
+                responsive: true,
+                aspectRatio: 0.7,
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                    datalabels: {
+                        anchor: 'end',
+                        align: 'start',
+                        offset: 5,
+                        color: 'rgba(0,0,0,.7)',
+                    }
+                },
+                scales: {
+                    x: {
+                        grid: {
+                            display: false
+                        }
+                    },
+                    y: {
+                        grid: {
+                            color: 'rgba(0,0,0,0.1)',
+                            drawBorder: false
+                        },
+                        ticks: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            }
+        });
+    }; 
 
     function pieChart(data,ctx){
         return new Chart(ctx, {
@@ -385,6 +429,55 @@ $(document).ready(function() {
             }
         });
     }
+
+    function lineChart(data, ctx) {
+        return new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: Object.keys(data),
+                datasets: [{
+                    data: Object.values(data),
+                    label: 'Current Question',
+                    backgroundColor: 'rgba(0, 123, 255, 0.4)',
+                    borderColor: 'rgba(0, 123, 255, 1)',
+                    borderWidth: 2,
+                    fill: false
+                }]
+            },
+            options: {
+                responsive: true,
+                aspectRatio: 0.7,
+                plugins: {
+                    legend: {
+                        position: 'bottom',
+                    },
+                    datalabels: {
+                        anchor: 'end',
+                        align: 'start',
+                        offset: 5,
+                        display: 'auto',
+                        color: 'rgba(0,0,0,.7)',
+                    }
+                },
+                scales: {
+                    x: {
+                        grid: {
+                            display: false
+                        }
+                    },
+                    y: {
+                        grid: {
+                            color: 'rgba(0,0,0,0.1)',
+                            drawBorder: false
+                        },
+                        ticks: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            }
+        });
+    };
 
     function wrapLabel(label, maxwidth = 15){
         let sections = [];
