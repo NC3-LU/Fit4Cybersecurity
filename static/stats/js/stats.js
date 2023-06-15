@@ -216,7 +216,12 @@ $(document).ready(function() {
                 sectionChart.data = result;
                 document.getElementById("select-section-displayByCountry").style.display = "block";
                 var ctx = document.getElementById("answers-per-section");
-                sectionChart.canvas = radarChart(labels,data_sets,ctx);
+                document.getElementById('select-section-graphType').style.display = "block";
+                if (document.getElementById('section_graphType').value == "radar") {
+                    sectionChart.canvas = radarChart(labels,data_sets,ctx);
+                } else {
+                    sectionChart.canvas = bubbleChart(labels,data_sets,ctx);
+                }
             }
         })
         .catch((error) => {
@@ -385,6 +390,62 @@ $(document).ready(function() {
             }
         });
     }
+
+    function bubbleChart(data, ctx) {
+        return new Chart(ctx, {
+            type: 'bubble',
+            data: {
+                datasets: data,
+            },
+            options: {
+                responsive: true,
+                aspectRatio: 1,
+                plugins: {
+                    legend: {
+                        position: 'bottom',
+                    },
+                    datalabels: {
+                        formatter: (value, ctx) => {
+                            return value;
+                        },
+                        font: {
+                            size: 12,
+                            weight: 'bold'
+                        },
+                        color: '#ffffff',
+                    }
+                },
+                scales: {
+                    x: {
+                        title: {
+                            display: true,
+                            text: 'X-axis Label',
+                            font: {
+                                weight: 'bold'
+                            }
+                        },
+                        grid: {
+                            display: true,
+                            color: '#ebedef',
+                        }
+                    },
+                    y: {
+                        title: {
+                            display: true,
+                            text: 'Y-axis Label',
+                            font: {
+                                weight: 'bold'
+                            }
+                        },
+                        grid: {
+                            display: true,
+                            color: '#ebedef',
+                        }
+                    }
+                },
+            },
+        });
+    }    
 
     function wrapLabel(label, maxwidth = 15){
         let sections = [];
