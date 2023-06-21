@@ -218,9 +218,9 @@ $(document).ready(function() {
                 var ctx = document.getElementById("answers-per-section");
                 document.getElementById('select-section-graphType').style.display = "block";
                 if (document.getElementById('section_graphType').value == "radar") {
-                    sectionChart.canvas = radarChart(labels,data_sets,ctx);
+                    sectionChart.canvas = radarChart(labels, data_sets, ctx);
                 } else {
-                    sectionChart.canvas = bubbleChart(labels,data_sets,ctx);
+                    sectionChart.canvas = bubbleChart(labels, data_sets, ctx);
                 }
             }
         })
