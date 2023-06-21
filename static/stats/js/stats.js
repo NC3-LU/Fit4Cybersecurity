@@ -195,38 +195,36 @@ $(document).ready(function() {
         .then(result => {
             document.getElementById("spinner-answers-per-section").innerHTML = "";
             if (Object.entries(result).length > 0) {
-                let data_sets = [];
+                let datasets = [];
                 let labels = [];
-                let i = 0;
                 for (const [key, value] of Object.entries(result.all)) {
-                    labels = Object.keys(value);
-                    data_sets.push({
+                    let data = [];
+                    for(const [dataKey, dataValue] of Object.entries(value.data)) {
+                        if(dataKey.startsWith('answer')){
+                            data.push({x: dataValue, y: value.data['y' + dataKey.substring(6)], r: value.data['r' + dataKey.substring(6)]})
+                        }                        
+                    }
+                    datasets.push({
                         label: key,
-                        data: Object.values(value),
-                        fill: false,
-                        backgroundColor: colors[i],
-                        borderColor: colors[i],
-                        pointBackgroundColor: colors[i],
-                        pointBorderColor: '#fff',
-                        pointHoverBackgroundColor: '#fff',
-                        pointHoverBorderColor: colors[i]
-                    })
-                    i++;
+                        data: data,
+                        backgroundColor: value.color,
+                        borderColor: value.color
+                    });
                 }
                 sectionChart.data = result;
                 document.getElementById("select-section-displayByCountry").style.display = "block";
                 var ctx = document.getElementById("answers-per-section");
                 document.getElementById('select-section-graphType').style.display = "block";
                 if (document.getElementById('section_graphType').value == "radar") {
-                    sectionChart.canvas = radarChart(labels, data_sets, ctx);
+                    sectionChart.canvas = radarChart(labels, datasets, ctx);
                 } else {
-                    sectionChart.canvas = bubbleChart(labels, data_sets, ctx);
+                    sectionChart.canvas = bubbleChart(labels, datasets, ctx);
                 }
             }
         })
         .catch((error) => {
             console.error('Error:', error);
-        });
+        });    
 
         section_displayByCountry.onchange = function() {
             let data_sets = [];
