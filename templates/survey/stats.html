@@ -275,6 +275,13 @@
                             {% endfor %}
                         </select>
                     </div>
+                    <div class="col-md-auto" id="select-section-graphType" style="display:none">
+                        <label for="section_graphType">{{ _('Graph Type')}}</label>
+                        <select id="section_graphType">
+                            <option value="radar" selected>{{ _('Radar')}}</option>
+                            <option value="bubble">{{ _('Bubble')}}</option>
+                        </select>
+                    </div>
                     {% if nb_finished_surveys_for_period == 0 %}
                         <div class="text-center">
                             <i class="bi bi-x-circle text-warning display-1"></i>
