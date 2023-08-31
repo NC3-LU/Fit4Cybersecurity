@@ -1,1355 +1,4876 @@
 [
   {
-    "service_category": "Rules/Charter",
     "section": "Company information",
-    "qtype": "S",
+    "service_category": "Company information",
+    "qtype": "MT",
     "qindex": 1,
-    "maxPoints": 45,
+    "label": "Does your company have one or more cybersecurity certification(s)?",
     "answers": [
       {
         "aindex": 1,
-        "uniqueAnswer": true,
-        "score": 0,
+        "uniqueAnswer": false,
         "atype": "P",
-        "recommendations": [
+        "questions_map": [
           {
-            "min_e_count": "a",
-            "max_e_count": "j",
-            "sector": null,
-            "answerChosen": true,
-            "label": "The company should define rules in order to avoid misunderstandings."
+            "label": "Do your employees have one or more cybersecurity certification(s) and / or accreditation?",
+            "branch": 0,
+            "level": 1,
+            "order": 1
           }
         ],
-        "label": "not described"
+        "label": "No"
       },
       {
         "aindex": 2,
         "uniqueAnswer": false,
-        "score": 15,
         "atype": "P",
-        "recommendations": [
+        "questions_map": [
           {
-            "min_e_count": "a",
-            "max_e_count": "j",
-            "sector": null,
-            "answerChosen": false,
-            "label": "Rules (organizational, IT or working ones) should be known and explained to everyone, at the very least orally."
+            "label": "Do your employees have one or more cybersecurity certification(s) and / or accreditation?",
+            "branch": 0,
+            "level": 1,
+            "order": 1
           }
         ],
-        "label": "orally given"
+        "label": "I don’t know"
       },
       {
         "aindex": 3,
         "uniqueAnswer": false,
-        "score": 5,
         "atype": "P",
-        "recommendations": [
+        "questions_map": [
           {
-            "min_e_count": "a",
-            "max_e_count": "b",
-            "sector": null,
-            "answerChosen": false,
-            "label": "If an oral transmission could be enough for a small company, rules should still be written in a charter, read and signed by everyone, very important if the company grows."
-          },
-          {
-            "min_e_count": "c",
-            "max_e_count": "j",
-            "sector": null,
-            "answerChosen": false,
-            "label": "An oral transmission could be a lot more complicated when there are lots of employees, and is really impossible when lots of people are hired and leaving."
+            "label": "Do your employees have one or more cybersecurity certification(s) and / or accreditation?",
+            "branch": 0,
+            "level": 1,
+            "order": 1
           }
         ],
-        "label": "written and given by mail"
+        "label": "ISO/IEC 27001"
       },
       {
         "aindex": 4,
         "uniqueAnswer": false,
-        "score": 10,
         "atype": "P",
-        "recommendations": [
+        "questions_map": [
           {
-            "min_e_count": "a",
-            "max_e_count": "j",
-            "sector": null,
-            "answerChosen": false,
-            "label": "Besides, written rules can :<ul><li>avoid to forget some points</li><li>have a legal proof if the rules have been read.</li></ul>"
+            "label": "Do your employees have one or more cybersecurity certification(s) and / or accreditation?",
+            "branch": 0,
+            "level": 1,
+            "order": 1
           }
         ],
-        "label": "read and signed by everyone, in a user charter"
+        "label": "ISO/IEC 15408 (Common Criteria)"
       },
       {
         "aindex": 5,
         "uniqueAnswer": false,
-        "score": 5,
         "atype": "P",
-        "recommendations": [
+        "questions_map": [
           {
-            "min_e_count": "a",
-            "max_e_count": "j",
-            "sector": null,
-            "answerChosen": false,
-            "label": "If it's possible, rules should be as short and as easy as possible to be attractive and readable."
+            "label": "Do your employees have one or more cybersecurity certification(s) and / or accreditation?",
+            "branch": 0,
+            "level": 1,
+            "order": 1
           }
         ],
-        "label": "written and explained with simple words, which are non-specific to a type of work"
+        "label": "Other ISO"
       },
       {
         "aindex": 6,
         "uniqueAnswer": false,
-        "score": 0,
         "atype": "P",
-        "recommendations": [
+        "questions_map": [
           {
-            "min_e_count": "a",
-            "max_e_count": "j",
-            "sector": null,
-            "answerChosen": true,
-            "label": "Rules that are too long or too heavy with technical vocabulary could become confusing."
+            "label": "Do your employees have one or more cybersecurity certification(s) and / or accreditation?",
+            "branch": 0,
+            "level": 1,
+            "order": 1
           }
         ],
-        "label": "quite heavy, but really accurate"
+        "label": "NIST 853"
       },
       {
         "aindex": 7,
         "uniqueAnswer": false,
-        "score": 5,
         "atype": "P",
-        "recommendations": [
+        "questions_map": [
           {
-            "min_e_count": "a",
-            "max_e_count": "j",
-            "sector": null,
-            "answerChosen": false,
-            "label": "Each time when it's possible, some advice or some best practices should be given, and explained."
+            "label": "Do your employees have one or more cybersecurity certification(s) and / or accreditation?",
+            "branch": 0,
+            "level": 1,
+            "order": 1
           }
         ],
-        "label": "given with advice and the best practices"
+        "label": "Other NIST certification(s)"
       },
       {
         "aindex": 8,
         "uniqueAnswer": false,
-        "score": 5,
         "atype": "P",
-        "recommendations": [
+        "questions_map": [
           {
-            "min_e_count": "a",
-            "max_e_count": "j",
-            "sector": null,
-            "answerChosen": false,
-            "label": "Some differences might be appropriate depending on the role, or if it's a temporary contract for instance."
+            "label": "Do your employees have one or more cybersecurity certification(s) and / or accreditation?",
+            "branch": 0,
+            "level": 1,
+            "order": 1
           }
         ],
-        "label": "adapted depending on the role of the reader"
-      }
-    ],
-    "label": "In the company, rules are"
-  },
-  {
-    "service_category": "GDPR",
-    "section": "Company information",
-    "qtype": "M",
-    "qindex": 2,
-    "maxPoints": 30,
-    "answers": [
-      {
-        "aindex": 1,
-        "uniqueAnswer": true,
-        "score": 0,
-        "atype": "P",
-        "recommendations": [
-          {
-            "min_e_count": "a",
-            "max_e_count": "j",
-            "sector": null,
-            "answerChosen": true,
-            "label": "For the moment, the company does not have a lot of personal data, or haven't done anything to it. If there is more personal data, or if nothing were done, the company should think:"
-          }
-        ],
-        "label": "no personal data other than the employee data, or nothing related to the personal data"
-      },
-      {
-        "aindex": 2,
-        "uniqueAnswer": false,
-        "score": 10,
-        "atype": "P",
-        "recommendations": [
-          {
-            "min_e_count": "a",
-            "max_e_count": "j",
-            "sector": null,
-            "answerChosen": false,
-            "label": "Define, whenever possible, someone responsible for the personal data in order to avoid the lack of response when there is an incident."
-          }
-        ],
-        "label": "someone who does every action bound to personal data"
-      },
-      {
-        "aindex": 3,
-        "uniqueAnswer": false,
-        "score": 10,
-        "atype": "P",
-        "recommendations": [
-          {
-            "min_e_count": "a",
-            "max_e_count": "j",
-            "sector": null,
-            "answerChosen": false,
-            "label": "Data Lifecycle should be accessible by everyone :<ul><li>How they are obtained</li><li>How they are used</li><li>How they are accessible, by whom and the contract linked</li><li>How they are alterable</li><li>How much time they are stored</li><li>How they are destroyed</li></ul>This cycle should be described somewhere and accessible by anyone (sell contracts, websites, files that could be shown …)."
-          }
-        ],
-        "label": "a written explanation about the personal data lifecycle (how there are get, stored, and when and how they are destroyed)"
-      },
-      {
-        "aindex": 4,
-        "uniqueAnswer": false,
-        "score": 5,
-        "atype": "P",
-        "recommendations": [
-          {
-            "min_e_count": "a",
-            "max_e_count": "j",
-            "sector": null,
-            "answerChosen": false,
-            "label": "People should know who is the responsible person for the data in order to ask all the necessary questions, requests and about data manipulation or data sensitivity."
-          }
-        ],
-        "label": "an oral or a written explanation of what should be done when there is a problem with personal data"
-      },
-      {
-        "aindex": 5,
-        "uniqueAnswer": false,
-        "score": 5,
-        "atype": "P",
-        "recommendations": [
-          {
-            "min_e_count": "a",
-            "max_e_count": "j",
-            "sector": null,
-            "answerChosen": false,
-            "label": "Concerning the image rights, some authorisations are required (to take an image and to diffuse it), and people need to know when a place is under video surveillance."
-          }
-        ],
-        "label": "some video surveillance, or some pictures taken, that contains face or people and possibly location data"
-      }
-    ],
-    "label": "In the company, there is/are"
-  },
-  {
-    "service_category": "Trainings",
-    "section": "Employee Management",
-    "qtype": "M",
-    "qindex": 3,
-    "maxPoints": 35,
-    "answers": [
-      {
-        "aindex": 1,
-        "uniqueAnswer": false,
-        "score": 15,
-        "atype": "P",
-        "recommendations": [
-          {
-            "min_e_count": "a",
-            "max_e_count": "j",
-            "sector": null,
-            "answerChosen": false,
-            "label": "Updating the best practices for daily tasks is important to avoid all the basic mistakes and loss of time."
-          }
-        ],
-        "label": "their work, their daily tasks by their studies, but also receive trainings to update their knowledge"
-      },
-      {
-        "aindex": 2,
-        "uniqueAnswer": false,
-        "score": 5,
-        "atype": "P",
-        "recommendations": [
-          {
-            "min_e_count": "a",
-            "max_e_count": "j",
-            "sector": null,
-            "answerChosen": false,
-            "label": "Learning to use software is important to avoid time loss, data loss and manipulation mistakes."
-          }
-        ],
-        "label": "the software they daily use"
-      },
-      {
-        "aindex": 3,
-        "uniqueAnswer": false,
-        "score": 5,
-        "atype": "P",
-        "recommendations": [
-          {
-            "min_e_count": "a",
-            "max_e_count": "j",
-            "sector": null,
-            "answerChosen": false,
-            "label": "By informing about attacks that are current, common or well known, employees could more easily identify them and avoid being affected by them."
-          }
-        ],
-        "label": "information security, to have the knowledge to protect themselves against attacks or information security issues"
-      },
-      {
-        "aindex": 4,
-        "uniqueAnswer": false,
-        "score": 5,
-        "atype": "P",
-        "recommendations": [
-          {
-            "min_e_count": "a",
-            "max_e_count": "j",
-            "sector": null,
-            "answerChosen": false,
-            "label": "Trainings that are done internally do not have the same impact as external ones, but could be more appropriate by the mastery of the subject within the company environment."
-          }
-        ],
-        "label": "by specialists, that could be internal or external"
-      },
-      {
-        "aindex": 5,
-        "uniqueAnswer": false,
-        "score": 5,
-        "atype": "P",
-        "recommendations": [
-          {
-            "min_e_count": "a",
-            "max_e_count": "j",
-            "sector": null,
-            "answerChosen": false,
-            "label": "Train users on the sensitivity of the processed information, in order to put their attention on how to protect these data."
-          }
-        ],
-        "label": "the importance to keep confidential data confidential, and more importantly if they are personal"
-      }
-    ],
-    "label": "Employees are trained for/in"
-  },
-  {
-    "service_category": "IT and Information Security Responsibilities",
-    "section": "Employee Management",
-    "qtype": "S",
-    "qindex": 4,
-    "maxPoints": 15,
-    "answers": [
-      {
-        "aindex": 1,
-        "uniqueAnswer": true,
-        "score": 15,
-        "atype": "P",
-        "recommendations": [],
-        "label": "internally defined, with someone who is specialised in IT field"
-      },
-      {
-        "aindex": 2,
-        "uniqueAnswer": true,
-        "score": 15,
-        "atype": "P",
-        "recommendations": [],
-        "label": "internally defined, with at least two people that were trained in the field"
-      },
-      {
-        "aindex": 3,
-        "uniqueAnswer": true,
-        "score": 15,
-        "atype": "P",
-        "recommendations": [],
-        "label": "externally defined, with a contract"
-      },
-      {
-        "aindex": 4,
-        "uniqueAnswer": true,
-        "score": 15,
-        "atype": "P",
-        "recommendations": [],
-        "label": "externally defined, depending on the needs, without any contract specified"
-      },
-      {
-        "aindex": 5,
-        "uniqueAnswer": true,
-        "score": 0,
-        "atype": "P",
-        "recommendations": [
-          {
-            "min_e_count": "a",
-            "max_e_count": "j",
-            "sector": null,
-            "answerChosen": true,
-            "label": "It's important to define responsibilities, either externally or internally, with one or more persons, or a company, but specialized into their own domain, at best supported by relevant training."
-          }
-        ],
-        "label": "aren't defined; anyone tries to resolve their problems, asking someone else if they can"
-      }
-    ],
-    "label": "IT and Information Security responsibilities are"
-  },
-  {
-    "service_category": "Home Office/Mobility",
-    "section": "Employee Management",
-    "qtype": "M",
-    "qindex": 5,
-    "maxPoints": 35,
-    "answers": [
-      {
-        "aindex": 1,
-        "uniqueAnswer": true,
-        "score": 35,
-        "atype": "P",
-        "recommendations": [
-          {
-            "min_e_count": "a",
-            "max_e_count": "j",
-            "sector": null,
-            "answerChosen": true,
-            "label": "For now, no outside work is done. If it's changed, it's important to take care that:<ul><li>External connections which are not controlled and monitored should be avoided to avoid data loss.</li></ul>"
-          }
-        ],
-        "label": "no professional tools because home office or travel is not allowed or necessary, or the only connection to the internal network is on the company premises"
-      },
-      {
-        "aindex": 2,
-        "uniqueAnswer": false,
-        "score": 15,
-        "atype": "P",
-        "recommendations": [
-          {
-            "min_e_count": "a",
-            "max_e_count": "j",
-            "sector": null,
-            "answerChosen": false,
-            "label": "Whenever users have the need to work outside, from home office to missions outside the premises, they must have a VPN connection to connect to the server."
-          }
-        ],
-        "label": "VPN (Virtual Private Network) is used to encrypt all data from any external network to the internal server"
-      },
-      {
-        "aindex": 3,
-        "uniqueAnswer": false,
-        "score": 0,
-        "atype": "P",
-        "recommendations": [],
-        "label": "Public Internet, Wi-Fi, open networks or connection protected by external organizations or individuals"
-      },
-      {
-        "aindex": 4,
-        "uniqueAnswer": false,
-        "score": 10,
-        "atype": "P",
-        "recommendations": [
-          {
-            "min_e_count": "a",
-            "max_e_count": "j",
-            "sector": null,
-            "answerChosen": true,
-            "label": "External connection which is not controlled and monitored should be avoided to avoid data theft."
-          }
-        ],
-        "label": "a private connection or connection sharing from a private or professional smartphone (tethering/hotspot)"
-      },
-      {
-        "aindex": 5,
-        "uniqueAnswer": false,
-        "score": 5,
-        "atype": "P",
-        "recommendations": [
-          {
-            "min_e_count": "a",
-            "max_e_count": "j",
-            "sector": null,
-            "answerChosen": false,
-            "label": "The visual environment is really important, to avoid curiosity or spying."
-          }
-        ],
-        "label": "a screen filter or adjusts their position to ensure that no unauthorized person could see what is on the screen of their mobile device (tablet or laptop)"
-      },
-      {
-        "aindex": 6,
-        "uniqueAnswer": false,
-        "score": 5,
-        "atype": "P",
-        "recommendations": [
-          {
-            "min_e_count": "a",
-            "max_e_count": "j",
-            "sector": null,
-            "answerChosen": false,
-            "label": "Devices that are taken away and that contain confidential data should always have their internal memory encrypted to avoid data theft."
-          }
-        ],
-        "label": "devices that are encrypted (protected by a password at boot) or without any confidential data"
-      }
-    ],
-    "label": "During any trip outside the company, the employee uses"
-  },
-  {
-    "service_category": "Contracts (SLA/NDA)",
-    "section": "Third Party Management",
-    "qtype": "M",
-    "qindex": 6,
-    "maxPoints": 15,
-    "answers": [
-      {
-        "aindex": 1,
-        "uniqueAnswer": true,
-        "score": 0,
-        "atype": "P",
-        "recommendations": [
-          {
-            "min_e_count": "a",
-            "max_e_count": "j",
-            "sector": null,
-            "answerChosen": true,
-            "label": "For now, no contracts with third parties are signed. If it's changed, it's important to:"
-          }
-        ],
-        "label": "are not defined, because they only come punctually in case of an incident or needs"
-      },
-      {
-        "aindex": 2,
-        "uniqueAnswer": false,
-        "score": 5,
-        "atype": "P",
-        "recommendations": [
-          {
-            "min_e_count": "a",
-            "max_e_count": "j",
-            "sector": null,
-            "answerChosen": false,
-            "label": "If confidential data is accessible by different third parties, like external maintenace companies, or financial data by a fiduciary, a Non-Disclosure Agreement (NDA) should be signed with them."
-          }
-        ],
-        "label": "define confidentiality of data, and their protection"
-      },
-      {
-        "aindex": 3,
-        "uniqueAnswer": false,
-        "score": 5,
-        "atype": "P",
-        "recommendations": [
-          {
-            "min_e_count": "a",
-            "max_e_count": "j",
-            "sector": null,
-            "answerChosen": false,
-            "label": "If means and needs permit it, a contract should be signed to ensure that the external IT provider will ensure the availability of system to remain operational. These kinds of contracts named \"Service Level Agreement (SLA)\""
-          }
-        ],
-        "label": "define the maximum time until intervention needs to be performed after an incident"
-      },
-      {
-        "aindex": 4,
-        "uniqueAnswer": false,
-        "score": 5,
-        "atype": "P",
-        "recommendations": [
-          {
-            "min_e_count": "a",
-            "max_e_count": "j",
-            "sector": null,
-            "answerChosen": false,
-            "label": "It's necessary to review the contracts to ensure :<ul><li>having an intervention solution whenever it is essential</li><li>to not pay too much for a service which is not necessary</li><li>to evaluate if the services paid are satisfying the necessary</li></ul>"
-          }
-        ],
-        "label": "are regularly reviewed to ensure that they correspond to the needs"
-      }
-    ],
-    "label": "Contracts with third parties"
-  },
-  {
-    "service_category": "Office Cleaning",
-    "section": "Third Party Management",
-    "qtype": "M",
-    "qindex": 7,
-    "maxPoints": 30,
-    "answers": [
-      {
-        "aindex": 1,
-        "uniqueAnswer": true,
-        "score": 30,
-        "atype": "P",
-        "recommendations": [
-          {
-            "min_e_count": "a",
-            "max_e_count": "j",
-            "sector": null,
-            "answerChosen": true,
-            "label": "For now, no third parties clean the premises. If it changes, it's important to:"
-          }
-        ],
-        "label": "internally, by employees, punctually"
-      },
-      {
-        "aindex": 2,
-        "uniqueAnswer": false,
-        "score": 10,
-        "atype": "P",
-        "recommendations": [
-          {
-            "min_e_count": "a",
-            "max_e_count": "j",
-            "sector": null,
-            "answerChosen": false,
-            "label": "The office cleaning should be done, whenever possible, during work time to avoid potential data or material theft."
-          }
-        ],
-        "label": "during the work time"
-      },
-      {
-        "aindex": 3,
-        "uniqueAnswer": false,
-        "score": 5,
-        "atype": "P",
-        "recommendations": [
-          {
-            "min_e_count": "a",
-            "max_e_count": "j",
-            "sector": null,
-            "answerChosen": false,
-            "label": "Rules should be given mainly to specify what should be done or avoided, as misunderstandings can happen."
-          }
-        ],
-        "label": "with clear rules of what should be done and what shouldn't be done"
-      },
-      {
-        "aindex": 4,
-        "uniqueAnswer": false,
-        "score": 5,
-        "atype": "P",
-        "recommendations": [
-          {
-            "min_e_count": "a",
-            "max_e_count": "j",
-            "sector": null,
-            "answerChosen": false,
-            "label": "It's important to define a confidentiality clause in all the contracts to ensure the confidentiality of information heard or seen."
-          }
-        ],
-        "label": "with a contract which specifies confidentiality"
-      },
-      {
-        "aindex": 5,
-        "uniqueAnswer": false,
-        "score": 5,
-        "atype": "P",
-        "recommendations": [
-          {
-            "min_e_count": "a",
-            "max_e_count": "j",
-            "sector": null,
-            "answerChosen": false,
-            "label": "To avoid problems due to the human curiosity, it is important to have a clean desk policy to avoid confidential documents being seen."
-          }
-        ],
-        "label": "with all confidential documents locked away in a room, a desk or a closet"
-      },
-      {
-        "aindex": 6,
-        "uniqueAnswer": false,
-        "score": 5,
-        "atype": "P",
-        "recommendations": [
-          {
-            "min_e_count": "a",
-            "max_e_count": "j",
-            "sector": null,
-            "answerChosen": false,
-            "label": "The staff shouldn't clean restricted access areas, such as archive room or IT room."
-          }
-        ],
-        "label": "while avoiding rooms which have restricted access, like an archive room or a server room"
-      }
-    ],
-    "label": "The office cleaning is done"
-  },
-  {
-    "service_category": "Passwords",
-    "section": "Logical Access",
-    "qtype": "M",
-    "qindex": 8,
-    "maxPoints": 45,
-    "answers": [
-      {
-        "aindex": 1,
-        "uniqueAnswer": true,
-        "score": 0,
-        "atype": "P",
-        "recommendations": [
-          {
-            "min_e_count": "a",
-            "max_e_count": "j",
-            "sector": null,
-            "answerChosen": true,
-            "label": "Advice should be given to avoid weak passwords. Some tips or techniques could be given to employees to remember their passwords. Here some examples:<ul><li>Passwords should be kept secret and personal. Each and everyone should access their data by using their password, even from a computer of someone else.</li><li>There shouldn't be a computer which is shared with one and unique password. If it's inevitable, then a trsutworthy person should be defined responsible, and access should be really limited.</li><li>It's mandatory to be careful with the password storage in the internet browser as they are not protected.</li></ul>"
-          }
-        ],
-        "label": "not having requirements or guidelines, employees are left on their own"
-      },
-      {
-        "aindex": 2,
-        "uniqueAnswer": false,
-        "score": 0,
-        "atype": "P",
-        "recommendations": [
-          {
-            "min_e_count": "a",
-            "max_e_count": "j",
-            "sector": null,
-            "answerChosen": true,
-            "label": "Passwords should be kept secret and personal. If it's impossible, then there should be a trustworthy person named responsible for the computer to ensure its use, and give minimum access."
-          }
-        ],
-        "label": "centralised in a file, or are all known by one or more people"
-      },
-      {
-        "aindex": 3,
-        "uniqueAnswer": false,
-        "score": 0,
-        "atype": "P",
-        "recommendations": [
-          {
-            "min_e_count": "a",
-            "max_e_count": "j",
-            "sector": null,
-            "answerChosen": true,
-            "label": "Passwords should be kept secret and personal. Each and everyone should access their data by using their password, even from the computer of someone else."
-          }
-        ],
-        "label": "shared whenever there is a need to access a protected device"
-      },
-      {
-        "aindex": 4,
-        "uniqueAnswer": false,
-        "score": 15,
-        "atype": "P",
-        "recommendations": [
-          {
-            "min_e_count": "a",
-            "max_e_count": "j",
-            "sector": null,
-            "answerChosen": false,
-            "label": "It's necessary to have passwords which have at least one uppercase, lowercase, digit and special character, and a minimum of 12 characters."
-          }
-        ],
-        "label": "made up of 12 or more characters which are uppercase, lowercase, digits and special character"
-      },
-      {
-        "aindex": 5,
-        "uniqueAnswer": false,
-        "score": 5,
-        "atype": "P",
-        "recommendations": [
-          {
-            "min_e_count": "a",
-            "max_e_count": "j",
-            "sector": null,
-            "answerChosen": false,
-            "label": "Passwords shouldn't be a coherent word or date, except if they are in a complete sentence."
-          }
-        ],
-        "label": "not forming any words or dates"
-      },
-      {
-        "aindex": 6,
-        "uniqueAnswer": false,
-        "score": 5,
-        "atype": "P",
-        "recommendations": [
-          {
-            "min_e_count": "a",
-            "max_e_count": "j",
-            "sector": null,
-            "answerChosen": false,
-            "label": "Complete sentences could be used, even if they represent complete words."
-          }
-        ],
-        "label": "complete sentences"
-      },
-      {
-        "aindex": 7,
-        "uniqueAnswer": false,
-        "score": 5,
-        "atype": "P",
-        "recommendations": [
-          {
-            "min_e_count": "a",
-            "max_e_count": "j",
-            "sector": null,
-            "answerChosen": false,
-            "label": "Passwords should be changed from time to time, to prevent serious consequences in case of a leak or data theft."
-          }
-        ],
-        "label": "regularly changed, every year or two"
-      },
-      {
-        "aindex": 8,
-        "uniqueAnswer": false,
-        "score": 5,
-        "atype": "P",
-        "recommendations": [
-          {
-            "min_e_count": "a",
-            "max_e_count": "j",
-            "sector": null,
-            "answerChosen": false,
-            "label": "To make the storage easier, a password manager could be used."
-          }
-        ],
-        "label": "included in a password manager"
+        "label": "Privacy shield certification"
       },
       {
         "aindex": 9,
         "uniqueAnswer": false,
-        "score": 0,
         "atype": "P",
-        "recommendations": [
+        "questions_map": [
           {
-            "min_e_count": "a",
-            "max_e_count": "j",
-            "sector": null,
-            "answerChosen": true,
-            "label": "It's mandatory to be careful with the password storage in the internet browsers as they are not protected well."
+            "label": "Do your employees have one or more cybersecurity certification(s) and / or accreditation?",
+            "branch": 0,
+            "level": 1,
+            "order": 1
           }
         ],
-        "label": "included in web browsers"
+        "label": "National authority certifications"
       },
       {
         "aindex": 10,
         "uniqueAnswer": false,
-        "score": 10,
         "atype": "P",
-        "recommendations": [
+        "questions_map": [
           {
-            "min_e_count": "a",
-            "max_e_count": "j",
-            "sector": null,
-            "answerChosen": false,
-            "label": "Same passwords used on different website makes a leak easier. Besides, only one leak is enough to compromise all the access using the same password."
+            "label": "Do your employees have one or more cybersecurity certification(s) and / or accreditation?",
+            "branch": 0,
+            "level": 1,
+            "order": 1
           }
         ],
-        "label": "different for each application used, even for a user"
+        "label": "Red Teaming TIBER CSSF (Luxembourg)"
+      },
+      {
+        "aindex": 11,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Do your employees have one or more cybersecurity certification(s) and / or accreditation?",
+            "branch": 0,
+            "level": 1,
+            "order": 1
+          }
+        ],
+        "label": "FedISA (Certification for dematerialization and electronic archiving project management)"
+      },
+      {
+        "aindex": 12,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Do your employees have one or more cybersecurity certification(s) and / or accreditation?",
+            "branch": 0,
+            "level": 1,
+            "order": 1
+          }
+        ],
+        "label": "PSDC (Prestataires de Services de Dématérialisation ou de Conservation)"
+      },
+      {
+        "aindex": 13,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Do your employees have one or more cybersecurity certification(s) and / or accreditation?",
+            "branch": 0,
+            "level": 1,
+            "order": 1
+          }
+        ],
+        "label": "PSF de support"
+      },
+      {
+        "aindex": 14,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Do your employees have one or more cybersecurity certification(s) and / or accreditation?",
+            "branch": 0,
+            "level": 1,
+            "order": 1
+          }
+        ],
+        "label": "Vendor-neutral certification"
+      },
+      {
+        "aindex": 15,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Do your employees have one or more cybersecurity certification(s) and / or accreditation?",
+            "branch": 0,
+            "level": 1,
+            "order": 1
+          }
+        ],
+        "label": "Vendor-specific certification"
+      },
+      {
+        "aindex": 16,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Do your employees have one or more cybersecurity certification(s) and / or accreditation?",
+            "branch": 0,
+            "level": 1,
+            "order": 1
+          }
+        ],
+        "label": "Vendors’ certification"
+      },
+      {
+        "aindex": 17,
+        "uniqueAnswer": false,
+        "atype": "T",
+        "questions_map": [
+          {
+            "label": "Do your employees have one or more cybersecurity certification(s) and / or accreditation?",
+            "branch": 0,
+            "level": 1,
+            "order": 1
+          }
+        ],
+        "label": "Other (please specify)"
       }
-    ],
-    "label": "Passwords in the company are"
+    ]
   },
   {
-    "service_category": "WiFi",
-    "section": "Local Area Network",
-    "qtype": "M",
-    "qindex": 9,
-    "maxPoints": 25,
+    "section": "Company information",
+    "service_category": "Company information",
+    "qtype": "MT",
+    "qindex": 2,
+    "label": "Do your employees have one or more cybersecurity certification(s) and / or accreditation?",
     "answers": [
       {
         "aindex": 1,
-        "uniqueAnswer": true,
-        "score": 25,
+        "uniqueAnswer": false,
         "atype": "P",
-        "recommendations": [
+        "questions_map": [
           {
-            "min_e_count": "a",
-            "max_e_count": "j",
-            "sector": null,
-            "answerChosen": true,
-            "label": "For now, wireless network isn't activated in the company. If it is changed, it's important to:<ul><li>Wireless Network should be split between internal and external users to avoid access problems.</li><li>If a wireless network is used for external people, strong precautions should be taken, for example the collection of an identity.</li></ul>"
+            "label": "What are the primary drivers for cybersecurity certifications investment?",
+            "branch": 0,
+            "level": 2,
+            "order": 1
           }
         ],
-        "label": "are not used in the company"
+        "label": "No"
       },
-      {
+	  {
         "aindex": 2,
         "uniqueAnswer": false,
-        "score": 0,
         "atype": "P",
-        "recommendations": [
+        "questions_map": [
           {
-            "min_e_count": "a",
-            "max_e_count": "j",
-            "sector": null,
-            "answerChosen": true,
-            "label": "Wireless Network should be split between internal and external users to avoid access problems."
+            "label": "What are the primary drivers for cybersecurity certifications investment?",
+            "branch": 0,
+            "level": 2,
+            "order": 1
           }
         ],
-        "label": "are used by everyone and access is granted to the company server"
+        "label": "I don’t know"
       },
-      {
+	  {
         "aindex": 3,
         "uniqueAnswer": false,
-        "score": 0,
         "atype": "P",
-        "recommendations": [
+        "questions_map": [
           {
-            "min_e_count": "a",
-            "max_e_count": "j",
-            "sector": null,
-            "answerChosen": true,
-            "label": "If a wireless network is used for external people, strong precautions should be taken, for example the collection of an identity."
+            "label": "What are the primary drivers for cybersecurity certifications investment?",
+            "branch": 0,
+            "level": 2,
+            "order": 1
           }
         ],
-        "label": "are given to everyone, without any way to get identity of the persons"
+        "label": "CISSP"
       },
       {
         "aindex": 4,
         "uniqueAnswer": false,
-        "score": 15,
         "atype": "P",
-        "recommendations": [
+        "questions_map": [
           {
-            "min_e_count": "a",
-            "max_e_count": "j",
-            "sector": null,
-            "answerChosen": false,
-            "label": "The password shouldn't be easily guessable, to avoid connections which are not wanted."
+            "label": "What are the primary drivers for cybersecurity certifications investment?",
+            "branch": 0,
+            "level": 2,
+            "order": 1
           }
         ],
-        "label": "are protected by long passwords of 20 characters or more"
+        "label": "SSCP"
       },
       {
         "aindex": 5,
         "uniqueAnswer": false,
-        "score": 10,
         "atype": "P",
-        "recommendations": [
+        "questions_map": [
           {
-            "min_e_count": "a",
-            "max_e_count": "j",
-            "sector": null,
-            "answerChosen": false,
-            "label": "Also, wireless networks of printers should be protected to avoid the leak of all printed documents."
+            "label": "What are the primary drivers for cybersecurity certifications investment?",
+            "branch": 0,
+            "level": 2,
+            "order": 1
           }
         ],
-        "label": "of the printers are protected by a strong password"
-      }
-    ],
-    "label": "Wireless networks"
-  },
-  {
-    "service_category": "Antivirus",
-    "section": "Local Area Network",
-    "qtype": "M",
-    "qindex": 10,
-    "maxPoints": 35,
-    "answers": [
-      {
-        "aindex": 1,
-        "uniqueAnswer": true,
-        "score": 0,
-        "atype": "P",
-        "recommendations": [
-          {
-            "min_e_count": "a",
-            "max_e_count": "j",
-            "sector": null,
-            "answerChosen": true,
-            "label": "The company should have an antivirus and be careful to:"
-          }
-        ],
-        "label": "is not installed or used"
-      },
-      {
-        "aindex": 2,
-        "uniqueAnswer": false,
-        "score": 10,
-        "atype": "P",
-        "recommendations": [
-          {
-            "min_e_count": "a",
-            "max_e_count": "j",
-            "sector": null,
-            "answerChosen": false,
-            "label": "An antivirus software must be installed on all devices."
-          }
-        ],
-        "label": "is installed on computers and laptops"
-      },
-      {
-        "aindex": 3,
-        "uniqueAnswer": false,
-        "score": 5,
-        "atype": "P",
-        "recommendations": [
-          {
-            "min_e_count": "a",
-            "max_e_count": "j",
-            "sector": null,
-            "answerChosen": false,
-            "label": "It should be up to date, preferably automatically to cover as many threats as possible."
-          }
-        ],
-        "label": "is updated on all computers, automatically or manually"
-      },
-      {
-        "aindex": 4,
-        "uniqueAnswer": false,
-        "score": 5,
-        "atype": "P",
-        "recommendations": [
-          {
-            "min_e_count": "a",
-            "max_e_count": "j",
-            "sector": null,
-            "answerChosen": false,
-            "label": "It should be activated in any case to protect the device continuously."
-          }
-        ],
-        "label": "is activated and protects computer"
-      },
-      {
-        "aindex": 5,
-        "uniqueAnswer": false,
-        "score": 5,
-        "atype": "P",
-        "recommendations": [
-          {
-            "min_e_count": "a",
-            "max_e_count": "j",
-            "sector": null,
-            "answerChosen": false,
-            "label": "All devices, like smartphones, tablets should have an antivirus, even if it is the one by default from the operating system."
-          }
-        ],
-        "label": "is installed on all mobile phones that are on network"
+        "label": "Other (ISC)² certification(s)"
       },
       {
         "aindex": 6,
         "uniqueAnswer": false,
-        "score": 5,
         "atype": "P",
-        "recommendations": [
+        "questions_map": [
           {
-            "min_e_count": "a",
-            "max_e_count": "j",
-            "sector": null,
-            "answerChosen": false,
-            "label": "Some tests should be done from time to time."
+            "label": "What are the primary drivers for cybersecurity certifications investment?",
+            "branch": 0,
+            "level": 2,
+            "order": 1
           }
         ],
-        "label": "is used from time to time in order to analyse the computer, even without external events"
+        "label": "CISA"
       },
       {
         "aindex": 7,
         "uniqueAnswer": false,
-        "score": 5,
         "atype": "P",
-        "recommendations": [
+        "questions_map": [
           {
-            "min_e_count": "a",
-            "max_e_count": "j",
-            "sector": null,
-            "answerChosen": false,
-            "label": "Some tests should be done in case of suspicion of infection."
+            "label": "What are the primary drivers for cybersecurity certifications investment?",
+            "branch": 0,
+            "level": 2,
+            "order": 1
           }
         ],
-        "label": "is used to analyse the network whenever a suspicious event occurs"
-      }
-    ],
-    "label": "Antivirus software"
-  },
-  {
-    "service_category": "User Work Stations/Updates",
-    "section": "Information System",
-    "qtype": "M",
-    "qindex": 11,
-    "maxPoints": 35,
-    "answers": [
-      {
-        "aindex": 1,
-        "uniqueAnswer": true,
-        "score": 0,
-        "atype": "P",
-        "recommendations": [
-          {
-            "min_e_count": "a",
-            "max_e_count": "j",
-            "sector": null,
-            "answerChosen": true,
-            "label": "Some rules and specific advice should be given concerning users stations or laptop. Some points that are important:"
-          }
-        ],
-        "label": "left without any rules, and users have to take care of their on workstations"
-      },
-      {
-        "aindex": 2,
-        "uniqueAnswer": false,
-        "score": 15,
-        "atype": "P",
-        "recommendations": [
-          {
-            "min_e_count": "a",
-            "max_e_count": "j",
-            "sector": null,
-            "answerChosen": false,
-            "label": "A device should always be up to date in order to avoid security problems, and also avoid network intrusion. Many operating systems now update automatically, but installed software needs some permission to be given or manual maintenance."
-          }
-        ],
-        "label": "automatically or manually updated regarding the software and operating system"
-      },
-      {
-        "aindex": 3,
-        "uniqueAnswer": false,
-        "score": 5,
-        "atype": "P",
-        "recommendations": [
-          {
-            "min_e_count": "a",
-            "max_e_count": "j",
-            "sector": null,
-            "answerChosen": false,
-            "label": "Administrator rights should be left only to the users who are specialised in IT, or well advised respecting the rules."
-          }
-        ],
-        "label": "controlled by administrators, which won't let users install software because they do not have administrator rights"
-      },
-      {
-        "aindex": 4,
-        "uniqueAnswer": false,
-        "score": 5,
-        "atype": "P",
-        "recommendations": [
-          {
-            "min_e_count": "a",
-            "max_e_count": "j",
-            "sector": null,
-            "answerChosen": false,
-            "label": "Downloads should only be done from the official websites, the original developers of the software, to avoid manipulated download files or infections."
-          }
-        ],
-        "label": "needed to comply with rules or guidelines about installation and downloading software, concerning illegality or the danger to install something without authorisation"
-      },
-      {
-        "aindex": 5,
-        "uniqueAnswer": false,
-        "score": 10,
-        "atype": "P",
-        "recommendations": [
-          {
-            "min_e_count": "a",
-            "max_e_count": "j",
-            "sector": null,
-            "answerChosen": false,
-            "label": "Devices should be locked to avoid identity theft."
-          }
-        ],
-        "label": "locked whenever the user is not at his desk, even for a short time"
-      }
-    ],
-    "label": "The user workstations are"
-  },
-  {
-    "service_category": "Backups",
-    "section": "Information System",
-    "qtype": "M",
-    "qindex": 12,
-    "maxPoints": 65,
-    "answers": [
-      {
-        "aindex": 1,
-        "uniqueAnswer": true,
-        "score": 0,
-        "atype": "P",
-        "recommendations": [
-          {
-            "min_e_count": "a",
-            "max_e_count": "j",
-            "sector": null,
-            "answerChosen": true,
-            "label": "It's important to have backups for various reason, to have redundancy of data if they disappeared. It's important to have:"
-          }
-        ],
-        "label": "non existent: they are not done or not working"
-      },
-      {
-        "aindex": 2,
-        "uniqueAnswer": false,
-        "score": 5,
-        "atype": "P",
-        "recommendations": [],
-        "label": "shared: a third party has the responsibility of the backup"
-      },
-      {
-        "aindex": 3,
-        "uniqueAnswer": false,
-        "score": 10,
-        "atype": "P",
-        "recommendations": [
-          {
-            "min_e_count": "a",
-            "max_e_count": "j",
-            "sector": null,
-            "answerChosen": false,
-            "label": "Backups should concern the whole company, and everyone should be aware to put all data on the systems that are backed up, to ensure to have a copy of them."
-          }
-        ],
-        "label": "exhaustive: all data is on backups, and all users know that and avoid storing information locally"
-      },
-      {
-        "aindex": 4,
-        "uniqueAnswer": false,
-        "score": 10,
-        "atype": "P",
-        "recommendations": [
-          {
-            "min_e_count": "a",
-            "max_e_count": "j",
-            "sector": null,
-            "answerChosen": false,
-            "label": "Backups should be done daily to avoid major data loss."
-          }
-        ],
-        "label": "done daily: backups are made at least once daily"
-      },
-      {
-        "aindex": 5,
-        "uniqueAnswer": false,
-        "score": 10,
-        "atype": "P",
-        "recommendations": [
-          {
-            "min_e_count": "a",
-            "max_e_count": "j",
-            "sector": null,
-            "answerChosen": false,
-            "label": "Backups should be retained at least a month to avoid problems caused by ransomware."
-          }
-        ],
-        "label": "retained: it is possible to get back a month or more"
-      },
-      {
-        "aindex": 6,
-        "uniqueAnswer": false,
-        "score": 5,
-        "atype": "P",
-        "recommendations": [
-          {
-            "min_e_count": "a",
-            "max_e_count": "j",
-            "sector": null,
-            "answerChosen": false,
-            "label": "Backups should be outside the premises, decentralized, with more than 3 kilometres between them."
-          }
-        ],
-        "label": "decentralized: the server, and at least one full backup system is separated by at leaset 3 kilometres"
-      },
-      {
-        "aindex": 7,
-        "uniqueAnswer": false,
-        "score": 10,
-        "atype": "P",
-        "recommendations": [
-          {
-            "min_e_count": "a",
-            "max_e_count": "j",
-            "sector": null,
-            "answerChosen": false,
-            "label": "Backups should be disconnected, outside the local network, to be invisible by crypto-ransomwares."
-          }
-        ],
-        "label": "disconnected: they are disconnected from the server once they are done"
+        "label": "CISM"
       },
       {
         "aindex": 8,
         "uniqueAnswer": false,
-        "score": 10,
         "atype": "P",
-        "recommendations": [
+        "questions_map": [
           {
-            "min_e_count": "a",
-            "max_e_count": "j",
-            "sector": null,
-            "answerChosen": false,
-            "label": "Backups should be tested (restored) from time to time, just to ensure that the data is readable and has integrity."
+            "label": "What are the primary drivers for cybersecurity certifications investment?",
+            "branch": 0,
+            "level": 2,
+            "order": 1
           }
         ],
-        "label": "tested: one or all the files are restored from a backup from occasionally"
+        "label": "Other ISACA certification(s)"
       },
       {
         "aindex": 9,
         "uniqueAnswer": false,
-        "score": 5,
         "atype": "P",
-        "recommendations": [
+        "questions_map": [
           {
-            "min_e_count": "a",
-            "max_e_count": "j",
-            "sector": null,
-            "answerChosen": false,
-            "label": "Backups should be encrypted to avoid problems concerning the data theft, mainly if they are moved."
+            "label": "What are the primary drivers for cybersecurity certifications investment?",
+            "branch": 0,
+            "level": 2,
+            "order": 1
           }
         ],
-        "label": "encrypted: so when they are taken outside the company, they can't be read"
+        "label": "Security+"
+      },
+	  {
+        "aindex": 10,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "What are the primary drivers for cybersecurity certifications investment?",
+            "branch": 0,
+            "level": 2,
+            "order": 1
+          }
+        ],
+        "label": "Other CompTIA certification(s)"
+      },
+	  {
+        "aindex": 11,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "What are the primary drivers for cybersecurity certifications investment?",
+            "branch": 0,
+            "level": 2,
+            "order": 1
+          }
+        ],
+        "label": "SANS"
+      },
+      {
+        "aindex": 12,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "What are the primary drivers for cybersecurity certifications investment?",
+            "branch": 0,
+            "level": 2,
+            "order": 1
+          }
+        ],
+        "label": "Certified Ethical Hacker (CEH)"
+      },
+      {
+        "aindex": 13,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "What are the primary drivers for cybersecurity certifications investment?",
+            "branch": 0,
+            "level": 2,
+            "order": 1
+          }
+        ],
+        "label": "Other EC-Council certification(s)"
+      },
+      {
+        "aindex": 14,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "What are the primary drivers for cybersecurity certifications investment?",
+            "branch": 0,
+            "level": 2,
+            "order": 1
+          }
+        ],
+        "label": "OSCP"
+      },
+      {
+        "aindex": 15,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "What are the primary drivers for cybersecurity certifications investment?",
+            "branch": 0,
+            "level": 2,
+            "order": 1
+          }
+        ],
+        "label": "Other OffSec certification(s)"
+      },
+      {
+        "aindex": 16,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "What are the primary drivers for cybersecurity certifications investment?",
+            "branch": 0,
+            "level": 2,
+            "order": 1
+          }
+        ],
+        "label": "Other vendor-neutral certification"
+      },
+      {
+        "aindex": 17,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "What are the primary drivers for cybersecurity certifications investment?",
+            "branch": 0,
+            "level": 2,
+            "order": 1
+          }
+        ],
+        "label": "Other vendor-specific certification"
+      },
+      {
+        "aindex": 18,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "What are the primary drivers for cybersecurity certifications investment?",
+            "branch": 0,
+            "level": 2,
+            "order": 1
+          }
+        ],
+        "label": "Secret clearance accreditation (NATO, EU,…)"
+      },
+      {
+        "aindex": 19,
+        "uniqueAnswer": false,
+        "atype": "T",
+        "questions_map": [
+          {
+            "label": "What are the primary drivers for cybersecurity certifications investment?",
+            "branch": 0,
+            "level": 2,
+            "order": 1
+          }
+        ],
+        "label": "Other (please specify)"
       }
-    ],
-    "label": "Backups are"
+    ]
   },
   {
-    "service_category": "BYOD",
-    "section": "Information System",
-    "qtype": "M",
-    "qindex": 13,
-    "maxPoints": 20,
+    "section": "Company information",
+    "service_category": "Company information",
+    "qtype": "MT",
+    "qindex": 3,
+    "label": "What are the primary drivers for cybersecurity certifications investment?",
     "answers": [
       {
         "aindex": 1,
-        "uniqueAnswer": true,
-        "score": 20,
+        "uniqueAnswer": false,
         "atype": "P",
-        "recommendations": [
+        "questions_map": [
           {
-            "min_e_count": "a",
-            "max_e_count": "j",
-            "sector": null,
-            "answerChosen": true,
-            "label": "For now, the personal devices are not connected in the local network. If it's changed, it's important to:"
+            "label": "Does your company have a dedicated cybersecurity offering for SMEs?",
+            "branch": 0,
+            "level": 3,
+            "order": 1
           }
         ],
-        "label": "is forbidden or impossible in the company"
+        "label": "Compliance requirements"
       },
       {
         "aindex": 2,
         "uniqueAnswer": false,
-        "score": 10,
         "atype": "P",
-        "recommendations": [
+        "questions_map": [
           {
-            "min_e_count": "a",
-            "max_e_count": "j",
-            "sector": null,
-            "answerChosen": false,
-            "label": "Personal devices shouldn't be used in company without any controls, rules and explanations. By knowing all the different existing ways to attack an organization, it's possible to avoid them."
+            "label": "Does your company have a dedicated cybersecurity offering for SMEs?",
+            "branch": 0,
+            "level": 3,
+            "order": 1
           }
         ],
-        "label": "is subject to precise rules, particularly before connecting to the company network"
+        "label": "Customer demands"
       },
       {
         "aindex": 3,
         "uniqueAnswer": false,
-        "score": 5,
         "atype": "P",
-        "recommendations": [
+        "questions_map": [
           {
-            "min_e_count": "a",
-            "max_e_count": "j",
-            "sector": null,
-            "answerChosen": false,
-            "label": "Personal devices should have an antivirus installed, updated and active to avoid as many threats as possible."
+            "label": "Does your company have a dedicated cybersecurity offering for SMEs?",
+            "branch": 0,
+            "level": 3,
+            "order": 1
           }
         ],
-        "label": "is under a strict antivirus control"
+        "label": "Competitive advantage"
       },
       {
         "aindex": 4,
         "uniqueAnswer": false,
-        "score": 5,
         "atype": "P",
-        "recommendations": [
+        "questions_map": [
           {
-            "min_e_count": "a",
-            "max_e_count": "j",
-            "sector": null,
-            "answerChosen": false,
-            "label": "Defining rules and best practices help to protect the internal networks."
+            "label": "Does your company have a dedicated cybersecurity offering for SMEs?",
+            "branch": 0,
+            "level": 3,
+            "order": 1
           }
         ],
-        "label": "has been explained to employees through training or explanations"
+        "label": "Business partnerships"
+      },
+      {
+        "aindex": 5,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Does your company have a dedicated cybersecurity offering for SMEs?",
+            "branch": 0,
+            "level": 3,
+            "order": 1
+          }
+        ],
+        "label": "Industry reputation"
+      },
+      {
+        "aindex": 6,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Does your company have a dedicated cybersecurity offering for SMEs?",
+            "branch": 0,
+            "level": 3,
+            "order": 1
+          }
+        ],
+        "label": "Employees’ skills development"
+      },
+      {
+        "aindex": 7,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Does your company have a dedicated cybersecurity offering for SMEs?",
+            "branch": 0,
+            "level": 3,
+            "order": 1
+          }
+        ],
+        "label": "Attractiveness for experts"
+      },
+      {
+        "aindex": 8,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Does your company have a dedicated cybersecurity offering for SMEs?",
+            "branch": 0,
+            "level": 3,
+            "order": 1
+          }
+        ],
+        "label": "Quality & maturity of IT work environment"
+      },
+      {
+        "aindex": 8,
+        "uniqueAnswer": false,
+        "atype": "T",
+        "questions_map": [
+          {
+            "label": "Does your company have a dedicated cybersecurity offering for SMEs?",
+            "branch": 0,
+            "level": 3,
+            "order": 1
+          }
+        ],
+        "label": "Other (please specify):"
       }
-    ],
-    "label": "Having some personal IT devices (USB Key, Hard Drive, Smartphone, Tablet, Laptop …) in the professional environment (network that is connected to the server)"
+    ]
+  },
+  {
+    "section": "SME & cybersecurity",
+    "service_category": "SME & cybersecurity",
+    "qtype": "ST",
+    "qindex": 4,
+    "label": "Does your company have a dedicated cybersecurity offering for SMEs?",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "From your market experience, could you outline the factors that encourage SMEs to invest in their cybersecurity?",
+            "branch": 0,
+            "level": 4,
+            "order": 1
+          }
+        ],
+        "label": "No, we have general service for all types of companies"
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "From your market experience, could you outline the factors that encourage SMEs to invest in their cybersecurity?",
+            "branch": 0,
+            "level": 4,
+            "order": 1
+          }
+        ],
+        "label": "No, we do not focus on SME"
+      },
+      {
+        "aindex": 3,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "In your interactions with SMEs, do you specifically address the subject of cybersecurity threats and solutions?",
+            "branch": 0,
+            "level": 4,
+            "order": 1
+          }
+        ],
+        "label": "Yes, we have a solution for SME"
+      },
+      {
+        "aindex": 4,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "In your interactions with SMEs, do you specifically address the subject of cybersecurity threats and solutions?",
+            "branch": 0,
+            "level": 4,
+            "order": 1
+          }
+        ],
+        "label": "Yes, we have solution for SME and even different services for small or medium companies"
+      },
+      {
+        "aindex": 5,
+        "uniqueAnswer": true,
+        "atype": "T",
+        "questions_map": [
+          {
+            "label": "In your interactions with SMEs, do you specifically address the subject of cybersecurity threats and solutions?",
+            "branch": 0,
+            "level": 4,
+            "order": 1
+          }
+        ],
+        "label": "Other (please specify):"
+      }
+    ]
+  },
+  {
+    "section": "SME & cybersecurity",
+    "service_category": "SME & cybersecurity",
+    "qtype": "S",
+    "qindex": 5,
+    "label": "In your interactions with SMEs, do you specifically address the subject of cybersecurity threats and solutions?",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "From your market experience, could you outline the factors that encourage SMEs to invest in their cybersecurity?",
+            "branch": 0,
+            "level": 5,
+            "order": 1
+          }
+        ],
+        "label": "No, I talk about digital solutions first"
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "From your market experience, could you outline the factors that encourage SMEs to invest in their cybersecurity?",
+            "branch": 0,
+            "level": 5,
+            "order": 1
+          }
+        ],
+        "label": "No, I talk about risks first"
+      },
+      {
+        "aindex": 3,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "From your market experience, could you outline the factors that encourage SMEs to invest in their cybersecurity?",
+            "branch": 0,
+            "level": 5,
+            "order": 1
+          }
+        ],
+        "label": "No, I talk about compliance first"
+      },
+      {
+        "aindex": 4,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "From your market experience, could you outline the factors that encourage SMEs to invest in their cybersecurity?",
+            "branch": 0,
+            "level": 5,
+            "order": 1
+          }
+        ],
+        "label": "Yes, and they understand it if they have an in-house IT expert"
+      },
+      {
+        "aindex": 5,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "From your market experience, could you outline the factors that encourage SMEs to invest in their cybersecurity?",
+            "branch": 0,
+            "level": 5,
+            "order": 1
+          }
+        ],
+        "label": "Yes, and they understand it if they had an incident"
+      },
+      {
+        "aindex": 6,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "From your market experience, could you outline the factors that encourage SMEs to invest in their cybersecurity?",
+            "branch": 0,
+            "level": 5,
+            "order": 1
+          }
+        ],
+        "label": "Yes, but they don’t understand it"
+      },
+      {
+        "aindex": 7,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "From your market experience, could you outline the factors that encourage SMEs to invest in their cybersecurity?",
+            "branch": 0,
+            "level": 5,
+            "order": 1
+          }
+        ],
+        "label": "Yes, I collaborate with IT service providers who seek my expertise"
+      },
+      {
+        "aindex": 8,
+        "uniqueAnswer": false,
+        "atype": "T",
+        "questions_map": [
+          {
+            "label": "From your market experience, could you outline the factors that encourage SMEs to invest in their cybersecurity?",
+            "branch": 0,
+            "level": 5,
+            "order": 1
+          }
+        ],
+        "label": "Other (please specify)"
+      }
+    ]
+  },
+  {
+    "section": "SME & cybersecurity",
+    "service_category": "SME & cybersecurity",
+    "qtype": "MT",
+    "qindex": 6,
+    "label": "From your market experience, could you outline the factors that encourage SMEs to invest in their cybersecurity?",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "How do you generally assess the costs and budget allocated to your SME customers' cybersecurity investments?",
+            "branch": 0,
+            "level": 6,
+            "order": 1
+          }
+        ],
+        "label": "I do not work with SMEs"
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "How do you generally assess the costs and budget allocated to your SME customers' cybersecurity investments?",
+            "branch": 0,
+            "level": 6,
+            "order": 1
+          }
+        ],
+        "label": "I don’t know"
+      },
+      {
+        "aindex": 3,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "How do you generally assess the costs and budget allocated to your SME customers' cybersecurity investments?",
+            "branch": 0,
+            "level": 6,
+            "order": 1
+          }
+        ],
+        "label": "Incident experience & lessons learned"
+      },
+      {
+        "aindex": 4,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "How do you generally assess the costs and budget allocated to your SME customers' cybersecurity investments?",
+            "branch": 0,
+            "level": 6,
+            "order": 1
+          }
+        ],
+        "label": "The sector of activity trends & request"
+      },
+      {
+        "aindex": 5,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "How do you generally assess the costs and budget allocated to your SME customers' cybersecurity investments?",
+            "branch": 0,
+            "level": 6,
+            "order": 1
+          }
+        ],
+        "label": "Customers’  requirements"
+      },
+      {
+        "aindex": 6,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "How do you generally assess the costs and budget allocated to your SME customers' cybersecurity investments?",
+            "branch": 0,
+            "level": 6,
+            "order": 1
+          }
+        ],
+        "label": "Their number of employees"
+      },
+      {
+        "aindex": 7,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "How do you generally assess the costs and budget allocated to your SME customers' cybersecurity investments?",
+            "branch": 0,
+            "level": 6,
+            "order": 1
+          }
+        ],
+        "label": "Their turnover"
+      },
+      {
+        "aindex": 8,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "How do you generally assess the costs and budget allocated to your SME customers' cybersecurity investments?",
+            "branch": 0,
+            "level": 6,
+            "order": 1
+          }
+        ],
+        "label": "The sector of activity trends & request"
+      },
+      {
+        "aindex": 9,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "How do you generally assess the costs and budget allocated to your SME customers' cybersecurity investments?",
+            "branch": 0,
+            "level": 6,
+            "order": 1
+          }
+        ],
+        "label": "The sensitivity of their data"
+      },
+      {
+        "aindex": 10,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "How do you generally assess the costs and budget allocated to your SME customers' cybersecurity investments?",
+            "branch": 0,
+            "level": 6,
+            "order": 1
+          }
+        ],
+        "label": "Management awareness to the cybersecurity topic"
+      },
+      {
+        "aindex": 11,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "How do you generally assess the costs and budget allocated to your SME customers' cybersecurity investments?",
+            "branch": 0,
+            "level": 6,
+            "order": 1
+          }
+        ],
+        "label": "Their regulatory framework"
+      },
+      {
+        "aindex": 12,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "How do you generally assess the costs and budget allocated to your SME customers' cybersecurity investments?",
+            "branch": 0,
+            "level": 6,
+            "order": 1
+          }
+        ],
+        "label": "Working with an IT consulting firm to manage their digital environment"
+      },
+      {
+        "aindex": 13,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "How do you generally assess the costs and budget allocated to your SME customers' cybersecurity investments?",
+            "branch": 0,
+            "level": 6,
+            "order": 1
+          }
+        ],
+        "label": "Having in-house skills to manage their digital environment"
+      },
+      {
+        "aindex": 14,
+        "uniqueAnswer": false,
+        "atype": "T",
+        "questions_map": [
+          {
+            "label": "How do you generally assess the costs and budget allocated to your SME customers' cybersecurity investments?",
+            "branch": 0,
+            "level": 6,
+            "order": 1
+          }
+        ],
+        "label": "Other (please specify):"
+      }
+    ]
+  },
+  {
+    "section": "SME & cybersecurity",
+    "service_category": "SME & cybersecurity",
+    "qtype": "MT",
+    "qindex": 7,
+    "label": "How do you generally assess the costs and budget allocated to your SME customers' cybersecurity investments?",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "What is the man-day cost paid by customers for your cybersecurity services when provided as part of a comprehensive package?",
+            "branch": 0,
+            "level": 7,
+            "order": 1
+          }
+        ],
+        "label": "No such assessment is carried out"
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "What is the man-day cost paid by customers for your cybersecurity services when provided as part of a comprehensive package?",
+            "branch": 0,
+            "level": 7,
+            "order": 1
+          }
+        ],
+        "label": "Operational Expenditure (OpEx)"
+      },
+      {
+        "aindex": 3,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "What is the man-day cost paid by customers for your cybersecurity services when provided as part of a comprehensive package?",
+            "branch": 0,
+            "level": 7,
+            "order": 1
+          }
+        ],
+        "label": "Capital Expenditure (CapEx)"
+      },
+      {
+        "aindex": 4,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "What is the man-day cost paid by customers for your cybersecurity services when provided as part of a comprehensive package?",
+            "branch": 0,
+            "level": 7,
+            "order": 1
+          }
+        ],
+        "label": "Total Cost of Ownership (TCO)"
+      },
+      {
+        "aindex": 5,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "What is the man-day cost paid by customers for your cybersecurity services when provided as part of a comprehensive package?",
+            "branch": 0,
+            "level": 7,
+            "order": 1
+          }
+        ],
+        "label": "Return on Investment (ROI)"
+      },
+      {
+        "aindex": 6,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "What is the man-day cost paid by customers for your cybersecurity services when provided as part of a comprehensive package?",
+            "branch": 0,
+            "level": 7,
+            "order": 1
+          }
+        ],
+        "label": "Compliance and best practices prioritization"
+      },
+      {
+        "aindex": 7,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "What is the man-day cost paid by customers for your cybersecurity services when provided as part of a comprehensive package?",
+            "branch": 0,
+            "level": 7,
+            "order": 1
+          }
+        ],
+        "label": "Collaboration with IT/tech partners for infrastructure assessment"
+      },
+      {
+        "aindex": 8,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "What is the man-day cost paid by customers for your cybersecurity services when provided as part of a comprehensive package?",
+            "branch": 0,
+            "level": 7,
+            "order": 1
+          }
+        ],
+        "label": "Regular risk assessments and vulnerability scans"
+      },
+      {
+        "aindex": 9,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "What is the man-day cost paid by customers for your cybersecurity services when provided as part of a comprehensive package?",
+            "branch": 0,
+            "level": 7,
+            "order": 1
+          }
+        ],
+        "label": "Financial and reputational impact considerations"
+      },
+      {
+        "aindex": 10,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "What is the man-day cost paid by customers for your cybersecurity services when provided as part of a comprehensive package?",
+            "branch": 0,
+            "level": 7,
+            "order": 1
+          }
+        ],
+        "label": "Risk-based budgeting"
+      },
+      {
+        "aindex": 11,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "What is the man-day cost paid by customers for your cybersecurity services when provided as part of a comprehensive package?",
+            "branch": 0,
+            "level": 7,
+            "order": 1
+          }
+        ],
+        "label": "Cost-Benefit Analysis"
+      },
+      {
+        "aindex": 12,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "What is the man-day cost paid by customers for your cybersecurity services when provided as part of a comprehensive package?",
+            "branch": 0,
+            "level": 7,
+            "order": 1
+          }
+        ],
+        "label": "Cost of corrective actions triggered by a Maturity Model Assessment"
+      },
+      {
+        "aindex": 13,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "What is the man-day cost paid by customers for your cybersecurity services when provided as part of a comprehensive package?",
+            "branch": 0,
+            "level": 7,
+            "order": 1
+          }
+        ],
+        "label": "Cost of corrective actions due to a qualitative assessment of security perception"
+      },
+      {
+        "aindex": 14,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "What is the man-day cost paid by customers for your cybersecurity services when provided as part of a comprehensive package?",
+            "branch": 0,
+            "level": 7,
+            "order": 1
+          }
+        ],
+        "label": "Costs of remedial actions triggered by incidents"
+      },
+      {
+        "aindex": 15,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "What is the man-day cost paid by customers for your cybersecurity services when provided as part of a comprehensive package?",
+            "branch": 0,
+            "level": 7,
+            "order": 1
+          }
+        ],
+        "label": "Employee/stakeholder/customer feedback seeking"
+      },
+      {
+        "aindex": 16,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "What is the man-day cost paid by customers for your cybersecurity services when provided as part of a comprehensive package?",
+            "branch": 0,
+            "level": 7,
+            "order": 1
+          }
+        ],
+        "label": "Other (please specify):"
+      }
+    ]
+  },
+  {
+    "section": "Cost & budget",
+    "service_category": "Cost & budget",
+    "qtype": "S",
+    "qindex": 8,
+    "label": "What is the man-day cost paid by customers for your cybersecurity services when provided as part of a comprehensive package?",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "What is the man-day cost paid by customers for your cybersecurity services when required on an ad hoc basis or for specific projects?",
+            "branch": 0,
+            "level": 8,
+            "order": 1
+          }
+        ],
+        "label": "I don’t want to share this information"
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "What is the man-day cost paid by customers for your cybersecurity services when required on an ad hoc basis or for specific projects?",
+            "branch": 0,
+            "level": 8,
+            "order": 1
+          }
+        ],
+        "label": "I don’t provide such service"
+      },
+      {
+        "aindex": 3,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "What is the man-day cost paid by customers for your cybersecurity services when required on an ad hoc basis or for specific projects?",
+            "branch": 0,
+            "level": 8,
+            "order": 1
+          }
+        ],
+        "label": "Below 400 euros per day / 50 euros per hour"
+      },
+      {
+        "aindex": 4,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "What is the man-day cost paid by customers for your cybersecurity services when required on an ad hoc basis or for specific projects?",
+            "branch": 0,
+            "level": 8,
+            "order": 1
+          }
+        ],
+        "label": "400-600 euros per day / 50-75 euros per hour"
+      },
+      {
+        "aindex": 5,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "What is the man-day cost paid by customers for your cybersecurity services when required on an ad hoc basis or for specific projects?",
+            "branch": 0,
+            "level": 8,
+            "order": 1
+          }
+        ],
+        "label": "600-800 euros per day / 75-100 euros per hour"
+      },
+      {
+        "aindex": 6,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "What is the man-day cost paid by customers for your cybersecurity services when required on an ad hoc basis or for specific projects?",
+            "branch": 0,
+            "level": 8,
+            "order": 1
+          }
+        ],
+        "label": "800-1000 euros per day / 100-125 euros per hour"
+      },
+      {
+        "aindex": 7,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "What is the man-day cost paid by customers for your cybersecurity services when required on an ad hoc basis or for specific projects?",
+            "branch": 0,
+            "level": 8,
+            "order": 1
+          }
+        ],
+        "label": "1000-1200 euros per day / 125-150 euros per hour"
+      },
+      {
+        "aindex": 8,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "What is the man-day cost paid by customers for your cybersecurity services when required on an ad hoc basis or for specific projects?",
+            "branch": 0,
+            "level": 8,
+            "order": 1
+          }
+        ],
+        "label": "1200-1400 euros per day / 150-175 euros per hour"
+      },
+      {
+        "aindex": 9,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "What is the man-day cost paid by customers for your cybersecurity services when required on an ad hoc basis or for specific projects?",
+            "branch": 0,
+            "level": 8,
+            "order": 1
+          }
+        ],
+        "label": "Above 1400 euros per day / 175 euros per hour"
+      }
+    ]
+  },
+  {
+    "section": "Cost & budget",
+    "service_category": "Cost & budget",
+    "qtype": "S",
+    "qindex": 9,
+    "label": "What is the man-day cost paid by customers for your cybersecurity services when required on an ad hoc basis or for specific projects?",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "What is the man-day cost paid by customers for your cybersecurity services for highly specialized expertise or niche tools?",
+            "branch": 0,
+            "level": 9,
+            "order": 1
+          }
+        ],
+        "label": "I don’t want to share this information"
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "What is the man-day cost paid by customers for your cybersecurity services for highly specialized expertise or niche tools?",
+            "branch": 0,
+            "level": 9,
+            "order": 1
+          }
+        ],
+        "label": "I don’t provide such service"
+      },
+      {
+        "aindex": 3,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "What is the man-day cost paid by customers for your cybersecurity services for highly specialized expertise or niche tools?",
+            "branch": 0,
+            "level": 9,
+            "order": 1
+          }
+        ],
+        "label": "Below 400 euros per day / 50 euros per hour"
+      },
+      {
+        "aindex": 4,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "What is the man-day cost paid by customers for your cybersecurity services for highly specialized expertise or niche tools?",
+            "branch": 0,
+            "level": 9,
+            "order": 1
+          }
+        ],
+        "label": "400-600 euros per day / 50-75 euros per hour"
+      },
+      {
+        "aindex": 5,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "What is the man-day cost paid by customers for your cybersecurity services for highly specialized expertise or niche tools?",
+            "branch": 0,
+            "level": 9,
+            "order": 1
+          }
+        ],
+        "label": "600-800 euros per day / 75-100 euros per hour"
+      },
+      {
+        "aindex": 6,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "What is the man-day cost paid by customers for your cybersecurity services for highly specialized expertise or niche tools?",
+            "branch": 0,
+            "level": 9,
+            "order": 1
+          }
+        ],
+        "label": "800-1000 euros per day / 100-125 euros per hour"
+      },
+      {
+        "aindex": 7,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "What is the man-day cost paid by customers for your cybersecurity services for highly specialized expertise or niche tools?",
+            "branch": 0,
+            "level": 9,
+            "order": 1
+          }
+        ],
+        "label": "1000-1200 euros per day / 125-150 euros per hour"
+      },
+      {
+        "aindex": 8,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "What is the man-day cost paid by customers for your cybersecurity services for highly specialized expertise or niche tools?",
+            "branch": 0,
+            "level": 9,
+            "order": 1
+          }
+        ],
+        "label": "1200-1400 euros per day / 150-175 euros per hour"
+      },
+      {
+        "aindex": 9,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "What is the man-day cost paid by customers for your cybersecurity services for highly specialized expertise or niche tools?",
+            "branch": 0,
+            "level": 9,
+            "order": 1
+          }
+        ],
+        "label": "Above 1400 euros per day / 175 euros per hour"
+      }
+    ]
+  },
+  {
+    "section": "Cost & budget",
+    "service_category": "Cost & budget",
+    "qtype": "S",
+    "qindex": 10,
+    "label": "What is the man-day cost paid by customers for your cybersecurity services for highly specialized expertise or niche tools?",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "What is the man-day cost paid by customers for your cybersecurity services when offered as a 24/7 service?",
+            "branch": 0,
+            "level": 10,
+            "order": 1
+          }
+        ],
+        "label": "I don’t want to share this information"
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "What is the man-day cost paid by customers for your cybersecurity services when offered as a 24/7 service?",
+            "branch": 0,
+            "level": 10,
+            "order": 1
+          }
+        ],
+        "label": "I don’t provide such service"
+      },
+      {
+        "aindex": 3,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "What is the man-day cost paid by customers for your cybersecurity services when offered as a 24/7 service?",
+            "branch": 0,
+            "level": 10,
+            "order": 1
+          }
+        ],
+        "label": "Below 400 euros per day / 50 euros per hour"
+      },
+      {
+        "aindex": 4,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "What is the man-day cost paid by customers for your cybersecurity services when offered as a 24/7 service?",
+            "branch": 0,
+            "level": 10,
+            "order": 1
+          }
+        ],
+        "label": "400-600 euros per day / 50-75 euros per hour"
+      },
+      {
+        "aindex": 5,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "What is the man-day cost paid by customers for your cybersecurity services when offered as a 24/7 service?",
+            "branch": 0,
+            "level": 10,
+            "order": 1
+          }
+        ],
+        "label": "600-800 euros per day / 75-100 euros per hour"
+      },
+      {
+        "aindex": 6,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "What is the man-day cost paid by customers for your cybersecurity services when offered as a 24/7 service?",
+            "branch": 0,
+            "level": 10,
+            "order": 1
+          }
+        ],
+        "label": "800-1000 euros per day / 100-125 euros per hour"
+      },
+      {
+        "aindex": 3,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "What is the man-day cost paid by customers for your cybersecurity services when offered as a 24/7 service?",
+            "branch": 0,
+            "level": 10,
+            "order": 1
+          }
+        ],
+        "label": "1000-1200 euros per day / 125-150 euros per hour"
+      },
+      {
+        "aindex": 6,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "What is the man-day cost paid by customers for your cybersecurity services when offered as a 24/7 service?",
+            "branch": 0,
+            "level": 10,
+            "order": 1
+          }
+        ],
+        "label": "1200-1400 euros per day / 150-175 euros per hour"
+      },
+      {
+        "aindex": 3,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "What is the man-day cost paid by customers for your cybersecurity services when offered as a 24/7 service?",
+            "branch": 0,
+            "level": 10,
+            "order": 1
+          }
+        ],
+        "label": "Above 1400 euros per day / 175 euros per hour"
+      }
+    ]
+  },
+  {
+    "section": "Cost & budget",
+    "service_category": "Cost & budget",
+    "qtype": "S",
+    "qindex": 11,
+    "label": "What is the man-day cost paid by customers for your cybersecurity services when offered as a 24/7 service?",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Have you observed an increase in the number of cyberattacks targeting companies in Luxembourg over the past few years?",
+            "branch": 0,
+            "level": 11,
+            "order": 1
+          }
+        ],
+        "label": "I don’t want to share this information"
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Have you observed an increase in the number of cyberattacks targeting companies in Luxembourg over the past few years?",
+            "branch": 0,
+            "level": 11,
+            "order": 1
+          }
+        ],
+        "label": "I don’t provide such service"
+      },
+      {
+        "aindex": 3,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Have you observed an increase in the number of cyberattacks targeting companies in Luxembourg over the past few years?",
+            "branch": 0,
+            "level": 11,
+            "order": 1
+          }
+        ],
+        "label": "Below 400 euros per day / 50 euros per hour"
+      },
+      {
+        "aindex": 4,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Have you observed an increase in the number of cyberattacks targeting companies in Luxembourg over the past few years?",
+            "branch": 0,
+            "level": 11,
+            "order": 1
+          }
+        ],
+        "label": "400-600 euros per day / 50-75 euros per hour"
+      },
+      {
+        "aindex": 5,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Have you observed an increase in the number of cyberattacks targeting companies in Luxembourg over the past few years?",
+            "branch": 0,
+            "level": 11,
+            "order": 1
+          }
+        ],
+        "label": "600-800 euros per day / 75-100 euros per hour"
+      },
+      {
+        "aindex": 6,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Have you observed an increase in the number of cyberattacks targeting companies in Luxembourg over the past few years?",
+            "branch": 0,
+            "level": 11,
+            "order": 1
+          }
+        ],
+        "label": "800-1000 euros per day / 100-125 euros per hour"
+      },
+      {
+        "aindex": 7,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Have you observed an increase in the number of cyberattacks targeting companies in Luxembourg over the past few years?",
+            "branch": 0,
+            "level": 11,
+            "order": 1
+          }
+        ],
+        "label": "1000-1200 euros per day / 125-150 euros per hour"
+      },
+      {
+        "aindex": 8,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Have you observed an increase in the number of cyberattacks targeting companies in Luxembourg over the past few years?",
+            "branch": 0,
+            "level": 11,
+            "order": 1
+          }
+        ],
+        "label": "1200-1400 euros per day / 150-175 euros per hour"
+      },
+      {
+        "aindex": 9,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Have you observed an increase in the number of cyberattacks targeting companies in Luxembourg over the past few years?",
+            "branch": 0,
+            "level": 11,
+            "order": 1
+          }
+        ],
+        "label": "Above 1400 euros per day / 175 euros per hour"
+      }
+    ]
+  },
+  {
+    "section": "Threat trends",
+    "service_category": "Threat trends",
+    "qtype": "S",
+    "qindex": 12,
+    "label": "Have you observed an increase in the number of cyberattacks targeting companies in Luxembourg over the past few years?",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "What is the typical duration of downtime for a company during a cyber attack?",
+            "branch": 0,
+            "level": 12,
+            "order": 1
+          }
+        ],
+        "label": "No, the number of attacks has dropped sharply"
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "What is the typical duration of downtime for a company during a cyber attack?",
+            "branch": 0,
+            "level": 12,
+            "order": 1
+          }
+        ],
+        "label": "No, the number of attacks has slightly decreased"
+      },
+      {
+        "aindex": 3,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "What is the typical duration of downtime for a company during a cyber attack?",
+            "branch": 0,
+            "level": 12,
+            "order": 1
+          }
+        ],
+        "label": "Yes, the number of attacks has slightly increased"
+      },
+      {
+        "aindex": 4,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "What is the typical duration of downtime for a company during a cyber attack?",
+            "branch": 0,
+            "level": 12,
+            "order": 1
+          }
+        ],
+        "label": "Yes, the number of attacks has risen sharply"
+      },
+      {
+        "aindex": 5,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "What is the typical duration of downtime for a company during a cyber attack?",
+            "branch": 0,
+            "level": 12,
+            "order": 1
+          }
+        ],
+        "label": "I don’t know"
+      }
+    ]
+  },
+  {
+    "section": "Threat trends",
+    "service_category": "Threat trends",
+    "qtype": "S",
+    "qindex": 13,
+    "label": "What is the typical duration of <b>complete downtime</b> for a company during a cyber attack?",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Can you provide an estimate of the average duration required for a company to recover completely and restore normal operations following a cyber attack?",
+            "branch": 0,
+            "level": 13,
+            "order": 1
+          }
+        ],
+        "label": "I don’t know"
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Can you provide an estimate of the average duration required for a company to recover completely and restore normal operations following a cyber attack?",
+            "branch": 0,
+            "level": 13,
+            "order": 1
+          }
+        ],
+        "label": "less than a day"
+      },
+      {
+        "aindex": 3,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Can you provide an estimate of the average duration required for a company to recover completely and restore normal operations following a cyber attack?",
+            "branch": 0,
+            "level": 13,
+            "order": 1
+          }
+        ],
+        "label": "1 day"
+      },
+      {
+        "aindex": 4,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Can you provide an estimate of the average duration required for a company to recover completely and restore normal operations following a cyber attack?",
+            "branch": 0,
+            "level": 13,
+            "order": 1
+          }
+        ],
+        "label": "2 days"
+      },
+      {
+        "aindex": 5,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Can you provide an estimate of the average duration required for a company to recover completely and restore normal operations following a cyber attack?",
+            "branch": 0,
+            "level": 13,
+            "order": 1
+          }
+        ],
+        "label": "3 days"
+      },
+      {
+        "aindex": 6,
+        "uniqueAnswer": true,
+        "atype": "T",
+        "questions_map": [
+          {
+            "label": "Can you provide an estimate of the average duration required for a company to recover completely and restore normal operations following a cyber attack?",
+            "branch": 0,
+            "level": 13,
+            "order": 1
+          }
+        ],
+        "label": "4 days"
+      },
+      {
+        "aindex": 7,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Can you provide an estimate of the average duration required for a company to recover completely and restore normal operations following a cyber attack?",
+            "branch": 0,
+            "level": 13,
+            "order": 1
+          }
+        ],
+        "label": "5 days"
+      },
+      {
+        "aindex": 8,
+        "uniqueAnswer": true,
+        "atype": "T",
+        "questions_map": [
+          {
+            "label": "Can you provide an estimate of the average duration required for a company to recover completely and restore normal operations following a cyber attack?",
+            "branch": 0,
+            "level": 13,
+            "order": 1
+          }
+        ],
+        "label": "1-2 weeks"
+      },
+      {
+        "aindex": 9,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Can you provide an estimate of the average duration required for a company to recover completely and restore normal operations following a cyber attack?",
+            "branch": 0,
+            "level": 13,
+            "order": 1
+          }
+        ],
+        "label": "2-3 weeks"
+      },
+      {
+        "aindex": 10,
+        "uniqueAnswer": true,
+        "atype": "T",
+        "questions_map": [
+          {
+            "label": "Can you provide an estimate of the average duration required for a company to recover completely and restore normal operations following a cyber attack?",
+            "branch": 0,
+            "level": 13,
+            "order": 1
+          }
+        ],
+        "label": "3-4 weeks"
+      },
+      {
+        "aindex": 11,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Can you provide an estimate of the average duration required for a company to recover completely and restore normal operations following a cyber attack?",
+            "branch": 0,
+            "level": 13,
+            "order": 1
+          }
+        ],
+        "label": "4-5 weeks"
+      },
+      {
+        "aindex": 12,
+        "uniqueAnswer": true,
+        "atype": "T",
+        "questions_map": [
+          {
+            "label": "Can you provide an estimate of the average duration required for a company to recover completely and restore normal operations following a cyber attack?",
+            "branch": 0,
+            "level": 13,
+            "order": 1
+          }
+        ],
+        "label": "More than 5 weeks"
+      }
+    ]
+  },
+  {
+    "section": "Threat trends",
+    "service_category": "Threat trends",
+    "qtype": "S",
+    "qindex": 14,
+    "label": "Can you provide an estimate of the average duration required for a company to <b>recover completely and restore normal operations</b> following a cyber attack?",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "What are the top three activities that generate the highest sales for your company within each of the following categories?",
+            "branch": 0,
+            "level": 14,
+            "order": 1
+          }
+        ],
+        "label": "I don’t know"
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "What are the top three activities that generate the highest sales for your company within each of the following categories?",
+            "branch": 0,
+            "level": 14,
+            "order": 1
+          }
+        ],
+        "label": "less than a month"
+      },
+      {
+        "aindex": 3,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "What are the top three activities that generate the highest sales for your company within each of the following categories?",
+            "branch": 0,
+            "level": 14,
+            "order": 1
+          }
+        ],
+        "label": "1 month"
+      },
+      {
+        "aindex": 4,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "What are the top three activities that generate the highest sales for your company within each of the following categories?",
+            "branch": 0,
+            "level": 14,
+            "order": 1
+          }
+        ],
+        "label": "2 months"
+      },
+      {
+        "aindex": 5,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "What are the top three activities that generate the highest sales for your company within each of the following categories?",
+            "branch": 0,
+            "level": 14,
+            "order": 1
+          }
+        ],
+        "label": "3 months"
+      },
+      {
+        "aindex": 6,
+        "uniqueAnswer": true,
+        "atype": "T",
+        "questions_map": [
+          {
+            "label": "What are the top three activities that generate the highest sales for your company within each of the following categories?",
+            "branch": 0,
+            "level": 14,
+            "order": 1
+          }
+        ],
+        "label": "3-6 months"
+      },
+      {
+        "aindex": 7,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "What are the top three activities that generate the highest sales for your company within each of the following categories?",
+            "branch": 0,
+            "level": 14,
+            "order": 1
+          }
+        ],
+        "label": "6-9 months"
+      },
+      {
+        "aindex": 8,
+        "uniqueAnswer": true,
+        "atype": "T",
+        "questions_map": [
+          {
+            "label": "What are the top three activities that generate the highest sales for your company within each of the following categories?",
+            "branch": 0,
+            "level": 14,
+            "order": 1
+          }
+        ],
+        "label": "9-12 months"
+      },
+      {
+        "aindex": 9,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "What are the top three activities that generate the highest sales for your company within each of the following categories?",
+            "branch": 0,
+            "level": 14,
+            "order": 1
+          }
+        ],
+        "label": "1 year"
+      },
+      {
+        "aindex": 10,
+        "uniqueAnswer": true,
+        "atype": "T",
+        "questions_map": [
+          {
+            "label": "What are the top three activities that generate the highest sales for your company within each of the following categories?",
+            "branch": 0,
+            "level": 14,
+            "order": 1
+          }
+        ],
+        "label": "1-2 years"
+      },
+      {
+        "aindex": 11,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "What are the top three activities that generate the highest sales for your company within each of the following categories?",
+            "branch": 0,
+            "level": 14,
+            "order": 1
+          }
+        ],
+        "label": "More than 2 years"
+      },
+      {
+        "aindex": 12,
+        "uniqueAnswer": true,
+        "atype": "T",
+        "questions_map": [
+          {
+            "label": "What are the top three activities that generate the highest sales for your company within each of the following categories?",
+            "branch": 0,
+            "level": 14,
+            "order": 1
+          }
+        ],
+        "label": "A company never fully recovers from an attack"
+      }
+    ]
+  },
+  {
+    "section": "Market trends",
+    "service_category": "Market trends",
+    "qtype": "MT",
+    "qindex": 15,
+    "label": "What are the top three activities that generate the highest sales for your company within each of the following categories?",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "What factors do you consider when assessing the solutions your business adopts?",
+            "branch": 0,
+            "level": 15,
+            "order": 1
+          }
+        ],
+        "label": "I don’t want to share this information"
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "What factors do you consider when assessing the solutions your business adopts?",
+            "branch": 0,
+            "level": 15,
+            "order": 1
+          }
+        ],
+        "label": "Consulting and professional services"
+      },
+      {
+        "aindex": 3,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "What factors do you consider when assessing the solutions your business adopts?",
+            "branch": 0,
+            "level": 15,
+            "order": 1
+          }
+        ],
+        "label": "Business continuity services"
+      },
+      {
+        "aindex": 4,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "What factors do you consider when assessing the solutions your business adopts?",
+            "branch": 0,
+            "level": 15,
+            "order": 1
+          }
+        ],
+        "label": "Security assessments and penetration testing"
+      },
+      {
+        "aindex": 5,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "What factors do you consider when assessing the solutions your business adopts?",
+            "branch": 0,
+            "level": 15,
+            "order": 1
+          }
+        ],
+        "label": "Sale of security products"
+      },
+      {
+        "aindex": 6,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "What factors do you consider when assessing the solutions your business adopts?",
+            "branch": 0,
+            "level": 15,
+            "order": 1
+          }
+        ],
+        "label": "Subscription services"
+      },
+      {
+        "aindex": 7,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "What factors do you consider when assessing the solutions your business adopts?",
+            "branch": 0,
+            "level": 15,
+            "order": 1
+          }
+        ],
+        "label": "Risk assessment and compliance"
+      },
+      {
+        "aindex": 8,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "What factors do you consider when assessing the solutions your business adopts?",
+            "branch": 0,
+            "level": 15,
+            "order": 1
+          }
+        ],
+        "label": "Training and education"
+      },
+      {
+        "aindex": 9,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "What factors do you consider when assessing the solutions your business adopts?",
+            "branch": 0,
+            "level": 15,
+            "order": 1
+          }
+        ],
+        "label": "Research and development (IP)"
+      },
+      {
+        "aindex": 10,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "What factors do you consider when assessing the solutions your business adopts?",
+            "branch": 0,
+            "level": 15,
+            "order": 1
+          }
+        ],
+        "label": "Incident response and forensics"
+      },
+      {
+        "aindex": 11,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "What factors do you consider when assessing the solutions your business adopts?",
+            "branch": 0,
+            "level": 15,
+            "order": 1
+          }
+        ],
+        "label": "Disaster recovery services"
+      },
+      {
+        "aindex": 12,
+        "uniqueAnswer": false,
+        "atype": "T",
+        "questions_map": [
+          {
+            "label": "What factors do you consider when assessing the solutions your business adopts?",
+            "branch": 0,
+            "level": 15,
+            "order": 1
+          }
+        ],
+        "label": "Other (please specify):"
+      }
+    ]
+  },
+  {
+    "section": "Market trends",
+    "service_category": "Market trends",
+    "qtype": "MT",
+    "qindex": 16,
+    "label": "What factors do you consider when assessing the solutions your business adopts?",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Is the European origin of a solution, or its association with technological sovereignty, a definitive criterion in the adoption of new solution(s) by your company?",
+            "branch": 0,
+            "level": 15,
+            "order": 1
+          }
+        ],
+        "label": "I don’t know"
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Is the European origin of a solution, or its association with technological sovereignty, a definitive criterion in the adoption of new solution(s) by your company?",
+            "branch": 0,
+            "level": 15,
+            "order": 1
+          }
+        ],
+        "label": "Customer request for a specific product"
+      },
+      {
+        "aindex": 3,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Is the European origin of a solution, or its association with technological sovereignty, a definitive criterion in the adoption of new solution(s) by your company?",
+            "branch": 0,
+            "level": 15,
+            "order": 1
+          }
+        ],
+        "label": "Technological trends"
+      },
+      {
+        "aindex": 4,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Is the European origin of a solution, or its association with technological sovereignty, a definitive criterion in the adoption of new solution(s) by your company?",
+            "branch": 0,
+            "level": 15,
+            "order": 1
+          }
+        ],
+        "label": "Market trends"
+      },
+      {
+        "aindex": 5,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Is the European origin of a solution, or its association with technological sovereignty, a definitive criterion in the adoption of new solution(s) by your company?",
+            "branch": 0,
+            "level": 15,
+            "order": 1
+          }
+        ],
+        "label": "Vendor’s customer support"
+      },
+      {
+        "aindex": 6,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Is the European origin of a solution, or its association with technological sovereignty, a definitive criterion in the adoption of new solution(s) by your company?",
+            "branch": 0,
+            "level": 15,
+            "order": 1
+          }
+        ],
+        "label": "Vendor's responsiveness in answering and/or delivering an offer"
+      },
+      {
+        "aindex": 7,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Is the European origin of a solution, or its association with technological sovereignty, a definitive criterion in the adoption of new solution(s) by your company?",
+            "branch": 0,
+            "level": 15,
+            "order": 1
+          }
+        ],
+        "label": "Technical features"
+      },
+      {
+        "aindex": 8,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Is the European origin of a solution, or its association with technological sovereignty, a definitive criterion in the adoption of new solution(s) by your company?",
+            "branch": 0,
+            "level": 15,
+            "order": 1
+          }
+        ],
+        "label": "Certifications"
+      },
+      {
+        "aindex": 9,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Is the European origin of a solution, or its association with technological sovereignty, a definitive criterion in the adoption of new solution(s) by your company?",
+            "branch": 0,
+            "level": 15,
+            "order": 1
+          }
+        ],
+        "label": "Price"
+      },
+      {
+        "aindex": 10,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Is the European origin of a solution, or its association with technological sovereignty, a definitive criterion in the adoption of new solution(s) by your company?",
+            "branch": 0,
+            "level": 15,
+            "order": 1
+          }
+        ],
+        "label": "Complexity for final users"
+      },
+      {
+        "aindex": 11,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Is the European origin of a solution, or its association with technological sovereignty, a definitive criterion in the adoption of new solution(s) by your company?",
+            "branch": 0,
+            "level": 15,
+            "order": 1
+          }
+        ],
+        "label": "Origin of products"
+      },
+      {
+        "aindex": 12,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Is the European origin of a solution, or its association with technological sovereignty, a definitive criterion in the adoption of new solution(s) by your company?",
+            "branch": 0,
+            "level": 15,
+            "order": 1
+          }
+        ],
+        "label": "Regulation"
+      },
+      {
+        "aindex": 13,
+        "uniqueAnswer": false,
+        "atype": "T",
+        "questions_map": [
+          {
+            "label": "Is the European origin of a solution, or its association with technological sovereignty, a definitive criterion in the adoption of new solution(s) by your company?",
+            "branch": 0,
+            "level": 15,
+            "order": 1
+          }
+        ],
+        "label": "Other (please specify):"
+      }
+    ]
+  },
+  {
+    "section": "Market trends",
+    "service_category": "Market trends",
+    "qtype": "S",
+    "qindex": 17,
+    "label": "Is the European origin of a solution, or its association with technological sovereignty, a definitive criterion in the adoption of new solution(s) by your company?",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Do you think the Luxembourg cybersecurity market is sufficiently open to/welcoming innovation?",
+            "branch": 0,
+            "level": 16,
+            "order": 1
+          }
+        ],
+        "label": "No"
+      },
+	  {
+        "aindex": 2,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Do you think the Luxembourg cybersecurity market is sufficiently open to/welcoming innovation?",
+            "branch": 0,
+            "level": 16,
+            "order": 1
+          }
+        ],
+        "label": "The origin is not relevant or does not apply to my services or products"
+      },
+	  {
+        "aindex": 3,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Do you think the Luxembourg cybersecurity market is sufficiently open to/welcoming innovation?",
+            "branch": 0,
+            "level": 16,
+            "order": 1
+          }
+        ],
+        "label": "I don’t know"
+      },
+      {
+        "aindex": 4,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Do you think the Luxembourg cybersecurity market is sufficiently open to/welcoming innovation?",
+            "branch": 0,
+            "level": 16,
+            "order": 1
+          }
+        ],
+        "label": "Yes"
+      }
+    ]
+  },
+  {
+    "section": "Market trends",
+    "service_category": "Market trends",
+    "qtype": "S",
+    "qindex": 18,
+    "label": "Do you think the Luxembourg cybersecurity market is sufficiently open to/welcoming innovation?",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "questions_map": [
+          {
+          "label": "If not, why do you think the Luxembourg cybersecurity market is not sufficiently open to/welcoming innovation?",
+          "branch": 0,
+          "level": 17,
+          "order": 1
+          }
+        ],
+        "label": "No"
+      },
+      {
+          "aindex": 2,
+          "uniqueAnswer": true,
+          "atype": "P",
+          "questions_map": [
+            {
+              "label": "Does your organization have a specific approach to integrating open-source solutions into its business model?",
+              "branch": 0,
+              "level": 17,
+              "order": 1
+            }
+          ],
+          "label": "I don’t know"
+      },
+      {
+          "aindex": 3,
+          "uniqueAnswer": false,
+          "atype": "P",
+          "questions_map": [
+            {
+              "label": "Does your organization have a specific approach to integrating open-source solutions into its business model?",
+              "branch": 0,
+              "level": 17,
+              "order": 1
+            }
+          ],
+          "label": "Yes"
+        }
+    ]
+  },
+  {
+    "section": "Market trends",
+    "service_category": "Market trends",
+    "qtype": "ST",
+    "qindex": 19,
+    "label": "If not, why do you think the Luxembourg cybersecurity market is not sufficiently open to/welcoming innovation?",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": true,
+        "atype": "T",
+        "questions_map": [
+          {
+          "label": "Does your organization have a specific approach to integrating open-source solutions into its business model?",
+          "branch": 0,
+          "level": 18,
+          "order": 1
+          }
+        ],
+        "label": "Please provide us with more details:"
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "questions_map": [
+          {
+          "label": "Does your organization have a specific approach to integrating open-source solutions into its business model?",
+          "branch": 0,
+          "level": 18,
+          "order": 1
+          }
+        ],
+        "label": "Skip"
+      }
+    ]
+  },
+  {
+    "section": "Market trends",
+    "service_category": "Market trends",
+    "qtype": "S",
+    "qindex": 20,
+    "label": "Does your organization have a specific approach to integrating open-source solutions into its business model?",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Why doesn't your organization integrate open source solutions into its business model?",
+            "branch": 0,
+            "level": 19,
+            "order": 1
+          }
+        ],
+        "label": "No"
+      },      {
+        "aindex": 2,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Do you focus on digital or technology-driven enterprises rather than non-digital or brick-and-mortar businesses?",
+            "branch": 0,
+            "level": 19,
+            "order": 1
+          }
+        ],
+        "label": "I don't know"
+      },
+      {
+        "aindex": 3,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Do you focus on digital or technology-driven enterprises rather than non-digital or brick-and-mortar businesses?",
+            "branch": 0,
+            "level": 19,
+            "order": 1
+          }
+        ],
+        "label": "Yes"
+      }
+    ]
+  },
+  {
+    "section": "Market opportunities",
+    "service_category": "Market opportunities",
+    "qtype": "MT",
+    "qindex": 21,
+    "label": "Why doesn't your organization integrate open source solutions into its business model?",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Do you focus on digital or technology-driven enterprises rather than non-digital or brick-and-mortar businesses?",
+            "branch": 0,
+            "level": 20,
+            "order": 1
+          }
+        ],
+        "label": "We would like to but cannot for technical reasons"
+      },
+	  {
+        "aindex": 2,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Do you focus on digital or technology-driven enterprises rather than non-digital or brick-and-mortar businesses?",
+            "branch": 0,
+            "level": 20,
+            "order": 1
+          }
+        ],
+        "label": "We would like to but cannot for business reasons"
+      },
+      {
+        "aindex": 3,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Do you focus on digital or technology-driven enterprises rather than non-digital or brick-and-mortar businesses?",
+            "branch": 0,
+            "level": 20,
+            "order": 1
+          }
+        ],
+        "label": "We would like but we don't have the skills to deploy the open-source solution we've chosen"
+      },
+      {
+        "aindex": 4,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Do you focus on digital or technology-driven enterprises rather than non-digital or brick-and-mortar businesses?",
+            "branch": 0,
+            "level": 20,
+            "order": 1
+          }
+        ],
+        "label": "We would like to but cannot have a contract for the maintenance"
+      },
+      {
+        "aindex": 5,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Do you focus on digital or technology-driven enterprises rather than non-digital or brick-and-mortar businesses?",
+            "branch": 0,
+            "level": 20,
+            "order": 1
+          }
+        ],
+        "label": "We don't because there are concerns about intellectual property and commercial use"
+      },
+      {
+        "aindex": 6,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Do you focus on digital or technology-driven enterprises rather than non-digital or brick-and-mortar businesses?",
+            "branch": 0,
+            "level": 20,
+            "order": 1
+          }
+        ],
+        "label": "We don't do it because customer service is not reliable enough"
+      },
+      {
+        "aindex": 7,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Do you focus on digital or technology-driven enterprises rather than non-digital or brick-and-mortar businesses?",
+            "branch": 0,
+            "level": 20,
+            "order": 1
+          }
+        ],
+        "label": "We don’t have a dedicated approach"
+      },
+      {
+        "aindex": 8,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Do you focus on digital or technology-driven enterprises rather than non-digital or brick-and-mortar businesses?",
+            "branch": 0,
+            "level": 20,
+            "order": 1
+          }
+        ],
+        "label": "It is not a priority for us"
+      },
+      {
+        "aindex": 9,
+        "uniqueAnswer": false,
+        "atype": "T",
+        "questions_map": [
+          {
+            "label": "Do you focus on digital or technology-driven enterprises rather than non-digital or brick-and-mortar businesses?",
+            "branch": 0,
+            "level": 20,
+            "order": 1
+          }
+        ],
+        "label": "Other (please specify):"
+      }
+    ]
+  },
+  {
+    "section": "Market opportunities",
+    "service_category": "Market opportunities",
+    "qtype": "ST",
+    "qindex": 22,
+    "label": "Do you focus on digital or technology-driven enterprises rather than non-digital or brick-and-mortar businesses?",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": true,
+        "atype": "S",
+        "questions_map": [
+          {
+            "label": "From your market experience, do you think that there are issues that prevent Luxembourg's local IT and cybersecurity solutions from partnering with multinational subsidiaries operating within the country?",
+            "branch": 0,
+            "level": 21,
+            "order": 1
+          }
+        ],
+        "label": "Yes"
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": true,
+        "atype": "S",
+        "questions_map": [
+          {
+            "label": "From your market experience, do you think that there are issues that prevent Luxembourg's local IT and cybersecurity solutions from partnering with multinational subsidiaries operating within the country?",
+            "branch": 0,
+            "level": 21,
+            "order": 1
+          }
+        ],
+        "label": "I don't know"
+      },
+      {
+        "aindex": 3,
+        "uniqueAnswer": true,
+        "atype": "S",
+        "questions_map": [
+          {
+            "label": "From your market experience, do you think that there are issues that prevent Luxembourg's local IT and cybersecurity solutions from partnering with multinational subsidiaries operating within the country?",
+            "branch": 0,
+            "level": 21,
+            "order": 1
+          }
+        ],
+        "label": "No"
+      },
+      {
+        "aindex": 4,
+        "uniqueAnswer": false,
+        "atype": "T",
+        "questions_map": [
+          {
+            "label": "From your market experience, do you think that there are issues that prevent Luxembourg's local IT and cybersecurity solutions from partnering with multinational subsidiaries operating within the country?",
+            "branch": 0,
+            "level": 21,
+            "order": 1
+          }
+        ],
+        "label": "Other (please specify):"
+      }
+    ]
+  },
+  {
+    "section": "Market opportunities",
+    "service_category": "Market opportunities",
+    "qtype": "ST",
+    "qindex": 24,
+    "label": "From your market experience, do you think that there are issues that prevent Luxembourg's local IT and cybersecurity solutions from partnering with multinational subsidiaries operating within the country?",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Is there a particular range of company sizes that you do not focus on or exclude from your target market?",
+            "branch": 0,
+            "level": 23,
+            "order": 1
+          }
+        ],
+        "label": "No"
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Is there a particular range of company sizes that you do not focus on or exclude from your target market?",
+            "branch": 0,
+            "level": 23,
+            "order": 1
+          }
+        ],
+        "label": "I don't know"
+      },
+      {
+        "aindex": 3,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Given that you perceive obstacles for Luxembourg's local IT and cybersecurity solutions in partnering with multinational subsidiaries, what would you say are the unique considerations or attributes linked to these issues?",
+            "branch": 0,
+            "level": 23,
+            "order": 1
+          }
+        ],
+        "label": "Yes"
+      },
+      {
+        "aindex": 4,
+        "uniqueAnswer": false,
+        "atype": "T",
+        "questions_map": [
+          {
+            "label": "Is there a particular range of company sizes that you do not focus on or exclude from your target market?",
+            "branch": 0,
+            "level": 23,
+            "order": 1
+          }
+        ],
+        "label": "Other (please specify):"
+      }
+    ]
+  },
+  {
+    "section": "Market opportunities",
+    "service_category": "Market opportunities",
+    "qtype": "T",
+    "qindex": 25,
+    "label": "Given that you perceive obstacles for Luxembourg's local IT and cybersecurity solutions in partnering with multinational subsidiaries, what would you say are the unique considerations or attributes linked to these issues?",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": true,
+        "atype": "T",
+        "questions_map": [
+          {
+            "label": "Is there a particular range of company sizes that you do not focus on or exclude from your target market?",
+            "branch": 0,
+            "level": 24,
+            "order": 1
+          }
+        ],
+        "label": "Provide us with more details, please"
+      }
+    ]
+  },
+  {
+    "section": "Market opportunities",
+    "service_category": "Market opportunities",
+    "qtype": "S",
+    "qindex": 26,
+    "label": "Is there a particular range of company sizes that you do not focus on or exclude from your target market?",
+    "answers": [
+      {
+      "aindex": 1,
+      "uniqueAnswer": true,
+      "atype": "P",
+      "questions_map": [
+        {
+        "label": "Have you noticed any specific sectors in Luxembourg being more vulnerable to cyber-attacks?",
+        "branch": 0,
+        "level": 25,
+        "order": 1
+        }
+      ],
+      "label": "The size of a business is not a relevant metric for my business"
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Have you noticed any specific sectors in Luxembourg being more vulnerable to cyber-attacks?",
+            "branch": 0,
+            "level": 25,
+            "order": 1
+          }
+        ],
+        "label": "I don’t know"
+      },
+      {
+        "aindex": 3,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Have you noticed any specific sectors in Luxembourg being more vulnerable to cyber-attacks?",
+            "branch": 0,
+            "level": 25,
+            "order": 1
+          }
+        ],
+        "label": "1 employee"
+      },
+      {
+        "aindex": 4,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Have you noticed any specific sectors in Luxembourg being more vulnerable to cyber-attacks?",
+            "branch": 0,
+            "level": 25,
+            "order": 1
+          }
+        ],
+        "label": "less than 5 employees"
+      },
+      {
+        "aindex": 5,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Have you noticed any specific sectors in Luxembourg being more vulnerable to cyber-attacks?",
+            "branch": 0,
+            "level": 25,
+            "order": 1
+          }
+        ],
+        "label": "less than 9 employees"
+      },
+      {
+        "aindex": 6,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Have you noticed any specific sectors in Luxembourg being more vulnerable to cyber-attacks?",
+            "branch": 0,
+            "level": 25,
+            "order": 1
+          }
+        ],
+        "label": "less than 24 employees"
+      },
+      {
+        "aindex": 7,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Have you noticed any specific sectors in Luxembourg being more vulnerable to cyber-attacks?",
+            "branch": 0,
+            "level": 25,
+            "order": 1
+          }
+        ],
+        "label": "less than 49 employees"
+      },
+      {
+        "aindex": 8,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Have you noticed any specific sectors in Luxembourg being more vulnerable to cyber-attacks?",
+            "branch": 0,
+            "level": 25,
+            "order": 1
+          }
+        ],
+        "label": "less than 99 employees"
+      },
+      {
+        "aindex": 9,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Have you noticed any specific sectors in Luxembourg being more vulnerable to cyber-attacks?",
+            "branch": 0,
+            "level": 25,
+            "order": 1
+          }
+        ],
+        "label": "less than 249 employees"
+      },
+      {
+        "aindex": 10,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Have you noticed any specific sectors in Luxembourg being more vulnerable to cyber-attacks?",
+            "branch": 0,
+            "level": 25,
+            "order": 1
+          }
+        ],
+        "label": "less than 499 employees"
+      },
+      {
+        "aindex": 11,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Have you noticed any specific sectors in Luxembourg being more vulnerable to cyber-attacks?",
+            "branch": 0,
+            "level": 25,
+            "order": 1
+          }
+        ],
+        "label": "less than 999 employees"
+      },
+      {
+        "aindex": 12,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Have you noticed any specific sectors in Luxembourg being more vulnerable to cyber-attacks?",
+            "branch": 0,
+            "level": 25,
+            "order": 1
+          }
+        ],
+        "label": "more than 1000 employees"
+      }
+    ]
+  },
+  {
+    "section": "Sector-specific approach",
+    "service_category": "Sector-specific approach",
+    "qtype": "S",
+    "qindex": 27,
+    "label": "Have you noticed that certain sectors in Luxembourg are more targeted by cyber-attacks?",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Have you noticed that specific sectors in Luxembourg are suffering greater consequences from cyber-attacks?",
+            "branch": 0,
+            "level": 26,
+            "order": 1
+          }
+        ],
+        "label": "No"
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Have you noticed that specific sectors in Luxembourg are suffering greater consequences from cyber-attacks?",
+            "branch": 0,
+            "level": 26,
+            "order": 1
+          }
+        ],
+        "label": "I don't know"
+      },
+      {
+        "aindex": 3,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "In your opinion, which three sectors in Luxembourg are most targeted by cyber-attacks?",
+            "branch": 0,
+            "level": 26,
+            "order": 1
+          }
+        ],
+        "label": "Yes"
+      }
+    ]
+  },
+  {
+    "section": "Sector-specific approach",
+    "service_category": "Sector-specific approach",
+    "qtype": "MT",
+    "qindex": 28,
+    "label": "In your opinion, which three sectors in Luxembourg are most targeted by cyber-attacks?",
+    "answers": [
+      {
+        "label": "Agriculture, forestry and fishing",
+        "value": "A",
+        "uniqueAnswer": true,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Have you noticed that specific sectors in Luxembourg are suffering greater consequences from cyber-attacks?",
+            "branch": 0,
+            "level": 26,
+            "order": 1
+          }
+        ],
+        "aindex": 1
+      },
+      {
+        "label": "Mining and quarrying",
+        "value": "B",
+        "uniqueAnswer": true,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Have you noticed that specific sectors in Luxembourg are suffering greater consequences from cyber-attacks?",
+            "branch": 0,
+            "level": 26,
+            "order": 1
+          }
+        ],
+        "aindex": 2
+      },
+      {
+        "label": "Manufacturing",
+        "value": "C",
+        "uniqueAnswer": true,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Have you noticed that specific sectors in Luxembourg are suffering greater consequences from cyber-attacks?",
+            "branch": 0,
+            "level": 26,
+            "order": 1
+          }
+        ],
+        "aindex": 3
+      },
+      {
+        "label": "Electricity, gas, steam and air conditioning supply",
+        "value": "D",
+        "uniqueAnswer": true,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Have you noticed that specific sectors in Luxembourg are suffering greater consequences from cyber-attacks?",
+            "branch": 0,
+            "level": 26,
+            "order": 1
+          }
+        ],
+        "aindex": 4
+      },
+      {
+        "label": "Water supply; sewerage; waste management and remediation activities",
+        "value": "E",
+        "uniqueAnswer": true,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Have you noticed that specific sectors in Luxembourg are suffering greater consequences from cyber-attacks?",
+            "branch": 0,
+            "level": 26,
+            "order": 1
+          }
+        ],
+        "aindex": 5
+      },
+      {
+        "label": "Construction",
+        "value": "F",
+        "uniqueAnswer": true,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Have you noticed that specific sectors in Luxembourg are suffering greater consequences from cyber-attacks?",
+            "branch": 0,
+            "level": 26,
+            "order": 1
+          }
+        ],
+        "aindex": 6
+      },
+      {
+        "label": "Wholesale and retail trade; repair of motor vehicles and motorcycles",
+        "value": "G",
+        "uniqueAnswer": true,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Have you noticed that specific sectors in Luxembourg are suffering greater consequences from cyber-attacks?",
+            "branch": 0,
+            "level": 26,
+            "order": 1
+          }
+        ],
+        "aindex": 7
+      },
+      {
+        "label": "Transporting and storage",
+        "value": "H",
+        "uniqueAnswer": true,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Have you noticed that specific sectors in Luxembourg are suffering greater consequences from cyber-attacks?",
+            "branch": 0,
+            "level": 26,
+            "order": 1
+          }
+        ],
+        "aindex": 8
+      },
+      {
+        "label": "Accommodation and food service activities",
+        "value": "I",
+        "uniqueAnswer": true,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Have you noticed that specific sectors in Luxembourg are suffering greater consequences from cyber-attacks?",
+            "branch": 0,
+            "level": 26,
+            "order": 1
+          }
+        ],
+        "aindex": 9
+      },
+      {
+        "label": "Information and communication",
+        "value": "J",
+        "uniqueAnswer": true,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Have you noticed that specific sectors in Luxembourg are suffering greater consequences from cyber-attacks?",
+            "branch": 0,
+            "level": 26,
+            "order": 1
+          }
+        ],
+        "aindex": 10
+      },
+      {
+        "label": "Financial and insurance activities",
+        "value": "K",
+        "uniqueAnswer": true,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Have you noticed that specific sectors in Luxembourg are suffering greater consequences from cyber-attacks?",
+            "branch": 0,
+            "level": 26,
+            "order": 1
+          }
+        ],
+        "aindex": 11
+      },
+      {
+        "label": "Real estate activities",
+        "value": "L",
+        "uniqueAnswer": true,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Have you noticed that specific sectors in Luxembourg are suffering greater consequences from cyber-attacks?",
+            "branch": 0,
+            "level": 26,
+            "order": 1
+          }
+        ],
+        "aindex": 12
+      },
+      {
+        "label": "Professional, scientific and technical activities",
+        "value": "M",
+        "uniqueAnswer": true,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Have you noticed that specific sectors in Luxembourg are suffering greater consequences from cyber-attacks?",
+            "branch": 0,
+            "level": 26,
+            "order": 1
+          }
+        ],
+        "aindex": 13
+      },
+      {
+        "label": "Administrative and support service activities",
+        "value": "N",
+        "uniqueAnswer": true,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Have you noticed that specific sectors in Luxembourg are suffering greater consequences from cyber-attacks?",
+            "branch": 0,
+            "level": 26,
+            "order": 1
+          }
+        ],
+        "aindex": 14
+      },
+      {
+        "label": "Public administration and defense; compulsatory social security",
+        "value": "O",
+        "uniqueAnswer": true,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Have you noticed that specific sectors in Luxembourg are suffering greater consequences from cyber-attacks?",
+            "branch": 0,
+            "level": 26,
+            "order": 1
+          }
+        ],
+        "aindex": 15
+      },
+      {
+        "label": "Education",
+        "value": "P",
+        "uniqueAnswer": true,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Have you noticed that specific sectors in Luxembourg are suffering greater consequences from cyber-attacks?",
+            "branch": 0,
+            "level": 26,
+            "order": 1
+          }
+        ],
+        "aindex": 16
+      },
+      {
+        "label": "Human health and social work activities",
+        "value": "Q",
+        "uniqueAnswer": true,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Have you noticed that specific sectors in Luxembourg are suffering greater consequences from cyber-attacks?",
+            "branch": 0,
+            "level": 26,
+            "order": 1
+          }
+        ],
+        "aindex": 17
+      },
+      {
+        "label": "Arts, entertainment and recreation",
+        "value": "R",
+        "uniqueAnswer": true,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Have you noticed that specific sectors in Luxembourg are suffering greater consequences from cyber-attacks?",
+            "branch": 0,
+            "level": 26,
+            "order": 1
+          }
+        ],
+        "aindex": 18
+      },
+      {
+        "label": "Other services activities",
+        "value": "S",
+        "uniqueAnswer": true,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Have you noticed that specific sectors in Luxembourg are suffering greater consequences from cyber-attacks?",
+            "branch": 0,
+            "level": 26,
+            "order": 1
+          }
+        ],
+        "aindex": 19
+      },
+      {
+        "label": "Activities of hoseholds as employers; undifferentiated goods - and services - producing activities of households for own use",
+        "value": "T",
+        "uniqueAnswer": true,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Have you noticed that specific sectors in Luxembourg are suffering greater consequences from cyber-attacks?",
+            "branch": 0,
+            "level": 26,
+            "order": 1
+          }
+        ],
+        "aindex": 20
+      },
+      {
+        "label": "Activities of extraterritorial organisations and bodies",
+        "value": "U",
+        "uniqueAnswer": true,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Have you noticed that specific sectors in Luxembourg are suffering greater consequences from cyber-attacks?",
+            "branch": 0,
+            "level": 26,
+            "order": 1
+          }
+        ],
+        "aindex": 21
+      }
+    ]
+  },
+  {
+    "section": "Sector-specific approach",
+    "service_category": "Sector-specific approach",
+    "qtype": "S",
+    "qindex": 29,
+    "label": "Have you noticed that specific sectors in Luxembourg are suffering greater consequences from cyber-attacks?",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Are human resources challenges a significant hurdle for you in terms of finding, hiring, and retaining cybersecurity professionals?",
+            "branch": 0,
+            "level": 29,
+            "order": 1
+          }
+        ],
+        "label": "No"
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Are human resources challenges a significant hurdle for you in terms of finding, hiring, and retaining cybersecurity professionals?",
+            "branch": 0,
+            "level": 29,
+            "order": 1
+          }
+        ],
+        "label": "I don't know"
+      },
+      {
+        "aindex": 3,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "In your opinion, which three sectors in Luxembourg are suffering greater consequences from cyber-attacks?",
+            "branch": 0,
+            "level": 29,
+            "order": 1
+          }
+        ],
+        "label": "Yes"
+      }
+    ]
+  },
+  {
+    "section": "Sector-specific approach",
+    "service_category": "Sector-specific approach",
+    "qtype": "MT",
+    "qindex": 30,
+    "label": "In your opinion, which three sectors in Luxembourg are suffering greater consequences from cyber-attacks?",
+    "answers": [
+      {
+        "label": "Agriculture, forestry and fishing",
+        "value": "A",
+        "uniqueAnswer": true,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Are human resources challenges a significant hurdle for you in terms of finding, hiring, and retaining cybersecurity professionals?",
+            "branch": 0,
+            "level": 26,
+            "order": 1
+          }
+        ],
+        "aindex": 1
+      },
+      {
+        "label": "Mining and quarrying",
+        "value": "B",
+        "uniqueAnswer": true,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Are human resources challenges a significant hurdle for you in terms of finding, hiring, and retaining cybersecurity professionals?",
+            "branch": 0,
+            "level": 26,
+            "order": 1
+          }
+        ],
+        "aindex": 2
+      },
+      {
+        "label": "Manufacturing",
+        "value": "C",
+        "uniqueAnswer": true,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Are human resources challenges a significant hurdle for you in terms of finding, hiring, and retaining cybersecurity professionals?",
+            "branch": 0,
+            "level": 26,
+            "order": 1
+          }
+        ],
+        "aindex": 3
+      },
+      {
+        "label": "Electricity, gas, steam and air conditioning supply",
+        "value": "D",
+        "uniqueAnswer": true,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Are human resources challenges a significant hurdle for you in terms of finding, hiring, and retaining cybersecurity professionals?",
+            "branch": 0,
+            "level": 26,
+            "order": 1
+          }
+        ],
+        "aindex": 4
+      },
+      {
+        "label": "Water supply; sewerage; waste management and remediation activities",
+        "value": "E",
+        "uniqueAnswer": true,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Are human resources challenges a significant hurdle for you in terms of finding, hiring, and retaining cybersecurity professionals?",
+            "branch": 0,
+            "level": 26,
+            "order": 1
+          }
+        ],
+        "aindex": 5
+      },
+      {
+        "label": "Construction",
+        "value": "F",
+        "uniqueAnswer": true,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Are human resources challenges a significant hurdle for you in terms of finding, hiring, and retaining cybersecurity professionals?",
+            "branch": 0,
+            "level": 26,
+            "order": 1
+          }
+        ],
+        "aindex": 6
+      },
+      {
+        "label": "Wholesale and retail trade; repair of motor vehicles and motorcycles",
+        "value": "G",
+        "uniqueAnswer": true,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Are human resources challenges a significant hurdle for you in terms of finding, hiring, and retaining cybersecurity professionals?",
+            "branch": 0,
+            "level": 26,
+            "order": 1
+          }
+        ],
+        "aindex": 7
+      },
+      {
+        "label": "Transporting and storage",
+        "value": "H",
+        "uniqueAnswer": true,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Are human resources challenges a significant hurdle for you in terms of finding, hiring, and retaining cybersecurity professionals?",
+            "branch": 0,
+            "level": 26,
+            "order": 1
+          }
+        ],
+        "aindex": 8
+      },
+      {
+        "label": "Accommodation and food service activities",
+        "value": "I",
+        "uniqueAnswer": true,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Are human resources challenges a significant hurdle for you in terms of finding, hiring, and retaining cybersecurity professionals?",
+            "branch": 0,
+            "level": 26,
+            "order": 1
+          }
+        ],
+        "aindex": 9
+      },
+      {
+        "label": "Information and communication",
+        "value": "J",
+        "uniqueAnswer": true,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Are human resources challenges a significant hurdle for you in terms of finding, hiring, and retaining cybersecurity professionals?",
+            "branch": 0,
+            "level": 26,
+            "order": 1
+          }
+        ],
+        "aindex": 10
+      },
+      {
+        "label": "Financial and insurance activities",
+        "value": "K",
+        "uniqueAnswer": true,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Are human resources challenges a significant hurdle for you in terms of finding, hiring, and retaining cybersecurity professionals?",
+            "branch": 0,
+            "level": 26,
+            "order": 1
+          }
+        ],
+        "aindex": 11
+      },
+      {
+        "label": "Real estate activities",
+        "value": "L",
+        "uniqueAnswer": true,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Are human resources challenges a significant hurdle for you in terms of finding, hiring, and retaining cybersecurity professionals?",
+            "branch": 0,
+            "level": 26,
+            "order": 1
+          }
+        ],
+        "aindex": 12
+      },
+      {
+        "label": "Professional, scientific and technical activities",
+        "value": "M",
+        "uniqueAnswer": true,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Are human resources challenges a significant hurdle for you in terms of finding, hiring, and retaining cybersecurity professionals?",
+            "branch": 0,
+            "level": 26,
+            "order": 1
+          }
+        ],
+        "aindex": 13
+      },
+      {
+        "label": "Administrative and support service activities",
+        "value": "N",
+        "uniqueAnswer": true,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Are human resources challenges a significant hurdle for you in terms of finding, hiring, and retaining cybersecurity professionals?",
+            "branch": 0,
+            "level": 26,
+            "order": 1
+          }
+        ],
+        "aindex": 14
+      },
+      {
+        "label": "Public administration and defense; compulsatory social security",
+        "value": "O",
+        "uniqueAnswer": true,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Are human resources challenges a significant hurdle for you in terms of finding, hiring, and retaining cybersecurity professionals?",
+            "branch": 0,
+            "level": 26,
+            "order": 1
+          }
+        ],
+        "aindex": 15
+      },
+      {
+        "label": "Education",
+        "value": "P",
+        "uniqueAnswer": true,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Are human resources challenges a significant hurdle for you in terms of finding, hiring, and retaining cybersecurity professionals?",
+            "branch": 0,
+            "level": 26,
+            "order": 1
+          }
+        ],
+        "aindex": 16
+      },
+      {
+        "label": "Human health and social work activities",
+        "value": "Q",
+        "uniqueAnswer": true,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Are human resources challenges a significant hurdle for you in terms of finding, hiring, and retaining cybersecurity professionals?",
+            "branch": 0,
+            "level": 26,
+            "order": 1
+          }
+        ],
+        "aindex": 17
+      },
+      {
+        "label": "Arts, entertainment and recreation",
+        "value": "R",
+        "uniqueAnswer": true,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Are human resources challenges a significant hurdle for you in terms of finding, hiring, and retaining cybersecurity professionals?",
+            "branch": 0,
+            "level": 26,
+            "order": 1
+          }
+        ],
+        "aindex": 18
+      },
+      {
+        "label": "Other services activities",
+        "value": "S",
+        "uniqueAnswer": true,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Are human resources challenges a significant hurdle for you in terms of finding, hiring, and retaining cybersecurity professionals?",
+            "branch": 0,
+            "level": 26,
+            "order": 1
+          }
+        ],
+        "aindex": 19
+      },
+      {
+        "label": "Activities of hoseholds as employers; undifferentiated goods - and services - producing activities of households for own use",
+        "value": "T",
+        "uniqueAnswer": true,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Are human resources challenges a significant hurdle for you in terms of finding, hiring, and retaining cybersecurity professionals?",
+            "branch": 0,
+            "level": 26,
+            "order": 1
+          }
+        ],
+        "aindex": 20
+      },
+      {
+        "label": "Activities of extraterritorial organisations and bodies",
+        "value": "U",
+        "uniqueAnswer": true,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Are human resources challenges a significant hurdle for you in terms of finding, hiring, and retaining cybersecurity professionals?",
+            "branch": 0,
+            "level": 26,
+            "order": 1
+          }
+        ],
+        "aindex": 21
+      }
+    ]
+  },
+  {
+    "section": "Human resources",
+    "service_category": "Human resources",
+    "qtype": "S",
+    "qindex": 31,
+    "label": "Are human resources challenges a significant hurdle for you in terms of finding, hiring, and retaining cybersecurity professionals?",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "From your perspective, what are the strengths of Luxembourg's cybersecurity market?",
+            "branch": 0,
+            "level": 26,
+            "order": 1
+          }
+        ],
+        "label": "No"
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "From your perspective, what are the strengths of Luxembourg's cybersecurity market?",
+            "branch": 0,
+            "level": 26,
+            "order": 1
+          }
+        ],
+        "label": "I don't know"
+      },
+      {
+        "aindex": 3,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "From your perspective, what are the strengths of Luxembourg's cybersecurity market?",
+            "branch": 0,
+            "level": 26,
+            "order": 1
+          }
+        ],
+        "label": "Yes"
+      }
+    ]
+  },
+  {
+    "section": "Market strenghs and weaknesses",
+    "service_category": "Market strenghs and weaknesses",
+    "qtype": "MT",
+    "qindex": 32,
+    "label": "From your perspective, what are the strengths of Luxembourg's cybersecurity market?",
+    "answers": [
+      {
+        "label": "Access to public entities",
+        "uniqueAnswer": false,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "From your perspective, what are the weaknesses of Luxembourg's cybersecurity market?",
+            "branch": 0,
+            "level": 32,
+            "order": 1
+          }
+        ],
+        "aindex": 1
+      },
+      {
+        "label": "Geographical location",
+        "uniqueAnswer": false,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "From your perspective, what are the strengths of Luxembourg's cybersecurity market?",
+            "branch": 0,
+            "level": 32,
+            "order": 1
+          }
+        ],
+        "aindex": 2
+      },
+      {
+        "label": "High standard of living",
+        "uniqueAnswer": false,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "From your perspective, what are the strengths of Luxembourg's cybersecurity market?",
+            "branch": 0,
+            "level": 32,
+            "order": 1
+          }
+        ],
+        "aindex": 3
+      },
+      {
+        "label": "International orientation of the country/population",
+        "uniqueAnswer": false,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "From your perspective, what are the weaknesses of Luxembourg's cybersecurity market?",
+            "branch": 0,
+            "level": 32,
+            "order": 1
+          }
+        ],
+        "aindex": 4
+      },
+      {
+        "label": "Strong demand from the financial and banking sector",
+        "uniqueAnswer": false,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "From your perspective, what are the strengths of Luxembourg's cybersecurity market?",
+            "branch": 0,
+            "level": 32,
+            "order": 1
+          }
+        ],
+        "aindex": 5
+      },
+      {
+        "label": "No strengths",
+        "uniqueAnswer": false,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "From your perspective, what are the strengths of Luxembourg's cybersecurity market?",
+            "branch": 0,
+            "level": 32,
+            "order": 1
+          }
+        ],
+        "aindex": 6
+      },
+      {
+        "label": "I don’t know",
+        "uniqueAnswer": false,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "From your perspective, what are the strengths of Luxembourg's cybersecurity market?",
+            "branch": 0,
+            "level": 32,
+            "order": 1
+          }
+        ],
+        "aindex": 7
+      },
+      {
+        "label": "Other (please specify):",
+        "uniqueAnswer": false,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "From your perspective, what are the strengths of Luxembourg's cybersecurity market?",
+            "branch": 0,
+            "level": 32,
+            "order": 1
+          }
+        ],
+        "aindex": 8
+      }
+    ]
+  },
+  {
+    "section": "Market strenghs and weaknesses",
+    "service_category": "Market strenghs and weaknesses",
+    "qtype": "MT",
+    "qindex": 33,
+    "label": "From your perspective, what are the weaknesses of Luxembourg's cybersecurity market?",
+    "answers": [
+      {
+        "label": "Limited market size",
+        "uniqueAnswer": false,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "What are your main concerns regarding the evolution of the market?",
+            "branch": 0,
+            "level": 32,
+            "order": 1
+          }
+        ],
+        "aindex": 1
+      },
+      {
+        "label": "Lack of awareness",
+        "uniqueAnswer": false,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "What are your main concerns regarding the evolution of the market?",
+            "branch": 0,
+            "level": 32,
+            "order": 1
+          }
+        ],
+        "aindex": 2
+      },
+      {
+        "label": "Lack of international exposure",
+        "uniqueAnswer": false,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "What are your main concerns regarding the evolution of the market?",
+            "branch": 0,
+            "level": 32,
+            "order": 1
+          }
+        ],
+        "aindex": 3
+      },
+      {
+        "label": "High cost of living",
+        "uniqueAnswer": false,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "What are your main concerns regarding the evolution of the market?",
+            "branch": 0,
+            "level": 32,
+            "order": 1
+          }
+        ],
+        "aindex": 4
+      },
+      {
+        "label": "Customers' lack of interest in innovation",
+        "uniqueAnswer": false,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "What are your main concerns regarding the evolution of the market?",
+            "branch": 0,
+            "level": 32,
+            "order": 1
+          }
+        ],
+        "aindex": 5
+      },
+      {
+        "label": "Lack of attractiveness for employee",
+        "uniqueAnswer": false,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "What are your main concerns regarding the evolution of the market?",
+            "branch": 0,
+            "level": 32,
+            "order": 1
+          }
+        ],
+        "aindex": 6
+      },
+      {
+        "label": "No weaknesses",
+        "uniqueAnswer": false,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "What are your main concerns regarding the evolution of the market?",
+            "branch": 0,
+            "level": 32,
+            "order": 1
+          }
+        ],
+        "aindex": 7
+      },
+      {
+        "label": "I don’t know",
+        "uniqueAnswer": false,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "What are your main concerns regarding the evolution of the market?",
+            "branch": 0,
+            "level": 32,
+            "order": 1
+          }
+        ],
+        "aindex": 8
+      },
+      {
+        "label": "Other (please specify):",
+        "uniqueAnswer": false,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "What are your main concerns regarding the evolution of the market?",
+            "branch": 0,
+            "level": 32,
+            "order": 1
+          }
+        ],
+        "aindex": 9
+      }
+    ]
+  },
+  {
+    "section": "Market strenghs and weaknesses",
+    "service_category": "Market strenghs and weaknesses",
+    "qtype": "MT",
+    "qindex": 34,
+    "label": "What are your main concerns regarding the evolution of the market?",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Which solutions from the following list are you interested in sharing with cybersecurity companies and public entities in Luxembourg?",
+            "branch": 0,
+            "level": 33,
+            "order": 1
+          }
+        ],
+        "label": "Market regulations"
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Which solutions from the following list are you interested in sharing with cybersecurity companies and public entities in Luxembourg?",
+            "branch": 0,
+            "level": 33,
+            "order": 1
+          }
+        ],
+        "label": "Mobility & transportation"
+      },
+      {
+        "aindex": 3,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Which solutions from the following list are you interested in sharing with cybersecurity companies and public entities in Luxembourg?",
+            "branch": 0,
+            "level": 33,
+            "order": 1
+          }
+        ],
+        "label": "Human resources shortage"
+      },
+      {
+        "aindex": 4,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Which solutions from the following list are you interested in sharing with cybersecurity companies and public entities in Luxembourg?",
+            "branch": 0,
+            "level": 33,
+            "order": 1
+          }
+        ],
+        "label": "Remote work constraints"
+      },
+      {
+        "aindex": 5,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Which solutions from the following list are you interested in sharing with cybersecurity companies and public entities in Luxembourg?",
+            "branch": 0,
+            "level": 33,
+            "order": 1
+          }
+        ],
+        "label": "Competitiveness of the market"
+      },
+      {
+        "aindex": 6,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Which solutions from the following list are you interested in sharing with cybersecurity companies and public entities in Luxembourg?",
+            "branch": 0,
+            "level": 33,
+            "order": 1
+          }
+        ],
+        "label": "Cost of living"
+      },
+      {
+        "aindex": 7,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Which solutions from the following list are you interested in sharing with cybersecurity companies and public entities in Luxembourg?",
+            "branch": 0,
+            "level": 33,
+            "order": 1
+          }
+        ],
+        "label": "Salary policy"
+      },
+      {
+        "aindex": 8,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Which solutions from the following list are you interested in sharing with cybersecurity companies and public entities in Luxembourg?",
+            "branch": 0,
+            "level": 33,
+            "order": 1
+          }
+        ],
+        "label": "I don’t have concerns"
+      },
+      {
+        "aindex": 9,
+        "uniqueAnswer": false,
+        "atype": "T",
+        "questions_map": [
+          {
+            "label": "Which solutions from the following list are you interested in sharing with cybersecurity companies and public entities in Luxembourg?",
+            "branch": 0,
+            "level": 33,
+            "order": 1
+          }
+        ],
+        "label": "Other (please specify):"
+      }
+    ]
+  },
+  {
+    "section": "Shared solution",
+    "service_category": "Shared solution",
+    "qtype": "MT",
+    "qindex": 35,
+    "label": "Which solutions from the following list are you interested in sharing with cybersecurity companies and public entities in Luxembourg?",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Do you expect the government and its agencies to do more to support or promote Luxembourg's cybersecurity ecosystem?",
+            "branch": 0,
+            "level": 34,
+            "order": 1
+          }
+        ],
+        "label": "None"
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Do you expect the government and its agencies to do more to support or promote Luxembourg's cybersecurity ecosystem?",
+            "branch": 0,
+            "level": 34,
+            "order": 1
+          }
+        ],
+        "label": "I don’t know"
+      },
+      {
+        "aindex": 3,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Do you expect the government and its agencies to do more to support or promote Luxembourg's cybersecurity ecosystem?",
+            "branch": 0,
+            "level": 34,
+            "order": 1
+          }
+        ],
+        "label": "ITSO / CISO as a Service"
+      },
+      {
+        "aindex": 4,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Do you expect the government and its agencies to do more to support or promote Luxembourg's cybersecurity ecosystem?",
+            "branch": 0,
+            "level": 34,
+            "order": 1
+          }
+        ],
+        "label": "SOC"
+      },
+      {
+        "aindex": 5,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Do you expect the government and its agencies to do more to support or promote Luxembourg's cybersecurity ecosystem?",
+            "branch": 0,
+            "level": 34,
+            "order": 1
+          }
+        ],
+        "label": "Incident response"
+      },
+      {
+        "aindex": 6,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Do you expect the government and its agencies to do more to support or promote Luxembourg's cybersecurity ecosystem?",
+            "branch": 0,
+            "level": 34,
+            "order": 1
+          }
+        ],
+        "label": "Disaster recovery"
+      },
+      {
+        "aindex": 7,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Do you expect the government and its agencies to do more to support or promote Luxembourg's cybersecurity ecosystem?",
+            "branch": 0,
+            "level": 34,
+            "order": 1
+          }
+        ],
+        "label": "Situational awareness"
+      },
+      {
+        "aindex": 8,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Do you expect the government and its agencies to do more to support or promote Luxembourg's cybersecurity ecosystem?",
+            "branch": 0,
+            "level": 34,
+            "order": 1
+          }
+        ],
+        "label": "Scalable security training"
+      },
+      {
+        "aindex": 9,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Do you expect the government and its agencies to do more to support or promote Luxembourg's cybersecurity ecosystem?",
+            "branch": 0,
+            "level": 34,
+            "order": 1
+          }
+        ],
+        "label": "Cloud based solutions"
+      },
+      {
+        "aindex": 10,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Do you expect the government and its agencies to do more to support or promote Luxembourg's cybersecurity ecosystem?",
+            "branch": 0,
+            "level": 34,
+            "order": 1
+          }
+        ],
+        "label": "Threat intelligence"
+      },
+      {
+        "aindex": 11,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Do you expect the government and its agencies to do more to support or promote Luxembourg's cybersecurity ecosystem?",
+            "branch": 0,
+            "level": 34,
+            "order": 1
+          }
+        ],
+        "label": "Ransomware and cryptolockers solutions"
+      },
+      {
+        "aindex": 12,
+        "uniqueAnswer": false,
+        "atype": "T",
+        "questions_map": [
+          {
+            "label": "Do you expect the government and its agencies to do more to support or promote Luxembourg's cybersecurity ecosystem?",
+            "branch": 0,
+            "level": 34,
+            "order": 1
+          }
+        ],
+        "label": "Other (please specify):"
+      }
+    ]
+  },
+  {
+    "section": "Public services",
+    "service_category": "Public services",
+    "qtype": "S",
+    "qindex": 36,
+    "label": "Do you expect the government and its agencies to do more to support or promote Luxembourg's cybersecurity ecosystem?",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Do you have any additional points, concerns, or comments you would like to share?",
+            "branch": 0,
+            "level": 35,
+            "order": 1
+          }
+        ],
+        "label": "No"
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Given your expectation of greater support or promotion of Luxembourg's cybersecurity ecosystem by the government and its agencies, what specific areas do you think should receive particular attention?",
+            "branch": 0,
+            "level": 35,
+            "order": 1
+          }
+        ],
+        "label": "I don’t know"
+      },
+      {
+        "aindex": 3,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Do you expect the government and its agencies to do more to support or promote Luxembourg's cybersecurity ecosystem?",
+            "branch": 0,
+            "level": 35,
+            "order": 1
+          }
+        ],
+        "label": "Yes"
+      }
+    ]
+  },
+  {
+    "section": "Public services",
+    "service_category": "Public services",
+    "qtype": "MT",
+    "qindex": 37,
+    "label": "Given your expectation of greater support or promotion of Luxembourg's cybersecurity ecosystem by the government and its agencies, what specific areas do you think should receive particular attention?",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Do you have any additional points, concerns, or comments you would like to share?",
+            "branch": 0,
+            "level": 36,
+            "order": 1
+          }
+        ],
+        "label": "Private-Public Partnerships"
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Do you have any additional points, concerns, or comments you would like to share?",
+            "branch": 0,
+            "level": 36,
+            "order": 1
+          }
+        ],
+        "label": "Private sector collaboration"
+      },
+      {
+        "aindex": 3,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Do you have any additional points, concerns, or comments you would like to share?",
+            "branch": 0,
+            "level": 36,
+            "order": 1
+          }
+        ],
+        "label": "International collaboration"
+      },
+      {
+        "aindex": 4,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Do you have any additional points, concerns, or comments you would like to share?",
+            "branch": 0,
+            "level": 36,
+            "order": 1
+          }
+        ],
+        "label": "Funding and incentives"
+      },
+      {
+        "aindex": 5,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Do you have any additional points, concerns, or comments you would like to share?",
+            "branch": 0,
+            "level": 36,
+            "order": 1
+          }
+        ],
+        "label": "Support to security SME’s growth"
+      },
+      {
+        "aindex": 6,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Do you have any additional points, concerns, or comments you would like to share?",
+            "branch": 0,
+            "level": 36,
+            "order": 1
+          }
+        ],
+        "label": "Marketing and events"
+      },
+      {
+        "aindex": 7,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Do you have any additional points, concerns, or comments you would like to share?",
+            "branch": 0,
+            "level": 36,
+            "order": 1
+          }
+        ],
+        "label": "Regulatory framework"
+      },
+      {
+        "aindex": 8,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Do you have any additional points, concerns, or comments you would like to share?",
+            "branch": 0,
+            "level": 36,
+            "order": 1
+          }
+        ],
+        "label": "Research and development support"
+      },
+      {
+        "aindex": 9,
+        "uniqueAnswer": false,
+        "atype": "T",
+        "questions_map": [
+          {
+            "label": "Do you have any additional points, concerns, or comments you would like to share?",
+            "branch": 0,
+            "level": 36,
+            "order": 1
+          }
+        ],
+        "label": "Other (please specify):"
+      }
+    ]
+  },
+  {
+    "section": "Public services",
+    "service_category": "Public services",
+    "qtype": "T",
+    "qindex": 38,
+    "label": "Given your expectation of greater support or promotion of Luxembourg's cybersecurity ecosystem by the government and its agencies, what specific areas do you think should receive particular attention?",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "Please provide us with more details:"
+      }
+    ]
   }
 ]
