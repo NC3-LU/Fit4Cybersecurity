@@ -73,7 +73,7 @@ CUSTOM = {
     # Available stats charts
     "stats": {
         "activity": True,
-        "sector": True,
+        "sector": False,
         "size": True,
         "country": False,
         "status": True,
