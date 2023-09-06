@@ -1264,22 +1264,130 @@
             "uniqueAnswer": true,
             "atype": "P",
             "aindex": 200
+        },
+        {
+            "label": "200",
+            "uniqueAnswer": true,
+            "atype": "P",
+            "aindex": 200
         }
       ]
     },
     {
       "section": "__context",
       "service_category": "Socio-economic data",
-      "qtype": "T",
+      "qtype": "SO",
       "qindex": 3,
-      "label": "What is your NACE code? (find it easily ${`<a href='https://guichet.public.lu/en/outils/code_nace.html?searchInput=Accenture&searchType=CONTAINS&nace=Start+search' target='_blank' rel='noreferrer'>here</a>`})",
+      "label": "What is your NACE code (Statistical Classification of Economic Activities in the European Community)? Find yours easily <a href='https://guichet.public.lu/en/outils/code_nace.html?searchInput=Accenture&searchType=CONTAINS&nace=Start+search' target='_blank' rel='noreferrer'>here</a>, using only your company name.)",
       "answers_order": "label",
       "answers": [
           {
-            "label": "NACE Code",
+            "label": "33.200 - Installation of industrial machinery and equipment",
             "uniqueAnswer": true,
-            "atype": "T",
+            "atype": "P",
             "aindex": 1
+          },
+          {
+            "label": "46.510 - Wholesale of computers, computer peripheral equipment and software",
+            "uniqueAnswer": true,
+            "atype": "P",
+            "aindex": 2
+          },
+          {
+            "label": "47.410 - Retail sale of computers, peripheral units and software in specialised stores",
+            "uniqueAnswer": true,
+            "atype": "P",
+            "aindex": 3
+          },
+          {
+            "label": "61.100 - Wired telecommunications activities",
+            "uniqueAnswer": true,
+            "atype": "P",
+            "aindex": 4
+          },
+          {
+            "label": "62.010 - Computer programming activities",
+            "uniqueAnswer": true,
+            "atype": "P",
+            "aindex": 5
+          },
+          {
+            "label": "62.020 - Computer consultancy activities",
+            "uniqueAnswer": true,
+            "atype": "P",
+            "aindex": 6
+          },
+          {
+            "label": "62.030 - Computer facilities management activities",
+            "uniqueAnswer": true,
+            "atype": "P",
+            "aindex": 7
+          },
+          {
+            "label": "62.090 - Other information technology and computer service activities",
+            "uniqueAnswer": true,
+            "atype": "P",
+            "aindex": 8
+          },
+          {
+            "label": "63.110 - Data processing, hosting and related activities",
+            "uniqueAnswer": true,
+            "atype": "P",
+            "aindex": 9
+          },
+          {
+          "label": "64.202 - Financial holdings ('Soparfi')",
+          "uniqueAnswer": true,
+          "atype": "P",
+          "aindex": 10
+          },
+          {
+            "label": "65.120 - Non-life insurance",
+            "uniqueAnswer": true,
+            "atype": "P",
+            "aindex": 11
+          },
+          {
+            "label": "66.199 - Other activities auxiliary to financial services, except insurance and pension funding n.e.c.",
+            "uniqueAnswer": true,
+            "atype": "P",
+            "aindex": 12
+          },
+          {
+            "label": "66.200 - Accounting, bookkeeping and auditing activities; tax consultancy",
+            "uniqueAnswer": true,
+            "atype": "P",
+            "aindex": 13
+          },
+          {
+            "label": "69.101 - Legal advisory and representation activities",
+            "uniqueAnswer": true,
+            "atype": "P",
+            "aindex": 14
+          },
+          {
+            "label": "70.220 - Business and other management consultancy activities",
+            "uniqueAnswer": true,
+            "atype": "P",
+            "aindex": 15
+          },
+          {
+            "label": "74.900 - Other professional, scientific and technical activities n.e.c.",
+            "uniqueAnswer": true,
+            "atype": "P",
+            "aindex": 16
+          },
+          {
+            "label": "77.400 - Leasing of intellectual property and similar products, except copyrighted works",
+            "uniqueAnswer": true,
+            "atype": "P",
+            "aindex": 17
+          },
+          {
+            "label": "Other",
+            "uniqueAnswer": true,
+            "atype": "P",
+            "aindex": 18
           }
         ]
     }
