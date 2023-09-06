@@ -291,14 +291,18 @@ def save_answers(
     if current_sequence is not None:
         current_branch = current_sequence.branch
 
+    question_answers = []
     match current_question.qtype:
         case "SO":
             selected_value = posted_answers[0]
-            question_answers = [
-                current_question.surveyquestionanswer_set.get(
-                    is_active=True, value=selected_value
-                )
-            ]
+            try:
+                question_answers = [
+                    current_question.surveyquestionanswer_set.get(
+                        is_active=True, value=selected_value
+                    )
+                ]
+            except Exception:
+                pass
         case "CL":
             question_answers = [current_question.surveyquestionanswer_set.all()[0]]
         case _:
