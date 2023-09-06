@@ -7,9 +7,9 @@ CUSTOM = {
         " The Luxembourg House of Cybersecurity (LHC) is the cybersecurity, agency for the private sector in Luxembourg. We are responsible for  supporting the development of the national cybersecurity ecosystem, and for promoting cybersecurity awareness and best practices. "
         " <br /> "
         " <br /> "
-        "This survey is part of the market intelligence observatory of" 
+        "This survey is part of the market intelligence observatory of"
         " the National Cybersecurity Competence Center (NC3). The NC3 is a "
-        "department of the LHC and supported by the Ministry of the Economy." 
+        "department of the LHC and supported by the Ministry of the Economy."
         " The observatory collects and analyzes data on the cybersecurity "
         "market in Luxembourg, in order to inform policy decisions and "
         "support the development of the ecosystem."
@@ -49,7 +49,7 @@ CUSTOM = {
     "templates_parts": {
         # path of the templates parts
         "terms": "terms_part.html",
-        "footer": "surveySMEDemand/footer_part.html",
+        "footer": "footer_part.html",
         "main_logo": "logo_part.html",
         "privacy": "privacy_policy_part.html",
     },
