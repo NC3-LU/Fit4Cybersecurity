@@ -248,12 +248,9 @@ class Command(BaseCommand):
             SurveyAnswerQuestionMap.objects.filter(answer=answer).delete()
             answer_questions_map = answers_questions_map[answer_id]["questions_map"]
             for answer_question_map in answer_questions_map:
-                try:
-                    question = SurveyQuestion.objects.get(
-                        label=answer_question_map["label"]
-                    )
-                except Exception:
-                    continue
+                question = SurveyQuestion.objects.get(
+                    label=answer_question_map["label"]
+                )
                 SurveyAnswerQuestionMap.objects.create(
                     answer=answer,
                     question=question,
