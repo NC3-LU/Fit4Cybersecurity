@@ -610,6 +610,12 @@ def get_answer_choices(question: SurveyQuestion, lang: str) -> List[Tuple[int, s
         )
     )
 
+    try: # hack for surveyMarketCyberLux
+        if int(question_answers[1].label):
+            question_answers = sorted(question_answers, key=lambda x: int(x.label), reverse=False)
+    except Exception as e:
+        pass
+
     for question_answer in question_answers:
         answer = _(question_answer.label)
         tooltip = _(question_answer.tooltip)
@@ -832,7 +838,10 @@ def get_total_questions_number(user: SurveyUser, question_index: int) -> int:
     total_questions_num = (
         SurveyAnswerQuestionMap.objects.values("question").distinct().count()
     )
-    total_questions_num = int(math.ceil(total_questions_num * 5 / branches_number))
+    try:
+        total_questions_num = int(math.ceil(total_questions_num * 5 / branches_number))
+    except Exception:
+        pass
     if total_questions_num <= question_index:
         total_questions_num = question_index + 1
 
