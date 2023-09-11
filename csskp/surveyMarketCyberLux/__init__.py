@@ -2,23 +2,13 @@ from django.utils.translation import gettext_lazy
 
 CUSTOM = {
     # Generic configurations
-    "tool_name": "Survey Market Cybersecurity Luxembourg",
+    "tool_name": "Cybersecurity Providers’ Survey",
     "intro_text": gettext_lazy(
-        " The Luxembourg House of Cybersecurity (LHC) is the cybersecurity, agency for the private sector in Luxembourg. We are responsible for  supporting the development of the national cybersecurity ecosystem, and for promoting cybersecurity awareness and best practices. "
-        " <br /> "
-        " <br /> "
-        "This survey is part of the market intelligence observatory of"
-        " the National Cybersecurity Competence Center (NC3). The NC3 is a "
-        "department of the LHC and supported by the Ministry of the Economy."
-        " The observatory collects and analyzes data on the cybersecurity "
-        "market in Luxembourg, in order to inform policy decisions and "
-        "support the development of the ecosystem."
-        " <br /> "
-        " <br /> "
-        "This survey is directed to providers of cybersecurity services "
-        "and solutions in Luxembourg. Your participation is important to "
-        "help us understand the current state of the market and the needs of "
-        "businesses and organizations"
+        "<b>This survey is directed to providers of cybersecurity services and solutions in Luxembourg</b>. Your participation is important to help us understand the current state of the market in relation to the needs of businesses and organizations."
+        "<br /><br />"
+        "After a comprehensive survey on the cybersecurity needs of SMEs conducted earlier this year, the National Cybersecurity Competence Center (NC3) has now launched a survey in regards <b>to cybersecurity services and solutions offered by providers in Luxembourg</b>. Through this research the connection between cybersecurity providers and businesses in need of cybersecurity solutions should be made easier and clearer."
+        "<br /><br />"
+        "This survey is part of the market intelligence observatory of the National Cybersecurity Competence Center (NC3). The NC3 is a department of the LHC and supported by the Ministry of the Economy. The observatory collects and analyzes data on the cybersecurity market in Luxembourg, in order to inform policy decisions and support the development of the ecosystem. "
     ),
     "countries_first": [
         "LU",

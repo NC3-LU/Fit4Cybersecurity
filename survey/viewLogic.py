@@ -614,9 +614,11 @@ def get_answer_choices(question: SurveyQuestion, lang: str) -> List[Tuple[int, s
         )
     )
 
-    try: # hack for surveyMarketCyberLux
+    try:  # hack for surveyMarketCyberLux
         if int(question_answers[1].label):
-            question_answers = sorted(question_answers, key=lambda x: int(x.label), reverse=False)
+            question_answers = sorted(
+                question_answers, key=lambda x: int(x.label), reverse=False
+            )
     except Exception as e:
         pass
 
