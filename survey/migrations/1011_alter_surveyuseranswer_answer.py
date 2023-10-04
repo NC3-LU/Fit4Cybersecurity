@@ -5,7 +5,6 @@ from django.db import models
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
         ("survey", "1010_alter_surveyquestion_managers_and_more"),
     ]

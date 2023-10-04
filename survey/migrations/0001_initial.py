@@ -15,7 +15,6 @@ LOCAL_DEFAULT_LANG = LANGUAGE_CODE
 
 
 class Migration(migrations.Migration):
-
     initial = True
 
     dependencies = []

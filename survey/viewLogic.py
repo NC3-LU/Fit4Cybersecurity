@@ -619,7 +619,7 @@ def get_answer_choices(question: SurveyQuestion, lang: str) -> List[Tuple[int, s
             question_answers = sorted(
                 question_answers, key=lambda x: int(x.label), reverse=False
             )
-    except Exception as e:
+    except Exception:
         pass
 
     for question_answer in question_answers:

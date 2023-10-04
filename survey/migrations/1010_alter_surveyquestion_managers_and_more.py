@@ -4,7 +4,6 @@ from django.db import migrations
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
         ("survey", "1009_rename_choosen_lang_surveyuser_and_more"),
     ]
