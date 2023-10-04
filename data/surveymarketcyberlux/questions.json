@@ -2,9 +2,9 @@
   {
     "section": "Company information",
     "service_category": "Company information",
-    "qtype": "MT",
+    "qtype": "ST",
     "qindex": 1,
-    "label": "Does your company have one or more cybersecurity certification(s)?",
+    "label": "Does your company have one or more cybersecurity certification(s)? (ISO/IEC 27001, PSDC, NIST, PCI-DSS, etc.)",
     "answers": [
       {
         "aindex": 1,
@@ -12,7 +12,7 @@
         "atype": "P",
         "questions_map": [
           {
-            "label": "Do your employees have one or more cybersecurity certification(s) and / or accreditation?",
+            "label": "Do your employees have one or more cybersecurity certification(s)? (CISSP, CISA, CISM, etc.)",
             "branch": 0,
             "level": 1,
             "order": 1
@@ -26,7 +26,7 @@
         "atype": "P",
         "questions_map": [
           {
-            "label": "Do your employees have one or more cybersecurity certification(s) and / or accreditation?",
+            "label": "Do your employees have one or more cybersecurity certification(s)? (CISSP, CISA, CISM, etc.)",
             "branch": 0,
             "level": 1,
             "order": 1
@@ -37,221 +37,25 @@
       {
         "aindex": 3,
         "uniqueAnswer": false,
-        "atype": "P",
-        "questions_map": [
-          {
-            "label": "Do your employees have one or more cybersecurity certification(s) and / or accreditation?",
-            "branch": 0,
-            "level": 1,
-            "order": 1
-          }
-        ],
-        "label": "ISO/IEC 27001"
-      },
-      {
-        "aindex": 4,
-        "uniqueAnswer": false,
-        "atype": "P",
-        "questions_map": [
-          {
-            "label": "Do your employees have one or more cybersecurity certification(s) and / or accreditation?",
-            "branch": 0,
-            "level": 1,
-            "order": 1
-          }
-        ],
-        "label": "ISO/IEC 15408 (Common Criteria)"
-      },
-      {
-        "aindex": 5,
-        "uniqueAnswer": false,
-        "atype": "P",
-        "questions_map": [
-          {
-            "label": "Do your employees have one or more cybersecurity certification(s) and / or accreditation?",
-            "branch": 0,
-            "level": 1,
-            "order": 1
-          }
-        ],
-        "label": "Other ISO"
-      },
-      {
-        "aindex": 6,
-        "uniqueAnswer": false,
-        "atype": "P",
-        "questions_map": [
-          {
-            "label": "Do your employees have one or more cybersecurity certification(s) and / or accreditation?",
-            "branch": 0,
-            "level": 1,
-            "order": 1
-          }
-        ],
-        "label": "NIST 853"
-      },
-      {
-        "aindex": 7,
-        "uniqueAnswer": false,
-        "atype": "P",
-        "questions_map": [
-          {
-            "label": "Do your employees have one or more cybersecurity certification(s) and / or accreditation?",
-            "branch": 0,
-            "level": 1,
-            "order": 1
-          }
-        ],
-        "label": "Other NIST certification(s)"
-      },
-      {
-        "aindex": 8,
-        "uniqueAnswer": false,
-        "atype": "P",
-        "questions_map": [
-          {
-            "label": "Do your employees have one or more cybersecurity certification(s) and / or accreditation?",
-            "branch": 0,
-            "level": 1,
-            "order": 1
-          }
-        ],
-        "label": "Privacy shield certification"
-      },
-      {
-        "aindex": 9,
-        "uniqueAnswer": false,
-        "atype": "P",
-        "questions_map": [
-          {
-            "label": "Do your employees have one or more cybersecurity certification(s) and / or accreditation?",
-            "branch": 0,
-            "level": 1,
-            "order": 1
-          }
-        ],
-        "label": "National authority certifications"
-      },
-      {
-        "aindex": 10,
-        "uniqueAnswer": false,
-        "atype": "P",
-        "questions_map": [
-          {
-            "label": "Do your employees have one or more cybersecurity certification(s) and / or accreditation?",
-            "branch": 0,
-            "level": 1,
-            "order": 1
-          }
-        ],
-        "label": "Red Teaming TIBER CSSF (Luxembourg)"
-      },
-      {
-        "aindex": 11,
-        "uniqueAnswer": false,
-        "atype": "P",
-        "questions_map": [
-          {
-            "label": "Do your employees have one or more cybersecurity certification(s) and / or accreditation?",
-            "branch": 0,
-            "level": 1,
-            "order": 1
-          }
-        ],
-        "label": "FedISA (Certification for dematerialization and electronic archiving project management)"
-      },
-      {
-        "aindex": 12,
-        "uniqueAnswer": false,
-        "atype": "P",
-        "questions_map": [
-          {
-            "label": "Do your employees have one or more cybersecurity certification(s) and / or accreditation?",
-            "branch": 0,
-            "level": 1,
-            "order": 1
-          }
-        ],
-        "label": "PSDC (Prestataires de Services de Dématérialisation ou de Conservation)"
-      },
-      {
-        "aindex": 13,
-        "uniqueAnswer": false,
-        "atype": "P",
-        "questions_map": [
-          {
-            "label": "Do your employees have one or more cybersecurity certification(s) and / or accreditation?",
-            "branch": 0,
-            "level": 1,
-            "order": 1
-          }
-        ],
-        "label": "PSF de support"
-      },
-      {
-        "aindex": 14,
-        "uniqueAnswer": false,
-        "atype": "P",
-        "questions_map": [
-          {
-            "label": "Do your employees have one or more cybersecurity certification(s) and / or accreditation?",
-            "branch": 0,
-            "level": 1,
-            "order": 1
-          }
-        ],
-        "label": "Vendor-neutral certification"
-      },
-      {
-        "aindex": 15,
-        "uniqueAnswer": false,
-        "atype": "P",
-        "questions_map": [
-          {
-            "label": "Do your employees have one or more cybersecurity certification(s) and / or accreditation?",
-            "branch": 0,
-            "level": 1,
-            "order": 1
-          }
-        ],
-        "label": "Vendor-specific certification"
-      },
-      {
-        "aindex": 16,
-        "uniqueAnswer": false,
-        "atype": "P",
-        "questions_map": [
-          {
-            "label": "Do your employees have one or more cybersecurity certification(s) and / or accreditation?",
-            "branch": 0,
-            "level": 1,
-            "order": 1
-          }
-        ],
-        "label": "Vendors’ certification"
-      },
-      {
-        "aindex": 17,
-        "uniqueAnswer": false,
         "atype": "T",
         "questions_map": [
           {
-            "label": "Do your employees have one or more cybersecurity certification(s) and / or accreditation?",
+            "label": "Do your employees have one or more cybersecurity certification(s)? (CISSP, CISA, CISM, etc.)",
             "branch": 0,
             "level": 1,
             "order": 1
           }
         ],
-        "label": "Other (please specify)"
+        "label": "Yes (please specify)"
       }
     ]
   },
   {
     "section": "Company information",
     "service_category": "Company information",
-    "qtype": "MT",
+    "qtype": "ST",
     "qindex": 2,
-    "label": "Do your employees have one or more cybersecurity certification(s) and / or accreditation?",
+    "label": "Do your employees have one or more cybersecurity certification(s)? (CISSP, CISA, CISM, etc.)",
     "answers": [
       {
         "aindex": 1,
@@ -281,232 +85,8 @@
         ],
         "label": "I don’t know"
       },
-	  {
+      {
         "aindex": 3,
-        "uniqueAnswer": false,
-        "atype": "P",
-        "questions_map": [
-          {
-            "label": "What are the primary drivers for cybersecurity certifications investment?",
-            "branch": 0,
-            "level": 2,
-            "order": 1
-          }
-        ],
-        "label": "CISSP"
-      },
-      {
-        "aindex": 4,
-        "uniqueAnswer": false,
-        "atype": "P",
-        "questions_map": [
-          {
-            "label": "What are the primary drivers for cybersecurity certifications investment?",
-            "branch": 0,
-            "level": 2,
-            "order": 1
-          }
-        ],
-        "label": "SSCP"
-      },
-      {
-        "aindex": 5,
-        "uniqueAnswer": false,
-        "atype": "P",
-        "questions_map": [
-          {
-            "label": "What are the primary drivers for cybersecurity certifications investment?",
-            "branch": 0,
-            "level": 2,
-            "order": 1
-          }
-        ],
-        "label": "Other (ISC)² certification(s)"
-      },
-      {
-        "aindex": 6,
-        "uniqueAnswer": false,
-        "atype": "P",
-        "questions_map": [
-          {
-            "label": "What are the primary drivers for cybersecurity certifications investment?",
-            "branch": 0,
-            "level": 2,
-            "order": 1
-          }
-        ],
-        "label": "CISA"
-      },
-      {
-        "aindex": 7,
-        "uniqueAnswer": false,
-        "atype": "P",
-        "questions_map": [
-          {
-            "label": "What are the primary drivers for cybersecurity certifications investment?",
-            "branch": 0,
-            "level": 2,
-            "order": 1
-          }
-        ],
-        "label": "CISM"
-      },
-      {
-        "aindex": 8,
-        "uniqueAnswer": false,
-        "atype": "P",
-        "questions_map": [
-          {
-            "label": "What are the primary drivers for cybersecurity certifications investment?",
-            "branch": 0,
-            "level": 2,
-            "order": 1
-          }
-        ],
-        "label": "Other ISACA certification(s)"
-      },
-      {
-        "aindex": 9,
-        "uniqueAnswer": false,
-        "atype": "P",
-        "questions_map": [
-          {
-            "label": "What are the primary drivers for cybersecurity certifications investment?",
-            "branch": 0,
-            "level": 2,
-            "order": 1
-          }
-        ],
-        "label": "Security+"
-      },
-	  {
-        "aindex": 10,
-        "uniqueAnswer": false,
-        "atype": "P",
-        "questions_map": [
-          {
-            "label": "What are the primary drivers for cybersecurity certifications investment?",
-            "branch": 0,
-            "level": 2,
-            "order": 1
-          }
-        ],
-        "label": "Other CompTIA certification(s)"
-      },
-	  {
-        "aindex": 11,
-        "uniqueAnswer": false,
-        "atype": "P",
-        "questions_map": [
-          {
-            "label": "What are the primary drivers for cybersecurity certifications investment?",
-            "branch": 0,
-            "level": 2,
-            "order": 1
-          }
-        ],
-        "label": "SANS"
-      },
-      {
-        "aindex": 12,
-        "uniqueAnswer": false,
-        "atype": "P",
-        "questions_map": [
-          {
-            "label": "What are the primary drivers for cybersecurity certifications investment?",
-            "branch": 0,
-            "level": 2,
-            "order": 1
-          }
-        ],
-        "label": "Certified Ethical Hacker (CEH)"
-      },
-      {
-        "aindex": 13,
-        "uniqueAnswer": false,
-        "atype": "P",
-        "questions_map": [
-          {
-            "label": "What are the primary drivers for cybersecurity certifications investment?",
-            "branch": 0,
-            "level": 2,
-            "order": 1
-          }
-        ],
-        "label": "Other EC-Council certification(s)"
-      },
-      {
-        "aindex": 14,
-        "uniqueAnswer": false,
-        "atype": "P",
-        "questions_map": [
-          {
-            "label": "What are the primary drivers for cybersecurity certifications investment?",
-            "branch": 0,
-            "level": 2,
-            "order": 1
-          }
-        ],
-        "label": "OSCP"
-      },
-      {
-        "aindex": 15,
-        "uniqueAnswer": false,
-        "atype": "P",
-        "questions_map": [
-          {
-            "label": "What are the primary drivers for cybersecurity certifications investment?",
-            "branch": 0,
-            "level": 2,
-            "order": 1
-          }
-        ],
-        "label": "Other OffSec certification(s)"
-      },
-      {
-        "aindex": 16,
-        "uniqueAnswer": false,
-        "atype": "P",
-        "questions_map": [
-          {
-            "label": "What are the primary drivers for cybersecurity certifications investment?",
-            "branch": 0,
-            "level": 2,
-            "order": 1
-          }
-        ],
-        "label": "Other vendor-neutral certification"
-      },
-      {
-        "aindex": 17,
-        "uniqueAnswer": false,
-        "atype": "P",
-        "questions_map": [
-          {
-            "label": "What are the primary drivers for cybersecurity certifications investment?",
-            "branch": 0,
-            "level": 2,
-            "order": 1
-          }
-        ],
-        "label": "Other vendor-specific certification"
-      },
-      {
-        "aindex": 18,
-        "uniqueAnswer": false,
-        "atype": "P",
-        "questions_map": [
-          {
-            "label": "What are the primary drivers for cybersecurity certifications investment?",
-            "branch": 0,
-            "level": 2,
-            "order": 1
-          }
-        ],
-        "label": "Secret clearance accreditation (NATO, EU,…)"
-      },
-      {
-        "aindex": 19,
         "uniqueAnswer": false,
         "atype": "T",
         "questions_map": [
@@ -517,7 +97,7 @@
             "order": 1
           }
         ],
-        "label": "Other (please specify)"
+        "label": "Yes (please specify)"
       }
     ]
   },
