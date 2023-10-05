@@ -1,5 +1,6 @@
 import json
 import sys
+import datetime
 
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
@@ -51,7 +52,9 @@ def results_stats(request):
         dates_limit_form = AdminDatesLimitForm()
         start_date = dates_limit_form.fields["start_date"].initial
         end_date = dates_limit_form.fields["end_date"].initial
-
+    # overwrite values coming from the POST:
+    start_date = datetime.datetime.fromtimestamp(0)
+    end_date = datetime.datetime.now()
     result = get_finished_surveys_list(start_date, end_date)
     context = {
         "dates_limit_form": dates_limit_form,

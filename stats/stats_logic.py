@@ -14,7 +14,7 @@ def get_finished_surveys_list(start_date, end_date):
         updated_at__lte=end_date.strftime(DEFAULT_DATE_FORMAT),
     )
 
-    total_questions_score = 0
+    total_questions_score = 1
     max_evaluations_per_section = {}
     for question in SurveyQuestion.objects.exclude(
         section__label__contains=CONTEXT_SECTION_LABEL
@@ -95,40 +95,43 @@ def get_finished_surveys_list(start_date, end_date):
                     "questions"
                 ][question.id] = {
                     "score": 0,
+                    "label": question.label,
                     "answers": [],
                     "has_feedback": has_feedback,
                 }
 
-            surveys_users_results["survey_users"][user_id]["sections"][section_id][
-                "questions"
-            ][question.id]["answers"].append(
-                {
-                    user_answer.answer.id: {
-                        "label": user_answer.answer.label,
-                        "value": user_answer.uvalue,
-                        "score": user_answer.answer.score,
+            if user_answer.uvalue != "0":
+                surveys_users_results["survey_users"][user_id]["sections"][section_id][
+                    "questions"
+                ][question.id]["answers"].append(
+                    {
+                        user_answer.answer.id: {
+                            "label": user_answer.answer.label,
+                            "value": user_answer.uvalue,
+                            "score": user_answer.answer.score,
+                            "content": user_answer.content,
+                        }
                     }
-                }
-            )
+                )
 
             if question.maxPoints == 0:
                 continue
 
-            if user_answer.uvalue == "1":
-                answer_score = user_answer.answer.score
-                total_points_number += answer_score
-                surveys_users_results["survey_users"][user_id]["sections"][section_id][
-                    "questions"
-                ][question.id]["score"] += round(
-                    answer_score * 100 / user_answer.answer.question.maxPoints
-                )
-                surveys_users_results["survey_users"][user_id]["sections"][section_id][
-                    "score"
-                ] += round(answer_score * 100 / max_evaluations_per_section[section_id])
+            #if user_answer.uvalue == "1":
+                #answer_score = user_answer.answer.score
+                #total_points_number += answer_score
+                #surveys_users_results["survey_users"][user_id]["sections"][section_id][
+                #    "questions"
+                #][question.id]["score"] += round(
+                #    answer_score * 100 / user_answer.answer.question.maxPoints
+                #)
+                #surveys_users_results["survey_users"][user_id]["sections"][section_id][
+                #    "score"
+                #] += round(answer_score * 100 / max_evaluations_per_section[section_id])
 
-        surveys_users_results["survey_users"][user_id]["details"][
-            "total_score"
-        ] = round(total_points_number * 100 / total_questions_score)
+        #surveys_users_results["survey_users"][user_id]["details"][
+            #"total_score"
+        #] = round(total_points_number * 100 / total_questions_score)
 
     return {
         "start_date": str(start_date),
