@@ -60,7 +60,7 @@ def get_finished_surveys_list(start_date, end_date):
             }
         )
 
-        total_points_number = 0
+        # total_points_number = 0
 
         user_answers = (
             SurveyUserAnswer.objects.filter(user=completed_survey_user)
@@ -117,21 +117,21 @@ def get_finished_surveys_list(start_date, end_date):
             if question.maxPoints == 0:
                 continue
 
-            #if user_answer.uvalue == "1":
-                #answer_score = user_answer.answer.score
-                #total_points_number += answer_score
-                #surveys_users_results["survey_users"][user_id]["sections"][section_id][
-                #    "questions"
-                #][question.id]["score"] += round(
-                #    answer_score * 100 / user_answer.answer.question.maxPoints
-                #)
-                #surveys_users_results["survey_users"][user_id]["sections"][section_id][
-                #    "score"
-                #] += round(answer_score * 100 / max_evaluations_per_section[section_id])
+            # if user_answer.uvalue == "1":
+            # answer_score = user_answer.answer.score
+            # total_points_number += answer_score
+            # surveys_users_results["survey_users"][user_id]["sections"][section_id][
+            #    "questions"
+            # ][question.id]["score"] += round(
+            #    answer_score * 100 / user_answer.answer.question.maxPoints
+            # )
+            # surveys_users_results["survey_users"][user_id]["sections"][section_id][
+            #    "score"
+            # ] += round(answer_score * 100 / max_evaluations_per_section[section_id])
 
-        #surveys_users_results["survey_users"][user_id]["details"][
-            #"total_score"
-        #] = round(total_points_number * 100 / total_questions_score)
+        # surveys_users_results["survey_users"][user_id]["details"][
+        # "total_score"
+        # ] = round(total_points_number * 100 / total_questions_score)
 
     return {
         "start_date": str(start_date),
