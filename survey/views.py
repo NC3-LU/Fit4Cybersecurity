@@ -7,29 +7,29 @@ from cryptography.fernet import Fernet
 from django import forms
 from django.conf import settings
 from django.contrib import messages
-from django.http import HttpResponse, HttpResponseRedirect
+from django.http import HttpResponse
+from django.http import HttpResponseRedirect
 from django.shortcuts import render
 from django.utils import translation
 from django.utils.translation import gettext as _
 
-from csskp.settings import (
-    COOKIEBANNER,
-    CUSTOM,
-    HASH_KEY,
-    LANGUAGE_CODE,
-    OPERATOR_CONTACT,
-)
-from survey.models import SURVEY_STATUS_FINISHED, SurveyUser
-from survey.report import create_html_report, makepdf
-from survey.reporthelper import calculateResult, getRecommendations
-from survey.viewLogic import (
-    find_user_by_id,
-    get_current_user_question_index_from_sequence,
-    get_questions_with_user_answers,
-    handle_general_feedback,
-    handle_question_answers_request,
-    handle_start_survey,
-)
+from csskp.settings import COOKIEBANNER
+from csskp.settings import CUSTOM
+from csskp.settings import HASH_KEY
+from csskp.settings import LANGUAGE_CODE
+from csskp.settings import OPERATOR_CONTACT
+from survey.models import SURVEY_STATUS_FINISHED
+from survey.models import SurveyUser
+from survey.report import create_html_report
+from survey.report import makepdf
+from survey.reporthelper import calculateResult
+from survey.reporthelper import getRecommendations
+from survey.viewLogic import find_user_by_id
+from survey.viewLogic import get_current_user_question_index_from_sequence
+from survey.viewLogic import get_questions_with_user_answers
+from survey.viewLogic import handle_general_feedback
+from survey.viewLogic import handle_question_answers_request
+from survey.viewLogic import handle_start_survey
 from utils.notifications import send_report
 from utils.utils import can_redirect
 
