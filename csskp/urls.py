@@ -18,6 +18,7 @@ from django.contrib import admin
 from django.urls import path
 
 from survey import views
+from .settings import CUSTOM
 
 urlpatterns = [
     # Root
@@ -35,3 +36,6 @@ urlpatterns = [
     # API
     path("api-auth/", include("rest_framework.urls")),
 ]
+
+if CUSTOM.get("modules").get('faqPage'):
+    urlpatterns.append(path("faq/", views.get_faq, name="faq"))

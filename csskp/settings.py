@@ -157,6 +157,7 @@ INSTALLED_APPS = [
     "drf_spectacular_sidecar",  # required for Django collectstatic discovery
     "corsheaders",
     "cookiebanner",
+    'fontawesomefree',
 ]
 
 context_processors = [

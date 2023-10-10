@@ -49,6 +49,7 @@ CUSTOM = {
         "requestDiagnostic": True,
         "requestTraining": False,
         "displayResults": True,
+        "faqPage": True,
     },
     # Available report parts
     "report": {
