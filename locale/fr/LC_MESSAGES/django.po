@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-04-11 08:31+0000\n"
+"POT-Creation-Date: 2023-10-17 09:49+0000\n"
 "PO-Revision-Date: 2023-04-06 11:50+0000\n"
 "Last-Translator: Juan Rocha <juan.rocha@cases.lu>\n"
 "Language-Team: French <https://translate.monarc.lu/projects/"
@@ -221,7 +221,7 @@ msgstr "15 jours"
 #: data/fit4africa/context-questions.json:3
 #: data/fit4contract/context-questions.json:3
 #: data/fit4cybersecurity/context-questions.json:3
-#: data/fit4ehealth/context-questions.json:3
+#: data/fit4ehealth/questions.json:3
 #: data/fit4operatorsurvey/context-questions.json:3
 #: data/fit4privacy/context-questions.json:3
 msgid "What is your sector?"
@@ -236,9 +236,8 @@ msgstr "Quel est votre secteur ?"
 #: data/fit4cybersecurity/context-questions.json:4
 #: data/fit4cybersecurity/context-questions.json:120
 #: data/fit4cybersecurity/context-questions.json:200
-#: data/fit4ehealth/context-questions.json:4
-#: data/fit4ehealth/context-questions.json:21
-#: data/fit4ehealth/context-questions.json:38
+#: data/fit4ehealth/questions.json:4 data/fit4ehealth/questions.json:21
+#: data/fit4ehealth/questions.json:38 data/fit4ehealth/questions.json:258
 #: data/fit4operatorsurvey/context-questions.json:4
 #: data/fit4operatorsurvey/context-questions.json:141
 #: data/fit4operatorsurvey/context-questions.json:179
@@ -258,9 +257,8 @@ msgstr "Contexte"
 #: data/fit4cybersecurity/context-questions.json:5
 #: data/fit4cybersecurity/context-questions.json:121
 #: data/fit4cybersecurity/context-questions.json:201
-#: data/fit4ehealth/context-questions.json:5
-#: data/fit4ehealth/context-questions.json:22
-#: data/fit4ehealth/context-questions.json:39
+#: data/fit4ehealth/questions.json:5 data/fit4ehealth/questions.json:22
+#: data/fit4ehealth/questions.json:39 data/fit4ehealth/questions.json:259
 #: data/fit4operatorsurvey/context-questions.json:5
 #: data/fit4operatorsurvey/context-questions.json:142
 #: data/fit4operatorsurvey/context-questions.json:180
@@ -344,7 +342,7 @@ msgstr "Réalisation ou placement d'objets artistiques et décoratifs"
 #: data/fit4africa/context-questions.json:96
 #: data/fit4contract/context-questions.json:68
 #: data/fit4cybersecurity/context-questions.json:68
-#: data/fit4ehealth/context-questions.json:11
+#: data/fit4ehealth/questions.json:11
 #: data/fit4operatorsurvey/context-questions.json:40
 #: data/fit4privacy/context-questions.json:68
 msgid "Health"
@@ -483,13 +481,13 @@ msgstr "5000+"
 #: data/fit4africa/context-questions.json:241
 #: data/fit4contract/context-questions.json:199
 #: data/fit4cybersecurity/context-questions.json:199
-#: data/fit4ehealth/context-questions.json:20
+#: data/fit4ehealth/questions.json:20
 #: data/fit4privacy/context-questions.json:199 survey/forms.py:61
 msgid "Please select your country"
 msgstr "Veuillez sélectionner votre pays"
 
 #: data/fit4africa/questions.json:3 data/fit4cybersecurity/questions.json:3
-#: data/fit4ehealth/questions.json:3
+#: data/fit4ehealth/questions.json:302
 msgid "Rules/Charter"
 msgstr "Règles/Chartes"
 
@@ -509,7 +507,7 @@ msgstr ""
 "L'entreprise doit définir des règles pour éviter toutes incompréhensions."
 
 #: data/fit4africa/questions.json:24 data/fit4cybersecurity/questions.json:23
-#: data/fit4ehealth/questions.json:15
+#: data/fit4ehealth/questions.json:341
 msgid "not described"
 msgstr "non décrites"
 
@@ -598,7 +596,7 @@ msgstr ""
 "respect des règles, voire parfois, expliquer en quoi elles sont nécessaires."
 
 #: data/fit4africa/questions.json:127 data/fit4cybersecurity/questions.json:126
-#: data/fit4ehealth/questions.json:83
+#: data/fit4ehealth/questions.json:517
 msgid "given with advice and the best practices"
 msgstr ""
 "données avec des conseils et des bonnes pratiques pour faciliter la mise en "
@@ -719,7 +717,7 @@ msgstr ""
 "particulièrement si elle contient une personne ou une identité avec un lieu"
 
 #: data/fit4africa/questions.json:238 data/fit4cybersecurity/questions.json:238
-#: data/fit4ehealth/questions.json:270
+#: data/fit4ehealth/questions.json:785
 msgid "Trainings"
 msgstr "Formations"
 
@@ -909,7 +907,7 @@ msgstr ""
 "n'importe quel réseau externe vers le serveur interne"
 
 #: data/fit4africa/questions.json:431 data/fit4cybersecurity/questions.json:430
-#: data/fit4ehealth/questions.json:458
+#: data/fit4ehealth/questions.json:973
 msgid ""
 "Public Internet, Wi-Fi, open networks or connection protected by external "
 "organizations or individuals"
@@ -973,8 +971,8 @@ msgstr "Contrats (SLA/NDA)"
 #: data/fit4africa/questions.json:485 data/fit4africa/questions.json:559
 #: data/fit4cybersecurity/questions.json:485
 #: data/fit4cybersecurity/questions.json:559
-#: data/fit4ehealth/questions.json:553 data/fit4ehealth/questions.json:682
-#: data/fit4ehealth/questions.json:818
+#: data/fit4ehealth/questions.json:1068 data/fit4ehealth/questions.json:1197
+#: data/fit4ehealth/questions.json:1333
 msgid "Third Party Management"
 msgstr "Gestion des Tiers"
 
@@ -1062,7 +1060,7 @@ msgid "The office cleaning is done"
 msgstr "Le nettoyage des locaux de travail se déroule"
 
 #: data/fit4africa/questions.json:576 data/fit4cybersecurity/questions.json:575
-#: data/fit4ehealth/questions.json:701
+#: data/fit4ehealth/questions.json:1216
 msgid ""
 "For now, no third parties clean the premises. If it changes, it's important "
 "to:"
@@ -1146,13 +1144,13 @@ msgstr ""
 "ou une salle serveur"
 
 #: data/fit4africa/questions.json:664 data/fit4cybersecurity/questions.json:664
-#: data/fit4ehealth/questions.json:1068
+#: data/fit4ehealth/questions.json:1583
 msgid "Passwords"
 msgstr "Mots de passe"
 
 #: data/fit4africa/questions.json:665 data/fit4cybersecurity/questions.json:665
-#: data/fit4ehealth/questions.json:1069 data/fit4ehealth/questions.json:1253
-#: data/fit4ehealth/questions.json:1254
+#: data/fit4ehealth/questions.json:1584 data/fit4ehealth/questions.json:1768
+#: data/fit4ehealth/questions.json:1769
 msgid "Logical Access"
 msgstr "Accès Logiques"
 
@@ -1316,12 +1314,12 @@ msgstr "Wifi"
 #: data/fit4africa/questions.json:835 data/fit4africa/questions.json:925
 #: data/fit4cybersecurity/questions.json:835
 #: data/fit4cybersecurity/questions.json:925
-#: data/fit4ehealth/questions.json:1321 data/fit4ehealth/questions.json:1444
+#: data/fit4ehealth/questions.json:1836 data/fit4ehealth/questions.json:1959
 msgid "Local Area Network"
 msgstr "Réseau Interne"
 
 #: data/fit4africa/questions.json:836 data/fit4cybersecurity/questions.json:921
-#: data/fit4ehealth/questions.json:1322
+#: data/fit4ehealth/questions.json:1837
 msgid "Wireless networks"
 msgstr "Les réseaux sans fil"
 
@@ -1398,18 +1396,18 @@ msgstr ""
 "pour éviter toute fuite des documents imprimés et scannés."
 
 #: data/fit4africa/questions.json:919 data/fit4cybersecurity/questions.json:918
-#: data/fit4ehealth/questions.json:1428
+#: data/fit4ehealth/questions.json:1943
 msgid "of the printers are protected by a strong password"
 msgstr "des imprimantes sont protégées par un mot de passe"
 
 #: data/fit4africa/questions.json:924 data/fit4cybersecurity/questions.json:924
-#: data/fit4ehealth/questions.json:1443
+#: data/fit4ehealth/questions.json:1958
 msgid "Antivirus"
 msgstr "Antivirus"
 
 #: data/fit4africa/questions.json:926
 #: data/fit4cybersecurity/questions.json:1043
-#: data/fit4ehealth/questions.json:1445
+#: data/fit4ehealth/questions.json:1960
 msgid "Antivirus software"
 msgstr "Un logiciel antivirus"
 
@@ -1418,7 +1416,7 @@ msgid "The company should have an antivirus and be careful to:"
 msgstr "L'entreprise doit se munir d'antivirus, et faire attention :"
 
 #: data/fit4africa/questions.json:945 data/fit4cybersecurity/questions.json:944
-#: data/fit4ehealth/questions.json:1455
+#: data/fit4ehealth/questions.json:1970
 msgid "is not installed or used"
 msgstr "n'est pas installé ou utilisé"
 
@@ -1429,7 +1427,7 @@ msgstr ""
 "maximum possible les infections virales."
 
 #: data/fit4africa/questions.json:961 data/fit4cybersecurity/questions.json:960
-#: data/fit4ehealth/questions.json:1472
+#: data/fit4ehealth/questions.json:1987
 msgid "is installed on computers and laptops"
 msgstr ""
 "est installé sur toutes les machines de bureau et les ordinateurs portables"
@@ -1443,7 +1441,7 @@ msgstr ""
 "le plus de menaces possible."
 
 #: data/fit4africa/questions.json:977 data/fit4cybersecurity/questions.json:976
-#: data/fit4ehealth/questions.json:1489
+#: data/fit4ehealth/questions.json:2004
 msgid "is updated on all computers, automatically or manually"
 msgstr ""
 "est mis à jour sur toutes les machines, de façon automatique comme manuelle"
@@ -1470,7 +1468,7 @@ msgstr ""
 
 #: data/fit4africa/questions.json:1009
 #: data/fit4cybersecurity/questions.json:1008
-#: data/fit4ehealth/questions.json:1523
+#: data/fit4ehealth/questions.json:2038
 msgid "is installed on all mobile phones that are on network"
 msgstr "est installé sur tous les téléphones mobiles étant sur le réseau"
 
@@ -1496,7 +1494,7 @@ msgstr "Des tests doivent être réalisés dès lors d'une suspicion d'infection
 
 #: data/fit4africa/questions.json:1041
 #: data/fit4cybersecurity/questions.json:1040
-#: data/fit4ehealth/questions.json:1557
+#: data/fit4ehealth/questions.json:2072
 msgid "is used to analyse the network whenever a suspicious event occurs"
 msgstr "est utilisé pour analyser le réseau en cas de suspicion d'infection"
 
@@ -1516,7 +1514,7 @@ msgstr "Infrastructure IT"
 
 #: data/fit4africa/questions.json:1048
 #: data/fit4cybersecurity/questions.json:1133
-#: data/fit4ehealth/questions.json:1574
+#: data/fit4ehealth/questions.json:2089
 msgid "The user workstations are"
 msgstr "Les postes utilisateurs sont"
 
@@ -1599,7 +1597,7 @@ msgstr ""
 
 #: data/fit4africa/questions.json:1128
 #: data/fit4cybersecurity/questions.json:1127
-#: data/fit4ehealth/questions.json:1660
+#: data/fit4ehealth/questions.json:2175
 msgid "Devices should be locked to avoid identity theft."
 msgstr ""
 "Les machines doivent être verrouillées pour éviter toute usurpation "
@@ -1612,7 +1610,7 @@ msgstr "verrouillés en cas d'une brève absence, même pour en temps très cour
 
 #: data/fit4africa/questions.json:1136
 #: data/fit4cybersecurity/questions.json:1136
-#: data/fit4ehealth/questions.json:1684
+#: data/fit4ehealth/questions.json:2199
 msgid "Backups"
 msgstr "Sauvegardes"
 
@@ -1762,7 +1760,7 @@ msgstr ""
 
 #: data/fit4africa/questions.json:1282
 #: data/fit4cybersecurity/questions.json:1282
-#: data/fit4ehealth/questions.json:1786
+#: data/fit4ehealth/questions.json:2301
 msgid "BYOD"
 msgstr "BYOD"
 
@@ -1790,7 +1788,7 @@ msgstr ""
 
 #: data/fit4africa/questions.json:1303
 #: data/fit4cybersecurity/questions.json:1302
-#: data/fit4ehealth/questions.json:1815
+#: data/fit4ehealth/questions.json:2330
 msgid "is forbidden or impossible in the company"
 msgstr "est interdite ou impossible dans l'organisme"
 
@@ -1808,7 +1806,7 @@ msgstr ""
 
 #: data/fit4africa/questions.json:1319
 #: data/fit4cybersecurity/questions.json:1318
-#: data/fit4ehealth/questions.json:1832
+#: data/fit4ehealth/questions.json:2347
 msgid ""
 "is subject to precise rules, particularly before connecting to the company "
 "network"
@@ -1840,12 +1838,12 @@ msgstr ""
 
 #: data/fit4africa/questions.json:1351
 #: data/fit4cybersecurity/questions.json:1350
-#: data/fit4ehealth/questions.json:1866
+#: data/fit4ehealth/questions.json:2381
 msgid "has been explained to employees through training or explanations"
 msgstr ""
 "a été expliquée aux employés à travers des formations ou des explications"
 
-#: data/fit4africa/questions.json:1356 data/fit4ehealth/questions.json:912
+#: data/fit4africa/questions.json:1356 data/fit4ehealth/questions.json:1427
 msgid "Physical Security"
 msgstr "Sécurité Physique"
 
@@ -2504,143 +2502,167 @@ msgstr ""
 "Les données sont stockées en partie ou en totalité sur une infrastructure "
 "cloud."
 
-#: data/fit4ehealth/context-questions.json:28
+#: data/fit4ehealth/questions.json:28
 msgid "Luxembourg"
 msgstr "Luxembourg"
 
-#: data/fit4ehealth/context-questions.json:37
+#: data/fit4ehealth/questions.json:37
 msgid "Please select your profession"
 msgstr "Veuillez sélectionner votre profession"
 
-#: data/fit4ehealth/context-questions.json:45
+#: data/fit4ehealth/questions.json:45
 msgid "General practitioner"
 msgstr "Médecin généraliste"
 
-#: data/fit4ehealth/context-questions.json:52
+#: data/fit4ehealth/questions.json:52
 msgid "Specialist"
 msgstr "Médecin spécialiste"
 
-#: data/fit4ehealth/context-questions.json:59
+#: data/fit4ehealth/questions.json:59
 msgid "Dentist"
 msgstr "Médecin dentiste"
 
-#: data/fit4ehealth/context-questions.json:66
+#: data/fit4ehealth/questions.json:66
 msgid "Pharmacist"
 msgstr "Pharmacien"
 
-#: data/fit4ehealth/context-questions.json:73
+#: data/fit4ehealth/questions.json:73
 msgid "Psychotherapist"
 msgstr "Psychothérapeute"
 
-#: data/fit4ehealth/context-questions.json:80
+#: data/fit4ehealth/questions.json:80
 msgid "Trainee doctor"
 msgstr "Médecin stagiaire"
 
-#: data/fit4ehealth/context-questions.json:87
+#: data/fit4ehealth/questions.json:87
 msgid "Health care assistant "
 msgstr "Aide-soignant/e"
 
-#: data/fit4ehealth/context-questions.json:94
+#: data/fit4ehealth/questions.json:94
 msgid "Social hygiene assistant"
 msgstr "Assistant/e d’hygiène sociale"
 
-#: data/fit4ehealth/context-questions.json:101
+#: data/fit4ehealth/questions.json:101
 msgid "Social worker"
 msgstr "Assistant/e social/e"
 
-#: data/fit4ehealth/context-questions.json:108
+#: data/fit4ehealth/questions.json:108
 msgid "Medical technical assistant in surgery"
 msgstr "Assistant/e technique médical/e de chirurgie"
 
-#: data/fit4ehealth/context-questions.json:115
+#: data/fit4ehealth/questions.json:115
 msgid "Medical technical assistant in laboratory"
 msgstr "Assistant/e technique médical/e de laboratoire"
 
-#: data/fit4ehealth/context-questions.json:122
+#: data/fit4ehealth/questions.json:122
 msgid "Medical technical assistant in radiology"
 msgstr "Assistant/e technique médica/e de radiologie"
 
-#: data/fit4ehealth/context-questions.json:129
+#: data/fit4ehealth/questions.json:129
 msgid "Dietician"
 msgstr "Diététicien/ne"
 
-#: data/fit4ehealth/context-questions.json:136
+#: data/fit4ehealth/questions.json:136
 msgid "Occupational Therapist"
 msgstr "Ergothérapeute"
 
-#: data/fit4ehealth/context-questions.json:143
+#: data/fit4ehealth/questions.json:143
 msgid "Nurse"
 msgstr "Infirmier/Infirmière"
 
-#: data/fit4ehealth/context-questions.json:150
+#: data/fit4ehealth/questions.json:150
 msgid "Nurse in anesthesia and intensive care"
 msgstr "Infirmier/Infirmière en anesthésie et réanimation"
 
-#: data/fit4ehealth/context-questions.json:157
+#: data/fit4ehealth/questions.json:157
 msgid "Pediatric nurse"
 msgstr "Infirmier/Infirmière en pédiatrie"
 
-#: data/fit4ehealth/context-questions.json:164
+#: data/fit4ehealth/questions.json:164
 msgid "Graduate Nurse"
 msgstr "Infirmier/Infirmière graduée"
 
-#: data/fit4ehealth/context-questions.json:171
+#: data/fit4ehealth/questions.json:171
 msgid "Psychiatric Nurse"
 msgstr "Infirmier/Infirmière psychiatrique"
 
-#: data/fit4ehealth/context-questions.json:178
+#: data/fit4ehealth/questions.json:178
 msgid "Laboratory assistant"
 msgstr "Laborantin/e"
 
-#: data/fit4ehealth/context-questions.json:185
+#: data/fit4ehealth/questions.json:185
 msgid "Masseur"
 msgstr "Masseur/Masseuse"
 
-#: data/fit4ehealth/context-questions.json:192
+#: data/fit4ehealth/questions.json:192
 msgid "Physiotherapist"
 msgstr "Masseur-kinésithérapeute"
 
-#: data/fit4ehealth/context-questions.json:199
+#: data/fit4ehealth/questions.json:199
 msgid "Speech therapist"
 msgstr "Orthophoniste"
 
-#: data/fit4ehealth/context-questions.json:206
+#: data/fit4ehealth/questions.json:206
 msgid "Orthoptist"
 msgstr "Orthoptiste"
 
-#: data/fit4ehealth/context-questions.json:213
+#: data/fit4ehealth/questions.json:213
 msgid "Osteopath"
 msgstr "Ostéopathe"
 
-#: data/fit4ehealth/context-questions.json:220
+#: data/fit4ehealth/questions.json:220
 msgid "Curative educator"
 msgstr "Pédagogue curatif/curative"
 
-#: data/fit4ehealth/context-questions.json:227
+#: data/fit4ehealth/questions.json:227
 msgid "Chiropodist"
 msgstr "Podologue"
 
-#: data/fit4ehealth/context-questions.json:234
+#: data/fit4ehealth/questions.json:234
 msgid "Psychomotricity reeducator"
 msgstr "Rééducateur/Rééeducatrice en psychomotricité"
 
-#: data/fit4ehealth/context-questions.json:241
+#: data/fit4ehealth/questions.json:241
 msgid "Midwife"
 msgstr "Sage-femme"
 
-#: data/fit4ehealth/context-questions.json:248
+#: data/fit4ehealth/questions.json:248
 msgid "Other"
 msgstr "Autre"
 
-#: data/fit4ehealth/questions.json:4 data/fit4ehealth/questions.json:150
+#: data/fit4ehealth/questions.json:257
+msgid "How many persons work in the medical practice?"
+msgstr "Combien de personnes travaillent dans le cabinet médical ?"
+
+#: data/fit4ehealth/questions.json:265
+msgid "1"
+msgstr ""
+
+#: data/fit4ehealth/questions.json:272
+msgid "2 - 5"
+msgstr ""
+
+#: data/fit4ehealth/questions.json:279
+msgid "6 - 10"
+msgstr ""
+
+#: data/fit4ehealth/questions.json:286
+msgid "11 - 25"
+msgstr ""
+
+#: data/fit4ehealth/questions.json:293
+msgid "26+"
+msgstr ""
+
+#: data/fit4ehealth/questions.json:303 data/fit4ehealth/questions.json:665
 msgid "Organisational Awareness"
 msgstr "Sensibilisation organisationnelle"
 
-#: data/fit4ehealth/questions.json:5
+#: data/fit4ehealth/questions.json:304
 msgid "In the establishment, rules are"
 msgstr "Dans l'établissement, les règles sont"
 
-#: data/fit4ehealth/questions.json:16
+#: data/fit4ehealth/questions.json:342
 msgid ""
 "Rules are not especially specified, because they should be obvious for "
 "everyone"
@@ -2648,7 +2670,7 @@ msgstr ""
 "Les règles ne sont pas particulièrement spécifiées, car elles devraient être "
 "évidentes pour tout le monde"
 
-#: data/fit4ehealth/questions.json:23
+#: data/fit4ehealth/questions.json:349
 msgid ""
 "The company should define rules in order to avoid misunderstandings. Here "
 "some tips to do in order to have some:"
@@ -2656,17 +2678,17 @@ msgstr ""
 "L'entreprise devrait définir des règles afin d'éviter les malentendus. Voici "
 "quelques conseils à suivre afin d'en avoir :"
 
-#: data/fit4ehealth/questions.json:32
+#: data/fit4ehealth/questions.json:385
 msgid "given verbally"
 msgstr "données verbalement"
 
-#: data/fit4ehealth/questions.json:33
+#: data/fit4ehealth/questions.json:386
 msgid "Rules are discussed, told to everyone whenever they are decided"
 msgstr ""
 "Les règles sont discutées et communiquées à tout le monde lorsqu'elles sont "
 "décidées"
 
-#: data/fit4ehealth/questions.json:40
+#: data/fit4ehealth/questions.json:393
 msgid ""
 "Rules (organizational, IT or work rules) should be known and explained to "
 "everyone, at the very least verbally."
@@ -2674,11 +2696,11 @@ msgstr ""
 "Les règles (organisationnelles, informatiques ou de travail) doivent être "
 "connues et expliquées à tous, au moins verbalement."
 
-#: data/fit4ehealth/questions.json:49
+#: data/fit4ehealth/questions.json:429
 msgid "written and distributed by mail"
 msgstr "écrites et distribuées par courriel"
 
-#: data/fit4ehealth/questions.json:50
+#: data/fit4ehealth/questions.json:430
 msgid ""
 "Rules are written by someone when they are decided, then send by any means "
 "(could be paper, email, internal chat app ...)"
@@ -2686,7 +2708,7 @@ msgstr ""
 "Une fois définies, les règles sont rédigées puis diffusées en interne "
 "(papier, email, chat, …)"
 
-#: data/fit4ehealth/questions.json:57
+#: data/fit4ehealth/questions.json:437
 msgid ""
 "Even though a verbal transmission might be sufficient for a small medical "
 "practice, rules should still be written in a charter, read and signed by "
@@ -2698,15 +2720,15 @@ msgstr ""
 "et signées par tous, ce qui est très important pour les grandes entreprises "
 "ou si la société est en pleine croissance."
 
-#: data/fit4ehealth/questions.json:66
+#: data/fit4ehealth/questions.json:473
 msgid "read and signed by all, in a cabinet/practice charter or similar"
 msgstr "lues et signées par tous, dans une charte ou équivalent du cabinet"
 
-#: data/fit4ehealth/questions.json:67
+#: data/fit4ehealth/questions.json:474
 msgid "Rules are written and should be signed by all employees"
 msgstr "Les règles sont écrites et doivent être signées par tous les employés"
 
-#: data/fit4ehealth/questions.json:74
+#: data/fit4ehealth/questions.json:481
 msgid ""
 "Written rules can:<ul><li>avoid for relevant points being forgotten and can "
 "be consulted at any time</li><li>have a legal proof that the rules have been "
@@ -2716,7 +2738,7 @@ msgstr ""
 "soient oubliés et peuvent être consultés à tout moment</li><li>d'avoir une "
 "preuve légale que les règles ont été lues</li></ul>"
 
-#: data/fit4ehealth/questions.json:84
+#: data/fit4ehealth/questions.json:518
 msgid ""
 "Whenever it is possible, rules are given with some tips to help people to "
 "understand them and accept them more easily."
@@ -2724,7 +2746,7 @@ msgstr ""
 "En cas de besoin, les explications supplémentaires peuvent être fournies "
 "afin de faciliter la compréhension."
 
-#: data/fit4ehealth/questions.json:91
+#: data/fit4ehealth/questions.json:525
 msgid ""
 "Each time when it's possible, some advice or some best practices should be "
 "given and explained."
@@ -2732,14 +2754,14 @@ msgstr ""
 "Chaque fois que c'est possible, des conseils ou des bonnes pratiques "
 "devraient être donnés et expliqués."
 
-#: data/fit4ehealth/questions.json:100
+#: data/fit4ehealth/questions.json:561
 msgid ""
 "covering topics such as cybersecurity and data management in your profession"
 msgstr ""
 "définies pour couvrir des sujets tels que la cybersécurité et la gestion des "
 "données de santé"
 
-#: data/fit4ehealth/questions.json:101
+#: data/fit4ehealth/questions.json:562
 msgid ""
 "Do you have rules for creating complex passwords, or that you shouldn't "
 "download any untrustworthy software?"
@@ -2748,7 +2770,7 @@ msgstr ""
 "utilisés, ou sur le fait qu'il ne faut pas télécharger de logiciels non "
 "fiables ?"
 
-#: data/fit4ehealth/questions.json:108
+#: data/fit4ehealth/questions.json:569
 msgid ""
 "Some explanation about cybersecurity or data protection measures for the "
 "organization should be included as they help to ensure data security."
@@ -2757,7 +2779,7 @@ msgstr ""
 "données de l'organisation devraient être incluses car elles permettent de "
 "garantir la sécurité des données."
 
-#: data/fit4ehealth/questions.json:117
+#: data/fit4ehealth/questions.json:605
 msgid ""
 "covering topics like the procedures/policies that are in place for business "
 "continuity e.g. in the event the IT systems of the organization are "
@@ -2767,7 +2789,7 @@ msgstr ""
 "place pour la continuité des opérations, par exemple dans le cas où les "
 "systèmes informatiques de l'organisation seraient temporairement hors service"
 
-#: data/fit4ehealth/questions.json:118
+#: data/fit4ehealth/questions.json:606
 msgid ""
 "You have some advice or rules on what should be done in case of a major "
 "disaster or incident that stops your activity happens."
@@ -2775,7 +2797,7 @@ msgstr ""
 "Vous avez des conseils ou des règles sur ce que vous devez faire en cas "
 "d’incident majeur qui stoppe votre activité."
 
-#: data/fit4ehealth/questions.json:125
+#: data/fit4ehealth/questions.json:613
 msgid ""
 "In case of a major incident, you should have some rules or advice in order "
 "to act in a stressful situation, and keep the systems / organization "
@@ -2785,7 +2807,7 @@ msgstr ""
 "afin d'agir dans une situation de stress, et de maintenir les systèmes / "
 "l'organisation opérationnels."
 
-#: data/fit4ehealth/questions.json:134
+#: data/fit4ehealth/questions.json:649
 msgid ""
 "defined to manage the necessary steps which need to be taken when there is a "
 "change in medical staff, e.g. hiring of new employees, leave/dismissal or "
@@ -2796,7 +2818,7 @@ msgstr ""
 "l'embauche de nouveaux employés, le congé/le licenciement ou le remplacement "
 "temporaire (pendant le congé) des membres du personnel"
 
-#: data/fit4ehealth/questions.json:135
+#: data/fit4ehealth/questions.json:650
 msgid ""
 "For example a checklist containing the relevant steps like blocking/removing "
 "account, keys, change of assignments, etc."
@@ -2804,7 +2826,7 @@ msgstr ""
 "Par exemple une liste de contrôle contenant les étapes pertinentes comme le "
 "blocage/la suppression du compte, des clés, le changement d'affectation, etc."
 
-#: data/fit4ehealth/questions.json:142
+#: data/fit4ehealth/questions.json:657
 msgid ""
 "In the event of staff turnover, e.g. departure, all account details "
 "associated with that person should be inaccessible to them. So should "
@@ -2816,19 +2838,19 @@ msgstr ""
 "inaccessibles. De même, les comptes, les accès et les ordinateurs doivent "
 "être opérationnels lorsqu'une nouvelle personne rejoint l'équipe."
 
-#: data/fit4ehealth/questions.json:149
+#: data/fit4ehealth/questions.json:664
 msgid "Data Transfer"
 msgstr "Transfert de données"
 
-#: data/fit4ehealth/questions.json:151
+#: data/fit4ehealth/questions.json:666
 msgid "Medical data of the establishment/organisation is"
 msgstr "Les données médicales de l'établissement/organisme sont"
 
-#: data/fit4ehealth/questions.json:162
+#: data/fit4ehealth/questions.json:677
 msgid "still stored on paper, if needed"
 msgstr "encore conservées sur papier, si nécessaire"
 
-#: data/fit4ehealth/questions.json:163
+#: data/fit4ehealth/questions.json:678
 msgid ""
 "Some documents concerning patients are still received, printed and stored "
 "somewhere."
@@ -2836,7 +2858,7 @@ msgstr ""
 "Certains documents concernant les patients sont encore reçus, imprimés et "
 "conservés quelque part."
 
-#: data/fit4ehealth/questions.json:170
+#: data/fit4ehealth/questions.json:685
 msgid ""
 "Hard copy documents must be kept where only authorized persons have access. "
 "These data can't be kept indefinitely, and should be deleted as soon as they "
@@ -2848,7 +2870,7 @@ msgstr ""
 "inutilisables (généralement par la loi après 10 ans pour les documents "
 "médicaux)."
 
-#: data/fit4ehealth/questions.json:179
+#: data/fit4ehealth/questions.json:694
 msgid ""
 "sent in unencrypted form by email to the patient or to collaborators who "
 "request it"
@@ -2856,11 +2878,11 @@ msgstr ""
 "envoyées non-chiffré par courrier électronique aux patients ou aux "
 "collaborateurs qui le demandent"
 
-#: data/fit4ehealth/questions.json:180
+#: data/fit4ehealth/questions.json:695
 msgid "Emails are sent without protecting the content"
 msgstr "Des courriers électroniques sont envoyés sans protection du contenu"
 
-#: data/fit4ehealth/questions.json:187
+#: data/fit4ehealth/questions.json:702
 msgid ""
 "You should always try to provide all documents directly to the targeted "
 "person. If you can't, you should ensure and double check that the person is "
@@ -2872,7 +2894,7 @@ msgstr ""
 "revérifier que la personne est bien identifiée et chiffrer les informations "
 "médicales avec un mot de passe pour éviter toute divulgation ou interception."
 
-#: data/fit4ehealth/questions.json:196
+#: data/fit4ehealth/questions.json:711
 msgid ""
 "sent in encrypted form by email to the patient or to collaborators who "
 "request it"
@@ -2880,7 +2902,7 @@ msgstr ""
 "envoyées sous forme chiffrée par e-mail aux patients ou aux collaborateurs "
 "qui en font la demande"
 
-#: data/fit4ehealth/questions.json:197
+#: data/fit4ehealth/questions.json:712
 msgid ""
 "Emails are sent encrypted or with medical content only in encrypted "
 "attachment or by using Regimail."
@@ -2888,7 +2910,7 @@ msgstr ""
 "Les e-mails sont envoyés chiffrés ou avec un contenu médical uniquement dans "
 "une pièce jointe chiffrée ou en utilisant Regimail."
 
-#: data/fit4ehealth/questions.json:205
+#: data/fit4ehealth/questions.json:720
 msgid ""
 "sometimes sent via a messaging system (like Whatsapp, Skype, …) or stored in "
 "the Cloud (like WeTransfer, Google Drive, …)"
@@ -2896,7 +2918,7 @@ msgstr ""
 "parfois envoyées via un système de messagerie (comme Whatsapp, Skype, ...) "
 "ou stockées dans le Cloud (comme WeTransfer, Google Drive, ...)"
 
-#: data/fit4ehealth/questions.json:206
+#: data/fit4ehealth/questions.json:721
 msgid ""
 "Data could be sent either to someone by a non-specialized storage public "
 "solution (RegiBox or internal solutions excluded) such as WeTransfer, "
@@ -2908,7 +2930,7 @@ msgstr ""
 "Dropbox, Google Drive, ... ou par une solution de chat publique comme "
 "Whatsapp, Signal …"
 
-#: data/fit4ehealth/questions.json:213
+#: data/fit4ehealth/questions.json:728
 msgid ""
 "Avoid sharing medical data via commercial public messengers or cloud "
 "platforms, as the data you store there is likely to be sent abroad (outside "
@@ -2924,14 +2946,14 @@ msgstr ""
 "leur permettez implicitement d'accéder à vos données stockées et de les "
 "analyser."
 
-#: data/fit4ehealth/questions.json:222
+#: data/fit4ehealth/questions.json:737
 msgid ""
 "sometimes sent by fax to external healthcare professionals / institutions"
 msgstr ""
 "parfois envoyées par fax à des professionnels de la santé / institutions "
 "externes"
 
-#: data/fit4ehealth/questions.json:223
+#: data/fit4ehealth/questions.json:738
 msgid ""
 "Data are sent by fax to any professional, laboratory, hospital or other "
 "organization."
@@ -2939,7 +2961,7 @@ msgstr ""
 "Les données sont envoyées par fax à tout professionnel, laboratoire, hôpital "
 "ou autre organisme."
 
-#: data/fit4ehealth/questions.json:230
+#: data/fit4ehealth/questions.json:745
 msgid ""
 "Fax is not a secure way to exchange sensitive data. It is also important to "
 "refuse the sending of sensitive data by unencrypted mail, as you will be "
@@ -2949,19 +2971,19 @@ msgstr ""
 "également important de refuser l'envoi de données sensibles par courrier non "
 "chiffré, car vous serez responsable en cas de fuite de ces données."
 
-#: data/fit4ehealth/questions.json:239
+#: data/fit4ehealth/questions.json:754
 msgid "kept indefinitely, even after patients have left the country or died"
 msgstr ""
 "conservées indéfiniment, même lorsque les patients ont quitté le pays ou "
 "sont décédés"
 
-#: data/fit4ehealth/questions.json:240
+#: data/fit4ehealth/questions.json:755
 msgid "You never dispose the data when the patient is inaccessible."
 msgstr ""
 "Les données ne sont pas archivées ou détruites lorsque le patient n’est plus "
 "joignable"
 
-#: data/fit4ehealth/questions.json:247
+#: data/fit4ehealth/questions.json:762
 msgid ""
 "Of course, data should be discarded as soon as you don't need them anymore, "
 "when your patient explicitly requests for or when the law (e.g. after 10 "
@@ -2974,7 +2996,7 @@ msgstr ""
 "concerne les données collectées avec les systèmes informatiques par voie "
 "électronique, mais aussi tous les papiers et le courrier."
 
-#: data/fit4ehealth/questions.json:256
+#: data/fit4ehealth/questions.json:771
 msgid ""
 "sometimes shared between organizations and external collaborators via an "
 "encrypted shared storage like e.g. RegiBox"
@@ -2982,7 +3004,7 @@ msgstr ""
 "parfois partagées entre les organisations et les collaborateurs externes via "
 "un stockage partagé chiffré tel que RegiBox"
 
-#: data/fit4ehealth/questions.json:263
+#: data/fit4ehealth/questions.json:778
 msgid ""
 "If data is shared, it should be encrypted so that only the intended "
 "recipient can access the data."
@@ -2990,20 +3012,20 @@ msgstr ""
 "Si les données sont partagées, elles doivent être chiffrés afin que seul le "
 "destinataire prévu puisse y accéder."
 
-#: data/fit4ehealth/questions.json:271 data/fit4ehealth/questions.json:341
-#: data/fit4ehealth/questions.json:403
+#: data/fit4ehealth/questions.json:786 data/fit4ehealth/questions.json:856
+#: data/fit4ehealth/questions.json:918
 msgid "Employee Management in Your Cabinet or Practice"
 msgstr "Gestion des Employés de votre Cabinet"
 
-#: data/fit4ehealth/questions.json:272
+#: data/fit4ehealth/questions.json:787
 msgid "All staff is trained for/in"
 msgstr "Tous les professionnels sont formés pour / dans"
 
-#: data/fit4ehealth/questions.json:282
+#: data/fit4ehealth/questions.json:797
 msgid "software they use on a regular basis"
 msgstr "les logiciels qu'ils utilisent régulièrement"
 
-#: data/fit4ehealth/questions.json:283
+#: data/fit4ehealth/questions.json:798
 msgid ""
 "You have received training on software or devices that you use, and you are "
 "able to face or understand some particular situation to avoid any data loss."
@@ -3012,7 +3034,7 @@ msgstr ""
 "système informatique aussi bien la gestion des ordinateurs, des serveurs ou "
 "toute autre demande en lien avec l’informatique "
 
-#: data/fit4ehealth/questions.json:290
+#: data/fit4ehealth/questions.json:805
 msgid ""
 "To avoid loss of time and data, it is important to learn to use your "
 "software properly. It prevents you from making mistakes that could "
@@ -3022,7 +3044,7 @@ msgstr ""
 "à utiliser correctement votre logiciel. Cela vous évite de commettre des "
 "erreurs qui pourraient compromettre la sécurité des données traitées."
 
-#: data/fit4ehealth/questions.json:299
+#: data/fit4ehealth/questions.json:814
 msgid ""
 "information security, to be able to protect themselves from attacks or "
 "information security issues"
@@ -3030,7 +3052,7 @@ msgstr ""
 "la sécurité de l'information, pour pouvoir se protéger des attaques ou des "
 "problèmes de sécurité de l'information"
 
-#: data/fit4ehealth/questions.json:300
+#: data/fit4ehealth/questions.json:815
 msgid ""
 "You have received training on the information security basics, or you have "
 "personally invested some time to search some ways or practice, either to be "
@@ -3042,7 +3064,7 @@ msgstr ""
 "des pratiques, soit pour être plus protégé, soit pour comprendre comment les "
 "cyberattaquants peuvent nuire à vous même ou à vos données."
 
-#: data/fit4ehealth/questions.json:307
+#: data/fit4ehealth/questions.json:822
 msgid ""
 "By sharing information about current, common or well known attacks, "
 "employees could take measures to identify and prevent from being affected by "
@@ -3052,12 +3074,12 @@ msgstr ""
 "connues, les employés pourraient prendre des mesures pour les identifier et "
 "éviter d'être affectés par elles."
 
-#: data/fit4ehealth/questions.json:316
+#: data/fit4ehealth/questions.json:831
 msgid "the importance of managing and protecting personal data correctly"
 msgstr ""
 "l'importance de gérer et de protéger correctement les données personnelles"
 
-#: data/fit4ehealth/questions.json:317
+#: data/fit4ehealth/questions.json:832
 msgid ""
 "You have received training on the personal data protection, or asked a "
 "professional how you should proceed to protect them."
@@ -3065,7 +3087,7 @@ msgstr ""
 "Vous avez reçu une formation sur la protection des données personnelles, ou "
 "demandé à un professionnel comment procéder pour les protéger."
 
-#: data/fit4ehealth/questions.json:324
+#: data/fit4ehealth/questions.json:839
 msgid ""
 "Train users on the sensitivity of the information processed, in order to "
 "focus their attention on how to protect this data."
@@ -3073,11 +3095,11 @@ msgstr ""
 "Former les utilisateurs sur la sensibilité des informations traitées, afin "
 "d'attirer leur attention sur la manière de protéger ces données."
 
-#: data/fit4ehealth/questions.json:333
+#: data/fit4ehealth/questions.json:848
 msgid "none of those cases"
 msgstr "aucun de ces cas"
 
-#: data/fit4ehealth/questions.json:334
+#: data/fit4ehealth/questions.json:849
 msgid ""
 "You have never received any training for the software you use, on "
 "information security or on personal data."
@@ -3085,19 +3107,19 @@ msgstr ""
 "Vous n'avez jamais reçu de formation sur les logiciels que vous utilisez, "
 "sur la sécurité des informations ou sur les données personnelles."
 
-#: data/fit4ehealth/questions.json:340
+#: data/fit4ehealth/questions.json:855
 msgid "Responsibilities"
 msgstr "Responsabilités"
 
-#: data/fit4ehealth/questions.json:342
+#: data/fit4ehealth/questions.json:857
 msgid "IT and Information security tasks are:"
 msgstr "Les tâches d'informatique et de sécurité de l'information sont :"
 
-#: data/fit4ehealth/questions.json:352
+#: data/fit4ehealth/questions.json:867
 msgid "performed internally by an IT specialist"
 msgstr "effectuées en interne par un spécialiste en informatique"
 
-#: data/fit4ehealth/questions.json:353
+#: data/fit4ehealth/questions.json:868
 msgid ""
 "Someone in the establishment specifically has to take care of all issues "
 "that concerns computers or servers, or any issues in that field."
@@ -3106,12 +3128,12 @@ msgstr ""
 "questions relatives aux ordinateurs ou aux serveurs, ou de toute autre "
 "question dans ce domaine."
 
-#: data/fit4ehealth/questions.json:361
+#: data/fit4ehealth/questions.json:876
 msgid "performed internally by a person who is computer literate"
 msgstr ""
 "réalisées en interne par une personne ayant des connaissances en informatique"
 
-#: data/fit4ehealth/questions.json:362
+#: data/fit4ehealth/questions.json:877
 msgid ""
 "An employee of your organization who has some IT skills takes care if there "
 "is an IT problem, but the main function of this person is not IT management."
@@ -3120,7 +3142,7 @@ msgstr ""
 "s'il y a un problème, mais la personne n'est pas dédiée à cela et fait "
 "d'autres tâches dans l'établissement."
 
-#: data/fit4ehealth/questions.json:369 data/fit4ehealth/questions.json:386
+#: data/fit4ehealth/questions.json:884 data/fit4ehealth/questions.json:901
 msgid ""
 "It is important to define responsibilities, for internal and external "
 "staff / companies, related to their specific domain. At best this should be "
@@ -3130,7 +3152,7 @@ msgstr ""
 "et externe / les entreprises, liées à leur domaine spécifique. Au mieux, "
 "cela devrait être soutenu par des formations pertinentes."
 
-#: data/fit4ehealth/questions.json:378
+#: data/fit4ehealth/questions.json:893
 msgid ""
 "performed internally by the person who found or encountered the problem, or "
 "externally without contract"
@@ -3138,7 +3160,7 @@ msgstr ""
 "réalisées en interne par la personne qui a trouvé ou rencontré le problème, "
 "ou en externe sans contrat"
 
-#: data/fit4ehealth/questions.json:379
+#: data/fit4ehealth/questions.json:894
 msgid ""
 "The employee who encounters the problem has to solve it himself/herself or "
 "is allowed to request external support. The external service supplier does "
@@ -3148,11 +3170,11 @@ msgstr ""
 "à quelqu'un qui pourrait être externe mais qui n'a pas de contrat avec "
 "l'établissement."
 
-#: data/fit4ehealth/questions.json:395
+#: data/fit4ehealth/questions.json:910
 msgid "contractually outsourced to a service provider"
 msgstr "réalisées en externe par un tiers sous contrat"
 
-#: data/fit4ehealth/questions.json:396
+#: data/fit4ehealth/questions.json:911
 msgid ""
 "Whenever a problem is encountered, another company will try to solve it. "
 "This company is under contract."
@@ -3160,11 +3182,11 @@ msgstr ""
 "Dès qu'un problème survient, une autre entreprise va essayer de le résoudre. "
 "Cette société est principalement sous contrat."
 
-#: data/fit4ehealth/questions.json:402
+#: data/fit4ehealth/questions.json:917
 msgid "Mobility"
 msgstr "Mobilité"
 
-#: data/fit4ehealth/questions.json:404
+#: data/fit4ehealth/questions.json:919
 msgid ""
 "When working outside the facility/ establishment or during visits, the "
 "health professional uses:"
@@ -3172,7 +3194,7 @@ msgstr ""
 "Lorsqu'il travaille à l'extérieur de la structure/de l'établissement ou lors "
 "de visites, le professionnel de santé utilise :"
 
-#: data/fit4ehealth/questions.json:414
+#: data/fit4ehealth/questions.json:929
 #, fuzzy
 msgid ""
 "no professional tools/devices because home office or visits are not allowed "
@@ -3183,14 +3205,14 @@ msgstr ""
 "visites ne sont pas autorisés ou nécessaires, ou la seule connexion est le "
 "réseau interne dans les locaux de la société"
 
-#: data/fit4ehealth/questions.json:415
+#: data/fit4ehealth/questions.json:930
 msgid ""
 "Accessing to the internal data is impossible from outside the establishment."
 msgstr ""
 "L'accès aux données internes est impossible depuis l'extérieur de "
 "l'établissement."
 
-#: data/fit4ehealth/questions.json:422 data/fit4ehealth/questions.json:469
+#: data/fit4ehealth/questions.json:937 data/fit4ehealth/questions.json:984
 msgid ""
 "External connection which is not controlled and monitored should be avoided "
 "to prevent from data theft."
@@ -3198,7 +3220,7 @@ msgstr ""
 "Les connexions externes qui ne sont pas contrôlées et surveillées doivent "
 "être évitées afin de prévenir le vol de données."
 
-#: data/fit4ehealth/questions.json:429
+#: data/fit4ehealth/questions.json:944
 msgid ""
 "For now, no work outside the facility/establishment is done. If this "
 "changes, it is important to take care that:"
@@ -3206,7 +3228,7 @@ msgstr ""
 "Pour l'instant, aucun travail n'est effectué en dehors de l'installation/"
 "établissement. Si cela change, il est important de veiller à ce que :"
 
-#: data/fit4ehealth/questions.json:438
+#: data/fit4ehealth/questions.json:953
 msgid ""
 "VPN (Virtual Private Network) to encrypt all data from any external network "
 "to the establishment's internal server"
@@ -3214,7 +3236,7 @@ msgstr ""
 "un VPN (Virtual Private Network) pour chiffrer toutes les données de tout "
 "réseau externe vers le serveur interne de l'établissement"
 
-#: data/fit4ehealth/questions.json:439
+#: data/fit4ehealth/questions.json:954
 msgid ""
 "Before accessing your data from outside, you need to connect (or "
 "automatically connect) to a software that permits to access the data you "
@@ -3224,7 +3246,7 @@ msgstr ""
 "(ou vous connecter automatiquement) à un logiciel qui autorise d'accéder aux "
 "données que vous avez à l'intérieur de l'établissement."
 
-#: data/fit4ehealth/questions.json:449
+#: data/fit4ehealth/questions.json:964
 msgid ""
 "Whenever users need to work offsite, from home office or other offsite "
 "assignments, they need a VPN connection to connect to the organization's "
@@ -3234,13 +3256,13 @@ msgstr ""
 "domicile ou d'autres missions hors site, ils ont besoin d'une connexion VPN "
 "pour se connecter au serveur/réseau de l'organisation."
 
-#: data/fit4ehealth/questions.json:459
+#: data/fit4ehealth/questions.json:974
 msgid "You can connect from any place that provides you an internet access"
 msgstr ""
 "Vous pouvez vous connecter depuis n'importe quel endroit qui vous fournit un "
 "accès internet"
 
-#: data/fit4ehealth/questions.json:478
+#: data/fit4ehealth/questions.json:993
 msgid ""
 "a private connection or connection sharing from a private or professional/"
 "work smartphone tethering/hotspot)"
@@ -3248,7 +3270,7 @@ msgstr ""
 "une connexion privée ou un partage de connexion à partir d'un smartphone "
 "privé ou professionnel (tethering/hotspot)"
 
-#: data/fit4ehealth/questions.json:479
+#: data/fit4ehealth/questions.json:994
 msgid ""
 "You only use a connection where you have some control, such as your own "
 "private connection or your phone's shared one."
@@ -3256,7 +3278,7 @@ msgstr ""
 "Vous n'utilisez qu'une connexion sur laquelle vous avez un certain contrôle, "
 "comme votre propre connexion privée ou celle partagée par votre téléphone."
 
-#: data/fit4ehealth/questions.json:489
+#: data/fit4ehealth/questions.json:1004
 msgid ""
 "Having a network environment that you can control or easily check is "
 "important, to ensure that only you have access to this network."
@@ -3265,7 +3287,7 @@ msgstr ""
 "ou vérifier facilement, afin de vous assurer que vous seul avez accès à ce "
 "réseau."
 
-#: data/fit4ehealth/questions.json:498
+#: data/fit4ehealth/questions.json:1013
 msgid ""
 "a screen filter or setting that ensures that no unauthorized person can see "
 "what is displayed on the screen of their mobile device (tablet or laptop)"
@@ -3274,7 +3296,7 @@ msgstr ""
 "autorisée ne peut voir ce qui est affiché sur l'écran de son appareil mobile "
 "(tablette ou ordinateur portable)"
 
-#: data/fit4ehealth/questions.json:499
+#: data/fit4ehealth/questions.json:1014
 msgid ""
 "While working with sensitive data on a mobile device, you take measures to "
 "prevent others from reading the data from your screen."
@@ -3283,7 +3305,7 @@ msgstr ""
 "attention à qui pourrait voir votre écran, ou vous avez un filtre d'écran "
 "pour éviter tout regard curieux."
 
-#: data/fit4ehealth/questions.json:506
+#: data/fit4ehealth/questions.json:1021
 msgid ""
 "Protection against unauthorised viewing of medical data by third parties "
 "while you are working on visual terminals, e.g. the screen at your workplace "
@@ -3294,7 +3316,7 @@ msgstr ""
 "l'écran sur votre lieu de travail, mais aussi sur des appareils mobiles, "
 "doit être assurée."
 
-#: data/fit4ehealth/questions.json:515
+#: data/fit4ehealth/questions.json:1030
 msgid ""
 "mobile devices that are encrypted (password protected at startup) or do not "
 "contain confidential data"
@@ -3302,7 +3324,7 @@ msgstr ""
 "des appareils mobiles qui sont chiffrés (protégés par un mot de passe au "
 "démarrage) ou qui ne contiennent pas de données confidentielles"
 
-#: data/fit4ehealth/questions.json:516
+#: data/fit4ehealth/questions.json:1031
 msgid ""
 "Each time you boot your device, you have to type an extra password (e.g. for "
 "Bitlocker) or your computer does not store any medical data on it."
@@ -3311,7 +3333,7 @@ msgstr ""
 "supplémentaire (par exemple pour Bitlocker) ou des données médicales n’y "
 "sont pas stockées."
 
-#: data/fit4ehealth/questions.json:523
+#: data/fit4ehealth/questions.json:1038
 msgid ""
 "For devices that are taken along and contain confidential data, the internal "
 "memory/disc should always be encrypted to prevent data theft."
@@ -3320,19 +3342,19 @@ msgstr ""
 "confidentielles, la mémoire interne devrait toujours être chiffrée pour "
 "éviter le vol de données."
 
-#: data/fit4ehealth/questions.json:532
+#: data/fit4ehealth/questions.json:1047
 msgid "devices that are not connected to an IT network during the visit."
 msgstr ""
 "des appareils qui ne sont pas connectés à un réseau informatique pendant la "
 "visite"
 
-#: data/fit4ehealth/questions.json:533
+#: data/fit4ehealth/questions.json:1048
 msgid ""
 "The device you use cannot connect to any network from outside, or you take "
 "care it never do it."
 msgstr "Ou vous faites en sorte qu’il ne le fasse jamais."
 
-#: data/fit4ehealth/questions.json:545
+#: data/fit4ehealth/questions.json:1060
 msgid ""
 "A possible solution is to use a laptop or a mobile device that is not "
 "connected to any network. If on this device any medical data is stored, it "
@@ -3343,15 +3365,15 @@ msgstr ""
 "sont stockées sur cet appareil, il convient de s'assurer que l'appareil est "
 "toujours sécurisé et sous contrôle."
 
-#: data/fit4ehealth/questions.json:552
+#: data/fit4ehealth/questions.json:1067
 msgid "Contracts"
 msgstr "Contrats"
 
-#: data/fit4ehealth/questions.json:554
+#: data/fit4ehealth/questions.json:1069
 msgid "Contracts concluded with third parties"
 msgstr "Les contrats avec les tiers"
 
-#: data/fit4ehealth/questions.json:564
+#: data/fit4ehealth/questions.json:1079
 msgid ""
 "are not defined, as they are only concluded in case of an incident or "
 "special needs"
@@ -3359,7 +3381,7 @@ msgstr ""
 "ne sont pas définis, car ils ne sont conclus qu'en cas d'incident ou de "
 "besoins particuliers"
 
-#: data/fit4ehealth/questions.json:565
+#: data/fit4ehealth/questions.json:1080
 msgid ""
 "You do not have any contract defined with your ICT provider which only acts "
 "when they have time, without any guarantee."
@@ -3367,14 +3389,14 @@ msgstr ""
 "Vous n’avez pas de contrat défini avec votre prestataire de services "
 "informatiques contenant un délai d’intervention en cas d’incident."
 
-#: data/fit4ehealth/questions.json:572
+#: data/fit4ehealth/questions.json:1087
 msgid ""
 "Contracts should be defined with all external actors. Here are some advices:"
 msgstr ""
 "Des contrats doivent être définis avec tous les acteurs externes. Voici "
 "quelques conseils :"
 
-#: data/fit4ehealth/questions.json:581
+#: data/fit4ehealth/questions.json:1096
 msgid ""
 "contain a confidentiality clause stating that the provider must  not "
 "disclose any personal data he might access in the course of his work"
@@ -3383,7 +3405,7 @@ msgstr ""
 "doit pas divulguer les données personnelles auxquelles il pourrait avoir "
 "accès dans le cadre de son travail"
 
-#: data/fit4ehealth/questions.json:582
+#: data/fit4ehealth/questions.json:1097
 msgid ""
 "You may have an NDA (Non-Disclosure Agreement) or this is written in the "
 "signed contract with the ICT provider."
@@ -3391,7 +3413,7 @@ msgstr ""
 "Vous avez peut-être un accord de confidentialité ou cela est écrit dans le "
 "contrat signé avec le prestataire de services informatiques."
 
-#: data/fit4ehealth/questions.json:589
+#: data/fit4ehealth/questions.json:1104
 msgid ""
 "Since you have medical data of your patients, you should definitely sign an "
 "NDA (Non-Disclosure Agreement) with all entities who may have access to the "
@@ -3404,7 +3426,7 @@ msgstr ""
 "s'agir du personnel du cabinet, de la société qui assure la maintenance du "
 "logiciel ou du matériel, ou même de la société de nettoyage."
 
-#: data/fit4ehealth/questions.json:598
+#: data/fit4ehealth/questions.json:1113
 msgid ""
 "refer to clear data protection responsibilities – namely that of data "
 "controller and data processor"
@@ -3412,7 +3434,7 @@ msgstr ""
 "font référence à des responsabilités claires en matière de protection des "
 "données, à savoir celles du responsable de traitement et du sous-traitant"
 
-#: data/fit4ehealth/questions.json:599
+#: data/fit4ehealth/questions.json:1114
 msgid ""
 "Terms such as “data controller” and “data processor” are clearly stated in a "
 "contract defining the personal data protection."
@@ -3421,7 +3443,7 @@ msgstr ""
 "clairement énoncés dans un contrat définissant la protection des données "
 "personnelles."
 
-#: data/fit4ehealth/questions.json:606
+#: data/fit4ehealth/questions.json:1121
 msgid ""
 "Some terms are legally defined by the GDPR (e.g. “Data Processor” and “Data "
 "Controller”) and should be clearly stated in the contract."
@@ -3430,14 +3452,14 @@ msgstr ""
 "traitant\" et \"Responsable de traitement\") et doivent être clairement "
 "indiqués dans le contrat."
 
-#: data/fit4ehealth/questions.json:615
+#: data/fit4ehealth/questions.json:1130
 msgid ""
 "define the maximum time until an intervention must be performed after an "
 "incident or problem has been reported"
 msgstr ""
 "définissent le temps maximum pour lequel ces derniers doivent intervenir"
 
-#: data/fit4ehealth/questions.json:616
+#: data/fit4ehealth/questions.json:1131
 msgid ""
 "Whenever an incident is happening, the ICT provider needs to react within a "
 "certain time which is defined in the contract."
@@ -3445,7 +3467,7 @@ msgstr ""
 "Lorsqu'un incident se produit, le prestataire de services informatiques doit "
 "réagir dans un délai déterminé qui est défini dans le contrat."
 
-#: data/fit4ehealth/questions.json:623
+#: data/fit4ehealth/questions.json:1138
 msgid ""
 "If possible, a contract should be signed to ensure that the external IT "
 "provider guarantees the availability of the system so that it remains "
@@ -3457,14 +3479,14 @@ msgstr ""
 "système afin qu'il reste opérationnel. Ce type de contrat est appelé "
 "\"Service Level Agreement (SLA)\"."
 
-#: data/fit4ehealth/questions.json:632
+#: data/fit4ehealth/questions.json:1147
 msgid ""
 "are reviewed regularly to ensure that they are compliant with the "
 "requirements"
 msgstr ""
 "sont révisées régulièrement pour garantir leur conformité aux exigences"
 
-#: data/fit4ehealth/questions.json:633
+#: data/fit4ehealth/questions.json:1148
 msgid ""
 "Contracts are reviewed, once every year or two years, to see if the needs of "
 "the establishment fit the contract."
@@ -3472,7 +3494,7 @@ msgstr ""
 "Les contrats sont revus tous les un ou deux ans, afin de vérifier si les "
 "besoins de l’établissement correspondent toujours au contrat."
 
-#: data/fit4ehealth/questions.json:640
+#: data/fit4ehealth/questions.json:1155
 msgid ""
 "It's necessary to review the contracts to ensure :<ul><li>having an "
 "intervention solution whenever necessary</li><li>to not pay too much for a "
@@ -3486,11 +3508,11 @@ msgstr ""
 "élevé;</li><li>que les services rendus sont d'un niveau de qualité suffisant "
 "à ce qui est nécessaire.</li></ul>"
 
-#: data/fit4ehealth/questions.json:649
+#: data/fit4ehealth/questions.json:1164
 msgid "are specified verbally"
 msgstr "sont spécifiées verbalement"
 
-#: data/fit4ehealth/questions.json:650
+#: data/fit4ehealth/questions.json:1165
 msgid ""
 "There is no written agreement between the third party and the establishment, "
 "only a discussion beforehand."
@@ -3498,7 +3520,7 @@ msgstr ""
 "Il n'y a pas d'accord écrit entre le tiers et l'établissement, seulement une "
 "discussion préalable."
 
-#: data/fit4ehealth/questions.json:657
+#: data/fit4ehealth/questions.json:1172
 msgid ""
 "Even if this point is valid by law, a verbal agreement should always be "
 "avoided, as you will have no proof in the case an incident happens, and will "
@@ -3508,38 +3530,38 @@ msgstr ""
 "évité, car vous n'aurez aucune preuve au cas où un incident se produirait, "
 "et vous ne serez plus protégé. En outre, un accord verbal peut être imprécis."
 
-#: data/fit4ehealth/questions.json:666
+#: data/fit4ehealth/questions.json:1181
 msgid "are in written form"
 msgstr "sont sous forme écrite"
 
-#: data/fit4ehealth/questions.json:667
+#: data/fit4ehealth/questions.json:1182
 msgid "The contracts are written, dated and signed by both parties."
 msgstr "Les contrats sont écrits, datés et signés par les deux parties."
 
-#: data/fit4ehealth/questions.json:674
+#: data/fit4ehealth/questions.json:1189
 msgid ""
 "A written contract should be made, customized for your needs, if possible."
 msgstr "Il faut établir un contrat écrit, adapté à vos besoins, si possible."
 
-#: data/fit4ehealth/questions.json:681
+#: data/fit4ehealth/questions.json:1196
 msgid "Cleaning"
 msgstr "Nettoyage des Locaux"
 
-#: data/fit4ehealth/questions.json:683
+#: data/fit4ehealth/questions.json:1198
 msgid "The establishment / facility cleaning is done:"
 msgstr "Le nettoyage de l'établissement / de l'organisation est fait :"
 
-#: data/fit4ehealth/questions.json:693
+#: data/fit4ehealth/questions.json:1208
 msgid "internally, by our employees"
 msgstr "en interne, par nos employés"
 
-#: data/fit4ehealth/questions.json:694
+#: data/fit4ehealth/questions.json:1209
 msgid ""
 "The cleaning of the place is done by someone intern to the establishment."
 msgstr ""
 "Le nettoyage du lieu est effectué par une personne interne à l'établissement."
 
-#: data/fit4ehealth/questions.json:708
+#: data/fit4ehealth/questions.json:1223
 msgid ""
 "Not to provide keys, as there is the risk that keys can be lost or copied "
 "and then misused by someone else."
@@ -3547,13 +3569,13 @@ msgstr ""
 "Ne pas fournir les clés, car il y a un risque que les clés soient perdues ou "
 "copiées et ensuite utilisées à mauvais escient par quelqu'un d'autre."
 
-#: data/fit4ehealth/questions.json:717
+#: data/fit4ehealth/questions.json:1232
 msgid "by an external person/company who has all the necessary keys"
 msgstr ""
 "par une personne/entreprise externe qui dispose de toutes les clés "
 "nécessaires"
 
-#: data/fit4ehealth/questions.json:718
+#: data/fit4ehealth/questions.json:1233
 msgid ""
 "The cleaning is managed either by a person who is specialized, or by a "
 "company which is specialized in it."
@@ -3561,7 +3583,7 @@ msgstr ""
 "Le nettoyage est géré soit par une personne spécialisée, soit par une "
 "entreprise spécialisée dans ce domaine."
 
-#: data/fit4ehealth/questions.json:725
+#: data/fit4ehealth/questions.json:1240
 msgid ""
 "When giving the keys, there is the risk that keys can be lost or copied and "
 "then misused by someone else."
@@ -3569,11 +3591,11 @@ msgstr ""
 "Lors de la remise des clés, il y a un risque que les clés soient perdues ou "
 "copiées et ensuite utilisées à mauvais escient par quelqu'un d'autre."
 
-#: data/fit4ehealth/questions.json:734
+#: data/fit4ehealth/questions.json:1249
 msgid "during the working hours of the establishment/facility"
 msgstr "pendant les heures de travail de l'établissement/des locaux"
 
-#: data/fit4ehealth/questions.json:735
+#: data/fit4ehealth/questions.json:1250
 msgid ""
 "The cleaning is done only while there is still someone who works on the "
 "establishment."
@@ -3581,7 +3603,7 @@ msgstr ""
 "Le nettoyage est fait seulement quand il y a encore quelqu'un qui travaille "
 "dans l'établissement."
 
-#: data/fit4ehealth/questions.json:742
+#: data/fit4ehealth/questions.json:1257
 msgid ""
 "Whenever possible, the office cleaning should be done during office hours to "
 "avoid potential theft of data or material."
@@ -3590,11 +3612,11 @@ msgstr ""
 "pendant les heures de bureau afin d'éviter le vol potentiel de données ou de "
 "matériel."
 
-#: data/fit4ehealth/questions.json:751
+#: data/fit4ehealth/questions.json:1266
 msgid "with clear rules on what must or must not be done"
 msgstr "avec des règles claires sur ce qui peut et ne peut pas être fait"
 
-#: data/fit4ehealth/questions.json:752
+#: data/fit4ehealth/questions.json:1267
 msgid ""
 "When cleaning, some rules have to be followed, e.g. which rooms need to be "
 "cleaned or how sensitive equipment has to be cleaned"
@@ -3603,7 +3625,7 @@ msgstr ""
 "précision sur ce qui doit être accessible ou non, ou ce qui ne doit pas être "
 "débranché."
 
-#: data/fit4ehealth/questions.json:759
+#: data/fit4ehealth/questions.json:1274
 msgid ""
 "Rules should be set on what to do and what to avoid, as misunderstandings "
 "can occur."
@@ -3611,11 +3633,11 @@ msgstr ""
 "Des règles doivent être établies sur ce qu'il faut faire et ce qu'il faut "
 "éviter, car des malentendus peuvent survenir."
 
-#: data/fit4ehealth/questions.json:768
+#: data/fit4ehealth/questions.json:1283
 msgid "with a contract that stipulates medical confidentiality"
 msgstr "avec un contrat qui stipule le secret médical"
 
-#: data/fit4ehealth/questions.json:769
+#: data/fit4ehealth/questions.json:1284
 msgid ""
 "The contract you have signed with the person or the company has some part "
 "concerning the confidentiality of medical data."
@@ -3623,7 +3645,7 @@ msgstr ""
 "Le contrat que vous avez signé avec la personne ou l'entreprise comporte une "
 "partie concernant la confidentialité des données médicales."
 
-#: data/fit4ehealth/questions.json:776
+#: data/fit4ehealth/questions.json:1291
 msgid ""
 "It is important to define a confidentiality clause in all the contracts to "
 "ensure the confidentiality of information heard or seen."
@@ -3632,13 +3654,13 @@ msgstr ""
 "contrats afin de garantir la confidentialité des informations entendues ou "
 "vues."
 
-#: data/fit4ehealth/questions.json:785
+#: data/fit4ehealth/questions.json:1300
 msgid "with all confidential documents locked away in a room, desk or cabinet"
 msgstr ""
 "avec tous les documents confidentiels enfermés dans une pièce, un bureau ou "
 "une armoire"
 
-#: data/fit4ehealth/questions.json:786
+#: data/fit4ehealth/questions.json:1301
 msgid ""
 "The cleaning will be done when all documents are locked up or otherwise made "
 "inaccessible."
@@ -3646,7 +3668,7 @@ msgstr ""
 "Le nettoyage se fait toujours quand tous les documents sont enfermés quelque "
 "part, ou sont inaccessibles sans forcer quelque chose."
 
-#: data/fit4ehealth/questions.json:793
+#: data/fit4ehealth/questions.json:1308
 msgid ""
 "To prevent confidential documents from being seen by unauthorized persons / "
 "third parties, it is important to establish a clean desk policy."
@@ -3655,14 +3677,14 @@ msgstr ""
 "autorisées / des tiers, il est important d'établir une politique de bureau "
 "propre."
 
-#: data/fit4ehealth/questions.json:802
+#: data/fit4ehealth/questions.json:1317
 msgid ""
 "avoiding rooms with restricted access, like an archive room or a server room"
 msgstr ""
 "en évitant les pièces à accès restreint, comme une salle d'archives ou une "
 "salle de serveurs"
 
-#: data/fit4ehealth/questions.json:803
+#: data/fit4ehealth/questions.json:1318
 msgid ""
 "The cleaning is not done by externals in some places which contain "
 "confidential equipment or data."
@@ -3670,7 +3692,7 @@ msgstr ""
 "Le nettoyage n'est pas fait par des personnes externes dans certains "
 "endroits qui contiennent des équipements ou des données confidentielles"
 
-#: data/fit4ehealth/questions.json:810
+#: data/fit4ehealth/questions.json:1325
 msgid ""
 "Only appropriately authorised persons should clean areas with restricted "
 "access, such as the archive or the IT room."
@@ -3678,19 +3700,19 @@ msgstr ""
 "Seules les personnes dûment autorisées peuvent nettoyer les zones à accès "
 "restreint, telles que les archives ou la salle informatique."
 
-#: data/fit4ehealth/questions.json:817
+#: data/fit4ehealth/questions.json:1332
 msgid "Remote Maintenance"
 msgstr "Télémaintenance"
 
-#: data/fit4ehealth/questions.json:819
+#: data/fit4ehealth/questions.json:1334
 msgid "Remote maintenance for IT hardware and software is"
 msgstr "La télémaintenance des matériels et logiciels informatiques est"
 
-#: data/fit4ehealth/questions.json:829
+#: data/fit4ehealth/questions.json:1344
 msgid "managed by my ICT service provider without being informed"
 msgstr "gérée par mon prestataire de services informatiques sans être informé"
 
-#: data/fit4ehealth/questions.json:830
+#: data/fit4ehealth/questions.json:1345
 msgid ""
 "When a problem occurs, you contact your ICT service provider to take care of "
 "it, without being noticed about their activities (such as when it starts, "
@@ -3702,7 +3724,7 @@ msgstr ""
 "exemple, quand il commence, quand il termine...). Mais le prestataire peut "
 "toujours accéder au serveur ou à l'ordinateur sans restrictions."
 
-#: data/fit4ehealth/questions.json:837
+#: data/fit4ehealth/questions.json:1352
 msgid ""
 "Whenever someone is accessing your computer remotely, you need to be aware "
 "who is accessing, what is being accessed and for which reason. Here is some "
@@ -3712,12 +3734,12 @@ msgstr ""
 "qui y accède, ce à quoi il accède et pour quelle raison. Voici quelques "
 "conseils sur la manière d'y faire face :"
 
-#: data/fit4ehealth/questions.json:846
+#: data/fit4ehealth/questions.json:1361
 msgid "managed by my ICT service provider, but only when I ask for"
 msgstr ""
 "gérée par mon prestataire de services informatiques avec accord préalable"
 
-#: data/fit4ehealth/questions.json:847
+#: data/fit4ehealth/questions.json:1362
 msgid ""
 "Your ICT service provider can access your server or your computer when you "
 "ask for it."
@@ -3725,7 +3747,7 @@ msgstr ""
 "Votre prestataire de services informatiques peut accéder à votre serveur ou "
 "à votre ordinateur lorsque vous le demandez."
 
-#: data/fit4ehealth/questions.json:854
+#: data/fit4ehealth/questions.json:1369
 msgid ""
 "You should decide when you need maintenance. You should ensure that a backup "
 "of your data is saved before the maintenance."
@@ -3733,11 +3755,11 @@ msgstr ""
 "Vous devez décider quand vous avez besoin de maintenance. Vous devez vous "
 "assurer qu'une sauvegarde de vos données est effectuée avant la maintenance."
 
-#: data/fit4ehealth/questions.json:863
+#: data/fit4ehealth/questions.json:1378
 msgid "monitored as soon as this happens"
 msgstr "contrôlée pendant l’intervention"
 
-#: data/fit4ehealth/questions.json:864
+#: data/fit4ehealth/questions.json:1379
 msgid ""
 "If your IT service provider can access your computer (using remote access "
 "software such as Teamviewer), you always monitor/observe their activity."
@@ -3746,7 +3768,7 @@ msgstr ""
 "écran (par un logiciel d'accès à distance tel que Teamviewer), vérifier le "
 "bon déroulement."
 
-#: data/fit4ehealth/questions.json:871
+#: data/fit4ehealth/questions.json:1386
 msgid ""
 "If someone is performing remote maintenance on your computer, you should "
 "check that no one can access data to which they shouldn't have access to."
@@ -3755,13 +3777,13 @@ msgstr ""
 "devez vérifier que personne ne peut accéder à des données auxquelles il ne "
 "devrait pas avoir accès."
 
-#: data/fit4ehealth/questions.json:880
+#: data/fit4ehealth/questions.json:1395
 msgid ""
 "observed under constant contact with the ICT service provider during the "
 "maintenance"
 msgstr "vérifiée par un contact permanent avec le fournisseur TIC"
 
-#: data/fit4ehealth/questions.json:881
+#: data/fit4ehealth/questions.json:1396
 msgid ""
 "While your IT service provider can access your computer (using remote access "
 "software such as Teamviewer), you are always in contact with them, either by "
@@ -3771,7 +3793,7 @@ msgstr ""
 "(par un logiciel d'accès à distance tel que Teamviewer), vous êtes toujours "
 "en contact avec lui, par téléphone ou par tout autre moyen."
 
-#: data/fit4ehealth/questions.json:888
+#: data/fit4ehealth/questions.json:1403
 msgid ""
 "You should know when the remote maintenance starts and when it ends. Besides "
 "that, the person accessing remotely should ask you before invading your "
@@ -3785,12 +3807,12 @@ msgstr ""
 "personne au téléphone et, si possible, d'observer l'écran pendant que la "
 "personne effectue la maintenance à distance."
 
-#: data/fit4ehealth/questions.json:897
+#: data/fit4ehealth/questions.json:1412
 msgid "never carried out, a technician must be on-site"
 msgstr ""
 "jamais effectuée, un technicien doit être sur place dans l'établissement"
 
-#: data/fit4ehealth/questions.json:898
+#: data/fit4ehealth/questions.json:1413
 msgid ""
 "An ICT service provider cannot do maintenance without being physically "
 "present in your establishment."
@@ -3798,7 +3820,7 @@ msgstr ""
 "Un prestataire de services informatiques ne peut pas faire de la maintenance "
 "sans être physiquement présent dans votre établissement."
 
-#: data/fit4ehealth/questions.json:905
+#: data/fit4ehealth/questions.json:1420
 msgid ""
 "The best is to be present while technicians doing the maintenance, but there "
 "is no obligation as long as they respect the fact that: <ul><li>You decide "
@@ -3811,19 +3833,19 @@ msgstr ""
 "li><li>Vous veillez à ce qu'aucune donnée personnelle ne soit accessible.</"
 "il><il>Vous gardez le contact pendant le processus.</il></ul>"
 
-#: data/fit4ehealth/questions.json:913
+#: data/fit4ehealth/questions.json:1428
 msgid "Physical Access"
 msgstr "Accès physiques"
 
-#: data/fit4ehealth/questions.json:914
+#: data/fit4ehealth/questions.json:1429
 msgid "When a patient enters your premises, he/she:"
 msgstr "Lorsqu'un patient entre dans vos locaux, il/elle :"
 
-#: data/fit4ehealth/questions.json:924
+#: data/fit4ehealth/questions.json:1439
 msgid "can move freely around in the premises"
 msgstr "peut circuler librement dans les locaux"
 
-#: data/fit4ehealth/questions.json:925
+#: data/fit4ehealth/questions.json:1440
 msgid ""
 "The patient can visit the premises as he wishes. Some doors could be left "
 "open (by accident). Also the patient could come in the premises without "
@@ -3833,7 +3855,7 @@ msgstr ""
 "peuvent rester ouvertes (par accident). De même, le patient peut entrer dans "
 "les locaux sans s'annoncer (en sonnant, en frappant...)."
 
-#: data/fit4ehealth/questions.json:932
+#: data/fit4ehealth/questions.json:1447
 msgid ""
 "Ensure that external persons cannot move freely around within your premises, "
 "because it is always possible to get hold of the data without being seen."
@@ -3842,11 +3864,11 @@ msgstr ""
 "librement dans vos locaux, car il est toujours possible de s'emparer de "
 "données sans être vu."
 
-#: data/fit4ehealth/questions.json:941
+#: data/fit4ehealth/questions.json:1456
 msgid "can occasionally be left alone"
 msgstr "peut occasionnellement être laissé seul"
 
-#: data/fit4ehealth/questions.json:942
+#: data/fit4ehealth/questions.json:1457
 msgid ""
 "The patient might occasionally be left alone (when the person who admits the "
 "patient has to go somewhere else) or frequently (if he/she simply enters the "
@@ -3857,7 +3879,7 @@ msgstr ""
 "fréquemment (il a juste besoin de venir dans la salle d'attente sans être "
 "annoncé)."
 
-#: data/fit4ehealth/questions.json:952
+#: data/fit4ehealth/questions.json:1467
 msgid ""
 "You shouldn't let external people without surveillance, as they can steal "
 "something. An internal presence should be for instance near the waiting room "
@@ -3867,11 +3889,11 @@ msgstr ""
 "elles peuvent voler quelque chose. Une présence interne devrait être par "
 "exemple près de la salle d'attente ou près de la sortie."
 
-#: data/fit4ehealth/questions.json:961
+#: data/fit4ehealth/questions.json:1476
 msgid "can leave unnoticed"
 msgstr "peut partir sans se faire remarquer"
 
-#: data/fit4ehealth/questions.json:962
+#: data/fit4ehealth/questions.json:1477
 msgid ""
 "No one can see or know that a patient leaves or enters the premises. He/she "
 "cannot be spotted by physical sight, cameras or a ringing bell at the door"
@@ -3880,7 +3902,7 @@ msgstr ""
 "locaux. Il/elle ne peut pas être repéré(e) à vue d'oeil, par les caméras ou "
 "une sonnerie à la porte"
 
-#: data/fit4ehealth/questions.json:972
+#: data/fit4ehealth/questions.json:1487
 msgid ""
 "To prevent theft and avoid snooping, it is important to know who enters and "
 "leaves the practice. This can be achieved by physical or other means as long "
@@ -3890,12 +3912,12 @@ msgstr ""
 "entre et sort du cabinet. Cela peut être réalisé par des moyens physiques ou "
 "autres, tant qu'ils sont protégés."
 
-#: data/fit4ehealth/questions.json:981
+#: data/fit4ehealth/questions.json:1496
 msgid "is always under surveillance (by someone, physically or remotely)"
 msgstr ""
 "est toujours sous surveillance (par quelqu'un, physiquement ou à distance)"
 
-#: data/fit4ehealth/questions.json:982
+#: data/fit4ehealth/questions.json:1497
 msgid ""
 "Someone should always see or know a patient leave or enter the premises. He/"
 "she can be spotted by physical sight, cameras or a ringing bell at the door."
@@ -3904,7 +3926,7 @@ msgstr ""
 "les locaux. Il/elle peut être repéré(e) à vue d’œil, par les caméras ou une "
 "sonnerie à la porte"
 
-#: data/fit4ehealth/questions.json:993
+#: data/fit4ehealth/questions.json:1508
 msgid ""
 "If you store videos for evidence purposes, remember that this is personal "
 "data and the patient may ask you to delete any personal data you have stored "
@@ -3914,11 +3936,11 @@ msgstr ""
 "de données personnelles et que le patient peut vous demander de supprimer "
 "toutes les données personnelles que vous avez stockées à son sujet."
 
-#: data/fit4ehealth/questions.json:1002
+#: data/fit4ehealth/questions.json:1517
 msgid "has no access to any documents, as these are locked up"
 msgstr "n'a accès à aucun document, ceux-ci étant verrouillés"
 
-#: data/fit4ehealth/questions.json:1003
+#: data/fit4ehealth/questions.json:1518
 msgid ""
 "Important documents are always stored securely and are only accessible to "
 "people with the appropriate access rights."
@@ -3926,7 +3948,7 @@ msgstr ""
 "Les documents sensibles sont toujours stockés en sécurité et seules les "
 "personnes habilitées y ont accès."
 
-#: data/fit4ehealth/questions.json:1010
+#: data/fit4ehealth/questions.json:1525
 msgid ""
 "You must lock every sensitive physical document to avoid data theft or "
 "disclosure. It's the same for hardware or storage device that contains "
@@ -3936,11 +3958,11 @@ msgstr ""
 "ou la divulgation de données. Il en va de même pour le matériel ou le "
 "dispositif de stockage qui contient des données confidentielles."
 
-#: data/fit4ehealth/questions.json:1019
+#: data/fit4ehealth/questions.json:1534
 msgid "has no access to any computers because they are locked"
 msgstr "n'a accès à aucun ordinateur, car ils sont verrouillés"
 
-#: data/fit4ehealth/questions.json:1020
+#: data/fit4ehealth/questions.json:1535
 msgid ""
 "Whenever a computer is left unattended (could be his/her or a computer "
 "linked to the medical device, or the one with the medical software), the "
@@ -3951,7 +3973,7 @@ msgstr ""
 "qui contient le logiciel), l'ordinateur est verrouillé et personne ne peut y "
 "accéder sans saisir un mot de passe."
 
-#: data/fit4ehealth/questions.json:1027
+#: data/fit4ehealth/questions.json:1542
 msgid ""
 "You must lock any computer or storage device as soon as you leave it, even "
 "for a short break, to prevent anyone from accessing it without authorization."
@@ -3960,17 +3982,17 @@ msgstr ""
 "vous le quittez, même pour une courte pause, afin d'empêcher quiconque d'y "
 "accéder sans autorisation."
 
-#: data/fit4ehealth/questions.json:1036
+#: data/fit4ehealth/questions.json:1551
 msgid "cannot access printers without being seen"
 msgstr "ne peut accéder aux imprimantes sans être vu"
 
-#: data/fit4ehealth/questions.json:1037
+#: data/fit4ehealth/questions.json:1552
 msgid ""
 "Printed documents can only be withdrawn by persons with the right of access "
 "to these documents."
 msgstr "Les documents imprimés ne sont accessibles qu’aux personnes habilitées"
 
-#: data/fit4ehealth/questions.json:1044
+#: data/fit4ehealth/questions.json:1559
 msgid ""
 "Printers can contain confidential information, such as the last documents "
 "printed, or some printed documents that have not been collected yet."
@@ -3979,11 +4001,11 @@ msgstr ""
 "derniers documents imprimés, ou certains documents imprimés qui n'ont pas "
 "été collectés."
 
-#: data/fit4ehealth/questions.json:1053
+#: data/fit4ehealth/questions.json:1568
 msgid "cannot enter the office when no one is in the office"
 msgstr "ne peut pas entrer dans le bureau lorsque personne n'y est"
 
-#: data/fit4ehealth/questions.json:1054
+#: data/fit4ehealth/questions.json:1569
 msgid ""
 "The premises are only open at a certain time, and otherwise are closed with "
 "a key (or other means) and under alarm (if possible)."
@@ -3991,7 +4013,7 @@ msgstr ""
 "Les locaux ne sont ouverts qu'à une certaine heure, et sinon ils sont fermés "
 "à clé (ou autre moyen) et sous alarme (si possible)."
 
-#: data/fit4ehealth/questions.json:1061
+#: data/fit4ehealth/questions.json:1576
 msgid ""
 "After the regular working hours, when everybody has left the medical "
 "practice, it needs to be ensured that no unauthorised person is able to "
@@ -4002,11 +4024,11 @@ msgstr ""
 "cabinet médical. Vous devez alors vous assurer que personne ne peut entrer "
 "dans le cabinet, ou mieux encore, faire installer un système d'alarme."
 
-#: data/fit4ehealth/questions.json:1070
+#: data/fit4ehealth/questions.json:1585
 msgid "Passwords in the company:"
 msgstr "Les mots de passe dans l'entreprise :"
 
-#: data/fit4ehealth/questions.json:1080
+#: data/fit4ehealth/questions.json:1595
 msgid ""
 "have no specifications or guidelines, employees can manage them at their own "
 "discretion"
@@ -4014,7 +4036,7 @@ msgstr ""
 "n'ont pas de spécifications ou de lignes directrices, les employés peuvent "
 "les gérer à leur propre discrétion"
 
-#: data/fit4ehealth/questions.json:1081
+#: data/fit4ehealth/questions.json:1596
 msgid ""
 "There is no indication for people on what they should do, so password could "
 "be anything."
@@ -4022,7 +4044,7 @@ msgstr ""
 "Il n'y a pas d'indication pour les gens sur ce qu'ils doivent faire, donc le "
 "mot de passe peut être n'importe quoi."
 
-#: data/fit4ehealth/questions.json:1088
+#: data/fit4ehealth/questions.json:1603
 msgid ""
 "Advice should be given to avoid weak passwords. Some tips or techniques "
 "could be given to employees to remember their passwords. Here some examples:"
@@ -4031,7 +4053,7 @@ msgstr ""
 "Certains conseils ou techniques pourraient être administrés aux employés "
 "pour se souvenir de leurs mots de passe. Voici quelques exemples:"
 
-#: data/fit4ehealth/questions.json:1095
+#: data/fit4ehealth/questions.json:1610
 msgid ""
 "Everyone should access their data by using their own password, even from the "
 "computer of someone else."
@@ -4039,7 +4061,7 @@ msgstr ""
 "Chacun devrait accéder à ses données en utilisant son propre mot de passe, "
 "même à partir de l'ordinateur de quelqu'un d'autre."
 
-#: data/fit4ehealth/questions.json:1102 data/fit4ehealth/questions.json:1229
+#: data/fit4ehealth/questions.json:1617 data/fit4ehealth/questions.json:1744
 msgid ""
 "It is mandatory to be careful with the password storage in  internet "
 "browsers, as they are not protected well."
@@ -4047,7 +4069,7 @@ msgstr ""
 "Il est obligatoire de faire attention au stockage des mots de passe dans les "
 "navigateurs internet, car ils ne sont pas bien protégés."
 
-#: data/fit4ehealth/questions.json:1109 data/fit4ehealth/questions.json:1126
+#: data/fit4ehealth/questions.json:1624 data/fit4ehealth/questions.json:1641
 msgid ""
 "Passwords should be kept secret and personal. If it's impossible, then there "
 "should be a trustworthy person being responsible for the computer to ensure "
@@ -4057,13 +4079,13 @@ msgstr ""
 "alors une personne de confiance devrait être responsable de l'ordinateur "
 "pour en assurer l'utilisation, et fournir des droits d'accès minimaux."
 
-#: data/fit4ehealth/questions.json:1118
+#: data/fit4ehealth/questions.json:1633
 msgid "are centralized in a file, or are all known by one or more people"
 msgstr ""
 "sont centralisés dans un fichier, ou sont tous connus par une ou plusieurs "
 "personnes"
 
-#: data/fit4ehealth/questions.json:1119
+#: data/fit4ehealth/questions.json:1634
 msgid ""
 "Passwords are all listed on a file so everyone can access to all computers "
 "if they need it."
@@ -4071,11 +4093,11 @@ msgstr ""
 "Les mots de passe sont tous répertoriés dans un fichier afin que chacun "
 "puisse accéder à tous les ordinateurs en cas de besoin."
 
-#: data/fit4ehealth/questions.json:1135
+#: data/fit4ehealth/questions.json:1650
 msgid "are shared when a protected device needs to be accessed"
 msgstr "sont partagés lorsqu'il faut accéder à un dispositif protégé"
 
-#: data/fit4ehealth/questions.json:1136
+#: data/fit4ehealth/questions.json:1651
 msgid ""
 "Passwords are shared by multiple people to access a medical device, or even "
 "to access some patient folders."
@@ -4083,7 +4105,7 @@ msgstr ""
 "Les mots de passe sont partagés par plusieurs personnes pour accéder à un "
 "dispositif médical, ou même pour accéder à certains dossiers de patients."
 
-#: data/fit4ehealth/questions.json:1143
+#: data/fit4ehealth/questions.json:1658
 msgid ""
 "Passwords should be kept secret and personal. Everyone should access their "
 "data by using their own password, even from the computer of someone else."
@@ -4092,7 +4114,7 @@ msgstr ""
 "accéder à ses données en utilisant son propre mot de passe, même à partir de "
 "l'ordinateur de quelqu'un d'autre."
 
-#: data/fit4ehealth/questions.json:1152
+#: data/fit4ehealth/questions.json:1667
 msgid ""
 "consist of 12 or more characters, made up of which are upper case letters, "
 "lower case letters, digits and special characters"
@@ -4100,7 +4122,7 @@ msgstr ""
 "sont constitués de 12 caractères ou plus, dont des lettres majuscules, des "
 "lettres minuscules, des chiffres et des caractères spéciaux"
 
-#: data/fit4ehealth/questions.json:1153
+#: data/fit4ehealth/questions.json:1668
 msgid ""
 "Passwords such as \"MyPassword123!\", \"IL0veS@ndwichs\" or "
 "\"Jp7njQs#FpdCF5oF\" can be considered here."
@@ -4108,7 +4130,7 @@ msgstr ""
 "Des mots de passe tels que \"MyPassword123 !\", \"IL0veS@ndwichs\" ou "
 "\"Jp7njQs#FpdCF5oF\" peuvent être envisagés ici."
 
-#: data/fit4ehealth/questions.json:1160
+#: data/fit4ehealth/questions.json:1675
 msgid ""
 "Passwords must at least consist of one uppercase letter, one lowercase "
 "letter, one digit and one special character, and must be at least 12 "
@@ -4118,11 +4140,11 @@ msgstr ""
 "d'une lettre minuscule, d'un chiffre et d'un caractère spécial, et doivent "
 "comporter au moins 12 caractères."
 
-#: data/fit4ehealth/questions.json:1169
+#: data/fit4ehealth/questions.json:1684
 msgid "do not form any words or dates, or complete sentences"
 msgstr "ne forment pas de mots, de dates ou de phrases complètes"
 
-#: data/fit4ehealth/questions.json:1170
+#: data/fit4ehealth/questions.json:1685
 msgid ""
 "Passwords such as \"Jp7njQs#FpdCF5oF\", \"kjahebf\", \"OuattwSWat7D\" or "
 "\"Once upon a time, there was Snow White and the 7 Dwarfs.\" can be "
@@ -4132,7 +4154,7 @@ msgstr ""
 "\" ou \"Il était une fois Blanche-Neige et les 7 nains.\" peuvent être "
 "considérés ici."
 
-#: data/fit4ehealth/questions.json:1177
+#: data/fit4ehealth/questions.json:1692
 msgid ""
 "Passwords shouldn't be a coherent word or date, except if they are part of a "
 "complete sentence."
@@ -4140,11 +4162,11 @@ msgstr ""
 "Les mots de passe ne doivent pas être un mot cohérent ou une date, sauf "
 "s'ils font partie d'une phrase complète."
 
-#: data/fit4ehealth/questions.json:1186
+#: data/fit4ehealth/questions.json:1701
 msgid "are changed regularly, every one or two years"
 msgstr "sont changés régulièrement, tous les ans ou tous les deux ans"
 
-#: data/fit4ehealth/questions.json:1187
+#: data/fit4ehealth/questions.json:1702
 msgid ""
 "Passwords are changed at least once every two years. This might not be "
 "strict, but could be done more often."
@@ -4152,7 +4174,7 @@ msgstr ""
 "Les mots de passe sont changés au moins une fois tous les deux ans. Cela "
 "n'est peut-être pas strict, mais pourrait être fait plus souvent."
 
-#: data/fit4ehealth/questions.json:1194
+#: data/fit4ehealth/questions.json:1709
 msgid ""
 "Passwords should be changed from time to time, to prevent serious "
 "consequences in case of a leakage or data theft."
@@ -4160,11 +4182,11 @@ msgstr ""
 "Les mots de passe doivent être changés de temps en temps, pour éviter de "
 "graves conséquences en cas de fuite ou de vol de données."
 
-#: data/fit4ehealth/questions.json:1204
+#: data/fit4ehealth/questions.json:1719
 msgid "are included in a password manager"
 msgstr "sont inclus dans un gestionnaire de mots de passe"
 
-#: data/fit4ehealth/questions.json:1205
+#: data/fit4ehealth/questions.json:1720
 msgid ""
 "Passwords are stored in a password manager which is dedicated to this "
 "activity. Example: Lastpass, 1Password, KeePass, Dashlane …"
@@ -4172,18 +4194,18 @@ msgstr ""
 "Les mots de passe sont stockés dans un gestionnaire de mots de passe qui est "
 "dédié à cette activité. Exemple : Lastpass, 1Password, KeePass, Dashlane …"
 
-#: data/fit4ehealth/questions.json:1212
+#: data/fit4ehealth/questions.json:1727
 msgid ""
 "A password manager application can be used to facilitate secure storage."
 msgstr ""
 "Une application de gestion des mots de passe peut être utilisée pour "
 "faciliter le stockage sécurisé."
 
-#: data/fit4ehealth/questions.json:1221
+#: data/fit4ehealth/questions.json:1736
 msgid "are saved in web browsers"
 msgstr "sont sauvegardés dans les navigateurs web"
 
-#: data/fit4ehealth/questions.json:1222
+#: data/fit4ehealth/questions.json:1737
 msgid ""
 "Passwords are stored in a web browser, a VPN or another service such as the "
 "OS. Example : Mozilla Firefox, Google Chrome, Windows, Apple, NordVPN."
@@ -4192,13 +4214,13 @@ msgstr ""
 "service tel que l'OS. Exemple : Mozilla Firefox, Google Chrome, Windows, "
 "Apple, NordVPN."
 
-#: data/fit4ehealth/questions.json:1238
+#: data/fit4ehealth/questions.json:1753
 msgid "are different for each application used, even for one user"
 msgstr ""
 "sont différents pour chaque application utilisée, même pour un seul "
 "utilisateur"
 
-#: data/fit4ehealth/questions.json:1239
+#: data/fit4ehealth/questions.json:1754
 msgid ""
 "Passwords are never used twice, or this should be an exception. Each "
 "password you have to type is different."
@@ -4206,7 +4228,7 @@ msgstr ""
 "Les mots de passe ne sont jamais utilisés deux fois sauf de manière "
 "exceptionnelle. Le mot de passe est toujours unique."
 
-#: data/fit4ehealth/questions.json:1246
+#: data/fit4ehealth/questions.json:1761
 msgid ""
 "Same passwords used on different website facilitate a leak. A single leak is "
 "enough to compromise all accesses that use the same password."
@@ -4215,17 +4237,17 @@ msgstr ""
 "fuites. Une seule fuite suffit à compromettre tous les accès qui utilisent "
 "le même mot de passe."
 
-#: data/fit4ehealth/questions.json:1255
+#: data/fit4ehealth/questions.json:1770
 msgid "Authorisation for the access to patient data"
 msgstr "Les autorisations d'accès aux données des patients"
 
-#: data/fit4ehealth/questions.json:1265
+#: data/fit4ehealth/questions.json:1780
 msgid ""
 "is clearly distinguished by the assignment of different authorization roles"
 msgstr ""
 "sont clairement définies par l'attribution de différents rôles d'autorisation"
 
-#: data/fit4ehealth/questions.json:1266
+#: data/fit4ehealth/questions.json:1781
 msgid ""
 "Within the patient data management application, roles like Doctor, Nurse, "
 "Secretary, Administrator are distinguished and users are assigned to "
@@ -4235,7 +4257,7 @@ msgstr ""
 "rôles tels que Médecin, Infirmière, Secrétaire, Administrateur et les "
 "utilisateurs sont affectés correctement aux différents rôles."
 
-#: data/fit4ehealth/questions.json:1273
+#: data/fit4ehealth/questions.json:1788
 msgid ""
 "Defining and assigning different access roles is imperative, as this will "
 "limit the different data that each role can read and modify, depending on "
@@ -4248,14 +4270,14 @@ msgstr ""
 "personnes qui ne devraient pas avoir accès, en fonction de la sensibilité "
 "des données médicales."
 
-#: data/fit4ehealth/questions.json:1282
+#: data/fit4ehealth/questions.json:1797
 msgid ""
 "is managed within the application by own personal with specific access rights"
 msgstr ""
 "sont gérées au sein de l'application par une personne identifiée disposant "
 "de droits d'accès spécifiques"
 
-#: data/fit4ehealth/questions.json:1283
+#: data/fit4ehealth/questions.json:1798
 msgid ""
 "A member of your organization, with specific access rights (like e.g. "
 "Administrator) is able to manage the authorization roles/assignments within "
@@ -4265,7 +4287,7 @@ msgstr ""
 "par exemple Administrateur) est capable de gérer les rôles/affectations "
 "d'autorisation dans l'application de gestion des données du patient."
 
-#: data/fit4ehealth/questions.json:1293
+#: data/fit4ehealth/questions.json:1808
 msgid ""
 "It is possible to delegate the decision to someone working within your "
 "organization, and thus adjust the permissions you need to give people who "
@@ -4277,7 +4299,7 @@ msgstr ""
 "personnes qui devraient avoir accès aux données. Dans tous les cas, vous ne "
 "devriez pas donner votre propre accès à quelqu'un d'autre."
 
-#: data/fit4ehealth/questions.json:1302
+#: data/fit4ehealth/questions.json:1817
 msgid ""
 "is managed within the application by external people such as IT-Service "
 "provider"
@@ -4285,7 +4307,7 @@ msgstr ""
 "sont gérées au sein de l'application par des personnes externes telles que "
 "des prestataires de services informatiques"
 
-#: data/fit4ehealth/questions.json:1303
+#: data/fit4ehealth/questions.json:1818
 msgid ""
 "Your software vendor or IT-Service provider is managing the authorization "
 "roles/assignments within the patient data management application."
@@ -4294,7 +4316,7 @@ msgstr ""
 "rôles/assignations d'autorisation dans l'application de gestion des données "
 "des patients."
 
-#: data/fit4ehealth/questions.json:1313
+#: data/fit4ehealth/questions.json:1828
 msgid ""
 "The management of permissions and roles is a sensitive task and should be "
 "handled by known and trustful persons, as they may gain access to "
@@ -4306,15 +4328,15 @@ msgstr ""
 "décidée par des personnes extérieures, qui ne connaissent pas exactement vos "
 "besoins et les changements de personnel."
 
-#: data/fit4ehealth/questions.json:1320
+#: data/fit4ehealth/questions.json:1835
 msgid "Wireless access"
 msgstr "Accès sans-fils"
 
-#: data/fit4ehealth/questions.json:1332
+#: data/fit4ehealth/questions.json:1847
 msgid "are not used in the establishment/facility at all"
 msgstr "ne sont pas du tout utilisés dans l'établissement/la structure"
 
-#: data/fit4ehealth/questions.json:1333
+#: data/fit4ehealth/questions.json:1848
 msgid ""
 "There is no WiFi accessible in the establishment that come from any router "
 "(such as FritzBox! or equivalent)."
@@ -4322,7 +4344,7 @@ msgstr ""
 "Il n'y a pas de WiFi accessible dans l'établissement qui provienne d'un "
 "quelconque routeur (tel que FritzBox! ou équivalent)."
 
-#: data/fit4ehealth/questions.json:1340
+#: data/fit4ehealth/questions.json:1855
 msgid ""
 "For now, the wireless network is not yet installed in the company. If this "
 "is changing, it is important that:"
@@ -4330,18 +4352,18 @@ msgstr ""
 "Pour l'instant, le réseau sans fil n'est pas encore installé dans "
 "l'entreprise. Si cela change, il est important que :"
 
-#: data/fit4ehealth/questions.json:1349
+#: data/fit4ehealth/questions.json:1864
 msgid "are locked and intended for professional use only"
 msgstr "sont verrouillés et destinés à un usage professionnel uniquement"
 
-#: data/fit4ehealth/questions.json:1350
+#: data/fit4ehealth/questions.json:1865
 msgid ""
 "Only the staff can access to the WiFi, and no personal devices are connected."
 msgstr ""
 "Seul le personnel peut accéder au WiFi, et aucun appareil personnel n'est "
 "connecté."
 
-#: data/fit4ehealth/questions.json:1361
+#: data/fit4ehealth/questions.json:1876
 msgid ""
 "The WIFI Network is separated for internal and external users to avoid "
 "access problems."
@@ -4349,7 +4371,7 @@ msgstr ""
 "Le réseau WIFI soit séparé pour les utilisateurs internes et externes afin "
 "d'éviter les problèmes d'accès."
 
-#: data/fit4ehealth/questions.json:1370
+#: data/fit4ehealth/questions.json:1885
 msgid ""
 "are accessible to anyone, without checking the identity of the user "
 "connecting to the network"
@@ -4357,7 +4379,7 @@ msgstr ""
 "sont accessibles à tous, sans vérification de l'identité de l'utilisateur "
 "qui se connecte au réseau"
 
-#: data/fit4ehealth/questions.json:1371
+#: data/fit4ehealth/questions.json:1886
 msgid ""
 "WiFi is given to anyone without any distinction, without asking who they "
 "are. It could be a separate network or the same network that you use."
@@ -4366,7 +4388,7 @@ msgstr ""
 "sont. Il peut s'agir d'un réseau séparé ou du même réseau que celui que vous "
 "utilisez."
 
-#: data/fit4ehealth/questions.json:1381
+#: data/fit4ehealth/questions.json:1896
 msgid ""
 "If a WIFI network is used for external people, strict precautions should be "
 "taken, for example the collection of an identity."
@@ -4374,11 +4396,11 @@ msgstr ""
 "Si un réseau WIFI est utilisé pour des personnes externes, des précautions "
 "strictes doivent être prises, par exemple la collecte d'une identité."
 
-#: data/fit4ehealth/questions.json:1390
+#: data/fit4ehealth/questions.json:1905
 msgid "are divided into guests and internal network"
 msgstr "sont séparés entre les invités et le réseau interne"
 
-#: data/fit4ehealth/questions.json:1391
+#: data/fit4ehealth/questions.json:1906
 msgid ""
 "WiFi for patients/guests are separated from the WiFi used for the services "
 "by the employees and professionals in the establishment."
@@ -4386,7 +4408,7 @@ msgstr ""
 "Les WiFi pour les patients/visiteurs sont séparés des WiFi utilisés pour les "
 "services par les employés et professionnels de l'établissement."
 
-#: data/fit4ehealth/questions.json:1401
+#: data/fit4ehealth/questions.json:1916
 msgid ""
 "Ensure strong separation of the two wireless networks by using strong "
 "passwords and by providing access to the internal network for known devices "
@@ -4396,24 +4418,24 @@ msgstr ""
 "de passe forts et en réservant l'accès au réseau interne aux seuls appareils "
 "connus."
 
-#: data/fit4ehealth/questions.json:1410
+#: data/fit4ehealth/questions.json:1925
 msgid "are protected by long passwords of 20 or more characters"
 msgstr "sont protégés par des mots de passe longs de 20 caractères ou plus"
 
-#: data/fit4ehealth/questions.json:1411
+#: data/fit4ehealth/questions.json:1926
 msgid ""
 "The password needed to access the WiFi is at least 20 characters, or more."
 msgstr ""
 "Le mot de passe nécessaire pour accéder au WiFi comporte au moins 20 "
 "caractères, voire plus."
 
-#: data/fit4ehealth/questions.json:1418
+#: data/fit4ehealth/questions.json:1933
 msgid "The password cannot be easily guessed, to avoid unwanted connections."
 msgstr ""
 "Le mot de passe ne peut pas être facilement deviné, afin d'éviter les "
 "connexions non désirées."
 
-#: data/fit4ehealth/questions.json:1429
+#: data/fit4ehealth/questions.json:1944
 msgid ""
 "If the printer can be accessed by WiFi, then this network is protected with "
 "a long password (more than 20 characters)."
@@ -4421,7 +4443,7 @@ msgstr ""
 "Si l'imprimante est accessible par WiFi, alors ce réseau est protégé par un "
 "mot de passe long (plus de 20 caractères)."
 
-#: data/fit4ehealth/questions.json:1436
+#: data/fit4ehealth/questions.json:1951
 msgid ""
 "The wireless network for printers is protected to prevent leakage of all "
 "printed documents."
@@ -4429,7 +4451,7 @@ msgstr ""
 "Le réseau sans fil des imprimantes est protégé pour éviter la fuite de tous "
 "les documents imprimés."
 
-#: data/fit4ehealth/questions.json:1456
+#: data/fit4ehealth/questions.json:1971
 msgid ""
 "There is no antivirus software in the establishment, or you have no idea if "
 "it's the case."
@@ -4437,11 +4459,11 @@ msgstr ""
 "Il n'y a pas de logiciel antivirus dans l'établissement, ou vous n'avez "
 "aucune idée si c'est le cas."
 
-#: data/fit4ehealth/questions.json:1463
+#: data/fit4ehealth/questions.json:1978
 msgid "The company should have an antivirus software and ensure that:"
 msgstr "L'entreprise doit disposer d'un antivirus et s'assurer que :"
 
-#: data/fit4ehealth/questions.json:1473
+#: data/fit4ehealth/questions.json:1988
 msgid ""
 "There is an antivirus software installed on every computer and laptop in the "
 "establishment."
@@ -4449,11 +4471,11 @@ msgstr ""
 "Il y a un logiciel antivirus installé sur chaque ordinateur et portable de "
 "l'établissement."
 
-#: data/fit4ehealth/questions.json:1480
+#: data/fit4ehealth/questions.json:1995
 msgid "An antivirus software is installed on all devices."
 msgstr "Un logiciel antivirus est installé sur tous les appareils."
 
-#: data/fit4ehealth/questions.json:1490
+#: data/fit4ehealth/questions.json:2005
 msgid ""
 "The antivirus is updated automatically, or your ICT provider update it "
 "sometimes."
@@ -4461,7 +4483,7 @@ msgstr ""
 "L'antivirus est mis à jour automatiquement, ou votre prestataire de services "
 "informatiques le met parfois à jour."
 
-#: data/fit4ehealth/questions.json:1497
+#: data/fit4ehealth/questions.json:2012
 msgid ""
 "It is kept up to date, preferably via automatic updates to cover as many "
 "threats as possible."
@@ -4469,11 +4491,11 @@ msgstr ""
 "Il est maintenu à jour, de préférence par des mises à jour automatiques pour "
 "couvrir un maximum de menaces."
 
-#: data/fit4ehealth/questions.json:1506
+#: data/fit4ehealth/questions.json:2021
 msgid "is activated and protects the computer"
 msgstr "est activé et protège l'ordinateur"
 
-#: data/fit4ehealth/questions.json:1507
+#: data/fit4ehealth/questions.json:2022
 msgid ""
 "All downloaded files are analysed by the antivirus, and same for every media "
 "storage plugged in the computer."
@@ -4481,11 +4503,11 @@ msgstr ""
 "Tous les fichiers téléchargés sont analysés par l'antivirus, de même que "
 "tous les supports de stockage branchés sur l'ordinateur."
 
-#: data/fit4ehealth/questions.json:1514
+#: data/fit4ehealth/questions.json:2029
 msgid "It is activated to continuously protect the device."
 msgstr "Il est activé pour protéger en permanence l'appareil."
 
-#: data/fit4ehealth/questions.json:1524
+#: data/fit4ehealth/questions.json:2039
 msgid ""
 "All phones or tablets that are connected to the network have antivirus "
 "software installed."
@@ -4493,7 +4515,7 @@ msgstr ""
 "Tous les téléphones ou tablettes qui sont connectés au réseau ont un "
 "logiciel antivirus installé."
 
-#: data/fit4ehealth/questions.json:1531
+#: data/fit4ehealth/questions.json:2046
 msgid ""
 "All devices, including smartphones and tablets, have an antivirus software "
 "installed, even if it is the operating system's default one."
@@ -4502,7 +4524,7 @@ msgstr ""
 "logiciel antivirus installé, même s'il s'agit de celui par défaut du système "
 "d'exploitation."
 
-#: data/fit4ehealth/questions.json:1540
+#: data/fit4ehealth/questions.json:2055
 msgid ""
 "is used from time to time to analyse the computer, even in absence of "
 "external events"
@@ -4510,7 +4532,7 @@ msgstr ""
 "est utilisé de temps à autre pour analyser l'ordinateur, même en l'absence "
 "d'événements extérieurs"
 
-#: data/fit4ehealth/questions.json:1541
+#: data/fit4ehealth/questions.json:2056
 msgid ""
 "Sometimes you (or your ICT provider) run a full scan of the computer to make "
 "sure it does not contain viruses."
@@ -4518,7 +4540,7 @@ msgstr ""
 "Parfois, vous (ou votre prestataire de services informatiques) effectuez un "
 "scan complet de l'ordinateur pour vérifier qu'il n'y a pas de virus."
 
-#: data/fit4ehealth/questions.json:1548
+#: data/fit4ehealth/questions.json:2063
 msgid ""
 "It is configured in order to benefit of the fact that most of the antivirus "
 "applications allow the configuration of regular schedules for full scans."
@@ -4527,7 +4549,7 @@ msgstr ""
 "antivirus permettent de configurer des horaires réguliers pour les analyses "
 "complètes."
 
-#: data/fit4ehealth/questions.json:1558
+#: data/fit4ehealth/questions.json:2073
 msgid ""
 "Whenever there is a suspicion of an infection by a virus, a full scan is "
 "done on the computer."
@@ -4535,28 +4557,28 @@ msgstr ""
 "Chaque fois que l'on soupçonne une infection par un virus, on effectue un "
 "scan complet de l'ordinateur."
 
-#: data/fit4ehealth/questions.json:1565
+#: data/fit4ehealth/questions.json:2080
 msgid ""
 "In the case of suspicion of an infection, some additional tests are done."
 msgstr ""
 "En cas de suspicion d'infection, certains tests supplémentaires sont "
 "effectués."
 
-#: data/fit4ehealth/questions.json:1572
+#: data/fit4ehealth/questions.json:2087
 msgid "Workstations"
 msgstr "Postes de travail"
 
-#: data/fit4ehealth/questions.json:1573 data/fit4ehealth/questions.json:1685
-#: data/fit4ehealth/questions.json:1787
+#: data/fit4ehealth/questions.json:2088 data/fit4ehealth/questions.json:2200
+#: data/fit4ehealth/questions.json:2302
 msgid "Information Systems within the Establishment"
 msgstr "Systèmes d'information au sein de l'établissement"
 
-#: data/fit4ehealth/questions.json:1584
+#: data/fit4ehealth/questions.json:2099
 msgid "used without any specific rules and maintained by the users themselves"
 msgstr ""
 "utilisés sans règles spécifiques et maintenus par les utilisateurs eux-mêmes"
 
-#: data/fit4ehealth/questions.json:1585
+#: data/fit4ehealth/questions.json:2100
 msgid ""
 "There are no rules (orally given, written …) or advice on how to keep the "
 "workstations safe and everyone can do what ever they want on their computer "
@@ -4567,7 +4589,7 @@ msgstr ""
 "veut sur son ordinateur (comme télécharger et installer des logiciels, ou "
 "mettre à jour l'ordinateur...)."
 
-#: data/fit4ehealth/questions.json:1592
+#: data/fit4ehealth/questions.json:2107
 msgid ""
 "Some rules and specific advice should be given for the usage of workstations "
 "or laptops. Important points are:"
@@ -4576,7 +4598,7 @@ msgstr ""
 "l'utilisation des postes de travail ou des ordinateurs portables. Les points "
 "importants sont :"
 
-#: data/fit4ehealth/questions.json:1601
+#: data/fit4ehealth/questions.json:2116
 msgid ""
 "updated automatically or manually with regard to the software and the "
 "operating system"
@@ -4584,7 +4606,7 @@ msgstr ""
 "mis à jour automatiquement ou manuellement en ce qui concerne leurs "
 "logiciels et leur système d'exploitation"
 
-#: data/fit4ehealth/questions.json:1602
+#: data/fit4ehealth/questions.json:2117
 msgid ""
 "The laptop and the software installed on it are updated as soon as possible, "
 "or sometimes they are updated by the ICT provider."
@@ -4593,7 +4615,7 @@ msgstr ""
 "dès que possible, ou parfois ils sont mis à jour par le prestataire de "
 "services informatiques"
 
-#: data/fit4ehealth/questions.json:1609
+#: data/fit4ehealth/questions.json:2124
 msgid ""
 "A device should always be up to date in order to avoid security problems and "
 "to prevent network intrusion. Automatic updates of the operating system and "
@@ -4608,7 +4630,7 @@ msgstr ""
 "métier, les mises à jour / correctifs réguliers doivent être installés "
 "manuellement."
 
-#: data/fit4ehealth/questions.json:1618
+#: data/fit4ehealth/questions.json:2133
 msgid ""
 "controlled by one or more administrators, who do not allow users to install "
 "software because they do not have administrator rights"
@@ -4616,7 +4638,7 @@ msgstr ""
 "contrôlés par un ou plusieurs administrateurs, qui ne permettent pas aux "
 "utilisateurs d'installer des logiciels parce qu'ils n'en ont pas les droits."
 
-#: data/fit4ehealth/questions.json:1619
+#: data/fit4ehealth/questions.json:2134
 msgid ""
 "You do not own the administrator rights on your computer and you can't "
 "install any software."
@@ -4624,14 +4646,14 @@ msgstr ""
 "Vous ne possédez pas les droits d'administrateur sur votre ordinateur et "
 "vous ne pouvez installer aucun logiciel."
 
-#: data/fit4ehealth/questions.json:1626
+#: data/fit4ehealth/questions.json:2141
 msgid ""
 "Administrator rights should only be given to users who are specialised in IT."
 msgstr ""
 "Les droits d'administrateur ne doivent être accordés qu'aux utilisateurs "
 "spécialisés en informatique."
 
-#: data/fit4ehealth/questions.json:1635
+#: data/fit4ehealth/questions.json:2150
 msgid ""
 "used in accordance with the rules or guidelines for installing and "
 "downloading software, in order to avoid illegal or dangerous activities, "
@@ -4641,7 +4663,7 @@ msgstr ""
 "et le téléchargement de logiciels, afin d'éviter les activités illégales ou "
 "dangereuses, telles que l'installation non autorisée de logiciels"
 
-#: data/fit4ehealth/questions.json:1636
+#: data/fit4ehealth/questions.json:2151
 msgid ""
 "You have some advice or rule to respect whenever you try to download "
 "software, and do it only when you are allowed to do it."
@@ -4650,7 +4672,7 @@ msgstr ""
 "de télécharger un logiciel, et ne le faites que lorsque vous êtes autorisé à "
 "le faire."
 
-#: data/fit4ehealth/questions.json:1643
+#: data/fit4ehealth/questions.json:2158
 msgid ""
 "Downloads should only be made from the official websites, the original "
 "developers of the software, to avoid manipulated download files or malicious "
@@ -4663,7 +4685,7 @@ msgstr ""
 "mesure du possible, les sommes de contrôle correspondantes doivent être "
 "vérifiées après le téléchargement."
 
-#: data/fit4ehealth/questions.json:1652
+#: data/fit4ehealth/questions.json:2167
 msgid ""
 "being locked when the user is away from his desk, even if this is for a "
 "short time"
@@ -4671,7 +4693,7 @@ msgstr ""
 "verrouillés lorsque l'utilisateur n'est pas à son bureau, même si c'est pour "
 "une courte durée"
 
-#: data/fit4ehealth/questions.json:1653
+#: data/fit4ehealth/questions.json:2168
 msgid ""
 "As soon as you leave the computer, even if it is for one or two minutes, you "
 "lock your computer and need to type the password as soon as you come back."
@@ -4680,11 +4702,11 @@ msgstr ""
 "vous verrouillez votre ordinateur et devez taper le mot de passe dès que "
 "vous revenez."
 
-#: data/fit4ehealth/questions.json:1669
+#: data/fit4ehealth/questions.json:2184
 msgid "regularly shut down outside office hours"
 msgstr "régulièrement fermés en dehors des heures de bureau"
 
-#: data/fit4ehealth/questions.json:1670
+#: data/fit4ehealth/questions.json:2185
 msgid ""
 "Whenever you leave the establishment, the computer is shut down, and "
 "sometimes an update screen appears."
@@ -4692,7 +4714,7 @@ msgstr ""
 "Chaque fois que vous quittez l'établissement, l'ordinateur s'éteint, et "
 "parfois un écran de mise à jour apparaît."
 
-#: data/fit4ehealth/questions.json:1677
+#: data/fit4ehealth/questions.json:2192
 msgid ""
 "Devices should be shut down outside operating hours, in order to prevent "
 "anyone from the outside to try to connect to it. It also allows the system "
@@ -4703,15 +4725,15 @@ msgstr ""
 "permet également au système d'effectuer une mise à jour du système "
 "d'exploitation pendant le processus d'arrêt."
 
-#: data/fit4ehealth/questions.json:1686
+#: data/fit4ehealth/questions.json:2201
 msgid "Data backups are"
 msgstr "Les sauvegardes des données médicales sont"
 
-#: data/fit4ehealth/questions.json:1697
+#: data/fit4ehealth/questions.json:2212
 msgid "on paper, are stored in a locked place at all times"
 msgstr "sur papier, stockées dans un endroit verrouillé à tout moment"
 
-#: data/fit4ehealth/questions.json:1698
+#: data/fit4ehealth/questions.json:2213
 msgid ""
 "Whenever you don't need them, papers are locked in a room or at any storage "
 "mean. The lock does not need to be solid, but is always used to prevent "
@@ -4722,13 +4744,13 @@ msgstr ""
 "toujours utilisée pour empêcher les personnes non autorisées d'avoir accès à "
 "ces documents."
 
-#: data/fit4ehealth/questions.json:1706
+#: data/fit4ehealth/questions.json:2221
 msgid "not my responsibility and should be handled by my ICT provider"
 msgstr ""
 "en aucun cas ma responsabilité et cela devrait être géré par mon prestataire "
 "de services informatiques"
 
-#: data/fit4ehealth/questions.json:1707
+#: data/fit4ehealth/questions.json:2222
 msgid ""
 "A contract is signed (or you consider this is the job of the ICT provider), "
 "but you couldn't look where the data are, or check if your backups are safe "
@@ -4738,7 +4760,7 @@ msgstr ""
 "de services informatiques), mais vous n'avez pas pu voir où se trouvent les "
 "données, ni vérifier si vos sauvegardes sont sûres et effectuées."
 
-#: data/fit4ehealth/questions.json:1719
+#: data/fit4ehealth/questions.json:2234
 msgid ""
 "Ensure that the backup policy is part of the contract with your ICT "
 "provider, incl. verification of the backups, secure storage location and "
@@ -4748,11 +4770,11 @@ msgstr ""
 "votre  prestataire de services informatiques, y compris la vérification de "
 "la sauvegarde, le lieu de stockage sécurisé et les tests de restauration."
 
-#: data/fit4ehealth/questions.json:1728
+#: data/fit4ehealth/questions.json:2243
 msgid "on an external storage device"
 msgstr "sur un dispositif de stockage externe"
 
-#: data/fit4ehealth/questions.json:1729
+#: data/fit4ehealth/questions.json:2244
 msgid ""
 "All information is stored on one or more additional hard drives managed by a "
 "staff member. These disks are kept secured in the office or off-site."
@@ -4762,7 +4784,7 @@ msgstr ""
 "d'avoir plus d'un disque dur. Le disque dur peut rester au bureau ou peut "
 "être changé de lieu."
 
-#: data/fit4ehealth/questions.json:1739
+#: data/fit4ehealth/questions.json:2254
 msgid ""
 "External storage can be a device or external storage location. Remember the "
 "importance of storing the backup device in a secure environment."
@@ -4771,11 +4793,11 @@ msgstr ""
 "externe. N'oubliez pas l'importance de stocker le dispositif de sauvegarde "
 "dans un environnement sécurisé."
 
-#: data/fit4ehealth/questions.json:1748
+#: data/fit4ehealth/questions.json:2263
 msgid "checked from time to time"
 msgstr "vérifiées de temps en temps"
 
-#: data/fit4ehealth/questions.json:1749
+#: data/fit4ehealth/questions.json:2264
 msgid ""
 "All information is stored in a location that can be accessed and that allows "
 "you or another authorised person to perform the backup review. Conducting "
@@ -4786,7 +4808,7 @@ msgstr ""
 "accès, ou vous demandez à quelqu'un de le vérifier pour vous, ou spécifié "
 "dans un contrat."
 
-#: data/fit4ehealth/questions.json:1759
+#: data/fit4ehealth/questions.json:2274
 msgid ""
 "Backups should be tested (restored) from time to time, just to ensure that "
 "the data is readable and its integrity is maintained."
@@ -4795,12 +4817,12 @@ msgstr ""
 "pour s'assurer que les données sont lisibles et que leur intégrité est "
 "maintenue."
 
-#: data/fit4ehealth/questions.json:1768
+#: data/fit4ehealth/questions.json:2283
 msgid "only readable by persons with assigned permission"
 msgstr ""
 "ne peuvent être lues que par des personnes à qui j'ai donné l'autorisation"
 
-#: data/fit4ehealth/questions.json:1769
+#: data/fit4ehealth/questions.json:2284
 msgid ""
 "All information (on paper, on the server, in the backup, in any hard drive) "
 "are only accessible by me and the person who have signed a contract with me. "
@@ -4812,7 +4834,7 @@ msgstr ""
 "signé un contrat avec moi. Tout prestataire de maintenance ou de services ne "
 "doit pas y avoir accès, sauf si cela est spécifié dans un contrat."
 
-#: data/fit4ehealth/questions.json:1779
+#: data/fit4ehealth/questions.json:2294
 msgid ""
 "Even for the backup files it must be defined who is authorized to access "
 "them, as they may contain medical data."
@@ -4821,7 +4843,7 @@ msgstr ""
 "l'autorisation qu'à ceux qui en ont besoin, car elles contiennent des "
 "données médicales."
 
-#: data/fit4ehealth/questions.json:1788
+#: data/fit4ehealth/questions.json:2303
 msgid ""
 "Using personal IT devices (USB Key, Hard Drive, Smartphone, Tablet, Laptop "
 "…) in the professional environment (network that is connected to the server)"
@@ -4830,11 +4852,11 @@ msgstr ""
 "smartphone, tablette, ordinateur portable...) dans l'environnement "
 "professionnel (réseau qui est connecté au serveur)"
 
-#: data/fit4ehealth/questions.json:1798
+#: data/fit4ehealth/questions.json:2313
 msgid "is possible but not subject to any rules"
 msgstr "est possible mais n'est pas soumis à des règles précises"
 
-#: data/fit4ehealth/questions.json:1799
+#: data/fit4ehealth/questions.json:2314
 msgid ""
 "There are no rules (orally given, written …) or advice on how to safely use "
 "personal IT devices in the professional environment."
@@ -4843,14 +4865,14 @@ msgstr ""
 "façon de sécuriser l'utilisation de dispositifs informatiques personnels "
 "dans l'environnement professionnel."
 
-#: data/fit4ehealth/questions.json:1806
+#: data/fit4ehealth/questions.json:2321
 msgid ""
 "As personal devices can connect in the local network, it is important that:"
 msgstr ""
 "Car les appareils personnels peuvent se connecter dans le réseau local, il "
 "est important de :"
 
-#: data/fit4ehealth/questions.json:1816
+#: data/fit4ehealth/questions.json:2331
 msgid ""
 "You cannot connect your personal device in the network of the establishment, "
 "or this is something forbidden."
@@ -4858,7 +4880,7 @@ msgstr ""
 "Vous ne pouvez pas connecter votre appareil personnel dans le réseau de "
 "l'établissement, ou c'est quelque chose d'interdit."
 
-#: data/fit4ehealth/questions.json:1823
+#: data/fit4ehealth/questions.json:2338
 msgid ""
 "For now, the personal devices are not connected to the local network. If "
 "this is changed, it is important that:"
@@ -4866,14 +4888,14 @@ msgstr ""
 "Pour l'instant, les appareils personnels ne sont pas connectés dans le "
 "réseau local. Si cela est modifié, il est important de :"
 
-#: data/fit4ehealth/questions.json:1833
+#: data/fit4ehealth/questions.json:2348
 msgid ""
 "If you connect any personal device, you have to respect some precise rules."
 msgstr ""
 "Si vous connectez un appareil personnel, vous devez respecter des règles "
 "précises."
 
-#: data/fit4ehealth/questions.json:1840
+#: data/fit4ehealth/questions.json:2355
 msgid ""
 "Personal devices shouldn't be used in the company without controls, rules "
 "and explanations. The knowledge of the various ways in which a company can "
@@ -4883,11 +4905,11 @@ msgstr ""
 "sans contrôles, règles et explications. Connaître toutes les différentes "
 "façons dont une entreprise peut être attaquée, peut aider à les éviter."
 
-#: data/fit4ehealth/questions.json:1849
+#: data/fit4ehealth/questions.json:2364
 msgid "is subject to a strict antivirus control"
 msgstr "fait l'objet d'un contrôle antivirus strict"
 
-#: data/fit4ehealth/questions.json:1850
+#: data/fit4ehealth/questions.json:2365
 msgid ""
 "Any personal device you connect to the network has to get through an "
 "antivirus scan."
@@ -4895,7 +4917,7 @@ msgstr ""
 "Tout appareil personnel que vous connectez au réseau doit passer par un scan "
 "antivirus."
 
-#: data/fit4ehealth/questions.json:1857
+#: data/fit4ehealth/questions.json:2372
 msgid ""
 "Personal devices should have an antivirus software installed, updated and "
 "active to avoid information security threats."
@@ -4903,7 +4925,7 @@ msgstr ""
 "Les appareils personnels doivent avoir un antivirus installé, mis à jour et "
 "actif pour éviter les menaces à la sécurité de l'information."
 
-#: data/fit4ehealth/questions.json:1867
+#: data/fit4ehealth/questions.json:2382
 msgid ""
 "The danger to connect personal devices or the rules about them has been "
 "explained to everyone."
@@ -4911,7 +4933,7 @@ msgstr ""
 "Le danger de connecter des appareils personnels ou les règles les concernant "
 "ont été expliquées à tout le monde."
 
-#: data/fit4ehealth/questions.json:1874
+#: data/fit4ehealth/questions.json:2389
 msgid ""
 "Defining rules and best practices to contribute to the protection of "
 "internal networks."
@@ -4919,7 +4941,7 @@ msgstr ""
 "La définition de règles et de bonnes pratiques permet de protéger les "
 "réseaux internes."
 
-#: data/fit4ehealth/questions.json:1883
+#: data/fit4ehealth/questions.json:2398
 msgid ""
 "is possible and if problems occur, the IT service provider or a staff member "
 "helps to solve them"
@@ -4927,7 +4949,7 @@ msgstr ""
 "est possible et si des problèmes surviennent, le fournisseur de services "
 "informatiques ou un membre du personnel aide à les résoudre"
 
-#: data/fit4ehealth/questions.json:1884
+#: data/fit4ehealth/questions.json:2399
 msgid ""
 "The ICT provider, or the person responsible to any IT or security problem "
 "can help to resolve the problem and has a good procedure to take care of it."
@@ -4936,7 +4958,7 @@ msgstr ""
 "problème informatique ou de sécurité, peut aider à résoudre le problème et "
 "dispose d'une bonne procédure pour s'en occuper."
 
-#: data/fit4ehealth/questions.json:1891
+#: data/fit4ehealth/questions.json:2406
 msgid ""
 "If you have encountered an information security problem and need further "
 "advice, you can contact CIRCL (info@circl.lu) for support."
@@ -4946,19 +4968,19 @@ msgstr ""
 "problème, vous pouvez contacter CIRCL (info@circl.lu) pour obtenir de l'aide "
 "pour gérer la situation."
 
-#: data/fit4ehealth/questions.json:1898
+#: data/fit4ehealth/questions.json:2413
 msgid "eHealth services usage"
 msgstr "Utilisation des services eHealth"
 
-#: data/fit4ehealth/questions.json:1899
+#: data/fit4ehealth/questions.json:2414
 msgid "eSanté"
 msgstr "eSanté"
 
-#: data/fit4ehealth/questions.json:1900
+#: data/fit4ehealth/questions.json:2415
 msgid "In our daily practice, we"
 msgstr "Dans notre pratique quotidienne, nous"
 
-#: data/fit4ehealth/questions.json:1911
+#: data/fit4ehealth/questions.json:2426
 msgid ""
 "use the DSP (\"Dossier de Soins Partagé\") to access or share relevant "
 "medical information of the patient"
@@ -4966,7 +4988,7 @@ msgstr ""
 "utilisons le DSP (\"Dossier de Soins Partagé\") pour accéder aux "
 "informations médicales pertinentes du patient ou les partager"
 
-#: data/fit4ehealth/questions.json:1912
+#: data/fit4ehealth/questions.json:2427
 msgid ""
 "\"Dossier de Soins Partagé\" (DSP) should be used for the exchange of "
 "medical data with other professionals and the patient."
@@ -4974,7 +4996,7 @@ msgstr ""
 "\"Dossier de Soins Partagé\" (DSP) doit être utilisé pour l'échange de "
 "données médicales avec d'autres professionnels et le patient."
 
-#: data/fit4ehealth/questions.json:1919
+#: data/fit4ehealth/questions.json:2434
 msgid ""
 "Sharing medical data via the DSP has the advantage of providing relevant "
 "medical information in a secure way for the patient and for other health "
@@ -4985,7 +5007,7 @@ msgstr ""
 "et pour les autres professionnels de santé afin d'assurer la continuité des "
 "soins."
 
-#: data/fit4ehealth/questions.json:1929
+#: data/fit4ehealth/questions.json:2444
 msgid ""
 "use the electronic transmission of the invoices (\"Mémoire d'honoraire(s)\") "
 "as part of the project of the \"Remboursement accélèré\""
@@ -4993,7 +5015,7 @@ msgstr ""
 "utilisons la transmission électronique des factures (\"Mémoire "
 "d'honoraire(s)\") dans le cadre du projet de \"Remboursement accéléré\""
 
-#: data/fit4ehealth/questions.json:1930
+#: data/fit4ehealth/questions.json:2445
 msgid ""
 "You are providing electronically the bills of your patients, for the "
 "accelerated reimbursement by CNS, electronically to the CNS."
@@ -5001,7 +5023,7 @@ msgstr ""
 "Vous fournissez électroniquement les factures de vos patients, pour le "
 "remboursement accéléré par la CNS, à la CNS."
 
-#: data/fit4ehealth/questions.json:1937
+#: data/fit4ehealth/questions.json:2452
 msgid ""
 "\"Reimbursement acceleré\" promotes the digitalisation and speeds up the "
 "billing process."
@@ -5009,7 +5031,7 @@ msgstr ""
 "Le \"remboursement accéléré\" favorise la numérisation et accélère le "
 "processus de facturation."
 
-#: data/fit4ehealth/questions.json:1947
+#: data/fit4ehealth/questions.json:2462
 msgid ""
 "use the EU cross-border eHealth services to support the treatment of foreign "
 "patients"
@@ -5017,7 +5039,7 @@ msgstr ""
 "utilisons les services transfrontaliers de santé en ligne de l'UE pour "
 "soutenir le traitement des patients étrangers"
 
-#: data/fit4ehealth/questions.json:1948
+#: data/fit4ehealth/questions.json:2463
 msgid ""
 "As part of the MyHealth@EU Initiative, Agence eSanté provides cross-border "
 "eHealth services to access for consultation the Patient Summary of patients "
@@ -5027,7 +5049,7 @@ msgstr ""
 "services transfrontaliers de santé en ligne permettant d'accéder pour "
 "consultation au Résumé Patient des patients d'autres pays de l'UE."
 
-#: data/fit4ehealth/questions.json:1955
+#: data/fit4ehealth/questions.json:2470
 msgid ""
 "Cross-border eHealth services can provide you with additional support when "
 "treating patients from other European countries. Get in contact with Agence "
@@ -5040,14 +5062,14 @@ msgstr ""
 "href=\"https://www.esante.lu\" target=\"_blank\">https://www.esante.lu</a> "
 "pour plus d'informations."
 
-#: data/fit4ehealth/questions.json:1965
+#: data/fit4ehealth/questions.json:2480
 msgid ""
 "use Regimail for secure email exchange with hospitals and other professionals"
 msgstr ""
 "utilisons Regimail pour l'échange de courriels sécurisés avec les hôpitaux "
 "et d'autres professionnels"
 
-#: data/fit4ehealth/questions.json:1972
+#: data/fit4ehealth/questions.json:2487
 msgid ""
 "Regimail can be used free of charge by all authorized health professionals "
 "in Luxembourg. It ensures the data exchange by secure and encrypted e-mail."
@@ -5056,7 +5078,7 @@ msgstr ""
 "autorisés au Luxembourg. Il assure l'échange de données par courrier "
 "électronique sécurisé et chiffré."
 
-#: data/fit4ehealth/questions.json:1981
+#: data/fit4ehealth/questions.json:2496
 msgid ""
 "want use a secure direct messaging system in eHealth, to support direct "
 "secure communication with healthcare professionals"
@@ -5065,7 +5087,7 @@ msgstr ""
 "de la santé en ligne, afin de soutenir la communication directe sécurisée "
 "avec les professionnels de la santé"
 
-#: data/fit4ehealth/questions.json:1982
+#: data/fit4ehealth/questions.json:2497
 msgid ""
 "On governmental level a secure messaging solution is planned to be taken in "
 "place, which would allow secure messaging between professionals replacing "
@@ -5075,7 +5097,7 @@ msgstr ""
 "messagerie sécurisée, qui permettrait une messagerie sécurisée entre "
 "professionnels en remplaçant des outils comme WhatsApp, Signal, …"
 
-#: data/fit4ehealth/questions.json:1990
+#: data/fit4ehealth/questions.json:2505
 msgid ""
 "are well supported in terms of IT and digitalization opportunities in the "
 "healthcare domain, by our software provider / IT Integrator"
@@ -5084,7 +5106,7 @@ msgstr ""
 "digitalisation dans le domaine de la santé, par notre fournisseur de "
 "logiciels / intégrateur IT"
 
-#: data/fit4ehealth/questions.json:1998
+#: data/fit4ehealth/questions.json:2513
 msgid ""
 "feel not well informed about our digital eHealth services offered at "
 "national level in Luxembourg and  are interested in participating in webinars"
@@ -5093,7 +5115,7 @@ msgstr ""
 "offerts au niveau national au Luxembourg et nous sommes intéressés à "
 "participer à des webinaires"
 
-#: data/fit4ehealth/questions.json:2006
+#: data/fit4ehealth/questions.json:2521
 msgid "do not consider any of the above as relevant"
 msgstr "ne considérons aucun des éléments ci-dessus comme pertinents"
 
@@ -5527,75 +5549,75 @@ msgstr ""
 msgid ""
 "If you are obliged to comply with the NIS directive, then you should "
 "consider <a href=\"https://www.enisa.europa.eu/topics/nis-directive/minimum-"
-"security-measures-for-operators-of-essentials-services\" target=\"_blank"
-"\">this mapping table</a> of security measures provided by ENISA. In "
-"addition, depending on your sector you should consider this documents:"
-"<ul><li>Digital service provider<ul><li><a href=\"https://www.enisa.europa."
-"eu/publications/minimum-security-measures-for-digital-service-providers\" "
-"target=\"_blank\">Minimum security measures for digital service providers</"
-"a></li></ul></li><li>Telecom sector<ul><li><a href=\"https://www.enisa."
-"europa.eu/publications/guideline-on-security-measures-under-the-eecc\" "
+"security-measures-for-operators-of-essentials-services\" "
+"target=\"_blank\">this mapping table</a> of security measures provided by "
+"ENISA. In addition, depending on your sector you should consider this "
+"documents:<ul><li>Digital service provider<ul><li><a href=\"https://www."
+"enisa.europa.eu/publications/minimum-security-measures-for-digital-service-"
+"providers\" target=\"_blank\">Minimum security measures for digital service "
+"providers</a></li></ul></li><li>Telecom sector<ul><li><a href=\"https://www."
+"enisa.europa.eu/publications/guideline-on-security-measures-under-the-eecc\" "
 "target=\"_blank\">Guideline on security measures under the EECC</a></li></"
 "ul></li><li>Healthcare sector<ul><li><a href=\"https://www.enisa.europa.eu/"
-"publications/cloud-security-for-healthcare-services\" target=\"_blank"
-"\">Cloud security for healthcare services</a></li><li><a href=\"https://www."
-"enisa.europa.eu/publications/good-practices-for-the-security-of-healthcare-"
-"services\" target=\"_blank\">Good practices for the security of healthcare "
-"services</a></li></ul></li><li>Transport sector (railways)<ul><li><a href="
-"\"https://www.enisa.europa.eu/publications/railway-cybersecurity\" target="
-"\"_blank\">Railway cybersecurity</a></li></ul></li><li>Energy "
-"sector<ul><li><a href=\"https://www.enisa.europa.eu/publications/"
-"communication-network-interdependencies-in-smart-grids\" target=\"_blank"
-"\">Communication network interdependencies in smart grids</a></li><li><a "
-"href=\"https://www.enisa.europa.eu/publications/power-sector-dependency\" "
-"target=\"_blank\">Power sector dependency</a></li></ul></li><li>Financial "
-"sector<ul><li><a href=\"https://www.enisa.europa.eu/publications/"
-"EU_Cybersecurity_Initiatives_in_the_Finance_Sector\" target=\"_blank\"> EU "
-"Cybersecurity Initiatives in the Finance Sector</a></li><li><a href="
-"\"https://www.enisa.europa.eu/publications/mobile-payments-security\" target="
-"\"_blank\">Mobile payments security</a></li><li><a href=\"https://www.enisa."
-"europa.eu/publications/blockchain-security\" target=\"_blank\">Blockchain "
-"security</a></li><li><a href=\"https://www.enisa.europa.eu/publications/"
-"network-and-information-security-in-the-finance-sector\" target=\"_blank"
-"\">Network and information security in the finance sector</a></li></ul></"
-"ul></li>"
+"publications/cloud-security-for-healthcare-services\" "
+"target=\"_blank\">Cloud security for healthcare services</a></li><li><a "
+"href=\"https://www.enisa.europa.eu/publications/good-practices-for-the-"
+"security-of-healthcare-services\" target=\"_blank\">Good practices for the "
+"security of healthcare services</a></li></ul></li><li>Transport sector "
+"(railways)<ul><li><a href=\"https://www.enisa.europa.eu/publications/railway-"
+"cybersecurity\" target=\"_blank\">Railway cybersecurity</a></li></ul></"
+"li><li>Energy sector<ul><li><a href=\"https://www.enisa.europa.eu/"
+"publications/communication-network-interdependencies-in-smart-grids\" "
+"target=\"_blank\">Communication network interdependencies in smart grids</"
+"a></li><li><a href=\"https://www.enisa.europa.eu/publications/power-sector-"
+"dependency\" target=\"_blank\">Power sector dependency</a></li></ul></"
+"li><li>Financial sector<ul><li><a href=\"https://www.enisa.europa.eu/"
+"publications/EU_Cybersecurity_Initiatives_in_the_Finance_Sector\" "
+"target=\"_blank\"> EU Cybersecurity Initiatives in the Finance Sector</a></"
+"li><li><a href=\"https://www.enisa.europa.eu/publications/mobile-payments-"
+"security\" target=\"_blank\">Mobile payments security</a></li><li><a "
+"href=\"https://www.enisa.europa.eu/publications/blockchain-security\" "
+"target=\"_blank\">Blockchain security</a></li><li><a href=\"https://www."
+"enisa.europa.eu/publications/network-and-information-security-in-the-finance-"
+"sector\" target=\"_blank\">Network and information security in the finance "
+"sector</a></li></ul></ul></li>"
 msgstr ""
 "Si vous êtes obligé de vous conformer à la directive NIS, alors vous devriez "
 "considérer <a href=\"https://www.enisa.europa.eu/topics/nis-directive/"
-"minimum-security-measures-for-operators-of-essentials-services\" target="
-"\"_blank\">cette table de correspondance</a> des mesures de sécurité fournie "
-"par l'ENISA. En outre, en fonction de votre secteur, vous devriez considérer "
-"ces documents:<ul><li>Fournisseur de services numériques<ul><li><a href="
-"\"https://www.enisa.europa.eu/publications/minimum-security-measures-for-"
-"digital-service-providers\" target=\"_blank\">Mesures de sécurité minimales "
-"pour les fournisseurs de services numériques</a></li></ul></li><li>Secteur "
-"des télécommunications<ul><li><a href=\"https://www.enisa.europa.eu/"
-"publications/guideline-on-security-measures-under-the-eecc\" target=\"_blank"
-"\">Guideline on security measures under the EECC</a></li></ul></"
-"li><li>Secteur de la santé<ul><li><a href=\"https://www.enisa.europa.eu/"
-"publications/cloud-security-for-healthcare-services\" target=\"_blank"
-"\">Cloud security for healthcare services</a></li><li><a href=\"https://www."
-"enisa.europa.eu/publications/good-practices-for-the-security-of-healthcare-"
-"services\" target=\"_blank\">Bonnes pratiques pour la sécurité des services "
-"de santé</a></li></ul><li><li>Secteur des transports (chemins de "
-"fer)<ul><li><a href=\"https://www.enisa.europa.eu/publications/railway-"
-"cybersecurity\" target=\"_blank\">Cybersécurité des chemins de fer</a></li></"
-"ul></li>Secteur de l'énergie<ul><li><a href=\"https://www.enisa.europa.eu/"
-"publications/communication-network-interdependencies-in-smart-grids\" target="
-"\"_blank\">Interdépendances des réseaux de communication dans les réseaux "
-"intelligents</a></li><li><a href=\"https://www.enisa.europa.eu/publications/"
-"power-sector-dependency\" target=\"_blank\">Dépendance du secteur de "
-"l'électricité</a></li></ul></li><li>Secteur financier<ul><li><a href="
-"\"https://www.enisa.europa.eu/publications/"
-"EU_Cybersecurity_Initiatives_in_the_Finance_Sector\" target=\"_blank"
-"\">Initiatives de cybersécurité de l'UE dans le secteur financier</a></"
-"li><li><a href=\"https://www.enisa.europa.eu/publications/mobile-payments-"
-"security\" target=\"_blank\">Sécurité des paiements mobiles</a></li><li><a "
-"href=\"https://www.enisa.europa.eu/publications/blockchain-security\" target="
-"\"_blank\">Sécurité des blockchains</a></li><li><a href=\"https://www.enisa."
-"europa.eu/publications/network-and-information-security-in-the-finance-sector"
-"\" target=\"_blank\">Sécurité des réseaux et de l'information dans le "
-"secteur financier</a></li></ul></ul></li>."
+"minimum-security-measures-for-operators-of-essentials-services\" "
+"target=\"_blank\">cette table de correspondance</a> des mesures de sécurité "
+"fournie par l'ENISA. En outre, en fonction de votre secteur, vous devriez "
+"considérer ces documents:<ul><li>Fournisseur de services "
+"numériques<ul><li><a href=\"https://www.enisa.europa.eu/publications/minimum-"
+"security-measures-for-digital-service-providers\" target=\"_blank\">Mesures "
+"de sécurité minimales pour les fournisseurs de services numériques</a></li></"
+"ul></li><li>Secteur des télécommunications<ul><li><a href=\"https://www."
+"enisa.europa.eu/publications/guideline-on-security-measures-under-the-eecc\" "
+"target=\"_blank\">Guideline on security measures under the EECC</a></li></"
+"ul></li><li>Secteur de la santé<ul><li><a href=\"https://www.enisa.europa.eu/"
+"publications/cloud-security-for-healthcare-services\" "
+"target=\"_blank\">Cloud security for healthcare services</a></li><li><a "
+"href=\"https://www.enisa.europa.eu/publications/good-practices-for-the-"
+"security-of-healthcare-services\" target=\"_blank\">Bonnes pratiques pour la "
+"sécurité des services de santé</a></li></ul><li><li>Secteur des transports "
+"(chemins de fer)<ul><li><a href=\"https://www.enisa.europa.eu/publications/"
+"railway-cybersecurity\" target=\"_blank\">Cybersécurité des chemins de fer</"
+"a></li></ul></li>Secteur de l'énergie<ul><li><a href=\"https://www.enisa."
+"europa.eu/publications/communication-network-interdependencies-in-smart-"
+"grids\" target=\"_blank\">Interdépendances des réseaux de communication dans "
+"les réseaux intelligents</a></li><li><a href=\"https://www.enisa.europa.eu/"
+"publications/power-sector-dependency\" target=\"_blank\">Dépendance du "
+"secteur de l'électricité</a></li></ul></li><li>Secteur financier<ul><li><a "
+"href=\"https://www.enisa.europa.eu/publications/"
+"EU_Cybersecurity_Initiatives_in_the_Finance_Sector\" "
+"target=\"_blank\">Initiatives de cybersécurité de l'UE dans le secteur "
+"financier</a></li><li><a href=\"https://www.enisa.europa.eu/publications/"
+"mobile-payments-security\" target=\"_blank\">Sécurité des paiements mobiles</"
+"a></li><li><a href=\"https://www.enisa.europa.eu/publications/blockchain-"
+"security\" target=\"_blank\">Sécurité des blockchains</a></li><li><a "
+"href=\"https://www.enisa.europa.eu/publications/network-and-information-"
+"security-in-the-finance-sector\" target=\"_blank\">Sécurité des réseaux et "
+"de l'information dans le secteur financier</a></li></ul></ul></li>."
 
 #: data/fit4operatorsurvey/questions.json:499
 #: data/fit4operatorsurvey/questions.json:685
@@ -5628,10 +5650,11 @@ msgstr "Nous ne respectons aucune norme ni aucune directive."
 msgid ""
 "Irrespective of your obligations in terms of risk management and "
 "cybersecurity, you should consider <a href=\"https://www.enisa.europa.eu/"
-"publications/guideline-on-security-measures-under-the-eecc\" target=\"_blank"
-"\">the 29 Security Objectives</a> listed by ENISA split in 8 areas, and "
-"ordered by level of sophistication. To check if you have implemented "
-"security measures in your company in a meaningful and risk-aware way."
+"publications/guideline-on-security-measures-under-the-eecc\" "
+"target=\"_blank\">the 29 Security Objectives</a> listed by ENISA split in 8 "
+"areas, and ordered by level of sophistication. To check if you have "
+"implemented security measures in your company in a meaningful and risk-aware "
+"way."
 msgstr ""
 "Indépendamment de vos obligations en matière de gestion des risques et de "
 "cybersécurité, vous devez prendre en compte <a href=\"https://www.enisa."
@@ -6116,8 +6139,8 @@ msgid ""
 "definitions of personal data, you can consult Art. 4 of GDPR, and for the "
 "tasks for a responsible with data protection, Art. 39. In addition to that, "
 "you can also consider the <a href=\"https://edpb.europa.eu/our-work-tools/"
-"our-documents/guidelines/data-protection-officer_en\" target=\"_blank"
-"\">guidelines</a> on this topic from the EDPB."
+"our-documents/guidelines/data-protection-officer_en\" "
+"target=\"_blank\">guidelines</a> on this topic from the EDPB."
 msgstr ""
 "Si votre société ne traite pas de données sur un grand nombre de personnes "
 "concernées (qu'il s'agisse d'employés, clients, ou d'usagers), même si un "
@@ -6158,9 +6181,9 @@ msgstr ""
 "votre société traite une quantité importante de données à caractère "
 "personnel, pensez donc à mettre en place des personnes et les ressources (de "
 "temps et un budget) pour quantifier et documenter les risques relatifs au "
-"traitement. Pour ces risques il faut prendre en considération la <a href="
-"\"https://ec.europa.eu/newsroom/article29/items/611236\" target=\"_blank"
-"\">guidance</a> de l'EDPB."
+"traitement. Pour ces risques il faut prendre en considération la <a "
+"href=\"https://ec.europa.eu/newsroom/article29/items/611236\" "
+"target=\"_blank\">guidance</a> de l'EDPB."
 
 #: data/fit4privacy/questions.json:55
 msgid "We process a lot of personal data of employees."
@@ -6274,8 +6297,8 @@ msgid ""
 "Does your company process personal data that can be sensitive (e.g., taken "
 "out of context, can be used to infer racial or ethnic origin, political "
 "opinions, religious or philosophical beliefs, trade union membership, "
-"genetic data, biometric data, sex life or sexual orientation)? (See <a href="
-"\"https://www.privacy-regulation.eu/en/article-9-processing-of-special-"
+"genetic data, biometric data, sex life or sexual orientation)? (See <a "
+"href=\"https://www.privacy-regulation.eu/en/article-9-processing-of-special-"
 "categories-of-personal-data-GDPR.htm\" target=\"_blank\">GDPR Article 9</a>)"
 msgstr ""
 "Votre société traite-t'elle des données à caractère personnel sensibles (e."
@@ -6510,10 +6533,11 @@ msgid ""
 "organization has put in place to protect that data. To your customers, as "
 "well as to suppliers and third parties, you have a similar obligation to be "
 "transparent (for example, by updating contracts or terms and conditions). In "
-"terms of what to communicate to them, you should consider following <a href="
-"\"https://www.privacy-regulation.eu/en/article-13-information-to-be-provided-"
-"where-personal-data-are-collected-from-the-data-subject-GDPR.htm\" target="
-"\"_blank\">Art. 13 and 14 of GDPR</a> when it comes to this information."
+"terms of what to communicate to them, you should consider following <a "
+"href=\"https://www.privacy-regulation.eu/en/article-13-information-to-be-"
+"provided-where-personal-data-are-collected-from-the-data-subject-GDPR.htm\" "
+"target=\"_blank\">Art. 13 and 14 of GDPR</a> when it comes to this "
+"information."
 msgstr ""
 "Votre entreprise devrait informer tous les types de personnes concernées "
 "dont elle traite les données à caractère personnel, de l'existence de ces "
@@ -6551,8 +6575,8 @@ msgid ""
 "efficient and succinct manner, and differentiate them from other non-privacy "
 "related information such as contractual clauses or general terms of use. For "
 "more inspiration on this topic, there is an EDPB guidance on transparency <a "
-"href=\"https://ec.europa.eu/newsroom/article29/items/622227/en\" target="
-"\"_blank\">here</a>."
+"href=\"https://ec.europa.eu/newsroom/article29/items/622227/en\" "
+"target=\"_blank\">here</a>."
 msgstr ""
 "Le responsable du traitement doit démontrer que les données personnelles "
 "sont traitées de manière transparente au regard de la personne concernée. "
@@ -7157,8 +7181,8 @@ msgid ""
 "protection authority in your country has issued as blacklist of processing "
 "operations (i.e., what personal data processing is likely to require DPIAs). "
 "For Luxembourg, the list is available <a href=\"https://cnpd.public.lu/"
-"content/dam/cnpd/fr/actualites/national/2019/Delib-34-2019-du-6-mars-2019.pdf"
-"\" target=\"_blank\">in annex here</a>. If your company acts in multiple "
+"content/dam/cnpd/fr/actualites/national/2019/Delib-34-2019-du-6-mars-2019."
+"pdf\" target=\"_blank\">in annex here</a>. If your company acts in multiple "
 "countries, ensure that you look at the recommendations of all data "
 "protection authorities in all countries you act in."
 msgstr ""
@@ -7489,8 +7513,8 @@ msgid ""
 "your company, not just because of GDPR but for your own company's continuity "
 "and operations point of view. You should consider the guidelines by ENISA, "
 "from 2016 to 2018, available <a href=\"https://www.enisa.europa.eu/topics/"
-"data-protection/security-of-personal-data/security-measures\" target=\"_blank"
-"\">here</a>."
+"data-protection/security-of-personal-data/security-measures\" "
+"target=\"_blank\">here</a>."
 msgstr ""
 "Selon l'article 32 du RGPD, les responsables de traitement et les sous-"
 "traitants doivent mettre en place des mesures de mitigation adéquates en "
@@ -7514,8 +7538,8 @@ msgid ""
 "but to be aware and continously improving. You can also get inspiration on "
 "evaluating potential risks and countermeasures from the guidelines by ENISA "
 "from 2016, 2017 and 2018, available <a href=\"https://www.enisa.europa.eu/"
-"topics/data-protection/security-of-personal-data/security-measures\" target="
-"\"_blank\">here</a>."
+"topics/data-protection/security-of-personal-data/security-measures\" "
+"target=\"_blank\">here</a>."
 msgstr ""
 "Si vous avez déjà effectué une analyse des risques sur les domaines de la "
 "sécurité de l'information, il va falloir la mettre à jour périodiquement car "
@@ -7538,8 +7562,8 @@ msgid ""
 "exercises of business incidents occurring, audits, or certifications. You "
 "can also get some inspiration from the reports and guidelines by ENISA from "
 "2016, 2017 and 2018, available <a href=\"https://www.enisa.europa.eu/topics/"
-"data-protection/security-of-personal-data/security-measures\" target=\"_blank"
-"\">here</a>."
+"data-protection/security-of-personal-data/security-measures\" "
+"target=\"_blank\">here</a>."
 msgstr ""
 "Toute analyse peut avoir des angles morts. Pensez à compléter l'analyse par "
 "une vision externe / différente, y compris des exercices d'incidents "
@@ -7922,7 +7946,7 @@ msgstr "Un service fourni par ACRC"
 
 #: templates/parts/fit4africa/footer_part.html:14
 #: templates/parts/fit4contract/footer_part.html:21
-#: templates/parts/fit4ehealth/footer_part.html:34
+#: templates/parts/fit4ehealth/footer_part.html:37
 #: templates/parts/footer_part.html:28
 msgid "Stats"
 msgstr "Statistiques"
@@ -7931,8 +7955,8 @@ msgstr "Statistiques"
 #: templates/parts/fit4africa/footer_part.html:18
 #: templates/parts/fit4contract/footer_part.html:24
 #: templates/parts/fit4contract/footer_part.html:25
-#: templates/parts/fit4ehealth/footer_part.html:37
-#: templates/parts/fit4ehealth/footer_part.html:38
+#: templates/parts/fit4ehealth/footer_part.html:40
+#: templates/parts/fit4ehealth/footer_part.html:41
 #: templates/parts/footer_part.html:31 templates/parts/footer_part.html:32
 msgid "Terms of Service"
 msgstr "Conditions d'utilisation"
@@ -7941,8 +7965,8 @@ msgstr "Conditions d'utilisation"
 #: templates/parts/fit4africa/footer_part.html:22
 #: templates/parts/fit4contract/footer_part.html:28
 #: templates/parts/fit4contract/footer_part.html:29
-#: templates/parts/fit4ehealth/footer_part.html:41
-#: templates/parts/fit4ehealth/footer_part.html:42
+#: templates/parts/fit4ehealth/footer_part.html:44
+#: templates/parts/fit4ehealth/footer_part.html:45
 #: templates/parts/footer_part.html:35 templates/parts/footer_part.html:36
 msgid "Privacy policy"
 msgstr "Politique de confidentialité"
@@ -7977,6 +8001,10 @@ msgstr "Version de"
 #: templates/parts/fit4ehealth/footer_part.html:28
 msgid "eQualis"
 msgstr "eQualis"
+
+#: templates/parts/fit4ehealth/footer_part.html:34
+msgid "FAQ"
+msgstr ""
 
 #: templates/parts/privacy_policy_part.html:87
 msgid "Name"
@@ -8158,6 +8186,74 @@ msgstr "Télécharger le lien direct"
 #: templates/survey/continue.html:26 templates/survey/finishedSurvey.html:220
 msgid "Close"
 msgstr "Fermer"
+
+#: templates/survey/faq.html:20
+msgid ""
+"I am self-employed, working alone, and some of the answers are not "
+"applicable to my situation. What should I do?"
+msgstr "Je suis médecin indépendant, je travaille seul, et certaines "
+"réponses ne correspondent pas à ma situation. Que dois-je faire ?"
+
+#: templates/survey/faq.html:30
+msgid ""
+"If you are alone or self-employed, some of the possible answers or "
+"recommendations may seem disproportionate or not applicable to your "
+"situation. Your answers should reflect your specific circumstances as "
+"accurately as possible. Regarding the recommendations, they may also appear "
+"excessive; however, it is important to understand that they are primarily "
+"best practices that need to be adapted to your organization and its context. "
+"For example, an individual working alone in an organization may not "
+"necessarily need to create comprehensive and specific rules, but they can "
+"still have reference documents on certain behaviors to adopt or procedures "
+"to follow for handling patient data."
+msgstr "Si vous êtes seul ou médecin indépendant, certaines propositions voire "
+"recommandations pourront vous sembler disproportionnées ou non conformes à "
+"votre situation. Vos réponses doivent refléter au mieux la réalité qui vous "
+"concerne. Concernant les recommandations, elles peuvent également vous sembler "
+"excessives, cependant, il est important de comprendre qu'il s'agit "
+"principalement de bonnes pratiques qui doivent être adaptées à votre "
+"entreprise et à son contexte. Par exemple, une personne travaillant seule au "
+"sein d'une organisation n'aura pas nécessairement besoin d'établir des règles "
+"complètes et précises, mais pourra quand même disposer de documents de "
+"référence concernant certains comportements à adopter ou des procédures à "
+"suivre pour la manipulation des données des patients."
+
+#: templates/survey/faq.html:48
+msgid "There is no answer that describes my case. What should I select?"
+msgstr "Il manque une réponse pour décrire mon cas. Que dois-je cocher ?"
+
+#: templates/survey/faq.html:58
+msgid ""
+"You can select the answer that seems closest and most logical to your "
+"situation. However, you can also provide feedback through the free-text "
+"field below the question."
+msgstr "Vous pouvez cocher la réponse qui vous semble la plus proche et "
+"la plus logique par rapport à votre situation. Cependant, vous pouvez "
+"également nous faire part de vos commentaires en utilisant le champ de "
+"texte libre situé sous la question."
+
+#: templates/survey/faq.html:72
+msgid ""
+"My situation is more complex than the provided options, and I would like to "
+"provide additional details to improve the evaluation."
+msgstr "Ma situation est plus complexe que les options proposées, et "
+"j'aimerais apporter des précisions pour améliorer l'évaluation."
+
+#: templates/survey/faq.html:82
+msgid ""
+"You can select the answer that seems closest and most logical to your "
+"situation. We strongly discourage the use of the free-text field below the "
+"question to specify your case, especially from providing any personal "
+"details, as it would compromise the anonymity of this self-assessment. "
+"However, you can always suggest the addition of one or more cases, and your "
+"proposal will be considered."
+msgstr "Vous pouvez cocher la réponse qui vous semble la plus proche et la "
+"plus logique par rapport à votre situation. Nous vous déconseillons fortement "
+"d'utiliser le champ de texte libre situé sous la question pour préciser votre "
+"cas, et encore plus de mentionner des détails vous concernant, car cela "
+"compromettrait l'aspect anonyme de cette auto-évaluation. Cependant, vous "
+"pouvez toujours nous proposer l'ajout d'un ou plusieurs cas, et votre "
+"proposition sera étudiée."
 
 #: templates/survey/finishedSurvey.html:26
 msgid "Summary"
