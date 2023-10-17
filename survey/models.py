@@ -183,6 +183,38 @@ class SurveyQuestionAnswer(models.Model, RightMixin):
         unique_together = ("aindex", "question")
 
 
+class SurveyQuestionMaxScore(models.Model):
+    # Used to define different scores depending on the selected answers.
+    question = models.ForeignKey(SurveyQuestion, on_delete=models.CASCADE)
+    selected_answer = models.ForeignKey(SurveyQuestionAnswer, on_delete=models.CASCADE)
+    max_score = models.IntegerField(default=0)
+
+    class Meta:
+        unique_together = ("question", "selected_answer")
+
+    def __str__(self):
+        return self.max_score
+
+
+class SurveyQuestionAnswerScore(models.Model):
+    # Used to define different scores depending on the selected answers.
+    answer = models.ForeignKey(
+        SurveyQuestionAnswer, on_delete=models.CASCADE, related_name="answer_scores"
+    )
+    selected_answer = models.ForeignKey(
+        SurveyQuestionAnswer,
+        on_delete=models.CASCADE,
+        related_name="answer_scores_when_selected",
+    )
+    score = models.IntegerField(default=0)
+
+    class Meta:
+        unique_together = ("answer", "selected_answer")
+
+    def __str__(self):
+        return self.score
+
+
 class SurveyAnswerQuestionMap(models.Model):
     # Used to define answers -> questions sequences.
     # For ex. answer ID 1 can be linked with multiple questions (IDs: 2, 3, 4)

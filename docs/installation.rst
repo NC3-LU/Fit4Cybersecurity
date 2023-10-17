@@ -97,9 +97,9 @@ and can be used in HTML templates.
     $ python manage.py migrate
 
     # Import questions, answers and recommendations:
-    $ python manage.py import_questions data/fit4cybersecurity/questions.json
+    $ python manage.py import_questions data/fit4ehealth/questions.json
     # Optionally, import the context questions (will be asked to the user before the survey start):
-    $ python manage.py import_questions data/fit4cybersecurity/context-questions.json
+    $ python manage.py import_questions data/fit4ehealth/context-questions.json
 
     # Create a user for the admin interface:
     $ python manage.py createsuperuser --username <username>
