@@ -199,12 +199,12 @@ class SurveyQuestionMaxScore(models.Model):
 class SurveyQuestionAnswerScore(models.Model):
     # Used to define different scores depending on the selected answers.
     answer = models.ForeignKey(
-        SurveyQuestionAnswer, on_delete=models.CASCADE,
-        related_name='answer_scores'
+        SurveyQuestionAnswer, on_delete=models.CASCADE, related_name="answer_scores"
     )
     selected_answer = models.ForeignKey(
-        SurveyQuestionAnswer, on_delete=models.CASCADE,
-        related_name='answer_scores_when_selected'
+        SurveyQuestionAnswer,
+        on_delete=models.CASCADE,
+        related_name="answer_scores_when_selected",
     )
     score = models.IntegerField(default=0)
 

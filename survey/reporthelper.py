@@ -111,8 +111,7 @@ def calculateResult(
         # Taking max points from the dependency on answers' table if defined.
         for max_score in question.surveyquestionmaxscore_set.all():
             user_answer = SurveyUserAnswer.objects.filter(
-                user=user,
-                answer=max_score.selected_answer
+                user=user, answer=max_score.selected_answer
             )[:1]
             if user_answer and user_answer[0].uvalue != "0":
                 question_max_score = max_score.max_score
@@ -126,8 +125,7 @@ def calculateResult(
 
         if question.service_category_id not in max_evaluations_per_category:
             max_evaluations_per_category[question.service_category_id] = 0
-        max_evaluations_per_category[
-            question.service_category_id] += question_max_score
+        max_evaluations_per_category[question.service_category_id] += question_max_score
 
         sections[question.section_id] = _(question.section.label)
         categories[question.service_category_id] = _(question.service_category.label)
@@ -150,8 +148,7 @@ def calculateResult(
             # If the scores dependencies are set, then get from the table.
             for answer_score in user_answer.answer.answer_scores.all():
                 dependant_user_answer = SurveyUserAnswer.objects.filter(
-                    user=user,
-                    answer=answer_score.selected_answer
+                    user=user, answer=answer_score.selected_answer
                 )[:1]
                 if dependant_user_answer and dependant_user_answer[0].uvalue != "0":
                     answer_score = answer_score.score
@@ -185,21 +182,20 @@ def calculateResult(
         prepare_evaluations(user_evaluations_per_section, max_evaluations_per_section),
         list(sections.values()),
         prepare_evaluations(
-            user_evaluations_per_category,
-            max_evaluations_per_category
+            user_evaluations_per_category, max_evaluations_per_category
         ),
         [i for k, i in sorted(categories.items())],
     )
 
 
 def prepare_evaluations(
-    user_evaluations: Dict[int, int],
-    max_evaluations: Dict[int, int]
+    user_evaluations: Dict[int, int], max_evaluations: Dict[int, int]
 ) -> List[int]:
     evaluations: List[int] = []
     for item_id, user_evaluation in sorted(user_evaluations.items()):
-        evaluations.append(round(user_evaluation * 100 / max_evaluations[item_id]))\
-            if max_evaluations[item_id] > 0 else evaluations.append(0)
+        evaluations.append(
+            round(user_evaluation * 100 / max_evaluations[item_id])
+        ) if max_evaluations[item_id] > 0 else evaluations.append(0)
 
     return evaluations
 
