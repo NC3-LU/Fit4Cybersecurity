@@ -2958,7 +2958,8 @@ msgstr ""
 #: data/fit4ehealth/questions.json:240
 msgid "You never dispose the data when the patient is inaccessible."
 msgstr ""
-"Les données ne sont pas supprimées, tant que le patient n’est pas joignable."
+"Les données ne sont pas archivées ou détruites lorsque le patient n’est plus "
+"joignable"
 
 #: data/fit4ehealth/questions.json:247
 msgid ""
@@ -3007,9 +3008,9 @@ msgid ""
 "You have received training on software or devices that you use, and you are "
 "able to face or understand some particular situation to avoid any data loss."
 msgstr ""
-"Vous avez reçu une formation sur les logiciels ou les appareils que vous "
-"utilisez, et vous êtes capable de faire face ou de comprendre une situation "
-"particulière pour éviter toute perte de données."
+"Une personne au sein de l’établissement est formée à la maintenance du "
+"système informatique aussi bien la gestion des ordinateurs, des serveurs ou "
+"toute autre demande en lien avec l’informatique "
 
 #: data/fit4ehealth/questions.json:290
 msgid ""
@@ -3172,12 +3173,13 @@ msgstr ""
 "de visites, le professionnel de santé utilise :"
 
 #: data/fit4ehealth/questions.json:414
+#, fuzzy
 msgid ""
 "no professional tools/devices because home office or visits are not allowed "
 "or necessary, or the only connection is the internal network on company "
 "premises"
 msgstr ""
-"pas d'outils/dispositifs professionnels parce que le télétravail ou les "
+"aucun d'outils/dispositifs professionnels parce que le télétravail ou les "
 "visites ne sont pas autorisés ou nécessaires, ou la seule connexion est le "
 "réseau interne dans les locaux de la société"
 
@@ -3346,7 +3348,7 @@ msgid "Contracts"
 msgstr "Contrats"
 
 #: data/fit4ehealth/questions.json:554
-msgid "Contracts with external IT service providers"
+msgid "Contracts concluded with third parties"
 msgstr "Les contrats avec les tiers"
 
 #: data/fit4ehealth/questions.json:564
@@ -3713,8 +3715,7 @@ msgstr ""
 #: data/fit4ehealth/questions.json:846
 msgid "managed by my ICT service provider, but only when I ask for"
 msgstr ""
-"gérée par mon prestataire de services informatiques mais seulement si je le "
-"demande"
+"gérée par mon prestataire de services informatiques avec accord préalable"
 
 #: data/fit4ehealth/questions.json:847
 msgid ""
@@ -3922,9 +3923,8 @@ msgid ""
 "Important documents are always stored securely and are only accessible to "
 "people with the appropriate access rights."
 msgstr ""
-"Les documents importants sont toujours verrouillés, et la seule personne qui "
-"y a accès est celle qui a le droit d'y accéder. Si quelqu'un qui n'a pas le "
-"droit initial d'y accéder, il doit demander à la personne qui a la clé."
+"Les documents sensibles sont toujours stockés en sécurité et seules les "
+"personnes habilitées y ont accès."
 
 #: data/fit4ehealth/questions.json:1010
 msgid ""
@@ -3968,10 +3968,7 @@ msgstr "ne peut accéder aux imprimantes sans être vu"
 msgid ""
 "Printed documents can only be withdrawn by persons with the right of access "
 "to these documents."
-msgstr ""
-"Les documents imprimés ne peuvent être saisis par quelqu'un qui ne les a pas "
-"imprimés, ou si c'est le cas, la personne a l'autorisation de les lire ou de "
-"les prendre."
+msgstr "Les documents imprimés ne sont accessibles qu’aux personnes habilitées"
 
 #: data/fit4ehealth/questions.json:1044
 msgid ""
@@ -4205,7 +4202,9 @@ msgstr ""
 msgid ""
 "Passwords are never used twice, or this should be an exception. Each "
 "password you have to type is different."
-msgstr "Chaque mot de passe que vous saisissez doit être différent."
+msgstr ""
+"Les mots de passe ne sont jamais utilisés deux fois sauf de manière "
+"exceptionnelle. Le mot de passe est toujours unique."
 
 #: data/fit4ehealth/questions.json:1246
 msgid ""
@@ -4253,8 +4252,8 @@ msgstr ""
 msgid ""
 "is managed within the application by own personal with specific access rights"
 msgstr ""
-"sont gérées au sein de l'application par un personnel propre disposant de "
-"droits d'accès spécifiques"
+"sont gérées au sein de l'application par une personne identifiée disposant "
+"de droits d'accès spécifiques"
 
 #: data/fit4ehealth/questions.json:1283
 msgid ""
@@ -4377,7 +4376,7 @@ msgstr ""
 
 #: data/fit4ehealth/questions.json:1390
 msgid "are divided into guests and internal network"
-msgstr "sont divisés entre les invités et le réseau interne"
+msgstr "sont séparés entre les invités et le réseau interne"
 
 #: data/fit4ehealth/questions.json:1391
 msgid ""
@@ -4615,8 +4614,7 @@ msgid ""
 "software because they do not have administrator rights"
 msgstr ""
 "contrôlés par un ou plusieurs administrateurs, qui ne permettent pas aux "
-"utilisateurs d'installer des logiciels parce qu'ils n'ont pas de droits "
-"d'administrateur"
+"utilisateurs d'installer des logiciels parce qu'ils n'en ont pas les droits."
 
 #: data/fit4ehealth/questions.json:1619
 msgid ""
@@ -4711,7 +4709,7 @@ msgstr "Les sauvegardes des données médicales sont"
 
 #: data/fit4ehealth/questions.json:1697
 msgid "on paper, are stored in a locked place at all times"
-msgstr "sur papier, sont stockées dans un endroit verrouillé à tout moment"
+msgstr "sur papier, stockées dans un endroit verrouillé à tout moment"
 
 #: data/fit4ehealth/questions.json:1698
 msgid ""
@@ -4727,8 +4725,8 @@ msgstr ""
 #: data/fit4ehealth/questions.json:1706
 msgid "not my responsibility and should be handled by my ICT provider"
 msgstr ""
-"pas ma responsabilité et cela devrait être géré par mon prestataire de "
-"services informatiques"
+"en aucun cas ma responsabilité et cela devrait être géré par mon prestataire "
+"de services informatiques"
 
 #: data/fit4ehealth/questions.json:1707
 msgid ""
@@ -4774,8 +4772,8 @@ msgstr ""
 "dans un environnement sécurisé."
 
 #: data/fit4ehealth/questions.json:1748
-msgid "checked by me from time to time"
-msgstr "vérifiées par moi-même de temps en temps"
+msgid "checked from time to time"
+msgstr "vérifiées de temps en temps"
 
 #: data/fit4ehealth/questions.json:1749
 msgid ""
@@ -4798,10 +4796,9 @@ msgstr ""
 "maintenue."
 
 #: data/fit4ehealth/questions.json:1768
-msgid "only readable by me and the persons to whom I gave permission"
+msgid "only readable by persons with assigned permission"
 msgstr ""
-"ne peuvent être lues que par moi, et les personnes à qui j'ai donné "
-"l'autorisation"
+"ne peuvent être lues que par des personnes à qui j'ai donné l'autorisation"
 
 #: data/fit4ehealth/questions.json:1769
 msgid ""
@@ -5028,20 +5025,20 @@ msgid ""
 msgstr ""
 "Dans le cadre de l'initiative MyHealth@EU, l'Agence eSanté fournit des "
 "services transfrontaliers de santé en ligne permettant d'accéder pour "
-"consultation au Patient Summary des patients d'autres pays de l'UE."
+"consultation au Résumé Patient des patients d'autres pays de l'UE."
 
 #: data/fit4ehealth/questions.json:1955
 msgid ""
 "Cross-border eHealth services can provide you with additional support when "
 "treating patients from other European countries. Get in contact with Agence "
-"eSanté and visit the Website <a href=\"https://www.esante.lu\" target="
-"\"_blank\">https://www.esante.lu</a> for further information."
+"eSanté and visit the Website <a href=\"https://www.esante.lu\" "
+"target=\"_blank\">https://www.esante.lu</a> for further information."
 msgstr ""
 "Les services de santé en ligne transfrontaliers peuvent vous apporter un "
 "soutien supplémentaire lorsque vous traitez des patients d'autres pays "
-"européens. Prenez contact avec l'Agence eSanté et visitez le site <a href="
-"\"https://www.esante.lu\" target=\"_blank\">https://www.esante.lu</a> pour "
-"plus d'informations."
+"européens. Prenez contact avec l'Agence eSanté et visitez le site <a "
+"href=\"https://www.esante.lu\" target=\"_blank\">https://www.esante.lu</a> "
+"pour plus d'informations."
 
 #: data/fit4ehealth/questions.json:1965
 msgid ""

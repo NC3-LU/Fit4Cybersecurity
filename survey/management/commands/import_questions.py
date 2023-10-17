@@ -11,6 +11,8 @@ from survey.models import SurveyQuestion
 from survey.models import SurveyQuestionAnswer
 from survey.models import SurveyQuestionServiceCategory
 from survey.models import SurveySection
+from survey.models import SurveyQuestionMaxScore
+from survey.models import SurveyQuestionAnswerScore
 
 
 class Command(BaseCommand):
@@ -35,6 +37,9 @@ class Command(BaseCommand):
 
         answers_questions_map = {}
         answers_to_remove_map = []
+
+        questions_max_scores = {}
+        answers_scores = {}
 
         for question in json_data:
             # Get or create the section
@@ -76,6 +81,18 @@ class Command(BaseCommand):
                 question_obj.is_active = True
 
                 question_obj.save()
+
+                # Prepare max_scores dependency for SurveyQuestionMaxScore.
+                if "max_scores" in question.keys():
+                    questions_max_scores[question_obj.id] = []
+                    for max_score_data in question["max_scores"]:
+                        questions_max_scores[question_obj.id].append({
+                            "question": question_obj,
+                            "question_of_answer": max_score_data["question_of_answer"],
+                            "selected_answer": max_score_data["selected_answer"],
+                            "max_score": max_score_data["max_score"],
+                        })
+
                 nb_updated_questions += 1
             except SurveyQuestion.DoesNotExist:
                 question_obj = SurveyQuestion.objects.create(
@@ -174,6 +191,17 @@ class Command(BaseCommand):
                         nb_imported_recommendations += 1
                         reco_obj.save()
 
+                # Prepare scores dependency for SurveyQuestionAnswerScore.
+                if "scores" in answer.keys():
+                    answers_scores[answer_obj.id] = []
+                    for score_data in answer["scores"]:
+                        answers_scores[answer_obj.id].append({
+                            "answer": answer_obj,
+                            "question_of_answer": score_data["question_of_answer"],
+                            "selected_answer": score_data["selected_answer"],
+                            "score": score_data["score"],
+                        })
+
             # Deactivate all the answers with index higher then max importing.
             max_answer_index = max(question["answers"], key=lambda x: x["aindex"])
             if max_answer_index:
@@ -196,6 +224,12 @@ class Command(BaseCommand):
         if min_question_index:
             SurveyQuestion.all_objects.filter(qindex__lt=min_question_index).update(
                 is_active=False
+            )
+
+        # Handle the questions max_scores and answers scores dependencies.
+        if len(questions_max_scores) > 0 and len(answers_scores) > 0:
+            self.process_questions_answers_scores_dependencies(
+                questions_max_scores, answers_scores
             )
 
         self.stdout.write(self.style.SUCCESS("Data imported."))
@@ -257,4 +291,33 @@ class Command(BaseCommand):
                     branch=answer_question_map["branch"],
                     level=answer_question_map["level"],
                     order=answer_question_map["order"],
+                )
+
+    @staticmethod
+    def process_questions_answers_scores_dependencies(
+        questions_max_scores: Dict, answers_scores: Dict
+    ) -> None:
+        SurveyQuestionMaxScore.objects.all().delete()
+        SurveyQuestionAnswerScore.objects.all().delete()
+        for question_id in questions_max_scores:
+            for question_max_score in questions_max_scores[question_id]:
+                selected_answer = SurveyQuestionAnswer.objects.filter(
+                    question__label=question_max_score["question_of_answer"],
+                    label=question_max_score["selected_answer"]
+                )[:1][0]
+                SurveyQuestionMaxScore.objects.create(
+                    question=question_max_score["question"],
+                    selected_answer=selected_answer,
+                    max_score=question_max_score["max_score"],
+                )
+        for answer_id in answers_scores:
+            for answer_score in answers_scores[answer_id]:
+                selected_answer = SurveyQuestionAnswer.objects.filter(
+                    question__label=answer_score["question_of_answer"],
+                    label=answer_score["selected_answer"]
+                )[:1][0]
+                SurveyQuestionAnswerScore.objects.create(
+                    answer=answer_score["answer"],
+                    selected_answer=selected_answer,
+                    score=answer_score["score"],
                 )

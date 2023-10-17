@@ -209,7 +209,7 @@ def handle_question_answers_request(
             was_sequence_question_answered = current_sequence.has_been_answered
             mark_sequence_as_answered(current_sequence)
             next_sequence = get_next_sequence_with_not_answered_question(
-                user, question_index, current_sequence
+                user, current_sequence
             )
 
             if next_sequence is not None:
@@ -288,6 +288,7 @@ def save_answers(
     answer_content: str,
 ) -> None:
     does_map_exist = does_answers_questions_map_exist()
+    current_branch = 0
     if current_sequence is not None:
         current_branch = current_sequence.branch
 
@@ -520,7 +521,7 @@ def remove_questions_sequences(
         sequence_to_remove.delete()
         if should_user_question_be_reset:
             next_sequence = get_next_sequence_with_not_answered_question(
-                user, question_index, current_sequence
+                user, current_sequence
             )
             if next_sequence is None:
                 next_sequence = get_last_user_sequence(user)
@@ -757,7 +758,7 @@ def get_number_of_questions_in_user_sequence(user) -> int:
 
 
 def get_next_sequence_with_not_answered_question(
-    user: SurveyUser, question_index: int, current_sequence: SurveyUserQuestionSequence
+    user: SurveyUser, current_sequence: SurveyUserQuestionSequence
 ) -> Optional[SurveyUserQuestionSequence]:
     questions_sequence = (
         SurveyUserQuestionSequence.objects.filter(

@@ -90,7 +90,6 @@ def calculateResult(
             chart_exclude_sections + CUSTOM["chart_exclude_sections"]
         )
 
-    """Only answered questions are used for the results calculation."""
     answered_questions_ids = [
         q.question.id
         for q in SurveyUserQuestionSequence.objects.filter(user=user, is_active=True)
@@ -99,60 +98,80 @@ def calculateResult(
     questions_by_section = (
         SurveyQuestion.objects.filter(id__in=answered_questions_ids)
         .exclude(section__label__in=chart_exclude_sections)
-        .values_list("section_id")
         .order_by("section_id")
     )
 
-    questions_by_category = questions_by_section.values_list(
-        "service_category_id"
-    ).order_by("service_category_id")
+    sections: Dict[int, str] = {}
+    categories: Dict[int, str] = {}
+    max_evaluations_per_section: Dict[int, int] = {}
+    max_evaluations_per_category: Dict[int, int] = {}
+    total_questions_score = 0
+    for question in questions_by_section.all():
+        question_max_score = question.maxPoints
+        # Taking max points from the dependency on answers' table if defined.
+        for max_score in question.surveyquestionmaxscore_set.all():
+            user_answer = SurveyUserAnswer.objects.filter(
+                user=user,
+                answer=max_score.selected_answer
+            )[:1]
+            if user_answer and user_answer[0].uvalue != "0":
+                question_max_score = max_score.max_score
+                break
 
-    max_evaluations_per_section = {
-        q[0]: q[1] for q in questions_by_section.annotate(total=Sum("maxPoints"))
-    }
-    max_evaluations_per_category = {
-        q[0]: q[1] for q in questions_by_category.annotate(total=Sum("maxPoints"))
-    }
-    total_questions_score = questions_by_section.aggregate(total=Sum("maxPoints"))[
-        "total"
-    ]
+        total_questions_score += question_max_score
 
-    sections = [
-        _(section)
-        for section in questions_by_section.values_list(
-            "section__label", flat=True
-        ).distinct()
-    ]
-    categories = [
-        _(category)
-        for category in questions_by_category.values_list(
-            "service_category__label", flat=True
-        ).distinct()
-    ]
+        if question.section_id not in max_evaluations_per_section:
+            max_evaluations_per_section[question.section_id] = 0
+        max_evaluations_per_section[question.section_id] += question_max_score
 
-    # There are no exclude sections, because score or bonus points can be set to some answers.
+        if question.service_category_id not in max_evaluations_per_category:
+            max_evaluations_per_category[question.service_category_id] = 0
+        max_evaluations_per_category[
+            question.service_category_id] += question_max_score
+
+        sections[question.section_id] = _(question.section.label)
+        categories[question.service_category_id] = _(question.service_category.label)
+
+    # There is no sections exclude, as score or bonus points can be set for the answers.
     user_answers = SurveyUserAnswer.objects.filter(user=user).order_by(
         "answer__question__qindex", "answer__aindex"
     )
 
-    total_bonus_points = user_answers.aggregate(total=Sum("answer__bonus_points"))[
-        "total"
-    ]
-    user_given_bonus_points = user_answers.filter(uvalue=1).aggregate(
-        total=Sum("answer__bonus_points")
-    )["total"]
-    total_user_score = user_answers.filter(uvalue=1).aggregate(
-        total=Sum("answer__score")
-    )["total"]
+    total_user_score = 0
+    total_bonus_points = 0
+    user_given_bonus_points = 0
+    user_evaluations_per_section: Dict[int, int] = {}
+    user_evaluations_per_category: Dict[int, int] = {}
+    for user_answer in user_answers.all():
+        total_bonus_points += user_answer.answer.bonus_points
+        if user_answer.uvalue == "1":
+            user_given_bonus_points += user_answer.answer.bonus_points
+            answer_score = user_answer.answer.score
+            # If the scores dependencies are set, then get from the table.
+            for answer_score in user_answer.answer.answer_scores.all():
+                dependant_user_answer = SurveyUserAnswer.objects.filter(
+                    user=user,
+                    answer=answer_score.selected_answer
+                )[:1]
+                if dependant_user_answer and dependant_user_answer[0].uvalue != "0":
+                    answer_score = answer_score.score
+                    break
+            total_user_score += answer_score
 
-    user_evaluations_by_section = user.get_evaluations_by_section(
-        max_evaluations_per_section
-    )
-    user_evaluations_by_category = user.get_evaluations_by_category(
-        max_evaluations_per_category
-    )
+            section = user_answer.answer.question.section
+            if section.label in chart_exclude_sections:
+                continue
 
-    # Get the score in percent, with then 100 being total_questions_score.
+            if section.id not in user_evaluations_per_section:
+                user_evaluations_per_section[section.id] = 0
+            user_evaluations_per_section[section.id] += user_answer.answer.score
+
+            category = user_answer.answer.question.service_category
+            if category.id not in user_evaluations_per_category:
+                user_evaluations_per_category[category.id] = 0
+            user_evaluations_per_category[category.id] += user_answer.answer.score
+
+    # Get the score & bonus pts in percent, with then 100 being total_questions_score.
     if total_user_score > 0:
         total_user_score = round(total_user_score * 100 / total_questions_score)
     if total_bonus_points > 0:
@@ -163,11 +182,26 @@ def calculateResult(
     return (
         total_user_score,
         user_bonus_points_percent,
-        user_evaluations_by_section,
-        sections,
-        user_evaluations_by_category,
-        categories,
+        prepare_evaluations(user_evaluations_per_section, max_evaluations_per_section),
+        list(sections.values()),
+        prepare_evaluations(
+            user_evaluations_per_category,
+            max_evaluations_per_category
+        ),
+        [i for k, i in sorted(categories.items())],
     )
+
+
+def prepare_evaluations(
+    user_evaluations: Dict[int, int],
+    max_evaluations: Dict[int, int]
+) -> List[int]:
+    evaluations: List[int] = []
+    for item_id, user_evaluation in sorted(user_evaluations.items()):
+        evaluations.append(round(user_evaluation * 100 / max_evaluations[item_id]))\
+            if max_evaluations[item_id] > 0 else evaluations.append(0)
+
+    return evaluations
 
 
 def generate_chart_png(
