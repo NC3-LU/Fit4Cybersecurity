@@ -111,6 +111,9 @@ def change_lang(request, lang: str):
     if previous_path.__contains__("/privacy/"):
         return HttpResponseRedirect("/privacy/")
 
+    if previous_path.__contains__("/faq/"):
+        return HttpResponseRedirect("/faq/")
+
     if user_id is None:
         return HttpResponseRedirect("/")
 
@@ -361,4 +364,6 @@ def get_privacy_policy(request):
 
 
 def get_faq(request):
+    lang = request.session.get(settings.LANGUAGE_COOKIE_NAME, LANGUAGE_CODE)
+    translation.activate(lang)
     return render(request, "survey/faq.html", context={})
