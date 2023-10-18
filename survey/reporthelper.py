@@ -146,12 +146,12 @@ def calculateResult(
 
             if section.id not in user_evaluations_per_section:
                 user_evaluations_per_section[section.id] = 0
-            user_evaluations_per_section[section.id] += user_answer.answer.score
+            user_evaluations_per_section[section.id] += answer_score
 
             category = user_answer.answer.question.service_category
             if category.id not in user_evaluations_per_category:
                 user_evaluations_per_category[category.id] = 0
-            user_evaluations_per_category[category.id] += user_answer.answer.score
+            user_evaluations_per_category[category.id] += answer_score
 
     # Get the score & bonus pts in percent, with then 100 being total_questions_score.
     if total_user_score > 0:
@@ -187,7 +187,7 @@ def get_question_max_score(question: SurveyQuestion, user: SurveyUser) -> int:
 
 
 def get_answer_score(user: SurveyUser, user_answer: SurveyUserAnswer) -> int:
-    answer_score = user_answer.answer.score
+    score = user_answer.answer.score
     # If the scores dependencies are set, then get from the table.
     for answer_score in user_answer.answer.answer_scores.all():
         dependant_user_answer = SurveyUserAnswer.objects.filter(
@@ -196,7 +196,7 @@ def get_answer_score(user: SurveyUser, user_answer: SurveyUserAnswer) -> int:
         if dependant_user_answer and dependant_user_answer[0].uvalue != "0":
             return answer_score.score
 
-    return answer_score
+    return score
 
 
 def prepare_evaluations(
