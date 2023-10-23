@@ -46,7 +46,7 @@ CUSTOM = {
     "modules": {
         "reportDownload": True,
         "reportEmail": False,
-        "requestDiagnostic": True,
+        "requestDiagnostic": False,
         "requestTraining": False,
         "displayResults": True,
         "faqPage": True,
