@@ -48,7 +48,7 @@ class AnswerMChoice(forms.Form):
             self.fields["answers"] = forms.ChoiceField(
                 required=True,
                 choices=[],
-                widget=forms.RadioSelect(attrs={"class": "radio-buttons"}),
+                widget=forms.RadioSelect(attrs={"class": "radio-buttons d-none"}),
                 label="",
                 initial=tanswers[0][0],
             )
@@ -103,9 +103,12 @@ class AnswerMChoice(forms.Form):
                 )
 
         self.fields["feedback"] = forms.CharField(
-            label=_("Your feedback"),
+            label=_(""),
             widget=forms.Textarea(
-                attrs={"placeholder": _("Please let us know if anything is missing")}
+                attrs={
+                    "placeholder": _("Please let us know if anything is missing"),
+                    "class": "d-none"
+                }
             ),
             required=False,
         )
