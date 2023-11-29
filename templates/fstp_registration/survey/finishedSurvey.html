@@ -1,0 +1,10 @@
+{% extends 'survey/finishedSurvey.html' %}
+{% load i18n %}
+
+{% block finished_survey_description %}
+<p class="text-justify">
+    {% blocktranslate trimmed %}
+    FINISH TEXT
+    {% endblocktranslate %}
+</p>
+{% endblock %}

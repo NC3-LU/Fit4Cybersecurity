@@ -1,0 +1,13 @@
+{% load i18n %}
+{% load apptags %}
+{% get_current_language as LANGUAGE_CODE %}
+
+<h1>
+    <a href="/" class="logo-link">
+        <img
+            src="{% settings_value 'SITE_IMAGES_URL' %}/logo-nc3.png"
+            width="50%"
+            alt="{{ custom.tool_name }}"
+            title="{{ custom.tool_name }}">
+    </a>
+</h1>
