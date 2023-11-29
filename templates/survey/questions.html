@@ -1,6 +1,7 @@
 {% extends 'survey/base.html' %}
 
 {% load bootstrap4 %}
+{% load apptags %}
 
 {% load static %}
 
@@ -31,17 +32,21 @@
     {% endif %}
 
     <div class="m-2 p-3">
-        <div class="card-title">
-            <span data-bs-toggle="tooltip" title="{{ question_tooltip | safe }}">{{ question | safe }}</span>
-        </div>
         <form action="{{ action }}" method="post" class="form" id="survey-question-form">
             {% csrf_token %}
 
-            {% bootstrap_form form exclude="feedback" %}
+            {% for key, form in forms.items %}
+              <div class="card-title">
+                <span data-bs-toggle="tooltip" title="{{ questions_tooltips|get_item:key }}">{{ questions|get_item:key }}</span>
+              </div>
+              {% bootstrap_form form exclude="feedback" %}
 
-            <p class="select-multi-info text-muted pl-4 small" style="display: none;">
-                ** {{ _('Multiple answers are possible.') }}
-            </p>
+              <p class="select-multi-info text-muted pl-4 small" style="display: none;">
+                  ** {{ _('Multiple answers are possible.') }}
+              </p>
+
+          <div class="border-bottom"></div>
+            {% endfor %}
 
             {% buttons %}
                 <div class="form-group pt-4">
@@ -79,16 +84,6 @@
                     </div>
                 </div>
             {% endbuttons %}
-
-            <div class="form-group pt-4">
-                {% bootstrap_field form.feedback label_class="feedback-label" %}
-                <!-- <p class="select-multi-info text-muted pl-4 mb-0 small">
-                    * {{ _('This text field should not be used to answer the question.') }}
-                </p>
-                <p class="select-multi-info text-muted pl-4 mb-0 small">
-                    ** {{ _('Please do not provide any sensitive or confidential information referring to your identity.') }}
-                </p> -->
-            </div>
         </form>
     </div>
 
