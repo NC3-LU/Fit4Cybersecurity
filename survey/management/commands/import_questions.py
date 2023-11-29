@@ -61,7 +61,7 @@ class Command(BaseCommand):
             qindex = (
                 abs(qindex)
                 if question["section"] != CONTEXT_SECTION_LABEL
-                else -abs(qindex)
+                else qindex
             )
 
             if qindex > max_question_index:

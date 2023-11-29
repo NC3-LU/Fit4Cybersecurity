@@ -55,7 +55,7 @@ def create_user_and_sequence(lang: str) -> SurveyUser:
     user = SurveyUser()
     # defines the next question (exclude the context questions)
     survey_question = SurveyQuestion.objects.exclude(
-        section__label__contains=CONTEXT_SECTION_LABEL
+        # section__label__contains=CONTEXT_SECTION_LABEL
     ).order_by("qindex")[:1]
     user.current_question = survey_question[0]
     # Ensures the submitted languages is accepted
@@ -98,7 +98,7 @@ def handle_start_survey(request: HttpRequest, lang: str) -> Union[Dict, SurveyUs
     forms = {}
     questions = (
         SurveyQuestion.objects.filter(section__label__contains=CONTEXT_SECTION_LABEL)
-        .order_by("-qindex")
+        .order_by("qindex")
         .all()
     )
 
@@ -638,7 +638,7 @@ def get_answer_choices(question: SurveyQuestion, lang: str) -> List[Tuple[int, s
 def get_questions_with_user_answers(user: SurveyUser):
     survey_user_answers = (
         SurveyUserAnswer.objects.filter(user=user)
-        .exclude(answer__question__section__label=CONTEXT_SECTION_LABEL)
+        # .exclude(answer__question__section__label=CONTEXT_SECTION_LABEL)
         .order_by("answer__question__qindex", "answer__aindex")
     )
 
