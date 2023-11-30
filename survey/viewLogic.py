@@ -55,7 +55,7 @@ def create_user_and_sequence(lang: str) -> SurveyUser:
     user = SurveyUser()
     # defines the next question (exclude the context questions)
     survey_question = SurveyQuestion.objects.exclude(
-        # section__label__contains=CONTEXT_SECTION_LABEL
+        section__label__contains=CONTEXT_SECTION_LABEL
     ).order_by("qindex")[:1]
     user.current_question = survey_question[0]
     # Ensures the submitted languages is accepted
@@ -98,7 +98,7 @@ def handle_start_survey(request: HttpRequest, lang: str) -> Union[Dict, SurveyUs
     forms = {}
     questions = (
         SurveyQuestion.objects.filter(section__label__contains=CONTEXT_SECTION_LABEL)
-        .order_by("qindex")
+        .order_by("-qindex")
         .all()
     )
 
@@ -158,37 +158,25 @@ def handle_question_answers_request(
 ) -> Union[Dict, SurveyUser]:
     current_sequence = get_sequence_by_user_and_index(user, question_index)
     current_question = current_sequence.question
-    questions_group = SurveyQuestion.objects.filter(
-        section=current_question.section
-    )
     does_map_exist = does_answers_questions_map_exist()
 
-    question_answers = {}
-    tuple_answers = {}
-    current_questions = {}
-    current_questions_tooltips = {}
     try:
-        for question in questions_group:
-            current_questions[question.id] = _(question.label)
-            current_questions_tooltips[question.id] = _(question.tooltip)
-            question_answers[question.id] = question.surveyquestionanswer_set.filter(
-                is_active=True
-            )
-            tuple_answers[question.id] = get_answer_choices(question, user.chosen_lang)
+        question_answers = current_question.surveyquestionanswer_set.filter(
+            is_active=True
+        )
+        tuple_answers = get_answer_choices(current_question, user.chosen_lang)
     except Exception as e:
         logger.error(e)
         raise e
 
     free_text_answer_id = 0
-    # TODO: adjust here....
-    # for question_answer in question_answers:
-    #     if question_answer.atype == "T":
-    #         free_text_answer_id = question_answer.id
+    for question_answer in question_answers:
+        if question_answer.atype == "T":
+            free_text_answer_id = question_answer.id
 
     translation.activate(user.chosen_lang)
-    forms = {}
+
     if request.method == "POST":
-        # TODO: adjust here....
         form = AnswerMChoice(
             tuple_answers,
             data=request.POST,
@@ -240,40 +228,38 @@ def handle_question_answers_request(
 
             return user
     else:
-        for question in questions_group:
-            forms[question.id] = AnswerMChoice(
-                tuple_answers[question.id],
-                lang=user.chosen_lang,
-                answers_field_type=question.qtype,
-                question_answers=question_answers[question.id],
-            )
-
-            user_answers = SurveyUserAnswer.objects.filter(
-                user=user, answer__question=question
-            )
-            selected_answers = []
-            for user_answer in user_answers:
-                if user_answer.uvalue == "1":
-                    selected_answers.append(user_answer.answer.id)
-                if user_answer.content:
-                    forms[question.id].set_answer_content(user_answer.content)
-
-            # user_feedback = SurveyUserFeedback.objects.filter(
-            #     user=user, question=current_question
-            # )[:1]
-
-            forms[question.id].set_answers(selected_answers)
-            # if user_feedback:
-            #     forms[question.id].set_feedback(user_feedback[0].feedback)
-
-    for question in questions_group:
-        unique_answers = SurveyQuestionAnswer.objects.filter(
-            question=question, uniqueAnswer=True
+        form = AnswerMChoice(
+            tuple_answers,
+            lang=user.chosen_lang,
+            answers_field_type=current_question.qtype,
+            question_answers=question_answers,
         )
-        forms[question.id].set_unique_answers(
-            ",".join(str(uniqueAnswer.id) for uniqueAnswer in unique_answers)
+
+        user_answers = SurveyUserAnswer.objects.filter(
+            user=user, answer__question=current_question
         )
-        forms[question.id].set_free_text_answer_id(free_text_answer_id)
+        selected_answers = []
+        for user_answer in user_answers:
+            if user_answer.uvalue == "1":
+                selected_answers.append(user_answer.answer.id)
+            if user_answer.content:
+                form.set_answer_content(user_answer.content)
+
+        user_feedback = SurveyUserFeedback.objects.filter(
+            user=user, question=current_question
+        )[:1]
+
+        form.set_answers(selected_answers)
+        if user_feedback:
+            form.set_feedback(user_feedback[0].feedback)
+
+    uniqueAnswers = SurveyQuestionAnswer.objects.filter(
+        question=current_question, uniqueAnswer=True
+    )
+    form.set_unique_answers(
+        ",".join(str(uniqueAnswer.id) for uniqueAnswer in uniqueAnswers)
+    )
+    form.set_free_text_answer_id(free_text_answer_id)
 
     return {
         "title": CUSTOM["tool_name"]
@@ -281,9 +267,9 @@ def handle_question_answers_request(
         + _("Question")
         + " "
         + str(question_index),
-        "questions": current_questions,
-        "questions_tooltips": current_questions_tooltips,
-        "forms": forms,
+        "question": _(current_question.label),
+        "question_tooltip": _(current_question.tooltip),
+        "form": form,
         "action": "/survey/question/" + str(question_index),
         "user": user,
         "current_question_index": question_index,
@@ -652,7 +638,7 @@ def get_answer_choices(question: SurveyQuestion, lang: str) -> List[Tuple[int, s
 def get_questions_with_user_answers(user: SurveyUser):
     survey_user_answers = (
         SurveyUserAnswer.objects.filter(user=user)
-        # .exclude(answer__question__section__label=CONTEXT_SECTION_LABEL)
+        .exclude(answer__question__section__label=CONTEXT_SECTION_LABEL)
         .order_by("answer__question__qindex", "answer__aindex")
     )
 

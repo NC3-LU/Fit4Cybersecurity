@@ -1,0 +1,87 @@
+{% extends 'survey/bootstrap.html' %}
+
+{% load i18n %}
+{% load bootstrap4 %}
+{% load static %}
+
+{% block bootstrap4_extra_head %}
+<meta name="description" content="{{ custom.tool_name }} by NC3-LU" />
+<link rel="stylesheet" type="text/css" href="{% static custom.survey_css %}" />
+<link rel="icon" type="image/x-icon" href="{% static 'images/favicon.ico' %}" />
+<link rel="apple-touch-icon" sizes="152x152" href="{% static 'images/apple-touch-icon.png' %}" />
+<link rel="apple-touch-icon" sizes="180x180" href="{% static 'images/apple-touch-icon.png' %}" />
+<link rel="stylesheet" href="{% static 'npm_components/fork-awesome/css/fork-awesome.min.css' %}">
+<link rel="stylesheet" href="{% static 'npm_components/bootstrap-icons/font/bootstrap-icons.css' %}">
+<script type="text/javascript" src="{% static 'survey/js/language-selector.js' %}"></script>
+{% endblock %}
+
+{% block title %}
+{{ custom.tool_name }}
+{% endblock %}
+
+{% block bootstrap4_content %}
+{% get_current_language as LANGUAGE_CODE %}
+{% get_available_languages as LANGUAGES %}
+{% get_language_info_list for LANGUAGES as languages %}
+
+{% if user.is_authenticated %}
+<nav class="navbar navbar-expand-lg navbar-dark bg-cssk-blue">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto w-100 justify-content-end">
+      {% if user.is_superuser %}
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownAdmin" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-cogs"></i></a>
+        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownAdmin">
+          <a class="dropdown-item" href="/admin/" title="Dashboard">Django Administration</a>
+        </div>
+      </li>
+      {% endif %}
+      <li class="nav-item">
+        <a class="nav-link" href="/admin/logout/" title="Log out"><i class="fa fa-sign-out" aria-hidden="true"></i></a>
+      </li>
+    </ul>
+  </div>
+</nav>
+{% endif %}
+
+<div class="container">
+  {% block main_logo %}
+  <div class="row">
+    <div class="col text-center">
+      <div class="mt-1 border-bottom border-primary">
+        {% include custom.templates_parts.main_logo %}
+      </div>
+    </div>
+  </div>
+  {% endblock %}
+
+  {% if languages|length > 1 %}
+  <div class="dropdown d-flex flex-row-reverse" id="language-selector" >
+    <a class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <i class="bi bi-translate text-primary"></i>
+        {{ LANGUAGE_CODE|language_name_local }}
+    </a>
+    <div class="dropdown-menu">
+      {% for lang in languages %}
+      <a class="dropdown-item" href="/survey/language/{{ lang.code }}">
+        {{ lang.name_local }}
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+  {% endif %}
+
+  {% autoescape off %}{% bootstrap_messages %}{# {% bootstrap_alert content %} #}{% endautoescape %}
+
+  <div id="content-body">
+    {% block content %}{% endblock %}
+  </div>
+</div>
+
+<div class="footer d-none d-md-block">
+  {% include custom.templates_parts.footer %}
+</div>
+{% endblock %}

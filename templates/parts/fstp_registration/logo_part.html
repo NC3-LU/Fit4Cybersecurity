@@ -5,9 +5,11 @@
 <h1>
     <a href="/" class="logo-link">
         <img
-            src="{% settings_value 'SITE_IMAGES_URL' %}/logo-nc3.png"
+            src="{% settings_value 'STATIC_URL' %}images/logo-nc3-full.png"
+            class="py-4"
             width="50%"
             alt="{{ custom.tool_name }}"
-            title="{{ custom.tool_name }}">
+            title="{{ custom.tool_name }}"
+            style="max-width: 300px;">
     </a>
 </h1>

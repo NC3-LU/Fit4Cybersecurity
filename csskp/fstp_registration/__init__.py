@@ -4,18 +4,7 @@ CUSTOM = {
     # Generic configurations
     "tool_name": "FSTP Registration",
     "intro_text": gettext_lazy(
-        "This questionnaire, created in consultation with "
-        '<a href="https://cnpd.public.lu/en.html" target="_blank">CNPD</a>, '
-        "aims to help organisations assess to what extent they are in control of their personal "
-        "data risks. First, Fit4Privacy asks questions to understand the amount of personal "
-        "data processing already in place, then its questions examine the response of the "
-        "organisation towards GDPR obligations. Based on the identified scope, the tool offers "
-        "a set of recommendations that could be consolidated into the first steps towards "
-        "implementing privacy and data protection. Note that this is a self-assessment tool "
-        "and as such cannot provide definitive guidelines. Yet, Fit4Privacy is raising "
-        "awareness around key topics such as personal data processing, data lifecycle "
-        "management, and basic data protection obligations for which organisations should "
-        "already be prepared as of 2021."
+        "TO BE DEFINED 895"
     ),
     "countries_first": [
         "LU",
