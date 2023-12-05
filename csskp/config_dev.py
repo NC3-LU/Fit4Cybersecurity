@@ -18,7 +18,7 @@ SITE_NAME = "fstp_registration"
 
 SECRET_KEY = "u__*z&=urjtc0t)b)@5qbt_a#3-354=k9x(j)@eu#h7sb=-66s"
 
-HASH_KEY = b"#StandWithtUkraineHP-TmGv-4z7h-1xaQp0RYuY20="
+HASH_KEY = b"KnX5YN3hvP54jOIMkacWdqxFX1RKk8cjqVZjGJbAscM="
 
 DEBUG = True
 

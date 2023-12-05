@@ -40,17 +40,17 @@ CUSTOM = {
     # Available modules
     "modules": {
         "reportDownload": True,
-        "reportEmail": False,
+        "reportEmail": True,
         "requestDiagnostic": False,
         "requestTraining": False,
-        "displayResults": True,
+        "displayResults": False,
     },
     # Available report parts
     "report": {
         "introduction": True,
         "description": True,
-        "results": True,
-        "recommendations": True,
+        "results": False,
+        "recommendations": False,
         "questions": True,
     },
     # Available stats charts
