@@ -1,5 +1,238 @@
 [
   {
+    "label": "Project name",
+    "service_category": "Legal Entity",
+    "section": "Legal Entity",
+    "qtype": "T",
+    "qindex": 1,
+    "maxPoints": 0,
+    "answers": [
+      {
+          "aindex": 1,
+          "uniqueAnswer": true,
+          "score": 0,
+          "atype": "T",
+          "recommendations": []
+      }
+    ]
+  },
+  {
+    "label": "Project/company website",
+    "service_category": "Legal Entity",
+    "section": "Legal Entity",
+    "qtype": "T",
+    "qindex": 2,
+    "maxPoints": 0,
+    "answers": [
+      {
+        "label": "",
+        "aindex": 1,
+        "uniqueAnswer": true,
+        "score": 0,
+        "atype": "T",
+        "recommendations": []
+      }
+    ]
+  },
+  {
+    "label": "Legal entity name",
+    "service_category": "Legal Entity",
+    "section": "Legal Entity",
+    "qtype": "T",
+    "qindex": 3,
+    "maxPoints": 0,
+    "answers": [
+      {
+        "label": "",
+        "aindex": 1,
+        "uniqueAnswer": true,
+        "score": 0,
+        "atype": "T",
+        "recommendations": []
+      }
+    ]
+  },
+  {
+    "label": "Legal form",
+    "service_category": "Legal Entity",
+    "section": "Legal Entity",
+    "qtype": "T",
+    "qindex": 4,
+    "maxPoints": 0,
+    "answers": [
+      {
+        "label": "",
+        "aindex": 1,
+        "uniqueAnswer": true,
+        "score": 0,
+        "atype": "T",
+        "recommendations": []
+      }
+    ]
+  },
+  {
+    "label": "Company HQ address",
+    "service_category": "Legal Entity",
+    "section": "Legal Entity",
+    "qtype": "T",
+    "qindex": 5,
+    "maxPoints": 0,
+    "answers": [
+      {
+        "label": "",
+        "aindex": 1,
+        "uniqueAnswer": true,
+        "score": 0,
+        "atype": "T",
+        "recommendations": []
+      }
+    ]
+  },
+  {
+    "label": "RCS number",
+    "service_category": "Legal Entity",
+    "section": "Legal Entity",
+    "qtype": "T",
+    "qindex": 6,
+    "maxPoints": 0,
+    "answers": [
+      {
+        "label": "",
+        "aindex": 1,
+        "uniqueAnswer": true,
+        "score": 0,
+        "atype": "T",
+        "recommendations": []
+      }
+    ]
+  },
+
+
+  {
+    "label": "Gender",
+    "service_category": "Legal Representative",
+    "section": "Legal Representative",
+    "qtype": "S",
+    "qindex": 7,
+    "maxPoints": 0,
+    "answers": [
+      {
+        "label": "Male",
+        "aindex": 1,
+        "uniqueAnswer": false,
+        "score": 0,
+        "atype": "P",
+        "recommendations": []
+      },
+      {
+        "label": "Female",
+        "aindex": 2,
+        "uniqueAnswer": false,
+        "score": 0,
+        "atype": "P",
+        "recommendations": []
+      },
+      {
+        "label": "Other",
+        "aindex": 3,
+        "uniqueAnswer": false,
+        "score": 0,
+        "atype": "P",
+        "recommendations": []
+      }
+    ]
+  },
+  {
+    "label": "First name",
+    "service_category": "Legal Representative",
+    "section": "Legal Representative",
+    "qtype": "T",
+    "qindex": 8,
+    "maxPoints": 0,
+    "answers": [
+      {
+        "label": "",
+        "aindex": 1,
+        "uniqueAnswer": true,
+        "score": 0,
+        "atype": "T",
+        "recommendations": []
+      }
+    ]
+  },
+  {
+    "label": "Last name",
+    "service_category": "Legal Representative",
+    "section": "Legal Representative",
+    "qtype": "T",
+    "qindex": 9,
+    "maxPoints": 0,
+    "answers": [
+      {
+        "label": "",
+        "aindex": 1,
+        "uniqueAnswer": true,
+        "score": 0,
+        "atype": "T",
+        "recommendations": []
+      }
+    ]
+  },
+  {
+    "label": "E-mail",
+    "service_category": "Legal Representative",
+    "section": "Legal Representative",
+    "qtype": "T",
+    "qindex": 10,
+    "maxPoints": 0,
+    "answers": [
+      {
+        "label": "",
+        "aindex": 1,
+        "uniqueAnswer": true,
+        "score": 0,
+        "atype": "T",
+        "recommendations": []
+      }
+    ]
+  },
+  {
+    "label": "Phone number",
+    "service_category": "Legal Representative",
+    "section": "Legal Representative",
+    "qtype": "T",
+    "qindex": 11,
+    "maxPoints": 0,
+    "answers": [
+      {
+        "label": "",
+        "aindex": 1,
+        "uniqueAnswer": true,
+        "score": 0,
+        "atype": "T",
+        "recommendations": []
+      }
+    ]
+  },
+  {
+    "label": "Country",
+    "service_category": "Legal Representative",
+    "section": "Legal Representative",
+    "qtype": "CL",
+    "qindex": 12,
+    "maxPoints": 0,
+    "answers": [
+      {
+        "label": "",
+        "uniqueAnswer": true,
+        "atype": "P",
+        "aindex": 1
+      }
+    ]
+  },
+
+
+  {
     "label": "In which of the following domains does your organisation have expertise?",
     "service_category": "Project",
     "section": "Domain(s) of expertise",
@@ -10,7 +243,7 @@
       {
         "label": "Academia, research or innovation",
         "aindex": 1,
-        "uniqueAnswer": true,
+        "uniqueAnswer": false,
         "score": 0,
         "atype": "P",
         "recommendations": []
@@ -70,7 +303,7 @@
       {
         "label": "Security service provision",
         "aindex": 1,
-        "uniqueAnswer": true,
+        "uniqueAnswer": false,
         "score": 0,
         "atype": "P",
         "recommendations": []
@@ -245,7 +478,7 @@
     "label": "At what development stage is your product/solution?",
     "service_category": "Project",
     "section": "Market and technology readiness",
-    "qtype": "M",
+    "qtype": "S",
     "qindex": 24,
     "maxPoints": 0,
     "answers": [
@@ -302,7 +535,7 @@
       {
         "label": "Supporting the development of cybersecurity start-ups;",
         "aindex": 1,
-        "uniqueAnswer": true,
+        "uniqueAnswer": false,
         "score": 0,
         "atype": "P",
         "recommendations": []
@@ -439,7 +672,7 @@
     "label": "Have you benefitted from any public grants yet?",
     "service_category": "Financing",
     "section": "Financing",
-    "qtype": "M",
+    "qtype": "S",
     "qindex": 31,
     "maxPoints": 0,
     "answers": [
@@ -454,7 +687,7 @@
       {
         "label": "No",
         "aindex": 2,
-        "uniqueAnswer": false,
+        "uniqueAnswer": true,
         "score": 0,
         "atype": "P",
         "recommendations": []
@@ -462,7 +695,7 @@
     ]
   },
   {
-    "label": "If yes, From which source(s)?",
+    "label": "If yes, from which source(s)?",
     "service_category": "Financing",
     "section": "Financing",
     "qtype": "T",
