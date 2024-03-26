@@ -13,7 +13,7 @@ def get_finished_surveys_list(start_date, end_date):
         status=SURVEY_STATUS_FINISHED,
         updated_at__gte=start_date.strftime(DEFAULT_DATE_FORMAT),
         updated_at__lte=end_date.strftime(DEFAULT_DATE_FORMAT),
-    )
+    ).order_by("updated_at")
 
     total_questions_score = 1
     max_evaluations_per_section = {}
@@ -127,7 +127,7 @@ def get_finished_surveys_list(start_date, end_date):
                     answer_score * 100 / user_answer.answer.question.maxPoints
                 )
                 surveys_users_results["survey_users"][user_id]["sections"][section_id][
-                   "score"
+                    "score"
                 ] += round(answer_score * 100 / max_evaluations_per_section[section_id])
 
             surveys_users_results["survey_users"][user_id]["details"][
