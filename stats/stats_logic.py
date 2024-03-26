@@ -134,15 +134,18 @@ def get_finished_surveys_list(start_date, end_date):
             surveys_users_results["survey_users"][user_id]["details"][
                 "total_score"
             ] = round(total_points_number * 100 / total_questions_score)
-            total_overall_score = total_overall_score + surveys_users_results[
-                "survey_users"
-            ][user_id]["details"]["total_score"]
+            total_overall_score = (
+                total_overall_score
+                + surveys_users_results["survey_users"][user_id]["details"][
+                    "total_score"
+                ]
+            )
 
     return {
         "start_date": str(start_date),
         "end_date": str(end_date),
-        "surveys_users_results": surveys_users_results,
         "total_average_score": round(
-            total_overall_score / completed_surveys_users.count()
-        )
+            total_overall_score / surveys_users_results["surveys_total_number"]
+        ),
+        "surveys_users_results": surveys_users_results,
     }
