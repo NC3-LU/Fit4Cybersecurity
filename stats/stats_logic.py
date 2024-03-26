@@ -143,6 +143,6 @@ def get_finished_surveys_list(start_date, end_date):
         "end_date": str(end_date),
         "total_average_score": round(
             total_overall_score / surveys_users_results["surveys_total_number"]
-        ),
+        ) if surveys_users_results["surveys_total_number"] != 0 else 0,
         "surveys_users_results": surveys_users_results,
     }
