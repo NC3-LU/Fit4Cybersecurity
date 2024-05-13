@@ -14,10 +14,9 @@ CUSTOM = {
 		"addressing these critical challenges. "
         " <br /> "
         " <br /> "
-        "The study is the work product of the Data For Research,"
-        " Innovation, and Governance (D4RIG) team of"
+        "The study is the work product of"
         " the National Cybersecurity Competence Center"
-        " of the Luxembourg House of Cybersecurity."
+        ", a department of the Luxembourg House of Cybersecurity."
     ),
     "countries_first": [
         "LU",
