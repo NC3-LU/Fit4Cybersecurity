@@ -114,6 +114,7 @@ class Command(BaseCommand):
 
             # Create the answers
             answers_dependencies = {}
+            print(question)
             for answer in question["answers"]:
                 try:
                     answer_obj = SurveyQuestionAnswer.all_objects.get(
@@ -284,6 +285,7 @@ class Command(BaseCommand):
             answer__in=answers_to_remove_map
         ).delete()
         for answer_id in answers_questions_map:
+            print(answer_id)
             answer = answers_questions_map[answer_id]["object"]
             SurveyAnswerQuestionMap.objects.filter(answer=answer).delete()
             answer_questions_map = answers_questions_map[answer_id]["questions_map"]
