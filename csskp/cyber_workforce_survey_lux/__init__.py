@@ -17,6 +17,7 @@ CUSTOM = {
         "The study is the work product of"
         " the National Cybersecurity Competence Center"
         ", a department of the Luxembourg House of Cybersecurity."
+        " "
     ),
     "countries_first": [
         "LU",
