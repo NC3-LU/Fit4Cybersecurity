@@ -4,12 +4,19 @@ CUSTOM = {
     # Generic configurations
     "tool_name": "Cybersecurity Workforce Survey Luxembourg",
     "intro_text": gettext_lazy(
-        " Welcome to the Cybersecurity Workforce Survey Luxembourg! This survey aims to gather essential insights into the current landscape of cybersecurity professionals in Luxembourg. Your participation will contribute to a better understanding of the workforce dynamics, skill requirements, and challenges faced in the cybersecurity sector within Luxembourg. Thank you for taking the time to share your valuable input."
+        " Welcome to our survey on the human resources challenges faced by cybersecurity professionals in Luxembourg. The 2023 national ecosystem study on cybersecurity revealed that an overwhelming 82% of market participants identify human resources as a significant obstacle. This encompasses issues such as the location, recruitment, and retention of cybersecurity professionals. Moreover, the study underscores the growing concerns regarding the scarcity of talent and the constraints imposed by remote work, with 77% of respondents expressing worry about each of these factors. "
+        " <br /> "
+        " <br /> "
+        "This questionnaire is intended for cybersecurity professionals " 
+        "working in Luxembourg, and the results are anonymous "
+	    "with the sole purpose of better understanding the market dynamics.  "
+        "Your insights are invaluable in understanding and "
+		"addressing these critical challenges. "
+        " <br /> "
         " <br /> "
         "The study is the work product of"
         " the National Cybersecurity Competence Center"
-        " , a department"
-        " of the Luxembourg House of Cybersecurity."
+        ", a department of the Luxembourg House of Cybersecurity."
     ),
     "countries_first": [
         "LU",
