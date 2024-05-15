@@ -47,7 +47,7 @@ CUSTOM = {
     "templates_parts": {
         # path of the templates parts
         "terms": "terms_part.html",
-        "footer": "surveySMEDemand/footer_part.html",
+        "footer": "footer_part.html",
         "main_logo": "logo_part.html",
         "privacy": "privacy_policy_part.html",
     },
