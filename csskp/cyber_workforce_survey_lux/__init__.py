@@ -4,7 +4,7 @@ CUSTOM = {
     # Generic configurations
     "tool_name": "Cybersecurity Workforce Survey Luxembourg",
     "intro_text": gettext_lazy(
-        " Welcome to our survey on the human resources challenges faced by cybersecurity professionals in Luxembourg. The 2023 national ecosystem study on cybersecurity revealed that an overwhelming 82% of market participants identify human resources as a significant obstacle. This encompasses issues such as the location, recruitment, and retention of cybersecurity professionals. Moreover, the study underscores the growing concerns regarding the scarcity of talent and the constraints imposed by remote work, with 77% of respondents expressing worry about each of these factors. "
+        " This survey is aimed at cybersecurity professionals in Luxembourg. The 2023 national ecosystem study on cybersecurity revealed that an overwhelming 82% of market participants identify human resources as a significant obstacle. This encompasses issues such as the location, recruitment, and retention of cybersecurity professionals. Moreover, the study underscores the growing concerns regarding the scarcity of talent and the constraints imposed by remote work, with 77% of respondents expressing worry about each of these factors. "
         " <br /> "
         " <br /> "
         "This questionnaire is intended for cybersecurity professionals " 
