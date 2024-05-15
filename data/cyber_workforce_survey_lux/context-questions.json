@@ -1,296 +1,296 @@
 [
-    {
-      "section": "__context",
-      "service_category": "Context",
-      "qtype": "SO",
-      "qindex": 2,
-      "label": "How many employees does your business have?",
-      "answers": [
+  {
+    "section": "__context",
+    "service_category": "Socio-economic data",
+    "qtype": "S",
+    "qindex": 1,
+    "label": "How many employees does your business have?",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "value": "1",
+        "label": "1"
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "value": "<10",
+        "label": "<10"
+      },
+      {
+        "aindex": 3,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "value": "<50",
+        "label": "<50"
+      },
+      {
+        "aindex": 4,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "value": "<250",
+        "label": "<250"
+      },
+      {
+        "aindex": 5,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "value": ">=250",
+        "label": ">=250"
+      }
+    ]
+  },
+  {
+    "section": "__context",
+    "service_category": "Socio-economic data",
+    "qtype": "S",
+    "qindex": 2,
+    "label": "In which canton is your head office located?",
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "Capellen",
+        "value": "CAPE"
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "Clervaux",
+        "value": "CLER"
+      },
+      {
+        "aindex": 3,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "Diekirch",
+        "value": "DIER"
+      },
+      {
+        "aindex": 4,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "Echternach",
+        "value": "ECHT"
+      },
+      {
+        "aindex": 5,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "Esch-sur-Alzette",
+        "value": "ESCH"
+      },
+      {
+        "aindex": 6,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "Grevenmacher",
+        "value": "GREV"
+      },
+      {
+        "aindex": 7,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "Luxembourg",
+        "value": "LUXE"
+      },
+      {
+        "aindex": 8,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "Mersch",
+        "value": "MERS"
+      },
+      {
+        "aindex": 9,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "Redange",
+        "value": "REDA"
+      },
+      {
+        "aindex": 10,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "Remich",
+        "value": "REMI"
+      },
+      {
+        "aindex": 11,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "Vianden",
+        "value": "VIAN"
+      },
+      {
+        "aindex": 11,
+        "uniqueAnswer": true,
+        "atype": "P",
+        "label": "Wiltz",
+        "value": "WILT"
+      }
+    ]
+  },
+  {
+    "section": "__context",
+    "service_category": "Socio-economic data",
+    "qtype": "S",
+    "qindex": 3,
+    "label": "What is your business sector? The list below uses the NACE code classification.",
+    "answers_order": "label",
+    "answers": [
         {
-          "aindex": 1,
+          "label": "Agriculture, forestry and fishing",
+          "value": "A",
           "uniqueAnswer": true,
           "atype": "P",
-          "value": "1",
-          "label": "1"
+          "aindex": 1
         },
         {
-          "aindex": 2,
+          "label": "Mining and quarrying",
+          "value": "B",
           "uniqueAnswer": true,
           "atype": "P",
-          "value": "<10",
-          "label": "<10"
+          "aindex": 2
         },
         {
-          "aindex": 3,
+          "label": "Manufacturing",
+          "value": "C",
           "uniqueAnswer": true,
           "atype": "P",
-          "value": "<50",
-          "label": "<50"
+          "aindex": 3
         },
         {
-          "aindex": 4,
+          "label": "Electricity, gas, steam and air conditioning supply",
+          "value": "D",
           "uniqueAnswer": true,
           "atype": "P",
-          "value": "<250",
-          "label": "<250"
+          "aindex": 4
         },
         {
-          "aindex": 4,
+          "label": "Water supply; sewerage; waste management and remediation activities",
+          "value": "E",
           "uniqueAnswer": true,
           "atype": "P",
-          "value": ">250",
-          "label": ">250"
+          "aindex": 5
+        },
+        {
+          "label": "Construction",
+          "value": "F",
+          "uniqueAnswer": true,
+          "atype": "P",
+          "aindex": 6
+        },
+        {
+          "label": "Wholesale and retail trade; repair of motor vehicles and motorcycles",
+          "value": "G",
+          "uniqueAnswer": true,
+          "atype": "P",
+          "aindex": 7
+        },
+        {
+          "label": "Transporting and storage",
+          "value": "H",
+          "uniqueAnswer": true,
+          "atype": "P",
+          "aindex": 8
+        },
+        {
+          "label": "Accommodation and food service activities",
+          "value": "I",
+          "uniqueAnswer": true,
+          "atype": "P",
+          "aindex": 9
+        },
+        {
+          "label": "Information and communication",
+          "value": "J",
+          "uniqueAnswer": true,
+          "atype": "P",
+          "aindex": 10
+        },
+        {
+          "label": "Financial and insurance activities",
+          "value": "K",
+          "uniqueAnswer": true,
+          "atype": "P",
+          "aindex": 11
+        },
+        {
+          "label": "Real estate activities",
+          "value": "L",
+          "uniqueAnswer": true,
+          "atype": "P",
+          "aindex": 12
+        },
+        {
+          "label": "Professional, scientific and technical activities",
+          "value": "M",
+          "uniqueAnswer": true,
+          "atype": "P",
+          "aindex": 13
+        },
+        {
+          "label": "Administrative and support service activities",
+          "value": "N",
+          "uniqueAnswer": true,
+          "atype": "P",
+          "aindex": 14
+        },
+        {
+          "label": "Public administration and defense; compulsatory social security",
+          "value": "O",
+          "uniqueAnswer": true,
+          "atype": "P",
+          "aindex": 15
+        },
+        {
+          "label": "Education",
+          "value": "P",
+          "uniqueAnswer": true,
+          "atype": "P",
+          "aindex": 16
+        },
+        {
+          "label": "Human health and social work activities",
+          "value": "Q",
+          "uniqueAnswer": true,
+          "atype": "P",
+          "aindex": 17
+        },
+        {
+          "label": "Arts, entertainment and recreation",
+          "value": "R",
+          "uniqueAnswer": true,
+          "atype": "P",
+          "aindex": 18
+        },
+        {
+          "label": "Other services activities",
+          "value": "S",
+          "uniqueAnswer": true,
+          "atype": "P",
+          "aindex": 19
+        },
+        {
+          "label": "Activities of hoseholds as employers; undifferentiated goods - and services - producing activities of households for own use",
+          "value": "T",
+          "uniqueAnswer": true,
+          "atype": "P",
+          "aindex": 20
+        },
+        {
+          "label": "Activities of extraterritorial organisations and bodies",
+          "value": "U",
+          "uniqueAnswer": true,
+          "atype": "P",
+          "aindex": 21
         }
       ]
-    },
-    {
-      "section": "__context",
-      "service_category": "Socio-economic data",
-      "qtype": "SO",
-      "qindex": 3,
-      "label": "In which canton is your head office located?",
-      "answers": [
-        {
-          "aindex": 1,
-          "uniqueAnswer": true,
-          "atype": "P",
-          "label": "Capellen",
-          "value": "CAPE"
-        },
-        {
-          "aindex": 2,
-          "uniqueAnswer": true,
-          "atype": "P",
-          "label": "Clervaux",
-          "value": "CLER"
-        },
-        {
-          "aindex": 3,
-          "uniqueAnswer": true,
-          "atype": "P",
-          "label": "Diekirch",
-          "value": "DIER"
-        },
-        {
-          "aindex": 4,
-          "uniqueAnswer": true,
-          "atype": "P",
-          "label": "Echternach",
-          "value": "ECHT"
-        },
-        {
-          "aindex": 5,
-          "uniqueAnswer": true,
-          "atype": "P",
-          "label": "Esch-sur-Alzette",
-          "value": "ESCH"
-        },
-        {
-          "aindex": 6,
-          "uniqueAnswer": true,
-          "atype": "P",
-          "label": "Grevenmacher",
-          "value": "GREV"
-        },
-        {
-          "aindex": 7,
-          "uniqueAnswer": true,
-          "atype": "P",
-          "label": "Luxembourg",
-          "value": "LUXE"
-        },
-        {
-          "aindex": 8,
-          "uniqueAnswer": true,
-          "atype": "P",
-          "label": "Mersch",
-          "value": "MERS"
-        },
-        {
-          "aindex": 9,
-          "uniqueAnswer": true,
-          "atype": "P",
-          "label": "Redange",
-          "value": "REDA"
-        },
-        {
-          "aindex": 10,
-          "uniqueAnswer": true,
-          "atype": "P",
-          "label": "Remich",
-          "value": "REMI"
-        },
-        {
-          "aindex": 11,
-          "uniqueAnswer": true,
-          "atype": "P",
-          "label": "Vianden",
-          "value": "VIAN"
-        },
-        {
-          "aindex": 11,
-          "uniqueAnswer": true,
-          "atype": "P",
-          "label": "Wiltz",
-          "value": "WILT"
-        }
-      ]
-    },
-    {
-      "section": "__context",
-      "service_category": "Socio-economic data",
-      "qtype": "SO",
-      "qindex": 4,
-      "label": "What is your activity sector? (NACE CODE for reference)",
-      "answers_order": "label",
-      "answers": [
-          {
-            "label": "Agriculture, forestry and fishing",
-            "value": "A",
-            "uniqueAnswer": true,
-            "atype": "P",
-            "aindex": 1
-          },
-          {
-            "label": "Mining and quarrying",
-            "value": "B",
-            "uniqueAnswer": true,
-            "atype": "P",
-            "aindex": 2
-          },
-          {
-            "label": "Manufacturing",
-            "value": "C",
-            "uniqueAnswer": true,
-            "atype": "P",
-            "aindex": 3
-          },
-          {
-            "label": "Electricity, gas, steam and air conditioning supply",
-            "value": "D",
-            "uniqueAnswer": true,
-            "atype": "P",
-            "aindex": 4
-          },
-          {
-            "label": "Water supply; sewerage; waste management and remediation activities",
-            "value": "E",
-            "uniqueAnswer": true,
-            "atype": "P",
-            "aindex": 5
-          },
-          {
-            "label": "Construction",
-            "value": "F",
-            "uniqueAnswer": true,
-            "atype": "P",
-            "aindex": 6
-          },
-          {
-            "label": "Wholesale and retail trade; repair of motor vehicles and motorcycles",
-            "value": "G",
-            "uniqueAnswer": true,
-            "atype": "P",
-            "aindex": 7
-          },
-          {
-            "label": "Transporting and storage",
-            "value": "H",
-            "uniqueAnswer": true,
-            "atype": "P",
-            "aindex": 8
-          },
-          {
-            "label": "Accommodation and food service activities",
-            "value": "I",
-            "uniqueAnswer": true,
-            "atype": "P",
-            "aindex": 9
-          },
-          {
-            "label": "Information and communication",
-            "value": "J",
-            "uniqueAnswer": true,
-            "atype": "P",
-            "aindex": 10
-          },
-          {
-            "label": "Financial and insurance activities",
-            "value": "K",
-            "uniqueAnswer": true,
-            "atype": "P",
-            "aindex": 11
-          },
-          {
-            "label": "Real estate activities",
-            "value": "L",
-            "uniqueAnswer": true,
-            "atype": "P",
-            "aindex": 12
-          },
-          {
-            "label": "Professional, scientific and technical activities",
-            "value": "M",
-            "uniqueAnswer": true,
-            "atype": "P",
-            "aindex": 13
-          },
-          {
-            "label": "Administrative and support service activities",
-            "value": "N",
-            "uniqueAnswer": true,
-            "atype": "P",
-            "aindex": 14
-          },
-          {
-            "label": "Public administration and defense; compulsatory social security",
-            "value": "O",
-            "uniqueAnswer": true,
-            "atype": "P",
-            "aindex": 15
-          },
-          {
-            "label": "Education",
-            "value": "P",
-            "uniqueAnswer": true,
-            "atype": "P",
-            "aindex": 16
-          },
-          {
-            "label": "Human health and social work activities",
-            "value": "Q",
-            "uniqueAnswer": true,
-            "atype": "P",
-            "aindex": 17
-          },
-          {
-            "label": "Arts, entertainment and recreation",
-            "value": "R",
-            "uniqueAnswer": true,
-            "atype": "P",
-            "aindex": 18
-          },
-          {
-            "label": "Other services activities",
-            "value": "S",
-            "uniqueAnswer": true,
-            "atype": "P",
-            "aindex": 19
-          },
-          {
-            "label": "Activities of hoseholds as employers; undifferentiated goods - and services - producing activities of households for own use",
-            "value": "T",
-            "uniqueAnswer": true,
-            "atype": "P",
-            "aindex": 20
-          },
-          {
-            "label": "Activities of extraterritorial organisations and bodies",
-            "value": "U",
-            "uniqueAnswer": true,
-            "atype": "P",
-            "aindex": 21
-          }
-        ]
-    }
+  }
 ]
