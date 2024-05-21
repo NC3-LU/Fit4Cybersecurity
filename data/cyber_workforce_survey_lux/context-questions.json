@@ -141,155 +141,162 @@
     "service_category": "Socio-economic data",
     "qtype": "S",
     "qindex": 3,
-    "label": "What is your business sector? The list below uses the NACE code classification. You can find your NACE code <a href=\"https://guichet.public.lu/en/citoyens/outils/code-nace.html\" target=\"_blank\" rel=\"noopener noreferrer\">here</a>. If you already know your NACE code, you can consult the list provided by the EU Commission <a href=\"https://ec.europa.eu/competition/mergers/cases/index/nace_all.html\" target=\"_blank\" rel=\"noopener noreferrer\">here</a>.",
+    "label": "What is your business sector? The list below uses the NACE code classification. You can find yourcompany's NACE code <a href=\"https://guichet.public.lu/en/citoyens/outils/code-nace.html\" target=\"_blank\" rel=\"noopener noreferrer\">here</a>. If you already know your NACE code, you can consult the list provided by the EU Commission <a href=\"https://ec.europa.eu/competition/mergers/cases/index/nace_all.html\" target=\"_blank\" rel=\"noopener noreferrer\">here</a>.",
     "answers_order": "label",
     "answers": [
         {
-          "label": "Agriculture, forestry and fishing",
+          "label": "A - Agriculture, forestry and fishing",
           "value": "A",
           "uniqueAnswer": true,
           "atype": "P",
           "aindex": 1
         },
         {
-          "label": "Mining and quarrying",
+          "label": "B - Mining and quarrying",
           "value": "B",
           "uniqueAnswer": true,
           "atype": "P",
           "aindex": 2
         },
         {
-          "label": "Manufacturing",
+          "label": "C - Manufacturing",
           "value": "C",
           "uniqueAnswer": true,
           "atype": "P",
           "aindex": 3
         },
         {
-          "label": "Electricity, gas, steam and air conditioning supply",
+          "label": "D - Electricity, gas, steam and air conditioning supply",
           "value": "D",
           "uniqueAnswer": true,
           "atype": "P",
           "aindex": 4
         },
         {
-          "label": "Water supply; sewerage; waste management and remediation activities",
+          "label": "E - Water supply; sewerage; waste management and remediation activities",
           "value": "E",
           "uniqueAnswer": true,
           "atype": "P",
           "aindex": 5
         },
         {
-          "label": "Construction",
+          "label": "F - Construction",
           "value": "F",
           "uniqueAnswer": true,
           "atype": "P",
           "aindex": 6
         },
         {
-          "label": "Wholesale and retail trade; repair of motor vehicles and motorcycles",
+          "label": "G - Wholesale and retail trade; repair of motor vehicles and motorcycles",
           "value": "G",
           "uniqueAnswer": true,
           "atype": "P",
           "aindex": 7
         },
         {
-          "label": "Transporting and storage",
+          "label": "H - Transporting and storage",
           "value": "H",
           "uniqueAnswer": true,
           "atype": "P",
           "aindex": 8
         },
         {
-          "label": "Accommodation and food service activities",
+          "label": "I - Accommodation and food service activities",
           "value": "I",
           "uniqueAnswer": true,
           "atype": "P",
           "aindex": 9
         },
         {
-          "label": "Information and communication",
+          "label": "J - Information and communication",
           "value": "J",
           "uniqueAnswer": true,
           "atype": "P",
           "aindex": 10
         },
         {
-          "label": "Financial and insurance activities",
+          "label": "K - Financial and insurance activities",
           "value": "K",
           "uniqueAnswer": true,
           "atype": "P",
           "aindex": 11
         },
         {
-          "label": "Real estate activities",
+          "label": "L - Real estate activities",
           "value": "L",
           "uniqueAnswer": true,
           "atype": "P",
           "aindex": 12
         },
         {
-          "label": "Professional, scientific and technical activities",
+          "label": "M - Professional, scientific and technical activities",
           "value": "M",
           "uniqueAnswer": true,
           "atype": "P",
           "aindex": 13
         },
         {
-          "label": "Administrative and support service activities",
+          "label": "N - Administrative and support service activities",
           "value": "N",
           "uniqueAnswer": true,
           "atype": "P",
           "aindex": 14
         },
         {
-          "label": "Public administration and defense; compulsatory social security",
+          "label": "O - Public administration and defense; compulsatory social security",
           "value": "O",
           "uniqueAnswer": true,
           "atype": "P",
           "aindex": 15
         },
         {
-          "label": "Education",
+          "label": "P - Education",
           "value": "P",
           "uniqueAnswer": true,
           "atype": "P",
           "aindex": 16
         },
         {
-          "label": "Human health and social work activities",
+          "label": "Q - Human health and social work activities",
           "value": "Q",
           "uniqueAnswer": true,
           "atype": "P",
           "aindex": 17
         },
         {
-          "label": "Arts, entertainment and recreation",
+          "label": "R - Arts, entertainment and recreation",
           "value": "R",
           "uniqueAnswer": true,
           "atype": "P",
           "aindex": 18
         },
         {
-          "label": "Other services activities",
+          "label": "S - Other services activities",
           "value": "S",
           "uniqueAnswer": true,
           "atype": "P",
           "aindex": 19
         },
         {
-          "label": "Activities of hoseholds as employers; undifferentiated goods - and services - producing activities of households for own use",
+          "label": "T - Activities of hoseholds as employers; undifferentiated goods - and services - producing activities of households for own use",
           "value": "T",
           "uniqueAnswer": true,
           "atype": "P",
           "aindex": 20
         },
         {
-          "label": "Activities of extraterritorial organisations and bodies",
+          "label": "U - Activities of extraterritorial organisations and bodies",
           "value": "U",
           "uniqueAnswer": true,
           "atype": "P",
           "aindex": 21
+        },
+        {
+          "label": "SKIP",
+          "value": "V",
+          "uniqueAnswer": true,
+          "atype": "P",
+          "aindex": 22
         }
       ]
   }
