@@ -4,19 +4,19 @@ CUSTOM = {
     # Generic configurations
     "tool_name": "Cybersecurity Workforce Survey Luxembourg",
     "intro_text": gettext_lazy(
-        " This survey is aimed at cybersecurity professionals in Luxembourg. The 2023 national ecosystem study on cybersecurity revealed that an overwhelming 82% of market participants identify human resources as a significant obstacle. This encompasses issues such as the location, recruitment, and retention of cybersecurity professionals. Moreover, the study underscores the growing concerns regarding the scarcity of talent and the constraints imposed by remote work, with 77% of respondents expressing worry about each of these factors. "
+        " Welcome to the Cybersecurity Workforce Survey, designed for professionals in Luxembourg. This survey is crucial as it builds on the 2023 national ecosystem study, which revealed that 82% of market participants view human resources as a major obstacle, including challenges related to location, recruitment, and retention. "
         " <br /> "
         " <br /> "
-        "This questionnaire is intended for cybersecurity professionals " 
-        "working in Luxembourg, and the results are anonymous "
-	    "with the sole purpose of better understanding the market dynamics.  "
-        "Your insights are invaluable in understanding and "
-		"addressing these critical challenges. "
+        " Furthermore, 77% of respondents expressed concerns about "
+        "talent scarcity and the limitations of remote work. " 
+        "Your insights are vital for better understanding and addressing "
+		"these workforce challenges. "
         " <br /> "
         " <br /> "
-        "The study is the work product of"
-        " the National Cybersecurity Competence Center"
-        ", a department of the Luxembourg House of Cybersecurity."
+        "The survey is anonymous and there are no right or wrong answers. "
+		"It is conducted by the National Cybersecurity Competence Center "
+		"of the Luxembourg House of Cybersecurity. Your participation will " "help shape effective strategies to enhance the cybersecurity "
+		"workforce in Luxembourg."
     ),
     "countries_first": [
         "LU",
