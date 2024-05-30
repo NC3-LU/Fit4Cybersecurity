@@ -12,7 +12,7 @@
         "atype": "P",
         "questions_map": [
           {
-            "label": "Have you started your career in Luxembourg?",
+            "label": "Did you start your career in Luxembourg?",
             "branch": 0,
             "level": 1,
             "order": 1
@@ -26,7 +26,7 @@
         "atype": "P",
         "questions_map": [
           {
-            "label": "Have you started your career in Luxembourg?",
+            "label": "Did you start your career in Luxembourg?",
             "branch": 0,
             "level": 1,
             "order": 1
@@ -40,7 +40,7 @@
         "atype": "P",
         "questions_map": [
           {
-            "label": "Have you started your career in Luxembourg?",
+            "label": "Did you start your career in Luxembourg?",
             "branch": 0,
             "level": 1,
             "order": 1
@@ -54,7 +54,7 @@
         "atype": "P",
         "questions_map": [
           {
-            "label": "Have you started your career in Luxembourg?",
+            "label": "Did you start your career in Luxembourg?",
             "branch": 0,
             "level": 1,
             "order": 1
@@ -68,7 +68,7 @@
         "atype": "T",
         "questions_map": [
           {
-            "label": "Have you started your career in Luxembourg?",
+            "label": "Did you start your career in Luxembourg?",
             "branch": 0,
             "level": 1,
             "order": 1
@@ -83,7 +83,7 @@
     "service_category": "Regional Background",
     "qtype": "ST",
     "qindex": 2,
-    "label": "Have you started your career in Luxembourg?",
+    "label": "Did you start your career in Luxembourg?",
     "answers": [
       {
           "aindex": 1,
@@ -1322,6 +1322,20 @@
           }
         ],
         "label": "Housing prices"
+      },
+      {
+        "aindex": 10,
+        "uniqueAnswer": false,
+        "atype": "T",
+        "questions_map": [
+          {
+            "label": "Do you think the Luxembourg cybersecurity market offers sufficient opportunities for long-term professional growth?",
+            "branch": 1,
+            "level": 12,
+            "order": 1
+          }
+        ],
+        "label": "Other reasons as specified:"
       }
     ]
   },
@@ -1457,6 +1471,34 @@
           }
         ],
         "label": "Naturalization"
+      },
+      {
+        "aindex": 10,
+        "uniqueAnswer": false,
+        "atype": "P",
+        "questions_map": [
+          {
+            "label": "Do you think the Luxembourg cybersecurity market offers sufficient opportunities for long-term professional growth?",
+            "branch": 2,
+            "level": 12,
+            "order": 1
+          }
+        ],
+        "label": "Attractiveness of the cybersecurity ecosystem"
+      },
+      {
+        "aindex": 11,
+        "uniqueAnswer": false,
+        "atype": "T",
+        "questions_map": [
+          {
+            "label": "Do you think the Luxembourg cybersecurity market offers sufficient opportunities for long-term professional growth?",
+            "branch": 2,
+            "level": 12,
+            "order": 1
+          }
+        ],
+        "label": "Other reasons as specified:"
       }
     ]
   },
