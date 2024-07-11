@@ -40,15 +40,17 @@ CUSTOM = {
         "terms": "terms_part.html",
         "footer": "fit4ehealth/footer_part.html",
         "main_logo": "logo_part.html",
+        "privacy": "privacy_policy_part.html",
     },
     # Available modules
     "modules": {
         "displayProgressBar": True,
         "reportDownload": True,
         "reportEmail": False,
-        "requestDiagnostic": True,
+        "requestDiagnostic": False,
         "requestTraining": False,
         "displayResults": True,
+        "faqPage": True,
     },
     # Available report parts
     "report": {
@@ -68,6 +70,7 @@ CUSTOM = {
         "language": True,
         "section": True,
         "category": True,
+        "current_question": True,
     },
     "chart_exclude_sections": ["eSanté"],
 }

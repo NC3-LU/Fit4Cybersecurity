@@ -1,0 +1,97 @@
+{% extends 'survey/base.html' %}
+
+{% load apptags %}
+
+{% load bootstrap4 %}
+{% load i18n %}
+{% load static %}
+
+{% block bootstrap4_extra_head %}
+    {{ block.super }}
+    <link href="{% static 'fontawesomefree/css/fontawesome.css' %}" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="{% static 'npm_components/bootstrap/dist/js/bootstrap.bundle.min.js' %}"></script>
+{% endblock %}
+
+{% block content %}
+<div class="container accordion-one">
+    <div class="panel-group" id="accordionFourLeft">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordionFourLeft" href="#collapseFiveLeftone" aria-expanded="true" class="collapsed">
+                    {% blocktranslate trimmed %}
+                    I am self-employed, working alone, and some of the answers are not applicable to my situation. What should I do?
+                    {% endblocktranslate %}
+                    </a>
+                </h4>
+            </div>
+            <div id="collapseFiveLeftone" class="panel-collapse collapse" aria-expanded="false" role="tablist" style="height: 0px;">
+                <div class="panel-body">
+                    <div class="text-accordion">
+                        <p>
+                        {% blocktranslate trimmed %}
+                        If you are alone or self-employed, some of the possible answers or recommendations may seem disproportionate
+                        or not applicable to your situation. Your answers should reflect your specific circumstances as accurately as possible.
+                        Regarding the recommendations, they may also appear excessive; however, it is important to understand that they are
+                        primarily best practices that need to be adapted to your organization and its context. For example, an individual
+                        working alone in an organization may not necessarily need to create comprehensive and specific rules,
+                        but they can still have reference documents on certain behaviors to adopt or procedures to follow for handling patient data.
+                        {% endblocktranslate %}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                <a class="collapsed" data-toggle="collapse" data-parent="#accordionFourLeft" href="#collapseFiveLeftTwo" aria-expanded="false">
+                {% blocktranslate trimmed %}
+                There is no answer that describes my case. What should I select?
+                {% endblocktranslate %}
+                </a>
+                </h4>
+            </div>
+            <div id="collapseFiveLeftTwo" class="panel-collapse collapse" aria-expanded="false" role="tablist" style="height: 0px;">
+                <div class="panel-body">
+                    <div class="text-accordion">
+                        <p>
+                        {% blocktranslate trimmed %}
+                        You can select the answer that seems closest and most logical to your situation. However, you can also provide
+                        feedback through the free-text field below the question.
+                        {% endblocktranslate %}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                <a class="collapsed" data-toggle="collapse" data-parent="#accordionFourLeft" href="#collapseFiveLeftThree" aria-expanded="false">
+                {% blocktranslate trimmed %}
+                My situation is more complex than the provided options, and I would like to provide additional details to improve the evaluation.
+                {% endblocktranslate %}
+                </a>
+            </h4>
+            </div>
+            <div id="collapseFiveLeftThree" class="panel-collapse collapse" aria-expanded="false" role="tablist">
+                <div class="panel-body">
+                    <div class="text-accordion">
+                        <p>
+                        {% blocktranslate trimmed %}
+                        You can select the answer that seems closest and most logical to your situation. We strongly discourage the use of the
+                        free-text field below the question to specify your case, especially from providing any personal details,
+                        as it would compromise the anonymity of this self-assessment. However, you can always suggest the addition of one or more cases,
+                        and your proposal will be considered.
+                        {% endblocktranslate %}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

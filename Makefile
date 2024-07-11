@@ -48,9 +48,6 @@ update:
 	python manage.py compilemessages
 	python manage.py migrate
 
-heroku:
-	git push heroku master
-
 deploy:
 	docker-compose build
 	docker-compose up -d

@@ -1,11 +1,337 @@
 [
   {
+    "label": "What is your sector?",
+    "service_category": "Context",
+    "section": "__context",
+    "qtype": "SO",
+    "qindex": 1,
+    "maxPoints": 0,
+    "answers": [
+      {
+        "label": "Health",
+        "value": "HEAL",
+        "uniqueAnswer": true,
+        "atype": "P",
+        "aindex": 1
+      }
+    ]
+  },
+  {
+    "label": "Please select your country",
+    "service_category": "Context",
+    "section": "__context",
+    "qtype": "SO",
+    "qindex": 2,
+    "maxPoints": 0,
+    "answers": [
+      {
+        "label": "Luxembourg",
+        "value": "LU",
+        "uniqueAnswer": true,
+        "atype": "P",
+        "aindex": 1
+      }
+    ]
+  },
+  {
+    "label": "Please select your profession",
+    "service_category": "Context",
+    "section": "__context",
+    "qtype": "SO",
+    "qindex": 3,
+    "maxPoints": 0,
+    "answers": [
+      {
+        "label": "General practitioner",
+        "value": "GENERAL",
+        "uniqueAnswer": true,
+        "atype": "P",
+        "aindex": 1
+      },
+      {
+        "label": "Specialist",
+        "value": "SPECIAL",
+        "uniqueAnswer": true,
+        "atype": "P",
+        "aindex": 2
+      },
+      {
+        "label": "Dentist",
+        "value": "DEN",
+        "uniqueAnswer": true,
+        "atype": "P",
+        "aindex": 3
+      },
+      {
+        "label": "Pharmacist",
+        "value": "PHARM",
+        "uniqueAnswer": true,
+        "atype": "P",
+        "aindex": 4
+      },
+      {
+        "label": "Psychotherapist",
+        "value": "PSYCHO",
+        "uniqueAnswer": true,
+        "atype": "P",
+        "aindex": 5
+      },
+      {
+        "label": "Trainee doctor",
+        "value": "TRAINEE",
+        "uniqueAnswer": true,
+        "atype": "P",
+        "aindex": 6
+      },
+      {
+        "label": "Health care assistant ",
+        "value": "HEALTH",
+        "uniqueAnswer": true,
+        "atype": "P",
+        "aindex": 7
+      },
+      {
+        "label": "Social hygiene assistant",
+        "value": "SOCHYG",
+        "uniqueAnswer": true,
+        "atype": "P",
+        "aindex": 8
+      },
+      {
+        "label": "Social worker",
+        "value": "SOCWORK",
+        "uniqueAnswer": true,
+        "atype": "P",
+        "aindex": 9
+      },
+      {
+        "label": "Medical technical assistant in surgery",
+        "value": "ASSISTSURG",
+        "uniqueAnswer": true,
+        "atype": "P",
+        "aindex": 10
+      },
+      {
+        "label": "Medical technical assistant in laboratory",
+        "value": "ASSISTLAB",
+        "uniqueAnswer": true,
+        "atype": "P",
+        "aindex": 11
+      },
+      {
+        "label": "Medical technical assistant in radiology",
+        "value": "ASSISTRADIO",
+        "uniqueAnswer": true,
+        "atype": "P",
+        "aindex": 12
+      },
+      {
+        "label": "Dietician",
+        "value": "DIET",
+        "uniqueAnswer": true,
+        "atype": "P",
+        "aindex": 13
+      },
+      {
+        "label": "Occupational Therapist",
+        "value": "OCCUPTHER",
+        "uniqueAnswer": true,
+        "atype": "P",
+        "aindex": 14
+      },
+      {
+        "label": "Nurse",
+        "value": "NURSE",
+        "uniqueAnswer": true,
+        "atype": "P",
+        "aindex": 15
+      },
+      {
+        "label": "Nurse in anesthesia and intensive care",
+        "value": "NURSEANESTHESIA",
+        "uniqueAnswer": true,
+        "atype": "P",
+        "aindex": 16
+      },
+      {
+        "label": "Pediatric nurse",
+        "value": "PEDIANURSE",
+        "uniqueAnswer": true,
+        "atype": "P",
+        "aindex": 17
+      },
+      {
+        "label": "Graduate Nurse",
+        "value": "GRADNURSE",
+        "uniqueAnswer": true,
+        "atype": "P",
+        "aindex": 18
+      },
+      {
+        "label": "Psychiatric Nurse",
+        "value": "PSYCHNURSE",
+        "uniqueAnswer": true,
+        "atype": "P",
+        "aindex": 19
+      },
+      {
+        "label": "Laboratory assistant",
+        "value": "LABASSIST",
+        "uniqueAnswer": true,
+        "atype": "P",
+        "aindex": 20
+      },
+      {
+        "label": "Masseur",
+        "value": "MASSEUR",
+        "uniqueAnswer": true,
+        "atype": "P",
+        "aindex": 21
+      },
+      {
+        "label": "Physiotherapist",
+        "value": "PHYSIOTHER",
+        "uniqueAnswer": true,
+        "atype": "P",
+        "aindex": 22
+      },
+      {
+        "label": "Speech therapist",
+        "value": "SPEECHTHER",
+        "uniqueAnswer": true,
+        "atype": "P",
+        "aindex": 23
+      },
+      {
+        "label": "Orthoptist",
+        "value": "ORTHOPT",
+        "uniqueAnswer": true,
+        "atype": "P",
+        "aindex": 24
+      },
+      {
+        "label": "Osteopath",
+        "value": "OSTEOPATH",
+        "uniqueAnswer": true,
+        "atype": "P",
+        "aindex": 25
+      },
+      {
+        "label": "Curative educator",
+        "value": "CURATIVEEDU",
+        "uniqueAnswer": true,
+        "atype": "P",
+        "aindex": 26
+      },
+      {
+        "label": "Chiropodist",
+        "value": "CHIROPODIST",
+        "uniqueAnswer": true,
+        "atype": "P",
+        "aindex": 27
+      },
+      {
+        "label": "Psychomotricity reeducator",
+        "value": "PSYCHOREEDU",
+        "uniqueAnswer": true,
+        "atype": "P",
+        "aindex": 28
+      },
+      {
+        "label": "Midwife",
+        "value": "MIDWIFE",
+        "uniqueAnswer": true,
+        "atype": "P",
+        "aindex": 29
+      },
+      {
+        "label": "Other",
+        "value": "OTHER",
+        "uniqueAnswer": true,
+        "atype": "P",
+        "aindex": 30
+      }
+    ]
+  },
+  {
+    "label": "How many persons work in the medical practice?",
+    "service_category": "Context",
+    "section": "__context",
+    "qtype": "SO",
+    "qindex": 4,
+    "maxPoints": 0,
+    "answers": [
+      {
+        "label": "1",
+        "value": "a",
+        "uniqueAnswer": true,
+        "atype": "P",
+        "aindex": 1
+      },
+      {
+        "label": "2 - 5",
+        "value": "b",
+        "uniqueAnswer": true,
+        "atype": "P",
+        "aindex": 2
+      },
+      {
+        "label": "6 - 10",
+        "value": "c",
+        "uniqueAnswer": true,
+        "atype": "P",
+        "aindex": 3
+      },
+      {
+        "label": "11 - 25",
+        "value": "d",
+        "uniqueAnswer": true,
+        "atype": "P",
+        "aindex": 4
+      },
+      {
+        "label": "26+",
+        "value": "e",
+        "uniqueAnswer": true,
+        "atype": "P",
+        "aindex": 5
+      }
+    ]
+  },
+  {
     "service_category": "Rules/Charter",
     "section": "Organisational Awareness",
     "label": "In the establishment, rules are",
     "qtype": "M",
     "qindex": 1,
     "maxPoints": 21,
+    "max_scores": [
+      {
+        "question_of_answer": "How many persons work in the medical practice?",
+        "selected_answer": "1",
+        "max_score": 9
+      },
+      {
+        "question_of_answer": "How many persons work in the medical practice?",
+        "selected_answer": "2 - 5",
+        "max_score": 17
+      },
+      {
+        "question_of_answer": "How many persons work in the medical practice?",
+        "selected_answer": "6 - 10",
+        "max_score": 21
+      },
+      {
+        "question_of_answer": "How many persons work in the medical practice?",
+        "selected_answer": "11 - 25",
+        "max_score": 25
+      },
+      {
+        "question_of_answer": "How many persons work in the medical practice?",
+        "selected_answer": "26+",
+        "max_score": 28
+      }
+    ],
     "answers": [
       {
         "aindex": 1,
@@ -28,6 +354,33 @@
         "aindex": 2,
         "uniqueAnswer": false,
         "score": 2,
+        "scores": [
+          {
+            "question_of_answer": "How many persons work in the medical practice?",
+            "selected_answer": "1",
+            "score": 0
+          },
+          {
+            "question_of_answer": "How many persons work in the medical practice?",
+            "selected_answer": "2 - 5",
+            "score": 2
+          },
+          {
+            "question_of_answer": "How many persons work in the medical practice?",
+            "selected_answer": "6 - 10",
+            "score": 2
+          },
+          {
+            "question_of_answer": "How many persons work in the medical practice?",
+            "selected_answer": "11 - 25",
+            "score": 2
+          },
+          {
+            "question_of_answer": "How many persons work in the medical practice?",
+            "selected_answer": "26+",
+            "score": 2
+          }
+        ],
         "atype": "P",
         "label": "given verbally",
         "tooltip": "Rules are discussed, told to everyone whenever they are decided",
@@ -46,6 +399,33 @@
         "uniqueAnswer": false,
         "score": 3,
         "atype": "P",
+        "scores": [
+          {
+            "question_of_answer": "How many persons work in the medical practice?",
+            "selected_answer": "1",
+            "score": 2
+          },
+          {
+            "question_of_answer": "How many persons work in the medical practice?",
+            "selected_answer": "2 - 5",
+            "score": 2
+          },
+          {
+            "question_of_answer": "How many persons work in the medical practice?",
+            "selected_answer": "6 - 10",
+            "score": 3
+          },
+          {
+            "question_of_answer": "How many persons work in the medical practice?",
+            "selected_answer": "11 - 25",
+            "score": 3
+          },
+          {
+            "question_of_answer": "How many persons work in the medical practice?",
+            "selected_answer": "26+",
+            "score": 4
+          }
+        ],
         "label": "written and distributed by mail",
         "tooltip": "Rules are written by someone when they are decided, then send by any means (could be paper, email, internal chat app ...)",
         "recommendations": [
@@ -62,6 +442,33 @@
         "aindex": 4,
         "uniqueAnswer": false,
         "score": 4,
+        "scores": [
+          {
+            "question_of_answer": "How many persons work in the medical practice?",
+            "selected_answer": "1",
+            "score": 0
+          },
+          {
+            "question_of_answer": "How many persons work in the medical practice?",
+            "selected_answer": "2 - 5",
+            "score": 2
+          },
+          {
+            "question_of_answer": "How many persons work in the medical practice?",
+            "selected_answer": "6 - 10",
+            "score": 3
+          },
+          {
+            "question_of_answer": "How many persons work in the medical practice?",
+            "selected_answer": "11 - 25",
+            "score": 4
+          },
+          {
+            "question_of_answer": "How many persons work in the medical practice?",
+            "selected_answer": "26+",
+            "score": 5
+          }
+        ],
         "atype": "P",
         "label": "read and signed by all, in a cabinet/practice charter or similar",
         "tooltip": "Rules are written and should be signed by all employees",
@@ -79,6 +486,33 @@
         "aindex": 5,
         "uniqueAnswer": false,
         "score": 3,
+        "scores": [
+          {
+            "question_of_answer": "How many persons work in the medical practice?",
+            "selected_answer": "1",
+            "score": 2
+          },
+          {
+            "question_of_answer": "How many persons work in the medical practice?",
+            "selected_answer": "2 - 5",
+            "score": 3
+          },
+          {
+            "question_of_answer": "How many persons work in the medical practice?",
+            "selected_answer": "6 - 10",
+            "score": 3
+          },
+          {
+            "question_of_answer": "How many persons work in the medical practice?",
+            "selected_answer": "11 - 25",
+            "score": 4
+          },
+          {
+            "question_of_answer": "How many persons work in the medical practice?",
+            "selected_answer": "26+",
+            "score": 4
+          }
+        ],
         "atype": "P",
         "label": "given with advice and the best practices",
         "tooltip": "Whenever it is possible, rules are given with some tips to help people to understand them and accept them more easily.",
@@ -96,6 +530,33 @@
         "aindex": 6,
         "uniqueAnswer": false,
         "score": 5,
+        "scores": [
+          {
+            "question_of_answer": "How many persons work in the medical practice?",
+            "selected_answer": "1",
+            "score": 3
+          },
+          {
+            "question_of_answer": "How many persons work in the medical practice?",
+            "selected_answer": "2 - 5",
+            "score": 4
+          },
+          {
+            "question_of_answer": "How many persons work in the medical practice?",
+            "selected_answer": "6 - 10",
+            "score": 5
+          },
+          {
+            "question_of_answer": "How many persons work in the medical practice?",
+            "selected_answer": "11 - 25",
+            "score": 5
+          },
+          {
+            "question_of_answer": "How many persons work in the medical practice?",
+            "selected_answer": "26+",
+            "score": 5
+          }
+        ],
         "atype": "P",
         "label": "covering topics such as cybersecurity and data management in your profession",
         "tooltip": "Do you have rules for creating complex passwords, or that you shouldn't download any untrustworthy software?",
@@ -113,6 +574,33 @@
         "aindex": 7,
         "uniqueAnswer": false,
         "score": 2,
+        "scores": [
+          {
+            "question_of_answer": "How many persons work in the medical practice?",
+            "selected_answer": "1",
+            "score": 1
+          },
+          {
+            "question_of_answer": "How many persons work in the medical practice?",
+            "selected_answer": "2 - 5",
+            "score": 2
+          },
+          {
+            "question_of_answer": "How many persons work in the medical practice?",
+            "selected_answer": "6 - 10",
+            "score": 2
+          },
+          {
+            "question_of_answer": "How many persons work in the medical practice?",
+            "selected_answer": "11 - 25",
+            "score": 3
+          },
+          {
+            "question_of_answer": "How many persons work in the medical practice?",
+            "selected_answer": "26+",
+            "score": 4
+          }
+        ],
         "atype": "P",
         "label": "covering topics like the procedures/policies that are in place for business continuity e.g. in the event the IT systems of the organization are temporarily out of order",
         "tooltip": "You have some advice or rules on what should be done in case of a major disaster or incident that stops your activity happens.",
@@ -130,6 +618,33 @@
         "aindex": 8,
         "uniqueAnswer": false,
         "score": 2,
+        "scores": [
+          {
+            "question_of_answer": "How many persons work in the medical practice?",
+            "selected_answer": "1",
+            "score": 1
+          },
+          {
+            "question_of_answer": "How many persons work in the medical practice?",
+            "selected_answer": "2 - 5",
+            "score": 2
+          },
+          {
+            "question_of_answer": "How many persons work in the medical practice?",
+            "selected_answer": "6 - 10",
+            "score": 3
+          },
+          {
+            "question_of_answer": "How many persons work in the medical practice?",
+            "selected_answer": "11 - 25",
+            "score": 4
+          },
+          {
+            "question_of_answer": "How many persons work in the medical practice?",
+            "selected_answer": "26+",
+            "score": 4
+          }
+        ],
         "atype": "P",
         "label": "defined to manage the necessary steps which need to be taken when there is a change in medical staff, e.g. hiring of new employees, leave/dismissal or temporary replacement (during leave) of staff members",
         "tooltip": "For example a checklist containing the relevant steps like blocking/removing account, keys, change of assignments, etc.",
@@ -551,7 +1066,7 @@
   {
     "service_category": "Contracts",
     "section": "Third Party Management",
-    "label": "Contracts with external IT service providers",
+    "label": "Contracts concluded with third parties",
     "qtype": "M",
     "qindex": 6,
     "maxPoints": 23,
@@ -674,6 +1189,15 @@
             "label": "A written contract should be made, customized for your needs, if possible."
           }
         ]
+      },
+      {
+        "aindex": 8,
+        "uniqueAnswer": true,
+        "score": 23,
+        "atype": "P",
+        "label": "are not defined, since we do not work with any third parties",
+        "tooltip": "You do not have ANY third party that currently works with you and that can access your data, directly (by accessing them) or indirectly (by seeing them, by earring them …), even for a short instant.",
+        "recommendations": []
       }
     ]
   },
@@ -1706,9 +2230,9 @@
         "label": "not my responsibility and should be handled by my ICT provider",
         "tooltip": "A contract is signed (or you consider this is the job of the ICT provider), but you couldn't look where the data are, or check if your backups are safe and done.",
         "dependant_answers": [
-          "checked by me from time to time",
+          "checked from time to time",
           "on an external storage device",
-          "only readable by me and the persons to whom I gave permission"
+          "only readable by persons with assigned permission"
         ],
         "recommendations": [
           {
@@ -1745,7 +2269,7 @@
         "uniqueAnswer": false,
         "score": 10,
         "atype": "P",
-        "label": "checked by me from time to time",
+        "label": "checked from time to time",
         "tooltip": "All information is stored in a location that can be accessed and that allows you or another authorised person to perform the backup review. Conducting the review may also be part of a contractual agreement  between you and your IT service provider.",
         "dependant_answers": [
           "not my responsibility and should be handled by my ICT provider"
@@ -1765,7 +2289,7 @@
         "uniqueAnswer": false,
         "score": 6,
         "atype": "P",
-        "label": "only readable by me and the persons to whom I gave permission",
+        "label": "only readable by persons with assigned permission",
         "tooltip": "All information (on paper, on the server, in the backup, in any hard drive) are only accessible by me and the person who have signed a contract with me. Any maintenance or service provider must not have access unless it is specified in a contract.",
         "dependant_answers": [
           "not my responsibility and should be handled by my ICT provider"

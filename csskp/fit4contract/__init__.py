@@ -48,6 +48,7 @@ CUSTOM = {
         "terms": "terms_part.html",
         "footer": "fit4contract/footer_part.html",
         "main_logo": "logo_part.html",
+        "privacy": "privacy_policy_part.html",
     },
     # Available modules
     "modules": {
@@ -76,6 +77,7 @@ CUSTOM = {
         "language": True,
         "section": False,
         "category": False,
+        "current_question": True,
     },
     "chart_exclude_sections": [],
 }

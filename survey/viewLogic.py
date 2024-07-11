@@ -211,7 +211,7 @@ def handle_question_answers_request(
             was_sequence_question_answered = current_sequence.has_been_answered
             mark_sequence_as_answered(current_sequence)
             next_sequence = get_next_sequence_with_not_answered_question(
-                user, question_index, current_sequence
+                user, current_sequence
             )
 
             if next_sequence is not None:
@@ -301,6 +301,7 @@ def save_answers(
     answer_content: str,
 ) -> None:
     does_map_exist = does_answers_questions_map_exist()
+    current_branch = 0
     if current_sequence is not None:
         current_branch = current_sequence.branch
 
@@ -415,7 +416,7 @@ def create_questions_sequence(
     question_answer: SurveyQuestionAnswer,
     current_branch: int,
     question_index: int,
-    posted_answers: List[int],
+    posted_answers: List[Union[int, str]],
 ):
     answer_questions_map = SurveyAnswerQuestionMap.objects.filter(
         answer=question_answer
@@ -509,7 +510,7 @@ def remove_questions_sequences(
     question_answer: SurveyQuestionAnswer,
     question_index: int,
     current_sequence: SurveyUserQuestionSequence,
-    posted_answers: List[int],
+    posted_answers: List[Union[int, str]],
 ) -> None:
     sequences_to_remove = []
     """Validates all the sequences starting from the first index,
@@ -551,7 +552,7 @@ def remove_questions_sequences(
         sequence_to_remove.delete()
         if should_user_question_be_reset:
             next_sequence = get_next_sequence_with_not_answered_question(
-                user, question_index, current_sequence
+                user, current_sequence
             )
             if next_sequence is None:
                 next_sequence = get_last_user_sequence(user)
@@ -563,7 +564,7 @@ def is_question_referenced_to_user_answers(
     user_answers: QuerySet,
     current_question: SurveyQuestion,
     question: SurveyQuestion,
-    posted_answers: List[int],
+    posted_answers: List[Union[int, str]],
     question_index: int,
 ) -> bool:
     list_of_available_branches = get_list_of_available_branches(
@@ -788,7 +789,7 @@ def get_number_of_questions_in_user_sequence(user) -> int:
 
 
 def get_next_sequence_with_not_answered_question(
-    user: SurveyUser, question_index: int, current_sequence: SurveyUserQuestionSequence
+    user: SurveyUser, current_sequence: SurveyUserQuestionSequence
 ) -> Optional[SurveyUserQuestionSequence]:
     questions_sequence = (
         SurveyUserQuestionSequence.objects.filter(
@@ -900,7 +901,7 @@ def get_related_inactive_instances(
 
 def get_list_of_available_branches(
     user: SurveyUser,
-    posted_answers: List[int],
+    posted_answers: List[Union[int, str]],
     question_index: int,
     exclude_question: Optional[SurveyQuestion] = None,
 ) -> List[SurveyUserQuestionSequence]:

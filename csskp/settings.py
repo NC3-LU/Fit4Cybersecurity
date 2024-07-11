@@ -153,8 +153,11 @@ INSTALLED_APPS = [
     "django_countries",
     "bootstrap_datepicker_plus",
     "rest_framework",
+    "drf_spectacular",
+    "drf_spectacular_sidecar",  # required for Django collectstatic discovery
     "corsheaders",
     "cookiebanner",
+    "fontawesomefree",
 ]
 
 context_processors = [
@@ -238,7 +241,28 @@ REST_FRAMEWORK = {
     # or allow read-only access for unauthenticated users.
     "DEFAULT_PERMISSION_CLASSES": [
         "rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly"
-    ]
+    ],
+    "DEFAULT_AUTHENTICATION_CLASSES": [
+        "rest_framework.authentication.BasicAuthentication",
+        "rest_framework.authentication.SessionAuthentication",
+    ],
+    "DEFAULT_PAGINATION_CLASS": "rest_framework.pagination.PageNumberPagination",
+    "PAGE_SIZE": 10,
+    "DEFAULT_SCHEMA_CLASS": "drf_spectacular.openapi.AutoSchema",
+}
+
+SPECTACULAR_SETTINGS = {
+    "SWAGGER_UI_DIST": "SIDECAR",  # shorthand to use the sidecar instead
+    "SWAGGER_UI_FAVICON_HREF": "SIDECAR",
+    "REDOC_DIST": "SIDECAR",
+    "TITLE": "Fit4Cybersecurity API documentation.",
+    "DESCRIPTION": "Documentation of the Fit4Cybersecurity API.",
+    "CONTACT": {"email": OPERATOR_CONTACT["contact_email"]},
+    "VERSION": "2.1.0",
+    "LICENSE": {
+        "name": "GNU Affero General Public License version 3",
+        "url": "https://www.gnu.org/licenses/agpl-3.0.html",
+    },
 }
 
 SPECTACULAR_SETTINGS = {

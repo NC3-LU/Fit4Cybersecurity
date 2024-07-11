@@ -5,6 +5,7 @@ from survey.models import SurveyQuestion
 from survey.models import SurveyUser
 from survey.models import SurveyUserAnswer
 from survey.models import SurveyUserFeedback
+from survey.reporthelper import get_answer_score
 
 
 def get_finished_surveys_list(start_date, end_date):
@@ -12,9 +13,10 @@ def get_finished_surveys_list(start_date, end_date):
         status=SURVEY_STATUS_FINISHED,
         updated_at__gte=start_date.strftime(DEFAULT_DATE_FORMAT),
         updated_at__lte=end_date.strftime(DEFAULT_DATE_FORMAT),
-    )
+    ).order_by("updated_at")
 
-    total_questions_score = 0
+    total_questions_score = 1
+    total_overall_score = 0
     max_evaluations_per_section = {}
     for question in SurveyQuestion.objects.exclude(
         section__label__contains=CONTEXT_SECTION_LABEL
@@ -95,27 +97,30 @@ def get_finished_surveys_list(start_date, end_date):
                     "questions"
                 ][question.id] = {
                     "score": 0,
+                    "label": question.label,
                     "answers": [],
                     "has_feedback": has_feedback,
                 }
 
-            surveys_users_results["survey_users"][user_id]["sections"][section_id][
-                "questions"
-            ][question.id]["answers"].append(
-                {
-                    user_answer.answer.id: {
-                        "label": user_answer.answer.label,
-                        "value": user_answer.uvalue,
-                        "score": user_answer.answer.score,
+            if user_answer.uvalue != "0":
+                surveys_users_results["survey_users"][user_id]["sections"][section_id][
+                    "questions"
+                ][question.id]["answers"].append(
+                    {
+                        user_answer.answer.id: {
+                            "label": user_answer.answer.label,
+                            "value": user_answer.uvalue,
+                            "score": user_answer.answer.score,
+                            "content": user_answer.content,
+                        }
                     }
-                }
-            )
+                )
 
             if question.maxPoints == 0:
                 continue
 
             if user_answer.uvalue == "1":
-                answer_score = user_answer.answer.score
+                answer_score = get_answer_score(completed_survey_user, user_answer)
                 total_points_number += answer_score
                 surveys_users_results["survey_users"][user_id]["sections"][section_id][
                     "questions"
@@ -129,9 +134,15 @@ def get_finished_surveys_list(start_date, end_date):
         surveys_users_results["survey_users"][user_id]["details"][
             "total_score"
         ] = round(total_points_number * 100 / total_questions_score)
+        total_overall_score += surveys_users_results["survey_users"][user_id][
+            "details"
+        ]["total_score"]
 
     return {
         "start_date": str(start_date),
         "end_date": str(end_date),
+        "total_average_score": round(
+            total_overall_score / surveys_users_results["surveys_total_number"]
+        ) if surveys_users_results["surveys_total_number"] != 0 else 0,
         "surveys_users_results": surveys_users_results,
     }
