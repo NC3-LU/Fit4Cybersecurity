@@ -8,13 +8,13 @@
 
 {% block bootstrap4_extra_head %}
 {{ block.super }}
-<link rel="stylesheet" type="text/css" href="{% static " survey/css/survey-index.css" %}" />
-<script type="text/javascript" src="{% static " survey/js/survey-index.js" %}"></script>
+<link rel="stylesheet" type="text/css" href="{% static "survey/css/survey-index.css" %}" />
+<script type="text/javascript" src="{% static "survey/js/survey-index.js" %}"></script>
 {% endblock %}
 
 {% block content %}
 {% cookiebanner_modal 'bootstrap4' %}
-<div class="card bg-primary">
+<div class="card bg-bright-blue">
     <div class="card-body font-weight-light text-white p-2">
         <h3 class="card-title text-center m-0">{{ _('QUESTIONNAIRE DE SATISFACTION') }}</h3>
     </div>
