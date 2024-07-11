@@ -1,2500 +1,1175 @@
 [
   {
-    "section": "ALTO",
-    "service_category": "Generalities",
+    "section": "DAAZ",
+    "service_category": "Généralités",
     "qtype": "S",
     "qindex": 1,
-    "label": "How would you rate your general knowledge of the GDPR<sup>1</sup> ?<p><small>[1] The General Data Protection Regulation (GDPR) is a European text applicable since May 25, 2018 and which governs the processing of personal data in the territories of the European Union.</small></p>",
+    "label": "Quel est votre domaine de compétence principal ?",
     "answers": [
-      {
-        "aindex": 1,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "label": "0 (Not acquired)",
-        "questions_map": [
-          {
-            "label": "Which organization / person supports your SME in your GDPR compliance?",
-            "branch": 0,
-            "level": 1,
-            "order": 1
-          }
-        ]
-      },
-      {
-        "aindex": 2,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "label": "1",
-        "questions_map": [
-          {
-            "label": "Which organization / person supports your SME in your GDPR compliance?",
-            "branch": 0,
-            "level": 1,
-            "order": 1
-          }
-        ]
-      },
-      {
-        "aindex": 3,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "label": "2",
-        "questions_map": [
-          {
-            "label": "Which organization / person supports your SME in your GDPR compliance?",
-            "branch": 0,
-            "level": 1,
-            "order": 1
-          }
-        ]
-      },
-      {
-        "aindex": 4,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "label": "3",
-        "questions_map": [
-          {
-            "label": "Which organization / person supports your SME in your GDPR compliance?",
-            "branch": 0,
-            "level": 1,
-            "order": 1
-          }
-        ]
-      },
-      {
-        "aindex": 5,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "label": "4",
-        "questions_map": [
-          {
-            "label": "Which organization / person supports your SME in your GDPR compliance?",
-            "branch": 0,
-            "level": 1,
-            "order": 1
-          }
-        ]
-      },
-      {
-        "aindex": 6,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "label": "5 (Perfectly mastered)",
-        "questions_map": [
-          {
-            "label": "Which organization / person supports your SME in your GDPR compliance?",
-            "branch": 0,
-            "level": 1,
-            "order": 1
-          }
-        ]
-      }
+       {
+          "aindex": 1,
+          "uniqueAnswer": true,
+          "atype": "P",
+          "label": "Administrateur / Gérant"
+       },
+       {
+          "aindex": 2,
+          "uniqueAnswer": true,
+          "atype": "P",
+          "label": "Management (Resp. équipe / projet)"
+       },
+       {
+          "aindex": 3,
+          "uniqueAnswer": true,
+          "atype": "P",
+          "label": "DPO"
+       },
+       {
+          "aindex": 4,
+          "uniqueAnswer": true,
+          "atype": "P",
+          "label": "Juriste"
+       },
+       {
+          "aindex": 5,
+          "uniqueAnswer": true,
+          "atype": "P",
+          "label": "Ressources Humaines"
+       },
+       {
+          "aindex": 6,
+          "uniqueAnswer": true,
+          "atype": "P",
+          "label": "Informatique (IT)"
+       },
+       {
+          "aindex": 7,
+          "uniqueAnswer": true,
+          "atype": "P",
+          "label": "Autre"
+       }
     ]
-  },
+ },
   {
-    "section": "ALTO",
-    "service_category": "Generalities",
-    "qtype": "M",
+    "section": "DAAZ",
+    "service_category": "Généralités",
+    "qtype": "S",
     "qindex": 2,
-    "label": "Which organization / person supports your SME in your GDPR compliance?",
+    "label": "Quel est le motif de votre participation à l’expérience DAAZ ?",
     "answers": [
-      {
-        "aindex": 1,
-        "uniqueAnswer": false,
-        "atype": "P",
-        "label": "The National Commission for Data Protection (<i>Commission Nationale pour la Protection des Données</i> - CNPD)",
-        "questions_map": [
-          {
-            "label": "What body/person does your business turn to for information/help on this?",
-            "branch": 0,
-            "level": 2,
-            "order": 1
-          }
-        ]
-      },
-      {
-        "aindex": 2,
-        "uniqueAnswer": false,
-        "atype": "P",
-        "label": "An internal data protection officer",
-        "questions_map": [
-          {
-            "label": "What body/person does your business turn to for information/help on this?",
-            "branch": 0,
-            "level": 2,
-            "order": 1
-          }
-        ]
-      },
-      {
-        "aindex": 3,
-        "uniqueAnswer": false,
-        "atype": "P",
-        "label": "An external data protection officer",
-        "questions_map": [
-          {
-            "label": "What body/person does your business turn to for information/help on this?",
-            "branch": 0,
-            "level": 2,
-            "order": 1
-          }
-        ]
-      },
-      {
-        "aindex": 4,
-        "uniqueAnswer": false,
-        "atype": "P",
-        "label": "A lawyer",
-        "questions_map": [
-          {
-            "label": "What body/person does your business turn to for information/help on this?",
-            "branch": 0,
-            "level": 2,
-            "order": 1
-          }
-        ]
-      },
-      {
-        "aindex": 5,
-        "uniqueAnswer": false,
-        "atype": "P",
-        "label": "A consulting company",
-        "questions_map": [
-          {
-            "label": "What body/person does your business turn to for information/help on this?",
-            "branch": 0,
-            "level": 2,
-            "order": 1
-          }
-        ]
-      },
-      {
-        "aindex": 6,
-        "uniqueAnswer": false,
-        "atype": "P",
-        "label": "A professional chamber/union",
-        "questions_map": [
-          {
-            "label": "What body/person does your business turn to for information/help on this?",
-            "branch": 0,
-            "level": 2,
-            "order": 1
-          }
-        ]
-      },
-      {
-        "aindex": 7,
-        "uniqueAnswer": false,
-        "atype": "P",
-        "label": "Our company is not supported by any outside organization/person",
-        "questions_map": [
-          {
-            "label": "What body/person does your business turn to for information/help on this?",
-            "branch": 0,
-            "level": 2,
-            "order": 1
-          }
-        ]
-      },
-      {
-        "aindex": 8,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "label": "I don't know",
-        "questions_map": [
-          {
-            "label": "What body/person does your business turn to for information/help on this?",
-            "branch": 0,
-            "level": 2,
-            "order": 1
-          }
-        ]
-      }
+       {
+          "aindex": 1,
+          "uniqueAnswer": true,
+          "atype": "P",
+          "label": "Demande de mon employeur"
+       },
+       {
+          "aindex": 2,
+          "uniqueAnswer": true,
+          "atype": "P",
+          "label": "Initiative personnelle dans le cadre de mon travail "
+       },
+       {
+          "aindex": 3,
+          "uniqueAnswer": true,
+          "atype": "P",
+          "label": "Initiative personnelle hors cadre de mon travail"
+       },
+       {
+          "aindex": 4,
+          "uniqueAnswer": true,
+          "atype": "P",
+          "label": "Autre"
+       }
     ]
-  },
+ },
   {
-    "section": "ALTO",
-    "service_category": "Generalities",
-    "qtype": "M",
+    "section": "DAAZ",
+    "service_category": "Généralités",
+    "qtype": "S",
     "qindex": 3,
-    "label": "What body/person does your business turn to for information/help on this?",
+    "label": "Comment avez-vous eu connaissance de la formation ?",
     "answers": [
-      {
-        "aindex": 1,
-        "uniqueAnswer": false,
-        "atype": "P",
-        "label": "The National Commission for Data Protection (<i>Commission Nationale pour la Protection des Données</i> - CNPD)",
-        "questions_map": [
-          {
-            "label": "Are you a data controller?",
-            "branch": 0,
-            "level": 3,
-            "order": 1
-          }
-        ]
-      },
-      {
-        "aindex": 2,
-        "uniqueAnswer": false,
-        "atype": "P",
-        "label": "An internal data protection officer",
-        "questions_map": [
-          {
-            "label": "Are you a data controller?",
-            "branch": 0,
-            "level": 3,
-            "order": 1
-          }
-        ]
-      },
-      {
-        "aindex": 3,
-        "uniqueAnswer": false,
-        "atype": "P",
-        "label": "An external data protection officer",
-        "questions_map": [
-          {
-            "label": "Are you a data controller?",
-            "branch": 0,
-            "level": 3,
-            "order": 1
-          }
-        ]
-      },
-      {
-        "aindex": 4,
-        "uniqueAnswer": false,
-        "atype": "P",
-        "label": "A lawyer",
-        "questions_map": [
-          {
-            "label": "Are you a data controller?",
-            "branch": 0,
-            "level": 3,
-            "order": 1
-          }
-        ]
-      },
-      {
-        "aindex": 5,
-        "uniqueAnswer": false,
-        "atype": "P",
-        "label": "A consulting company",
-        "questions_map": [
-          {
-            "label": "Are you a data controller?",
-            "branch": 0,
-            "level": 3,
-            "order": 1
-          }
-        ]
-      },
-      {
-        "aindex": 6,
-        "uniqueAnswer": false,
-        "atype": "P",
-        "label": "A professional chamber/union",
-        "questions_map": [
-          {
-            "label": "Are you a data controller?",
-            "branch": 0,
-            "level": 3,
-            "order": 1
-          }
-        ]
-      },
-      {
-        "aindex": 7,
-        "uniqueAnswer": false,
-        "atype": "P",
-        "label": "Our company is not supported by any outside organization/person",
-        "questions_map": [
-          {
-            "label": "Are you a data controller?",
-            "branch": 0,
-            "level": 3,
-            "order": 1
-          }
-        ]
-      },
-      {
-        "aindex": 8,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "label": "I don't know",
-        "questions_map": [
-          {
-            "label": "Are you a data controller?",
-            "branch": 0,
-            "level": 3,
-            "order": 1
-          }
-        ]
-      }
+       {
+          "aindex": 1,
+          "uniqueAnswer": true,
+          "atype": "P",
+          "label": "via la Newsletters de la CNPD "
+       },
+       {
+          "aindex": 2,
+          "uniqueAnswer": true,
+          "atype": "P",
+          "label": "lors de ma participation à une formation DP Basics de la CNPD"
+       },
+       {
+          "aindex": 3,
+          "uniqueAnswer": true,
+          "atype": "P",
+          "label": "lors de ma participation à un DaProLab de la CNPD"
+       },
+       {
+          "aindex": 4,
+          "uniqueAnswer": true,
+          "atype": "P",
+          "label": "à l’occasion d’une action de communication de la CNPD"
+       },
+       {
+          "aindex": 5,
+          "uniqueAnswer": true,
+          "atype": "P",
+          "label": "via ma chambre professionnelle"
+       },
+       {
+          "aindex": 6,
+          "uniqueAnswer": true,
+          "atype": "P",
+          "label": "via un réseau social (ex : LinkedIn) "
+       },
+       {
+          "aindex": 7,
+          "uniqueAnswer": true,
+          "atype": "P",
+          "label": "via mon organisation (hiérarchie, collègue, etc.)"
+       },
+       {
+          "aindex": 8,
+          "uniqueAnswer": true,
+          "atype": "P",
+          "label": "Par le bouche à oreille"
+       },
+       {
+          "aindex": 9,
+          "uniqueAnswer": true,
+          "atype": "P",
+          "label": "Autre"
+       }
     ]
-  },
+ },
   {
-    "section": "ALTO",
-    "service_category": "Data processing",
+    "section": "DAAZ",
+    "service_category": "Généralités",
     "qtype": "S",
     "qindex": 4,
-    "label": "Are you a data controller?",
+    "label": "De manière générale, comment jugez-vous l’outil DAAZ ?",
     "answers": [
-      {
-        "aindex": 1,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "label": "Yes",
-        "questions_map": [
-          {
-            "label": "Are you a data processor within the meaning of GDPR?",
-            "branch": 0,
-            "level": 5,
-            "order": 1
-          }
-        ]
-      },
-      {
-        "aindex": 2,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "label": "No",
-        "questions_map": [
-          {
-            "label": "Are you a data processor within the meaning of GDPR?",
-            "branch": 0,
-            "level": 5,
-            "order": 1
-          }
-        ]
-      },
-      {
-        "aindex": 3,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "label": "I don't know",
-        "questions_map": [
-          {
-            "label": "Are you a data processor within the meaning of GDPR?",
-            "branch": 0,
-            "level": 5,
-            "order": 1
-          }
-        ]
-      }
+       {
+          "aindex": 1,
+          "uniqueAnswer": true,
+          "atype": "P",
+          "label": "Très bon"
+       },
+       {
+          "aindex": 2,
+          "uniqueAnswer": true,
+          "atype": "P",
+          "label": "Bon"
+       },
+       {
+          "aindex": 3,
+          "uniqueAnswer": true,
+          "atype": "P",
+          "label": "Insuffisant"
+       },
+       {
+          "aindex": 4,
+          "uniqueAnswer": true,
+          "atype": "P",
+          "label": "Très insuffisant"
+       }
     ]
-  },
+ },
   {
-    "section": "ALTO",
-    "service_category": "Data processing",
+    "section": "DAAZ",
+    "service_category": "Généralités",
     "qtype": "S",
     "qindex": 5,
-    "label": "Are you a data processor within the meaning of GDPR?",
+    "label": "Les objectifs et les contenus développés correspondaient au descriptif annoncé à la page d’accueil.",
     "answers": [
-      {
-        "aindex": 1,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "label": "Yes",
-        "questions_map": [
-          {
-            "label": "Do you know the difference between the notion of \"data controller\" and the notion of \"data processor\"?",
-            "branch": 0,
-            "level": 6,
-            "order": 1
-          }
-        ]
-      },
-      {
-        "aindex": 2,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "label": "No",
-        "questions_map": [
-          {
-            "label": "Do you know the difference between the notion of \"data controller\" and the notion of \"data processor\"?",
-            "branch": 0,
-            "level": 6,
-            "order": 1
-          }
-        ]
-      },
-      {
-        "aindex": 3,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "label": "I don't know",
-        "questions_map": [
-          {
-            "label": "Do you know the difference between the notion of \"data controller\" and the notion of \"data processor\"?",
-            "branch": 0,
-            "level": 6,
-            "order": 1
-          }
-        ]
-      }
+       {
+          "aindex": 1,
+          "uniqueAnswer": true,
+          "atype": "P",
+          "label": "Accord total"
+       },
+       {
+          "aindex": 2,
+          "uniqueAnswer": true,
+          "atype": "P",
+          "label": "Plutôt d'accord"
+       },
+       {
+          "aindex": 3,
+          "uniqueAnswer": true,
+          "atype": "P",
+          "label": "Plutôt en désaccord"
+       },
+       {
+          "aindex": 4,
+          "uniqueAnswer": true,
+          "atype": "P",
+          "label": "Désaccord total"
+       },
+       {
+          "aindex": 5,
+          "uniqueAnswer": true,
+          "atype": "P",
+          "label": "N/A"
+       }
     ]
-  },
+ },
   {
-    "section": "ALTO",
-    "service_category": "Data processing",
+    "section": "DAAZ",
+    "service_category": "Généralités",
     "qtype": "S",
     "qindex": 6,
-    "label": "Do you know the difference between the notion of \"data controller\" and the notion of \"data processor\"?",
+    "label": "Je me suis senti impliqué et concerné par le parcours.",
     "answers": [
-      {
-        "aindex": 1,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "label": "0 (Not acquired)",
-        "questions_map": [
-          {
-            "label": "Do you know the extent of your responsibilities as \"data controller\" and/or \"data processor\"?",
-            "branch": 0,
-            "level": 7,
-            "order": 1
-          }
-        ]
-      },
-      {
-        "aindex": 2,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "label": "1",
-        "questions_map": [
-          {
-            "label": "Do you know the extent of your responsibilities as \"data controller\" and/or \"data processor\"?",
-            "branch": 0,
-            "level": 7,
-            "order": 1
-          }
-        ]
-      },
-      {
-        "aindex": 3,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "label": "2",
-        "questions_map": [
-          {
-            "label": "Do you know the extent of your responsibilities as \"data controller\" and/or \"data processor\"?",
-            "branch": 0,
-            "level": 7,
-            "order": 1
-          }
-        ]
-      },
-      {
-        "aindex": 4,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "label": "3",
-        "questions_map": [
-          {
-            "label": "Do you know the extent of your responsibilities as \"data controller\" and/or \"data processor\"?",
-            "branch": 0,
-            "level": 7,
-            "order": 1
-          }
-        ]
-      },
-      {
-        "aindex": 5,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "label": "4",
-        "questions_map": [
-          {
-            "label": "Do you know the extent of your responsibilities as \"data controller\" and/or \"data processor\"?",
-            "branch": 0,
-            "level": 7,
-            "order": 1
-          }
-        ]
-      },
-      {
-        "aindex": 6,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "label": "5 (Perfectly mastered)",
-        "questions_map": [
-          {
-            "label": "Do you know the extent of your responsibilities as \"data controller\" and/or \"data processor\"?",
-            "branch": 0,
-            "level": 7,
-            "order": 1
-          }
-        ]
-      }
+       {
+          "aindex": 1,
+          "uniqueAnswer": true,
+          "atype": "P",
+          "label": "Accord total"
+       },
+       {
+          "aindex": 2,
+          "uniqueAnswer": true,
+          "atype": "P",
+          "label": "Plutôt d'accord"
+       },
+       {
+          "aindex": 3,
+          "uniqueAnswer": true,
+          "atype": "P",
+          "label": "Plutôt en désaccord"
+       },
+       {
+          "aindex": 4,
+          "uniqueAnswer": true,
+          "atype": "P",
+          "label": "Désaccord total"
+       },
+       {
+          "aindex": 5,
+          "uniqueAnswer": true,
+          "atype": "P",
+          "label": "N/A"
+       }
     ]
-  },
+ },
   {
-    "section": "ALTO",
-    "service_category": "Data processing",
+    "section": "DAAZ",
+    "service_category": "Généralités",
     "qtype": "S",
     "qindex": 7,
-    "label": "Do you know the extent of your responsibilities as \"data controller\" and/or \"data processor\"?",
+    "label": "La durée du parcours était adaptée par rapport aux objectifs de mise en conformité et aux contenus proposés.",
     "answers": [
-      {
-        "aindex": 1,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "label": "0 (Not acquired)",
-        "questions_map": [
-          {
-            "label": "Do you outsource some of your data processing<sup>1</sup>? <p><small>[1] A processing of personal data is an operation, or set of operations, relating to personal data, regardless of the process used.  The GDPR names a whole series of different types of processing such as collecting, recording, modifying, disseminating or otherwise making available, or erasing and destroying (e.g. salary processing, candidate processing, client lists, prospect client lists).<p>Note : Paper files may also be concerned (if they are structured, for example by an alphabetical or chronological classification).</p></small></p>",
-            "branch": 0,
-            "level": 8,
-            "order": 1
-          }
-        ]
-      },
-      {
-        "aindex": 2,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "label": "1",
-        "questions_map": [
-          {
-            "label": "Do you outsource some of your data processing<sup>1</sup>? <p><small>[1] A processing of personal data is an operation, or set of operations, relating to personal data, regardless of the process used.  The GDPR names a whole series of different types of processing such as collecting, recording, modifying, disseminating or otherwise making available, or erasing and destroying (e.g. salary processing, candidate processing, client lists, prospect client lists).<p>Note : Paper files may also be concerned (if they are structured, for example by an alphabetical or chronological classification).</p></small></p>",
-            "branch": 0,
-            "level": 8,
-            "order": 1
-          }
-        ]
-      },
-      {
-        "aindex": 3,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "label": "2",
-        "questions_map": [
-          {
-            "label": "Do you outsource some of your data processing<sup>1</sup>? <p><small>[1] A processing of personal data is an operation, or set of operations, relating to personal data, regardless of the process used.  The GDPR names a whole series of different types of processing such as collecting, recording, modifying, disseminating or otherwise making available, or erasing and destroying (e.g. salary processing, candidate processing, client lists, prospect client lists).<p>Note : Paper files may also be concerned (if they are structured, for example by an alphabetical or chronological classification).</p></small></p>",
-            "branch": 0,
-            "level": 8,
-            "order": 1
-          }
-        ]
-      },
-      {
-        "aindex": 4,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "label": "3",
-        "questions_map": [
-          {
-            "label": "Do you outsource some of your data processing<sup>1</sup>? <p><small>[1] A processing of personal data is an operation, or set of operations, relating to personal data, regardless of the process used.  The GDPR names a whole series of different types of processing such as collecting, recording, modifying, disseminating or otherwise making available, or erasing and destroying (e.g. salary processing, candidate processing, client lists, prospect client lists).<p>Note : Paper files may also be concerned (if they are structured, for example by an alphabetical or chronological classification).</p></small></p>",
-            "branch": 0,
-            "level": 8,
-            "order": 1
-          }
-        ]
-      },
-      {
-        "aindex": 5,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "label": "4",
-        "questions_map": [
-          {
-            "label": "Do you outsource some of your data processing<sup>1</sup>? <p><small>[1] A processing of personal data is an operation, or set of operations, relating to personal data, regardless of the process used.  The GDPR names a whole series of different types of processing such as collecting, recording, modifying, disseminating or otherwise making available, or erasing and destroying (e.g. salary processing, candidate processing, client lists, prospect client lists).<p>Note : Paper files may also be concerned (if they are structured, for example by an alphabetical or chronological classification).</p></small></p>",
-            "branch": 0,
-            "level": 8,
-            "order": 1
-          }
-        ]
-      },
-      {
-        "aindex": 6,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "label": "5 (Perfectly mastered)",
-        "questions_map": [
-          {
-            "label": "Do you outsource some of your data processing<sup>1</sup>? <p><small>[1] A processing of personal data is an operation, or set of operations, relating to personal data, regardless of the process used.  The GDPR names a whole series of different types of processing such as collecting, recording, modifying, disseminating or otherwise making available, or erasing and destroying (e.g. salary processing, candidate processing, client lists, prospect client lists).<p>Note : Paper files may also be concerned (if they are structured, for example by an alphabetical or chronological classification).</p></small></p>",
-            "branch": 0,
-            "level": 8,
-            "order": 1
-          }
-        ]
-      }
+       {
+          "aindex": 1,
+          "uniqueAnswer": true,
+          "atype": "P",
+          "label": "Trop court"
+       },
+       {
+          "aindex": 2,
+          "uniqueAnswer": true,
+          "atype": "P",
+          "label": "Plutôt adaptée"
+       },
+       {
+          "aindex": 3,
+          "uniqueAnswer": true,
+          "atype": "P",
+          "label": "Adaptée"
+       },
+       {
+          "aindex": 4,
+          "uniqueAnswer": true,
+          "atype": "P",
+          "label": "Trop long"
+       }
     ]
-  },
+ },
   {
-    "section": "ALTO",
-    "service_category": "Data processing",
+    "section": "DAAZ",
+    "service_category": "Connaissance",
     "qtype": "S",
     "qindex": 8,
-    "label": "Do you outsource some of your data processing<sup>1</sup>? <p><small>[1] A processing of personal data is an operation, or set of operations, relating to personal data, regardless of the process used.  The GDPR names a whole series of different types of processing such as collecting, recording, modifying, disseminating or otherwise making available, or erasing and destroying (e.g. salary processing, candidate processing, client lists, prospect client lists).<p>Note : Paper files may also be concerned (if they are structured, for example by an alphabetical or chronological classification).</p></small></p>",
+    "label": "Avant l’accomplissement, quel était votre niveau de connaissance concernant la protection des données personnelles ?",
     "answers": [
-      {
-        "aindex": 1,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "label": "Yes",
-        "questions_map": [
-          {
-            "label": "Have you entered into a data processing agreement?",
-            "branch": 0,
-            "level": 9,
-            "order": 1
-          }
-        ]
-      },
-      {
-        "aindex": 2,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "label": "No",
-        "questions_map": [
-          {
-            "label": "Does your company know how and when to appoint a Data Protection Officer (DPO)?",
-            "branch": 0,
-            "level": 9,
-            "order": 1
-          }
-        ]
-      },
-      {
-        "aindex": 3,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "label": "I don't know",
-        "questions_map": [
-          {
-            "label": "Does your company know how and when to appoint a Data Protection Officer (DPO)?",
-            "branch": 0,
-            "level": 9,
-            "order": 1
-          }
-        ]
-      }
+       {
+          "aindex": 1,
+          "uniqueAnswer": true,
+          "atype": "P",
+          "label": "Expert                              "
+       },
+       {
+          "aindex": 2,
+          "uniqueAnswer": true,
+          "atype": "P",
+          "label": "Bonnes connaissances     "
+       },
+       {
+          "aindex": 3,
+          "uniqueAnswer": true,
+          "atype": "P",
+          "label": "Peu de connaissances               "
+       },
+       {
+          "aindex": 4,
+          "uniqueAnswer": true,
+          "atype": "P",
+          "label": "Aucune connaissance"
+       }
     ]
-  },
+ },
   {
-    "section": "ALTO",
-    "service_category": "Data processing",
+    "section": "DAAZ",
+    "service_category": "Connaissance",
     "qtype": "S",
     "qindex": 9,
-    "label": "Have you entered into a data processing agreement?",
+    "label": "Après l’accomplissement, j’estime avoir acquis une meilleure connaissance générale concernant la protection des données :",
     "answers": [
-      {
-        "aindex": 1,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "label": "Yes",
-        "questions_map": [
-          {
-            "label": "Does your company know how and when to appoint a Data Protection Officer (DPO)?",
-            "branch": 0,
-            "level": 10,
-            "order": 1
-          }
-        ]
-      },
-      {
-        "aindex": 2,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "label": "No",
-        "questions_map": [
-          {
-            "label": "Does your company know how and when to appoint a Data Protection Officer (DPO)?",
-            "branch": 0,
-            "level": 10,
-            "order": 1
-          }
-        ]
-      },
-      {
-        "aindex": 3,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "label": "In progress",
-        "questions_map": [
-          {
-            "label": "Does your company know how and when to appoint a Data Protection Officer (DPO)?",
-            "branch": 0,
-            "level": 10,
-            "order": 1
-          }
-        ]
-      }
+       {
+          "aindex": 1,
+          "uniqueAnswer": true,
+          "atype": "P",
+          "label": "Accord total"
+       },
+       {
+          "aindex": 2,
+          "uniqueAnswer": true,
+          "atype": "P",
+          "label": "Plutôt d'accord"
+       },
+       {
+          "aindex": 3,
+          "uniqueAnswer": true,
+          "atype": "P",
+          "label": "Plutôt en désaccord"
+       },
+       {
+          "aindex": 4,
+          "uniqueAnswer": true,
+          "atype": "P",
+          "label": "Désaccord total"
+       },
+       {
+          "aindex": 5,
+          "uniqueAnswer": true,
+          "atype": "P",
+          "label": "N/A"
+       }
     ]
-  },
+ },
   {
-    "section": "ALTO",
-    "service_category": "Principles",
+    "section": "DAAZ",
+    "service_category": "Connaissance",
     "qtype": "S",
     "qindex": 10,
-    "label": "Does your company know how and when to appoint a Data Protection Officer (DPO)?",
+    "label": "Les connaissances acquises lors du parcours peuvent être mises en application dans ma pratique professionnelle.",
     "answers": [
-      {
-        "aindex": 1,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "label": "Yes",
-        "questions_map": [
-          {
-            "label": "Does your company have a list of data processing operations?",
-            "branch": 0,
-            "level": 11,
-            "order": 1
-          }
-        ]
-      },
-      {
-        "aindex": 2,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "label": "No",
-        "questions_map": [
-          {
-            "label": "Does your company have a list of data processing operations?",
-            "branch": 0,
-            "level": 11,
-            "order": 1
-          }
-        ]
-      }
+       {
+          "aindex": 1,
+          "uniqueAnswer": true,
+          "atype": "P",
+          "label": "Accord total"
+       },
+       {
+          "aindex": 2,
+          "uniqueAnswer": true,
+          "atype": "P",
+          "label": "Plutôt d'accord"
+       },
+       {
+          "aindex": 3,
+          "uniqueAnswer": true,
+          "atype": "P",
+          "label": "Plutôt en désaccord"
+       },
+       {
+          "aindex": 4,
+          "uniqueAnswer": true,
+          "atype": "P",
+          "label": "Désaccord total"
+       },
+       {
+          "aindex": 5,
+          "uniqueAnswer": true,
+          "atype": "P",
+          "label": "N/A"
+       }
     ]
-  },
+ },
   {
-    "section": "ALTO",
-    "service_category": "Principles",
+    "section": "DAAZ",
+    "service_category": "Connaissance",
     "qtype": "S",
     "qindex": 11,
-    "label": "Does your company have a list of data processing operations?",
+    "label": "L’expérience comportait un bon équilibre entre aspects théoriques et pratiques.",
     "answers": [
-      {
-        "aindex": 1,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "label": "Yes",
-        "questions_map": [
-          {
-            "label": "Has your company established clear purposes for its data processing operations?",
-            "branch": 0,
-            "level": 12,
-            "order": 1
-          }
-        ]
-      },
-      {
-        "aindex": 2,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "label": "No",
-        "questions_map": [
-          {
-            "label": "Has your company established clear purposes for its data processing operations?",
-            "branch": 0,
-            "level": 12,
-            "order": 1
-          }
-        ]
-      },
-      {
-        "aindex": 3,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "label": "In progress",
-        "questions_map": [
-          {
-            "label": "Has your company established clear purposes for its data processing operations?",
-            "branch": 0,
-            "level": 12,
-            "order": 1
-          }
-        ]
-      },
-      {
-        "aindex": 4,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "label": "I don't know",
-        "questions_map": [
-          {
-            "label": "Has your company established clear purposes for its data processing operations?",
-            "branch": 0,
-            "level": 12,
-            "order": 1
-          }
-        ]
-      }
+       {
+          "aindex": 1,
+          "uniqueAnswer": true,
+          "atype": "P",
+          "label": "Accord total"
+       },
+       {
+          "aindex": 2,
+          "uniqueAnswer": true,
+          "atype": "P",
+          "label": "Plutôt d'accord"
+       },
+       {
+          "aindex": 3,
+          "uniqueAnswer": true,
+          "atype": "P",
+          "label": "Plutôt en désaccord"
+       },
+       {
+          "aindex": 4,
+          "uniqueAnswer": true,
+          "atype": "P",
+          "label": "Désaccord total"
+       },
+       {
+          "aindex": 5,
+          "uniqueAnswer": true,
+          "atype": "P",
+          "label": "N/A"
+       }
     ]
-  },
+ },
   {
-    "section": "ALTO",
-    "service_category": "Principles",
+    "section": "DAAZ",
+    "service_category": "Connaissance",
     "qtype": "S",
     "qindex": 12,
-    "label": "Has your company established clear purposes for its data processing operations?",
+    "label": "Les supports pédagogiques fournis étaient appropriés.",
     "answers": [
-      {
-        "aindex": 1,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "label": "Yes",
-        "questions_map": [
-          {
-            "label": "Has your company identified specific legal bases for its data processing operations?",
-            "branch": 0,
-            "level": 13,
-            "order": 1
-          }
-        ]
-      },
-      {
-        "aindex": 2,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "label": "No",
-        "questions_map": [
-          {
-            "label": "Has your company identified specific legal bases for its data processing operations?",
-            "branch": 0,
-            "level": 13,
-            "order": 1
-          }
-        ]
-      },
-      {
-        "aindex": 3,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "label": "In progress",
-        "questions_map": [
-          {
-            "label": "Has your company identified specific legal bases for its data processing operations?",
-            "branch": 0,
-            "level": 13,
-            "order": 1
-          }
-        ]
-      },
-      {
-        "aindex": 4,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "label": "I don't know",
-        "questions_map": [
-          {
-            "label": "Has your company identified specific legal bases for its data processing operations?",
-            "branch": 0,
-            "level": 13,
-            "order": 1
-          }
-        ]
-      }
+       {
+          "aindex": 1,
+          "uniqueAnswer": true,
+          "atype": "P",
+          "label": "Accord total"
+       },
+       {
+          "aindex": 2,
+          "uniqueAnswer": true,
+          "atype": "P",
+          "label": "Plutôt d'accord"
+       },
+       {
+          "aindex": 3,
+          "uniqueAnswer": true,
+          "atype": "P",
+          "label": "Plutôt en désaccord"
+       },
+       {
+          "aindex": 4,
+          "uniqueAnswer": true,
+          "atype": "P",
+          "label": "Désaccord total"
+       },
+       {
+          "aindex": 5,
+          "uniqueAnswer": true,
+          "atype": "P",
+          "label": "N/A"
+       }
     ]
-  },
+ },
   {
-    "section": "ALTO",
-    "service_category": "Principles",
+    "section": "DAAZ",
+    "service_category": "Connaissance",
     "qtype": "S",
     "qindex": 13,
-    "label": "Has your company identified specific legal bases for its data processing operations?",
+    "label": "L’outil DAAZ va me permettre d’élever le niveau de connaissance de mon organisation en matière de protection des données.",
     "answers": [
-      {
-        "aindex": 1,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "label": "Yes",
-        "questions_map": [
-          {
-            "label": "Has your company implemented the data minimization principle consisting of using only necessary data to carry out its processing operations?",
-            "branch": 0,
-            "level": 14,
-            "order": 1
-          }
-        ]
-      },
-      {
-        "aindex": 2,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "label": "No",
-        "questions_map": [
-          {
-            "label": "Has your company implemented the data minimization principle consisting of using only necessary data to carry out its processing operations?",
-            "branch": 0,
-            "level": 14,
-            "order": 1
-          }
-        ]
-      },
-      {
-        "aindex": 3,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "label": "In progress",
-        "questions_map": [
-          {
-            "label": "Has your company implemented the data minimization principle consisting of using only necessary data to carry out its processing operations?",
-            "branch": 0,
-            "level": 14,
-            "order": 1
-          }
-        ]
-      },
-      {
-        "aindex": 4,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "label": "I don't know",
-        "questions_map": [
-          {
-            "label": "Has your company implemented the data minimization principle consisting of using only necessary data to carry out its processing operations?",
-            "branch": 0,
-            "level": 14,
-            "order": 1
-          }
-        ]
-      }
+       {
+          "aindex": 1,
+          "uniqueAnswer": true,
+          "atype": "P",
+          "label": "Accord total"
+       },
+       {
+          "aindex": 2,
+          "uniqueAnswer": true,
+          "atype": "P",
+          "label": "Plutôt d'accord"
+       },
+       {
+          "aindex": 3,
+          "uniqueAnswer": true,
+          "atype": "P",
+          "label": "Plutôt en désaccord"
+       },
+       {
+          "aindex": 4,
+          "uniqueAnswer": true,
+          "atype": "P",
+          "label": "Désaccord total"
+       },
+       {
+          "aindex": 5,
+          "uniqueAnswer": true,
+          "atype": "P",
+          "label": "N/A"
+       }
     ]
-  },
+ },
   {
-    "section": "ALTO",
-    "service_category": "Principles",
+    "section": "DAAZ",
+    "service_category": "Mise en conformité",
     "qtype": "S",
     "qindex": 14,
-    "label": "Has your company implemented the data minimization principle consisting of using only necessary data to carry out its processing operations?",
+    "label": "Avant l’accomplissement, quel était le niveau de maturité de la mise en conformité au RGPD de votre organisation ?",
     "answers": [
-      {
-        "aindex": 1,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "label": "Yes",
-        "questions_map": [
-          {
-            "label": "Is your company aware of the \"Privacy-by-default/Privacy-by-design\" principles?",
-            "branch": 0,
-            "level": 15,
-            "order": 1
-          }
-        ]
-      },
-      {
-        "aindex": 2,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "label": "No",
-        "questions_map": [
-          {
-            "label": "Is your company aware of the \"Privacy-by-default/Privacy-by-design\" principles?",
-            "branch": 0,
-            "level": 15,
-            "order": 1
-          }
-        ]
-      },
-      {
-        "aindex": 3,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "label": "In progress",
-        "questions_map": [
-          {
-            "label": "Is your company aware of the \"Privacy-by-default/Privacy-by-design\" principles?",
-            "branch": 0,
-            "level": 15,
-            "order": 1
-          }
-        ]
-      },
-      {
-        "aindex": 4,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "label": "I don't know",
-        "questions_map": [
-          {
-            "label": "Is your company aware of the \"Privacy-by-default/Privacy-by-design\" principles?",
-            "branch": 0,
-            "level": 15,
-            "order": 1
-          }
-        ]
-      }
+       {
+          "aindex": 1,
+          "uniqueAnswer": true,
+          "atype": "P",
+          "label": "Totale"
+       },
+       {
+          "aindex": 2,
+          "uniqueAnswer": true,
+          "atype": "P",
+          "label": "Avancée      "
+       },
+       {
+          "aindex": 3,
+          "uniqueAnswer": true,
+          "atype": "P",
+          "label": "Partielle     "
+       },
+       {
+          "aindex": 4,
+          "uniqueAnswer": true,
+          "atype": "P",
+          "label": "Faible "
+       },
+       {
+          "aindex": 5,
+          "uniqueAnswer": true,
+          "atype": "P",
+          "label": "Aucune "
+       }
     ]
-  },
+ },
   {
-    "section": "ALTO",
-    "service_category": "Principles",
+    "section": "DAAZ",
+    "service_category": "Mise en conformité",
     "qtype": "S",
     "qindex": 15,
-    "label": "Is your company aware of the \"Privacy-by-default/Privacy-by-design\" principles?",
+    "label": "Après l’accomplissement, j’estime avoir élevé le niveau de mise en conformité au RGPD de mon organisation :",
     "answers": [
-      {
-        "aindex": 1,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "label": "Yes",
-        "questions_map": [
-          {
-            "label": "Does your company inform the data subjects (e.g.: employees, customers, etc.) about the processing carried out from their personal data?",
-            "branch": 0,
-            "level": 16,
-            "order": 1
-          }
-        ]
-      },
-      {
-        "aindex": 2,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "label": "No",
-        "questions_map": [
-          {
-            "label": "Does your company inform the data subjects (e.g.: employees, customers, etc.) about the processing carried out from their personal data?",
-            "branch": 0,
-            "level": 16,
-            "order": 1
-          }
-        ]
-      },
-      {
-        "aindex": 3,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "label": "I don't know",
-        "questions_map": [
-          {
-            "label": "Does your company inform the data subjects (e.g.: employees, customers, etc.) about the processing carried out from their personal data?",
-            "branch": 0,
-            "level": 16,
-            "order": 1
-          }
-        ]
-      }
+       {
+          "aindex": 1,
+          "uniqueAnswer": true,
+          "atype": "P",
+          "label": "Accord total"
+       },
+       {
+          "aindex": 2,
+          "uniqueAnswer": true,
+          "atype": "P",
+          "label": "Plutôt d'accord"
+       },
+       {
+          "aindex": 3,
+          "uniqueAnswer": true,
+          "atype": "P",
+          "label": "Plutôt en désaccord"
+       },
+       {
+          "aindex": 4,
+          "uniqueAnswer": true,
+          "atype": "P",
+          "label": "Désaccord total"
+       },
+       {
+          "aindex": 5,
+          "uniqueAnswer": true,
+          "atype": "P",
+          "label": "N/A"
+       }
     ]
-  },
+ },
   {
-    "section": "ALTO",
-    "service_category": "Principles",
+    "section": "DAAZ",
+    "service_category": "Mise en conformité",
     "qtype": "S",
     "qindex": 16,
-    "label": "Does your company inform the data subjects (e.g.: employees, customers, etc.) about the processing carried out from their personal data?",
+    "label": "Les template fournis lors des challenges de fin de niveau étaient suffisamment simples et adaptés à mon organisation.",
     "answers": [
-      {
-        "aindex": 1,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "label": "Yes",
-        "questions_map": [
-          {
-            "label": "Does your company inform the data subjects (e.g.: employees, customers, etc.) about their rights under the GDPR?",
-            "branch": 0,
-            "level": 17,
-            "order": 1
-          }
-        ]
-      },
-      {
-        "aindex": 2,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "label": "No",
-        "questions_map": [
-          {
-            "label": "Does your company inform the data subjects (e.g.: employees, customers, etc.) about their rights under the GDPR?",
-            "branch": 0,
-            "level": 17,
-            "order": 1
-          }
-        ]
-      },
-      {
-        "aindex": 3,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "label": "In progress",
-        "questions_map": [
-          {
-            "label": "Does your company inform the data subjects (e.g.: employees, customers, etc.) about their rights under the GDPR?",
-            "branch": 0,
-            "level": 17,
-            "order": 1
-          }
-        ]
-      },
-      {
-        "aindex": 4,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "label": "I don't know",
-        "questions_map": [
-          {
-            "label": "Does your company inform the data subjects (e.g.: employees, customers, etc.) about their rights under the GDPR?",
-            "branch": 0,
-            "level": 17,
-            "order": 1
-          }
-        ]
-      }
+       {
+          "aindex": 1,
+          "uniqueAnswer": true,
+          "atype": "P",
+          "label": "Accord total"
+       },
+       {
+          "aindex": 2,
+          "uniqueAnswer": true,
+          "atype": "P",
+          "label": "Plutôt d'accord"
+       },
+       {
+          "aindex": 3,
+          "uniqueAnswer": true,
+          "atype": "P",
+          "label": "Plutôt en désaccord"
+       },
+       {
+          "aindex": 4,
+          "uniqueAnswer": true,
+          "atype": "P",
+          "label": "Désaccord total"
+       },
+       {
+          "aindex": 5,
+          "uniqueAnswer": true,
+          "atype": "P",
+          "label": "N/A"
+       }
     ]
-  },
+ },
   {
-    "section": "ALTO",
-    "service_category": "Principles",
+    "section": "DAAZ",
+    "service_category": "Contenu",
     "qtype": "S",
     "qindex": 17,
-    "label": "Does your company inform the data subjects (e.g.: employees, customers, etc.) about their rights under the GDPR?",
+    "label": "Le contenu relatif à la protection des données a été présentés de manière structurée.",
     "answers": [
-      {
-        "aindex": 1,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "label": "Yes",
-        "questions_map": [
-          {
-            "label": "Does your company apply a retention period adapted to each purpose of the processing?",
-            "branch": 0,
-            "level": 18,
-            "order": 1
-          }
-        ]
-      },
-      {
-        "aindex": 2,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "label": "No",
-        "questions_map": [
-          {
-            "label": "Does your company apply a retention period adapted to each purpose of the processing?",
-            "branch": 0,
-            "level": 18,
-            "order": 1
-          }
-        ]
-      },
-      {
-        "aindex": 3,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "label": "In progress",
-        "questions_map": [
-          {
-            "label": "Does your company apply a retention period adapted to each purpose of the processing?",
-            "branch": 0,
-            "level": 18,
-            "order": 1
-          }
-        ]
-      },
-      {
-        "aindex": 4,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "label": "I don't know",
-        "questions_map": [
-          {
-            "label": "Does your company apply a retention period adapted to each purpose of the processing?",
-            "branch": 0,
-            "level": 18,
-            "order": 1
-          }
-        ]
-      }
+       {
+          "aindex": 1,
+          "uniqueAnswer": true,
+          "atype": "P",
+          "label": "Accord total"
+       },
+       {
+          "aindex": 2,
+          "uniqueAnswer": true,
+          "atype": "P",
+          "label": "Plutôt d'accord"
+       },
+       {
+          "aindex": 3,
+          "uniqueAnswer": true,
+          "atype": "P",
+          "label": "Plutôt en désaccord"
+       },
+       {
+          "aindex": 4,
+          "uniqueAnswer": true,
+          "atype": "P",
+          "label": "Désaccord total"
+       },
+       {
+          "aindex": 5,
+          "uniqueAnswer": true,
+          "atype": "P",
+          "label": "N/A"
+       }
     ]
-  },
+ },
   {
-    "section": "ALTO",
-    "service_category": "Principles",
+    "section": "DAAZ",
+    "service_category": "Contenu",
     "qtype": "S",
     "qindex": 18,
-    "label": "Does your company apply a retention period adapted to each purpose of the processing?",
+    "label": "Il y avait assez d’éléments interactifs dans la formation.",
     "answers": [
-      {
-        "aindex": 1,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "label": "Yes",
-        "questions_map": [
-          {
-            "label": "Does your company host the processed data in a storage location<sup>1</sup> that ensures appropriate security to the sensitivity of the data?<p><small>[1] This can be the physical room (e.g. server room, paper cabinet, etc.) or the actual storage location (databases, archives, back-ups, physical filing cabinets, etc.) </small></p>",
-            "branch": 0,
-            "level": 19,
-            "order": 1
-          }
-        ]
-      },
-      {
-        "aindex": 2,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "label": "No",
-        "questions_map": [
-          {
-            "label": "Does your company host the processed data in a storage location<sup>1</sup> that ensures appropriate security to the sensitivity of the data?<p><small>[1] This can be the physical room (e.g. server room, paper cabinet, etc.) or the actual storage location (databases, archives, back-ups, physical filing cabinets, etc.) </small></p>",
-            "branch": 0,
-            "level": 19,
-            "order": 1
-          }
-        ]
-      },
-      {
-        "aindex": 3,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "label": "In progress",
-        "questions_map": [
-          {
-            "label": "Does your company host the processed data in a storage location<sup>1</sup> that ensures appropriate security to the sensitivity of the data?<p><small>[1] This can be the physical room (e.g. server room, paper cabinet, etc.) or the actual storage location (databases, archives, back-ups, physical filing cabinets, etc.) </small></p>",
-            "branch": 0,
-            "level": 19,
-            "order": 1
-          }
-        ]
-      },
-      {
-        "aindex": 4,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "label": "I don't know",
-        "questions_map": [
-          {
-            "label": "Does your company host the processed data in a storage location<sup>1</sup> that ensures appropriate security to the sensitivity of the data?<p><small>[1] This can be the physical room (e.g. server room, paper cabinet, etc.) or the actual storage location (databases, archives, back-ups, physical filing cabinets, etc.) </small></p>",
-            "branch": 0,
-            "level": 19,
-            "order": 1
-          }
-        ]
-      }
+       {
+          "aindex": 1,
+          "uniqueAnswer": true,
+          "atype": "P",
+          "label": "Accord total"
+       },
+       {
+          "aindex": 2,
+          "uniqueAnswer": true,
+          "atype": "P",
+          "label": "Plutôt d'accord"
+       },
+       {
+          "aindex": 3,
+          "uniqueAnswer": true,
+          "atype": "P",
+          "label": "Plutôt en désaccord"
+       },
+       {
+          "aindex": 4,
+          "uniqueAnswer": true,
+          "atype": "P",
+          "label": "Désaccord total"
+       },
+       {
+          "aindex": 5,
+          "uniqueAnswer": true,
+          "atype": "P",
+          "label": "N/A"
+       }
     ]
-  },
+ },
   {
-    "section": "ALTO",
-    "service_category": "Principles",
+    "section": "DAAZ",
+    "service_category": "Contenu",
     "qtype": "S",
     "qindex": 19,
-    "label": "Does your company host the processed data in a storage location<sup>1</sup> that ensures appropriate security to the sensitivity of the data?<p><small>[1] This can be the physical room (e.g. server room, paper cabinet, etc.) or the actual storage location (databases, archives, back-ups, physical filing cabinets, etc.) </small></p>",
+    "label": "Les contenus numériques fournis et accessibles depuis l’espace « Ressources » présentent une valeur ajoutée dans la formation.",
     "answers": [
-      {
-        "aindex": 1,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "label": "Yes",
-        "questions_map": [
-          {
-            "label": "What documentation has your company put in place to demonstrate that its data processing is GDPR compliant?",
-            "branch": 0,
-            "level": 20,
-            "order": 1
-          }
-        ]
-      },
-      {
-        "aindex": 2,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "label": "No",
-        "questions_map": [
-          {
-            "label": "What documentation has your company put in place to demonstrate that its data processing is GDPR compliant?",
-            "branch": 0,
-            "level": 20,
-            "order": 1
-          }
-        ]
-      },
-      {
-        "aindex": 3,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "label": "In progress",
-        "questions_map": [
-          {
-            "label": "What documentation has your company put in place to demonstrate that its data processing is GDPR compliant?",
-            "branch": 0,
-            "level": 20,
-            "order": 1
-          }
-        ]
-      },
-      {
-        "aindex": 4,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "label": "I don't know",
-        "questions_map": [
-          {
-            "label": "What documentation has your company put in place to demonstrate that its data processing is GDPR compliant?",
-            "branch": 0,
-            "level": 20,
-            "order": 1
-          }
-        ]
-      }
+       {
+          "aindex": 1,
+          "uniqueAnswer": true,
+          "atype": "P",
+          "label": "Accord total"
+       },
+       {
+          "aindex": 2,
+          "uniqueAnswer": true,
+          "atype": "P",
+          "label": "Plutôt d'accord"
+       },
+       {
+          "aindex": 3,
+          "uniqueAnswer": true,
+          "atype": "P",
+          "label": "Plutôt en désaccord"
+       },
+       {
+          "aindex": 4,
+          "uniqueAnswer": true,
+          "atype": "P",
+          "label": "Désaccord total"
+       },
+       {
+          "aindex": 5,
+          "uniqueAnswer": true,
+          "atype": "P",
+          "label": "N/A"
+       }
     ]
-  },
+ },
   {
-    "section": "ALTO",
-    "service_category": "Principles",
-    "qtype": "M",
+    "section": "DAAZ",
+    "service_category": "Contenu",
+    "qtype": "S",
     "qindex": 20,
-    "label": "What documentation has your company put in place to demonstrate that its data processing is GDPR compliant?",
+    "label": "Le visuel et les graphismes de la formation étaient lisibles et agréables à regarder.",
     "answers": [
-      {
-        "aindex": 1,
-        "uniqueAnswer": false,
-        "atype": "P",
-        "label": "Data protection policies",
-        "questions_map": [
-          {
-            "label": "Are you aware of the risks associated with data processing?",
-            "branch": 0,
-            "level": 21,
-            "order": 1
-          }
-        ]
-      },
-      {
-        "aindex": 2,
-        "uniqueAnswer": false,
-        "atype": "P",
-        "label": "Data Processing Agreement",
-        "questions_map": [
-          {
-            "label": "Are you aware of the risks associated with data processing?",
-            "branch": 0,
-            "level": 21,
-            "order": 1
-          }
-        ]
-      },
-      {
-        "aindex": 3,
-        "uniqueAnswer": false,
-        "atype": "P",
-        "label": "Annex to the employment contract (information on the management of employee data)",
-        "questions_map": [
-          {
-            "label": "Are you aware of the risks associated with data processing?",
-            "branch": 0,
-            "level": 21,
-            "order": 1
-          }
-        ]
-      },
-      {
-        "aindex": 4,
-        "uniqueAnswer": false,
-        "atype": "P",
-        "label": "Record of processing activities",
-        "questions_map": [
-          {
-            "label": "Are you aware of the risks associated with data processing?",
-            "branch": 0,
-            "level": 21,
-            "order": 1
-          }
-        ]
-      },
-      {
-        "aindex": 5,
-        "uniqueAnswer": false,
-        "atype": "P",
-        "label": "Internal standards of data breach management",
-        "questions_map": [
-          {
-            "label": "Are you aware of the risks associated with data processing?",
-            "branch": 0,
-            "level": 21,
-            "order": 1
-          }
-        ]
-      },
-      {
-        "aindex": 6,
-        "uniqueAnswer": false,
-        "atype": "P",
-        "label": "Internal standards on the exercise of the rights of data subjects",
-        "questions_map": [
-          {
-            "label": "Are you aware of the risks associated with data processing?",
-            "branch": 0,
-            "level": 21,
-            "order": 1
-          }
-        ]
-      },
-      {
-        "aindex": 7,
-        "uniqueAnswer": false,
-        "atype": "P",
-        "label": "Impact assessment",
-        "questions_map": [
-          {
-            "label": "Are you aware of the risks associated with data processing?",
-            "branch": 0,
-            "level": 21,
-            "order": 1
-          }
-        ]
-      },
-      {
-        "aindex": 8,
-        "uniqueAnswer": false,
-        "atype": "P",
-        "label": "Standard contractual clauses (transfer to third countries)",
-        "questions_map": [
-          {
-            "label": "Are you aware of the risks associated with data processing?",
-            "branch": 0,
-            "level": 21,
-            "order": 1
-          }
-        ]
-      },
-      {
-        "aindex": 9,
-        "uniqueAnswer": false,
-        "atype": "P",
-        "label": "Consent collection document",
-        "questions_map": [
-          {
-            "label": "Are you aware of the risks associated with data processing?",
-            "branch": 0,
-            "level": 21,
-            "order": 1
-          }
-        ]
-      },
-      {
-        "aindex": 10,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "label": "I don't know",
-        "questions_map": [
-          {
-            "label": "Are you aware of the risks associated with data processing?",
-            "branch": 0,
-            "level": 21,
-            "order": 1
-          }
-        ]
-      }
+       {
+          "aindex": 1,
+          "uniqueAnswer": true,
+          "atype": "P",
+          "label": "Accord total"
+       },
+       {
+          "aindex": 2,
+          "uniqueAnswer": true,
+          "atype": "P",
+          "label": "Plutôt d'accord"
+       },
+       {
+          "aindex": 3,
+          "uniqueAnswer": true,
+          "atype": "P",
+          "label": "Plutôt en désaccord"
+       },
+       {
+          "aindex": 4,
+          "uniqueAnswer": true,
+          "atype": "P",
+          "label": "Désaccord total"
+       },
+       {
+          "aindex": 5,
+          "uniqueAnswer": true,
+          "atype": "P",
+          "label": "N/A"
+       }
     ]
-  },
+ },
   {
-    "section": "ALTO",
-    "service_category": "Risks",
+    "section": "DAAZ",
+    "service_category": "Contenu",
     "qtype": "S",
     "qindex": 21,
-    "label": "Are you aware of the risks associated with data processing?",
+    "label": "Les contenus étaient adaptés pour être traités de manière numérique.",
     "answers": [
-      {
-        "aindex": 1,
-        "uniqueAnswer": false,
-        "atype": "P",
-        "label": "0 (Not acquired)",
-        "questions_map": [
-          {
-            "label": "What risks has your company identified?",
-            "branch": 0,
-            "level": 22,
-            "order": 1
-          }
-        ]
-      },
-      {
-        "aindex": 2,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "label": "1",
-        "questions_map": [
-          {
-            "label": "What risks has your company identified?",
-            "branch": 0,
-            "level": 22,
-            "order": 1
-          }
-        ]
-      },
-      {
-        "aindex": 3,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "label": "2",
-        "questions_map": [
-          {
-            "label": "What risks has your company identified?",
-            "branch": 0,
-            "level": 22,
-            "order": 1
-          }
-        ]
-      },
-      {
-        "aindex": 4,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "label": "3",
-        "questions_map": [
-          {
-            "label": "What risks has your company identified?",
-            "branch": 0,
-            "level": 22,
-            "order": 1
-          }
-        ]
-      },
-      {
-        "aindex": 5,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "label": "4",
-        "questions_map": [
-          {
-            "label": "What risks has your company identified?",
-            "branch": 0,
-            "level": 22,
-            "order": 1
-          }
-        ]
-      },
-      {
-        "aindex": 6,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "label": "5 (Perfectly mastered)",
-        "questions_map": [
-          {
-            "label": "What risks has your company identified?",
-            "branch": 0,
-            "level": 22,
-            "order": 1
-          }
-        ]
-      }
+       {
+          "aindex": 1,
+          "uniqueAnswer": true,
+          "atype": "P",
+          "label": "Accord total"
+       },
+       {
+          "aindex": 2,
+          "uniqueAnswer": true,
+          "atype": "P",
+          "label": "Plutôt d'accord"
+       },
+       {
+          "aindex": 3,
+          "uniqueAnswer": true,
+          "atype": "P",
+          "label": "Plutôt en désaccord"
+       },
+       {
+          "aindex": 4,
+          "uniqueAnswer": true,
+          "atype": "P",
+          "label": "Désaccord total"
+       },
+       {
+          "aindex": 5,
+          "uniqueAnswer": true,
+          "atype": "P",
+          "label": "N/A"
+       }
     ]
-  },
+ },
   {
-    "section": "ALTO",
-    "service_category": "Risks",
-    "qtype": "M",
+    "section": "DAAZ",
+    "service_category": "Contenu",
+    "qtype": "S",
     "qindex": 22,
-    "label": "What risks has your company identified?",
+    "label": "J’ai pris du plaisir à effectuer le parcours.",
     "answers": [
-      {
-        "aindex": 1,
-        "uniqueAnswer": false,
-        "atype": "P",
-        "label": "Internal risks (human, e.g. loss of USB stick)",
-        "questions_map": [
-          {
-            "label": "Does your company have an overview of data flows?",
-            "branch": 0,
-            "level": 23,
-            "order": 1
-          }
-        ]
-      },
-      {
-        "aindex": 2,
-        "uniqueAnswer": false,
-        "atype": "P",
-        "label": "External risks (cyber-attacks)",
-        "questions_map": [
-          {
-            "label": "Does your company have an overview of data flows?",
-            "branch": 0,
-            "level": 23,
-            "order": 1
-          }
-        ]
-      },
-      {
-        "aindex": 3,
-        "uniqueAnswer": false,
-        "atype": "P",
-        "label": "Risks related to the use of technologies",
-        "questions_map": [
-          {
-            "label": "Does your company have an overview of data flows?",
-            "branch": 0,
-            "level": 23,
-            "order": 1
-          }
-        ]
-      },
-      {
-        "aindex": 4,
-        "uniqueAnswer": false,
-        "atype": "P",
-        "label": "Accidents (e.g. computer failures, fires, floods, etc.)",
-        "questions_map": [
-          {
-            "label": "Does your company have an overview of data flows?",
-            "branch": 0,
-            "level": 23,
-            "order": 1
-          }
-        ]
-      },
-      {
-        "aindex": 5,
-        "uniqueAnswer": false,
-        "atype": "P",
-        "label": "Risks related to data processing, such as automatic decision-making and monitoring",
-        "questions_map": [
-          {
-            "label": "Does your company have an overview of data flows?",
-            "branch": 0,
-            "level": 23,
-            "order": 1
-          }
-        ]
-      },
-      {
-        "aindex": 6,
-        "uniqueAnswer": false,
-        "atype": "P",
-        "label": "Risks related to processing of sensitive data (e.g. racial origin, political and religious opinion, sexual orientation, biometrics, etc.)",
-        "questions_map": [
-          {
-            "label": "Does your company have an overview of data flows?",
-            "branch": 0,
-            "level": 23,
-            "order": 1
-          }
-        ]
-      },
-      {
-        "aindex": 7,
-        "uniqueAnswer": false,
-        "atype": "P",
-        "label": "Risks related to transfers to a third country outside the European Union",
-        "questions_map": [
-          {
-            "label": "Does your company have an overview of data flows?",
-            "branch": 0,
-            "level": 23,
-            "order": 1
-          }
-        ]
-      },
-      {
-        "aindex": 8,
-        "uniqueAnswer": false,
-        "atype": "P",
-        "label": "Risks related to the processing of data of vulnerable natural persons (e.g. children)",
-        "questions_map": [
-          {
-            "label": "Does your company have an overview of data flows?",
-            "branch": 0,
-            "level": 23,
-            "order": 1
-          }
-        ]
-      },
-      {
-        "aindex": 9,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "label": "I don't know",
-        "questions_map": [
-          {
-            "label": "Does your company have an overview of data flows?",
-            "branch": 0,
-            "level": 23,
-            "order": 1
-          }
-        ]
-      }
+       {
+          "aindex": 1,
+          "uniqueAnswer": true,
+          "atype": "P",
+          "label": "Accord total"
+       },
+       {
+          "aindex": 2,
+          "uniqueAnswer": true,
+          "atype": "P",
+          "label": "Plutôt d'accord"
+       },
+       {
+          "aindex": 3,
+          "uniqueAnswer": true,
+          "atype": "P",
+          "label": "Plutôt en désaccord"
+       },
+       {
+          "aindex": 4,
+          "uniqueAnswer": true,
+          "atype": "P",
+          "label": "Désaccord total"
+       },
+       {
+          "aindex": 5,
+          "uniqueAnswer": true,
+          "atype": "P",
+          "label": "N/A"
+       }
     ]
-  },
+ },
   {
-    "section": "ALTO",
-    "service_category": "Risks",
+    "section": "DAAZ",
+    "service_category": "Utilisation de l’outil DAAZ",
     "qtype": "S",
     "qindex": 23,
-    "label": "Does your company have an overview of data flows?",
+    "label": "La navigation entre les différents éléments était simple et intuitive.",
     "answers": [
-      {
-        "aindex": 1,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "label": "Yes",
-        "questions_map": [
-          {
-            "label": "Does your company have some process in place to ensure data security?",
-            "branch": 0,
-            "level": 24,
-            "order": 1
-          }
-        ]
-      },
-      {
-        "aindex": 2,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "label": "No",
-        "questions_map": [
-          {
-            "label": "Does your company have some process in place to ensure data security?",
-            "branch": 0,
-            "level": 24,
-            "order": 1
-          }
-        ]
-      },
-      {
-        "aindex": 3,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "label": "In progress",
-        "questions_map": [
-          {
-            "label": "Does your company have some process in place to ensure data security?",
-            "branch": 0,
-            "level": 24,
-            "order": 1
-          }
-        ]
-      },
-      {
-        "aindex": 4,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "label": "I don't know",
-        "questions_map": [
-          {
-            "label": "Does your company have some process in place to ensure data security?",
-            "branch": 0,
-            "level": 24,
-            "order": 1
-          }
-        ]
-      }
+       {
+          "aindex": 1,
+          "uniqueAnswer": true,
+          "atype": "P",
+          "label": "Accord total"
+       },
+       {
+          "aindex": 2,
+          "uniqueAnswer": true,
+          "atype": "P",
+          "label": "Plutôt d'accord"
+       },
+       {
+          "aindex": 3,
+          "uniqueAnswer": true,
+          "atype": "P",
+          "label": "Plutôt en désaccord"
+       },
+       {
+          "aindex": 4,
+          "uniqueAnswer": true,
+          "atype": "P",
+          "label": "Désaccord total"
+       },
+       {
+          "aindex": 5,
+          "uniqueAnswer": true,
+          "atype": "P",
+          "label": "N/A"
+       }
     ]
-  },
+ },
   {
-    "section": "ALTO",
-    "service_category": "Risks",
+    "section": "DAAZ",
+    "service_category": "Utilisation de l’outil DAAZ",
     "qtype": "S",
     "qindex": 24,
-    "label": "Does your company have some process in place to ensure data security?",
+    "label": "La plateforme a fonctionné sans incident technique.",
     "answers": [
-      {
-        "aindex": 1,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "label": "Yes",
-        "questions_map": [
-          {
-            "label": "Does your company know how to react in the event of leaks or destruction of personal data (data breach)?",
-            "branch": 0,
-            "level": 25,
-            "order": 1
-          }
-        ]
-      },
-      {
-        "aindex": 2,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "label": "No",
-        "questions_map": [
-          {
-            "label": "Does your company know how to react in the event of leaks or destruction of personal data (data breach)?",
-            "branch": 0,
-            "level": 25,
-            "order": 1
-          }
-        ]
-      },
-      {
-        "aindex": 3,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "label": "In progress",
-        "questions_map": [
-          {
-            "label": "Does your company know how to react in the event of leaks or destruction of personal data (data breach)?",
-            "branch": 0,
-            "level": 25,
-            "order": 1
-          }
-        ]
-      },
-      {
-        "aindex": 4,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "label": "I don't know",
-        "questions_map": [
-          {
-            "label": "Does your company know how to react in the event of leaks or destruction of personal data (data breach)?",
-            "branch": 0,
-            "level": 25,
-            "order": 1
-          }
-        ]
-      }
+       {
+          "aindex": 1,
+          "uniqueAnswer": true,
+          "atype": "P",
+          "label": "Accord total"
+       },
+       {
+          "aindex": 2,
+          "uniqueAnswer": true,
+          "atype": "P",
+          "label": "Plutôt d'accord"
+       },
+       {
+          "aindex": 3,
+          "uniqueAnswer": true,
+          "atype": "P",
+          "label": "Plutôt en désaccord"
+       },
+       {
+          "aindex": 4,
+          "uniqueAnswer": true,
+          "atype": "P",
+          "label": "Désaccord total"
+       },
+       {
+          "aindex": 5,
+          "uniqueAnswer": true,
+          "atype": "P",
+          "label": "N/A"
+       }
     ]
-  },
+ },
   {
-    "section": "ALTO",
-    "service_category": "Risks",
+    "section": "DAAZ",
+    "service_category": "Utilisation de l’outil DAAZ",
     "qtype": "S",
     "qindex": 25,
-    "label": "Does your company know how to react in the event of leaks or destruction of personal data (data breach)?",
+    "label": "L’assistance technique fournie en cas de problème était appropriée.",
     "answers": [
-      {
-        "aindex": 1,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "label": "Yes",
-        "questions_map": [
-          {
-            "label": "How do you react in the event of leaks or destruction of personal data?",
-            "branch": 0,
-            "level": 26,
-            "order": 1
-          }
-        ]
-      },
-      {
-        "aindex": 2,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "label": "No",
-        "questions_map": [
-          {
-            "label": "Are some processed data transferred to a third country (outside the European Union)?",
-            "branch": 0,
-            "level": 26,
-            "order": 1
-          }
-        ]
-      }
+       {
+          "aindex": 1,
+          "uniqueAnswer": true,
+          "atype": "P",
+          "label": "Accord total"
+       },
+       {
+          "aindex": 2,
+          "uniqueAnswer": true,
+          "atype": "P",
+          "label": "Plutôt d'accord"
+       },
+       {
+          "aindex": 3,
+          "uniqueAnswer": true,
+          "atype": "P",
+          "label": "Plutôt en désaccord"
+       },
+       {
+          "aindex": 4,
+          "uniqueAnswer": true,
+          "atype": "P",
+          "label": "Désaccord total"
+       },
+       {
+          "aindex": 5,
+          "uniqueAnswer": true,
+          "atype": "P",
+          "label": "N/A"
+       }
     ]
-  },
+ },
   {
-    "section": "ALTO",
-    "service_category": "Risks",
-    "qtype": "M",
+    "section": "DAAZ",
+    "service_category": "Organisation de l’information",
+    "qtype": "S",
     "qindex": 26,
-    "label": "How do you react in the event of leaks or destruction of personal data?",
+    "label": "J’ai obtenu toutes les informations nécessaires pour le bon déroulement de ma participation à l’outil DAAZ.",
     "answers": [
-      {
-        "aindex": 1,
-        "uniqueAnswer": false,
-        "atype": "P",
-        "label": "Impact analysis of data subjects",
-        "questions_map": [
-          {
-            "label": "Are some processed data transferred to a third country (outside the European Union)?",
-            "branch": 0,
-            "level": 27,
-            "order": 1
-          }
-        ]
-      },
-      {
-        "aindex": 2,
-        "uniqueAnswer": false,
-        "atype": "P",
-        "label": "Information of data subjects in the event of a high risk to their rights and freedoms",
-        "questions_map": [
-          {
-            "label": "Are some processed data transferred to a third country (outside the European Union)?",
-            "branch": 0,
-            "level": 27,
-            "order": 1
-          }
-        ]
-      },
-      {
-        "aindex": 3,
-        "uniqueAnswer": false,
-        "atype": "P",
-        "label": "Risk table (assessing severity levels)",
-        "questions_map": [
-          {
-            "label": "Are some processed data transferred to a third country (outside the European Union)?",
-            "branch": 0,
-            "level": 27,
-            "order": 1
-          }
-        ]
-      },
-      {
-        "aindex": 4,
-        "uniqueAnswer": false,
-        "atype": "P",
-        "label": "Implementation of a reaction procedure provided for this purpose",
-        "questions_map": [
-          {
-            "label": "Are some processed data transferred to a third country (outside the European Union)?",
-            "branch": 0,
-            "level": 27,
-            "order": 1
-          }
-        ]
-      },
-      {
-        "aindex": 5,
-        "uniqueAnswer": false,
-        "atype": "P",
-        "label": "CNPD data breach notification form",
-        "questions_map": [
-          {
-            "label": "Are some processed data transferred to a third country (outside the European Union)?",
-            "branch": 0,
-            "level": 27,
-            "order": 1
-          }
-        ]
-      },
-      {
-        "aindex": 6,
-        "uniqueAnswer": false,
-        "atype": "P",
-        "label": "Taking adequate actions to ensure that the breach does not happen again",
-        "questions_map": [
-          {
-            "label": "Are some processed data transferred to a third country (outside the European Union)?",
-            "branch": 0,
-            "level": 27,
-            "order": 1
-          }
-        ]
-      },
-      {
-        "aindex": 7,
-        "uniqueAnswer": false,
-        "atype": "P",
-        "label": "Other",
-        "questions_map": [
-          {
-            "label": "Are some processed data transferred to a third country (outside the European Union)?",
-            "branch": 0,
-            "level": 27,
-            "order": 1
-          }
-        ]
-      },
-      {
-        "aindex": 8,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "label": "I don't know",
-        "questions_map": [
-          {
-            "label": "Are some processed data transferred to a third country (outside the European Union)?",
-            "branch": 0,
-            "level": 27,
-            "order": 1
-          }
-        ]
-      }
+       {
+          "aindex": 1,
+          "uniqueAnswer": true,
+          "atype": "P",
+          "label": "Accord total"
+       },
+       {
+          "aindex": 2,
+          "uniqueAnswer": true,
+          "atype": "P",
+          "label": "Plutôt d'accord"
+       },
+       {
+          "aindex": 3,
+          "uniqueAnswer": true,
+          "atype": "P",
+          "label": "Plutôt en désaccord"
+       },
+       {
+          "aindex": 4,
+          "uniqueAnswer": true,
+          "atype": "P",
+          "label": "Désaccord total"
+       },
+       {
+          "aindex": 5,
+          "uniqueAnswer": true,
+          "atype": "P",
+          "label": "N/A"
+       }
     ]
-  },
+ },
   {
-    "section": "ALTO",
-    "service_category": "Transfers",
+    "section": "DAAZ",
+    "service_category": "Organisation de l’information",
     "qtype": "S",
     "qindex": 27,
-    "label": "Are some processed data transferred to a third country (outside the European Union)?",
+    "label": "L’encadrement fourni via le Centre d’aide était approprié.",
     "answers": [
-      {
-        "aindex": 1,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "label": "Yes",
-        "questions_map": [
-          {
-            "label": "Does your company use free or paid online services?",
-            "branch": 0,
-            "level": 28,
-            "order": 1
-          }
-        ]
-      },
-      {
-        "aindex": 2,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "label": "No",
-        "questions_map": [
-          {
-            "label": "Does your company use free or paid online services?",
-            "branch": 0,
-            "level": 28,
-            "order": 1
-          }
-        ]
-      },
-      {
-        "aindex": 3,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "label": "In progress",
-        "questions_map": [
-          {
-            "label": "Does your company use free or paid online services?",
-            "branch": 0,
-            "level": 28,
-            "order": 1
-          }
-        ]
-      },
-      {
-        "aindex": 4,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "label": "I don't know",
-        "questions_map": [
-          {
-            "label": "Does your company use free or paid online services?",
-            "branch": 0,
-            "level": 28,
-            "order": 1
-          }
-        ]
-      }
+       {
+          "aindex": 1,
+          "uniqueAnswer": true,
+          "atype": "P",
+          "label": "Accord total"
+       },
+       {
+          "aindex": 2,
+          "uniqueAnswer": true,
+          "atype": "P",
+          "label": "Plutôt d'accord"
+       },
+       {
+          "aindex": 3,
+          "uniqueAnswer": true,
+          "atype": "P",
+          "label": "Plutôt en désaccord"
+       },
+       {
+          "aindex": 4,
+          "uniqueAnswer": true,
+          "atype": "P",
+          "label": "Désaccord total"
+       },
+       {
+          "aindex": 5,
+          "uniqueAnswer": true,
+          "atype": "P",
+          "label": "N/A"
+       }
     ]
-  },
+ },
   {
-    "section": "ALTO",
-    "service_category": "Transfers",
+    "section": "DAAZ",
+    "service_category": "Organisation de l’information",
     "qtype": "S",
     "qindex": 28,
-    "label": "Does your company use free or paid online services?",
+    "label": "Sur quel(-s) appareil(-s) avez-vous effectué le parcours DAAZ ?",
     "answers": [
-      {
-        "aindex": 1,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "label": "Yes",
-        "questions_map": [
-          {
-            "label": "Does your company check where the data hosted by these online service providers is located?",
-            "branch": 0,
-            "level": 29,
-            "order": 1
-          }
-        ]
-      },
-      {
-        "aindex": 2,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "label": "No",
-        "questions_map": [
-          {
-            "label": "Please rank the top challenges your business is facing, moving them up (click and drag).",
-            "branch": 0,
-            "level": 29,
-            "order": 1
-          }
-        ]
-      },
-      {
-        "aindex": 3,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "label": "In progress",
-        "questions_map": [
-          {
-            "label": "Does your company check where the data hosted by these online service providers is located?",
-            "branch": 0,
-            "level": 29,
-            "order": 1
-          }
-        ]
-      },
-      {
-        "aindex": 4,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "label": "I don't know",
-        "questions_map": [
-          {
-            "label": "Please rank the top challenges your business is facing, moving them up (click and drag).",
-            "branch": 0,
-            "level": 29,
-            "order": 1
-          }
-        ]
-      }
+       {
+          "aindex": 1,
+          "uniqueAnswer": true,
+          "atype": "P",
+          "label": "Mobile"
+       },
+       {
+          "aindex": 2,
+          "uniqueAnswer": true,
+          "atype": "P",
+          "label": "Tablette "
+       },
+       {
+          "aindex": 3,
+          "uniqueAnswer": true,
+          "atype": "P",
+          "label": "Ordinateur portable"
+       },
+       {
+          "aindex": 4,
+          "uniqueAnswer": true,
+          "atype": "P",
+          "label": "Ecran large"
+       },
+       {
+          "aindex": 5,
+          "uniqueAnswer": true,
+          "atype": "P",
+          "label": "autre"
+       }
     ]
-  },
+ },
   {
-    "section": "ALTO",
-    "service_category": "Transfers",
+    "section": "DAAZ",
+    "service_category": "Organisation de l’information",
     "qtype": "S",
     "qindex": 29,
-    "label": "Does your company check where the data hosted by these online service providers is located?",
+    "label": "L’ergonomie et le visuel de l’outil étaient appropriés.",
     "answers": [
-      {
-        "aindex": 1,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "label": "Yes",
-        "questions_map": [
-          {
-            "label": "Has your company had a written document signed containing the data protection requirements to be respected by the company located in a third country outside the European Union?",
-            "branch": 0,
-            "level": 30,
-            "order": 1
-          }
-        ]
-      },
-      {
-        "aindex": 2,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "label": "No",
-        "questions_map": [
-          {
-            "label": "Has your company had a written document signed containing the data protection requirements to be respected by the company located in a third country outside the European Union?",
-            "branch": 0,
-            "level": 30,
-            "order": 1
-          }
-        ]
-      },
-      {
-        "aindex": 3,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "label": "In progress",
-        "questions_map": [
-          {
-            "label": "Has your company had a written document signed containing the data protection requirements to be respected by the company located in a third country outside the European Union?",
-            "branch": 0,
-            "level": 30,
-            "order": 1
-          }
-        ]
-      },
-      {
-        "aindex": 4,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "label": "I don't know",
-        "questions_map": [
-          {
-            "label": "Has your company had a written document signed containing the data protection requirements to be respected by the company located in a third country outside the European Union?",
-            "branch": 0,
-            "level": 30,
-            "order": 1
-          }
-        ]
-      }
+       {
+          "aindex": 1,
+          "uniqueAnswer": true,
+          "atype": "P",
+          "label": "Accord total"
+       },
+       {
+          "aindex": 2,
+          "uniqueAnswer": true,
+          "atype": "P",
+          "label": "Plutôt d'accord"
+       },
+       {
+          "aindex": 3,
+          "uniqueAnswer": true,
+          "atype": "P",
+          "label": "Plutôt en désaccord"
+       },
+       {
+          "aindex": 4,
+          "uniqueAnswer": true,
+          "atype": "P",
+          "label": "Désaccord total"
+       },
+       {
+          "aindex": 5,
+          "uniqueAnswer": true,
+          "atype": "P",
+          "label": "N/A"
+       }
     ]
-  },
+ },
   {
-    "section": "ALTO",
-    "service_category": "Transfers",
-    "qtype": "S",
-    "qindex": 30,
-    "label": "Has your company had a written document signed containing the data protection requirements to be respected by the company located in a third country outside the European Union?",
-    "answers": [
-      {
-        "aindex": 1,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "label": "Yes",
-        "questions_map": [
-          {
-            "label": "Please rank the top challenges your business is facing, moving them up (click and drag).",
-            "branch": 0,
-            "level": 31,
-            "order": 1
-          }
-        ]
-      },
-      {
-        "aindex": 2,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "label": "No",
-        "questions_map": [
-          {
-            "label": "Please rank the top challenges your business is facing, moving them up (click and drag).",
-            "branch": 0,
-            "level": 31,
-            "order": 1
-          }
-        ]
-      },
-      {
-        "aindex": 3,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "label": "In progress",
-        "questions_map": [
-          {
-            "label": "Please rank the top challenges your business is facing, moving them up (click and drag).",
-            "branch": 0,
-            "level": 31,
-            "order": 1
-          }
-        ]
-      },
-      {
-        "aindex": 4,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "label": "I don't know",
-        "questions_map": [
-          {
-            "label": "Please rank the top challenges your business is facing, moving them up (click and drag).",
-            "branch": 0,
-            "level": 31,
-            "order": 1
-          }
-        ]
-      },
-      {
-        "aindex": 5,
-        "uniqueAnswer": false,
-        "atype": "P",
-        "label": "No, the provider is established in a state having an adequate level of data protection to the GDPR<sup>1</sup><p><small>[1] Andorra, Argentina, Canada, South Korea, Faroe Islands, Guernsey, Israel, Isle of Man, Japan, Jersey, New Zealand , United Kingdom, Switzerland or Uruguay.</small></p>",
-        "questions_map": [
-          {
-            "label": "Please rank the top challenges your business is facing, moving them up (click and drag).",
-            "branch": 0,
-            "level": 31,
-            "order": 1
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "section": "ALTO",
-    "service_category": "Comments",
-    "qtype": "MS",
-    "qindex": 31,
-    "label": "Please rank the top challenges your business is facing, moving them up (click and drag).",
-    "answers": [
-      {
-        "aindex": 1,
-        "uniqueAnswer": false,
-        "atype": "P",
-        "label": "I need to understand whether I am concerned by the GDPR",
-        "questions_map": [
-          {
-            "label": "Are there other aspects not dealt with in this questionnaire that seem important to address for your company?",
-            "branch": 0,
-            "level": 32,
-            "order": 1
-          }
-        ]
-      },
-      {
-        "aindex": 2,
-        "uniqueAnswer": false,
-        "atype": "P",
-        "label": "I need to know if I am a data controller or a data processor",
-        "questions_map": [
-          {
-            "label": "Are there other aspects not dealt with in this questionnaire that seem important to address for your company?",
-            "branch": 0,
-            "level": 32,
-            "order": 1
-          }
-        ]
-      },
-      {
-        "aindex": 3,
-        "uniqueAnswer": false,
-        "atype": "P",
-        "label": "I need explanations about my GDPR obligations",
-        "questions_map": [
-          {
-            "label": "Are there other aspects not dealt with in this questionnaire that seem important to address for your company?",
-            "branch": 0,
-            "level": 32,
-            "order": 1
-          }
-        ]
-      },
-      {
-        "aindex": 4,
-        "uniqueAnswer": false,
-        "atype": "P",
-        "label": "I need to know how to document data management",
-        "questions_map": [
-          {
-            "label": "Are there other aspects not dealt with in this questionnaire that seem important to address for your company?",
-            "branch": 0,
-            "level": 32,
-            "order": 1
-          }
-        ]
-      },
-      {
-        "aindex": 5,
-        "uniqueAnswer": false,
-        "atype": "P",
-        "label": "I need to know what an information policy should include",
-        "questions_map": [
-          {
-            "label": "Are there other aspects not dealt with in this questionnaire that seem important to address for your company?",
-            "branch": 0,
-            "level": 32,
-            "order": 1
-          }
-        ]
-      },
-      {
-        "aindex": 6,
-        "uniqueAnswer": false,
-        "atype": "P",
-        "label": "I need explanations on the rights of data subjects",
-        "questions_map": [
-          {
-            "label": "Are there other aspects not dealt with in this questionnaire that seem important to address for your company?",
-            "branch": 0,
-            "level": 32,
-            "order": 1
-          }
-        ]
-      },
-      {
-        "aindex": 7,
-        "uniqueAnswer": false,
-        "atype": "P",
-        "label": "I need explanations on the adequate legal basis for each of my data processing",
-        "questions_map": [
-          {
-            "label": "Are there other aspects not dealt with in this questionnaire that seem important to address for your company?",
-            "branch": 0,
-            "level": 32,
-            "order": 1
-          }
-        ]
-      },
-      {
-        "aindex": 8,
-        "uniqueAnswer": false,
-        "atype": "P",
-        "label": "I need to know when to appoint a Data Protection Officer (DPO)",
-        "questions_map": [
-          {
-            "label": "Are there other aspects not dealt with in this questionnaire that seem important to address for your company?",
-            "branch": 0,
-            "level": 32,
-            "order": 1
-          }
-        ]
-      },
-      {
-        "aindex": 9,
-        "uniqueAnswer": false,
-        "atype": "P",
-        "label": "I need to know how long I have to retain the collected data",
-        "questions_map": [
-          {
-            "label": "Are there other aspects not dealt with in this questionnaire that seem important to address for your company?",
-            "branch": 0,
-            "level": 32,
-            "order": 1
-          }
-        ]
-      },
-      {
-        "aindex": 10,
-        "uniqueAnswer": false,
-        "atype": "P",
-        "label": "I need to know if I am correctly applying the data minimization principle"
-      },
-      {
-        "questions_map": [
-          {
-            "label": "Are there other aspects not dealt with in this questionnaire that seem important to address for your company?",
-            "branch": 0,
-            "level": 32,
-            "order": 1
-          }
-        ],
-        "aindex": 11,
-        "uniqueAnswer": false,
-        "atype": "P",
-        "label": "I need information about security obligations concerning personal data under the GDPR"
-      },
-      {
-        "questions_map": [
-          {
-            "label": "Are there other aspects not dealt with in this questionnaire that seem important to address for your company?",
-            "branch": 0,
-            "level": 32,
-            "order": 1
-          }
-        ],
-        "aindex": 12,
-        "uniqueAnswer": false,
-        "atype": "P",
-        "label": "I need information regarding the technical and organizational measures appropriate to the risks related to my personal data management"
-      },
-      {
-        "questions_map": [
-          {
-            "label": "Are there other aspects not dealt with in this questionnaire that seem important to address for your company?",
-            "branch": 0,
-            "level": 32,
-            "order": 1
-          }
-        ],
-        "aindex": 13,
-        "uniqueAnswer": false,
-        "atype": "P",
-        "label": "I need information about the rules governing the management of data breaches"
-      },
-      {
-        "questions_map": [
-          {
-            "label": "Are there other aspects not dealt with in this questionnaire that seem important to address for your company?",
-            "branch": 0,
-            "level": 32,
-            "order": 1
-          }
-        ],
-        "aindex": 14,
-        "uniqueAnswer": false,
-        "atype": "T",
-        "label": "Other"
-      },
-      {
-        "aindex": 15,
-        "uniqueAnswer": true,
-        "atype": "P",
-        "label": "I don't know",
-        "questions_map": [
-          {
-            "label": "Are there other aspects not dealt with in this questionnaire that seem important to address for your company?",
-            "branch": 0,
-            "level": 32,
-            "order": 1
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "section": "ALTO",
-    "service_category": "Comments",
+    "section": "DAAZ",
+    "service_category": "Points d’amélioration",
     "qtype": "T",
-    "qindex": 32,
-    "label": "Are there other aspects not dealt with in this questionnaire that seem important to address for your company?",
+    "qindex": 30,
+    "label": "Y a-t-il d'autres aspects non abordés dans le présent outil qui semblent importants de traiter pour votre organisation ?",
     "answers": [
-      {
-        "aindex": 1,
-        "uniqueAnswer": false,
-        "atype": "T",
-        "label": "Please specify:"
-      }
+       {
+          "aindex": 1,
+          "uniqueAnswer": true,
+          "atype": "T",
+          "label": "Veuillez préciser :"
+       }
     ]
-  }
-]
+ },
+  {
+    "section": "DAAZ",
+    "service_category": "Points d’amélioration",
+    "qtype": "T",
+    "qindex": 31,
+    "label": "Autres commentaires :",
+    "answers": [
+       {
+          "aindex": 1,
+          "uniqueAnswer": true,
+          "atype": "T",
+          "label": "Veuillez préciser :"
+       }
+    ]
+ }
+ ]
