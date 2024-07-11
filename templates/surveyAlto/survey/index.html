@@ -7,42 +7,79 @@
 {% load cookiebanner %}
 
 {% block bootstrap4_extra_head %}
-    {{ block.super }}
-    <link rel="stylesheet" type="text/css" href="{% static "survey/css/survey-index.css" %}" />
-    <script type="text/javascript" src="{% static "survey/js/survey-index.js" %}"></script>
+{{ block.super }}
+<link rel="stylesheet" type="text/css" href="{% static " survey/css/survey-index.css" %}" />
+<script type="text/javascript" src="{% static " survey/js/survey-index.js" %}"></script>
 {% endblock %}
 
 {% block content %}
-    {% cookiebanner_modal 'bootstrap4' %}
-    <div class="px-3">
-        <div class="p-2 text-center">
-            <h2 class="text-blue-color p-3">
-                {{ _('The questionnaire is closed') }}
-            </h2>
-            <h4 class="py-2 col-8 mx-auto">
-                {{ _('The ALTO team thanks you for your interest and your participation in phase 1 of the project.') }}
-            </h4>
-        </div>
+{% cookiebanner_modal 'bootstrap4' %}
+<div class="card bg-primary">
+    <div class="card-body font-weight-light text-white p-2">
+        <h3 class="card-title text-center m-0">{{ _('QUESTIONNAIRE DE SATISFACTION') }}</h3>
     </div>
-
-    <div class="col px-2 py-4 text-center">
-        <a href="/stats">
-            <button class="btn rounded btn-outline-primary text-blue-color font-weight-bold" type="button">
-                {{ _('View statistics') }}
-            </button>
-        </a>
-    </div>
-    <div class="m-5">
-        <h4 class="card-title text-center">{{ _('Contribute to the design !') }}</h4>
-        <p class="text-center">
-            {{ _("The Pilot prototyping phase will begin soon.") }}
+</div>
+<div class="d-flex flex-row align-items-center px-3 pt-4">
+    <div class="p-2 flex-grow-1 text-justify">
+        <h5>
+            {% block index_welcome_message %}
+            {{ _('Bonjour et Félicitations !') }}
+            {% endblock %}
+        </h5>
+        <p>
             {% blocktranslate trimmed %}
-            <a class="text-blue-color" href="https://cnpd.public.lu/en/actualites/national/2023/03/projet-alto.html">Details</a>
+            Vous venez d’accomplir DAAZ, l’outil de mise en conformité et de E-learning innovant en matière de
+            protection des données et nous vous en remercions !
             {% endblocktranslate %}
-            <br />
-            {{ _('You can now register by email: ')}}
-            <a class="text-blue-color" href="mailto:alto@cnpd.lu">alto@cnpd.lu</a>
+        </p>
+        <p>
+            {% blocktranslate trimmed %}
+            Afin d’améliorer la qualité de l’expérience utilisateur, la mise en conformité de votre organisation ainsi
+            que la sensibilisation à la protection des données de manière générale, nous vous saurions gré de consacrer
+            quelques minutes à l'évaluation de l'outil DAAZ et de l’expérience que vous avez acquise.
+            {% endblocktranslate %}
+        </p>
+        <p>
+            {% blocktranslate trimmed %}
+            Les données récoltées par le présent questionnaire seront exploitées par la CNPD aux seules fins d’améliorer
+            l’expérience des prochains utilisateurs et de créer des outils similaires dans domaines ou des secteurs
+            d’activité spécifiques.
+            {% endblocktranslate %}
+        </p>
+        <p>
+            {% blocktranslate trimmed %}
+            Le lien vers le questionnaire en ligne restera actif pendant 30 jours.
+            {% endblocktranslate %}
+        </p>
+        <p>
+            {% blocktranslate trimmed %}
+            Merci d’avance pour votre contribution.
+            {% endblocktranslate %}
         </p>
     </div>
-    {% include 'survey/resume.html' %}
+</div>
+
+
+<div class="col px-2 py-4 text-center">
+    <a href="/survey/start">
+        <button class="btn border border-rounded btn-primary" type="button">
+            {{ _('Start') }}
+        </button>
+    </a>
+    <h5 class="text-primary">
+        {{ _('Length: 15 min') }}
+    </h5>
+
+
+</div>
+<div class="row py-3">
+    <div class="col">
+        <button class="btn btn-link" type="button" name="resume-show-popup" data-toggle="modal" data-target="#modal"
+            data-tooltip>
+            {{ _('Continue a previous survey') }}
+        </button>
+    </div>
+</div>
+
+{% include 'survey/resume.html' %}
 {% endblock %}
