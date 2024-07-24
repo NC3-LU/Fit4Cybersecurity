@@ -47,41 +47,44 @@
 </nav>
 {% endif %}
 
-<div class="container">
-  {% block main_logo %}
-  <div class="row">
-    <div class="col text-center">
-      <div class="mt-1">
-        {% include custom.templates_parts.main_logo %}
+<div class="container min-vh-90 d-flex align-items-center justify-content-center">
+  <div>
+    {% block main_logo %}
+    <div class="row">
+      <div class="col text-center">
+        <div class="mt-1">
+          {% include custom.templates_parts.main_logo %}
+        </div>
       </div>
     </div>
-  </div>
-  {% endblock %}
+    {% endblock %}
 
-  {% if languages|length > 1 %}
-  <div class="dropdown d-flex flex-row-reverse" id="language-selector" >
-    <a class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        <i class="bi bi-translate text-primary"></i>
-        {{ LANGUAGE_CODE|language_name_local }}
-    </a>
-    <div class="dropdown-menu">
-      {% for lang in languages %}
-      <a class="dropdown-item" href="/survey/language/{{ lang.code }}">
-        {{ lang.name_local }}
+    {% if languages|length > 1 %}
+    <div class="dropdown d-flex flex-row-reverse" id="language-selector" >
+      <a class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <i class="bi bi-translate text-primary"></i>
+          {{ LANGUAGE_CODE|language_name_local }}
       </a>
-      {% endfor %}
+      <div class="dropdown-menu">
+        {% for lang in languages %}
+        <a class="dropdown-item" href="/survey/language/{{ lang.code }}">
+          {{ lang.name_local }}
+        </a>
+        {% endfor %}
+      </div>
+    </div>
+    {% endif %}
+
+    {% autoescape off %}{% bootstrap_messages %}{# {% bootstrap_alert content %} #}{% endautoescape %}
+
+    <div id="content-body">
+      {% block content %}{% endblock %}
     </div>
   </div>
-  {% endif %}
 
-  {% autoescape off %}{% bootstrap_messages %}{# {% bootstrap_alert content %} #}{% endautoescape %}
-
-  <div id="content-body">
-    {% block content %}{% endblock %}
-  </div>
-</div>
 
 <div class="footer d-none d-md-block">
   {% include custom.templates_parts.footer %}
+</div>
 </div>
 {% endblock %}

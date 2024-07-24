@@ -1,5 +1,5 @@
 {% load static %}
-<div class="d-flex justify-content-between">
+<div class="container">
     <ul class="nav flex-column flex-sm-row">
         <li class="nav-item">
             <a class="nav-link" href="https://nc3.lu" target="_blank" rel="noopener noreferrer">
@@ -29,20 +29,22 @@
             </a>
         </li>
     </ul>
-    <ul class="nav flex-column flex-sm-row mt-2">
-        <li class="nav-item">
-            <a class="nav-link" href="{% url 'stats' %}" title="{{ _('Stats') }}" alt="{{ _('Stats') }}">{{ _('Stats') }}</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="{% url 'terms' %}" title="{{ _('Terms of Service') }}"
-               alt="{{ _('Terms of Service') }}">{{ _('Terms of Service') }}</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="{% url 'privacy' %}" title="{{ _('Privacy policy') }}"
-               alt="{{ _('Privacy policy') }}">{{ _('Privacy policy') }}</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="https://lhc.lu" target="_blank" rel="noopener noreferrer">Copyright {% now "Y" %} Luxembourg House of Cybersecurity</a>
-        </li>
-    </ul>
+    <div class="">
+        <ul class="nav flex-column flex-sm-row d-flex justify-content-between">
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'stats' %}" title="{{ _('Stats') }}" alt="{{ _('Stats') }}">{{ _('Stats') }}</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'terms' %}" title="{{ _('Terms of Service') }}"
+                   alt="{{ _('Terms of Service') }}">{{ _('Terms of Service') }}</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'privacy' %}" title="{{ _('Privacy policy') }}"
+                   alt="{{ _('Privacy policy') }}">{{ _('Privacy policy') }}</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="https://lhc.lu" target="_blank" rel="noopener noreferrer">Copyright {% now "Y" %} Luxembourg House of Cybersecurity</a>
+            </li>
+        </ul>
+    </div>
 </div>
