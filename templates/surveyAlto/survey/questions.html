@@ -21,7 +21,7 @@
 
             <nav class="nav_categories nav nav-fill">
                 {% for index, category in questions_categories %}
-                <a class="nav-link small py-1 {% if current_question_category == category.id %}nav_categories_active{% endif %}" href="#">{% trans category.label %}</a>
+                <a class="nav-link small py-1 d-none d-lg-inline {% if current_question_category == category.id %}d-inline nav_categories_active{% endif %}" href="#">{% trans category.label %}</a>
                 {% endfor %}
             </nav>
             <div class="progress mx-2 mt-2" style="height: 15px;">
@@ -56,11 +56,11 @@
             {% buttons %}
                 <div class="form-group pt-4 container">
                     <div class="row">
-                        <div class="col-8">
+                        <div class="col-12 col-lg-8">
                             {% if user.is_survey_in_progress %}
                                 {% if current_question_index > 1 %}
                                     <button
-                                        class="btn col-5 col-md-2 btn-sm btn btn-primary return-to-question "
+                                        class="btn col-5 col-lg-2 btn-sm btn btn-primary return-to-question "
                                         data-return-to-question="{{ previous_question_index }}"
                                         type="button">
                                         {{ _('Back') }}
@@ -68,20 +68,20 @@
                                 {% endif %}
                             {% else %}
                                 <button
-                                    class="col-5 col-md-2 btn-sm btn btn-primary cancel-modifications"
+                                    class="col-5 col-lg-2 btn-sm btn btn-primary cancel-modifications"
                                     data-question-index="{{ current_question_index }}"
                                     type="button">
                                     {{ _('Cancel') }}
                                 </button>
                             {% endif %}
                             <input
-                            class="ml-3 btn col-5 col-md-2 btn-sm btn-primary{% if show_warning_dialog %} modify-question{% endif %}"
+                            class="ml-3 btn col-5 col-lg-2 btn-sm btn-primary{% if show_warning_dialog %} modify-question{% endif %}"
                             type="submit"
                             value="{% if user.is_survey_under_review or show_warning_dialog %}{{ _('Modify') }}{% else %}{{ _('Next') }}{% endif %}"
                             data-question-index="{{ current_question_index }}">
                         </div>
                         <button
-                            class="col btn btn-link btn-sm"
+                            class="col-12 col-lg-4 btn btn-link btn-sm"
                             type="button"
                             name="continue-later"
                             data-toggle="modal"
