@@ -40,7 +40,7 @@ logger = logging.getLogger(__name__)
 def index(request):
     lang = request.session.get(settings.LANGUAGE_COOKIE_NAME, LANGUAGE_CODE)
     translation.activate(lang)
-    return render(request, "survey/index.html")
+    return render(request, "/survey/index.html")
 
 
 def start(request):
@@ -51,13 +51,13 @@ def start(request):
 
         if isinstance(form_data, SurveyUser):
             return HttpResponseRedirect(
-                "/survey/question/" + str(form_data.current_question.qindex)
+                "question/" + str(form_data.current_question.qindex)
             )
     except Exception as e:
         messages.error(request, e)
         return HttpResponseRedirect("/")
 
-    return render(request, "survey/start.html", context=form_data)
+    return render(request, "/survey/start.html", context=form_data)
 
 
 def handle_question_form(request, question_index: int):
@@ -67,12 +67,12 @@ def handle_question_form(request, question_index: int):
     user = find_user_by_id(request.session["user_id"])
 
     if user.is_survey_finished():
-        return HttpResponseRedirect("/survey/finish")
+        return HttpResponseRedirect("finish")
 
     user_current_question_index = get_current_user_question_index_from_sequence(user)
     if user_current_question_index < question_index or question_index <= 0:
         return HttpResponseRedirect(
-            "/survey/question/" + str(user_current_question_index)
+            "question/" + str(user_current_question_index)
         )
 
     review_ancher = ""
@@ -83,14 +83,14 @@ def handle_question_form(request, question_index: int):
 
     if type(result) is SurveyUser:
         if result.is_survey_under_review():
-            return HttpResponseRedirect("/survey/review" + review_ancher)
+            return HttpResponseRedirect("review" + review_ancher)
 
         return HttpResponseRedirect(
-            "/survey/question/"
+            "question/"
             + str(get_current_user_question_index_from_sequence(result))
         )
 
-    return render(request, "survey/questions.html", context=result)
+    return render(request, "/survey/questions.html", context=result)
 
 
 def change_lang(request, lang: str):
@@ -100,7 +100,7 @@ def change_lang(request, lang: str):
     previous_path = request.META.get("HTTP_REFERER", "/")
 
     if previous_path.__contains__("/survey/start"):
-        return HttpResponseRedirect("/survey/start")
+        return HttpResponseRedirect("start")
 
     if previous_path.__contains__("/stats/"):
         return HttpResponseRedirect("/stats/")
@@ -131,10 +131,10 @@ def change_lang(request, lang: str):
         return HttpResponseRedirect(previous_path)
 
     if user.is_survey_under_review() and previous_path.__contains__("/survey/review"):
-        return HttpResponseRedirect("/survey/review")
+        return HttpResponseRedirect("review")
 
     if user.is_survey_finished() and previous_path.__contains__("/survey/finish"):
-        return HttpResponseRedirect("/survey/finish")
+        return HttpResponseRedirect("finish")
 
     return HttpResponseRedirect("/")
 
@@ -201,7 +201,7 @@ def review(request):
 
     user = find_user_by_id(user_id)
     if user.is_survey_finished():
-        return HttpResponseRedirect("/survey/finish")
+        return HttpResponseRedirect("finish")
     elif user.is_survey_in_progress():
         return HttpResponseRedirect(
             "/survey/question/"
@@ -212,7 +212,7 @@ def review(request):
         user.status = SURVEY_STATUS_FINISHED
         user.save()
 
-        return HttpResponseRedirect("/survey/finish")
+        return HttpResponseRedirect("finish")
 
     questions_with_user_answers = get_questions_with_user_answers(user)
 
@@ -311,10 +311,10 @@ def resume(request):
         )
 
     if user.is_survey_under_review():
-        return HttpResponseRedirect("/survey/review")
+        return HttpResponseRedirect("review")
 
     if user.is_survey_finished():
-        return HttpResponseRedirect("/survey/finish")
+        return HttpResponseRedirect("finish")
 
     return HttpResponseRedirect("/")
 
@@ -333,7 +333,7 @@ def save_general_feedback(request):
                 request, _("Feedback sending errors: " + form.errors.split(", "))
             )
 
-        return HttpResponseRedirect("/survey/finish")
+        return HttpResponseRedirect("finish")
 
     if user.is_survey_in_progress():
         return HttpResponseRedirect(
@@ -342,7 +342,7 @@ def save_general_feedback(request):
         )
 
     if user.is_survey_under_review():
-        return HttpResponseRedirect("/survey/review")
+        return HttpResponseRedirect("review")
 
     return HttpResponseRedirect("/")
 
