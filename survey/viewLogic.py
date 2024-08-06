@@ -281,7 +281,7 @@ def handle_question_answers_request(
         "question": _(current_question.label),
         "question_tooltip": _(current_question.tooltip),
         "form": form,
-        "action": "/survey/question/" + str(question_index),
+        "action": "question/" + str(question_index),
         "user": user,
         "current_question_index": question_index,
         "previous_question_index": question_index - 1 if question_index > 1 else 1,
