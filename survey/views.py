@@ -57,7 +57,7 @@ def start(request):
         messages.error(request, e)
         return HttpResponseRedirect("/")
 
-    return render(request, "/survey/start.html", context=form_data)
+    return render(request, "survey/start.html", context=form_data)
 
 
 def handle_question_form(request, question_index: int):
@@ -90,7 +90,7 @@ def handle_question_form(request, question_index: int):
             + str(get_current_user_question_index_from_sequence(result))
         )
 
-    return render(request, "/survey/questions.html", context=result)
+    return render(request, "survey/questions.html", context=result)
 
 
 def change_lang(request, lang: str):
@@ -204,7 +204,7 @@ def review(request):
         return HttpResponseRedirect("finish")
     elif user.is_survey_in_progress():
         return HttpResponseRedirect(
-            "/survey/question/"
+            "question/"
             + str(get_current_user_question_index_from_sequence(user))
         )
 
@@ -306,7 +306,7 @@ def resume(request):
 
     if user.is_survey_in_progress():
         return HttpResponseRedirect(
-            "/survey/question/"
+            "question/"
             + str(get_current_user_question_index_from_sequence(user))
         )
 
@@ -337,7 +337,7 @@ def save_general_feedback(request):
 
     if user.is_survey_in_progress():
         return HttpResponseRedirect(
-            "/survey/question/"
+            "question/"
             + str(get_current_user_question_index_from_sequence(user))
         )
 
