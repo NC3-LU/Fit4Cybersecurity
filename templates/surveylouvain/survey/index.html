@@ -1,0 +1,44 @@
+{% extends 'survey/base.html' %}
+
+{% load bootstrap4 %}
+{% load apptags %}
+{% load static %}
+{% load cookiebanner %}
+
+{% block bootstrap4_extra_head %}
+    {{ block.super }}
+    <link rel="stylesheet" type="text/css" href="{% static "survey/css/survey-index.css" %}" />
+    <script type="text/javascript" src="{% static "survey/js/survey-index.js" %}"></script>
+{% endblock %}
+
+{% block content %}
+    {% cookiebanner_modal 'bootstrap4' %}
+    <div class="d-flex flex-row align-items-center px-3">
+        <div class="p-2 flex-grow-1 text-justify">
+            <h5>
+                {% block index_welcome_message %}
+                {{ _('Welcome to the') }} {{ custom.tool_name|lower }}.
+                {% endblock %}
+            </h5>
+            {{ custom.intro_text | safe }}
+        </div>
+    </div>
+
+    <div class="col px-2 py-4 text-center">
+        <a href="/survey/start">
+            <button class="btn border border-rounded btn-primary" type="button">
+                {{ _('Start') }}
+            </button>
+        </a>
+    </div>
+
+    <div class="row py-3">
+        <div class="col">
+            <button class="btn btn-link" type="button" name="resume-show-popup" data-toggle="modal" data-target="#modal" data-tooltip>
+                {{ _('Continue a previous survey') }}
+            </button>
+        </div>
+    </div>
+
+    {% include 'survey/resume.html' %}
+{% endblock %}

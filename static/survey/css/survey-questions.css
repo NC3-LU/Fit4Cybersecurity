@@ -234,3 +234,13 @@
     -webkit-animation: spin 1s linear infinite;
     animation: spin 1s linear infinite;
 }
+.card-title span p {
+    margin-top: 1rem;
+}
+.nav_categories a:hover {
+    cursor: default;
+}
+.nav_categories_active {
+    font-weight: bold;
+    border-bottom: 2px solid var(--red) !important;
+}

@@ -158,6 +158,7 @@ $(document).ready(function() {
         checkboxesAndRadios.each(function() {
             let element = $(this);
             if (element.is(":checked") && element.val() == freeTextAnswerId) {
+                $(".form-check-label").hide();            
                 answerContentTextarea.show();
                 answerContentTextarea.prop('required', true);
             }
