@@ -40,7 +40,7 @@ logger = logging.getLogger(__name__)
 def index(request):
     lang = request.session.get(settings.LANGUAGE_COOKIE_NAME, LANGUAGE_CODE)
     translation.activate(lang)
-    return render(request, "/survey/index.html")
+    return render(request, "survey/index.html")
 
 
 def start(request):
