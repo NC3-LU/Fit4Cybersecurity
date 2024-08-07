@@ -68,7 +68,7 @@ $(document).ready(function() {
     if (stats_options.activity) {
         let section_displayTimeFrame = document.getElementById("section_displayTimeFrame");
 
-        fetch("/stats/activity-chart.json")
+        fetch("activity-chart.json")
         .then(response => response.json())
         .then(result => {
             document.getElementById("spinner-surveys-activity").innerHTML = "";
@@ -76,7 +76,7 @@ $(document).ready(function() {
               data: result ,
               texts: ['completed survey','completed surveys'],
               click: function(date, count) {
-                window.location = "/stats/?from=" + date;
+                window.location = "?from=" + date;
               }
             });
         })
@@ -85,12 +85,12 @@ $(document).ready(function() {
         });
 
         section_displayTimeFrame.onchange = function() {
-          window.location = "/stats/?from=" + section_displayTimeFrame.value;
+          window.location = "?from=" + section_displayTimeFrame.value;
         }
     }
 
     if (stats_options.sector) {
-        fetch("/stats/survey_per_company_sector.json?from="+date_from+"&to="+date_to)
+        fetch("survey_per_company_sector.json?from="+date_from+"&to="+date_to)
         .then(response => response.json())
         .then(result => {
             document.getElementById("spinner-stats-sector").innerHTML = "";
@@ -105,7 +105,7 @@ $(document).ready(function() {
     }
 
     if (stats_options.size) {
-        fetch("/stats/survey_per_company_size.json?from="+date_from+"&to="+date_to)
+        fetch("survey_per_company_size.json?from="+date_from+"&to="+date_to)
         .then(response => response.json())
         .then(result => {
             document.getElementById("spinner-stats-company").innerHTML = "";
@@ -120,7 +120,7 @@ $(document).ready(function() {
     }
 
     if (stats_options.country) {
-        fetch("/stats/survey_per_country.json?from="+date_from+"&to="+date_to)
+        fetch("survey_per_country.json?from="+date_from+"&to="+date_to)
         .then(response => response.json())
         .then(result => {
             document.getElementById("spinner-stats-countries").innerHTML = "";
@@ -158,7 +158,7 @@ $(document).ready(function() {
     }
 
     if (stats_options.status) {
-        fetch("/stats/survey-status-count.json?from="+date_from+"&to="+date_to)
+        fetch("survey-status-count.json?from="+date_from+"&to="+date_to)
         .then(response => response.json())
         .then(result => {
             document.getElementById("spinner-stats-count").innerHTML = "";
@@ -173,7 +173,7 @@ $(document).ready(function() {
     }
 
     if (stats_options.language) {
-        fetch("/stats/survey-language-count.json?from="+date_from+"&to="+date_to)
+        fetch("survey-language-count.json?from="+date_from+"&to="+date_to)
         .then(response => response.json())
         .then(result => {
             document.getElementById("spinner-stats-language").innerHTML = "";
@@ -190,7 +190,7 @@ $(document).ready(function() {
 
         let section_displayByCountry = document.getElementById("section_displayByCountry");
 
-        fetch("/stats/answers-per-section.json?from="+date_from+"&to="+date_to)
+        fetch("answers-per-section.json?from="+date_from+"&to="+date_to)
         .then(response => response.json())
         .then(result => {
             document.getElementById("spinner-answers-per-section").innerHTML = "";
@@ -248,7 +248,7 @@ $(document).ready(function() {
     if (stats_options.category) {
         let category_displayByCountry = document.getElementById("category_displayByCountry");
 
-        fetch("/stats/answers-per-category.json?from="+date_from+"&to="+date_to)
+        fetch("answers-per-category.json?from="+date_from+"&to="+date_to)
         .then(response => response.json())
         .then(result => {
             document.getElementById("spinner-answers-per-category").innerHTML = "";
@@ -304,7 +304,7 @@ $(document).ready(function() {
     }
 
     if (stats_options.current_question) {
-        fetch("/stats/survey_current_question.json?from="+date_from+"&to="+date_to)
+        fetch("survey_current_question.json?from="+date_from+"&to="+date_to)
         .then(response => response.json())
         .then(result => {
             document.getElementById("spinner-stats-current_question").innerHTML = "";
