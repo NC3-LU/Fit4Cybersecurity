@@ -1,14 +1,14 @@
 [
     {
-      "service_category": "A1.1 ORGANIZATION OF INFORMATION SECURITY, A.2 INFORMATION SECURITY POLICIES",
+      "service_category": "ORGANIZATION OF INFORMATION SECURITY,INFORMATION SECURITY POLICIES",
       "section": "L-DIH",
-      "qtype": "S",
+      "qtype": "M",
       "qindex": 1,
       "maxPoints": 90,
       "answers": [
         {
           "aindex": 1,
-          "uniqueAnswer": true,
+          "uniqueAnswer": false,
           "score": 0,
           "atype": "P",
           "recommendations": [
@@ -21,8 +21,8 @@
         },
         {
           "aindex": 2,
-          "uniqueAnswer": true,
-          "score": 90,
+          "uniqueAnswer": false,
+          "score": 45,
           "atype": "P",
           "recommendations": [
             {
@@ -34,7 +34,7 @@
         },
         {
           "aindex": 3,
-          "uniqueAnswer": true,
+          "uniqueAnswer": false,
           "score": 45,
           "atype": "P",
           "recommendations": [
@@ -47,7 +47,7 @@
         },
         {
           "aindex": 4,
-          "uniqueAnswer": true,
+          "uniqueAnswer": false,
           "score": 0,
           "atype": "P",
           "recommendations": [
@@ -60,7 +60,7 @@
         },
         {
           "aindex": 5,
-          "uniqueAnswer": true,
+          "uniqueAnswer": false,
           "score": 5,
           "atype": "P",
           "recommendations": [
@@ -75,7 +75,7 @@
       "label": "In your organisation, do you have an Information Security Management System (ISMS) implemented including OT systems ?"
     },
     {
-      "service_category": "A.3 RISK MANAGEMENT",
+      "service_category": "RISK MANAGEMENT",
       "section": "L-DIH",
       "qtype": "S",
       "qindex": 2,
@@ -84,7 +84,7 @@
         {
           "aindex": 1,
           "uniqueAnswer": true,
-          "score": 0,
+          "score": 10,
           "atype": "P",
           "recommendations": [
             {
@@ -131,13 +131,13 @@
               "label": "No Recommendation"
             }
           ],
-          "label": " We have defined and implemented a risk management guideline for both IT and OT systems. All risks are identified, proactively treated and mitigated to an acceptable level.."
+          "label": " We have defined and implemented a risk management guideline for both IT and OT systems. All risks are identified, proactively treated and mitigated to an acceptable level."
         }
       ],
       "label": "Did your organisation define and implement a guideline for risk management including OT systems?"
     },
     {
-      "service_category": "A.4 HUMAN RESOURCES",
+      "service_category": "HUMAN RESOURCES",
       "section": "L-DIH",
       "qtype": "S",
       "qindex": 3,
@@ -154,7 +154,7 @@
               "label": "Whenever rules change, or periodically at a predefined date, awareness sessions should be offered to employees on topics related to security guidelines and procedures. This is because security is rarely the aim of their work, and how to exchange data and manage it is at the core of more and more organization. This awareness also helps them spot the abnormalities."
             }
           ],
-          "label": " I am not sure."
+          "label": "I am not sure."
         },
         {
           "aindex": 2,
@@ -199,7 +199,7 @@
       "label": "Are all your employees regularly provided with OT specific awareness trainings that incorporates real-world situations and exercises to guarantee adherence to internal security protocols and to assess their proficiency in spotting unusual or suspicious system behavior or attempted cyberattacks?"
     },
     {
-      "service_category": "A.5 ASSET MANAGEMENT",
+      "service_category": "ASSET MANAGEMENT",
       "section": "L-DIH",
       "qtype": "S",
       "qindex": 4,
@@ -247,7 +247,7 @@
         {
           "aindex": 4,
           "uniqueAnswer": true,
-          "score": 68,
+          "score": 45,
           "atype": "P",
           "recommendations": [
             {
@@ -261,7 +261,7 @@
       "label": "Does your organization maintain a comprehensive list of all its assets (OT and IT), while also incorporating asset classification and labeling into the management process?"
     },
     {
-      "service_category": "A.6 PHYSICAL SECURITY",
+      "service_category": "PHYSICAL SECURITY",
       "section": "L-DIH",
       "qtype": "S",
       "qindex": 5,
@@ -323,7 +323,7 @@
       "label": "Do you have access control measures in place for all physical access points to your building, server room or facility in general?"
     },
     {
-      "service_category": "A.7 OPERATIONAL SECURITY",
+      "service_category": "OPERATIONAL SECURITY",
       "section": "L-DIH",
       "qtype": "S",
       "qindex": 6,
@@ -332,12 +332,12 @@
         {
           "aindex": 1,
           "uniqueAnswer": true,
-          "score": 0,
+          "score": 20,
           "atype": "P",
           "recommendations": [
             {
               "answerChosen": true,
-              "label": "Planning resources (people availability or computing resources availability) is a key aspect when dealing with business continuity planning. The lack of resources can cause disruption to the operation of your service, and your company should have a business continuity planning approach where capacity planning (needed resources, resource usage monitoring, etc)  is considered. Also formally documenting this as a guideline ensures all the resources have the same understanding and no information is lost."
+              "label": "Planning resources(people availability or computing resources availability) is a key aspect when dealing with business continuity planning. The lack of resources can cause disruption to the operation of your service, and your company should have a business continuity planning approach where capacity planning (needed resources, resource usage monitoring, etc)  is considered. Also formally documenting this as a guideline ensures all the resources have the same understanding and no information is lost."
             }
           ],
           "label": "We do not have a formal planning for resources but manage the needs on ad hoc basis."
@@ -385,16 +385,16 @@
       "label": "Does your capacity planning include emergency power backup?"
     },
     {
-      "service_category": "A.7 OPERATIONAL SECURITY",
+      "service_category": "OPERATIONAL SECURITY",
       "section": "L-DIH",
       "qtype": "M",
       "qindex": 7,
-      "maxPoints": 0,
+      "maxPoints": 100,
       "answers": [
         {
           "aindex": 1,
           "uniqueAnswer": false,
-          "score": 0,
+          "score": 10,
           "atype": "P",
           "recommendations": [
             {
@@ -407,7 +407,7 @@
         {
           "aindex": 2,
           "uniqueAnswer": false,
-          "score": 45,
+          "score": 30,
           "atype": "P",
           "recommendations": [
             {
@@ -420,7 +420,7 @@
         {
           "aindex": 3,
           "uniqueAnswer": false,
-          "score": 0,
+          "score": 10,
           "atype": "P",
           "recommendations": [
             {
@@ -433,7 +433,7 @@
         {
           "aindex": 4,
           "uniqueAnswer": false,
-          "score": 45,
+          "score": 25,
           "atype": "P",
           "recommendations": [
             {
@@ -446,7 +446,7 @@
         {
           "aindex": 5,
           "uniqueAnswer": false,
-          "score": 90,
+          "score": 25,
           "atype": "P",
           "recommendations": [
             {
@@ -460,7 +460,7 @@
       "label": "Do you have a malware management guideline indicating how malware should be managed withing your company for OT systems?"
     },
     {
-      "service_category": "A.7 OPERATIONAL SECURITY",
+      "service_category": "OPERATIONAL SECURITY",
       "section": "L-DIH",
       "qtype": "M",
       "qindex": 8,
@@ -482,7 +482,7 @@
         {
           "aindex": 2,
           "uniqueAnswer": false,
-          "score": 30,
+          "score": 20,
           "atype": "P",
           "recommendations": [
             {
@@ -495,7 +495,7 @@
         {
           "aindex": 3,
           "uniqueAnswer": false,
-          "score": 30,
+          "score": 20,
           "atype": "P",
           "recommendations": [
             {
@@ -508,7 +508,7 @@
         {
           "aindex": 4,
           "uniqueAnswer": false,
-          "score": 45,
+          "score": 20,
           "atype": "P",
           "recommendations": [
             {
@@ -521,7 +521,7 @@
         {
           "aindex": 5,
           "uniqueAnswer": false,
-          "score": 60,
+          "score": 20,
           "atype": "P",
           "recommendations": [
             {
@@ -535,11 +535,11 @@
       "label": "Did your organisation define and implement a guideline for backup management including OT systems?"
     },
     {
-      "service_category": "A.7 OPERATIONAL SECURITY",
+      "service_category": "OPERATIONAL SECURITY",
       "section": "L-DIH",
       "qtype": "M",
       "qindex": 9,
-      "maxPoints": 0,
+      "maxPoints": 90,
       "answers": [
         {
           "aindex": 1,
@@ -623,11 +623,11 @@
       "label": "Are controls and measures been implemented to ensure backups are stored securely including OT systems?"
     },
     {
-      "service_category": "A.7 OPERATIONAL SECURITY",
+      "service_category": "OPERATIONAL SECURITY",
       "section": "L-DIH",
       "qtype": "M",
       "qindex": 10,
-      "maxPoints": 20,
+      "maxPoints": 80,
       "answers": [
         {
           "aindex": 1,
@@ -711,7 +711,7 @@
       "label": "Do you have a logging and monitoring guideline defined and implemented for OT systems?"
     },
     {
-      "service_category": "A.7 OPERATIONAL SECURITY",
+      "service_category": "OPERATIONAL SECURITY",
       "section": "L-DIH",
       "qtype": "S",
       "qindex": 11,
@@ -773,7 +773,7 @@
       "label": "Do you have a vulnerability management guideline defined and implemented for OT systems?"
     },
     {
-      "service_category": "A.7 OPERATIONAL SECURITY",
+      "service_category": "OPERATIONAL SECURITY",
       "section": "L-DIH",
       "qtype": "S",
       "qindex": 12,
@@ -782,12 +782,12 @@
         {
           "aindex": 1,
           "uniqueAnswer": true,
-          "score": 0,
+          "score": 10,
           "atype": "P",
           "recommendations": [
             {
               "answerChosen": true,
-              "label": "For a cloud service provider, it is essential to be able to provide assurance that client data is only accessible to those who have access and are authorised to use that data. This can become difficult to ensure especially in the case when systems and resources are potentially shared by different clients (e.g., different virtual machines hosted onto the same physical servver incur the risk of data leasks). For this purpose, there should be specific guidelines and procedures to ensure that data of different clients stays segregated when shared resources are used. The application of such procedures and guidelines should be periodically checked. Having procedures and guidelines in place for this purpose is essential to handle the issues in the same way every time."
+              "label": "For a cloud service provider,it is essential to be able to provide assurance that client data is only accessible to those who have access and are authorised to use that data. This can become difficult to ensure especially in the case when systems and resources are potentially shared by different clients (e.g., different virtual machines hosted onto the same physical servver incur the risk of data leasks). For this purpose, there should be specific guidelines and procedures to ensure that data of different clients stays segregated when shared resources are used. The application of such procedures and guidelines should be periodically checked. Having procedures and guidelines in place for this purpose is essential to handle the issues in the same way every time."
             }
           ],
           "label": "There is no specific guideline to ensure clients' data segregation when shared resources are implemented."
@@ -795,12 +795,12 @@
         {
           "aindex": 2,
           "uniqueAnswer": true,
-          "score": 30,
+          "score": 20,
           "atype": "P",
           "recommendations": [
             {
               "answerChosen": true,
-              "label": "For a cloud service provider, it is essential to be able to provide assurance that client data is only accessible to those who have access and are authorised to use that data. This can become difficult to ensure especially in the case when systems and resources are potentially shared by different clients (e.g., different virtual machines hosted onto the same physical servver incur the risk of data leasks). For this purpose, there should be specific guidelines and procedures to ensure that data of different clients stays segregated when shared resources are used. The application of such procedures and guidelines should be periodically checked. Having procedures and guidelines in place for this purpose is essential to handle the issues in the same way every time."
+              "label": "For a cloud service provider,it is essential to be able to provide assurance that client data is only accessible to those who have access and are authorised to use that data. This can become difficult to ensure especially in the case when systems and resources are potentially shared by different clients (e.g., different virtual machines hosted onto the same physical servver incur the risk of data leasks). For this purpose, there should be specific guidelines and procedures to ensure that data of different clients stays segregated when shared resources are used. The application of such procedures and guidelines should be periodically checked. Having procedures and guidelines in place for this purpose is essential to handle the issues in the same way every time."
             }
           ],
           "label": "Whenever more than one client shares a resource, there is a guideline to ensure data segregation. An audit is realized at least once a year to ensure that data segregation is well implemented."
@@ -822,7 +822,7 @@
       "label": "When sharing resources with more than one client, do you ensure that data is well segregated including Cloud?"
     },
     {
-      "service_category": "A.8 IDENTITY, AUTHENTICATION, AND ACCESS CONTROL MANAGEMENT",
+      "service_category": "IDENTITY, AUTHENTICATION, AND ACCESS CONTROL MANAGEMENT",
       "section": "L-DIH",
       "qtype": "S",
       "qindex": 13,
@@ -871,7 +871,7 @@
       "label": "Is access management in your company centralized?"
     },
     {
-      "service_category": "A.8 IDENTITY, AUTHENTICATION, AND ACCESS CONTROL MANAGEMENT",
+      "service_category": "IDENTITY, AUTHENTICATION, AND ACCESS CONTROL MANAGEMENT",
       "section": "L-DIH",
       "qtype": "M",
       "qindex": 14,
@@ -906,7 +906,7 @@
         {
           "aindex": 3,
           "uniqueAnswer": false,
-          "score": 45,
+          "score": 35,
           "atype": "P",
           "recommendations": [
             {
@@ -919,7 +919,7 @@
         {
           "aindex": 4,
           "uniqueAnswer": false,
-          "score": 0,
+          "score": 10,
           "atype": "P",
           "recommendations": [
             {
@@ -932,7 +932,7 @@
         {
           "aindex": 5,
           "uniqueAnswer": false,
-          "score": 45,
+          "score": 35,
           "atype": "P",
           "recommendations": [
             {
@@ -946,9 +946,9 @@
       "label": "Does access to your company’s infrastructure, systems, and applications require secret authentication?"
     },
     {
-      "service_category": "A.8 IDENTITY, AUTHENTICATION, AND ACCESS CONTROL MANAGEMENT",
+      "service_category": "IDENTITY, AUTHENTICATION, AND ACCESS CONTROL MANAGEMENT",
       "section": "L-DIH",
-      "qtype": "S",
+      "qtype": "M",
       "qindex": 15,
       "maxPoints": 90,
       "answers": [
@@ -968,7 +968,7 @@
         {
           "aindex": 2,
           "uniqueAnswer": true,
-          "score": 45,
+          "score": 40,
           "atype": "P",
           "recommendations": [
             {
@@ -981,12 +981,12 @@
         {
           "aindex": 3,
           "uniqueAnswer": true,
-          "score": 0,
+          "score": 10,
           "atype": "P",
           "recommendations": [
             {
               "answerChosen": true,
-              "label": " You should set up an authentication mechanism towards any part of your system or service.In scenarios where there is an inability of OT software to conform to a strong password policy, we have enabled access and activity logs on the systems to be managed. Ensuring hourly identification of users who have accessed the operating console,with fingerprint identification,video surveillance of the operating room, central account control console."
+              "label": "You should set up an authentication mechanism towards any part of your system or service.In scenarios where there is an inability of OT software to conform to a strong password policy, we have enabled access and activity logs on the systems to be managed. Ensuring hourly identification of users who have accessed the operating console,with fingerprint identification,video surveillance of the operating room, central account control console."
             }
           ],
           "label": "Password is not required to connect to some applications and systems."
@@ -994,7 +994,7 @@
         {
           "aindex": 4,
           "uniqueAnswer": true,
-          "score": 90,
+          "score": 40,
           "atype": "P",
           "recommendations": [
             {
@@ -1008,7 +1008,7 @@
       "label": "Did you implement across your infrastructure OT and IT systems a guideline on passwords (min length, complexity, etc.) ?"
     },
     {
-      "service_category": "A.8 IDENTITY, AUTHENTICATION, AND ACCESS CONTROL MANAGEMENT",
+      "service_category": "IDENTITY, AUTHENTICATION, AND ACCESS CONTROL MANAGEMENT",
       "section": "L-DIH",
       "qtype": "S",
       "qindex": 16,
@@ -1063,9 +1063,9 @@
       "label": "Do you have users connecting remotely to your OT systems for maintenance or better operations?"
     },
     {
-      "service_category": "A.9 CRYPTOGRAPHY AND KEY MANAGEMENT",
+      "service_category": "CRYPTOGRAPHY AND KEY MANAGEMENT",
       "section": "L-DIH",
-      "qtype": "S",
+      "qtype": "M",
       "qindex": 17,
       "maxPoints": 60,
       "answers": [
@@ -1085,7 +1085,7 @@
         {
           "aindex": 2,
           "uniqueAnswer": true,
-          "score": 60,
+          "score": 10,
           "atype": "P",
           "recommendations": [
             {
@@ -1098,7 +1098,7 @@
         {
           "aindex": 3,
           "uniqueAnswer": true,
-          "score": 30,
+          "score": 10,
           "atype": "P",
           "recommendations": [
             {
@@ -1111,7 +1111,7 @@
         {
           "aindex": 4,
           "uniqueAnswer": true,
-          "score": 30,
+          "score": 10,
           "atype": "P",
           "recommendations": [
             {
@@ -1124,7 +1124,7 @@
         {
           "aindex": 5,
           "uniqueAnswer": true,
-          "score": 60,
+          "score": 10,
           "atype": "P",
           "recommendations": [
             {
@@ -1137,7 +1137,7 @@
         {
           "aindex": 6,
           "uniqueAnswer": true,
-          "score": 60,
+          "score": 10,
           "atype": "P",
           "recommendations": [
             {
@@ -1151,7 +1151,7 @@
       "label": "Do you have guidelines to secure your sensitive information in IT and OT systems?"
     },
     {
-      "service_category": "A.10 COMMUNICATION SECURITY",
+      "service_category": "COMMUNICATION SECURITY",
       "section": "L-DIH",
       "qtype": "S",
       "qindex": 18,
@@ -1213,7 +1213,7 @@
       "label": "Do you have an updated network topology documentation of your OT infrastructure?"
     },
     {
-      "service_category": "A.10 COMMUNICATION SECURITY",
+      "service_category": "COMMUNICATION SECURITY",
       "section": "L-DIH",
       "qtype": "M",
       "qindex": 19,
@@ -1235,7 +1235,7 @@
         {
           "aindex": 2,
           "uniqueAnswer": false,
-          "score": 90,
+          "score": 20,
           "atype": "P",
           "recommendations": [
             {
@@ -1248,7 +1248,7 @@
         {
           "aindex": 3,
           "uniqueAnswer": false,
-          "score": 90,
+          "score": 20,
           "atype": "P",
           "recommendations": [
             {
@@ -1261,7 +1261,7 @@
         {
           "aindex": 4,
           "uniqueAnswer": false,
-          "score": 90,
+          "score": 20,
           "atype": "P",
           "recommendations": [
             {
@@ -1274,7 +1274,7 @@
         {
           "aindex": 5,
           "uniqueAnswer": false,
-          "score": 90,
+          "score": 10,
           "atype": "P",
           "recommendations": [
             {
@@ -1287,7 +1287,7 @@
         {
           "aindex": 6,
           "uniqueAnswer": false,
-          "score": 90,
+          "score": 10,
           "atype": "P",
           "recommendations": [
             {
@@ -1301,9 +1301,9 @@
       "label": "Does your company architecture have segregation between OT network and corporate networks?"
     },
     {
-      "service_category": "A.11 CHANGE AND CONFIGURATION MANAGEMENT",
+      "service_category": "CHANGE AND CONFIGURATION MANAGEMENT",
       "section": "L-DIH",
-      "qtype": "S",
+      "qtype": "M",
       "qindex": 20,
       "maxPoints": 40,
       "answers": [
@@ -1336,7 +1336,7 @@
         {
           "aindex": 3,
           "uniqueAnswer": true,
-          "score": 40,
+          "score": 20,
           "atype": "P",
           "recommendations": [
             {
@@ -1349,7 +1349,7 @@
         {
           "aindex": 4,
           "uniqueAnswer": true,
-          "score": 40,
+          "score": 20,
           "atype": "P",
           "recommendations": [
             {
@@ -1363,7 +1363,7 @@
       "label": "Do you always test all changes to your OT systems and applications before releasing them in a production environment?"
     },
     {
-      "service_category": "A.11 CHANGE AND CONFIGURATION MANAGEMENT",
+      "service_category": "CHANGE AND CONFIGURATION MANAGEMENT",
       "section": "L-DIH",
       "qtype": "S",
       "qindex": 21,
@@ -1406,12 +1406,12 @@
               "label": "The guidelines related to change procedure needs to be shared with all."
             }
           ],
-          "label": "Im not sure"
+          "label": "I'm not sure"
         },
         {
           "aindex": 4,
           "uniqueAnswer": true,
-          "score": 0,
+          "score": 10,
           "atype": "P",
           "recommendations": [
             {
@@ -1425,7 +1425,7 @@
       "label": "As part of the change procedure in your organization for OT systems, do you realize a risk assessment to define the priority of your changes?"
     },
     {
-      "service_category": "A.12 DEVELOPMENT OF INFORMATION SYSTEMS",
+      "service_category": "DEVELOPMENT OF INFORMATION SYSTEMS",
       "section": "L-DIH",
       "qtype": "S",
       "qindex": 22,
@@ -1461,7 +1461,7 @@
       "label": "In your organisation, do you perform development in OT systems?"
     },
     {
-      "service_category": "A.13 PROCUREMENT MANAGEMENT",
+      "service_category": "PROCUREMENT MANAGEMENT",
       "section": "L-DIH",
       "qtype": "M",
       "qindex": 23,
@@ -1470,7 +1470,7 @@
         {
           "aindex": 1,
           "uniqueAnswer": false,
-          "score": 0,
+          "score": 18,
           "atype": "P",
           "recommendations": [
             {
@@ -1483,7 +1483,7 @@
         {
           "aindex": 2,
           "uniqueAnswer": false,
-          "score": 45,
+          "score": 18,
           "atype": "P",
           "recommendations": [
             {
@@ -1496,7 +1496,7 @@
         {
           "aindex": 3,
           "uniqueAnswer": false,
-          "score": 90,
+          "score": 18,
           "atype": "P",
           "recommendations": [
             {
@@ -1509,7 +1509,7 @@
         {
           "aindex": 4,
           "uniqueAnswer": false,
-          "score": 45,
+          "score": 18,
           "atype": "P",
           "recommendations": [
             {
@@ -1522,7 +1522,7 @@
         {
           "aindex": 5,
           "uniqueAnswer": false,
-          "score": 45,
+          "score": 18,
           "atype": "P",
           "recommendations": [
             {
@@ -1536,7 +1536,7 @@
       "label": "Do you realize periodic risk assessment for suppliers, to proactively implement mitigation controls?"
     },
     {
-      "service_category": "A.14 INCIDENT MANAGEMENT",
+      "service_category": "INCIDENT MANAGEMENT",
       "section": "L-DIH",
       "qtype": "M",
       "qindex": 24,
@@ -1558,7 +1558,7 @@
         {
           "aindex": 2,
           "uniqueAnswer": false,
-          "score": 45,
+          "score": 20,
           "atype": "P",
           "recommendations": [
             {
@@ -1571,7 +1571,7 @@
         {
           "aindex": 3,
           "uniqueAnswer": false,
-          "score": 90,
+          "score": 20,
           "atype": "P",
           "recommendations": [
             {
@@ -1584,7 +1584,7 @@
         {
           "aindex": 4,
           "uniqueAnswer": false,
-          "score": 45,
+          "score": 20,
           "atype": "P",
           "recommendations": [
             {
@@ -1597,7 +1597,7 @@
         {
           "aindex": 5,
           "uniqueAnswer": false,
-          "score": 45,
+          "score": 20,
           "atype": "P",
           "recommendations": [
             {
@@ -1611,11 +1611,11 @@
       "label": "Does your company have guidelines for dealing with cyber incidents, personal data breaches, or sudden events (flood, fire, crisis, etc.)?"
     },
     {
-      "service_category": "A.15 BUSINESS CONTINUITY",
+      "service_category": "BUSINESS CONTINUITY",
       "section": "L-DIH",
       "qtype": "M",
       "qindex": 25,
-      "maxPoints": 40,
+      "maxPoints": 60,
       "answers": [
         {
           "aindex": 1,
@@ -1646,7 +1646,7 @@
         {
           "aindex": 3,
           "uniqueAnswer": false,
-          "score": 40,
+          "score": 20,
           "atype": "P",
           "recommendations": [
             {
@@ -1659,7 +1659,7 @@
         {
           "aindex": 4,
           "uniqueAnswer": false,
-          "score": 40,
+          "score": 20,
           "atype": "P",
           "recommendations": [
             {
@@ -1672,7 +1672,7 @@
         {
           "aindex": 5,
           "uniqueAnswer": false,
-          "score": 40,
+          "score": 20,
           "atype": "P",
           "recommendations": [
             {
@@ -1686,11 +1686,11 @@
       "label": "Did you define and implement Business Continuity process for OT systems?"
     },
     {
-      "service_category": "A.16 COMPLIANCE",
+      "service_category": "COMPLIANCE",
       "section": "L-DIH",
       "qtype": "M",
       "qindex": 26,
-      "maxPoints": 20,
+      "maxPoints": 90,
       "answers": [
         {
           "aindex": 1,
@@ -1708,7 +1708,7 @@
         {
           "aindex": 2,
           "uniqueAnswer": false,
-          "score": 0,
+          "score": 10,
           "atype": "P",
           "recommendations": [
             {
@@ -1739,7 +1739,7 @@
           "recommendations": [
             {
               "answerChosen": true,
-              "label": "null"
+              "label": ""
             }
           ],
           "label": "We are NIS2 compliant."
@@ -1752,7 +1752,7 @@
           "recommendations": [
             {
               "answerChosen": true,
-              "label": "null"
+              "label": ""
             }
           ],
           "label": "We have a well defined guidelines for preparation and conduct of internal audit annually. The results of the audit are shared with the stakeholders and tracked to closure."
@@ -1760,7 +1760,7 @@
         {
           "aindex": 6,
           "uniqueAnswer": false,
-          "score": 0,
+          "score": 10,
           "atype": "P",
           "recommendations": [
             {
@@ -1773,7 +1773,7 @@
         {
           "aindex": 7,
           "uniqueAnswer": false,
-          "score": 0,
+          "score": 10,
           "atype": "P",
           "recommendations": [
             {
@@ -1787,7 +1787,7 @@
       "label": "In your organisation, how do you identify and track relevant compliance requirements for OT systems?"
     },
     {
-      "service_category": "A.17 MAINTENANCE",
+      "service_category": "MAINTENANCE",
       "section": "L-DIH",
       "qtype": "S",
       "qindex": 27,
@@ -1814,7 +1814,7 @@
           "recommendations": [
             {
               "answerChosen": true,
-              "label": "null"
+              "label": ""
             }
           ],
           "label": "We have guidelines for non local maintenance and diagonostic activities of OT systems. Only approved tools are used."
@@ -1823,7 +1823,7 @@
       "label": "In the company, do you have guidelines for maintenance related to  OT systems?"
     },
     {
-      "service_category": "A.18 PRIVACY BY DESIGN",
+      "service_category": "PRIVACY BY DESIGN",
       "section": "L-DIH",
       "qtype": "S",
       "qindex": 28,
@@ -1845,7 +1845,7 @@
         {
           "aindex": 2,
           "uniqueAnswer": true,
-          "score": 0,
+          "score": 10,
           "atype": "P",
           "recommendations": [
             {
@@ -1853,7 +1853,7 @@
               "label": "null"
             }
           ],
-          "label": " No we do not need, as we do not collect  Personally Identifiable Information (PII) data."
+          "label": " No we do not need, as we do not collect Personally Identifiable Information (PII) data."
         },
         {
           "aindex": 3,
@@ -1876,7 +1876,7 @@
           "recommendations": [
             {
               "answerChosen": true,
-              "label": "null"
+              "label": ""
             }
           ],
           "label": "Not Applicable"
