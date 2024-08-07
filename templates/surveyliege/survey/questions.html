@@ -53,20 +53,20 @@
                     <div class="d-flex flex-row justify-content-between">
                         {% if user.is_survey_in_progress %}
                             {% if current_question_index > 1 %}
-                                <button
+                                <a
                                     class="btn btn-primary return-to-question"
-                                    data-return-to-question="{{ previous_question_index }}"
+                                    href="{% url 'question' previous_question_index %}"
                                     type="button">
                                     {{ _('Back') }}
-                                </button>
+                                </a>
                             {% endif %}
                         {% else %}
-                            <button
-                                class="btn btn-primary cancel-modifications"
-                                data-question-index="{{ current_question_index }}"
+                            <a
+                                class="btn btn-primary"
+                                href="{% url 'review'%}#question-{{ current_question_index }}"
                                 type="button">
                                 {{ _('Cancel') }}
-                            </button>
+                            </a>
                         {% endif %}
                         <button
                             class="btn btn-light border border-rounded"
@@ -80,7 +80,7 @@
                             class="btn btn-primary{% if show_warning_dialog %} modify-question{% endif %}"
                             type="submit"
                             value="{% if user.is_survey_under_review or show_warning_dialog %}{{ _('Modify') }}{% else %}{{ _('Next') }}{% endif %}"
-                            data-question-index="{{ current_question_index }}">
+                        >
                     </div>
                 </div>
             {% endbuttons %}
