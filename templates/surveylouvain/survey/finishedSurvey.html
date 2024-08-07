@@ -10,9 +10,8 @@
 
 {% block content %}
 <div class="row px-4">
-    <div class="col-10">
+    <div class="col">
         <h2>{{ _('Thanks') }}</h2>
-        <div class="qrcode"></div>
         {% block finished_survey_description %}
         <p class="text-justify">
             {% blocktranslate trimmed %}
@@ -20,19 +19,7 @@
             {% endblocktranslate %}
         </p>
         {% endblock %}
-        <p class="continue-later-link">
-            <button
-                class="pl-0 btn btn-link"
-                type="button"
-                name="continue-later"
-                data-toggle="modal"
-                data-target="#modal">
-                {{ _('Your results link') }}
-            </button>
-        </p>
-
     </div>
-
 </div>
 
 {% include 'survey/continue.html' %}

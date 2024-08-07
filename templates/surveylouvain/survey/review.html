@@ -54,9 +54,9 @@
                         </p>
                     {% endif %}
                     <div class="p-3">
-                        <button class="btn btn-light border border-rounded modify-question" data-question="{{ question_index }}">
+                        <a class="btn btn-light border border-rounded" href="{% url 'question' question_index %}">
                             {{ _('Modify answers') }}
-                        </button>
+                        </a>
                     </div>
                 {% endfor %}
             </ol>
