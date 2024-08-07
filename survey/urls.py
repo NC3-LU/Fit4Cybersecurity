@@ -6,14 +6,14 @@ from survey import views
 
 urlpatterns = [
     path("", views.index),
-    path("start", views.start),
+    path("start", views.start, name="start"),
     path("question/<int:question_index>", views.handle_question_form, name="question"),
     path("language/<slug:lang>", views.change_lang),
-    path("resume/", views.resume),
-    path("review", views.review),
-    path("finish", views.finish),
-    path("report", views.show_report),
-    path("feedback", views.save_general_feedback),
+    path("resume/", views.resume, name="resume"),
+    path("review", views.review, name="review"),
+    path("finish", views.finish, name="finish"),
+    path("report", views.show_report, name="report"),
+    path("feedback", views.save_general_feedback, name="feedback"),
     path("companies", views.get_companies),
     path("api/v1/", include("survey.api.urls")),
 ]

@@ -149,7 +149,7 @@ def handle_start_survey(request: HttpRequest, lang: str) -> Union[Dict, SurveyUs
         "title": title,
         "forms": forms,
         "questions_per_id": {question.id: _(question.label) for question in questions},
-        "action": "/survey/start",
+        "action": "{% url 'start' %}",
         "chosen_lang": lang,
     }
 
@@ -281,7 +281,6 @@ def handle_question_answers_request(
         "question": _(current_question.label),
         "question_tooltip": _(current_question.tooltip),
         "form": form,
-        "action": "question/" + str(question_index),
         "user": user,
         "current_question_index": question_index,
         "previous_question_index": question_index - 1 if question_index > 1 else 1,

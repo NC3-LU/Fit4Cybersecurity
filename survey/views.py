@@ -51,34 +51,36 @@ def start(request):
         form_data = handle_start_survey(request, lang)
 
         if isinstance(form_data, SurveyUser):
-            HttpResponseRedirect(
+            return HttpResponseRedirect(
                 reverse(
                     "question",
                     kwargs={"question_index": form_data.current_question.qindex},
                 )
             )
-            # return HttpResponseRedirect(
-            #     "question/" + str(form_data.current_question.qindex)
-            # )
     except Exception as e:
         messages.error(request, e)
-        return HttpResponseRedirect("/")
+        return HttpResponseRedirect(reverse("index"))
 
     return render(request, "survey/start.html", context=form_data)
 
 
 def handle_question_form(request, question_index: int):
     if request.session.get("user_id", None) is None:
-        return HttpResponseRedirect("/")
+        return HttpResponseRedirect(reverse("index"))
 
     user = find_user_by_id(request.session["user_id"])
 
     if user.is_survey_finished():
-        return HttpResponseRedirect("finish")
+        return HttpResponseRedirect(reverse("finish"))
 
     user_current_question_index = get_current_user_question_index_from_sequence(user)
     if user_current_question_index < question_index or question_index <= 0:
-        return HttpResponseRedirect("question/" + str(user_current_question_index))
+        return HttpResponseRedirect(
+            reverse(
+                "question",
+                kwargs={"question_index": user_current_question_index},
+            )
+        )
 
     review_ancher = ""
     if user.is_survey_under_review():
@@ -88,10 +90,17 @@ def handle_question_form(request, question_index: int):
 
     if type(result) is SurveyUser:
         if result.is_survey_under_review():
-            return HttpResponseRedirect("review" + review_ancher)
+            return HttpResponseRedirect(reverse("review") + review_ancher)
 
         return HttpResponseRedirect(
-            "question/" + str(get_current_user_question_index_from_sequence(result))
+            reverse(
+                "question",
+                kwargs={
+                    "question_index": get_current_user_question_index_from_sequence(
+                        result
+                    )
+                },
+            )
         )
 
     return render(request, "survey/questions.html", context=result)
@@ -104,22 +113,21 @@ def change_lang(request, lang: str):
     previous_path = request.META.get("HTTP_REFERER", "/")
 
     if previous_path.__contains__("/survey/start"):
-        return HttpResponseRedirect("start")
+        return HttpResponseRedirect(reverse("start"))
 
     if previous_path.__contains__("/stats/"):
-        return HttpResponseRedirect("/stats/")
-
+        return HttpResponseRedirect(reverse("stats"))
     if previous_path.__contains__("/terms/"):
-        return HttpResponseRedirect("/terms/")
+        return HttpResponseRedirect(reverse("terms"))
 
     if previous_path.__contains__("/privacy/"):
-        return HttpResponseRedirect("/privacy/")
+        return HttpResponseRedirect(reverse("privacy"))
 
     if previous_path.__contains__("/faq/"):
-        return HttpResponseRedirect("/faq/")
+        return HttpResponseRedirect(reverse("faq"))
 
     if user_id is None:
-        return HttpResponseRedirect("/")
+        return HttpResponseRedirect(reverse("index"))
 
     user = find_user_by_id(user_id)
     user.chosen_lang = lang
@@ -135,18 +143,18 @@ def change_lang(request, lang: str):
         return HttpResponseRedirect(previous_path)
 
     if user.is_survey_under_review() and previous_path.__contains__("/survey/review"):
-        return HttpResponseRedirect("review")
+        return HttpResponseRedirect(reverse("review"))
 
     if user.is_survey_finished() and previous_path.__contains__("/survey/finish"):
-        return HttpResponseRedirect("finish")
+        return HttpResponseRedirect(reverse("finish"))
 
-    return HttpResponseRedirect("/")
+    return HttpResponseRedirect(reverse("index"))
 
 
 def show_report(request) -> HttpResponseRedirect:
     user_id = request.session.get("user_id", None)
     if user_id is None:
-        return HttpResponseRedirect("/")
+        return HttpResponseRedirect(reverse("index"))
 
     user = find_user_by_id(user_id)
     lang = user.chosen_lang
@@ -156,7 +164,7 @@ def show_report(request) -> HttpResponseRedirect:
             request, _("To generate a report you have to finish the survey.")
         )
 
-        return HttpResponseRedirect("/")
+        return HttpResponseRedirect(reverse("index"))
 
     # check that the redirect is authorised
     target = request.META.get("HTTP_REFERER", "/")
@@ -201,21 +209,24 @@ def show_report(request) -> HttpResponseRedirect:
 def review(request):
     user_id = request.session.get("user_id", None)
     if user_id is None:
-        return HttpResponseRedirect("/")
+        return HttpResponseRedirect(reverse("index"))
 
     user = find_user_by_id(user_id)
     if user.is_survey_finished():
-        return HttpResponseRedirect("finish")
+        return HttpResponseRedirect(reverse("finish"))
     elif user.is_survey_in_progress():
         return HttpResponseRedirect(
-            "question/" + str(get_current_user_question_index_from_sequence(user))
+            reverse(
+                "question",
+                kwargs={"question_index": get_current_user_question_index_from_sequence(user)},
+            )
         )
 
     if request.method == "POST" and forms.Form(data=request.POST).is_valid():
         user.status = SURVEY_STATUS_FINISHED
         user.save()
 
-        return HttpResponseRedirect("finish")
+        return HttpResponseRedirect(reverse("finish"))
 
     questions_with_user_answers = get_questions_with_user_answers(user)
 
@@ -236,11 +247,11 @@ def finish(request):
     crypter = Fernet(HASH_KEY)
     user_id = request.session.get("user_id", None)
     if user_id is None:
-        return HttpResponseRedirect("/")
+        return HttpResponseRedirect(reverse("index"))
 
     user = find_user_by_id(user_id)
     if not user.is_survey_finished():
-        return HttpResponseRedirect("/")
+        return HttpResponseRedirect(reverse("index"))
 
     lang = user.chosen_lang
     translation.activate(lang)
@@ -303,29 +314,32 @@ def resume(request):
                 "We could not find a survey with the requested key, please start a new one."
             ),
         )
-        return HttpResponseRedirect("/")
+        return HttpResponseRedirect(reverse("index"))
 
     request.session["user_id"] = str(user_id)
 
     if user.is_survey_in_progress():
         return HttpResponseRedirect(
-            "question/" + str(get_current_user_question_index_from_sequence(user))
+            reverse(
+                "question",
+                kwargs={"question_index": get_current_user_question_index_from_sequence(user)},
+            )
         )
-
+        
     if user.is_survey_under_review():
-        return HttpResponseRedirect("review")
+        return HttpResponseRedirect(reverse("review"))
 
     if user.is_survey_finished():
-        return HttpResponseRedirect("finish")
+        return HttpResponseRedirect(reverse("finish"))
 
-    return HttpResponseRedirect("/")
+    return HttpResponseRedirect(reverse("index"))
 
 
 def save_general_feedback(request):
     user_id = request.session["user_id"]
     user = find_user_by_id(user_id)
     if not user.is_survey_finished():
-        return HttpResponseRedirect("/")
+        return HttpResponseRedirect(reverse("index"))
 
     form = handle_general_feedback(user, request)
 
@@ -335,17 +349,20 @@ def save_general_feedback(request):
                 request, _("Feedback sending errors: " + form.errors.split(", "))
             )
 
-        return HttpResponseRedirect("finish")
+        return HttpResponseRedirect(reverse("finish"))
 
     if user.is_survey_in_progress():
         return HttpResponseRedirect(
-            "question/" + str(get_current_user_question_index_from_sequence(user))
+            reverse(
+                "question",
+                kwargs={"question_index": get_current_user_question_index_from_sequence(user)},
+            )
         )
 
     if user.is_survey_under_review():
-        return HttpResponseRedirect("review")
+        return HttpResponseRedirect(reverse("review"))
 
-    return HttpResponseRedirect("/")
+    return HttpResponseRedirect(reverse("index"))
 
 
 def get_terms(request):

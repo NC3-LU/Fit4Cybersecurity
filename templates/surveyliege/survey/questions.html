@@ -39,7 +39,7 @@
         <div class="card-title">
             <span data-bs-toggle="tooltip" title="{{ question_tooltip | safe }}">{{ question | safe }}</span>
         </div>
-        <form action="{{ action }}" method="post" class="form" id="survey-question-form">
+        <form action="{% url 'question' current_question_index %}" method="post" class="form" id="survey-question-form">
             {% csrf_token %}
 
             {% bootstrap_form form exclude="feedback" %}
