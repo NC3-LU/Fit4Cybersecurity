@@ -12,6 +12,7 @@ from django.http import HttpResponseRedirect
 from django.shortcuts import render
 from django.utils import translation
 from django.utils.translation import gettext as _
+from django.urls import reverse
 
 from csskp.settings import COOKIEBANNER
 from csskp.settings import CUSTOM
@@ -50,9 +51,15 @@ def start(request):
         form_data = handle_start_survey(request, lang)
 
         if isinstance(form_data, SurveyUser):
-            return HttpResponseRedirect(
-                "question/" + str(form_data.current_question.qindex)
+            HttpResponseRedirect(
+                reverse(
+                    "question",
+                    kwargs={"question_index": form_data.current_question.qindex},
+                )
             )
+            # return HttpResponseRedirect(
+            #     "question/" + str(form_data.current_question.qindex)
+            # )
     except Exception as e:
         messages.error(request, e)
         return HttpResponseRedirect("/")
@@ -71,9 +78,7 @@ def handle_question_form(request, question_index: int):
 
     user_current_question_index = get_current_user_question_index_from_sequence(user)
     if user_current_question_index < question_index or question_index <= 0:
-        return HttpResponseRedirect(
-            "question/" + str(user_current_question_index)
-        )
+        return HttpResponseRedirect("question/" + str(user_current_question_index))
 
     review_ancher = ""
     if user.is_survey_under_review():
@@ -86,8 +91,7 @@ def handle_question_form(request, question_index: int):
             return HttpResponseRedirect("review" + review_ancher)
 
         return HttpResponseRedirect(
-            "question/"
-            + str(get_current_user_question_index_from_sequence(result))
+            "question/" + str(get_current_user_question_index_from_sequence(result))
         )
 
     return render(request, "survey/questions.html", context=result)
@@ -204,8 +208,7 @@ def review(request):
         return HttpResponseRedirect("finish")
     elif user.is_survey_in_progress():
         return HttpResponseRedirect(
-            "question/"
-            + str(get_current_user_question_index_from_sequence(user))
+            "question/" + str(get_current_user_question_index_from_sequence(user))
         )
 
     if request.method == "POST" and forms.Form(data=request.POST).is_valid():
@@ -306,8 +309,7 @@ def resume(request):
 
     if user.is_survey_in_progress():
         return HttpResponseRedirect(
-            "question/"
-            + str(get_current_user_question_index_from_sequence(user))
+            "question/" + str(get_current_user_question_index_from_sequence(user))
         )
 
     if user.is_survey_under_review():
@@ -337,8 +339,7 @@ def save_general_feedback(request):
 
     if user.is_survey_in_progress():
         return HttpResponseRedirect(
-            "question/"
-            + str(get_current_user_question_index_from_sequence(user))
+            "question/" + str(get_current_user_question_index_from_sequence(user))
         )
 
     if user.is_survey_under_review():

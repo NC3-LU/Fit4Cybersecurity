@@ -7,7 +7,7 @@ from survey import views
 urlpatterns = [
     path("", views.index),
     path("start", views.start),
-    path("question/<int:question_index>", views.handle_question_form),
+    path("question/<int:question_index>", views.handle_question_form, name="question"),
     path("language/<slug:lang>", views.change_lang),
     path("resume/", views.resume),
     path("review", views.review),
