@@ -32,7 +32,7 @@ CUSTOM = {
         # path of the templates parts
         "terms": "terms_part.html",
         "footer": "footer_part.html",
-        "main_logo": "survelouvain/logo_part.html",
+        "main_logo": "surveylouvain/logo_part.html",
         "privacy": "privacy_policy_part.html",
     },
     # Available modules
