@@ -146,11 +146,13 @@
 
     {% endif %}
     {% if custom.modules.displayResults %}
-        <div class="col-8 py-4">
-            <h4 class="text-center">
-                {{ _('Score by category') }}
-            </h4>
-            <canvas id="chartByCategory"></canvas>
+        <div class="d-flex">
+            <div class="col-8 py-4 mx-auto">
+                <h4 class="text-center">
+                    {{ _('Score by category') }}
+                </h4>
+                <canvas id="chartByCategory"></canvas>
+            </div>
         </div>
         <script>
           var sectionsLabels = {{ sectionsLabels | safe }}
