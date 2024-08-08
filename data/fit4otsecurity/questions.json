@@ -177,7 +177,7 @@
             "recommendations":[
                {
                   "answerChosen":true,
-                  "label":"It is already a good step for having documented a common approach to dealing with risk at organizational level, yet the next step is to actually have it implemented for both IT and OT systems."
+                  "label":"It is good that awareness sessions are offered to employees yet from time to time the organization should check if rules are applied,and if not when and why.Apart from training,newsletters,emails and internal websites can be used to share informative content,practical tips,and real-world examples of security incidents.Refresher trainings can also be provided on a defined frequency,at least annually to ensure and promote security aware culture."
                }
             ],
             "label":"The training for OT security is in place, but there is no assessment to verify if this knowledge is used or not."
@@ -213,7 +213,7 @@
             "recommendations":[
                {
                   "answerChosen":true,
-                  "label":"In order to be in control of your risks, knowing your organisation's computing and OT assets is a mandatory step.You should, moreover, have an updated list of these assets at all times. The criteria to label and classify them is equally important, as the protection of these assets are based on the classification."
+                  "label":"In order to be in control of your risks,knowing your organisation's computing and OT assets is a mandatory step.You should, moreover,have an updated list of these assets at all times.The criteria to label and classify them is equally important,as the protection of these assets are based on the classification."
                }
             ],
             "label":"Asset inventory and management process only for IT assets."
@@ -425,7 +425,7 @@
             "recommendations":[
                {
                   "answerChosen":true,
-                  "label":"Consider both IT and OT systems and plan deployment of anti malware softwares. For systems where anti-malware software is not compatible, we should have countermeasures implemented. A denial of service attack detection system may be put in place."
+                  "label":"Consider both IT and OT systems and plan deployment of anti malware softwares.For systems where anti-malware software is not compatible,we should have countermeasures implemented.Using a firewall with deep packet inspection capability that can monitor and block advanced threats like malware."
                }
             ],
             "label":"Anti-Malware software is not deployed or deployed only in IT systems."
@@ -500,7 +500,7 @@
             "recommendations":[
                {
                   "answerChosen":true,
-                  "label":"It is good that the critical IT systems are backed up,but it is also important to include other systems and OT systems."
+                  "label":"It is good that the critical IT systems are backed up,but it is also important to include other systems and OT systems.Establish backup systems and processes to backup relevant OT systems,state,data,configuration files,programs at regular intervals to support recovery to a stable state."
                }
             ],
             "label":"Backups are taken only for Critical IT systems."
@@ -813,7 +813,7 @@
             "recommendations":[
                {
                   "answerChosen":true,
-                  "label":"null"
+                  "label":""
                }
             ],
             "label":"We do not use cloud."
@@ -849,7 +849,7 @@
             "recommendations":[
                {
                   "answerChosen":true,
-                  "label":"Descentralising access management makes it difficult to have a view over access-related incidents, as well it makes it difficult to update permissions of a role, or adding more roles into the organisation in the same way across different access areas. It would be recommented to have a centralised system to manage access across the whole organisation. In situations where it is not possible ensure controls are put in place to ensure right access is given to right resources. When typical IT IAM controls cannot be implemented organizations should look for opportunities to use monitoring and alerting capabilities to identify potential threats."
+                  "label":"Descentralising access management makes it difficult to have a view over access-related incidents,as well it makes it difficult to update permissions of a role,or adding more roles into the organisation in the same way across different access areas.It would be recommented to have a centralised system to manage access across the whole organisation.In situations where it is not possible ensure controls are put in place to ensure right access is given to right resources.When typical IT IAM controls cannot be implemented organizations should look for opportunities to use monitoring and alerting capabilities to identify potential threats.Restrict OT user priveleges to only those that are required to perform function."
                }
             ],
             "label":"Access to OT systems are de centralised managed by  internal teams."
@@ -960,7 +960,7 @@
             "recommendations":[
                {
                   "answerChosen":true,
-                  "label":"It is essential to direct your organisation to use password best practices, instead of old simple passwords that do not change at all. In order to have the same password best practices applied, it is also recommended that you fomalise minimal requirements in a password policy, that you verify that this password policy is applied, and that the policy would be reviewed from time to time to require better password constraints in line with new technologies."
+                  "label":"It is essential to direct your organisation to use password best practices,instead of old simple passwords that do not change at all.In order to have the same password best practices applied,it is also recommended that you fomalise minimal requirements in a password policy,that you verify that this password policy is applied,and that the policy would be reviewed from time to time to require better password constraints in line with new technologies.Organizations are encouraged to change the default password on OT equipment to make it more difficult for an adversary to guess the password.Once changed,the password needs to be made available to those who need to know using a password management tool that is secure."
                }
             ],
             "label":"Not all our systems and applications are configured with password best practices."
@@ -1326,7 +1326,7 @@
             "recommendations":[
                {
                   "answerChosen":true,
-                  "label":"It is good that changes related to IT environment are tested, but the risk related to unplanned changes exist in OT environemnet. Hence include OT system changes as well into testing. Management should approve each change that can affect the production environment."
+                  "label":"It is good that changes related to IT environment are tested,but the risk related to unplanned changes exist in OT environemnet.Change management is paramount to maintaining the integrity of both IT and OT systems.Hence include OT system changes as well into testing.It requires a careful assessment by OT experts working in conjunction with IT and security persomnnel.Management should approve each change that can affect the production environment."
                }
             ],
             "label":"Changes related to IT systems are tested before implementation."
@@ -1473,7 +1473,7 @@
             "recommendations":[
                {
                   "answerChosen":true,
-                  "label":"It is highly recommended that you have procedures or guidelines for how to react quickly in the face of cybersecurity incidents, data breaches or disasters. This is because often in situations like these it is vital to act quickly and in the correct way in order to minimise damage. The guideline must include both IT and OT environment. The formal guideline must be regularly audited and reviewed. Maintaining an incident repository helps in better manage the incidents."
+                  "label":"You shouldn't rely on your suppliers to come back to you on risks that have been identified(if they have identified them at all),but rather that your organisation takes control of the periodicy of risk assessments that include your suppliers.Like this,the necessary measures to mitigate such risks would be triggered by you,at your organisation's pace."
                }
             ],
             "label":"Our suppliers inform us when they identified risks that could affect any of our systems and services."
