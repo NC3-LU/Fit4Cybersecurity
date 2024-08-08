@@ -46,8 +46,8 @@ CUSTOM = {
     "modules": {
         "reportDownload": True,
         "reportEmail": False,
-        "requestDiagnostic": True,
-        "requestTraining": True,
+        "requestDiagnostic": False,
+        "requestTraining": False,
         "displayResults": True,
     },
     # Available report parts
@@ -66,7 +66,7 @@ CUSTOM = {
         "country": True,
         "status": True,
         "language": True,
-        "section": True,
+        "section": False,
         "category": True,
         "current_question": True,
     },
