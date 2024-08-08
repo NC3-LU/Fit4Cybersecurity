@@ -146,19 +146,17 @@
 
     {% endif %}
     {% if custom.modules.displayResults %}
-        <div class="d-flex">
-            <div class="col-8 py-4 mx-auto">
-                <h4 class="text-center">
-                    {{ _('Score by category') }}
-                </h4>
-                <canvas id="chartByCategory"></canvas>
-            </div>
+        <div class="col-8 py-4 mx-auto">
+            <h4 class="text-center">
+                {{ _('Score by category') }}
+            </h4>
+            <canvas id="chartByCategory"></canvas>
         </div>
         <script>
-          var sectionsLabels = {{ sectionsLabels | safe }}
-          var sectionsData = {{ sectionsData | safe }}
-          var categoriesLabels = {{ categoriesLabels | safe }}
-          var categoriesData = {{ categoriesData | safe }}
+            var sectionsLabels = {{ sectionsLabels | safe }}
+            var sectionsData = {{ sectionsData | safe }}
+            var categoriesLabels = {{ categoriesLabels | safe }}
+            var categoriesData = {{ categoriesData | safe }}
         </script>
     {% endif %}
     <div class="col-12 py-4">
