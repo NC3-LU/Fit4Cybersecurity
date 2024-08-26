@@ -6,39 +6,48 @@
 {% load cookiebanner %}
 
 {% block bootstrap4_extra_head %}
-    {{ block.super }}
-    <link rel="stylesheet" type="text/css" href="{% static "survey/css/survey-index.css" %}" />
-    <script type="text/javascript" src="{% static "survey/js/survey-index.js" %}"></script>
+{{ block.super }}
+<link rel="stylesheet" type="text/css" href="{% static " survey/css/survey-index.css" %}" />
+<script type="text/javascript" src="{% static " survey/js/survey-index.js" %}"></script>
 {% endblock %}
 
 {% block content %}
-    {% cookiebanner_modal 'bootstrap4' %}
-    <div class="d-flex flex-row align-items-center px-3">
-        <div class="p-2 flex-grow-1 text-justify">
-            <h5>
-                {% block index_welcome_message %}
-                {{ _('Welcome to the') }} {{ custom.tool_name|lower }}.
-                {% endblock %}
-            </h5>
-            {{ custom.intro_text | safe }}
-        </div>
+{% cookiebanner_modal 'bootstrap4' %}
+<div class="d-flex flex-row align-items-center px-3">
+    <div class="p-2 flex-grow-1 text-justify pt-4">
+        <p>
+            You participated in the ><strong>CYBERSECURITY & DEFENCE Programme on 17 April 2024 in Leuven and/or
+                Louvain-la-Neuve</strong>CYBERSECURITY & DEFENCE Programme on 17 April 2024 in Leuven and/or
+            Louvain-la-Neuve, organised as part of the State Visit to Belgium in April 2024. In order to measure the
+            impact of this mission, we invite you to complete the following questionnaire. It will take between 10 and
+            15 minutes to complete (depending on the level of detail). The purpose of this survey is twofold: it will
+            enable the institutions involved in the organisation of this mission to continue their support in the
+            realisation of possible projects/synergies, as well as to improve future initiatives of this kind to develop
+            Luxembourg's international relations.
+        </p>
+        <p>
+            After answering each question, you will be able to access all your answers compiled on one page, modify them
+            if necessary and submit them.
+        </p>
     </div>
+</div>
 
-    <div class="col px-2 py-4 text-center">
-        <a href="{% url 'start' %}">
-            <button class="btn border border-rounded btn-primary" type="button">
-                {{ _('Start') }}
-            </button>
-        </a>
+<div class="col px-2 py-4 text-center">
+    <a href="{% url 'start' %}">
+        <button class="btn border border-rounded btn-primary" type="button">
+            {{ _('Start') }}
+        </button>
+    </a>
+</div>
+
+<div class="row py-3">
+    <div class="col">
+        <button class="btn btn-link" type="button" name="resume-show-popup" data-toggle="modal" data-target="#modal"
+            data-tooltip>
+            {{ _('Continue a previous survey') }}
+        </button>
     </div>
+</div>
 
-    <div class="row py-3">
-        <div class="col">
-            <button class="btn btn-link" type="button" name="resume-show-popup" data-toggle="modal" data-target="#modal" data-tooltip>
-                {{ _('Continue a previous survey') }}
-            </button>
-        </div>
-    </div>
-
-    {% include 'survey/resume.html' %}
+{% include 'survey/resume.html' %}
 {% endblock %}
