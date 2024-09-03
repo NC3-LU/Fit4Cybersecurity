@@ -1,6 +1,6 @@
 $(document).ready(function() {
     
-    $('form[action="/survey/question/1"] textarea').attr('rows', 1);
+    $('form[action*="/survey/question/1"] textarea').attr('rows', 1);
 
     const download = function(filename, text) {
         const pom = document.createElement('a');
