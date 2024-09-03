@@ -29,7 +29,7 @@
                 {% with rest_category=questions_categories|slice:"1:" %}
                 <div id="conference_nav" class="col-lg-9 {% for category in rest_category %}{% if current_question_category == category.id %}col{% endif %}{% endfor %}">
                     <div class="text-center">
-                        <h5 class="text-primary d-none d-lg-block font-weight-bold {% for category in rest_category %}{% if current_question_category == category.id %}d-block nav_categories_active{% endif %}{% endfor %}">Conference</h5>
+                        <h5 class="text-primary d-none d-lg-block {% for category in rest_category %}{% if current_question_category == category.id %}font-weight-bold d-block nav_categories_active{% endif %}{% endfor %}">Conference</h5>
                     </div>
                     <div class="d-flex justify-content-between">
                         {% for category in rest_category %}
