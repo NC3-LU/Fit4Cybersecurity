@@ -2,7 +2,7 @@ from django.utils.translation import gettext_lazy
 
 CUSTOM = {
     # Generic configurations
-    "tool_name": "Survey on visiting Liège",
+    "tool_name": "Joint Seminar - 'Security and Defence challenges in and from Space - Converging CYBER, DEFENSE and SPACE' - 18.04.2024 - Satisfaction Survey",
     "intro_text": gettext_lazy("[INTRO survey on visiting Liège]"),
     "countries_first": [
         "LU",

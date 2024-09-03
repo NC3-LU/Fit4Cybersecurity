@@ -20,7 +20,7 @@
                 <div class="col-3">
                     {% with first_category=questions_categories|slice:":1" %}
                     {% for category in first_category %}
-                    <div class="text-center">
+                    <div class="text-center my-auto">
                         <a class="nav-link py-1 d-none h5 mb-0 mt-1 d-lg-inline {% if current_question_category == category.id %}d-inline nav_categories_active{% endif %}" href="#">{% trans category.label %}</a>
                     </div>                         
                     {% endfor %}
@@ -28,7 +28,7 @@
                 </div>
                 <div class="col-9">
                     <div>
-                        <h5 class="text-primary">Conference “Connected land systems (including drones) MATERIALS , DIGITAL AND CYBER”</h5>
+                        <h5 class="text-primary">Conference</h5>
                     </div>
                     <div class="row">
                         {% with rest_category=questions_categories|slice:"1:" %}
