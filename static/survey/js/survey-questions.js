@@ -1,4 +1,7 @@
 $(document).ready(function() {
+    
+    $('form[action="/survey/question/1"] textarea').attr('rows', 1);
+
     const download = function(filename, text) {
         const pom = document.createElement('a');
         pom.setAttribute('href', 'data:application/plain;charset=utf-8,' + encodeURIComponent(text));

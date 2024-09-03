@@ -13,9 +13,9 @@
 }
 
 .modal-header {
-    background-color: #337AB7;
+    background-color: var(--blue);
     color: #FFF;
-    border-bottom: 1px dashed #337AB7;
+    border-bottom: 1px dashed var(--blue);
  }
 
 #modal textarea {
@@ -96,7 +96,7 @@
 }
 
 .form-check-label input:checked ~ .checkmark {
-    background-color: #2196F3;
+    background-color: var(--blue);
 }
 
 .multiple-selection .form-check-label .checkmark:after {

@@ -1,0 +1,179 @@
+// Include any default variable overrides here (though functions won't be available)
+
+$blue: #0099FF;
+
+
+// Importing bootstrap
+@import "../../../node_modules/bootstrap/scss/bootstrap";
+
+
+
+// Then add additional custom code here
+
+// To compile scss file, run this command at root project ** npm run compile-scss **
+
+/* Bootstrap customization */
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+
+.bg-cssk-blue {
+  background-color: var(--blue);
+}
+
+
+.spacer-50 { margin:0; padding:0; height:50px; }
+.spacer-100 { margin:0; padding:0; height:100px; }
+
+/* Sticky footer */
+.footer {
+position: absolute;
+bottom: 0;
+width: 100%;
+/* Set the fixed height of the footer here */
+/* height: 60px; */
+line-height: 40px; /* Vertically center the text there */
+background-color: var(--blue);
+}
+.footer a{
+  color: #FFFFFF;
+}
+.flag {
+width: 35px !important;
+}
+#ie-warning {
+  display: none;
+}
+#browsers-list {
+  display: block;
+  list-style-type: disc;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 40px;
+}
+#browsers-list li {
+  background-size: 28px 28px;
+  background-repeat: no-repeat;
+  padding-left: 28px;
+  display: block;
+  padding: 9px;
+  background-position: left center;
+  padding-left: 40px;
+}
+#browsers-list .bc {
+  background-image: url(/static/images/chrome.png);
+}
+#browsers-list .bf {
+  background-image: url(/static/images/firefox.png);
+}
+#browsers-list .bs {
+  background-image: url(/static/images/safari.png);
+}
+#browsers-list .be {
+  background-image: url(/static/images/edge.png);
+}
+#browsers-list .bo {
+  background-image: url(/static/images/opera.png);
+}
+@media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {
+  #ie-warning { display:block; }
+  #content-body { display: none; }
+}
+
+.accordion-one .panel-group {
+  border: 1px solid #f1f1f1;
+  margin-top: 50px;
+}
+a:link {
+  text-decoration: none
+}
+.accordion-one .panel {
+  background-color: transparent;
+  box-shadow: none;
+  border-bottom: 0px solid transparent;
+  border-radius: 0;
+  margin: 0;
+}
+.accordion-one .panel-default {
+  border: 0;
+}
+.accordion-wrap .panel-heading {
+  padding: 0px;
+  border-radius: 0px;
+}
+h4 {
+  font-size: 15px;
+  line-height: 24px;
+}
+.accordion-one .panel .panel-heading a.collapsed {
+  color: #999999;
+  display: block;
+  padding: 12px 30px;
+  border-top: 0px;
+}
+.accordion-one .panel .panel-heading a {
+  display: block;
+  padding: 12px 30px;
+  background: #fff;
+  color: #313131;
+  border-bottom: 1px solid #f1f1f1;
+}
+.accordion-wrap .panel .panel-heading a {
+  font-size: 14px;
+}
+.accordion-one .panel-group .panel-heading+.panel-collapse>.panel-body {
+  border-top: 0;
+  padding-top: 0;
+  padding: 25px 30px 30px 35px;
+  background: #fff;
+  color: #999999;
+  font-size: 15px;
+}
+.img-accordion {
+  width: 81px;
+  float: left;
+  margin-right: 15px;
+  display: block;
+}
+.accordion-one .panel .panel-heading a.collapsed:after {
+  content: "\2b";
+  color: #999999;
+  background: #f1f1f1;
+}
+.accordion-one .panel .panel-heading a:after, .accordion-one .panel .panel-heading a.collapsed:after {
+  font-family: 'FontAwesome';
+  font-size: 15px;
+  width: 36px;
+  line-height: 48px;
+  text-align: center;
+  background: #F1F1F1;
+  float: left;
+  margin-left: -31px;
+  margin-top: -12px;
+  margin-right: 15px;
+}
+.accordion-one .panel .panel-heading a:after {
+  content: "\2212";
+}
+.accordion-one .panel .panel-heading a:after, .accordion-one .panel .panel-heading a.collapsed:after {
+  font-family: 'FontAwesome';
+  font-size: 15px;
+  width: 36px;
+  height: 48px;
+  line-height: 48px;
+  text-align: center;
+  background: #F1F1F1;
+  float: left;
+  margin-left: -31px;
+  margin-top: -12px;
+  margin-right: 15px;
+}
+
