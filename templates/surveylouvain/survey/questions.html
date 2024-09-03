@@ -17,7 +17,7 @@
     {% if user.is_survey_in_progress %}
         <nav class="nav_categories nav nav-fill d-block">
             <div class="row">
-                <div class="col-3">
+                <div class="col-3 d-flex">
                     {% with first_category=questions_categories|slice:":1" %}
                     {% for category in first_category %}
                     <div class="text-center my-auto">
@@ -27,8 +27,8 @@
                     {% endwith %}
                 </div>
                 <div class="col-9">
-                    <div>
-                        <h5 class="text-primary">Conference</h5>
+                    <div class="text-center">
+                        <h5 class="text-primary fw-bold">Conference</h5>
                     </div>
                     <div class="row">
                         {% with rest_category=questions_categories|slice:"1:" %}
