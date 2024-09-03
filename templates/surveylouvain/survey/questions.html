@@ -29,11 +29,11 @@
                 {% with rest_category=questions_categories|slice:"1:" %}
                 <div id="conference_nav" class="col-9">
                     <div class="text-center">
-                        <h5 class="text-primary font-weight-bold {% for category in rest_category %}{% if current_question_category == category.id %}d-inline nav_categories_active{% endif %}{% endfor %}">Conference</h5>
+                        <h5 class="text-primary font-weight-bold {% for category in rest_category %}{% if current_question_category == category.id %}nav_categories_active{% endif %}{% endfor %}">Conference</h5>
                     </div>
-                    <div class="row">
+                    <div class="d-flex justify-content-between">
                         {% for category in rest_category %}
-                        <div class="col-4 text-center">
+                        <div class="col-auto">
                             <a class="nav-link py-1 d-none h6 mb-0 mt-1 d-lg-inline {% if current_question_category == category.id %}d-inline nav_categories_active{% endif %}" href="#">{% trans category.label %}</a>
                         </div>                          
                         {% endfor %}
