@@ -287,7 +287,7 @@ def handle_question_answers_request(
         "total_questions_num": get_total_questions_number(user, question_index),
         "show_warning_dialog": current_sequence.has_been_answered and does_map_exist,
         "current_question_category": current_question.service_category.id,
-        "questions_categories": enumerate(questions_categories),
+        "questions_categories": questions_categories,
     }
 
 

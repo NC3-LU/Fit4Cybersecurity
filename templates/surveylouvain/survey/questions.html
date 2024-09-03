@@ -15,10 +15,32 @@
 
 {% block content %}
     {% if user.is_survey_in_progress %}
-        <nav class="nav_categories nav nav-fill">
-            {% for index, category in questions_categories %}
-            <a class="nav-link py-1 d-none h5 mb-0 mt-1 d-lg-inline {% if current_question_category == category.id %}d-inline nav_categories_active{% endif %}" href="#">{% trans category.label %}</a>
-            {% endfor %}
+        <nav class="nav_categories nav nav-fill d-block">
+            <div class="row">
+                <div class="col-3">
+                    {% with first_category=questions_categories|slice:":1" %}
+                    {% for category in first_category %}
+                    <div class="text-center">
+                        <a class="nav-link py-1 d-none h5 mb-0 mt-1 d-lg-inline {% if current_question_category == category.id %}d-inline nav_categories_active{% endif %}" href="#">{% trans category.label %}</a>
+                    </div>                         
+                    {% endfor %}
+                    {% endwith %}
+                </div>
+                <div class="col-9">
+                    <div>
+                        <h5 class="text-primary">Conference “Connected land systems (including drones) MATERIALS , DIGITAL AND CYBER”</h5>
+                    </div>
+                    <div class="row">
+                        {% with rest_category=questions_categories|slice:"1:" %}
+                        {% for category in rest_category %}
+                        <div class="col-4 text-center">
+                            <a class="nav-link py-1 d-none h6 mb-0 mt-1 d-lg-inline {% if current_question_category == category.id %}d-inline nav_categories_active{% endif %}" href="#">{% trans category.label %}</a>
+                        </div>                          
+                        {% endfor %}
+                        {% endwith %}
+                    </div>
+                </div>     
+            </div>
         </nav>
         <div class="progress mx-2 mt-2" style="height: 15px;">
             <div
