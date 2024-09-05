@@ -239,7 +239,7 @@
             "recommendations":[
                {
                   "answerChosen":true,
-                  "label":"It is good that you already started listing your organisation's computing assets, yet it is essential that you complete the list and also that you keep it updated. having a guideline helps in ensuring all the employees have the same understanding on the process and the knowledge is not lost as resources leave."
+                  "label":" It is good that you already started listing your organisation's computing assets, yet it is essential that you complete the list and also that you keep it updated. Having a guideline helps in ensuring all the employees have the same understanding on the process and the knowledge is not lost as resources leave."
                }
             ],
             "label":" An inventory of all assets including OT systems was conducted, but not completed (updated)."
@@ -846,11 +846,6 @@
             "uniqueAnswer":true,
             "score":45,
             "atype":"P",
-            "recommendations":[
-               {
-                  "answerChosen":true,
-                  "label":"null"
-               }
             ],
             "label":" Access to all systems (IT and OT) and applications of the company is centralized and managed by a dedicated team."
          }
@@ -895,11 +890,6 @@
             "uniqueAnswer":false,
             "score":35,
             "atype":"P",
-            "recommendations":[
-               {
-                  "answerChosen":true,
-                  "label":""
-               }
             ],
             "label":" Authentication of the company’s assets is only possible by providing a secret authentication information."
          },
@@ -947,7 +937,7 @@
             "recommendations":[
                {
                   "answerChosen":true,
-                  "label":" It is essential to direct your organisation to use password best practices,instead of old simple passwords that do not change at all.In order to have the same password best practices applied,it is also recommended that you fomalise minimal requirements in a password policy,that you verify that this password policy is applied,and that the policy would be reviewed from time to time to require better password constraints in line with new technologies.Organizations are encouraged to change the default password on OT equipment to make it more difficult for an adversary to guess the password.Once changed,the password needs to be made available to those who need to know using a password management tool that is secure."
+                  "label":" It is essential to direct your organisation to use password best practices, instead of old simple passwords that do not change at all. In order to have the same password best practices applied, it is also recommended that you fomalise minimal requirements in a password policy, that you verify that this password policy is applied,and that the policy would be reviewed from time to time to require better password constraints in line with new technologies. Organizations are encouraged to change the default password on OT equipment to make it more difficult for an adversary to guess the password. Once changed, the password needs to be made available to those who need to know using a password management tool that is secure."
                }
             ],
             "label":" Not all our systems and applications are configured with password best practices."
@@ -973,10 +963,10 @@
             "recommendations":[
                {
                   "answerChosen":true,
-                  "label":"You should set up an authentication mechanism towards any part of your system or service.In scenarios where there is an inability of OT software to conform to a strong password policy, we have enabled access and activity logs on the systems to be managed.Ensuring hourly identification of users who have accessed the operating console,with fingerprint identification,video surveillance of the operating room,central account control console."
+                  "label":" You should set up an authentication mechanism towards any part of your system or service. In scenarios where there is an inability of OT software to conform to a strong password policy, we have enabled access and activity logs on the systems to be managed. Ensuring hourly identification of users who have accessed the operating console, with fingerprint identification, video surveillance of the operating room, central account control console."
                }
             ],
-            "label":"Password is not required to connect to some applications and systems."
+            "label":" Password is not required to connect to some applications and systems."
          },
          {
             "aindex":4,
@@ -986,13 +976,13 @@
             "recommendations":[
                {
                   "answerChosen":true,
-                  "label":"It is good that the guideline is established but Organizations may also need to consider procedures to periodically change passwords when a password is compromised or an individual with access leaves the organization."
+                  "label":" It is good that the guideline is established but organizations may also need to consider procedures to periodically change passwords when a password is compromised or an individual with access leaves the organization."
                }
             ],
-            "label":"We have defined a password guideline based on best practices, that is implemented across all our applications and systems both IT and OT."
+            "label":" We have defined a password guideline based on best practices, that is implemented across all our applications and systems both IT and OT."
          }
       ],
-      "label":"Did you implement across your infrastructure OT and IT systems a guideline on passwords (min length, complexity, etc.) ?"
+      "label":" Did you implement across your infrastructure OT and IT systems a guideline on passwords (min length, complexity, etc.) ?"
    },
    {
       "service_category":"IDENTITY, AUTHENTICATION, AND ACCESS CONTROL MANAGEMENT",
@@ -1006,13 +996,8 @@
             "uniqueAnswer":true,
             "score":40,
             "atype":"P",
-            "recommendations":[
-               {
-                  "answerChosen":true,
-                  "label":""
-               }
             ],
-            "label":"Maintenance engineers connect using tools to perform maintenance or updates."
+            "label":" Maintenance engineers connect using tools to perform maintenance or updates."
          },
          {
             "aindex":2,
@@ -1021,13 +1006,11 @@
             "atype":"P",
             "recommendations":[
                {
-                  "min_e_count":"a",
-                  "max_e_count":"c",
                   "answerChosen":true,
-                  "label":"Your organisation must ensure vendors have their own restricted users for the system accessibility.They use VPN to connect remotely and 2FA.Sessions and remote connections are provided via jump servers,on-demand basis and monitored and terminated when remote maintenance is completed.This allows the recording of keyboard entries and the sessions themselves."
+                  "label":" Your organisation must ensure vendors have their own restricted users for the system accessibility. They use VPN to connect remotely and 2FA. Sessions and remote connections are provided via jump servers, on-demand basis and monitored and terminated when remote maintenance is completed. This allows the recording of keyboard entries and the sessions themselves."
                }
             ],
-            "label":"No remote connections."
+            "label":" No remote connections."
          },
          {
             "aindex":3,
@@ -1036,16 +1019,14 @@
             "atype":"P",
             "recommendations":[
                {
-                  "min_e_count":"a",
-                  "max_e_count":"c",
                   "answerChosen":true,
-                  "label":"Guidelines related to maintenance must be shared so that employees are aware of the guidelines."
+                  "label":" Guidelines related to maintenance must be shared so that employees are aware of the guidelines."
                }
             ],
             "label":"I'm not sure"
          }
       ],
-      "label":"Do you have users connecting remotely to your OT systems for maintenance or better operations?"
+      "label": "Do you have users connecting remotely to your OT systems for maintenance or better operations?"
    },
    {
       "service_category":"CRYPTOGRAPHY AND KEY MANAGEMENT",
@@ -1098,11 +1079,6 @@
             "uniqueAnswer":false,
             "score":10,
             "atype":"P",
-            "recommendations":[
-               {
-                  "answerChosen":true,
-                  "label":""
-               }
             ],
             "label":" Data is encrypted at transit. "
          },
@@ -1111,11 +1087,6 @@
             "uniqueAnswer":false,
             "score":10,
             "atype":"P",
-            "recommendations":[
-               {
-                  "answerChosen":true,
-                  "label":""
-               }
             ],
             "label":" Guidelines are reviewed at least once a year. "
          },
@@ -1124,11 +1095,6 @@
             "uniqueAnswer":false,
             "score":10,
             "atype":"P",
-            "recommendations":[
-               {
-                  "answerChosen":true,
-                  "label":""
-               }
             ],
             "label":" We have implemented an encryption solution that is used by all employees to transfer sensible data within and outside our networks. "
          }
@@ -1235,11 +1201,6 @@
             "uniqueAnswer":false,
             "score":20,
             "atype":"P",
-            "recommendations":[
-               {
-                  "answerChosen":true,
-                  "label":""
-               }
             ],
             "label":" Not just logical but we also have segregation in physical resources."
          },
@@ -1261,11 +1222,6 @@
             "uniqueAnswer":false,
             "score":10,
             "atype":"P",
-            "recommendations":[
-               {
-                  "answerChosen":true,
-                  "label":"null"
-               }
             ],
             "label":" Our IT network communicates with OT network but we have only specific ports used."
          },
@@ -1274,11 +1230,6 @@
             "uniqueAnswer":false,
             "score":10,
             "atype":"P",
-            "recommendations":[
-               {
-                  "answerChosen":true,
-                  "label":""
-               }
             ],
             "label":" I do not know if OT communicates with IT."
          }
@@ -1359,11 +1310,6 @@
             "uniqueAnswer":true,
             "score":10,
             "atype":"P",
-            "recommendations":[
-               {
-                  "answerChosen":true,
-                  "label":""
-               }
             ],
             "label":" Risk assessment is realised in our change procedure for OT systems, which is eventually considered in defining change priority. "
          },
@@ -1395,11 +1341,6 @@
             "uniqueAnswer":true,
             "score":0,
             "atype":"P",
-            "recommendations":[
-               {
-                  "answerChosen":true,
-                  "label":"null"
-               }
             ],
             "label":" No software developments in OT, only in IT environment."
          },
@@ -1444,11 +1385,6 @@
             "uniqueAnswer":false,
             "score":18,
             "atype":"P",
-            "recommendations":[
-               {
-                  "answerChosen":true,
-                  "label":""
-               }
             ],
             "label":" We have regular meetings with our suppliers to review the agreed SLA and proactively address any foreseen risks."
          },
@@ -1457,11 +1393,6 @@
             "uniqueAnswer":false,
             "score":18,
             "atype":"P",
-            "recommendations":[
-               {
-                  "answerChosen":true,
-                  "label":""
-               }
             ],
             "label":" The selection of suppliers and other third parties includes consideration of their cybersecurity qualifications, at least in an ad hoc manner."
          },
@@ -1470,11 +1401,6 @@
             "uniqueAnswer":false,
             "score":18,
             "atype":"P",
-            "recommendations":[
-               {
-                  "answerChosen":true,
-                  "label":""
-               }
             ],
             "label":" The selection of products and services includes consideration of their cybersecurity capabilities, at least in an ad hoc manner."
          },
@@ -1483,11 +1409,6 @@
             "uniqueAnswer":false,
             "score":18,
             "atype":"P",
-            "recommendations":[
-               {
-                  "answerChosen":true,
-                  "label":""
-               }
             ],
             "label":" Selection criteria for higher priority assets include evaluation of bills of material for key asset elements, such as hardware and software."
          }
@@ -1532,11 +1453,6 @@
             "uniqueAnswer":false,
             "score":20,
             "atype":"P",
-            "recommendations":[
-               {
-                  "answerChosen":true,
-                  "label":"null"
-               }
             ],
             "label":" Incident management guideline is defined and implemented for both IT and OT systems."
          },
@@ -1545,11 +1461,6 @@
             "uniqueAnswer":false,
             "score":20,
             "atype":"P",
-            "recommendations":[
-               {
-                  "answerChosen":true,
-                  "label":"null"
-               }
             ],
             "label":" Guidelines are audited at least once a year to verify their compliance."
          },
@@ -1558,11 +1469,6 @@
             "uniqueAnswer":false,
             "score":20,
             "atype":"P",
-            "recommendations":[
-               {
-                  "answerChosen":true,
-                  "label":""
-               }
             ],
             "label":" A repository is maintained where cybersecurity events and incidents are documented and tracked to closure."
          }
@@ -1597,7 +1503,7 @@
             "recommendations":[
                {
                   "answerChosen":true,
-                  "label":" It is good that you have set up a business continuity guideline and plan for IT systems, but with the convergence of IT and OT today,it is important that OT systems are also included. Any disruption in the OT environment can have very high impact on the entire business. Periodical tests should be performed in this respect to simulate reaction to a disaster, and the ensuing report should be shared with the management.The main function of a business impact analysis (BIA) is to help understand the consequences of a disruption to the operations of your company, and to help gather data that is essential to develop ways to recover from the incident/disruption. It is essential to have BIAs as part of your business continuity planning."
+                  "label":" It is good that you have set up a business continuity guideline and plan for IT systems, but with the convergence of IT and OT today, it is important that OT systems are also included. Any disruption in the OT environment can have very high impact on the entire business. Periodical tests should be performed in this respect to simulate reaction to a disaster, and the ensuing report should be shared with the management.The main function of a business impact analysis (BIA) is to help understand the consequences of a disruption to the operations of your company, and to help gather data that is essential to develop ways to recover from the incident/disruption. It is essential to have BIAs as part of your business continuity planning."
                }
             ],
             "label":" Clearly defined guideline and implementation of business continuity for IT systems."
@@ -1607,11 +1513,6 @@
             "uniqueAnswer":false,
             "score":20,
             "atype":"P",
-            "recommendations":[
-               {
-                  "answerChosen":true,
-                  "label":""
-               }
             ],
             "label":" Clearly defined guideline and implementation of business continuity for IT and OT systems."
          },
@@ -1623,7 +1524,7 @@
             "recommendations":[
                {
                   "answerChosen":true,
-                  "label":" It is good that Business continuity tests are performed but Test results and reports must be shared with the management."
+                  "label":" It is good that Business continuity tests are performed but test results and reports must be shared with the management."
                }
             ],
             "label":" Business continuity tests and exercises are performed including OT environment."
@@ -1633,11 +1534,6 @@
             "uniqueAnswer":false,
             "score":20,
             "atype":"P",
-            "recommendations":[
-               {
-                  "answerChosen":true,
-                  "label":""
-               }
             ],
             "label":" Test results and a reports are shared with the management."
          }
@@ -1682,11 +1578,6 @@
             "uniqueAnswer":false,
             "score":20,
             "atype":"P",
-            "recommendations":[
-               {
-                  "answerChosen":true,
-                  "label":""
-               }
             ],
             "label":" We are NIS2 compliant."
          },
@@ -1695,11 +1586,6 @@
             "uniqueAnswer":false,
             "score":20,
             "atype":"P",
-            "recommendations":[
-               {
-                  "answerChosen":true,
-                  "label":""
-               }
             ],
             "label":" We have a well defined guidelines for preparation and conduct of internal audit annually. The results of the audit are shared with the stakeholders and tracked to closure."
          },
@@ -1793,11 +1679,6 @@
             "uniqueAnswer":true,
             "score":45,
             "atype":"P",
-            "recommendations":[
-               {
-                  "answerChosen":true,
-                  "label":""
-               }
             ],
             "label":" We have guidelines in place to ensure safe handling of Personally Identifiable Information (PII) data."
          },
@@ -1806,11 +1687,6 @@
             "uniqueAnswer":true,
             "score":10,
             "atype":"P",
-            "recommendations":[
-               {
-                  "answerChosen":true,
-                  "label":""
-               }
             ],
             "label":" No we do not need, as we do not collect Personally Identifiable Information (PII) data."
          },
@@ -1832,13 +1708,8 @@
             "uniqueAnswer":true,
             "score":0,
             "atype":"P",
-            "recommendations":[
-               {
-                  "answerChosen":true,
-                  "label":""
-               }
             ],
-            "label":"Not Applicable"
+            "label":"Not Applicable. "
          }
       ],
       "label":" Do you have personally identifiable information (PII), how do you protect them?"
