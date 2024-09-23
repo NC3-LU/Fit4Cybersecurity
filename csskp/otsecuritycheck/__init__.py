@@ -2,7 +2,7 @@ from django.utils.translation import gettext_lazy
 
 CUSTOM = {
     # Generic configurations
-    "tool_name": "fit4otsecurity",
+    "tool_name": "otsecuritycheck",
     "intro_text": gettext_lazy(
         "This survey will ask a few questions and provide "
         "recommendations. Keep in mind, that it is a self-assessment tool and that it "
