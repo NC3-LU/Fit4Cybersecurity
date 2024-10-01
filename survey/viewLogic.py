@@ -187,7 +187,7 @@ def handle_question_answers_request(
             tuple_answers,
             data=request.POST,
             lang=user.chosen_lang,
-            answers_field_type=current_question.qtype,
+            question=current_question,
             question_answers=question_answers,
         )
         if form.is_valid():
@@ -237,7 +237,7 @@ def handle_question_answers_request(
         form = AnswerMChoice(
             tuple_answers,
             lang=user.chosen_lang,
-            answers_field_type=current_question.qtype,
+            question=current_question,
             question_answers=question_answers,
         )
 
