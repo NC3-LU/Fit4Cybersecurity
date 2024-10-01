@@ -14,9 +14,10 @@ QUESTION_TYPES = [
     ("MT", "Multiple Choice + Free Text"),
     ("ST", "Single Choice + Free Text"),
     ("CL", "Countries list"),
+    ("CT", "Context with Text")
 ]
 
 ANSWER_TYPES = [
     ("P", "Predefined answer"),
-    ("T", "Free text"),
+    ("T", "Free text")
 ]

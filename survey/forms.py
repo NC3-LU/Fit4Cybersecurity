@@ -14,14 +14,14 @@ class AnswerMChoice(forms.Form):
 
     def __init__(self, tanswers=None, *args, **kwargs):
         self.lang = kwargs.pop("lang")
-        answers_field_type = kwargs.pop("answers_field_type")
-        self.question_type = answers_field_type
+        question = kwargs.pop("question")
+        self.question_type = question.qtype
         question_answers = kwargs.pop("question_answers")
         data = kwargs.get("data")
 
         super().__init__(*args, **kwargs)
 
-        if answers_field_type[0] == "M":
+        if self.question_type[0] == "M":
             self.fields["answers"] = forms.MultipleChoiceField(
                 required=True,
                 choices=[],
@@ -30,21 +30,21 @@ class AnswerMChoice(forms.Form):
                 ),
                 label="",
             )
-        elif answers_field_type == "SO":
+        elif self.question_type == "SO":
             self.fields["answers"] = forms.ChoiceField(
                 required=False,
                 choices=question_answers,
                 widget=forms.Select(),
                 label="",
             )
-        elif answers_field_type[0] == "S":
+        elif self.question_type[0] == "S":
             self.fields["answers"] = forms.ChoiceField(
                 required=True,
                 choices=[],
                 widget=forms.RadioSelect(attrs={"class": "radio-buttons"}),
                 label="",
             )
-        elif answers_field_type == "T":
+        elif self.question_type == "T":
             self.fields["answers"] = forms.ChoiceField(
                 required=True,
                 choices=[],
@@ -52,7 +52,7 @@ class AnswerMChoice(forms.Form):
                 label="",
                 initial=tanswers[0][0],
             )
-        elif answers_field_type == "CL":
+        elif self.question_type == "CL":
             tanswers = None
             self.fields["answers"] = CountryField().formfield(
                 label="",
@@ -60,12 +60,17 @@ class AnswerMChoice(forms.Form):
                 initial=CUSTOM.get("defaultCountryCode", "LU"),
                 error_messages={"required": _("Please select your country")},
             )
-
-        self.fields["answers"].error_messages = {
-            "required": _("You need to choose at least one answer")
-        }
+        elif self.question_type == "CT":
+            self.fields["answers"] = forms.CharField(
+                label=question.label.lower(),
+                max_length=200,
+                required=True
+            )
 
         if tanswers is not None:
+            self.fields["answers"].error_messages = {
+                "required": _("You need to choose at least one answer")
+            }
             self.fields["answers"].choices = tanswers
 
         answers_dependencies = []
@@ -74,7 +79,7 @@ class AnswerMChoice(forms.Form):
                 isAnswerContentRequired = False
                 if data is not None and data["free_text_answer_id"] != 0:
                     selected_answers = data["answers"]
-                    if answers_field_type[0] == "S":
+                    if self.question_type[0] == "S":
                         selected_answers = [data["answers"]]
                     if data["free_text_answer_id"] in selected_answers:
                         isAnswerContentRequired = True
@@ -84,6 +89,7 @@ class AnswerMChoice(forms.Form):
                     widget=forms.Textarea(
                         attrs={
                             "autofocus": True,
+                            "row": 2
                         }
                     ),
                     required=isAnswerContentRequired,

@@ -120,7 +120,7 @@ def handle_start_survey(request: HttpRequest, lang: str) -> Union[Dict, SurveyUs
             tuple_answers,
             lang=lang,
             data=request.POST if request.method == "POST" else None,
-            answers_field_type=question.qtype,
+            question=question,
             question_answers=question.surveyquestionanswer_set.filter(is_active=True),
             prefix="form" + str(question.id),
         )
@@ -302,6 +302,8 @@ def save_answers(
             ]
         case "CL":
             question_answers = [current_question.surveyquestionanswer_set.all()[0]]
+        case "CT":
+            question_answers = []
         case _:
             question_answers = current_question.surveyquestionanswer_set.filter(
                 is_active=True

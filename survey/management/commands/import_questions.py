@@ -208,12 +208,13 @@ class Command(BaseCommand):
                             }
                         )
 
-            # Deactivate all the answers with index higher then max importing.
-            max_answer_index = max(question["answers"], key=lambda x: x["aindex"])
-            if max_answer_index:
-                SurveyQuestionAnswer.all_objects.filter(
-                    question=question_obj, aindex__gt=max_answer_index["aindex"]
-                ).update(is_active=False)
+            if question["answers"]:
+                # Deactivate all the answers with index higher then max importing.
+                max_answer_index = max(question["answers"], key=lambda x: x["aindex"])
+                if max_answer_index:
+                    SurveyQuestionAnswer.all_objects.filter(
+                        question=question_obj, aindex__gt=max_answer_index["aindex"]
+                    ).update(is_active=False)
 
             # Process the answers' dependencies.
             self.process_answers_dependencies(answers_dependencies)
