@@ -9,6 +9,7 @@ from survey.models import SurveyQuestionServiceCategory
 from survey.models import SurveySection
 from survey.models import SurveyUser
 from survey.models import SurveyUserAnswer
+from survey.models import SurveyUserCustomAnswer
 from survey.models import SurveyUserFeedback
 
 
@@ -57,6 +58,7 @@ class SurveyUserFeedbackAdmin(admin.ModelAdmin):
 
 admin.site.register(SurveyQuestion)
 admin.site.register(SurveyQuestionAnswer)
+admin.site.register(SurveyUserCustomAnswer)
 admin.site.register(SurveyQuestionServiceCategory)
 admin.site.register(SurveySection)
 admin.site.register(SurveyUserAnswer)
