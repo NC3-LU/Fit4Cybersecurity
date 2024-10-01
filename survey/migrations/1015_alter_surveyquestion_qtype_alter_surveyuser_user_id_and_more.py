@@ -30,11 +30,6 @@ class Migration(migrations.Migration):
                 max_length=2,
             ),
         ),
-        migrations.AlterField(
-            model_name="surveyuser",
-            name="user_id",
-            field=models.UUIDField(default=uuid.uuid4, unique=True),
-        ),
         migrations.CreateModel(
             name="SurveyUserCustomAnswer",
             fields=[
@@ -47,8 +42,6 @@ class Migration(migrations.Migration):
                         verbose_name="ID",
                     ),
                 ),
-                ("question", models.CharField(default="0", max_length=100)),
-                ("answer", models.TextField(blank=True, default="")),
                 (
                     "user",
                     models.ForeignKey(
@@ -56,6 +49,23 @@ class Migration(migrations.Migration):
                         to="survey.surveyuser",
                     ),
                 ),
+                (
+                    "question",
+                    models.ForeignKey(
+                        on_delete=django.db.models.deletion.CASCADE,
+                        to="survey.surveyquestion",
+                    ),
+                ),
+                (
+                    "answer_label",
+                    models.TextField(
+                        blank=False,
+                        default="",
+                        null=False,
+                        max_length=100
+                    )
+                ),
+                ("answer_value", models.TextField(blank=True, null=False, default="")),
             ],
         ),
     ]

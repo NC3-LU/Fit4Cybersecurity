@@ -33,6 +33,7 @@ from survey.models import SurveyUser
 from survey.models import SurveyUserAnswer
 from survey.models import SurveyUserFeedback
 from survey.models import SurveyUserQuestionSequence
+from survey.models import SurveyUserCustomAnswer
 
 LOCAL_DEFAULT_LANG = LANGUAGE_CODE
 
@@ -133,6 +134,11 @@ def handle_start_survey(request: HttpRequest, lang: str) -> Union[Dict, SurveyUs
             for question in questions:
                 form = forms[question.id]
                 answers = form.cleaned_data["answers"]
+                # For the custom field type the value is saved in a separate table
+                if question.qtype == 'CT':
+                    save_custom_answer(user, question, question.label.lower(), answers)
+                    continue
+
                 answer_content = ""
                 if "answer_content" in form.cleaned_data:
                     answer_content = form.cleaned_data["answer_content"]
@@ -368,6 +374,20 @@ def save_answers(
                     )
 
         user_answer.save()
+
+
+def save_custom_answer(
+    user: SurveyUser,
+    question: SurveyQuestion,
+    answer_label: str,
+    answer_value: str
+) -> None:
+    user_custom_answer = SurveyUserCustomAnswer()
+    user_custom_answer.user = user
+    user_custom_answer.question = question
+    user_custom_answer.answer_label = answer_label
+    user_custom_answer.answer_value = answer_value
+    user_custom_answer.save()
 
 
 def save_feedback(user: SurveyUser, question: SurveyQuestion, feedback: str) -> None:

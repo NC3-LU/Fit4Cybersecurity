@@ -1,4 +1,5 @@
 import json
+import html
 
 from django import forms
 from django.utils.translation import gettext_lazy as _
@@ -62,7 +63,7 @@ class AnswerMChoice(forms.Form):
             )
         elif self.question_type == "CT":
             self.fields["answers"] = forms.CharField(
-                label=question.label.lower(),
+                label="",
                 max_length=200,
                 required=True
             )
@@ -134,6 +135,9 @@ class AnswerMChoice(forms.Form):
 
         if self.fields["answers"].widget.input_type == "radio":
             answers = [answers]
+
+        if self.fields["answers"].widget.input_type == "text":
+            return html.escape(answers)
 
         if len(answers) > 1:
             question_answers = SurveyQuestionAnswer.objects.filter(

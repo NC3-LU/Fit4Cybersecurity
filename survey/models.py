@@ -464,14 +464,14 @@ class SurveyUserAnswer(models.Model):
 
 
 class SurveyUserCustomAnswer(models.Model):
-    # AnswerID
-    # AnswerListID
+    # CustomAnswerID
     user = models.ForeignKey(SurveyUser, on_delete=models.CASCADE)
-    question = models.CharField(default="0", max_length=100, null=False)
-    answer = models.TextField(null=False, blank=True, default="")
+    question = models.ForeignKey(SurveyQuestion, on_delete=models.CASCADE)
+    answer_label = models.TextField(max_length=100, null=False, blank=False, default="")
+    answer_value = models.TextField(null=False, blank=True, default="")
 
     def __str__(self):
-        return str(self.answer)
+        return str(self.answer_label)
 
 
 class SurveyUserFeedback(models.Model):
