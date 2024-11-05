@@ -72,7 +72,7 @@
         "label": " The guidelines defined have been audited at least once a year."
       }
     ],
-    "label": " Does your organization have an Information Security Management System (ISMS) in place, which includes a set of rules and practices to secure its information, including Operational Technology (OT) systems? "
+    "label": " Does your organization have an Information Security Management System (ISMS) in place, which includes a set of rules and practices to secure its information, including Operational Technology (OT) systems? Operational technology (OT) is hardware and software that detects or causes a change, through the direct monitoring and/or control of industrial equipment, assets, processes and events. "
   },
   {
     "service_category": "RISK MANAGEMENT",
@@ -320,7 +320,7 @@
         "label": " Access controls are implemented for accessing any access point in the facility."
       }
     ],
-    "label": " Do you have access control measures in place for all physical access points to your building, server room, archive room or facility in general?"
+    "label": " Do you have access control measures in place for all physical access points to your production facilities, server room, archive room or facility in general?"
   },
   {
     "service_category": "OPERATIONAL SECURITY",
@@ -811,13 +811,13 @@
   {
     "service_category": "IDENTITY, AUTHENTICATION, AND ACCESS CONTROL MANAGEMENT",
     "section": "L-DIH",
-    "qtype": "S",
+    "qtype": "M",
     "qindex": 13,
     "maxPoints": 45,
     "answers": [
       {
         "aindex": 1,
-        "uniqueAnswer": true,
+        "uniqueAnswer": false,
         "score": 22,
         "atype": "P",
         "recommendations": [
@@ -830,7 +830,7 @@
       },
       {
         "aindex": 2,
-        "uniqueAnswer": true,
+        "uniqueAnswer": false,
         "score": 22,
         "atype": "P",
         "recommendations": [
@@ -843,13 +843,33 @@
       },
       {
         "aindex": 3,
-        "uniqueAnswer": true,
+        "uniqueAnswer": false,
         "score": 45,
         "atype": "P",
         "label": " Access to all systems (IT and OT) and applications of the company is centralized and managed by a dedicated team."
+      },
+      {
+        "aindex": 4,
+        "uniqueAnswer": false,
+        "score": 22,
+        "atype": "P",
+        "label": "Basic access control is in place."
+      },
+      {
+        "aindex": 5,
+        "uniqueAnswer": false,
+        "score": 22,
+        "atype": "P",
+        "recommendations": [
+          {
+            "answerChosen": true,
+            "label": "By implementing basic access control measures, manufacturing companies can create a safer, more secure, and efficient working environment, ultimately protecting their assets and ensuring smooth operations. "
+          }
+        ],
+        "label": "Basic access control is not in place."
       }
     ],
-    "label": " Is access management in your company centralized?"
+    "label": "Does your organization have access management in place?"
   },
   {
     "service_category": "IDENTITY, AUTHENTICATION, AND ACCESS CONTROL MANAGEMENT",
@@ -985,20 +1005,20 @@
   {
     "service_category": "IDENTITY, AUTHENTICATION, AND ACCESS CONTROL MANAGEMENT",
     "section": "L-DIH",
-    "qtype": "S",
+    "qtype": "M",
     "qindex": 16,
     "maxPoints": 40,
     "answers": [
       {
         "aindex": 1,
-        "uniqueAnswer": true,
-        "score": 40,
+        "uniqueAnswer": false,
+        "score": 30,
         "atype": "P",
         "label": " Maintenance engineers connect using tools to perform maintenance or updates."
       },
       {
         "aindex": 2,
-        "uniqueAnswer": true,
+        "uniqueAnswer": false,
         "score": 0,
         "atype": "P",
         "recommendations": [
@@ -1011,7 +1031,7 @@
       },
       {
         "aindex": 3,
-        "uniqueAnswer": true,
+        "uniqueAnswer": false,
         "score": 0,
         "atype": "P",
         "recommendations": [
@@ -1021,6 +1041,26 @@
           }
         ],
         "label": "I'm not sure"
+      },
+      {
+        "aindex": 4,
+        "uniqueAnswer": false,
+        "score": 0,
+        "atype": "P",
+        "recommendations": [
+          {
+            "answerChosen": true,
+            "label": " The usage of remote assistance tools must be coupled with security in mind. Strong authentication like MFA and secure protocols must be used. Implement strict data privacy policies to protect sensitive information during remote sessions. "
+          }
+        ],
+        "label": "TeamViewer, AnyDesk, Splashtop, BeyondTrust Remote Support, and other remote assistance tools are used to improve our maintenance procedure."
+      },
+      {
+        "aindex": 5,
+        "uniqueAnswer": false,
+        "score": 10,
+        "atype": "P",
+        "label": " We use secure VPN (Virtual Private Network) connections."
       }
     ],
     "label": "Do you have users connecting remotely to your OT systems for maintenance or better operations?"
@@ -1322,21 +1362,21 @@
   {
     "service_category": "DEVELOPMENT OF INFORMATION SYSTEMS",
     "section": "L-DIH",
-    "qtype": "S",
+    "qtype": "M",
     "qindex": 22,
     "maxPoints": 60,
     "answers": [
       {
         "aindex": 1,
-        "uniqueAnswer": true,
+        "uniqueAnswer": false,
         "score": 0,
         "atype": "P",
         "label": " No software developments in OT, only in IT environment."
       },
       {
         "aindex": 2,
-        "uniqueAnswer": true,
-        "score": 60,
+        "uniqueAnswer": false,
+        "score": 30,
         "atype": "P",
         "recommendations": [
           {
@@ -1345,9 +1385,16 @@
           }
         ],
         "label": " We perform automations using inhouse expertise or third party."
+      },
+      {
+        "aindex": 3,
+        "uniqueAnswer": false,
+        "score": 30,
+        "atype": "P",
+        "label": " We ensure both environment and the libraries used in scripts are secure by restricting access , audit logs, backups. For libraries we check the source is trusted and regular updates and reviews are performed. "
       }
     ],
-    "label": " In your organisation, do you perform development in OT systems?"
+    "label": " In your organisation, do you perform development in Operational Technology (OT) systems?"
   },
   {
     "service_category": "PROCUREMENT MANAGEMENT",
