@@ -1,0 +1,1739 @@
+[
+  {
+    "service_category": "ORGANIZATION OF INFORMATION SECURITY,INFORMATION SECURITY POLICIES",
+    "section": "L-DIH",
+    "qtype": "M",
+    "qindex": 1,
+    "maxPoints": 90,
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": false,
+        "score": 0,
+        "atype": "P",
+        "recommendations": [
+          {
+            "answerChosen": true,
+            "label": " Your organisation does not have ISMS or guidelines related to information security. It is essential to have not only ISMS but also include OT systems in it."
+          }
+        ],
+        "label": " There is no information security management system (ISMS) implemented."
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": false,
+        "score": 45,
+        "atype": "P",
+        "recommendations": [
+          {
+            "answerChosen": true,
+            "label": " It is already good that you have ISMS (Information Security Management System) but auditing these guidelines is mandatory."
+          }
+        ],
+        "label": " Information security management system (ISMS) is implemented including OT systems."
+      },
+      {
+        "aindex": 3,
+        "uniqueAnswer": false,
+        "score": 45,
+        "atype": "P",
+        "recommendations": [
+          {
+            "answerChosen": true,
+            "label": " Your organization should have some security guidelines defined for ICS or OT environment, for example covering topics such as physical security, onboarding or departure of employees, etc. These should be listed and communicated to all employees. It is a good start to involve top management in the decision making related to information security and OT, as it will show a certain openness towards this topic in your organisation. However, as management and staff need to work together to manage risks related to information security and OT (both in a reactive and in a preventive way), the roles of the non-management staff need also be clearly defined and known to them. "
+          }
+        ],
+        "label": " Information security management system (ISMS) is implemented but OT systems are not included in it."
+      },
+      {
+        "aindex": 4,
+        "uniqueAnswer": false,
+        "score": 0,
+        "atype": "P",
+        "recommendations": [
+          {
+            "answerChosen": true,
+            "label": " Your organisation must have a core team having clearly defined responsibilities. "
+          }
+        ],
+        "label": " No Seggregation of Duties (SOD) in place, everyone does all the activities."
+      },
+      {
+        "aindex": 5,
+        "uniqueAnswer": false,
+        "score": 5,
+        "atype": "P",
+        "recommendations": [
+          {
+            "answerChosen": true,
+            "label": " Defining the guidelines is already good, but these must be updated and auditing on regular basis to ensure they are relevant."
+          }
+        ],
+        "label": " The guidelines defined have been audited at least once a year."
+      }
+    ],
+    "label": " Does your organization have an Information Security Management System (ISMS) in place, which includes a set of rules and practices to secure its information, including Operational Technology (OT) systems? Operational technology (OT) is hardware and software that detects or causes a change, through the direct monitoring and/or control of industrial equipment, assets, processes and events. "
+  },
+  {
+    "service_category": "RISK MANAGEMENT",
+    "section": "L-DIH",
+    "qtype": "S",
+    "qindex": 2,
+    "maxPoints": 60,
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": true,
+        "score": 10,
+        "atype": "P",
+        "recommendations": [
+          {
+            "answerChosen": true,
+            "label": " Your company does not have a formal risk management guideline but you are able to manage the risks based on experience only for IT systems. It is good that you already manage risks, although in an ad-hoc manner. However, in order to ensure that the same risk is managed in the same way everytime it appears, it is good practice to define a risk management guideline, including responsibilities and ownerships, toolbox, reporting, risk mitigation approaches, etc. Also as risks of OT systems are not made aware it puts the organisation at a much larger risk. We cannot protect if we do not know. So OT systems must be included in the risk management process."
+          }
+        ],
+        "label": " There is no risk management guideline, but risks are managed ad-hoc, based on experience for IT systems."
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": true,
+        "score": 30,
+        "atype": "P",
+        "recommendations": [
+          {
+            "answerChosen": true,
+            "label": " Your company does not have a formal risk management guideline but you are able to manage the risks based on experience only for IT systems. It is good that you already manage risks, although in an ad-hoc manner. However, in order to ensure that the same risk is managed in the same way everytime it appears, it is good practice to define a risk management guideline, including responsibilities and ownerships, toolbox, reporting, risk mitigation approaches, etc. Also as risks of OT systems are not made aware it puts the organisation at a much larger risk. We cannot protect if we do not know. So OT systems must be included in the risk management process."
+          }
+        ],
+        "label": " We do not have a formal guideline but we manage our identified risk using a risk register for IT systems. "
+      },
+      {
+        "aindex": 3,
+        "uniqueAnswer": true,
+        "score": 30,
+        "atype": "P",
+        "recommendations": [
+          {
+            "answerChosen": true,
+            "label": " It is already a good step for having documented a common approach to dealing with risk at organizational level, yet the next step is to actually have it implemented for both IT and OT systems."
+          }
+        ],
+        "label": " We have defined a risk management guideline but have not fully implemented it for OT systems."
+      },
+      {
+        "aindex": 4,
+        "uniqueAnswer": true,
+        "score": 60,
+        "atype": "P",
+        "recommendations": [
+          {
+            "answerChosen": true,
+            "label": " Proactively identifying and mitigating risks to an acceptable level demonstrates a mature approach to risk management.To further enhance your efforts, consider regular reviews and update your risk management guidelines to adapt to new threats and changes in the environment. Ensure collaboration between IT and OT teams to address any overlapping risks and share best practices. Utilize advanced monitoring tools to gain better visibility into potential risks and improve response times.Conduct regular incident response drills to ensure your team is prepared for any potential security incidents."
+          }
+        ],
+        "label": " We have defined and implemented a risk management guideline for both IT and OT systems. All risks are identified, proactively treated and mitigated to an acceptable level."
+      }
+    ],
+    "label": " Did your organisation define and implement a guideline for risk management including OT systems?"
+  },
+  {
+    "service_category": "HUMAN RESOURCES",
+    "section": "L-DIH",
+    "qtype": "S",
+    "qindex": 3,
+    "maxPoints": 40,
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": true,
+        "score": 0,
+        "atype": "P",
+        "recommendations": [
+          {
+            "answerChosen": true,
+            "label": " Whenever rules change, or periodically at a predefined date, awareness sessions should be offered to employees on topics related to security guidelines and procedures. This is because security is rarely the aim of their work, and how to exchange data and manage it is at the core of more and more organization. This awareness also helps them spot the abnormalities."
+          }
+        ],
+        "label": " We do not have trainings. "
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": true,
+        "score": 0,
+        "atype": "P",
+        "recommendations": [
+          {
+            "answerChosen": true,
+            "label": " Whenever rules change, or periodically at a predefined date, awareness sessions should be offered to employees on topics related to security guidelines and procedures. This is because security is rarely the aim of their work, and how to exchange data and manage it is at the core of more and more organization. This awareness also helps them spot the abnormalities."
+          }
+        ],
+        "label": " There is no regular OT specific awareness training or assessments. "
+      },
+      {
+        "aindex": 3,
+        "uniqueAnswer": true,
+        "score": 20,
+        "atype": "P",
+        "recommendations": [
+          {
+            "answerChosen": true,
+            "label": " It is good that awareness sessions are offered to employees yet from time to time the organization should check if rules are applied, and if not when and why. Apart from training, newsletters, emails and internal websites can be used to share informative content,practical tips, and real-world examples of security incidents. Refresher trainings can also be provided on a defined frequency, at least annually to ensure and promote security aware culture. "
+          }
+        ],
+        "label": " The training for OT security is in place, but there is no assessment to verify if this knowledge is used or not."
+      },
+      {
+        "aindex": 4,
+        "uniqueAnswer": true,
+        "score": 40,
+        "atype": "P",
+        "recommendations": [
+          {
+            "answerChosen": true,
+            "label": " It is good that awareness sessions are offered to employees yet from time to time the organization should check if rules are applied, and if not, when and why. Apart from training, Newsletters, emails, and internal websites can be used to share informative content, practical tips, and real-world examples of security incidents. Refresher trainings can also be provided on a defined frequency, at least annually to ensure and promote security aware culture."
+          }
+        ],
+        "label": " Both OT Awareness training and assessments in place. "
+      }
+    ],
+    "label": " Are all employees regularly provided with OT specific awareness (simulation exercises, theoretical courses)? "
+  },
+  {
+    "service_category": "ASSET MANAGEMENT",
+    "section": "L-DIH",
+    "qtype": "S",
+    "qindex": 4,
+    "maxPoints": 90,
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": true,
+        "score": 45,
+        "atype": "P",
+        "recommendations": [
+          {
+            "answerChosen": true,
+            "label": " In order to be in control of your risks,knowing your organisation's computing and OT assets is a mandatory step. You should, moreover, have an updated list of these assets at all times. The criteria to label and classify them is equally important, as the protection of these assets are based on the classification."
+          }
+        ],
+        "label": " Asset inventory and management process only for IT assets."
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": true,
+        "score": 45,
+        "atype": "P",
+        "recommendations": [
+          {
+            "answerChosen": true,
+            "label": " It is good that you already started listing your organisation's computing assets, yet it is essential that you complete the list and also that you keep it updated. Having a guideline helps in ensuring all the employees have the same understanding on the process and the knowledge is not lost as resources leave."
+          }
+        ],
+        "label": " No formal procedure or guideline, but asset details are captured and classified on an ad hoc basis for IT assets."
+      },
+      {
+        "aindex": 3,
+        "uniqueAnswer": true,
+        "score": 45,
+        "atype": "P",
+        "recommendations": [
+          {
+            "answerChosen": true,
+            "label": " It is good that you already started listing your organisation's computing assets, yet it is essential that you complete the list and also that you keep it updated. Having a guideline helps in ensuring all the employees have the same understanding on the process and the knowledge is not lost as resources leave."
+          }
+        ],
+        "label": " An inventory of all assets including OT systems was conducted, but not completed (updated)."
+      },
+      {
+        "aindex": 4,
+        "uniqueAnswer": true,
+        "score": 45,
+        "atype": "P",
+        "recommendations": [
+          {
+            "answerChosen": true,
+            "label": " It is good that the critical assets are captured but it is advised to capture details of all assets. As threat can propogate from one tier to another. A detailed asset inventory must also include attributes that support cybersecurity activities (for example, asset category, backup locations and frequencies, storage locations, asset owner, cybersecurity requirements)."
+          }
+        ],
+        "label": " IT and OT assets that are related to critical service are inventoried with labelling and classification."
+      }
+    ],
+    "label": " Does your organization maintain a comprehensive list of all its assets (OT and IT), while also incorporating asset classification and labeling into the management process? "
+  },
+  {
+    "service_category": "PHYSICAL SECURITY",
+    "section": "L-DIH",
+    "qtype": "S",
+    "qindex": 5,
+    "maxPoints": 90,
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": true,
+        "score": 0,
+        "atype": "P",
+        "recommendations": [
+          {
+            "answerChosen": true,
+            "label": " You should definitely consider implementing controls related to the access to the premises where your company is conducting its business. This is because of the risk of having intruders who can exfiltrate or damage business assets, or simply cause disruption of your operations without the possibility to know who it was. Consider first the areas of the most criticality, do not disconsider the less important areas, and once some rules are defined, make them known to the staff and check their implementation."
+          }
+        ],
+        "label": " There are no access controls implemented to manage access to the office building, server room."
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": true,
+        "score": 45,
+        "atype": "P",
+        "recommendations": [
+          {
+            "answerChosen": true,
+            "label": " It is good that some controls exist around the access to critical areas like the server room, yet data and assets exist outside of those areas so you should also impose rules on the physical security of all your compamy's facilities. Such rules should be known, implemented, and periodically checked."
+          }
+        ],
+        "label": " Access controls exist at least for accessing the server room. "
+      },
+      {
+        "aindex": 3,
+        "uniqueAnswer": true,
+        "score": 22,
+        "atype": "P",
+        "recommendations": [
+          {
+            "answerChosen": true,
+            "label": " Its good that the practices exist on ad hoc or need basis, but these must be regular practices for better risk management. "
+          }
+        ],
+        "label": " Access control is implemented depending on the need, without any defined procedures or controls. "
+      },
+      {
+        "aindex": 4,
+        "uniqueAnswer": true,
+        "score": 90,
+        "atype": "P",
+        "recommendations": [
+          {
+            "answerChosen": true,
+            "label": " The audit, or verification of the application of rules related to physical security, is essential to understand the actual risks in practice for the assets of your company. "
+          }
+        ],
+        "label": " Access controls are implemented for accessing any access point in the facility."
+      }
+    ],
+    "label": " Do you have access control measures in place for all physical access points to your production facilities, server room, archive room or facility in general?"
+  },
+  {
+    "service_category": "OPERATIONAL SECURITY",
+    "section": "L-DIH",
+    "qtype": "S",
+    "qindex": 6,
+    "maxPoints": 90,
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": true,
+        "score": 20,
+        "atype": "P",
+        "recommendations": [
+          {
+            "answerChosen": true,
+            "label": " Planning resources (people availability or computing resources availability) is a key aspect when dealing with business continuity planning. The lack of resources can cause disruption to the operation of your service, and your company should have a business continuity planning approach where capacity planning (needed resources, resource usage monitoring, etc) is considered. Also formally documenting this as a guideline ensures that all the resources have the same understanding and no information is lost. "
+          }
+        ],
+        "label": " We do not have a formal planning for resources but manage the needs on ad hoc basis. "
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": true,
+        "score": 0,
+        "atype": "P",
+        "recommendations": [
+          {
+            "answerChosen": true,
+            "label": " Planning resources (people availability or computing resources availability) is a key aspect when dealing with business continuity planning. The lack of resources can cause disruption to the operation of your service, and your company should have a business continuity planning approach where capacity planning (needed resources, resource usage monitoring, etc)  is considered. Also formally documenting this as a guideline ensures all the resources have the same understanding and no information is lost."
+          }
+        ],
+        "label": " We have capacity planning in place but no emergency power included. We do not have the need. "
+      },
+      {
+        "aindex": 3,
+        "uniqueAnswer": true,
+        "score": 90,
+        "atype": "P",
+        "recommendations": [
+          {
+            "answerChosen": true,
+            "label": " "
+          }
+        ],
+        "label": " We have capacity planning in place and this includes emergency power backup. "
+      },
+      {
+        "aindex": 4,
+        "uniqueAnswer": true,
+        "score": 0,
+        "atype": "P",
+        "recommendations": [
+          {
+            "answerChosen": true,
+            "label": " Your organisation must ensure the communication of its business continuity plan as its important for the resources to be aware of the same."
+          }
+        ],
+        "label": " I'm not sure. "
+      }
+    ],
+    "label": " Does your capacity planning include emergency power backup?"
+  },
+  {
+    "service_category": "OPERATIONAL SECURITY",
+    "section": "L-DIH",
+    "qtype": "M",
+    "qindex": 7,
+    "maxPoints": 100,
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": false,
+        "score": 10,
+        "atype": "P",
+        "recommendations": [
+          {
+            "answerChosen": true,
+            "label": " It is good that your team has the knowledge and expertise but it is important for all to have the same understanding,hence formalising a guideline is needed. As part of your malware management procedure or process, you should consider all IT and OT assets in your company and to what extent anti-malware software should be deployed on all of them."
+          }
+        ],
+        "label": " Malware management guideline is not established but by practice and experience team performs malware management for IT systems."
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": false,
+        "score": 30,
+        "atype": "P",
+        "recommendations": [
+          {
+            "answerChosen": true,
+            "label": " It is good that you have a malware management policy or procedure in place, yet it is important to regularly review it so that practices imposed by it stay up to date with the evolution of malware. For systems where anti-malware software is not compatible, we should have countermeasures implemented. A denial of service attack detection system may be put in place."
+          }
+        ],
+        "label": " Malware management guideline is established."
+      },
+      {
+        "aindex": 3,
+        "uniqueAnswer": false,
+        "score": 10,
+        "atype": "P",
+        "recommendations": [
+          {
+            "answerChosen": true,
+            "label": " Consider both IT and OT systems and plan deployment of anti malware softwares.For systems where anti-malware software is not compatible,we should have countermeasures implemented.Using a firewall with deep packet inspection capability that can monitor and block advanced threats like malware."
+          }
+        ],
+        "label": " Anti-Malware software is not deployed or deployed only in IT systems."
+      },
+      {
+        "aindex": 4,
+        "uniqueAnswer": false,
+        "score": 25,
+        "atype": "P",
+        "recommendations": [
+          {
+            "answerChosen": true,
+            "label": "To further enhance your security posture,educate users on safe practices to avoid malware infections,such as not opening suspicious emails or downloading unverified software.Have a clear incident response plan in place for dealing with malware infections swiftly and effectively."
+          }
+        ],
+        "label": " Anti-malware software deployed on all of our systems both IT and OT."
+      },
+      {
+        "aindex": 5,
+        "uniqueAnswer": false,
+        "score": 25,
+        "atype": "P",
+        "recommendations": [
+          {
+            "answerChosen": true,
+            "label": " To further strengthen your approach, consider to incorporate the latest threat intelligence to stay ahead of emerging malware trends. Continuously train employees on recognizing and responding to malware threats and educate users on safe practices to avoid malware infections."
+          }
+        ],
+        "label": " Malware management guidelines are reviewed and updated at least once a year."
+      }
+    ],
+    "label": " Do you have a malware management guideline indicating how malware should be managed withing your company for OT systems?"
+  },
+  {
+    "service_category": "OPERATIONAL SECURITY",
+    "section": "L-DIH",
+    "qtype": "M",
+    "qindex": 8,
+    "maxPoints": 60,
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": false,
+        "score": 0,
+        "atype": "P",
+        "recommendations": [
+          {
+            "answerChosen": true,
+            "label": " It is vital for the continuity of your service operations, that there is a strong management of backups in place, including what data should be backed up,with what frequency, where should backups be kept, if any third-parties should be involved, how a backup should be used in case of an incident, etc). This should be formalised in a backup management guideline, communicated to the relevant staff, and applied at company-wide level for both IT and OT systems."
+          }
+        ],
+        "label": " There is no formal backup guideline in place."
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": false,
+        "score": 20,
+        "atype": "P",
+        "recommendations": [
+          {
+            "answerChosen": true,
+            "label": " You went a step forward already to have defined a backup management guideline, yet it is essential that you verify to what extent staff follows such a guideline, and if the guideline is good enough with respect to what your company needs. This is done best by testing."
+          }
+        ],
+        "label": " A backup guideline has been defined and reviewed on regular basis including OT systems."
+      },
+      {
+        "aindex": 3,
+        "uniqueAnswer": false,
+        "score": 20,
+        "atype": "P",
+        "recommendations": [
+          {
+            "answerChosen": true,
+            "label": " It is good that the critical IT systems are backed up, but it is also important to include other systems and OT systems. Establish backup systems and processes to backup relevant OT systems, state, data, configuration files, programs at regular intervals to support recovery to a stable state."
+          }
+        ],
+        "label": " Backups are taken only for Critical IT systems."
+      },
+      {
+        "aindex": 4,
+        "uniqueAnswer": false,
+        "score": 20,
+        "atype": "P",
+        "recommendations": [
+          {
+            "answerChosen": true,
+            "label": " It is good that backup management is implemented for OT systems, but it must be regularly tested to ensure staff are able to follow the guideline and the results are as expected."
+          }
+        ],
+        "label": " Implemented for OT systems, but regular testing is not conducted."
+      },
+      {
+        "aindex": 5,
+        "uniqueAnswer": false,
+        "score": 20,
+        "atype": "P",
+        "recommendations": [
+          {
+            "answerChosen": true,
+            "label": " To further strengthen your backup strategy, consider storing backups in a secure offsite location to protect against physical disasters.Encrypt backups to safeguard sensitive data from unauthorized access. Maintain detailed documentation of backup procedures and schedules for easy reference and compliance."
+          }
+        ],
+        "label": " Implemented for both IT and OT systems,backups are monitored and tested."
+      }
+    ],
+    "label": " Did your organisation define and implement a guideline for backup management including OT systems?"
+  },
+  {
+    "service_category": "OPERATIONAL SECURITY",
+    "section": "L-DIH",
+    "qtype": "M",
+    "qindex": 9,
+    "maxPoints": 90,
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": false,
+        "score": 0,
+        "atype": "P",
+        "recommendations": [
+          {
+            "answerChosen": true,
+            "label": " Information backup involves creating and storing copies of information, software and system images in a secure location, separate from the original source. The backup copies should be protected from unauthorized access, modification or deletion, and should be tested periodically to verify their usability and completeness. Physical and environmental protection of backups is crucial to ensure the integrity and availability of the data. If backups are compromised due to environmental factors or physical threats, it defeats the purpose of having them in the first place. To ensure this we need controls in place."
+          }
+        ],
+        "label": " No, measures or controls have been implemented to ensure security of backup."
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": false,
+        "score": 30,
+        "atype": "P",
+        "recommendations": [
+          {
+            "answerChosen": true,
+            "label": ""
+          }
+        ],
+        "label": " Controls for backup management in place to ensure availability and integrity of the backup for both IT and OT systems."
+      },
+      {
+        "aindex": 3,
+        "uniqueAnswer": false,
+        "score": 15,
+        "atype": "P",
+        "recommendations": [
+          {
+            "answerChosen": true,
+            "label": " It is good that controls are present for IT systems but we must also ensure OT systems are included to minimize the risk of loss of data."
+          }
+        ],
+        "label": " Controls for backup management in place to ensure availability and integrity of the backup for only IT systems."
+      },
+      {
+        "aindex": 4,
+        "uniqueAnswer": false,
+        "score": 15,
+        "atype": "P",
+        "recommendations": [
+          {
+            "answerChosen": true,
+            "label": ""
+          }
+        ],
+        "label": " Stored in an offsite location."
+      },
+      {
+        "aindex": 5,
+        "uniqueAnswer": false,
+        "score": 15,
+        "atype": "P",
+        "recommendations": [
+          {
+            "answerChosen": true,
+            "label": ""
+          }
+        ],
+        "label": " Stored online using cloud solutions."
+      },
+      {
+        "aindex": 6,
+        "uniqueAnswer": false,
+        "score": 15,
+        "atype": "P",
+        "recommendations": [
+          {
+            "answerChosen": true,
+            "label": ""
+          }
+        ],
+        "label": " Encryption of backup in place."
+      }
+    ],
+    "label": " Are controls and measures been implemented to ensure backups are stored securely including OT systems?"
+  },
+  {
+    "service_category": "OPERATIONAL SECURITY",
+    "section": "L-DIH",
+    "qtype": "M",
+    "qindex": 10,
+    "maxPoints": 80,
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": false,
+        "score": 0,
+        "atype": "P",
+        "recommendations": [
+          {
+            "answerChosen": true,
+            "label": " It is important to consider that there has to be some rules in place related to what events should be logged in the infrastructure and how the logs should be monitored, in order to discover incidents for both IT and OT systems. These rules, related to logging and monitoring, should be documented in a guideline or procedure whose implementation should be verified periodically."
+          }
+        ],
+        "label": " No logging and monitoring guideline defined."
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": false,
+        "score": 20,
+        "atype": "P",
+        "recommendations": [
+          {
+            "answerChosen": true,
+            "label": " It is good rules exist in practice and formalised guideline exists with respect to logging and monitoring for IT and OT systems. Yet, the company should check to what extent such guideline or procedure are followed by employees. Also consider performing audits."
+          }
+        ],
+        "label": " Guideline is defined and implemented for logging and monitoring of all systems (IT and OT)."
+      },
+      {
+        "aindex": 3,
+        "uniqueAnswer": false,
+        "score": 10,
+        "atype": "P",
+        "recommendations": [
+          {
+            "answerChosen": true,
+            "label": " Access, storage and deletion of data or systems must be tracked not just for IT systems but also for OT systems."
+          }
+        ],
+        "label": " Access, storage and deletion of data or systems are tracked only for IT systems."
+      },
+      {
+        "aindex": 4,
+        "uniqueAnswer": false,
+        "score": 20,
+        "atype": "P",
+        "recommendations": [
+          {
+            "answerChosen": true,
+            "label": ""
+          }
+        ],
+        "label": " Review of guidelines done periodically."
+      },
+      {
+        "aindex": 5,
+        "uniqueAnswer": false,
+        "score": 20,
+        "atype": "P",
+        "recommendations": [
+          {
+            "answerChosen": true,
+            "label": ""
+          }
+        ],
+        "label": "Audit log is retained for a defined period of time and reviewed periodically. "
+      }
+    ],
+    "label": " Do you have a logging and monitoring guideline defined and implemented for OT systems? "
+  },
+  {
+    "service_category": "OPERATIONAL SECURITY",
+    "section": "L-DIH",
+    "qtype": "S",
+    "qindex": 11,
+    "maxPoints": 40,
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": true,
+        "score": 0,
+        "atype": "P",
+        "recommendations": [
+          {
+            "answerChosen": true,
+            "label": " There must be a guideline about vulneranility identification and management so that they would be clear to everyone and understood in the same way. Also, the company should check to what extent such guideline or procedure are followed by employees. This must cover both IT and OT systems."
+          }
+        ],
+        "label": " No logging and monitoring guideline defined."
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": true,
+        "score": 20,
+        "atype": "P",
+        "recommendations": [
+          {
+            "answerChosen": true,
+            "label": " It is good that in practice identification and management of vulnerability is performed on IT systems, but with the increasing convergence of IT and OT systems we must ensure we include OT systems as well. If not active scanning, we must perform passive scanning to ensure we identify vulnerabilities. Along with identification, maintaining the list, remediating and establish mechanisms and maintain to receive and respond to reports from the public or external parties of potential vulnerabilities related to the organization’s IT and OT assets, such as public-facing websites or mobile applications."
+          }
+        ],
+        "label": " Guideline is defined and implemented only for IT systems. "
+      },
+      {
+        "aindex": 3,
+        "uniqueAnswer": true,
+        "score": 40,
+        "atype": "P",
+        "recommendations": [
+          {
+            "answerChosen": true,
+            "label": ""
+          }
+        ],
+        "label": " Guideline is defined and implemented for logging and monitoring of all systems (IT and OT)."
+      },
+      {
+        "aindex": 4,
+        "uniqueAnswer": true,
+        "score": 0,
+        "atype": "P",
+        "recommendations": [
+          {
+            "answerChosen": true,
+            "label": " There must be a guideline about vulneranility identification and management so that they would be clear to everyone and understood in the same way. Also,the company must ensure that this guidelines is communicated to all the employees and check to what extent such guideline or procedure are followed by employees. This must cover both IT and OT systems."
+          }
+        ],
+        "label": " I'm not sure."
+      }
+    ],
+    "label": " Do you have a vulnerability management guideline defined and implemented for OT systems?"
+  },
+  {
+    "service_category": "OPERATIONAL SECURITY",
+    "section": "L-DIH",
+    "qtype": "S",
+    "qindex": 12,
+    "maxPoints": 30,
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": true,
+        "score": 10,
+        "atype": "P",
+        "recommendations": [
+          {
+            "answerChosen": true,
+            "label": " For a cloud service provider, it is essential to be able to provide assurance that client data is only accessible to those who have access and are authorised to use that data. This can become difficult to ensure especially in the case when systems and resources are potentially shared by different clients (e.g., different virtual machines hosted onto the same physical servver incur the risk of data leasks). For this purpose, there should be specific guidelines and procedures to ensure that data of different clients stays segregated when shared resources are used. The application of such procedures and guidelines should be periodically checked. Having procedures and guidelines in place for this purpose is essential to handle the issues in the same way every time."
+          }
+        ],
+        "label": " There is no specific guideline to ensure clients' data segregation when shared resources are implemented."
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": true,
+        "score": 20,
+        "atype": "P",
+        "recommendations": [
+          {
+            "answerChosen": true,
+            "label": " For a cloud service provider, it is essential to be able to provide assurance that client data is only accessible to those who have access and are authorised to use that data. This can become difficult to ensure especially in the case when systems and resources are potentially shared by different clients (e.g., different virtual machines hosted onto the same physical servver incur the risk of data leasks). For this purpose, there should be specific guidelines and procedures to ensure that data of different clients stays segregated when shared resources are used. The application of such procedures and guidelines should be periodically checked. Having procedures and guidelines in place for this purpose is essential to handle the issues in the same way every time."
+          }
+        ],
+        "label": " Whenever more than one client shares a resource, there is a guideline to ensure data segregation. An audit is realized at least once a year to ensure that data segregation is well implemented."
+      },
+      {
+        "aindex": 3,
+        "uniqueAnswer": true,
+        "score": 0,
+        "atype": "P",
+        "recommendations": [
+          {
+            "answerChosen": true,
+            "label": ""
+          }
+        ],
+        "label": " We do not use cloud."
+      }
+    ],
+    "label": " When sharing resources with more than one client, do you ensure that data is well segregated including Cloud?"
+  },
+  {
+    "service_category": "IDENTITY, AUTHENTICATION, AND ACCESS CONTROL MANAGEMENT",
+    "section": "L-DIH",
+    "qtype": "M",
+    "qindex": 13,
+    "maxPoints": 45,
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": false,
+        "score": 22,
+        "atype": "P",
+        "recommendations": [
+          {
+            "answerChosen": true,
+            "label": " Even if some critical IT systems are part of a centralised access management in your company, remember that securing your infrastrcture depends on the weakest link. So it would be recommended to have as many systems as possible part of your centralised access management including OT systems."
+          }
+        ],
+        "label": " Access to IT systems are centralized."
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": false,
+        "score": 22,
+        "atype": "P",
+        "recommendations": [
+          {
+            "answerChosen": true,
+            "label": " Descentralising access management makes it difficult to have a view over access-related incidents,as well it makes it difficult to update permissions of a role,or adding more roles into the organisation in the same way across different access areas.It would be recommented to have a centralised system to manage access across the whole organisation.In situations where it is not possible ensure controls are put in place to ensure right access is given to right resources.When typical IT IAM controls cannot be implemented organizations should look for opportunities to use monitoring and alerting capabilities to identify potential threats.Restrict OT user priveleges to only those that are required to perform function."
+          }
+        ],
+        "label": " Access to OT systems are de centralised managed by  internal teams."
+      },
+      {
+        "aindex": 3,
+        "uniqueAnswer": false,
+        "score": 45,
+        "atype": "P",
+        "label": " Access to all systems (IT and OT) and applications of the company is centralized and managed by a dedicated team."
+      },
+      {
+        "aindex": 4,
+        "uniqueAnswer": false,
+        "score": 22,
+        "atype": "P",
+        "label": "Basic access control is in place."
+      },
+      {
+        "aindex": 5,
+        "uniqueAnswer": false,
+        "score": 22,
+        "atype": "P",
+        "recommendations": [
+          {
+            "answerChosen": true,
+            "label": "By implementing basic access control measures, manufacturing companies can create a safer, more secure, and efficient working environment, ultimately protecting their assets and ensuring smooth operations. "
+          }
+        ],
+        "label": "Basic access control is not in place."
+      }
+    ],
+    "label": "Does your organization have access management in place?"
+  },
+  {
+    "service_category": "IDENTITY, AUTHENTICATION, AND ACCESS CONTROL MANAGEMENT",
+    "section": "L-DIH",
+    "qtype": "M",
+    "qindex": 14,
+    "maxPoints": 90,
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": false,
+        "score": 0,
+        "atype": "P",
+        "recommendations": [
+          {
+            "answerChosen": true,
+            "label": " If authentication information that is supposed to be secret, is shared, it is the same as if this information would be public and hence access would be free. In order to control access to information, secrets should be used, and not shared among employees."
+          }
+        ],
+        "label": " To facilitate users access to systems and applications, passwords are not required for authentication."
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": false,
+        "score": 10,
+        "atype": "P",
+        "recommendations": [
+          {
+            "answerChosen": true,
+            "label": " Access to data should not be dictated by whether a system or application is critical but rather by the need-to-know basis. Therefore, it should be governed by secret authentication information, that can be given or set up for the employees who need it."
+          }
+        ],
+        "label": " Some systems and applications within our LAN are not critical, hence users can connect to them without providing any secret code or phrase."
+      },
+      {
+        "aindex": 3,
+        "uniqueAnswer": false,
+        "score": 35,
+        "atype": "P",
+        "label": " Authentication of the company’s assets is only possible by providing a secret authentication information."
+      },
+      {
+        "aindex": 4,
+        "uniqueAnswer": false,
+        "score": 10,
+        "atype": "P",
+        "recommendations": [
+          {
+            "answerChosen": true,
+            "label": " If authentication information that is supposed to be secret, is shared, it is the same as if this information would be public and hence access would be free. In order to control access to information, secrets should be used, and not shared among employees."
+          }
+        ],
+        "label": " For some applications and systems secret authentication, information is shared between several users."
+      },
+      {
+        "aindex": 5,
+        "uniqueAnswer": false,
+        "score": 35,
+        "atype": "P",
+        "recommendations": [
+          {
+            "answerChosen": true,
+            "label": " Multifactor authentication is an invaluable way to safeguard access to sensitive data from sometimes overlooked points of authentication. So wherever feasible MFA must be implemented in scenarios where there is limitation compensatory controls must be applied.As a compensating control, physical access restrictions may sufficiently represent one authentication factor, provided that the system is not remotely accessible."
+          }
+        ],
+        "label": " MFA is required to remotely connect to our company’s network, applications exposed to internet and all administrative access."
+      }
+    ],
+    "label": " Does access to your company’s infrastructure, systems, and applications require secret authentication?"
+  },
+  {
+    "service_category": "IDENTITY, AUTHENTICATION, AND ACCESS CONTROL MANAGEMENT",
+    "section": "L-DIH",
+    "qtype": "M",
+    "qindex": 15,
+    "maxPoints": 90,
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": false,
+        "score": 0,
+        "atype": "P",
+        "recommendations": [
+          {
+            "answerChosen": true,
+            "label": " It is essential to direct your organisation to use password best practices, instead of old simple passwords that do not change at all. In order to have the same password best practices applied, it is also recommended that you fomalise minimal requirements in a password policy, that you verify that this password policy is applied,and that the policy would be reviewed from time to time to require better password constraints in line with new technologies. Organizations are encouraged to change the default password on OT equipment to make it more difficult for an adversary to guess the password. Once changed, the password needs to be made available to those who need to know using a password management tool that is secure."
+          }
+        ],
+        "label": " Not all our systems and applications are configured with password best practices."
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": false,
+        "score": 40,
+        "atype": "P",
+        "recommendations": [
+          {
+            "answerChosen": true,
+            "label": " It is good that guidelines for passwords are followed in IT environment but it is essential to include OT systems as well. The use of weak passwords are more riskier and can cause more damage than in IT environment."
+          }
+        ],
+        "label": " Only Systems in IT are checked for complaince on password guideline."
+      },
+      {
+        "aindex": 3,
+        "uniqueAnswer": false,
+        "score": 10,
+        "atype": "P",
+        "recommendations": [
+          {
+            "answerChosen": true,
+            "label": " You should set up an authentication mechanism towards any part of your system or service. In scenarios where there is an inability of OT software to conform to a strong password policy, we have enabled access and activity logs on the systems to be managed. Ensuring hourly identification of users who have accessed the operating console, with fingerprint identification, video surveillance of the operating room, central account control console."
+          }
+        ],
+        "label": " Password is not required to connect to some applications and systems."
+      },
+      {
+        "aindex": 4,
+        "uniqueAnswer": false,
+        "score": 40,
+        "atype": "P",
+        "recommendations": [
+          {
+            "answerChosen": true,
+            "label": " It is good that the guideline is established but organizations may also need to consider procedures to periodically change passwords when a password is compromised or an individual with access leaves the organization."
+          }
+        ],
+        "label": " We have defined a password guideline based on best practices, that is implemented across all our applications and systems both IT and OT."
+      }
+    ],
+    "label": " Did you implement across your infrastructure OT and IT systems a guideline on passwords (min length, complexity, etc.) ?"
+  },
+  {
+    "service_category": "IDENTITY, AUTHENTICATION, AND ACCESS CONTROL MANAGEMENT",
+    "section": "L-DIH",
+    "qtype": "M",
+    "qindex": 16,
+    "maxPoints": 40,
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": false,
+        "score": 30,
+        "atype": "P",
+        "label": " Maintenance engineers connect using tools to perform maintenance or updates."
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": false,
+        "score": 0,
+        "atype": "P",
+        "recommendations": [
+          {
+            "answerChosen": true,
+            "label": " Your organisation must ensure vendors have their own restricted users for the system accessibility. They use VPN to connect remotely and 2FA. Sessions and remote connections are provided via jump servers, on-demand basis and monitored and terminated when remote maintenance is completed. This allows the recording of keyboard entries and the sessions themselves."
+          }
+        ],
+        "label": " No remote connections."
+      },
+      {
+        "aindex": 3,
+        "uniqueAnswer": false,
+        "score": 0,
+        "atype": "P",
+        "recommendations": [
+          {
+            "answerChosen": true,
+            "label": " Guidelines related to maintenance must be shared so that employees are aware of the guidelines."
+          }
+        ],
+        "label": "I'm not sure"
+      },
+      {
+        "aindex": 4,
+        "uniqueAnswer": false,
+        "score": 0,
+        "atype": "P",
+        "recommendations": [
+          {
+            "answerChosen": true,
+            "label": " The usage of remote assistance tools must be coupled with security in mind. Strong authentication like MFA and secure protocols must be used. Implement strict data privacy policies to protect sensitive information during remote sessions. "
+          }
+        ],
+        "label": "TeamViewer, AnyDesk, Splashtop, BeyondTrust Remote Support, and other remote assistance tools are used to improve our maintenance procedure."
+      },
+      {
+        "aindex": 5,
+        "uniqueAnswer": false,
+        "score": 10,
+        "atype": "P",
+        "label": " We use secure VPN (Virtual Private Network) connections."
+      }
+    ],
+    "label": "Do you have users connecting remotely to your OT systems for maintenance or better operations?"
+  },
+  {
+    "service_category": "CRYPTOGRAPHY AND KEY MANAGEMENT",
+    "section": "L-DIH",
+    "qtype": "M",
+    "qindex": 17,
+    "maxPoints": 60,
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": false,
+        "score": 0,
+        "atype": "P",
+        "recommendations": [
+          {
+            "answerChosen": true,
+            "label": " In order to harmonise the use of encryption and key management across the company, it is recommended that practices that should be implemented by everyone should be formalised in a guideline on this topic. It is strongly recommended that your company uses encryption for data at rest, especially for sensitive data that has a higher risk for being lost or stolen."
+          }
+        ],
+        "label": " No guidelines have been defined for the use of encryption and key management. "
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": false,
+        "score": 10,
+        "atype": "P",
+        "recommendations": [
+          {
+            "answerChosen": true,
+            "label": " It is good that some policies and guidelines exist related to the use of encryption and key management, yet your company should verify that that policy or guideline is respected and is also reviewed, preferably on a regular basis. It is strongly recommended that your company uses encryption for data at rest, especially for sensitive data that has a higher risk for being lost or stolen."
+          }
+        ],
+        "label": " We have guidelines about use of encryption and key management. "
+      },
+      {
+        "aindex": 3,
+        "uniqueAnswer": false,
+        "score": 10,
+        "atype": "P",
+        "recommendations": [
+          {
+            "answerChosen": true,
+            "label": " As much as possible, it is recommended to avoid data transfers in clear, especially when the data being exchanged is sensitive. You should consider a solution that encrypts data in motion (transit). "
+          }
+        ],
+        "label": " Data is encrypted at rest."
+      },
+      {
+        "aindex": 4,
+        "uniqueAnswer": false,
+        "score": 10,
+        "atype": "P",
+        "label": " Data is encrypted at transit. "
+      },
+      {
+        "aindex": 5,
+        "uniqueAnswer": false,
+        "score": 10,
+        "atype": "P",
+        "label": " Guidelines are reviewed at least once a year. "
+      },
+      {
+        "aindex": 6,
+        "uniqueAnswer": false,
+        "score": 10,
+        "atype": "P",
+        "label": " We have implemented an encryption solution that is used by all employees to transfer sensible data within and outside our networks. "
+      }
+    ],
+    "label": " Do you have guidelines to secure your sensitive information in IT and OT systems? "
+  },
+  {
+    "service_category": "COMMUNICATION SECURITY",
+    "section": "L-DIH",
+    "qtype": "M",
+    "qindex": 18,
+    "maxPoints": 30,
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": false,
+        "score": 0,
+        "atype": "P",
+        "recommendations": [
+          {
+            "answerChosen": true,
+            "label": " It is a good practice to have a network topology documentation that is kept up to date, as it is essential to have a view over all network components and how they are connected in order to understand how they are and how they should be protected. This must include both IT and OT network."
+          }
+        ],
+        "label": " There is no network topology documentation of our infrastructure available. "
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": false,
+        "score": 30,
+        "atype": "P",
+        "recommendations": [
+          {
+            "answerChosen": true,
+            "label": " It is good that you started to build a network topology for IT environment yet it is essential to include OT environment as well. Just OT or just IT will not suffice as you are able to protect what you know, having complete visibility plays a key role. "
+          }
+        ],
+        "label": " Network topology of IT network is available."
+      },
+      {
+        "aindex": 3,
+        "uniqueAnswer": false,
+        "score": 30,
+        "atype": "P",
+        "recommendations": [
+          {
+            "answerChosen": true,
+            "label": " It is good that you started to build a network topology for OT environment yet it is essential to include IT environment as well. Just OT or just IT will not suffice as you are able to protect what you know having complete visibility plays a key role. "
+          }
+        ],
+        "label": " Network topology of OT network is available. "
+      },
+      {
+        "aindex": 4,
+        "uniqueAnswer": false,
+        "score": 15,
+        "atype": "P",
+        "recommendations": [
+          {
+            "answerChosen": true,
+            "label": " Having the network topology covering both IT and OT assets would not suffice, it is essential that it is kept up to date so that it would represent your topology at every moment in time. "
+          }
+        ],
+        "label": " A documented topology of our infrastructure exists but has not been updated for some time. "
+      }
+    ],
+    "label": " Do you have an updated network topology documentation of your OT infrastructure? "
+  },
+  {
+    "service_category": "COMMUNICATION SECURITY",
+    "section": "L-DIH",
+    "qtype": "M",
+    "qindex": 19,
+    "maxPoints": 90,
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": false,
+        "score": 0,
+        "atype": "P",
+        "recommendations": [
+          {
+            "answerChosen": true,
+            "label": "It is important to have a guideline that gives direction to all and ensure everyone has the same level of understanding with respect to network security. It is important to seggregrate OT and IT environment not just logically but physical as well. Segmentation restricts how far an attack can spread within the organization. Network segmentation enhances security, performance, and compliance."
+          }
+        ],
+        "label": "No network seggregation."
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": false,
+        "score": 20,
+        "atype": "P",
+        "recommendations": [
+          {
+            "answerChosen": true,
+            "label": "It is important to have a guideline that gives direction to all and ensure everyone has the same level of understanding with respect to network security. It is important to seggregrate OT and IT environment not just logically but physical as well. Segmentation restricts how far an attack can spread within the organization. Network segmentation enhances security, performance, and compliance."
+          }
+        ],
+        "label": " Logical architecture segregation."
+      },
+      {
+        "aindex": 3,
+        "uniqueAnswer": false,
+        "score": 20,
+        "atype": "P",
+        "label": " Not just logical but we also have segregation in physical resources."
+      },
+      {
+        "aindex": 4,
+        "uniqueAnswer": false,
+        "score": 20,
+        "atype": "P",
+        "recommendations": [
+          {
+            "answerChosen": true,
+            "label": " It is good that the communication is only on certain ports, but it would be recommended to ensure the communication is uni directional."
+          }
+        ],
+        "label": " We have unidirectional communication between OT network to IT network."
+      },
+      {
+        "aindex": 5,
+        "uniqueAnswer": false,
+        "score": 10,
+        "atype": "P",
+        "label": " Our IT network communicates with OT network but we have only specific ports used."
+      },
+      {
+        "aindex": 6,
+        "uniqueAnswer": false,
+        "score": 10,
+        "atype": "P",
+        "label": " I do not know if OT communicates with IT."
+      }
+    ],
+    "label": " Does your company architecture have segregation between OT network and corporate networks?"
+  },
+  {
+    "service_category": "CHANGE AND CONFIGURATION MANAGEMENT",
+    "section": "L-DIH",
+    "qtype": "M",
+    "qindex": 20,
+    "maxPoints": 40,
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": false,
+        "score": 0,
+        "atype": "P",
+        "recommendations": [
+          {
+            "answerChosen": true,
+            "label": " It is essential that all changes to your all OT and IT systems and applications be tested before they are applied to production, and also approved by management in order to mitigate the risk that unplanned changes are applied to production. "
+          }
+        ],
+        "label": " Changes are not tested before they are released into a production environment. "
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": false,
+        "score": 20,
+        "atype": "P",
+        "recommendations": [
+          {
+            "answerChosen": true,
+            "label": " All changes despite of testing must be approved by the management. "
+          }
+        ],
+        "label": " We test every single change before applying them in any production environment ( IT and OT). "
+      },
+      {
+        "aindex": 3,
+        "uniqueAnswer": false,
+        "score": 20,
+        "atype": "P",
+        "recommendations": [
+          {
+            "answerChosen": true,
+            "label": " It is great that changes are always tested and approved by management, but it would be even better that they were reviewed after production to understand their impact and effects. Audits will help identify if changes were performed without formal approval or testing. "
+          }
+        ],
+        "label": " Implemented changes are audited at least once a year. "
+      }
+    ],
+    "label": " Do you always test all changes to your OT systems and applications before releasing them in a production environment? "
+  },
+  {
+    "service_category": "CHANGE AND CONFIGURATION MANAGEMENT",
+    "section": "L-DIH",
+    "qtype": "S",
+    "qindex": 21,
+    "maxPoints": 10,
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": true,
+        "score": 0,
+        "atype": "P",
+        "recommendations": [
+          {
+            "answerChosen": true,
+            "label": " Your change management procedure should consider the performance of a risk assessment in order to understand the impact of the change and its priority be it in IT or OT system. "
+          }
+        ],
+        "label": " No risk assessment realized as part of the change management procedure for OT systems. "
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": true,
+        "score": 10,
+        "atype": "P",
+        "label": " Risk assessment is realised in our change procedure for OT systems, which is eventually considered in defining change priority. "
+      },
+      {
+        "aindex": 3,
+        "uniqueAnswer": true,
+        "score": 0,
+        "atype": "P",
+        "recommendations": [
+          {
+            "answerChosen": true,
+            "label": " The guidelines related to change procedure needs to be shared with all. "
+          }
+        ],
+        "label": " I'm not sure. "
+      }
+    ],
+    "label": " As part of the change procedure in your organization for OT systems, do you realize a risk assessment to define the priority of your changes? "
+  },
+  {
+    "service_category": "DEVELOPMENT OF INFORMATION SYSTEMS",
+    "section": "L-DIH",
+    "qtype": "M",
+    "qindex": 22,
+    "maxPoints": 60,
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": false,
+        "score": 0,
+        "atype": "P",
+        "label": " No software developments in OT, only in IT environment."
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": false,
+        "score": 30,
+        "atype": "P",
+        "recommendations": [
+          {
+            "answerChosen": true,
+            "label": " Organisations must have seggregated environments to  help maintain stability and security. Following best practices and regular reviews ensure code aligns with security requirements. In case of third parties it must be ensured through contracts."
+          }
+        ],
+        "label": " We perform automations using inhouse expertise or third party."
+      },
+      {
+        "aindex": 3,
+        "uniqueAnswer": false,
+        "score": 30,
+        "atype": "P",
+        "label": " We ensure both environment and the libraries used in scripts are secure by restricting access , audit logs, backups. For libraries we check the source is trusted and regular updates and reviews are performed. "
+      }
+    ],
+    "label": " In your organisation, do you perform development in Operational Technology (OT) systems?"
+  },
+  {
+    "service_category": "PROCUREMENT MANAGEMENT",
+    "section": "L-DIH",
+    "qtype": "M",
+    "qindex": 23,
+    "maxPoints": 90,
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": false,
+        "score": 18,
+        "atype": "P",
+        "recommendations": [
+          {
+            "answerChosen": true,
+            "label": " You shouldn't rely on your suppliers to come back to you on risks that have been identified(if they have identified them at all),but rather that your organisation takes control of the periodicy of risk assessments that include your suppliers.Like this,the necessary measures to mitigate such risks would be triggered by you,at your organisation's pace."
+          }
+        ],
+        "label": " Our suppliers inform us when they identified risks that could affect any of our systems and services."
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": false,
+        "score": 18,
+        "atype": "P",
+        "label": " We have regular meetings with our suppliers to review the agreed SLA and proactively address any foreseen risks."
+      },
+      {
+        "aindex": 3,
+        "uniqueAnswer": false,
+        "score": 18,
+        "atype": "P",
+        "label": " The selection of suppliers and other third parties includes consideration of their cybersecurity qualifications, at least in an ad hoc manner."
+      },
+      {
+        "aindex": 4,
+        "uniqueAnswer": false,
+        "score": 18,
+        "atype": "P",
+        "label": " The selection of products and services includes consideration of their cybersecurity capabilities, at least in an ad hoc manner."
+      },
+      {
+        "aindex": 5,
+        "uniqueAnswer": false,
+        "score": 18,
+        "atype": "P",
+        "label": " Selection criteria for higher priority assets include evaluation of bills of material for key asset elements, such as hardware and software."
+      }
+    ],
+    "label": " Do you realize periodic risk assessment for suppliers, to proactively implement mitigation controls?"
+  },
+  {
+    "service_category": "INCIDENT MANAGEMENT",
+    "section": "L-DIH",
+    "qtype": "M",
+    "qindex": 24,
+    "maxPoints": 90,
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": false,
+        "score": 0,
+        "atype": "P",
+        "recommendations": [
+          {
+            "answerChosen": true,
+            "label": " It is highly recommended that you have procedures or guidelines for how to react quickly in the face of cybersecurity incidents, data breaches or disasters. This is because often in situations like these it is vital to act quickly and in the correct way in order to minimise damage. The guideline must include both IT and OT environment. The formal guideline must be regularly audited and reviewed. Maintaining an incident repository helps in better manage the incidents."
+          }
+        ],
+        "label": " Incident management guideline is not defined."
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": false,
+        "score": 20,
+        "atype": "P",
+        "recommendations": [
+          {
+            "answerChosen": true,
+            "label": " It is good that incident management procedures are in place for IT environment, but these should be verified that they are applicable and up to date and including OT environment, as an incident in one environment can affect the other. The formal guideline is good but these must be regularly audited and reviewed. Maintaining an incident repository helps in better manage the incidents."
+          }
+        ],
+        "label": " Incident management guideline is defined and implemented for IT systems."
+      },
+      {
+        "aindex": 3,
+        "uniqueAnswer": false,
+        "score": 20,
+        "atype": "P",
+        "label": " Incident management guideline is defined and implemented for both IT and OT systems."
+      },
+      {
+        "aindex": 4,
+        "uniqueAnswer": false,
+        "score": 20,
+        "atype": "P",
+        "label": " Guidelines are audited at least once a year to verify their compliance."
+      },
+      {
+        "aindex": 5,
+        "uniqueAnswer": false,
+        "score": 20,
+        "atype": "P",
+        "label": " A repository is maintained where cybersecurity events and incidents are documented and tracked to closure."
+      }
+    ],
+    "label": " Does your company have guidelines for dealing with cyber incidents, personal data breaches, or sudden events (flood, fire, crisis, etc.)?"
+  },
+  {
+    "service_category": "BUSINESS CONTINUITY",
+    "section": "L-DIH",
+    "qtype": "M",
+    "qindex": 25,
+    "maxPoints": 60,
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": false,
+        "score": 0,
+        "atype": "P",
+        "recommendations": [
+          {
+            "answerChosen": true,
+            "label": " It is essential to put in place a business continuity plan and guidelines, in order to mitigate the effects of disruptions on your operations."
+          }
+        ],
+        "label": " No business continuity guideline or implementation in place."
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": false,
+        "score": 20,
+        "atype": "P",
+        "recommendations": [
+          {
+            "answerChosen": true,
+            "label": " It is good that you have set up a business continuity guideline and plan for IT systems, but with the convergence of IT and OT today, it is important that OT systems are also included. Any disruption in the OT environment can have very high impact on the entire business. Periodical tests should be performed in this respect to simulate reaction to a disaster, and the ensuing report should be shared with the management.The main function of a business impact analysis (BIA) is to help understand the consequences of a disruption to the operations of your company, and to help gather data that is essential to develop ways to recover from the incident/disruption. It is essential to have BIAs as part of your business continuity planning."
+          }
+        ],
+        "label": " Clearly defined guideline and implementation of business continuity for IT systems."
+      },
+      {
+        "aindex": 3,
+        "uniqueAnswer": false,
+        "score": 20,
+        "atype": "P",
+        "label": " Clearly defined guideline and implementation of business continuity for IT and OT systems."
+      },
+      {
+        "aindex": 4,
+        "uniqueAnswer": false,
+        "score": 20,
+        "atype": "P",
+        "recommendations": [
+          {
+            "answerChosen": true,
+            "label": " It is good that Business continuity tests are performed but test results and reports must be shared with the management."
+          }
+        ],
+        "label": " Business continuity tests and exercises are performed including OT environment."
+      },
+      {
+        "aindex": 5,
+        "uniqueAnswer": false,
+        "score": 20,
+        "atype": "P",
+        "label": " Test results and a reports are shared with the management."
+      }
+    ],
+    "label": " Did you define and implement Business Continuity process for OT systems?"
+  },
+  {
+    "service_category": "COMPLIANCE",
+    "section": "L-DIH",
+    "qtype": "M",
+    "qindex": 26,
+    "maxPoints": 90,
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": false,
+        "score": 0,
+        "atype": "P",
+        "recommendations": [
+          {
+            "answerChosen": true,
+            "label": " Given the quickly changing landscape of regulations and legal requirements that are imposed on businesses that use IT and new technologies like OT, it becomes essential to have a common view at organisation level across as many of these requirements as possible by keeping a common list or registry of such requirements, and regularly updating it. Establishing a guideline on preparation and conduct of internal audit along with regularly or annually performing audit is key to identify weaknesses. "
+          }
+        ],
+        "label": " No centralised registry available, but each business or operation unit ensures compliance with any legal and regulatory requirements."
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": false,
+        "score": 0,
+        "atype": "P",
+        "recommendations": [
+          {
+            "answerChosen": true,
+            "label": " To address the compliance challenges in your OT systems, start with a thorough audit of your current OT systems to identify gaps in compliance. Create a comprehensive compliance framework that aligns with relevant standards. Regularly review and update your compliance framework and security controls to adapt to new threats and changes in regulations. Ensure these responsibilities are assigned to relevant resources. "
+          }
+        ],
+        "label": " We lack clarity in terms of compliance when it comes to OT systems. "
+      },
+      {
+        "aindex": 3,
+        "uniqueAnswer": false,
+        "score": 20,
+        "atype": "P",
+        "label": " We are NIS2 compliant."
+      },
+      {
+        "aindex": 4,
+        "uniqueAnswer": false,
+        "score": 20,
+        "atype": "P",
+        "label": " We have a well defined guidelines for preparation and conduct of internal audit annually. The results of the audit are shared with the stakeholders and tracked to closure."
+      },
+      {
+        "aindex": 5,
+        "uniqueAnswer": false,
+        "score": 10,
+        "atype": "P",
+        "recommendations": [
+          {
+            "answerChosen": true,
+            "label": " Auditing your internal processes and systems, especially when done internally, can raise flags, identify weaknesses or flaws,  and help find solutions to organisational processes or help better manage assets. This can be done with low costs and without any reputation exposure. You should consider having internal audits on an yearly basis so that weaknesses and flaws found in one cycle, could be mitigated (or at least having their mitigation followed) in the next cycle."
+          }
+        ],
+        "label": " Our systems and processes have not been audited for the past 2 years. "
+      },
+      {
+        "aindex": 6,
+        "uniqueAnswer": false,
+        "score": 10,
+        "atype": "P",
+        "recommendations": [
+          {
+            "answerChosen": true,
+            "label": " If you have outsourced the audit of your systems (IT and OT) and controls to a third-party, you should also check that these audits happen and render value for you (e.g., you receive reports that are seen by your management), as for any service provided by an external party."
+          }
+        ],
+        "label": " We have outsourced auditing to a third party for both IT and OT systems."
+      }
+    ],
+    "label": " In your organisation, how do you identify and track relevant compliance requirements for OT systems? "
+  },
+  {
+    "service_category": "MAINTENANCE",
+    "section": "L-DIH",
+    "qtype": "S",
+    "qindex": 27,
+    "maxPoints": 20,
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": true,
+        "score": 0,
+        "atype": "P",
+        "recommendations": [
+          {
+            "answerChosen": true,
+            "label": " Your organization should have some guidelines defined for ICS or OT environment undergoing maintenance,for example covering topics any maintenance or upgrade must meet the security requirements of the systems zone.It must be performed and logged with approved controlled tools regularly.Terminate session and network connections when non-local maintenance is completed.Strong authentication must be established for these users."
+          }
+        ],
+        "label": " We do not have guidelines for maintenance and diagonostic activities of OT systems."
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": true,
+        "score": 20,
+        "atype": "P",
+        "recommendations": [
+          {
+            "answerChosen": true,
+            "label": " Having guidelines and using only approved tools for non-local maintenance and diagnostic activities is a crucial step in ensuring compliance and security. To further enhance your approach, you might consider regularly reviewing and updating guidelines,this ensures that your guidelines are up-to-date with the latest industry standards and regulatory requirements. Continuously train your personnel on these guidelines and the proper use of approved tools.Implement regular monitoring and auditing processes to ensure adherence to the guidelines.Develop a clear incident response plan for any issues that arise during non-local maintenance activities"
+          }
+        ],
+        "label": " We have guidelines for remote maintenance and diagnostic activities of OT systems, using only approved tools. These guidelines are audited annually to ensure compliance. "
+      },
+      {
+        "aindex": 3,
+        "uniqueAnswer": true,
+        "score": 20,
+        "atype": "P",
+        "recommendations": [
+          {
+            "answerChosen": true,
+            "label": " To begin with having a guideline for maintenance and diagonostic tool is good, but to enhance your approach, you might consider regularly reviewing and updating guidelines, this ensures that your guidelines are up-to-date with the latest industry standards and regulatory requirements. Continuously train your personnel on these guidelines and the proper use of approved tools. Implement regular monitoring and auditing processes to ensure adherence to the guidelines. Develop a clear incident response plan for any issues that arise during non-local maintenance activities. "
+          }
+        ],
+        "label": " We have guidelines for maintenance and diagonostic activities written but not updated at since a year. "
+      }
+    ],
+    "label": " In the company, do you have guidelines for maintenance related to  OT systems? "
+  },
+  {
+    "service_category": "PRIVACY BY DESIGN",
+    "section": "L-DIH",
+    "qtype": "S",
+    "qindex": 28,
+    "maxPoints": 45,
+    "answers": [
+      {
+        "aindex": 1,
+        "uniqueAnswer": true,
+        "score": 45,
+        "atype": "P",
+        "label": " We have guidelines in place to ensure safe handling of Personally Identifiable Information (PII) data."
+      },
+      {
+        "aindex": 2,
+        "uniqueAnswer": true,
+        "score": 10,
+        "atype": "P",
+        "label": " No we do not need, as we do not collect Personally Identifiable Information (PII) data."
+      },
+      {
+        "aindex": 3,
+        "uniqueAnswer": true,
+        "score": 22,
+        "atype": "P",
+        "recommendations": [
+          {
+            "answerChosen": true,
+            "label": " Handling personally identifiable information (PII) is critical for data privacy and compliance. Guidelines regarding the collection of PII (Personally Identifiable Information) data and its management must be shared with all employees."
+          }
+        ],
+        "label": " We collect Personally Identifiable Information (PII) but im not sure of the process to handle the data."
+      },
+      {
+        "aindex": 4,
+        "uniqueAnswer": true,
+        "score": 0,
+        "atype": "P",
+        "label": "Not Applicable. "
+      }
+    ],
+    "label": " Do you have personally identifiable information (PII), how do you protect them?"
+  }
+]
