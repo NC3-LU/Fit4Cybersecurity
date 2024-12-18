@@ -7,6 +7,7 @@ from cryptography.fernet import Fernet
 from django import forms
 from django.conf import settings
 from django.contrib import messages
+from django.http import Http404
 from django.http import HttpResponse
 from django.http import HttpResponseRedirect
 from django.shortcuts import render
@@ -30,6 +31,7 @@ from survey.viewLogic import get_questions_with_user_answers
 from survey.viewLogic import handle_general_feedback
 from survey.viewLogic import handle_question_answers_request
 from survey.viewLogic import handle_start_survey
+from survey.viewLogic import validate_survey_token
 from utils.notifications import send_report
 from utils.utils import can_redirect
 
@@ -38,12 +40,21 @@ logger = logging.getLogger(__name__)
 
 
 def index(request):
+    if not request.session.get("token_validated"):
+        token = request.GET.get("token")
+        if not token or not validate_survey_token(token):
+            raise Http404()
+        request.session["token_validated"] = True
+
     lang = request.session.get(settings.LANGUAGE_COOKIE_NAME, LANGUAGE_CODE)
     translation.activate(lang)
     return render(request, "survey/index.html")
 
 
 def start(request):
+    if not request.session.get("token_validated"):
+        raise Http404()
+
     lang = request.session.get(settings.LANGUAGE_COOKIE_NAME, LANGUAGE_CODE)
 
     try:

@@ -1,5 +1,7 @@
+import hashlib
 import logging
 import math
+from datetime import datetime
 from typing import Any
 from typing import Dict
 from typing import List
@@ -23,6 +25,7 @@ from typing_extensions import TypedDict
 from csskp.settings import CUSTOM
 from csskp.settings import LANGUAGE_CODE
 from csskp.settings import LANGUAGES
+from csskp.settings import PRESHARED_SURVEY_KEY
 from survey.forms import AnswerMChoice
 from survey.forms import GeneralFeedback
 from survey.models import CONTEXT_SECTION_LABEL
@@ -636,9 +639,11 @@ def get_answer_choices(question: SurveyQuestion, lang: str) -> List[Tuple[int, s
     question_answers = list(
         sorted(
             question.surveyquestionanswer_set.filter(is_active=True),
-            key=lambda obj: getattr(obj, question.answers_order)
-            if isinstance(getattr(obj, question.answers_order), int)
-            else _(str(getattr(obj, question.answers_order))),
+            key=lambda obj: (
+                getattr(obj, question.answers_order)
+                if isinstance(getattr(obj, question.answers_order), int)
+                else _(str(getattr(obj, question.answers_order)))
+            ),
         )
     )
 
@@ -943,3 +948,11 @@ def get_list_of_available_branches(
 
 def does_answers_questions_map_exist() -> bool:
     return SurveyAnswerQuestionMap.objects.exists()
+
+
+def validate_survey_token(survey_token):
+    preshared_key = PRESHARED_SURVEY_KEY
+    current_date = datetime.now().strftime("%Y-%m-%d")
+    data = f"{preshared_key}{current_date}"
+    token = hashlib.sha256(data.encode()).hexdigest()
+    return token == survey_token

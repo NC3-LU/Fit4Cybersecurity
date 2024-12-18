@@ -73,3 +73,6 @@ LOGGING = {
         },
     },
 }
+
+SESSION_COOKIE_AGE = 30 * 60  # 30 minutes, in seconds
+PRESHARED_SURVEY_KEY = "**insecured_preshared_survey_key**"

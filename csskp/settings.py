@@ -114,6 +114,10 @@ try:
 
     EMAIL_HOST = config.EMAIL_HOST
     EMAIL_PORT = config.EMAIL_PORT
+
+    PRESHARED_SURVEY_KEY = config.PRESHARED_SURVEY_KEY
+    SESSION_COOKIE_AGE = config.SESSION_COOKIE_AGE
+
 except AttributeError as e:
     print("Please check you configuration file for the missing configuration variable:")
     print(f"  {e}")
