@@ -2,7 +2,7 @@ from django.utils.translation import gettext_lazy
 
 CUSTOM = {
     # Generic configurations
-    "tool_name": "Survey ALTO",
+    "tool_name": "DAAZ",
     "intro_text": gettext_lazy(
         "Managing personal data in accordance with the General Data Protection Regulation "
         '(hereinafter "<strong>GDPR</strong>") can be a challenge for small and medium-sized '
