@@ -46,7 +46,12 @@ def index(request):
             raise Http404()
         request.session["token_validated"] = True
 
-    lang = request.session.get(settings.LANGUAGE_COOKIE_NAME, LANGUAGE_CODE)
+    lang = request.GET.get("lang")
+
+    if lang not in dict(settings.LANGUAGES):
+        lang = request.session.get(settings.LANGUAGE_COOKIE_NAME, LANGUAGE_CODE)
+
+    request.session[settings.LANGUAGE_COOKIE_NAME] = lang
     translation.activate(lang)
     return render(request, "survey/index.html")
 
