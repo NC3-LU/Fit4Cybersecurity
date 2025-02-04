@@ -7,11 +7,20 @@
 #: data/fit4contract/context-questions.json:207
 #: data/fit4cybersecurity/context-questions.json:207
 #: data/fit4privacy/context-questions.json:207
+#: data/otsecuritycheck/context-questions.json:257
+#: data/otsecuritycheck/questions.json:565
+#: data/otsecuritycheck/questions.json:591
+#: data/otsecuritycheck/questions.json:604
+#: data/otsecuritycheck/questions.json:617
+#: data/otsecuritycheck/questions.json:679
+#: data/otsecuritycheck/questions.json:692
+#: data/otsecuritycheck/questions.json:741
+#: data/otsecuritycheck/questions.json:803
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-20 06:21+0000\n"
+"POT-Creation-Date: 2025-02-04 10:32+0000\n"
 "PO-Revision-Date: 2023-04-06 11:50+0000\n"
 "Last-Translator: Juan Rocha <juan.rocha@cases.lu>\n"
 "Language-Team: German <https://translate.monarc.lu/projects/"
@@ -24,6 +33,7 @@ msgstr ""
 "X-Generator: Weblate 4.17-dev\n"
 
 #: csskp/fit4africa/__init__.py:7 csskp/fit4cybersecurity/__init__.py:7
+#: csskp/otsecuritycheck/__init__.py:7
 msgid ""
 "This survey will ask a few questions and provide recommendations. Keep in "
 "mind, that it is a self-assessment tool and that it only touches the surface "
@@ -224,6 +234,7 @@ msgstr "15 Tage"
 #: data/fit4ehealth/questions.json:3
 #: data/fit4operatorsurvey/context-questions.json:3
 #: data/fit4privacy/context-questions.json:3
+#: data/otsecuritycheck/context-questions.json:53
 msgid "What is your sector?"
 msgstr "Was ist Ihre Branche?"
 
@@ -245,6 +256,14 @@ msgstr "Was ist Ihre Branche?"
 #: data/fit4privacy/context-questions.json:4
 #: data/fit4privacy/context-questions.json:120
 #: data/fit4privacy/context-questions.json:200
+#: data/otsecuritycheck/context-questions.json:4
+#: data/otsecuritycheck/context-questions.json:14
+#: data/otsecuritycheck/context-questions.json:24
+#: data/otsecuritycheck/context-questions.json:34
+#: data/otsecuritycheck/context-questions.json:44
+#: data/otsecuritycheck/context-questions.json:54
+#: data/otsecuritycheck/context-questions.json:170
+#: data/otsecuritycheck/context-questions.json:250
 msgid "Context"
 msgstr "Kontext"
 
@@ -266,6 +285,14 @@ msgstr "Kontext"
 #: data/fit4privacy/context-questions.json:5
 #: data/fit4privacy/context-questions.json:121
 #: data/fit4privacy/context-questions.json:201
+#: data/otsecuritycheck/context-questions.json:5
+#: data/otsecuritycheck/context-questions.json:15
+#: data/otsecuritycheck/context-questions.json:25
+#: data/otsecuritycheck/context-questions.json:35
+#: data/otsecuritycheck/context-questions.json:45
+#: data/otsecuritycheck/context-questions.json:55
+#: data/otsecuritycheck/context-questions.json:171
+#: data/otsecuritycheck/context-questions.json:251
 msgid "__context"
 msgstr "__context"
 
@@ -294,6 +321,7 @@ msgstr "Mobiles Geld"
 #: data/fit4contract/context-questions.json:19
 #: data/fit4cybersecurity/context-questions.json:19
 #: data/fit4privacy/context-questions.json:19
+#: data/otsecuritycheck/context-questions.json:69
 msgid "Trading, sales and mass distribution"
 msgstr "Handel, Verkauf und Massenverteilung"
 
@@ -301,6 +329,7 @@ msgstr "Handel, Verkauf und Massenverteilung"
 #: data/fit4contract/context-questions.json:26
 #: data/fit4cybersecurity/context-questions.json:26
 #: data/fit4privacy/context-questions.json:26
+#: data/otsecuritycheck/context-questions.json:76
 msgid "Marketing, media and multimedia"
 msgstr "Marketing, Medien und Multimedia"
 
@@ -308,6 +337,7 @@ msgstr "Marketing, Medien und Multimedia"
 #: data/fit4contract/context-questions.json:33
 #: data/fit4cybersecurity/context-questions.json:33
 #: data/fit4privacy/context-questions.json:33
+#: data/otsecuritycheck/context-questions.json:83
 msgid "Construction industries and civil engineering"
 msgstr "Baugewerbe und Tiefbau"
 
@@ -315,6 +345,7 @@ msgstr "Baugewerbe und Tiefbau"
 #: data/fit4contract/context-questions.json:40
 #: data/fit4cybersecurity/context-questions.json:40
 #: data/fit4privacy/context-questions.json:40
+#: data/otsecuritycheck/context-questions.json:90
 msgid "Hotel and restoration, tourism and entertainment"
 msgstr "Hotel und Gastronomie, Tourismus und Unterhaltung"
 
@@ -322,6 +353,7 @@ msgstr "Hotel und Gastronomie, Tourismus und Unterhaltung"
 #: data/fit4contract/context-questions.json:47
 #: data/fit4cybersecurity/context-questions.json:47
 #: data/fit4privacy/context-questions.json:47
+#: data/otsecuritycheck/context-questions.json:97
 msgid "Industry"
 msgstr "Industrie"
 
@@ -329,6 +361,7 @@ msgstr "Industrie"
 #: data/fit4contract/context-questions.json:54
 #: data/fit4cybersecurity/context-questions.json:54
 #: data/fit4privacy/context-questions.json:54
+#: data/otsecuritycheck/context-questions.json:104
 msgid "Installation and maintenance"
 msgstr "Installation und Wartung"
 
@@ -336,6 +369,7 @@ msgstr "Installation und Wartung"
 #: data/fit4contract/context-questions.json:61
 #: data/fit4cybersecurity/context-questions.json:61
 #: data/fit4privacy/context-questions.json:61
+#: data/otsecuritycheck/context-questions.json:111
 msgid "Creation or placing of objects that are artistic and decorative"
 msgstr "Kreation oder Platzierung von künstlerischen und dekorativen Objekten"
 
@@ -345,6 +379,7 @@ msgstr "Kreation oder Platzierung von künstlerischen und dekorativen Objekten"
 #: data/fit4ehealth/questions.json:11
 #: data/fit4operatorsurvey/context-questions.json:40
 #: data/fit4privacy/context-questions.json:68
+#: data/otsecuritycheck/context-questions.json:118
 msgid "Health"
 msgstr "Gesundheit"
 
@@ -352,6 +387,7 @@ msgstr "Gesundheit"
 #: data/fit4contract/context-questions.json:75
 #: data/fit4cybersecurity/context-questions.json:75
 #: data/fit4privacy/context-questions.json:75
+#: data/otsecuritycheck/context-questions.json:125
 msgid "Home-Care Service or Community Service"
 msgstr "Hauspflege oder Zivildienst"
 
@@ -359,6 +395,7 @@ msgstr "Hauspflege oder Zivildienst"
 #: data/fit4contract/context-questions.json:82
 #: data/fit4cybersecurity/context-questions.json:82
 #: data/fit4privacy/context-questions.json:82
+#: data/otsecuritycheck/context-questions.json:132
 msgid "Shows"
 msgstr "Veranstaltungen"
 
@@ -366,6 +403,7 @@ msgstr "Veranstaltungen"
 #: data/fit4contract/context-questions.json:89
 #: data/fit4cybersecurity/context-questions.json:89
 #: data/fit4privacy/context-questions.json:89
+#: data/otsecuritycheck/context-questions.json:139
 msgid "Company Support"
 msgstr "Firmenunterstützung"
 
@@ -373,6 +411,7 @@ msgstr "Firmenunterstützung"
 #: data/fit4contract/context-questions.json:96
 #: data/fit4cybersecurity/context-questions.json:96
 #: data/fit4privacy/context-questions.json:96
+#: data/otsecuritycheck/context-questions.json:146
 msgid "Transport and Logistics"
 msgstr "Transport und Logistik"
 
@@ -380,6 +419,7 @@ msgstr "Transport und Logistik"
 #: data/fit4contract/context-questions.json:103
 #: data/fit4cybersecurity/context-questions.json:103
 #: data/fit4privacy/context-questions.json:103
+#: data/otsecuritycheck/context-questions.json:153
 msgid "Farming and fishing, natural spaces and green spaces, animal care"
 msgstr "Landwirtschaft und Fischerei, Natur- und Grünflächen, Tierpflege"
 
@@ -388,6 +428,7 @@ msgstr "Landwirtschaft und Fischerei, Natur- und Grünflächen, Tierpflege"
 #: data/fit4cybersecurity/context-questions.json:110
 #: data/fit4operatorsurvey/context-questions.json:68
 #: data/fit4privacy/context-questions.json:110
+#: data/otsecuritycheck/context-questions.json:160
 msgid "Public Administration"
 msgstr "Öffentliche Verwaltung"
 
@@ -404,6 +445,7 @@ msgstr "Andere"
 #: data/fit4cybersecurity/context-questions.json:119
 #: data/fit4operatorsurvey/context-questions.json:140
 #: data/fit4privacy/context-questions.json:119
+#: data/otsecuritycheck/context-questions.json:169
 msgid "How many employees?"
 msgstr "Wie viele mitarbeiter?"
 
@@ -411,6 +453,7 @@ msgstr "Wie viele mitarbeiter?"
 #: data/fit4contract/context-questions.json:127
 #: data/fit4cybersecurity/context-questions.json:127
 #: data/fit4privacy/context-questions.json:127
+#: data/otsecuritycheck/context-questions.json:177
 msgid "1-5"
 msgstr "1-5"
 
@@ -418,6 +461,7 @@ msgstr "1-5"
 #: data/fit4contract/context-questions.json:134
 #: data/fit4cybersecurity/context-questions.json:134
 #: data/fit4privacy/context-questions.json:134
+#: data/otsecuritycheck/context-questions.json:184
 msgid "6-10"
 msgstr "6-10"
 
@@ -425,6 +469,7 @@ msgstr "6-10"
 #: data/fit4contract/context-questions.json:141
 #: data/fit4cybersecurity/context-questions.json:141
 #: data/fit4privacy/context-questions.json:141
+#: data/otsecuritycheck/context-questions.json:191
 msgid "10-20"
 msgstr "10-20"
 
@@ -432,6 +477,7 @@ msgstr "10-20"
 #: data/fit4contract/context-questions.json:148
 #: data/fit4cybersecurity/context-questions.json:148
 #: data/fit4privacy/context-questions.json:148
+#: data/otsecuritycheck/context-questions.json:198
 msgid "20-50"
 msgstr "20-50"
 
@@ -439,6 +485,7 @@ msgstr "20-50"
 #: data/fit4contract/context-questions.json:155
 #: data/fit4cybersecurity/context-questions.json:155
 #: data/fit4privacy/context-questions.json:155
+#: data/otsecuritycheck/context-questions.json:205
 msgid "50-100"
 msgstr "50-100"
 
@@ -446,6 +493,7 @@ msgstr "50-100"
 #: data/fit4contract/context-questions.json:162
 #: data/fit4cybersecurity/context-questions.json:162
 #: data/fit4privacy/context-questions.json:162
+#: data/otsecuritycheck/context-questions.json:212
 msgid "100-200"
 msgstr "100-200"
 
@@ -453,6 +501,7 @@ msgstr "100-200"
 #: data/fit4contract/context-questions.json:169
 #: data/fit4cybersecurity/context-questions.json:169
 #: data/fit4privacy/context-questions.json:169
+#: data/otsecuritycheck/context-questions.json:219
 msgid "200-500"
 msgstr "200-500"
 
@@ -460,6 +509,7 @@ msgstr "200-500"
 #: data/fit4contract/context-questions.json:176
 #: data/fit4cybersecurity/context-questions.json:176
 #: data/fit4privacy/context-questions.json:176
+#: data/otsecuritycheck/context-questions.json:226
 msgid "500-1000"
 msgstr "500-1000"
 
@@ -467,6 +517,7 @@ msgstr "500-1000"
 #: data/fit4contract/context-questions.json:183
 #: data/fit4cybersecurity/context-questions.json:183
 #: data/fit4privacy/context-questions.json:183
+#: data/otsecuritycheck/context-questions.json:233
 msgid "1000-5000"
 msgstr "1000-5000"
 
@@ -474,6 +525,7 @@ msgstr "1000-5000"
 #: data/fit4contract/context-questions.json:190
 #: data/fit4cybersecurity/context-questions.json:190
 #: data/fit4privacy/context-questions.json:190
+#: data/otsecuritycheck/context-questions.json:240
 msgid "5000+"
 msgstr "5000+"
 
@@ -481,7 +533,8 @@ msgstr "5000+"
 #: data/fit4contract/context-questions.json:199
 #: data/fit4cybersecurity/context-questions.json:199
 #: data/fit4ehealth/questions.json:20
-#: data/fit4privacy/context-questions.json:199 survey/forms.py:61
+#: data/fit4privacy/context-questions.json:199
+#: data/otsecuritycheck/context-questions.json:249 survey/forms.py:62
 msgid "Please select your country"
 msgstr "Bitte wählen Sie Ihr Land"
 
@@ -1922,6 +1975,7 @@ msgstr "keine physischen Sicherheitsmaßnahmen"
 #: data/fit4contract/context-questions.json:12
 #: data/fit4cybersecurity/context-questions.json:12
 #: data/fit4privacy/context-questions.json:12
+#: data/otsecuritycheck/context-questions.json:62
 msgid "Banking, insurance and real estate"
 msgstr "Banken, Versicherungen und Immobilien"
 
@@ -3426,8 +3480,8 @@ msgid ""
 "Controller”) and should be clearly stated in the contract."
 msgstr ""
 "Einige Begriffe sind in der Datenschutz-Grundverordnung rechtlich definiert "
-"(z. B. \"Datenverarbeiter\" und \"für die Datenverarbeitung Verantwortlicher"
-"\") und sollten im Vertrag eindeutig festgelegt werden."
+"(z. B. \"Datenverarbeiter\" und \"für die Datenverarbeitung "
+"Verantwortlicher\") und sollten im Vertrag eindeutig festgelegt werden."
 
 #: data/fit4ehealth/questions.json:1130
 msgid ""
@@ -3535,7 +3589,8 @@ msgid ""
 msgstr ""
 "Sie haben keinen Dritten, der derzeit mit Ihnen zusammenarbeitet und auf "
 "Ihre Daten zugreifen kann, weder direkt (indem er auf sie zugreift) noch "
-"indirekt (indem er sie sieht, hört ...), auch nicht für einen kurzen Zeitraum."
+"indirekt (indem er sie sieht, hört ...), auch nicht für einen kurzen "
+"Zeitraum."
 
 #: data/fit4ehealth/questions.json:1205
 msgid "Cleaning"
@@ -4133,8 +4188,8 @@ msgid ""
 "Passwords such as \"MyPassword123!\", \"IL0veS@ndwichs\" or "
 "\"Jp7njQs#FpdCF5oF\" can be considered here."
 msgstr ""
-"Passwörter wie \"MyPassword123!\", \"IL0veS@ndwichs\" oder \"Jp7njQs#FpdCF5oF"
-"\" können hier in Betracht kommen."
+"Passwörter wie \"MyPassword123!\", \"IL0veS@ndwichs\" oder "
+"\"Jp7njQs#FpdCF5oF\" können hier in Betracht kommen."
 
 #: data/fit4ehealth/questions.json:1684
 msgid ""
@@ -5062,8 +5117,8 @@ msgstr ""
 msgid ""
 "Cross-border eHealth services can provide you with additional support when "
 "treating patients from other European countries. Get in contact with Agence "
-"eSanté and visit the Website <a href=\"https://www.esante.lu\" target="
-"\"_blank\">https://www.esante.lu</a> for further information."
+"eSanté and visit the Website <a href=\"https://www.esante.lu\" "
+"target=\"_blank\">https://www.esante.lu</a> for further information."
 msgstr ""
 "Grenzüberschreitende eHealth-Dienste können Ihnen zusätzliche Unterstützung "
 "bei der Behandlung von Patienten aus anderen europäischen Ländern bieten. "
@@ -5418,10 +5473,11 @@ msgid ""
 msgstr ""
 "Vorhandensein und Pflege einer angemessenen Informationssicherheitspolitik "
 "und -charta. Sie sollte zumindest die Grundlagen enthalten, wie sie in den "
-"Charta-Vorlagen in der <a href=\"https://trustbox.cases.lu\" target=\"_blank"
-"\">NC3 Trustbox</a> zu finden sind. Aber nicht nur die Erstellung, sondern "
-"auch die korrekte Pflege einer detaillierteren Sicherheitspolitik ist von "
-"wesentlicher Bedeutung und sollte so bald wie möglich erfolgen."
+"Charta-Vorlagen in der <a href=\"https://trustbox.cases.lu\" "
+"target=\"_blank\">NC3 Trustbox</a> zu finden sind. Aber nicht nur die "
+"Erstellung, sondern auch die korrekte Pflege einer detaillierteren "
+"Sicherheitspolitik ist von wesentlicher Bedeutung und sollte so bald wie "
+"möglich erfolgen."
 
 #: data/fit4operatorsurvey/questions.json:227
 msgid "None and not needed nor desired."
@@ -5553,74 +5609,75 @@ msgstr ""
 msgid ""
 "If you are obliged to comply with the NIS directive, then you should "
 "consider <a href=\"https://www.enisa.europa.eu/topics/nis-directive/minimum-"
-"security-measures-for-operators-of-essentials-services\" target=\"_blank"
-"\">this mapping table</a> of security measures provided by ENISA. In "
-"addition, depending on your sector you should consider this documents:"
-"<ul><li>Digital service provider<ul><li><a href=\"https://www.enisa.europa."
-"eu/publications/minimum-security-measures-for-digital-service-providers\" "
-"target=\"_blank\">Minimum security measures for digital service providers</"
-"a></li></ul></li><li>Telecom sector<ul><li><a href=\"https://www.enisa."
-"europa.eu/publications/guideline-on-security-measures-under-the-eecc\" "
+"security-measures-for-operators-of-essentials-services\" "
+"target=\"_blank\">this mapping table</a> of security measures provided by "
+"ENISA. In addition, depending on your sector you should consider this "
+"documents:<ul><li>Digital service provider<ul><li><a href=\"https://www."
+"enisa.europa.eu/publications/minimum-security-measures-for-digital-service-"
+"providers\" target=\"_blank\">Minimum security measures for digital service "
+"providers</a></li></ul></li><li>Telecom sector<ul><li><a href=\"https://www."
+"enisa.europa.eu/publications/guideline-on-security-measures-under-the-eecc\" "
 "target=\"_blank\">Guideline on security measures under the EECC</a></li></"
 "ul></li><li>Healthcare sector<ul><li><a href=\"https://www.enisa.europa.eu/"
-"publications/cloud-security-for-healthcare-services\" target=\"_blank"
-"\">Cloud security for healthcare services</a></li><li><a href=\"https://www."
-"enisa.europa.eu/publications/good-practices-for-the-security-of-healthcare-"
-"services\" target=\"_blank\">Good practices for the security of healthcare "
-"services</a></li></ul></li><li>Transport sector (railways)<ul><li><a href="
-"\"https://www.enisa.europa.eu/publications/railway-cybersecurity\" target="
-"\"_blank\">Railway cybersecurity</a></li></ul></li><li>Energy "
-"sector<ul><li><a href=\"https://www.enisa.europa.eu/publications/"
-"communication-network-interdependencies-in-smart-grids\" target=\"_blank"
-"\">Communication network interdependencies in smart grids</a></li><li><a "
-"href=\"https://www.enisa.europa.eu/publications/power-sector-dependency\" "
-"target=\"_blank\">Power sector dependency</a></li></ul></li><li>Financial "
-"sector<ul><li><a href=\"https://www.enisa.europa.eu/publications/"
-"EU_Cybersecurity_Initiatives_in_the_Finance_Sector\" target=\"_blank\"> EU "
-"Cybersecurity Initiatives in the Finance Sector</a></li><li><a href="
-"\"https://www.enisa.europa.eu/publications/mobile-payments-security\" target="
-"\"_blank\">Mobile payments security</a></li><li><a href=\"https://www.enisa."
-"europa.eu/publications/blockchain-security\" target=\"_blank\">Blockchain "
-"security</a></li><li><a href=\"https://www.enisa.europa.eu/publications/"
-"network-and-information-security-in-the-finance-sector\" target=\"_blank"
-"\">Network and information security in the finance sector</a></li></ul></"
-"ul></li>"
+"publications/cloud-security-for-healthcare-services\" "
+"target=\"_blank\">Cloud security for healthcare services</a></li><li><a "
+"href=\"https://www.enisa.europa.eu/publications/good-practices-for-the-"
+"security-of-healthcare-services\" target=\"_blank\">Good practices for the "
+"security of healthcare services</a></li></ul></li><li>Transport sector "
+"(railways)<ul><li><a href=\"https://www.enisa.europa.eu/publications/railway-"
+"cybersecurity\" target=\"_blank\">Railway cybersecurity</a></li></ul></"
+"li><li>Energy sector<ul><li><a href=\"https://www.enisa.europa.eu/"
+"publications/communication-network-interdependencies-in-smart-grids\" "
+"target=\"_blank\">Communication network interdependencies in smart grids</"
+"a></li><li><a href=\"https://www.enisa.europa.eu/publications/power-sector-"
+"dependency\" target=\"_blank\">Power sector dependency</a></li></ul></"
+"li><li>Financial sector<ul><li><a href=\"https://www.enisa.europa.eu/"
+"publications/EU_Cybersecurity_Initiatives_in_the_Finance_Sector\" "
+"target=\"_blank\"> EU Cybersecurity Initiatives in the Finance Sector</a></"
+"li><li><a href=\"https://www.enisa.europa.eu/publications/mobile-payments-"
+"security\" target=\"_blank\">Mobile payments security</a></li><li><a "
+"href=\"https://www.enisa.europa.eu/publications/blockchain-security\" "
+"target=\"_blank\">Blockchain security</a></li><li><a href=\"https://www."
+"enisa.europa.eu/publications/network-and-information-security-in-the-finance-"
+"sector\" target=\"_blank\">Network and information security in the finance "
+"sector</a></li></ul></ul></li>"
 msgstr ""
 "Wenn Sie verpflichtet sind, die NIS-Richtlinie einzuhalten, dann sollten Sie "
 "<a href=\"https://www.enisa.europa.eu/topics/nis-directive/minimum-security-"
 "measures-for-operators-of-essentials-services\" target=\"_blank\">diese "
 "Zuordnungstabelle</a> der Sicherheitsmaßnahmen berücksichtigen, die von der "
 "ENISA bereitgestellt wird. Darüber hinaus sollten Sie je nach Sektor diese "
-"Dokumente berücksichtigen:< ul><li>Digitaler Dienstanbieter< ul><li><a href="
-"\"https://www.enisa.europa.eu/publications/minimum-security-measures-for-"
-"digital-service-providers\" target=\"_blank\">Mindestsicherheitsmaßnahmen "
-"für Anbieter digitaler Dienste</a></li></ul></"
-"li><li>Telekommunikationssektor< ul><li><a href=\"https://www.enisa.europa."
-"eu/publications/guideline-on-security-measures-under-the-eecc\" target="
-"\"_blank\">Guideline on security measures under the EECC</a></li></ul></li></"
-"li><li>Gesundheitswesen< ul><li><a href=\"https://www.enisa.europa.eu/"
-"publications/cloud-security-for-healthcare-services\" target=\"_blank"
-"\">Cloud-Sicherheit für Gesundheitsdienste</a></li><li><a href=\"https://www."
-"enisa.europa.eu/publications/good-practices-for-the-security-of-healthcare-"
-"services\" target=\"_blank\">Gute Praktiken für die Sicherheit von "
-"Gesundheitsdiensten</a></li></ul></li><li>Verkehrssektor (Eisenbahnen)< "
-"ul><li><a href=\"https://www.enisa.europa.eu/publications/railway-"
-"cybersecurity\" target=\"_blank\">Bahn-Cybersecurity</a></li></ul></"
-"li><li>Energiesektor< ul><li><a href=\"https://www.enisa.europa.eu/"
-"publications/communication-network-interdependencies-in-smart-grids\" target="
-"\"_blank\">Kommunikationsnetzinterdependenzen in intelligenten Netzen</a></"
-"li><li><a href=\"https://www.enisa.europa.eu/publications/power-sector-"
-"dependency\" target=\"_blank\">Abhängigkeit des Stromsektors</a></li></ul></"
-"li><li>Finanzsektor< ul><li><a href=\"https://www.enisa.europa.eu/"
-"publications/EU_Cybersecurity_Initiatives_in_the_Finance_Sector\" target="
-"\"_blank\">EU-Cybersecurity-Initiativen im Finanzsektor</a></li><li><a href="
-"\"https://www.enisa.europa.eu/publications/mobile-payments-security\" target="
-"\"_blank\">Sicherheit bei mobilen Zahlungen</a></li><li><a href=\"https://"
-"www.enisa.europa.eu/publications/blockchain-security\" target=\"_blank\"> "
-"Blockchain-Sicherheit</a></li><li><a href=\"https://www.enisa.europa.eu/"
-"publications/network-and-information-security-in-the-finance-sector\" target="
-"\"_blank\">Netz- und Informationssicherheit im Finanzsektor</a></li></ul></"
-"ul></li>"
+"Dokumente berücksichtigen:< ul><li>Digitaler Dienstanbieter< ul><li><a "
+"href=\"https://www.enisa.europa.eu/publications/minimum-security-measures-"
+"for-digital-service-providers\" "
+"target=\"_blank\">Mindestsicherheitsmaßnahmen für Anbieter digitaler "
+"Dienste</a></li></ul></li><li>Telekommunikationssektor< ul><li><a "
+"href=\"https://www.enisa.europa.eu/publications/guideline-on-security-"
+"measures-under-the-eecc\" target=\"_blank\">Guideline on security measures "
+"under the EECC</a></li></ul></li></li><li>Gesundheitswesen< ul><li><a "
+"href=\"https://www.enisa.europa.eu/publications/cloud-security-for-"
+"healthcare-services\" target=\"_blank\">Cloud-Sicherheit für "
+"Gesundheitsdienste</a></li><li><a href=\"https://www.enisa.europa.eu/"
+"publications/good-practices-for-the-security-of-healthcare-services\" "
+"target=\"_blank\">Gute Praktiken für die Sicherheit von Gesundheitsdiensten</"
+"a></li></ul></li><li>Verkehrssektor (Eisenbahnen)< ul><li><a href=\"https://"
+"www.enisa.europa.eu/publications/railway-cybersecurity\" "
+"target=\"_blank\">Bahn-Cybersecurity</a></li></ul></li><li>Energiesektor< "
+"ul><li><a href=\"https://www.enisa.europa.eu/publications/communication-"
+"network-interdependencies-in-smart-grids\" "
+"target=\"_blank\">Kommunikationsnetzinterdependenzen in intelligenten "
+"Netzen</a></li><li><a href=\"https://www.enisa.europa.eu/publications/power-"
+"sector-dependency\" target=\"_blank\">Abhängigkeit des Stromsektors</a></"
+"li></ul></li><li>Finanzsektor< ul><li><a href=\"https://www.enisa.europa.eu/"
+"publications/EU_Cybersecurity_Initiatives_in_the_Finance_Sector\" "
+"target=\"_blank\">EU-Cybersecurity-Initiativen im Finanzsektor</a></"
+"li><li><a href=\"https://www.enisa.europa.eu/publications/mobile-payments-"
+"security\" target=\"_blank\">Sicherheit bei mobilen Zahlungen</a></li><li><a "
+"href=\"https://www.enisa.europa.eu/publications/blockchain-security\" "
+"target=\"_blank\"> Blockchain-Sicherheit</a></li><li><a href=\"https://www."
+"enisa.europa.eu/publications/network-and-information-security-in-the-finance-"
+"sector\" target=\"_blank\">Netz- und Informationssicherheit im Finanzsektor</"
+"a></li></ul></ul></li>"
 
 #: data/fit4operatorsurvey/questions.json:499
 #: data/fit4operatorsurvey/questions.json:685
@@ -5653,10 +5710,11 @@ msgstr "Wir halten uns weder an Normen noch an Leitlinien."
 msgid ""
 "Irrespective of your obligations in terms of risk management and "
 "cybersecurity, you should consider <a href=\"https://www.enisa.europa.eu/"
-"publications/guideline-on-security-measures-under-the-eecc\" target=\"_blank"
-"\">the 29 Security Objectives</a> listed by ENISA split in 8 areas, and "
-"ordered by level of sophistication. To check if you have implemented "
-"security measures in your company in a meaningful and risk-aware way."
+"publications/guideline-on-security-measures-under-the-eecc\" "
+"target=\"_blank\">the 29 Security Objectives</a> listed by ENISA split in 8 "
+"areas, and ordered by level of sophistication. To check if you have "
+"implemented security measures in your company in a meaningful and risk-aware "
+"way."
 msgstr ""
 "Unabhängig von Ihren Verpflichtungen in Bezug auf Risikomanagement und "
 "Cybersicherheit sollten Sie <a href=\"https://www.enisa.europa.eu/"
@@ -6142,8 +6200,8 @@ msgid ""
 "definitions of personal data, you can consult Art. 4 of GDPR, and for the "
 "tasks for a responsible with data protection, Art. 39. In addition to that, "
 "you can also consider the <a href=\"https://edpb.europa.eu/our-work-tools/"
-"our-documents/guidelines/data-protection-officer_en\" target=\"_blank"
-"\">guidelines</a> on this topic from the EDPB."
+"our-documents/guidelines/data-protection-officer_en\" "
+"target=\"_blank\">guidelines</a> on this topic from the EDPB."
 msgstr ""
 "Scheinbar verarbeitet Ihr Unternehmen Daten nur über eine begrenzte Anzahl "
 "von betroffenen Personen (Mitarbeiter oder Kunden), aber auch wenn ein(e) "
@@ -6152,8 +6210,8 @@ msgstr ""
 "Schritte im Zusammenhang mit der DSGVO unternehmen, um die verarbeiteten "
 "Daten und die damit verbundenen Risiken zu erkennen. Für die Definition "
 "personenbezogener Daten können Sie Art. 4 der DSGVO, und für die Aufgaben "
-"für einen Datenschutz verantwortlich, Art. 39. Beachten Sie auch die <a href="
-"\"https://edpb.europa.eu/our-work-tools/our-documents/guidelines/data-"
+"für einen Datenschutz verantwortlich, Art. 39. Beachten Sie auch die <a "
+"href=\"https://edpb.europa.eu/our-work-tools/our-documents/guidelines/data-"
 "protection-officer_de\" target=\"_blank\">Richtlinien des EDPB</a> zu diesem "
 "Thema."
 
@@ -6300,8 +6358,8 @@ msgid ""
 "Does your company process personal data that can be sensitive (e.g., taken "
 "out of context, can be used to infer racial or ethnic origin, political "
 "opinions, religious or philosophical beliefs, trade union membership, "
-"genetic data, biometric data, sex life or sexual orientation)? (See <a href="
-"\"https://www.privacy-regulation.eu/en/article-9-processing-of-special-"
+"genetic data, biometric data, sex life or sexual orientation)? (See <a "
+"href=\"https://www.privacy-regulation.eu/en/article-9-processing-of-special-"
 "categories-of-personal-data-GDPR.htm\" target=\"_blank\">GDPR Article 9</a>)"
 msgstr ""
 "Verarbeitet Ihr Unternehmen personenbezogene Daten, die sensibel sein "
@@ -6536,10 +6594,11 @@ msgid ""
 "organization has put in place to protect that data. To your customers, as "
 "well as to suppliers and third parties, you have a similar obligation to be "
 "transparent (for example, by updating contracts or terms and conditions). In "
-"terms of what to communicate to them, you should consider following <a href="
-"\"https://www.privacy-regulation.eu/en/article-13-information-to-be-provided-"
-"where-personal-data-are-collected-from-the-data-subject-GDPR.htm\" target="
-"\"_blank\">Art. 13 and 14 of GDPR</a> when it comes to this information."
+"terms of what to communicate to them, you should consider following <a "
+"href=\"https://www.privacy-regulation.eu/en/article-13-information-to-be-"
+"provided-where-personal-data-are-collected-from-the-data-subject-GDPR.htm\" "
+"target=\"_blank\">Art. 13 and 14 of GDPR</a> when it comes to this "
+"information."
 msgstr ""
 "Ihr Unternehmen sollte in Betracht ziehen, alle Gruppen von betroffenen "
 "Personen, deren Daten es verarbeitet, über die Tatsache der Verarbeitung, "
@@ -6576,8 +6635,8 @@ msgid ""
 "efficient and succinct manner, and differentiate them from other non-privacy "
 "related information such as contractual clauses or general terms of use. For "
 "more inspiration on this topic, there is an EDPB guidance on transparency <a "
-"href=\"https://ec.europa.eu/newsroom/article29/items/622227/en\" target="
-"\"_blank\">here</a>."
+"href=\"https://ec.europa.eu/newsroom/article29/items/622227/en\" "
+"target=\"_blank\">here</a>."
 msgstr ""
 "Der Verantwortliche muss nachweisen, dass die personenbezogenen Daten "
 "gegenüber der betroffenen Person transparent verarbeitet werden. Um eine "
@@ -7180,8 +7239,8 @@ msgid ""
 "protection authority in your country has issued as blacklist of processing "
 "operations (i.e., what personal data processing is likely to require DPIAs). "
 "For Luxembourg, the list is available <a href=\"https://cnpd.public.lu/"
-"content/dam/cnpd/fr/actualites/national/2019/Delib-34-2019-du-6-mars-2019.pdf"
-"\" target=\"_blank\">in annex here</a>. If your company acts in multiple "
+"content/dam/cnpd/fr/actualites/national/2019/Delib-34-2019-du-6-mars-2019."
+"pdf\" target=\"_blank\">in annex here</a>. If your company acts in multiple "
 "countries, ensure that you look at the recommendations of all data "
 "protection authorities in all countries you act in."
 msgstr ""
@@ -7198,8 +7257,8 @@ msgstr ""
 "der Verarbeitungsvorgänge (d. h., welche Verarbeitung personenbezogener "
 "Daten wahrscheinlich eine Datenschutz-Folgenabschätzung (DSFA) erfordert). "
 "Für Luxemburg steht die Liste zur Verfügung <a href=\"https://cnpd.public.lu/"
-"content/dam/cnpd/fr/actualites/national/2019/Delib-34-2019-du-6-mars-2019.pdf"
-"\" target=\"_blank\"> im Anhang hier auf Französisch</a>. Wenn Ihr "
+"content/dam/cnpd/fr/actualites/national/2019/Delib-34-2019-du-6-mars-2019."
+"pdf\" target=\"_blank\"> im Anhang hier auf Französisch</a>. Wenn Ihr "
 "Unternehmen in mehreren Ländern tätig ist, sollten Sie sich die Empfehlungen "
 "aller Datenschutzbehörden in allen Ländern anschauen, in denen Sie tätig "
 "sind."
@@ -7328,8 +7387,8 @@ msgstr ""
 "in Ihrer Verantwortung als Verantwortlicher liegt). Beachten Sie für diese "
 "Überprüfung die Punkte in Art. 28-3 der DSGVO und auch die Richtlinien des "
 "EDPB <a href=\"https://edpb.europa.eu/our-work-tools/documents/public-"
-"consultations/2020/guidelines-072020-concepts-controller-and_en\" target="
-"\"_blank\">hier</a>. Die anderen Verträge (wo Ihr Unternehmen als "
+"consultations/2020/guidelines-072020-concepts-controller-and_en\" "
+"target=\"_blank\">hier</a>. Die anderen Verträge (wo Ihr Unternehmen als "
 "Datenverarbeiter fungiert), sollten Sie daraufhin prüfen, dass Sie Ihre "
 "Verantwortlichkeiten kennen (z. B., dass Sie personenbezogene Daten schützen "
 "und bei Bedarf mit dem Verantwortlichen zusammenarbeiten)."
@@ -7527,8 +7586,8 @@ msgid ""
 "your company, not just because of GDPR but for your own company's continuity "
 "and operations point of view. You should consider the guidelines by ENISA, "
 "from 2016 to 2018, available <a href=\"https://www.enisa.europa.eu/topics/"
-"data-protection/security-of-personal-data/security-measures\" target=\"_blank"
-"\">here</a>."
+"data-protection/security-of-personal-data/security-measures\" "
+"target=\"_blank\">here</a>."
 msgstr ""
 "Im Einklang mit Art. 32 DSGVO, sollten Sie sich die Risiken der "
 "Informationssicherheit genauer anschauen, und zwar nicht nur wegen der "
@@ -7549,8 +7608,8 @@ msgid ""
 "but to be aware and continously improving. You can also get inspiration on "
 "evaluating potential risks and countermeasures from the guidelines by ENISA "
 "from 2016, 2017 and 2018, available <a href=\"https://www.enisa.europa.eu/"
-"topics/data-protection/security-of-personal-data/security-measures\" target="
-"\"_blank\">here</a>."
+"topics/data-protection/security-of-personal-data/security-measures\" "
+"target=\"_blank\">here</a>."
 msgstr ""
 "Wenn Sie bereits eine Risikoanalyse für den Bereich der "
 "Informationssicherheit durchgeführt haben, sollten Sie diese aktualisieren, "
@@ -7573,8 +7632,8 @@ msgid ""
 "exercises of business incidents occurring, audits, or certifications. You "
 "can also get some inspiration from the reports and guidelines by ENISA from "
 "2016, 2017 and 2018, available <a href=\"https://www.enisa.europa.eu/topics/"
-"data-protection/security-of-personal-data/security-measures\" target=\"_blank"
-"\">here</a>."
+"data-protection/security-of-personal-data/security-measures\" "
+"target=\"_blank\">here</a>."
 msgstr ""
 "Jede einzelne Analyse kann blinde Flecken aufweisen, vor allem wenn sie von "
 "Personen durchgeführt wird. Ziehen Sie eine Ergänzung der Analyse aus einer "
@@ -7582,8 +7641,8 @@ msgstr ""
 "Sicherheitsvorfällen, Audits oder Zertifizierungen. Sie können sich auch von "
 "den Berichten und Richtlinien der ENISA aus den Jahren 2016, 2017 und 2018 "
 "inspirieren lassen, verfügbar unter <a href=\"https://www.enisa.europa.eu/"
-"topics/data-protection/security-of-personal-data/security-measures\" target="
-"\"_blank\">hier</a>."
+"topics/data-protection/security-of-personal-data/security-measures\" "
+"target=\"_blank\">hier</a>."
 
 #: data/fit4privacy/questions.json:1115
 msgid "We review our risks periodically."
@@ -7692,6 +7751,1689 @@ msgstr ""
 "zu Informationssicherheit und Datenschutz in Ihrem Unternehmen schriftlich "
 "fixiert und Ihren Mitarbeitern bekannt?"
 
+#: data/otsecuritycheck/context-questions.json:3
+#: templates/parts/privacy_policy_part.html:87
+msgid "Name"
+msgstr "Name"
+
+#: data/otsecuritycheck/context-questions.json:13
+#: templates/otsecuritycheck/survey/finishedSurvey.html:140
+#: templates/survey/finishedSurvey.html:140
+msgid "Email"
+msgstr "Email"
+
+#: data/otsecuritycheck/context-questions.json:23
+msgid "Company name"
+msgstr ""
+
+#: data/otsecuritycheck/context-questions.json:33
+msgid "Company address (with post code and city)"
+msgstr ""
+
+#: data/otsecuritycheck/context-questions.json:43
+msgid "VAT number"
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:3
+msgid "ORGANIZATION OF INFORMATION SECURITY,INFORMATION SECURITY POLICIES"
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:4 data/otsecuritycheck/questions.json:79
+#: data/otsecuritycheck/questions.json:141
+#: data/otsecuritycheck/questions.json:203
+#: data/otsecuritycheck/questions.json:265
+#: data/otsecuritycheck/questions.json:327
+#: data/otsecuritycheck/questions.json:389
+#: data/otsecuritycheck/questions.json:464
+#: data/otsecuritycheck/questions.json:539
+#: data/otsecuritycheck/questions.json:627
+#: data/otsecuritycheck/questions.json:702
+#: data/otsecuritycheck/questions.json:764
+#: data/otsecuritycheck/questions.json:813
+#: data/otsecuritycheck/questions.json:876
+#: data/otsecuritycheck/questions.json:945
+#: data/otsecuritycheck/questions.json:1007
+#: data/otsecuritycheck/questions.json:1070
+#: data/otsecuritycheck/questions.json:1140
+#: data/otsecuritycheck/questions.json:1202
+#: data/otsecuritycheck/questions.json:1272
+#: data/otsecuritycheck/questions.json:1321
+#: data/otsecuritycheck/questions.json:1364
+#: data/otsecuritycheck/questions.json:1401
+#: data/otsecuritycheck/questions.json:1452
+#: data/otsecuritycheck/questions.json:1509
+#: data/otsecuritycheck/questions.json:1572
+#: data/otsecuritycheck/questions.json:1648
+#: data/otsecuritycheck/questions.json:1697
+msgid "L-DIH"
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:17
+msgid ""
+" Your organisation does not have ISMS or guidelines related to information "
+"security. It is essential to have not only ISMS but also include OT systems "
+"in it."
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:20
+msgid " There is no information security management system (ISMS) implemented."
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:30
+msgid ""
+" It is already good that you have ISMS (Information Security Management "
+"System) but auditing these guidelines is mandatory."
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:33
+msgid ""
+" Information security management system (ISMS) is implemented including OT "
+"systems."
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:43
+msgid ""
+" Your organization should have some security guidelines defined for ICS or "
+"OT environment, for example covering topics such as physical security, "
+"onboarding or departure of employees, etc. These should be listed and "
+"communicated to all employees. It is a good start to involve top management "
+"in the decision making related to information security and OT, as it will "
+"show a certain openness towards this topic in your organisation. However, as "
+"management and staff need to work together to manage risks related to "
+"information security and OT (both in a reactive and in a preventive way), "
+"the roles of the non-management staff need also be clearly defined and known "
+"to them. "
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:46
+msgid ""
+" Information security management system (ISMS) is implemented but OT systems "
+"are not included in it."
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:56
+msgid ""
+" Your organisation must have a core team having clearly defined "
+"responsibilities. "
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:59
+msgid ""
+" No Seggregation of Duties (SOD) in place, everyone does all the activities."
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:69
+msgid ""
+" Defining the guidelines is already good, but these must be updated and "
+"auditing on regular basis to ensure they are relevant."
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:72
+msgid " The guidelines defined have been audited at least once a year."
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:75
+msgid ""
+" Does your organization have an Information Security Management System "
+"(ISMS) in place, which includes a set of rules and practices to secure its "
+"information, including Operational Technology (OT) systems? Operational "
+"technology (OT) is hardware and software that detects or causes a change, "
+"through the direct monitoring and/or control of industrial equipment, "
+"assets, processes and events. "
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:78
+msgid "RISK MANAGEMENT"
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:92
+#: data/otsecuritycheck/questions.json:105
+msgid ""
+" Your company does not have a formal risk management guideline but you are "
+"able to manage the risks based on experience only for IT systems. It is good "
+"that you already manage risks, although in an ad-hoc manner. However, in "
+"order to ensure that the same risk is managed in the same way everytime it "
+"appears, it is good practice to define a risk management guideline, "
+"including responsibilities and ownerships, toolbox, reporting, risk "
+"mitigation approaches, etc. Also as risks of OT systems are not made aware "
+"it puts the organisation at a much larger risk. We cannot protect if we do "
+"not know. So OT systems must be included in the risk management process."
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:95
+msgid ""
+" There is no risk management guideline, but risks are managed ad-hoc, based "
+"on experience for IT systems."
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:108
+msgid ""
+" We do not have a formal guideline but we manage our identified risk using a "
+"risk register for IT systems. "
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:118
+msgid ""
+" It is already a good step for having documented a common approach to "
+"dealing with risk at organizational level, yet the next step is to actually "
+"have it implemented for both IT and OT systems."
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:121
+msgid ""
+" We have defined a risk management guideline but have not fully implemented "
+"it for OT systems."
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:131
+msgid ""
+" Proactively identifying and mitigating risks to an acceptable level "
+"demonstrates a mature approach to risk management.To further enhance your "
+"efforts, consider regular reviews and update your risk management guidelines "
+"to adapt to new threats and changes in the environment. Ensure collaboration "
+"between IT and OT teams to address any overlapping risks and share best "
+"practices. Utilize advanced monitoring tools to gain better visibility into "
+"potential risks and improve response times.Conduct regular incident response "
+"drills to ensure your team is prepared for any potential security incidents."
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:134
+msgid ""
+" We have defined and implemented a risk management guideline for both IT and "
+"OT systems. All risks are identified, proactively treated and mitigated to "
+"an acceptable level."
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:137
+msgid ""
+" Did your organisation define and implement a guideline for risk management "
+"including OT systems?"
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:140
+msgid "HUMAN RESOURCES"
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:154
+#: data/otsecuritycheck/questions.json:167
+msgid ""
+" Whenever rules change, or periodically at a predefined date, awareness "
+"sessions should be offered to employees on topics related to security "
+"guidelines and procedures. This is because security is rarely the aim of "
+"their work, and how to exchange data and manage it is at the core of more "
+"and more organization. This awareness also helps them spot the abnormalities."
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:157
+#, fuzzy
+#| msgid "We do not really have one."
+msgid " We do not have trainings. "
+msgstr "Wir haben nicht wirklich eine."
+
+#: data/otsecuritycheck/questions.json:170
+msgid " There is no regular OT specific awareness training or assessments. "
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:180
+msgid ""
+" It is good that awareness sessions are offered to employees yet from time "
+"to time the organization should check if rules are applied, and if not when "
+"and why. Apart from training, newsletters, emails and internal websites can "
+"be used to share informative content,practical tips, and real-world examples "
+"of security incidents. Refresher trainings can also be provided on a defined "
+"frequency, at least annually to ensure and promote security aware culture. "
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:183
+msgid ""
+" The training for OT security is in place, but there is no assessment to "
+"verify if this knowledge is used or not."
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:193
+msgid ""
+" It is good that awareness sessions are offered to employees yet from time "
+"to time the organization should check if rules are applied, and if not, when "
+"and why. Apart from training, Newsletters, emails, and internal websites can "
+"be used to share informative content, practical tips, and real-world "
+"examples of security incidents. Refresher trainings can also be provided on "
+"a defined frequency, at least annually to ensure and promote security aware "
+"culture."
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:196
+msgid " Both OT Awareness training and assessments in place. "
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:199
+msgid ""
+" Are all employees regularly provided with OT specific awareness (simulation "
+"exercises, theoretical courses)? "
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:202
+msgid "ASSET MANAGEMENT"
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:216
+msgid ""
+" In order to be in control of your risks,knowing your organisation's "
+"computing and OT assets is a mandatory step. You should, moreover, have an "
+"updated list of these assets at all times. The criteria to label and "
+"classify them is equally important, as the protection of these assets are "
+"based on the classification."
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:219
+msgid " Asset inventory and management process only for IT assets."
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:229
+#: data/otsecuritycheck/questions.json:242
+msgid ""
+" It is good that you already started listing your organisation's computing "
+"assets, yet it is essential that you complete the list and also that you "
+"keep it updated. Having a guideline helps in ensuring all the employees have "
+"the same understanding on the process and the knowledge is not lost as "
+"resources leave."
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:232
+msgid ""
+" No formal procedure or guideline, but asset details are captured and "
+"classified on an ad hoc basis for IT assets."
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:245
+msgid ""
+" An inventory of all assets including OT systems was conducted, but not "
+"completed (updated)."
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:255
+msgid ""
+" It is good that the critical assets are captured but it is advised to "
+"capture details of all assets. As threat can propogate from one tier to "
+"another. A detailed asset inventory must also include attributes that "
+"support cybersecurity activities (for example, asset category, backup "
+"locations and frequencies, storage locations, asset owner, cybersecurity "
+"requirements)."
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:258
+msgid ""
+" IT and OT assets that are related to critical service are inventoried with "
+"labelling and classification."
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:261
+msgid ""
+" Does your organization maintain a comprehensive list of all its assets (OT "
+"and IT), while also incorporating asset classification and labeling into the "
+"management process? "
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:264
+msgid "PHYSICAL SECURITY"
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:278
+msgid ""
+" You should definitely consider implementing controls related to the access "
+"to the premises where your company is conducting its business. This is "
+"because of the risk of having intruders who can exfiltrate or damage "
+"business assets, or simply cause disruption of your operations without the "
+"possibility to know who it was. Consider first the areas of the most "
+"criticality, do not disconsider the less important areas, and once some "
+"rules are defined, make them known to the staff and check their "
+"implementation."
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:281
+msgid ""
+" There are no access controls implemented to manage access to the office "
+"building, server room."
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:291
+msgid ""
+" It is good that some controls exist around the access to critical areas "
+"like the server room, yet data and assets exist outside of those areas so "
+"you should also impose rules on the physical security of all your compamy's "
+"facilities. Such rules should be known, implemented, and periodically "
+"checked."
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:294
+msgid " Access controls exist at least for accessing the server room. "
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:304
+msgid ""
+" Its good that the practices exist on ad hoc or need basis, but these must "
+"be regular practices for better risk management. "
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:307
+msgid ""
+" Access control is implemented depending on the need, without any defined "
+"procedures or controls. "
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:317
+msgid ""
+" The audit, or verification of the application of rules related to physical "
+"security, is essential to understand the actual risks in practice for the "
+"assets of your company. "
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:320
+msgid ""
+" Access controls are implemented for accessing any access point in the "
+"facility."
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:323
+msgid ""
+" Do you have access control measures in place for all physical access points "
+"to your production facilities, server room, archive room or facility in "
+"general?"
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:326
+#: data/otsecuritycheck/questions.json:388
+#: data/otsecuritycheck/questions.json:463
+#: data/otsecuritycheck/questions.json:538
+#: data/otsecuritycheck/questions.json:626
+#: data/otsecuritycheck/questions.json:701
+#: data/otsecuritycheck/questions.json:763
+msgid "OPERATIONAL SECURITY"
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:340
+msgid ""
+" Planning resources (people availability or computing resources "
+"availability) is a key aspect when dealing with business continuity "
+"planning. The lack of resources can cause disruption to the operation of "
+"your service, and your company should have a business continuity planning "
+"approach where capacity planning (needed resources, resource usage "
+"monitoring, etc) is considered. Also formally documenting this as a "
+"guideline ensures that all the resources have the same understanding and no "
+"information is lost. "
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:343
+msgid ""
+" We do not have a formal planning for resources but manage the needs on ad "
+"hoc basis. "
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:353
+msgid ""
+" Planning resources (people availability or computing resources "
+"availability) is a key aspect when dealing with business continuity "
+"planning. The lack of resources can cause disruption to the operation of "
+"your service, and your company should have a business continuity planning "
+"approach where capacity planning (needed resources, resource usage "
+"monitoring, etc)  is considered. Also formally documenting this as a "
+"guideline ensures all the resources have the same understanding and no "
+"information is lost."
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:356
+msgid ""
+" We have capacity planning in place but no emergency power included. We do "
+"not have the need. "
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:366
+msgid " "
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:369
+msgid ""
+" We have capacity planning in place and this includes emergency power "
+"backup. "
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:379
+msgid ""
+" Your organisation must ensure the communication of its business continuity "
+"plan as its important for the resources to be aware of the same."
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:382
+#: data/otsecuritycheck/questions.json:1357
+msgid " I'm not sure. "
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:385
+msgid " Does your capacity planning include emergency power backup?"
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:402
+msgid ""
+" It is good that your team has the knowledge and expertise but it is "
+"important for all to have the same understanding,hence formalising a "
+"guideline is needed. As part of your malware management procedure or "
+"process, you should consider all IT and OT assets in your company and to "
+"what extent anti-malware software should be deployed on all of them."
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:405
+msgid ""
+" Malware management guideline is not established but by practice and "
+"experience team performs malware management for IT systems."
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:415
+msgid ""
+" It is good that you have a malware management policy or procedure in place, "
+"yet it is important to regularly review it so that practices imposed by it "
+"stay up to date with the evolution of malware. For systems where anti-"
+"malware software is not compatible, we should have countermeasures "
+"implemented. A denial of service attack detection system may be put in place."
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:418
+msgid " Malware management guideline is established."
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:428
+msgid ""
+" Consider both IT and OT systems and plan deployment of anti malware "
+"softwares.For systems where anti-malware software is not compatible,we "
+"should have countermeasures implemented.Using a firewall with deep packet "
+"inspection capability that can monitor and block advanced threats like "
+"malware."
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:431
+msgid " Anti-Malware software is not deployed or deployed only in IT systems."
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:441
+msgid ""
+"To further enhance your security posture,educate users on safe practices to "
+"avoid malware infections,such as not opening suspicious emails or "
+"downloading unverified software.Have a clear incident response plan in place "
+"for dealing with malware infections swiftly and effectively."
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:444
+msgid " Anti-malware software deployed on all of our systems both IT and OT."
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:454
+msgid ""
+" To further strengthen your approach, consider to incorporate the latest "
+"threat intelligence to stay ahead of emerging malware trends. Continuously "
+"train employees on recognizing and responding to malware threats and educate "
+"users on safe practices to avoid malware infections."
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:457
+msgid ""
+" Malware management guidelines are reviewed and updated at least once a year."
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:460
+msgid ""
+" Do you have a malware management guideline indicating how malware should be "
+"managed withing your company for OT systems?"
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:477
+msgid ""
+" It is vital for the continuity of your service operations, that there is a "
+"strong management of backups in place, including what data should be backed "
+"up,with what frequency, where should backups be kept, if any third-parties "
+"should be involved, how a backup should be used in case of an incident, "
+"etc). This should be formalised in a backup management guideline, "
+"communicated to the relevant staff, and applied at company-wide level for "
+"both IT and OT systems."
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:480
+msgid " There is no formal backup guideline in place."
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:490
+msgid ""
+" You went a step forward already to have defined a backup management "
+"guideline, yet it is essential that you verify to what extent staff follows "
+"such a guideline, and if the guideline is good enough with respect to what "
+"your company needs. This is done best by testing."
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:493
+msgid ""
+" A backup guideline has been defined and reviewed on regular basis including "
+"OT systems."
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:503
+msgid ""
+" It is good that the critical IT systems are backed up, but it is also "
+"important to include other systems and OT systems. Establish backup systems "
+"and processes to backup relevant OT systems, state, data, configuration "
+"files, programs at regular intervals to support recovery to a stable state."
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:506
+msgid " Backups are taken only for Critical IT systems."
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:516
+msgid ""
+" It is good that backup management is implemented for OT systems, but it "
+"must be regularly tested to ensure staff are able to follow the guideline "
+"and the results are as expected."
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:519
+msgid " Implemented for OT systems, but regular testing is not conducted."
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:529
+msgid ""
+" To further strengthen your backup strategy, consider storing backups in a "
+"secure offsite location to protect against physical disasters.Encrypt "
+"backups to safeguard sensitive data from unauthorized access. Maintain "
+"detailed documentation of backup procedures and schedules for easy reference "
+"and compliance."
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:532
+msgid ""
+" Implemented for both IT and OT systems,backups are monitored and tested."
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:535
+msgid ""
+" Did your organisation define and implement a guideline for backup "
+"management including OT systems?"
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:552
+msgid ""
+" Information backup involves creating and storing copies of information, "
+"software and system images in a secure location, separate from the original "
+"source. The backup copies should be protected from unauthorized access, "
+"modification or deletion, and should be tested periodically to verify their "
+"usability and completeness. Physical and environmental protection of backups "
+"is crucial to ensure the integrity and availability of the data. If backups "
+"are compromised due to environmental factors or physical threats, it defeats "
+"the purpose of having them in the first place. To ensure this we need "
+"controls in place."
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:555
+msgid ""
+" No, measures or controls have been implemented to ensure security of backup."
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:568
+msgid ""
+" Controls for backup management in place to ensure availability and "
+"integrity of the backup for both IT and OT systems."
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:578
+msgid ""
+" It is good that controls are present for IT systems but we must also ensure "
+"OT systems are included to minimize the risk of loss of data."
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:581
+msgid ""
+" Controls for backup management in place to ensure availability and "
+"integrity of the backup for only IT systems."
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:594
+msgid " Stored in an offsite location."
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:607
+msgid " Stored online using cloud solutions."
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:620
+msgid " Encryption of backup in place."
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:623
+msgid ""
+" Are controls and measures been implemented to ensure backups are stored "
+"securely including OT systems?"
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:640
+msgid ""
+" It is important to consider that there has to be some rules in place "
+"related to what events should be logged in the infrastructure and how the "
+"logs should be monitored, in order to discover incidents for both IT and OT "
+"systems. These rules, related to logging and monitoring, should be "
+"documented in a guideline or procedure whose implementation should be "
+"verified periodically."
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:643
+#: data/otsecuritycheck/questions.json:718
+msgid " No logging and monitoring guideline defined."
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:653
+msgid ""
+" It is good rules exist in practice and formalised guideline exists with "
+"respect to logging and monitoring for IT and OT systems. Yet, the company "
+"should check to what extent such guideline or procedure are followed by "
+"employees. Also consider performing audits."
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:656
+#: data/otsecuritycheck/questions.json:744
+msgid ""
+" Guideline is defined and implemented for logging and monitoring of all "
+"systems (IT and OT)."
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:666
+msgid ""
+" Access, storage and deletion of data or systems must be tracked not just "
+"for IT systems but also for OT systems."
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:669
+msgid ""
+" Access, storage and deletion of data or systems are tracked only for IT "
+"systems."
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:682
+#, fuzzy
+#| msgid "We review our risks periodically."
+msgid " Review of guidelines done periodically."
+msgstr "Wir führen regelmäßige Risikoprüfungen durch."
+
+#: data/otsecuritycheck/questions.json:695
+msgid ""
+"Audit log is retained for a defined period of time and reviewed "
+"periodically. "
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:698
+msgid ""
+" Do you have a logging and monitoring guideline defined and implemented for "
+"OT systems? "
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:715
+msgid ""
+" There must be a guideline about vulneranility identification and management "
+"so that they would be clear to everyone and understood in the same way. "
+"Also, the company should check to what extent such guideline or procedure "
+"are followed by employees. This must cover both IT and OT systems."
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:728
+msgid ""
+" It is good that in practice identification and management of vulnerability "
+"is performed on IT systems, but with the increasing convergence of IT and OT "
+"systems we must ensure we include OT systems as well. If not active "
+"scanning, we must perform passive scanning to ensure we identify "
+"vulnerabilities. Along with identification, maintaining the list, "
+"remediating and establish mechanisms and maintain to receive and respond to "
+"reports from the public or external parties of potential vulnerabilities "
+"related to the organization’s IT and OT assets, such as public-facing "
+"websites or mobile applications."
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:731
+msgid " Guideline is defined and implemented only for IT systems. "
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:754
+msgid ""
+" There must be a guideline about vulneranility identification and management "
+"so that they would be clear to everyone and understood in the same way. Also,"
+"the company must ensure that this guidelines is communicated to all the "
+"employees and check to what extent such guideline or procedure are followed "
+"by employees. This must cover both IT and OT systems."
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:757
+msgid " I'm not sure."
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:760
+msgid ""
+" Do you have a vulnerability management guideline defined and implemented "
+"for OT systems?"
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:777
+#: data/otsecuritycheck/questions.json:790
+msgid ""
+" For a cloud service provider, it is essential to be able to provide "
+"assurance that client data is only accessible to those who have access and "
+"are authorised to use that data. This can become difficult to ensure "
+"especially in the case when systems and resources are potentially shared by "
+"different clients (e.g., different virtual machines hosted onto the same "
+"physical servver incur the risk of data leasks). For this purpose, there "
+"should be specific guidelines and procedures to ensure that data of "
+"different clients stays segregated when shared resources are used. The "
+"application of such procedures and guidelines should be periodically "
+"checked. Having procedures and guidelines in place for this purpose is "
+"essential to handle the issues in the same way every time."
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:780
+msgid ""
+" There is no specific guideline to ensure clients' data segregation when "
+"shared resources are implemented."
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:793
+msgid ""
+" Whenever more than one client shares a resource, there is a guideline to "
+"ensure data segregation. An audit is realized at least once a year to ensure "
+"that data segregation is well implemented."
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:806
+#, fuzzy
+#| msgid "We do not know if we do."
+msgid " We do not use cloud."
+msgstr "Wir wissen nicht, ob wir das tun."
+
+#: data/otsecuritycheck/questions.json:809
+msgid ""
+" When sharing resources with more than one client, do you ensure that data "
+"is well segregated including Cloud?"
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:812
+#: data/otsecuritycheck/questions.json:875
+#: data/otsecuritycheck/questions.json:944
+#: data/otsecuritycheck/questions.json:1006
+msgid "IDENTITY, AUTHENTICATION, AND ACCESS CONTROL MANAGEMENT"
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:826
+msgid ""
+" Even if some critical IT systems are part of a centralised access "
+"management in your company, remember that securing your infrastrcture "
+"depends on the weakest link. So it would be recommended to have as many "
+"systems as possible part of your centralised access management including OT "
+"systems."
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:829
+msgid " Access to IT systems are centralized."
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:839
+msgid ""
+" Descentralising access management makes it difficult to have a view over "
+"access-related incidents,as well it makes it difficult to update permissions "
+"of a role,or adding more roles into the organisation in the same way across "
+"different access areas.It would be recommented to have a centralised system "
+"to manage access across the whole organisation.In situations where it is not "
+"possible ensure controls are put in place to ensure right access is given to "
+"right resources.When typical IT IAM controls cannot be implemented "
+"organizations should look for opportunities to use monitoring and alerting "
+"capabilities to identify potential threats.Restrict OT user priveleges to "
+"only those that are required to perform function."
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:842
+msgid " Access to OT systems are de centralised managed by  internal teams."
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:849
+msgid ""
+" Access to all systems (IT and OT) and applications of the company is "
+"centralized and managed by a dedicated team."
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:856
+msgid "Basic access control is in place."
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:866
+msgid ""
+"By implementing basic access control measures, manufacturing companies can "
+"create a safer, more secure, and efficient working environment, ultimately "
+"protecting their assets and ensuring smooth operations. "
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:869
+msgid "Basic access control is not in place."
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:872
+msgid "Does your organization have access management in place?"
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:889
+#: data/otsecuritycheck/questions.json:922
+msgid ""
+" If authentication information that is supposed to be secret, is shared, it "
+"is the same as if this information would be public and hence access would be "
+"free. In order to control access to information, secrets should be used, and "
+"not shared among employees."
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:892
+msgid ""
+" To facilitate users access to systems and applications, passwords are not "
+"required for authentication."
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:902
+msgid ""
+" Access to data should not be dictated by whether a system or application is "
+"critical but rather by the need-to-know basis. Therefore, it should be "
+"governed by secret authentication information, that can be given or set up "
+"for the employees who need it."
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:905
+msgid ""
+" Some systems and applications within our LAN are not critical, hence users "
+"can connect to them without providing any secret code or phrase."
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:912
+msgid ""
+" Authentication of the company’s assets is only possible by providing a "
+"secret authentication information."
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:925
+msgid ""
+" For some applications and systems secret authentication, information is "
+"shared between several users."
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:935
+msgid ""
+" Multifactor authentication is an invaluable way to safeguard access to "
+"sensitive data from sometimes overlooked points of authentication. So "
+"wherever feasible MFA must be implemented in scenarios where there is "
+"limitation compensatory controls must be applied.As a compensating control, "
+"physical access restrictions may sufficiently represent one authentication "
+"factor, provided that the system is not remotely accessible."
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:938
+msgid ""
+" MFA is required to remotely connect to our company’s network, applications "
+"exposed to internet and all administrative access."
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:941
+msgid ""
+" Does access to your company’s infrastructure, systems, and applications "
+"require secret authentication?"
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:958
+msgid ""
+" It is essential to direct your organisation to use password best practices, "
+"instead of old simple passwords that do not change at all. In order to have "
+"the same password best practices applied, it is also recommended that you "
+"fomalise minimal requirements in a password policy, that you verify that "
+"this password policy is applied,and that the policy would be reviewed from "
+"time to time to require better password constraints in line with new "
+"technologies. Organizations are encouraged to change the default password on "
+"OT equipment to make it more difficult for an adversary to guess the "
+"password. Once changed, the password needs to be made available to those who "
+"need to know using a password management tool that is secure."
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:961
+msgid ""
+" Not all our systems and applications are configured with password best "
+"practices."
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:971
+msgid ""
+" It is good that guidelines for passwords are followed in IT environment but "
+"it is essential to include OT systems as well. The use of weak passwords are "
+"more riskier and can cause more damage than in IT environment."
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:974
+msgid " Only Systems in IT are checked for complaince on password guideline."
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:984
+msgid ""
+" You should set up an authentication mechanism towards any part of your "
+"system or service. In scenarios where there is an inability of OT software "
+"to conform to a strong password policy, we have enabled access and activity "
+"logs on the systems to be managed. Ensuring hourly identification of users "
+"who have accessed the operating console, with fingerprint identification, "
+"video surveillance of the operating room, central account control console."
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:987
+msgid " Password is not required to connect to some applications and systems."
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:997
+msgid ""
+" It is good that the guideline is established but organizations may also "
+"need to consider procedures to periodically change passwords when a password "
+"is compromised or an individual with access leaves the organization."
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:1000
+msgid ""
+" We have defined a password guideline based on best practices, that is "
+"implemented across all our applications and systems both IT and OT."
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:1003
+msgid ""
+" Did you implement across your infrastructure OT and IT systems a guideline "
+"on passwords (min length, complexity, etc.) ?"
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:1017
+msgid ""
+" Maintenance engineers connect using tools to perform maintenance or updates."
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:1027
+msgid ""
+" Your organisation must ensure vendors have their own restricted users for "
+"the system accessibility. They use VPN to connect remotely and 2FA. Sessions "
+"and remote connections are provided via jump servers, on-demand basis and "
+"monitored and terminated when remote maintenance is completed. This allows "
+"the recording of keyboard entries and the sessions themselves."
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:1030
+msgid " No remote connections."
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:1040
+msgid ""
+" Guidelines related to maintenance must be shared so that employees are "
+"aware of the guidelines."
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:1043
+msgid "I'm not sure"
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:1053
+msgid ""
+" The usage of remote assistance tools must be coupled with security in mind. "
+"Strong authentication like MFA and secure protocols must be used. Implement "
+"strict data privacy policies to protect sensitive information during remote "
+"sessions. "
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:1056
+msgid ""
+"TeamViewer, AnyDesk, Splashtop, BeyondTrust Remote Support, and other remote "
+"assistance tools are used to improve our maintenance procedure."
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:1063
+msgid " We use secure VPN (Virtual Private Network) connections."
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:1066
+msgid ""
+"Do you have users connecting remotely to your OT systems for maintenance or "
+"better operations?"
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:1069
+msgid "CRYPTOGRAPHY AND KEY MANAGEMENT"
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:1083
+msgid ""
+" In order to harmonise the use of encryption and key management across the "
+"company, it is recommended that practices that should be implemented by "
+"everyone should be formalised in a guideline on this topic. It is strongly "
+"recommended that your company uses encryption for data at rest, especially "
+"for sensitive data that has a higher risk for being lost or stolen."
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:1086
+msgid ""
+" No guidelines have been defined for the use of encryption and key "
+"management. "
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:1096
+msgid ""
+" It is good that some policies and guidelines exist related to the use of "
+"encryption and key management, yet your company should verify that that "
+"policy or guideline is respected and is also reviewed, preferably on a "
+"regular basis. It is strongly recommended that your company uses encryption "
+"for data at rest, especially for sensitive data that has a higher risk for "
+"being lost or stolen."
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:1099
+msgid " We have guidelines about use of encryption and key management. "
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:1109
+msgid ""
+" As much as possible, it is recommended to avoid data transfers in clear, "
+"especially when the data being exchanged is sensitive. You should consider a "
+"solution that encrypts data in motion (transit). "
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:1112
+msgid " Data is encrypted at rest."
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:1119
+msgid " Data is encrypted at transit. "
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:1126
+msgid " Guidelines are reviewed at least once a year. "
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:1133
+msgid ""
+" We have implemented an encryption solution that is used by all employees to "
+"transfer sensible data within and outside our networks. "
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:1136
+msgid ""
+" Do you have guidelines to secure your sensitive information in IT and OT "
+"systems? "
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:1139
+#: data/otsecuritycheck/questions.json:1201
+msgid "COMMUNICATION SECURITY"
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:1153
+msgid ""
+" It is a good practice to have a network topology documentation that is kept "
+"up to date, as it is essential to have a view over all network components "
+"and how they are connected in order to understand how they are and how they "
+"should be protected. This must include both IT and OT network."
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:1156
+msgid ""
+" There is no network topology documentation of our infrastructure available. "
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:1166
+msgid ""
+" It is good that you started to build a network topology for IT environment "
+"yet it is essential to include OT environment as well. Just OT or just IT "
+"will not suffice as you are able to protect what you know, having complete "
+"visibility plays a key role. "
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:1169
+msgid " Network topology of IT network is available."
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:1179
+msgid ""
+" It is good that you started to build a network topology for OT environment "
+"yet it is essential to include IT environment as well. Just OT or just IT "
+"will not suffice as you are able to protect what you know having complete "
+"visibility plays a key role. "
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:1182
+msgid " Network topology of OT network is available. "
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:1192
+msgid ""
+" Having the network topology covering both IT and OT assets would not "
+"suffice, it is essential that it is kept up to date so that it would "
+"represent your topology at every moment in time. "
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:1195
+msgid ""
+" A documented topology of our infrastructure exists but has not been updated "
+"for some time. "
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:1198
+msgid ""
+" Do you have an updated network topology documentation of your OT "
+"infrastructure? "
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:1215
+#: data/otsecuritycheck/questions.json:1228
+msgid ""
+"It is important to have a guideline that gives direction to all and ensure "
+"everyone has the same level of understanding with respect to network "
+"security. It is important to seggregrate OT and IT environment not just "
+"logically but physical as well. Segmentation restricts how far an attack can "
+"spread within the organization. Network segmentation enhances security, "
+"performance, and compliance."
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:1218
+msgid "No network seggregation."
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:1231
+msgid " Logical architecture segregation."
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:1238
+msgid " Not just logical but we also have segregation in physical resources."
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:1248
+msgid ""
+" It is good that the communication is only on certain ports, but it would be "
+"recommended to ensure the communication is uni directional."
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:1251
+msgid " We have unidirectional communication between OT network to IT network."
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:1258
+msgid ""
+" Our IT network communicates with OT network but we have only specific ports "
+"used."
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:1265
+msgid " I do not know if OT communicates with IT."
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:1268
+msgid ""
+" Does your company architecture have segregation between OT network and "
+"corporate networks?"
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:1271
+#: data/otsecuritycheck/questions.json:1320
+msgid "CHANGE AND CONFIGURATION MANAGEMENT"
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:1285
+msgid ""
+" It is essential that all changes to your all OT and IT systems and "
+"applications be tested before they are applied to production, and also "
+"approved by management in order to mitigate the risk that unplanned changes "
+"are applied to production. "
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:1288
+msgid ""
+" Changes are not tested before they are released into a production "
+"environment. "
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:1298
+msgid " All changes despite of testing must be approved by the management. "
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:1301
+msgid ""
+" We test every single change before applying them in any production "
+"environment ( IT and OT). "
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:1311
+msgid ""
+" It is great that changes are always tested and approved by management, but "
+"it would be even better that they were reviewed after production to "
+"understand their impact and effects. Audits will help identify if changes "
+"were performed without formal approval or testing. "
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:1314
+#, fuzzy
+#| msgid "done daily: backups are made at least once daily"
+msgid " Implemented changes are audited at least once a year. "
+msgstr "täglich erledigt: Backups werden jeden Tag oder öfter erstellt"
+
+#: data/otsecuritycheck/questions.json:1317
+msgid ""
+" Do you always test all changes to your OT systems and applications before "
+"releasing them in a production environment? "
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:1334
+msgid ""
+" Your change management procedure should consider the performance of a risk "
+"assessment in order to understand the impact of the change and its priority "
+"be it in IT or OT system. "
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:1337
+msgid ""
+" No risk assessment realized as part of the change management procedure for "
+"OT systems. "
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:1344
+msgid ""
+" Risk assessment is realised in our change procedure for OT systems, which "
+"is eventually considered in defining change priority. "
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:1354
+msgid ""
+" The guidelines related to change procedure needs to be shared with all. "
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:1360
+msgid ""
+" As part of the change procedure in your organization for OT systems, do you "
+"realize a risk assessment to define the priority of your changes? "
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:1363
+msgid "DEVELOPMENT OF INFORMATION SYSTEMS"
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:1374
+msgid " No software developments in OT, only in IT environment."
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:1384
+msgid ""
+" Organisations must have seggregated environments to  help maintain "
+"stability and security. Following best practices and regular reviews ensure "
+"code aligns with security requirements. In case of third parties it must be "
+"ensured through contracts."
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:1387
+msgid " We perform automations using inhouse expertise or third party."
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:1394
+msgid ""
+" We ensure both environment and the libraries used in scripts are secure by "
+"restricting access , audit logs, backups. For libraries we check the source "
+"is trusted and regular updates and reviews are performed. "
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:1397
+msgid ""
+" In your organisation, do you perform development in Operational Technology "
+"(OT) systems?"
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:1400
+msgid "PROCUREMENT MANAGEMENT"
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:1414
+msgid ""
+" You shouldn't rely on your suppliers to come back to you on risks that have "
+"been identified(if they have identified them at all),but rather that your "
+"organisation takes control of the periodicy of risk assessments that include "
+"your suppliers.Like this,the necessary measures to mitigate such risks would "
+"be triggered by you,at your organisation's pace."
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:1417
+msgid ""
+" Our suppliers inform us when they identified risks that could affect any of "
+"our systems and services."
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:1424
+msgid ""
+" We have regular meetings with our suppliers to review the agreed SLA and "
+"proactively address any foreseen risks."
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:1431
+msgid ""
+" The selection of suppliers and other third parties includes consideration "
+"of their cybersecurity qualifications, at least in an ad hoc manner."
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:1438
+msgid ""
+" The selection of products and services includes consideration of their "
+"cybersecurity capabilities, at least in an ad hoc manner."
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:1445
+msgid ""
+" Selection criteria for higher priority assets include evaluation of bills "
+"of material for key asset elements, such as hardware and software."
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:1448
+msgid ""
+" Do you realize periodic risk assessment for suppliers, to proactively "
+"implement mitigation controls?"
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:1451
+msgid "INCIDENT MANAGEMENT"
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:1465
+msgid ""
+" It is highly recommended that you have procedures or guidelines for how to "
+"react quickly in the face of cybersecurity incidents, data breaches or "
+"disasters. This is because often in situations like these it is vital to act "
+"quickly and in the correct way in order to minimise damage. The guideline "
+"must include both IT and OT environment. The formal guideline must be "
+"regularly audited and reviewed. Maintaining an incident repository helps in "
+"better manage the incidents."
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:1468
+msgid " Incident management guideline is not defined."
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:1478
+msgid ""
+" It is good that incident management procedures are in place for IT "
+"environment, but these should be verified that they are applicable and up to "
+"date and including OT environment, as an incident in one environment can "
+"affect the other. The formal guideline is good but these must be regularly "
+"audited and reviewed. Maintaining an incident repository helps in better "
+"manage the incidents."
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:1481
+msgid ""
+" Incident management guideline is defined and implemented for IT systems."
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:1488
+msgid ""
+" Incident management guideline is defined and implemented for both IT and OT "
+"systems."
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:1495
+msgid ""
+" Guidelines are audited at least once a year to verify their compliance."
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:1502
+msgid ""
+" A repository is maintained where cybersecurity events and incidents are "
+"documented and tracked to closure."
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:1505
+msgid ""
+" Does your company have guidelines for dealing with cyber incidents, "
+"personal data breaches, or sudden events (flood, fire, crisis, etc.)?"
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:1508
+msgid "BUSINESS CONTINUITY"
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:1522
+msgid ""
+" It is essential to put in place a business continuity plan and guidelines, "
+"in order to mitigate the effects of disruptions on your operations."
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:1525
+msgid " No business continuity guideline or implementation in place."
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:1535
+msgid ""
+" It is good that you have set up a business continuity guideline and plan "
+"for IT systems, but with the convergence of IT and OT today, it is important "
+"that OT systems are also included. Any disruption in the OT environment can "
+"have very high impact on the entire business. Periodical tests should be "
+"performed in this respect to simulate reaction to a disaster, and the "
+"ensuing report should be shared with the management.The main function of a "
+"business impact analysis (BIA) is to help understand the consequences of a "
+"disruption to the operations of your company, and to help gather data that "
+"is essential to develop ways to recover from the incident/disruption. It is "
+"essential to have BIAs as part of your business continuity planning."
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:1538
+msgid ""
+" Clearly defined guideline and implementation of business continuity for IT "
+"systems."
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:1545
+msgid ""
+" Clearly defined guideline and implementation of business continuity for IT "
+"and OT systems."
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:1555
+msgid ""
+" It is good that Business continuity tests are performed but test results "
+"and reports must be shared with the management."
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:1558
+msgid ""
+" Business continuity tests and exercises are performed including OT "
+"environment."
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:1565
+msgid " Test results and a reports are shared with the management."
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:1568
+msgid ""
+" Did you define and implement Business Continuity process for OT systems?"
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:1571
+msgid "COMPLIANCE"
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:1585
+msgid ""
+" Given the quickly changing landscape of regulations and legal requirements "
+"that are imposed on businesses that use IT and new technologies like OT, it "
+"becomes essential to have a common view at organisation level across as many "
+"of these requirements as possible by keeping a common list or registry of "
+"such requirements, and regularly updating it. Establishing a guideline on "
+"preparation and conduct of internal audit along with regularly or annually "
+"performing audit is key to identify weaknesses. "
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:1588
+msgid ""
+" No centralised registry available, but each business or operation unit "
+"ensures compliance with any legal and regulatory requirements."
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:1598
+msgid ""
+" To address the compliance challenges in your OT systems, start with a "
+"thorough audit of your current OT systems to identify gaps in compliance. "
+"Create a comprehensive compliance framework that aligns with relevant "
+"standards. Regularly review and update your compliance framework and "
+"security controls to adapt to new threats and changes in regulations. Ensure "
+"these responsibilities are assigned to relevant resources. "
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:1601
+msgid " We lack clarity in terms of compliance when it comes to OT systems. "
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:1608
+msgid " We are NIS2 compliant."
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:1615
+msgid ""
+" We have a well defined guidelines for preparation and conduct of internal "
+"audit annually. The results of the audit are shared with the stakeholders "
+"and tracked to closure."
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:1625
+msgid ""
+" Auditing your internal processes and systems, especially when done "
+"internally, can raise flags, identify weaknesses or flaws,  and help find "
+"solutions to organisational processes or help better manage assets. This can "
+"be done with low costs and without any reputation exposure. You should "
+"consider having internal audits on an yearly basis so that weaknesses and "
+"flaws found in one cycle, could be mitigated (or at least having their "
+"mitigation followed) in the next cycle."
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:1628
+msgid " Our systems and processes have not been audited for the past 2 years. "
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:1638
+msgid ""
+" If you have outsourced the audit of your systems (IT and OT) and controls "
+"to a third-party, you should also check that these audits happen and render "
+"value for you (e.g., you receive reports that are seen by your management), "
+"as for any service provided by an external party."
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:1641
+msgid ""
+" We have outsourced auditing to a third party for both IT and OT systems."
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:1644
+msgid ""
+" In your organisation, how do you identify and track relevant compliance "
+"requirements for OT systems? "
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:1647
+msgid "MAINTENANCE"
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:1661
+msgid ""
+" Your organization should have some guidelines defined for ICS or OT "
+"environment undergoing maintenance,for example covering topics any "
+"maintenance or upgrade must meet the security requirements of the systems "
+"zone.It must be performed and logged with approved controlled tools "
+"regularly.Terminate session and network connections when non-local "
+"maintenance is completed.Strong authentication must be established for these "
+"users."
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:1664
+msgid ""
+" We do not have guidelines for maintenance and diagonostic activities of OT "
+"systems."
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:1674
+msgid ""
+" Having guidelines and using only approved tools for non-local maintenance "
+"and diagnostic activities is a crucial step in ensuring compliance and "
+"security. To further enhance your approach, you might consider regularly "
+"reviewing and updating guidelines,this ensures that your guidelines are up-"
+"to-date with the latest industry standards and regulatory requirements. "
+"Continuously train your personnel on these guidelines and the proper use of "
+"approved tools.Implement regular monitoring and auditing processes to ensure "
+"adherence to the guidelines.Develop a clear incident response plan for any "
+"issues that arise during non-local maintenance activities"
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:1677
+msgid ""
+" We have guidelines for remote maintenance and diagnostic activities of OT "
+"systems, using only approved tools. These guidelines are audited annually to "
+"ensure compliance. "
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:1687
+msgid ""
+" To begin with having a guideline for maintenance and diagonostic tool is "
+"good, but to enhance your approach, you might consider regularly reviewing "
+"and updating guidelines, this ensures that your guidelines are up-to-date "
+"with the latest industry standards and regulatory requirements. Continuously "
+"train your personnel on these guidelines and the proper use of approved "
+"tools. Implement regular monitoring and auditing processes to ensure "
+"adherence to the guidelines. Develop a clear incident response plan for any "
+"issues that arise during non-local maintenance activities. "
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:1690
+msgid ""
+" We have guidelines for maintenance and diagonostic activities written but "
+"not updated at since a year. "
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:1693
+msgid ""
+" In the company, do you have guidelines for maintenance related to  OT "
+"systems? "
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:1696
+msgid "PRIVACY BY DESIGN"
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:1707
+msgid ""
+" We have guidelines in place to ensure safe handling of Personally "
+"Identifiable Information (PII) data."
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:1714
+msgid ""
+" No we do not need, as we do not collect Personally Identifiable Information "
+"(PII) data."
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:1724
+msgid ""
+" Handling personally identifiable information (PII) is critical for data "
+"privacy and compliance. Guidelines regarding the collection of PII "
+"(Personally Identifiable Information) data and its management must be shared "
+"with all employees."
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:1727
+msgid ""
+" We collect Personally Identifiable Information (PII) but im not sure of the "
+"process to handle the data."
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:1734
+msgid "Not Applicable. "
+msgstr ""
+
+#: data/otsecuritycheck/questions.json:1737
+msgid ""
+" Do you have personally identifiable information (PII), how do you protect "
+"them?"
+msgstr ""
+
 #: stats/forms.py:9
 msgid "Start date"
 msgstr "Startdatum"
@@ -7732,36 +9474,38 @@ msgstr "Wird überprüft"
 msgid "Finished"
 msgstr "Beendet"
 
-#: survey/forms.py:65
+#: survey/forms.py:73
 msgid "You need to choose at least one answer"
 msgstr "Sie müssen mindestens eine Antwort auswählen"
 
-#: survey/forms.py:106 survey/forms.py:181
+#: survey/forms.py:112 survey/forms.py:190
+#: templates/otsecuritycheck/survey/finishedSurvey.html:190
+#: templates/otsecuritycheck/survey/finishedSurvey.html:204
 #: templates/survey/finishedSurvey.html:196
 #: templates/survey/finishedSurvey.html:210 templates/survey/review.html:50
 msgid "Your feedback"
 msgstr "Ihre Rückmeldung"
 
-#: survey/forms.py:108 survey/forms.py:183
+#: survey/forms.py:114 survey/forms.py:192
 msgid "Please let us know if anything is missing"
 msgstr "Bitte lassen Sie uns wissen, wenn etwas fehlt"
 
-#: survey/forms.py:143
+#: survey/forms.py:152
 msgid "You can't choose multiple answers if the answer {} is choosen."
 msgstr ""
 "Sie können nicht mehrere Antworten wählen, wenn die Antwort {} gewählt wurde."
 
-#: survey/forms.py:158
+#: survey/forms.py:167
 msgid "You can't choose the answers {} if answer '{}' is choosen."
 msgstr ""
 "Sie können die Antworten {} nicht wählen, wenn die Antwort '{}' gewählt "
 "wurde."
 
-#: survey/viewLogic.py:96
+#: survey/viewLogic.py:97
 msgid "Let's start"
 msgstr "Lasst uns beginnen"
 
-#: survey/viewLogic.py:267
+#: survey/viewLogic.py:273
 msgid "Question"
 msgstr "Frage"
 
@@ -7957,6 +9701,120 @@ msgstr ""
 "Maßnahmen ergreift, um nachweisen zu können, dass es die DSGVO einhält und "
 "dass diese Maßnahmen wirksam sind."
 
+#: templates/otsecuritycheck/survey/finishedSurvey.html:26
+#: templates/survey/finishedSurvey.html:26
+msgid "Summary"
+msgstr "Zusammenfassung"
+
+#: templates/otsecuritycheck/survey/finishedSurvey.html:30
+#: templates/survey/finishedSurvey.html:30
+msgid ""
+"This is the list of recommendations to improve the information security "
+"maturity in your company, provided that your answers did correctly reflect "
+"the state in your company. Also keep in mind that it is a self-assessment "
+"and only scratches the surface of the information security maturity level "
+"and thus, we are not liable for the results of this survey."
+msgstr ""
+"Dies ist die Liste der Empfehlungen zur Verbesserung der "
+"Informationssicherheit in Ihrem Unternehmen, sofern Ihre Antworten den "
+"Status in Ihrem Unternehmen korrekt widerspiegeln. Denken Sie auch daran, "
+"dass es sich um eine Selbsteinschätzung handelt, die nur basierend auf Ihren "
+"Angaben den Reifegrad der Informationssicherheit abbilden kann, und wir "
+"daher nicht für die Ergebnisse dieser Umfrage haften."
+
+#: templates/otsecuritycheck/survey/finishedSurvey.html:42
+#: templates/survey/finishedSurvey.html:42
+#, python-format
+msgid ""
+"Based on your score %(score)s, the NC3 Diagnostic is not available for your "
+"organization at this moment. We recommend you improve the information "
+"security maturity level by implementing the recommendations listed below. If "
+"you need any information security training to raise awareness in your "
+"company, do not hesitate to"
+msgstr ""
+"Basierend auf Ihrem Ergebnis von %(score)s ist das Diagnostic NC3 derzeit "
+"für Ihr Unternehmen nicht verfügbar. Wir empfehlen Ihnen, Ihren "
+"Informationssicherheit-Reifegrad zu verbessern, indem Sie die unten "
+"aufgeführten Empfehlungen umsetzen. Wenn Sie die Informationssicherheits-"
+"Kenntnisse in Ihrem Unternehmen durch eine Schulung verbessern möchten, "
+"zögern Sie nicht"
+
+#: templates/otsecuritycheck/survey/finishedSurvey.html:55
+#: templates/report/results.html:17 templates/survey/finishedSurvey.html:55
+#, python-format
+msgid ""
+"You have scored an additional %(bonus)s %% of bonus points for adherence to "
+"best practices."
+msgstr ""
+"Sie haben zusätzliche %(bonus)s %% Bonuspunkte für die Einhaltung bewährter "
+"Verfahren erhalten."
+
+#: templates/otsecuritycheck/survey/finishedSurvey.html:67
+#: templates/survey/finishedSurvey.html:67
+msgid "Your results link"
+msgstr "Ihr Ergebnislink"
+
+#: templates/otsecuritycheck/survey/finishedSurvey.html:72
+#: templates/survey/finishedSurvey.html:72
+msgid "About the NC3 Diagnostic"
+msgstr "Über die NC3-Diagnose"
+
+#: templates/otsecuritycheck/survey/finishedSurvey.html:74
+#: templates/survey/finishedSurvey.html:74
+msgid ""
+"The NC3 Diagnostic is a service which analyses the company maturity in the "
+"information security depending on company's requirements. The analysis "
+"duration can take approximately 2 hours. A consultant from NC3 will come to "
+"your company's premises, and ask around 30 questions concerning your "
+"information security, mostly organizational questions and possibly some "
+"technical questions. You will receive a detailed report which will contain a "
+"maturity estimation as well as recommendations to enhance the information "
+"security maturity."
+msgstr ""
+"Der Diagnostic NC3 ist ein Service zur Analyse des Reifegrads eines "
+"Unternehmens im Hinblick auf die Sicherheit der benötigten Informationen. "
+"Mit einer Dauer von ungefähr 2 Stunden kommt ein NC3-Berater zu Ihnen auf "
+"ihr Firmengelände und stellt ungefähr 30 Fragen, die sowohl "
+"organisatorischer als auch etwas technischer Natur sein können. Am Ende "
+"dieses Diagnostic wird ein Bericht verfasst und Ihnen kurze Zeit später "
+"übermittelt: er enthält eine Schätzung der Laufzeit sowie Empfehlungen zur "
+"Verbesserung der Laufzeit der Informationssicherheit."
+
+#: templates/otsecuritycheck/survey/finishedSurvey.html:86
+#: templates/survey/finishedSurvey.html:86
+msgid ""
+"The NC3 Diagnostic is available for all the companies located in Luxembourg "
+"and free of charge."
+msgstr ""
+"Der Diagnostic ist für jedes Unternehmen mit Sitz in Luxemburg möglich und "
+"kostenlos."
+
+#: templates/otsecuritycheck/survey/finishedSurvey.html:123
+#: templates/survey/finishedSurvey.html:123
+msgid "Report"
+msgstr "Bericht"
+
+#: templates/otsecuritycheck/survey/finishedSurvey.html:130
+#: templates/survey/finishedSurvey.html:130
+msgid "Download"
+msgstr "Herunterladen"
+
+#: templates/otsecuritycheck/survey/finishedSurvey.html:151
+#: templates/survey/finishedSurvey.html:157
+msgid "Score by category"
+msgstr "Punktzahl nach Kategorie"
+
+#: templates/otsecuritycheck/survey/finishedSurvey.html:214
+#: templates/survey/continue.html:26 templates/survey/finishedSurvey.html:220
+msgid "Close"
+msgstr "Schließen"
+
+#: templates/otsecuritycheck/survey/finishedSurvey.html:219
+#: templates/survey/finishedSurvey.html:225
+#: templates/survey/sendReportEmail.html:14
+msgid "Send"
+msgstr "Senden"
+
 #: templates/parts/fit4africa/footer_part.html:7
 #: templates/parts/fit4africa/footer_part.html:8
 msgid "A service provided by ACRC"
@@ -8023,10 +9881,6 @@ msgstr "eQualis"
 #: templates/parts/fit4ehealth/footer_part.html:34
 msgid "FAQ"
 msgstr ""
-
-#: templates/parts/privacy_policy_part.html:87
-msgid "Name"
-msgstr "Name"
 
 #: templates/parts/privacy_policy_part.html:88
 #: templates/report/description.html:4
@@ -8143,15 +9997,6 @@ msgstr ""
 "Selbsteinschätzung ist. Es versteht sich, dass alle Ergebnisse in keiner "
 "Weise erschöpfend sein können."
 
-#: templates/report/results.html:17 templates/survey/finishedSurvey.html:55
-#, python-format
-msgid ""
-"You have scored an additional %(bonus)s %% of bonus points for adherence to "
-"best practices."
-msgstr ""
-"Sie haben zusätzliche %(bonus)s %% Bonuspunkte für die Einhaltung bewährter "
-"Verfahren erhalten."
-
 #: templates/report/results.html:25
 msgid "By section"
 msgstr "Nach Abschnitt"
@@ -8201,10 +10046,6 @@ msgstr ""
 #: templates/survey/continue.html:23
 msgid "Download direct link"
 msgstr "Direkten Link herunterladen"
-
-#: templates/survey/continue.html:26 templates/survey/finishedSurvey.html:220
-msgid "Close"
-msgstr "Schließen"
 
 #: templates/survey/faq.html:22
 msgid ""
@@ -8278,101 +10119,9 @@ msgstr ""
 "Selbsteinschätzung gefährden würde. Sie können jedoch immer vorschlagen, "
 "einen oder mehrere Fälle hinzuzufügen, und Ihr Vorschlag wird geprüft."
 
-#: templates/survey/finishedSurvey.html:26
-msgid "Summary"
-msgstr "Zusammenfassung"
-
-#: templates/survey/finishedSurvey.html:30
-msgid ""
-"This is the list of recommendations to improve the information security "
-"maturity in your company, provided that your answers did correctly reflect "
-"the state in your company. Also keep in mind that it is a self-assessment "
-"and only scratches the surface of the information security maturity level "
-"and thus, we are not liable for the results of this survey."
-msgstr ""
-"Dies ist die Liste der Empfehlungen zur Verbesserung der "
-"Informationssicherheit in Ihrem Unternehmen, sofern Ihre Antworten den "
-"Status in Ihrem Unternehmen korrekt widerspiegeln. Denken Sie auch daran, "
-"dass es sich um eine Selbsteinschätzung handelt, die nur basierend auf Ihren "
-"Angaben den Reifegrad der Informationssicherheit abbilden kann, und wir "
-"daher nicht für die Ergebnisse dieser Umfrage haften."
-
-#: templates/survey/finishedSurvey.html:42
-#, python-format
-msgid ""
-"Based on your score %(score)s, the NC3 Diagnostic is not available for your "
-"organization at this moment. We recommend you improve the information "
-"security maturity level by implementing the recommendations listed below. If "
-"you need any information security training to raise awareness in your "
-"company, do not hesitate to"
-msgstr ""
-"Basierend auf Ihrem Ergebnis von %(score)s ist das Diagnostic NC3 derzeit "
-"für Ihr Unternehmen nicht verfügbar. Wir empfehlen Ihnen, Ihren "
-"Informationssicherheit-Reifegrad zu verbessern, indem Sie die unten "
-"aufgeführten Empfehlungen umsetzen. Wenn Sie die Informationssicherheits-"
-"Kenntnisse in Ihrem Unternehmen durch eine Schulung verbessern möchten, "
-"zögern Sie nicht"
-
-#: templates/survey/finishedSurvey.html:67
-msgid "Your results link"
-msgstr "Ihr Ergebnislink"
-
-#: templates/survey/finishedSurvey.html:72
-msgid "About the NC3 Diagnostic"
-msgstr "Über die NC3-Diagnose"
-
-#: templates/survey/finishedSurvey.html:74
-msgid ""
-"The NC3 Diagnostic is a service which analyses the company maturity in the "
-"information security depending on company's requirements. The analysis "
-"duration can take approximately 2 hours. A consultant from NC3 will come to "
-"your company's premises, and ask around 30 questions concerning your "
-"information security, mostly organizational questions and possibly some "
-"technical questions. You will receive a detailed report which will contain a "
-"maturity estimation as well as recommendations to enhance the information "
-"security maturity."
-msgstr ""
-"Der Diagnostic NC3 ist ein Service zur Analyse des Reifegrads eines "
-"Unternehmens im Hinblick auf die Sicherheit der benötigten Informationen. "
-"Mit einer Dauer von ungefähr 2 Stunden kommt ein NC3-Berater zu Ihnen auf "
-"ihr Firmengelände und stellt ungefähr 30 Fragen, die sowohl "
-"organisatorischer als auch etwas technischer Natur sein können. Am Ende "
-"dieses Diagnostic wird ein Bericht verfasst und Ihnen kurze Zeit später "
-"übermittelt: er enthält eine Schätzung der Laufzeit sowie Empfehlungen zur "
-"Verbesserung der Laufzeit der Informationssicherheit."
-
-#: templates/survey/finishedSurvey.html:86
-msgid ""
-"The NC3 Diagnostic is available for all the companies located in Luxembourg "
-"and free of charge."
-msgstr ""
-"Der Diagnostic ist für jedes Unternehmen mit Sitz in Luxemburg möglich und "
-"kostenlos."
-
-#: templates/survey/finishedSurvey.html:123
-msgid "Report"
-msgstr "Bericht"
-
-#: templates/survey/finishedSurvey.html:130
-msgid "Download"
-msgstr "Herunterladen"
-
-#: templates/survey/finishedSurvey.html:140
-msgid "Email"
-msgstr "Email"
-
 #: templates/survey/finishedSurvey.html:151
 msgid "Score by section"
 msgstr "Punktzahl nach Abschnitt"
-
-#: templates/survey/finishedSurvey.html:157
-msgid "Score by category"
-msgstr "Punktzahl nach Kategorie"
-
-#: templates/survey/finishedSurvey.html:225
-#: templates/survey/sendReportEmail.html:14
-msgid "Send"
-msgstr "Senden"
 
 #: templates/survey/index.html:20
 msgid "Welcome to the NC3 self-assessment tool:"
