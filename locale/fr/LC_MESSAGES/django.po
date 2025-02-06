@@ -1,8 +1,4 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
+# This file was generated from translations_v0.2.xlsx
 #: data/fit4africa/context-questions.json:249
 #: data/fit4contract/context-questions.json:207
 #: data/fit4cybersecurity/context-questions.json:207
@@ -18,19 +14,13 @@
 #: data/otsecuritycheck/questions.json:803
 msgid ""
 msgstr ""
-"Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-04 10:32+0000\n"
-"PO-Revision-Date: 2023-04-06 11:50+0000\n"
-"Last-Translator: Juan Rocha <juan.rocha@cases.lu>\n"
-"Language-Team: French <https://translate.monarc.lu/projects/"
-"Fit4Cybersecurity/fit4cybersecurity/fr/>\n"
+"POT-Creation-Date: 2025-02-06 14:08+0000\n"
+"PO-Revision-Date: 2025-02-06 15:04+0100\n"
 "Language: fr\n"
-"MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 4.17-dev\n"
+"Generated-By: xls-to-po 1.0\n"
 
 #: csskp/fit4africa/__init__.py:7 csskp/fit4cybersecurity/__init__.py:7
 #: csskp/otsecuritycheck/__init__.py:7
@@ -3249,7 +3239,6 @@ msgstr ""
 "de visites, le professionnel de santé utilise :"
 
 #: data/fit4ehealth/questions.json:929
-#, fuzzy
 msgid ""
 "no professional tools/devices because home office or visits are not allowed "
 "or necessary, or the only connection is the internal network on company "
@@ -7759,19 +7748,21 @@ msgstr "Courriel"
 
 #: data/otsecuritycheck/context-questions.json:23
 msgid "Company name"
-msgstr ""
+msgstr "Nom de l'entreprise"
 
 #: data/otsecuritycheck/context-questions.json:33
 msgid "Company address (with post code and city)"
-msgstr ""
+msgstr "Adresse de l'entreprise (avec code postal et ville)"
 
 #: data/otsecuritycheck/context-questions.json:43
 msgid "VAT number"
-msgstr ""
+msgstr "Numéro de TVA"
 
 #: data/otsecuritycheck/questions.json:3
 msgid "ORGANIZATION OF INFORMATION SECURITY,INFORMATION SECURITY POLICIES"
 msgstr ""
+"ORGANISATION DE LA SÉCURITÉ DE L'INFORMATION\n"
+"POLITIQUES DE SÉCURITÉ DE L'INFORMATION"
 
 #: data/otsecuritycheck/questions.json:4 data/otsecuritycheck/questions.json:79
 #: data/otsecuritycheck/questions.json:141
@@ -7801,7 +7792,7 @@ msgstr ""
 #: data/otsecuritycheck/questions.json:1648
 #: data/otsecuritycheck/questions.json:1697
 msgid "L-DIH"
-msgstr ""
+msgstr "L-DIH"
 
 #: data/otsecuritycheck/questions.json:17
 msgid ""
@@ -7809,22 +7800,31 @@ msgid ""
 "security. It is essential to have not only ISMS but also include OT systems "
 "in it."
 msgstr ""
+"Votre organisation n'a pas de SGSI ou de lignes directrices liées à la "
+"sécurité de l'information. Il est essentiel d'avoir non seulement un SGSI "
+"mais aussi d'inclure les systèmes OT."
 
 #: data/otsecuritycheck/questions.json:20
 msgid " There is no information security management system (ISMS) implemented."
 msgstr ""
+"Il n'y a pas de système de gestion de la sécurité de l'information (SGSI) "
+"mis en place."
 
 #: data/otsecuritycheck/questions.json:30
 msgid ""
 " It is already good that you have ISMS (Information Security Management "
 "System) but auditing these guidelines is mandatory."
 msgstr ""
+"Il est déjà bon que vous ayez un SGSI (Système de Gestion de la Sécurité de "
+"l'Information), mais l'audit de ces lignes directrices est obligatoire."
 
 #: data/otsecuritycheck/questions.json:33
 msgid ""
 " Information security management system (ISMS) is implemented including OT "
 "systems."
 msgstr ""
+"Un système de gestion de la sécurité de l'information (SGSI) est mis en "
+"place, mais les systèmes OT ne sont pas inclus."
 
 #: data/otsecuritycheck/questions.json:43
 msgid ""
@@ -7839,33 +7839,54 @@ msgid ""
 "the roles of the non-management staff need also be clearly defined and known "
 "to them. "
 msgstr ""
+"Votre organisation devrait avoir des lignes directrices de sécurité définies "
+"pour l'environnement ICS ou OT, par exemple couvrant des sujets tels que la "
+"sécurité physique, l'intégration ou le départ des employés, etc. Celles-ci "
+"devraient être listées et communiquées à tous les employés. C'est un bon "
+"début d'impliquer la direction dans la prise de décision liée à la sécurité "
+"de l'information et à l'OT, car cela montrera une certaine ouverture à ce "
+"sujet dans votre organisation. Cependant, comme la direction et le personnel "
+"doivent travailler ensemble pour gérer les risques liés à la sécurité de "
+"l'information et à l'OT (à la fois de manière réactive et préventive), les "
+"rôles du personnel non dirigeant doivent également être clairement définis "
+"et connus d'eux."
 
 #: data/otsecuritycheck/questions.json:46
 msgid ""
 " Information security management system (ISMS) is implemented but OT systems "
 "are not included in it."
 msgstr ""
+"Un système de gestion de la sécurité de l'information (SGSI) est mis en "
+"place, mais les systèmes OT ne sont pas inclus."
 
 #: data/otsecuritycheck/questions.json:56
 msgid ""
 " Your organisation must have a core team having clearly defined "
 "responsibilities. "
 msgstr ""
+"Votre organisation doit avoir une équipe de base avec des responsabilités "
+"clairement définies."
 
 #: data/otsecuritycheck/questions.json:59
 msgid ""
 " No Seggregation of Duties (SOD) in place, everyone does all the activities."
 msgstr ""
+"Pas de Séparation des Fonctions (SOD) en place, tout le monde fait toutes "
+"les activités."
 
 #: data/otsecuritycheck/questions.json:69
 msgid ""
 " Defining the guidelines is already good, but these must be updated and "
 "auditing on regular basis to ensure they are relevant."
 msgstr ""
+"Définir les lignes directrices est déjà bon, mais celles-ci doivent être "
+"mises à jour et auditées régulièrement pour s'assurer qu'elles sont "
+"pertinentes."
 
 #: data/otsecuritycheck/questions.json:72
 msgid " The guidelines defined have been audited at least once a year."
 msgstr ""
+"Les lignes directrices définies ont été auditées au moins une fois par an."
 
 #: data/otsecuritycheck/questions.json:75
 msgid ""
@@ -7876,10 +7897,13 @@ msgid ""
 "through the direct monitoring and/or control of industrial equipment, "
 "assets, processes and events. "
 msgstr ""
+"Dans votre organisation, avez-vous mis en place un Système de Gestion de la "
+"Sécurité de l'Information (SGSI) incluant les systèmes OT (Technologie "
+"Opérationnelle) ?"
 
 #: data/otsecuritycheck/questions.json:78
 msgid "RISK MANAGEMENT"
-msgstr ""
+msgstr "GESTION DES RISQUES"
 
 #: data/otsecuritycheck/questions.json:92
 #: data/otsecuritycheck/questions.json:105
@@ -7894,18 +7918,36 @@ msgid ""
 "it puts the organisation at a much larger risk. We cannot protect if we do "
 "not know. So OT systems must be included in the risk management process."
 msgstr ""
+"Votre entreprise n'a pas de ligne directrice formelle pour la gestion des "
+"risques, mais vous êtes en mesure de gérer les risques en vous basant sur "
+"l'expérience uniquement pour les systèmes IT. Il est bon que vous gériez "
+"déjà les risques, bien que de manière ad hoc. Cependant, afin de garantir "
+"que le même risque soit géré de la même manière chaque fois qu'il apparaît, "
+"il est bon de définir une ligne directrice pour la gestion des risques, "
+"incluant les responsabilités et les propriétaires, les outils, les rapports, "
+"les approches de mitigation des risques, etc. De plus, comme les risques des "
+"systèmes OT ne sont pas connus, cela met l'organisation à un risque beaucoup "
+"plus grand. Nous ne pouvons pas protéger ce que nous ne connaissons pas. Les "
+"systèmes OT doivent donc être inclus dans le processus de gestion des "
+"risques."
 
 #: data/otsecuritycheck/questions.json:95
 msgid ""
 " There is no risk management guideline, but risks are managed ad-hoc, based "
 "on experience for IT systems."
 msgstr ""
+"Il n'y a pas de ligne directrice pour la gestion des risques, mais les "
+"risques sont gérés de manière ad hoc, en fonction de l'expérience pour les "
+"systèmes informatiques."
 
 #: data/otsecuritycheck/questions.json:108
 msgid ""
 " We do not have a formal guideline but we manage our identified risk using a "
 "risk register for IT systems. "
 msgstr ""
+"Nous n'avons pas de ligne directrice formelle, mais nous gérons nos risques "
+"identifiés en utilisant un registre des risques pour les systèmes "
+"informatiques."
 
 #: data/otsecuritycheck/questions.json:118
 msgid ""
@@ -7913,12 +7955,17 @@ msgid ""
 "dealing with risk at organizational level, yet the next step is to actually "
 "have it implemented for both IT and OT systems."
 msgstr ""
+"C'est déjà une bonne étape d'avoir documenté une approche commune pour gérer "
+"les risques au niveau organisationnel, mais la prochaine étape est de la "
+"mettre en oeuvre pour les systèmes IT et OT."
 
 #: data/otsecuritycheck/questions.json:121
 msgid ""
 " We have defined a risk management guideline but have not fully implemented "
 "it for OT systems."
 msgstr ""
+"Nous avons défini une ligne directrice pour la gestion des risques, mais "
+"nous ne l'avons pas entièrement mise en oeuvre pour les systèmes OT."
 
 #: data/otsecuritycheck/questions.json:131
 msgid ""
@@ -7931,6 +7978,17 @@ msgid ""
 "potential risks and improve response times.Conduct regular incident response "
 "drills to ensure your team is prepared for any potential security incidents."
 msgstr ""
+"L'identification et l'atténuation proactives des risques à un niveau "
+"acceptable témoignent d'une approche mature de la gestion des risques. Pour "
+"améliorer encore vos efforts, envisagez des révisions régulières et mettez à "
+"jour vos lignes directrices en matière de gestion des risques pour vous "
+"adapter aux nouvelles menaces et aux changements dans l'environnement. "
+"Assurez la collaboration entre les équipes IT et OT afin de traiter les "
+"risques qui se chevauchent et de partager les meilleures pratiques. Utilisez "
+"des outils de surveillance avancés pour avoir une meilleure visibilité des "
+"risques potentiels et améliorer les temps de réponse. Effectuez "
+"régulièrement des exercices de réponse aux incidents pour vous assurer que "
+"votre équipe est prête à faire face à tout incident de sécurité potentiel."
 
 #: data/otsecuritycheck/questions.json:134
 msgid ""
@@ -7938,16 +7996,21 @@ msgid ""
 "OT systems. All risks are identified, proactively treated and mitigated to "
 "an acceptable level."
 msgstr ""
+"Nous avons défini et mis en oeuvre une ligne directrice pour la gestion des "
+"risques pour les systèmes informatiques et OT. Tous les risques sont "
+"identifiés, traités de manière proactive et atténués à un niveau acceptable."
 
 #: data/otsecuritycheck/questions.json:137
 msgid ""
 " Did your organisation define and implement a guideline for risk management "
 "including OT systems?"
 msgstr ""
+"Votre organisation a-t-elle défini et mis en oeuvre une ligne directrice "
+"pour la gestion des risques incluant les systèmes OT?"
 
 #: data/otsecuritycheck/questions.json:140
 msgid "HUMAN RESOURCES"
-msgstr ""
+msgstr "RESSOURCES HUMAINES"
 
 #: data/otsecuritycheck/questions.json:154
 #: data/otsecuritycheck/questions.json:167
@@ -7958,16 +8021,24 @@ msgid ""
 "their work, and how to exchange data and manage it is at the core of more "
 "and more organization. This awareness also helps them spot the abnormalities."
 msgstr ""
+"Chaque fois que les règles changent, ou périodiquement à une date "
+"prédéfinie, des sessions de sensibilisation devraient être offertes aux "
+"employés sur des sujets liés aux lignes directrices et procédures de "
+"sécurité. En effet, la sécurité n'est que rarement l'objectif de leur "
+"travail, et la manière\n"
+"d'échanger et de gérer les données est au coeur de plus en plus "
+"d'organisations. Cette sensibilisation les aide également à repérer les "
+"anomalies."
 
 #: data/otsecuritycheck/questions.json:157
-#, fuzzy
-#| msgid "We do not really have one."
 msgid " We do not have trainings. "
-msgstr "Nous n'en avons pas vraiment."
+msgstr " Nous n'organisons pas de formations."
 
 #: data/otsecuritycheck/questions.json:170
 msgid " There is no regular OT specific awareness training or assessments. "
 msgstr ""
+"Il n'y a pas de formation de sensibilisation spécifique à l'OT ou "
+"d'évaluations régulières."
 
 #: data/otsecuritycheck/questions.json:180
 msgid ""
@@ -7978,12 +8049,23 @@ msgid ""
 "of security incidents. Refresher trainings can also be provided on a defined "
 "frequency, at least annually to ensure and promote security aware culture. "
 msgstr ""
+"Il est bon que des sessions de sensibilisation soient offertes aux employés, "
+"mais de temps en temps, l'organisation devrait vérifier si les règles sont "
+"appliquées, et si ce n'est pas le cas, quand et pourquoi. En plus de la "
+"formation, des newsletters, des e-mails et des sites web internes peuvent "
+"être utilisés pour partager du contenu informatif, des conseils pratiques et "
+"des exemples concrets d'incidents de sécurité. Des formations de rappel "
+"peuvent également être fournies à une fréquence définie, au moins "
+"annuellement, pour garantir et promouvoir une culture de sensibilisation à "
+"la sécurité."
 
 #: data/otsecuritycheck/questions.json:183
 msgid ""
 " The training for OT security is in place, but there is no assessment to "
 "verify if this knowledge is used or not."
 msgstr ""
+"La formation à la sécurité OT est en place, mais il n'y a pas d'évaluation "
+"pour vérifier si ces connaissances sont utilisées ou non."
 
 #: data/otsecuritycheck/questions.json:193
 msgid ""
@@ -7995,20 +8077,34 @@ msgid ""
 "a defined frequency, at least annually to ensure and promote security aware "
 "culture."
 msgstr ""
+"Il est bon que des sessions de sensibilisation soient offertes aux employés, "
+"mais de temps en temps, l'organisation devrait vérifier si les règles sont "
+"appliquées, et si ce n'est pas le cas, quand et pourquoi. En plus de la "
+"formation, des newsletters, des e-mails et des sites web internes peuvent "
+"être utilisés pour partager du contenu informatif, des conseils pratiques et "
+"des exemples concrets d'incidents de sécurité. Des formations de rappel "
+"peuvent également être fournies à une fréquence définie, au moins "
+"annuellement, pour garantir et promouvoir une culture de sensibilisation à "
+"la sécurité."
 
 #: data/otsecuritycheck/questions.json:196
 msgid " Both OT Awareness training and assessments in place. "
-msgstr ""
+msgstr "Formation de sensibilisation à l'OT et évaluations en place."
 
 #: data/otsecuritycheck/questions.json:199
 msgid ""
 " Are all employees regularly provided with OT specific awareness (simulation "
 "exercises, theoretical courses)? "
 msgstr ""
+"Tous vos employés reçoivent-ils régulièrement des formations de "
+"sensibilisation spécifiques à l'OT, incorporant des situations et des "
+"exercices réels pour garantir le respect des protocoles de sécurité internes "
+"et évaluer leur compétence à repérer des comportements système inhabituels "
+"ou suspects ou des tentatives de cyberattaques ?"
 
 #: data/otsecuritycheck/questions.json:202
 msgid "ASSET MANAGEMENT"
-msgstr ""
+msgstr "GESTION DES ACTIFS"
 
 #: data/otsecuritycheck/questions.json:216
 msgid ""
@@ -8018,10 +8114,16 @@ msgid ""
 "classify them is equally important, as the protection of these assets are "
 "based on the classification."
 msgstr ""
+"Pour maîtriser vos risques, connaître les actifs informatiques et OT de "
+"votre organisation est une étape obligatoire. Vous devriez, de plus, avoir "
+"une liste à jour de ces actifs en tout temps. Les critères pour les "
+"étiqueter et les classer sont également importants, car la protection de ces "
+"actifs est basée sur la classification."
 
 #: data/otsecuritycheck/questions.json:219
 msgid " Asset inventory and management process only for IT assets."
 msgstr ""
+"Inventaire des actifs et processus de gestion uniquement pour les actifs IT."
 
 #: data/otsecuritycheck/questions.json:229
 #: data/otsecuritycheck/questions.json:242
@@ -8032,18 +8134,27 @@ msgid ""
 "the same understanding on the process and the knowledge is not lost as "
 "resources leave."
 msgstr ""
+"Il est bon que vous ayez déjà commencé à lister les actifs informatiques de "
+"votre organisation, mais il est essentiel de compléter la liste et de la "
+"maintenir à jour. Avoir une ligne directrice aide à garantir que tous les "
+"employés ont la même compréhension du processus et que les connaissances ne "
+"sont pas perdues lorsque des ressources quittent l'organisation."
 
 #: data/otsecuritycheck/questions.json:232
 msgid ""
 " No formal procedure or guideline, but asset details are captured and "
 "classified on an ad hoc basis for IT assets."
 msgstr ""
+"Pas de procédure ou de ligne directrice formelle, mais les détails des "
+"actifs sont capturés et classifiés de manière ad hoc pour les actifs IT."
 
 #: data/otsecuritycheck/questions.json:245
 msgid ""
 " An inventory of all assets including OT systems was conducted, but not "
 "completed (updated)."
 msgstr ""
+"Un inventaire de tous les actifs, y compris les systèmes OT, a été réalisé, "
+"mais pas complété (mis à jour)."
 
 #: data/otsecuritycheck/questions.json:255
 msgid ""
@@ -8054,12 +8165,21 @@ msgid ""
 "locations and frequencies, storage locations, asset owner, cybersecurity "
 "requirements)."
 msgstr ""
+"Il est bon que les actifs critiques soient capturés, mais il est conseillé "
+"de capturer les détails de tous les actifs. Les menaces peuvent se propager "
+"d'un niveau à un autre. Un inventaire détaillé des actifs doit également "
+"inclure des attributs qui soutiennent les activités de cybersécurité (par "
+"exemple, catégorie des actifs, emplacements et fréquences de sauvegarde, "
+"emplacements de stockage, propriétaire des actifs, exigences en matière de "
+"cybersécurité)."
 
 #: data/otsecuritycheck/questions.json:258
 msgid ""
 " IT and OT assets that are related to critical service are inventoried with "
 "labelling and classification."
 msgstr ""
+"Les actifs IT et OT liés aux services critiques sont inventoriés avec "
+"étiquetage et classification."
 
 #: data/otsecuritycheck/questions.json:261
 msgid ""
@@ -8067,10 +8187,13 @@ msgid ""
 "and IT), while also incorporating asset classification and labeling into the "
 "management process? "
 msgstr ""
+"Votre organisation maintient-elle une liste complète de tous ses actifs (OT "
+"et IT), tout en intégrant la classification et l'étiquetage des actifs dans "
+"le processus de gestion ?"
 
 #: data/otsecuritycheck/questions.json:264
 msgid "PHYSICAL SECURITY"
-msgstr ""
+msgstr "SÉCURITÉ PHYSIQUE"
 
 #: data/otsecuritycheck/questions.json:278
 msgid ""
@@ -8083,12 +8206,22 @@ msgid ""
 "rules are defined, make them known to the staff and check their "
 "implementation."
 msgstr ""
+"Vous devriez absolument envisager de mettre en place des contrôles liés à "
+"l'accès aux locaux où votre entreprise exerce ses activités. En effet, il "
+"existe un risque d'intrusion pouvant entraîner l'exfiltration ou la "
+"détérioration des actifs de l'entreprise, ou simplement la perturbation de "
+"vos opérations sans possibilité de savoir qui en est responsable. Considérez "
+"d'abord les zones les plus critiques, sans négliger les zones moins "
+"importantes, et une fois que certaines règles sont définies, faites-les "
+"connaître au personnel et vérifiez leur mise en oeuvre."
 
 #: data/otsecuritycheck/questions.json:281
 msgid ""
 " There are no access controls implemented to manage access to the office "
 "building, server room."
 msgstr ""
+"Il n'y a pas de contrôles d'accès mis en place pour gérer l'accès au "
+"bâtiment de bureaux, à la salle des serveurs."
 
 #: data/otsecuritycheck/questions.json:291
 msgid ""
@@ -8098,22 +8231,34 @@ msgid ""
 "facilities. Such rules should be known, implemented, and periodically "
 "checked."
 msgstr ""
+"Il est bon que certains contrôles existent autour de l'accès aux zones "
+"critiques comme la salle des serveurs, mais les données et les actifs "
+"existent en dehors de ces zones, vous devriez donc également imposer des "
+"règles sur la sécurité physique de toutes les installations de votre "
+"entreprise. Ces règles doivent être connues, mises en oeuvre et vérifiées "
+"périodiquement."
 
 #: data/otsecuritycheck/questions.json:294
 msgid " Access controls exist at least for accessing the server room. "
 msgstr ""
+"Des contrôles d'accès existent au moins pour accéder à la salle des serveurs."
 
 #: data/otsecuritycheck/questions.json:304
 msgid ""
 " Its good that the practices exist on ad hoc or need basis, but these must "
 "be regular practices for better risk management. "
 msgstr ""
+"Il est bon que les pratiques existent de manière ponctuelle, mais elles "
+"doivent être régulières pour une meilleure gestion des risques."
 
 #: data/otsecuritycheck/questions.json:307
 msgid ""
 " Access control is implemented depending on the need, without any defined "
 "procedures or controls. "
 msgstr ""
+"Les contrôles d'accès sont mis en place de manière  ponctuelle, les journaux "
+"sont tenus à jour, et la révocation des accès est effectuée au cas par cas "
+"lorsque l'accès n'est plus nécessaire."
 
 #: data/otsecuritycheck/questions.json:317
 msgid ""
@@ -8121,12 +8266,17 @@ msgid ""
 "security, is essential to understand the actual risks in practice for the "
 "assets of your company. "
 msgstr ""
+"L'audit, ou la vérification de l'application des règles liées à la sécurité "
+"physique, est essentiel pour comprendre les risques réels en pratique pour "
+"les actifs de votre entreprise."
 
 #: data/otsecuritycheck/questions.json:320
 msgid ""
 " Access controls are implemented for accessing any access point in the "
 "facility."
 msgstr ""
+"Des contrôles d'accès sont mis en place pour accéder à tout point d'accès "
+"dans l'établissement."
 
 #: data/otsecuritycheck/questions.json:323
 msgid ""
@@ -8134,6 +8284,9 @@ msgid ""
 "to your production facilities, server room, archive room or facility in "
 "general?"
 msgstr ""
+"Avez-vous mis en place des mesures de contrôle d'accès pour tous les points "
+"d'accès physiques à votre bâtiment, salle des serveurs, installation ou "
+"usine en général ?"
 
 #: data/otsecuritycheck/questions.json:326
 #: data/otsecuritycheck/questions.json:388
@@ -8143,7 +8296,7 @@ msgstr ""
 #: data/otsecuritycheck/questions.json:701
 #: data/otsecuritycheck/questions.json:763
 msgid "OPERATIONAL SECURITY"
-msgstr ""
+msgstr "SÉCURITÉ OPÉRATIONNELLE"
 
 #: data/otsecuritycheck/questions.json:340
 msgid ""
@@ -8156,12 +8309,24 @@ msgid ""
 "guideline ensures that all the resources have the same understanding and no "
 "information is lost. "
 msgstr ""
+"La planification des ressources (disponibilité des personnes ou des "
+"ressources informatiques) est un aspect clé lorsqu'il s'agit de "
+"planification de la continuité des activités. Le manque de ressources peut "
+"entraîner une perturbation du fonctionnement de votre service, et votre "
+"entreprise devrait avoir une approche de planification de la continuité des "
+"activités où la planification de la capacité (ressources nécessaires, "
+"surveillance de l'utilisation des ressources, etc.) est prise en compte. "
+"Documenter formellement cela en tant que ligne directrice garantit également "
+"que toutes les ressources ont la même compréhension et qu'aucune information "
+"n'est perdue."
 
 #: data/otsecuritycheck/questions.json:343
 msgid ""
 " We do not have a formal planning for resources but manage the needs on ad "
 "hoc basis. "
 msgstr ""
+"Nous n'avons pas de planification formelle des ressources, mais nous gérons "
+"les besoins de manière circonstancielle."
 
 #: data/otsecuritycheck/questions.json:353
 msgid ""
@@ -8174,12 +8339,24 @@ msgid ""
 "guideline ensures all the resources have the same understanding and no "
 "information is lost."
 msgstr ""
+"La planification des ressources (disponibilité des personnes ou des "
+"ressources informatiques) est un aspect clé lorsqu'il s'agit de "
+"planification de la continuité des activités. Le manque de ressources peut "
+"entraîner une perturbation du fonctionnement de votre service, et votre "
+"entreprise devrait avoir une approche de planification de la continuité des "
+"activités où la planification de la capacité (ressources nécessaires, "
+"surveillance de l'utilisation des ressources, etc.) est prise en compte. "
+"Documenter formellement cela en tant que ligne directrice garantit également "
+"que toutes les ressources ont la même compréhension et qu'aucune information "
+"n'est perdue."
 
 #: data/otsecuritycheck/questions.json:356
 msgid ""
 " We have capacity planning in place but no emergency power included. We do "
 "not have the need. "
 msgstr ""
+"Nous avons une planification de la capacité en place, mais sans alimentation "
+"de secours d'urgence. Nous n'en voyons pas la nécessité."
 
 #: data/otsecuritycheck/questions.json:366
 msgid " "
@@ -8190,21 +8367,28 @@ msgid ""
 " We have capacity planning in place and this includes emergency power "
 "backup. "
 msgstr ""
+"Nous avons une planification de la capacité en place et cela inclut une "
+"alimentation de secours d'urgence."
 
 #: data/otsecuritycheck/questions.json:379
 msgid ""
 " Your organisation must ensure the communication of its business continuity "
 "plan as its important for the resources to be aware of the same."
 msgstr ""
+"Votre organisation doit s'assurer de la communication de son plan de "
+"continuité des activités, car il est important que les ressources en soient "
+"conscientes."
 
 #: data/otsecuritycheck/questions.json:382
 #: data/otsecuritycheck/questions.json:1357
 msgid " I'm not sure. "
-msgstr ""
+msgstr "Je ne suis pas sûr."
 
 #: data/otsecuritycheck/questions.json:385
 msgid " Does your capacity planning include emergency power backup?"
 msgstr ""
+"Votre planification de la capacité inclut-elle une alimentation de secours "
+"d'urgence ?"
 
 #: data/otsecuritycheck/questions.json:402
 msgid ""
@@ -8214,12 +8398,21 @@ msgid ""
 "process, you should consider all IT and OT assets in your company and to "
 "what extent anti-malware software should be deployed on all of them."
 msgstr ""
+"Il est bon que votre équipe ait les connaissances et l'expertise, mais il "
+"est important que tout le monde ait la même compréhension, d'où la nécessité "
+"de formaliser une ligne directrice. Dans le cadre de votre procédure ou "
+"processus de gestion des logiciels malveillants, vous devriez prendre en "
+"compte tous les actifs IT et OT de votre entreprise et dans quelle mesure "
+"les logiciels anti-malware devraient être déployés sur tous ces actifs."
 
 #: data/otsecuritycheck/questions.json:405
 msgid ""
 " Malware management guideline is not established but by practice and "
 "experience team performs malware management for IT systems."
 msgstr ""
+"La ligne directrice pour la gestion des logiciels malveillants n'est pas "
+"établie, mais par pratique et expérience, l'équipe en effectue la gestion "
+"pour les systèmes IT."
 
 #: data/otsecuritycheck/questions.json:415
 msgid ""
@@ -8229,10 +8422,18 @@ msgid ""
 "malware software is not compatible, we should have countermeasures "
 "implemented. A denial of service attack detection system may be put in place."
 msgstr ""
+"Il est bon que vous ayez une politique ou une procédure de gestion des "
+"logiciels malveillants en place, mais il est important de la revoir "
+"régulièrement afin que les pratiques imposées par celle-ci restent à jour "
+"avec l'évolution de ces menaces. Pour les systèmes où les logiciels anti-"
+"malware ne sont pas compatibles, nous devrions mettre en oeuvre des contre-"
+"mesures. Un système de détection des attaques par déni de service peut être "
+"mis en place."
 
 #: data/otsecuritycheck/questions.json:418
 msgid " Malware management guideline is established."
 msgstr ""
+"La ligne directrice pour la gestion des logiciels malveillants est établie."
 
 #: data/otsecuritycheck/questions.json:428
 msgid ""
@@ -8242,10 +8443,16 @@ msgid ""
 "inspection capability that can monitor and block advanced threats like "
 "malware."
 msgstr ""
+"Considérez à la fois les systèmes IT et OT et planifiez le déploiement des "
+"logiciels anti-malware. Pour les systèmes où les logiciels anti-malware ne "
+"sont pas compatibles, nous devrions mettre en oeuvre des contre-mesures. Un "
+"système de détection des attaques par déni de service peut être mis en place."
 
 #: data/otsecuritycheck/questions.json:431
 msgid " Anti-Malware software is not deployed or deployed only in IT systems."
 msgstr ""
+"Les logiciels anti-malware ne sont pas déployés ou déployés uniquement dans "
+"les systèmes IT."
 
 #: data/otsecuritycheck/questions.json:441
 msgid ""
@@ -8254,10 +8461,15 @@ msgid ""
 "downloading unverified software.Have a clear incident response plan in place "
 "for dealing with malware infections swiftly and effectively."
 msgstr ""
+"Pour améliorer encore votre posture de sécurité, informez les utilisateurs "
+"sur les pratiques sûres pour éviter les infections par des logiciels "
+"malveillants, par exemple en n'ouvrant pas les courriels suspects ou en ne "
+"téléchargeant pas de logiciels non vérifiés."
 
 #: data/otsecuritycheck/questions.json:444
 msgid " Anti-malware software deployed on all of our systems both IT and OT."
 msgstr ""
+"Les logiciels anti-malware sont déployés sur tous nos systèmes, IT et OT."
 
 #: data/otsecuritycheck/questions.json:454
 msgid ""
@@ -8266,17 +8478,28 @@ msgid ""
 "train employees on recognizing and responding to malware threats and educate "
 "users on safe practices to avoid malware infections."
 msgstr ""
+"Pour renforcer encore votre approche, envisagez d'intégrer les derniers "
+"renseignements sur les menaces afin de rester à l'affût des nouvelles "
+"tendances en matière de logiciels malveillants. Formez en permanence vos "
+"employés à reconnaître les menaces liées aux logiciels malveillants et à y "
+"répondre, et informez les utilisateurs sur les pratiques sûres à adopter "
+"pour éviter les infections par des logiciels malveillants."
 
 #: data/otsecuritycheck/questions.json:457
 msgid ""
 " Malware management guidelines are reviewed and updated at least once a year."
 msgstr ""
+"Les lignes directrices pour la gestion des logiciels malveillants sont "
+"examinées et mises à jour au moins une fois par an."
 
 #: data/otsecuritycheck/questions.json:460
 msgid ""
 " Do you have a malware management guideline indicating how malware should be "
 "managed withing your company for OT systems?"
 msgstr ""
+"Avez-vous une ligne directrice pour la gestion des logiciels malveillants "
+"indiquant comment ils doivent être gérés au sein de votre entreprise pour "
+"les systèmes OT ?"
 
 #: data/otsecuritycheck/questions.json:477
 msgid ""
@@ -8288,10 +8511,18 @@ msgid ""
 "communicated to the relevant staff, and applied at company-wide level for "
 "both IT and OT systems."
 msgstr ""
+"Il est vital pour la continuité de vos opérations de service d'avoir une "
+"gestion solide des sauvegardes en place, y compris quelles données doivent "
+"être sauvegardées, à quelle fréquence, où les sauvegardes doivent être "
+"conservées, si des tiers doivent être impliqués, comment une sauvegarde doit "
+"être utilisée en cas d'incident, etc. Cela devrait être formalisé dans une "
+"ligne directrice de gestion des sauvegardes, communiquée au personnel "
+"concerné et appliquée à l'échelle de l'entreprise pour les systèmes IT et OT."
 
 #: data/otsecuritycheck/questions.json:480
 msgid " There is no formal backup guideline in place."
 msgstr ""
+"Il n'y a pas de ligne directrice formelle pour les sauvegardes en place."
 
 #: data/otsecuritycheck/questions.json:490
 msgid ""
@@ -8300,12 +8531,19 @@ msgid ""
 "such a guideline, and if the guideline is good enough with respect to what "
 "your company needs. This is done best by testing."
 msgstr ""
+"Vous avez déjà fait un pas en avant en définissant une ligne directrice de "
+"gestion des sauvegardes, mais il est essentiel de vérifier dans quelle "
+"mesure le personnel suit cette ligne directrice et si elle est suffisamment "
+"bonne par rapport aux besoins de votre entreprise. Cette approche nécessite "
+"une phase de tests."
 
 #: data/otsecuritycheck/questions.json:493
 msgid ""
 " A backup guideline has been defined and reviewed on regular basis including "
 "OT systems."
 msgstr ""
+"Une ligne directrice pour les sauvegardes a été définie et examinée "
+"régulièrement, y compris pour les systèmes OT."
 
 #: data/otsecuritycheck/questions.json:503
 msgid ""
@@ -8314,10 +8552,13 @@ msgid ""
 "and processes to backup relevant OT systems, state, data, configuration "
 "files, programs at regular intervals to support recovery to a stable state."
 msgstr ""
+"Il est bon que les systèmes IT critiques soient sauvegardés, mais il est "
+"également important d'inclure d'autres systèmes et les systèmes OT."
 
 #: data/otsecuritycheck/questions.json:506
 msgid " Backups are taken only for Critical IT systems."
 msgstr ""
+"Les sauvegardes sont effectuées uniquement pour les systèmes IT critiques."
 
 #: data/otsecuritycheck/questions.json:516
 msgid ""
@@ -8325,10 +8566,16 @@ msgid ""
 "must be regularly tested to ensure staff are able to follow the guideline "
 "and the results are as expected."
 msgstr ""
+"Il est bon que la gestion des sauvegardes soit mise en oeuvre pour les "
+"systèmes OT, mais elle doit être testée régulièrement pour s'assurer que le "
+"personnel est capable de suivre la ligne directrice et que les résultats "
+"sont conformes aux attentes."
 
 #: data/otsecuritycheck/questions.json:519
 msgid " Implemented for OT systems, but regular testing is not conducted."
 msgstr ""
+"Mise en oeuvre pour les systèmes OT, mais les tests réguliers ne sont pas "
+"effectués."
 
 #: data/otsecuritycheck/questions.json:529
 msgid ""
@@ -8338,17 +8585,27 @@ msgid ""
 "detailed documentation of backup procedures and schedules for easy reference "
 "and compliance."
 msgstr ""
+" Pour renforcer encore votre stratégie de sauvegarde, envisagez de stocker "
+"les sauvegardes dans un lieu sécurisé hors site afin de vous protéger contre "
+"les catastrophes physiques.cryptez les sauvegardes pour protéger les données "
+"sensibles contre les accès non autorisés. Conservez une documentation "
+"détaillée sur les procédures et les calendriers de sauvegarde afin de "
+"pouvoir vous y référer facilement et de vous conformer à la réglementation."
 
 #: data/otsecuritycheck/questions.json:532
 msgid ""
 " Implemented for both IT and OT systems,backups are monitored and tested."
 msgstr ""
+"Mise en oeuvre pour les systèmes IT et OT, les sauvegardes sont surveillées "
+"et testées."
 
 #: data/otsecuritycheck/questions.json:535
 msgid ""
 " Did your organisation define and implement a guideline for backup "
 "management including OT systems?"
 msgstr ""
+"Votre organisation a-t-elle défini et mis en oeuvre une ligne directrice "
+"pour la gestion des sauvegardes incluant les systèmes OT ?"
 
 #: data/otsecuritycheck/questions.json:552
 msgid ""
@@ -8362,47 +8619,68 @@ msgid ""
 "the purpose of having them in the first place. To ensure this we need "
 "controls in place."
 msgstr ""
+"La sauvegarde des informations implique la création et le stockage de copies "
+"des informations, des logiciels et des images système dans un emplacement "
+"sécurisé, séparé de la source originale. Les copies de sauvegarde doivent "
+"être protégées contre tout accès non autorisé, modification ou suppression, "
+"et doivent être testées périodiquement pour vérifier leur utilisabilité et "
+"leur intégrité. La protection physique et environnementale des sauvegardes "
+"est cruciale pour garantir l'intégrité et la disponibilité des données. Si "
+"les sauvegardes sont compromises en raison de facteurs environnementaux ou "
+"de menaces physiques, cela annule l'objectif même de les avoir en premier "
+"lieu. Pour garantir cela, nous avons besoin de contrôles en place."
 
 #: data/otsecuritycheck/questions.json:555
 msgid ""
 " No, measures or controls have been implemented to ensure security of backup."
 msgstr ""
+"Aucune mesure ou contrôle n'a été mis en place pour garantir la sécurité des "
+"sauvegardes."
 
 #: data/otsecuritycheck/questions.json:568
 msgid ""
 " Controls for backup management in place to ensure availability and "
 "integrity of the backup for both IT and OT systems."
 msgstr ""
+"Des contrôles pour la gestion des sauvegardes sont en place pour garantir la "
+"disponibilité et l'intégrité des sauvegardes pour les systèmes IT et OT."
 
 #: data/otsecuritycheck/questions.json:578
 msgid ""
 " It is good that controls are present for IT systems but we must also ensure "
 "OT systems are included to minimize the risk of loss of data."
 msgstr ""
+"Il est bon que des contrôles soient présents pour les systèmes IT, mais nous "
+"devons également nous assurer que les systèmes OT sont inclus pour minimiser "
+"le risque de perte de données."
 
 #: data/otsecuritycheck/questions.json:581
 msgid ""
 " Controls for backup management in place to ensure availability and "
 "integrity of the backup for only IT systems."
 msgstr ""
+"Des contrôles pour la gestion des sauvegardes sont en place pour garantir la "
+"disponibilité et l'intégrité des sauvegardes uniquement pour les systèmes IT."
 
 #: data/otsecuritycheck/questions.json:594
 msgid " Stored in an offsite location."
-msgstr ""
+msgstr "Stockées dans un emplacement hors site."
 
 #: data/otsecuritycheck/questions.json:607
 msgid " Stored online using cloud solutions."
-msgstr ""
+msgstr "Stockées en ligne en utilisant des solutions cloud."
 
 #: data/otsecuritycheck/questions.json:620
 msgid " Encryption of backup in place."
-msgstr ""
+msgstr "Chiffrement des sauvegardes en place."
 
 #: data/otsecuritycheck/questions.json:623
 msgid ""
 " Are controls and measures been implemented to ensure backups are stored "
 "securely including OT systems?"
 msgstr ""
+"Des contrôles et mesures ont-ils été mis en place pour garantir que les "
+"sauvegardes sont stockées en toute sécurité, y compris pour les systèmes OT ?"
 
 #: data/otsecuritycheck/questions.json:640
 msgid ""
@@ -8413,11 +8691,19 @@ msgid ""
 "documented in a guideline or procedure whose implementation should be "
 "verified periodically."
 msgstr ""
+"Il est important de considérer qu'il doit y avoir des règles en place "
+"concernant les événements à enregistrer dans l'infrastructure et la manière "
+"dont les journaux doivent être surveillés, afin de découvrir les incidents "
+"pour les systèmes IT et OT. Ces règles, liées à la journalisation et à la "
+"surveillance, doivent être documentées dans une ligne directrice ou une "
+"procédure dont la mise en oeuvre doit être vérifiée périodiquement."
 
 #: data/otsecuritycheck/questions.json:643
 #: data/otsecuritycheck/questions.json:718
 msgid " No logging and monitoring guideline defined."
 msgstr ""
+"Aucune ligne directrice pour la journalisation et la surveillance n'est "
+"définie."
 
 #: data/otsecuritycheck/questions.json:653
 msgid ""
@@ -8426,6 +8712,11 @@ msgid ""
 "should check to what extent such guideline or procedure are followed by "
 "employees. Also consider performing audits."
 msgstr ""
+" Il est bon que des règles existent dans la pratique et qu'il existe des "
+"lignes directrices formalisées concernant la journalisation et la "
+"surveillance des systèmes TI et OT. Cependant, l'entreprise doit vérifier "
+"dans quelle mesure ces lignes directrices ou procédures sont suivies par les "
+"employés. Elle devrait également envisager de procéder à des audits."
 
 #: data/otsecuritycheck/questions.json:656
 #: data/otsecuritycheck/questions.json:744
@@ -8433,36 +8724,45 @@ msgid ""
 " Guideline is defined and implemented for logging and monitoring of all "
 "systems (IT and OT)."
 msgstr ""
+"La ligne directrice est définie et mise en oeuvre pour la journalisation et "
+"la surveillance de tous les systèmes (IT et OT)."
 
 #: data/otsecuritycheck/questions.json:666
 msgid ""
 " Access, storage and deletion of data or systems must be tracked not just "
 "for IT systems but also for OT systems."
 msgstr ""
+" L'accès, le stockage et la suppression de données ou de systèmes doivent "
+"être suivis non seulement pour les systèmes informatiques, mais aussi pour "
+"les systèmes OT."
 
 #: data/otsecuritycheck/questions.json:669
 msgid ""
 " Access, storage and deletion of data or systems are tracked only for IT "
 "systems."
 msgstr ""
+"L'accès, le stockage et la suppression des données ou des systèmes sont "
+"suivis uniquement pour les systèmes IT."
 
 #: data/otsecuritycheck/questions.json:682
-#, fuzzy
-#| msgid "We review our risks periodically."
 msgid " Review of guidelines done periodically."
-msgstr "Nous faisons une revue des risques de ce type périodiquement."
+msgstr "La révision des lignes directrices est effectuée périodiquement."
 
 #: data/otsecuritycheck/questions.json:695
 msgid ""
 "Audit log is retained for a defined period of time and reviewed "
 "periodically. "
 msgstr ""
+"Le journal d'audit est conservé pendant une période définie et examiné "
+"périodiquement."
 
 #: data/otsecuritycheck/questions.json:698
 msgid ""
 " Do you have a logging and monitoring guideline defined and implemented for "
 "OT systems? "
 msgstr ""
+"Avez-vous défini et mis en oeuvre une ligne directrice pour la "
+"journalisation et la surveillance des systèmes OT ?"
 
 #: data/otsecuritycheck/questions.json:715
 msgid ""
@@ -8471,6 +8771,12 @@ msgid ""
 "Also, the company should check to what extent such guideline or procedure "
 "are followed by employees. This must cover both IT and OT systems."
 msgstr ""
+" Il doit y avoir une ligne directrice concernant l'identification et la "
+"gestion des vulnérabilités afin qu'elles soient claires pour tout le monde "
+"et comprises de la même manière. L'entreprise doit également vérifier dans "
+"quelle mesure ces lignes directrices ou procédures sont suivies par les "
+"employés. Cette procédure doit couvrir les systèmes informatiques et les "
+"systèmes de télécommunications."
 
 #: data/otsecuritycheck/questions.json:728
 msgid ""
@@ -8484,10 +8790,22 @@ msgid ""
 "related to the organization’s IT and OT assets, such as public-facing "
 "websites or mobile applications."
 msgstr ""
+"Il est bon qu'en pratique l'identification et la gestion des vulnérabilités "
+"soient effectuées sur les systèmes IT, mais avec la convergence croissante "
+"des systèmes IT et OT, nous devons nous assurer d'inclure également les "
+"systèmes OT. Si ce n'est pas un scan actif, nous devons effectuer un scan "
+"passif pour nous assurer d'identifier les vulnérabilités. En plus de "
+"l'identification, il faut maintenir la liste, remédier et établir des "
+"mécanismes pour recevoir et répondre aux rapports du public ou des parties "
+"externes concernant les vulnérabilités potentielles liées aux actifs IT et "
+"OT de l'organisation, tels que les sites web publics ou les applications "
+"mobiles."
 
 #: data/otsecuritycheck/questions.json:731
 msgid " Guideline is defined and implemented only for IT systems. "
 msgstr ""
+" La ligne directrice est définie et mise en œuvre uniquement pour les "
+"systèmes informatiques. "
 
 #: data/otsecuritycheck/questions.json:754
 msgid ""
@@ -8497,16 +8815,23 @@ msgid ""
 "employees and check to what extent such guideline or procedure are followed "
 "by employees. This must cover both IT and OT systems."
 msgstr ""
+"Il doit y avoir une ligne directrice sur l'identification et la gestion des "
+"vulnérabilités afin qu'elles soient claires pour tout le monde et comprises "
+"de la même manière. De plus, l'entreprise doit vérifier dans quelle mesure "
+"cette ligne directrice ou procédure est suivie par les employés. Cela doit "
+"couvrir à la fois les systèmes IT et OT."
 
 #: data/otsecuritycheck/questions.json:757
 msgid " I'm not sure."
-msgstr ""
+msgstr "Je ne suis pas sûr."
 
 #: data/otsecuritycheck/questions.json:760
 msgid ""
 " Do you have a vulnerability management guideline defined and implemented "
 "for OT systems?"
 msgstr ""
+"Avez-vous défini et mis en oeuvre une ligne directrice pour la gestion des "
+"vulnérabilités des systèmes OT ?"
 
 #: data/otsecuritycheck/questions.json:777
 #: data/otsecuritycheck/questions.json:790
@@ -8523,12 +8848,27 @@ msgid ""
 "checked. Having procedures and guidelines in place for this purpose is "
 "essential to handle the issues in the same way every time."
 msgstr ""
+"Pour un fournisseur de services cloud, il est essentiel de pouvoir garantir "
+"que les données des clients ne sont accessibles qu'à ceux qui ont accès et "
+"sont autorisés à utiliser ces données. Cela peut devenir difficile à "
+"garantir, surtout dans le cas où les systèmes et les ressources sont "
+"potentiellement partagés par différents clients (par exemple, différentes "
+"machines virtuelles hébergées sur le même serveur physique encourent le "
+"risque de fuites de données). À cette fin, il devrait y avoir des lignes "
+"directrices et des procédures spécifiques pour garantir que les données de "
+"différents clients restent séparées lorsque des ressources partagées sont "
+"utilisées. L'application de ces procédures et lignes directrices doit être "
+"vérifiée périodiquement. Avoir des procédures et des lignes directrices en "
+"place à cette fin est essentiel pour traiter les problèmes de la même "
+"manière à chaque fois."
 
 #: data/otsecuritycheck/questions.json:780
 msgid ""
 " There is no specific guideline to ensure clients' data segregation when "
 "shared resources are implemented."
 msgstr ""
+"Il n'y a pas de ligne directrice spécifique pour garantir la séparation des "
+"données des clients lorsque des ressources partagées sont mises en oeuvre."
 
 #: data/otsecuritycheck/questions.json:793
 msgid ""
@@ -8536,25 +8876,29 @@ msgid ""
 "ensure data segregation. An audit is realized at least once a year to ensure "
 "that data segregation is well implemented."
 msgstr ""
+"Chaque fois que plus d'un client partage une ressource, il existe une ligne "
+"directrice pour garantir la séparation des données. Un audit est réalisé au "
+"moins une fois par an pour s'assurer que la séparation des données est bien "
+"mise en oeuvre."
 
 #: data/otsecuritycheck/questions.json:806
-#, fuzzy
-#| msgid "We do not know if we do."
 msgid " We do not use cloud."
-msgstr "Nous ne savons pas."
+msgstr "Nous n'utilisons pas le cloud."
 
 #: data/otsecuritycheck/questions.json:809
 msgid ""
 " When sharing resources with more than one client, do you ensure that data "
 "is well segregated including Cloud?"
 msgstr ""
+"Lorsque vous partagez des ressources avec plus d'un client, vous assurez-"
+"vous que les données sont bien séparées, y compris dans le Cloud?"
 
 #: data/otsecuritycheck/questions.json:812
 #: data/otsecuritycheck/questions.json:875
 #: data/otsecuritycheck/questions.json:944
 #: data/otsecuritycheck/questions.json:1006
 msgid "IDENTITY, AUTHENTICATION, AND ACCESS CONTROL MANAGEMENT"
-msgstr ""
+msgstr "GESTION DES IDENTITÉS, DE L'AUTHENTIFICATION ET DU CONTRÔLE D'ACCÈS "
 
 #: data/otsecuritycheck/questions.json:826
 msgid ""
@@ -8564,10 +8908,15 @@ msgid ""
 "systems as possible part of your centralised access management including OT "
 "systems."
 msgstr ""
+"Même si certains systèmes IT critiques font partie d'une gestion centralisée "
+"des accès dans votre entreprise, rappelez-vous que la sécurisation de votre "
+"infrastructure dépend du maillon le plus faible. Il est donc recommandé "
+"d'inclure autant de systèmes que possible dans votre gestion centralisée des "
+"accès, y compris les systèmes OT."
 
 #: data/otsecuritycheck/questions.json:829
 msgid " Access to IT systems are centralized."
-msgstr ""
+msgstr "L'accès aux systèmes IT est centralisé."
 
 #: data/otsecuritycheck/questions.json:839
 msgid ""
@@ -8582,20 +8931,34 @@ msgid ""
 "capabilities to identify potential threats.Restrict OT user priveleges to "
 "only those that are required to perform function."
 msgstr ""
+"La décentralisation de la gestion des accès rend difficile la vue d'ensemble "
+"des incidents liés aux accès, ainsi que la mise à jour des permissions d'un "
+"rôle ou l'ajout de nouveaux rôles dans l'organisation de la même manière "
+"dans différentes zones d'accès. Il est recommandé d'avoir un système "
+"centralisé pour gérer les accès dans toute l'organisation. Dans les "
+"situations où cela n'est pas possible, assurez-vous que des contrôles sont "
+"mis en place pour garantir que le bon accès est donné aux bonnes ressources. "
+"Lorsque les contrôles IAM typiques de l'IT ne peuvent pas être mis en "
+"oeuvre, les organisations devraient chercher des opportunités d'utiliser des "
+"capacités de surveillance et d'alerte pour identifier les menaces "
+"potentielles."
 
 #: data/otsecuritycheck/questions.json:842
 msgid " Access to OT systems are de centralised managed by  internal teams."
 msgstr ""
+"L'accès aux systèmes OT est décentralisé et géré par des équipes internes."
 
 #: data/otsecuritycheck/questions.json:849
 msgid ""
 " Access to all systems (IT and OT) and applications of the company is "
 "centralized and managed by a dedicated team."
 msgstr ""
+"L'accès à tous les systèmes (IT et OT) et applications de l'entreprise est "
+"centralisé et géré par une équipe dédiée."
 
 #: data/otsecuritycheck/questions.json:856
 msgid "Basic access control is in place."
-msgstr ""
+msgstr "Un contrôle d'accès élémentaire est en place."
 
 #: data/otsecuritycheck/questions.json:866
 msgid ""
@@ -8603,14 +8966,18 @@ msgid ""
 "create a safer, more secure, and efficient working environment, ultimately "
 "protecting their assets and ensuring smooth operations. "
 msgstr ""
+"En mettant en œuvre des mesures élémentaires de contrôle d'accès, les "
+"entreprises manufacturières peuvent créer un environnement de travail plus "
+"sûr, plus sécurisé et plus efficace, protégeant ainsi leurs actifs et "
+"garantissant le bon déroulement de leurs activités. "
 
 #: data/otsecuritycheck/questions.json:869
 msgid "Basic access control is not in place."
-msgstr ""
+msgstr "Il n'existe pas de contrôle d'accès de base."
 
 #: data/otsecuritycheck/questions.json:872
 msgid "Does your organization have access management in place?"
-msgstr ""
+msgstr "La gestion des accès dans votre entreprise est-elle centralisée?"
 
 #: data/otsecuritycheck/questions.json:889
 #: data/otsecuritycheck/questions.json:922
@@ -8620,12 +8987,18 @@ msgid ""
 "free. In order to control access to information, secrets should be used, and "
 "not shared among employees."
 msgstr ""
+"Si les informations d'authentification censées être secrètes sont partagées, "
+"c'est comme si ces informations étaient publiques et donc l'accès serait "
+"libre. Pour contrôler l'accès aux informations, des secrets doivent être "
+"utilisés et non partagés entre les employés."
 
 #: data/otsecuritycheck/questions.json:892
 msgid ""
 " To facilitate users access to systems and applications, passwords are not "
 "required for authentication."
 msgstr ""
+"Pour faciliter l'accès des utilisateurs aux systèmes et applications, les "
+"mots de passe ne sont pas requis pour l'authentification."
 
 #: data/otsecuritycheck/questions.json:902
 msgid ""
@@ -8634,24 +9007,36 @@ msgid ""
 "governed by secret authentication information, that can be given or set up "
 "for the employees who need it."
 msgstr ""
+"L'accès aux données ne doit pas être dicté par le fait qu'un système ou une "
+"application soit critique, mais plutôt par le besoin de savoir. Par "
+"conséquent, il doit être régi par des informations d'authentification "
+"secrètes, qui peuvent être données ou configurées pour les employés qui en "
+"ont besoin."
 
 #: data/otsecuritycheck/questions.json:905
 msgid ""
 " Some systems and applications within our LAN are not critical, hence users "
 "can connect to them without providing any secret code or phrase."
 msgstr ""
+"Certains systèmes et applications au sein de notre LAN ne sont pas "
+"critiques, donc les utilisateurs peuvent s'y connecter sans fournir de code "
+"ou de phrase secrète."
 
 #: data/otsecuritycheck/questions.json:912
 msgid ""
 " Authentication of the company’s assets is only possible by providing a "
 "secret authentication information."
 msgstr ""
+"L'authentification des actifs de l'entreprise n'est possible qu'en "
+"fournissant une information d'authentification secrète."
 
 #: data/otsecuritycheck/questions.json:925
 msgid ""
 " For some applications and systems secret authentication, information is "
 "shared between several users."
 msgstr ""
+"Pour certaines applications et systèmes, l'information d'authentification "
+"secrète est partagée entre plusieurs utilisateurs."
 
 #: data/otsecuritycheck/questions.json:935
 msgid ""
@@ -8662,18 +9047,31 @@ msgid ""
 "physical access restrictions may sufficiently represent one authentication "
 "factor, provided that the system is not remotely accessible."
 msgstr ""
+"L'authentification multifactorielle est un moyen inestimable de protéger "
+"l'accès aux données sensibles à partir de points d'authentification parfois "
+"négligés. Donc, partout où cela est possible, l'AMF doit être mise en "
+"oeuvre. Dans les scénarios où il y a des limitations, des contrôles "
+"compensatoires doivent être appliqués. En tant que contrôle compensatoire, "
+"les restrictions d'accès\n"
+"physique peuvent représenter suffisamment un facteur d'authentification, à "
+"condition que le système ne soit pas accessible à distance."
 
 #: data/otsecuritycheck/questions.json:938
 msgid ""
 " MFA is required to remotely connect to our company’s network, applications "
 "exposed to internet and all administrative access."
 msgstr ""
+"L'authentification multifactorielle (MFA) est requise pour se connecter à "
+"distance au réseau de notre entreprise, aux applications exposées à Internet "
+"et à tous les accès administratifs."
 
 #: data/otsecuritycheck/questions.json:941
 msgid ""
 " Does access to your company’s infrastructure, systems, and applications "
 "require secret authentication?"
 msgstr ""
+"L'accès à l'infrastructure, aux systèmes et aux applications de votre "
+"entreprise nécessite-t-il une authentification secrète ?"
 
 #: data/otsecuritycheck/questions.json:958
 msgid ""
@@ -8688,12 +9086,22 @@ msgid ""
 "password. Once changed, the password needs to be made available to those who "
 "need to know using a password management tool that is secure."
 msgstr ""
+"Il est essentiel de diriger votre organisation vers l'utilisation des "
+"meilleures pratiques en matière de mots de passe, au lieu d'anciens mots de "
+"passe simples qui ne changent jamais. Afin d'appliquer les mêmes meilleures "
+"pratiques en matière de mots de passe, il est également recommandé de "
+"formaliser des exigences minimales dans une politique de mot de passe, de "
+"vérifier que cette politique de mot de passe est appliquée et de la revoir "
+"de temps en temps pour exiger de meilleures contraintes de mot de passe en "
+"ligne avec les nouvelles technologies."
 
 #: data/otsecuritycheck/questions.json:961
 msgid ""
 " Not all our systems and applications are configured with password best "
 "practices."
 msgstr ""
+"Tous nos systèmes et applications ne sont pas configurés avec les meilleures "
+"pratiques en matière de mots de passe."
 
 #: data/otsecuritycheck/questions.json:971
 msgid ""
@@ -8701,10 +9109,16 @@ msgid ""
 "it is essential to include OT systems as well. The use of weak passwords are "
 "more riskier and can cause more damage than in IT environment."
 msgstr ""
+"Il est bon que des lignes directrices pour les mots de passe soient suivies "
+"dans l'environnement IT, mais il est essentiel d'inclure également les "
+"systèmes OT. L'utilisation de mots de passe faibles est plus risquée et peut "
+"causer plus de dommages que dans l'environnement IT."
 
 #: data/otsecuritycheck/questions.json:974
 msgid " Only Systems in IT are checked for complaince on password guideline."
 msgstr ""
+"Seuls les systèmes IT sont vérifiés pour la conformité aux lignes "
+"directrices sur les mots de passe."
 
 #: data/otsecuritycheck/questions.json:984
 msgid ""
@@ -8715,10 +9129,20 @@ msgid ""
 "who have accessed the operating console, with fingerprint identification, "
 "video surveillance of the operating room, central account control console."
 msgstr ""
+"Vous devriez mettre en place un mécanisme d'authentification pour toute "
+"partie de votre système ou service. Dans les scénarios où il est impossible "
+"pour les logiciels OT de se conformer à une politique de mot de passe forte, "
+"nous avons activé les journaux d'accès et d'activité sur les systèmes à "
+"gérer. Assurer l'identification horaire des utilisateurs qui ont accédé à la "
+"console d'exploitation, avec identification par empreinte digitale, "
+"surveillance vidéo de la salle d'exploitation, console de contrôle des "
+"comptes centraux."
 
 #: data/otsecuritycheck/questions.json:987
 msgid " Password is not required to connect to some applications and systems."
 msgstr ""
+"Le mot de passe n'est pas requis pour se connecter à certaines applications "
+"et systèmes."
 
 #: data/otsecuritycheck/questions.json:997
 msgid ""
@@ -8726,23 +9150,34 @@ msgid ""
 "need to consider procedures to periodically change passwords when a password "
 "is compromised or an individual with access leaves the organization."
 msgstr ""
+"Il est bon que la ligne directrice soit établie, mais les organisations "
+"peuvent également envisager des procédures pour changer périodiquement les "
+"mots de passe lorsqu'un mot de passe est compromis ou lorsqu'une personne "
+"ayant accès quitte l'organisation."
 
 #: data/otsecuritycheck/questions.json:1000
 msgid ""
 " We have defined a password guideline based on best practices, that is "
 "implemented across all our applications and systems both IT and OT."
 msgstr ""
+"Nous avons défini une ligne directrice sur les mots de passe basée sur les "
+"meilleures pratiques, qui est mise en oeuvre sur toutes nos applications et "
+"systèmes, IT et OT."
 
 #: data/otsecuritycheck/questions.json:1003
 msgid ""
 " Did you implement across your infrastructure OT and IT systems a guideline "
 "on passwords (min length, complexity, etc.) ?"
 msgstr ""
+"Avez-vous mis en oeuvre une ligne directrice sur les mots de passe (longueur "
+"minimale, complexité, etc.) pour vos systèmes OT et IT ?"
 
 #: data/otsecuritycheck/questions.json:1017
 msgid ""
 " Maintenance engineers connect using tools to perform maintenance or updates."
 msgstr ""
+"Les ingénieurs de maintenance se connectent en utilisant des outils pour "
+"effectuer la maintenance ou les mises à jour."
 
 #: data/otsecuritycheck/questions.json:1027
 msgid ""
@@ -8752,20 +9187,29 @@ msgid ""
 "monitored and terminated when remote maintenance is completed. This allows "
 "the recording of keyboard entries and the sessions themselves."
 msgstr ""
+"Votre organisation doit s'assurer que les fournisseurs ont leurs propres "
+"utilisateurs restreints pour l'accessibilité du système. Ils utilisent un "
+"VPN pour se connecter à distance et une authentification à deux facteurs "
+"(2FA). Les sessions et les connexions à distance sont fournies via des "
+"serveurs de saut (serveurs jump), sur demande, et sont surveillées et "
+"terminées lorsque la maintenance à distance est terminée. Cela permet "
+"l'enregistrement des frappes au clavier et des sessions elles-mêmes."
 
 #: data/otsecuritycheck/questions.json:1030
 msgid " No remote connections."
-msgstr ""
+msgstr "Pas de connexions à distance."
 
 #: data/otsecuritycheck/questions.json:1040
 msgid ""
 " Guidelines related to maintenance must be shared so that employees are "
 "aware of the guidelines."
 msgstr ""
+"Les lignes directrices relatives à la maintenance doivent être partagées "
+"afin que les employés en soient informés."
 
 #: data/otsecuritycheck/questions.json:1043
 msgid "I'm not sure"
-msgstr ""
+msgstr "Je ne suis pas sûr."
 
 #: data/otsecuritycheck/questions.json:1053
 msgid ""
@@ -8774,26 +9218,37 @@ msgid ""
 "strict data privacy policies to protect sensitive information during remote "
 "sessions. "
 msgstr ""
+" L'utilisation d'outils d'assistance à distance doit être associée à un "
+"souci de sécurité. Une authentification forte, telle que le MFA, et des "
+"protocoles sécurisés doivent être utilisés. Mettez en œuvre des politiques "
+"strictes de confidentialité des données afin de protéger les informations "
+"sensibles lors des sessions à distance. "
 
 #: data/otsecuritycheck/questions.json:1056
 msgid ""
 "TeamViewer, AnyDesk, Splashtop, BeyondTrust Remote Support, and other remote "
 "assistance tools are used to improve our maintenance procedure."
 msgstr ""
+"TeamViewer, AnyDesk, Splashtop, BeyondTrust Remote Support et d'autres "
+"outils d'assistance à distance sont utilisés pour améliorer notre procédure "
+"de maintenance."
 
 #: data/otsecuritycheck/questions.json:1063
 msgid " We use secure VPN (Virtual Private Network) connections."
 msgstr ""
+" Nous utilisons des connexions VPN (Virtual Private Network) sécurisées."
 
 #: data/otsecuritycheck/questions.json:1066
 msgid ""
 "Do you have users connecting remotely to your OT systems for maintenance or "
 "better operations?"
 msgstr ""
+"Des utilisateurs se connectent-ils à distance à vos systèmes OT à des fins "
+"de maintenance ou d'amélioration des opérations ?"
 
 #: data/otsecuritycheck/questions.json:1069
 msgid "CRYPTOGRAPHY AND KEY MANAGEMENT"
-msgstr ""
+msgstr "CRYPTOGRAPHIE ET GESTION DES CLÉS"
 
 #: data/otsecuritycheck/questions.json:1083
 msgid ""
@@ -8803,12 +9258,20 @@ msgid ""
 "recommended that your company uses encryption for data at rest, especially "
 "for sensitive data that has a higher risk for being lost or stolen."
 msgstr ""
+"Afin d'harmoniser l'utilisation du chiffrement et de la gestion des clés "
+"dans toute l'entreprise, il est recommandé que les pratiques à mettre en "
+"oeuvre par tout le monde soient formalisées dans une ligne directrice sur ce "
+"sujet. Il est fortement recommandé que votre entreprise utilise le "
+"chiffrement pour les données au repos, en particulier pour les données "
+"sensibles qui présentent un risque plus élevé de perte ou de vol."
 
 #: data/otsecuritycheck/questions.json:1086
 msgid ""
 " No guidelines have been defined for the use of encryption and key "
 "management. "
 msgstr ""
+" Aucune ligne directrice n'a été définie pour l'utilisation du cryptage et "
+"de la gestion des clés. "
 
 #: data/otsecuritycheck/questions.json:1096
 msgid ""
@@ -8819,10 +9282,19 @@ msgid ""
 "for data at rest, especially for sensitive data that has a higher risk for "
 "being lost or stolen."
 msgstr ""
+"Il est bon que certaines politiques et lignes directrices existent "
+"concernant l'utilisation du chiffrement et de la gestion des clés, mais "
+"votre entreprise devrait vérifier que cette politique ou ligne directrice "
+"est respectée et également revue, de préférence régulièrement. Il est "
+"fortement recommandé que votre entreprise utilise le chiffrement pour les "
+"données au repos, en particulier pour les données sensibles qui présentent "
+"un risque plus élevé de perte ou de vol."
 
 #: data/otsecuritycheck/questions.json:1099
 msgid " We have guidelines about use of encryption and key management. "
 msgstr ""
+"Nous avons des lignes directrices sur l'utilisation du chiffrement et la "
+"gestion des clés."
 
 #: data/otsecuritycheck/questions.json:1109
 msgid ""
@@ -8830,35 +9302,44 @@ msgid ""
 "especially when the data being exchanged is sensitive. You should consider a "
 "solution that encrypts data in motion (transit). "
 msgstr ""
+"Autant que possible, il est recommandé d'éviter les transferts de données en "
+"clair, en particulier lorsque les données échangées sont sensibles. Vous "
+"devriez envisager une solution qui chiffre les données en mouvement "
+"(transit)."
 
 #: data/otsecuritycheck/questions.json:1112
 msgid " Data is encrypted at rest."
-msgstr ""
+msgstr "Les données sont chiffrées au repos."
 
 #: data/otsecuritycheck/questions.json:1119
 msgid " Data is encrypted at transit. "
-msgstr ""
+msgstr "Les données sont chiffrées en transit."
 
 #: data/otsecuritycheck/questions.json:1126
 msgid " Guidelines are reviewed at least once a year. "
-msgstr ""
+msgstr "Les lignes directrices sont examinées au moins une fois par an."
 
 #: data/otsecuritycheck/questions.json:1133
 msgid ""
 " We have implemented an encryption solution that is used by all employees to "
 "transfer sensible data within and outside our networks. "
 msgstr ""
+"Nous avons mis en oeuvre une solution de chiffrement utilisée par tous les "
+"employés pour transférer des données sensibles à l'intérieur et à "
+"l'extérieur de nos réseaux."
 
 #: data/otsecuritycheck/questions.json:1136
 msgid ""
 " Do you have guidelines to secure your sensitive information in IT and OT "
 "systems? "
 msgstr ""
+"Avez-vous des lignes directrices pour sécuriser vos informations sensibles "
+"dans les systèmes IT et OT ?"
 
 #: data/otsecuritycheck/questions.json:1139
 #: data/otsecuritycheck/questions.json:1201
 msgid "COMMUNICATION SECURITY"
-msgstr ""
+msgstr "SÉCURITÉ DES COMMUNICATIONS"
 
 #: data/otsecuritycheck/questions.json:1153
 msgid ""
@@ -8867,11 +9348,17 @@ msgid ""
 "and how they are connected in order to understand how they are and how they "
 "should be protected. This must include both IT and OT network."
 msgstr ""
+"Il est bon de documenter la topologie du réseau et de la maintenir à jour, "
+"car il est essentiel d'avoir une vue d'ensemble de tous les composants du "
+"réseau et de leur connexion afin de comprendre comment ils sont et doivent "
+"être protégés. Cela doit inclure à la fois le réseau IT et OT."
 
 #: data/otsecuritycheck/questions.json:1156
 msgid ""
 " There is no network topology documentation of our infrastructure available. "
 msgstr ""
+"Il n'y a pas de documentation de la topologie du réseau de notre "
+"infrastructure disponible."
 
 #: data/otsecuritycheck/questions.json:1166
 msgid ""
@@ -8880,10 +9367,15 @@ msgid ""
 "will not suffice as you are able to protect what you know, having complete "
 "visibility plays a key role. "
 msgstr ""
+"Il est bon que vous ayez commencé à construire une topologie de réseau pour "
+"l'environnement IT, mais il est essentiel d'inclure également "
+"l'environnement OT. Juste OT ou juste IT ne suffira pas, car vous pouvez "
+"protéger ce que vous connaissez, et avoir une visibilité complète joue un "
+"rôle clé."
 
 #: data/otsecuritycheck/questions.json:1169
 msgid " Network topology of IT network is available."
-msgstr ""
+msgstr "La topologie du réseau IT est disponible."
 
 #: data/otsecuritycheck/questions.json:1179
 msgid ""
@@ -8892,10 +9384,15 @@ msgid ""
 "will not suffice as you are able to protect what you know having complete "
 "visibility plays a key role. "
 msgstr ""
+"Il est bon que vous ayez commencé à construire une topologie de réseau pour "
+"l'environnement OT, mais il est essentiel d'inclure également "
+"l'environnement IT. Juste OT ou juste IT ne suffira pas, car vous pouvez "
+"protéger ce que vous connaissez, et avoir une visibilité complète joue un "
+"rôle clé."
 
 #: data/otsecuritycheck/questions.json:1182
 msgid " Network topology of OT network is available. "
-msgstr ""
+msgstr "La topologie du réseau OT est disponible."
 
 #: data/otsecuritycheck/questions.json:1192
 msgid ""
@@ -8903,18 +9400,25 @@ msgid ""
 "suffice, it is essential that it is kept up to date so that it would "
 "represent your topology at every moment in time. "
 msgstr ""
+"Avoir une topologie de réseau couvrant à la fois les actifs IT et OT ne "
+"suffira pas, il est essentiel de la maintenir à jour afin qu'elle représente "
+"votre topologie à tout moment."
 
 #: data/otsecuritycheck/questions.json:1195
 msgid ""
 " A documented topology of our infrastructure exists but has not been updated "
 "for some time. "
 msgstr ""
+"Une topologie documentée de notre infrastructure existe, mais n'a pas été "
+"mise à jour depuis un certain temps."
 
 #: data/otsecuritycheck/questions.json:1198
 msgid ""
 " Do you have an updated network topology documentation of your OT "
 "infrastructure? "
 msgstr ""
+"Avez-vous une documentation à jour de la topologie du réseau de votre "
+"infrastructure OT ?"
 
 #: data/otsecuritycheck/questions.json:1215
 #: data/otsecuritycheck/questions.json:1228
@@ -8926,49 +9430,66 @@ msgid ""
 "spread within the organization. Network segmentation enhances security, "
 "performance, and compliance."
 msgstr ""
+"Il est important d'avoir une ligne directrice qui donne des orientations à "
+"tous et garantit que tout le monde a le même niveau de compréhension en "
+"matière de sécurité réseau. Il est important de séparer les environnements "
+"OT et IT non seulement logiquement mais aussi physiquement. La segmentation "
+"limite la propagation d'une attaque au sein de l'organisation. La "
+"segmentation du réseau améliore la sécurité, les performances et la "
+"conformité."
 
 #: data/otsecuritycheck/questions.json:1218
 msgid "No network seggregation."
-msgstr ""
+msgstr "Pas de séparation des réseaux."
 
 #: data/otsecuritycheck/questions.json:1231
 msgid " Logical architecture segregation."
-msgstr ""
+msgstr "Séparation logique de l'architecture."
 
 #: data/otsecuritycheck/questions.json:1238
 msgid " Not just logical but we also have segregation in physical resources."
 msgstr ""
+"Nous avons une séparation des ressources non seulement logique, mais "
+"également physique."
 
 #: data/otsecuritycheck/questions.json:1248
 msgid ""
 " It is good that the communication is only on certain ports, but it would be "
 "recommended to ensure the communication is uni directional."
 msgstr ""
+"Il est bon que la communication ne se fasse que sur certains ports, mais il "
+"serait recommandé de s'assurer que la communication soit unidirectionnelle."
 
 #: data/otsecuritycheck/questions.json:1251
 msgid " We have unidirectional communication between OT network to IT network."
 msgstr ""
+"Nous avons une communication unidirectionnelle entre le réseau OT et le "
+"réseau IT."
 
 #: data/otsecuritycheck/questions.json:1258
 msgid ""
 " Our IT network communicates with OT network but we have only specific ports "
 "used."
 msgstr ""
+"Notre réseau IT communique avec le réseau OT, mais nous n'utilisons que des "
+"ports spécifiques."
 
 #: data/otsecuritycheck/questions.json:1265
 msgid " I do not know if OT communicates with IT."
-msgstr ""
+msgstr "Je ne sais pas si l'OT communique avec l'IT."
 
 #: data/otsecuritycheck/questions.json:1268
 msgid ""
 " Does your company architecture have segregation between OT network and "
 "corporate networks?"
 msgstr ""
+"L'architecture de votre entreprise comporte-t-elle une séparation entre le "
+"réseau OT et les réseaux d'entreprise ?"
 
 #: data/otsecuritycheck/questions.json:1271
 #: data/otsecuritycheck/questions.json:1320
 msgid "CHANGE AND CONFIGURATION MANAGEMENT"
-msgstr ""
+msgstr "GESTION DES CHANGEMENTS ET DE LA CONFIGURATION"
 
 #: data/otsecuritycheck/questions.json:1285
 msgid ""
@@ -8977,22 +9498,33 @@ msgid ""
 "approved by management in order to mitigate the risk that unplanned changes "
 "are applied to production. "
 msgstr ""
+" Il est essentiel que tous les changements apportés à vos systèmes et "
+"applications OT et informatiques soient testés avant d'être appliqués à la "
+"production, et qu'ils soient également approuvés par la direction afin de "
+"réduire le risque que des changements non planifiés soient appliqués à la "
+"production."
 
 #: data/otsecuritycheck/questions.json:1288
 msgid ""
 " Changes are not tested before they are released into a production "
 "environment. "
 msgstr ""
+" Les modifications ne sont pas testées avant d'être introduites dans un "
+"environnement de production. "
 
 #: data/otsecuritycheck/questions.json:1298
 msgid " All changes despite of testing must be approved by the management. "
 msgstr ""
+" Toutes les modifications apportées en dépit des tests doivent être "
+"approuvées par la direction. "
 
 #: data/otsecuritycheck/questions.json:1301
 msgid ""
 " We test every single change before applying them in any production "
 "environment ( IT and OT). "
 msgstr ""
+" Nous testons chaque changement avant de l'appliquer dans un environnement "
+"de production (IT et OT). "
 
 #: data/otsecuritycheck/questions.json:1311
 msgid ""
@@ -9001,18 +9533,26 @@ msgid ""
 "understand their impact and effects. Audits will help identify if changes "
 "were performed without formal approval or testing. "
 msgstr ""
+" C'est une bonne chose que les changements soient toujours testés et "
+"approuvés par la direction, mais ce serait encore mieux s'ils étaient "
+"examinés après la production pour en comprendre l'impact et les effets. Les "
+"audits permettront d'identifier si des changements ont été effectués sans "
+"approbation ou test formel."
 
 #: data/otsecuritycheck/questions.json:1314
-#, fuzzy
-#| msgid "done daily: backups are made at least once daily"
 msgid " Implemented changes are audited at least once a year. "
-msgstr "journalières : les sauvegardes sont faites tous les jours ou plus"
+msgstr ""
+" Les changements mis en œuvre font l'objet d'un audit au moins une fois par "
+"an. "
 
 #: data/otsecuritycheck/questions.json:1317
 msgid ""
 " Do you always test all changes to your OT systems and applications before "
 "releasing them in a production environment? "
 msgstr ""
+"Dans le cadre de la procédure de changement dans votre organisation pour les "
+"systèmes OT, réalisez-vous une évaluation des risques pour définir la "
+"priorité de vos changements ?"
 
 #: data/otsecuritycheck/questions.json:1334
 msgid ""
@@ -9020,37 +9560,52 @@ msgid ""
 "assessment in order to understand the impact of the change and its priority "
 "be it in IT or OT system. "
 msgstr ""
+"Votre procédure de gestion des changements doit envisager la réalisation "
+"d'une évaluation des risques afin de comprendre l'impact du changement et sa "
+"priorité, qu'il s'agisse d'un système informatique ou d'un système "
+"opérationnel. "
 
 #: data/otsecuritycheck/questions.json:1337
 msgid ""
 " No risk assessment realized as part of the change management procedure for "
 "OT systems. "
 msgstr ""
+" Aucune évaluation des risques n'a été réalisée dans le cadre de la "
+"procédure de gestion des changements pour les systèmes OT. "
 
 #: data/otsecuritycheck/questions.json:1344
 msgid ""
 " Risk assessment is realised in our change procedure for OT systems, which "
 "is eventually considered in defining change priority. "
 msgstr ""
+"Une évaluation des risques est réalisée dans notre procédure de changement "
+"pour les systèmes OT, qui est finalement prise en compte pour définir la "
+"priorité des changements."
 
 #: data/otsecuritycheck/questions.json:1354
 msgid ""
 " The guidelines related to change procedure needs to be shared with all. "
 msgstr ""
+"Les lignes directrices relatives à la procédure de changement doivent être "
+"partagées avec tous"
 
 #: data/otsecuritycheck/questions.json:1360
 msgid ""
 " As part of the change procedure in your organization for OT systems, do you "
 "realize a risk assessment to define the priority of your changes? "
 msgstr ""
+"Dans le cadre de la procédure de changement dans votre organisation pour les "
+"systèmes OT, réalisez-vous une évaluation des risques pour définir la "
+"priorité de vos changements ?"
 
 #: data/otsecuritycheck/questions.json:1363
 msgid "DEVELOPMENT OF INFORMATION SYSTEMS"
-msgstr ""
+msgstr "DÉVELOPPEMENT DES SYSTÈMES D'INFORMATION"
 
 #: data/otsecuritycheck/questions.json:1374
 msgid " No software developments in OT, only in IT environment."
 msgstr ""
+"Aucun développement logiciel dans l'OT, uniquement dans l'environnement IT."
 
 #: data/otsecuritycheck/questions.json:1384
 msgid ""
@@ -9059,10 +9614,17 @@ msgid ""
 "code aligns with security requirements. In case of third parties it must be "
 "ensured through contracts."
 msgstr ""
+"Les organisations doivent avoir des environnements séparés pour aider à "
+"maintenir la stabilité et la sécurité. Suivre les meilleures pratiques et "
+"effectuer des examens réguliers garantissent que le code est conforme aux "
+"exigences de sécurité. Dans le cas de tiers, cela doit être assuré par des "
+"contrats."
 
 #: data/otsecuritycheck/questions.json:1387
 msgid " We perform automations using inhouse expertise or third party."
 msgstr ""
+"Nous réalisons des automatisations en utilisant une expertise interne ou des "
+"tiers."
 
 #: data/otsecuritycheck/questions.json:1394
 msgid ""
@@ -9070,16 +9632,23 @@ msgid ""
 "restricting access , audit logs, backups. For libraries we check the source "
 "is trusted and regular updates and reviews are performed. "
 msgstr ""
+"Nous nous assurons que l'environnement et les bibliothèques utilisées dans "
+"les scripts sont sécurisés en restreignant l'accès, en établissant des "
+"journaux d'audit et en effectuant des sauvegardes. Pour les bibliothèques, "
+"nous vérifions que la source est fiable et que des mises à jour et des "
+"révisions régulières sont effectuées. "
 
 #: data/otsecuritycheck/questions.json:1397
 msgid ""
 " In your organisation, do you perform development in Operational Technology "
 "(OT) systems?"
 msgstr ""
+"Dans votre organisation, réalisez-vous des développements dans les systèmes "
+"OT ?"
 
 #: data/otsecuritycheck/questions.json:1400
 msgid "PROCUREMENT MANAGEMENT"
-msgstr ""
+msgstr "GESTION DES APPROVISIONNEMENTS"
 
 #: data/otsecuritycheck/questions.json:1414
 msgid ""
@@ -9089,46 +9658,65 @@ msgid ""
 "your suppliers.Like this,the necessary measures to mitigate such risks would "
 "be triggered by you,at your organisation's pace."
 msgstr ""
+"Vous ne devriez pas compter sur vos fournisseurs pour vous informer des "
+"risques qu'ils ont identifiés (s'ils les ont identifiés), mais plutôt que "
+"votre organisation prenne le contrôle de la périodicité des évaluations des "
+"risques qui incluent vos fournisseurs. De cette manière, les mesures "
+"nécessaires pour atténuer ces risques seraient déclenchées par vous, au "
+"rythme de votre organisation."
 
 #: data/otsecuritycheck/questions.json:1417
 msgid ""
 " Our suppliers inform us when they identified risks that could affect any of "
 "our systems and services."
 msgstr ""
+"Nos fournisseurs nous informent lorsqu'ils identifient des risques pouvant "
+"affecter l'un de nos systèmes et services."
 
 #: data/otsecuritycheck/questions.json:1424
 msgid ""
 " We have regular meetings with our suppliers to review the agreed SLA and "
 "proactively address any foreseen risks."
 msgstr ""
+"Nous avons des réunions régulières avec nos fournisseurs pour examiner le "
+"SLA convenu et traiter de manière proactive les risques prévus."
 
 #: data/otsecuritycheck/questions.json:1431
 msgid ""
 " The selection of suppliers and other third parties includes consideration "
 "of their cybersecurity qualifications, at least in an ad hoc manner."
 msgstr ""
+"La sélection des fournisseurs et autres tiers inclut la prise en compte de "
+"leurs qualifications en matière de cybersécurité, au moins de manière ad hoc."
 
 #: data/otsecuritycheck/questions.json:1438
 msgid ""
 " The selection of products and services includes consideration of their "
 "cybersecurity capabilities, at least in an ad hoc manner."
 msgstr ""
+"La sélection des produits et services inclut la prise en compte de leurs "
+"capacités en matière de cybersécurité, au moins de manière ad hoc."
 
 #: data/otsecuritycheck/questions.json:1445
 msgid ""
 " Selection criteria for higher priority assets include evaluation of bills "
 "of material for key asset elements, such as hardware and software."
 msgstr ""
+"Les critères de sélection pour les actifs de priorité supérieure incluent "
+"l'évaluation des nomenclatures pour les éléments d'actifs clés, tels que le "
+"matériel et les logiciels."
 
 #: data/otsecuritycheck/questions.json:1448
 msgid ""
 " Do you realize periodic risk assessment for suppliers, to proactively "
 "implement mitigation controls?"
 msgstr ""
+"Réalisez-vous des évaluations périodiques des risques pour les fournisseurs, "
+"afin de mettre en oeuvre de manière proactive des contrôles d'atténuation ?"
 
 #: data/otsecuritycheck/questions.json:1451
 msgid "INCIDENT MANAGEMENT"
-msgstr ""
+msgstr "GESTION DES INCIDENTS"
 
 #: data/otsecuritycheck/questions.json:1465
 msgid ""
@@ -9140,10 +9728,18 @@ msgid ""
 "regularly audited and reviewed. Maintaining an incident repository helps in "
 "better manage the incidents."
 msgstr ""
+"Il est fortement recommandé d'avoir des procédures ou des lignes directrices "
+"sur la manière de réagir rapidement face aux incidents de cybersécurité, aux "
+"violations de données ou aux catastrophes. En effet, dans des situations "
+"comme celles-ci, il est souvent vital d'agir rapidement et de manière "
+"correcte afin de minimiser les dommages. La ligne directrice doit inclure à "
+"la fois l'environnement IT et OT. La ligne directrice formelle doit être "
+"régulièrement auditée et revue. Maintenir un référentiel d'incidents aide à "
+"mieux gérer les incidents."
 
 #: data/otsecuritycheck/questions.json:1468
 msgid " Incident management guideline is not defined."
-msgstr ""
+msgstr "La ligne directrice de gestion des incidents n'est pas définie."
 
 #: data/otsecuritycheck/questions.json:1478
 msgid ""
@@ -9154,48 +9750,70 @@ msgid ""
 "audited and reviewed. Maintaining an incident repository helps in better "
 "manage the incidents."
 msgstr ""
+"Il est bon que des procédures de gestion des incidents soient en place pour "
+"l'environnement IT, mais elles doivent être vérifiées pour s'assurer "
+"qu'elles sont applicables et à jour, et inclure l'environnement OT, car un "
+"incident dans un environnement peut affecter l'autre. La ligne directrice "
+"formelle est bonne, mais elle doit être régulièrement auditée et revue. "
+"Maintenir un référentiel d'incidents aide à mieux gérer les incidents."
 
 #: data/otsecuritycheck/questions.json:1481
 msgid ""
 " Incident management guideline is defined and implemented for IT systems."
 msgstr ""
+"La ligne directrice de gestion des incidents est définie et mise en oeuvre "
+"pour les systèmes IT."
 
 #: data/otsecuritycheck/questions.json:1488
 msgid ""
 " Incident management guideline is defined and implemented for both IT and OT "
 "systems."
 msgstr ""
+"La ligne directrice de gestion des incidents est définie et mise en oeuvre "
+"pour les systèmes IT et OT."
 
 #: data/otsecuritycheck/questions.json:1495
 msgid ""
 " Guidelines are audited at least once a year to verify their compliance."
 msgstr ""
+"Les lignes directrices sont auditées au moins une fois par an pour vérifier "
+"leur conformité."
 
 #: data/otsecuritycheck/questions.json:1502
 msgid ""
 " A repository is maintained where cybersecurity events and incidents are "
 "documented and tracked to closure."
 msgstr ""
+"Un référentiel est maintenu où les événements et incidents de cybersécurité "
+"sont documentés et suivis jusqu'à leur clôture."
 
 #: data/otsecuritycheck/questions.json:1505
 msgid ""
 " Does your company have guidelines for dealing with cyber incidents, "
 "personal data breaches, or sudden events (flood, fire, crisis, etc.)?"
 msgstr ""
+"Votre entreprise dispose-t-elle de lignes directrices pour traiter les "
+"incidents cybernétiques, les violations de données personnelles ou les "
+"événements soudains (inondation, incendie, crise, etc.) ?"
 
 #: data/otsecuritycheck/questions.json:1508
 msgid "BUSINESS CONTINUITY"
-msgstr ""
+msgstr "CONTINUITÉ DES ACTIVITÉS"
 
 #: data/otsecuritycheck/questions.json:1522
 msgid ""
 " It is essential to put in place a business continuity plan and guidelines, "
 "in order to mitigate the effects of disruptions on your operations."
 msgstr ""
+"Il est essentiel de mettre en place un plan de continuité des activités et "
+"des lignes directrices afin de réduire les effets des perturbations sur vos "
+"opérations."
 
 #: data/otsecuritycheck/questions.json:1525
 msgid " No business continuity guideline or implementation in place."
 msgstr ""
+"Aucune ligne directrice ou mise en oeuvre de la continuité des activités en "
+"place."
 
 #: data/otsecuritycheck/questions.json:1535
 msgid ""
@@ -9210,43 +9828,67 @@ msgid ""
 "is essential to develop ways to recover from the incident/disruption. It is "
 "essential to have BIAs as part of your business continuity planning."
 msgstr ""
+"Il est bon que vous ayez mis en place une ligne directrice et un plan de "
+"continuité des activités pour les systèmes IT, mais avec la convergence des "
+"systèmes IT et OT aujourd'hui, il est important d'inclure également les "
+"systèmes OT. Toute perturbation dans l'environnement OT peut avoir un impact "
+"très élevé sur l'ensemble de l'entreprise. Des tests périodiques doivent "
+"être effectués à cet égard pour simuler la réaction à une catastrophe, et le "
+"rapport qui en résulte doit être partagé avec la direction.\n"
+"La principale fonction d'une analyse d'impact sur les activités (BIA) est "
+"d'aider à comprendre les conséquences d'une perturbation des opérations de "
+"votre entreprise et de recueillir des données essentielles pour développer "
+"des moyens de se remettre de l'incident/perturbation. Il est essentiel "
+"d'avoir des BIA dans le cadre de votre planification de la continuité des "
+"activités."
 
 #: data/otsecuritycheck/questions.json:1538
 msgid ""
 " Clearly defined guideline and implementation of business continuity for IT "
 "systems."
 msgstr ""
+"Ligne directrice clairement définie et mise en oeuvre de la continuité des "
+"activités pour les systèmes IT."
 
 #: data/otsecuritycheck/questions.json:1545
 msgid ""
 " Clearly defined guideline and implementation of business continuity for IT "
 "and OT systems."
 msgstr ""
+"Ligne directrice clairement définie et mise en oeuvre de la continuité des "
+"activités pour les systèmes IT et OT."
 
 #: data/otsecuritycheck/questions.json:1555
 msgid ""
 " It is good that Business continuity tests are performed but test results "
 "and reports must be shared with the management."
 msgstr ""
+" Il est bon que des tests de continuité des activités soient effectués, mais "
+"les résultats et les rapports de ces tests doivent être communiqués à la "
+"direction."
 
 #: data/otsecuritycheck/questions.json:1558
 msgid ""
 " Business continuity tests and exercises are performed including OT "
 "environment."
 msgstr ""
+"Des tests et exercices de continuité des activités sont réalisés, y compris "
+"pour l'environnement OT."
 
 #: data/otsecuritycheck/questions.json:1565
 msgid " Test results and a reports are shared with the management."
-msgstr ""
+msgstr "Les résultats des tests et rapports sont partagés avec la direction"
 
 #: data/otsecuritycheck/questions.json:1568
 msgid ""
 " Did you define and implement Business Continuity process for OT systems?"
 msgstr ""
+"Avez-vous défini et mis en oeuvre un processus de continuité des activités "
+"pour les systèmes OT?"
 
 #: data/otsecuritycheck/questions.json:1571
 msgid "COMPLIANCE"
-msgstr ""
+msgstr "CONFORMITÉ"
 
 #: data/otsecuritycheck/questions.json:1585
 msgid ""
@@ -9258,12 +9900,24 @@ msgid ""
 "preparation and conduct of internal audit along with regularly or annually "
 "performing audit is key to identify weaknesses. "
 msgstr ""
+"Étant donné l'évolution rapide des réglementations et des exigences légales "
+"imposées aux entreprises utilisant les technologies de l'information (IT) et "
+"les nouvelles technologies comme les technologies opérationnelles (OT), il "
+"devient essentiel d'avoir une vue commune au niveau de l'organisation sur "
+"autant de ces exigences que possible en tenant une liste ou un registre "
+"commun de ces exigences et en le mettant à jour régulièrement. Établir une "
+"ligne directrice sur la préparation et la conduite des audits internes, "
+"ainsi que réaliser des audits régulièrement ou annuellement, est essentiel "
+"pour identifier les faiblesses."
 
 #: data/otsecuritycheck/questions.json:1588
 msgid ""
 " No centralised registry available, but each business or operation unit "
 "ensures compliance with any legal and regulatory requirements."
 msgstr ""
+"Aucun registre centralisé disponible, mais chaque unité commerciale ou "
+"opérationnelle assure la conformité avec les exigences légales et "
+"réglementaires."
 
 #: data/otsecuritycheck/questions.json:1598
 msgid ""
@@ -9274,14 +9928,23 @@ msgid ""
 "security controls to adapt to new threats and changes in regulations. Ensure "
 "these responsibilities are assigned to relevant resources. "
 msgstr ""
+"Pour relever les défis de la conformité dans vos systèmes OT, commencez par "
+"un audit approfondi de vos systèmes OT actuels afin d'identifier les lacunes "
+"en matière de conformité. Créez un cadre de conformité complet qui s'aligne "
+"sur les normes pertinentes. Examinez et mettez régulièrement à jour votre "
+"cadre de conformité et vos contrôles de sécurité pour vous adapter aux "
+"nouvelles menaces et aux changements de réglementation. Veillez à ce que ces "
+"responsabilités soient confiées aux ressources appropriées. "
 
 #: data/otsecuritycheck/questions.json:1601
 msgid " We lack clarity in terms of compliance when it comes to OT systems. "
 msgstr ""
+"Nous tenons un registre de toutes les exigences légales et réglementaires "
+"pour les systèmes IT."
 
 #: data/otsecuritycheck/questions.json:1608
 msgid " We are NIS2 compliant."
-msgstr ""
+msgstr "Nous sommes conformes à NIS2."
 
 #: data/otsecuritycheck/questions.json:1615
 msgid ""
@@ -9289,6 +9952,9 @@ msgid ""
 "audit annually. The results of the audit are shared with the stakeholders "
 "and tracked to closure."
 msgstr ""
+"Nous avons une ligne directrice bien définie pour la préparation et la "
+"réalisation d'audits internes annuels. Les résultats de l'audit sont "
+"partagés avec les parties prenantes et suivis jusqu'à leur clôture."
 
 #: data/otsecuritycheck/questions.json:1625
 msgid ""
@@ -9300,10 +9966,21 @@ msgid ""
 "flaws found in one cycle, could be mitigated (or at least having their "
 "mitigation followed) in the next cycle."
 msgstr ""
+"Auditer vos processus et systèmes internes, surtout lorsqu'ils sont "
+"effectués en interne, peut mettre en lumière des points critiques, "
+"identifier des faiblesses ou des défauts, et aider à trouver des solutions "
+"aux processus organisationnels ou à mieux gérer les actifs. Cela peut être "
+"fait à faible coût et sans exposition de réputation.\n"
+"Vous devriez envisager de réaliser des audits internes sur une base annuelle "
+"afin que les faiblesses et les défauts identifiés lors d'un cycle puissent "
+"être atténués (ou au moins que leur atténuation soit suivie) lors du cycle "
+"suivant."
 
 #: data/otsecuritycheck/questions.json:1628
 msgid " Our systems and processes have not been audited for the past 2 years. "
 msgstr ""
+"Nos systèmes et processus n'ont pas été audités au cours des 2 dernières "
+"années."
 
 #: data/otsecuritycheck/questions.json:1638
 msgid ""
@@ -9312,21 +9989,31 @@ msgid ""
 "value for you (e.g., you receive reports that are seen by your management), "
 "as for any service provided by an external party."
 msgstr ""
+"Si vous avez externalisé l'audit de vos systèmes (IT et OT) et de vos "
+"contrôles à un tiers, vous devriez également vérifier que ces audits ont "
+"lieu et apportent de la valeur pour vous (par exemple, vous recevez des "
+"rapports qui sont vus par votre direction), comme pour tout service fourni "
+"par une partie externe."
 
 #: data/otsecuritycheck/questions.json:1641
 msgid ""
 " We have outsourced auditing to a third party for both IT and OT systems."
 msgstr ""
+" Nous avons confié l'audit à un tiers, tant pour les systèmes informatiques "
+"que pour les systèmes OT."
 
 #: data/otsecuritycheck/questions.json:1644
 msgid ""
 " In your organisation, how do you identify and track relevant compliance "
 "requirements for OT systems? "
 msgstr ""
+"Dans votre organisation, comment identifiez-vous et suivez-vous les "
+"exigences de conformité pertinentes pour les systèmes OT (NIS2, ISO 27001, "
+"TISAX)?"
 
 #: data/otsecuritycheck/questions.json:1647
 msgid "MAINTENANCE"
-msgstr ""
+msgstr "MAINTENANCE"
 
 #: data/otsecuritycheck/questions.json:1661
 msgid ""
@@ -9338,12 +10025,21 @@ msgid ""
 "maintenance is completed.Strong authentication must be established for these "
 "users."
 msgstr ""
+"Votre organisation devrait définir des lignes directrices pour "
+"l'environnement ICS ou OT en cours de maintenance, par exemple en couvrant "
+"les sujets suivants : toute maintenance ou mise à niveau doit répondre aux "
+"exigences de sécurité de la zone des systèmes. Elle doit être effectuée et "
+"enregistrée régulièrement avec des outils contrôlés approuvés. Terminez la "
+"session et les connexions réseau lorsque la maintenance à distance est "
+"terminée. Une authentification forte doit être établie pour ces utilisateurs."
 
 #: data/otsecuritycheck/questions.json:1664
 msgid ""
 " We do not have guidelines for maintenance and diagonostic activities of OT "
 "systems."
 msgstr ""
+"Nous n'avons pas de lignes directrices pour les activités de maintenance et "
+"de diagnostic des systèmes OT."
 
 #: data/otsecuritycheck/questions.json:1674
 msgid ""
@@ -9357,6 +10053,17 @@ msgid ""
 "adherence to the guidelines.Develop a clear incident response plan for any "
 "issues that arise during non-local maintenance activities"
 msgstr ""
+"Disposer de lignes directrices et n'utiliser que des outils approuvés pour "
+"les activités de maintenance et de diagnostic non locales est une étape "
+"cruciale pour garantir la conformité et la sécurité. Pour améliorer encore "
+"votre approche, vous pouvez envisager de réviser et de mettre à jour "
+"régulièrement les lignes directrices, ce qui permet de s'assurer qu'elles "
+"sont conformes aux normes industrielles et aux exigences réglementaires les "
+"plus récentes. Formez en permanence votre personnel à ces lignes directrices "
+"et à l'utilisation correcte des outils approuvés.Mettez en œuvre des "
+"processus de contrôle et d'audit réguliers pour garantir le respect des "
+"lignes directrices.Élaborez un plan d'intervention clair en cas d'incident "
+"survenant au cours des activités de maintenance non locale."
 
 #: data/otsecuritycheck/questions.json:1677
 msgid ""
@@ -9364,6 +10071,8 @@ msgid ""
 "systems, using only approved tools. These guidelines are audited annually to "
 "ensure compliance. "
 msgstr ""
+"Nous n'avons pas de lignes directrices pour les activités de maintenance et "
+"de diagnostic des systèmes OT."
 
 #: data/otsecuritycheck/questions.json:1687
 msgid ""
@@ -9376,34 +10085,53 @@ msgid ""
 "adherence to the guidelines. Develop a clear incident response plan for any "
 "issues that arise during non-local maintenance activities. "
 msgstr ""
+"Pour commencer, il est bon d'avoir des lignes directrices pour l'entretien "
+"et les outils de diagnostic, mais pour améliorer votre approche, vous pouvez "
+"envisager de réviser et de mettre à jour régulièrement les lignes "
+"directrices, ce qui garantit qu'elles sont conformes aux normes "
+"industrielles et aux exigences réglementaires les plus récentes. Former en "
+"permanence votre personnel à ces lignes directrices et à l'utilisation "
+"correcte des outils approuvés. Mettez en œuvre des processus de contrôle et "
+"d'audit réguliers pour garantir le respect des lignes directrices. Élaborer "
+"un plan d'intervention clair en cas d'incident survenant au cours "
+"d'activités de maintenance non locales. "
 
 #: data/otsecuritycheck/questions.json:1690
 msgid ""
 " We have guidelines for maintenance and diagonostic activities written but "
 "not updated at since a year. "
 msgstr ""
+"Nous avons des lignes directrices pour les activités de maintenance et de "
+"diagnostic non locales des systèmes OT. Seuls les outils approuvés sont "
+"utilisés."
 
 #: data/otsecuritycheck/questions.json:1693
 msgid ""
 " In the company, do you have guidelines for maintenance related to  OT "
 "systems? "
 msgstr ""
+"Dans l'entreprise, avez-vous des lignes directrices pour la maintenance des "
+"systèmes OT?"
 
 #: data/otsecuritycheck/questions.json:1696
 msgid "PRIVACY BY DESIGN"
-msgstr ""
+msgstr "CONFIDENTIALITÉ PAR CONCEPTION"
 
 #: data/otsecuritycheck/questions.json:1707
 msgid ""
 " We have guidelines in place to ensure safe handling of Personally "
 "Identifiable Information (PII) data."
 msgstr ""
+"Nous avons des lignes directrices en place pour garantir la manipulation "
+"sécurisée des données personnellement identifiables (PII)."
 
 #: data/otsecuritycheck/questions.json:1714
 msgid ""
 " No we do not need, as we do not collect Personally Identifiable Information "
 "(PII) data."
 msgstr ""
+"Non, nous n'en avons pas besoin, car nous ne collectons pas de données "
+"personnellement identifiables (PII)."
 
 #: data/otsecuritycheck/questions.json:1724
 msgid ""
@@ -9412,22 +10140,30 @@ msgid ""
 "(Personally Identifiable Information) data and its management must be shared "
 "with all employees."
 msgstr ""
+"La gestion des informations personnellement identifiables (PII) est cruciale "
+"pour la confidentialité des données et la conformité. Les lignes directrices "
+"concernant la collecte des données PII (informations personnellement "
+"identifiables) et leur gestion doivent être partagées avec tous les employés."
 
 #: data/otsecuritycheck/questions.json:1727
 msgid ""
 " We collect Personally Identifiable Information (PII) but im not sure of the "
 "process to handle the data."
 msgstr ""
+"Nous collectons des données personnellement identifiables (PII), mais je ne "
+"suis pas sûr du processus de gestion de ces données."
 
 #: data/otsecuritycheck/questions.json:1734
 msgid "Not Applicable. "
-msgstr ""
+msgstr "Non applicable."
 
 #: data/otsecuritycheck/questions.json:1737
 msgid ""
 " Do you have personally identifiable information (PII), how do you protect "
 "them?"
 msgstr ""
+"Avez-vous des informations personnellement identifiables (PII), comment les "
+"protégez-vous?"
 
 #: stats/forms.py:9
 msgid "Start date"
