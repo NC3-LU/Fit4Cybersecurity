@@ -4,7 +4,7 @@ CUSTOM = {
     # Generic configurations
     "tool_name": "Survey PQCReadiness",
     "intro_text": gettext_lazy(
-        " Post-Quantum Cryptography (PQC) readiness refers to the practice of"
+        "Post-Quantum Cryptography (PQC) readiness refers to the practice of "
         "preparing computer systems, networks, and sensitive information "
         "for protection against future threats posed by quantum computing."
         "Advances in quantum technologies are expected to break widely"
@@ -42,7 +42,7 @@ CUSTOM = {
     "defaultLanguage": "en",
     "languages": [
         ("en", "English"),
-        ],
+    ],
     # Logos paths
     "right_cover_logo": "templates/report/images/nc3_logo.svg",
     "left_cover_logo": "templates/report/images/lhc_logo.svg",
@@ -58,7 +58,7 @@ CUSTOM = {
     "templates_parts": {
         # path of the templates parts
         "terms": "terms_part.html",
-        "footer": "surveySMEDemand/footer_part.html",
+        "footer": "footer_part.html",
         "main_logo": "logo_part.html",
         "privacy": "privacy_policy_part.html",
     },

@@ -6,7 +6,7 @@
 
 
 ```bash
-$ whitelabel={NameOfWhitelabel} docker-compose up -d
+$ whitelabel={NameOfWhitelabel} docker compose up -d
 ```
 {NameOfWhitelabel} - is the launching site name (e.g. fit4cybersecurity).
 
