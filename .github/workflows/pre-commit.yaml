@@ -13,4 +13,4 @@ jobs:
           pip install reorder-python-imports
           pip install pyupgrade
           pip install black
-      - uses: pre-commit/action@v2.0.3
+      - uses: pre-commit/action@v3.0.1
