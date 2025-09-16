@@ -26,6 +26,7 @@ from survey.forms import GeneralFeedback
 from survey.models import CONTEXT_SECTION_LABEL
 from survey.models import SURVEY_STATUS_IN_PROGRESS
 from survey.models import SURVEY_STATUS_UNDER_REVIEW
+from survey.models import SURVEY_STATUS_FINISHED
 from survey.models import SurveyAnswerQuestionMap
 from survey.models import SurveyQuestion
 from survey.models import SurveyQuestionAnswer
@@ -222,7 +223,13 @@ def handle_question_answers_request(
 
                 user.current_question = next_sequence.question
             else:
-                user.status = SURVEY_STATUS_UNDER_REVIEW
+                if (
+                    "displayReview" in CUSTOM["modules"]
+                    and CUSTOM["modules"]["displayReview"]
+                ):
+                    user.status = SURVEY_STATUS_UNDER_REVIEW
+                else:
+                    user.status = SURVEY_STATUS_FINISHED
 
             user.save()
 

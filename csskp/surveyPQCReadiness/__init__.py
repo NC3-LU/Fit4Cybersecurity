@@ -70,6 +70,7 @@ CUSTOM = {
         "requestDiagnostic": False,
         "requestTraining": False,
         "displayResults": False,
+        "displayReview": False,
     },
     # Available report parts
     "report": {

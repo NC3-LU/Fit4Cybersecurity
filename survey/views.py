@@ -84,6 +84,8 @@ def handle_question_form(request, question_index: int):
     if type(result) is SurveyUser:
         if result.is_survey_under_review():
             return HttpResponseRedirect("/survey/review" + review_ancher)
+        elif user.is_survey_finished():
+            return HttpResponseRedirect("/survey/finish")
 
         return HttpResponseRedirect(
             "/survey/question/"
