@@ -43,20 +43,36 @@
         "aindex": 1,
         "uniqueAnswer": true,
         "atype": "P",
-        "label": "Yes"
+        "label": "Yes",
+        "questions_map": [
+          {
+            "label": "Has PQC or quantum risk been included in your organization's security awareness training or risk management?",
+            "branch": 1,
+            "level": 1,
+            "order": 1
+          }
+        ]
       },
       {
         "aindex": 2,
         "uniqueAnswer": true,
         "atype": "P",
-        "label": "No"
+        "label": "No",
+        "questions_map": [
+          {
+            "label": "Do you know which of your current cryptographic systems (e.g., TLS, VPNs, PKI, blockchain) are vulnerable to quantum attacks?",
+            "branch": 2,
+            "level": 1,
+            "order": 1
+          }
+        ]
       }
     ]
   },
   {
     "section": "Awareness",
     "service_category": "Awareness",
-    "qtype": "ST",
+    "qtype": "S",
     "qindex": 3,
     "label": "Do you know which of your current cryptographic systems (e.g., TLS, VPNs, PKI, blockchain) are vulnerable to quantum attacks?",
     "answers": [
@@ -83,19 +99,19 @@
   {
     "section": "Awareness",
     "service_category": "Awareness",
-    "qtype": "MT",
+    "qtype": "S",
     "qindex": 4,
     "label": "Has PQC or quantum risk been included in your organization's security awareness training or risk management?",
     "answers": [
       {
         "aindex": 1,
-        "uniqueAnswer": false,
+        "uniqueAnswer": true,
         "atype": "P",
         "label": "Yes"
       },
       {
         "aindex": 2,
-        "uniqueAnswer": false,
+        "uniqueAnswer": true,
         "atype": "P",
         "label": "No"
       },
@@ -161,33 +177,65 @@
   {
     "section": "Strategy",
     "service_category": "Strategy",
-    "qtype": "MT",
+    "qtype": "S",
     "qindex": 6,
     "label": "Has your organization developed a strategy or roadmap for transitioning to quantum-resistant cryptographic systems?",
     "answers": [
       {
         "aindex": 1,
-        "uniqueAnswer": false,
+        "uniqueAnswer": true,
         "atype": "P",
-        "label": "Yes"
+        "label": "Yes",
+        "questions_map": [
+          {
+            "label": "Who is driving this initiative internally?",
+            "branch": 1,
+            "level": 1,
+            "order": 1
+          }
+        ]
       },
       {
         "aindex": 2,
-        "uniqueAnswer": false,
+        "uniqueAnswer": true,
         "atype": "P",
-        "label": "In Progress"
+        "label": "In Progress",
+        "questions_map": [
+          {
+            "label": "Do you have your leadership Support?",
+            "branch": 2,
+            "level": 1,
+            "order": 1
+          }
+        ]
       },
       {
         "aindex": 3,
-        "uniqueAnswer": false,
+        "uniqueAnswer": true,
         "atype": "P",
-        "label": "Planned but not started."
+        "label": "Planned but not started.",
+        "questions_map": [
+          {
+            "label": "Do you have your leadership Support?",
+            "branch": 2,
+            "level": 1,
+            "order": 1
+          }
+        ]
       },
       {
         "aindex": 4,
         "uniqueAnswer": true,
         "atype": "P",
-        "label": "No plans yet."
+        "label": "No plans yet.",
+        "questions_map": [
+          {
+            "label": "Do you have your leadership Support?",
+            "branch": 2,
+            "level": 1,
+            "order": 1
+          }
+        ]
       }
     ]
   },
@@ -254,31 +302,31 @@
   {
     "section": "Strategy",
     "service_category": "Strategy",
-    "qtype": "M",
+    "qtype": "S",
     "qindex": 9,
     "label": "What stage is your organization at in its post-quantum transition?",
     "answers": [
       {
         "aindex": 1,
-        "uniqueAnswer": false,
+        "uniqueAnswer": true,
         "atype": "P",
         "label": "No awareness."
       },
       {
         "aindex": 2,
-        "uniqueAnswer": false,
+        "uniqueAnswer": true,
         "atype": "P",
         "label": "Awareness but no planning."
       },
       {
         "aindex": 3,
-        "uniqueAnswer": false,
+        "uniqueAnswer": true,
         "atype": "P",
         "label": "Planning underway."
       },
       {
         "aindex": 4,
-        "uniqueAnswer": false,
+        "uniqueAnswer": true,
         "atype": "P",
         "label": "Pilots or proof-of-concepts (PoCs)."
       },
@@ -326,31 +374,25 @@
   {
     "section": "Inventory & Readiness",
     "service_category": "Inventory & Readiness",
-    "qtype": "MT",
+    "qtype": "S",
     "qindex": 11,
     "label": "Has your organization conducted a cryptographic inventory to identify algorithms and protocols currently in use?",
     "answers": [
       {
         "aindex": 1,
-        "uniqueAnswer": false,
+        "uniqueAnswer": true,
         "atype": "P",
         "label": "Yes, but not updated."
       },
       {
         "aindex": 2,
-        "uniqueAnswer": false,
+        "uniqueAnswer": true,
         "atype": "P",
-        "label": "No"
+        "label": "No, We plan to do in future."
       },
       {
         "aindex": 3,
-        "uniqueAnswer": false,
-        "atype": "P",
-        "label": "We plan to do in future."
-      },
-      {
-        "aindex": 4,
-        "uniqueAnswer": false,
+        "uniqueAnswer": true,
         "atype": "P",
         "label": "Not sure"
       }
@@ -359,25 +401,25 @@
   {
     "section": "Inventory & Readiness",
     "service_category": "Inventory & Readiness",
-    "qtype": "MT",
+    "qtype": "S",
     "qindex": 12,
     "label": "Have you assessed which systems would be most vulnerable to a future quantum threat?",
     "answers": [
       {
         "aindex": 1,
-        "uniqueAnswer": false,
+        "uniqueAnswer": true,
         "atype": "P",
         "label": "Yes"
       },
       {
         "aindex": 2,
-        "uniqueAnswer": false,
+        "uniqueAnswer": true,
         "atype": "P",
         "label": "In Progress"
       },
       {
         "aindex": 3,
-        "uniqueAnswer": false,
+        "uniqueAnswer": true,
         "atype": "P",
         "label": "No"
       }
@@ -386,19 +428,19 @@
   {
     "section": "Inventory & Readiness",
     "service_category": "Inventory & Readiness",
-    "qtype": "MT",
+    "qtype": "ST",
     "qindex": 13,
     "label": "Are you currently testing or piloting any PQC algorithms?",
     "answers": [
       {
         "aindex": 1,
-        "uniqueAnswer": false,
+        "uniqueAnswer": true,
         "atype": "P",
         "label": "Yes"
       },
       {
         "aindex": 2,
-        "uniqueAnswer": false,
+        "uniqueAnswer": true,
         "atype": "P",
         "label": "No"
       }
@@ -407,7 +449,7 @@
   {
     "section": "Inventory & Readiness",
     "service_category": "Inventory & Readiness",
-    "qtype": "MT",
+    "qtype": "M",
     "qindex": 14,
     "label": "What tools or methods are you using for crypto discovery and inventory?",
     "answers": [
@@ -431,13 +473,13 @@
       },
       {
         "aindex": 4,
-        "uniqueAnswer": false,
+        "uniqueAnswer": true,
         "atype": "P",
         "label": "Not using any tools"
       },
       {
         "aindex": 5,
-        "uniqueAnswer": false,
+        "uniqueAnswer": true,
         "atype": "P",
         "label": "Not applicable / don't know."
       }
@@ -446,37 +488,37 @@
   {
     "section": "Inventory & Readiness",
     "service_category": "Inventory & Readiness",
-    "qtype": "MT",
+    "qtype": "S",
     "qindex": 15,
     "label": "When do you plan to start migrating to PQC?",
     "answers": [
       {
         "aindex": 1,
-        "uniqueAnswer": false,
+        "uniqueAnswer": true,
         "atype": "P",
         "label": "Currently migrating"
       },
       {
         "aindex": 2,
-        "uniqueAnswer": false,
+        "uniqueAnswer": true,
         "atype": "P",
         "label": "1 - 3 years"
       },
       {
         "aindex": 3,
-        "uniqueAnswer": false,
+        "uniqueAnswer": true,
         "atype": "P",
         "label": "3 - 5 years"
       },
       {
         "aindex": 4,
-        "uniqueAnswer": false,
+        "uniqueAnswer": true,
         "atype": "P",
         "label": "5 - 10 years"
       },
       {
         "aindex": 5,
-        "uniqueAnswer": false,
+        "uniqueAnswer": true,
         "atype": "P",
         "label": "Unsure, likely after 10 years, or not at all"
       }
@@ -485,25 +527,25 @@
   {
     "section": "Regulations/Complaince",
     "service_category": "Regulations/Complaince",
-    "qtype": "MT",
+    "qtype": "S",
     "qindex": 16,
     "label": "Are you prepared to meet impending regulatory requirements around quantum threat resilience?",
     "answers": [
       {
         "aindex": 1,
-        "uniqueAnswer": false,
+        "uniqueAnswer": true,
         "atype": "P",
         "label": "Yes"
       },
       {
         "aindex": 2,
-        "uniqueAnswer": false,
+        "uniqueAnswer": true,
         "atype": "P",
         "label": "No"
       },
       {
         "aindex": 3,
-        "uniqueAnswer": false,
+        "uniqueAnswer": true,
         "atype": "P",
         "label": "Not planned"
       }
@@ -512,25 +554,25 @@
   {
     "section": "Regulations/Complaince",
     "service_category": "Regulations/Complaince",
-    "qtype": "MT",
+    "qtype": "S",
     "qindex": 17,
     "label": "Are you aware of emerging compliance requirements or government guidelines on PQC?",
     "answers": [
       {
         "aindex": 1,
-        "uniqueAnswer": false,
+        "uniqueAnswer": true,
         "atype": "P",
         "label": "Yes"
       },
       {
         "aindex": 2,
-        "uniqueAnswer": false,
+        "uniqueAnswer": true,
         "atype": "P",
         "label": "No"
       },
       {
         "aindex": 3,
-        "uniqueAnswer": false,
+        "uniqueAnswer": true,
         "atype": "P",
         "label": "Not sure"
       }
@@ -539,25 +581,25 @@
   {
     "section": "Vendor & Supply chain",
     "service_category": "Vendor & Supply chain",
-    "qtype": "MT",
+    "qtype": "S",
     "qindex": 18,
     "label": "Have you engaged with third-party vendors or service providers about their plans for PQC?",
     "answers": [
       {
         "aindex": 1,
-        "uniqueAnswer": false,
+        "uniqueAnswer": true,
         "atype": "P",
         "label": "Yes"
       },
       {
         "aindex": 2,
-        "uniqueAnswer": false,
+        "uniqueAnswer": true,
         "atype": "P",
         "label": "No"
       },
       {
         "aindex": 3,
-        "uniqueAnswer": false,
+        "uniqueAnswer": true,
         "atype": "P",
         "label": "Not sure"
       }
@@ -566,25 +608,25 @@
   {
     "section": "Vendor & Supply chain",
     "service_category": "Vendor & Supply chain",
-    "qtype": "MT",
+    "qtype": "S",
     "qindex": 19,
     "label": "Have you assessed your third-party relationships, their cryptologic standards and any potential impacts on post-quantum cryptography?",
     "answers": [
       {
         "aindex": 1,
-        "uniqueAnswer": false,
+        "uniqueAnswer": true,
         "atype": "P",
         "label": "Yes"
       },
       {
         "aindex": 2,
-        "uniqueAnswer": false,
+        "uniqueAnswer": true,
         "atype": "P",
         "label": "No"
       },
       {
         "aindex": 3,
-        "uniqueAnswer": false,
+        "uniqueAnswer": true,
         "atype": "P",
         "label": "Planning in future."
       }
@@ -593,25 +635,25 @@
   {
     "section": "Vendor & Supply chain",
     "service_category": "Vendor & Supply chain",
-    "qtype": "MT",
+    "qtype": "S",
     "qindex": 20,
     "label": "Have you revised your procurement requirements to address PQC standards and documenting encryption for new solutions?",
     "answers": [
       {
         "aindex": 1,
-        "uniqueAnswer": false,
+        "uniqueAnswer": true,
         "atype": "P",
         "label": "Yes"
       },
       {
         "aindex": 2,
-        "uniqueAnswer": false,
+        "uniqueAnswer": true,
         "atype": "P",
         "label": "No"
       },
       {
         "aindex": 3,
-        "uniqueAnswer": false,
+        "uniqueAnswer": true,
         "atype": "P",
         "label": "We don’t see the need."
       }
@@ -620,7 +662,7 @@
   {
     "section": "Challenges",
     "service_category": "Challenges",
-    "qtype": "MT",
+    "qtype": "M",
     "qindex": 21,
     "label": "What are the biggest challenges in transitioning to PQC? (Select all that apply)",
     "answers": [
@@ -704,32 +746,32 @@
   {
     "section": "Workforce",
     "service_category": "Workforce",
-    "qtype": "T",
+    "qtype": "S",
     "qindex": 23,
     "label": "Do you have internal staff with sufficient technical knowledge to evaluate and implement PQC solutions?",
     "answers": [
       {
         "aindex": 1,
         "uniqueAnswer": true,
-        "atype": "T",
+        "atype": "P",
         "label": "Yes – in-house expertise available."
       },
       {
         "aindex": 2,
         "uniqueAnswer": true,
-        "atype": "T",
+        "atype": "P",
         "label": "Some knowledge, but would need training or external help."
       },
       {
         "aindex": 3,
         "uniqueAnswer": true,
-        "atype": "T",
+        "atype": "P",
         "label": "No – would need external consultants or partners"
       },
       {
         "aindex": 4,
         "uniqueAnswer": true,
-        "atype": "T",
+        "atype": "P",
         "label": "Not sure"
       }
     ]
@@ -758,38 +800,38 @@
   {
     "section": "Workforce",
     "service_category": "Workforce",
-    "qtype": "T",
+    "qtype": "M",
     "qindex": 25,
     "label": "What challenges do you face in hiring PQC talent?",
     "answers": [
       {
         "aindex": 1,
-        "uniqueAnswer": true,
-        "atype": "T",
+        "uniqueAnswer": false,
+        "atype": "P",
         "label": "Talent shortage in the market."
       },
       {
         "aindex": 2,
-        "uniqueAnswer": true,
-        "atype": "T",
+        "uniqueAnswer": false,
+        "atype": "P",
         "label": "Budget constraints."
       },
       {
         "aindex": 3,
-        "uniqueAnswer": true,
-        "atype": "T",
+        "uniqueAnswer": false,
+        "atype": "P",
         "label": "Inability to compete with tech firms."
       },
       {
         "aindex": 4,
-        "uniqueAnswer": true,
-        "atype": "T",
+        "uniqueAnswer": false,
+        "atype": "P",
         "label": "Lack of internal PQC strategy."
       },
       {
         "aindex": 5,
         "uniqueAnswer": true,
-        "atype": "T",
+        "atype": "P",
         "label": "No challenges."
       }
     ]
@@ -797,31 +839,31 @@
   {
     "section": "Workforce",
     "service_category": "Workforce",
-    "qtype": "MT",
+    "qtype": "S",
     "qindex": 26,
     "label": "Would your organization benefit from external PQC training or workshops?",
     "answers": [
       {
         "aindex": 1,
-        "uniqueAnswer": false,
+        "uniqueAnswer": true,
         "atype": "P",
         "label": "Yes – urgently needed"
       },
       {
         "aindex": 2,
-        "uniqueAnswer": false,
+        "uniqueAnswer": true,
         "atype": "P",
         "label": "Possibly – for technical teams"
       },
       {
         "aindex": 3,
-        "uniqueAnswer": false,
+        "uniqueAnswer": true,
         "atype": "P",
         "label": "Not necessary"
       },
       {
         "aindex": 4,
-        "uniqueAnswer": false,
+        "uniqueAnswer": true,
         "atype": "P",
         "label": "Not sure"
       }
@@ -830,31 +872,31 @@
   {
     "section": "Workforce",
     "service_category": "Workforce",
-    "qtype": "MT",
+    "qtype": "S",
     "qindex": 27,
     "label": "How would you rate your workforce's overall PQC readiness?",
     "answers": [
       {
         "aindex": 1,
-        "uniqueAnswer": false,
+        "uniqueAnswer": true,
         "atype": "P",
         "label": "High — well-prepared and growing"
       },
       {
         "aindex": 2,
-        "uniqueAnswer": false,
+        "uniqueAnswer": true,
         "atype": "P",
         "label": "Moderate — skills exist but are siloed."
       },
       {
         "aindex": 3,
-        "uniqueAnswer": false,
+        "uniqueAnswer": true,
         "atype": "P",
         "label": "Low — major gaps in skills and planning."
       },
       {
         "aindex": 4,
-        "uniqueAnswer": false,
+        "uniqueAnswer": true,
         "atype": "P",
         "label": "Not assessed"
       }
@@ -863,32 +905,32 @@
   {
     "section": "Inventory & Readiness",
     "service_category": "Inventory & Readiness",
-    "qtype": "MT",
+    "qtype": "S",
     "qindex": 28,
     "label": "How does your organization classify its data in terms of sensitivity and risk?",
     "answers": [
       {
         "aindex": 1,
-        "uniqueAnswer": false,
+        "uniqueAnswer": true,
         "atype": "P",
         "label": "High-risk data"
       },
       {
         "aindex": 2,
-        "uniqueAnswer": false,
+        "uniqueAnswer": true,
         "atype": "P",
         "label": "Medium-risk data"
       },
       {
         "aindex": 3,
-        "uniqueAnswer": false,
+        "uniqueAnswer": true,
         "atype": "P",
         "label": "Low-risk data"
       },
       {
         "aindex": 4,
-        "uniqueAnswer": false,
-        "atype": "T",
+        "uniqueAnswer": true,
+        "atype": "P",
         "label": "Not sure or no classification done."
       }
     ]
