@@ -24,9 +24,9 @@ from csskp.settings import LANGUAGES
 from survey.forms import AnswerMChoice
 from survey.forms import GeneralFeedback
 from survey.models import CONTEXT_SECTION_LABEL
+from survey.models import SURVEY_STATUS_FINISHED
 from survey.models import SURVEY_STATUS_IN_PROGRESS
 from survey.models import SURVEY_STATUS_UNDER_REVIEW
-from survey.models import SURVEY_STATUS_FINISHED
 from survey.models import SurveyAnswerQuestionMap
 from survey.models import SurveyQuestion
 from survey.models import SurveyQuestionAnswer
