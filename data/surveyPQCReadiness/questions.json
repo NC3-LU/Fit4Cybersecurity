@@ -12,8 +12,13 @@
         "atype": "P",
         "label": "Not aware",
         "questions_map": [
-        { "label": "Are your technical teams aware of the implications of quantum computing on current cryptographic systems?", "branch": 1, "level": 1, "order": 1 }
-      ]
+          {
+            "label": "Are your technical teams aware of the implications of quantum computing on current cryptographic systems?",
+            "branch": 0,
+            "level": 1,
+            "order": 1
+          }
+        ]
       },
       {
         "aindex": 2,
@@ -21,8 +26,13 @@
         "atype": "P",
         "label": "Heard of it, but no internal discussions",
         "questions_map": [
-        { "label": "Are your technical teams aware of the implications of quantum computing on current cryptographic systems?", "branch": 1, "level": 1, "order": 1 }
-      ]
+          {
+            "label": "Are your technical teams aware of the implications of quantum computing on current cryptographic systems?",
+            "branch": 0,
+            "level": 1,
+            "order": 1
+          }
+        ]
       },
       {
         "aindex": 3,
@@ -30,8 +40,13 @@
         "atype": "P",
         "label": "Moderate awareness with occasional internal discussions.",
         "questions_map": [
-        { "label": "Are your technical teams aware of the implications of quantum computing on current cryptographic systems?", "branch": 1, "level": 1, "order": 1 }
-      ]
+          {
+            "label": "Are your technical teams aware of the implications of quantum computing on current cryptographic systems?",
+            "branch": 0,
+            "level": 1,
+            "order": 1
+          }
+        ]
       },
       {
         "aindex": 4,
@@ -39,8 +54,13 @@
         "atype": "P",
         "label": "Clear understanding and defined roadmap.",
         "questions_map": [
-        { "label": "Are your technical teams aware of the implications of quantum computing on current cryptographic systems?", "branch": 1, "level": 1, "order": 1 }
-      ]
+          {
+            "label": "Are your technical teams aware of the implications of quantum computing on current cryptographic systems?",
+            "branch": 0,
+            "level": 1,
+            "order": 1
+          }
+        ]
       }
     ]
   },
@@ -58,7 +78,10 @@
         "label": "Yes",
         "questions_map": [
           {
-            "label": "Has PQC or quantum risk been included in your organization's security awareness training or risk management?","branch": 1,"level": 1,"order": 1
+            "label": "Has PQC or quantum risk been included in your organization's security awareness training or risk management?",
+            "branch": 0,
+            "level": 1,
+            "order": 1
           }
         ]
       },
@@ -68,8 +91,13 @@
         "atype": "P",
         "label": "No",
         "questions_map": [
-    { "label": "Do you know which of your current cryptographic systems (e.g., TLS, VPNs, PKI, blockchain) are vulnerable to quantum attacks?", "branch": 1, "level": 1, "order": 1 }
-  ]
+          {
+            "label": "Do you know which of your current cryptographic systems (e.g., TLS, VPNs, PKI, blockchain) are vulnerable to quantum attacks?",
+            "branch": 1,
+            "level": 1,
+            "order": 1
+          }
+        ]
       }
     ]
   },
@@ -86,8 +114,13 @@
         "atype": "P",
         "label": "Yes",
         "questions_map": [
-    { "label": "Has PQC or quantum risk been included in your organization's security awareness training or risk management?", "branch": 1, "level": 1, "order": 1 }
-  ]
+          {
+            "label": "Has PQC or quantum risk been included in your organization's security awareness training or risk management?",
+            "branch": 0,
+            "level": 1,
+            "order": 1
+          }
+        ]
       },
       {
         "aindex": 2,
@@ -95,7 +128,12 @@
         "atype": "P",
         "label": "No",
         "questions_map": [
-    { "label": "Has PQC or quantum risk been included in your organization's security awareness training or risk management?", "branch": 1, "level": 1, "order": 1 }
+          {
+            "label": "Has PQC or quantum risk been included in your organization's security awareness training or risk management?",
+            "branch": 0,
+            "level": 1,
+            "order": 1
+          }
         ]
       },
       {
@@ -104,7 +142,12 @@
         "atype": "P",
         "label": "We are currently assessing this",
         "questions_map": [
-    { "label": "Has PQC or quantum risk been included in your organization's security awareness training or risk management?", "branch": 1, "level": 1, "order": 1 }
+          {
+            "label": "Has PQC or quantum risk been included in your organization's security awareness training or risk management?",
+            "branch": 0,
+            "level": 1,
+            "order": 1
+          }
         ]
       }
     ]
@@ -122,7 +165,12 @@
         "atype": "P",
         "label": "Yes",
         "questions_map": [
-    { "label": "When do you believe quantum computers will pose a real-world threat to currently deployed cryptography?", "branch": 1, "level": 1, "order": 1 }
+          {
+            "label": "When do you believe quantum computers will pose a real-world threat to currently deployed cryptography?",
+            "branch": 0,
+            "level": 1,
+            "order": 1
+          }
         ]
       },
       {
@@ -130,8 +178,13 @@
         "uniqueAnswer": true,
         "atype": "P",
         "label": "No",
-       "questions_map": [
-    { "label": "When do you believe quantum computers will pose a real-world threat to currently deployed cryptography?", "branch": 1, "level": 1, "order": 1 }
+        "questions_map": [
+          {
+            "label": "When do you believe quantum computers will pose a real-world threat to currently deployed cryptography?",
+            "branch": 0,
+            "level": 1,
+            "order": 1
+          }
         ]
       },
       {
@@ -139,8 +192,13 @@
         "uniqueAnswer": true,
         "atype": "P",
         "label": "Planned in the next 12 months.",
-        "questions_map":[
-    { "label": "When do you believe quantum computers will pose a real-world threat to currently deployed cryptography?", "branch": 1, "level": 1, "order": 1 }
+        "questions_map": [
+          {
+            "label": "When do you believe quantum computers will pose a real-world threat to currently deployed cryptography?",
+            "branch": 0,
+            "level": 1,
+            "order": 1
+          }
         ]
       },
       {
@@ -148,8 +206,13 @@
         "uniqueAnswer": true,
         "atype": "P",
         "label": "Not applicable.",
-        "questions_map":[
-    { "label": "When do you believe quantum computers will pose a real-world threat to currently deployed cryptography?", "branch": 1, "level": 1, "order": 1 }
+        "questions_map": [
+          {
+            "label": "When do you believe quantum computers will pose a real-world threat to currently deployed cryptography?",
+            "branch": 0,
+            "level": 1,
+            "order": 1
+          }
         ]
       }
     ]
@@ -166,8 +229,13 @@
         "uniqueAnswer": true,
         "atype": "P",
         "label": "Within 1 – 2 years",
-        "questions_map":[
-    { "label": "Has your organization developed a strategy or roadmap for transitioning to quantum-resistant cryptographic systems?", "branch": 1, "level": 1, "order": 1 }
+        "questions_map": [
+          {
+            "label": "Has your organization developed a strategy or roadmap for transitioning to quantum-resistant cryptographic systems?",
+            "branch": 0,
+            "level": 1,
+            "order": 1
+          }
         ]
       },
       {
@@ -175,8 +243,13 @@
         "uniqueAnswer": true,
         "atype": "P",
         "label": "3 – 5 years",
-        "questions_map":[
-    { "label": "Has your organization developed a strategy or roadmap for transitioning to quantum-resistant cryptographic systems?", "branch": 1, "level": 1, "order": 1 }
+        "questions_map": [
+          {
+            "label": "Has your organization developed a strategy or roadmap for transitioning to quantum-resistant cryptographic systems?",
+            "branch": 0,
+            "level": 1,
+            "order": 1
+          }
         ]
       },
       {
@@ -184,8 +257,13 @@
         "uniqueAnswer": true,
         "atype": "P",
         "label": "6 – 10 years",
-        "questions_map":[
-    { "label": "Has your organization developed a strategy or roadmap for transitioning to quantum-resistant cryptographic systems?", "branch": 1, "level": 1, "order": 1 }
+        "questions_map": [
+          {
+            "label": "Has your organization developed a strategy or roadmap for transitioning to quantum-resistant cryptographic systems?",
+            "branch": 0,
+            "level": 1,
+            "order": 1
+          }
         ]
       },
       {
@@ -193,8 +271,13 @@
         "uniqueAnswer": true,
         "atype": "P",
         "label": "Over 10 years",
-        "questions_map":[
-    { "label": "Has your organization developed a strategy or roadmap for transitioning to quantum-resistant cryptographic systems?", "branch": 1, "level": 1, "order": 1 }
+        "questions_map": [
+          {
+            "label": "Has your organization developed a strategy or roadmap for transitioning to quantum-resistant cryptographic systems?",
+            "branch": 0,
+            "level": 1,
+            "order": 1
+          }
         ]
       },
       {
@@ -202,8 +285,13 @@
         "uniqueAnswer": true,
         "atype": "P",
         "label": "Not likely to be a threat",
-        "questions_map":[
-    { "label": "Has your organization developed a strategy or roadmap for transitioning to quantum-resistant cryptographic systems?", "branch": 1, "level": 1, "order": 1 }
+        "questions_map": [
+          {
+            "label": "Has your organization developed a strategy or roadmap for transitioning to quantum-resistant cryptographic systems?",
+            "branch": 0,
+            "level": 1,
+            "order": 1
+          }
         ]
       },
       {
@@ -211,8 +299,13 @@
         "uniqueAnswer": true,
         "atype": "P",
         "label": "Not sure",
-        "questions_map":[
-    { "label": "Has your organization developed a strategy or roadmap for transitioning to quantum-resistant cryptographic systems?", "branch": 1, "level": 1, "order": 1 }
+        "questions_map": [
+          {
+            "label": "Has your organization developed a strategy or roadmap for transitioning to quantum-resistant cryptographic systems?",
+            "branch": 0,
+            "level": 1,
+            "order": 1
+          }
         ]
       }
     ]
@@ -229,8 +322,13 @@
         "uniqueAnswer": true,
         "atype": "P",
         "label": "Yes",
-        "questions_map":[
-    { "label": "Who is driving this initiative internally?", "branch": 1, "level": 1, "order": 1 }
+        "questions_map": [
+          {
+            "label": "Who is driving this initiative internally?",
+            "branch": 0,
+            "level": 1,
+            "order": 1
+          }
         ]
       },
       {
@@ -238,8 +336,13 @@
         "uniqueAnswer": true,
         "atype": "P",
         "label": "In Progress",
-        "questions_map":[
-    { "label": "Do you have your leadership Support?", "branch": 1, "level": 1, "order": 1 }
+        "questions_map": [
+          {
+            "label": "Do you have your leadership Support?",
+            "branch": 1,
+            "level": 2,
+            "order": 1
+          }
         ]
       },
       {
@@ -247,8 +350,13 @@
         "uniqueAnswer": true,
         "atype": "P",
         "label": "Planned but not started.",
-        "questions_map":[
-    { "label": "Do you have your leadership Support?", "branch": 1, "level": 1, "order": 1 }
+        "questions_map": [
+          {
+            "label": "Do you have your leadership Support?",
+            "branch": 1,
+            "level": 2,
+            "order": 1
+          }
         ]
       },
       {
@@ -256,8 +364,13 @@
         "uniqueAnswer": true,
         "atype": "P",
         "label": "No plans yet.",
-        "questions_map":[
-    { "label": "Do you have your leadership Support?", "branch": 1, "level": 1, "order": 1 }
+        "questions_map": [
+          {
+            "label": "Do you have your leadership Support?",
+            "branch": 1,
+            "level": 2,
+            "order": 1
+          }
         ]
       }
     ]
@@ -274,8 +387,13 @@
         "uniqueAnswer": true,
         "atype": "P",
         "label": "CISO/CIO",
-        "questions_map":[
-    { "label": "Do you have your leadership Support?", "branch": 1, "level": 1, "order": 1 }
+        "questions_map": [
+          {
+            "label": "Do you have your leadership Support?",
+            "branch": 0,
+            "level": 1,
+            "order": 1
+          }
         ]
       },
       {
@@ -283,8 +401,13 @@
         "uniqueAnswer": true,
         "atype": "P",
         "label": "IT Security Team",
-        "questions_map":[
-    { "label": "Do you have your leadership Support?", "branch": 1, "level": 1, "order": 1 }
+        "questions_map": [
+          {
+            "label": "Do you have your leadership Support?",
+            "branch": 0,
+            "level": 1,
+            "order": 1
+          }
         ]
       },
       {
@@ -292,8 +415,13 @@
         "uniqueAnswer": true,
         "atype": "P",
         "label": "Compliance/Governance",
-        "questions_map":[
-    { "label": "Do you have your leadership Support?", "branch": 1, "level": 1, "order": 1 }
+        "questions_map": [
+          {
+            "label": "Do you have your leadership Support?",
+            "branch": 0,
+            "level": 1,
+            "order": 1
+          }
         ]
       },
       {
@@ -301,8 +429,13 @@
         "uniqueAnswer": true,
         "atype": "P",
         "label": "External Advisors",
-        "questions_map":[
-    { "label": "Do you have your leadership Support?", "branch": 1, "level": 1, "order": 1 }
+        "questions_map": [
+          {
+            "label": "Do you have your leadership Support?",
+            "branch": 0,
+            "level": 1,
+            "order": 1
+          }
         ]
       },
       {
@@ -310,8 +443,13 @@
         "uniqueAnswer": true,
         "atype": "P",
         "label": "Not sure",
-        "questions_map":[
-    { "label": "Do you have your leadership Support?", "branch": 1, "level": 1, "order": 1 }
+        "questions_map": [
+          {
+            "label": "Do you have your leadership Support?",
+            "branch": 0,
+            "level": 1,
+            "order": 1
+          }
         ]
       }
     ]
@@ -328,8 +466,13 @@
         "uniqueAnswer": true,
         "atype": "P",
         "label": "Yes",
-        "questions_map":[
-    { "label": "What stage is your organization at in its post-quantum transition?", "branch": 1, "level": 1, "order": 1 }
+        "questions_map": [
+          {
+            "label": "What stage is your organization at in its post-quantum transition?",
+            "branch": 0,
+            "level": 1,
+            "order": 1
+          }
         ]
       },
       {
@@ -337,8 +480,13 @@
         "uniqueAnswer": true,
         "atype": "P",
         "label": "No",
-        "questions_map":[
-    { "label": "What stage is your organization at in its post-quantum transition?", "branch": 1, "level": 1, "order": 1 }
+        "questions_map": [
+          {
+            "label": "What stage is your organization at in its post-quantum transition?",
+            "branch": 0,
+            "level": 1,
+            "order": 1
+          }
         ]
       }
     ]
@@ -355,8 +503,13 @@
         "uniqueAnswer": true,
         "atype": "P",
         "label": "No awareness.",
-        "questions_map":[
-    { "label": "How important is PQC in your overall cybersecurity strategy?", "branch": 1, "level": 1, "order": 1 }
+        "questions_map": [
+          {
+            "label": "How important is PQC in your overall cybersecurity strategy?",
+            "branch": 0,
+            "level": 1,
+            "order": 1
+          }
         ]
       },
       {
@@ -364,8 +517,13 @@
         "uniqueAnswer": true,
         "atype": "P",
         "label": "Awareness but no planning.",
-        "questions_map":[
-    { "label": "How important is PQC in your overall cybersecurity strategy?", "branch": 1, "level": 1, "order": 1 }
+        "questions_map": [
+          {
+            "label": "How important is PQC in your overall cybersecurity strategy?",
+            "branch": 0,
+            "level": 1,
+            "order": 1
+          }
         ]
       },
       {
@@ -373,8 +531,13 @@
         "uniqueAnswer": true,
         "atype": "P",
         "label": "Planning underway.",
-        "questions_map":[
-    { "label": "How important is PQC in your overall cybersecurity strategy?", "branch": 1, "level": 1, "order": 1 }
+        "questions_map": [
+          {
+            "label": "How important is PQC in your overall cybersecurity strategy?",
+            "branch": 0,
+            "level": 1,
+            "order": 1
+          }
         ]
       },
       {
@@ -382,8 +545,13 @@
         "uniqueAnswer": true,
         "atype": "P",
         "label": "Pilots or proof-of-concepts (PoCs).",
-        "questions_map":[
-    { "label": "How important is PQC in your overall cybersecurity strategy?", "branch": 1, "level": 1, "order": 1 }
+        "questions_map": [
+          {
+            "label": "How important is PQC in your overall cybersecurity strategy?",
+            "branch": 0,
+            "level": 1,
+            "order": 1
+          }
         ]
       },
       {
@@ -391,8 +559,13 @@
         "uniqueAnswer": true,
         "atype": "P",
         "label": "Implementation in production systems.",
-        "questions_map":[
-    { "label": "How important is PQC in your overall cybersecurity strategy?", "branch": 1, "level": 1, "order": 1 }
+        "questions_map": [
+          {
+            "label": "How important is PQC in your overall cybersecurity strategy?",
+            "branch": 0,
+            "level": 1,
+            "order": 1
+          }
         ]
       }
     ]
@@ -409,8 +582,13 @@
         "uniqueAnswer": true,
         "atype": "P",
         "label": "Top priority",
-        "questions_map":[
-    { "label": "Has your organization conducted a cryptographic inventory to identify algorithms and protocols currently in use?", "branch": 1, "level": 1, "order": 1 }
+        "questions_map": [
+          {
+            "label": "Has your organization conducted a cryptographic inventory to identify algorithms and protocols currently in use?",
+            "branch": 0,
+            "level": 1,
+            "order": 1
+          }
         ]
       },
       {
@@ -418,8 +596,13 @@
         "uniqueAnswer": true,
         "atype": "P",
         "label": "Medium priority",
-        "questions_map":[
-    { "label": "Has your organization conducted a cryptographic inventory to identify algorithms and protocols currently in use?", "branch": 1, "level": 1, "order": 1 }
+        "questions_map": [
+          {
+            "label": "Has your organization conducted a cryptographic inventory to identify algorithms and protocols currently in use?",
+            "branch": 0,
+            "level": 1,
+            "order": 1
+          }
         ]
       },
       {
@@ -427,8 +610,13 @@
         "uniqueAnswer": true,
         "atype": "P",
         "label": "Low priority",
-        "questions_map":[
-    { "label": "Has your organization conducted a cryptographic inventory to identify algorithms and protocols currently in use?", "branch": 1, "level": 1, "order": 1 }
+        "questions_map": [
+          {
+            "label": "Has your organization conducted a cryptographic inventory to identify algorithms and protocols currently in use?",
+            "branch": 0,
+            "level": 1,
+            "order": 1
+          }
         ]
       },
       {
@@ -436,8 +624,13 @@
         "uniqueAnswer": true,
         "atype": "P",
         "label": "Not currently prioritized.",
-        "questions_map":[
-    { "label": "Has your organization conducted a cryptographic inventory to identify algorithms and protocols currently in use?", "branch": 1, "level": 1, "order": 1 }
+        "questions_map": [
+          {
+            "label": "Has your organization conducted a cryptographic inventory to identify algorithms and protocols currently in use?",
+            "branch": 0,
+            "level": 1,
+            "order": 1
+          }
         ]
       }
     ]
@@ -454,8 +647,13 @@
         "uniqueAnswer": true,
         "atype": "P",
         "label": "Yes, but not updated.",
-        "questions_map":[
-    { "label": "Have you assessed which systems would be most vulnerable to a future quantum threat?", "branch": 1, "level": 1, "order": 1 }
+        "questions_map": [
+          {
+            "label": "Have you assessed which systems would be most vulnerable to a future quantum threat?",
+            "branch": 0,
+            "level": 1,
+            "order": 1
+          }
         ]
       },
       {
@@ -463,8 +661,13 @@
         "uniqueAnswer": true,
         "atype": "P",
         "label": "No",
-        "questions_map":[
-    { "label": "Have you assessed which systems would be most vulnerable to a future quantum threat?", "branch": 1, "level": 1, "order": 1 }
+        "questions_map": [
+          {
+            "label": "Have you assessed which systems would be most vulnerable to a future quantum threat?",
+            "branch": 0,
+            "level": 1,
+            "order": 1
+          }
         ]
       },
       {
@@ -472,8 +675,13 @@
         "uniqueAnswer": true,
         "atype": "P",
         "label": "We plan to do in future.",
-        "questions_map":[
-    { "label": "Have you assessed which systems would be most vulnerable to a future quantum threat?", "branch": 1, "level": 1, "order": 1 }
+        "questions_map": [
+          {
+            "label": "Have you assessed which systems would be most vulnerable to a future quantum threat?",
+            "branch": 0,
+            "level": 1,
+            "order": 1
+          }
         ]
       },
       {
@@ -481,8 +689,13 @@
         "uniqueAnswer": true,
         "atype": "P",
         "label": "Not sure",
-        "questions_map":[
-    { "label": "Have you assessed which systems would be most vulnerable to a future quantum threat?", "branch": 1, "level": 1, "order": 1 }
+        "questions_map": [
+          {
+            "label": "Have you assessed which systems would be most vulnerable to a future quantum threat?",
+            "branch": 0,
+            "level": 1,
+            "order": 1
+          }
         ]
       }
     ]
@@ -499,8 +712,13 @@
         "uniqueAnswer": true,
         "atype": "P",
         "label": "Yes",
-        "questions_map":[
-    { "label": "Are you currently testing or piloting any PQC algorithms?", "branch": 1, "level": 1, "order": 1 }
+        "questions_map": [
+          {
+            "label": "Are you currently testing or piloting any PQC algorithms?",
+            "branch": 0,
+            "level": 1,
+            "order": 1
+          }
         ]
       },
       {
@@ -508,8 +726,13 @@
         "uniqueAnswer": true,
         "atype": "P",
         "label": "In Progress",
-        "questions_map":[
-    { "label": "Are you currently testing or piloting any PQC algorithms?", "branch": 1, "level": 1, "order": 1 }
+        "questions_map": [
+          {
+            "label": "Are you currently testing or piloting any PQC algorithms?",
+            "branch": 0,
+            "level": 1,
+            "order": 1
+          }
         ]
       },
       {
@@ -517,8 +740,13 @@
         "uniqueAnswer": true,
         "atype": "P",
         "label": "No",
-        "questions_map":[
-    { "label": "Are you currently testing or piloting any PQC algorithms?", "branch": 1, "level": 1, "order": 1 }
+        "questions_map": [
+          {
+            "label": "Are you currently testing or piloting any PQC algorithms?",
+            "branch": 0,
+            "level": 1,
+            "order": 1
+          }
         ]
       }
     ]
@@ -535,8 +763,13 @@
         "uniqueAnswer": true,
         "atype": "T",
         "label": "Yes",
-        "questions_map":[
-    { "label": "What tools or methods are you using for crypto discovery and inventory?", "branch": 1, "level": 1, "order": 1 }
+        "questions_map": [
+          {
+            "label": "What tools or methods are you using for crypto discovery and inventory?",
+            "branch": 0,
+            "level": 1,
+            "order": 1
+          }
         ]
       },
       {
@@ -544,8 +777,13 @@
         "uniqueAnswer": true,
         "atype": "P",
         "label": "No",
-        "questions_map":[
-    { "label": "What tools or methods are you using for crypto discovery and inventory?", "branch": 1, "level": 1, "order": 1 }
+        "questions_map": [
+          {
+            "label": "What tools or methods are you using for crypto discovery and inventory?",
+            "branch": 0,
+            "level": 1,
+            "order": 1
+          }
         ]
       }
     ]
@@ -562,8 +800,13 @@
         "uniqueAnswer": true,
         "atype": "P",
         "label": "Manual audits",
-        "questions_map":[
-    { "label": "When do you plan to start migrating to PQC?", "branch": 1, "level": 1, "order": 1 }
+        "questions_map": [
+          {
+            "label": "When do you plan to start migrating to PQC?",
+            "branch": 0,
+            "level": 1,
+            "order": 1
+          }
         ]
       },
       {
@@ -571,8 +814,13 @@
         "uniqueAnswer": true,
         "atype": "P",
         "label": "Automated scanning tools",
-        "questions_map":[
-    { "label": "When do you plan to start migrating to PQC?", "branch": 1, "level": 1, "order": 1 }
+        "questions_map": [
+          {
+            "label": "When do you plan to start migrating to PQC?",
+            "branch": 0,
+            "level": 1,
+            "order": 1
+          }
         ]
       },
       {
@@ -580,8 +828,13 @@
         "uniqueAnswer": true,
         "atype": "P",
         "label": "Asset management platform integration",
-        "questions_map":[
-    { "label": "When do you plan to start migrating to PQC?", "branch": 1, "level": 1, "order": 1 }
+        "questions_map": [
+          {
+            "label": "When do you plan to start migrating to PQC?",
+            "branch": 0,
+            "level": 1,
+            "order": 1
+          }
         ]
       },
       {
@@ -589,8 +842,13 @@
         "uniqueAnswer": true,
         "atype": "P",
         "label": "Not using any tools",
-        "questions_map":[
-    { "label": "When do you plan to start migrating to PQC?", "branch": 1, "level": 1, "order": 1 }
+        "questions_map": [
+          {
+            "label": "When do you plan to start migrating to PQC?",
+            "branch": 0,
+            "level": 1,
+            "order": 1
+          }
         ]
       },
       {
@@ -598,8 +856,13 @@
         "uniqueAnswer": true,
         "atype": "P",
         "label": "Not applicable / don't know.",
-        "questions_map":[
-    { "label": "When do you plan to start migrating to PQC?", "branch": 1, "level": 1, "order": 1 }
+        "questions_map": [
+          {
+            "label": "When do you plan to start migrating to PQC?",
+            "branch": 0,
+            "level": 1,
+            "order": 1
+          }
         ]
       }
     ]
@@ -616,8 +879,13 @@
         "uniqueAnswer": true,
         "atype": "P",
         "label": "Currently migrating",
-        "questions_map":[
-    { "label": "Are you prepared to meet impending regulatory requirements around quantum threat resilience?", "branch": 1, "level": 1, "order": 1 }
+        "questions_map": [
+          {
+            "label": "Are you prepared to meet impending regulatory requirements around quantum threat resilience?",
+            "branch": 0,
+            "level": 1,
+            "order": 1
+          }
         ]
       },
       {
@@ -625,8 +893,13 @@
         "uniqueAnswer": true,
         "atype": "P",
         "label": "1 - 3 years",
-        "questions_map":[
-    { "label": "Are you prepared to meet impending regulatory requirements around quantum threat resilience?", "branch": 1, "level": 1, "order": 1 }
+        "questions_map": [
+          {
+            "label": "Are you prepared to meet impending regulatory requirements around quantum threat resilience?",
+            "branch": 0,
+            "level": 1,
+            "order": 1
+          }
         ]
       },
       {
@@ -634,8 +907,13 @@
         "uniqueAnswer": true,
         "atype": "P",
         "label": "3 - 5 years",
-        "questions_map":[
-    { "label": "Are you prepared to meet impending regulatory requirements around quantum threat resilience?", "branch": 1, "level": 1, "order": 1 }
+        "questions_map": [
+          {
+            "label": "Are you prepared to meet impending regulatory requirements around quantum threat resilience?",
+            "branch": 0,
+            "level": 1,
+            "order": 1
+          }
         ]
       },
       {
@@ -643,8 +921,13 @@
         "uniqueAnswer": true,
         "atype": "P",
         "label": "5 - 10 years",
-        "questions_map":[
-    { "label": "Are you prepared to meet impending regulatory requirements around quantum threat resilience?", "branch": 1, "level": 1, "order": 1 }
+        "questions_map": [
+          {
+            "label": "Are you prepared to meet impending regulatory requirements around quantum threat resilience?",
+            "branch": 0,
+            "level": 1,
+            "order": 1
+          }
         ]
       },
       {
@@ -652,8 +935,13 @@
         "uniqueAnswer": true,
         "atype": "P",
         "label": "Unsure, likely after 10 years, or not at all",
-        "questions_map":[
-    { "label": "Are you prepared to meet impending regulatory requirements around quantum threat resilience?", "branch": 1, "level": 1, "order": 1 }
+        "questions_map": [
+          {
+            "label": "Are you prepared to meet impending regulatory requirements around quantum threat resilience?",
+            "branch": 0,
+            "level": 1,
+            "order": 1
+          }
         ]
       }
     ]
@@ -670,8 +958,13 @@
         "uniqueAnswer": true,
         "atype": "P",
         "label": "Yes",
-        "questions_map":[
-    { "label": "Are you aware of emerging compliance requirements or government guidelines on PQC?", "branch": 1, "level": 1, "order": 1 }
+        "questions_map": [
+          {
+            "label": "Are you aware of emerging compliance requirements or government guidelines on PQC?",
+            "branch": 0,
+            "level": 1,
+            "order": 1
+          }
         ]
       },
       {
@@ -679,8 +972,13 @@
         "uniqueAnswer": true,
         "atype": "P",
         "label": "No",
-        "questions_map":[
-    { "label": "Are you aware of emerging compliance requirements or government guidelines on PQC?", "branch": 1, "level": 1, "order": 1 }
+        "questions_map": [
+          {
+            "label": "Are you aware of emerging compliance requirements or government guidelines on PQC?",
+            "branch": 0,
+            "level": 1,
+            "order": 1
+          }
         ]
       },
       {
@@ -688,8 +986,13 @@
         "uniqueAnswer": true,
         "atype": "P",
         "label": "Not planned",
-        "questions_map":[
-    { "label": "Are you aware of emerging compliance requirements or government guidelines on PQC?", "branch": 1, "level": 1, "order": 1 }
+        "questions_map": [
+          {
+            "label": "Are you aware of emerging compliance requirements or government guidelines on PQC?",
+            "branch": 0,
+            "level": 1,
+            "order": 1
+          }
         ]
       }
     ]
@@ -706,8 +1009,13 @@
         "uniqueAnswer": true,
         "atype": "P",
         "label": "Yes",
-        "questions_map":[
-    { "label": "Have you engaged with third-party vendors or service providers about their plans for PQC?", "branch": 1, "level": 1, "order": 1 }
+        "questions_map": [
+          {
+            "label": "Have you engaged with third-party vendors or service providers about their plans for PQC?",
+            "branch": 0,
+            "level": 1,
+            "order": 1
+          }
         ]
       },
       {
@@ -715,8 +1023,13 @@
         "uniqueAnswer": true,
         "atype": "P",
         "label": "No",
-        "questions_map":[
-    { "label": "Have you engaged with third-party vendors or service providers about their plans for PQC?", "branch": 1, "level": 1, "order": 1 }
+        "questions_map": [
+          {
+            "label": "Have you engaged with third-party vendors or service providers about their plans for PQC?",
+            "branch": 0,
+            "level": 1,
+            "order": 1
+          }
         ]
       },
       {
@@ -724,8 +1037,13 @@
         "uniqueAnswer": true,
         "atype": "P",
         "label": "Not sure",
-        "questions_map":[
-    { "label": "Have you engaged with third-party vendors or service providers about their plans for PQC?", "branch": 1, "level": 1, "order": 1 }
+        "questions_map": [
+          {
+            "label": "Have you engaged with third-party vendors or service providers about their plans for PQC?",
+            "branch": 0,
+            "level": 1,
+            "order": 1
+          }
         ]
       }
     ]
@@ -742,8 +1060,13 @@
         "uniqueAnswer": true,
         "atype": "P",
         "label": "Yes",
-        "questions_map":[
-    { "label": "Have you assessed your third-party relationships, their cryptologic standards and any potential impacts on post-quantum cryptography?", "branch": 1, "level": 1, "order": 1 }
+        "questions_map": [
+          {
+            "label": "Have you assessed your third-party relationships, their cryptologic standards and any potential impacts on post-quantum cryptography?",
+            "branch": 0,
+            "level": 1,
+            "order": 1
+          }
         ]
       },
       {
@@ -751,8 +1074,13 @@
         "uniqueAnswer": true,
         "atype": "P",
         "label": "No",
-        "questions_map":[
-    { "label": "Have you assessed your third-party relationships, their cryptologic standards and any potential impacts on post-quantum cryptography?", "branch": 1, "level": 1, "order": 1 }
+        "questions_map": [
+          {
+            "label": "Have you assessed your third-party relationships, their cryptologic standards and any potential impacts on post-quantum cryptography?",
+            "branch": 0,
+            "level": 1,
+            "order": 1
+          }
         ]
       },
       {
@@ -760,8 +1088,13 @@
         "uniqueAnswer": true,
         "atype": "P",
         "label": "Not sure",
-        "questions_map":[
-    { "label": "Have you assessed your third-party relationships, their cryptologic standards and any potential impacts on post-quantum cryptography?", "branch": 1, "level": 1, "order": 1 }
+        "questions_map": [
+          {
+            "label": "Have you assessed your third-party relationships, their cryptologic standards and any potential impacts on post-quantum cryptography?",
+            "branch": 0,
+            "level": 1,
+            "order": 1
+          }
         ]
       }
     ]
@@ -778,17 +1111,27 @@
         "uniqueAnswer": true,
         "atype": "P",
         "label": "Yes",
-        "questions_map":[
-    { "label": "Have you revised your procurement requirements to address PQC standards and documenting encryption for new solutions?", "branch": 1, "level": 1, "order": 1 }
-        ]        
+        "questions_map": [
+          {
+            "label": "Have you revised your procurement requirements to address PQC standards and documenting encryption for new solutions?",
+            "branch": 0,
+            "level": 1,
+            "order": 1
+          }
+        ]
       },
       {
         "aindex": 2,
         "uniqueAnswer": true,
         "atype": "P",
         "label": "No",
-        "questions_map":[
-    { "label": "Have you revised your procurement requirements to address PQC standards and documenting encryption for new solutions?", "branch": 1, "level": 1, "order": 1 }
+        "questions_map": [
+          {
+            "label": "Have you revised your procurement requirements to address PQC standards and documenting encryption for new solutions?",
+            "branch": 0,
+            "level": 1,
+            "order": 1
+          }
         ]
       },
       {
@@ -796,8 +1139,13 @@
         "uniqueAnswer": true,
         "atype": "P",
         "label": "Planning in future.",
-        "questions_map":[
-    { "label": "Have you revised your procurement requirements to address PQC standards and documenting encryption for new solutions?", "branch": 1, "level": 1, "order": 1 }
+        "questions_map": [
+          {
+            "label": "Have you revised your procurement requirements to address PQC standards and documenting encryption for new solutions?",
+            "branch": 0,
+            "level": 1,
+            "order": 1
+          }
         ]
       }
     ]
@@ -814,8 +1162,13 @@
         "uniqueAnswer": true,
         "atype": "P",
         "label": "Yes",
-        "questions_map":[
-    { "label": "What are the biggest challenges in transitioning to PQC? (Select all that apply)", "branch": 1, "level": 1, "order": 1 }
+        "questions_map": [
+          {
+            "label": "What are the biggest challenges in transitioning to PQC? (Select all that apply)",
+            "branch": 0,
+            "level": 1,
+            "order": 1
+          }
         ]
       },
       {
@@ -823,8 +1176,13 @@
         "uniqueAnswer": true,
         "atype": "P",
         "label": "No",
-        "questions_map":[
-    { "label": "What are the biggest challenges in transitioning to PQC? (Select all that apply)", "branch": 1, "level": 1, "order": 1 }
+        "questions_map": [
+          {
+            "label": "What are the biggest challenges in transitioning to PQC? (Select all that apply)",
+            "branch": 0,
+            "level": 1,
+            "order": 1
+          }
         ]
       },
       {
@@ -832,8 +1190,13 @@
         "uniqueAnswer": true,
         "atype": "P",
         "label": "We don’t see the need.",
-        "questions_map":[
-    { "label": "What are the biggest challenges in transitioning to PQC? (Select all that apply)", "branch": 1, "level": 1, "order": 1 }
+        "questions_map": [
+          {
+            "label": "What are the biggest challenges in transitioning to PQC? (Select all that apply)",
+            "branch": 0,
+            "level": 1,
+            "order": 1
+          }
         ]
       }
     ]
@@ -850,8 +1213,13 @@
         "uniqueAnswer": false,
         "atype": "P",
         "label": "Lack of awareness.",
-        "questions_map":[
-    { "label": "Do you have a dedicated PQC leadership role or is it an additional role with current responsibilities?", "branch": 1, "level": 1, "order": 1 }
+        "questions_map": [
+          {
+            "label": "Do you have a dedicated PQC leadership role or is it an additional role with current responsibilities?",
+            "branch": 0,
+            "level": 1,
+            "order": 1
+          }
         ]
       },
       {
@@ -859,8 +1227,13 @@
         "uniqueAnswer": false,
         "atype": "P",
         "label": "Cost",
-        "questions_map":[
-    { "label": "Do you have a dedicated PQC leadership role or is it an additional role with current responsibilities?", "branch": 1, "level": 1, "order": 1 }
+        "questions_map": [
+          {
+            "label": "Do you have a dedicated PQC leadership role or is it an additional role with current responsibilities?",
+            "branch": 0,
+            "level": 1,
+            "order": 1
+          }
         ]
       },
       {
@@ -868,8 +1241,13 @@
         "uniqueAnswer": false,
         "atype": "P",
         "label": "Technical complexity.",
-        "questions_map":[
-    { "label": "Do you have a dedicated PQC leadership role or is it an additional role with current responsibilities?", "branch": 1, "level": 1, "order": 1 }
+        "questions_map": [
+          {
+            "label": "Do you have a dedicated PQC leadership role or is it an additional role with current responsibilities?",
+            "branch": 0,
+            "level": 1,
+            "order": 1
+          }
         ]
       },
       {
@@ -877,8 +1255,13 @@
         "uniqueAnswer": false,
         "atype": "P",
         "label": "Lack of skilled personnel",
-        "questions_map":[
-    { "label": "Do you have a dedicated PQC leadership role or is it an additional role with current responsibilities?", "branch": 1, "level": 1, "order": 1 }
+        "questions_map": [
+          {
+            "label": "Do you have a dedicated PQC leadership role or is it an additional role with current responsibilities?",
+            "branch": 0,
+            "level": 1,
+            "order": 1
+          }
         ]
       },
       {
@@ -886,8 +1269,13 @@
         "uniqueAnswer": false,
         "atype": "P",
         "label": "Waiting for standards to finalize.",
-        "questions_map":[
-    { "label": "Do you have a dedicated PQC leadership role or is it an additional role with current responsibilities?", "branch": 1, "level": 1, "order": 1 }
+        "questions_map": [
+          {
+            "label": "Do you have a dedicated PQC leadership role or is it an additional role with current responsibilities?",
+            "branch": 0,
+            "level": 1,
+            "order": 1
+          }
         ]
       },
       {
@@ -895,8 +1283,13 @@
         "uniqueAnswer": false,
         "atype": "P",
         "label": "No perceived urgency",
-        "questions_map":[
-    { "label": "Do you have a dedicated PQC leadership role or is it an additional role with current responsibilities?", "branch": 1, "level": 1, "order": 1 }
+        "questions_map": [
+          {
+            "label": "Do you have a dedicated PQC leadership role or is it an additional role with current responsibilities?",
+            "branch": 0,
+            "level": 1,
+            "order": 1
+          }
         ]
       },
       {
@@ -904,8 +1297,13 @@
         "uniqueAnswer": false,
         "atype": "P",
         "label": "Legacy systems",
-        "questions_map":[
-    { "label": "Do you have a dedicated PQC leadership role or is it an additional role with current responsibilities?", "branch": 1, "level": 1, "order": 1 }
+        "questions_map": [
+          {
+            "label": "Do you have a dedicated PQC leadership role or is it an additional role with current responsibilities?",
+            "branch": 0,
+            "level": 1,
+            "order": 1
+          }
         ]
       }
     ]
@@ -922,8 +1320,13 @@
         "uniqueAnswer": true,
         "atype": "P",
         "label": "Dedicated PQC Role in leadership",
-        "questions_map":[
-    { "label": "Do you have internal staff with sufficient technical knowledge to evaluate and implement PQC solutions?", "branch": 1, "level": 1, "order": 1 }
+        "questions_map": [
+          {
+            "label": "Do you have internal staff with sufficient technical knowledge to evaluate and implement PQC solutions?",
+            "branch": 0,
+            "level": 1,
+            "order": 1
+          }
         ]
       },
       {
@@ -931,8 +1334,13 @@
         "uniqueAnswer": true,
         "atype": "P",
         "label": "Shared responsibility",
-        "questions_map":[
-    { "label": "Do you have internal staff with sufficient technical knowledge to evaluate and implement PQC solutions?", "branch": 1, "level": 1, "order": 1 }
+        "questions_map": [
+          {
+            "label": "Do you have internal staff with sufficient technical knowledge to evaluate and implement PQC solutions?",
+            "branch": 0,
+            "level": 1,
+            "order": 1
+          }
         ]
       },
       {
@@ -940,8 +1348,13 @@
         "uniqueAnswer": true,
         "atype": "P",
         "label": "No clear ownership",
-        "questions_map":[
-    { "label": "Do you have internal staff with sufficient technical knowledge to evaluate and implement PQC solutions?", "branch": 1, "level": 1, "order": 1 }
+        "questions_map": [
+          {
+            "label": "Do you have internal staff with sufficient technical knowledge to evaluate and implement PQC solutions?",
+            "branch": 0,
+            "level": 1,
+            "order": 1
+          }
         ]
       },
       {
@@ -949,8 +1362,13 @@
         "uniqueAnswer": true,
         "atype": "P",
         "label": "Not applicable",
-        "questions_map":[
-    { "label": "Do you have internal staff with sufficient technical knowledge to evaluate and implement PQC solutions?", "branch": 1, "level": 1, "order": 1 }
+        "questions_map": [
+          {
+            "label": "Do you have internal staff with sufficient technical knowledge to evaluate and implement PQC solutions?",
+            "branch": 0,
+            "level": 1,
+            "order": 1
+          }
         ]
       }
     ]
@@ -967,8 +1385,13 @@
         "uniqueAnswer": true,
         "atype": "P",
         "label": "Yes – in-house expertise available.",
-        "questions_map":[
-    { "label": "Are there plans to hire or train staff in PQC-related roles in the next 12 months?", "branch": 1, "level": 1, "order": 1 }
+        "questions_map": [
+          {
+            "label": "Are there plans to hire or train staff in PQC-related roles in the next 12 months?",
+            "branch": 0,
+            "level": 1,
+            "order": 1
+          }
         ]
       },
       {
@@ -976,8 +1399,13 @@
         "uniqueAnswer": true,
         "atype": "P",
         "label": "Some knowledge, but would need training or external help.",
-        "questions_map":[
-    { "label": "Are there plans to hire or train staff in PQC-related roles in the next 12 months?", "branch": 1, "level": 1, "order": 1 }
+        "questions_map": [
+          {
+            "label": "Are there plans to hire or train staff in PQC-related roles in the next 12 months?",
+            "branch": 0,
+            "level": 1,
+            "order": 1
+          }
         ]
       },
       {
@@ -985,8 +1413,13 @@
         "uniqueAnswer": true,
         "atype": "P",
         "label": "No – would need external consultants or partners",
-        "questions_map":[
-    { "label": "Are there plans to hire or train staff in PQC-related roles in the next 12 months?", "branch": 1, "level": 1, "order": 1 }
+        "questions_map": [
+          {
+            "label": "Are there plans to hire or train staff in PQC-related roles in the next 12 months?",
+            "branch": 0,
+            "level": 1,
+            "order": 1
+          }
         ]
       },
       {
@@ -994,8 +1427,13 @@
         "uniqueAnswer": true,
         "atype": "P",
         "label": "Not sure",
-        "questions_map":[
-    { "label": "Are there plans to hire or train staff in PQC-related roles in the next 12 months?", "branch": 1, "level": 1, "order": 1 }
+        "questions_map": [
+          {
+            "label": "Are there plans to hire or train staff in PQC-related roles in the next 12 months?",
+            "branch": 0,
+            "level": 1,
+            "order": 1
+          }
         ]
       }
     ]
@@ -1012,8 +1450,13 @@
         "uniqueAnswer": true,
         "atype": "P",
         "label": "Yes",
-        "questions_map":[
-    { "label": "What challenges do you face in hiring PQC talent?", "branch": 1, "level": 1, "order": 1 }
+        "questions_map": [
+          {
+            "label": "What challenges do you face in hiring PQC talent?",
+            "branch": 0,
+            "level": 1,
+            "order": 1
+          }
         ]
       },
       {
@@ -1021,8 +1464,13 @@
         "uniqueAnswer": true,
         "atype": "P",
         "label": "No",
-        "questions_map":[
-    { "label": "What challenges do you face in hiring PQC talent?", "branch": 1, "level": 1, "order": 1 }
+        "questions_map": [
+          {
+            "label": "What challenges do you face in hiring PQC talent?",
+            "branch": 0,
+            "level": 1,
+            "order": 1
+          }
         ]
       }
     ]
@@ -1039,8 +1487,13 @@
         "uniqueAnswer": false,
         "atype": "P",
         "label": "Talent shortage in the market.",
-        "questions_map":[
-    { "label": "Would your organization benefit from external PQC training or workshops?", "branch": 1, "level": 1, "order": 1 }
+        "questions_map": [
+          {
+            "label": "Would your organization benefit from external PQC training or workshops?",
+            "branch": 0,
+            "level": 1,
+            "order": 1
+          }
         ]
       },
       {
@@ -1048,8 +1501,13 @@
         "uniqueAnswer": false,
         "atype": "P",
         "label": "Budget constraints.",
-        "questions_map":[
-    { "label": "Would your organization benefit from external PQC training or workshops?", "branch": 1, "level": 1, "order": 1 }
+        "questions_map": [
+          {
+            "label": "Would your organization benefit from external PQC training or workshops?",
+            "branch": 0,
+            "level": 1,
+            "order": 1
+          }
         ]
       },
       {
@@ -1057,8 +1515,13 @@
         "uniqueAnswer": false,
         "atype": "P",
         "label": "Inability to compete with tech firms.",
-        "questions_map":[
-    { "label": "Would your organization benefit from external PQC training or workshops?", "branch": 1, "level": 1, "order": 1 }
+        "questions_map": [
+          {
+            "label": "Would your organization benefit from external PQC training or workshops?",
+            "branch": 0,
+            "level": 1,
+            "order": 1
+          }
         ]
       },
       {
@@ -1066,8 +1529,13 @@
         "uniqueAnswer": false,
         "atype": "P",
         "label": "Lack of internal PQC strategy.",
-        "questions_map":[
-    { "label": "Would your organization benefit from external PQC training or workshops?", "branch": 1, "level": 1, "order": 1 }
+        "questions_map": [
+          {
+            "label": "Would your organization benefit from external PQC training or workshops?",
+            "branch": 0,
+            "level": 1,
+            "order": 1
+          }
         ]
       },
       {
@@ -1075,8 +1543,13 @@
         "uniqueAnswer": false,
         "atype": "P",
         "label": "No challenges.",
-        "questions_map":[
-    { "label": "Would your organization benefit from external PQC training or workshops?", "branch": 1, "level": 1, "order": 1 }
+        "questions_map": [
+          {
+            "label": "Would your organization benefit from external PQC training or workshops?",
+            "branch": 0,
+            "level": 1,
+            "order": 1
+          }
         ]
       }
     ]
@@ -1093,8 +1566,13 @@
         "uniqueAnswer": true,
         "atype": "P",
         "label": "Yes – urgently needed",
-        "questions_map":[
-    { "label": "How would you rate your workforce's overall PQC readiness?", "branch": 1, "level": 1, "order": 1 }
+        "questions_map": [
+          {
+            "label": "How would you rate your workforce's overall PQC readiness?",
+            "branch": 0,
+            "level": 1,
+            "order": 1
+          }
         ]
       },
       {
@@ -1102,17 +1580,27 @@
         "uniqueAnswer": true,
         "atype": "P",
         "label": "Possibly – for technical teams",
-        "questions_map":[
-    { "label": "How would you rate your workforce's overall PQC readiness?", "branch": 1, "level": 1, "order": 1 }
-        ]        
+        "questions_map": [
+          {
+            "label": "How would you rate your workforce's overall PQC readiness?",
+            "branch": 0,
+            "level": 1,
+            "order": 1
+          }
+        ]
       },
       {
         "aindex": 3,
         "uniqueAnswer": true,
         "atype": "P",
         "label": "Not necessary",
-        "questions_map":[
-    { "label": "How would you rate your workforce's overall PQC readiness?", "branch": 1, "level": 1, "order": 1 }
+        "questions_map": [
+          {
+            "label": "How would you rate your workforce's overall PQC readiness?",
+            "branch": 0,
+            "level": 1,
+            "order": 1
+          }
         ]
       },
       {
@@ -1120,8 +1608,13 @@
         "uniqueAnswer": true,
         "atype": "P",
         "label": "Not sure",
-        "questions_map":[
-    { "label": "How would you rate your workforce's overall PQC readiness?", "branch": 1, "level": 1, "order": 1 }
+        "questions_map": [
+          {
+            "label": "How would you rate your workforce's overall PQC readiness?",
+            "branch": 0,
+            "level": 1,
+            "order": 1
+          }
         ]
       }
     ]
@@ -1138,8 +1631,13 @@
         "uniqueAnswer": true,
         "atype": "P",
         "label": "High — well-prepared and growing",
-        "questions_map":[
-    { "label": "How does your organization classify its data in terms of sensitivity and risk?", "branch": 1, "level": 1, "order": 1 }
+        "questions_map": [
+          {
+            "label": "How does your organization classify its data in terms of sensitivity and risk?",
+            "branch": 0,
+            "level": 1,
+            "order": 1
+          }
         ]
       },
       {
@@ -1147,8 +1645,13 @@
         "uniqueAnswer": true,
         "atype": "P",
         "label": "Moderate — skills exist but are siloed.",
-        "questions_map":[
-    { "label": "How does your organization classify its data in terms of sensitivity and risk?", "branch": 1, "level": 1, "order": 1 }
+        "questions_map": [
+          {
+            "label": "How does your organization classify its data in terms of sensitivity and risk?",
+            "branch": 0,
+            "level": 1,
+            "order": 1
+          }
         ]
       },
       {
@@ -1156,8 +1659,13 @@
         "uniqueAnswer": true,
         "atype": "P",
         "label": "Low — major gaps in skills and planning.",
-        "questions_map":[
-    { "label": "How does your organization classify its data in terms of sensitivity and risk?", "branch": 1, "level": 1, "order": 1 }
+        "questions_map": [
+          {
+            "label": "How does your organization classify its data in terms of sensitivity and risk?",
+            "branch": 0,
+            "level": 1,
+            "order": 1
+          }
         ]
       },
       {
@@ -1165,8 +1673,13 @@
         "uniqueAnswer": true,
         "atype": "P",
         "label": "Not assessed",
-        "questions_map":[
-    { "label": "How does your organization classify its data in terms of sensitivity and risk?", "branch": 1, "level": 1, "order": 1 }
+        "questions_map": [
+          {
+            "label": "How does your organization classify its data in terms of sensitivity and risk?",
+            "branch": 0,
+            "level": 1,
+            "order": 1
+          }
         ]
       }
     ]
