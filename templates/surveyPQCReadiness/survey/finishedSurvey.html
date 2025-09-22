@@ -1,10 +1,12 @@
 {% extends 'survey/finishedSurvey.html' %}
 {% load i18n %}
 
+
+
 {% block finished_survey_description %}
-<p class="text-justify">
+<h4 class="text-justify mt-4">
 {% blocktranslate trimmed %}
     Thank you for completing the survey. Your contribution provides us with important insights and helps us improve.
 {% endblocktranslate %}
-</p>
+</h4>
 {% endblock %}
