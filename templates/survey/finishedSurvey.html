@@ -23,8 +23,6 @@
 {% block content %}
 <div class="row px-4">
     <div class="col-10">
-        <h2>{{ _('Summary') }}:</h2>
-        <div class="qrcode"></div>
         {% block finished_survey_description %}
         <p class="text-justify">
             {% blocktranslate trimmed %}
@@ -57,16 +55,6 @@
                 {% endblocktranslate %}
             </p>
         {% endif %}
-        <p class="continue-later-link">
-            <button
-                class="pl-0 btn btn-link"
-                type="button"
-                name="continue-later"
-                data-toggle="modal"
-                data-target="#modal">
-                {{ _('Your results link') }}
-            </button>
-        </p>
         {% if custom.modules.requestDiagnostic and user.get_country_code == 'LU' and txtscore >= custom.minimal_acceptable_score %}
             {% block finished_survey_diagnostic %}
             <h2>{{ _('About the NC3 Diagnostic') }}:</h2>
