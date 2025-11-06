@@ -11,8 +11,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-20 06:21+0000\n"
-"PO-Revision-Date: 2023-04-06 11:50+0000\n"
+"POT-Creation-Date: 2025-03-05 06:39+0000\n"
+"PO-Revision-Date: 2025-03-05 09:04+0100\n"
 "Last-Translator: Juan Rocha <juan.rocha@cases.lu>\n"
 "Language-Team: French <https://translate.monarc.lu/projects/"
 "Fit4Cybersecurity/fit4cybersecurity/fr/>\n"
@@ -21,7 +21,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 4.17-dev\n"
+"X-Generator: Poedit 3.5\n"
 
 #: csskp/fit4africa/__init__.py:7 csskp/fit4cybersecurity/__init__.py:7
 msgid ""
@@ -480,7 +480,6 @@ msgstr "5000+"
 
 #: data/fit4africa/context-questions.json:241
 #: data/fit4contract/context-questions.json:199
-#: data/fit4cybersecurity/context-questions.json:199
 #: data/fit4ehealth/questions.json:20
 #: data/fit4privacy/context-questions.json:199 survey/forms.py:61
 msgid "Please select your country"
@@ -497,7 +496,7 @@ msgstr "Règles/Chartes"
 msgid "Awareness and Compliance"
 msgstr "Obligations et Conformités"
 
-#: data/fit4africa/questions.json:5 data/fit4cybersecurity/questions.json:145
+#: data/fit4africa/questions.json:5
 msgid "In the company, rules are"
 msgstr "Dans l'entreprise, les règles données aux employés sont"
 
@@ -671,7 +670,7 @@ msgstr ""
 "accessible à tous (contrat de vente, site web, fichier présentable en cas "
 "d'interrogation …)."
 
-#: data/fit4africa/questions.json:201 data/fit4cybersecurity/questions.json:200
+#: data/fit4africa/questions.json:201
 msgid ""
 "a written explanation about the personal data lifecycle (how there are get, "
 "stored, and when and how they are destroyed)"
@@ -815,7 +814,7 @@ msgstr "Responsabilités IT et Sécurité de l'Information"
 
 #: data/fit4africa/questions.json:330 data/fit4cybersecurity/questions.json:383
 msgid "IT and Information Security responsibilities are"
-msgstr "Les responsabilités IT et Sécurité de l'Information sont"
+msgstr "Les responsabilités IT et Sécurité de l'Information"
 
 #: data/fit4africa/questions.json:341 data/fit4cybersecurity/questions.json:340
 msgid "internally defined, with someone who is specialised in IT field"
@@ -866,7 +865,7 @@ msgstr "Télétravail/Mobilité"
 
 #: data/fit4africa/questions.json:388 data/fit4cybersecurity/questions.json:481
 msgid "During any trip outside the company, the employee uses"
-msgstr "Les employés, lors d'un voyage à l'extérieur, utilisent"
+msgstr "Les employés, lors d'un voyage à l'extérieur,"
 
 #: data/fit4africa/questions.json:404 data/fit4cybersecurity/questions.json:403
 msgid ""
@@ -885,8 +884,9 @@ msgid ""
 "necessary, or the only connection to the internal network is on the company "
 "premises"
 msgstr ""
-"aucun appareil professionnel, car le télétravail n'est pas une pratique "
-"autorisée et la seule connexion possible au réseau d'entreprise est interne"
+"n'utilisent aucun appareil professionnel, car le télétravail n'est pas une "
+"pratique autorisée et la seule connexion possible au réseau d'entreprise est "
+"interne"
 
 #: data/fit4africa/questions.json:420 data/fit4cybersecurity/questions.json:419
 msgid ""
@@ -903,8 +903,8 @@ msgid ""
 "VPN (Virtual Private Network) is used to encrypt all data from any external "
 "network to the internal server"
 msgstr ""
-"VPN (Virtual Private Network) est utilisé pour crypter toutes les données de "
-"n'importe quel réseau externe vers le serveur interne"
+"utilisent un VPN (Virtual Private Network) pour chiffrer toutes les données "
+"de n'importe quel réseau externe vers le serveur interne"
 
 #: data/fit4africa/questions.json:431 data/fit4cybersecurity/questions.json:430
 #: data/fit4ehealth/questions.json:973
@@ -928,8 +928,8 @@ msgid ""
 "a private connection or connection sharing from a private or professional "
 "smartphone (tethering/hotspot)"
 msgstr ""
-"une connexion privée ou du partage de réseau d'un téléphone personnel ou "
-"professionnel"
+"utilisent une connexion privée ou du partage de réseau d'un téléphone "
+"personnel ou professionnel"
 
 #: data/fit4africa/questions.json:460 data/fit4cybersecurity/questions.json:459
 msgid ""
@@ -944,9 +944,9 @@ msgid ""
 "person could see what is on the screen of their mobile device (tablet or "
 "laptop)"
 msgstr ""
-"un filtre à écran, ou portent une attention particulière à la vision "
-"possible sur les écrans au travers des fenêtres ou dans les transports "
-"publics"
+"utilisent un filtre à écran, ou portent une attention particulière à la "
+"vision possible sur les écrans au travers des fenêtres ou dans les "
+"transports publics"
 
 #: data/fit4africa/questions.json:476 data/fit4cybersecurity/questions.json:475
 msgid ""
@@ -961,7 +961,7 @@ msgid ""
 "devices that are encrypted (protected by a password at boot) or without any "
 "confidential data"
 msgstr ""
-"un matériel avec un stockage de données chiffré ou sans données "
+"utilisent un matériel avec un stockage de données chiffré ou sans données "
 "confidentielles pour éviter toute perte involontaire de données"
 
 #: data/fit4africa/questions.json:484 data/fit4cybersecurity/questions.json:484
@@ -2502,6 +2502,30 @@ msgstr ""
 "Les données sont stockées en partie ou en totalité sur une infrastructure "
 "cloud."
 
+#: data/fit4cybersecurity/context-questions.json:199
+msgid "Please select your country of establishment"
+msgstr "Veuillez sélectionner votre pays d'établissement"
+
+#: data/fit4cybersecurity/questions.json:145
+msgid ""
+"In the company, the rules for information security and cybersecurity are"
+msgstr ""
+"Dans l'entreprise, les règles relatives à la sécurité de l'information et à "
+"la cybersécurité données aux employés sont"
+
+#: data/fit4cybersecurity/questions.json:200
+#, fuzzy
+#| msgid ""
+#| "a written explanation about the personal data lifecycle (how there are "
+#| "get, stored, and when and how they are destroyed)"
+msgid ""
+"a written explanation about the personal data lifecycle (how there are "
+"gathered, stored, and when and how they are destroyed)"
+msgstr ""
+"une explication écrite sur le cycle de vie des données internes (comment "
+"elles sont récupérées, comment elles sont stockées, où et quand elles sont "
+"détruites)"
+
 #: data/fit4ehealth/questions.json:28
 msgid "Luxembourg"
 msgstr "Luxembourg"
@@ -3553,9 +3577,10 @@ msgid ""
 "access your data, directly (by accessing them) or indirectly (by seeing "
 "them, by earring them …), even for a short instant."
 msgstr ""
-"Aucun tiers n’intervient au sein de votre organisme ni ne consulte directement "
-"(accès à la base de données) ou indirectement (accès visuel, accès audio aux "
-"données….) les données et ce, même pendant un temps très court."
+"Aucun tiers n’intervient au sein de votre organisme ni ne consulte "
+"directement (accès à la base de données) ou indirectement (accès visuel, "
+"accès audio aux données….) les données et ce, même pendant un temps très "
+"court."
 
 #: data/fit4ehealth/questions.json:1205
 msgid "Cleaning"
@@ -8429,7 +8454,7 @@ msgstr "Demander un diagnostic"
 #: templates/survey/requestDiagnosticLink.html:7
 #, python-format
 msgid ""
-"Dear Cases Team,\n"
+"Dear NC3 Team,\n"
 "\n"
 "We would like to request a Diagnostic NC3 from you.\n"
 "\n"
@@ -8465,7 +8490,7 @@ msgstr "Demander une offre de formation"
 #: templates/survey/requestTrainingLink.html:7
 #, python-format
 msgid ""
-"Dear Cases Team,\n"
+"Dear NC3 Team,\n"
 "\n"
 "We would like an information about security awareness training offer.\n"
 "\n"
