@@ -1,4 +1,4 @@
-FROM python:3.10.2-buster
+FROM python:3.10-bullseye
 
 RUN apt-get update && \
   apt-get install -y \
@@ -53,9 +53,11 @@ RUN mkdir /tmp/csskp
 RUN chmod +x ./wait-for-postgres.sh
 
 RUN mkdir node_modules
-RUN npm install
-RUN mkdir -p static/npm_components
-RUN cp -R node_modules/* static/npm_components/
+RUN npm install && \
+  if [ ! -L static/npm_components ]; then \
+    mkdir -p static/npm_components && \
+    cp -R node_modules/. static/npm_components/; \
+  fi
 RUN cp csskp/config_dev.py csskp/config.py
 
 RUN pip install poetry

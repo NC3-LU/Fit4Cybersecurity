@@ -1,7 +1,6 @@
-version: '3'
 services:
   db:
-    image: postgres:latest
+    image: postgres:17
     hostname: db
     restart: always
     environment:
