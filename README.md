@@ -28,3 +28,9 @@ This software is licensed under
 [GNU Affero General Public License version 3](https://www.gnu.org/licenses/agpl-3.0.html)
 
 Copyright (C) 2019-2023 Luxembourg House of Cybersecurity
+
+### Infrastructure model
+![Infrastructure main model](.infragenie/infrastructure_main_model.svg)
+- [app component model](.infragenie/app_component_model.svg)
+
+---
